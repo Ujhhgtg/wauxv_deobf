@@ -30,7 +30,7 @@ public final /* synthetic */ class aam implements MenuItem.OnMenuItemClickListen
                 eqj eqjVar = ((CodeFragment) obj).d;
                 throwIfVar1IsNull(eqjVar);
                 bad.e(file, ((bdp) eqjVar).b.getText().toString());
-                dnc.g(null, 3, "保存成功" /* "保存成功" /* "保存成功" /* cnb.z(-420137995860778L)  */);
+                dnc.sendToast(null, 3, "保存成功" /* "保存成功" /* "保存成功" /* cnb.z(-420137995860778L)  */);
                 break;
             default:
                 MainActivity mainActivity = (MainActivity) obj2;

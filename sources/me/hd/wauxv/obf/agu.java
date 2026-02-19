@@ -104,7 +104,7 @@ public final class agu extends ViewGroup.MarginLayoutParams {
                     }
                     agrVar = (agr) constructor.newInstance(context, attributeSet);
                 } catch (Exception e) {
-                    throw new RuntimeException(yg.k("Could not inflate Behavior subclass ", string), e);
+                    throw new RuntimeException(yg.concat("Could not inflate Behavior subclass ", string), e);
                 }
             }
             this.a = agrVar;

@@ -52,8 +52,8 @@ public final /* synthetic */ class zj implements CompoundButton.OnCheckedChangeL
                         Context context = r1.getContext();
                         StringBuilder sb = new StringBuilder();
                         sb.append("重启 " /* "重启 " /* "重启 " /* cnb.z(-57990648429354L)  */);
-                        bmo.a.getClass();
-                        sb.append(bmo.o());
+                        HostInfoRegistry.INSTANCE.getClass();
+                        sb.append(HostInfoRegistry.getAppName());
                         sb.append(" 生效" /* " 生效" /* " 生效" /* cnb.z(-57939108821802L)  */);
                         Toast.makeText(context, sb.toString(), 0).show();
                     }

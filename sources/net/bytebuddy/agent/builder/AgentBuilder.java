@@ -2864,7 +2864,7 @@ public interface AgentBuilder {
                             try {
                                 this.listener.onDiscovery(strReplace, classLoader2, javaModule, cls2 != null);
                                 this.listener.onError(strReplace, classLoader2, javaModule, cls2 != null, th);
-                                throw new IllegalStateException(yg.k("Failed transformation of ", strReplace), th);
+                                throw new IllegalStateException(yg.concat("Failed transformation of ", strReplace), th);
                             } catch (Throwable th3) {
                                 this.listener.onError(strReplace, classLoader, javaModule, cls2 != null, th);
                                 throw th3;

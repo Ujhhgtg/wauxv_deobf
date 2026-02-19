@@ -11,16 +11,16 @@ import java.util.Arrays;
 import java.util.List;
 import me.hd.wauxv.obf.StaticHelpers5;
 import me.hd.wauxv.obf.FieldResolver;
-import me.hd.wauxv.obf.azk;
+import me.hd.wauxv.obf.BoundField;
 import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.bkc;
 import me.hd.wauxv.obf.SyntheticPileOfMess;
-import me.hd.wauxv.obf.btc;
+import me.hd.wauxv.obf.IEmpty7;
 import me.hd.wauxv.obf.Configuration;
 import me.hd.wauxv.obf.MethodResolver;
 import me.hd.wauxv.obf.MethodHookWrapper;
 import me.hd.wauxv.obf.dal;
-import me.hd.wauxv.obf.dcx;
+import me.hd.wauxv.obf.Failure;
 import me.hd.wauxv.obf.dnj;
 import me.hd.wauxv.obf.Kotlin$Lazy;
 import me.hd.wauxv.obf.dqc;
@@ -51,7 +51,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
         bkc bkcVar = bkc.a;
         Handler.Callback callback = this.baseInstance;
         bkcVar.getClass();
-        btc[] btcVarArr = bkc.b;
+        IEmpty7[] btcVarArr = bkc.b;
         int i = message.what;
         if (i == 100) {
             int i2 = 0;
@@ -61,18 +61,18 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
             bmuVarBi.setHookOptional(true);
             FieldResolver fieldResolverVarR = bmuVarBi.r();
             fieldResolverVarR.name = "intent";
-            azk azkVar = (azk) StaticHelpers5.g(fieldResolverVarR.resolve());
-            Intent intent = azkVar != null ? (Intent) azkVar.e() : null;
-            azk azkVar2 = (azk) bkc.e.getValue();
-            if (azkVar2 != null) {
-                azk azkVar3 = new azk(azkVar2.a);
-                azkVar3.dexFind(intent);
+            BoundField boundFieldVar = (BoundField) StaticHelpers5.g(fieldResolverVarR.resolve());
+            Intent intent = boundFieldVar != null ? (Intent) boundFieldVar.getValue_() : null;
+            BoundField boundFieldVar2 = (BoundField) bkc.e.getValue();
+            if (boundFieldVar2 != null) {
+                BoundField boundFieldVar3 = new BoundField(boundFieldVar2.reflectedField);
+                boundFieldVar3.dexFind(intent);
                 try {
-                    objX = azkVar3.e();
+                    objX = boundFieldVar3.getValue_();
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                if (objX instanceof dcx) {
+                if (objX instanceof Failure) {
                     objX = null;
                 }
                 bundle = (Bundle) objX;
@@ -81,16 +81,16 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
             }
             if (bundle != null) {
                 ki.a.getClass();
-                Application applicationH = ki.h();
+                Application applicationH = ki.tryGetApplication();
                 bundle.setClassLoader(applicationH != null ? applicationH.getClassLoader() : null);
             }
             if (intent != null && intent.hasExtra("")) {
-                azkVar.f(intent.getParcelableExtra(""));
+                boundFieldVar.setValue(intent.getParcelableExtra(""));
             }
         } else if (i == 159) {
             int i3 = 0;
             FactoryPools factoryPoolsVar = bkc.d;
-            btc btcVar = btcVarArr[1];
+            IEmpty7 btcVar = btcVarArr[1];
             SyntheticPileOfMess bmuVarBh = dqc.bh(factoryPoolsVar.w());
             Kotlin$Lazy kotlin$LazyVar2 = ep.a;
             ((Configuration) bmuVarBh.obj).processorResolver = FastKV.aa();
@@ -120,19 +120,19 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                     bmuVarBi2.setHookOptional(true);
                     FieldResolver fieldResolverVarR2 = bmuVarBi2.r();
                     fieldResolverVarR2.name = "mIntent";
-                    azk azkVar4 = (azk) StaticHelpers5.g(fieldResolverVarR2.resolve());
-                    Intent intent2 = azkVar4 != null ? (Intent) azkVar4.e() : null;
+                    BoundField boundFieldVar4 = (BoundField) StaticHelpers5.g(fieldResolverVarR2.resolve());
+                    Intent intent2 = boundFieldVar4 != null ? (Intent) boundFieldVar4.getValue_() : null;
                     bkc.a.getClass();
-                    azk azkVar5 = (azk) bkc.e.getValue();
-                    if (azkVar5 != null) {
-                        azk azkVar6 = new azk(azkVar5.a);
-                        azkVar6.dexFind(intent2);
+                    BoundField boundFieldVar5 = (BoundField) bkc.e.getValue();
+                    if (boundFieldVar5 != null) {
+                        BoundField boundFieldVar6 = new BoundField(boundFieldVar5.reflectedField);
+                        boundFieldVar6.dexFind(intent2);
                         try {
-                            objX2 = azkVar6.e();
+                            objX2 = boundFieldVar6.getValue_();
                         } catch (Throwable th2) {
-                            objX2 = FastKV.x(th2);
+                            objX2 = FastKV.getFailureFromException(th2);
                         }
-                        if (objX2 instanceof dcx) {
+                        if (objX2 instanceof Failure) {
                             objX2 = null;
                         }
                         bundle2 = (Bundle) objX2;
@@ -141,14 +141,14 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                     }
                     if (bundle2 != null) {
                         ki.a.getClass();
-                        Application applicationH2 = ki.h();
+                        Application applicationH2 = ki.tryGetApplication();
                         bundle2.setClassLoader(applicationH2 != null ? applicationH2.getClassLoader() : null);
                     }
                     if (intent2 != null && intent2.hasExtra("")) {
                         Intent intent3 = (Intent) intent2.getParcelableExtra("");
                         if (eu.b(31)) {
                             FactoryPools factoryPoolsVar2 = bkc.c;
-                            btc btcVar2 = btcVarArr[0];
+                            IEmpty7 btcVar2 = btcVarArr[0];
                             SyntheticPileOfMess bmuVarBh2 = dqc.bh(factoryPoolsVar2.w());
                             Kotlin$Lazy kotlin$LazyVar3 = ep.a;
                             ((Configuration) bmuVarBh2.obj).processorResolver = FastKV.aa();
@@ -170,7 +170,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                                 bmuVarBi4.setHookOptional(true);
                                 MethodResolver methodResolverVarT4 = bmuVarBi4.getMethodResolverBasedOnPreviouslyProvidedConfig();
                                 methodResolverVarT4.name = "getLaunchingActivity";
-                                methodResolverVarT4.setParams(Arrays.copyOf(new Object[] { dal.b(IBinder.class) }, 1));
+                                methodResolverVarT4.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(IBinder.class) }, 1));
                                 MethodHookWrapper methodHookWrapperVar4 = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT4.findMethods());
                                 objF = methodHookWrapperVar4 != null ? methodHookWrapperVar4.f(objF2) : null;
                             }
@@ -180,13 +180,13 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                                 bmuVarBi5.setHookOptional(true);
                                 FieldResolver fieldResolverVarR3 = bmuVarBi5.r();
                                 fieldResolverVarR3.name = "intent";
-                                azk azkVar7 = (azk) StaticHelpers5.g(fieldResolverVarR3.resolve());
-                                if (azkVar7 != null) {
-                                    azkVar7.f(intent3);
+                                BoundField boundFieldVar7 = (BoundField) StaticHelpers5.g(fieldResolverVarR3.resolve());
+                                if (boundFieldVar7 != null) {
+                                    boundFieldVar7.setValue(intent3);
                                 }
                             }
                         }
-                        azkVar4.f(intent3);
+                        boundFieldVar4.setValue(intent3);
                     }
                 }
             }

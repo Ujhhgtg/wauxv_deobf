@@ -36,7 +36,7 @@ import me.hd.wauxv.obf.dhp;
 import me.hd.wauxv.obf.eqq;
 import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.era;
-import me.hd.wauxv.obf.ewz;
+import me.hd.wauxv.obf.StaticAndroidHelpers;
 import me.hd.wauxv.obf.o;
 import me.hd.wauxv.obf.qd;
 import me.hd.wauxv.obf.qf;
@@ -56,7 +56,7 @@ public class SideSheetBehavior<V extends View> extends agr {
     public int ai;
     public final LinkedHashSet aj;
     public final qd ak;
-    public ewz f;
+    public StaticAndroidHelpers f;
     public final cau g;
     public final ColorStateList h;
     public final dgm q;
@@ -273,7 +273,7 @@ public class SideSheetBehavior<V extends View> extends agr {
             }
         }
         int i6 = Gravity.getAbsoluteGravity(((agu) view.getLayoutParams()).c, i) == 3 ? 1 : 0;
-        ewz ewzVar = this.f;
+        StaticAndroidHelpers ewzVar = this.f;
         if (ewzVar == null || ewzVar.k() != i6) {
             agu aguVar = null;
             dgm dgmVar = this.q;

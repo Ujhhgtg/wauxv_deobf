@@ -17,7 +17,7 @@ import me.hd.wauxv.R;
 import me.hd.wauxv.obf.ajn;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.ViewCompat;
-import me.hd.wauxv.obf.ewz;
+import me.hd.wauxv.obf.StaticAndroidHelpers;
 import me.hd.wauxv.obf.ff;
 import me.hd.wauxv.obf.zz;
 
@@ -136,7 +136,7 @@ class ClockHandView extends View {
         } else if (actionMasked == 1 || actionMasked == 2) {
             z2 = this.j;
             if (this.b) {
-                this.m = ((float) Math.hypot((double) (x - ((float) (getWidth() / 2))), (double) (y - ((float) (getHeight() / 2))))) <= ((float) n(2)) + ewz.ag(getContext(), 12) ? 2 : 1;
+                this.m = ((float) Math.hypot((double) (x - ((float) (getWidth() / 2))), (double) (y - ((float) (getHeight() / 2))))) <= ((float) n(2)) + StaticAndroidHelpers.ag(getContext(), 12) ? 2 : 1;
             }
             z = false;
         } else {

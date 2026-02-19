@@ -5,16 +5,16 @@ import java.lang.reflect.Member;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class azk extends InstanceResolver {
-    public final Field a;
+public final class BoundField extends InstanceResolver {
+    public final Field reflectedField;
 
-    public azk(Field field) {
-        this.a = field;
+    public BoundField(Field field) {
+        this.reflectedField = field;
     }
 
     @Override // me.hd.wauxv.obf.cbq
     public final Member getMember() {
-        return this.a;
+        return this.reflectedField;
     }
 
     @Override // me.hd.wauxv.obf.bpu
@@ -23,8 +23,8 @@ public final class azk extends InstanceResolver {
         return this;
     }
 
-    public final Object d() {
-        Field field = this.a;
+    public final Object getValue() {
+        Field field = this.reflectedField;
         Field field2 = field != null ? field : null;
         if (field2 != null && !field2.isAccessible()) {
             field2.setAccessible(true);
@@ -32,8 +32,8 @@ public final class azk extends InstanceResolver {
         return field.get(this.boundInstance);
     }
 
-    public final Object e() throws IllegalAccessException {
-        Field field = this.a;
+    public final Object getValue_() throws IllegalAccessException {
+        Field field = this.reflectedField;
         Field field2 = field != null ? field : null;
         if (field2 != null && !field2.isAccessible()) {
             field2.setAccessible(true);
@@ -45,8 +45,8 @@ public final class azk extends InstanceResolver {
         return obj;
     }
 
-    public final void f(Object obj) throws IllegalAccessException {
-        Field field = this.a;
+    public final void setValue(Object obj) throws IllegalAccessException {
+        Field field = this.reflectedField;
         Field field2 = field != null ? field : null;
         if (field2 != null && !field2.isAccessible()) {
             field2.setAccessible(true);

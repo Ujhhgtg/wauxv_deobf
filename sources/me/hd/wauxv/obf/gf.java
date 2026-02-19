@@ -17,9 +17,9 @@ public final class gf extends SwitchHook {
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         gf gfVar = a;
-        aki akiVarAd = gfVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
-        gfVar.y(akiVarAd, new bn(27));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = gfVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+        gfVar.y(hookManagerVarAd, new bn(27));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

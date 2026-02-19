@@ -21,7 +21,7 @@ public final class byr extends bws implements IDexFind {
         int i = 0;
         MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(byp.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
         cme.a.getClass();
-        methodResolverVarT.returnType = StaticHelpers7.bb(cmc.a).getDeclaringClass();
+        methodResolverVarT.returnType = StaticHelpers7.toDexMethod(cmc.a).getDeclaringClass();
         Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;

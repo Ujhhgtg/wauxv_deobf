@@ -21,14 +21,14 @@ public final class ewi {
 
     static {
         String strZ = "MAIN_PROCESS" /* "MAIN_PROCESS" /* "MAIN_PROCESS" /* cnb.z(-18214956301098L)  */;
-        bmo.a.getClass();
-        ewi ewiVar = new ewi(strZ, 0, bmo.p());
+        HostInfoRegistry.INSTANCE.getClass();
+        ewi ewiVar = new ewi(strZ, 0, HostInfoRegistry.getPackageName());
         a = ewiVar;
-        ewi ewiVar2 = new ewi("APP_BRAND_0" /* "APP_BRAND_0" /* "APP_BRAND_0" /* cnb.z(-18210661333802L)  */, 1, bmo.p().concat(":appbrand0" /* ":appbrand0" /* ":appbrand0" /* cnb.z(-18674517801770L)  */));
+        ewi ewiVar2 = new ewi("APP_BRAND_0" /* "APP_BRAND_0" /* "APP_BRAND_0" /* cnb.z(-18210661333802L)  */, 1, HostInfoRegistry.getPackageName().concat(":appbrand0" /* ":appbrand0" /* ":appbrand0" /* cnb.z(-18674517801770L)  */));
         b = ewiVar2;
-        ewi ewiVar3 = new ewi("APP_BRAND_1" /* "APP_BRAND_1" /* "APP_BRAND_1" /* cnb.z(-18644453030698L)  */, 2, bmo.p().concat(":appbrand1" /* ":appbrand1" /* ":appbrand1" /* cnb.z(-18558553684778L)  */));
+        ewi ewiVar3 = new ewi("APP_BRAND_1" /* "APP_BRAND_1" /* "APP_BRAND_1" /* cnb.z(-18644453030698L)  */, 2, HostInfoRegistry.getPackageName().concat(":appbrand1" /* ":appbrand1" /* ":appbrand1" /* cnb.z(-18558553684778L)  */));
         c = ewiVar3;
-        d = new ewi[]{ewiVar, ewiVar2, ewiVar3, new ewi("APP_BRAND_2" /* "APP_BRAND_2" /* "APP_BRAND_2" /* cnb.z(-18545668782890L)  */, 3, bmo.p().concat(":appbrand2" /* ":appbrand2" /* ":appbrand2" /* cnb.z(-18459769436970L)  */)), new ewi("APP_BRAND_3" /* "APP_BRAND_3" /* "APP_BRAND_3" /* cnb.z(-18429704665898L)  */, 4, bmo.p().concat(":appbrand3" /* ":appbrand3" /* ":appbrand3" /* cnb.z(-17862768982826L)  */)), new ewi("APP_BRAND_4" /* "APP_BRAND_4" /* "APP_BRAND_4" /* cnb.z(-17781164604202L)  */, 5, bmo.p().concat(":appbrand4" /* ":appbrand4" /* ":appbrand4" /* cnb.z(-17763984735018L)  */))};
+        d = new ewi[]{ewiVar, ewiVar2, ewiVar3, new ewi("APP_BRAND_2" /* "APP_BRAND_2" /* "APP_BRAND_2" /* cnb.z(-18545668782890L)  */, 3, HostInfoRegistry.getPackageName().concat(":appbrand2" /* ":appbrand2" /* ":appbrand2" /* cnb.z(-18459769436970L)  */)), new ewi("APP_BRAND_3" /* "APP_BRAND_3" /* "APP_BRAND_3" /* cnb.z(-18429704665898L)  */, 4, HostInfoRegistry.getPackageName().concat(":appbrand3" /* ":appbrand3" /* ":appbrand3" /* cnb.z(-17862768982826L)  */)), new ewi("APP_BRAND_4" /* "APP_BRAND_4" /* "APP_BRAND_4" /* cnb.z(-17781164604202L)  */, 5, HostInfoRegistry.getPackageName().concat(":appbrand4" /* ":appbrand4" /* ":appbrand4" /* cnb.z(-17763984735018L)  */))};
     }
 
     public ewi(String str, int i, String str2) {

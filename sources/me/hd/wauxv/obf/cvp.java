@@ -7,58 +7,58 @@ public abstract class cvp {
 
     static {
         bzg bzgVar = new bzg(8);
-        bzgVar.put(dal.b(String.class), dnh.b);
-        bzgVar.put(dal.b(Character.TYPE), ui.b);
-        bzgVar.put(dal.b(char[].class), ub.j);
-        bzgVar.put(dal.b(Double.TYPE), apl.b);
-        bzgVar.put(dal.b(double[].class), apk.j);
-        bzgVar.put(dal.b(Float.TYPE), bbm.b);
-        bzgVar.put(dal.b(float[].class), bbl.j);
-        bzgVar.put(dal.b(Long.TYPE), bya.b);
-        bzgVar.put(dal.b(long[].class), bxx.j);
-        bzgVar.put(dal.b(emz.class), end.b);
-        bzgVar.put(dal.b(Integer.TYPE), bqj.b);
-        bzgVar.put(dal.b(int[].class), bqd.j);
-        bzgVar.put(dal.b(emu.class), emy.b);
-        bzgVar.put(dal.b(Short.TYPE), dhf.b);
-        bzgVar.put(dal.b(short[].class), dhe.j);
-        bzgVar.put(dal.b(ene.class), eni.b);
-        bzgVar.put(dal.b(Byte.TYPE), si.b);
-        bzgVar.put(dal.b(byte[].class), rx.j);
-        bzgVar.put(dal.b(emp.class), emt.b);
-        bzgVar.put(dal.b(Boolean.TYPE), pv.b);
-        bzgVar.put(dal.b(boolean[].class), pu.j);
-        bzgVar.put(dal.b(KotlinUnit.class), enu.b);
-        bzgVar.put(dal.b(Void.class), coq.b);
+        bzgVar.put(dal.getKClassFromClass(String.class), dnh.b);
+        bzgVar.put(dal.getKClassFromClass(Character.TYPE), ui.b);
+        bzgVar.put(dal.getKClassFromClass(char[].class), ub.j);
+        bzgVar.put(dal.getKClassFromClass(Double.TYPE), apl.b);
+        bzgVar.put(dal.getKClassFromClass(double[].class), apk.j);
+        bzgVar.put(dal.getKClassFromClass(Float.TYPE), bbm.b);
+        bzgVar.put(dal.getKClassFromClass(float[].class), bbl.j);
+        bzgVar.put(dal.getKClassFromClass(Long.TYPE), bya.b);
+        bzgVar.put(dal.getKClassFromClass(long[].class), bxx.j);
+        bzgVar.put(dal.getKClassFromClass(emz.class), end.b);
+        bzgVar.put(dal.getKClassFromClass(Integer.TYPE), bqj.b);
+        bzgVar.put(dal.getKClassFromClass(int[].class), bqd.j);
+        bzgVar.put(dal.getKClassFromClass(emu.class), emy.b);
+        bzgVar.put(dal.getKClassFromClass(Short.TYPE), dhf.b);
+        bzgVar.put(dal.getKClassFromClass(short[].class), dhe.j);
+        bzgVar.put(dal.getKClassFromClass(ene.class), eni.b);
+        bzgVar.put(dal.getKClassFromClass(Byte.TYPE), si.b);
+        bzgVar.put(dal.getKClassFromClass(byte[].class), rx.j);
+        bzgVar.put(dal.getKClassFromClass(emp.class), emt.b);
+        bzgVar.put(dal.getKClassFromClass(Boolean.TYPE), pv.b);
+        bzgVar.put(dal.getKClassFromClass(boolean[].class), pu.j);
+        bzgVar.put(dal.getKClassFromClass(Kotlin$Unit.class), enu.b);
+        bzgVar.put(dal.getKClassFromClass(Void.class), coq.b);
         try {
-            zc zcVarB = dal.b(aqm.class);
+            KClass zcVarB = dal.getKClassFromClass(aqm.class);
             int i = aqm.c;
             bzgVar.put(zcVarB, aqo.b);
         } catch (ClassNotFoundException | NoClassDefFoundError unused) {
         }
         try {
-            bzgVar.put(dal.b(ena.class), enc.j);
+            bzgVar.put(dal.getKClassFromClass(ena.class), enc.j);
         } catch (ClassNotFoundException | NoClassDefFoundError unused2) {
         }
         try {
-            bzgVar.put(dal.b(emv.class), emx.j);
+            bzgVar.put(dal.getKClassFromClass(emv.class), emx.j);
         } catch (ClassNotFoundException | NoClassDefFoundError unused3) {
         }
         try {
-            bzgVar.put(dal.b(enf.class), enh.j);
+            bzgVar.put(dal.getKClassFromClass(enf.class), enh.j);
         } catch (ClassNotFoundException | NoClassDefFoundError unused4) {
         }
         try {
-            bzgVar.put(dal.b(emq.class), ems.j);
+            bzgVar.put(dal.getKClassFromClass(emq.class), ems.j);
         } catch (ClassNotFoundException | NoClassDefFoundError unused5) {
         }
         try {
-            bzgVar.put(dal.b(eov.class), eow.b);
+            bzgVar.put(dal.getKClassFromClass(eov.class), eow.b);
         } catch (ClassNotFoundException | NoClassDefFoundError unused6) {
         }
         try {
-            zc zcVarB2 = dal.b(bpw.class);
-            bpw bpwVar = bpw.a;
+            KClass zcVarB2 = dal.getKClassFromClass(Instant.class);
+            Instant instantVar = Instant.a;
             bzgVar.put(zcVarB2, bqb.b);
         } catch (ClassNotFoundException | NoClassDefFoundError unused7) {
         }

@@ -24,14 +24,14 @@ public final class atx extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(att.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(att.a));
         atx atxVar = a;
-        aki akiVarAb = PackageParam.ab(atxVar, listBf);
-        atxVar.x(akiVarAb, new atn(8));
-        akiVarAb.o();
-        aki akiVarAb2 = PackageParam.ab(atxVar, dqc.toSingletonList(StaticHelpers7.bb(ats.a)));
-        atxVar.y(akiVarAb2, new atn(5));
-        akiVarAb2.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(atxVar, listBf);
+        atxVar.x(hookManagerVarAb, new atn(8));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
+        HookManager hookManagerVarAb2 = PackageParam.createHook(atxVar, dqc.toSingletonList(StaticHelpers7.toDexMethod(ats.a)));
+        atxVar.y(hookManagerVarAb2, new atn(5));
+        hookManagerVarAb2.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

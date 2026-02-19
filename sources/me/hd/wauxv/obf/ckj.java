@@ -62,7 +62,7 @@ public final class ckj extends ckg {
         setItemPaddingTop(Math.round(fH));
         setItemPaddingBottom(Math.round(fH2));
         factoryPoolsVarAo.ae();
-        ewz.af(this, new SyntheticPileOfMess(this));
+        StaticAndroidHelpers.af(this, new SyntheticPileOfMess(this));
     }
 
     private cki getNavigationRailMenuView() {

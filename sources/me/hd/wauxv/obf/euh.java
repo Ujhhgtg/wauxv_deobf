@@ -31,7 +31,7 @@ public final class euh extends doi implements bgk {
         euh euhVar = new euh(3, (afw) obj3);
         euhVar.x = (TextView) obj;
         euhVar.y = (ProgressBar) obj2;
-        return euhVar.i(KotlinUnit.INSTANCE);
+        return euhVar.i(Kotlin$Unit.INSTANCE);
     }
 
     /* JADX WARN: Found duplicated region for block: B:30:0x00cf A[Catch: all -> 0x016e, TRY_ENTER, TryCatch #9 {all -> 0x016e, blocks: (B:27:0x00c3, B:30:0x00cf, B:32:0x00d9, B:33:0x00df, B:35:0x00e3, B:37:0x00e7, B:39:0x010c, B:41:0x0122, B:43:0x0128, B:45:0x012c, B:47:0x0134, B:49:0x0138, B:51:0x013d, B:86:0x01db, B:88:0x01f6, B:90:0x0206, B:89:0x01fd, B:91:0x0228, B:92:0x022b), top: B:165:0x00c3 }] */

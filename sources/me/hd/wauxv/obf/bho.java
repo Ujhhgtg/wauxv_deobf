@@ -30,7 +30,7 @@ public final class bho extends doi implements bgj {
             case 1:
                 break;
         }
-        return ((bho) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
+        return ((bho) h(ahpVar, afwVar)).i(Kotlin$Unit.INSTANCE);
     }
 
     @Override // me.hd.wauxv.obf.nc

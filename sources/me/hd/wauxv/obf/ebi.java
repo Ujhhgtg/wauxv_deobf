@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class ebi {
     public static final ebh Companion = new ebh();
-    public static final IHasGetValue[] a = { ewz.am(btx.a, new dtr(21)) };
+    public static final IHasGetValue[] a = { StaticAndroidHelpers.am(btx.a, new dtr(21)) };
     public final List b;
 
     public /* synthetic */ ebi(int i, List list) {

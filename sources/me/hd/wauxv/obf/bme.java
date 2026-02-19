@@ -34,6 +34,6 @@ public final /* synthetic */ class bme implements IInvokable {
                 }
                 break;
         }
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

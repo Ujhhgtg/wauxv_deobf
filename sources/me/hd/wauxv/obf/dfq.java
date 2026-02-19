@@ -27,7 +27,7 @@ public final /* synthetic */ class dfq implements bgj {
         long jAl2;
         Object objX;
         int i = this.a;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         int i2 = 0;
         switch (i) {
             case 0:
@@ -191,7 +191,7 @@ public final /* synthetic */ class dfq implements bgj {
                         i2 = i16;
                     }
                     dnc.c(sb.toString());
-                    dnc.g(null, 3, "复制图片成功" /* "复制图片成功" /* "复制图片成功" /* cnb.z(-588367569877802L)  */);
+                    dnc.sendToast(null, 3, "复制图片成功" /* "复制图片成功" /* "复制图片成功" /* cnb.z(-588367569877802L)  */);
                 } else if (iIntValue3 == 4) {
                     JSONObject jSONObject2 = (JSONObject) list.get(0);
                     int i17 = jSONObject2.getInt("videoDuration" /* "videoDuration" /* "videoDuration" /* cnb.z(-588320325237546L)  */);
@@ -219,7 +219,7 @@ public final /* synthetic */ class dfq implements bgj {
                         sb2.append('\n');
                     }
                     dnc.c(sb2.toString());
-                    dnc.g(null, 3, "复制视频成功" /* "复制视频成功" /* "复制视频成功" /* cnb.z(-586018222766890L)  */);
+                    dnc.sendToast(null, 3, "复制视频成功" /* "复制视频成功" /* "复制视频成功" /* cnb.z(-586018222766890L)  */);
                 }
                 return kotlinUnitVar;
             case 14:
@@ -237,7 +237,7 @@ public final /* synthetic */ class dfq implements bgj {
                         String string4 = jSONObject3.getString("md5sum" /* "md5sum" /* "md5sum" /* cnb.z(-585988157995818L)  */);
                         String string5 = jSONObject3.getString("url" /* "url" /* "url" /* cnb.z(-585940913355562L)  */);
                         String string6 = jSONObject3.getString("url_token" /* "url_token" /* "url_token" /* cnb.z(-585958093224746L)  */);
-                        alc alcVar = aou.a;
+                        Dispatchers$Default alcVar = aou.a;
                         KotlinHelpers2.bf(akq.f, new etb("第" + i18 + (char) 24352, string4, string5, string6, null, 0));
                         i2 = i18;
                     }
@@ -251,10 +251,10 @@ public final /* synthetic */ class dfq implements bgj {
                         String string8 = jSONObject4.getString("url" /* "url" /* "url" /* cnb.z(-585094804798250L)  */);
                         String string9 = jSONObject4.getString("url_token" /* "url_token" /* "url_token" /* cnb.z(-585111984667434L)  */);
                         String string10 = jSONObject4.getString("decodeKey" /* "decodeKey" /* "decodeKey" /* cnb.z(-585017495386922L)  */);
-                        alc alcVar2 = aou.a;
+                        Dispatchers$Default alcVar2 = aou.a;
                         KotlinHelpers2.bf(akq.f, new etd(str3, string7, string10, string8, string9, null, 0));
                     } else {
-                        alc alcVar3 = aou.a;
+                        Dispatchers$Default alcVar3 = aou.a;
                         KotlinHelpers2.bf(akq.f, new etc(str3, string7, jSONObjectOptJSONObject2, afwVar, 0));
                     }
                 }
@@ -278,7 +278,7 @@ public final /* synthetic */ class dfq implements bgj {
                         i2 = i19;
                     }
                     dnc.c(sb3.toString());
-                    dnc.g(null, 3, "复制图片成功" /* "复制图片成功" /* "复制图片成功" /* cnb.z(-610679924980522L)  */);
+                    dnc.sendToast(null, 3, "复制图片成功" /* "复制图片成功" /* "复制图片成功" /* cnb.z(-610679924980522L)  */);
                 } else if (iIntValue5 == 4) {
                     JSONObject jSONObject6 = (JSONObject) list3.get(0);
                     int i20 = jSONObject6.getInt("videoDuration" /* "videoDuration" /* "videoDuration" /* cnb.z(-610649860209450L)  */);
@@ -306,7 +306,7 @@ public final /* synthetic */ class dfq implements bgj {
                         sb4.append('\n');
                     }
                     dnc.c(sb4.toString());
-                    dnc.g(null, 3, "复制视频成功" /* "复制视频成功" /* "复制视频成功" /* cnb.z(-607798001924906L)  */);
+                    dnc.sendToast(null, 3, "复制视频成功" /* "复制视频成功" /* "复制视频成功" /* cnb.z(-607798001924906L)  */);
                 }
                 return kotlinUnitVar;
             case 16:
@@ -324,7 +324,7 @@ public final /* synthetic */ class dfq implements bgj {
                         String string14 = jSONObject7.getString("md5sum" /* "md5sum" /* "md5sum" /* cnb.z(-607819476761386L)  */);
                         String string15 = jSONObject7.getString("url" /* "url" /* "url" /* cnb.z(-607789411990314L)  */);
                         String string16 = jSONObject7.getString("url_token" /* "url_token" /* "url_token" /* cnb.z(-607188116568874L)  */);
-                        alc alcVar4 = aou.a;
+                        Dispatchers$Default alcVar4 = aou.a;
                         KotlinHelpers2.bf(akq.f, new etb("第" + i21 + (char) 24352, string14, string15, string16, null, 1));
                         i2 = i21;
                     }
@@ -338,10 +338,10 @@ public final /* synthetic */ class dfq implements bgj {
                         String string18 = jSONObject8.getString("url" /* "url" /* "url" /* cnb.z(-607475879377706L)  */);
                         String string19 = jSONObject8.getString("url_token" /* "url_token" /* "url_token" /* cnb.z(-607424339770154L)  */);
                         String string20 = jSONObject8.getString("decodeKey" /* "decodeKey" /* "decodeKey" /* cnb.z(-607398569966378L)  */);
-                        alc alcVar5 = aou.a;
+                        Dispatchers$Default alcVar5 = aou.a;
                         KotlinHelpers2.bf(akq.f, new etd(str6, string17, string20, string18, string19, null, 1));
                     } else {
-                        alc alcVar6 = aou.a;
+                        Dispatchers$Default alcVar6 = aou.a;
                         KotlinHelpers2.bf(akq.f, new etc(str6, string17, jSONObjectOptJSONObject4, afwVar2, 1));
                     }
                 }
@@ -350,7 +350,7 @@ public final /* synthetic */ class dfq implements bgj {
                 MsgInfoBean msgInfoBean = (MsgInfoBean) obj2;
                 String imgPath = msgInfoBean.getImgPath();
                 throwIfVar1IsNull(imgPath);
-                ewz.aq(etl.a, new etk(etu.b(etu.a, imgPath), Integer.parseInt(msgInfoBean.getContent()), i2));
+                StaticAndroidHelpers.runOnUiThread(etl.a, new etk(etu.b(etu.a, imgPath), Integer.parseInt(msgInfoBean.getContent()), i2));
                 return kotlinUnitVar;
             default:
                 MsgInfoBean msgInfoBean2 = (MsgInfoBean) obj2;
@@ -363,16 +363,16 @@ public final /* synthetic */ class dfq implements bgj {
                     file.mkdirs();
                     String str7 = msgId + SignatureVisitor.SUPER + imgPath2 + SignatureVisitor.SUPER + System.currentTimeMillis() + ".mp3" /* ".mp3" /* ".mp3" /* cnb.z(-520361057712938L)  */;
                     bad.a(cnh.af(new File(strB)), new File(file, str7));
-                    dnc.g(null, 3, "已保存到: " /* "已保存到: " /* "已保存到: " /* cnb.z(-520373942614826L)  */ + file.getAbsolutePath() + '/' + str7);
+                    dnc.sendToast(null, 3, "已保存到: " /* "已保存到: " /* "已保存到: " /* cnb.z(-520373942614826L)  */ + file.getAbsolutePath() + '/' + str7);
                     objX = kotlinUnitVar;
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                Throwable thB = dcy.b(objX);
+                Throwable thB = Success.exceptionOrNull(objX);
                 if (thB != null) {
                     String strZ = "保存失败: " /* "保存失败: " /* "保存失败: " /* cnb.z(-526391191796522L)  */;
                     String message = thB.getMessage();
-                    dnc.g(null, 3, strZ.concat(message != null ? dnj.az(50, message) : "未知错误" /* "未知错误" /* "未知错误" /* cnb.z(-526343947156266L)  */));
+                    dnc.sendToast(null, 3, strZ.concat(message != null ? dnj.az(50, message) : "未知错误" /* "未知错误" /* "未知错误" /* cnb.z(-526343947156266L)  */));
                 }
                 return kotlinUnitVar;
         }

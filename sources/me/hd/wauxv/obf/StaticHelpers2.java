@@ -22,7 +22,7 @@ public abstract class StaticHelpers2 extends StaticHelpers3 {
         }
     }
 
-    public static void ao(Collection collection, Object[] objArr) {
+    public static void addAllFromVar2ToVar1(Collection collection, Object[] objArr) {
         throwIfVar1IsNull(collection, "<this>");
         throwIfVar1IsNull(objArr, "elements");
         collection.addAll(SomeStaticHelpers.toList(objArr));

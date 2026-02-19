@@ -17,9 +17,9 @@ public final class CustomBalanceHook extends SwitchHook {
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         CustomBalanceHook aioVar = a;
-        aki akiVarAd = aioVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
-        aioVar.y(akiVarAd, new age(23));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = aioVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+        aioVar.y(hookManagerVarAd, new age(23));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

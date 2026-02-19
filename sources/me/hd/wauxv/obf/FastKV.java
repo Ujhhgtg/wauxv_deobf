@@ -693,8 +693,8 @@ public abstract class FastKV {
     }
 
     public static final void bd(Object obj) throws Throwable {
-        if (obj instanceof dcx) {
-            throw ((dcx) obj).a;
+        if (obj instanceof Failure) {
+            throw ((Failure) obj).value;
         }
     }
 
@@ -1016,9 +1016,9 @@ public abstract class FastKV {
         return j2;
     }
 
-    public static final dcx x(Throwable th) {
+    public static final Failure getFailureFromException(Throwable th) {
         throwIfVar1IsNull(th, "exception");
-        return new dcx(th);
+        return new Failure(th);
     }
 
     public static void y(ayd aydVar) {

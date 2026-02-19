@@ -23,7 +23,7 @@ public final class eak {
     static {
         dtr dtrVar = new dtr(16);
         btx btxVar = btx.a;
-        a = new IHasGetValue[] { null, null, null, null, ewz.am(btxVar, dtrVar), ewz.am(btxVar, new dtr(17)), null,
+        a = new IHasGetValue[] { null, null, null, null, StaticAndroidHelpers.am(btxVar, dtrVar), StaticAndroidHelpers.am(btxVar, new dtr(17)), null,
                 null, null,
                 null, null, null };
     }

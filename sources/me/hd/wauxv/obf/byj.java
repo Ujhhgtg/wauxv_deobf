@@ -25,7 +25,7 @@ public class byj {
             throw null;
         }
         this.f = new bpg(1);
-        this.g = new GifEncoder(25);
+        this.g = new SyntheticClass(25);
     }
 
     public void h(View view) {
@@ -106,7 +106,7 @@ public class byj {
 
     public Object o(Object obj) {
         throwIfVar1IsNull(obj, "key");
-        synchronized (((GifEncoder) this.g)) {
+        synchronized (((SyntheticClass) this.g)) {
             bpg bpgVar = (bpg) this.f;
             bpgVar.getClass();
             Object obj2 = bpgVar.a.get(obj);
@@ -207,7 +207,7 @@ public class byj {
         String str;
         switch (this.a) {
             case 0:
-                synchronized (((GifEncoder) this.g)) {
+                synchronized (((SyntheticClass) this.g)) {
                     try {
                         int i = this.d;
                         int i2 = this.e + i;
@@ -240,7 +240,7 @@ public class byj {
     public Object v(Object obj, Object obj2) {
         Object objPut;
         throwIfVar1IsNull(obj, "key");
-        synchronized (((GifEncoder) this.g)) {
+        synchronized (((SyntheticClass) this.g)) {
             this.c++;
             bpg bpgVar = (bpg) this.f;
             bpgVar.getClass();
@@ -251,7 +251,7 @@ public class byj {
         }
         int i = this.b;
         while (true) {
-            synchronized (((GifEncoder) this.g)) {
+            synchronized (((SyntheticClass) this.g)) {
                 try {
                     if (this.c < 0 || (((bpg) this.f).a.isEmpty() && this.c != 0)) {
                         break;

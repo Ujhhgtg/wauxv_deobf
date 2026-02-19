@@ -11,9 +11,9 @@ public final class cos extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() throws NoSuchMethodException {
-        aki akiVarAb = PackageParam.ab(a, dqc.toSingletonList(StaticHelpers7.bb(cor.a)));
-        akiVarAb.n(new cml(20));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(a, dqc.toSingletonList(StaticHelpers7.toDexMethod(cor.a)));
+        hookManagerVarAb.n(new cml(20));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.IDexFind

@@ -61,7 +61,7 @@ public abstract class ResourcesCompat implements ckp {
                     return -1;
                 case '\\':
                     int i3 = i2 + 1;
-                    if (ewz.aj(i3, charSequence)) {
+                    if (StaticAndroidHelpers.aj(i3, charSequence)) {
                         i2 = i3;
                     }
                     break;
@@ -81,7 +81,7 @@ public abstract class ResourcesCompat implements ckp {
             char cCharAt = charSequence.charAt(i2);
             if (cCharAt == '\\') {
                 int i3 = i2 + 1;
-                if (ewz.aj(i3, charSequence)) {
+                if (StaticAndroidHelpers.aj(i3, charSequence)) {
                     i2 = i3;
                 } else {
                     if (cCharAt == c) {
@@ -154,7 +154,7 @@ public abstract class ResourcesCompat implements ckp {
 
     public static final long ae(String str, long j2, long j3, long j4) {
         String property;
-        int i2 = dpg.a;
+        int i2 = JustAStaticField.availableProcessors;
         try {
             property = System.getProperty(str);
         } catch (SecurityException unused) {
@@ -529,7 +529,7 @@ public abstract class ResourcesCompat implements ckp {
                 }
                 if (cCharAt == '\\') {
                     int i3 = i2 + 1;
-                    if (ewz.aj(i3, charSequence)) {
+                    if (StaticAndroidHelpers.aj(i3, charSequence)) {
                         i2 = i3;
                     }
                 }
@@ -548,7 +548,7 @@ public abstract class ResourcesCompat implements ckp {
             }
             if (cCharAt2 == '\\') {
                 int i6 = i5 + 1;
-                if (ewz.aj(i6, charSequence)) {
+                if (StaticAndroidHelpers.aj(i6, charSequence)) {
                     i5 = i6;
                 }
             } else if (cCharAt2 == '(') {

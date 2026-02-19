@@ -22,7 +22,7 @@ public final /* synthetic */ class amd implements bfu {
         List list;
         List list2;
         int i = this.a;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 Kotlin$Lazy kotlin$LazyVar = ajf.a;
@@ -32,8 +32,8 @@ public final /* synthetic */ class amd implements bfu {
             case 1:
                 return kotlinUnitVar;
             case 3:
-                bmo.a.getClass();
-                return bmo.getClassLoader();
+                HostInfoRegistry.INSTANCE.getClass();
+                return HostInfoRegistry.getClassLoader();
             case 4:
                 azq.a.u(azr.b);
                 return kotlinUnitVar;
@@ -92,7 +92,7 @@ public final /* synthetic */ class amd implements bfu {
                 }
                 return StaticHelpers5.t(arrayList2, new ex(7));
             case 10:
-                zc zcVarB = dal.b(String.class);
+                KClass zcVarB = dal.getKClassFromClass(String.class);
                 dnh dnhVar = dnh.b;
                 return new daj(zcVarB);
             case 11:
@@ -141,11 +141,11 @@ public final /* synthetic */ class amd implements bfu {
                 return kotlinUnitVar;
             case 18:
                 int i2 = 0;
-                SyntheticPileOfMess bmuVarBg = dqc.bg(dal.b(Intent.class));
+                SyntheticPileOfMess bmuVarBg = dqc.bg(dal.getKClassFromClass(Intent.class));
                 bmuVarBg.setHookOptional(true);
                 FieldResolver fieldResolverVarR = bmuVarBg.r();
                 fieldResolverVarR.name = "mExtras";
-                return (azk) StaticHelpers5.g(fieldResolverVarR.resolve());
+                return (BoundField) StaticHelpers5.g(fieldResolverVarR.resolve());
             case 19:
                 Kotlin$Lazy kotlin$LazyVar2 = ajf.a;
                 return new eqi(ajf.b(Boolean.FALSE));
@@ -165,7 +165,7 @@ public final /* synthetic */ class amd implements bfu {
             case 26:
                 return bxv.g();
             case 27:
-                return Boolean.valueOf(ReflectionWrapper.g(bth.class.getClassLoader(), "android.os.Build"));
+                return Boolean.valueOf(ReflectionWrapper.g(LogConfig.class.getClassLoader(), "android.os.Build"));
             case 28:
                 bxf bxfVar = bxf.a;
                 cem cemVar = bxj.c;

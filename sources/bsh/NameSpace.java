@@ -333,7 +333,7 @@ public class NameSpace implements Serializable, BshClassManager.Listener, NameSo
         BshClassManager classManager = interpreter.getClassManager();
         for (String str3 : this.importedCommands) {
             String str4 = str3.equals("/") ? str3 + str + ".bsh" : str3 + "/" + str + ".bsh";
-            Interpreter.debug(yg.k("searching for script: ", str4));
+            Interpreter.debug(yg.concat("searching for script: ", str4));
             URL resource = classManager.getResource(str4);
             if (resource != null) {
                 try {
@@ -361,7 +361,7 @@ public class NameSpace implements Serializable, BshClassManager.Listener, NameSo
                 sb.append(str3.substring(1).replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH));
                 strO = yg.concatToVar1(sb, ".", str2);
             }
-            Interpreter.debug(yg.k("searching for class: ", strO));
+            Interpreter.debug(yg.concat("searching for class: ", strO));
             Class<?> clsClassForName = classManager.classForName(strO);
             if (clsClassForName != null) {
                 return clsClassForName;
@@ -860,7 +860,7 @@ public class NameSpace implements Serializable, BshClassManager.Listener, NameSo
             return variableImpl;
         }
         if (z) {
-            throw new UtilEvalError(yg.k("(Strict Java mode) Assignment to undeclared variable: ", str));
+            throw new UtilEvalError(yg.concat("(Strict Java mode) Assignment to undeclared variable: ", str));
         }
         Variable variableCreateVariable = createVariable(str, obj, (Modifiers) null);
         this.variables.put(str, variableCreateVariable);
@@ -884,7 +884,7 @@ public class NameSpace implements Serializable, BshClassManager.Listener, NameSo
             }
         }
         if (z) {
-            throw new UtilEvalError(yg.k("(Strict Java mode) Assignment to undeclared variable: ", str));
+            throw new UtilEvalError(yg.concat("(Strict Java mode) Assignment to undeclared variable: ", str));
         }
         This r4 = this.thisReference;
         if (attemptSetPropertyValue(str, obj, r4 != null ? r4.declaringInterpreter : null)) {

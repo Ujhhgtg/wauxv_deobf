@@ -56,6 +56,6 @@ public abstract class ExecutableResolver extends MemberResolver {
     }
 
     public final void setParams(Object... objArr) {
-        StaticHelpers2.ao(this.b, objArr);
+        StaticHelpers2.addAllFromVar2ToVar1(this.b, objArr);
     }
 }

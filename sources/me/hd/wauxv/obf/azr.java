@@ -24,11 +24,11 @@ public final class azr extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(azp.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(azp.a));
         azr azrVar = a;
-        aki akiVarAb = PackageParam.ab(azrVar, listBf);
-        azrVar.x(akiVarAb, new ayz(8));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(azrVar, listBf);
+        azrVar.x(hookManagerVarAb, new ayz(8));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

@@ -70,6 +70,6 @@ public final /* synthetic */ class daz implements IInvokable {
                 bagVar.b = zbVar;
                 break;
         }
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

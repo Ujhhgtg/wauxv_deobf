@@ -474,7 +474,7 @@ public final class FragmentManager {
         ahv ahvVar = ahv.a;
         throwIfVar1IsNull(ahvVar, "defaultCreationExtras");
         chm chmVar = new chm(erqVarAj, beiVar, ahvVar);
-        zc zcVarB = dal.b(bwv.class);
+        KClass zcVarB = dal.getKClassFromClass(bwv.class);
         String strAo = emc.ao(zcVarB);
         if (strAo == null) {
             throw new IllegalArgumentException("Local and anonymous classes can not be ViewModels");

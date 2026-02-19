@@ -16,11 +16,11 @@ public final class eoz {
         }
         cls = eoz.class;
         if (obj instanceof Class) {
-            Class<eoz> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+            Class<eoz> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
             return !obj.equals(clsBf != null ? clsBf : eoz.class) ? ((Class) obj).toString() : "VagueType";
         }
         if (obj instanceof IEmpty5) {
-            return !obj.equals(dal.b(cls)) ? obj.toString() : "VagueType";
+            return !obj.equals(dal.getKClassFromClass(cls)) ? obj.toString() : "VagueType";
         }
         if (!(obj instanceof Collection)) {
             return obj.toString();

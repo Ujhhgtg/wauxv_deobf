@@ -11,8 +11,7 @@ public abstract class PathUtils {
     public static final Kotlin$Lazy mediaDataFolder = new Kotlin$Lazy(() -> {
         StringBuilder sb = new StringBuilder();
         concatVar3Var2ToVar1(sb, (String) PathUtils.externalStorageRoot.getValue(), "/Android/media/");
-//        bmo.a.getClass();
-        sb.append(bmo.p());
+        sb.append(HostInfoRegistry.getPackageName());
         return sb.toString();
     });
 

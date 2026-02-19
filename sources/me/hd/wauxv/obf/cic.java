@@ -31,7 +31,7 @@ public final /* synthetic */ class cic implements bgj {
                 while (it.hasNext()) {
                     arj.ah(((adx) it.next()).a, str, aysVar.a);
                 }
-                dnc.g(null, 3, "已转发至" /* "已转发至" /* "已转发至" /* "已转发至" /* cnb.z(-475620383390506L)   */ + list.size() + "个会话" /*
+                dnc.sendToast(null, 3, "已转发至" /* "已转发至" /* "已转发至" /* "已转发至" /* cnb.z(-475620383390506L)   */ + list.size() + "个会话" /*
                                                                                             * "个会话" /* "个会话" /* "个会话" /* cnb.z(-475581728684842L)  */
                                                                                             */);
                 break;
@@ -43,7 +43,7 @@ public final /* synthetic */ class cic implements bgj {
                 while (it2.hasNext()) {
                     arj.ah(((adx) it2.next()).a, str2, aysVar2.a);
                 }
-                dnc.g(null, 3, "已转发至" /* "已转发至" /* "已转发至" /* "已转发至" /* cnb.z(-476895988677418L)   */ + list2.size() + "个会话" /*
+                dnc.sendToast(null, 3, "已转发至" /* "已转发至" /* "已转发至" /* "已转发至" /* cnb.z(-476895988677418L)   */ + list2.size() + "个会话" /*
                                                                                              * "个会话" /* "个会话" /* "个会话" /* cnb.z(-476908873579306L)  */
                                                                                              */);
                 break;
@@ -56,7 +56,7 @@ public final /* synthetic */ class cic implements bgj {
                         arj.ah(adxVar.a, (String) pairVar.first, ((Number) pairVar.second).intValue());
                     }
                 }
-                dnc.g(null, 3, "已转发" /* "已转发" /* "已转发" /* "已转发" /* cnb.z(-514360988400426L)   */ + arrayList.size()
+                dnc.sendToast(null, 3, "已转发" /* "已转发" /* "已转发" /* "已转发" /* cnb.z(-514360988400426L)   */ + arrayList.size()
                         + "条语音至" /* "条语音至" /* "条语音至" /* "条语音至" /* cnb.z(-514309448792874L)   */ + list3.size() + "个会话" /* "个会话" /* "个会话" /* "个会话" /* cnb.z(-513721038273322L)   */);
                 break;
         }

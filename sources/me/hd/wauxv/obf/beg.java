@@ -26,7 +26,7 @@ import me.hd.wauxv.R;
 /* JADX INFO: loaded from: classes.dex */
 public final class beg {
     public final bdz aa;
-    public final GifEncoder ab;
+    public final SyntheticClass ab;
     public dy ac;
     public dy ad;
     public dy ae;
@@ -256,7 +256,7 @@ public final class beg {
         this.u = new bdy(this);
         this.v = -1;
         this.aa = new bdz(this);
-        this.ab = new GifEncoder(10);
+        this.ab = new SyntheticClass(10);
         this.af = new ArrayDeque();
         this.ap = new dc(this, 8);
     }
@@ -388,7 +388,7 @@ public final class beg {
             ahv ahvVar = ahv.a;
             throwIfVar1IsNull(ahvVar, "defaultCreationExtras");
             chm chmVar = new chm(erqVarAj, bej.a, ahvVar);
-            zc zcVarB = dal.b(bej.class);
+            KClass zcVarB = dal.getKClassFromClass(bej.class);
             String strAo = emc.ao(zcVarB);
             if (strAo == null) {
                 throw new IllegalArgumentException("Local and anonymous classes can not be ViewModels");
@@ -411,7 +411,7 @@ public final class beg {
         bdm bdmVar3 = this.w;
         if (bdmVar3 != null) {
             acg acgVar = bdmVar3.h.x;
-            String strK = yg.k("FragmentManager:", someFragmentManagerVar != null ? yg.concatToVar1(new StringBuilder(), someFragmentManagerVar.aw, ":") : "");
+            String strK = yg.concat("FragmentManager:", someFragmentManagerVar != null ? yg.concatToVar1(new StringBuilder(), someFragmentManagerVar.aw, ":") : "");
             this.ac = acgVar.k(StaticHelpers6.concat(strK, "StartActivityForResult"), new ds(2), new bdw(this, 1));
             this.ad = acgVar.k(StaticHelpers6.concat(strK, "StartIntentSenderForResult"), new ds(3), new bdw(this, 2));
             this.ae = acgVar.k(StaticHelpers6.concat(strK, "RequestPermissions"), new ds(1), new bdw(this, 0));
@@ -986,7 +986,7 @@ public final class beg {
                         ahv ahvVar = ahv.a;
                         throwIfVar1IsNull(ahvVar, "defaultCreationExtras");
                         chm chmVar2 = new chm(erqVarAj, beiVar, ahvVar);
-                        zc zcVarB = dal.b(bwv.class);
+                        KClass zcVarB = dal.getKClassFromClass(bwv.class);
                         String strAo = emc.ao(zcVarB);
                         if (strAo == null) {
                             throw new IllegalArgumentException("Local and anonymous classes can not be ViewModels");
@@ -1850,7 +1850,7 @@ public final class beg {
         return someFragmentManagerVar != null ? someFragmentManagerVar.bm.ce() : this.aa;
     }
 
-    public final GifEncoder cf() {
+    public final SyntheticClass cf() {
         SomeFragmentManager someFragmentManagerVar = this.y;
         return someFragmentManagerVar != null ? someFragmentManagerVar.bm.cf() : this.ab;
     }
@@ -2237,10 +2237,10 @@ public final class beg {
             behVar.h = new ArrayList(this.af);
             bundle.putParcelable("state", behVar);
             for (String str : this.m.keySet()) {
-                bundle.putBundle(yg.k("result_", str), (Bundle) this.m.get(str));
+                bundle.putBundle(yg.concat("result_", str), (Bundle) this.m.get(str));
             }
             for (String str2 : map2.keySet()) {
-                bundle.putBundle(yg.k("fragment_", str2), (Bundle) map2.get(str2));
+                bundle.putBundle(yg.concat("fragment_", str2), (Bundle) map2.get(str2));
             }
         } else if (ar(2)) {
             Log.v("FragmentManager", "saveAllState: no fragments!");

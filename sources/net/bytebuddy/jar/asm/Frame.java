@@ -359,15 +359,15 @@ class Frame {
     }
 
     private static /* synthetic */ String stringConcat$0(String str) {
-        return yg.k("Invalid descriptor fragment: ", str);
+        return yg.concat("Invalid descriptor fragment: ", str);
     }
 
     private static /* synthetic */ String stringConcat$1(String str) {
-        return yg.k("Invalid descriptor: ", str);
+        return yg.concat("Invalid descriptor: ", str);
     }
 
     private static /* synthetic */ String stringConcat$2(String str) {
-        return yg.k("[", str);
+        return yg.concat("[", str);
     }
 
     public final void accept(MethodWriter methodWriter) {

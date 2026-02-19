@@ -20,15 +20,13 @@ public abstract class dal {
         a = damVar;
     }
 
-    public static zc b(Class cls) {
-        a.getClass();
-        return new zc(cls);
+    public static KClass getKClassFromClass(Class cls) {
+        return new KClass(cls);
     }
 
     public static eme c(Class cls) {
-        zc zcVarB = b(cls);
+        KClass zcVarB = getKClassFromClass(cls);
         List list = Collections.EMPTY_LIST;
-        a.getClass();
         return new eme(zcVarB, false);
     }
 }

@@ -70,13 +70,13 @@ public final /* synthetic */ class aqi implements ValueAnimator.AnimatorUpdateLi
                 donVar.scrollTo(((Integer) animatedValue2).intValue(), 0);
                 break;
             default:
-                ((View) ((eut) ((eru) this.b).a).as.getParent()).invalidate();
+                ((View) ((eut) ((InstantCollection) this.b).instantBuilders).as.getParent()).invalidate();
                 break;
         }
     }
 
-    public /* synthetic */ aqi(eru eruVar, View view) {
+    public /* synthetic */ aqi(InstantCollection instantCollectionVar, View view) {
         this.a = 5;
-        this.b = eruVar;
+        this.b = instantCollectionVar;
     }
 }

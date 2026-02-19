@@ -41,6 +41,6 @@ public final class bzx {
         }
         Matcher matcher2 = matcher.pattern().matcher(charSequence);
         throwIfVar1IsNull(matcher2, "matcher(...)");
-        return ewz.y(matcher2, iEnd, charSequence);
+        return StaticAndroidHelpers.y(matcher2, iEnd, charSequence);
     }
 }

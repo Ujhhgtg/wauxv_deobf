@@ -906,11 +906,11 @@ public abstract class czg {
             bdVar.m(true);
             bdVar.j(67108864, true);
         }
-        bdVar.a.setCollectionInfo((AccessibilityNodeInfo.CollectionInfo) bc.f(v(recyclerViewVar, cztVar), u(recyclerViewVar, cztVar), 0).e);
+        bdVar.a.setCollectionInfo((AccessibilityNodeInfo.CollectionInfo) LateinitProperty.f(v(recyclerViewVar, cztVar), u(recyclerViewVar, cztVar), 0).e);
     }
 
     public void y(RecyclerView recyclerViewVar, czt cztVar, View view, bd bdVar) {
-        bdVar.l(bc.g(bv() ? el(view) : 0, 1, bu() ? el(view) : 0, 1, false));
+        bdVar.l(LateinitProperty.g(bv() ? el(view) : 0, 1, bu() ? el(view) : 0, 1, false));
     }
 
     public void z(int i, int i2) {

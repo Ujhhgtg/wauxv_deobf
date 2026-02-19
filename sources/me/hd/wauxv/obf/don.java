@@ -68,12 +68,12 @@ public final class don extends ViewGroup {
                         obj = chmVar.d;
                         FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
                         fieldResolverVarR.name = "checkBox" /* "checkBox" /* "checkBox" /* "checkBox" /* cnb.z(-473640403467050L)   */;
-                        objE = ((azk) yg.e(fieldResolverVarR)).e();
+                        objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
                         throwIfVar1IsNull(objE);
                         if (((View) objE).getVisibility() == 0) {
                             FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj).r();
                             fieldResolverVarR2.name = "maskView" /* "maskView" /* "maskView" /* "maskView" /* cnb.z(-473051992947498L)   */;
-                            Object objE2 = ((azk) yg.e(fieldResolverVarR2)).e();
+                            Object objE2 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue_();
                             throwIfVar1IsNull(objE2);
                             ((View) objE2).performClick();
                         } else {
@@ -83,7 +83,7 @@ public final class don extends ViewGroup {
                             origin = ((MsgInfoBean) chmVar.e).getOrigin();
                             uqVar.getClass();
                             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(frameLayout).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                            methodResolverVarT.returnType = dal.b(Boolean.TYPE);
+                            methodResolverVarT.returnType = dal.getKClassFromClass(Boolean.TYPE);
                             methodResolverVarT.d = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(26);
                             methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
                             if (methodHookWrapperVar.method.getParameterCount() == 2) {
@@ -161,12 +161,12 @@ public final class don extends ViewGroup {
                         obj = chmVar.d;
                         FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).r();
                         fieldResolverVarR3.name = "checkBox" /* "checkBox" /* "checkBox" /* "checkBox" /* cnb.z(-473640403467050L)   */;
-                        objE = ((azk) yg.e(fieldResolverVarR3)).e();
+                        objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
                         throwIfVar1IsNull(objE);
                         if (((View) objE).getVisibility() == 0) {
                             FieldResolver fieldResolverVarR22 = dqc.getWrapperConfiguration(obj).r();
                             fieldResolverVarR22.name = "maskView" /* "maskView" /* "maskView" /* "maskView" /* cnb.z(-473051992947498L)   */;
-                            Object objE22 = ((azk) yg.e(fieldResolverVarR22)).e();
+                            Object objE22 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR22)).getValue_();
                             throwIfVar1IsNull(objE22);
                             ((View) objE22).performClick();
                         } else {
@@ -176,7 +176,7 @@ public final class don extends ViewGroup {
                             origin = ((MsgInfoBean) chmVar.e).getOrigin();
                             uqVar2.getClass();
                             MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(frameLayout2).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                            methodResolverVarT2.returnType = dal.b(Boolean.TYPE);
+                            methodResolverVarT2.returnType = dal.getKClassFromClass(Boolean.TYPE);
                             methodResolverVarT2.d = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(26);
                             methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods());
                             if (methodHookWrapperVar.method.getParameterCount() == 2) {

@@ -43,7 +43,7 @@ public final /* synthetic */ class cfx implements bfu {
         Bundle bundle2;
         int i2 = this.a;
         int i3 = 0;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         Object obj = this.b;
         switch (i2) {
             case 0:

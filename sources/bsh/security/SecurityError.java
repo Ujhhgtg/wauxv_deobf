@@ -11,7 +11,7 @@ import me.hd.wauxv.obf.yg;
 /* JADX INFO: loaded from: classes.dex */
 public class SecurityError extends UtilEvalError {
     public SecurityError(String str) {
-        super(yg.k("SecurityError: ", str));
+        super(yg.concat("SecurityError: ", str));
     }
 
     private static String argsTypesString(Object[] objArr) {

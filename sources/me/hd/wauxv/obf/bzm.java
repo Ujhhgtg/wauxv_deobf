@@ -12,7 +12,7 @@ public final class bzm implements btd {
         this.b = i;
         switch (i) {
             case 1:
-                this.d = ewz.am(btx.a, new Function1$VarIsInt$2(this));
+                this.d = StaticAndroidHelpers.am(btx.a, new Function1$VarIsInt$2(this));
                 break;
             default:
                 dnh dnhVar = dnh.b;
@@ -66,7 +66,7 @@ public final class bzm implements btd {
                     throw new SomeIllegalArgumentException(concatVar2Var1(iF2, "Unexpected index "));
                 }
                 acmVarP2._bp(descriptor);
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
         }
     }
 

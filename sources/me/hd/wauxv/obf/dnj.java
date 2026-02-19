@@ -206,7 +206,7 @@ public abstract class dnj extends dnr {
     }
 
     public static String ap(String str, String str2) {
-        if (!dnr.bi(str, str2)) {
+        if (!dnr.ifVar1EndsWithVar2(str, str2)) {
             return str;
         }
         String strSubstring = str.substring(0, str.length() - str2.length());

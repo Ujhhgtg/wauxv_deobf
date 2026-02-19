@@ -45,7 +45,7 @@ import me.hd.wauxv.obf.ek;
 import me.hd.wauxv.obf.eqq;
 import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.era;
-import me.hd.wauxv.obf.ewz;
+import me.hd.wauxv.obf.StaticAndroidHelpers;
 import me.hd.wauxv.obf.jh;
 import me.hd.wauxv.obf.no;
 import me.hd.wauxv.obf.qd;
@@ -608,7 +608,7 @@ public class BottomSheetBehavior<V extends View> extends agr {
                     .getDimensionPixelSize(R.dimen.design_bottom_sheet_peek_height_min);
             boolean z = (Build.VERSION.SDK_INT < 29 || this.ab || this.r) ? false : true;
             if (this.ac || this.ad || this.ae || this.ag || this.ah || this.ai || z) {
-                ewz.af(view, new cxc(this, z));
+                StaticAndroidHelpers.af(view, new cxc(this, z));
             }
             ViewCompat.setWindowInsetsAnimation(view, new bpt(view));
             this.bi = new WeakReference(view);

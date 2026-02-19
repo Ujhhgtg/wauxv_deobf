@@ -35,23 +35,23 @@ public final class bhn extends doi implements bgj {
         switch (this.a) {
             case 0:
                 bhn bhnVar = (bhn) h(ahpVar, afwVar);
-                KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+                Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
                 bhnVar.i(kotlinUnitVar);
                 return kotlinUnitVar;
             case 1:
-                return ((bhn) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
+                return ((bhn) h(ahpVar, afwVar)).i(Kotlin$Unit.INSTANCE);
             case 2:
-                return ((bhn) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
+                return ((bhn) h(ahpVar, afwVar)).i(Kotlin$Unit.INSTANCE);
             case 3:
-                return ((bhn) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
+                return ((bhn) h(ahpVar, afwVar)).i(Kotlin$Unit.INSTANCE);
             case 4:
-                return ((bhn) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
+                return ((bhn) h(ahpVar, afwVar)).i(Kotlin$Unit.INSTANCE);
             case 5:
-                return ((bhn) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
+                return ((bhn) h(ahpVar, afwVar)).i(Kotlin$Unit.INSTANCE);
             case 6:
-                return ((bhn) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
+                return ((bhn) h(ahpVar, afwVar)).i(Kotlin$Unit.INSTANCE);
             default:
-                return ((bhn) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
+                return ((bhn) h(ahpVar, afwVar)).i(Kotlin$Unit.INSTANCE);
         }
     }
 
@@ -109,7 +109,7 @@ public final class bhn extends doi implements bgj {
                 sb.append("\n更新日志如下\n" /* "\n更新日志如下\n" /* "\n更新日志如下\n" /* "\n更新日志如下\n" /* cnb.z(-47644072213290L)   */);
                 sb.append('\n');
                 ((byx) this.d).b(strZ, concat(sb, bhlVar.c, '\n'), new ls((MainActivity) obj2, 2, bhlVar));
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 1:
                 FastKV.bd(obj);
                 ahp ahpVar = (ahp) this.d;

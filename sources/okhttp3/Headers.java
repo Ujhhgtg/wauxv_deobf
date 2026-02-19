@@ -384,7 +384,7 @@ public final class Headers implements Iterable<Pair>, IEmpty {
 
     public final Builder newBuilder() {
         Builder builder = new Builder();
-        StaticHelpers2.ao(builder.getNamesAndValues$okhttp(), this.namesAndValues);
+        StaticHelpers2.addAllFromVar2ToVar1(builder.getNamesAndValues$okhttp(), this.namesAndValues);
         return builder;
     }
 

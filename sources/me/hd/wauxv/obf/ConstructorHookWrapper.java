@@ -29,9 +29,9 @@ public final class ConstructorHookWrapper extends MemberWrapper {
             }
             objX = constructor.newInstance(Arrays.copyOf(objArrCopyOf, objArrCopyOf.length));
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        if (objX instanceof dcx) {
+        if (objX instanceof Failure) {
             return null;
         }
         return objX;

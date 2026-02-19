@@ -117,7 +117,7 @@ public final class cjm {
                     psVar = psVar3;
                     String strConcat = (!dnr.bp(string, ".", false) || resourcePackageName == null) ? string
                             : resourcePackageName.concat(string);
-                    boolean zBi = dnr.bi(string, HttpUrl.PATH_SEGMENT_ENCODE_SET_URI);
+                    boolean zBi = dnr.ifVar1EndsWithVar2(string, HttpUrl.PATH_SEGMENT_ENCODE_SET_URI);
                     if (zBi) {
                         z3 = zBi;
                         strConcat = strConcat.substring(0, strConcat.length() - 2);

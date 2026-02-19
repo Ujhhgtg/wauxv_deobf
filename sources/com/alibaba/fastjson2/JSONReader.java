@@ -3739,7 +3739,7 @@ public abstract class JSONReader implements Closeable {
                         if (IOUtils.isNumber(string)) {
                             return Long.parseLong(string);
                         }
-                        throw new JSONException(yg.k("TODO : ", string));
+                        throw new JSONException(yg.concat("TODO : ", string));
                     }
                     localDateTimeOf = LocalDateTime.of(localDate10, LocalTime.MIN);
                     break;
@@ -4464,7 +4464,7 @@ public abstract class JSONReader implements Closeable {
                     }
                 }
                 if (i2 == 0 && (this.context.features & Feature.ErrorOnNotSupportAutoType.mask) != 0 && "@type".equals(fieldName)) {
-                    throw new JSONException(yg.k("autoType not support : ", readString()));
+                    throw new JSONException(yg.concat("autoType not support : ", readString()));
                 }
                 char c2 = this.ch;
                 switch (c2) {

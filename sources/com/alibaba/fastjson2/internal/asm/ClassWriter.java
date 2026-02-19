@@ -31,7 +31,7 @@ public class ClassWriter {
     public String getCommonSuperClass(String str, String str2) {
         Class<? super Object> clsLoadClass = loadClass(str);
         if (clsLoadClass == null) {
-            throw new JSONException(yg.k("class not found ", str));
+            throw new JSONException(yg.concat("class not found ", str));
         }
         Class<?> clsLoadClass2 = loadClass(str2);
         if (clsLoadClass2 == null) {

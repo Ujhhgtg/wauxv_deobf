@@ -16,10 +16,10 @@ public final class cgf extends bws {
         cge.a.getClass();
         MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(cgd.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-66662187399978L)  */;
-        methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.b(Cursor.class) }, 1));
+        methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(Cursor.class) }, 1));
         methodResolverVarT.enableSuperclass();
-        aki akiVarAd = ad((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods()), HookPriorityEnum.ENUM_DEFAULT);
-        akiVarAd.m(new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(22));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = createImmediateHook((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods()), HookPriorityEnum.ENUM_DEFAULT);
+        hookManagerVarAd.m(new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(22));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 }

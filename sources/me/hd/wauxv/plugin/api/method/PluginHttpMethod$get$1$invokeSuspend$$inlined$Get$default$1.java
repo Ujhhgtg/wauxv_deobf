@@ -18,7 +18,7 @@ import me.hd.wauxv.obf.dal;
 import me.hd.wauxv.obf.dbv;
 import me.hd.wauxv.obf.doi;
 import me.hd.wauxv.obf.StaticHelpers7;
-import me.hd.wauxv.obf.KotlinUnit;
+import me.hd.wauxv.obf.Kotlin$Unit;
 import me.hd.wauxv.obf.eoj;
 import okhttp3.Response;
 
@@ -39,7 +39,7 @@ public final class PluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1 e
 
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) {
-        return ((PluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1) h((ahp) obj, (afw) obj2)).i(KotlinUnit.INSTANCE);
+        return ((PluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1) h((ahp) obj, (afw) obj2)).i(Kotlin$Unit.INSTANCE);
     }
 
     @Override // me.hd.wauxv.obf.nc

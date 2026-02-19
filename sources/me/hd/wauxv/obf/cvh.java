@@ -17,8 +17,8 @@ public final class cvh extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        StaticHelpers7.resolveDexAndCache(cvd.a, dexKitBridge, new Function1$VarIsInt(24));
-        StaticHelpers7.resolveDexAndCache(cvf.a, dexKitBridge, new Function1$VarIsInt(25));
-        StaticHelpers7.resolveDexAndCache(cve.a, dexKitBridge, new Function1$VarIsInt(26));
+        StaticHelpers7.resolveDexAndCache(cvd.a, dexKitBridge, new Function1$VarIsObj(24));
+        StaticHelpers7.resolveDexAndCache(cvf.a, dexKitBridge, new Function1$VarIsObj(25));
+        StaticHelpers7.resolveDexAndCache(cve.a, dexKitBridge, new Function1$VarIsObj(26));
     }
 }

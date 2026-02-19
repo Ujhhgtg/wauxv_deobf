@@ -14,7 +14,7 @@ public abstract class dqb {
 
     static {
         String property;
-        int i = dpg.a;
+        int i = JustAStaticField.availableProcessors;
         try {
             property = System.getProperty("kotlinx.coroutines.scheduler.default.name");
         } catch (SecurityException unused) {
@@ -25,7 +25,7 @@ public abstract class dqb {
         }
         a = property;
         b = ResourcesCompat.ae("kotlinx.coroutines.scheduler.resolution.ns", 100000L, 1L, Long.MAX_VALUE);
-        int i2 = dpg.a;
+        int i2 = JustAStaticField.availableProcessors;
         if (i2 < 2) {
             i2 = 2;
         }

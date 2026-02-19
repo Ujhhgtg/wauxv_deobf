@@ -22,9 +22,9 @@ public final class bqb implements btd {
         int i5;
         long j;
         char cCharAt;
-        bqa bqaVarAq;
+        IConvertableToInstant bqaVarAq;
         char cCharAt2;
-        bpw bpwVar = bpw.a;
+        Instant instantVar = Instant.a;
         String strV = ajtVar.v();
         throwIfVar1IsNull(strV, "input");
         if (strV.length() == 0) {
@@ -217,9 +217,9 @@ public final class bqb implements btd {
                                                         long jC = (((j4 - ((long) 719528)) * ((long) 86400))
                                                                 + ((long) bjs.c(iAr4, 60, iAr3 * 3600, i5)))
                                                                 - ((long) iC);
-                                                        bpz bpzVar = new bpz();
-                                                        bpzVar.a = jC;
-                                                        bpzVar.b = i2;
+                                                        InstantBuilder bpzVar = new InstantBuilder();
+                                                        bpzVar.seconds = jC;
+                                                        bpzVar.nanoAdjustment = i2;
                                                         bqaVarAq = bpzVar;
                                                     }
                                                 }
@@ -266,9 +266,9 @@ public final class bqb implements btd {
 
     @Override // me.hd.wauxv.obf.btd
     public final void c(avt avtVar, Object obj) {
-        bpw bpwVar = (bpw) obj;
-        throwIfVar1IsNull(bpwVar, "value");
-        avtVar.ad(bpwVar.toString());
+        Instant instantVar = (Instant) obj;
+        throwIfVar1IsNull(instantVar, "value");
+        avtVar.ad(instantVar.toString());
     }
 
     @Override // me.hd.wauxv.obf.btd

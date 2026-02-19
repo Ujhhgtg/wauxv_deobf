@@ -31,9 +31,9 @@ public final class diq extends SwitchHook {
             MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
             HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
             diq diqVar = a;
-            aki akiVarAd = diqVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
-            diqVar.x(akiVarAd, new dhg(11));
-            akiVarAd.o();
+            HookManager hookManagerVarAd = diqVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+            diqVar.x(hookManagerVarAd, new dhg(11));
+            hookManagerVarAd.initInstantCollectionAndApplyHooks();
         }
     }
 

@@ -16,9 +16,9 @@ public final class uo extends SwitchHook {
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         uo uoVar = a;
-        aki akiVarAd = uoVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
-        uoVar.y(akiVarAd, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(23));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = uoVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+        uoVar.y(hookManagerVarAd, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(23));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

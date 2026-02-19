@@ -8,9 +8,9 @@ import java.util.Map;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class zc implements IEmpty5, KClassContainer {
-    public static final Map b;
-    public final Class c;
+public final class KClass implements IEmpty5, KClassContainer {
+    public static final Map functionInterfaceMap;
+    public final Class javaClass;
 
     static {
         List listAg = OtherStaticHelpers.argsToList(bfu.class, IInvokable.class, bgj.class, bgk.class, blv.class, bgl.class, bgm.class, aak.class,
@@ -27,22 +27,22 @@ public final class zc implements IEmpty5, KClassContainer {
             arrayList.add(new Pair((Class) obj, Integer.valueOf(i)));
             i = i2;
         }
-        b = KotlinHelpers.as(arrayList);
+        functionInterfaceMap = KotlinHelpers.as(arrayList);
     }
 
-    public zc(Class cls) {
+    public KClass(Class cls) {
         throwIfVar1IsNull(cls, "jClass");
-        this.c = cls;
+        this.javaClass = cls;
     }
 
     @Override // me.hd.wauxv.obf.yq
     public final Class getJClass() {
-        return this.c;
+        return this.javaClass;
     }
 
-    public final String d() {
+    public final String getKotlinSimpleName() {
         String strAq;
-        Class cls = this.c;
+        Class cls = this.javaClass;
         throwIfVar1IsNull(cls, "jClass");
         String strConcat = null;
         if (cls.isAnonymousClass()) {
@@ -72,7 +72,7 @@ public final class zc implements IEmpty5, KClassContainer {
     }
 
     public final boolean equals(Object obj) {
-        return (obj instanceof zc) && HugeSyntheticPileOfHelpers.be(this).equals(HugeSyntheticPileOfHelpers.be((IEmpty5) obj));
+        return (obj instanceof KClass) && HugeSyntheticPileOfHelpers.be(this).equals(HugeSyntheticPileOfHelpers.be((IEmpty5) obj));
     }
 
     public final int hashCode() {
@@ -80,6 +80,6 @@ public final class zc implements IEmpty5, KClassContainer {
     }
 
     public final String toString() {
-        return this.c.toString() + " (Kotlin reflection is not available)";
+        return this.javaClass.toString() + " (Kotlin reflection is not available)";
     }
 }

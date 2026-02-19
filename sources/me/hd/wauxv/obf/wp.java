@@ -12,14 +12,14 @@ public final class wp extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(wo.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(wo.a));
         wp wpVar = a;
-        aki akiVarAb = PackageParam.ab(wpVar, listBf);
-        akiVarAb.m(new us(17));
-        akiVarAb.o();
-        aki akiVarAb2 = PackageParam.ab(wpVar, dqc.toSingletonList(StaticHelpers7.bb(wn.a)));
-        akiVarAb2.m(new us(18));
-        akiVarAb2.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(wpVar, listBf);
+        hookManagerVarAb.m(new us(17));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
+        HookManager hookManagerVarAb2 = PackageParam.createHook(wpVar, dqc.toSingletonList(StaticHelpers7.toDexMethod(wn.a)));
+        hookManagerVarAb2.m(new us(18));
+        hookManagerVarAb2.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.IDexFind

@@ -28,7 +28,7 @@ public final /* synthetic */ class cml implements IInvokable {
         int i3 = 1;
         cls = String.class;
         cls2 = Integer.class;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar = (FindDexClassMethodDslWrapper) obj;
@@ -51,15 +51,15 @@ public final /* synthetic */ class cml implements IInvokable {
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
                 cls3 = Pair.class;
-                Class<Pair> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
+                Class<Pair> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cls3 = clsBf != null ? clsBf : Pair.class;
-                Class<String> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf2 == null) {
                     clsBf2 = cls;
                 }
-                Class<String> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cls = clsBf3 != null ? clsBf3 : String.class;
-                Class<Integer> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<Integer> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar.q(cls3, clsBf2, cls, clsBf4 != null ? clsBf4 : Integer.class);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
@@ -104,19 +104,19 @@ public final /* synthetic */ class cml implements IInvokable {
             case 8:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
-                Class<String> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 Class<String> cls5 = clsBf5 == null ? cls : clsBf5;
-                Class<String> clsBf6 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf6 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 Class<String> cls6 = clsBf6 == null ? cls : clsBf6;
-                Class<Integer> clsBf7 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<Integer> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 Class<Integer> cls7 = clsBf7 == null ? cls2 : clsBf7;
-                Class<Integer> clsBf8 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<Integer> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 Class<Integer> cls8 = clsBf8 == null ? cls2 : clsBf8;
-                Class<Integer> clsBf9 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<Integer> clsBf9 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 Class<Integer> cls9 = clsBf9 == null ? cls2 : clsBf9;
-                Class<String> clsBf10 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf10 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 Class<String> cls10 = clsBf10 == null ? cls : clsBf10;
-                Class<Integer> clsBf11 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<Integer> clsBf11 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar3.q(cls5, cls6, cls7, cls8, cls9, cls10, clsBf11 == null ? cls2 : clsBf11);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
@@ -139,25 +139,25 @@ public final /* synthetic */ class cml implements IInvokable {
             case 11:
                 bah bahVar4 = (bah) obj;
                 cdj cdjVar4 = new cdj();
-                Class<Integer> clsBf12 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<Integer> clsBf12 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 Class<Integer> cls11 = clsBf12 == null ? cls2 : clsBf12;
-                Class<String> clsBf13 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf13 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 Class<String> cls12 = clsBf13 == null ? cls : clsBf13;
-                Class<String> clsBf14 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf14 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 Class<String> cls13 = clsBf14 == null ? cls : clsBf14;
-                Class<String> clsBf15 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf15 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 Class<String> cls14 = clsBf15 == null ? cls : clsBf15;
-                Class<Integer> clsBf16 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<Integer> clsBf16 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 Class<Integer> cls15 = clsBf16 == null ? cls2 : clsBf16;
-                Class<Integer> clsBf17 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<Integer> clsBf17 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 Class<Integer> cls16 = clsBf17 == null ? cls2 : clsBf17;
-                Class<String> clsBf18 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf18 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 Class<String> cls17 = clsBf18 == null ? cls : clsBf18;
-                Class<String> clsBf19 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf19 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 Class<String> cls18 = clsBf19 == null ? cls : clsBf19;
-                Class clsBf20 = HugeSyntheticPileOfHelpers.bf(dal.b(Boolean.class));
+                Class clsBf20 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(Boolean.class));
                 Class cls19 = clsBf20 == null ? Boolean.class : clsBf20;
-                Class<Integer> clsBf21 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<Integer> clsBf21 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar4.q(cls11, cls12, cls13, cls14, cls15, null, cls16, cls17, cls18, cls19,
                         clsBf21 == null ? cls2 : clsBf21);
                 bahVar4.getClass();
@@ -179,9 +179,9 @@ public final /* synthetic */ class cml implements IInvokable {
             case 14:
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar5 = new cdj();
-                Class<String> clsBf22 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf22 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cls = clsBf22 != null ? clsBf22 : String.class;
-                Class<Integer> clsBf23 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<Integer> clsBf23 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar5.q(cls, clsBf23 != null ? clsBf23 : Integer.class);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar5;
@@ -235,9 +235,9 @@ public final /* synthetic */ class cml implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                if (objX instanceof dcx) {
+                if (objX instanceof Failure) {
                     objX = null;
                 }
                 throwIfVar1IsNull(objX);
@@ -249,10 +249,10 @@ public final /* synthetic */ class cml implements IInvokable {
                             hookParam.setResult(null);
                         }
                     } catch (Exception e) {
-                        ArrayList arrayList = ewq.a;
+                        ArrayList arrayList = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onHandleMsg " /* "onHandleMsg " /* "onHandleMsg " /* cnb.z(-66288525245226L)  */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
                                 obj2 instanceof SwitchHook ? ((SwitchHook) obj2).getResult() : "LoadHook" /*
                                                                                                            * cnb.z(-
                                                                                                            * 66267050408746L)
@@ -280,14 +280,14 @@ public final /* synthetic */ class cml implements IInvokable {
                 FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam2);
                 uq.a.getClass();
                 fieldResolverVarAa.fieldType = ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */);
-                Object objE = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).e();
+                Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue_();
                 throwIfVar1IsNull(objE);
                 FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration((FrameLayout) objE).r();
                 fieldResolverVarR.b = new cml(24);
                 Object obj3 = null;
                 boolean z = false;
                 for (Object obj4 : fieldResolverVarR.resolve()) {
-                    Object objD = ((azk) obj4).d();
+                    Object objD = ((BoundField) obj4).getValue();
                     if (nullSafeIsEqual(objD != null ? objD.getClass().getSimpleName() : null, "MMFlexEditText" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -307,7 +307,7 @@ public final /* synthetic */ class cml implements IInvokable {
                                                                                                                * 400157807999786L)
                                                                                                                */);
                 }
-                Object objE2 = ((azk) obj3).e();
+                Object objE2 = ((BoundField) obj3).getValue_();
                 throwIfVar1IsNull(objE2);
                 FrameLayout frameLayout = (FrameLayout) objE2;
                 int i5 = 0;
@@ -359,7 +359,7 @@ public final /* synthetic */ class cml implements IInvokable {
                 HookParam hookParam3 = (HookParam) obj;
                 int i7 = 0;
                 MethodResolver methodResolverVarT3 = dqc.getWrapperConfiguration(hookParam3.getThisObject()).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                methodResolverVarT3.returnType = dal.b(Integer.TYPE);
+                methodResolverVarT3.returnType = dal.getKClassFromClass(Integer.TYPE);
                 Object objJ2 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT3)).j(new Object[0]);
                 throwIfVar1IsNull(objJ2);
                 int iIntValue = ((Number) objJ2).intValue();
@@ -373,10 +373,10 @@ public final /* synthetic */ class cml implements IInvokable {
                     try {
                         ((zw) obj5).h(hookParam3, iIntValue, bArr);
                     } catch (Exception e2) {
-                        ArrayList arrayList4 = ewq.a;
+                        ArrayList arrayList4 = Logger.a;
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onGetBuffer " /* "onGetBuffer " /* "onGetBuffer " /* cnb.z(-67486821120810L)  */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
                                 obj5 instanceof SwitchHook ? ((SwitchHook) obj5).getResult() : "LoadHook" /*
                                                                                                            * cnb.z(-
                                                                                                            * 67482526153514L)
@@ -392,7 +392,7 @@ public final /* synthetic */ class cml implements IInvokable {
                 bah bahVar10 = (bah) obj;
                 cdj cdjVar10 = new cdj();
                 cls4 = byte[].class;
-                Class<byte[]> clsBf24 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
+                Class<byte[]> clsBf24 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
                 cdjVar10.r(clsBf24 != null ? clsBf24 : byte[].class);
                 cdjVar10.t("MicroMsg.OpLog.Operation" /* "MicroMsg.OpLog.Operation" /* "MicroMsg.OpLog.Operation" /* cnb.z(-67409511709482L)  */,
                         "summeroplog Operation toByteArray err: " /* "summeroplog Operation toByteArray err: " /* "summeroplog Operation toByteArray err: " /* cnb.z(-55705725827882L)  */);

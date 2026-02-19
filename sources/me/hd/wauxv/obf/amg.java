@@ -30,19 +30,19 @@ public final class amg {
         if (i < 31) {
             switch (i) {
                 case 27:
-                    bArr = ewz.t;
+                    bArr = StaticAndroidHelpers.t;
                     break;
                 case 28:
                 case 29:
                 case 30:
-                    bArr = ewz.s;
+                    bArr = StaticAndroidHelpers.s;
                     break;
                 default:
                     bArr = null;
                     break;
             }
         } else {
-            bArr = ewz.r;
+            bArr = StaticAndroidHelpers.r;
         }
         this.c = bArr;
     }

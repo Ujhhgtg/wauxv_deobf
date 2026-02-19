@@ -518,7 +518,7 @@ public final class HttpUrl {
             } else {
                 if (httpUrl == null) {
                     throw new IllegalArgumentException(
-                            yg.k("Expected URL scheme 'http' or 'https' but no scheme was found for ",
+                            yg.concat("Expected URL scheme 'http' or 'https' but no scheme was found for ",
                                     str4.length() > 6 ? dnj.az(6, str4).concat("...") : str4));
                 }
                 this.scheme = httpUrl.scheme();

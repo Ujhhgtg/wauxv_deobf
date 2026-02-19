@@ -13,7 +13,7 @@ public final class byg implements oz {
     public static final Bitmap.Config a = Bitmap.Config.ARGB_8888;
     public final dib b;
     public final Set c;
-    public final GifEncoder d;
+    public final SyntheticClass d;
     public final long e;
     public long f;
     public int g;
@@ -30,7 +30,7 @@ public final class byg implements oz {
         this.e = j;
         this.b = dibVar;
         this.c = setUnmodifiableSet;
-        this.d = new GifEncoder(27);
+        this.d = new SyntheticClass(27);
     }
 
     @Override // me.hd.wauxv.obf.oz

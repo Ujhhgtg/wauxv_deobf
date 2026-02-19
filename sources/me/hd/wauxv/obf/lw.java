@@ -28,33 +28,33 @@ public final class lw extends doi implements bgj {
         switch (this.a) {
             case 0:
                 lw lwVar = (lw) h(ahpVar, afwVar);
-                KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+                Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
                 lwVar.i(kotlinUnitVar);
                 return kotlinUnitVar;
             case 1:
                 lw lwVar2 = (lw) h(ahpVar, afwVar);
-                KotlinUnit kotlinUnitVar2 = KotlinUnit.INSTANCE;
+                Kotlin$Unit kotlinUnitVar2 = Kotlin$Unit.INSTANCE;
                 lwVar2.i(kotlinUnitVar2);
                 return kotlinUnitVar2;
             case 2:
                 lw lwVar3 = (lw) h(ahpVar, afwVar);
-                KotlinUnit kotlinUnitVar3 = KotlinUnit.INSTANCE;
+                Kotlin$Unit kotlinUnitVar3 = Kotlin$Unit.INSTANCE;
                 lwVar3.i(kotlinUnitVar3);
                 return kotlinUnitVar3;
             case 3:
                 lw lwVar4 = (lw) h(ahpVar, afwVar);
-                KotlinUnit kotlinUnitVar4 = KotlinUnit.INSTANCE;
+                Kotlin$Unit kotlinUnitVar4 = Kotlin$Unit.INSTANCE;
                 lwVar4.i(kotlinUnitVar4);
                 return kotlinUnitVar4;
             case 4:
                 lw lwVar5 = (lw) h(ahpVar, afwVar);
-                KotlinUnit kotlinUnitVar5 = KotlinUnit.INSTANCE;
+                Kotlin$Unit kotlinUnitVar5 = Kotlin$Unit.INSTANCE;
                 lwVar5.i(kotlinUnitVar5);
                 return kotlinUnitVar5;
             case 5:
-                return ((lw) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
+                return ((lw) h(ahpVar, afwVar)).i(Kotlin$Unit.INSTANCE);
             default:
-                return ((lw) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
+                return ((lw) h(ahpVar, afwVar)).i(Kotlin$Unit.INSTANCE);
         }
     }
 
@@ -81,7 +81,7 @@ public final class lw extends doi implements bgj {
     @Override // me.hd.wauxv.obf.nc
     public final Object i(Object obj) throws Throwable {
         int i = this.a;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 FastKV.bd(obj);
@@ -115,13 +115,13 @@ public final class lw extends doi implements bgj {
                         }
                     }
                     long jCurrentTimeMillis2 = System.currentTimeMillis() - jCurrentTimeMillis;
-                    ArrayList arrayList = ewq.a;
+                    ArrayList arrayList = Logger.a;
                     StringBuilder sb = new StringBuilder();
                     sb.append("auto clean: name(" /* "auto clean: name(" /* "auto clean: name(" /* "auto clean: name(" /* cnb.z(-513583599319850L)   */);
                     yg.decryptVar2UsingCnbZAndConcatToVar1(sb, znVar.a, -513523469777706L);
                     sb.append(jCurrentTimeMillis2);
                     sb.append("ms)" /* "ms)" /* "ms)" /* "ms)" /* cnb.z(-513506289908522L)   */);
-                    ewq.d(14, sb.toString());
+                    Logger.logD(14, sb.toString());
                 }
                 return kotlinUnitVar;
             case 1:
@@ -141,11 +141,11 @@ public final class lw extends doi implements bgj {
                 return kotlinUnitVar;
             case 4:
                 FastKV.bd(obj);
-                PanelEmojiHook panelEmojiHookVar = PanelEmojiHook.a;
+                PanelEmojiHook panelEmojiHookVar = PanelEmojiHook.INSTANCE;
                 String strZ = "emoji" /* "emoji" /* "emoji" /* "emoji" /* cnb.z(-474967548361514L)   */;
                 ArrayList arrayList2 = PanelEmojiHook.someArrayList;
                 panelEmojiHookVar.getClass();
-                File[] fileArrListFiles2 = new File(PanelEmojiHook.b, strZ).listFiles();
+                File[] fileArrListFiles2 = new File(PanelEmojiHook.RESOURCE_DIR, strZ).listFiles();
                 if (fileArrListFiles2 != null) {
                     for (File file2 : fileArrListFiles2) {
                         if (file2.isFile()) {
@@ -170,7 +170,7 @@ public final class lw extends doi implements bgj {
                                 aub.a.getClass();
                                 Object objB = aub.b(strB);
                                 atz.a.getClass();
-                                StaticHelpers7.bb(aty.a).invoke(objB, null, Boolean.TRUE);
+                                StaticHelpers7.toDexMethod(aty.a).invoke(objB, null, Boolean.TRUE);
                                 arrayList2
                                         .add(StaticHelpers7.ba(PanelEmojiHookConstructorGroupItemInfo.INSTANCE).newInstance(objB, 2, "" /* "" /* "" /* "" /* cnb.z(-474215929084714L)   */, 0));
                             }

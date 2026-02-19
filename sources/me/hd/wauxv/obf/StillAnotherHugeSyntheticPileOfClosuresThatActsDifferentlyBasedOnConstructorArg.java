@@ -37,7 +37,7 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
         boolean zAb = true;
         boolean z = true;
         int i2 = 8;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         ?? r7 = this.b;
         switch (i) {
             case 0:
@@ -52,9 +52,9 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                Integer num = (Integer) (objX instanceof dcx ? null : objX);
+                Integer num = (Integer) (objX instanceof Failure ? null : objX);
                 qbVar.setSelectedItemId(num != null ? num.intValue() : 0);
                 return kotlinUnitVar;
             case 2:
@@ -109,7 +109,7 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
                 throwIfVar1IsNull(cioVar, "entry");
                 return new acb((beq) r7, z ? 1 : 0, cioVar);
             case 5:
-                aki akiVar = (aki) r7;
+                HookManager hookManagerVar = (HookManager) r7;
                 HookParam hookParam2 = (bmm) obj;
                 hookParam2.getClass();
                 try {
@@ -118,9 +118,9 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = FastKV.x(th2);
+                    objX2 = FastKV.getFailureFromException(th2);
                 }
-                Object obj2 = objX2 instanceof dcx ? null : objX2;
+                Object obj2 = objX2 instanceof Failure ? null : objX2;
                 if (obj2 != null) {
                     int i3 = 0;
                     SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(obj2);
@@ -129,16 +129,16 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
                     methodResolverVarT.name = "getLatitude" /* "getLatitude" /* "getLatitude" /* cnb.z(-493470267472682L)  */;
                     MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
                     HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
-                    aki akiVarAd = bxjVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
-                    bxjVar.y(akiVarAd, new bty(i));
-                    akiVarAd.o();
+                    HookManager hookManagerVarAd = bxjVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+                    bxjVar.y(hookManagerVarAd, new bty(i));
+                    hookManagerVarAd.initInstantCollectionAndApplyHooks();
                     MethodResolver methodResolverVarT2 = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
                     methodResolverVarT2.name = "getLongitude" /* "getLongitude" /* "getLongitude" /* cnb.z(-492834612312874L)  */;
-                    aki akiVarAd2 = bxjVar.ad((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods()), hookPriorityEnumVar);
-                    bxjVar.y(akiVarAd2, new bty(i2));
-                    akiVarAd2.o();
+                    HookManager hookManagerVarAd2 = bxjVar.createImmediateHook((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods()), hookPriorityEnumVar);
+                    bxjVar.y(hookManagerVarAd2, new bty(i2));
+                    hookManagerVarAd2.initInstantCollectionAndApplyHooks();
                 }
-                aki.l(akiVar);
+                HookManager.l(hookManagerVar);
                 return kotlinUnitVar;
             case 6:
                 return ((bzw) r7).c(((Integer) obj).intValue());
@@ -153,9 +153,9 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = FastKV.x(th3);
+                    objX3 = FastKV.getFailureFromException(th3);
                 }
-                if (objX3 instanceof dcx) {
+                if (objX3 instanceof Failure) {
                     objX3 = null;
                 }
                 String str = (String) objX3;

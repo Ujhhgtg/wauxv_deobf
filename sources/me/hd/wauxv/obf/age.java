@@ -48,7 +48,7 @@ public final /* synthetic */ class age implements IInvokable {
         char c2 = 1;
         Object obj2 = null;
         int i7 = 0;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 HookParam hookParam = (HookParam) obj;
@@ -59,20 +59,20 @@ public final /* synthetic */ class age implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                Object obj3 = objX instanceof dcx ? null : objX;
+                Object obj3 = objX instanceof Failure ? null : objX;
                 throwIfVar1IsNull(obj3);
                 MenuItem menuItem = (MenuItem) obj3;
                 int i8 = 0;
                 FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam);
-                fieldResolverVarAa.fieldType = StaticHelpers7.bb(agg.a).getDeclaringClass();
-                Object objD = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).d();
+                fieldResolverVarAa.fieldType = StaticHelpers7.toDexMethod(agg.a).getDeclaringClass();
+                Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue();
                 throwIfVar1IsNull(objD);
                 FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objD).r();
                 agc.a.getClass();
-                fieldResolverVarR.fieldType = StaticHelpers7.bb(agb.a).getDeclaringClass();
-                Object objD2 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).d();
+                fieldResolverVarR.fieldType = StaticHelpers7.toDexMethod(agb.a).getDeclaringClass();
+                Object objD2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue();
                 throwIfVar1IsNull(objD2);
                 ConversationBean conversationBean = new ConversationBean(objD2);
                 for (bnf bnfVar : agi.b) {
@@ -83,10 +83,10 @@ public final /* synthetic */ class age implements IInvokable {
                             }
                         }
                     } catch (Exception e) {
-                        ArrayList arrayList = ewq.a;
+                        ArrayList arrayList = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-38555921414954L)  */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
                                 bnfVar instanceof SwitchHook ? ((SwitchHook) bnfVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 38508676774698L)
@@ -104,9 +104,9 @@ public final /* synthetic */ class age implements IInvokable {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = FastKV.x(th2);
+                    objX2 = FastKV.getFailureFromException(th2);
                 }
-                if (objX2 instanceof dcx) {
+                if (objX2 instanceof Failure) {
                     objX2 = null;
                 }
                 throwIfVar1IsNull(objX2);
@@ -117,16 +117,16 @@ public final /* synthetic */ class age implements IInvokable {
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = FastKV.x(th3);
+                    objX3 = FastKV.getFailureFromException(th3);
                 }
-                Object obj4 = objX3 instanceof dcx ? null : objX3;
+                Object obj4 = objX3 instanceof Failure ? null : objX3;
                 throwIfVar1IsNull(obj4);
                 AdapterView.AdapterContextMenuInfo adapterContextMenuInfo = (AdapterView.AdapterContextMenuInfo) obj4;
                 int i9 = 0;
                 FieldResolver fieldResolverVarAa2 = StaticHelpers6.aa(hookParam2);
                 agc.a.getClass();
-                fieldResolverVarAa2.fieldType = StaticHelpers7.bb(agb.a).getDeclaringClass();
-                Object objD3 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).d();
+                fieldResolverVarAa2.fieldType = StaticHelpers7.toDexMethod(agb.a).getDeclaringClass();
+                Object objD3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).getValue();
                 throwIfVar1IsNull(objD3);
                 ConversationBean conversationBean2 = new ConversationBean(objD3);
                 for (bnf bnfVar2 : agi.b) {
@@ -135,10 +135,10 @@ public final /* synthetic */ class age implements IInvokable {
                             contextMenu.add(adapterContextMenuInfo.position, agfVar2.a, 0, agfVar2.b);
                         }
                     } catch (Exception e2) {
-                        ArrayList arrayList2 = ewq.a;
+                        ArrayList arrayList2 = Logger.a;
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-38744899975978L)  */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
                                 bnfVar2 instanceof SwitchHook ? ((SwitchHook) bnfVar2).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -510,17 +510,17 @@ public final /* synthetic */ class age implements IInvokable {
                 List list = (List) obj;
                 Object obj5 = list.get(0);
                 cls = String.class;
-                Class<String> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (nullSafeIsEqual(obj5, clsBf != null ? clsBf : String.class)) {
                     Object obj6 = list.get(1);
                     cls2 = Boolean.class;
-                    Class<Boolean> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                    Class<Boolean> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                     if (clsBf2 == null) {
                         clsBf2 = cls2;
                     }
                     if (nullSafeIsEqual(obj6, clsBf2)) {
                         Object obj7 = list.get(2);
-                        Class<Boolean> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                        Class<Boolean> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                         z = nullSafeIsEqual(obj7, clsBf3 != null ? clsBf3 : Boolean.class);
                     }
                 }
@@ -534,9 +534,9 @@ public final /* synthetic */ class age implements IInvokable {
                         objX4 = null;
                     }
                 } catch (Throwable th4) {
-                    objX4 = FastKV.x(th4);
+                    objX4 = FastKV.getFailureFromException(th4);
                 }
-                String str = (String) (objX4 instanceof dcx ? null : objX4);
+                String str = (String) (objX4 instanceof Failure ? null : objX4);
                 if (str == null) {
                     str = "";
                 }
@@ -620,9 +620,9 @@ public final /* synthetic */ class age implements IInvokable {
                 HookParam hookParam4 = (HookParam) obj;
                 int i12 = 0;
                 FieldResolver fieldResolverVarAa3 = StaticHelpers6.aa(hookParam4);
-                fieldResolverVarAa3.fieldType = dal.b(Integer.TYPE);
+                fieldResolverVarAa3.fieldType = dal.getKClassFromClass(Integer.TYPE);
                 for (Object obj8 : fieldResolverVarAa3.resolve()) {
-                    Object objE = ((azk) obj8).e();
+                    Object objE = ((BoundField) obj8).getValue_();
                     throwIfVar1IsNull(objE);
                     int iIntValue = ((Number) objE).intValue();
                     if (1 <= iIntValue && iIntValue < 3) {
@@ -640,7 +640,7 @@ public final /* synthetic */ class age implements IInvokable {
                                                                                                                * 430742270114602L)
                                                                                                                */);
                 }
-                Object objE2 = ((azk) obj2).e();
+                Object objE2 = ((BoundField) obj2).getValue_();
                 throwIfVar1IsNull(objE2);
                 int iK2 = (((Number) objE2).intValue() == 1 ? aip.a : aiq.a).k();
                 if (iK2 != 0) {

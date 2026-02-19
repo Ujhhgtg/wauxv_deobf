@@ -9,7 +9,7 @@ public final class dgf extends bws implements IDexFind {
     public static final dgf a = new dgf();
 
     public static Object b(Class cls) throws IllegalAccessException, InvocationTargetException {
-        Object objInvoke = StaticHelpers7.bb(dge.a).invoke(null, cls);
+        Object objInvoke = StaticHelpers7.toDexMethod(dge.a).invoke(null, cls);
         throwIfVar1IsNull(objInvoke);
         return objInvoke;
     }

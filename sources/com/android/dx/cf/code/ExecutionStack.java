@@ -27,7 +27,7 @@ public final class ExecutionStack extends MutabilityControl {
     }
 
     private static TypeBearer throwSimException(String str) {
-        throw new SimException(yg.k("stack: ", str));
+        throw new SimException(yg.concat("stack: ", str));
     }
 
     public void annotate(axc axcVar) {

@@ -32,7 +32,7 @@ import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.dcu;
 import me.hd.wauxv.obf.ew;
-import me.hd.wauxv.obf.ewz;
+import me.hd.wauxv.obf.StaticAndroidHelpers;
 import me.hd.wauxv.obf.fc;
 import me.hd.wauxv.obf.fd;
 import me.hd.wauxv.obf.fe;
@@ -103,7 +103,7 @@ public class MaterialCheckBox extends hf {
             }
         }
         this.p = cnb.w(context3, factoryPoolsVarAo, 3);
-        this.q = ewz.ap(typedArray.getInt(4, -1), PorterDuff.Mode.SRC_IN);
+        this.q = StaticAndroidHelpers.ap(typedArray.getInt(4, -1), PorterDuff.Mode.SRC_IN);
         this.h = typedArray.getBoolean(10, false);
         this.i = typedArray.getBoolean(6, true);
         this.j = typedArray.getBoolean(9, false);
@@ -199,7 +199,7 @@ public class MaterialCheckBox extends hf {
             super.onDraw(canvas);
             return;
         }
-        int width = ((getWidth() - buttonDrawable.getIntrinsicWidth()) / 2) * (ewz.al(this) ? -1 : 1);
+        int width = ((getWidth() - buttonDrawable.getIntrinsicWidth()) / 2) * (StaticAndroidHelpers.al(this) ? -1 : 1);
         int iSave = canvas.save();
         canvas.translate(width, 0.0f);
         super.onDraw(canvas);

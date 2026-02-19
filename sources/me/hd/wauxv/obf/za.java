@@ -56,8 +56,8 @@ public final /* synthetic */ class za implements Comparator {
                 int i2 = (dlbVar3 == null || (bgsVar = dlbVar3.b) == null) ? 0 : bgsVar.b;
                 if (i >= i2) {
                     if (i <= i2) {
-                        String strAa = ewz.aa(dhrVar.b);
-                        String strAa2 = ewz.aa(dhrVar2.b);
+                        String strAa = StaticAndroidHelpers.aa(dhrVar.b);
+                        String strAa2 = StaticAndroidHelpers.aa(dhrVar2.b);
                         if (strAa.compareTo(strAa2) >= 0) {
                             if (strAa.compareTo(strAa2) <= 0) {
                                 abu abuVar4 = dhrVar2.d;

@@ -28,11 +28,11 @@ public final /* synthetic */ class eqg implements bfu {
             Context context = this.c.ao.b.getContext();
             StringBuilder sb = new StringBuilder();
             sb.append("重启 " /* "重启 " /* "重启 " /* "重启 " /* cnb.z(-394359602150186L)   */);
-            bmo.a.getClass();
-            sb.append(bmo.o());
+            HostInfoRegistry.INSTANCE.getClass();
+            sb.append(HostInfoRegistry.getAppName());
             sb.append(" 生效" /* " 生效" /* " 生效" /* " 生效" /* cnb.z(-394376782019370L)   */);
             Toast.makeText(context, sb.toString(), 0).show();
         }
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

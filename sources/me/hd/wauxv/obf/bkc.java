@@ -4,7 +4,7 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class bkc {
     public static final bkc a;
-    public static final /* synthetic */ btc[] b;
+    public static final /* synthetic */ IEmpty7[] b;
     public static final FactoryPools c;
     public static final FactoryPools d;
     public static final Kotlin$Lazy e;
@@ -12,7 +12,7 @@ public final class bkc {
     static {
         cwb cwbVar = new cwb(bkc.class, "ActivityThreadClass", "getActivityThreadClass()Ljava/lang/Class;");
         dal.a.getClass();
-        b = new btc[]{cwbVar, new cwb(bkc.class, "ClientTransactionClass", "getClientTransactionClass()Ljava/lang/Class;")};
+        b = new IEmpty7[]{cwbVar, new cwb(bkc.class, "ClientTransactionClass", "getClientTransactionClass()Ljava/lang/Class;")};
         a = new bkc();
         c = ReflectionWrapper.h("android.app.ActivityThread", null, 6);
         d = ReflectionWrapper.h("android.app.servertransaction.ClientTransaction", null, 6);

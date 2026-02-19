@@ -14,7 +14,7 @@ import me.hd.wauxv.obf.abi;
 import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cxs;
-import me.hd.wauxv.obf.ewz;
+import me.hd.wauxv.obf.StaticAndroidHelpers;
 import me.hd.wauxv.obf.FactoryPools;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -52,10 +52,10 @@ public class MaterialSwitch extends SwitchCompat {
         this.be = factoryPoolsVarAo.r(2);
         int i = typedArray.getInt(3, -1);
         PorterDuff.Mode mode = PorterDuff.Mode.SRC_IN;
-        this.bf = ewz.ap(i, mode);
+        this.bf = StaticAndroidHelpers.ap(i, mode);
         this.bc = factoryPoolsVarAo.s(4);
         this.bh = factoryPoolsVarAo.r(5);
-        this.bi = ewz.ap(typedArray.getInt(6, -1), mode);
+        this.bi = StaticAndroidHelpers.ap(typedArray.getInt(6, -1), mode);
         factoryPoolsVarAo.ae();
         setEnforceSwitchWidth(false);
         bm();

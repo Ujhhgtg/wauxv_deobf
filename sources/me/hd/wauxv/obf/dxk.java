@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dxk {
     public static final dxj Companion = new dxj();
-    public static final IHasGetValue[] a = { null, null, null, null, null, ewz.am(btx.a, new dtr(8)), null };
+    public static final IHasGetValue[] a = { null, null, null, null, null, StaticAndroidHelpers.am(btx.a, new dtr(8)), null };
     public final String b;
     public final Long c;
     public final String d;

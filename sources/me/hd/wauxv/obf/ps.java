@@ -131,7 +131,7 @@ public final class ps extends cjv {
                 return Integer.valueOf(i);
             case 3:
                 throwIfVar1IsNull(str, "value");
-                if (dnr.bi(str, "L")) {
+                if (dnr.ifVar1EndsWithVar2(str, "L")) {
                     strSubstring = str.substring(0, str.length() - 1);
                     throwIfVar1IsNull(strSubstring, "substring(...)");
                 } else {

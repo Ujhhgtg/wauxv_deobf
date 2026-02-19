@@ -86,7 +86,7 @@ import me.hd.wauxv.obf.dqp;
 import me.hd.wauxv.obf.elp;
 import me.hd.wauxv.obf.eqt;
 import me.hd.wauxv.obf.ViewCompat;
-import me.hd.wauxv.obf.ewz;
+import me.hd.wauxv.obf.StaticAndroidHelpers;
 import me.hd.wauxv.obf.ff;
 import me.hd.wauxv.obf.jp;
 import me.hd.wauxv.obf.FactoryPools;
@@ -1450,25 +1450,25 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     }
 
     public float getBoxCornerRadiusBottomEnd() {
-        boolean zAl = ewz.al(this);
+        boolean zAl = StaticAndroidHelpers.al(this);
         RectF rectF = this.ay;
         return zAl ? this.am.h.b(rectF) : this.am.g.b(rectF);
     }
 
     public float getBoxCornerRadiusBottomStart() {
-        boolean zAl = ewz.al(this);
+        boolean zAl = StaticAndroidHelpers.al(this);
         RectF rectF = this.ay;
         return zAl ? this.am.g.b(rectF) : this.am.h.b(rectF);
     }
 
     public float getBoxCornerRadiusTopEnd() {
-        boolean zAl = ewz.al(this);
+        boolean zAl = StaticAndroidHelpers.al(this);
         RectF rectF = this.ay;
         return zAl ? this.am.e.b(rectF) : this.am.f.b(rectF);
     }
 
     public float getBoxCornerRadiusTopStart() {
-        boolean zAl = ewz.al(this);
+        boolean zAl = StaticAndroidHelpers.al(this);
         RectF rectF = this.ay;
         return zAl ? this.am.f.b(rectF) : this.am.e.b(rectF);
     }
@@ -1767,7 +1767,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
                 if (this.e == null) {
                     throw new IllegalStateException();
                 }
-                boolean zAl = ewz.al(this);
+                boolean zAl = StaticAndroidHelpers.al(this);
                 int i7 = rect.bottom;
                 Rect rect2 = this.ax;
                 rect2.bottom = i7;

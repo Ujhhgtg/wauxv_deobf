@@ -4,7 +4,7 @@ import me.hd.wauxv.obf.StaticHelpers5;
 import me.hd.wauxv.obf.ajn;
 import me.hd.wauxv.obf.arj;
 import me.hd.wauxv.obf.FieldResolver;
-import me.hd.wauxv.obf.azk;
+import me.hd.wauxv.obf.BoundField;
 import me.hd.wauxv.obf.SyntheticPileOfMess;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.cty;
@@ -26,7 +26,7 @@ public final class PluginMediaMsgMethod {
         int i = 0;
         FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC).r();
         fieldResolverVarR.name = "filePath" /* "filePath" /* "filePath" /* cnb.z(-94171452930858L)  */;
-        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).f(str3);
+        ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(str3);
         cnh.ae(str, arj.y(str2, null, objC, 6), str4);
     }
 
@@ -40,10 +40,10 @@ public final class PluginMediaMsgMethod {
         SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(objC);
         FieldResolver fieldResolverVarR = bmuVarBi.r();
         fieldResolverVarR.name = "userName" /* "userName" /* "userName" /* cnb.z(-94424856001322L)  */;
-        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).f(str4);
+        ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(str4);
         FieldResolver fieldResolverVarR2 = bmuVarBi.r();
         fieldResolverVarR2.name = "path" /* "path" /* "path" /* cnb.z(-94403381164842L)  */;
-        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).f(str5);
+        ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).setValue(str5);
         cnh.ae(str, arj.x(str2, str3, bArr, objC), str6);
     }
 
@@ -56,10 +56,10 @@ public final class PluginMediaMsgMethod {
         SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(objC);
         FieldResolver fieldResolverVarR = bmuVarBi.r();
         fieldResolverVarR.name = "musicUrl" /* "musicUrl" /* "musicUrl" /* cnb.z(-93651761888042L)  */;
-        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).f(str4);
+        ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(str4);
         FieldResolver fieldResolverVarR2 = bmuVarBi.r();
         fieldResolverVarR2.name = "musicDataUrl" /* "musicDataUrl" /* "musicDataUrl" /* cnb.z(-93630287051562L)  */;
-        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).f(str5);
+        ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).setValue(str5);
         cnh.ae(str, arj.x(str2, str3, bArr, objC), str6);
     }
 
@@ -73,19 +73,19 @@ public final class PluginMediaMsgMethod {
         SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(objC);
         FieldResolver fieldResolverVarR = bmuVarBi.r();
         fieldResolverVarR.name = "musicUrl" /* "musicUrl" /* "musicUrl" /* cnb.z(-93905164958506L)  */;
-        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).f(str4);
+        ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(str4);
         FieldResolver fieldResolverVarR2 = bmuVarBi.r();
         fieldResolverVarR2.name = "musicDataUrl" /* "musicDataUrl" /* "musicDataUrl" /* cnb.z(-93866510252842L)  */;
-        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).f(str5);
+        ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).setValue(str5);
         FieldResolver fieldResolverVarR3 = bmuVarBi.r();
         fieldResolverVarR3.name = "singerName" /* "singerName" /* "singerName" /* cnb.z(-93793495808810L)  */;
-        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).f(str6);
+        ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).setValue(str6);
         FieldResolver fieldResolverVarR4 = bmuVarBi.r();
         fieldResolverVarR4.name = "duration" /* "duration" /* "duration" /* cnb.z(-93763431037738L)  */;
-        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).f(Integer.valueOf(i));
+        ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).setValue(Integer.valueOf(i));
         FieldResolver fieldResolverVarR5 = bmuVarBi.r();
         fieldResolverVarR5.name = "songLyric" /* "songLyric" /* "songLyric" /* cnb.z(-117312736721706L)  */;
-        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR5.resolve())).f(str7);
+        ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR5.resolve())).setValue(str7);
         cnh.ae(str, arj.x(str2, str3, bArr, objC), str8);
     }
 
@@ -96,7 +96,7 @@ public final class PluginMediaMsgMethod {
         int i = 0;
         FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC).r();
         fieldResolverVarR.name = "text" /* "text" /* "text" /* cnb.z(-117128053127978L)  */;
-        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).f(str2);
+        ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(str2);
         cnh.ae(str, arj.y(null, str2, objC, 5), str3);
     }
 
@@ -108,7 +108,7 @@ public final class PluginMediaMsgMethod {
         int i = 0;
         FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC).r();
         fieldResolverVarR.name = "videoUrl" /* "videoUrl" /* "videoUrl" /* cnb.z(-117424405871402L)  */;
-        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).f(str4);
+        ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(str4);
         cnh.ae(str, arj.x(str2, str3, bArr, objC), str5);
     }
 
@@ -121,7 +121,7 @@ public final class PluginMediaMsgMethod {
         int i = 0;
         FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC).r();
         fieldResolverVarR.name = "webpageUrl" /* "webpageUrl" /* "webpageUrl" /* cnb.z(-116629836921642L)  */;
-        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).f(str4);
+        ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(str4);
         cnh.ae(str, arj.x(str2, str3, bArr, objC), str5);
     }
 }

@@ -14,7 +14,7 @@ public final /* synthetic */ class efq implements bfu {
     @Override // me.hd.wauxv.obf.bfu
     public final Object invoke() {
         int i = this.a;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 return new ko(eej.b);
@@ -57,8 +57,8 @@ public final /* synthetic */ class efq implements bfu {
                 return kotlinUnitVar;
             case 18:
                 StringBuilder sb = new StringBuilder();
-                bmo.a.getClass();
-                sb.append(bmo.s());
+                HostInfoRegistry.INSTANCE.getClass();
+                sb.append(HostInfoRegistry.getVersionString());
                 sb.append(".1238." /* ".1238." /* ".1238." /* cnb.z(-82995948026666L)  */);
                 sb.append(exl.b);
                 return sb.toString();
@@ -66,13 +66,13 @@ public final /* synthetic */ class efq implements bfu {
                 int i2 = 0;
                 ewm.a.getClass();
                 FactoryPools factoryPoolsVar = ewm.d;
-                btc btcVar = ewm.b[1];
+                IEmpty7 btcVar = ewm.b[1];
                 SyntheticPileOfMess bmuVarBh = dqc.bh(factoryPoolsVar.w());
                 ((Configuration) bmuVarBh.obj).processorResolver = ewm.h;
                 bmuVarBh.setHookOptional(false);
                 MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.name = "newParser";
-                methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.b(Integer.TYPE) }, 1));
+                methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(Integer.TYPE) }, 1));
                 return (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
         }
     }

@@ -28,7 +28,7 @@ public final /* synthetic */ class cis implements bfu {
                 if (r0 != 0) {
                     r0.invoke();
                 }
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             default:
                 cjl cjlVar2 = this.b;
                 return new cjm(cjlVar2.a, cjlVar2.b.r);

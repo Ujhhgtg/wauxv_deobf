@@ -13,9 +13,9 @@ import okhttp3.HttpUrl;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public abstract class bpv {
-    public static final chm a = new chm(2);
-    public static final Object b = KotlinHelpers.mapOf(new Pair("boolean", Boolean.TYPE), new Pair("byte", Byte.TYPE),
+public abstract class TypeResolver {
+    public static final chm globalCache = new chm(2);
+    public static final Object primitiveTypesMap = KotlinHelpers.mapOf(new Pair("boolean", Boolean.TYPE), new Pair("byte", Byte.TYPE),
             new Pair("char", Character.TYPE), new Pair("short", Short.TYPE), new Pair("int", Integer.TYPE),
             new Pair("long", Long.TYPE), new Pair("float", Float.TYPE), new Pair("double", Double.TYPE),
             new Pair("void", Void.TYPE));
@@ -106,7 +106,7 @@ public abstract class bpv {
      * JADX WARN: Type inference failed for: r5v2, types: [java.lang.Object,
      * java.util.Map]
      */
-    public static Class c(ClassLoader classLoader, String str) {
+    public static Class loadType(ClassLoader classLoader, String str) {
         ec ecVar;
         Object objB;
         WeakHashMap weakHashMap;
@@ -125,7 +125,7 @@ public abstract class bpv {
         ec ecVar3;
         Object objB3;
         throwIfVar1IsNull(str, "typeName");
-        chm chmVar = a;
+        chm chmVar = globalCache;
         chmVar.getClass();
         ReentrantReadWriteLock reentrantReadWriteLock = (ReentrantReadWriteLock) chmVar.c;
         ReentrantReadWriteLock.ReadLock lock = reentrantReadWriteLock.readLock();
@@ -175,12 +175,12 @@ public abstract class bpv {
                             Object obj3 = objB2;
                             strSubstring = str;
                             i = 0;
-                            while (dnr.bi(strSubstring, HttpUrl.PATH_SEGMENT_ENCODE_SET_URI)) {
+                            while (dnr.ifVar1EndsWithVar2(strSubstring, HttpUrl.PATH_SEGMENT_ENCODE_SET_URI)) {
                                 i++;
                                 strSubstring = strSubstring.substring(0, strSubstring.length() - 2);
                                 throwIfVar1IsNull(strSubstring, "substring(...)");
                             }
-                            clsLoadClass = (Class) b.get(strSubstring);
+                            clsLoadClass = (Class) primitiveTypesMap.get(strSubstring);
                             if (clsLoadClass == null) {
                                 clsLoadClass = classLoader.loadClass(strSubstring);
                             }
@@ -244,12 +244,12 @@ public abstract class bpv {
                         Object obj32 = objB2;
                         strSubstring = str;
                         i = 0;
-                        while (dnr.bi(strSubstring, HttpUrl.PATH_SEGMENT_ENCODE_SET_URI)) {
+                        while (dnr.ifVar1EndsWithVar2(strSubstring, HttpUrl.PATH_SEGMENT_ENCODE_SET_URI)) {
                             i++;
                             strSubstring = strSubstring.substring(0, strSubstring.length() - 2);
                             throwIfVar1IsNull(strSubstring, "substring(...)");
                         }
-                        clsLoadClass = (Class) b.get(strSubstring);
+                        clsLoadClass = (Class) primitiveTypesMap.get(strSubstring);
                         if (clsLoadClass == null) {
                             clsLoadClass = classLoader.loadClass(strSubstring);
                         }
@@ -266,12 +266,12 @@ public abstract class bpv {
                         Object obj322 = objB2;
                         strSubstring = str;
                         i = 0;
-                        while (dnr.bi(strSubstring, HttpUrl.PATH_SEGMENT_ENCODE_SET_URI)) {
+                        while (dnr.ifVar1EndsWithVar2(strSubstring, HttpUrl.PATH_SEGMENT_ENCODE_SET_URI)) {
                             i++;
                             strSubstring = strSubstring.substring(0, strSubstring.length() - 2);
                             throwIfVar1IsNull(strSubstring, "substring(...)");
                         }
-                        clsLoadClass = (Class) b.get(strSubstring);
+                        clsLoadClass = (Class) primitiveTypesMap.get(strSubstring);
                         if (clsLoadClass == null) {
                             clsLoadClass = classLoader.loadClass(strSubstring);
                         }
@@ -316,19 +316,19 @@ public abstract class bpv {
      * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
      * java:119)
      */
-    public static Serializable d(ClassLoader classLoader, ArrayList arrayList) {
+    public static Serializable loadParameterTypes(ClassLoader classLoader, ArrayList arrayList) {
         Object objX;
         ArrayList arrayList2 = new ArrayList(arrayList.size());
         Iterator it = arrayList.iterator();
         while (it.hasNext()) {
             try {
-                objX = c(classLoader, (String) it.next());
+                objX = loadType(classLoader, (String) it.next());
             } catch (Throwable th) {
-                objX = FastKV.x(th);
+                objX = FastKV.getFailureFromException(th);
             }
-            Throwable thB = dcy.b(objX);
+            Throwable thB = Success.exceptionOrNull(objX);
             if (thB != null) {
-                return FastKV.x(thB);
+                return FastKV.getFailureFromException(thB);
             }
             arrayList2.add((Class) objX);
         }

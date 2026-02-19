@@ -8,7 +8,7 @@ public final class efz {
     public static final efy Companion = new efy();
     public static final IHasGetValue[] a = { null, null, null, null, null, null, null, null, null, null, null, null,
             null, null,
-            null, null, null, null, null, null, null, null, ewz.am(btx.a, new efq(1)), null, null, null, null, null,
+            null, null, null, null, null, null, null, null, StaticAndroidHelpers.am(btx.a, new efq(1)), null, null, null, null, null,
             null, null };
     public final egx aa;
     public final ecv ab;

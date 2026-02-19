@@ -63,14 +63,14 @@ public class cbm implements bno, crt, cvv, axv, ahw, dff, cdw {
                 }
             }
         } catch (Throwable th) {
-            X = FastKV.x(th);
+            X = FastKV.getFailureFromException(th);
         }
-        Throwable thB = dcy.b(X);
+        Throwable thB = Success.exceptionOrNull(X);
         if (thB != null) {
-            Kotlin$Lazy kotlin$LazyVar = bth.a;
-            bth.e("Failed to get declared constructors in " + this + " because got an exception.", thB);
+            Kotlin$Lazy kotlin$LazyVar = LogConfig.isDevelopmentMode;
+            LogConfig.logE("Failed to get declared constructors in " + this + " because got an exception.", thB);
         }
-        boolean z = X instanceof dcx;
+        boolean z = X instanceof Failure;
         ?? r0 = X;
         if (z) {
             r0 = 0;
@@ -84,14 +84,14 @@ public class cbm implements bno, crt, cvv, axv, ahw, dff, cdw {
         try {
             objX = SomeStaticHelpers.ab(cls.getDeclaredMethods());
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        Throwable thB = dcy.b(objX);
+        Throwable thB = Success.exceptionOrNull(objX);
         if (thB != null) {
-            Kotlin$Lazy kotlin$LazyVar = bth.a;
-            bth.e("Failed to get declared methods in " + this + " because got an exception.", thB);
+            Kotlin$Lazy kotlin$LazyVar = LogConfig.isDevelopmentMode;
+            LogConfig.logE("Failed to get declared methods in " + this + " because got an exception.", thB);
         }
-        if (objX instanceof dcx) {
+        if (objX instanceof Failure) {
             objX = null;
         }
         List list = (List) objX;

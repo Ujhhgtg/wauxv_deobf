@@ -36,8 +36,8 @@ import java.util.zip.Inflater;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public abstract class ewz {
-    public static final GifEncoder q = new GifEncoder(3);
+public abstract class StaticAndroidHelpers {
+    public static final SyntheticClass q = new SyntheticClass(3);
     public static final byte[] r = { JSONB.Constants.BC_INT32_BYTE_MIN, 49, 53, 0 };
     public static final byte[] s = { JSONB.Constants.BC_INT32_BYTE_MIN, 49, JSONB.Constants.BC_INT32_BYTE_MIN, 0 };
     public static final byte[] t = { JSONB.Constants.BC_INT32_BYTE_MIN, JSONB.Constants.BC_INT32_BYTE_MIN, 57, 0 };
@@ -386,8 +386,8 @@ public abstract class ewz {
         }
     }
 
-    public static final void aq(Object obj, IInvokable bgfVar) {
-        ((Handler) bij.a.getValue()).post(new bjt(bgfVar, obj, 0));
+    public static final void runOnUiThread(Object obj, IInvokable bgfVar) {
+        ((Handler) StaticMainLooperHandlerProvider.HANDLER.getValue()).post(() -> { bgfVar.invoke(obj); });
     }
 
     public static byte[] ar(InputStream inputStream, int i) throws IOException {

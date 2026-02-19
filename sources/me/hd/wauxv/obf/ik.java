@@ -661,7 +661,7 @@ public final class ik {
 
     public ik(afr afrVar) {
         this.a = 4;
-        this.d = ewz.aw(150, new erp(this, 21));
+        this.d = StaticAndroidHelpers.aw(150, new erp(this, 21));
         this.c = afrVar;
     }
 }

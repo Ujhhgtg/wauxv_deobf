@@ -12,7 +12,7 @@ public final class aub extends bws implements IDexFind {
         aup.a.getClass();
         auo auoVar = auo.a;
         MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(auoVar)).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        methodResolverVarT.ak(cdy.c);
+        methodResolverVarT.addAccessModifiers(AccessModifierEnum.STATIC);
         methodResolverVarT.returnType = StaticHelpers7.az(auoVar);
         Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
@@ -23,8 +23,8 @@ public final class aub extends bws implements IDexFind {
         throwIfVar1IsNull(objE2);
         MethodResolver methodResolverVarT3 = dqc.getWrapperConfiguration(objE2).getMethodResolverBasedOnPreviouslyProvidedConfig();
         atz.a.getClass();
-        methodResolverVarT3.returnType = StaticHelpers7.bb(aty.a).getDeclaringClass();
-        Object objE3 = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class) }, 1, methodResolverVarT3)).e(str);
+        methodResolverVarT3.returnType = StaticHelpers7.toDexMethod(aty.a).getDeclaringClass();
+        Object objE3 = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(String.class) }, 1, methodResolverVarT3)).e(str);
         throwIfVar1IsNull(objE3);
         return objE3;
     }

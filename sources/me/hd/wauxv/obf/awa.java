@@ -76,7 +76,7 @@ public final class awa extends LinearLayout {
             this.d = cnb.w(getContext(), factoryPoolsVar, 38);
         }
         if (typedArray.hasValue(39)) {
-            this.e = ewz.ap(typedArray.getInt(39, -1), null);
+            this.e = StaticAndroidHelpers.ap(typedArray.getInt(39, -1), null);
         }
         if (typedArray.hasValue(37)) {
             ae(factoryPoolsVar.s(37));
@@ -92,7 +92,7 @@ public final class awa extends LinearLayout {
                 this.k = cnb.w(getContext(), factoryPoolsVar, 32);
             }
             if (typedArray.hasValue(33)) {
-                this.l = ewz.ap(typedArray.getInt(33, -1), null);
+                this.l = StaticAndroidHelpers.ap(typedArray.getInt(33, -1), null);
             }
         }
         int i = 1;
@@ -108,7 +108,7 @@ public final class awa extends LinearLayout {
                 this.k = cnb.w(getContext(), factoryPoolsVar, 54);
             }
             if (typedArray.hasValue(55)) {
-                this.l = ewz.ap(typedArray.getInt(55, -1), null);
+                this.l = StaticAndroidHelpers.ap(typedArray.getInt(55, -1), null);
             }
             ac(typedArray.getBoolean(53, false) ? 1 : 0);
             CharSequence text2 = typedArray.getText(51);

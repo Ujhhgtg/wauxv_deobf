@@ -114,7 +114,7 @@ class BSHType extends SimpleNode implements BshClassManager.Listener {
             }
         }
         for (int i = 0; i < this.arrayDims; i++) {
-            strO = yg.k("[", strO);
+            strO = yg.concat("[", strO);
         }
         this.descriptor = strO;
         return strO;

@@ -18,13 +18,13 @@ public final class DevLogHook extends SwitchHook {
         MethodResolver methodResolverVarT = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mars.xlog.Xlog" /* "com.tencent.mars.xlog.Xlog" /* "com.tencent.mars.xlog.Xlog" /* "com.tencent.mars.xlog.Xlog" /* cnb.z(-647870046796586L)   */)).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "logMonitor" /* "logMonitor" /* "logMonitor" /* "logMonitor" /* cnb.z(-647771262548778L)   */;
         Class cls = Long.TYPE;
-        zc zcVarB = dal.b(cls);
+        KClass zcVarB = dal.getKClassFromClass(cls);
         Class cls2 = Integer.TYPE;
-        aki akiVarAd = ad((MethodHookWrapper) StaticHelpers6.n(new Object[] { zcVarB, dal.b(cls2), dal.b(String.class), dal.b(String.class),
-                dal.b(String.class), dal.b(cls2), dal.b(cls2), dal.b(cls), dal.b(cls), dal.b(String.class) }, 10,
+        HookManager hookManagerVarAd = createImmediateHook((MethodHookWrapper) StaticHelpers6.n(new Object[] { zcVarB, dal.getKClassFromClass(cls2), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class),
+                dal.getKClassFromClass(String.class), dal.getKClassFromClass(cls2), dal.getKClassFromClass(cls2), dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(String.class) }, 10,
                 methodResolverVarT), HookPriorityEnum.ENUM_DEFAULT);
-        a.y(akiVarAd, new amb(0));
-        akiVarAd.o();
+        a.y(hookManagerVarAd, new amb(0));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

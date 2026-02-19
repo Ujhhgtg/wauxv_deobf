@@ -80,7 +80,7 @@ public final class MediaType {
                     String strGroup4 = matcher2.group(2);
                     if (strGroup4 == null) {
                         strGroup4 = matcher2.group(3);
-                    } else if (dnr.bp(strGroup4, "'", false) && dnr.bi(strGroup4, "'") && strGroup4.length() > 2) {
+                    } else if (dnr.bp(strGroup4, "'", false) && dnr.ifVar1EndsWithVar2(strGroup4, "'") && strGroup4.length() > 2) {
                         strGroup4 = strGroup4.substring(1, strGroup4.length() - 1);
                         throwIfVar1IsNull(strGroup4, "this as java.lang.String…ing(startIndex, endIndex)");
                     }

@@ -28,21 +28,21 @@ public final class djh extends SwitchHook implements IDexFind {
         int i2 = 0;
         FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
         fieldResolverVarR.name = "field_snsId" /* "field_snsId" /* "field_snsId" /* "field_snsId" /* cnb.z(-535771400370986L)   */;
-        Object objE = ((azk) yg.e(fieldResolverVarR)).e();
+        Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
         throwIfVar1IsNull(objE);
         long jLongValue = ((Number) objE).longValue();
         FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj).r();
         fieldResolverVarR2.name = "field_userName" /* "field_userName" /* "field_userName" /* "field_userName" /* cnb.z(-532936721955626L)   */;
-        Object objE2 = ((azk) yg.e(fieldResolverVarR2)).e();
+        Object objE2 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue_();
         throwIfVar1IsNull(objE2);
         FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).r();
         fieldResolverVarR3.name = "field_createTime" /* "field_createTime" /* "field_createTime" /* "field_createTime" /* cnb.z(-532855117577002L)   */;
-        Object objE3 = ((azk) yg.e(fieldResolverVarR3)).e();
+        Object objE3 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
         throwIfVar1IsNull(objE3);
         int iIntValue = ((Number) objE3).intValue();
         FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(obj).r();
         fieldResolverVarR4.name = "field_type" /* "field_type" /* "field_type" /* "field_type" /* cnb.z(-532799283002154L)   */;
-        Object objE4 = ((azk) yg.e(fieldResolverVarR4)).e();
+        Object objE4 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR4)).getValue_();
         throwIfVar1IsNull(objE4);
         int iIntValue2 = ((Number) objE4).intValue();
         String strBo = dnr.bo(djf.a.o(), "${time}" /* "${time}" /* "${time}" /* "${time}" /* cnb.z(-532769218231082L)   */,
@@ -63,13 +63,13 @@ public final class djh extends SwitchHook implements IDexFind {
         boolean zAb = cnb.ab(ewk.d);
         djh djhVar = a;
         if (zAb || cnb.ac(ewh.d)) {
-            aki akiVarAb = PackageParam.ab(djhVar, dqc.toSingletonList(StaticHelpers7.bb(djc.a)));
-            djhVar.x(akiVarAb, new dhg(18));
-            akiVarAb.o();
+            HookManager hookManagerVarAb = PackageParam.createHook(djhVar, dqc.toSingletonList(StaticHelpers7.toDexMethod(djc.a)));
+            djhVar.x(hookManagerVarAb, new dhg(18));
+            hookManagerVarAb.initInstantCollectionAndApplyHooks();
         } else {
-            aki akiVarAb2 = PackageParam.ab(djhVar, dqc.toSingletonList(StaticHelpers7.bb(djd.a)));
-            djhVar.x(akiVarAb2, new dhg(19));
-            akiVarAb2.o();
+            HookManager hookManagerVarAb2 = PackageParam.createHook(djhVar, dqc.toSingletonList(StaticHelpers7.toDexMethod(djd.a)));
+            djhVar.x(hookManagerVarAb2, new dhg(19));
+            hookManagerVarAb2.initInstantCollectionAndApplyHooks();
         }
     }
 

@@ -81,11 +81,11 @@ public final class SnsUploadAppInfoHook extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(dke.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(dke.a));
         SnsUploadAppInfoHook dkhVar = a;
-        aki akiVarAb = PackageParam.ab(dkhVar, listBf);
-        dkhVar.y(akiVarAb, new djk(14));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(dkhVar, listBf);
+        dkhVar.y(hookManagerVarAb, new djk(14));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

@@ -90,7 +90,7 @@ public final /* synthetic */ class cug implements IInvokable {
                                             + StaticHelpers5.k(setAd, ";" /* ";" /* ";" /* ";" /* cnb.z(-535264594230058L)   */, null, null, null, 62));
                                 }
                                 diyVar.t(linkedHashSet);
-                                dnc.g(null, 3, "已点赞" /* "已点赞" /* "已点赞" /* "已点赞" /* cnb.z(-535273184164650L)   */);
+                                dnc.sendToast(null, 3, "已点赞" /* "已点赞" /* "已点赞" /* "已点赞" /* cnb.z(-535273184164650L)   */);
                                 return Boolean.FALSE;
                             }
                         };
@@ -133,6 +133,6 @@ public final /* synthetic */ class cug implements IInvokable {
                 }
                 break;
         }
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

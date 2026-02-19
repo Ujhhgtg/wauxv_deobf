@@ -197,14 +197,14 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                         if (((dop) awcVar.c) == null) {
                             awcVar.c = new dop(5);
                         }
-                        if (((GifEncoder) awcVar.d) == null) {
-                            awcVar.d = new GifEncoder(23);
+                        if (((SyntheticClass) awcVar.d) == null) {
+                            awcVar.d = new SyntheticClass(23);
                         }
-                        if (((GifEncoder) awcVar.e) == null) {
-                            awcVar.e = new GifEncoder(16);
+                        if (((SyntheticClass) awcVar.e) == null) {
+                            awcVar.e = new SyntheticClass(16);
                         }
-                        if (((GifEncoder) awcVar.f) == null) {
-                            awcVar.f = new GifEncoder(17);
+                        if (((SyntheticClass) awcVar.f) == null) {
+                            awcVar.f = new SyntheticClass(17);
                         }
                         blq blqVar = new blq(awcVar);
                         LinkedHashSet linkedHashSet3 = aph.a;

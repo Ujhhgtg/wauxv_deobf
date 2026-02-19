@@ -8,7 +8,7 @@ import org.luckypray.dexkit.DexKitBridge;
 /* JADX INFO: loaded from: classes.dex */
 public final class bxj extends SwitchHook implements IDexFind {
     public static final bxj a;
-    public static final /* synthetic */ btc[] b;
+    public static final /* synthetic */ IEmpty7[] b;
     public static cem c;
     public static final FactoryPools i;
     public static final String j;
@@ -22,7 +22,7 @@ public final class bxj extends SwitchHook implements IDexFind {
         cwb cwbVar = new cwb(bxj.class, "RedirectUIClass" /* "RedirectUIClass" /* "RedirectUIClass" /* "RedirectUIClass" /* cnb.z(-493818159823658L)   */,
                 "getRedirectUIClass()Ljava/lang/Class;" /* "getRedirectUIClass()Ljava/lang/Class;" /* "getRedirectUIClass()Ljava/lang/Class;" /* "getRedirectUIClass()Ljava/lang/Class;" /* cnb.z(-493749440346922L)   */);
         dal.a.getClass();
-        b = new btc[] { cwbVar };
+        b = new IEmpty7[] { cwbVar };
         a = new bxj("LocationHook" /* "LocationHook" /* "LocationHook" /* "LocationHook" /* cnb.z(-496816046996266L)   */);
         i = ReflectionWrapper.h("com.tencent.mm.plugin.location.ui.RedirectUI" /* "com.tencent.mm.plugin.location.ui.RedirectUI" /* "com.tencent.mm.plugin.location.ui.RedirectUI" /* "com.tencent.mm.plugin.location.ui.RedirectUI" /* cnb.z(-494118807534378L)   */,
                 new amd(3), 2);
@@ -42,13 +42,13 @@ public final class bxj extends SwitchHook implements IDexFind {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i2 = 0;
-        btc btcVar = b[0];
+        IEmpty7 btcVar = b[0];
         MethodResolver methodResolverVarT = dqc.bh(i.w()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "onActivityResult" /* "onActivityResult" /* "onActivityResult" /* "onActivityResult" /* cnb.z(-496794572159786L)   */;
         Class cls = Integer.TYPE;
-        aki akiVarAd = ad((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(cls), dal.b(cls), dal.b(Intent.class) }, 3, methodResolverVarT), HookPriorityEnum.ENUM_DEFAULT);
-        a.x(akiVarAd, new bty(11));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = createImmediateHook((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(Intent.class) }, 3, methodResolverVarT), HookPriorityEnum.ENUM_DEFAULT);
+        a.x(hookManagerVarAd, new bty(11));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
         Iterator it = OtherStaticHelpers.argsToList(bxc.a, bxd.a, bxb.a).iterator();
         while (it.hasNext()) {
             StaticHelpers7.bc((DexDescData) it.next(), new bty(12));

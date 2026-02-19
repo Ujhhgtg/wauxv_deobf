@@ -51,18 +51,18 @@ public final class blu {
         blr blrVar = new blr(bluVar, cls, viewGroup, z, context);
         if (context != null) {
             ewm.a.getClass();
-            if (!dnr.bi(context.getClass().getName(), "BridgeContext")) {
+            if (!dnr.ifVar1EndsWithVar2(context.getClass().getName(), "BridgeContext")) {
                 ApplicationInfo applicationInfo = context.getApplicationContext().getApplicationInfo();
                 ewl ewlVar = ewm.h;
                 if (((Number) eu.a.getValue()).intValue() > 28 && !ewm.g) {
                     String str = applicationInfo.sourceDir;
                     boolean zB = eu.b(30);
-                    cdy cdyVar = cdy.e;
+                    AccessModifierEnum accessModifierEnumVar = AccessModifierEnum.NATIVE;
                     Class cls2 = Boolean.TYPE;
                     if (zB) {
                         int i = 0;
                         FactoryPools factoryPoolsVar = ewm.c;
-                        btc btcVar = ewm.b[0];
+                        IEmpty7 btcVar = ewm.b[0];
                         SyntheticPileOfMess bmuVarBh = dqc.bh(factoryPoolsVar.w());
                         ((Configuration) bmuVarBh.obj).processorResolver = ewlVar;
                         bmuVarBh.setHookOptional(false);
@@ -70,8 +70,8 @@ public final class blu {
                         methodResolverVarT.name = "nativeLoad";
                         Class cls3 = Integer.TYPE;
                         methodResolverVarT.setParams(Arrays.copyOf(
-                                new Object[] { dal.b(cls3), dal.b(String.class), dal.b(cls3), dal.b(evt.b()) }, 4));
-                        methodResolverVarT.ak(cdyVar);
+                                new Object[] { dal.getKClassFromClass(cls3), dal.getKClassFromClass(String.class), dal.getKClassFromClass(cls3), dal.getKClassFromClass(evt.b()) }, 4));
+                        methodResolverVarT.addAccessModifiers(accessModifierEnumVar);
                         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
                         objF = methodHookWrapperVar != null ? methodHookWrapperVar.f(0, str, 1, null) : null;
                     } else {
@@ -80,15 +80,15 @@ public final class blu {
                         }
                         int i2 = 0;
                         FactoryPools factoryPoolsVar2 = ewm.c;
-                        btc btcVar2 = ewm.b[0];
+                        IEmpty7 btcVar2 = ewm.b[0];
                         SyntheticPileOfMess bmuVarBh2 = dqc.bh(factoryPoolsVar2.w());
                         ((Configuration) bmuVarBh2.obj).processorResolver = ewlVar;
                         bmuVarBh2.setHookOptional(false);
                         MethodResolver methodResolverVarT2 = bmuVarBh2.getMethodResolverBasedOnPreviouslyProvidedConfig();
                         methodResolverVarT2.name = "nativeLoad";
                         methodResolverVarT2.setParams(Arrays.copyOf(
-                                new Object[] { dal.b(String.class), dal.b(cls2), dal.b(cls2), dal.b(cls2) }, 4));
-                        methodResolverVarT2.ak(cdyVar);
+                                new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(cls2), dal.getKClassFromClass(cls2), dal.getKClassFromClass(cls2) }, 4));
+                        methodResolverVarT2.addAccessModifiers(accessModifierEnumVar);
                         MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT2.findMethods());
                         if (methodHookWrapperVar2 != null) {
                             Boolean bool = Boolean.FALSE;
@@ -101,7 +101,7 @@ public final class blu {
                     }
                     ewm.e = l;
                     FactoryPools factoryPoolsVar3 = ewm.d;
-                    btc btcVar3 = ewm.b[1];
+                    IEmpty7 btcVar3 = ewm.b[1];
                     SyntheticPileOfMess bmuVarBh3 = dqc.bh(factoryPoolsVar3.w());
                     ((Configuration) bmuVarBh3.obj).processorResolver = ewlVar;
                     bmuVarBh3.setHookOptional(false);
@@ -110,9 +110,9 @@ public final class blu {
                     Class cls4 = Long.TYPE;
                     if (zB2) {
                         adtVarM.setParams(
-                                Arrays.copyOf(new Object[] { dal.b(AssetManager.class), dal.b(cls4), dal.b(cls2) }, 3));
+                                Arrays.copyOf(new Object[] { dal.getKClassFromClass(AssetManager.class), dal.getKClassFromClass(cls4), dal.getKClassFromClass(cls2) }, 3));
                     } else {
-                        adtVarM.setParams(Arrays.copyOf(new Object[] { dal.b(AssetManager.class), dal.b(cls4) }, 2));
+                        adtVarM.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(AssetManager.class), dal.getKClassFromClass(cls4) }, 2));
                     }
                     ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) StaticHelpers5.g(adtVarM.a());
                     if (constructorHookWrapperVar != null) {

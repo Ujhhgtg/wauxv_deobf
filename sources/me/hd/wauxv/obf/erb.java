@@ -50,8 +50,8 @@ public abstract class erb {
                 X = 0;
             }
         } catch (Throwable th) {
-            X = FastKV.x(th);
+            X = FastKV.getFailureFromException(th);
         }
-        return (View) (X instanceof dcx ? 0 : X);
+        return (View) (X instanceof Failure ? 0 : X);
     }
 }

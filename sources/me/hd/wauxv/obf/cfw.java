@@ -18,18 +18,18 @@ public final class cfw extends bws implements bnr {
         SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(obj);
         FieldResolver fieldResolverVarR = bmuVarBi.r();
         fieldResolverVarR.name = "field_isSend" /* "field_isSend" /* "field_isSend" /* "field_isSend" /* cnb.z(-61177514162986L)   */;
-        Integer num = (Integer) ((azk) yg.e(fieldResolverVarR)).e();
+        Integer num = (Integer) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
         if (num != null && num.intValue() == 1) {
             return;
         }
         FieldResolver fieldResolverVarR2 = bmuVarBi.r();
         fieldResolverVarR2.name = "field_type" /* "field_type" /* "field_type" /* "field_type" /* cnb.z(-61156039326506L)   */;
-        Object objE = ((azk) yg.e(fieldResolverVarR2)).e();
+        Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue_();
         throwIfVar1IsNull(objE);
         if (((Number) objE).intValue() == ewg.k.w) {
             FieldResolver fieldResolverVarR3 = bmuVarBi.r();
             fieldResolverVarR3.name = "field_content" /* "field_content" /* "field_content" /* "field_content" /* cnb.z(-61074434947882L)   */;
-            Object objE2 = ((azk) yg.e(fieldResolverVarR3)).e();
+            Object objE2 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
             throwIfVar1IsNull(objE2);
             String str = (String) objE2;
             Pattern patternCompile = Pattern.compile("\\Q<content>|WA|\\E(.*?)\\Q</content>\\E" /*
@@ -39,15 +39,15 @@ public final class cfw extends bws implements bnr {
             throwIfVar1IsNull(patternCompile, "compile(...)");
             Matcher matcher = patternCompile.matcher(str);
             throwIfVar1IsNull(matcher, "matcher(...)");
-            bzx bzxVarY = ewz.y(matcher, 0, str);
+            bzx bzxVarY = StaticAndroidHelpers.y(matcher, 0, str);
             String str2 = bzxVarY != null ? (String) StaticHelpers5.h(1, bzxVarY.e()) : null;
             if (str2 != null) {
                 FieldResolver fieldResolverVarR4 = bmuVarBi.r();
                 fieldResolverVarR4.name = "field_type" /* "field_type" /* "field_type" /* "field_type" /* cnb.z(-61422327298858L)   */;
-                ((azk) yg.e(fieldResolverVarR4)).f(Integer.valueOf(ewg.a.w));
+                ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR4)).setValue(Integer.valueOf(ewg.a.w));
                 FieldResolver fieldResolverVarR5 = bmuVarBi.r();
                 fieldResolverVarR5.name = "field_content" /* "field_content" /* "field_content" /* "field_content" /* cnb.z(-61340722920234L)   */;
-                ((azk) yg.e(fieldResolverVarR5)).f(str2);
+                ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR5)).setValue(str2);
             }
         }
     }

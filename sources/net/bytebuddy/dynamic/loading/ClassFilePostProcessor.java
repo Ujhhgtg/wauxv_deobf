@@ -86,7 +86,7 @@ public interface ClassFilePostProcessor {
                 byte[] bArrTransform = classFileTransformer.transform(classLoader, strReplace, cls, protectionDomain, bArr);
                 return bArrTransform == null ? bArr : bArrTransform;
             } catch (IllegalClassFormatException e) {
-                throw new IllegalStateException(yg.k("Failed to transform ", str), e);
+                throw new IllegalStateException(yg.concat("Failed to transform ", str), e);
             }
         }
     }

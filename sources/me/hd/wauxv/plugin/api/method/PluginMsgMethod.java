@@ -13,20 +13,20 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 import me.hd.wauxv.obf.StaticHelpers5;
 import me.hd.wauxv.obf.acx;
 import me.hd.wauxv.obf.akq;
-import me.hd.wauxv.obf.alc;
+import me.hd.wauxv.obf.Dispatchers$Default;
 import me.hd.wauxv.obf.aou;
 import me.hd.wauxv.obf.arj;
 import me.hd.wauxv.obf.aub;
 import me.hd.wauxv.obf.auh;
 import me.hd.wauxv.obf.aye;
 import me.hd.wauxv.obf.blv;
-import me.hd.wauxv.obf.bmo;
+import me.hd.wauxv.obf.HostInfoRegistry;
 import me.hd.wauxv.obf.bsr;
 import me.hd.wauxv.obf.byr;
 import me.hd.wauxv.obf.bzo;
 import me.hd.wauxv.obf.MethodResolver;
 import me.hd.wauxv.obf.MethodHookWrapper;
-import me.hd.wauxv.obf.cdy;
+import me.hd.wauxv.obf.AccessModifierEnum;
 import me.hd.wauxv.obf.cgy;
 import me.hd.wauxv.obf.ckx;
 import me.hd.wauxv.obf.cly;
@@ -181,19 +181,19 @@ public final class PluginMsgMethod {
         ctdVar.getClass();
         ctc ctcVar = ctc.a;
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dgf.b(StaticHelpers7.az(ctcVar))).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        methodResolverVarT.returnType = dal.b(String.class);
-        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class), dal.b(String.class) }, 2, methodResolverVarT)).j(str2, str);
+        methodResolverVarT.returnType = dal.getKClassFromClass(String.class);
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class) }, 2, methodResolverVarT)).j(str2, str);
         throwIfVar1IsNull(objJ);
         String str3 = (String) objJ;
         int iCurrentTimeMillis = (int) (System.currentTimeMillis() / ((long) 1000));
         ctdVar.getClass();
         MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(dgf.b(StaticHelpers7.az(ctcVar))).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        methodResolverVarT2.returnType = dal.b(Pair.class);
-        Object objJ2 = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class), dal.b(String.class), dal.b(String.class),
-                dal.b(String.class), dal.b(Integer.TYPE), dal.b(Long.TYPE) }, 6, methodResolverVarT2))
+        methodResolverVarT2.returnType = dal.getKClassFromClass(Pair.class);
+        Object objJ2 = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class),
+                dal.getKClassFromClass(String.class), dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(Long.TYPE) }, 6, methodResolverVarT2))
                 .j(str, strB, str2, str3, Integer.valueOf(iCurrentTimeMillis), 0L);
         throwIfVar1IsNull(objJ2);
-        alc alcVar = aou.a;
+        Dispatchers$Default alcVar = aou.a;
         KotlinHelpers2.bf(akq.f, new ckx((Pair) objJ2, str, str2, null));
     }
 
@@ -215,11 +215,11 @@ public final class PluginMsgMethod {
         int type = msgInfoBean.getType();
         kdVar.getClass();
         int i = 0;
-        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.bb(kc.a).getDeclaringClass()).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        methodResolverVarT.ak(cdy.c);
+        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.toDexMethod(kc.a).getDeclaringClass()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.addAccessModifiers(AccessModifierEnum.STATIC);
         Class cls = Integer.TYPE;
-        methodResolverVarT.returnType = dal.b(cls);
-        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(cls) }, 1, methodResolverVarT)).j(Integer.valueOf(type));
+        methodResolverVarT.returnType = dal.getKClassFromClass(cls);
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(cls) }, 1, methodResolverVarT)).j(Integer.valueOf(type));
         throwIfVar1IsNull(objJ);
         jSONObject4.put(strZ4, ((Number) objJ).intValue());
         jSONObject4.put("svrid" /* "svrid" /* "svrid" /* cnb.z(-114873195297578L)  */, msgInfoBean.getMsgSvrId());
@@ -295,8 +295,8 @@ public final class PluginMsgMethod {
             return;
         }
         Class<?> cls = methodHookWrapperVar.method.getParameterTypes()[1];
-        bmo.a.getClass();
-        Object objNewProxyInstance = Proxy.newProxyInstance(bmo.getClassLoader(), new Class[]{cls}, new InvocationHandler() { // from class: me.hd.wauxv.obf.cmb
+        HostInfoRegistry.INSTANCE.getClass();
+        Object objNewProxyInstance = Proxy.newProxyInstance(HostInfoRegistry.getClassLoader(), new Class[]{cls}, new InvocationHandler() { // from class: me.hd.wauxv.obf.cmb
             /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
             /* JADX WARN: Multi-variable type inference failed */
             /* JADX WARN: Type inference failed for: r10v31, types: [byte[], java.io.Serializable] */
@@ -373,7 +373,7 @@ public final class PluginMsgMethod {
                 return null;
             }
         });
-        Method methodBb = StaticHelpers7.bb(cmd.a);
+        Method methodBb = StaticHelpers7.toDexMethod(cmd.a);
         byr.a.getClass();
         Object objInvoke = methodBb.invoke(byr.c(), null);
         throwIfVar1IsNull(objInvoke);

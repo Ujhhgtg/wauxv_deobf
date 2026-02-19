@@ -30,7 +30,7 @@ public final class sd implements ajg {
             case 0:
                 return new ri(1, (ByteBuffer) obj);
             case 1:
-                return new bc(obj, 3);
+                return new LateinitProperty(obj, 3);
             default:
                 return new com.bumptech.glide.load.data.a((ParcelFileDescriptor) obj);
         }

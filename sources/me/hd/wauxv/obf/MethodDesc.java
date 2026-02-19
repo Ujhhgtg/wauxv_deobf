@@ -10,14 +10,14 @@ import org.luckypray.dexkit.util.NativeReflect;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class amq {
-    public final String a;
-    public final String b;
-    public final ArrayList c;
-    public final String d;
+public final class MethodDesc {
+    public final String declaringClass;
+    public final String methodName;
+    public final ArrayList parameterTypes;
+    public final String returnType;
     public final Kotlin$Lazy e;
 
-    public amq(String str) {
+    public MethodDesc(String str) {
         int i;
         throwIfVar1IsNull(str, "descriptor");
         this.e = new Kotlin$Lazy(new bp(this, 17));
@@ -31,10 +31,10 @@ public final class amq {
         }
         String strSubstring = str.substring(0, iAi);
         throwIfVar1IsNull(strSubstring, "substring(...)");
-        this.a = ams.f(strSubstring);
+        this.declaringClass = ams.f(strSubstring);
         String strSubstring2 = str.substring(iAi + 2, iAi2);
         throwIfVar1IsNull(strSubstring2, "substring(...)");
-        this.b = strSubstring2;
+        this.methodName = strSubstring2;
         String strSubstring3 = str.substring(i2, iAi3);
         throwIfVar1IsNull(strSubstring3, "substring(...)");
         ArrayList arrayList = new ArrayList();
@@ -63,10 +63,10 @@ public final class amq {
         if (i != iAh) {
             throw new IllegalStateException("Unknown signString: ".concat(strSubstring3));
         }
-        this.c = arrayList;
+        this.parameterTypes = arrayList;
         String strSubstring5 = str.substring(iAi3 + 1);
         throwIfVar1IsNull(strSubstring5, "substring(...)");
-        this.d = ams.f(strSubstring5);
+        this.returnType = ams.f(strSubstring5);
     }
 
     /* JADX WARN: Multi-variable type inference failed */
@@ -74,35 +74,34 @@ public final class amq {
      * JADX WARN: Type inference failed for: r6v5, types: [java.lang.reflect.Method]
      */
     /* JADX WARN: Type inference failed for: r6v9 */
-    public static Method f(amq amqVar, ClassLoader classLoader) throws NoSuchMethodException {
+    public static Method resolveMethod(MethodDesc methodDescVar, ClassLoader classLoader) throws NoSuchMethodException {
         Object objX;
         Object objX2;
-        Kotlin$Lazy kotlin$LazyVar = amqVar.e;
-        chm chmVar = bpv.a;
-        String str = amqVar.b;
+        Kotlin$Lazy kotlin$LazyVar = methodDescVar.e;
+        String str = methodDescVar.methodName;
         if (nullSafeIsEqual(str, MethodDescription.TYPE_INITIALIZER_INTERNAL_NAME)
                 || nullSafeIsEqual(str, MethodDescription.CONSTRUCTOR_INTERNAL_NAME)) {
-            throw new IllegalArgumentException((amqVar + " not a method").toString());
+            throw new IllegalArgumentException((methodDescVar + " not a method").toString());
         }
-        Class clsC = bpv.c(classLoader, amqVar.a);
-        Object objD = bpv.d(classLoader, amqVar.c);
-        Throwable thB = dcy.b(objD);
+        Class clsC = TypeResolver.loadType(classLoader, methodDescVar.declaringClass);
+        Object objD = TypeResolver.loadParameterTypes(classLoader, methodDescVar.parameterTypes);
+        Throwable thB = Success.exceptionOrNull(objD);
         if (thB != null) {
             NoSuchMethodException noSuchMethodException = new NoSuchMethodException(
-                    "Method " + amqVar + " not available: parameter type(s) missing");
+                    "Method " + methodDescVar + " not available: parameter type(s) missing");
             noSuchMethodException.initCause(thB);
             throw noSuchMethodException;
         }
         Class[] clsArr = (Class[]) objD;
         try {
-            objX = bpv.c(classLoader, amqVar.d);
+            objX = TypeResolver.loadType(classLoader, methodDescVar.returnType);
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        Throwable thB2 = dcy.b(objX);
+        Throwable thB2 = Success.exceptionOrNull(objX);
         if (thB2 != null) {
             NoSuchMethodException noSuchMethodException2 = new NoSuchMethodException(
-                    "Method " + amqVar + " not available: return type missing");
+                    "Method " + methodDescVar + " not available: return type missing");
             noSuchMethodException2.initCause(thB2);
             throw noSuchMethodException2;
         }
@@ -133,7 +132,7 @@ public final class amq {
                     method2.setAccessible(true);
                     return method2;
                 }
-                throw new NoSuchMethodException("Method " + amqVar + " not found");
+                throw new NoSuchMethodException("Method " + methodDescVar + " not found");
             }
             try {
                 Method declaredMethod = superclass.getDeclaredMethod(str,
@@ -141,9 +140,9 @@ public final class amq {
                 declaredMethod.setAccessible(true);
                 objX2 = declaredMethod;
             } catch (Throwable th2) {
-                objX2 = FastKV.x(th2);
+                objX2 = FastKV.getFailureFromException(th2);
             }
-            Method method3 = (Method) (objX2 instanceof dcx ? null : objX2);
+            Method method3 = (Method) (objX2 instanceof Failure ? null : objX2);
             if (method3 != null && nullSafeIsEqual(method3.getReturnType(), cls)) {
                 return method3;
             }
@@ -155,30 +154,30 @@ public final class amq {
         if (this == obj) {
             return true;
         }
-        if (!(obj instanceof amq)) {
+        if (!(obj instanceof MethodDesc)) {
             return false;
         }
-        amq amqVar = (amq) obj;
-        return nullSafeIsEqual(this.a, amqVar.a) && nullSafeIsEqual(this.b, amqVar.b)
-                && nullSafeIsEqual(this.c, amqVar.c) && nullSafeIsEqual(this.d, amqVar.d);
+        MethodDesc methodDescVar = (MethodDesc) obj;
+        return nullSafeIsEqual(this.declaringClass, methodDescVar.declaringClass) && nullSafeIsEqual(this.methodName, methodDescVar.methodName)
+                && nullSafeIsEqual(this.parameterTypes, methodDescVar.parameterTypes) && nullSafeIsEqual(this.returnType, methodDescVar.returnType);
     }
 
     /* JADX WARN: Found duplicated region for block: B:26:0x007b */
     /* JADX WARN: Found duplicated region for block: B:28:0x0081 */
-    public final Constructor g(ClassLoader classLoader) throws NoSuchMethodException {
+    public final Constructor resolveConstructor(ClassLoader classLoader) throws NoSuchMethodException {
         Object objX;
         Member reflectedMethod;
         Constructor<?>[] declaredConstructors;
         int i;
         Kotlin$Lazy kotlin$LazyVar = this.e;
-        chm chmVar = bpv.a;
-        String str = this.b;
+        chm chmVar = TypeResolver.globalCache;
+        String str = this.methodName;
         if (!nullSafeIsEqual(str, MethodDescription.CONSTRUCTOR_INTERNAL_NAME)) {
             throw new IllegalArgumentException((this + " not a constructor").toString());
         }
-        Class clsC = bpv.c(classLoader, this.a);
-        Object objD = bpv.d(classLoader, this.c);
-        Throwable thB = dcy.b(objD);
+        Class clsC = TypeResolver.loadType(classLoader, this.declaringClass);
+        Object objD = TypeResolver.loadParameterTypes(classLoader, this.parameterTypes);
+        Throwable thB = Success.exceptionOrNull(objD);
         if (thB != null) {
             NoSuchMethodException noSuchMethodException = new NoSuchMethodException(
                     "Constructor " + this + " not available: parameter type(s) missing");
@@ -192,9 +191,9 @@ public final class amq {
             declaredConstructor.setAccessible(true);
             objX = declaredConstructor;
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        boolean z = objX instanceof dcx;
+        boolean z = objX instanceof Failure;
         Object obj = objX;
         if (z) {
             obj = null;
@@ -233,10 +232,10 @@ public final class amq {
     }
 
     public final int hashCode() {
-        return this.d.hashCode() + (this.c.hashCode() * 31) + (this.b.hashCode() * 31) + (this.a.hashCode() * 31);
+        return this.returnType.hashCode() + (this.parameterTypes.hashCode() * 31) + (this.methodName.hashCode() * 31) + (this.declaringClass.hashCode() * 31);
     }
 
     public final String toString() {
-        return ams.h(this.a) + "->" + this.b + ((String) this.e.getValue());
+        return ams.h(this.declaringClass) + "->" + this.methodName + ((String) this.e.getValue());
     }
 }

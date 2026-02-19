@@ -24,9 +24,9 @@ import me.hd.wauxv.obf.dbv;
 import me.hd.wauxv.obf.doi;
 import me.hd.wauxv.obf.eme;
 import me.hd.wauxv.obf.StaticHelpers7;
-import me.hd.wauxv.obf.KotlinUnit;
+import me.hd.wauxv.obf.Kotlin$Unit;
 import me.hd.wauxv.obf.eoj;
-import me.hd.wauxv.obf.zc;
+import me.hd.wauxv.obf.KClass;
 import okhttp3.Response;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -46,7 +46,7 @@ public final class PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$defaul
 
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) {
-        return ((PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$default$1) h((ahp) obj, (afw) obj2)).i(KotlinUnit.INSTANCE);
+        return ((PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$default$1) h((ahp) obj, (afw) obj2)).i(Kotlin$Unit.INSTANCE);
     }
 
     @Override // me.hd.wauxv.obf.nc
@@ -69,14 +69,14 @@ public final class PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$defaul
         this.e.invoke(eojVar);
         Context context = ckv.a;
         dam damVar = dal.a;
-        zc zcVarB = dal.b(File.class);
+        KClass zcVarB = dal.getKClassFromClass(File.class);
         List list = Collections.EMPTY_LIST;
         damVar.getClass();
         dbv.a(eojVar.d, new eme(zcVarB, true));
         Response responseExecute = eojVar.e.newCall(eojVar.f()).execute();
         try {
             ckw ckwVarP = bhs.p(responseExecute.request());
-            zc zcVarB2 = dal.b(File.class);
+            KClass zcVarB2 = dal.getKClassFromClass(File.class);
             damVar.getClass();
             return (File) ckwVarP.b(StaticHelpers7.am(new eme(zcVarB2, true)), responseExecute);
         } catch (NetException e) {

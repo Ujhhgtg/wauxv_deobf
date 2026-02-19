@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.aji;
 import me.hd.wauxv.obf.anr;
 import me.hd.wauxv.obf.awd;
-import me.hd.wauxv.obf.GifEncoder;
+import me.hd.wauxv.obf.SyntheticClass;
 import me.hd.wauxv.obf.bhw;
 import me.hd.wauxv.obf.bhz;
 import me.hd.wauxv.obf.bia;
@@ -56,13 +56,13 @@ public final class a implements ComponentCallbacks2 {
     public final nu h;
     public final ArrayList i = new ArrayList();
 
-    public a(Context context, awd awdVar, byk bykVar, oz ozVar, bva bvaVar, dcb dcbVar, nu nuVar, GifEncoder gifEncoderVar, ku kuVar, List list, ArrayList arrayList, cna cnaVar, bib bibVar) {
+    public a(Context context, awd awdVar, byk bykVar, oz ozVar, bva bvaVar, dcb dcbVar, nu nuVar, SyntheticClass syntheticClassVar, ku kuVar, List list, ArrayList arrayList, cna cnaVar, bib bibVar) {
         this.c = ozVar;
         this.f = bvaVar;
         this.d = bykVar;
         this.g = dcbVar;
         this.h = nuVar;
-        this.e = new bhw(context, bvaVar, new ConnectivityMonitor(this, arrayList, cnaVar), new GifEncoder(18), gifEncoderVar, kuVar, list, awdVar, bibVar);
+        this.e = new bhw(context, bvaVar, new ConnectivityMonitor(this, arrayList, cnaVar), new SyntheticClass(18), syntheticClassVar, kuVar, list, awdVar, bibVar);
     }
 
     public static a j(Context context) {
@@ -106,7 +106,7 @@ public final class a implements ComponentCallbacks2 {
     public static void k(Context context, GeneratedAppGlideModule generatedAppGlideModule) {
         ku kuVar = new ku(0);
         aji ajiVar = new aji(1);
-        GifEncoder gifEncoderVar = new GifEncoder(13);
+        SyntheticClass syntheticClassVar = new SyntheticClass(13);
         Context applicationContext = context.getApplicationContext();
         List list = Collections.EMPTY_LIST;
         if (Log.isLoggable("ManifestParser", 3)) {
@@ -186,7 +186,7 @@ public final class a implements ComponentCallbacks2 {
         anr anrVar = new anr(applicationContext, 4);
         SyntheticPileOfMess bmuVar = new SyntheticPileOfMess();
         bmuVar.obj = anrVar;
-        a aVar = new a(applicationContext, new awd(bykVar, bmuVar, biaVar2, biaVar, new bia(new ThreadPoolExecutor(0, Integer.MAX_VALUE, bia.a, timeUnit, new SynchronousQueue(), new bhz(new dd(1), "source-unlimited", false))), biaVar3), bykVar, bygVar, bvaVar, new dcb(), nuVar, gifEncoderVar, kuVar, Collections.EMPTY_LIST, arrayList, generatedAppGlideModule, new bib(ajiVar));
+        a aVar = new a(applicationContext, new awd(bykVar, bmuVar, biaVar2, biaVar, new bia(new ThreadPoolExecutor(0, Integer.MAX_VALUE, bia.a, timeUnit, new SynchronousQueue(), new bhz(new dd(1), "source-unlimited", false))), biaVar3), bykVar, bygVar, bvaVar, new dcb(), nuVar, syntheticClassVar, kuVar, Collections.EMPTY_LIST, arrayList, generatedAppGlideModule, new bib(ajiVar));
         applicationContext.registerComponentCallbacks(aVar);
         a = aVar;
     }

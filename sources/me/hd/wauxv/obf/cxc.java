@@ -181,7 +181,7 @@ public class cxc implements esn {
         int i2 = bpsVarN.d;
         int i3 = bpsVarN.b;
         bottomSheetBehavior.ak = i;
-        boolean zAl = ewz.al(view);
+        boolean zAl = StaticAndroidHelpers.al(view);
         int paddingBottom = view.getPaddingBottom();
         int paddingLeft = view.getPaddingLeft();
         int paddingRight = view.getPaddingRight();

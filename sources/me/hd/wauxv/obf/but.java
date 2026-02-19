@@ -668,7 +668,7 @@ public final class but implements aja, app, cqk, evw {
                 break;
             case 8:
                 this.b = new byi(1000L);
-                this.c = ewz.aw(10, new cbm(17));
+                this.c = StaticAndroidHelpers.aw(10, new cbm(17));
                 break;
             case 13:
                 break;

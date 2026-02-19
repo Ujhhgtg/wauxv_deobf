@@ -407,7 +407,7 @@ public class StdAttributeFactory extends AttributeFactory {
         CstString cstString = new CstString(byteArraySlice);
         AttSourceDebugExtension attSourceDebugExtension = new AttSourceDebugExtension(cstString);
         if (parseObserver != null) {
-            parseObserver.parsed(byteArraySlice, i, i2, yg.k("sourceDebugExtension: ", cstString.getString()));
+            parseObserver.parsed(byteArraySlice, i, i2, yg.concat("sourceDebugExtension: ", cstString.getString()));
         }
         return attSourceDebugExtension;
     }

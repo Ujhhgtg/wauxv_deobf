@@ -52,7 +52,7 @@ public final /* synthetic */ class djk implements IInvokable {
         char c = 3;
         Object[] objArr = 0;
         int i3 = 1;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new djk(i3);
@@ -83,7 +83,7 @@ public final /* synthetic */ class djk implements IInvokable {
                 Activity activity = (Activity) (!(objE instanceof Activity) ? null : objE);
                 if (activity == null) {
                     cls2 = Activity.class;
-                    Class<Activity> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                    Class<Activity> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf != null ? clsBf : Activity.class).getName()).toString());
                 }
@@ -95,7 +95,7 @@ public final /* synthetic */ class djk implements IInvokable {
                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(activity).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.name = "addTextOptionMenu" /* "addTextOptionMenu" /* "addTextOptionMenu" /* cnb.z(-558530432072490L)  */;
                 methodResolverVarT.setParams(Arrays.copyOf(
-                        new Object[] { dal.b(Integer.TYPE), dal.b(cls), dal.b(MenuItem.OnMenuItemClickListener.class) },
+                        new Object[] { dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(cls), dal.getKClassFromClass(MenuItem.OnMenuItemClickListener.class) },
                         3));
                 methodResolverVarT.enableSuperclass();
                 ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(Integer.valueOf(R.id.MenuItem_Sns_LabelFilter), strZ, new ars(djpVar, 1));
@@ -110,7 +110,7 @@ public final /* synthetic */ class djk implements IInvokable {
                 cdj cdjVar3 = new cdj();
                 cdj.l(cdjVar3, "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* cnb.z(-556339998751530L)  */);
                 cls3 = Void.class;
-                Class<Void> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
+                Class<Void> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cdjVar3.r(clsBf2 != null ? clsBf2 : Void.class);
                 cdjVar3.t("submitRefreshAll" /* "submitRefreshAll" /* "submitRefreshAll" /* cnb.z(-556168200059690L)  */);
                 bahVar3.getClass();
@@ -122,10 +122,10 @@ public final /* synthetic */ class djk implements IInvokable {
             case 8:
                 bah bahVar4 = (bah) obj;
                 cdj cdjVar4 = new cdj();
-                Class<String> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cls = clsBf3 != null ? clsBf3 : String.class;
                 cls4 = Integer.class;
-                Class<Integer> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
+                Class<Integer> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
                 cdjVar4.q(cls, clsBf4 != null ? clsBf4 : Integer.class);
                 fj fjVar = new fj();
                 cdj cdjVar5 = new cdj();
@@ -146,11 +146,11 @@ public final /* synthetic */ class djk implements IInvokable {
             case 10:
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar7 = new cdj();
-                Class<String> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf5 == null) {
                     clsBf5 = cls;
                 }
-                Class<String> clsBf6 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf6 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar7.q(clsBf5, clsBf6 != null ? clsBf6 : String.class);
                 cdjVar7.t("MicroMsg.snsMediaStorage" /* "MicroMsg.snsMediaStorage" /* "MicroMsg.snsMediaStorage" /* cnb.z(-377939942177578L)  */,
                         "convertImg2WxamWithoutZip origPath:%s OutOfMemoryError! rollback" /*
@@ -311,9 +311,9 @@ public final /* synthetic */ class djk implements IInvokable {
                             objX = null;
                         }
                     } catch (Throwable th) {
-                        objX = FastKV.x(th);
+                        objX = FastKV.getFailureFromException(th);
                     }
-                    if (objX instanceof dcx) {
+                    if (objX instanceof Failure) {
                         objX = null;
                     }
                     String str3 = (String) objX;
@@ -324,9 +324,9 @@ public final /* synthetic */ class djk implements IInvokable {
                             objX2 = null;
                         }
                     } catch (Throwable th2) {
-                        objX2 = FastKV.x(th2);
+                        objX2 = FastKV.getFailureFromException(th2);
                     }
-                    if (objX2 instanceof dcx) {
+                    if (objX2 instanceof Failure) {
                         objX2 = null;
                     }
                     String str5 = (String) objX2;
@@ -337,9 +337,9 @@ public final /* synthetic */ class djk implements IInvokable {
                             objX3 = null;
                         }
                     } catch (Throwable th3) {
-                        objX3 = FastKV.x(th3);
+                        objX3 = FastKV.getFailureFromException(th3);
                     }
-                    if (objX3 instanceof dcx) {
+                    if (objX3 instanceof Failure) {
                         objX3 = null;
                     }
                     String str7 = (String) objX3;
@@ -347,7 +347,7 @@ public final /* synthetic */ class djk implements IInvokable {
                     djz djzVar = djz.a;
                     String strConcat = str4.concat(str);
                     djzVar.getClass();
-                    Object objInvoke = StaticHelpers7.bb(djy.a).invoke(null, str6, strConcat);
+                    Object objInvoke = StaticHelpers7.toDexMethod(djy.a).invoke(null, str6, strConcat);
                     throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.Boolean" /*
                                                                                                         * cnb.z(-
                                                                                                         * 376548372773674L)
@@ -365,9 +365,9 @@ public final /* synthetic */ class djk implements IInvokable {
                             objX4 = null;
                         }
                     } catch (Throwable th4) {
-                        objX4 = FastKV.x(th4);
+                        objX4 = FastKV.getFailureFromException(th4);
                     }
-                    if (objX4 instanceof dcx) {
+                    if (objX4 instanceof Failure) {
                         objX4 = null;
                     }
                     String str8 = (String) objX4;
@@ -378,9 +378,9 @@ public final /* synthetic */ class djk implements IInvokable {
                             objX5 = null;
                         }
                     } catch (Throwable th5) {
-                        objX5 = FastKV.x(th5);
+                        objX5 = FastKV.getFailureFromException(th5);
                     }
-                    if (objX5 instanceof dcx) {
+                    if (objX5 instanceof Failure) {
                         objX5 = null;
                     }
                     String str10 = (String) objX5;
@@ -391,9 +391,9 @@ public final /* synthetic */ class djk implements IInvokable {
                             objX6 = null;
                         }
                     } catch (Throwable th6) {
-                        objX6 = FastKV.x(th6);
+                        objX6 = FastKV.getFailureFromException(th6);
                     }
-                    if (objX6 instanceof dcx) {
+                    if (objX6 instanceof Failure) {
                         objX6 = null;
                     }
                     String str12 = (String) objX6;
@@ -404,9 +404,9 @@ public final /* synthetic */ class djk implements IInvokable {
                             objX7 = null;
                         }
                     } catch (Throwable th7) {
-                        objX7 = FastKV.x(th7);
+                        objX7 = FastKV.getFailureFromException(th7);
                     }
-                    if (objX7 instanceof dcx) {
+                    if (objX7 instanceof Failure) {
                         objX7 = null;
                     }
                     Boolean bool = (Boolean) objX7;
@@ -415,7 +415,7 @@ public final /* synthetic */ class djk implements IInvokable {
                         eoy eoyVar = eoy.a;
                         String strConcat2 = str9.concat(str);
                         eoyVar.getClass();
-                        Object objInvoke2 = StaticHelpers7.bb(eox.a).invoke(null, strConcat2, Boolean.TRUE);
+                        Object objInvoke2 = StaticHelpers7.toDexMethod(eox.a).invoke(null, strConcat2, Boolean.TRUE);
                         throwIfVar1IsNull(objInvoke2, "null cannot be cast to non-null type kotlin.String" /*
                                                                                                             * cnb.z(-
                                                                                                             * 107696304945962L)

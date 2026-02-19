@@ -13,11 +13,11 @@ public final class blo extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(bln.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(bln.a));
         blo bloVar = a;
-        aki akiVarAb = PackageParam.ab(bloVar, listBf);
-        bloVar.x(akiVarAb, new bep(21));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(bloVar, listBf);
+        bloVar.x(hookManagerVarAb, new bep(21));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

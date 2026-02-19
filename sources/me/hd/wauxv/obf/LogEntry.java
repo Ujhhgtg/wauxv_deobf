@@ -12,7 +12,7 @@ import java.util.Locale;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class ewr implements Serializable {
+public final class LogEntry implements Serializable {
     public final long a;
     public final String b;
     public final String c;
@@ -23,7 +23,7 @@ public final class ewr implements Serializable {
     public final Throwable h;
     public boolean i;
 
-    public ewr(String str, String str2, String str3, Throwable th, int i) {
+    public LogEntry(String str, String str2, String str3, Throwable th, int i) {
         String strI;
         PackageManager packageManager;
         ApplicationInfo applicationInfo;
@@ -52,7 +52,7 @@ public final class ewr implements Serializable {
         String strI2 = ki.i();
         int i2 = 0;
         FactoryPools factoryPoolsVar = ki.e;
-        btc btcVar = ki.b[0];
+        IEmpty7 btcVar = ki.b[0];
         SyntheticPileOfMess bmuVarBh = dqc.bh(factoryPoolsVar.w());
         Kotlin$Lazy kotlin$LazyVar = ep.a;
         ((Configuration) bmuVarBh.obj).processorResolver = FastKV.aa();
@@ -74,12 +74,12 @@ public final class ewr implements Serializable {
         if (context != null && (packageManager = context.getPackageManager()) != null
                 && (applicationInfo = packageManager.getApplicationInfo(strI2, 1)) != null) {
             int i3 = applicationInfo.uid;
-            SyntheticPileOfMess bmuVarBg = dqc.bg(dal.b(UserHandle.class));
+            SyntheticPileOfMess bmuVarBg = dqc.bg(dal.getKClassFromClass(UserHandle.class));
             ((Configuration) bmuVarBg.obj).processorResolver = FastKV.aa();
             bmuVarBg.setHookOptional(true);
             MethodResolver methodResolverVarT3 = bmuVarBg.getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT3.name = "getUserId";
-            methodResolverVarT3.setParams(Arrays.copyOf(new Object[] { dal.b(Integer.TYPE) }, 1));
+            methodResolverVarT3.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(Integer.TYPE) }, 1));
             MethodHookWrapper methodHookWrapperVar3 = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT3.findMethods());
             if (methodHookWrapperVar3 != null && (num = (Integer) methodHookWrapperVar3.j(Integer.valueOf(i3))) != null) {
                 iIntValue = num.intValue();
@@ -92,13 +92,13 @@ public final class ewr implements Serializable {
         if (this == obj) {
             return true;
         }
-        if (!(obj instanceof ewr)) {
+        if (!(obj instanceof LogEntry)) {
             return false;
         }
-        ewr ewrVar = (ewr) obj;
-        return this.a == ewrVar.a && nullSafeIsEqual(this.b, ewrVar.b) && nullSafeIsEqual(this.c, ewrVar.c)
-                && nullSafeIsEqual(this.d, ewrVar.d) && nullSafeIsEqual(this.e, ewrVar.e) && this.f == ewrVar.f
-                && nullSafeIsEqual(this.g, ewrVar.g) && nullSafeIsEqual(this.h, ewrVar.h);
+        LogEntry logEntryVar = (LogEntry) obj;
+        return this.a == logEntryVar.a && nullSafeIsEqual(this.b, logEntryVar.b) && nullSafeIsEqual(this.c, logEntryVar.c)
+                && nullSafeIsEqual(this.d, logEntryVar.d) && nullSafeIsEqual(this.e, logEntryVar.e) && this.f == logEntryVar.f
+                && nullSafeIsEqual(this.g, logEntryVar.g) && nullSafeIsEqual(this.h, logEntryVar.h);
     }
 
     public final int hashCode() {

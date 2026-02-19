@@ -6,7 +6,7 @@ import me.hd.wauxv.obf.aem;
 import me.hd.wauxv.obf.aen;
 import me.hd.wauxv.obf.aeo;
 import me.hd.wauxv.obf.FieldResolver;
-import me.hd.wauxv.obf.azk;
+import me.hd.wauxv.obf.BoundField;
 import me.hd.wauxv.obf.bfu;
 import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.MethodResolver;
@@ -26,7 +26,7 @@ public final class PluginVipMethod {
         aeo aeoVar = aeo.a;
         String strZ = "gh_6f586343034c" /* "gh_6f586343034c" /* "gh_6f586343034c" /* cnb.z(-401128470608682L)  */;
         aeoVar.getClass();
-        Method methodBb = StaticHelpers7.bb(aen.a);
+        Method methodBb = StaticHelpers7.toDexMethod(aen.a);
         dmu dmuVar = dmu.a;
         dmuVar.getClass();
         int i = 0;
@@ -40,7 +40,7 @@ public final class PluginVipMethod {
         throwIfVar1IsNull(objInvoke);
         FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objInvoke).r();
         fieldResolverVarR.name = "field_type" /* "field_type" /* "field_type" /* cnb.z(-382930694175530L)  */;
-        Object objE2 = ((azk) yg.e(fieldResolverVarR)).e();
+        Object objE2 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
         throwIfVar1IsNull(objE2);
         if ((((Number) objE2).intValue() & 1) == 0) {
             throw new RuntimeException("no permission to invoke method" /* "no permission to invoke method" /* "no permission to invoke method" /* cnb.z(-401059751131946L)  */);

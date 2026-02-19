@@ -44,7 +44,7 @@ public abstract class nw extends FrameLayout {
         }
         this.d = typedArrayObtainStyledAttributes.getFloat(3, 1.0f);
         setBackgroundTintList(cnb.v(context2, typedArrayObtainStyledAttributes, 4));
-        setBackgroundTintMode(ewz.ap(typedArrayObtainStyledAttributes.getInt(5, -1), PorterDuff.Mode.SRC_IN));
+        setBackgroundTintMode(StaticAndroidHelpers.ap(typedArrayObtainStyledAttributes.getInt(5, -1), PorterDuff.Mode.SRC_IN));
         this.e = typedArrayObtainStyledAttributes.getFloat(1, 1.0f);
         this.f = typedArrayObtainStyledAttributes.getDimensionPixelSize(0, -1);
         this.g = typedArrayObtainStyledAttributes.getDimensionPixelSize(7, -1);

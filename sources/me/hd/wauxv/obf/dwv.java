@@ -28,9 +28,9 @@ public final class dwv {
     static {
         dtr dtrVar = new dtr(6);
         btx btxVar = btx.a;
-        a = new IHasGetValue[] { null, null, null, null, null, null, ewz.am(btxVar, dtrVar), null, null, null, null,
+        a = new IHasGetValue[] { null, null, null, null, null, null, StaticAndroidHelpers.am(btxVar, dtrVar), null, null, null, null,
                 null, null,
-                ewz.am(btxVar, new dtr(7)), null, null, null };
+                StaticAndroidHelpers.am(btxVar, new dtr(7)), null, null, null };
     }
 
     public /* synthetic */ dwv(int i, String str, Integer num, dyu dyuVar, dyu dyuVar2, Integer num2, dyr dyrVar,

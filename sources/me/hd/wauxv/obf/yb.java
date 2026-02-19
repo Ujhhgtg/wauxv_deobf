@@ -50,7 +50,7 @@ public final class yb extends AccessibilityDelegateCompat {
                         }
                     }
                 }
-                bdVar.l(bc.g(0, 1, i3, 1, ((MaterialButton) view).n));
+                bdVar.l(LateinitProperty.g(0, 1, i3, 1, ((MaterialButton) view).n));
                 break;
             case 2:
                 AccessibilityNodeInfo accessibilityNodeInfo2 = bdVar.a;

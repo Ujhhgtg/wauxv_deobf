@@ -10,6 +10,6 @@ public abstract class bry {
         if (bspVar != null) {
             return bspVar;
         }
-        throw new IllegalArgumentException("Element " + dal.b(brxVar.getClass()) + " is not a JsonPrimitive");
+        throw new IllegalArgumentException("Element " + dal.getKClassFromClass(brxVar.getClass()) + " is not a JsonPrimitive");
     }
 }

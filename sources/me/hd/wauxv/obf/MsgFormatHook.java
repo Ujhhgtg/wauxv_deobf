@@ -33,9 +33,9 @@ public final class MsgFormatHook extends SwitchHook implements IDexFind {
         Constructor constructorBa = StaticHelpers7.ba(ConstructorSendTextComponent.INSTANCE);
         List listBf = dqc.toSingletonList(constructorBa);
         MsgFormatHook msgFormatHookVar = a;
-        aki akiVarAb = PackageParam.ab(msgFormatHookVar, listBf);
-        msgFormatHookVar.y(akiVarAb, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(constructorBa, 7));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(msgFormatHookVar, listBf);
+        msgFormatHookVar.y(hookManagerVarAb, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(constructorBa, 7));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

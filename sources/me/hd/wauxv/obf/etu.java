@@ -12,7 +12,7 @@ public final class etu extends bws implements IDexFind {
     public static String b(etu etuVar, String str) {
         Object objInvoke;
         etuVar.getClass();
-        Method methodBb = StaticHelpers7.bb(ett.a);
+        Method methodBb = StaticHelpers7.toDexMethod(ett.a);
         if (Modifier.isStatic(methodBb.getModifiers())) {
             objInvoke = methodBb.invoke(null, str, true);
         } else {

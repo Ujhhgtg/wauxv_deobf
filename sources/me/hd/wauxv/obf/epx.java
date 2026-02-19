@@ -10,9 +10,9 @@ public final class epx extends bws implements IDexFind {
     public static Object b() {
         int i = 0;
         MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(epw.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        methodResolverVarT.ak(cdy.c);
+        methodResolverVarT.addAccessModifiers(AccessModifierEnum.STATIC);
         eqb.a.getClass();
-        methodResolverVarT.returnType = StaticHelpers7.bb(eqa.a).getDeclaringClass();
+        methodResolverVarT.returnType = StaticHelpers7.toDexMethod(eqa.a).getDeclaringClass();
         Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;

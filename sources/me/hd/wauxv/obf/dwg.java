@@ -7,7 +7,7 @@ import java.util.List;
 public final class dwg {
     public static final dwf Companion = new dwf();
     public static final IHasGetValue[] a = { null, null, null, null, null, null, null, null, null,
-            ewz.am(btx.a, new dtr(3)) };
+            StaticAndroidHelpers.am(btx.a, new dtr(3)) };
     public final String b;
     public final Long c;
     public final Long d;

@@ -18,7 +18,7 @@ public final class exm {
     public static String h = "";
     public static String i = "";
 
-    public static csc j(bmk bmkVar, String str, String str2, ClassLoader classLoader, ApplicationInfo applicationInfo, dcv dcvVar, int i2) {
+    public static csc j(HookScopeEnum hookScopeEnumVar, String str, String str2, ClassLoader classLoader, ApplicationInfo applicationInfo, dcv dcvVar, int i2) {
         if ((i2 & 4) != 0) {
             str2 = "";
         }
@@ -28,19 +28,19 @@ public final class exm {
         if ((i2 & 16) != 0) {
             applicationInfo = null;
         }
-        bmk bmkVar2 = bmk.a;
-        c = bmkVar == bmkVar2;
+        HookScopeEnum hookScopeEnumVar2 = HookScopeEnum.ZYGOTE;
+        c = hookScopeEnumVar == hookScopeEnumVar2;
         LinkedHashMap linkedHashMap = f;
         if (linkedHashMap.get(str) != null) {
             csc cscVar = (csc) linkedHashMap.get(str);
             if (cscVar != null) {
-                cscVar.a = bmkVar;
+                cscVar.hookScope = hookScopeEnumVar;
                 if (str != null) {
                     if (dnj.ak(str)) {
                         str = null;
                     }
                     if (str != null) {
-                        cscVar.b = str;
+                        cscVar.packageName = str;
                     }
                 }
                 if (str2 != null) {
@@ -48,21 +48,21 @@ public final class exm {
                         str2 = null;
                     }
                     if (str2 != null) {
-                        cscVar.c = str2;
+                        cscVar.processName = str2;
                     }
                 }
                 if (classLoader != null) {
-                    ClassLoader classLoader2 = (bmkVar == bmkVar2 || (classLoader instanceof PathClassLoader)) ? classLoader : null;
+                    ClassLoader classLoader2 = (hookScopeEnumVar == hookScopeEnumVar2 || (classLoader instanceof PathClassLoader)) ? classLoader : null;
                     if (classLoader2 != null) {
-                        cscVar.d = classLoader2;
+                        cscVar.appClassLoader = classLoader2;
                     }
                 }
                 if (applicationInfo != null) {
-                    cscVar.e = applicationInfo;
+                    cscVar.appInfo = applicationInfo;
                 }
                 return cscVar;
             }
-        } else if (bmkVar == bmkVar2 || classLoader != null) {
+        } else if (hookScopeEnumVar == hookScopeEnumVar2 || classLoader != null) {
             String str3 = str == null ? "android" : str;
             if (str2 == null) {
                 str2 = "android";
@@ -71,11 +71,11 @@ public final class exm {
                 classLoader = ClassLoader.getSystemClassLoader();
             }
             csc cscVar2 = new csc();
-            cscVar2.a = bmkVar;
-            cscVar2.b = str3;
-            cscVar2.c = str2;
-            cscVar2.d = classLoader;
-            cscVar2.e = applicationInfo;
+            cscVar2.hookScope = hookScopeEnumVar;
+            cscVar2.packageName = str3;
+            cscVar2.processName = str2;
+            cscVar2.appClassLoader = classLoader;
+            cscVar2.appInfo = applicationInfo;
             if (str == null) {
                 str = "android";
             }
@@ -85,16 +85,16 @@ public final class exm {
         return null;
     }
 
-    public static boolean k(String str, bmk bmkVar) {
+    public static boolean k(String str, HookScopeEnum hookScopeEnumVar) {
         if (str == null) {
             return false;
         }
-        String str2 = str + ":" + bmkVar;
+        String str2 = str + ":" + hookScopeEnumVar;
         LinkedHashSet linkedHashSet = e;
         if (linkedHashSet.contains(str2)) {
             return true;
         }
-        linkedHashSet.add(str + ":" + bmkVar);
+        linkedHashSet.add(str + ":" + hookScopeEnumVar);
         return false;
     }
 

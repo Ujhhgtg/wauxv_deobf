@@ -220,8 +220,8 @@ public final class bd {
         this.a.setClassName(charSequence);
     }
 
-    public final void l(bc bcVar) {
-        this.a.setCollectionItemInfo((AccessibilityNodeInfo.CollectionItemInfo) bcVar.e);
+    public final void l(LateinitProperty lateinitPropertyVar) {
+        this.a.setCollectionItemInfo((AccessibilityNodeInfo.CollectionItemInfo) lateinitPropertyVar.e);
     }
 
     public final void m(boolean z) {

@@ -33,7 +33,7 @@ public final /* synthetic */ class cbk implements bgj {
         String strB2;
         int i = this.a;
         int i2 = 0;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 return Boolean.valueOf(((Member) obj2).isSynthetic() != ((Boolean) obj).booleanValue());
@@ -158,7 +158,7 @@ public final /* synthetic */ class cbk implements bgj {
                     eqbVar.getClass();
                     String strB3 = eqb.b(str2);
                     String str3 = (String) StaticHelpers5.l(arrayList6);
-                    Method methodBb = StaticHelpers7.bb(epz.a);
+                    Method methodBb = StaticHelpers7.toDexMethod(epz.a);
                     epx.a.getClass();
                     Object objInvoke = methodBb.invoke(epx.b(), str3);
                     throwIfVar1IsNull(objInvoke,
@@ -225,13 +225,13 @@ public final /* synthetic */ class cbk implements bgj {
                     }
                 }
                 if (!arrayList8.isEmpty() && !arrayList9.isEmpty()) {
-                    ewz.aq(cfc.b, new cfb(arrayList8, arrayList9, i2));
+                    StaticAndroidHelpers.runOnUiThread(cfc.b, new cfb(arrayList8, arrayList9, i2));
                 }
                 return kotlinUnitVar;
             case 12:
                 int i4 = 0;
                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                methodResolverVarT.returnType = dal.b(Activity.class);
+                methodResolverVarT.returnType = dal.getKClassFromClass(Activity.class);
                 Object objJ = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).j(new Object[0]);
                 throwIfVar1IsNull(objJ);
                 Activity activity = (Activity) objJ;
@@ -246,7 +246,7 @@ public final /* synthetic */ class cbk implements bgj {
             case 13:
                 int i5 = 0;
                 MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                methodResolverVarT2.returnType = dal.b(Activity.class);
+                methodResolverVarT2.returnType = dal.getKClassFromClass(Activity.class);
                 Object objJ2 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).j(new Object[0]);
                 throwIfVar1IsNull(objJ2);
                 Activity activity2 = (Activity) objJ2;
@@ -265,7 +265,7 @@ public final /* synthetic */ class cbk implements bgj {
             case 14:
                 int i6 = 0;
                 MethodResolver methodResolverVarT3 = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                methodResolverVarT3.returnType = dal.b(Activity.class);
+                methodResolverVarT3.returnType = dal.getKClassFromClass(Activity.class);
                 Object objJ3 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT3.findMethods())).j(new Object[0]);
                 throwIfVar1IsNull(objJ3);
                 Activity activity3 = (Activity) objJ3;
@@ -273,7 +273,7 @@ public final /* synthetic */ class cbk implements bgj {
                 throwIfVar1IsNull(imgPath3);
                 eqb.a.getClass();
                 String strB4 = eqb.b(imgPath3);
-                Method methodBb2 = StaticHelpers7.bb(epz.a);
+                Method methodBb2 = StaticHelpers7.toDexMethod(epz.a);
                 epx.a.getClass();
                 Object objInvoke2 = methodBb2.invoke(epx.b(), imgPath3);
                 throwIfVar1IsNull(objInvoke2, "null cannot be cast to non-null type kotlin.String" /*

@@ -127,7 +127,7 @@ public final class AnnotationParser {
     private Constant parseConstant() {
         Constant constant = this.pool.get(this.input.readUnsignedShort());
         if (this.observer != null) {
-            parsed(2, yg.k("constant_value: ",
+            parsed(2, yg.concat("constant_value: ",
                     constant instanceof CstString ? ((CstString) constant).toQuoted() : constant.toHuman()));
         }
         return constant;

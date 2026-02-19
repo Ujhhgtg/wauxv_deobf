@@ -258,7 +258,7 @@ public final class cix {
                 }
                 for (afw afwVar : afwVarArr) {
                     if (afwVar != null) {
-                        afwVar._bn(KotlinUnit.INSTANCE);
+                        afwVar._bn(Kotlin$Unit.INSTANCE);
                     }
                 }
             }
@@ -862,7 +862,7 @@ public final class cix {
                         listSubList = EmptyReadonlyList.INSTANCE;
                     }
                     this.ab(cioVar4.b, bundle, cioVar4, listSubList);
-                    return KotlinUnit.INSTANCE;
+                    return Kotlin$Unit.INSTANCE;
                 }
             };
             cklVarD.i(list2, cjoVar);

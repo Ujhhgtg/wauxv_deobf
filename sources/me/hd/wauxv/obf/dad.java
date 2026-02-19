@@ -13,11 +13,11 @@ public final class dad extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        aki akiVarAb = PackageParam.ab(this, dqc.toSingletonList(StaticHelpers7.bb(dac.a)));
+        HookManager hookManagerVarAb = PackageParam.createHook(this, dqc.toSingletonList(StaticHelpers7.toDexMethod(dac.a)));
         cvc cvcVar = new cvc(16);
         dad dadVar = a;
-        dadVar.x(akiVarAb, cvcVar);
-        akiVarAb.o();
+        dadVar.x(hookManagerVarAb, cvcVar);
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
         cma.a.getClass();
         Class declaringClass = StaticHelpers7.ba(clz.a).getDeclaringClass();
         cls.a.getClass();
@@ -25,11 +25,11 @@ public final class dad extends SwitchHook implements IDexFind {
             int i2 = 0;
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(cls).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "onGYNetEnd" /* "onGYNetEnd" /* "onGYNetEnd" /* cnb.z(-540848051714858L)  */;
-            aki akiVarAd = dadVar.ad((MethodHookWrapper) StaticHelpers6
-                    .n(new Object[] { dal.b(Integer.TYPE), dal.b(String.class), dal.b(JSONObject.class) }, 3, methodResolverVarT),
+            HookManager hookManagerVarAd = dadVar.createImmediateHook((MethodHookWrapper) StaticHelpers6
+                    .n(new Object[] { dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(String.class), dal.getKClassFromClass(JSONObject.class) }, 3, methodResolverVarT),
                     HookPriorityEnum.ENUM_DEFAULT);
-            dadVar.y(akiVarAd, new cvc(17));
-            akiVarAd.o();
+            dadVar.y(hookManagerVarAd, new cvc(17));
+            hookManagerVarAd.initInstantCollectionAndApplyHooks();
         }
     }
 

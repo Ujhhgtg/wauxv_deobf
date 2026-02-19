@@ -35,7 +35,7 @@ public final class rv implements cdv {
                 return new cdu(new cpi(obj), new ThumbStreamOpener(obj.toString(), (nu) this.b, 0));
             default:
                 File file = (File) obj;
-                return new cdu(new cpi(file), new ThumbStreamOpener(file, (GifEncoder) this.b, 1));
+                return new cdu(new cpi(file), new ThumbStreamOpener(file, (SyntheticClass) this.b, 1));
         }
     }
 }

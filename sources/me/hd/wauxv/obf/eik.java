@@ -24,9 +24,9 @@ public final class eik {
     static {
         efq efqVar = new efq(6);
         btx btxVar = btx.a;
-        a = new IHasGetValue[] { null, null, ewz.am(btxVar, efqVar), null, null, null, null, ewz.am(btxVar, new efq(7)),
+        a = new IHasGetValue[] { null, null, StaticAndroidHelpers.am(btxVar, efqVar), null, null, null, null, StaticAndroidHelpers.am(btxVar, new efq(7)),
                 null,
-                ewz.am(btxVar, new efq(8)), null, ewz.am(btxVar, new efq(9)), ewz.am(btxVar, new efq(10)) };
+                StaticAndroidHelpers.am(btxVar, new efq(8)), null, StaticAndroidHelpers.am(btxVar, new efq(9)), StaticAndroidHelpers.am(btxVar, new efq(10)) };
     }
 
     public /* synthetic */ eik(int i, Integer num, Integer num2, List list, String str, Integer num3, String str2,

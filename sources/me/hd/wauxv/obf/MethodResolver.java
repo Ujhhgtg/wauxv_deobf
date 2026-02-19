@@ -23,8 +23,8 @@ public final class MethodResolver extends ExecutableResolver {
         return listQ;
     }
 
-    public final void ak(cdy... cdyVarArr) {
-        StaticHelpers2.ao(this.modifiers, (cdy[]) Arrays.copyOf(cdyVarArr, cdyVarArr.length));
+    public final void addAccessModifiers(AccessModifierEnum... accessModifierEnumVarArr) {
+        StaticHelpers2.addAllFromVar2ToVar1(this.modifiers, Arrays.copyOf(accessModifierEnumVarArr, accessModifierEnumVarArr.length));
     }
 
     @Override // me.hd.wauxv.obf.axd, me.hd.wauxv.obf.cbh

@@ -58,9 +58,9 @@ public final class kf extends nh {
                     try {
                         objX = Integer.valueOf(XposedBridge.getXposedVersion());
                     } catch (Throwable th) {
-                        objX = FastKV.x(th);
+                        objX = FastKV.getFailureFromException(th);
                     }
-                    if (objX instanceof dcx) {
+                    if (objX instanceof Failure) {
                         objX = null;
                     }
                     Integer num = (Integer) objX;

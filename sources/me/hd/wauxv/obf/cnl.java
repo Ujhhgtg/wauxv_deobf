@@ -16,12 +16,12 @@ public final class cnl extends SwitchHook implements IStartActivity {
     static {
         boolean z;
         ewk ewkVar = ewk.m;
-        bmo bmoVar = bmo.a;
-        bmoVar.getClass();
-        if (bmo.q() > ewkVar.r || bmo.r()) {
+        HostInfoRegistry hostInfoRegistryVar = HostInfoRegistry.INSTANCE;
+        hostInfoRegistryVar.getClass();
+        if (HostInfoRegistry.getVerCode() > ewkVar.r || HostInfoRegistry.getIsPlay()) {
             ewh ewhVar = ewh.p;
-            bmoVar.getClass();
-            z = bmo.q() <= ewhVar.u && bmo.r();
+            hostInfoRegistryVar.getClass();
+            z = HostInfoRegistry.getVerCode() <= ewhVar.u && HostInfoRegistry.getIsPlay();
         }
         j = z;
     }
@@ -52,8 +52,8 @@ public final class cnl extends SwitchHook implements IStartActivity {
                                                                                                              */)) {
                     return;
                 }
-                bmo.a.getClass();
-                intent.setComponent(new ComponentName(bmo.p(),
+                HostInfoRegistry.INSTANCE.getClass();
+                intent.setComponent(new ComponentName(HostInfoRegistry.getPackageName(),
                         "com.tencent.mm.ui.conversation.NewBizConversationUI" /* "com.tencent.mm.ui.conversation.NewBizConversationUI" /* "com.tencent.mm.ui.conversation.NewBizConversationUI" /* cnb.z(-481856675904298L)  */));
             }
         }

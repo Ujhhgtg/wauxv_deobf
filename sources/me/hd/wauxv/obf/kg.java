@@ -31,7 +31,7 @@ public final class kg extends nh {
                 try {
                     obj2 = ((bmh) blqVar.b).b.thisObject;
                 } catch (Throwable th) {
-                    objX4 = FastKV.x(th);
+                    objX4 = FastKV.getFailureFromException(th);
                 }
                 if ((obj2 instanceof Application ? (Application) obj2 : null) == null) {
                     return;
@@ -48,8 +48,8 @@ public final class kg extends nh {
                     }
                     throw null;
                 }
-                objX4 = KotlinUnit.INSTANCE;
-                Throwable thB = dcy.b(objX4);
+                objX4 = Kotlin$Unit.INSTANCE;
+                Throwable thB = Success.exceptionOrNull(objX4);
                 if (thB != null) {
                     blqVar.k(thB);
                     return;
@@ -68,11 +68,11 @@ public final class kg extends nh {
                             throw null;
                         }
                     }
-                    objX = KotlinUnit.INSTANCE;
+                    objX = Kotlin$Unit.INSTANCE;
                 } catch (Throwable th2) {
-                    objX = FastKV.x(th2);
+                    objX = FastKV.getFailureFromException(th2);
                 }
-                Throwable thB2 = dcy.b(objX);
+                Throwable thB2 = Success.exceptionOrNull(objX);
                 if (thB2 != null) {
                     blqVar.k(thB2);
                     return;
@@ -90,11 +90,11 @@ public final class kg extends nh {
                             throw null;
                         }
                     }
-                    objX2 = KotlinUnit.INSTANCE;
+                    objX2 = Kotlin$Unit.INSTANCE;
                 } catch (Throwable th3) {
-                    objX2 = FastKV.x(th3);
+                    objX2 = FastKV.getFailureFromException(th3);
                 }
-                Throwable thB3 = dcy.b(objX2);
+                Throwable thB3 = Success.exceptionOrNull(objX2);
                 if (thB3 != null) {
                     blqVar.k(thB3);
                     return;
@@ -112,11 +112,11 @@ public final class kg extends nh {
                             throw null;
                         }
                     }
-                    objX5 = KotlinUnit.INSTANCE;
+                    objX5 = Kotlin$Unit.INSTANCE;
                 } catch (Throwable th4) {
-                    objX5 = FastKV.x(th4);
+                    objX5 = FastKV.getFailureFromException(th4);
                 }
-                Throwable thB4 = dcy.b(objX5);
+                Throwable thB4 = Success.exceptionOrNull(objX5);
                 if (thB4 != null) {
                     blqVar.k(thB4);
                     return;
@@ -126,7 +126,7 @@ public final class kg extends nh {
                 try {
                     obj = ((bmh) blqVar.b).b.thisObject;
                 } catch (Throwable th5) {
-                    objX3 = FastKV.x(th5);
+                    objX3 = FastKV.getFailureFromException(th5);
                 }
                 if ((obj instanceof Application ? (Application) obj : null) == null) {
                     return;
@@ -141,8 +141,8 @@ public final class kg extends nh {
                         }
                         throw null;
                     }
-                    objX3 = KotlinUnit.INSTANCE;
-                    Throwable thB5 = dcy.b(objX3);
+                    objX3 = Kotlin$Unit.INSTANCE;
+                    Throwable thB5 = Success.exceptionOrNull(objX3);
                     if (thB5 != null) {
                         blqVar.k(thB5);
                         return;
@@ -170,11 +170,11 @@ public final class kg extends nh {
                             throw null;
                         }
                     }
-                    objX = KotlinUnit.INSTANCE;
+                    objX = Kotlin$Unit.INSTANCE;
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                Throwable thB = dcy.b(objX);
+                Throwable thB = Success.exceptionOrNull(objX);
                 if (thB != null) {
                     blqVar.k(thB);
                     return;

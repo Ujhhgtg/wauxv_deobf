@@ -14,7 +14,7 @@ public final class cge extends bws implements IDexFind {
         int i = 0;
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objC).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-75604309310250L)  */;
-        methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.b(Cursor.class) }, 1));
+        methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(Cursor.class) }, 1));
         methodResolverVarT.enableSuperclass();
         ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(cursor);
         return objC;

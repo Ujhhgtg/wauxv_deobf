@@ -37,7 +37,7 @@ import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dpr;
 import me.hd.wauxv.obf.dps;
 import me.hd.wauxv.obf.emd;
-import me.hd.wauxv.obf.ewz;
+import me.hd.wauxv.obf.StaticAndroidHelpers;
 import me.hd.wauxv.obf.fg;
 import me.hd.wauxv.obf.su;
 import me.hd.wauxv.obf.ys;
@@ -495,7 +495,7 @@ public final class DexMerger {
         amj amjVar = this.headerOut;
         int iMergeApiLevels = mergeApiLevels();
         dpsVar2.getClass();
-        amjVar.write(ewz.z(iMergeApiLevels).getBytes("UTF-8"));
+        amjVar.write(StaticAndroidHelpers.z(iMergeApiLevels).getBytes("UTF-8"));
         amjVar.writeInt(dpsVar2.w);
         amjVar.write(dpsVar2.x);
         amjVar.writeInt(dpsVar2.y);

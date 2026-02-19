@@ -29,9 +29,9 @@ public final class exf {
         try {
             objX = 1771232894858L;
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        if (objX instanceof dcx) {
+        if (objX instanceof Failure) {
             objX = null;
         }
         Long l = (Long) objX;
@@ -89,13 +89,13 @@ public final class exf {
             }
             objX = Boolean.valueOf(z);
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        Boolean bool = (Boolean) (objX instanceof dcx ? null : objX);
+        Boolean bool = (Boolean) (objX instanceof Failure ? null : objX);
         if (bool != null) {
             return bool.booleanValue();
         }
-        ewq.h("Couldn't got current Activity status because a SecurityException blocked it");
+        Logger.logW("Couldn't got current Activity status because a SecurityException blocked it");
         return false;
     }
 
@@ -143,10 +143,10 @@ public final class exf {
                             default:
                                 chm chmVarM2 = this.b.m(application, (String) obj);
                                 tw twVar = exf.c;
-                                chmVarM2.ao(chm.l(new tw(twVar.a, ewq.a), arj.s(), -1, -1));
+                                chmVarM2.ao(chm.l(new tw(twVar.a, Logger.a), arj.s(), -1, -1));
                                 break;
                         }
-                        return KotlinUnit.INSTANCE;
+                        return Kotlin$Unit.INSTANCE;
                     }
                 });
                 final int i2 = 1;
@@ -167,10 +167,10 @@ public final class exf {
                             default:
                                 chm chmVarM2 = this.b.m(application, (String) obj);
                                 tw twVar = exf.c;
-                                chmVarM2.ao(chm.l(new tw(twVar.a, ewq.a), arj.s(), -1, -1));
+                                chmVarM2.ao(chm.l(new tw(twVar.a, Logger.a), arj.s(), -1, -1));
                                 break;
                         }
-                        return KotlinUnit.INSTANCE;
+                        return Kotlin$Unit.INSTANCE;
                     }
                 });
             }

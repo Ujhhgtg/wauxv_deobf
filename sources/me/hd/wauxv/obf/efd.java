@@ -22,7 +22,7 @@ public final class efd {
     static {
         dtr dtrVar = new dtr(28);
         btx btxVar = btx.a;
-        a = new IHasGetValue[] { ewz.am(btxVar, dtrVar), null, ewz.am(btxVar, new dtr(29)), null, null, null, null,
+        a = new IHasGetValue[] { StaticAndroidHelpers.am(btxVar, dtrVar), null, StaticAndroidHelpers.am(btxVar, new dtr(29)), null, null, null, null,
                 null, null,
                 null, null };
     }

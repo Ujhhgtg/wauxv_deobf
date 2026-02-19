@@ -23,7 +23,7 @@ public final class ceb extends ClassLoader {
      * semantics)
      */
     public ceb() {
-        super(ki.g());
+        super(ki.getHostClassLoader());
         ki.a.getClass();
     }
 
@@ -49,10 +49,10 @@ public final class ceb extends ClassLoader {
         boolean z2 = exm.a;
         if (!exm.l()) {
             ki.a.getClass();
-            return ki.g().loadClass(str);
+            return ki.getHostClassLoader().loadClass(str);
         }
         ki.a.getClass();
-        Application applicationH = ki.h();
+        Application applicationH = ki.tryGetApplication();
         if (applicationH != null && (classLoader = applicationH.getClassLoader()) != null) {
             LinkedHashSet linkedHashSet2 = b;
             if (linkedHashSet2.isEmpty()) {
@@ -69,7 +69,7 @@ public final class ceb extends ClassLoader {
                                 continue;
                             }
                         } catch (Throwable th) {
-                            FastKV.x(th);
+                            FastKV.getFailureFromException(th);
                         }
                     } else {
                         linkedHashSet = c;
@@ -83,33 +83,33 @@ public final class ceb extends ClassLoader {
                                     try {
                                         if (nullSafeIsEqual(str, (String) it.next())) {
                                             ki.a.getClass();
-                                            clsLoadClass = ki.g().loadClass(str);
+                                            clsLoadClass = ki.getHostClassLoader().loadClass(str);
                                         } else {
                                             continue;
                                         }
                                     } catch (Throwable th2) {
-                                        FastKV.x(th2);
+                                        FastKV.getFailureFromException(th2);
                                     }
                                 } else {
                                     try {
                                         ki.a.getClass();
-                                        clsLoadClass = ki.g().loadClass(str);
+                                        clsLoadClass = ki.getHostClassLoader().loadClass(str);
                                     } catch (Throwable th3) {
-                                        FastKV.x(th3);
+                                        FastKV.getFailureFromException(th3);
                                         try {
                                             ki.a.getClass();
-                                            objX = ki.g().loadClass(str);
+                                            objX = ki.getHostClassLoader().loadClass(str);
                                         } catch (Throwable th4) {
-                                            objX = FastKV.x(th4);
+                                            objX = FastKV.getFailureFromException(th4);
                                         }
-                                        Class<?> cls = (Class) (objX instanceof dcx ? null : objX);
+                                        Class<?> cls = (Class) (objX instanceof Failure ? null : objX);
                                         clsLoadClass = cls == null ? classLoader.loadClass(str) : cls;
                                     }
                                 }
                             }
                         } else {
                             ki.a.getClass();
-                            clsLoadClass = ki.g().loadClass(str);
+                            clsLoadClass = ki.getHostClassLoader().loadClass(str);
                         }
                     }
                 }
@@ -123,17 +123,17 @@ public final class ceb extends ClassLoader {
                     while (true) {
                         if (!it.hasNext()) {
                             ki.a.getClass();
-                            clsLoadClass = ki.g().loadClass(str);
+                            clsLoadClass = ki.getHostClassLoader().loadClass(str);
                         } else if (nullSafeIsEqual(str, (String) it.next())) {
                             ki.a.getClass();
-                            clsLoadClass = ki.g().loadClass(str);
+                            clsLoadClass = ki.getHostClassLoader().loadClass(str);
                         } else {
                             continue;
                         }
                     }
                 } else {
                     ki.a.getClass();
-                    clsLoadClass = ki.g().loadClass(str);
+                    clsLoadClass = ki.getHostClassLoader().loadClass(str);
                 }
             }
             if (clsLoadClass != null) {

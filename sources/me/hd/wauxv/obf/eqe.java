@@ -84,8 +84,8 @@ public final class eqe extends eqc {
                                 StringBuilder sb = new StringBuilder();
                                 sb.append("此功能 (" /* "此功能 (" /* "此功能 (" /* "此功能 (" /* cnb.z(-388411072445226L)   */);
                                 yg.decryptVar2UsingCnbZAndConcatToVar1(sb, ((ob) ocVar).a, -388436842249002L);
-                                bmo.a.getClass();
-                                sb.append(bmo.s());
+                                HostInfoRegistry.INSTANCE.getClass();
+                                sb.append(HostInfoRegistry.getVersionString());
                                 sb.append(" 上使用, 仍要开启?" /* " 上使用, 仍要开启?" /* " 上使用, 仍要开启?" /* " 上使用, 仍要开启?" /* cnb.z(-394445501496106L)   */);
                                 String string = sb.toString();
                                 bzy bzyVar = (bzy) ioVar.c;

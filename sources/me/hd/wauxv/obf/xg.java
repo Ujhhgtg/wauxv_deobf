@@ -34,18 +34,18 @@ public final class xg extends SwitchHook implements bnr {
             SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(obj);
             FieldResolver fieldResolverVarR = bmuVarBi.r();
             fieldResolverVarR.name = "field_isSend" /* "field_isSend" /* "field_isSend" /* "field_isSend" /* cnb.z(-446672303815466L)   */;
-            Integer num = (Integer) ((azk) yg.e(fieldResolverVarR)).e();
+            Integer num = (Integer) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
             if (num != null && num.intValue() == 1) {
                 return;
             }
             FieldResolver fieldResolverVarR2 = bmuVarBi.r();
             fieldResolverVarR2.name = "field_type" /* "field_type" /* "field_type" /* "field_type" /* cnb.z(-446599289371434L)   */;
-            Object objE = ((azk) yg.e(fieldResolverVarR2)).e();
+            Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue_();
             throwIfVar1IsNull(objE);
             if (((Number) objE).intValue() == ewg.a.w) {
                 FieldResolver fieldResolverVarR3 = bmuVarBi.r();
                 fieldResolverVarR3.name = "field_content" /* "field_content" /* "field_content" /* "field_content" /* cnb.z(-446569224600362L)   */;
-                Object objE2 = ((azk) yg.e(fieldResolverVarR3)).e();
+                Object objE2 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
                 throwIfVar1IsNull(objE2);
                 String str = (String) objE2;
                 String strAx = dnj.ax(str, ":" /* ":" /* ":" /* ":" /* cnb.z(-446491915189034L)   */);
@@ -56,7 +56,7 @@ public final class xg extends SwitchHook implements bnr {
                     throwIfVar1IsNull(patternCompile, "compile(...)");
                     Matcher matcher = patternCompile.matcher(str);
                     throwIfVar1IsNull(matcher, "matcher(...)");
-                    bzx bzxVarY = ewz.y(matcher, 0, str);
+                    bzx bzxVarY = StaticAndroidHelpers.y(matcher, 0, str);
                     if (bzxVarY != null) {
                         strZ = bzxVarY.a.group();
                         throwIfVar1IsNull(strZ, "group(...)");
@@ -67,7 +67,7 @@ public final class xg extends SwitchHook implements bnr {
                     throwIfVar1IsNull(patternCompile2, "compile(...)");
                     Matcher matcher2 = patternCompile2.matcher(str);
                     throwIfVar1IsNull(matcher2, "matcher(...)");
-                    bzx bzxVarY2 = ewz.y(matcher2, 0, str);
+                    bzx bzxVarY2 = StaticAndroidHelpers.y(matcher2, 0, str);
                     if (bzxVarY2 == null || (strZ2 = (String) ((bzv) bzxVarY2.e()).get(1)) == null) {
                         strZ2 = "解析异常" /* "解析异常" /* "解析异常" /* "解析异常" /* cnb.z(-446659418913578L)   */;
                     }
@@ -79,11 +79,11 @@ public final class xg extends SwitchHook implements bnr {
                     String string = sb.toString();
                     FieldResolver fieldResolverVarR4 = bmuVarBi.r();
                     fieldResolverVarR4.name = "field_content" /* "field_content" /* "field_content" /* "field_content" /* cnb.z(-447174814989098L)   */;
-                    azk azkVar = (azk) yg.e(fieldResolverVarR4);
+                    BoundField boundFieldVar = (BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR4);
                     StringBuilder sbY = StaticHelpers6.toSb(strAx);
                     sbY.append(":\n" /* ":\n" /* ":\n" /* ":\n" /* cnb.z(-447097505577770L)   */);
                     sbY.append(string);
-                    azkVar.f(sbY.toString());
+                    boundFieldVar.setValue(sbY.toString());
                 }
             }
         }

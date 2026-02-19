@@ -44,7 +44,7 @@ final class JSONPathCompilerReflectASM extends JSONPathCompilerReflect {
         if (method == null) {
             methodWriter.getfield(str, field.getName(), strDesc);
         } else {
-            methodWriter.invokevirtual(str, method.getName(), yg.k("()", strDesc));
+            methodWriter.invokevirtual(str, method.getName(), yg.concat("()", strDesc));
         }
     }
 

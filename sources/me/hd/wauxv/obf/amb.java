@@ -32,7 +32,7 @@ public final /* synthetic */ class amb implements IInvokable {
         Class cls;
         int i = this.a;
         int i2 = 18;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 HookParam hookParam = (HookParam) obj;
@@ -43,9 +43,9 @@ public final /* synthetic */ class amb implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                if (objX instanceof dcx) {
+                if (objX instanceof Failure) {
                     objX = null;
                 }
                 Integer num = (Integer) objX;
@@ -56,9 +56,9 @@ public final /* synthetic */ class amb implements IInvokable {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = FastKV.x(th2);
+                    objX2 = FastKV.getFailureFromException(th2);
                 }
-                if (objX2 instanceof dcx) {
+                if (objX2 instanceof Failure) {
                     objX2 = null;
                 }
                 String str = (String) objX2;
@@ -71,9 +71,9 @@ public final /* synthetic */ class amb implements IInvokable {
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = FastKV.x(th3);
+                    objX3 = FastKV.getFailureFromException(th3);
                 }
-                String str2 = (String) (objX3 instanceof dcx ? null : objX3);
+                String str2 = (String) (objX3 instanceof Failure ? null : objX3);
                 String str3 = str2 != null ? str2 : "";
                 if (iIntValue == 0) {
                     String strZ = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-647689658170154L)  */;
@@ -134,9 +134,9 @@ public final /* synthetic */ class amb implements IInvokable {
                         objX4 = null;
                     }
                 } catch (Throwable th4) {
-                    objX4 = FastKV.x(th4);
+                    objX4 = FastKV.getFailureFromException(th4);
                 }
-                Object obj2 = objX4 instanceof dcx ? null : objX4;
+                Object obj2 = objX4 instanceof Failure ? null : objX4;
                 throwIfVar1IsNull(obj2);
                 WindowManager.LayoutParams layoutParams = (WindowManager.LayoutParams) obj2;
                 if (layoutParams.screenBrightness >= 0.5f) {
@@ -229,9 +229,9 @@ public final /* synthetic */ class amb implements IInvokable {
                         objX5 = null;
                     }
                 } catch (Throwable th5) {
-                    objX5 = FastKV.x(th5);
+                    objX5 = FastKV.getFailureFromException(th5);
                 }
-                Object obj3 = objX5 instanceof dcx ? null : objX5;
+                Object obj3 = objX5 instanceof Failure ? null : objX5;
                 throwIfVar1IsNull(obj3);
                 Bundle bundle = (Bundle) obj3;
                 if (nullSafeIsEqual(bundle.getString("scene" /* "scene" /* "scene" /* cnb.z(-444357316442922L)  */), "start" /*
@@ -293,9 +293,9 @@ public final /* synthetic */ class amb implements IInvokable {
                         objX6 = null;
                     }
                 } catch (Throwable th6) {
-                    objX6 = FastKV.x(th6);
+                    objX6 = FastKV.getFailureFromException(th6);
                 }
-                if (objX6 instanceof dcx) {
+                if (objX6 instanceof Failure) {
                     objX6 = null;
                 }
                 throwIfVar1IsNull(objX6);
@@ -307,8 +307,8 @@ public final /* synthetic */ class amb implements IInvokable {
                     try {
                         throw null;
                     } catch (Exception e) {
-                        ArrayList arrayList2 = ewq.a;
-                        ewq.e("onGetDynamicConfig "
+                        ArrayList arrayList2 = Logger.a;
+                        Logger.logE("onGetDynamicConfig "
                                 /* "onGetDynamicConfig " /* "onGetDynamicConfig " /* cnb.z(-36880884169514L)  */ + "LoadHook" /* "LoadHook" /* "LoadHook" /* cnb.z(-37379100375850L)  */
                                 + " Failed" /* " Failed" /* " Failed" /* cnb.z(-37288906062634L)  */, e, 12);
                     }
@@ -331,12 +331,12 @@ public final /* synthetic */ class amb implements IInvokable {
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar5 = new cdj();
                 cls = String.class;
-                Class<String> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf == null) {
                     clsBf = cls;
                 }
                 cdjVar5.r(clsBf);
-                Class<String> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar5.q(clsBf2 != null ? clsBf2 : String.class);
                 cdjVar5.t("MicroMsg.DynamicConfig" /* "MicroMsg.DynamicConfig" /* "MicroMsg.DynamicConfig" /* cnb.z(-36481452210986L)  */, "DynamicConfig hadnot load" /*
                                                                                                                * cnb.z(-

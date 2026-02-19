@@ -339,7 +339,7 @@ public abstract class cka extends ViewGroup implements cco {
     public final void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo accessibilityNodeInfo) {
         super.onInitializeAccessibilityNodeInfo(accessibilityNodeInfo);
         accessibilityNodeInfo
-                .setCollectionInfo((AccessibilityNodeInfo.CollectionInfo) bc.f(1, this.ao.ak().size(), 1).e);
+                .setCollectionInfo((AccessibilityNodeInfo.CollectionInfo) LateinitProperty.f(1, this.ao.ak().size(), 1).e);
     }
 
     public void setActiveIndicatorLabelPadding(int i2) {

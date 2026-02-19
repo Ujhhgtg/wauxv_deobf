@@ -18,7 +18,7 @@ import me.hd.wauxv.R;
 public final class arw extends ase {
     public final awy a;
     public final View b;
-    public final aki c;
+    public final HookManager c;
     public final int d;
     public ud e;
     public Pair f;
@@ -27,19 +27,19 @@ public final class arw extends ase {
         super(codeEditor, 6);
         awy awyVar = new awy(codeEditor.i);
         this.a = awyVar;
-        this.c = new aki();
+        this.c = new HookManager();
         this.d = (int) (codeEditor.getDpUnit() * 175);
         new ArrayList();
         Float fValueOf = Float.valueOf(0.0f);
         this.f = new Pair(fValueOf, fValueOf);
-        final aki akiVar = this.c;
-        throwIfVar1IsNull(akiVar, "value");
-        if (this.b == null || this.c != akiVar) {
-            this.c = akiVar;
-            akiVar.hookPriority = this;
+        final HookManager hookManagerVar = this.c;
+        throwIfVar1IsNull(hookManagerVar, "value");
+        if (this.b == null || this.c != hookManagerVar) {
+            this.c = hookManagerVar;
+            hookManagerVar.hookPriority = this;
             LayoutInflater layoutInflaterFrom = LayoutInflater.from(this.aa.getContext());
             throwIfVar1IsNull(layoutInflaterFrom, "from(...)");
-            arw arwVar = (arw) akiVar.hookPriority;
+            arw arwVar = (arw) hookManagerVar.hookPriority;
             if (arwVar == null) {
                 throwLateinitPropNotInitYet("window");
                 throw null;
@@ -47,9 +47,9 @@ public final class arw extends ase {
             Context context = arwVar.aa.getContext();
             View viewInflate = layoutInflaterFrom.inflate(R.layout.diagnostic_tooltip_window, (ViewGroup) null);
             throwIfVar1IsNull(viewInflate, "inflate(...)");
-            akiVar.resolutionStrategy = viewInflate;
+            hookManagerVar.resolutionStrategy = viewInflate;
             viewInflate.setClipToOutline(true);
-            View view = (View) akiVar.resolutionStrategy;
+            View view = (View) hookManagerVar.resolutionStrategy;
             if (view == null) {
                 throwLateinitPropNotInitYet("root");
                 throw null;
@@ -58,70 +58,70 @@ public final class arw extends ase {
                 @Override // android.view.View.OnGenericMotionListener
                 public final boolean onGenericMotion(View view2, MotionEvent motionEvent) {
                     int actionMasked = motionEvent.getActionMasked();
-                    aki akiVar2 = akiVar;
+                    HookManager hookManagerVar2 = hookManagerVar;
                     if (actionMasked == 9) {
-                        akiVar2.b = true;
+                        hookManagerVar2.b = true;
                     } else if (actionMasked == 10) {
-                        akiVar2.b = false;
+                        hookManagerVar2.b = false;
                     }
                     return false;
                 }
             });
-            View view2 = (View) akiVar.resolutionStrategy;
+            View view2 = (View) hookManagerVar.resolutionStrategy;
             if (view2 == null) {
                 throwLateinitPropNotInitYet("root");
                 throw null;
             }
             View viewFindViewById = view2.findViewById(R.id.diagnostic_tooltip_brief_message);
             throwIfVar1IsNull(viewFindViewById, "findViewById(...)");
-            akiVar.e = (TextView) viewFindViewById;
-            View view3 = (View) akiVar.resolutionStrategy;
+            hookManagerVar.instantCollection = (TextView) viewFindViewById;
+            View view3 = (View) hookManagerVar.resolutionStrategy;
             if (view3 == null) {
                 throwLateinitPropNotInitYet("root");
                 throw null;
             }
             View viewFindViewById2 = view3.findViewById(R.id.diagnostic_tooltip_detailed_message);
             throwIfVar1IsNull(viewFindViewById2, "findViewById(...)");
-            akiVar.f = (TextView) viewFindViewById2;
-            View view4 = (View) akiVar.resolutionStrategy;
+            hookManagerVar.f = (TextView) viewFindViewById2;
+            View view4 = (View) hookManagerVar.resolutionStrategy;
             if (view4 == null) {
                 throwLateinitPropNotInitYet("root");
                 throw null;
             }
             View viewFindViewById3 = view4.findViewById(R.id.diagnostic_tooltip_preferred_action);
             throwIfVar1IsNull(viewFindViewById3, "findViewById(...)");
-            akiVar.g = (TextView) viewFindViewById3;
-            View view5 = (View) akiVar.resolutionStrategy;
+            hookManagerVar.g = (TextView) viewFindViewById3;
+            View view5 = (View) hookManagerVar.resolutionStrategy;
             if (view5 == null) {
                 throwLateinitPropNotInitYet("root");
                 throw null;
             }
             View viewFindViewById4 = view5.findViewById(R.id.diagnostic_tooltip_more_actions);
             throwIfVar1IsNull(viewFindViewById4, "findViewById(...)");
-            akiVar.h = (TextView) viewFindViewById4;
-            View view6 = (View) akiVar.resolutionStrategy;
+            hookManagerVar.activeUnhooks = (TextView) viewFindViewById4;
+            View view6 = (View) hookManagerVar.resolutionStrategy;
             if (view6 == null) {
                 throwLateinitPropNotInitYet("root");
                 throw null;
             }
             View viewFindViewById5 = view6.findViewById(R.id.diagnostic_container_message);
             throwIfVar1IsNull(viewFindViewById5, "findViewById(...)");
-            akiVar.members = (ViewGroup) viewFindViewById5;
-            View view7 = (View) akiVar.resolutionStrategy;
+            hookManagerVar.members = (ViewGroup) viewFindViewById5;
+            View view7 = (View) hookManagerVar.resolutionStrategy;
             if (view7 == null) {
                 throwLateinitPropNotInitYet("root");
                 throw null;
             }
             View viewFindViewById6 = view7.findViewById(R.id.diagnostic_container_quickfix);
             throwIfVar1IsNull(viewFindViewById6, "findViewById(...)");
-            akiVar.j = (ViewGroup) viewFindViewById6;
-            TextView textView = (TextView) akiVar.g;
+            hookManagerVar.hookingEngine = (ViewGroup) viewFindViewById6;
+            TextView textView = (TextView) hookManagerVar.g;
             if (textView == null) {
                 throwLateinitPropNotInitYet("quickfixText");
                 throw null;
             }
-            textView.setOnClickListener(new akh(akiVar));
-            TextView textView2 = (TextView) akiVar.h;
+            textView.setOnClickListener(new akh(hookManagerVar));
+            TextView textView2 = (TextView) hookManagerVar.activeUnhooks;
             if (textView2 == null) {
                 throwLateinitPropNotInitYet("moreActionText");
                 throw null;
@@ -130,13 +130,13 @@ public final class arw extends ase {
             int i = R.string.sora_editor_diagnostics_more_actions;
             int i2 = sparseIntArray.get(R.string.sora_editor_diagnostics_more_actions);
             textView2.setText(i2 != 0 ? i2 : i);
-            TextView textView3 = (TextView) akiVar.h;
+            TextView textView3 = (TextView) hookManagerVar.activeUnhooks;
             if (textView3 == null) {
                 throwLateinitPropNotInitYet("moreActionText");
                 throw null;
             }
-            textView3.setOnClickListener(new akh(akiVar, context));
-            View view8 = (View) akiVar.resolutionStrategy;
+            textView3.setOnClickListener(new akh(hookManagerVar, context));
+            View view8 = (View) hookManagerVar.resolutionStrategy;
             if (view8 == null) {
                 throwLateinitPropNotInitYet("root");
                 throw null;
@@ -190,30 +190,30 @@ public final class arw extends ase {
                         arwVar3.c.getClass();
                         if (arwVar3.z.isShowing()) {
                             int width = (int) (((double) arwVar3.aa.getWidth()) * 0.9d);
-                            aki akiVar2 = arwVar3.c;
+                            HookManager hookManagerVar2 = arwVar3.c;
                             int i5 = arwVar3.d;
-                            akiVar2.getClass();
+                            hookManagerVar2.getClass();
                             int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(width, Integer.MIN_VALUE);
-                            ViewGroup viewGroup = (ViewGroup) akiVar2.j;
+                            ViewGroup viewGroup = (ViewGroup) hookManagerVar2.hookingEngine;
                             if (viewGroup == null) {
                                 throwLateinitPropNotInitYet("quickfixPanel");
                                 throw null;
                             }
                             if (viewGroup.getVisibility() == 0) {
-                                ViewGroup viewGroup2 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup2 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup2 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 viewGroup2.measure(iMakeMeasureSpec,
                                         View.MeasureSpec.makeMeasureSpec(i5, Integer.MIN_VALUE));
-                                ViewGroup viewGroup3 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup3 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup3 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredHeight = viewGroup3.getMeasuredHeight();
-                                ViewGroup viewGroup4 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup4 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup4 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
@@ -230,27 +230,27 @@ public final class arw extends ase {
                             if (i6 < 1) {
                                 i6 = 1;
                             }
-                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup5 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup5 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
-                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup6 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup6 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup7 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup7 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup7.measure(iMakeMeasureSpec,
                                     View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE));
-                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup8 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup8 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -260,13 +260,13 @@ public final class arw extends ase {
                                 i6 = measuredHeight2;
                             }
                             layoutParams.height = i6;
-                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup9 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup9 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup10 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup10 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -342,30 +342,30 @@ public final class arw extends ase {
                         arwVar3.c.getClass();
                         if (arwVar3.z.isShowing()) {
                             int width = (int) (((double) arwVar3.aa.getWidth()) * 0.9d);
-                            aki akiVar2 = arwVar3.c;
+                            HookManager hookManagerVar2 = arwVar3.c;
                             int i5 = arwVar3.d;
-                            akiVar2.getClass();
+                            hookManagerVar2.getClass();
                             int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(width, Integer.MIN_VALUE);
-                            ViewGroup viewGroup = (ViewGroup) akiVar2.j;
+                            ViewGroup viewGroup = (ViewGroup) hookManagerVar2.hookingEngine;
                             if (viewGroup == null) {
                                 throwLateinitPropNotInitYet("quickfixPanel");
                                 throw null;
                             }
                             if (viewGroup.getVisibility() == 0) {
-                                ViewGroup viewGroup2 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup2 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup2 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 viewGroup2.measure(iMakeMeasureSpec,
                                         View.MeasureSpec.makeMeasureSpec(i5, Integer.MIN_VALUE));
-                                ViewGroup viewGroup3 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup3 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup3 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredHeight = viewGroup3.getMeasuredHeight();
-                                ViewGroup viewGroup4 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup4 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup4 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
@@ -382,27 +382,27 @@ public final class arw extends ase {
                             if (i6 < 1) {
                                 i6 = 1;
                             }
-                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup5 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup5 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
-                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup6 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup6 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup7 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup7 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup7.measure(iMakeMeasureSpec,
                                     View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE));
-                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup8 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup8 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -412,13 +412,13 @@ public final class arw extends ase {
                                 i6 = measuredHeight2;
                             }
                             layoutParams.height = i6;
-                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup9 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup9 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup10 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup10 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -495,30 +495,30 @@ public final class arw extends ase {
                         arwVar3.c.getClass();
                         if (arwVar3.z.isShowing()) {
                             int width = (int) (((double) arwVar3.aa.getWidth()) * 0.9d);
-                            aki akiVar2 = arwVar3.c;
+                            HookManager hookManagerVar2 = arwVar3.c;
                             int i52 = arwVar3.d;
-                            akiVar2.getClass();
+                            hookManagerVar2.getClass();
                             int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(width, Integer.MIN_VALUE);
-                            ViewGroup viewGroup = (ViewGroup) akiVar2.j;
+                            ViewGroup viewGroup = (ViewGroup) hookManagerVar2.hookingEngine;
                             if (viewGroup == null) {
                                 throwLateinitPropNotInitYet("quickfixPanel");
                                 throw null;
                             }
                             if (viewGroup.getVisibility() == 0) {
-                                ViewGroup viewGroup2 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup2 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup2 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 viewGroup2.measure(iMakeMeasureSpec,
                                         View.MeasureSpec.makeMeasureSpec(i52, Integer.MIN_VALUE));
-                                ViewGroup viewGroup3 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup3 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup3 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredHeight = viewGroup3.getMeasuredHeight();
-                                ViewGroup viewGroup4 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup4 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup4 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
@@ -535,27 +535,27 @@ public final class arw extends ase {
                             if (i6 < 1) {
                                 i6 = 1;
                             }
-                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup5 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup5 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
-                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup6 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup6 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup7 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup7 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup7.measure(iMakeMeasureSpec,
                                     View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE));
-                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup8 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup8 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -565,13 +565,13 @@ public final class arw extends ase {
                                 i6 = measuredHeight2;
                             }
                             layoutParams.height = i6;
-                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup9 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup9 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup10 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup10 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -647,30 +647,30 @@ public final class arw extends ase {
                         arwVar3.c.getClass();
                         if (arwVar3.z.isShowing()) {
                             int width = (int) (((double) arwVar3.aa.getWidth()) * 0.9d);
-                            aki akiVar2 = arwVar3.c;
+                            HookManager hookManagerVar2 = arwVar3.c;
                             int i52 = arwVar3.d;
-                            akiVar2.getClass();
+                            hookManagerVar2.getClass();
                             int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(width, Integer.MIN_VALUE);
-                            ViewGroup viewGroup = (ViewGroup) akiVar2.j;
+                            ViewGroup viewGroup = (ViewGroup) hookManagerVar2.hookingEngine;
                             if (viewGroup == null) {
                                 throwLateinitPropNotInitYet("quickfixPanel");
                                 throw null;
                             }
                             if (viewGroup.getVisibility() == 0) {
-                                ViewGroup viewGroup2 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup2 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup2 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 viewGroup2.measure(iMakeMeasureSpec,
                                         View.MeasureSpec.makeMeasureSpec(i52, Integer.MIN_VALUE));
-                                ViewGroup viewGroup3 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup3 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup3 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredHeight = viewGroup3.getMeasuredHeight();
-                                ViewGroup viewGroup4 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup4 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup4 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
@@ -687,27 +687,27 @@ public final class arw extends ase {
                             if (i62 < 1) {
                                 i62 = 1;
                             }
-                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup5 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup5 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
-                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup6 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup6 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup7 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup7 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup7.measure(iMakeMeasureSpec,
                                     View.MeasureSpec.makeMeasureSpec(i62, Integer.MIN_VALUE));
-                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup8 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup8 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -717,13 +717,13 @@ public final class arw extends ase {
                                 i62 = measuredHeight2;
                             }
                             layoutParams.height = i62;
-                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup9 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup9 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup10 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup10 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -799,30 +799,30 @@ public final class arw extends ase {
                         arwVar3.c.getClass();
                         if (arwVar3.z.isShowing()) {
                             int width = (int) (((double) arwVar3.aa.getWidth()) * 0.9d);
-                            aki akiVar2 = arwVar3.c;
+                            HookManager hookManagerVar2 = arwVar3.c;
                             int i52 = arwVar3.d;
-                            akiVar2.getClass();
+                            hookManagerVar2.getClass();
                             int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(width, Integer.MIN_VALUE);
-                            ViewGroup viewGroup = (ViewGroup) akiVar2.j;
+                            ViewGroup viewGroup = (ViewGroup) hookManagerVar2.hookingEngine;
                             if (viewGroup == null) {
                                 throwLateinitPropNotInitYet("quickfixPanel");
                                 throw null;
                             }
                             if (viewGroup.getVisibility() == 0) {
-                                ViewGroup viewGroup2 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup2 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup2 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 viewGroup2.measure(iMakeMeasureSpec,
                                         View.MeasureSpec.makeMeasureSpec(i52, Integer.MIN_VALUE));
-                                ViewGroup viewGroup3 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup3 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup3 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredHeight = viewGroup3.getMeasuredHeight();
-                                ViewGroup viewGroup4 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup4 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup4 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
@@ -839,27 +839,27 @@ public final class arw extends ase {
                             if (i62 < 1) {
                                 i62 = 1;
                             }
-                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup5 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup5 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
-                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup6 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup6 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup7 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup7 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup7.measure(iMakeMeasureSpec,
                                     View.MeasureSpec.makeMeasureSpec(i62, Integer.MIN_VALUE));
-                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup8 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup8 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -869,13 +869,13 @@ public final class arw extends ase {
                                 i62 = measuredHeight2;
                             }
                             layoutParams.height = i62;
-                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup9 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup9 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup10 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup10 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -951,30 +951,30 @@ public final class arw extends ase {
                         arwVar3.c.getClass();
                         if (arwVar3.z.isShowing()) {
                             int width = (int) (((double) arwVar3.aa.getWidth()) * 0.9d);
-                            aki akiVar2 = arwVar3.c;
+                            HookManager hookManagerVar2 = arwVar3.c;
                             int i52 = arwVar3.d;
-                            akiVar2.getClass();
+                            hookManagerVar2.getClass();
                             int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(width, Integer.MIN_VALUE);
-                            ViewGroup viewGroup = (ViewGroup) akiVar2.j;
+                            ViewGroup viewGroup = (ViewGroup) hookManagerVar2.hookingEngine;
                             if (viewGroup == null) {
                                 throwLateinitPropNotInitYet("quickfixPanel");
                                 throw null;
                             }
                             if (viewGroup.getVisibility() == 0) {
-                                ViewGroup viewGroup2 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup2 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup2 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 viewGroup2.measure(iMakeMeasureSpec,
                                         View.MeasureSpec.makeMeasureSpec(i52, Integer.MIN_VALUE));
-                                ViewGroup viewGroup3 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup3 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup3 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
                                 }
                                 measuredHeight = viewGroup3.getMeasuredHeight();
-                                ViewGroup viewGroup4 = (ViewGroup) akiVar2.j;
+                                ViewGroup viewGroup4 = (ViewGroup) hookManagerVar2.hookingEngine;
                                 if (viewGroup4 == null) {
                                     throwLateinitPropNotInitYet("quickfixPanel");
                                     throw null;
@@ -991,27 +991,27 @@ public final class arw extends ase {
                             if (i62 < 1) {
                                 i62 = 1;
                             }
-                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup5 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup5 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
-                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup6 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup6 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup7 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup7 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup7.measure(iMakeMeasureSpec,
                                     View.MeasureSpec.makeMeasureSpec(i62, Integer.MIN_VALUE));
-                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup8 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup8 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -1021,13 +1021,13 @@ public final class arw extends ase {
                                 i62 = measuredHeight2;
                             }
                             layoutParams.height = i62;
-                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup9 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup9 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.members;
+                            ViewGroup viewGroup10 = (ViewGroup) hookManagerVar2.members;
                             if (viewGroup10 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -1088,35 +1088,35 @@ public final class arw extends ase {
     public final void j() {
         arq colorScheme = this.aa.getColorScheme();
         throwIfVar1IsNull(colorScheme, "getColorScheme(...)");
-        aki akiVar = this.c;
-        akiVar.getClass();
+        HookManager hookManagerVar = this.c;
+        hookManagerVar.getClass();
         SparseIntArray sparseIntArray = colorScheme.b;
-        arw arwVar = (arw) akiVar.hookPriority;
+        arw arwVar = (arw) hookManagerVar.hookPriority;
         if (arwVar == null) {
             throwLateinitPropNotInitYet("window");
             throw null;
         }
         CodeEditor codeEditor = arwVar.aa;
         throwIfVar1IsNull(codeEditor, "getEditor(...)");
-        TextView textView = (TextView) akiVar.e;
+        TextView textView = (TextView) hookManagerVar.instantCollection;
         if (textView == null) {
             throwLateinitPropNotInitYet("briefMessageText");
             throw null;
         }
         textView.setTextColor(sparseIntArray.get(54));
-        TextView textView2 = (TextView) akiVar.f;
+        TextView textView2 = (TextView) hookManagerVar.f;
         if (textView2 == null) {
             throwLateinitPropNotInitYet("detailMessageText");
             throw null;
         }
         textView2.setTextColor(sparseIntArray.get(55));
-        TextView textView3 = (TextView) akiVar.g;
+        TextView textView3 = (TextView) hookManagerVar.g;
         if (textView3 == null) {
             throwLateinitPropNotInitYet("quickfixText");
             throw null;
         }
         textView3.setTextColor(sparseIntArray.get(56));
-        TextView textView4 = (TextView) akiVar.h;
+        TextView textView4 = (TextView) hookManagerVar.activeUnhooks;
         if (textView4 == null) {
             throwLateinitPropNotInitYet("moreActionText");
             throw null;
@@ -1125,7 +1125,7 @@ public final class arw extends ase {
         GradientDrawable gradientDrawable = new GradientDrawable();
         gradientDrawable.setCornerRadius(codeEditor.getDpUnit() * 5);
         gradientDrawable.setColor(sparseIntArray.get(53));
-        View view = (View) akiVar.resolutionStrategy;
+        View view = (View) hookManagerVar.resolutionStrategy;
         if (view != null) {
             view.setBackground(gradientDrawable);
         } else {

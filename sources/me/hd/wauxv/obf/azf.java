@@ -50,8 +50,8 @@ public final class azf extends p {
         if (i3 < 4) {
             char c = azeVar.d;
             int i4 = azeVar.e;
-            int iAu = ewz.au(c, i, charSequence.length(), charSequence) - i;
-            if (iAu >= i4 && ewz.av(i + iAu, charSequence.length(), charSequence) == charSequence.length()) {
+            int iAu = StaticAndroidHelpers.au(c, i, charSequence.length(), charSequence) - i;
+            if (iAu >= i4 && StaticAndroidHelpers.av(i + iAu, charSequence.length(), charSequence) == charSequence.length()) {
                 return new pf(-1, -1, true);
             }
         }

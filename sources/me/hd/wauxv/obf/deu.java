@@ -31,9 +31,9 @@ public final class deu extends SwitchHook {
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) bjs.h(methodResolverVarT);
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         deu deuVar = a;
-        aki akiVarAd = deuVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
-        deuVar.y(akiVarAd, new dbj(19));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = deuVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+        deuVar.y(hookManagerVarAd, new dbj(19));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

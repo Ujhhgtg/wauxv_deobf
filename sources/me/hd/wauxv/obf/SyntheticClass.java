@@ -14,11 +14,11 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class GifEncoder implements axv, dcq, dcm, btg, dcc, cvg {
-    public static GifEncoder a;
+public final class SyntheticClass implements axv, dcq, dcm, LogBackend, dcc, cvg {
+    public static SyntheticClass a;
     public final /* synthetic */ int b;
 
-    public /* synthetic */ GifEncoder(int i) {
+    public /* synthetic */ SyntheticClass(int i) {
         this.b = i;
     }
 
@@ -49,22 +49,22 @@ public final class GifEncoder implements axv, dcq, dcm, btg, dcc, cvg {
     }
 
     @Override // me.hd.wauxv.obf.btg
-    public void debug(String str) {
-        Kotlin$Lazy kotlin$LazyVar = bth.a;
-        if (((Boolean) bth.b.getValue()).booleanValue()) {
+    public void logD(String str) {
+        Kotlin$Lazy kotlin$LazyVar = LogConfig.isDevelopmentMode;
+        if (((Boolean) LogConfig.isVerboseLogging.getValue()).booleanValue()) {
             Log.d("KavaRef", String.valueOf(str), null);
         } else {
-            ((bxs) bth.a.getValue()).debug(String.valueOf(str));
+            ((bxs) LogConfig.isDevelopmentMode.getValue()).debug(String.valueOf(str));
         }
     }
 
     @Override // me.hd.wauxv.obf.btg
-    public void e(Object obj, Throwable th) {
-        Kotlin$Lazy kotlin$LazyVar = bth.a;
-        if (((Boolean) bth.b.getValue()).booleanValue()) {
+    public void logException(Object obj, Throwable th) {
+        Kotlin$Lazy kotlin$LazyVar = LogConfig.isDevelopmentMode;
+        if (((Boolean) LogConfig.isVerboseLogging.getValue()).booleanValue()) {
             Log.w("KavaRef", String.valueOf(obj), th);
         } else {
-            ((bxs) bth.a.getValue()).warn(String.valueOf(obj), th);
+            ((bxs) LogConfig.isDevelopmentMode.getValue()).warn(String.valueOf(obj), th);
         }
     }
 
@@ -130,11 +130,11 @@ public final class GifEncoder implements axv, dcq, dcm, btg, dcc, cvg {
         return 1;
     }
 
-    public GifEncoder(but butVar, beg begVar) {
+    public SyntheticClass(but butVar, beg begVar) {
         this.b = 22;
     }
 
-    public GifEncoder(brd brdVar) {
+    public SyntheticClass(brd brdVar) {
         this.b = 19;
     }
 }

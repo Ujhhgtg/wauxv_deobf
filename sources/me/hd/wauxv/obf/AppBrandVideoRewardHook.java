@@ -26,9 +26,9 @@ public final class AppBrandVideoRewardHook extends SwitchHook {
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         AppBrandVideoRewardHook gyVar = a;
-        aki akiVarAd = gyVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
-        gyVar.y(akiVarAd, new gi(17));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = gyVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+        gyVar.y(hookManagerVarAd, new gi(17));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

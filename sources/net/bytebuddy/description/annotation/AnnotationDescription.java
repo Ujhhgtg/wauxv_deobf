@@ -372,7 +372,7 @@ public interface AnnotationDescription {
                 if (map.put(((MethodDescription.InDefinedShape) methodListFilter.getOnly()).getName(), annotationValue) == null) {
                     return new Builder(this.annotationType, map);
                 }
-                throw new IllegalArgumentException(yg.k("Property already defined: ", str));
+                throw new IllegalArgumentException(yg.concat("Property already defined: ", str));
             }
             throw new IllegalArgumentException(this.annotationType + " does not define a property named " + str);
         }

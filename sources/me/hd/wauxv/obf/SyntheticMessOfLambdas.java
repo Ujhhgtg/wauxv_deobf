@@ -50,7 +50,7 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
         int i3 = 3;
         boolean z = true;
         z = true;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 bah bahVar = (bah) obj;
@@ -151,9 +151,9 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                if (objX instanceof dcx) {
+                if (objX instanceof Failure) {
                     objX = null;
                 }
                 String str2 = (String) objX;
@@ -164,9 +164,9 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = FastKV.x(th2);
+                    objX2 = FastKV.getFailureFromException(th2);
                 }
-                if (objX2 instanceof dcx) {
+                if (objX2 instanceof Failure) {
                     objX2 = null;
                 }
                 try {
@@ -175,9 +175,9 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = FastKV.x(th3);
+                    objX3 = FastKV.getFailureFromException(th3);
                 }
-                if (objX3 instanceof dcx) {
+                if (objX3 instanceof Failure) {
                     objX3 = null;
                 }
                 throwIfVar1IsNull(objX3);
@@ -188,16 +188,16 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX4 = null;
                     }
                 } catch (Throwable th4) {
-                    objX4 = FastKV.x(th4);
+                    objX4 = FastKV.getFailureFromException(th4);
                 }
                 for (IDatabaseOperationsListener bobVar : dly.b) {
                     try {
                         bobVar.s(str, contentValues);
                     } catch (Exception e) {
-                        ArrayList arrayList = ewq.a;
+                        ArrayList arrayList = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onDatabaseInsertBefore " /* "onDatabaseInsertBefore " /* "onDatabaseInsertBefore " /* "onDatabaseInsertBefore " /* cnb.z(-54709293415210L)   */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
                                 bobVar instanceof SwitchHook ? ((SwitchHook) bobVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 54056458386218L)
@@ -215,9 +215,9 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX5 = null;
                     }
                 } catch (Throwable th5) {
-                    objX5 = FastKV.x(th5);
+                    objX5 = FastKV.getFailureFromException(th5);
                 }
-                if (objX5 instanceof dcx) {
+                if (objX5 instanceof Failure) {
                     objX5 = null;
                 }
                 String str3 = (String) objX5;
@@ -228,9 +228,9 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX6 = null;
                     }
                 } catch (Throwable th6) {
-                    objX6 = FastKV.x(th6);
+                    objX6 = FastKV.getFailureFromException(th6);
                 }
-                if (objX6 instanceof dcx) {
+                if (objX6 instanceof Failure) {
                     objX6 = null;
                 }
                 throwIfVar1IsNull(objX6);
@@ -241,9 +241,9 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX7 = null;
                     }
                 } catch (Throwable th7) {
-                    objX7 = FastKV.x(th7);
+                    objX7 = FastKV.getFailureFromException(th7);
                 }
-                if (objX7 instanceof dcx) {
+                if (objX7 instanceof Failure) {
                     objX7 = null;
                 }
                 String str5 = (String) objX7;
@@ -254,9 +254,9 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX8 = null;
                     }
                 } catch (Throwable th8) {
-                    objX8 = FastKV.x(th8);
+                    objX8 = FastKV.getFailureFromException(th8);
                 }
-                if (objX8 instanceof dcx) {
+                if (objX8 instanceof Failure) {
                     objX8 = null;
                 }
                 String[] strArr5 = (String[]) objX8;
@@ -266,18 +266,18 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX9 = null;
                     }
                 } catch (Throwable th9) {
-                    objX9 = FastKV.x(th9);
+                    objX9 = FastKV.getFailureFromException(th9);
                 }
-                Integer num = (Integer) (objX9 instanceof dcx ? null : objX9);
+                Integer num = (Integer) (objX9 instanceof Failure ? null : objX9);
                 int iIntValue = num != null ? num.intValue() : 0;
                 for (IDatabaseOperationsListener bobVar2 : dly.b) {
                     try {
                         bobVar2.j(hookParam2, str4, contentValues2, str6, strArr5, iIntValue);
                     } catch (Exception e2) {
-                        ArrayList arrayList2 = ewq.a;
+                        ArrayList arrayList2 = Logger.a;
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onDatabaseUpdateBefore " /* "onDatabaseUpdateBefore " /* "onDatabaseUpdateBefore " /* "onDatabaseUpdateBefore " /* cnb.z(-53983443942186L)   */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
                                 bobVar2 instanceof SwitchHook ? ((SwitchHook) bobVar2).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -294,7 +294,7 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                     Object obj2 = hookParam3.getArgs()[0];
                     break;
                 } catch (Throwable th10) {
-                    FastKV.x(th10);
+                    FastKV.getFailureFromException(th10);
                 }
                 try {
                     objX10 = hookParam3.getArgs()[1];
@@ -302,9 +302,9 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX10 = null;
                     }
                 } catch (Throwable th11) {
-                    objX10 = FastKV.x(th11);
+                    objX10 = FastKV.getFailureFromException(th11);
                 }
-                if (objX10 instanceof dcx) {
+                if (objX10 instanceof Failure) {
                     objX10 = null;
                 }
                 String str7 = (String) objX10;
@@ -315,9 +315,9 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX11 = null;
                     }
                 } catch (Throwable th12) {
-                    objX11 = FastKV.x(th12);
+                    objX11 = FastKV.getFailureFromException(th12);
                 }
-                if (objX11 instanceof dcx) {
+                if (objX11 instanceof Failure) {
                     objX11 = null;
                 }
                 try {
@@ -326,22 +326,22 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX12 = null;
                     }
                 } catch (Throwable th13) {
-                    objX12 = FastKV.x(th13);
+                    objX12 = FastKV.getFailureFromException(th13);
                 }
                 try {
                     Object obj3 = hookParam3.getArgs()[4];
                     break;
                 } catch (Throwable th14) {
-                    FastKV.x(th14);
+                    FastKV.getFailureFromException(th14);
                 }
                 for (IDatabaseOperationsListener bobVar3 : dly.b) {
                     try {
                         bobVar3.n(hookParam3, str);
                     } catch (Exception e3) {
-                        ArrayList arrayList3 = ewq.a;
+                        ArrayList arrayList3 = Logger.a;
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("onDatabaseQueryBefore " /* "onDatabaseQueryBefore " /* "onDatabaseQueryBefore " /* "onDatabaseQueryBefore " /* cnb.z(-54374285966122L)   */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb3,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb3,
                                 bobVar3 instanceof SwitchHook ? ((SwitchHook) bobVar3).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -360,9 +360,9 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX13 = null;
                     }
                 } catch (Throwable th15) {
-                    objX13 = FastKV.x(th15);
+                    objX13 = FastKV.getFailureFromException(th15);
                 }
-                if (objX13 instanceof dcx) {
+                if (objX13 instanceof Failure) {
                     objX13 = null;
                 }
                 String str8 = (String) objX13;
@@ -373,9 +373,9 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX14 = null;
                     }
                 } catch (Throwable th16) {
-                    objX14 = FastKV.x(th16);
+                    objX14 = FastKV.getFailureFromException(th16);
                 }
-                if (objX14 instanceof dcx) {
+                if (objX14 instanceof Failure) {
                     objX14 = null;
                 }
                 throwIfVar1IsNull(objX14);
@@ -386,9 +386,9 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX15 = null;
                     }
                 } catch (Throwable th17) {
-                    objX15 = FastKV.x(th17);
+                    objX15 = FastKV.getFailureFromException(th17);
                 }
-                if (objX15 instanceof dcx) {
+                if (objX15 instanceof Failure) {
                     objX15 = null;
                 }
                 String str10 = (String) objX15;
@@ -399,9 +399,9 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX16 = null;
                     }
                 } catch (Throwable th18) {
-                    objX16 = FastKV.x(th18);
+                    objX16 = FastKV.getFailureFromException(th18);
                 }
-                if (objX16 instanceof dcx) {
+                if (objX16 instanceof Failure) {
                     objX16 = null;
                 }
                 String[] strArr6 = (String[]) objX16;
@@ -411,18 +411,18 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX17 = null;
                     }
                 } catch (Throwable th19) {
-                    objX17 = FastKV.x(th19);
+                    objX17 = FastKV.getFailureFromException(th19);
                 }
-                Integer num2 = (Integer) (objX17 instanceof dcx ? null : objX17);
+                Integer num2 = (Integer) (objX17 instanceof Failure ? null : objX17);
                 int iIntValue2 = num2 != null ? num2.intValue() : 0;
                 for (IDatabaseOperationsListener bobVar4 : dly.b) {
                     try {
                         bobVar4.l(hookParam4, str9, contentValues3, str11, strArr6, iIntValue2);
                     } catch (Exception e4) {
-                        ArrayList arrayList4 = ewq.a;
+                        ArrayList arrayList4 = Logger.a;
                         StringBuilder sb4 = new StringBuilder();
                         sb4.append("onCompatUpdateBefore " /* "onCompatUpdateBefore " /* "onCompatUpdateBefore " /* "onCompatUpdateBefore " /* cnb.z(-54202487274282L)   */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb4,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb4,
                                 bobVar4 instanceof SwitchHook ? ((SwitchHook) bobVar4).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -441,9 +441,9 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX18 = null;
                     }
                 } catch (Throwable th20) {
-                    objX18 = FastKV.x(th20);
+                    objX18 = FastKV.getFailureFromException(th20);
                 }
-                if (objX18 instanceof dcx) {
+                if (objX18 instanceof Failure) {
                     objX18 = null;
                 }
                 String str12 = (String) objX18;
@@ -454,22 +454,22 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX19 = null;
                     }
                 } catch (Throwable th21) {
-                    objX19 = FastKV.x(th21);
+                    objX19 = FastKV.getFailureFromException(th21);
                 }
                 try {
                     Object obj4 = hookParam5.getArgs()[2];
                     break;
                 } catch (Throwable th22) {
-                    FastKV.x(th22);
+                    FastKV.getFailureFromException(th22);
                 }
                 for (IDatabaseOperationsListener bobVar5 : dly.b) {
                     try {
                         bobVar5.t(hookParam5, str);
                     } catch (Exception e5) {
-                        ArrayList arrayList5 = ewq.a;
+                        ArrayList arrayList5 = Logger.a;
                         StringBuilder sb5 = new StringBuilder();
                         sb5.append("onCompatQueryBefore " /* "onCompatQueryBefore " /* "onCompatQueryBefore " /* "onCompatQueryBefore " /* cnb.z(-60065117633322L)   */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb5,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb5,
                                 bobVar5 instanceof SwitchHook ? ((SwitchHook) bobVar5).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -495,9 +495,9 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                             objX21 = null;
                         }
                     } catch (Throwable th23) {
-                        objX21 = FastKV.x(th23);
+                        objX21 = FastKV.getFailureFromException(th23);
                     }
-                    intent = (Intent) (objX21 instanceof dcx ? null : objX21);
+                    intent = (Intent) (objX21 instanceof Failure ? null : objX21);
                 } else {
                     try {
                         objX20 = hookParam6.getArgs()[1];
@@ -505,19 +505,19 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                             objX20 = null;
                         }
                     } catch (Throwable th24) {
-                        objX20 = FastKV.x(th24);
+                        objX20 = FastKV.getFailureFromException(th24);
                     }
-                    intent = (Intent) (objX20 instanceof dcx ? null : objX20);
+                    intent = (Intent) (objX20 instanceof Failure ? null : objX20);
                 }
                 throwIfVar1IsNull(intent);
                 for (IStartActivity bocVar : dmi.b) {
                     try {
                         bocVar.onStartActivityIntent(hookParam6, intent);
                     } catch (Exception e6) {
-                        ArrayList arrayList6 = ewq.a;
+                        ArrayList arrayList6 = Logger.a;
                         StringBuilder sb6 = new StringBuilder();
                         sb6.append("onStartActivityIntent " /* "onStartActivityIntent " /* "onStartActivityIntent " /* "onStartActivityIntent " /* cnb.z(-60327110638378L)   */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb6,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb6,
                                 bocVar instanceof SwitchHook ? ((SwitchHook) bocVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 60211146521386L)
@@ -594,25 +594,25 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         objX22 = null;
                     }
                 } catch (Throwable th25) {
-                    objX22 = FastKV.x(th25);
+                    objX22 = FastKV.getFailureFromException(th25);
                 }
-                Object obj5 = objX22 instanceof dcx ? null : objX22;
+                Object obj5 = objX22 instanceof Failure ? null : objX22;
                 throwIfVar1IsNull(obj5);
                 String str14 = (String) obj5;
                 try {
                     Object obj6 = hookParam7.getArgs()[1];
                     break;
                 } catch (Throwable th26) {
-                    FastKV.x(th26);
+                    FastKV.getFailureFromException(th26);
                 }
                 for (bod bodVar : dou.b) {
                     try {
                         bodVar.d(hookParam7, str14);
                     } catch (Exception e7) {
-                        ArrayList arrayList7 = ewq.a;
+                        ArrayList arrayList7 = Logger.a;
                         StringBuilder sb7 = new StringBuilder();
                         sb7.append("onGetSyncConfig " /* "onGetSyncConfig " /* "onGetSyncConfig " /* "onGetSyncConfig " /* cnb.z(-59502476917546L)   */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb7,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb7,
                                 bodVar instanceof SwitchHook ? ((SwitchHook) bodVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 59429462473514L)

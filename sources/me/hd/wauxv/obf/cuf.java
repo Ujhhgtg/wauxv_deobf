@@ -50,6 +50,6 @@ public final /* synthetic */ class cuf implements IInvokable {
                 aekVar.m().bb(new qp(aekVar, 1)).bm();
                 break;
         }
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

@@ -913,7 +913,7 @@ public interface TypePool {
 
                 @Override // net.bytebuddy.pool.TypePool.Default.ComponentTypeLocator
                 public AbstractBase.ComponentTypeReference bind(String str) {
-                    throw new IllegalStateException(yg.k("Unexpected lookup of component type for ", str));
+                    throw new IllegalStateException(yg.concat("Unexpected lookup of component type for ", str));
                 }
             }
 
@@ -7346,7 +7346,7 @@ public interface TypePool {
             private final String name;
 
             public NoSuchTypeException(String str) {
-                super(yg.k("Cannot resolve type description for ", str));
+                super(yg.concat("Cannot resolve type description for ", str));
                 this.name = str;
             }
 

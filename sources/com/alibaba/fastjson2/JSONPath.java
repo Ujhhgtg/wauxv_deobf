@@ -331,7 +331,7 @@ public abstract class JSONPath {
                 if ("between".equalsIgnoreCase(fieldName)) {
                     return JSONPathFilter.Operator.BETWEEN;
                 }
-                throw new JSONException(yg.k("not support operator : ", fieldName));
+                throw new JSONException(yg.concat("not support operator : ", fieldName));
             case 'E':
             case 'e':
                 jSONReader.readFieldNameHashCodeUnquote();
@@ -340,10 +340,10 @@ public abstract class JSONPath {
                     jSONReader.readFieldNameHashCodeUnquote();
                     String fieldName3 = jSONReader.getFieldName();
                     if (!"with".equalsIgnoreCase(fieldName3)) {
-                        throw new JSONException(yg.k("not support operator : ", fieldName3));
+                        throw new JSONException(yg.concat("not support operator : ", fieldName3));
                     }
                 } else if (!"endsWith".equalsIgnoreCase(fieldName2)) {
-                    throw new JSONException(yg.k("not support operator : ", fieldName2));
+                    throw new JSONException(yg.concat("not support operator : ", fieldName2));
                 }
                 return JSONPathFilter.Operator.ENDS_WITH;
             case 'I':
@@ -356,7 +356,7 @@ public abstract class JSONPath {
                 if ("is".equalsIgnoreCase(fieldName4)) {
                     return JSONPathFilter.Operator.EQ;
                 }
-                throw new JSONException(yg.k("not support operator : ", fieldName4));
+                throw new JSONException(yg.concat("not support operator : ", fieldName4));
             case 'L':
             case 'l':
                 jSONReader.readFieldNameHashCodeUnquote();
@@ -364,7 +364,7 @@ public abstract class JSONPath {
                 if ("like".equalsIgnoreCase(fieldName5)) {
                     return JSONPathFilter.Operator.LIKE;
                 }
-                throw new JSONException(yg.k("not support operator : ", fieldName5));
+                throw new JSONException(yg.concat("not support operator : ", fieldName5));
             case 'N':
             case 'n':
                 jSONReader.readFieldNameHashCodeUnquote();
@@ -373,7 +373,7 @@ public abstract class JSONPath {
                     return JSONPathFilter.Operator.NOT_IN;
                 }
                 if (!"not".equalsIgnoreCase(fieldName6)) {
-                    throw new JSONException(yg.k("not support operator : ", fieldName6));
+                    throw new JSONException(yg.concat("not support operator : ", fieldName6));
                 }
                 jSONReader.readFieldNameHashCodeUnquote();
                 String fieldName7 = jSONReader.getFieldName();
@@ -389,7 +389,7 @@ public abstract class JSONPath {
                 if ("between".equalsIgnoreCase(fieldName7)) {
                     return JSONPathFilter.Operator.NOT_BETWEEN;
                 }
-                throw new JSONException(yg.k("not support operator : ", fieldName7));
+                throw new JSONException(yg.concat("not support operator : ", fieldName7));
             case 'R':
             case 'r':
                 jSONReader.readFieldNameHashCodeUnquote();
@@ -397,7 +397,7 @@ public abstract class JSONPath {
                 if ("rlike".equalsIgnoreCase(fieldName8)) {
                     return JSONPathFilter.Operator.RLIKE;
                 }
-                throw new JSONException(yg.k("not support operator : ", fieldName8));
+                throw new JSONException(yg.concat("not support operator : ", fieldName8));
             case 'S':
             case 's':
                 jSONReader.readFieldNameHashCodeUnquote();
@@ -406,10 +406,10 @@ public abstract class JSONPath {
                     jSONReader.readFieldNameHashCodeUnquote();
                     String fieldName10 = jSONReader.getFieldName();
                     if (!"with".equalsIgnoreCase(fieldName10)) {
-                        throw new JSONException(yg.k("not support operator : ", fieldName10));
+                        throw new JSONException(yg.concat("not support operator : ", fieldName10));
                     }
                 } else if (!"startsWith".equalsIgnoreCase(fieldName9)) {
-                    throw new JSONException(yg.k("not support operator : ", fieldName9));
+                    throw new JSONException(yg.concat("not support operator : ", fieldName9));
                 }
                 return JSONPathFilter.Operator.STARTS_WITH;
             default:

@@ -46,7 +46,7 @@ public final /* synthetic */ class etk implements IInvokable {
                 if (cursorAb != null) {
                     while (cursorAb.moveToNext()) {
                         try {
-                            if (dnr.bi(cursorAb.getString(cursorAb.getColumnIndex("username" /*
+                            if (dnr.ifVar1EndsWithVar2(cursorAb.getString(cursorAb.getColumnIndex("username" /*
                                                                                               * "username" /* "username" /* cnb.z(-521031072611114L)  */
                                                                                               */)), "@chatroom" /*
                                                                                                                  * cnb.z
@@ -133,7 +133,7 @@ public final /* synthetic */ class etk implements IInvokable {
                         while (it.hasNext()) {
                             arj.ah(((adx) it.next()).a, str3, i);
                         }
-                        dnc.g(null, 3, "已转发至" /* "已转发至" /* "已转发至" /* cnb.z(-520206438890282L)  */ + list.size() + "个会话" /*
+                        dnc.sendToast(null, 3, "已转发至" /* "已转发至" /* "已转发至" /* cnb.z(-520206438890282L)  */ + list.size() + "个会话" /*
                                                                                                     * cnb.z(-
                                                                                                     * 520150604315434L)
                                                                                                     */);
@@ -144,6 +144,6 @@ public final /* synthetic */ class etk implements IInvokable {
                 aelVar2.l = bgjVar;
                 break;
         }
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

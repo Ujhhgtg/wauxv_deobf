@@ -41,12 +41,12 @@ public abstract class cuk {
             ctxVar.n("onLoad" /* "onLoad" /* "onLoad" /* cnb.z(-402056183544618L)  */, new Object[0]);
             objX = Boolean.TRUE;
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        Throwable thB = dcy.b(objX);
+        Throwable thB = Success.exceptionOrNull(objX);
         if (thB != null) {
-            ArrayList arrayList = ewq.a;
-            ewq.e("Plugin[" /* "Plugin[" /* "Plugin[" /* cnb.z(-400741923552042L)  */ + ctxVar.f + "]: load Failed: " /* "]: load Failed: " /* "]: load Failed: " /* cnb.z(-400707563813674L)  */ + thB.getMessage(), null, 14);
+            ArrayList arrayList = Logger.a;
+            Logger.logE("Plugin[" /* "Plugin[" /* "Plugin[" /* cnb.z(-400741923552042L)  */ + ctxVar.f + "]: load Failed: " /* "]: load Failed: " /* "]: load Failed: " /* cnb.z(-400707563813674L)  */ + thB.getMessage(), null, 14);
             SyntheticPileOfMess bmuVar = ctxVar.m;
             StringBuilder sb = new StringBuilder();
             sb.append("load Failed: " /* "load Failed: " /* "load Failed: " /* cnb.z(-400651729238826L)  */);
@@ -62,7 +62,7 @@ public abstract class cuk {
     }
 
     public static void f(Interpreter interpreter, Object obj) {
-        baa baaVar = new baa(new bae(SomeStaticHelpers.b(obj.getClass().getDeclaredMethods()), true, new Function1$VarIsInt(23)));
+        baa baaVar = new baa(new bae(SomeStaticHelpers.b(obj.getClass().getDeclaredMethods()), true, new Function1$VarIsObj(23)));
         while (baaVar.hasNext()) {
             interpreter.getNameSpace().setMethod(new BshMethod((Method) baaVar.next(), obj));
         }
@@ -76,12 +76,12 @@ public abstract class cuk {
             ctxVar.o().getNameSpace().clear();
             objX = Boolean.TRUE;
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        Throwable thB = dcy.b(objX);
+        Throwable thB = Success.exceptionOrNull(objX);
         if (thB != null) {
-            ArrayList arrayList = ewq.a;
-            ewq.e("Plugin[" /* "Plugin[" /* "Plugin[" /* cnb.z(-400574419827498L)  */ + str + "]: unLoad Failed: " /* "]: unLoad Failed: " /* "]: unLoad Failed: " /* cnb.z(-400540060089130L)  */ + thB.getMessage(), null, 14);
+            ArrayList arrayList = Logger.a;
+            Logger.logE("Plugin[" /* "Plugin[" /* "Plugin[" /* cnb.z(-400574419827498L)  */ + str + "]: unLoad Failed: " /* "]: unLoad Failed: " /* "]: unLoad Failed: " /* cnb.z(-400540060089130L)  */ + thB.getMessage(), null, 14);
             SyntheticPileOfMess bmuVar = ctxVar.m;
             StringBuilder sb = new StringBuilder();
             sb.append("unLoad Failed: " /* "unLoad Failed: " /* "unLoad Failed: " /* cnb.z(-402124903021354L)  */);

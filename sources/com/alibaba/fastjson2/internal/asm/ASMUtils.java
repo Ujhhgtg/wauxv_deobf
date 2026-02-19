@@ -210,13 +210,13 @@ public final class ASMUtils {
                         .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/')
                 + TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER;
         DESC_FIELD_WRITER = str;
-        DESC_FIELD_WRITER_ARRAY = yg.k("[", str);
+        DESC_FIELD_WRITER_ARRAY = yg.concat("[", str);
         String str2 = "L"
                 + FieldReader.class.getName()
                         .replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/')
                 + TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER;
         DESC_FIELD_READER = str2;
-        DESC_FIELD_READER_ARRAY = yg.k("[", str2);
+        DESC_FIELD_READER_ARRAY = yg.concat("[", str2);
         DESC_JSON_READER = StaticHelpers6.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L",
                 strReplace);
         DESC_JSON_WRITER = StaticHelpers6.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L",

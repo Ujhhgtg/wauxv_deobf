@@ -180,7 +180,7 @@ public abstract class StaticHelpers7 implements esi {
                     + al(amrVar.a, amrVar.b, bArr).getBytes(StandardCharsets.UTF_8).length + 16 + amrVar.f;
         }
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream(length);
-        if (Arrays.equals(bArr, ewz.t)) {
+        if (Arrays.equals(bArr, StaticAndroidHelpers.t)) {
             int length2 = amrVarArr.length;
             while (i < length2) {
                 amr amrVar2 = amrVarArr[i];
@@ -342,7 +342,7 @@ public abstract class StaticHelpers7 implements esi {
             } else {
                 IInvokable bgfVar5 = findDexClassMethodDslWrapperVar.onMethodCallback;
                 if (bgfVar5 == null) {
-                    throw new IllegalArgumentException(amnVar.b.concat(" FindDexClassMethod Config Failed" /*
+                    throw new IllegalArgumentException(amnVar.signatureId.concat(" FindDexClassMethod Config Failed" /*
                                                                                                             * cnb.z(-
                                                                                                             * 82768314759978L)
                                                                                                             */));
@@ -353,21 +353,21 @@ public abstract class StaticHelpers7 implements esi {
                 IInvokable bgfVar6 = findDexClassMethodDslWrapperVar.onResultCallback;
                 foundName = ((cdf) (bgfVar6 != null ? cdgVarF2.b(bgfVar6) : cdgVarF2.a())).f;
             }
-            cacheKey = (String) amnVar.c.getValue();
-            ioVar = emc.w;
+            cacheKey = (String) amnVar.cachedName.getValue();
+            ioVar = emc.config;
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
         if (ioVar == null) {
             throw new IllegalArgumentException("DexDescConfig must be init" /* "DexDescConfig must be init" /* "DexDescConfig must be init" /* "DexDescConfig must be init" /* cnb.z(-6021544147754L)   */.toString());
         }
         ioVar.aj().putString(cacheKey, foundName);
-        objX = KotlinUnit.INSTANCE;
-        if (dcy.b(objX) != null) {
-            ArrayList arrayList = ewq.a;
-            String strConcat = amnVar.b.concat(" FindDexClassMethod Failed" /* " FindDexClassMethod Failed" /* " FindDexClassMethod Failed" /* " FindDexClassMethod Failed" /* cnb.z(-79821967194922L)   */);
+        objX = Kotlin$Unit.INSTANCE;
+        if (Success.exceptionOrNull(objX) != null) {
+            ArrayList arrayList = Logger.a;
+            String strConcat = amnVar.signatureId.concat(" FindDexClassMethod Failed" /* " FindDexClassMethod Failed" /* " FindDexClassMethod Failed" /* " FindDexClassMethod Failed" /* cnb.z(-79821967194922L)   */);
             ro.a.getClass();
-            ewq.e(strConcat, null, 12);
+            Logger.logE(strConcat, null, 12);
         }
     }
 
@@ -404,8 +404,8 @@ public abstract class StaticHelpers7 implements esi {
     }
 
     public static String al(String str, String str2, byte[] bArr) {
-        byte[] bArr2 = ewz.u;
-        byte[] bArr3 = ewz.v;
+        byte[] bArr2 = StaticAndroidHelpers.u;
+        byte[] bArr3 = StaticAndroidHelpers.v;
         String str3 = (Arrays.equals(bArr, bArr3) || Arrays.equals(bArr, bArr2)) ? ":" : "!";
         if (str.length() <= 0) {
             if ("!".equals(str3)) {
@@ -553,7 +553,7 @@ public abstract class StaticHelpers7 implements esi {
         int[] iArr = new int[i];
         int iAt = 0;
         for (int i2 = 0; i2 < i; i2++) {
-            iAt += (int) ewz.at(byteArrayInputStream, 2);
+            iAt += (int) StaticAndroidHelpers.at(byteArrayInputStream, 2);
             iArr[i2] = iAt;
         }
         return iArr;
@@ -561,13 +561,13 @@ public abstract class StaticHelpers7 implements esi {
 
     public static amr[] aq(FileInputStream fileInputStream, byte[] bArr, byte[] bArr2, amr[] amrVarArr)
             throws IOException {
-        byte[] bArr3 = ewz.w;
+        byte[] bArr3 = StaticAndroidHelpers.w;
         if (!Arrays.equals(bArr, bArr3)) {
-            if (!Arrays.equals(bArr, ewz.x)) {
+            if (!Arrays.equals(bArr, StaticAndroidHelpers.x)) {
                 throw new IllegalStateException("Unsupported meta version");
             }
-            int iAt = (int) ewz.at(fileInputStream, 2);
-            byte[] bArrAs = ewz.as(fileInputStream, (int) ewz.at(fileInputStream, 4), (int) ewz.at(fileInputStream, 4));
+            int iAt = (int) StaticAndroidHelpers.at(fileInputStream, 2);
+            byte[] bArrAs = StaticAndroidHelpers.as(fileInputStream, (int) StaticAndroidHelpers.at(fileInputStream, 4), (int) StaticAndroidHelpers.at(fileInputStream, 4));
             if (fileInputStream.read() > 0) {
                 throw new IllegalStateException("Content found after the end of file");
             }
@@ -585,15 +585,15 @@ public abstract class StaticHelpers7 implements esi {
                 throw th;
             }
         }
-        if (Arrays.equals(ewz.r, bArr2)) {
+        if (Arrays.equals(StaticAndroidHelpers.r, bArr2)) {
             throw new IllegalStateException(
                     "Requires new Baseline Profile Metadata. Please rebuild the APK with Android Gradle Plugin 7.2 Canary 7 or higher");
         }
         if (!Arrays.equals(bArr, bArr3)) {
             throw new IllegalStateException("Unsupported meta version");
         }
-        int iAt2 = (int) ewz.at(fileInputStream, 1);
-        byte[] bArrAs2 = ewz.as(fileInputStream, (int) ewz.at(fileInputStream, 4), (int) ewz.at(fileInputStream, 4));
+        int iAt2 = (int) StaticAndroidHelpers.at(fileInputStream, 1);
+        byte[] bArrAs2 = StaticAndroidHelpers.as(fileInputStream, (int) StaticAndroidHelpers.at(fileInputStream, 4), (int) StaticAndroidHelpers.at(fileInputStream, 4));
         if (fileInputStream.read() > 0) {
             throw new IllegalStateException("Content found after the end of file");
         }
@@ -622,9 +622,9 @@ public abstract class StaticHelpers7 implements esi {
         String[] strArr = new String[i];
         int[] iArr = new int[i];
         for (int i2 = 0; i2 < i; i2++) {
-            int iAt = (int) ewz.at(byteArrayInputStream, 2);
-            iArr[i2] = (int) ewz.at(byteArrayInputStream, 2);
-            strArr[i2] = new String(ewz.ar(byteArrayInputStream, iAt), StandardCharsets.UTF_8);
+            int iAt = (int) StaticAndroidHelpers.at(byteArrayInputStream, 2);
+            iArr[i2] = (int) StaticAndroidHelpers.at(byteArrayInputStream, 2);
+            strArr[i2] = new String(StaticAndroidHelpers.ar(byteArrayInputStream, iAt), StandardCharsets.UTF_8);
         }
         for (int i3 = 0; i3 < i; i3++) {
             amr amrVar = amrVarArr[i3];
@@ -647,11 +647,11 @@ public abstract class StaticHelpers7 implements esi {
             throw new IllegalStateException("Mismatched number of dex files found in metadata");
         }
         for (int i2 = 0; i2 < i; i2++) {
-            ewz.at(byteArrayInputStream, 2);
-            String str = new String(ewz.ar(byteArrayInputStream, (int) ewz.at(byteArrayInputStream, 2)),
+            StaticAndroidHelpers.at(byteArrayInputStream, 2);
+            String str = new String(StaticAndroidHelpers.ar(byteArrayInputStream, (int) StaticAndroidHelpers.at(byteArrayInputStream, 2)),
                     StandardCharsets.UTF_8);
-            long jAt = ewz.at(byteArrayInputStream, 4);
-            int iAt = (int) ewz.at(byteArrayInputStream, 2);
+            long jAt = StaticAndroidHelpers.at(byteArrayInputStream, 4);
+            int iAt = (int) StaticAndroidHelpers.at(byteArrayInputStream, 2);
             amr amrVar = null;
             if (amrVarArr.length > 0) {
                 int iIndexOf = str.indexOf("!");
@@ -671,7 +671,7 @@ public abstract class StaticHelpers7 implements esi {
             }
             amrVar.d = jAt;
             int[] iArrAp = ap(byteArrayInputStream, iAt);
-            if (Arrays.equals(bArr, ewz.v)) {
+            if (Arrays.equals(bArr, StaticAndroidHelpers.v)) {
                 amrVar.e = iAt;
                 amrVar.h = iArrAp;
             }
@@ -680,11 +680,11 @@ public abstract class StaticHelpers7 implements esi {
     }
 
     public static amr[] at(FileInputStream fileInputStream, byte[] bArr, String str) throws IOException {
-        if (!Arrays.equals(bArr, ewz.s)) {
+        if (!Arrays.equals(bArr, StaticAndroidHelpers.s)) {
             throw new IllegalStateException("Unsupported version");
         }
-        int iAt = (int) ewz.at(fileInputStream, 1);
-        byte[] bArrAs = ewz.as(fileInputStream, (int) ewz.at(fileInputStream, 4), (int) ewz.at(fileInputStream, 4));
+        int iAt = (int) StaticAndroidHelpers.at(fileInputStream, 1);
+        byte[] bArrAs = StaticAndroidHelpers.as(fileInputStream, (int) StaticAndroidHelpers.at(fileInputStream, 4), (int) StaticAndroidHelpers.at(fileInputStream, 4));
         if (fileInputStream.read() > 0) {
             throw new IllegalStateException("Content found after the end of file");
         }
@@ -718,11 +718,11 @@ public abstract class StaticHelpers7 implements esi {
         }
         amr[] amrVarArr = new amr[i];
         for (int i3 = 0; i3 < i; i3++) {
-            int iAt = (int) ewz.at(byteArrayInputStream, 2);
-            int iAt2 = (int) ewz.at(byteArrayInputStream, 2);
-            amrVarArr[i3] = new amr(str, new String(ewz.ar(byteArrayInputStream, iAt), StandardCharsets.UTF_8),
-                    ewz.at(byteArrayInputStream, 4), iAt2, (int) ewz.at(byteArrayInputStream, 4),
-                    (int) ewz.at(byteArrayInputStream, 4), new int[iAt2], new TreeMap());
+            int iAt = (int) StaticAndroidHelpers.at(byteArrayInputStream, 2);
+            int iAt2 = (int) StaticAndroidHelpers.at(byteArrayInputStream, 2);
+            amrVarArr[i3] = new amr(str, new String(StaticAndroidHelpers.ar(byteArrayInputStream, iAt), StandardCharsets.UTF_8),
+                    StaticAndroidHelpers.at(byteArrayInputStream, 4), iAt2, (int) StaticAndroidHelpers.at(byteArrayInputStream, 4),
+                    (int) StaticAndroidHelpers.at(byteArrayInputStream, 4), new int[iAt2], new TreeMap());
         }
         int i4 = 0;
         while (i4 < i) {
@@ -734,19 +734,19 @@ public abstract class StaticHelpers7 implements esi {
             int i7 = iAvailable - i5;
             int iAt3 = i2;
             while (byteArrayInputStream.available() > i7) {
-                iAt3 += (int) ewz.at(byteArrayInputStream, 2);
+                iAt3 += (int) StaticAndroidHelpers.at(byteArrayInputStream, 2);
                 treeMap.put(Integer.valueOf(iAt3), 1);
-                int iAt4 = (int) ewz.at(byteArrayInputStream, 2);
+                int iAt4 = (int) StaticAndroidHelpers.at(byteArrayInputStream, 2);
                 while (iAt4 > 0) {
-                    ewz.at(byteArrayInputStream, 2);
-                    int iAt5 = (int) ewz.at(byteArrayInputStream, 1);
+                    StaticAndroidHelpers.at(byteArrayInputStream, 2);
+                    int iAt5 = (int) StaticAndroidHelpers.at(byteArrayInputStream, 1);
                     if (iAt5 != 6 && iAt5 != 7) {
                         while (iAt5 > 0) {
-                            ewz.at(byteArrayInputStream, 1);
+                            StaticAndroidHelpers.at(byteArrayInputStream, 1);
                             int i8 = i2;
                             int i9 = i4;
-                            for (int iAt6 = (int) ewz.at(byteArrayInputStream, 1); iAt6 > 0; iAt6--) {
-                                ewz.at(byteArrayInputStream, 2);
+                            for (int iAt6 = (int) StaticAndroidHelpers.at(byteArrayInputStream, 1); iAt6 > 0; iAt6--) {
+                                StaticAndroidHelpers.at(byteArrayInputStream, 2);
                             }
                             iAt5--;
                             i2 = i8;
@@ -764,7 +764,7 @@ public abstract class StaticHelpers7 implements esi {
                 throw new IllegalStateException("Read too much data during profile line parse");
             }
             amrVar.h = ap(byteArrayInputStream, amrVar.e);
-            BitSet bitSetValueOf = BitSet.valueOf(ewz.ar(byteArrayInputStream, (((i6 * 2) + 7) & (-8)) / 8));
+            BitSet bitSetValueOf = BitSet.valueOf(StaticAndroidHelpers.ar(byteArrayInputStream, (((i6 * 2) + 7) & (-8)) / 8));
             for (int i12 = i10; i12 < i6; i12++) {
                 int i13 = bitSetValueOf.get(i12) ? 2 : i10;
                 if (bitSetValueOf.get(i12 + i6)) {
@@ -824,7 +824,7 @@ public abstract class StaticHelpers7 implements esi {
         ng.ak(viewAn);
     }
 
-    public static Class ay(String str) {
+    public static Class findClass(String str) {
         Object objX;
         String str2 = "[" + str + "][" + ((Object) null) + "]";
         LinkedHashMap linkedHashMap = dan.a;
@@ -833,18 +833,16 @@ public abstract class StaticHelpers7 implements esi {
             return cls;
         }
         try {
-            ki.a.getClass();
-            objX = Class.forName(str, false, ki.g());
+            objX = Class.forName(str, false, ki.getHostClassLoader());
             linkedHashMap.put(str2, objX);
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        Class cls2 = (Class) (objX instanceof dcx ? null : objX);
+        Class cls2 = (Class) (objX instanceof Failure ? null : objX);
         if (cls2 != null) {
             return cls2;
         }
-        ki.a.getClass();
-        ClassLoader classLoaderG = ki.g();
+        ClassLoader classLoaderG = ki.getHostClassLoader();
         String[] strArr = { concat("name:[", str, "]") };
         for (int i = 0; i != 30; i++) {
         }
@@ -857,133 +855,130 @@ public abstract class StaticHelpers7 implements esi {
     public static final Class az(DexDescData amnVar) throws NoSuchMethodException {
         Object objX;
         try {
-            String strF = ams.f(amnVar.d());
-            bmo.a.getClass();
-            objX = bpv.c(bmo.getClassLoader(), strF);
+            String strF = ams.f(amnVar.getResolvedName());
+            HostInfoRegistry.INSTANCE.getClass();
+            objX = TypeResolver.loadType(HostInfoRegistry.getClassLoader(), strF);
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        if (dcy.b(objX) == null) {
+        if (Success.exceptionOrNull(objX) == null) {
             return (Class) objX;
         }
-        ArrayList arrayList = ewq.a;
-        String strConcat = amnVar.b.concat(" toDexClass Failed" /* " toDexClass Failed" /* " toDexClass Failed" /* " toDexClass Failed" /* cnb.z(-79740362816298L)   */);
+        ArrayList arrayList = Logger.a;
+        String strConcat = amnVar.signatureId.concat(" toDexClass Failed" /* " toDexClass Failed" /* " toDexClass Failed" /* " toDexClass Failed" /* cnb.z(-79740362816298L)   */);
         ro.a.getClass();
-        ewq.e(strConcat, null, 12);
-        throw new NoSuchMethodException(amnVar.b.concat(" toDexClass Failed" /* " toDexClass Failed" /* " toDexClass Failed" /* " toDexClass Failed" /* cnb.z(-80225694120746L)   */));
+        Logger.logE(strConcat, null, 12);
+        throw new NoSuchMethodException(amnVar.signatureId.concat(" toDexClass Failed" /* " toDexClass Failed" /* " toDexClass Failed" /* " toDexClass Failed" /* cnb.z(-80225694120746L)   */));
     }
 
     public static final Constructor ba(DexDescData amnVar) throws NoSuchMethodException {
         Object objX;
         try {
-            amq amqVar = new amq(amnVar.d());
-            bmo.a.getClass();
-            objX = amqVar.g(bmo.getClassLoader());
+            MethodDesc methodDescVar = new MethodDesc(amnVar.getResolvedName());
+            HostInfoRegistry.INSTANCE.getClass();
+            objX = methodDescVar.resolveConstructor(HostInfoRegistry.getClassLoader());
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        if (dcy.b(objX) == null) {
+        if (Success.exceptionOrNull(objX) == null) {
             return (Constructor) objX;
         }
-        ArrayList arrayList = ewq.a;
-        String strConcat = amnVar.b.concat(" toDexConstructor Failed" /* " toDexConstructor Failed" /* " toDexConstructor Failed" /* " toDexConstructor Failed" /* cnb.z(-79388175498026L)   */);
+        ArrayList arrayList = Logger.a;
+        String strConcat = amnVar.signatureId.concat(" toDexConstructor Failed" /* " toDexConstructor Failed" /* " toDexConstructor Failed" /* " toDexConstructor Failed" /* cnb.z(-79388175498026L)   */);
         ro.a.getClass();
-        ewq.e(strConcat, null, 12);
-        throw new NoSuchMethodException(amnVar.b.concat(" toDexConstructor Failed" /* " toDexConstructor Failed" /* " toDexConstructor Failed" /* " toDexConstructor Failed" /* cnb.z(-79280801315626L)   */));
+        Logger.logE(strConcat, null, 12);
+        throw new NoSuchMethodException(amnVar.signatureId.concat(" toDexConstructor Failed" /* " toDexConstructor Failed" /* " toDexConstructor Failed" /* " toDexConstructor Failed" /* cnb.z(-79280801315626L)   */));
     }
 
-    public static final Method bb(DexDescData amnVar) throws NoSuchMethodException {
+    public static final Method toDexMethod(DexDescData amnVar) throws NoSuchMethodException {
         Object objX;
         try {
-            amq amqVar = new amq(amnVar.d());
-            bmo.a.getClass();
-            objX = amq.f(amqVar, bmo.getClassLoader());
+            MethodDesc methodDescVar = new MethodDesc(amnVar.getResolvedName());
+            objX = MethodDesc.resolveMethod(methodDescVar, HostInfoRegistry.getClassLoader());
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        if (dcy.b(objX) == null) {
+        if (Success.exceptionOrNull(objX) == null) {
             return (Method) objX;
         }
-        ArrayList arrayList = ewq.a;
-        String strConcat = amnVar.b.concat(" toDexMethod Failed" /* " toDexMethod Failed" /* " toDexMethod Failed" /* " toDexMethod Failed" /* cnb.z(-80109730003754L)   */);
-        ro.a.getClass();
-        ewq.e(strConcat, null, 12);
-        throw new NoSuchMethodException(amnVar.b.concat(" toDexMethod Failed" /* " toDexMethod Failed" /* " toDexMethod Failed" /* " toDexMethod Failed" /* cnb.z(-80058190396202L)   */));
+        String strConcat = amnVar.signatureId.concat(" toDexMethod Failed" /* " toDexMethod Failed" /* " toDexMethod Failed" /* " toDexMethod Failed" /* cnb.z(-80109730003754L)   */);
+        Logger.logE(strConcat, null, 12);
+        throw new NoSuchMethodException(amnVar.signatureId.concat(" toDexMethod Failed" /* " toDexMethod Failed" /* " toDexMethod Failed" /* " toDexMethod Failed" /* cnb.z(-80058190396202L)   */));
     }
 
     public static final void bc(DexDescData amnVar, IInvokable bgfVar) {
-        bgfVar.invoke(bb(amnVar));
+        bgfVar.invoke(toDexMethod(amnVar));
     }
 
     public static final Class bd(Class cls) {
-        boolean zF = nullSafeIsEqual(cls, KotlinUnit.class);
+        boolean zF = nullSafeIsEqual(cls, Kotlin$Unit.class);
         Class cls2 = Void.TYPE;
         if (!zF && !nullSafeIsEqual(cls, Void.class)) {
-            if (!nullSafeIsEqual(cls, cls2 == null ? ay("void") : cls2)) {
+            if (!nullSafeIsEqual(cls, cls2 == null ? findClass("void") : cls2)) {
                 boolean zF2 = nullSafeIsEqual(cls, Boolean.class);
                 Class cls3 = Boolean.TYPE;
                 if (!zF2) {
-                    if (!nullSafeIsEqual(cls, cls3 == null ? ay("boolean") : cls3)) {
+                    if (!nullSafeIsEqual(cls, cls3 == null ? findClass("boolean") : cls3)) {
                         boolean zF3 = nullSafeIsEqual(cls, Integer.class);
                         Class cls4 = Integer.TYPE;
                         if (!zF3) {
-                            if (!nullSafeIsEqual(cls, cls4 == null ? ay("int") : cls4)) {
+                            if (!nullSafeIsEqual(cls, cls4 == null ? findClass("int") : cls4)) {
                                 boolean zF4 = nullSafeIsEqual(cls, Float.class);
                                 Class cls5 = Float.TYPE;
                                 if (!zF4) {
-                                    if (!nullSafeIsEqual(cls, cls5 == null ? ay("float") : cls5)) {
+                                    if (!nullSafeIsEqual(cls, cls5 == null ? findClass("float") : cls5)) {
                                         boolean zF5 = nullSafeIsEqual(cls, Double.class);
                                         Class cls6 = Double.TYPE;
                                         if (!zF5) {
-                                            if (!nullSafeIsEqual(cls, cls6 == null ? ay("double") : cls6)) {
+                                            if (!nullSafeIsEqual(cls, cls6 == null ? findClass("double") : cls6)) {
                                                 boolean zF6 = nullSafeIsEqual(cls, Long.class);
                                                 Class cls7 = Long.TYPE;
                                                 if (!zF6) {
-                                                    if (!nullSafeIsEqual(cls, cls7 == null ? ay("long") : cls7)) {
+                                                    if (!nullSafeIsEqual(cls, cls7 == null ? findClass("long") : cls7)) {
                                                         boolean zF7 = nullSafeIsEqual(cls, Short.class);
                                                         Class cls8 = Short.TYPE;
                                                         if (!zF7) {
                                                             if (!nullSafeIsEqual(cls,
-                                                                    cls8 == null ? ay("short") : cls8)) {
+                                                                    cls8 == null ? findClass("short") : cls8)) {
                                                                 boolean zF8 = nullSafeIsEqual(cls, Character.class);
                                                                 Class cls9 = Character.TYPE;
                                                                 if (!zF8) {
                                                                     if (!nullSafeIsEqual(cls,
-                                                                            cls9 == null ? ay("char") : cls9)) {
+                                                                            cls9 == null ? findClass("char") : cls9)) {
                                                                         boolean zF9 = nullSafeIsEqual(cls, Byte.class);
                                                                         Class cls10 = Byte.TYPE;
                                                                         if (!zF9) {
                                                                             if (!nullSafeIsEqual(cls,
-                                                                                    cls10 == null ? ay("byte")
+                                                                                    cls10 == null ? findClass("byte")
                                                                                             : cls10)) {
                                                                                 return cls;
                                                                             }
                                                                         }
-                                                                        return cls10 == null ? ay("byte") : cls10;
+                                                                        return cls10 == null ? findClass("byte") : cls10;
                                                                     }
                                                                 }
-                                                                return cls9 == null ? ay("char") : cls9;
+                                                                return cls9 == null ? findClass("char") : cls9;
                                                             }
                                                         }
-                                                        return cls8 == null ? ay("short") : cls8;
+                                                        return cls8 == null ? findClass("short") : cls8;
                                                     }
                                                 }
-                                                return cls7 == null ? ay("long") : cls7;
+                                                return cls7 == null ? findClass("long") : cls7;
                                             }
                                         }
-                                        return cls6 == null ? ay("double") : cls6;
+                                        return cls6 == null ? findClass("double") : cls6;
                                     }
                                 }
-                                return cls5 == null ? ay("float") : cls5;
+                                return cls5 == null ? findClass("float") : cls5;
                             }
                         }
-                        return cls4 == null ? ay("int") : cls4;
+                        return cls4 == null ? findClass("int") : cls4;
                     }
                 }
-                return cls3 == null ? ay("boolean") : cls3;
+                return cls3 == null ? findClass("boolean") : cls3;
             }
         }
-        return cls2 == null ? ay("void") : cls2;
+        return cls2 == null ? findClass("void") : cls2;
     }
 
     /*
@@ -1004,26 +999,26 @@ public abstract class StaticHelpers7 implements esi {
             throws IOException {
         long j;
         int length;
-        byte[] bArr2 = ewz.v;
-        byte[] bArr3 = ewz.u;
-        byte[] bArr4 = ewz.r;
+        byte[] bArr2 = StaticAndroidHelpers.v;
+        byte[] bArr3 = StaticAndroidHelpers.u;
+        byte[] bArr4 = StaticAndroidHelpers.r;
         int i = 0;
         if (Arrays.equals(bArr, bArr4)) {
             ArrayList arrayList = new ArrayList(3);
             ArrayList arrayList2 = new ArrayList(3);
             ByteArrayOutputStream byteArrayOutputStream2 = new ByteArrayOutputStream();
             try {
-                ewz.az(byteArrayOutputStream2, amrVarArr.length);
+                StaticAndroidHelpers.az(byteArrayOutputStream2, amrVarArr.length);
                 int i2 = 2;
                 int i3 = 2;
                 for (amr amrVar : amrVarArr) {
-                    ewz.ay(byteArrayOutputStream2, amrVar.c, 4);
-                    ewz.ay(byteArrayOutputStream2, amrVar.d, 4);
-                    ewz.ay(byteArrayOutputStream2, amrVar.g, 4);
+                    StaticAndroidHelpers.ay(byteArrayOutputStream2, amrVar.c, 4);
+                    StaticAndroidHelpers.ay(byteArrayOutputStream2, amrVar.d, 4);
+                    StaticAndroidHelpers.ay(byteArrayOutputStream2, amrVar.g, 4);
                     String strAl = al(amrVar.a, amrVar.b, bArr4);
                     Charset charset = StandardCharsets.UTF_8;
                     int length2 = strAl.getBytes(charset).length;
-                    ewz.az(byteArrayOutputStream2, length2);
+                    StaticAndroidHelpers.az(byteArrayOutputStream2, length2);
                     i3 = i3 + 14 + length2;
                     byteArrayOutputStream2.write(strAl.getBytes(charset));
                 }
@@ -1041,8 +1036,8 @@ public abstract class StaticHelpers7 implements esi {
                 while (i4 < amrVarArr.length) {
                     try {
                         amr amrVar2 = amrVarArr[i4];
-                        ewz.az(byteArrayOutputStream3, i4);
-                        ewz.az(byteArrayOutputStream3, amrVar2.e);
+                        StaticAndroidHelpers.az(byteArrayOutputStream3, i4);
+                        StaticAndroidHelpers.az(byteArrayOutputStream3, amrVar2.e);
                         i5 = i5 + 4 + (amrVar2.e * i2);
                         int[] iArr = amrVar2.h;
                         int length3 = iArr.length;
@@ -1051,7 +1046,7 @@ public abstract class StaticHelpers7 implements esi {
                         int i8 = i6;
                         while (i8 < length3) {
                             int i9 = iArr[i8];
-                            ewz.az(byteArrayOutputStream3, i9 - i6);
+                            StaticAndroidHelpers.az(byteArrayOutputStream3, i9 - i6);
                             i8++;
                             i6 = i9;
                         }
@@ -1097,12 +1092,12 @@ public abstract class StaticHelpers7 implements esi {
                                 bj(byteArrayOutputStream6, amrVar3);
                                 byte[] byteArray4 = byteArrayOutputStream6.toByteArray();
                                 byteArrayOutputStream6.close();
-                                ewz.az(byteArrayOutputStream4, i10);
+                                StaticAndroidHelpers.az(byteArrayOutputStream4, i10);
                                 int length4 = byteArray3.length + 2 + byteArray4.length;
                                 int i12 = i11 + 6;
                                 int i13 = i10;
-                                ewz.ay(byteArrayOutputStream4, length4, 4);
-                                ewz.az(byteArrayOutputStream4, iIntValue);
+                                StaticAndroidHelpers.ay(byteArrayOutputStream4, length4, 4);
+                                StaticAndroidHelpers.az(byteArrayOutputStream4, iIntValue);
                                 byteArrayOutputStream4.write(byteArray3);
                                 byteArrayOutputStream4.write(byteArray4);
                                 i11 = i12 + length4;
@@ -1145,7 +1140,7 @@ public abstract class StaticHelpers7 implements esi {
                 arrayList.add(eweVar3);
                 long j2 = 4;
                 long size = j2 + j2 + 4 + ((long) (arrayList.size() * 16));
-                ewz.ay(byteArrayOutputStream, arrayList.size(), 4);
+                StaticAndroidHelpers.ay(byteArrayOutputStream, arrayList.size(), 4);
                 for (int i14 = 0; i14 < arrayList.size(); i14++) {
                     ewe eweVar4 = (ewe) arrayList.get(i14);
                     int i15 = eweVar4.a;
@@ -1164,19 +1159,19 @@ public abstract class StaticHelpers7 implements esi {
                         }
                         j = 4;
                     }
-                    ewz.ay(byteArrayOutputStream, j, 4);
-                    ewz.ay(byteArrayOutputStream, size, 4);
+                    StaticAndroidHelpers.ay(byteArrayOutputStream, j, 4);
+                    StaticAndroidHelpers.ay(byteArrayOutputStream, size, 4);
                     if (eweVar4.c) {
                         long length5 = bArr5.length;
-                        byte[] bArrAc = ewz.ac(bArr5);
+                        byte[] bArrAc = StaticAndroidHelpers.ac(bArr5);
                         arrayList2.add(bArrAc);
-                        ewz.ay(byteArrayOutputStream, bArrAc.length, 4);
-                        ewz.ay(byteArrayOutputStream, length5, 4);
+                        StaticAndroidHelpers.ay(byteArrayOutputStream, bArrAc.length, 4);
+                        StaticAndroidHelpers.ay(byteArrayOutputStream, length5, 4);
                         length = bArrAc.length;
                     } else {
                         arrayList2.add(bArr5);
-                        ewz.ay(byteArrayOutputStream, bArr5.length, 4);
-                        ewz.ay(byteArrayOutputStream, 0L, 4);
+                        StaticAndroidHelpers.ay(byteArrayOutputStream, bArr5.length, 4);
+                        StaticAndroidHelpers.ay(byteArrayOutputStream, 0L, 4);
                         length = bArr5.length;
                     }
                     size += (long) length;
@@ -1194,67 +1189,67 @@ public abstract class StaticHelpers7 implements esi {
                 }
             }
         } else {
-            byte[] bArr6 = ewz.s;
+            byte[] bArr6 = StaticAndroidHelpers.s;
             if (Arrays.equals(bArr, bArr6)) {
                 byte[] bArrAg = ag(amrVarArr, bArr6);
-                ewz.ay(byteArrayOutputStream, amrVarArr.length, 1);
-                ewz.ay(byteArrayOutputStream, bArrAg.length, 4);
-                byte[] bArrAc2 = ewz.ac(bArrAg);
-                ewz.ay(byteArrayOutputStream, bArrAc2.length, 4);
+                StaticAndroidHelpers.ay(byteArrayOutputStream, amrVarArr.length, 1);
+                StaticAndroidHelpers.ay(byteArrayOutputStream, bArrAg.length, 4);
+                byte[] bArrAc2 = StaticAndroidHelpers.ac(bArrAg);
+                StaticAndroidHelpers.ay(byteArrayOutputStream, bArrAc2.length, 4);
                 byteArrayOutputStream.write(bArrAc2);
                 return true;
             }
             if (Arrays.equals(bArr, bArr3)) {
-                ewz.ay(byteArrayOutputStream, amrVarArr.length, 1);
+                StaticAndroidHelpers.ay(byteArrayOutputStream, amrVarArr.length, 1);
                 for (amr amrVar4 : amrVarArr) {
                     int size2 = amrVar4.i.size() * 4;
                     String strAl2 = al(amrVar4.a, amrVar4.b, bArr3);
                     Charset charset2 = StandardCharsets.UTF_8;
-                    ewz.az(byteArrayOutputStream, strAl2.getBytes(charset2).length);
-                    ewz.az(byteArrayOutputStream, amrVar4.h.length);
-                    ewz.ay(byteArrayOutputStream, size2, 4);
-                    ewz.ay(byteArrayOutputStream, amrVar4.c, 4);
+                    StaticAndroidHelpers.az(byteArrayOutputStream, strAl2.getBytes(charset2).length);
+                    StaticAndroidHelpers.az(byteArrayOutputStream, amrVar4.h.length);
+                    StaticAndroidHelpers.ay(byteArrayOutputStream, size2, 4);
+                    StaticAndroidHelpers.ay(byteArrayOutputStream, amrVar4.c, 4);
                     byteArrayOutputStream.write(strAl2.getBytes(charset2));
                     Iterator it2 = amrVar4.i.keySet().iterator();
                     while (it2.hasNext()) {
-                        ewz.az(byteArrayOutputStream, ((Integer) it2.next()).intValue());
-                        ewz.az(byteArrayOutputStream, 0);
+                        StaticAndroidHelpers.az(byteArrayOutputStream, ((Integer) it2.next()).intValue());
+                        StaticAndroidHelpers.az(byteArrayOutputStream, 0);
                     }
                     for (int i17 : amrVar4.h) {
-                        ewz.az(byteArrayOutputStream, i17);
+                        StaticAndroidHelpers.az(byteArrayOutputStream, i17);
                     }
                 }
             } else {
-                byte[] bArr7 = ewz.t;
+                byte[] bArr7 = StaticAndroidHelpers.t;
                 if (Arrays.equals(bArr, bArr7)) {
                     byte[] bArrAg2 = ag(amrVarArr, bArr7);
-                    ewz.ay(byteArrayOutputStream, amrVarArr.length, 1);
-                    ewz.ay(byteArrayOutputStream, bArrAg2.length, 4);
-                    byte[] bArrAc3 = ewz.ac(bArrAg2);
-                    ewz.ay(byteArrayOutputStream, bArrAc3.length, 4);
+                    StaticAndroidHelpers.ay(byteArrayOutputStream, amrVarArr.length, 1);
+                    StaticAndroidHelpers.ay(byteArrayOutputStream, bArrAg2.length, 4);
+                    byte[] bArrAc3 = StaticAndroidHelpers.ac(bArrAg2);
+                    StaticAndroidHelpers.ay(byteArrayOutputStream, bArrAc3.length, 4);
                     byteArrayOutputStream.write(bArrAc3);
                     return true;
                 }
                 if (!Arrays.equals(bArr, bArr2)) {
                     return false;
                 }
-                ewz.az(byteArrayOutputStream, amrVarArr.length);
+                StaticAndroidHelpers.az(byteArrayOutputStream, amrVarArr.length);
                 for (amr amrVar5 : amrVarArr) {
                     String str = amrVar5.a;
                     TreeMap treeMap = amrVar5.i;
                     String strAl3 = al(str, amrVar5.b, bArr2);
                     Charset charset3 = StandardCharsets.UTF_8;
-                    ewz.az(byteArrayOutputStream, strAl3.getBytes(charset3).length);
-                    ewz.az(byteArrayOutputStream, treeMap.size());
-                    ewz.az(byteArrayOutputStream, amrVar5.h.length);
-                    ewz.ay(byteArrayOutputStream, amrVar5.c, 4);
+                    StaticAndroidHelpers.az(byteArrayOutputStream, strAl3.getBytes(charset3).length);
+                    StaticAndroidHelpers.az(byteArrayOutputStream, treeMap.size());
+                    StaticAndroidHelpers.az(byteArrayOutputStream, amrVar5.h.length);
+                    StaticAndroidHelpers.ay(byteArrayOutputStream, amrVar5.c, 4);
                     byteArrayOutputStream.write(strAl3.getBytes(charset3));
                     Iterator it3 = treeMap.keySet().iterator();
                     while (it3.hasNext()) {
-                        ewz.az(byteArrayOutputStream, ((Integer) it3.next()).intValue());
+                        StaticAndroidHelpers.az(byteArrayOutputStream, ((Integer) it3.next()).intValue());
                     }
                     for (int i18 : amrVar5.h) {
-                        ewz.az(byteArrayOutputStream, i18);
+                        StaticAndroidHelpers.az(byteArrayOutputStream, i18);
                     }
                 }
             }
@@ -1275,7 +1270,7 @@ public abstract class StaticHelpers7 implements esi {
         int i3 = 0;
         while (i2 < length) {
             int i4 = iArr[i2];
-            ewz.az(byteArrayOutputStream, i4 - i3);
+            StaticAndroidHelpers.az(byteArrayOutputStream, i4 - i3);
             i2++;
             i3 = i4;
         }
@@ -1298,11 +1293,11 @@ public abstract class StaticHelpers7 implements esi {
 
     public static void bh(ByteArrayOutputStream byteArrayOutputStream, amr amrVar, String str) throws IOException {
         Charset charset = StandardCharsets.UTF_8;
-        ewz.az(byteArrayOutputStream, str.getBytes(charset).length);
-        ewz.az(byteArrayOutputStream, amrVar.e);
-        ewz.ay(byteArrayOutputStream, amrVar.f, 4);
-        ewz.ay(byteArrayOutputStream, amrVar.c, 4);
-        ewz.ay(byteArrayOutputStream, amrVar.g, 4);
+        StaticAndroidHelpers.az(byteArrayOutputStream, str.getBytes(charset).length);
+        StaticAndroidHelpers.az(byteArrayOutputStream, amrVar.e);
+        StaticAndroidHelpers.ay(byteArrayOutputStream, amrVar.f, 4);
+        StaticAndroidHelpers.ay(byteArrayOutputStream, amrVar.c, 4);
+        StaticAndroidHelpers.ay(byteArrayOutputStream, amrVar.g, 4);
         byteArrayOutputStream.write(str.getBytes(charset));
     }
 
@@ -1332,8 +1327,8 @@ public abstract class StaticHelpers7 implements esi {
         for (Map.Entry entry : amrVar.i.entrySet()) {
             int iIntValue = ((Integer) entry.getKey()).intValue();
             if ((((Integer) entry.getValue()).intValue() & 1) != 0) {
-                ewz.az(byteArrayOutputStream, iIntValue - i);
-                ewz.az(byteArrayOutputStream, 0);
+                StaticAndroidHelpers.az(byteArrayOutputStream, iIntValue - i);
+                StaticAndroidHelpers.az(byteArrayOutputStream, 0);
                 i = iIntValue;
             }
         }
@@ -1411,12 +1406,12 @@ public abstract class StaticHelpers7 implements esi {
     public abstract Typeface t(Context context, bce[] bceVarArr, int i);
 
     public Typeface u(Context context, Resources resources, int i, String str, int i2) {
-        File fileAi = ewz.ai(context);
+        File fileAi = StaticAndroidHelpers.ai(context);
         if (fileAi == null) {
             return null;
         }
         try {
-            if (ewz.ad(fileAi, resources, i)) {
+            if (StaticAndroidHelpers.ad(fileAi, resources, i)) {
                 return Typeface.createFromFile(fileAi.getPath());
             }
             return null;

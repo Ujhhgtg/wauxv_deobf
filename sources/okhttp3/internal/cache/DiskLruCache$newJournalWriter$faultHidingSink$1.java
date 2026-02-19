@@ -3,7 +3,7 @@ package okhttp3.internal.cache;
 import java.io.IOException;
 import me.hd.wauxv.obf.IInvokable;
 import me.hd.wauxv.obf.btp;
-import me.hd.wauxv.obf.KotlinUnit;
+import me.hd.wauxv.obf.Kotlin$Unit;
 import okhttp3.internal.Util;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -23,7 +23,7 @@ public final class DiskLruCache$newJournalWriter$faultHidingSink$1 extends btp i
     @Override // me.hd.wauxv.obf.bgf
     public /* bridge */ /* synthetic */ Object invoke(Object obj) {
         invoke((IOException) obj);
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 
     public final void invoke(IOException iOException) {

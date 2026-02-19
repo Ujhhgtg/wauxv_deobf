@@ -37,7 +37,7 @@ public final class zy implements bnz {
                 if ("CLIPBOARD".equals(str)) {
                     return (clipboardManager == null || !clipboardManager.hasPrimaryClip() || (primaryClip = clipboardManager.getPrimaryClip()) == null || primaryClip.getItemCount() == 0) ? "" : primaryClip.getItemAt(0).getText().toString();
                 }
-                throw new IllegalArgumentException(yg.k("Unsupported variable name:", str));
+                throw new IllegalArgumentException(yg.concat("Unsupported variable name:", str));
             default:
                 codeEditor = (CodeEditor) obj;
                 str.getClass();

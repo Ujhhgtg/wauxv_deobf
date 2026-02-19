@@ -20,7 +20,7 @@ public final class eui extends ewy {
     public static boolean c() {
         String strZ = "initDexObfKey" /* "initDexObfKey" /* "initDexObfKey" /* "initDexObfKey" /* cnb.z(-81814832020266L)   */;
         String strZ2 = "" /* "" /* "" /* "" /* cnb.z(-5841155521322L)   */;
-        io ioVar = emc.w;
+        io ioVar = emc.config;
         if (ioVar == null) {
             throw new IllegalArgumentException("DexDescConfig must be init" /* "DexDescConfig must be init" /* "DexDescConfig must be init" /* "DexDescConfig must be init" /* cnb.z(-6021544147754L)   */.toString());
         }
@@ -139,8 +139,8 @@ public final class eui extends ewy {
                 }
                 for (String str : strArr) {
                     eui euiVar = a;
-                    if (nullSafeIsEqual(str, euiVar.ac())) {
-                        euiVar.ae(bmfVar);
+                    if (nullSafeIsEqual(str, euiVar.getCurrentProcessName())) {
+                        euiVar.validateHookerSafety(bmfVar);
                         break;
                     }
                 }
@@ -151,10 +151,10 @@ public final class eui extends ewy {
     @Override // me.hd.wauxv.obf.ewy
     public final void w() {
         int i = 0;
-        MethodResolver methodResolverVarT = dqc.bg(dal.b(Instrumentation.class)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        MethodResolver methodResolverVarT = dqc.bg(dal.getKClassFromClass(Instrumentation.class)).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "callApplicationOnCreate" /* "callApplicationOnCreate" /* "callApplicationOnCreate" /* "callApplicationOnCreate" /* cnb.z(-82549271427882L)   */;
-        aki akiVarAd = a.ad((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(Application.class) }, 1, methodResolverVarT), HookPriorityEnum.ENUM_DEFAULT);
-        akiVarAd.m(new epy(14));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = a.createImmediateHook((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(Application.class) }, 1, methodResolverVarT), HookPriorityEnum.ENUM_DEFAULT);
+        hookManagerVarAd.m(new epy(14));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 }

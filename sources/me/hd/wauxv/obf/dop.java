@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public class dop implements cdw, ahw, ero, btg {
+public class dop implements cdw, ahw, ero, LogBackend {
     public static dop c;
     public static dop d;
     public static dop f;
@@ -30,7 +30,7 @@ public class dop implements cdw, ahw, ero, btg {
         dpn dpnVar = (dpn) view;
         int contentWidth = dpnVar.getContentWidth();
         int contentHeight = dpnVar.getContentHeight();
-        int iAg = (int) ewz.ag(dpnVar.getContext(), 24);
+        int iAg = (int) StaticAndroidHelpers.ag(dpnVar.getContext(), 24);
         if (contentWidth < iAg) {
             contentWidth = iAg;
         }
@@ -61,7 +61,7 @@ public class dop implements cdw, ahw, ero, btg {
     }
 
     @Override // me.hd.wauxv.obf.ero
-    public erk _bh(zc zcVar, chq chqVar) {
+    public erk _bh(KClass zcVar, chq chqVar) {
         return l(HugeSyntheticPileOfHelpers.getJavaClass(zcVar), chqVar);
     }
 
@@ -71,15 +71,15 @@ public class dop implements cdw, ahw, ero, btg {
     }
 
     @Override // me.hd.wauxv.obf.btg
-    public void debug(String str) {
-        ArrayList arrayList = ewq.a;
-        ewq.d(12, String.valueOf(str));
+    public void logD(String str) {
+        ArrayList arrayList = Logger.a;
+        Logger.logD(12, String.valueOf(str));
     }
 
     @Override // me.hd.wauxv.obf.btg
-    public void e(Object obj, Throwable th) {
-        ArrayList arrayList = ewq.a;
-        ewq.i(ewp.a, new ewr(cna.d, "W", String.valueOf(obj), th, 51), false);
+    public void logException(Object obj, Throwable th) {
+        ArrayList arrayList = Logger.a;
+        Logger.dispatchLog(LogDestination.a, new LogEntry(cna.d, "W", String.valueOf(obj), th, 51), false);
     }
 
     public boolean k(CharSequence charSequence) {

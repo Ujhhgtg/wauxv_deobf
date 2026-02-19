@@ -12,7 +12,7 @@ import me.hd.wauxv.R;
 /* JADX INFO: loaded from: classes.dex */
 public final class ewm {
     public static final ewm a;
-    public static final /* synthetic */ btc[] b;
+    public static final /* synthetic */ IEmpty7[] b;
     public static final FactoryPools c;
     public static final FactoryPools d;
     public static Long e;
@@ -24,7 +24,7 @@ public final class ewm {
     static {
         cwb cwbVar = new cwb(ewm.class, "ApkAssetsClass", "getApkAssetsClass()Ljava/lang/Class;");
         dal.a.getClass();
-        b = new btc[]{cwbVar, new cwb(ewm.class, "XmlBlockClass", "getXmlBlockClass()Ljava/lang/Class;")};
+        b = new IEmpty7[]{cwbVar, new cwb(ewm.class, "XmlBlockClass", "getXmlBlockClass()Ljava/lang/Class;")};
         a = new ewm();
         c = ReflectionWrapper.h("android.content.res.ApkAssets", null, 6);
         d = new FactoryPools("android.content.res.XmlBlock", (bfu) null);
@@ -43,16 +43,16 @@ public final class ewm {
             objX = (HikageAttrsView) objInflate;
             if (objX == null) {
                 String str = "0x" + Integer.toHexString(R.layout.layout_hikage_attrs_view);
-                Class<HikageAttrsView> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<HikageAttrsView> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf != null) {
                     cls = clsBf;
                 }
                 throw new IllegalStateException(("This inflated view " + str + " is not a type of " + cls + " or is null.").toString());
             }
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        if (objX instanceof dcx) {
+        if (objX instanceof Failure) {
             objX = null;
         }
         HikageAttrsView hikageAttrsView = (HikageAttrsView) ((View) objX);

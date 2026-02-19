@@ -20,7 +20,7 @@ public final class dr extends bhs {
     }
 
     @Override // me.hd.wauxv.obf.bhs
-    public final bc c(hb hbVar, String str) {
+    public final LateinitProperty c(hb hbVar, String str) {
         return null;
     }
 

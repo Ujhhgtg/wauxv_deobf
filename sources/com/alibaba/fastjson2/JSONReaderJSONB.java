@@ -5136,7 +5136,7 @@ final class JSONReaderJSONB extends JSONReader {
             }
         }
         if (b == -110) {
-            throw new JSONException(yg.k("not support input type : ", readString()));
+            throw new JSONException(yg.concat("not support input type : ", readString()));
         }
         if (b == 72) {
             int intBE = IOUtils.getIntBE(this.bytes, check3(this.offset, i3));

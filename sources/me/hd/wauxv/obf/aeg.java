@@ -11,7 +11,7 @@ public final class aeg extends bws implements IDexFind {
     public static final aeg a = new aeg();
 
     public static List b(String str) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
-        Method methodBb = StaticHelpers7.bb(aef.a);
+        Method methodBb = StaticHelpers7.toDexMethod(aef.a);
         aec.a.getClass();
         Object objInvoke = methodBb.invoke(aec.b(), str);
         List list = objInvoke instanceof List ? (List) objInvoke : null;

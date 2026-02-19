@@ -1,6 +1,5 @@
 package me.hd.wauxv.obf;
 
-import com.umeng.analytics.pro.q;
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 
@@ -105,14 +104,14 @@ public final class dps {
         byte[] bArr = new byte[8];
         ByteBuffer byteBuffer = amkVar.n(0).b;
         byteBuffer.get(bArr);
-        if (ewz.an(bArr) <= 0) {
+        if (StaticAndroidHelpers.an(bArr) <= 0) {
             throw new amo(
                     String.format("Unexpected magic: [0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x, 0x%02x]",
                             Byte.valueOf(bArr[0]), Byte.valueOf(bArr[1]), Byte.valueOf(bArr[2]), Byte.valueOf(bArr[3]),
                             Byte.valueOf(bArr[4]), Byte.valueOf(bArr[5]), Byte.valueOf(bArr[6]), Byte.valueOf(bArr[7])),
                     null);
         }
-        this.v = ewz.an(bArr);
+        this.v = StaticAndroidHelpers.an(bArr);
         this.w = byteBuffer.getInt();
         byte[] bArr2 = new byte[20];
         byteBuffer.get(bArr2);

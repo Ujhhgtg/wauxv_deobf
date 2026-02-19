@@ -424,7 +424,7 @@ public final class dmx extends KotlinHelpers2 implements ajt, acm {
         brx brxVarBw = bw();
         String strB = ((cus) btdVar).getDescriptor().b();
         if (!(brxVarBw instanceof bsl)) {
-            throw KotlinHelpers2.ak(-1, "Expected " + dal.b(bsl.class).d() + ", but had " + dal.b(brxVarBw.getClass()).d()
+            throw KotlinHelpers2.ak(-1, "Expected " + dal.getKClassFromClass(bsl.class).getKotlinSimpleName() + ", but had " + dal.getKClassFromClass(brxVarBw.getClass()).getKotlinSimpleName()
                     + " as the serialized body of " + strB + " at element: " + ikVar.p(), brxVarBw.toString());
         }
         bsl bslVar = (bsl) brxVarBw;

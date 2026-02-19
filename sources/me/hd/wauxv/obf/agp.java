@@ -20,7 +20,7 @@ public final class agp extends bws implements IDexFind {
             try {
                 String string = cursorAc.getString(0);
                 a.getClass();
-                Method methodBb = StaticHelpers7.bb(ago.a);
+                Method methodBb = StaticHelpers7.toDexMethod(ago.a);
                 dmu.a.getClass();
                 methodBb.invoke(dmu.b(), string);
             } catch (Throwable th) {
@@ -40,19 +40,19 @@ public final class agp extends bws implements IDexFind {
         int i = 0;
         dmu.a.getClass();
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dmu.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        methodResolverVarT.returnType = dal.b(Integer.TYPE);
+        methodResolverVarT.returnType = dal.getKClassFromClass(Integer.TYPE);
         agc.a.getClass();
-        Class<?> declaringClass = StaticHelpers7.bb(agb.a).getDeclaringClass();
-        zc zcVarB = dal.b(String.class);
+        Class<?> declaringClass = StaticHelpers7.toDexMethod(agb.a).getDeclaringClass();
+        KClass zcVarB = dal.getKClassFromClass(String.class);
         Class cls = Boolean.TYPE;
-        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { declaringClass, zcVarB, dal.b(cls), dal.b(cls) }, 4, methodResolverVarT)).j(obj,
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { declaringClass, zcVarB, dal.getKClassFromClass(cls), dal.getKClassFromClass(cls) }, 4, methodResolverVarT)).j(obj,
                 str, false, true);
         throwIfVar1IsNull(objJ);
         ((Number) objJ).intValue();
     }
 
     public static void d(String str, String[] strArr) {
-        Method methodBb = StaticHelpers7.bb(agn.a);
+        Method methodBb = StaticHelpers7.toDexMethod(agn.a);
         if (methodBb.getParameterCount() == 4) {
             dmu.a.getClass();
             methodBb.invoke(dmu.b(), strArr, str, Boolean.TRUE, Boolean.FALSE);

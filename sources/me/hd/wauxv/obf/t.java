@@ -13,7 +13,7 @@ public abstract class t extends brm implements afw, ahp {
 
     @Override // me.hd.wauxv.obf.afw
     public final void _bn(Object obj) {
-        Throwable thB = dcy.b(obj);
+        Throwable thB = Success.exceptionOrNull(obj);
         if (thB != null) {
             obj = new abr(thB, false);
         }
@@ -54,7 +54,7 @@ public abstract class t extends brm implements afw, ahp {
     /* JADX WARN: Multi-variable type inference failed */
     public final void h(ahs ahsVar, t tVar, bgj bgjVar) {
         int iOrdinal = ahsVar.ordinal();
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         if (iOrdinal == 0) {
             try {
                 HugeSyntheticPileOfHelpers.resumeCoroutine(kotlinUnitVar, cmz.ab(((nc) bgjVar).h(tVar, this)));
@@ -64,7 +64,7 @@ public abstract class t extends brm implements afw, ahp {
                 if (th instanceof aoq) {
                     th = ((aoq) th).a;
                 }
-                _bn(FastKV.x(th));
+                _bn(FastKV.getFailureFromException(th));
                 throw th;
             }
         }
@@ -95,7 +95,7 @@ public abstract class t extends brm implements afw, ahp {
                 if (th instanceof aoq) {
                     th = ((aoq) th).a;
                 }
-                _bn(FastKV.x(th));
+                _bn(FastKV.getFailureFromException(th));
             }
         }
     }

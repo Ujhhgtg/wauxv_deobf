@@ -9,14 +9,14 @@ public abstract class akl {
         String property;
         Dispatcher2 dispatcher2Var;
         als alsVar;
-        int i = dpg.a;
+        int i = JustAStaticField.availableProcessors;
         try {
             property = System.getProperty("kotlinx.coroutines.main.delay");
         } catch (SecurityException unused) {
             property = null;
         }
         if (property != null ? Boolean.parseBoolean(property) : false) {
-            alc alcVar = aou.a;
+            Dispatchers$Default alcVar = aou.a;
             dispatcher2Var = bza.a;
             Dispatcher2 dispatcher2Var2 = dispatcher2Var.l;
             if (dispatcher2Var == null) {

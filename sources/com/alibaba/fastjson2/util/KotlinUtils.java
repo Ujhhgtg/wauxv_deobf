@@ -77,7 +77,7 @@ public class KotlinUtils {
         }
         if (i != 0 && STATE == 2) {
             try {
-                dal.b(cls);
+                dal.getKClassFromClass(cls);
                 throw new aht();
             } catch (Throwable unused) {
             }

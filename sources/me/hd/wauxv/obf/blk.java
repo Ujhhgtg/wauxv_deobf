@@ -35,7 +35,7 @@ public final class blk extends SwitchHook implements bnc {
             int i = 0;
             FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
             fieldResolverVarR.name = "avatarIV" /* "avatarIV" /* "avatarIV" /* cnb.z(-487160960514858L)  */;
-            ImageView imageView = (ImageView) ((azk) yg.e(fieldResolverVarR)).e();
+            ImageView imageView = (ImageView) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
             if (imageView != null) {
                 boolean zIsSend = msgInfoBean.isSend();
                 boolean z = bli.a.i() && !zIsSend;

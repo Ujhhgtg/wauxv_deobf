@@ -62,7 +62,7 @@ public abstract class cbp {
                 Class cls2 = (Class) obj;
                 Class cls3 = (Class) list.get(i);
                 cls = eoz.class;
-                Class<eoz> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<eoz> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (nullSafeIsEqual(cls2, clsBf != null ? clsBf : eoz.class) || nullSafeIsEqual(cls3, cls2)) {
                     arrayList2.add(obj);
                 }
@@ -212,7 +212,7 @@ public abstract class cbp {
         List listQ = EmptyReadonlyList.INSTANCE;
         if (cls != null) {
             cls2 = Object.class;
-            Class<Object> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+            Class<Object> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
             if (!cls.equals(clsBf != null ? clsBf : Object.class)) {
                 Collection collection = (Collection) bgfVar.invoke(cls);
                 if (collection.isEmpty()) {
@@ -246,8 +246,8 @@ public abstract class cbp {
         OptionalType optionalTypeVar = configurationVar.optional;
         if (optionalTypeVar != OptionalType.ENUM_NO) {
             if (optionalTypeVar == OptionalType.ENUM_NOTICE) {
-                Kotlin$Lazy kotlin$LazyVar = bth.a;
-                bth.e(dnj.ba(strS).toString(), null);
+                Kotlin$Lazy kotlin$LazyVar = LogConfig.isDevelopmentMode;
+                LogConfig.logE(dnj.ba(strS).toString(), null);
                 return;
             }
             return;
@@ -329,7 +329,7 @@ public abstract class cbp {
                         "\n", null, null, null, 62);
             }
         } catch (Throwable th) {
-            FastKV.x(th);
+            FastKV.getFailureFromException(th);
             strConcat = dnr.bo(cls.toString(), " (Kotlin reflection is not available)", "")
                     .concat("\nFailed to build condition table.");
         }
@@ -356,7 +356,7 @@ public abstract class cbp {
                 clsF = ReflectionWrapper.f((String) obj, 2, cls2.getClassLoader());
                 if (clsF == null) {
                     clsF = Object.class;
-                    Class<?> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(clsF));
+                    Class<?> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(clsF));
                     if (clsBf != null) {
                         clsF = clsBf;
                     }
@@ -371,7 +371,7 @@ public abstract class cbp {
             clsF = obj.getClass();
         }
         cls = eoz.class;
-        Class<eoz> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+        Class<eoz> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
         if (!clsF.equals(clsBf2 != null ? clsBf2 : eoz.class) || str == null) {
             return clsF;
         }

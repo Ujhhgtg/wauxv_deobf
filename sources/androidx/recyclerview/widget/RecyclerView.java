@@ -91,7 +91,7 @@ import me.hd.wauxv.obf.eqq;
 import me.hd.wauxv.obf.eqt;
 import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.erf;
-import me.hd.wauxv.obf.ewz;
+import me.hd.wauxv.obf.StaticAndroidHelpers;
 import me.hd.wauxv.obf.yg;
 import me.hd.wauxv.obf.yh;
 import me.hd.wauxv.obf.yi;
@@ -2180,7 +2180,7 @@ public class RecyclerView extends ViewGroup implements ckr {
         iArr3[0] = iArr3[0] + i14;
         iArr3[1] = iArr3[1] + i16;
         if (getOverScrollMode() != 2) {
-            if (motionEvent == null || ewz.ak(motionEvent, q.a.s)) {
+            if (motionEvent == null || StaticAndroidHelpers.ak(motionEvent, q.a.s)) {
                 z = true;
                 z2 = false;
             } else {
@@ -2212,7 +2212,7 @@ public class RecyclerView extends ViewGroup implements ckr {
                         if (z3 || f2 != 0.0f || f3 != 0.0f) {
                             postInvalidateOnAnimation();
                         }
-                        if (Build.VERSION.SDK_INT >= 31 && ewz.ak(motionEvent, 4194304)) {
+                        if (Build.VERSION.SDK_INT >= 31 && StaticAndroidHelpers.ak(motionEvent, 4194304)) {
                             ej();
                         }
                     }

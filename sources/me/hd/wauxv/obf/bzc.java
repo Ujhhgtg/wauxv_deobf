@@ -11,9 +11,9 @@ public final class bzc extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() throws NoSuchMethodException {
-        aki akiVarAb = PackageParam.ab(a, dqc.toSingletonList(StaticHelpers7.bb(bzb.a)));
-        akiVarAb.m(new bty(27));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(a, dqc.toSingletonList(StaticHelpers7.toDexMethod(bzb.a)));
+        hookManagerVarAb.m(new bty(27));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.IDexFind

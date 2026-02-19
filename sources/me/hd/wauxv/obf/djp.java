@@ -41,7 +41,7 @@ public final /* synthetic */ class djp implements bgf {
                 djsVar.b = strZ2;
                 bvzVar.add(djsVar);
                 aeg.a.getClass();
-                Method methodBb = StaticHelpers7.bb(aed.a);
+                Method methodBb = StaticHelpers7.toDexMethod(aed.a);
                 aec.a.getClass();
                 Object objInvoke = methodBb.invoke(aec.b(), null);
                 throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.collections.List<kotlin.Any>" /* "null cannot be cast to non-null type kotlin.collections.List<kotlin.Any>" /* "null cannot be cast to non-null type kotlin.collections.List<kotlin.Any>" /* "null cannot be cast to non-null type kotlin.collections.List<kotlin.Any>" /* cnb.z(-386645840886570L)   */);
@@ -54,10 +54,10 @@ public final /* synthetic */ class djp implements bgf {
                     int i3 = 0;
                     FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).r();
                     fieldResolverVarR.name = "field_labelID" /* "field_labelID" /* "field_labelID" /* "field_labelID" /* cnb.z(-556387243391786L)   */;
-                    djsVar2.a = String.valueOf(((azk) yg.e(fieldResolverVarR)).e());
+                    djsVar2.a = String.valueOf(((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_());
                     FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj2).r();
                     fieldResolverVarR2.name = "field_labelName" /* "field_labelName" /* "field_labelName" /* "field_labelName" /* cnb.z(-556859689794346L)   */;
-                    Object objE = ((azk) yg.e(fieldResolverVarR2)).e();
+                    Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue_();
                     throwIfVar1IsNull(objE);
                     djsVar2.b = (String) objE;
                     arrayList.add(djsVar2);
@@ -155,22 +155,22 @@ public final /* synthetic */ class djp implements bgf {
                 int i4 = 0;
                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(viewGroup).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 Class cls = Integer.TYPE;
-                ((MethodHookWrapper) StaticHelpers6.n(new Object[]{dal.b(cls), dal.b(cls), dal.b(cls)}, 3, methodResolverVarT)).e(0, 0, 0);
+                ((MethodHookWrapper) StaticHelpers6.n(new Object[]{dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(cls)}, 3, methodResolverVarT)).e(0, 0, 0);
                 MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(viewGroup).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT2.name = "getAdapter" /* "getAdapter" /* "getAdapter" /* "getAdapter" /* cnb.z(-555992106400554L)   */;
                 Object objE2 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).e(new Object[0]);
                 throwIfVar1IsNull(objE2);
                 FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objE2).r();
                 fieldResolverVarR3.fieldType = "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* cnb.z(-555962041629482L)   */;
-                Object objD = ((azk) yg.e(fieldResolverVarR3)).d();
+                Object objD = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue();
                 throwIfVar1IsNull(objD);
-                Method methodBb2 = StaticHelpers7.bb(djt.a);
+                Method methodBb2 = StaticHelpers7.toDexMethod(djt.a);
                 if (methodBb2.getParameterCount() == 4) {
                     methodBb2.invoke(null, objD, null, 1, null);
                 } else {
                     methodBb2.invoke(objD, null);
                 }
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
         }
     }
 }

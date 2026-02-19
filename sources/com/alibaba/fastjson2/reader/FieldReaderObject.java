@@ -56,7 +56,7 @@ public class FieldReaderObject<T> extends FieldReader<T> {
             fieldValue = ((Map) obj).get(str);
         } else {
             if (obj == null) {
-                throw new JSONException(yg.k("key not found ", str));
+                throw new JSONException(yg.concat("key not found ", str));
             }
             fieldValue = JSONFactory.getObjectWriter(obj.getClass(), 0L).getFieldValue(obj, str);
         }

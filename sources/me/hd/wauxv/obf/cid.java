@@ -45,7 +45,7 @@ public final /* synthetic */ class cid implements IInvokable {
                 if (cursorAb != null) {
                     while (cursorAb.moveToNext()) {
                         try {
-                            if (dnr.bi(cursorAb.getString(cursorAb.getColumnIndex("username" /*
+                            if (dnr.ifVar1EndsWithVar2(cursorAb.getString(cursorAb.getColumnIndex("username" /*
                                                                                               * "username" /* "username" /* cnb.z(-478644040366890L)  */
                                                                                               */)), "@chatroom" /*
                                                                                                                  * cnb.z
@@ -143,7 +143,7 @@ public final /* synthetic */ class cid implements IInvokable {
                 if (cursorAb2 != null) {
                     while (cursorAb2.moveToNext()) {
                         try {
-                            if (dnr.bi(cursorAb2
+                            if (dnr.ifVar1EndsWithVar2(cursorAb2
                                     .getString(cursorAb2.getColumnIndex("username" /* "username" /* "username" /* cnb.z(-475521599142698L)  */)),
                                     "@chatroom" /* "@chatroom" /* "@chatroom" /* cnb.z(-475482944437034L)  */)) {
                                 GroupInfo groupInfoT2 = cnb.t(cursorAb2);
@@ -219,6 +219,6 @@ public final /* synthetic */ class cid implements IInvokable {
                 aelVar4.l = cicVar2;
                 break;
         }
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

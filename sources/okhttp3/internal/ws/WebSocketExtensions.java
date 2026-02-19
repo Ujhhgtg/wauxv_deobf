@@ -79,7 +79,7 @@ public final class WebSocketExtensions {
                                             iDelimiterOffset2);
                                     throwIfVar1IsNull(strTrimSubstring, "<this>");
                                     if (strTrimSubstring.length() >= 2 && dnr.bp(strTrimSubstring, "\"", false)
-                                            && dnr.bi(strTrimSubstring, "\"")) {
+                                            && dnr.ifVar1EndsWithVar2(strTrimSubstring, "\"")) {
                                         strTrimSubstring = strTrimSubstring.substring(1, strTrimSubstring.length() - 1);
                                         throwIfVar1IsNull(strTrimSubstring, "substring(...)");
                                     }

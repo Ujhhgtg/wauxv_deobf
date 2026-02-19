@@ -236,7 +236,7 @@ public final class aff implements CharSequence {
     public final boolean ad(int i, int i2) {
         anu anuVarZ = z(i);
         for (int i3 = 0; i3 < anuVarZ.a.length; i3++) {
-            if (i2 >= anuVarZ.d(i3) && i2 < anuVarZ.e(i3)) {
+            if (i2 >= anuVarZ.getHighBits(i3) && i2 < anuVarZ.getLowBits(i3)) {
                 return anuVarZ.f(i3);
             }
         }

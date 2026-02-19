@@ -10,8 +10,8 @@ public final class bhw extends ContextWrapper {
     public static final bgz a;
     public final bva b;
     public final afr c;
-    public final GifEncoder d;
-    public final GifEncoder e;
+    public final SyntheticClass d;
+    public final SyntheticClass e;
     public final List f;
     public final ku g;
     public final awd h;
@@ -25,11 +25,11 @@ public final class bhw extends ContextWrapper {
         a = bgzVar;
     }
 
-    public bhw(Context context, bva bvaVar, ConnectivityMonitor connectivityMonitorVar, GifEncoder gifEncoderVar, GifEncoder gifEncoderVar2, ku kuVar, List list, awd awdVar, bib bibVar) {
+    public bhw(Context context, bva bvaVar, ConnectivityMonitor connectivityMonitorVar, SyntheticClass syntheticClassVar, SyntheticClass syntheticClassVar2, ku kuVar, List list, awd awdVar, bib bibVar) {
         super(context.getApplicationContext());
         this.b = bvaVar;
-        this.d = gifEncoderVar;
-        this.e = gifEncoderVar2;
+        this.d = syntheticClassVar;
+        this.e = syntheticClassVar2;
         this.f = list;
         this.g = kuVar;
         this.h = awdVar;

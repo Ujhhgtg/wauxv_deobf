@@ -104,12 +104,12 @@ public abstract class cnh {
     public static void ae(String str, Object obj, String str2) {
         kd.a.getClass();
         int i = 0;
-        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.bb(kc.a).getDeclaringClass()).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        methodResolverVarT.ak(cdy.c);
+        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.toDexMethod(kc.a).getDeclaringClass()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.addAccessModifiers(AccessModifierEnum.STATIC);
         Class cls = Integer.TYPE;
-        methodResolverVarT.returnType = dal.b(cls);
+        methodResolverVarT.returnType = dal.getKClassFromClass(cls);
         ((MethodHookWrapper) StaticHelpers6.n(new Object[] { "com.tencent.mm.opensdk.modelmsg.WXMediaMessage" /* "com.tencent.mm.opensdk.modelmsg.WXMediaMessage" /* "com.tencent.mm.opensdk.modelmsg.WXMediaMessage" /* cnb.z(-120332098730794L)  */,
-                dal.b(String.class), dal.b(String.class), dal.b(String.class), dal.b(cls), dal.b(String.class) }, 6,
+                dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(cls), dal.getKClassFromClass(String.class) }, 6,
                 methodResolverVarT)).e(obj, str2, "" /* "" /* "" /* cnb.z(-120130235267882L)  */, str, 2, null);
     }
 
@@ -391,15 +391,15 @@ public abstract class cnh {
         String strZ = "id" /* "id" /* "id" /* cnb.z(-71932112272170L)  */;
         if (obj instanceof View) {
             Resources resources = ((View) obj).getResources();
-            bmo.a.getClass();
-            return Integer.valueOf(resources.getIdentifier(str, strZ, bmo.p()));
+            HostInfoRegistry.INSTANCE.getClass();
+            return Integer.valueOf(resources.getIdentifier(str, strZ, HostInfoRegistry.getPackageName()));
         }
         if (!(obj instanceof Context)) {
             return null;
         }
         Resources resources2 = ((Context) obj).getResources();
-        bmo.a.getClass();
-        return Integer.valueOf(resources2.getIdentifier(str, strZ, bmo.p()));
+        HostInfoRegistry.INSTANCE.getClass();
+        return Integer.valueOf(resources2.getIdentifier(str, strZ, HostInfoRegistry.getPackageName()));
     }
 
     public static final View v(Object obj, String str) {
@@ -415,8 +415,8 @@ public abstract class cnh {
             }
         } else {
             if (!(obj instanceof Dialog)) {
-                ArrayList arrayList = ewq.a;
-                ewq.e("getHostView " /* "getHostView " /* "getHostView " /* cnb.z(-71936407239466L)  */ + str + " Failed" /* " Failed" /* " Failed" /* cnb.z(-71863392795434L)  */,
+                ArrayList arrayList = Logger.a;
+                Logger.logE("getHostView " /* "getHostView " /* "getHostView " /* cnb.z(-71936407239466L)  */ + str + " Failed" /* " Failed" /* " Failed" /* cnb.z(-71863392795434L)  */,
                         null, 14);
                 return null;
             }

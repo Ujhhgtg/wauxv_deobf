@@ -10,7 +10,7 @@ public final class crm extends SwitchHook implements bnn {
     public static final String b = "菜单" /* "菜单" /* "菜单" /* cnb.z(-513428980497194L)  */;
     public static final String c = "打开详情" /* "打开详情" /* "打开详情" /* cnb.z(-513433275464490L)  */;
     public static final String h = "打开 好友ID 或者 群聊ID 的对应详情页" /* "打开 好友ID 或者 群聊ID 的对应详情页" /* "打开 好友ID 或者 群聊ID 的对应详情页" /* cnb.z(-513394620758826L)  */;
-    public static final Function1$VarIsInt i = new Function1$VarIsInt(0);
+    public static final Function1$VarIsObj i = new Function1$VarIsObj(0);
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {

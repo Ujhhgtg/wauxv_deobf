@@ -6,8 +6,8 @@ public final class avc implements btq {
     public static final FactoryPools a = new FactoryPools(19);
 
     @Override // me.hd.wauxv.obf.btq
-    public final GifEncoder[] b() {
-        return new GifEncoder[0];
+    public final SyntheticClass[] b() {
+        return new SyntheticClass[0];
     }
 
     @Override // me.hd.wauxv.obf.btq
@@ -16,7 +16,7 @@ public final class avc implements btq {
     }
 
     @Override // me.hd.wauxv.obf.btq
-    public final GifEncoder d() {
+    public final SyntheticClass d() {
         return null;
     }
 

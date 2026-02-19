@@ -8,7 +8,7 @@ public final class eer {
     public static final eeq Companion = new eeq();
     public static final IHasGetValue[] a = { null, null, null, null, null, null, null, null, null, null, null, null,
             null, null,
-            null, ewz.am(btx.a, new dtr(27)), null };
+            null, StaticAndroidHelpers.am(btx.a, new dtr(27)), null };
     public final Float b;
     public final Float c;
     public final String d;

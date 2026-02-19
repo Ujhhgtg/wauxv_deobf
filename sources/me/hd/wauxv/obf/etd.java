@@ -37,7 +37,7 @@ public final class etd extends doi implements bgj {
             case 0:
                 break;
         }
-        return ((etd) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
+        return ((etd) h(ahpVar, afwVar)).i(Kotlin$Unit.INSTANCE);
     }
 
     @Override // me.hd.wauxv.obf.nc
@@ -63,7 +63,7 @@ public final class etd extends doi implements bgj {
         Object obj_be2;
         String str2;
         int i = this.a;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         String str3 = this.u;
         String str4 = this.t;
         ahq ahqVar = ahq.a;
@@ -76,7 +76,7 @@ public final class etd extends doi implements bgj {
                 int i2 = this.f;
                 if (i2 == 0) {
                     FastKV.bd(obj);
-                    dnc.g(null, 3, "开始下载视频" /* "开始下载视频" /* "开始下载视频" /* cnb.z(-587538641189674L)  */);
+                    dnc.sendToast(null, 3, "开始下载视频" /* "开始下载视频" /* "开始下载视频" /* cnb.z(-587538641189674L)  */);
                     StringBuilder sb = new StringBuilder();
                     eta etaVar = eta.a;
                     sb.append(etaVar.o());
@@ -96,7 +96,7 @@ public final class etd extends doi implements bgj {
                     String str8 = str4 + str3;
                     int i3 = 4;
                     beo beoVar = new beo(strH, i3);
-                    alc alcVar = aou.a;
+                    Dispatchers$Default alcVar = aou.a;
                     akq akqVar = akq.f;
                     dob dobVar = new dob();
                     akqVar.getClass();
@@ -122,14 +122,14 @@ public final class etd extends doi implements bgj {
                 }
                 arj.v(str, strN, new BigInteger(str7));
                 ((File) obj_be).delete();
-                dnc.g(null, 3, "下载视频完成" /* "下载视频完成" /* "下载视频完成" /* cnb.z(-589046174710570L)  */);
+                dnc.sendToast(null, 3, "下载视频完成" /* "下载视频完成" /* "下载视频完成" /* cnb.z(-589046174710570L)  */);
                 return kotlinUnitVar;
             default:
                 ahp ahpVar2 = (ahp) this.o;
                 int i4 = this.f;
                 if (i4 == 0) {
                     FastKV.bd(obj);
-                    dnc.g(null, 3, "开始下载视频" /* "开始下载视频" /* "开始下载视频" /* cnb.z(-611010637462314L)  */);
+                    dnc.sendToast(null, 3, "开始下载视频" /* "开始下载视频" /* "开始下载视频" /* cnb.z(-611010637462314L)  */);
                     StringBuilder sb3 = new StringBuilder();
                     etf etfVar = etf.a;
                     sb3.append(etfVar.o());
@@ -149,7 +149,7 @@ public final class etd extends doi implements bgj {
                     String str10 = str4 + str3;
                     int i5 = 7;
                     beo beoVar2 = new beo(strH2, i5);
-                    alc alcVar2 = aou.a;
+                    Dispatchers$Default alcVar2 = aou.a;
                     akq akqVar2 = akq.f;
                     dob dobVar2 = new dob();
                     akqVar2.getClass();
@@ -175,7 +175,7 @@ public final class etd extends doi implements bgj {
                 }
                 arj.v(str2, strN2, new BigInteger(str7));
                 ((File) obj_be2).delete();
-                dnc.g(null, 3, "下载视频完成" /* "下载视频完成" /* "下载视频完成" /* cnb.z(-610851723672362L)  */);
+                dnc.sendToast(null, 3, "下载视频完成" /* "下载视频完成" /* "下载视频完成" /* cnb.z(-610851723672362L)  */);
                 return kotlinUnitVar;
         }
     }

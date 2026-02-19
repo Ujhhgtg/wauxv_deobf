@@ -173,8 +173,8 @@ public abstract class ajn {
     }
 
     public static final Class tryGetClassByClassName(String str) {
-        bmo.a.getClass();
-        return ReflectionWrapper.tryGetClassByName(bmo.getClassLoader(), str);
+        HostInfoRegistry.INSTANCE.getClass();
+        return ReflectionWrapper.tryGetClassByName(HostInfoRegistry.getClassLoader(), str);
     }
 
     public static final String ah(afw afwVar) {
@@ -185,9 +185,9 @@ public abstract class ajn {
         try {
             objX = afwVar + '@' + toHexHashCode(afwVar);
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        if (dcy.b(objX) != null) {
+        if (Success.exceptionOrNull(objX) != null) {
             objX = afwVar.getClass().getName() + '@' + toHexHashCode(afwVar);
         }
         return (String) objX;
@@ -271,7 +271,7 @@ public abstract class ajn {
         }
         aos aosVar = new aos(ahhVar_v, doiVar);
         try {
-            HugeSyntheticPileOfHelpers.resumeCoroutine(KotlinUnit.INSTANCE, cmz.ab(((nc) bgjVar).h(aosVar, aosVar)));
+            HugeSyntheticPileOfHelpers.resumeCoroutine(Kotlin$Unit.INSTANCE, cmz.ab(((nc) bgjVar).h(aosVar, aosVar)));
             AtomicIntegerFieldUpdater atomicIntegerFieldUpdater = aos.i;
             do {
                 int i = atomicIntegerFieldUpdater.get(aosVar);
@@ -292,7 +292,7 @@ public abstract class ajn {
             if (th instanceof aoq) {
                 th = ((aoq) th).a;
             }
-            aosVar._bn(FastKV.x(th));
+            aosVar._bn(FastKV.getFailureFromException(th));
             throw th;
         }
     }
@@ -338,7 +338,7 @@ public abstract class ajn {
 
     public static alq g(ahp ahpVar, ahh ahhVar, bgj bgjVar) {
         ahh ahhVarT = KotlinHelpers.t(ahpVar.e(), ahhVar, true);
-        alc alcVar = aou.a;
+        Dispatchers$Default alcVar = aou.a;
         if (ahhVarT != alcVar && ahhVarT._w(arj.a) == null) {
             ahhVarT = ahhVarT._v(alcVar);
         }
@@ -670,7 +670,7 @@ public abstract class ajn {
 
     public static dmf y(ahp ahpVar, ahh ahhVar, bgj bgjVar) {
         ahh ahhVarT = KotlinHelpers.t(ahpVar.e(), ahhVar, true);
-        alc alcVar = aou.a;
+        Dispatchers$Default alcVar = aou.a;
         if (ahhVarT != alcVar && ahhVarT._w(arj.a) == null) {
             ahhVarT = ahhVarT._v(alcVar);
         }

@@ -2,7 +2,7 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public abstract class cwc extends sw implements btc {
+public abstract class cwc extends sw implements IEmpty7 {
     public final boolean b;
 
     public cwc(Object obj, Class cls, String str, String str2, int i) {
@@ -19,20 +19,20 @@ public abstract class cwc extends sw implements btc {
             return l().equals(cwcVar.l()) && this.f.equals(cwcVar.f) && this.h.equals(cwcVar.h)
                     && nullSafeIsEqual(this.d, cwcVar.d);
         }
-        if (obj instanceof btc) {
+        if (obj instanceof IEmpty7) {
             return obj.equals(j());
         }
         return false;
     }
 
-    public final btc g() {
+    public final IEmpty7 g() {
         if (this.b) {
             throw new UnsupportedOperationException(
                     "Kotlin reflection is not yet supported for synthetic Java properties. Please follow/upvote https://youtrack.jetbrains.com/issue/KT-55980");
         }
-        bsu bsuVarJ = j();
+        IEmpty6 bsuVarJ = j();
         if (bsuVarJ != this) {
-            return (btc) bsuVarJ;
+            return (IEmpty7) bsuVarJ;
         }
         throw new aht();
     }
@@ -42,12 +42,12 @@ public abstract class cwc extends sw implements btc {
     }
 
     @Override // me.hd.wauxv.obf.sw
-    public final bsu j() {
+    public final IEmpty6 j() {
         return this.b ? this : super.j();
     }
 
     public final String toString() {
-        bsu bsuVarJ = j();
+        IEmpty6 bsuVarJ = j();
         return bsuVarJ != this ? bsuVarJ.toString()
                 : yg.concatToVar1(new StringBuilder("property "), this.f, " (Kotlin reflection is not available)");
     }

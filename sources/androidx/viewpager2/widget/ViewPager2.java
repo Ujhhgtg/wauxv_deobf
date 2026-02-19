@@ -16,7 +16,7 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import java.util.ArrayList;
 import me.hd.wauxv.obf.aco;
 import me.hd.wauxv.obf.akz;
-import me.hd.wauxv.obf.bc;
+import me.hd.wauxv.obf.LateinitProperty;
 import me.hd.wauxv.obf.bdi;
 import me.hd.wauxv.obf.SomeFragmentManager;
 import me.hd.wauxv.obf.beg;
@@ -229,7 +229,7 @@ public final class ViewPager2 extends ViewGroup {
             iD2 = viewPager2.getAdapter().d();
             iD = 1;
         }
-        accessibilityNodeInfo.setCollectionInfo((AccessibilityNodeInfo.CollectionInfo) bc.f(iD, iD2, 0).e);
+        accessibilityNodeInfo.setCollectionInfo((AccessibilityNodeInfo.CollectionInfo) LateinitProperty.f(iD, iD2, 0).e);
         cyw adapter = viewPager2.getAdapter();
         if (adapter == null || (iD3 = adapter.d()) == 0 || !viewPager2.r) {
             return;

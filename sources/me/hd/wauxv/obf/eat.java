@@ -87,8 +87,8 @@ public final class eat {
         a = new IHasGetValue[] { null, null, null, null, null, null, null, null, null, null, null, null, null, null,
                 null, null,
                 null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
-                ewz.am(btxVar, dtrVar), null, null, null, null, null, null, null, ewz.am(btxVar, new dtr(19)), null,
-                null, null, null, null, null, null, null, null, null, ewz.am(btxVar, new dtr(20)), null, null, null,
+                StaticAndroidHelpers.am(btxVar, dtrVar), null, null, null, null, null, null, null, StaticAndroidHelpers.am(btxVar, new dtr(19)), null,
+                null, null, null, null, null, null, null, null, null, StaticAndroidHelpers.am(btxVar, new dtr(20)), null, null, null,
                 null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
                 null };
     }

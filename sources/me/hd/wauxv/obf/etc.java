@@ -30,7 +30,7 @@ public final class etc extends doi implements bgj {
             case 0:
                 break;
         }
-        return ((etc) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
+        return ((etc) h(ahpVar, afwVar)).i(Kotlin$Unit.INSTANCE);
     }
 
     @Override // me.hd.wauxv.obf.nc
@@ -50,7 +50,7 @@ public final class etc extends doi implements bgj {
     @Override // me.hd.wauxv.obf.nc
     public final Object i(Object obj) throws Exception {
         int i = this.a;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         JSONObject jSONObject = this.p;
         String str = this.o;
         String str2 = this.f;
@@ -63,7 +63,7 @@ public final class etc extends doi implements bgj {
                 int i3 = this.d;
                 if (i3 == 0) {
                     FastKV.bd(obj);
-                    dnc.g(null, 3, "开始下载视频" /* "开始下载视频" /* "开始下载视频" /* cnb.z(-587899418442538L)  */);
+                    dnc.sendToast(null, 3, "开始下载视频" /* "开始下载视频" /* "开始下载视频" /* cnb.z(-587899418442538L)  */);
                     StringBuilder sb = new StringBuilder();
                     sb.append(eta.a.o());
                     sb.append('/');
@@ -72,7 +72,7 @@ public final class etc extends doi implements bgj {
                     String strN = yg.decryptVar3UsingCnbZAndConcatToVar1(sb, str, -587869353671466L);
                     String string = jSONObject.getString("pcdn_url" /* "pcdn_url" /* "pcdn_url" /* cnb.z(-587882238573354L)  */);
                     beo beoVar = new beo(strN, i2);
-                    alc alcVar = aou.a;
+                    Dispatchers$Default alcVar = aou.a;
                     akq akqVar = akq.f;
                     dob dobVar = new dob();
                     akqVar.getClass();
@@ -89,14 +89,14 @@ public final class etc extends doi implements bgj {
                     }
                     FastKV.bd(obj);
                 }
-                dnc.g(null, 3, "下载视频完成" /* "下载视频完成" /* "下载视频完成" /* cnb.z(-587860763736874L)  */);
+                dnc.sendToast(null, 3, "下载视频完成" /* "下载视频完成" /* "下载视频完成" /* cnb.z(-587860763736874L)  */);
                 return kotlinUnitVar;
             default:
                 ahp ahpVar2 = (ahp) this.e;
                 int i4 = this.d;
                 if (i4 == 0) {
                     FastKV.bd(obj);
-                    dnc.g(null, 3, "开始下载视频" /* "开始下载视频" /* "开始下载视频" /* cnb.z(-609722147273514L)  */);
+                    dnc.sendToast(null, 3, "开始下载视频" /* "开始下载视频" /* "开始下载视频" /* cnb.z(-609722147273514L)  */);
                     StringBuilder sb2 = new StringBuilder();
                     sb2.append(etf.a.o());
                     sb2.append('/');
@@ -106,7 +106,7 @@ public final class etc extends doi implements bgj {
                     String string2 = jSONObject.getString("pcdn_url" /* "pcdn_url" /* "pcdn_url" /* cnb.z(-609704967404330L)  */);
                     int i5 = 6;
                     beo beoVar2 = new beo(strN2, i5);
-                    alc alcVar2 = aou.a;
+                    Dispatchers$Default alcVar2 = aou.a;
                     akq akqVar2 = akq.f;
                     dob dobVar2 = new dob();
                     akqVar2.getClass();
@@ -123,7 +123,7 @@ public final class etc extends doi implements bgj {
                     }
                     FastKV.bd(obj);
                 }
-                dnc.g(null, 3, "下载视频完成" /* "下载视频完成" /* "下载视频完成" /* cnb.z(-610216068512554L)  */);
+                dnc.sendToast(null, 3, "下载视频完成" /* "下载视频完成" /* "下载视频完成" /* cnb.z(-610216068512554L)  */);
                 return kotlinUnitVar;
         }
     }

@@ -15,13 +15,13 @@ import android.view.View;
 public final class bvr extends URLSpan {
     public final bzr a;
     public final String b;
-    public final GifEncoder c;
+    public final SyntheticClass c;
 
-    public bvr(bzr bzrVar, String str, GifEncoder gifEncoderVar) {
+    public bvr(bzr bzrVar, String str, SyntheticClass syntheticClassVar) {
         super(str);
         this.a = bzrVar;
         this.b = str;
-        this.c = gifEncoderVar;
+        this.c = syntheticClassVar;
     }
 
     @Override // android.text.style.URLSpan, android.text.style.ClickableSpan

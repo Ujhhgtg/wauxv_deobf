@@ -9,28 +9,27 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class aki {
-    public final /* synthetic */ int a = 0;
+public final class HookManager {
     public boolean b;
     public Object hookPriority;
     public Object resolutionStrategy;
-    public Object e;
+    public Object instantCollection;
     public Object f;
     public Object g;
-    public Object h;
+    public Object activeUnhooks;
     public Object members;
-    public Object j;
+    public Object hookingEngine;
 
-    public /* synthetic */ aki() {
+    public /* synthetic */ HookManager() {
     }
 
-    public static final void k(aki akiVar, Class cls, Class cls2) {
+    public static final void verifySignature(HookManager hookManagerVar, Class cls, Class cls2) {
         Class cls3;
         if (cls == null || cls2 == null) {
             return;
         }
         cls3 = Object.class;
-        Class<Object> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
+        Class<Object> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
         if (cls.equals(clsBf != null ? clsBf : Object.class)) {
             return;
         }
@@ -44,28 +43,28 @@ public final class aki {
                 ("Hooked method return type match failed, required [" + cls + "] but got [" + cls2 + "]").toString());
     }
 
-    public static void l(aki akiVar) {
-        eru eruVar = (eru) akiVar.e;
-        if (eruVar != null) {
-            aki akiVar2 = (aki) eruVar.a;
-            LinkedHashSet<exa> linkedHashSet = (LinkedHashSet) akiVar2.h;
+    public static void l(HookManager hookManagerVar) {
+        InstantCollection instantCollectionVar = (InstantCollection) hookManagerVar.instantCollection;
+        if (instantCollectionVar != null) {
+            HookManager hookManagerVar2 = (HookManager) instantCollectionVar.instantBuilders;
+            LinkedHashSet<exa> linkedHashSet = (LinkedHashSet) hookManagerVar2.activeUnhooks;
             if (linkedHashSet.isEmpty()) {
                 linkedHashSet = null;
             }
             if (linkedHashSet != null) {
-                but butVar = (but) akiVar2.j;
+                but butVar = (but) hookManagerVar2.hookingEngine;
                 for (exa exaVar : linkedHashSet) {
                     exaVar.b.invoke();
-                    ArrayList arrayList = ewq.a;
+                    ArrayList arrayList = Logger.a;
                     Objects.toString(exaVar.a.xposedUnhook.getHookedMethod());
-                    ewq.f();
+                    Logger.f();
                 }
                 try {
-                    if (((LinkedHashMap) butVar.c).remove(akiVar2.toString()) != null) {
+                    if (((LinkedHashMap) butVar.c).remove(hookManagerVar2.toString()) != null) {
                         throw new ClassCastException();
                     }
                 } catch (Throwable th) {
-                    FastKV.x(th);
+                    FastKV.getFailureFromException(th);
                 }
                 linkedHashSet.clear();
             }
@@ -74,25 +73,25 @@ public final class aki {
 
     public dop m(IInvokable bgfVar) {
         this.g = bgfVar;
-        q(false);
+        applyHooks(false);
         return new dop(25);
     }
 
     public dop n(IInvokable bgfVar) {
         this.f = bgfVar;
-        q(false);
+        applyHooks(false);
         return new dop(25);
     }
 
-    public void o() {
-        this.e = new eru(this);
-        q(true);
+    public void initInstantCollectionAndApplyHooks() {
+        this.instantCollection = new InstantCollection(this);
+        applyHooks(true);
     }
 
     /* JADX WARN: Found duplicated region for block: B:6:0x0019 */
-    public void p(Throwable th, Member member) {
+    public void logHookError(Throwable th, Member member) {
         String str;
-        ArrayList arrayList = ewq.a;
+        ArrayList arrayList = Logger.a;
         if (member != null) {
             str = "[" + member + "]";
             if (str == null) {
@@ -101,17 +100,17 @@ public final class aki {
         } else {
             str = "nothing";
         }
-        ewq.g(4, "Try to hook " + str + " got an exception", th);
+        Logger.logException(4, "Try to hook " + str + " got an exception", th);
     }
 
-    public void q(boolean z) {
+    public void applyHooks(boolean z) {
         Object objX;
         ResolutionStrategyEnum resolutionStrategyEnumVar = (ResolutionStrategyEnum) this.resolutionStrategy;
         if ((z && resolutionStrategyEnumVar == ResolutionStrategyEnum.ENUM_LAZY_MEMBERS) || resolutionStrategyEnumVar == ResolutionStrategyEnum.ENUM_IMMEDIATE) {
-            but butVar = (but) this.j;
+            but butVar = (but) this.hookingEngine;
             if (bhs.r() != bmc.b) {
-                csc cscVar = ((PackageParam) butVar.b).aa;
-                if ((cscVar != null ? cscVar.a : null) == bmk.c || this.b) {
+                csc cscVar = ((PackageParam) butVar.b).processInfo;
+                if ((cscVar != null ? cscVar.hookScope : null) == HookScopeEnum.RESOURCES || this.b) {
                     return;
                 }
                 this.b = true;
@@ -124,7 +123,7 @@ public final class aki {
                     if (resolutionStrategyEnumVar != ResolutionStrategyEnum.ENUM_LAZY_CLASSES) {
                         return;
                     }
-                    ewq.g(4, "Hooked Member cannot be null", th);
+                    Logger.logException(4, "Hooked Member cannot be null", th);
                     return;
                 }
                 for (Member member : linkedHashSet) {
@@ -134,25 +133,25 @@ public final class aki {
                         if ((exaVar != null ? exaVar.a.xposedUnhook.getHookedMethod() : null) == null) {
                             throw new IllegalStateException(("Hook Member [" + member + "] failed").toString());
                         }
-                        ((LinkedHashSet) this.h).add(exhVarZ.a);
+                        ((LinkedHashSet) this.activeUnhooks).add(exhVarZ.a);
                         objX = exhVarZ;
                     } catch (Throwable th2) {
-                        objX = FastKV.x(th2);
+                        objX = FastKV.getFailureFromException(th2);
                     }
-                    Throwable thB = dcy.b(objX);
+                    Throwable thB = Success.exceptionOrNull(objX);
                     if (thB != null) {
-                        p(thB, member);
+                        logHookError(thB, member);
                     }
                 }
             }
         }
     }
 
-    public aki(but butVar, HookPriorityEnum hookPriorityEnumVar, ResolutionStrategyEnum resolutionStrategyEnumVar) {
-        this.j = butVar;
+    public HookManager(but butVar, HookPriorityEnum hookPriorityEnumVar, ResolutionStrategyEnum resolutionStrategyEnumVar) {
+        this.hookingEngine = butVar;
         this.hookPriority = hookPriorityEnumVar;
         this.resolutionStrategy = resolutionStrategyEnumVar;
-        this.h = new LinkedHashSet();
+        this.activeUnhooks = new LinkedHashSet();
         this.members = new LinkedHashSet();
     }
 }

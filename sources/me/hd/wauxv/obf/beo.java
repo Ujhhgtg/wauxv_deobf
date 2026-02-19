@@ -24,25 +24,25 @@ public final /* synthetic */ class beo implements IInvokable {
                 String str = this.b;
                 throwIfVar1IsNull(str, "name");
                 eojVar.d.tag(cne.class, new cne(str));
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 2:
                 ((eoj) obj).h(this.b);
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 3:
                 ((eoj) obj).h(this.b);
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 4:
                 ((eoj) obj).h(this.b);
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 5:
                 ((eoj) obj).h(this.b);
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 6:
                 ((eoj) obj).h(this.b);
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             default:
                 ((eoj) obj).h(this.b);
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
         }
     }
 }

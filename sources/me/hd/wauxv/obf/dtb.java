@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dtb {
     public static final dta Companion = new dta();
-    public static final IHasGetValue[] a = { null, null, null, null, null, null, null, ewz.am(btx.a, new Function1$VarIsInt$2(28)), null,
+    public static final IHasGetValue[] a = { null, null, null, null, null, null, null, StaticAndroidHelpers.am(btx.a, new Function1$VarIsInt$2(28)), null,
             null,
             null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
             null };

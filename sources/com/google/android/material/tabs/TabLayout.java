@@ -28,7 +28,7 @@ import java.util.WeakHashMap;
 import me.hd.wauxv.R;
 import me.hd.wauxv.obf.ajn;
 import me.hd.wauxv.obf.asw;
-import me.hd.wauxv.obf.bc;
+import me.hd.wauxv.obf.LateinitProperty;
 import me.hd.wauxv.obf.ResourcesCompat;
 import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.cau;
@@ -49,7 +49,7 @@ import me.hd.wauxv.obf.dpn;
 import me.hd.wauxv.obf.eqq;
 import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.esf;
-import me.hd.wauxv.obf.ewz;
+import me.hd.wauxv.obf.StaticAndroidHelpers;
 import me.hd.wauxv.obf.ff;
 import me.hd.wauxv.obf.no;
 
@@ -178,7 +178,7 @@ public class TabLayout extends HorizontalScrollView {
                 this.m = aq(this.m.getDefaultColor(), typedArrayAn.getColor(23, 0));
             }
             this.n = cnb.v(context2, typedArrayAn, 3);
-            this.r = ewz.ap(typedArrayAn.getInt(4, -1), null);
+            this.r = StaticAndroidHelpers.ap(typedArrayAn.getInt(4, -1), null);
             this.o = cnb.v(context2, typedArrayAn, 21);
             this.ab = typedArrayAn.getInt(6, 300);
             this.ak = ajn.ae(context2, R.attr.motionEasingEmphasizedInterpolator, ff.b);
@@ -631,7 +631,7 @@ public class TabLayout extends HorizontalScrollView {
     @Override // android.view.View
     public final void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo accessibilityNodeInfo) {
         super.onInitializeAccessibilityNodeInfo(accessibilityNodeInfo);
-        accessibilityNodeInfo.setCollectionInfo((AccessibilityNodeInfo.CollectionInfo) bc.f(1, getTabCount(), 1).e);
+        accessibilityNodeInfo.setCollectionInfo((AccessibilityNodeInfo.CollectionInfo) LateinitProperty.f(1, getTabCount(), 1).e);
     }
 
     @Override // android.widget.HorizontalScrollView, android.view.ViewGroup
@@ -642,7 +642,7 @@ public class TabLayout extends HorizontalScrollView {
     /* JADX WARN: Found duplicated region for block: B:36:? A[RETURN, SYNTHETIC] */
     @Override // android.widget.HorizontalScrollView, android.widget.FrameLayout, android.view.View
     public final void onMeasure(int i, int i2) {
-        int iRound = Math.round(ewz.ag(getContext(), getDefaultHeight()));
+        int iRound = Math.round(StaticAndroidHelpers.ag(getContext(), getDefaultHeight()));
         int mode = View.MeasureSpec.getMode(i2);
         if (mode != Integer.MIN_VALUE) {
             if (mode == 0) {
@@ -655,7 +655,7 @@ public class TabLayout extends HorizontalScrollView {
         if (View.MeasureSpec.getMode(i) != 0) {
             int iAg = this.x;
             if (iAg <= 0) {
-                iAg = (int) (size - ewz.ag(getContext(), 56));
+                iAg = (int) (size - StaticAndroidHelpers.ag(getContext(), 56));
             }
             this.v = iAg;
         }

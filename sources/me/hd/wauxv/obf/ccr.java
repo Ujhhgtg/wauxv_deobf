@@ -42,7 +42,7 @@ public final class ccr implements View.OnClickListener {
                     dfVar.getClass();
                     Activity activityV = aye.v();
                     throwIfVar1IsNull(activityV);
-                    if (dnr.bi(string, "@chatroom" /* "@chatroom" /* "@chatroom" /* cnb.z(-513454750300970L)  */)) {
+                    if (dnr.ifVar1EndsWithVar2(string, "@chatroom" /* "@chatroom" /* "@chatroom" /* cnb.z(-513454750300970L)  */)) {
                         Intent intent = new Intent();
                         intent.setClassName(activityV, "com.tencent.mm.chatroom.ui.ChatroomInfoUI" /*
                                                                                                     * cnb.z(-

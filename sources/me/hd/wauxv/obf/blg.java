@@ -14,11 +14,11 @@ public final class blg extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(blf.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(blf.a));
         blg blgVar = a;
-        aki akiVarAb = PackageParam.ab(blgVar, listBf);
-        blgVar.x(akiVarAb, new bep(13));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(blgVar, listBf);
+        blgVar.x(hookManagerVarAb, new bep(13));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

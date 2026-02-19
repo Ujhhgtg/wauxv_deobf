@@ -138,7 +138,7 @@ public final class bci {
     }
 
     public final void o(DiskLruCache.Editor editor) {
-        KotlinUnit kotlinUnitVar;
+        Kotlin$Unit kotlinUnitVar;
         String str = this.c;
         Handshake handshake = this.j;
         Headers headers = this.i;
@@ -188,7 +188,7 @@ public final class bci {
                 cykVarAg.q(handshake.tlsVersion().javaName());
                 cykVarAg.writeByte(10);
             }
-            kotlinUnitVar = KotlinUnit.INSTANCE;
+            kotlinUnitVar = Kotlin$Unit.INSTANCE;
         } catch (Throwable th2) {
             th = th2;
             kotlinUnitVar = null;

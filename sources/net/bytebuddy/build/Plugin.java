@@ -1419,7 +1419,7 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     @Override // net.bytebuddy.build.Plugin.Engine.ErrorHandler.Enforcing,
                               // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                     public void onUnresolved(String str) {
-                        throw new IllegalStateException(yg.k("Failed to resolve type description for ", str));
+                        throw new IllegalStateException(yg.concat("Failed to resolve type description for ", str));
                     }
                 },
                 NO_LIVE_INITIALIZERS { // from class: net.bytebuddy.build.Plugin.Engine.ErrorHandler.Enforcing.2
@@ -1435,7 +1435,7 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                               // net.bytebuddy.build.Plugin.Engine.ErrorHandler
                     public void onResource(String str) {
                         throw new IllegalStateException(
-                                yg.k("Discovered a resource when only class files were allowed: ", str));
+                                yg.concat("Discovered a resource when only class files were allowed: ", str));
                     }
                 },
                 MANIFEST_REQUIRED { // from class: net.bytebuddy.build.Plugin.Engine.ErrorHandler.Enforcing.4

@@ -326,12 +326,12 @@ public class beq extends ckl {
         throwIfVar1IsNull(someFragmentManagerVar, "fragment");
         erq erqVarAj = someFragmentManagerVar.aj();
         bpg bpgVar = new bpg(0);
-        bpgVar.b(dal.b(a.class), new bep(0));
+        bpgVar.b(dal.getKClassFromClass(a.class), new bep(0));
         SyntheticPileOfMess bmuVarC = bpgVar.c();
         ahv ahvVar = ahv.a;
         throwIfVar1IsNull(ahvVar, "defaultCreationExtras");
         chm chmVar = new chm(erqVarAj, bmuVarC, ahvVar);
-        zc zcVarB = dal.b(a.class);
+        KClass zcVarB = dal.getKClassFromClass(a.class);
         String strAo = emc.ao(zcVarB);
         if (strAo == null) {
             throw new IllegalArgumentException("Local and anonymous classes can not be ViewModels");

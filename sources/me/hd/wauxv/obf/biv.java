@@ -4,7 +4,7 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class biv {
     public static final biu Companion = new biu();
-    public static final IHasGetValue[] a = { null, null, null, null, ewz.am(btx.a, new amd(10)) };
+    public static final IHasGetValue[] a = { null, null, null, null, StaticAndroidHelpers.am(btx.a, new amd(10)) };
     public final String b;
     public final int c;
     public final String d;

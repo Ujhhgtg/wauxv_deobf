@@ -16,9 +16,9 @@ public final class day extends SwitchHook {
         ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) StaticHelpers5.safeGetFirstInList(adtVarM.a());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         day dayVar = a;
-        aki akiVarAd = dayVar.ad(constructorHookWrapperVar, hookPriorityEnumVar);
-        dayVar.x(akiVarAd, new cvc(26));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = dayVar.createImmediateHook(constructorHookWrapperVar, hookPriorityEnumVar);
+        dayVar.x(hookManagerVarAd, new cvc(26));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

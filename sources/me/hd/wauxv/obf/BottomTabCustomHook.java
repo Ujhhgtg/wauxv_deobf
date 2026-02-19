@@ -41,13 +41,13 @@ public final class BottomTabCustomHook extends SwitchHook {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         adt adtVarM = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.ui.LauncherUIBottomTabView")).m();
-        adtVarM.setParams(dal.b(Context.class));
+        adtVarM.setParams(dal.getKClassFromClass(Context.class));
         ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) StaticHelpers5.safeGetFirstInList(adtVarM.a());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         BottomTabCustomHook bottomTabCustomHookVar = INSTANCE;
-        aki akiVarAd = bottomTabCustomHookVar.ad(constructorHookWrapperVar, hookPriorityEnumVar);
-        bottomTabCustomHookVar.x(akiVarAd, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(12));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = bottomTabCustomHookVar.createImmediateHook(constructorHookWrapperVar, hookPriorityEnumVar);
+        bottomTabCustomHookVar.x(hookManagerVarAd, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(12));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

@@ -32,7 +32,7 @@ public final class awd implements awi, awk {
         this.c = new nu(29);
         this.b = new aji(2);
         awc awcVar = new awc();
-        awcVar.g = ewz.aw(150, new erp(awcVar, 22));
+        awcVar.g = StaticAndroidHelpers.aw(150, new erp(awcVar, 22));
         awcVar.a = biaVar;
         awcVar.b = biaVar2;
         awcVar.c = biaVar3;

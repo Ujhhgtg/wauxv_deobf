@@ -13,7 +13,7 @@ public final class ctp extends SwitchHook implements bnf, bng {
     public static final String c = "菜单" /* "菜单" /* "菜单" /* cnb.z(-526807803624234L)  */;
     public static final String i = "列表排序" /* "列表排序" /* "列表排序" /* cnb.z(-526829278460714L)  */;
     public static final String j = "为聊天列表菜单添加列表排序聊天功能" /* "为聊天列表菜单添加列表排序聊天功能" /* "为聊天列表菜单添加列表排序聊天功能" /* cnb.z(-526773443885866L)  */;
-    public static final Function1$VarIsInt m = new Function1$VarIsInt(13);
+    public static final Function1$VarIsObj m = new Function1$VarIsObj(13);
 
     @Override // me.hd.wauxv.obf.bnf
     public final List a(ConversationBean conversationBean) {
@@ -27,7 +27,7 @@ public final class ctp extends SwitchHook implements bnf, bng {
                 if (0 <= flag && flag < 1152921504606846977L) {
                     arrayList.add(new agf(R.id.MenuItem_Conversation_SetPlacedTopPro, "列表置顶" /*
                                                                                               * "列表置顶" /* "列表置顶" /* cnb.z(-526086249118506L)  */
-                                                                                              */, new Function1$VarIsInt(15)));
+                                                                                              */, new Function1$VarIsObj(15)));
                 }
             } else {
                 long flag2 = conversationBean.getFlag();
@@ -35,13 +35,13 @@ public final class ctp extends SwitchHook implements bnf, bng {
                     arrayList.add(new agf(R.id.MenuItem_Conversation_UnSetPlacedTopPro, "取消列表置顶" /*
                                                                                                   * cnb.z(-
                                                                                                   * 526116313889578L)
-                                                                                                  */, new Function1$VarIsInt(16)));
+                                                                                                  */, new Function1$VarIsObj(16)));
                 }
             }
         }
         if (ctn.a.i()) {
             arrayList.add(new agf(R.id.MenuItem_Conversation_ResetPlaced, "还原排序" /* "还原排序" /* "还原排序" /* cnb.z(-526069069249322L)  */,
-                    new Function1$VarIsInt(17)));
+                    new Function1$VarIsObj(17)));
         }
         if (ctm.a.i()) {
             if (arj.z(conversationBean.getFlag(), agd.a) == 0) {
@@ -50,7 +50,7 @@ public final class ctp extends SwitchHook implements bnf, bng {
                     arrayList.add(new agf(R.id.MenuItem_Conversation_SetPlacedBottomPro, "列表置底" /*
                                                                                                  * cnb.z(-
                                                                                                  * 526030414543658L)
-                                                                                                 */, new Function1$VarIsInt(18)));
+                                                                                                 */, new Function1$VarIsObj(18)));
                     return arrayList;
                 }
             } else {
@@ -59,7 +59,7 @@ public final class ctp extends SwitchHook implements bnf, bng {
                     arrayList.add(new agf(R.id.MenuItem_Conversation_UnSetPlacedBottomPro, "取消列表置底" /*
                                                                                                      * cnb.z(-
                                                                                                      * 526043299445546L)
-                                                                                                     */, new Function1$VarIsInt(19)));
+                                                                                                     */, new Function1$VarIsObj(19)));
                 }
             }
         }
@@ -68,11 +68,11 @@ public final class ctp extends SwitchHook implements bnf, bng {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void getThisObject() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(ctl.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(ctl.a));
         ctp ctpVar = b;
-        aki akiVarAb = PackageParam.ab(ctpVar, listBf);
-        ctpVar.x(akiVarAb, new Function1$VarIsInt(14));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(ctpVar, listBf);
+        ctpVar.x(hookManagerVarAb, new Function1$VarIsObj(14));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -87,7 +87,7 @@ public final class ctp extends SwitchHook implements bnf, bng {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        StaticHelpers7.resolveDexAndCache(ctl.a, dexKitBridge, new Function1$VarIsInt(20));
+        StaticHelpers7.resolveDexAndCache(ctl.a, dexKitBridge, new Function1$VarIsObj(20));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

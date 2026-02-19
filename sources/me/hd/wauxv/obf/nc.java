@@ -26,7 +26,7 @@ public abstract class nc implements afw, ahr, Serializable {
                     return;
                 }
             } catch (Throwable th) {
-                obj = FastKV.x(th);
+                obj = FastKV.getFailureFromException(th);
             }
             ncVar.l();
             if (!(afwVar2 instanceof nc)) {

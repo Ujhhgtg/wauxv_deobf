@@ -16,11 +16,11 @@ public final class CommandProcessorHook extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(abk.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(abk.a));
         CommandProcessorHook ablVar = a;
-        aki akiVarAb = PackageParam.ab(ablVar, listBf);
-        ablVar.y(akiVarAb, new ws(26));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(ablVar, listBf);
+        ablVar.y(hookManagerVarAb, new ws(26));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

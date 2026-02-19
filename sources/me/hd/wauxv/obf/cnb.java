@@ -104,13 +104,13 @@ public abstract class cnb {
     }
 
     public static final boolean ab(ewk ewkVar) {
-        bmo.a.getClass();
-        return bmo.q() >= ewkVar.r && !bmo.r();
+        HostInfoRegistry.INSTANCE.getClass();
+        return HostInfoRegistry.getVerCode() >= ewkVar.r && !HostInfoRegistry.getIsPlay();
     }
 
     public static final boolean ac(ewh ewhVar) {
-        bmo.a.getClass();
-        return bmo.q() >= ewhVar.u && bmo.r();
+        HostInfoRegistry.INSTANCE.getClass();
+        return HostInfoRegistry.getVerCode() >= ewhVar.u && HostInfoRegistry.getIsPlay();
     }
 
     public static boolean ad(Context context) {
@@ -568,7 +568,7 @@ public abstract class cnb {
         }
         throw new IllegalStateException(
                 "This serializer can be used only with Json format.Expected Encoder to be JsonEncoder, got "
-                        + dal.b(avtVar.getClass()));
+                        + dal.getKClassFromClass(avtVar.getClass()));
     }
 
     public static void m(BaseAdapter baseAdapter, Object obj, int i2)
@@ -577,15 +577,15 @@ public abstract class cnb {
         SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(baseAdapter);
         bmuVarBi.setHookOptional(false);
         MethodResolver methodResolverVarT = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
-        StaticHelpers2.ao(methodResolverVarT.modifiersNot, (cdy[]) Arrays.copyOf(new cdy[] { cdy.d }, 1));
-        methodResolverVarT.setParams(Arrays.copyOf(new Object[] { cvh.a.b(), dal.b(Integer.TYPE) }, 2));
+        StaticHelpers2.addAllFromVar2ToVar1(methodResolverVarT.modifiersNot, (AccessModifierEnum[]) Arrays.copyOf(new AccessModifierEnum[] { AccessModifierEnum.FINAL}, 1));
+        methodResolverVarT.setParams(Arrays.copyOf(new Object[] { cvh.a.b(), dal.getKClassFromClass(Integer.TYPE) }, 2));
         methodResolverVarT.enableSuperclass();
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
         if (methodHookWrapperVar != null) {
             methodHookWrapperVar.e(obj, Integer.valueOf(i2));
         } else {
             byt.a.getClass();
-            StaticHelpers7.bb(bys.a).invoke(baseAdapter, obj, Integer.valueOf(i2));
+            StaticHelpers7.toDexMethod(bys.a).invoke(baseAdapter, obj, Integer.valueOf(i2));
         }
     }
 
@@ -597,7 +597,7 @@ public abstract class cnb {
         }
         throw new IllegalStateException(
                 "This serializer can be used only with Json format.Expected Decoder to be JsonDecoder, got "
-                        + dal.b(ajtVar.getClass()));
+                        + dal.getKClassFromClass(ajtVar.getClass()));
     }
 
     /*
@@ -1140,8 +1140,8 @@ public abstract class cnb {
     public static Object y(Context context, String str, String str2)
             throws IllegalAccessException, InvocationTargetException {
         Object objC = ReflectionWrapper.createInstanceWithArgs(cvh.a.b(), new Object[] { context });
-        StaticHelpers7.bb(cvd.a).invoke(objC, str);
-        StaticHelpers7.bb(cvf.a).invoke(objC, str2);
+        StaticHelpers7.toDexMethod(cvd.a).invoke(objC, str);
+        StaticHelpers7.toDexMethod(cvf.a).invoke(objC, str2);
         return objC;
     }
 

@@ -42,7 +42,7 @@ public enum PrivilegedMemberLookupAction implements AuxiliaryType {
             this.methodDescription = new MethodDescription.ForLoadedMethod(Class.class.getMethod(str, cls));
             this.fields = Collections.singletonMap(str2, cls);
         } catch (NoSuchMethodException e) {
-            throw new IllegalStateException(yg.k("Could not locate method: ", str), e);
+            throw new IllegalStateException(yg.concat("Could not locate method: ", str), e);
         }
     }
 
@@ -85,7 +85,7 @@ public enum PrivilegedMemberLookupAction implements AuxiliaryType {
             linkedHashMap.put(str2, cls);
             linkedHashMap.put(str3, cls2);
         } catch (NoSuchMethodException e) {
-            throw new IllegalStateException(yg.k("Could not locate method: ", str), e);
+            throw new IllegalStateException(yg.concat("Could not locate method: ", str), e);
         }
     }
 }

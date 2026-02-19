@@ -13,11 +13,11 @@ public final class lz extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(ly.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(ly.a));
         lz lzVar = a;
-        aki akiVarAb = PackageParam.ab(lzVar, listBf);
-        lzVar.x(akiVarAb, new gi(24));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(lzVar, listBf);
+        lzVar.x(hookManagerVarAb, new gi(24));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

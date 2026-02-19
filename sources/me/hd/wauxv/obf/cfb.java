@@ -43,7 +43,7 @@ public final /* synthetic */ class cfb implements IInvokable {
                 if (cursorAb != null) {
                     while (cursorAb.moveToNext()) {
                         try {
-                            if (dnr.bi(cursorAb.getString(cursorAb.getColumnIndex("username" /*
+                            if (dnr.ifVar1EndsWithVar2(cursorAb.getString(cursorAb.getColumnIndex("username" /*
                                                                                               * "username" /* "username" /* cnb.z(-514086110493482L)  */
                                                                                               */)), "@chatroom" /*
                                                                                                                  * cnb.z
@@ -124,6 +124,6 @@ public final /* synthetic */ class cfb implements IInvokable {
                 aelVar2.l = cicVar;
                 break;
         }
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

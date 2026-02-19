@@ -18,7 +18,7 @@ public final class erg extends dcw implements bgj {
 
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) {
-        return ((erg) h((dfu) obj, (afw) obj2)).i(KotlinUnit.INSTANCE);
+        return ((erg) h((dfu) obj, (afw) obj2)).i(Kotlin$Unit.INSTANCE);
     }
 
     @Override // me.hd.wauxv.obf.nc
@@ -44,7 +44,7 @@ public final class erg extends dcw implements bgj {
             dfuVar.f = this;
             return ahqVar;
         }
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         if (i != 1) {
             if (i != 2) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");

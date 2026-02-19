@@ -222,10 +222,10 @@ public class ClassGeneratorUtil implements Opcodes {
     }
 
     private void generateEnumSupport(String str, String str2, String str3, ClassWriter classWriter) {
-        MethodVisitor methodVisitorVisitMethod = classWriter.visitMethod(9, "values", yg.k("()[", str3), null, null);
+        MethodVisitor methodVisitorVisitMethod = classWriter.visitMethod(9, "values", yg.concat("()[", str3), null, null);
         pushBshStatic(str, str2, methodVisitorVisitMethod);
         methodVisitorVisitMethod.visitMethodInsn(182, "bsh/This", "enumValues", "()[Ljava/lang/Object;", false);
-        generatePlainReturnCode(yg.k("[", str3), methodVisitorVisitMethod);
+        generatePlainReturnCode(yg.concat("[", str3), methodVisitorVisitMethod);
         methodVisitorVisitMethod.visitMaxs(0, 0);
         MethodVisitor methodVisitorVisitMethod2 = classWriter.visitMethod(9, "valueOf", "(Ljava/lang/String;)" + str3, null, null);
         methodVisitorVisitMethod2.visitLdcInsn(Type.getType(str3));

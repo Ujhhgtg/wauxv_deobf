@@ -31,10 +31,10 @@ public final /* synthetic */ class h implements bfu {
         int i2 = 2;
         ?? r6 = 0;
         int i3 = 1;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
-                io ioVar = emc.w;
+                io ioVar = emc.config;
                 if (ioVar == null) {
                     throw new IllegalArgumentException("DexDescConfig must be init" /* "DexDescConfig must be init" /* "DexDescConfig must be init" /* cnb.z(-6021544147754L)  */.toString());
                 }
@@ -204,29 +204,29 @@ public final /* synthetic */ class h implements bfu {
             case 23:
                 return xf.l;
             case 24:
-                alc alcVar = aou.a;
+                Dispatchers$Default alcVar = aou.a;
                 KotlinHelpers2.bf(akq.f, new lw(i2, r6, i3));
                 return kotlinUnitVar;
             case 25:
-                alc alcVar2 = aou.a;
+                Dispatchers$Default alcVar2 = aou.a;
                 KotlinHelpers2.bf(akq.f, new lw(i2, r6, i2));
                 return kotlinUnitVar;
             case 26:
                 ccu ccuVar = new ccu();
-                bmo.a.getClass();
-                ccuVar.s = (int) (bmo.n().getResources().getDisplayMetrics().heightPixels * 0.9f);
+                HostInfoRegistry.INSTANCE.getClass();
+                ccuVar.s = (int) (HostInfoRegistry.getContext().getResources().getDisplayMetrics().heightPixels * 0.9f);
                 if (ccuVar.bl != null) {
                     ng.aj(new ccq(ccuVar, 0));
                 }
                 return ccuVar;
             case 27:
-                bmo.a.getClass();
-                View viewInflate = View.inflate(aqu.e(HugeSyntheticPileOfHelpers.wrapModuleContext(bmo.n())), R.layout.module_dialog_choose_contacts, null);
+                HostInfoRegistry.INSTANCE.getClass();
+                View viewInflate = View.inflate(aqu.e(HugeSyntheticPileOfHelpers.wrapModuleContext(HostInfoRegistry.getContext())), R.layout.module_dialog_choose_contacts, null);
                 throwIfVar1IsNull(viewInflate, "null cannot be cast to non-null type android.widget.LinearLayout" /* "null cannot be cast to non-null type android.widget.LinearLayout" /* "null cannot be cast to non-null type android.widget.LinearLayout" /* cnb.z(-394157738687274L)  */);
                 return (LinearLayout) viewInflate;
             case 28:
-                bmo.a.getClass();
-                return (LinearLayout) View.inflate(aqu.e(HugeSyntheticPileOfHelpers.wrapModuleContext(bmo.n())), R.layout.item_rv_contact_tab, null).findViewById(R.id.itemContactLinearLayout);
+                HostInfoRegistry.INSTANCE.getClass();
+                return (LinearLayout) View.inflate(aqu.e(HugeSyntheticPileOfHelpers.wrapModuleContext(HostInfoRegistry.getContext())), R.layout.item_rv_contact_tab, null).findViewById(R.id.itemContactLinearLayout);
             default:
                 try {
                     bmf[] bmfVarArrW = bhv.w();
@@ -238,8 +238,8 @@ public final /* synthetic */ class h implements bfu {
                     }
                     return SomeStaticHelpers.toList(objArrCopyOf);
                 } catch (Exception e) {
-                    ArrayList arrayList = ewq.a;
-                    ewq.e("getAnnoHookList Failed" /* "getAnnoHookList Failed" /* "getAnnoHookList Failed" /* cnb.z(-22694607190826L)  */, e, 12);
+                    ArrayList arrayList = Logger.a;
+                    Logger.logE("getAnnoHookList Failed" /* "getAnnoHookList Failed" /* "getAnnoHookList Failed" /* cnb.z(-22694607190826L)  */, e, 12);
                     return EmptyReadonlyList.INSTANCE;
                 }
         }

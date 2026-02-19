@@ -10,7 +10,7 @@ public final class akq extends axe implements Executor {
 
     static {
         enw enwVar = enw.f;
-        int i = dpg.a;
+        int i = JustAStaticField.availableProcessors;
         if (64 >= i) {
             i = 64;
         }

@@ -2,7 +2,7 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class anu implements bnh {
+public final class anu implements TimestampDataSource {
     public final long[] a;
     public final int b;
 
@@ -12,18 +12,18 @@ public final class anu implements bnh {
     }
 
     @Override // me.hd.wauxv.obf.bnh
-    public final int c() {
+    public final int size() {
         return this.a.length;
     }
 
     @Override // me.hd.wauxv.obf.bnh
-    public final int d(int i) {
+    public final int getHighBits(int i) {
         return (int) (this.a[i] >> 32);
     }
 
     @Override // me.hd.wauxv.obf.bnh
-    public final int e(int i) {
-        return i == this.a.length + (-1) ? this.b : d(i + 1);
+    public final int getLowBits(int i) {
+        return i == this.a.length + (-1) ? this.b : getHighBits(i + 1);
     }
 
     @Override // me.hd.wauxv.obf.bnh

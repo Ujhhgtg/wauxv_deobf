@@ -13,11 +13,11 @@ public final class fp extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(fo.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(fo.a));
         fp fpVar = a;
-        aki akiVarAb = PackageParam.ab(fpVar, listBf);
-        fpVar.y(akiVarAb, new bn(5));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(fpVar, listBf);
+        fpVar.y(hookManagerVarAb, new bn(5));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

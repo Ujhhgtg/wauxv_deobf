@@ -401,16 +401,16 @@ public final class ctx {
                 bshMethod = null;
                 z = false;
             } catch (Throwable th) {
-                objX = FastKV.x(th);
+                objX = FastKV.getFailureFromException(th);
             }
             while (true) {
                 if (i >= length) {
                     if (!z) {
                     }
-                    thB = dcy.b(objX);
+                    thB = Success.exceptionOrNull(objX);
                     if (thB != null) {
-                        ArrayList arrayList = ewq.a;
-                        ewq.e("Plugin[" /* "Plugin[" /* "Plugin[" /* cnb.z(-402288111778602L)  */ + this.f
+                        ArrayList arrayList = Logger.a;
+                        Logger.logE("Plugin[" /* "Plugin[" /* "Plugin[" /* cnb.z(-402288111778602L)  */ + this.f
                                 + "]: callBshMethod " /* "]: callBshMethod " /* "]: callBshMethod " /* cnb.z(-402253752040234L)  */ + str
                                 + " Failed: " /* " Failed: " /* " Failed: " /* cnb.z(-402193622498090L)  */ + thB.getMessage(), null, 14);
                         StringBuilder sb = new StringBuilder();
@@ -420,7 +420,7 @@ public final class ctx {
                         sb.append(thB.getMessage());
                         this.m.p(sb.toString());
                     }
-                    if (objX instanceof dcx) {
+                    if (objX instanceof Failure) {
                         return null;
                     }
                     return objX;
@@ -439,13 +439,13 @@ public final class ctx {
             if (bshMethod != null) {
                 objX = bshMethod.invoke(objArr, o());
                 if (objX instanceof Primitive) {
-                    objX = nullSafeIsEqual(((Primitive) objX).getType(), Void.TYPE) ? KotlinUnit.INSTANCE
+                    objX = nullSafeIsEqual(((Primitive) objX).getType(), Void.TYPE) ? Kotlin$Unit.INSTANCE
                             : ((Primitive) objX).getValue();
                 }
-                thB = dcy.b(objX);
+                thB = Success.exceptionOrNull(objX);
                 if (thB != null) {
-                    ArrayList arrayList2 = ewq.a;
-                    ewq.e("Plugin[" /* "Plugin[" /* "Plugin[" /* cnb.z(-402288111778602L)  */ + this.f
+                    ArrayList arrayList2 = Logger.a;
+                    Logger.logE("Plugin[" /* "Plugin[" /* "Plugin[" /* cnb.z(-402288111778602L)  */ + this.f
                             + "]: callBshMethod " /* "]: callBshMethod " /* "]: callBshMethod " /* cnb.z(-402253752040234L)  */ + str
                             + " Failed: " /* " Failed: " /* " Failed: " /* cnb.z(-402193622498090L)  */ + thB.getMessage(), null, 14);
                     StringBuilder sb2 = new StringBuilder();
@@ -455,7 +455,7 @@ public final class ctx {
                     sb2.append(thB.getMessage());
                     this.m.p(sb2.toString());
                 }
-                if (objX instanceof dcx) {
+                if (objX instanceof Failure) {
                     return null;
                 }
                 return objX;
@@ -478,14 +478,14 @@ public final class ctx {
         Interpreter interpreter = new Interpreter();
         interpreter.setClassLoader(cud.class.getClassLoader());
         String strZ = "hostContext" /* "hostContext" /* "hostContext" /* cnb.z(-390245023480618L)  */;
-        bmo.a.getClass();
-        interpreter.set(strZ, bmo.n());
+        HostInfoRegistry.INSTANCE.getClass();
+        interpreter.set(strZ, HostInfoRegistry.getContext());
         String strZ2 = "hostVerName" /* "hostVerName" /* "hostVerName" /* cnb.z(-390159124134698L)  */;
-        bc bcVar = bmo.i;
-        btc[] btcVarArr = bmo.b;
-        interpreter.set(strZ2, (String) bcVar.h(btcVarArr[6]));
-        interpreter.set("hostVerCode" /* "hostVerCode" /* "hostVerCode" /* cnb.z(-390141944265514L)  */, bmo.q());
-        interpreter.set("hostVerClient" /* "hostVerClient" /* "hostVerClient" /* cnb.z(-390056044919594L)  */, (String) bmo.k.h(btcVarArr[8]));
+        LateinitProperty lateinitPropertyVar = HostInfoRegistry.verName;
+        IEmpty7[] btcVarArr = HostInfoRegistry.b;
+        interpreter.set(strZ2, (String) lateinitPropertyVar.h(btcVarArr[6]));
+        interpreter.set("hostVerCode" /* "hostVerCode" /* "hostVerCode" /* cnb.z(-390141944265514L)  */, HostInfoRegistry.getVerCode());
+        interpreter.set("hostVerClient" /* "hostVerClient" /* "hostVerClient" /* cnb.z(-390056044919594L)  */, (String) HostInfoRegistry.verClient.h(btcVarArr[8]));
         interpreter.set("moduleVer" /* "moduleVer" /* "moduleVer" /* cnb.z(-389497699171114L)  */, 1238);
         String strZ3 = "cacheDir" /* "cacheDir" /* "cacheDir" /* cnb.z(-389403209890602L)  */;
         Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
@@ -512,7 +512,7 @@ public final class ctx {
     }
 
     public final boolean p() {
-        DefaultConfig ioVar = bhs.h;
+        DefaultConfig ioVar = bhs.config;
         if (ioVar != null) {
             return ioVar.ah(this.l, false);
         }
@@ -520,7 +520,7 @@ public final class ctx {
     }
 
     public final void q(boolean z) {
-        DefaultConfig ioVar = bhs.h;
+        DefaultConfig ioVar = bhs.config;
         if (ioVar == null) {
             throw new IllegalArgumentException("PluginConfig must be init" /* "PluginConfig must be init" /* "PluginConfig must be init" /* cnb.z(-29368986368810L)  */.toString());
         }

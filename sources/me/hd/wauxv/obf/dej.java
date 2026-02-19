@@ -4,7 +4,7 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class dej implements ero {
     @Override // me.hd.wauxv.obf.ero
-    public final erk _bh(zc zcVar, chq chqVar) {
+    public final erk _bh(KClass zcVar, chq chqVar) {
         return new del();
     }
 }

@@ -56,6 +56,6 @@ public final /* synthetic */ class cwz implements IInvokable {
                 aelVar2.l = cxaVar;
                 break;
         }
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

@@ -165,12 +165,12 @@ public final class OkHostnameVerifier implements HostnameVerifier {
 
     private final boolean verifyHostname(String str, String str2) {
         int length;
-        if (str != null && str.length() != 0 && !dnr.bp(str, ".", false) && !dnr.bi(str, "..") && str2 != null
-                && str2.length() != 0 && !dnr.bp(str2, ".", false) && !dnr.bi(str2, "..")) {
-            if (!dnr.bi(str, ".")) {
+        if (str != null && str.length() != 0 && !dnr.bp(str, ".", false) && !dnr.ifVar1EndsWithVar2(str, "..") && str2 != null
+                && str2.length() != 0 && !dnr.bp(str2, ".", false) && !dnr.ifVar1EndsWithVar2(str2, "..")) {
+            if (!dnr.ifVar1EndsWithVar2(str, ".")) {
                 str = str.concat(".");
             }
-            if (!dnr.bi(str2, ".")) {
+            if (!dnr.ifVar1EndsWithVar2(str2, ".")) {
                 str2 = str2.concat(".");
             }
             String strAsciiToLowercase = asciiToLowercase(str2);
@@ -183,7 +183,7 @@ public final class OkHostnameVerifier implements HostnameVerifier {
                     && str.length() >= strAsciiToLowercase.length() && !"*.".equals(strAsciiToLowercase)) {
                 String strSubstring = strAsciiToLowercase.substring(1);
                 throwIfVar1IsNull(strSubstring, "this as java.lang.String).substring(startIndex)");
-                if (dnr.bi(str, strSubstring) && ((length = str.length() - strSubstring.length()) <= 0 || dnj.am(str,
+                if (dnr.ifVar1EndsWithVar2(str, strSubstring) && ((length = str.length() - strSubstring.length()) <= 0 || dnj.am(str,
                         TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, length - 1, 4) == -1)) {
                     return true;
                 }

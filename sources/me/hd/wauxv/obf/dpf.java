@@ -64,7 +64,7 @@ public final class dpf extends SwitchHook implements IStartActivity {
                 if (!setN.isEmpty()) {
                     Iterator it = setN.iterator();
                     while (it.hasNext()) {
-                        if (dnr.bi(strAx, (String) it.next())) {
+                        if (dnr.ifVar1EndsWithVar2(strAx, (String) it.next())) {
                             return;
                         }
                     }
@@ -76,7 +76,7 @@ public final class dpf extends SwitchHook implements IStartActivity {
                 }
                 Iterator it2 = setN2.iterator();
                 while (it2.hasNext()) {
-                    if (dnr.bi(strAx, (String) it2.next())) {
+                    if (dnr.ifVar1EndsWithVar2(strAx, (String) it2.next())) {
                     }
                 }
                 return;
@@ -122,8 +122,8 @@ public final class dpf extends SwitchHook implements IStartActivity {
             }
             Bundle bundle2 = activityOptionsMakeBasic != null ? activityOptionsMakeBasic.toBundle() : null;
             intent2.addFlags(268435456);
-            bmo.a.getClass();
-            Context contextN = bmo.n();
+            HostInfoRegistry.INSTANCE.getClass();
+            Context contextN = HostInfoRegistry.getContext();
             intent2.setData(Uri.parse(stringExtra));
             contextN.startActivity(intent2, bundle2);
             hookParam.setResult(null);

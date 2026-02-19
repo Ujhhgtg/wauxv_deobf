@@ -12,7 +12,7 @@ import me.hd.wauxv.obf.OtherStaticHelpers;
 import me.hd.wauxv.obf.acv;
 import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.FieldResolver;
-import me.hd.wauxv.obf.azk;
+import me.hd.wauxv.obf.BoundField;
 import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.dgg;
 import me.hd.wauxv.obf.dnc;
@@ -48,45 +48,45 @@ public final class MsgInfoBean {
         int i = 0;
         FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
         fieldResolverVarR.name = "field_msgId" /* "field_msgId" /* "field_msgId" /* cnb.z(-8396661062442L)  */;
-        Object objE = ((azk) yg.e(fieldResolverVarR)).e();
+        Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
         throwIfVar1IsNull(objE);
         this.msgId = ((Number) objE).longValue();
         FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj).r();
         fieldResolverVarR2.name = "field_msgSvrId" /* "field_msgSvrId" /* "field_msgSvrId" /* cnb.z(-8379481193258L)  */;
-        this.msgSvrId = (Long) ((azk) yg.e(fieldResolverVarR2)).e();
+        this.msgSvrId = (Long) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue_();
         FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).r();
         fieldResolverVarR3.name = "field_type" /* "field_type" /* "field_type" /* cnb.z(-8315056683818L)  */;
-        Object objE2 = ((azk) yg.e(fieldResolverVarR3)).e();
+        Object objE2 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
         throwIfVar1IsNull(objE2);
         this.type = ((Number) objE2).intValue();
         FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(obj).r();
         fieldResolverVarR4.name = "field_isSend" /* "field_isSend" /* "field_isSend" /* cnb.z(-8766028249898L)  */;
-        this.isSendInt = (Integer) ((azk) yg.e(fieldResolverVarR4)).e();
+        this.isSendInt = (Integer) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR4)).getValue_();
         FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(obj).r();
         fieldResolverVarR5.name = "field_createTime" /* "field_createTime" /* "field_createTime" /* cnb.z(-8761733282602L)  */;
-        Object objE3 = ((azk) yg.e(fieldResolverVarR5)).e();
+        Object objE3 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR5)).getValue_();
         throwIfVar1IsNull(objE3);
         this.createTime = ((Number) objE3).longValue();
         FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(obj).r();
         fieldResolverVarR6.name = "field_talker" /* "field_talker" /* "field_talker" /* cnb.z(-8688718838570L)  */;
-        Object objE4 = ((azk) yg.e(fieldResolverVarR6)).e();
+        Object objE4 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR6)).getValue_();
         throwIfVar1IsNull(objE4);
         this.talker = (String) objE4;
         FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(obj).r();
         fieldResolverVarR7.name = "field_content" /* "field_content" /* "field_content" /* cnb.z(-8615704394538L)  */;
-        this.originContent = (String) ((azk) yg.e(fieldResolverVarR7)).e();
+        this.originContent = (String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR7)).getValue_();
         FieldResolver fieldResolverVarR8 = dqc.getWrapperConfiguration(obj).r();
         fieldResolverVarR8.name = "field_imgPath" /* "field_imgPath" /* "field_imgPath" /* cnb.z(-8538394983210L)  */;
-        this.imgPath = (String) ((azk) yg.e(fieldResolverVarR8)).e();
+        this.imgPath = (String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR8)).getValue_();
         FieldResolver fieldResolverVarR9 = dqc.getWrapperConfiguration(obj).r();
         fieldResolverVarR9.name = "field_lvbuffer" /* "field_lvbuffer" /* "field_lvbuffer" /* cnb.z(-7911329757994L)  */;
-        this.lvBuffer = (byte[]) ((azk) yg.e(fieldResolverVarR9)).e();
+        this.lvBuffer = (byte[]) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR9)).getValue_();
         FieldResolver fieldResolverVarR10 = dqc.getWrapperConfiguration(obj).r();
         fieldResolverVarR10.name = "field_talkerId" /* "field_talkerId" /* "field_talkerId" /* cnb.z(-7898444856106L)  */;
-        this.talkerId = (Integer) ((azk) yg.e(fieldResolverVarR10)).e();
+        this.talkerId = (Integer) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR10)).getValue_();
         FieldResolver fieldResolverVarR11 = dqc.getWrapperConfiguration(obj).r();
         fieldResolverVarR11.name = "field_msgSeq" /* "field_msgSeq" /* "field_msgSeq" /* cnb.z(-7834020346666L)  */;
-        this.msgSeq = (Long) ((azk) yg.e(fieldResolverVarR11)).e();
+        this.msgSeq = (Long) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR11)).getValue_();
     }
 
     public final List<String> getAtUserList() {
@@ -397,7 +397,7 @@ public final class MsgInfoBean {
     }
 
     public final boolean isChatroom() {
-        return dnr.bi(this.talker, "@chatroom" /* "@chatroom" /* "@chatroom" /* cnb.z(-4874787879722L)  */);
+        return dnr.ifVar1EndsWithVar2(this.talker, "@chatroom" /* "@chatroom" /* "@chatroom" /* cnb.z(-4874787879722L)  */);
     }
 
     public final boolean isEmoji() {
@@ -417,7 +417,7 @@ public final class MsgInfoBean {
     }
 
     public final boolean isImChatroom() throws IllegalAccessException {
-        boolean zBi = dnr.bi(this.talker, "@im.chatroom" /* "@im.chatroom" /* "@im.chatroom" /* cnb.z(-4780298599210L)  */);
+        boolean zBi = dnr.ifVar1EndsWithVar2(this.talker, "@im.chatroom" /* "@im.chatroom" /* "@im.chatroom" /* cnb.z(-4780298599210L)  */);
         xp xpVar = xp.a;
         String str = this.talker;
         xpVar.getClass();
@@ -427,9 +427,9 @@ public final class MsgInfoBean {
             int i = 0;
             FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objB).r();
             fieldResolverVarR.name = "field_chatroomStatus" /* "field_chatroomStatus" /* "field_chatroomStatus" /* cnb.z(-76149770156842L)  */;
-            Object objE = ((azk) yg.e(fieldResolverVarR)).e();
+            Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
             throwIfVar1IsNull(objE);
-            boolean z = dnr.bi(this.talker, "@chatroom" /* "@chatroom" /* "@chatroom" /* cnb.z(-4776003631914L)  */)
+            boolean z = dnr.ifVar1EndsWithVar2(this.talker, "@chatroom" /* "@chatroom" /* "@chatroom" /* cnb.z(-4776003631914L)  */)
                     && (((Number) objE).intValue() & 131072) == 131072;
             if (zBi || z) {
                 return true;
@@ -501,7 +501,7 @@ public final class MsgInfoBean {
     }
 
     public final boolean isOpenIM() {
-        return dnr.bi(this.talker, "@openim" /* "@openim" /* "@openim" /* cnb.z(-4909147618090L)  */);
+        return dnr.ifVar1EndsWithVar2(this.talker, "@openim" /* "@openim" /* "@openim" /* cnb.z(-4909147618090L)  */);
     }
 
     public final boolean isPat() {

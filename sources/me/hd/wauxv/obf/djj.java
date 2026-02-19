@@ -10,13 +10,13 @@ public final class djj extends bws implements IDexFind {
 
     public static Object b(String str) {
         dji djiVar = dji.a;
-        Method methodBb = StaticHelpers7.bb(djiVar);
+        Method methodBb = StaticHelpers7.toDexMethod(djiVar);
         dis.a.getClass();
         int i = 0;
         MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(dir.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        methodResolverVarT.ak(cdy.c);
+        methodResolverVarT.addAccessModifiers(AccessModifierEnum.STATIC);
         a.getClass();
-        methodResolverVarT.returnType = StaticHelpers7.bb(djiVar).getDeclaringClass();
+        methodResolverVarT.returnType = StaticHelpers7.toDexMethod(djiVar).getDeclaringClass();
         Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         Object objInvoke = methodBb.invoke(objE, str);

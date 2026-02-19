@@ -400,9 +400,9 @@ public abstract class KotlinHelpers2 implements ajt, acm {
                                 (String) null, (Bundle) null)) == null) ? null
                                         : Boolean.valueOf(bundleCall2.getBoolean("active", false));
             } catch (Throwable th) {
-                objX = FastKV.x(th);
+                objX = FastKV.getFailureFromException(th);
             }
-            if (objX instanceof dcx) {
+            if (objX instanceof Failure) {
                 objX = null;
             }
             Boolean bool = (Boolean) objX;
@@ -419,9 +419,9 @@ public abstract class KotlinHelpers2 implements ajt, acm {
                                     "active", (String) null, (Bundle) null)) == null) ? null
                                             : Boolean.valueOf(bundleCall.getBoolean("active", false));
                 } catch (Throwable th2) {
-                    objX2 = FastKV.x(th2);
+                    objX2 = FastKV.getFailureFromException(th2);
                 }
-                Boolean bool2 = (Boolean) (objX2 instanceof dcx ? null : objX2);
+                Boolean bool2 = (Boolean) (objX2 instanceof Failure ? null : objX2);
                 zBooleanValue = bool2 != null ? bool2.booleanValue() : false;
             }
         }
@@ -674,7 +674,7 @@ public abstract class KotlinHelpers2 implements ajt, acm {
     }
 
     public static void bg(bgj bgjVar) {
-        alc alcVar = aou.a;
+        Dispatchers$Default alcVar = aou.a;
         Dispatcher2 dispatcher2Var = bza.a;
         throwIfVar1IsNull(dispatcher2Var, "dispatcher");
         LifeEventEnum lifeEventEnumVar = LifeEventEnum.ON_DESTROY;
@@ -990,7 +990,7 @@ public abstract class KotlinHelpers2 implements ajt, acm {
     }
 
     public void bq() {
-        throw new SomeIllegalArgumentException(dal.b(getClass()) + " can't retrieve untyped values");
+        throw new SomeIllegalArgumentException(dal.getKClassFromClass(getClass()) + " can't retrieve untyped values");
     }
 
     @Override // me.hd.wauxv.obf.acm

@@ -13,11 +13,11 @@ public final class cww extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(cwv.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(cwv.a));
         cww cwwVar = a;
-        aki akiVarAb = PackageParam.ab(cwwVar, listBf);
-        cwwVar.y(akiVarAb, new cvc(1));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(cwwVar, listBf);
+        cwwVar.y(hookManagerVarAb, new cvc(1));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

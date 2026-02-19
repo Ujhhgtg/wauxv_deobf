@@ -13,7 +13,7 @@ public final class xp extends bws implements IDexFind {
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(xn.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         wv.a.getClass();
         methodResolverVarT.returnType = StaticHelpers7.az(wt.a);
-        return ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class) }, 1, methodResolverVarT)).e(str);
+        return ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(String.class) }, 1, methodResolverVarT)).e(str);
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

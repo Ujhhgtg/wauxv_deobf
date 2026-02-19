@@ -13,11 +13,11 @@ public final class die extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(did.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(did.a));
         die dieVar = a;
-        aki akiVarAb = PackageParam.ab(dieVar, listBf);
-        dieVar.y(akiVarAb, new dhg(5));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(dieVar, listBf);
+        dieVar.y(hookManagerVarAb, new dhg(5));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

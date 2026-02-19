@@ -7,7 +7,6 @@ import java.net.Proxy;
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bdb;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dhy;
 import me.hd.wauxv.obf.dlc;
 import me.hd.wauxv.obf.dnj;
@@ -564,7 +563,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
             return builderHeaders;
         } catch (EOFException e) {
             throw new IOException(
-                    yg.k("unexpected end of stream on ", getConnection().route().address().url().redact()), e);
+                    yg.concat("unexpected end of stream on ", getConnection().route().address().url().redact()), e);
         }
     }
 

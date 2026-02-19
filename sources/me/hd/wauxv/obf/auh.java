@@ -12,8 +12,8 @@ public final class auh extends bws implements IDexFind {
         int i = 0;
         atm.a.getClass();
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(atm.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        methodResolverVarT.returnType = dal.b(String.class);
-        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(Context.class), dal.b(String.class) }, 2, methodResolverVarT)).j(null,
+        methodResolverVarT.returnType = dal.getKClassFromClass(String.class);
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(Context.class), dal.getKClassFromClass(String.class) }, 2, methodResolverVarT)).j(null,
                 str);
         throwIfVar1IsNull(objJ);
         return (String) objJ;

@@ -655,7 +655,7 @@ public abstract class KotlinHelpers {
 
     public static final ArrayList w(String str, Bundle bundle) {
         throwIfVar1IsNull(str, "key");
-        ArrayList arrayListC = Build.VERSION.SDK_INT >= 34 ? az.c(bundle, str, HugeSyntheticPileOfHelpers.getJavaClass(dal.b(Bundle.class)))
+        ArrayList arrayListC = Build.VERSION.SDK_INT >= 34 ? az.c(bundle, str, HugeSyntheticPileOfHelpers.getJavaClass(dal.getKClassFromClass(Bundle.class)))
                 : bundle.getParcelableArrayList(str);
         if (arrayListC != null) {
             return arrayListC;

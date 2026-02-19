@@ -25,11 +25,11 @@ public class DataHelper {
     private static String UMENG_PLUS = "umeng+0123456789";
 
     public static String assembleStatelessURL(String str) {
-        return yg.k("https://", str);
+        return yg.concat("https://", str);
     }
 
     public static String assembleURL(String str) {
-        return yg.k("https://", str);
+        return yg.concat("https://", str);
     }
 
     public static String bytes2Hex(byte[] bArr) {

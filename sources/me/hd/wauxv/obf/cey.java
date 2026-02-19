@@ -12,14 +12,14 @@ public final class cey extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(cew.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(cew.a));
         cey ceyVar = a;
-        aki akiVarAb = PackageParam.ab(ceyVar, listBf);
-        akiVarAb.n(new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(7));
-        akiVarAb.o();
-        aki akiVarAb2 = PackageParam.ab(ceyVar, dqc.toSingletonList(StaticHelpers7.bb(cex.a)));
-        akiVarAb2.m(new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(6));
-        akiVarAb2.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(ceyVar, listBf);
+        hookManagerVarAb.n(new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(7));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
+        HookManager hookManagerVarAb2 = PackageParam.createHook(ceyVar, dqc.toSingletonList(StaticHelpers7.toDexMethod(cex.a)));
+        hookManagerVarAb2.m(new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(6));
+        hookManagerVarAb2.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.IDexFind

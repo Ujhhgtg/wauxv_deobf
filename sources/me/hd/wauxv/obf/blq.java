@@ -75,7 +75,7 @@ public final class blq {
                 bmuVarBi.setHookOptional(true);
                 MethodResolver methodResolverVarT = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.name = "generateLayoutParams";
-                methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.b(ViewGroup.LayoutParams.class) }, 1));
+                methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(ViewGroup.LayoutParams.class) }, 1));
                 methodResolverVarT.enableSuperclass();
                 MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
                 if (methodHookWrapperVar != null) {
@@ -219,8 +219,8 @@ public final class blq {
     public blq(awc awcVar) {
         this.a = (bzr) awcVar.a;
         this.b = (dop) awcVar.c;
-        this.c = (GifEncoder) awcVar.d;
-        this.d = (GifEncoder) awcVar.e;
+        this.c = (SyntheticClass) awcVar.d;
+        this.d = (SyntheticClass) awcVar.e;
         this.e = (bib) awcVar.g;
     }
 

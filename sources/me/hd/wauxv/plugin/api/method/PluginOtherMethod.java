@@ -12,7 +12,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import me.hd.wauxv.obf.aye;
-import me.hd.wauxv.obf.bmo;
+import me.hd.wauxv.obf.HostInfoRegistry;
 import me.hd.wauxv.obf.SyntheticPileOfMess;
 import me.hd.wauxv.obf.bpy;
 import me.hd.wauxv.obf.but;
@@ -33,7 +33,7 @@ import me.hd.wauxv.obf.dnj;
 import me.hd.wauxv.obf.Kotlin$Lazy;
 import me.hd.wauxv.obf.StaticHelpers7;
 import me.hd.wauxv.obf.eu;
-import me.hd.wauxv.obf.ewq;
+import me.hd.wauxv.obf.Logger;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -72,22 +72,22 @@ public final class PluginOtherMethod {
 
     @cty
     public final void log(Object obj) throws IOException {
-        ArrayList arrayList = ewq.a;
+        ArrayList arrayList = Logger.a;
         StringBuilder sb = new StringBuilder();
         sb.append("Plugin[" /* "Plugin[" /* "Plugin[" /* cnb.z(-401033981328170L)  */);
         ctx ctxVar = this.a;
         sb.append(ctxVar.f);
         sb.append("]: " /* "]: " /* "]: " /* cnb.z(-400999621589802L)  */);
         sb.append(obj);
-        ewq.d(14, sb.toString());
+        Logger.logD(14, sb.toString());
         SyntheticPileOfMess bmuVar = ctxVar.m;
         bmuVar.writePluginLog(new cuh(((ctx) bmuVar.obj).f, "D" /* "D" /* "D" /* cnb.z(-390322332891946L)  */, String.valueOf(obj)));
     }
 
     @cty
     public final void notify(String str, String str2) {
-        bmo.a.getClass();
-        Context contextN = bmo.n();
+        HostInfoRegistry.INSTANCE.getClass();
+        Context contextN = HostInfoRegistry.getContext();
         bpy bpyVar = new bpy("WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-400969556818730L)  */);
         bpyVar.b = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-400939492047658L)  */;
         but butVar = new but(bpyVar);
@@ -124,7 +124,7 @@ public final class PluginOtherMethod {
 
     @cty
     public final void toast(String str) {
-        dnc.g(null, 3, this.a.f + ": " /* ": " /* ": " /* cnb.z(-400948081982250L)  */ + str);
+        dnc.sendToast(null, 3, this.a.f + ": " /* ": " /* ": " /* cnb.z(-400948081982250L)  */ + str);
     }
 
     @cty
@@ -144,7 +144,7 @@ public final class PluginOtherMethod {
         Integer numValueOf2 = Integer.valueOf((int) (System.currentTimeMillis() / j2));
         Integer numValueOf3 = Integer.valueOf((int) j);
         dgd.a.getClass();
-        Object objInvoke = StaticHelpers7.bb(dgc.a).invoke(null, null);
+        Object objInvoke = StaticHelpers7.toDexMethod(dgc.a).invoke(null, null);
         throwIfVar1IsNull(objInvoke);
         cme.b(cme.a, constructorBa.newInstance(strZ, strZ2, numValueOf, numValueOf2, numValueOf3, objInvoke, 1));
     }

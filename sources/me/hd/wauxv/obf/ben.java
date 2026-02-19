@@ -51,7 +51,7 @@ public final /* synthetic */ class ben implements IInvokable {
                         burVar.j((buo) beqVar.n.invoke(cioVar));
                     }
                 }
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 1:
                 Activity activity = (Activity) this.b;
                 String str = (String) this.c;
@@ -78,6 +78,6 @@ public final /* synthetic */ class ben implements IInvokable {
                 activity2.startActivity(intent2);
                 break;
         }
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

@@ -31,7 +31,7 @@ final class ObjectArrayTypedReader extends ObjectReaderPrimitive {
         this.componentType = componentType;
         String typeName = TypeUtils.getTypeName(componentType);
         this.componentClassHash = Fnv.hashCode64(typeName);
-        String strK = yg.k("[", typeName);
+        String strK = yg.concat("[", typeName);
         this.typeName = strK;
         this.typeNameHashCode = Fnv.hashCode64(strK);
         this.componentClass = TypeUtils.getClass(componentType);

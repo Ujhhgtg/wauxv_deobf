@@ -17,7 +17,7 @@ public final class bss extends dcw implements bgk {
     public final Object b(Object obj, Object obj2, Object obj3) {
         bss bssVar = new bss(this.e, (afw) obj3);
         bssVar.d = (ajx) obj;
-        return bssVar.i(KotlinUnit.INSTANCE);
+        return bssVar.i(Kotlin$Unit.INSTANCE);
     }
 
     @Override // me.hd.wauxv.obf.nc

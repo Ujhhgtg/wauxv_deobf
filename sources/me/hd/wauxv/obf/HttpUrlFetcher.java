@@ -154,7 +154,7 @@ public final class HttpUrlFetcher implements ajb {
                     d();
                     return k(url3, i + 1, url, map);
                 } catch (MalformedURLException e3) {
-                    throw new azv(yg.k("Bad redirect url: ", headerField), iJ, e3);
+                    throw new azv(yg.concat("Bad redirect url: ", headerField), iJ, e3);
                 }
             } catch (IOException e4) {
                 throw new azv("Failed to connect or obtain data", j(this.g), e4);

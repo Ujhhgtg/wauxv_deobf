@@ -94,7 +94,7 @@ public final class BottomTabMaterialHook extends SwitchHook implements bnp {
             }
             typedArray.getBoolean(1, true);
             factoryPoolsVarAo.ae();
-            ewz.af(qbVar, new nu(4));
+            StaticAndroidHelpers.af(qbVar, new nu(4));
             qbVar.setLayoutParams(new FrameLayout.LayoutParams(-1, (int) cnh.r(56, qbVar.getContext())));
             qbVar.setLabelVisibilityMode(2);
             if (cnh.aa(qbVar.getContext())) {
@@ -132,9 +132,9 @@ public final class BottomTabMaterialHook extends SwitchHook implements bnp {
             int i2 = 0;
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "onPageSelected" /* "onPageSelected" /* "onPageSelected" /* "onPageSelected" /* cnb.z(-437253440535338L)   */;
-            aki akiVarAd = ad((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods()), HookPriorityEnum.ENUM_DEFAULT);
-            qwVar.x(akiVarAd, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(qbVar, 1));
-            akiVarAd.o();
+            HookManager hookManagerVarAd = createImmediateHook((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods()), HookPriorityEnum.ENUM_DEFAULT);
+            qwVar.x(hookManagerVarAd, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(qbVar, 1));
+            hookManagerVarAd.initInstantCollectionAndApplyHooks();
         }
     }
 }

@@ -6,22 +6,22 @@ import android.view.accessibility.AccessibilityNodeInfo;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bc implements ajh {
-    public static bc a;
+public final class LateinitProperty implements ajh {
+    public static LateinitProperty a;
     public final /* synthetic */ int b;
     public Object e;
 
-    public /* synthetic */ bc(Object obj, int i) {
+    public /* synthetic */ LateinitProperty(Object obj, int i) {
         this.b = i;
         this.e = obj;
     }
 
-    public static bc f(int i, int i2, int i3) {
-        return new bc(AccessibilityNodeInfo.CollectionInfo.obtain(i, i2, false, i3), 0);
+    public static LateinitProperty f(int i, int i2, int i3) {
+        return new LateinitProperty(AccessibilityNodeInfo.CollectionInfo.obtain(i, i2, false, i3), 0);
     }
 
-    public static bc g(int i, int i2, int i3, int i4, boolean z) {
-        return new bc(AccessibilityNodeInfo.CollectionItemInfo.obtain(i, i2, i3, i4, false, z), 1);
+    public static LateinitProperty g(int i, int i2, int i3, int i4, boolean z) {
+        return new LateinitProperty(AccessibilityNodeInfo.CollectionItemInfo.obtain(i, i2, i3, i4, false, z), 1);
     }
 
     @Override // me.hd.wauxv.obf.ajh
@@ -34,7 +34,7 @@ public final class bc implements ajh {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public Object h(btc btcVar) {
+    public Object h(IEmpty7 btcVar) {
         throwIfVar1IsNull(btcVar, "property");
         Object obj = this.e;
         if (obj != null) {
@@ -44,7 +44,7 @@ public final class bc implements ajh {
                 yg.concatToVar1(new StringBuilder("Property "), ((sw) btcVar).f, " should be initialized before get."));
     }
 
-    public void i(btc btcVar, Object obj) {
+    public void i(IEmpty7 btcVar, Object obj) {
         throwIfVar1IsNull(btcVar, "property");
         throwIfVar1IsNull(obj, "value");
         this.e = obj;
@@ -66,13 +66,11 @@ public final class bc implements ajh {
         }
     }
 
-    public bc(int i) {
+    public LateinitProperty(int i) {
         this.b = i;
-        switch (i) {
-            case 5:
-                this.e = new Object();
-                new Handler(Looper.getMainLooper(), new bhg(this, 1));
-                break;
+        if (i == 5) {
+            this.e = new Object();
+            new Handler(Looper.getMainLooper(), new bhg(this, 1));
         }
     }
 }

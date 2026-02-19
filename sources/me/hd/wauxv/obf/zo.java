@@ -11,11 +11,11 @@ public abstract class zo {
 
     static {
         File parentFile;
-        bmo.a.getClass();
-        File parentFile2 = bmo.n().getFilesDir().getParentFile();
+        HostInfoRegistry.INSTANCE.getClass();
+        File parentFile2 = HostInfoRegistry.getContext().getFilesDir().getParentFile();
         String path = null;
         a = String.valueOf(parentFile2 != null ? parentFile2.getPath() : null);
-        File externalCacheDir = bmo.n().getExternalCacheDir();
+        File externalCacheDir = HostInfoRegistry.getContext().getExternalCacheDir();
         if (externalCacheDir != null && (parentFile = externalCacheDir.getParentFile()) != null) {
             path = parentFile.getPath();
         }

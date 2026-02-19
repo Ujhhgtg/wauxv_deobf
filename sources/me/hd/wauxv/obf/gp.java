@@ -8,7 +8,7 @@ public final class gp extends bws implements IDexFind {
     public static final gp a = new gp();
 
     public static Object b(Class cls, Object obj) {
-        Object objInvoke = StaticHelpers7.bb(go.a).invoke(obj, cls);
+        Object objInvoke = StaticHelpers7.toDexMethod(go.a).invoke(obj, cls);
         throwIfVar1IsNull(objInvoke);
         return objInvoke;
     }

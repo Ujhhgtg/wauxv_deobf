@@ -3347,7 +3347,7 @@ public final class asn {
         int i3 = 0;
         while (i3 < length) {
             int i4 = i3 + 1;
-            if (i4 == length || (anuVarBf.d(i3) <= i2 && i2 < anuVarBf.e(i3))) {
+            if (i4 == length || (anuVarBf.getHighBits(i3) <= i2 && i2 < anuVarBf.getLowBits(i3))) {
                 return KotlinHelpers.al(this.r.getProps().ah ? 1 : 0, anuVarBf.f(i3) ? 1 : 0);
             }
             i3 = i4;

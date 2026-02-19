@@ -75,7 +75,7 @@ public final class cyo implements bul {
                                     butVarAk.ag();
                                 }
                             } catch (Exception e) {
-                                throw new RuntimeException(yg.k("Failed to instantiate ", str), e);
+                                throw new RuntimeException(yg.concat("Failed to instantiate ", str), e);
                             }
                         } catch (NoSuchMethodException e2) {
                             throw new IllegalStateException(

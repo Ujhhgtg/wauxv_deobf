@@ -31,7 +31,7 @@ public final /* synthetic */ class bka implements IInvokable {
         int i = this.a;
         int i2 = 2;
         afw afwVar = null;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         Object obj2 = this.c;
         Object obj3 = this.b;
         switch (i) {
@@ -52,7 +52,7 @@ public final /* synthetic */ class bka implements IInvokable {
                 } else if (nullSafeIsEqual(str, "wauxv" /* "wauxv" /* "wauxv" /* "wauxv" /* cnb.z(-550709296626474L)   */)) {
                     bbj.a.getClass();
                     if (nullSafeIsEqual(str2, "clearUnreadCount" /* "clearUnreadCount" /* "clearUnreadCount" /* "clearUnreadCount" /* cnb.z(-553591219682090L)   */)) {
-                        alc alcVar = aou.a;
+                        Dispatchers$Default alcVar = aou.a;
                         KotlinHelpers2.bf(akq.f, new lw(i2, afwVar, 3));
                     } else if (nullSafeIsEqual(str2, "killProcess" /* "killProcess" /* "killProcess" /* "killProcess" /* cnb.z(-553535385107242L)   */)) {
                         Process.killProcess(Process.myPid());
@@ -96,11 +96,11 @@ public final /* synthetic */ class bka implements IInvokable {
             case 4:
                 Activity activity = (Activity) obj2;
                 dnc.tryGetClassByName(activity, (String) obj3);
-                dnc.g(activity, 2, "复制成功" /* "复制成功" /* "复制成功" /* "复制成功" /* cnb.z(-583308098403114L)   */);
+                dnc.sendToast(activity, 2, "复制成功" /* "复制成功" /* "复制成功" /* "复制成功" /* cnb.z(-583308098403114L)   */);
                 return kotlinUnitVar;
             default:
                 euh euhVar = (euh) obj2;
-                aki.l((aki) obj3);
+                HookManager.l((HookManager) obj3);
                 Object objE = ((HookParam) obj).getThisObject();
                 if (!(objE instanceof Context)) {
                     objE = null;
@@ -108,7 +108,7 @@ public final /* synthetic */ class bka implements IInvokable {
                 Context context = (Context) objE;
                 if (context == null) {
                     cls = Context.class;
-                    Class<Context> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                    Class<Context> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf != null ? clsBf : Context.class).getName()).toString());
                 }
@@ -131,11 +131,11 @@ public final /* synthetic */ class bka implements IInvokable {
                 linearLayout.addView(textView);
                 linearLayout.addView(progressBar);
                 AlertDialog alertDialogShow = title.setView(linearLayout).setCancelable(false).show();
-                alc alcVar2 = aou.a;
+                Dispatchers$Default alcVar2 = aou.a;
                 akq akqVar = akq.f;
                 bhp bhpVar = new bhp(euhVar, textView, progressBar, alertDialogShow, null);
                 ahh ahhVarT = KotlinHelpers.t(auz.a, akqVar, true);
-                alc alcVar3 = aou.a;
+                Dispatchers$Default alcVar3 = aou.a;
                 if (ahhVarT != alcVar3 && ahhVarT._w(arj.a) == null) {
                     ahhVarT = ahhVarT._v(alcVar3);
                 }

@@ -444,9 +444,9 @@ public final class cjd {
             }
         };
         btx btxVar = btx.b;
-        this.n = ewz.am(btxVar, bfuVar);
+        this.n = StaticAndroidHelpers.am(btxVar, bfuVar);
         final int i4 = 3;
-        this.p = ewz.am(btxVar, new bfu(this) { // from class: me.hd.wauxv.obf.cja
+        this.p = StaticAndroidHelpers.am(btxVar, new bfu(this) { // from class: me.hd.wauxv.obf.cja
             public final /* synthetic */ cjd b;
 
             {
@@ -578,7 +578,7 @@ public final class cjd {
             }
         });
         final int i5 = 4;
-        this.q = ewz.am(btxVar, new bfu(this) { // from class: me.hd.wauxv.obf.cja
+        this.q = StaticAndroidHelpers.am(btxVar, new bfu(this) { // from class: me.hd.wauxv.obf.cja
             public final /* synthetic */ cjd b;
 
             {
@@ -710,7 +710,7 @@ public final class cjd {
             }
         });
         final int i6 = 5;
-        this.r = ewz.am(btxVar, new bfu(this) { // from class: me.hd.wauxv.obf.cja
+        this.r = StaticAndroidHelpers.am(btxVar, new bfu(this) { // from class: me.hd.wauxv.obf.cja
             public final /* synthetic */ cjd b;
 
             {
@@ -1116,7 +1116,7 @@ public final class cjd {
             throwIfVar1IsNull(patternCompile, "compile(...)");
             Matcher matcher = patternCompile.matcher(str);
             throwIfVar1IsNull(matcher, "matcher(...)");
-            bzx bzxVarY = ewz.y(matcher, 0, str);
+            bzx bzxVarY = StaticAndroidHelpers.y(matcher, 0, str);
             if (bzxVarY != null) {
                 String strSubstring = str.substring(0, bzxVarY.f().first);
                 throwIfVar1IsNull(strSubstring, "substring(...)");
@@ -1232,7 +1232,7 @@ public final class cjd {
             }
             try {
                 x(bundle, str, strDecode, (cin) map.get(str));
-                arrayList2.add(KotlinUnit.INSTANCE);
+                arrayList2.add(Kotlin$Unit.INSTANCE);
                 i = i2;
             } catch (IllegalArgumentException unused) {
                 return false;
@@ -1264,7 +1264,7 @@ public final class cjd {
             if (this.o && (query = uri.getQuery()) != null && !query.equals(uri.toString())) {
                 queryParameters = dqc.toSingletonList(query);
             }
-            KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+            Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
             boolean z2 = false;
             Bundle bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
             for (String str2 : cjcVar.b) {

@@ -13,12 +13,12 @@ public final class blh extends SwitchHook {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i = 0;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(View.class) }, 1, yg.s(-486417931172650L).getMethodResolverBasedOnPreviouslyProvidedConfig());
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(View.class) }, 1, yg.s(-486417931172650L).getMethodResolverBasedOnPreviouslyProvidedConfig());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         blh blhVar = a;
-        aki akiVarAd = blhVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
-        blhVar.x(akiVarAd, new bep(16));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = blhVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+        blhVar.x(hookManagerVarAd, new bep(16));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

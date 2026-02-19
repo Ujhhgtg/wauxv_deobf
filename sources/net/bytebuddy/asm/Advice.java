@@ -6494,7 +6494,7 @@ public class Advice implements AsmVisitorWrapper.ForDeclaredMethods.MethodVisito
                     if (typeDefinition != null) {
                         return new ForLocalValue(inDefinedShape.getType(), typeDefinition.asGenericType(), str);
                     }
-                    throw new IllegalStateException(yg.k("Named local variable is unknown: ", str));
+                    throw new IllegalStateException(yg.concat("Named local variable is unknown: ", str));
                 }
             }
 

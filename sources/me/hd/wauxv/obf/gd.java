@@ -14,11 +14,11 @@ public final class gd extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(gb.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(gb.a));
         gd gdVar = a;
-        aki akiVarAb = PackageParam.ab(gdVar, listBf);
-        gdVar.x(akiVarAb, new bn(24));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(gdVar, listBf);
+        gdVar.x(hookManagerVarAb, new bn(24));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

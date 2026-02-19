@@ -32,11 +32,11 @@ public final class bhg implements Handler.Callback {
                 if (message.what != 0) {
                     return false;
                 }
-                bc bcVar = (bc) this.b;
+                LateinitProperty lateinitPropertyVar = (LateinitProperty) this.b;
                 if (message.obj != null) {
                     throw new ClassCastException();
                 }
-                synchronized (bcVar.e) {
+                synchronized (lateinitPropertyVar.e) {
                     try {
                         throw null;
                     } catch (Throwable th) {

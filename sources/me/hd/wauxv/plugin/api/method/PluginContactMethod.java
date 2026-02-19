@@ -79,7 +79,7 @@ public final class PluginContactMethod {
     public final int getGroupMemberCount(String str)
             throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         xp.a.getClass();
-        Method methodBb = StaticHelpers7.bb(xo.a);
+        Method methodBb = StaticHelpers7.toDexMethod(xo.a);
         xn.a.getClass();
         Object objInvoke = methodBb.invoke(xn.b(), str);
         throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.Int" /* "null cannot be cast to non-null type kotlin.Int" /* "null cannot be cast to non-null type kotlin.Int" /* cnb.z(-380173325171498L)  */);
@@ -92,15 +92,15 @@ public final class PluginContactMethod {
         int i = 0;
         xn.a.getClass();
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(xn.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        methodResolverVarT.returnType = dal.b(List.class);
-        List<String> list = (List) ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class) }, 1, methodResolverVarT)).j(str);
+        methodResolverVarT.returnType = dal.getKClassFromClass(List.class);
+        List<String> list = (List) ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(String.class) }, 1, methodResolverVarT)).j(str);
         return list == null ? EmptyReadonlyList.INSTANCE : list;
     }
 
     @cty
     public final String getLoginAlias() throws IllegalAccessException, InvocationTargetException {
         acx.a.getClass();
-        Object objInvoke = StaticHelpers7.bb(acw.a).invoke(null, null);
+        Object objInvoke = StaticHelpers7.toDexMethod(acw.a).invoke(null, null);
         throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.collections.Map<*, *>" /*
                                                                                                           * cnb.z(-
                                                                                                           * 107949708016426L)

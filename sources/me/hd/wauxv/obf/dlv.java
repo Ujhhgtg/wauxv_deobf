@@ -14,11 +14,11 @@ public final class dlv extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(dlt.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(dlt.a));
         dlv dlvVar = a;
-        aki akiVarAb = PackageParam.ab(dlvVar, listBf);
-        dlvVar.x(akiVarAb, new SyntheticMessOfLambdas(5));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(dlvVar, listBf);
+        dlvVar.x(hookManagerVarAb, new SyntheticMessOfLambdas(5));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

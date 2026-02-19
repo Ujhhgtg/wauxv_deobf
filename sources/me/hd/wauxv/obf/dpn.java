@@ -234,7 +234,7 @@ public final class dpn extends LinearLayout {
         if (mxVar != null && mxVar.isVisible()) {
             accessibilityNodeInfo.setContentDescription(this.f.p());
         }
-        accessibilityNodeInfo.setCollectionItemInfo((AccessibilityNodeInfo.CollectionItemInfo) bc.g(0, 1, this.b.c, 1, isSelected()).e);
+        accessibilityNodeInfo.setCollectionItemInfo((AccessibilityNodeInfo.CollectionItemInfo) LateinitProperty.g(0, 1, this.b.c, 1, isSelected()).e);
         if (isSelected()) {
             accessibilityNodeInfo.setClickable(false);
             accessibilityNodeInfo.removeAction((AccessibilityNodeInfo.AccessibilityAction) ax.a.l);
@@ -482,7 +482,7 @@ public final class dpn extends LinearLayout {
         }
         if (z && imageView != null) {
             ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) imageView.getLayoutParams();
-            int iAg = (z2 && imageView.getVisibility() == 0) ? (int) ewz.ag(getContext(), 8) : 0;
+            int iAg = (z2 && imageView.getVisibility() == 0) ? (int) StaticAndroidHelpers.ag(getContext(), 8) : 0;
             if (tabLayout.ae) {
                 if (iAg != marginLayoutParams.getMarginEnd()) {
                     marginLayoutParams.setMarginEnd(iAg);

@@ -700,11 +700,11 @@ public abstract class cmz {
         sb.append("mm" /* "mm" /* "mm" /* cnb.z(-119443040500522L)  */);
         String strZ = "system_config_prefs" /* "system_config_prefs" /* "system_config_prefs" /* cnb.z(-122110215191338L)  */;
         String strZ2 = "default_uin" /* "default_uin" /* "default_uin" /* cnb.z(-122539711920938L)  */;
-        bmo.a.getClass();
-        SharedPreferences sharedPreferences = bmo.n().getSharedPreferences(strZ, 0);
-        zc zcVarB = dal.b(Integer.class);
+        HostInfoRegistry.INSTANCE.getClass();
+        SharedPreferences sharedPreferences = HostInfoRegistry.getContext().getSharedPreferences(strZ, 0);
+        KClass zcVarB = dal.getKClassFromClass(Integer.class);
         String string = null;
-        if (zcVarB.equals(dal.b(String.class))) {
+        if (zcVarB.equals(dal.getKClassFromClass(String.class))) {
             Object string2 = sharedPreferences.getString(strZ2, null);
             if (string2 == null) {
                 throw new NullPointerException("null cannot be cast to non-null type kotlin.Int" /*
@@ -713,14 +713,14 @@ public abstract class cmz {
                                                                                                   */);
             }
             numValueOf = (Integer) string2;
-        } else if (zcVarB.equals(dal.b(Integer.TYPE))) {
+        } else if (zcVarB.equals(dal.getKClassFromClass(Integer.TYPE))) {
             numValueOf = Integer.valueOf(sharedPreferences.getInt(strZ2, 0));
-        } else if (zcVarB.equals(dal.b(Boolean.TYPE))) {
+        } else if (zcVarB.equals(dal.getKClassFromClass(Boolean.TYPE))) {
             numValueOf = (Integer) Boolean.valueOf(sharedPreferences.getBoolean(strZ2, false));
-        } else if (zcVarB.equals(dal.b(Float.TYPE))) {
+        } else if (zcVarB.equals(dal.getKClassFromClass(Float.TYPE))) {
             numValueOf = (Integer) Float.valueOf(sharedPreferences.getFloat(strZ2, 0.0f));
         } else {
-            if (!zcVarB.equals(dal.b(Long.TYPE))) {
+            if (!zcVarB.equals(dal.getKClassFromClass(Long.TYPE))) {
                 throw new IllegalArgumentException("Unsupported type" /* "Unsupported type" /* "Unsupported type" /* cnb.z(-119567594552106L)  */);
             }
             numValueOf = (Integer) Long.valueOf(sharedPreferences.getLong(strZ2, 0L));
@@ -749,8 +749,8 @@ public abstract class cmz {
         String lowerCase = string.toLowerCase(Locale.ROOT);
         throwIfVar1IsNull(lowerCase, "toLowerCase(...)" /* "toLowerCase(...)" /* "toLowerCase(...)" /* cnb.z(-119447335467818L)  */);
         StringBuilder sb2 = new StringBuilder();
-        bmo.a.getClass();
-        sb2.append(bmo.n().getDataDir().getAbsolutePath());
+        HostInfoRegistry.INSTANCE.getClass();
+        sb2.append(HostInfoRegistry.getContext().getDataDir().getAbsolutePath());
         sb2.append("/MicroMsg/" /* "/MicroMsg/" /* "/MicroMsg/" /* cnb.z(-119391500892970L)  */);
         sb2.append(lowerCase);
         sb2.append('/');

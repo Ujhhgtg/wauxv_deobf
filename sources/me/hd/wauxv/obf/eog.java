@@ -9,7 +9,7 @@ public final class eog extends bws implements IDexFind {
     public static final eog a = new eog();
 
     public static void b(Object obj) {
-        XposedBridge.invokeOriginalMethod(StaticHelpers7.bb(eob.a), obj, new Object[0]);
+        XposedBridge.invokeOriginalMethod(StaticHelpers7.toDexMethod(eob.a), obj, new Object[0]);
     }
 
     public static Object c(eog eogVar, int i) {
@@ -18,15 +18,15 @@ public final class eog extends bws implements IDexFind {
     }
 
     public static void d(Object obj, String str) {
-        StaticHelpers7.bb(eoc.a).invoke(obj, str);
+        StaticHelpers7.toDexMethod(eoc.a).invoke(obj, str);
     }
 
     public static void g(Object obj, String str) {
-        StaticHelpers7.bb(eod.a).invoke(obj, str);
+        StaticHelpers7.toDexMethod(eod.a).invoke(obj, str);
     }
 
     public static void i(Object obj, String str) {
-        StaticHelpers7.bb(eoe.a).invoke(obj, str);
+        StaticHelpers7.toDexMethod(eoe.a).invoke(obj, str);
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

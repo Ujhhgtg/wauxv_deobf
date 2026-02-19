@@ -57,15 +57,15 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
         cls = Boolean.class;
         int i5 = 1;
         final int i6 = 0;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 int i7 = 0;
                 FieldResolver fieldResolverVarAa = StaticHelpers6.aa((HookParam) obj);
-                fieldResolverVarAa.fieldType = dal.b(Button.class);
+                fieldResolverVarAa.fieldType = dal.getKClassFromClass(Button.class);
                 Iterator it = fieldResolverVarAa.resolve().iterator();
                 while (it.hasNext()) {
-                    Button button = (Button) ((azk) it.next()).e();
+                    Button button = (Button) ((BoundField) it.next()).getValue_();
                     if (button != null && button.getVisibility() == 0) {
                         List listAg = OtherStaticHelpers.argsToList("查看原图" /* "查看原图" /* "查看原图" /* cnb.z(-440083823983402L)  */,
                                 "Full Image" /* "Full Image" /* "Full Image" /* cnb.z(-440113888754474L)  */, "查看原视频" /* "查看原视频" /* "查看原视频" /* cnb.z(-441664371948330L)  */,
@@ -117,15 +117,15 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
                 cls2 = ImageView.class;
-                Class<ImageView> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<ImageView> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cls2 = clsBf != null ? clsBf : ImageView.class;
                 cls3 = String.class;
-                Class<String> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
+                Class<String> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cls3 = clsBf2 != null ? clsBf2 : String.class;
                 cls4 = Float.class;
-                Class<Float> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
+                Class<Float> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
                 cls4 = clsBf3 != null ? clsBf3 : Float.class;
-                Class<Boolean> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<Boolean> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar3.q(cls2, cls3, cls4, clsBf4 != null ? clsBf4 : Boolean.class);
                 cdjVar3.t("MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* cnb.z(-118858924948266L)  */);
                 bahVar3.getClass();
@@ -271,7 +271,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 RelativeLayout relativeLayout = (RelativeLayout) (!(objE instanceof RelativeLayout) ? null : objE);
                 if (relativeLayout == null) {
                     cls5 = RelativeLayout.class;
-                    Class<RelativeLayout> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls5));
+                    Class<RelativeLayout> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls5));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf5 != null ? clsBf5 : RelativeLayout.class).getName()).toString());
                 }
@@ -426,20 +426,20 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                     return kotlinUnitVar;
                 }
                 cls6 = Activity.class;
-                Class<Activity> clsBf6 = HugeSyntheticPileOfHelpers.bf(dal.b(cls6));
+                Class<Activity> clsBf6 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls6));
                 throw new IllegalStateException("HookParam instance cannot cast to "
                         .concat((clsBf6 != null ? clsBf6 : Activity.class).getName()).toString());
             case 15:
                 un unVar = un.a;
-                aki akiVarAb = PackageParam.ab(unVar, dqc.toSingletonList((Method) obj));
-                unVar.y(akiVarAb, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(17));
-                akiVarAb.o();
+                HookManager hookManagerVarAb = PackageParam.createHook(unVar, dqc.toSingletonList((Method) obj));
+                unVar.y(hookManagerVarAb, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(17));
+                hookManagerVarAb.initInstantCollectionAndApplyHooks();
                 return kotlinUnitVar;
             case 16:
                 un unVar2 = un.a;
-                aki akiVarAb2 = PackageParam.ab(unVar2, dqc.toSingletonList((Method) obj));
-                unVar2.y(akiVarAb2, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(18));
-                akiVarAb2.o();
+                HookManager hookManagerVarAb2 = PackageParam.createHook(unVar2, dqc.toSingletonList((Method) obj));
+                unVar2.y(hookManagerVarAb2, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(18));
+                hookManagerVarAb2.initInstantCollectionAndApplyHooks();
                 return kotlinUnitVar;
             case 17:
                 ((HookParam) obj).setResult(Boolean.FALSE);
@@ -453,9 +453,9 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                if (objX instanceof dcx) {
+                if (objX instanceof Failure) {
                     objX = null;
                 }
                 throwIfVar1IsNull(objX);
@@ -464,34 +464,34 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 int i11 = 0;
                 FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(tag).r();
                 fieldResolverVarR.name = "a" /* "a" /* "a" /* cnb.z(-490369301084970L)  */;
-                Object objD = ((azk) yg.e(fieldResolverVarR)).d();
+                Object objD = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue();
                 throwIfVar1IsNull(objD);
                 FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(hookParam.getThisObject()).r();
                 fieldResolverVarR2.name = "d" /* "d" /* "d" /* cnb.z(-490377891019562L)  */;
-                Object objD2 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).d();
+                Object objD2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue();
                 throwIfVar1IsNull(objD2);
                 if (cnb.ab(ewk.a) || cnb.ac(ewh.c)) {
                     FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objD2).r();
                     fieldResolverVarR3.name = "w" /* "w" /* "w" /* cnb.z(-490317761477418L)  */;
-                    Object objE3 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).e();
+                    Object objE3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).getValue_();
                     throwIfVar1IsNull(objE3);
                     zBooleanValue = ((Boolean) objE3).booleanValue();
                 } else {
                     FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(objD2).r();
                     fieldResolverVarR4.name = "d" /* "d" /* "d" /* cnb.z(-490326351412010L)  */;
-                    Object objE4 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).e();
+                    Object objE4 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).getValue_();
                     throwIfVar1IsNull(objE4);
                     zBooleanValue = ((Number) objE4).intValue() == 1;
                 }
                 if (zBooleanValue) {
                     FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(objD).r();
                     fieldResolverVarR5.name = "field_type" /* "field_type" /* "field_type" /* cnb.z(-490334941346602L)  */;
-                    Object objE5 = ((azk) yg.e(fieldResolverVarR5)).e();
+                    Object objE5 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR5)).getValue_();
                     throwIfVar1IsNull(objE5);
                     if (((Number) objE5).intValue() == 3) {
                         FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(objD).r();
                         fieldResolverVarR6.name = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-490253336967978L)  */;
-                        Object objD3 = ((azk) yg.e(fieldResolverVarR6)).d();
+                        Object objD3 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR6)).getValue();
                         throwIfVar1IsNull(objD3);
                         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objD3).getMethodResolverBasedOnPreviouslyProvidedConfig();
                         methodResolverVarT.name = "getData" /* "getData" /* "getData" /* cnb.z(-490240452066090L)  */;
@@ -528,12 +528,12 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                                                 case 0:
                                                     dpv.a.getClass();
                                                     arj.ah(dpv.b, string, aysVar.a);
-                                                    dnc.g(null, 3, "已发送" /* "已发送" /* "已发送" /* cnb.z(-489450178083626L)  */);
+                                                    dnc.sendToast(null, 3, "已发送" /* "已发送" /* "已发送" /* cnb.z(-489450178083626L)  */);
                                                     break;
                                                 default:
                                                     dpv.a.getClass();
                                                     arj.ah(dpv.b, string, aysVar.a);
-                                                    dnc.g(null, 3, "已发送" /* "已发送" /* "已发送" /* cnb.z(-479305465330474L)  */);
+                                                    dnc.sendToast(null, 3, "已发送" /* "已发送" /* "已发送" /* cnb.z(-479305465330474L)  */);
                                                     break;
                                             }
                                         }
@@ -544,7 +544,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                             builder.show();
                         } else {
                             obj2 = null;
-                            dnc.g(null, 3, "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-489514602593066L)  */);
+                            dnc.sendToast(null, 3, "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-489514602593066L)  */);
                         }
                         hookParam.setResult(obj2);
                     }
@@ -588,9 +588,9 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = FastKV.x(th2);
+                    objX2 = FastKV.getFailureFromException(th2);
                 }
-                if (objX2 instanceof dcx) {
+                if (objX2 instanceof Failure) {
                     objX2 = null;
                 }
                 throwIfVar1IsNull(objX2);
@@ -599,16 +599,16 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 int i12 = 0;
                 FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(tag2).r();
                 fieldResolverVarR7.name = "a" /* "a" /* "a" /* cnb.z(-479082127031082L)  */;
-                Object objD4 = ((azk) yg.e(fieldResolverVarR7)).d();
+                Object objD4 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR7)).getValue();
                 throwIfVar1IsNull(objD4);
                 FieldResolver fieldResolverVarR8 = dqc.getWrapperConfiguration(objD4).r();
                 fieldResolverVarR8.name = "field_type" /* "field_type" /* "field_type" /* cnb.z(-479090716965674L)  */;
-                Object objE6 = ((azk) yg.e(fieldResolverVarR8)).e();
+                Object objE6 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR8)).getValue_();
                 throwIfVar1IsNull(objE6);
                 if (((Number) objE6).intValue() == 3) {
                     FieldResolver fieldResolverVarR9 = dqc.getWrapperConfiguration(objD4).r();
                     fieldResolverVarR9.name = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-479077832063786L)  */;
-                    Object objD5 = ((azk) yg.e(fieldResolverVarR9)).d();
+                    Object objD5 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR9)).getValue();
                     throwIfVar1IsNull(objD5);
                     MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objD5).getMethodResolverBasedOnPreviouslyProvidedConfig();
                     methodResolverVarT2.name = "getData" /* "getData" /* "getData" /* cnb.z(-478996227685162L)  */;
@@ -646,12 +646,12 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                                             case 0:
                                                 dpv.a.getClass();
                                                 arj.ah(dpv.b, string2, aysVar2.a);
-                                                dnc.g(null, 3, "已发送" /* "已发送" /* "已发送" /* cnb.z(-489450178083626L)  */);
+                                                dnc.sendToast(null, 3, "已发送" /* "已发送" /* "已发送" /* cnb.z(-489450178083626L)  */);
                                                 break;
                                             default:
                                                 dpv.a.getClass();
                                                 arj.ah(dpv.b, string2, aysVar2.a);
-                                                dnc.g(null, 3, "已发送" /* "已发送" /* "已发送" /* cnb.z(-479305465330474L)  */);
+                                                dnc.sendToast(null, 3, "已发送" /* "已发送" /* "已发送" /* cnb.z(-479305465330474L)  */);
                                                 break;
                                         }
                                     }
@@ -662,7 +662,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                         builder2.show();
                     } else {
                         obj3 = null;
-                        dnc.g(null, 3, "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-479369889839914L)  */);
+                        dnc.sendToast(null, 3, "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-479369889839914L)  */);
                     }
                     hookParam2.setResult(obj3);
                 }
@@ -676,11 +676,11 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 uq.a.getClass();
                 cdjVar8.o(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */));
                 cdjVar8.r(Void.TYPE);
-                Class<Boolean> clsBf7 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<Boolean> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf7 == null) {
                     clsBf7 = cls;
                 }
-                Class<Boolean> clsBf8 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<Boolean> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar8.q(clsBf7, clsBf8 != null ? clsBf8 : Boolean.class);
                 fj fjVar3 = new fj();
                 cdj cdjVar9 = new cdj();
@@ -702,7 +702,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 FrameLayout frameLayout = (FrameLayout) (!(objE7 instanceof FrameLayout) ? null : objE7);
                 if (frameLayout == null) {
                     cls7 = FrameLayout.class;
-                    Class<FrameLayout> clsBf9 = HugeSyntheticPileOfHelpers.bf(dal.b(cls7));
+                    Class<FrameLayout> clsBf9 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls7));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf9 != null ? clsBf9 : FrameLayout.class).getName()).toString());
                 }
@@ -710,10 +710,10 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                     try {
                         ((xf) obj5).n(frameLayout);
                     } catch (Exception e) {
-                        ArrayList arrayList = ewq.a;
+                        ArrayList arrayList = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onInit " /* "onInit " /* "onInit " /* cnb.z(-51075751082794L)  */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
                                 obj5 instanceof SwitchHook ? ((SwitchHook) obj5).getResult() : "LoadHook" /*
                                                                                                            * cnb.z(-
                                                                                                            * 51041391344426L)

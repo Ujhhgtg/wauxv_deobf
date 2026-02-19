@@ -52,7 +52,7 @@ public final /* synthetic */ class atn implements IInvokable {
         final int i3 = 3;
         int i4 = 12;
         final int i5 = 2;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 ((FindDexClassMethodDslWrapper) obj).onClassCallback = new atn(1 == true ? 1 : 0);
@@ -177,16 +177,16 @@ public final /* synthetic */ class atn implements IInvokable {
                 bahVar.a = SomeStaticHelpers.ab(strArr);
                 cdj cdjVar = new cdj();
                 cls2 = Integer.class;
-                Class<Integer> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<Integer> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 if (clsBf == null) {
                     clsBf = cls2;
                 }
                 cdjVar.r(clsBf);
-                Class<Integer> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<Integer> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 if (clsBf2 == null) {
                     clsBf2 = cls2;
                 }
-                Class<Integer> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<Integer> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar.q(clsBf2, clsBf3 != null ? clsBf3 : Integer.class);
                 fj fjVar = new fj();
                 cdj cdjVar2 = new cdj();
@@ -217,22 +217,22 @@ public final /* synthetic */ class atn implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                if (objX instanceof dcx) {
+                if (objX instanceof Failure) {
                     objX = null;
                 }
                 throwIfVar1IsNull(objX);
                 int i7 = 0;
                 FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objX).r();
-                StaticHelpers2.ao(fieldResolverVarR.modifiers, (cdy[]) Arrays.copyOf(new cdy[] { cdy.d }, 1));
-                fieldResolverVarR.fieldType = dal.b(cls4);
-                Object objE = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).e();
+                StaticHelpers2.addAllFromVar2ToVar1(fieldResolverVarR.modifiers, (AccessModifierEnum[]) Arrays.copyOf(new AccessModifierEnum[] { AccessModifierEnum.FINAL}, 1));
+                fieldResolverVarR.fieldType = dal.getKClassFromClass(cls4);
+                Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue_();
                 throwIfVar1IsNull(objE);
                 if (((Number) objE).intValue() == 0) {
                     FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objX).r();
                     fieldResolverVarR2.fieldType = "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-507897062619946L)  */;
-                    Object objD = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).d();
+                    Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue();
                     throwIfVar1IsNull(objD);
                     MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objD).getMethodResolverBasedOnPreviouslyProvidedConfig();
                     methodResolverVarT.name = "getMd5" /* "getMd5" /* "getMd5" /* cnb.z(-507751033731882L)  */;
@@ -398,9 +398,9 @@ public final /* synthetic */ class atn implements IInvokable {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = FastKV.x(th2);
+                    objX2 = FastKV.getFailureFromException(th2);
                 }
-                if (objX2 instanceof dcx) {
+                if (objX2 instanceof Failure) {
                     objX2 = null;
                 }
                 Integer num = (Integer) objX2;
@@ -439,11 +439,11 @@ public final /* synthetic */ class atn implements IInvokable {
             case 13:
                 List list = (List) obj;
                 Object obj2 = list.get(0);
-                Class<String> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (nullSafeIsEqual(obj2, clsBf4 != null ? clsBf4 : String.class)) {
                     Object obj3 = list.get(1);
                     atz.a.getClass();
-                    if (nullSafeIsEqual(obj3, StaticHelpers7.bb(aty.a).getDeclaringClass())) {
+                    if (nullSafeIsEqual(obj3, StaticHelpers7.toDexMethod(aty.a).getDeclaringClass())) {
                         Object obj4 = list.get(2);
                         cge.a.getClass();
                         z = nullSafeIsEqual(obj4, StaticHelpers7.az(cgd.a));
@@ -508,9 +508,9 @@ public final /* synthetic */ class atn implements IInvokable {
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = FastKV.x(th3);
+                    objX3 = FastKV.getFailureFromException(th3);
                 }
-                if (objX3 instanceof dcx) {
+                if (objX3 instanceof Failure) {
                     objX3 = null;
                 }
                 throwIfVar1IsNull(objX3);
@@ -521,7 +521,7 @@ public final /* synthetic */ class atn implements IInvokable {
                         objX4 = null;
                     }
                 } catch (Throwable th4) {
-                    objX4 = FastKV.x(th4);
+                    objX4 = FastKV.getFailureFromException(th4);
                 }
                 for (bni bniVar : axu.b) {
                     try {
@@ -532,10 +532,10 @@ public final /* synthetic */ class atn implements IInvokable {
                             hookParam3.setResult("1" /* "1" /* "1" /* cnb.z(-609107966950186L)  */);
                         }
                     } catch (Exception e) {
-                        ArrayList arrayList = ewq.a;
+                        ArrayList arrayList = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onGetExptConfig " /* "onGetExptConfig " /* "onGetExptConfig " /* cnb.z(-36717675412266L)  */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
                                 bniVar instanceof SwitchHook ? ((SwitchHook) bniVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 36661840837418L)
@@ -550,19 +550,19 @@ public final /* synthetic */ class atn implements IInvokable {
             case 21:
                 bah bahVar4 = (bah) obj;
                 cdj cdjVar6 = new cdj();
-                Class<String> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf5 == null) {
                     clsBf5 = cls;
                 }
                 cdjVar6.r(clsBf5);
-                Class<String> clsBf6 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf6 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf6 == null) {
                     clsBf6 = cls;
                 }
-                Class<String> clsBf7 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cls = clsBf7 != null ? clsBf7 : String.class;
                 cls3 = Boolean.class;
-                Class<Boolean> clsBf8 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
+                Class<Boolean> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cdjVar6.q(clsBf6, cls, clsBf8 != null ? clsBf8 : Boolean.class);
                 cdjVar6.t("MicroMsg.ExptService" /* "MicroMsg.ExptService" /* "MicroMsg.ExptService" /* cnb.z(-36588826393386L)  */,
                         "Fail to query value, return default value '%s' instead." /* "Fail to query value, return default value '%s' instead." /* "Fail to query value, return default value '%s' instead." /* cnb.z(-42528766163754L)  */);
@@ -579,16 +579,16 @@ public final /* synthetic */ class atn implements IInvokable {
                         objX5 = null;
                     }
                 } catch (Throwable th5) {
-                    objX5 = FastKV.x(th5);
+                    objX5 = FastKV.getFailureFromException(th5);
                 }
-                Object obj5 = objX5 instanceof dcx ? null : objX5;
+                Object obj5 = objX5 instanceof Failure ? null : objX5;
                 throwIfVar1IsNull(obj5);
                 ContextMenu contextMenu = (ContextMenu) obj5;
                 if (cnb.ab(ewk.b) || cnb.ac(ewh.c)) {
                     int i8 = 0;
                     FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(contextMenu).r();
-                    fieldResolverVarR3.fieldType = dal.b(Context.class);
-                    Object objE2 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).e();
+                    fieldResolverVarR3.fieldType = dal.getKClassFromClass(Context.class);
+                    Object objE2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).getValue_();
                     throwIfVar1IsNull(objE2);
                     Resources resources = ((Context) objE2).getResources();
                     if (resources != null) {
@@ -607,10 +607,10 @@ public final /* synthetic */ class atn implements IInvokable {
                                             Integer.valueOf(R.drawable.ic_menu_forward_24dp));
                                 } catch (Exception e2) {
                                     e = e2;
-                                    ArrayList arrayList2 = ewq.a;
+                                    ArrayList arrayList2 = Logger.a;
                                     StringBuilder sb2 = new StringBuilder();
                                     sb2.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-42013370088234L)  */);
-                                    ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
+                                    Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
                                             bnjVar instanceof SwitchHook ? ((SwitchHook) bnjVar).getResult()
                                                     : "LoadHook" /* "LoadHook" /* "LoadHook" /* cnb.z(-41948945578794L)  */,
                                             -41858751265578L), e, 12);
@@ -628,10 +628,10 @@ public final /* synthetic */ class atn implements IInvokable {
                                 contextMenu.add(R.id.MenuItem_Group, R.id.MenuItem_Fav_Forward, 0, ayvVar2.a);
                             }
                         } catch (Exception e4) {
-                            ArrayList arrayList3 = ewq.a;
+                            ArrayList arrayList3 = Logger.a;
                             StringBuilder sb3 = new StringBuilder();
                             sb3.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-41824391527210L)  */);
-                            ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb3, bnjVar2 instanceof SwitchHook ? ((SwitchHook) bnjVar2).getResult()
+                            Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb3, bnjVar2 instanceof SwitchHook ? ((SwitchHook) bnjVar2).getResult()
                                     : "LoadHook" /* "LoadHook" /* "LoadHook" /* cnb.z(-42309722831658L)  */, -42288247995178L), e4, 12);
                         }
                     }
@@ -646,24 +646,24 @@ public final /* synthetic */ class atn implements IInvokable {
                         objX6 = null;
                     }
                 } catch (Throwable th6) {
-                    objX6 = FastKV.x(th6);
+                    objX6 = FastKV.getFailureFromException(th6);
                 }
-                Object obj6 = objX6 instanceof dcx ? null : objX6;
+                Object obj6 = objX6 instanceof Failure ? null : objX6;
                 throwIfVar1IsNull(obj6);
                 MenuItem menuItem = (MenuItem) obj6;
                 int i9 = 0;
                 FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam5);
-                fieldResolverVarAa.fieldType = dal.b(cls4);
-                Object objE3 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).e();
+                fieldResolverVarAa.fieldType = dal.getKClassFromClass(cls4);
+                Object objE3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue_();
                 throwIfVar1IsNull(objE3);
                 int iIntValue = ((Number) objE3).intValue();
                 FieldResolver fieldResolverVarAa2 = StaticHelpers6.aa(hookParam5);
                 fieldResolverVarAa2.fieldType = "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* cnb.z(-42253888256810L)  */;
-                Object objE4 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).e();
+                Object objE4 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).getValue_();
                 throwIfVar1IsNull(objE4);
                 FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration((Activity) objE4).r();
                 fieldResolverVarR4.b = new atn(26);
-                Object objE5 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).e();
+                Object objE5 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).getValue_();
                 throwIfVar1IsNull(objE5);
                 Object item = ((BaseAdapter) objE5).getItem(iIntValue);
                 for (bnj bnjVar3 : ayy.b) {
@@ -676,10 +676,10 @@ public final /* synthetic */ class atn implements IInvokable {
                             }
                         }
                     } catch (Exception e5) {
-                        ArrayList arrayList4 = ewq.a;
+                        ArrayList arrayList4 = Logger.a;
                         StringBuilder sb4 = new StringBuilder();
                         sb4.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-43675522431786L)  */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb4,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb4,
                                 bnjVar3 instanceof SwitchHook ? ((SwitchHook) bnjVar3).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -733,15 +733,15 @@ public final /* synthetic */ class atn implements IInvokable {
                         objX7 = null;
                     }
                 } catch (Throwable th7) {
-                    objX7 = FastKV.x(th7);
+                    objX7 = FastKV.getFailureFromException(th7);
                 }
-                Object obj7 = objX7 instanceof dcx ? null : objX7;
+                Object obj7 = objX7 instanceof Failure ? null : objX7;
                 throwIfVar1IsNull(obj7);
                 ContextMenu contextMenu2 = (ContextMenu) obj7;
                 int i10 = 0;
                 FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(contextMenu2).r();
-                fieldResolverVarR5.fieldType = dal.b(Context.class);
-                Object objE6 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR5.resolve())).e();
+                fieldResolverVarR5.fieldType = dal.getKClassFromClass(Context.class);
+                Object objE6 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR5.resolve())).getValue_();
                 throwIfVar1IsNull(objE6);
                 Resources resources2 = ((Context) objE6).getResources();
                 if (resources2 != null) {
@@ -760,10 +760,10 @@ public final /* synthetic */ class atn implements IInvokable {
                                         Integer.valueOf(R.drawable.ic_menu_forward_24dp));
                             } catch (Exception e6) {
                                 e = e6;
-                                ArrayList arrayList5 = ewq.a;
+                                ArrayList arrayList5 = Logger.a;
                                 StringBuilder sb5 = new StringBuilder();
                                 sb5.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-40535901338410L)  */);
-                                ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb5, bnkVar instanceof SwitchHook ? ((SwitchHook) bnkVar).getResult()
+                                Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb5, bnkVar instanceof SwitchHook ? ((SwitchHook) bnkVar).getResult()
                                         : "LoadHook" /* "LoadHook" /* "LoadHook" /* cnb.z(-40471476828970L)  */, -39831526701866L), e, 12);
                                 i2 = R.id.MenuItem_Group;
                             }

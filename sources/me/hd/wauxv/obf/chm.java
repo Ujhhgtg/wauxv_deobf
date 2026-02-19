@@ -133,9 +133,9 @@ public final class chm implements dom {
             parcelObtain.recycle();
             objX = Integer.valueOf(iDataSize);
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        if (objX instanceof dcx) {
+        if (objX instanceof Failure) {
             objX = null;
         }
         Integer num = (Integer) objX;
@@ -463,11 +463,11 @@ public final class chm implements dom {
     }
 
     public static final void j(tx txVar, int i, String str) {
-        ArrayList arrayList = ewq.a;
+        ArrayList arrayList = Logger.a;
         tw twVar = txVar.e;
         String str2 = twVar.a;
         Object obj = twVar.b;
-        ewq.g(6, "YukiHookDataChannel cannot send this data key of \"" + str2 + "\" type "
+        Logger.logException(6, "YukiHookDataChannel cannot send this data key of \"" + str2 + "\" type "
                 + (obj != null ? obj.getClass() : null) + ", because it is too large (total " + (i / 1024.0f)
                 + " KB, limit " + (exf.d / 1024.0f) + " KB) and cannot be segmented\n"
                 + (!dnj.ak(str) ? str.concat("\n") : "")
@@ -531,7 +531,7 @@ public final class chm implements dom {
                         boolean z = exf.a;
                         chm chmVar2 = this.a;
                         boolean zF = nullSafeIsEqual(str3, z ? exf.j((String) chmVar2.d) : exf.k((Context) chmVar2.c));
-                        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+                        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
                         if (zF) {
                             try {
                                 Bundle extras = intent.getExtras();
@@ -539,9 +539,9 @@ public final class chm implements dom {
                                         : null;
                                 objX = serializable instanceof tx ? (tx) serializable : null;
                             } catch (Throwable th) {
-                                objX = FastKV.x(th);
+                                objX = FastKV.getFailureFromException(th);
                             }
-                            if (objX instanceof dcx) {
+                            if (objX instanceof Failure) {
                                 objX = null;
                             }
                             tx txVar = (tx) objX;
@@ -575,7 +575,7 @@ public final class chm implements dom {
                                         arrayList3 = exeVar.b;
                                         arrayList4 = exeVar.a;
                                     } catch (Throwable th2) {
-                                        objX2 = FastKV.x(th2);
+                                        objX2 = FastKV.getFailureFromException(th2);
                                     }
                                     if (obj3 instanceof List) {
                                         objX2 = (List) obj3;
@@ -591,10 +591,10 @@ public final class chm implements dom {
                                                 arrayList4.clear();
                                                 concurrentHashMap.remove(str5);
                                             }
-                                            thB = dcy.b(objX2);
+                                            thB = Success.exceptionOrNull(objX2);
                                             if (thB != null) {
-                                                ArrayList arrayList10 = ewq.a;
-                                                ewq.g(4, "YukiHookDataChannel cannot merge this segments data key of \""
+                                                ArrayList arrayList10 = Logger.a;
+                                                Logger.logException(4, "YukiHookDataChannel cannot merge this segments data key of \""
                                                         + str4 + "\"", thB);
                                             }
                                         }
@@ -614,10 +614,10 @@ public final class chm implements dom {
                                                 arrayList3.clear();
                                                 concurrentHashMap.remove(str5);
                                             }
-                                            thB = dcy.b(objX2);
+                                            thB = Success.exceptionOrNull(objX2);
                                             if (thB != null) {
-                                                ArrayList arrayList102 = ewq.a;
-                                                ewq.g(4, "YukiHookDataChannel cannot merge this segments data key of \""
+                                                ArrayList arrayList102 = Logger.a;
+                                                Logger.logException(4, "YukiHookDataChannel cannot merge this segments data key of \""
                                                         + str4 + "\"", thB);
                                             }
                                         }
@@ -635,10 +635,10 @@ public final class chm implements dom {
                                                 arrayList2.clear();
                                                 concurrentHashMap.remove(str5);
                                             }
-                                            thB = dcy.b(objX2);
+                                            thB = Success.exceptionOrNull(objX2);
                                             if (thB != null) {
-                                                ArrayList arrayList1022 = ewq.a;
-                                                ewq.g(4, "YukiHookDataChannel cannot merge this segments data key of \""
+                                                ArrayList arrayList1022 = Logger.a;
+                                                Logger.logException(4, "YukiHookDataChannel cannot merge this segments data key of \""
                                                         + str4 + "\"", thB);
                                             }
                                         }
@@ -659,14 +659,14 @@ public final class chm implements dom {
                                                 }
                                             }
                                         } else {
-                                            ArrayList arrayList11 = ewq.a;
-                                            ewq.g(6, "Unsupported segments data key of \"" + str4 + "\"'s type", null);
+                                            ArrayList arrayList11 = Logger.a;
+                                            Logger.logException(6, "Unsupported segments data key of \"" + str4 + "\"'s type", null);
                                             objX2 = kotlinUnitVar;
                                         }
-                                        thB = dcy.b(objX2);
+                                        thB = Success.exceptionOrNull(objX2);
                                         if (thB != null) {
-                                            ArrayList arrayList10222 = ewq.a;
-                                            ewq.g(4, "YukiHookDataChannel cannot merge this segments data key of \""
+                                            ArrayList arrayList10222 = Logger.a;
+                                            Logger.logException(4, "YukiHookDataChannel cannot merge this segments data key of \""
                                                     + str4 + "\"", thB);
                                         }
                                     }
@@ -774,7 +774,7 @@ public final class chm implements dom {
      * at jadx.core.dex.visitors.finaly.MarkFinallyVisitor.visit(MarkFinallyVisitor.
      * java:150)
      */
-    public erk ah(String str, zc zcVar) {
+    public erk ah(String str, KClass zcVar) {
         erk erkVar;
         boolean zIsInstance;
         erk erkVarB;
@@ -784,9 +784,9 @@ public final class chm implements dom {
                 erq erqVar = (erq) this.c;
                 erqVar.getClass();
                 erkVar = (erk) erqVar.a.get(str);
-                Class clsBe = zcVar.c;
+                Class clsBe = zcVar.javaClass;
                 throwIfVar1IsNull(clsBe, "jClass");
-                Map map = zc.b;
+                Map map = KClass.functionInterfaceMap;
                 throwIfVar1IsNull(map,
                         "null cannot be cast to non-null type kotlin.collections.Map<K of kotlin.collections.MapsKt__MapsKt.get, V of kotlin.collections.MapsKt__MapsKt.get>");
                 Integer num = (Integer) map.get(clsBe);
@@ -794,7 +794,7 @@ public final class chm implements dom {
                     zIsInstance = emc.as(num.intValue(), erkVar);
                 } else {
                     if (clsBe.isPrimitive()) {
-                        clsBe = HugeSyntheticPileOfHelpers.be(dal.b(clsBe));
+                        clsBe = HugeSyntheticPileOfHelpers.be(dal.getKClassFromClass(clsBe));
                     }
                     zIsInstance = clsBe.isInstance(erkVar);
                 }
@@ -901,8 +901,8 @@ public final class chm implements dom {
             String str = twVar.a;
             int iH = h(twVar);
             if (iH < 0) {
-                ArrayList arrayList = ewq.a;
-                ewq.g(6, "YukiHookDataChannel cannot calculate the byte size of the data key of \"" + str
+                ArrayList arrayList = Logger.a;
+                Logger.logException(6, "YukiHookDataChannel cannot calculate the byte size of the data key of \"" + str
                         + "\" to be sent, so this data cannot be sent\nIf you want to lift this restriction, use the allowSendTooLargeData function when calling, but this may cause the app crash",
                         null);
                 return;
@@ -1225,11 +1225,11 @@ public final class chm implements dom {
         Context contextH = (Context) this.c;
         if (contextH == null) {
             ki.a.getClass();
-            contextH = ki.h();
+            contextH = ki.tryGetApplication();
         }
         if (contextH == null) {
-            ArrayList arrayList = ewq.a;
-            ewq.g(6, "Failed to sendBroadcast like \"" + twVar.a + "\", because got null context in \"" + str + "\"",
+            ArrayList arrayList = Logger.a;
+            Logger.logException(6, "Failed to sendBroadcast like \"" + twVar.a + "\", because got null context in \"" + str + "\"",
                     null);
             return;
         }

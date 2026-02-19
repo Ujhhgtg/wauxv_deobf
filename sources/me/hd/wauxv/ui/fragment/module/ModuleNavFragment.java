@@ -60,7 +60,7 @@ public final class ModuleNavFragment extends bdo {
         sb2.append(acx.b());
         sb2.append('\n');
         sb.append(sb2.toString());
-        Object objInvoke = StaticHelpers7.bb(acw.a).invoke(null, null);
+        Object objInvoke = StaticHelpers7.toDexMethod(acw.a).invoke(null, null);
         throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.collections.Map<*, *>" /*
                                                                                                           * cnb.z(-
                                                                                                           * 107949708016426L)

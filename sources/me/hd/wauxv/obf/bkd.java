@@ -16,9 +16,9 @@ public abstract class bkd {
         try {
             objX = new Dispatcher2(a(Looper.getMainLooper()), false);
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        if (objX instanceof dcx) {
+        if (objX instanceof Failure) {
             objX = null;
         }
     }

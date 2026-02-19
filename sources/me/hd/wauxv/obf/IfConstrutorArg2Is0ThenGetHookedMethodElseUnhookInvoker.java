@@ -20,7 +20,7 @@ public final /* synthetic */ class IfConstrutorArg2Is0ThenGetHookedMethodElseUnh
                 return this.xposedUnhook.getHookedMethod();
             default:
                 this.xposedUnhook.unhook();
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
         }
     }
 }

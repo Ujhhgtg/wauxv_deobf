@@ -79,6 +79,6 @@ public final /* synthetic */ class cue implements IInvokable {
                 }
                 break;
         }
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

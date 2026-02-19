@@ -264,7 +264,7 @@ final class SymbolTable {
     }
 
     private static /* synthetic */ String stringConcat$0(String str) {
-        return yg.k("value ", str);
+        return yg.concat("value ", str);
     }
 
     public Symbol addBootstrapMethod(Handle handle, Object... objArr) {

@@ -7,10 +7,10 @@ import de.robv.android.xposed.IXposedHookZygoteInit;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
 import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.bml;
-import me.hd.wauxv.obf.dcx;
-import me.hd.wauxv.obf.dcy;
-import me.hd.wauxv.obf.KotlinUnit;
-import me.hd.wauxv.obf.ewq;
+import me.hd.wauxv.obf.Failure;
+import me.hd.wauxv.obf.Success;
+import me.hd.wauxv.obf.Kotlin$Unit;
+import me.hd.wauxv.obf.Logger;
 import me.hd.wauxv.obf.exk;
 import me.hd.wauxv.obf.exm;
 
@@ -44,20 +44,20 @@ public final class Entry implements IXposedHookZygoteInit, IXposedHookLoadPackag
                 int i = exk.a;
                 objX2 = new exk(XModuleResources.createInstance(exm.i, (XResources) null));
             } catch (Throwable th) {
-                objX2 = FastKV.x(th);
+                objX2 = FastKV.getFailureFromException(th);
             }
-            if (objX2 instanceof dcx) {
+            if (objX2 instanceof Failure) {
                 objX2 = null;
             }
             bml.d(bmlVar, null, 6);
             bml.b = true;
-            objX = KotlinUnit.INSTANCE;
+            objX = Kotlin$Unit.INSTANCE;
         } catch (Throwable th2) {
-            objX = FastKV.x(th2);
+            objX = FastKV.getFailureFromException(th2);
         }
-        Throwable thB = dcy.b(objX);
+        Throwable thB = Success.exceptionOrNull(objX);
         if (thB != null) {
-            ewq.g(4, "An exception occurred when YukiHookAPI loading Xposed Module" /* "An exception occurred when YukiHookAPI loading Xposed Module" /* "An exception occurred when YukiHookAPI loading Xposed Module" /* cnb.z(-77073188125482L)  */, thB);
+            Logger.logException(4, "An exception occurred when YukiHookAPI loading Xposed Module" /* "An exception occurred when YukiHookAPI loading Xposed Module" /* "An exception occurred when YukiHookAPI loading Xposed Module" /* cnb.z(-77073188125482L)  */, thB);
         }
     }
 }

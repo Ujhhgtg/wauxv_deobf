@@ -13,6 +13,6 @@ public final class ctd extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        StaticHelpers7.resolveDexAndCache(ctc.a, dexKitBridge, new Function1$VarIsInt(11));
+        StaticHelpers7.resolveDexAndCache(ctc.a, dexKitBridge, new Function1$VarIsObj(11));
     }
 }

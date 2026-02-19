@@ -15,7 +15,7 @@ public final class dmi extends bws {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        for (IEmpty5 bsvVar : OtherStaticHelpers.argsToList(dal.b(ContextWrapper.class), dal.b(Activity.class))) {
+        for (IEmpty5 bsvVar : OtherStaticHelpers.argsToList(dal.getKClassFromClass(ContextWrapper.class), dal.getKClassFromClass(Activity.class))) {
             int i = 0;
             MethodResolver methodResolverVarT = dqc.bg(bsvVar).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.nameCondition = new SyntheticMessOfLambdas(15);
@@ -37,14 +37,14 @@ public final class dmi extends bws {
             Throwable th = new Throwable("There is no hook class instance");
             erp erpVar = new erp(29, false);
             erpVar.v = th;
-            aki akiVar = new aki(new but(dmiVar), HookPriorityEnum.ENUM_DEFAULT, ResolutionStrategyEnum.ENUM_IMMEDIATE);
+            HookManager hookManagerVar = new HookManager(new but(dmiVar), HookPriorityEnum.ENUM_DEFAULT, ResolutionStrategyEnum.ENUM_IMMEDIATE);
             if (!arrayList.isEmpty()) {
-                LinkedHashSet linkedHashSet = (LinkedHashSet) akiVar.members;
+                LinkedHashSet linkedHashSet = (LinkedHashSet) hookManagerVar.members;
                 linkedHashSet.clear();
                 linkedHashSet.addAll(arrayList);
             }
-            akiVar.n(new SyntheticMessOfLambdas(16));
-            akiVar.o();
+            hookManagerVar.n(new SyntheticMessOfLambdas(16));
+            hookManagerVar.initInstantCollectionAndApplyHooks();
         }
     }
 }

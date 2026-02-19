@@ -1119,7 +1119,7 @@ public class UMUtils {
         if (!TextUtils.isEmpty(strB)) {
             VALUE_ASMS_VERSION = strB;
             if (UMConfigure.isDebugLog()) {
-                UMLog.mutlInfo(2, yg.k("ZID SDK版本号: ", strB));
+                UMLog.mutlInfo(2, yg.concat("ZID SDK版本号: ", strB));
             }
         }
         Class<?> cls = getClass("com.umeng.analytics.game.GameSdkVersion");

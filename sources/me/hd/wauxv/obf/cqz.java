@@ -30,7 +30,7 @@ public final class cqz extends bws implements IDatabaseOperationsListener {
             dlx.a.getClass();
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)   */;
-            Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class), dal.b(Object[].class) }, 2, methodResolverVarT)).j(
+            Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) }, 2, methodResolverVarT)).j(
                     "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* cnb.z(-396648819718954L)   */,
                     new Object[] { asString });
             throwIfVar1IsNull(objJ);

@@ -42,9 +42,9 @@ public final class MethodHookWrapper extends InstanceResolver {
         try {
             objX = e(Arrays.copyOf(objArr, objArr.length));
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        if (objX instanceof dcx) {
+        if (objX instanceof Failure) {
             return null;
         }
         return objX;
@@ -55,9 +55,9 @@ public final class MethodHookWrapper extends InstanceResolver {
         try {
             objX = j(Arrays.copyOf(objArr, objArr.length));
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        if (objX instanceof dcx) {
+        if (objX instanceof Failure) {
             return null;
         }
         return objX;

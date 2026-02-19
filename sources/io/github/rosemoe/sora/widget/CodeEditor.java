@@ -91,7 +91,7 @@ import me.hd.wauxv.obf.asp;
 import me.hd.wauxv.obf.ass;
 import me.hd.wauxv.obf.asv;
 import me.hd.wauxv.obf.avc;
-import me.hd.wauxv.obf.GifEncoder;
+import me.hd.wauxv.obf.SyntheticClass;
 import me.hd.wauxv.obf.awy;
 import me.hd.wauxv.obf.bhs;
 import me.hd.wauxv.obf.bjz;
@@ -150,7 +150,7 @@ import me.hd.wauxv.obf.enm;
 import me.hd.wauxv.obf.enr;
 import me.hd.wauxv.obf.erp;
 import me.hd.wauxv.obf.ewa;
-import me.hd.wauxv.obf.ewz;
+import me.hd.wauxv.obf.StaticAndroidHelpers;
 import me.hd.wauxv.obf.hz;
 import me.hd.wauxv.obf.ik;
 import me.hd.wauxv.obf.io;
@@ -655,7 +655,7 @@ public class CodeEditor extends View implements afp, bph {
                 int i13 = udVarO.b;
                 int i14 = i12 - i13;
                 if (i14 != 0 && (arrayList = dnvVar.b) != null) {
-                    ewz.ax(arrayList, i13, i14);
+                    StaticAndroidHelpers.ax(arrayList, i13, i14);
                 }
             }
         } catch (Exception e) {
@@ -739,7 +739,7 @@ public class CodeEditor extends View implements afp, bph {
         try {
             dnv dnvVar = this.cm;
             if (dnvVar != null && (i6 = (i5 = udVarO.b) - udVarD.b) != 0 && (arrayList = dnvVar.b) != null) {
-                ewz.ax(arrayList, i5, i6);
+                StaticAndroidHelpers.ax(arrayList, i5, i6);
             }
         } catch (Exception e) {
             Log.w("CodeEditor", "Update failure", e);
@@ -806,7 +806,7 @@ public class CodeEditor extends View implements afp, bph {
 
     public final void de(CharSequence charSequence, boolean z) {
         dor dorVarZ;
-        GifEncoder gifEncoderVarD;
+        SyntheticClass syntheticClassVarD;
         CharSequence charSequence2;
         char cCharAt;
         btq btqVar;
@@ -892,9 +892,9 @@ public class CodeEditor extends View implements afp, bph {
         ahy ahyVar = this.bo;
         aff affVar = this.bp;
         try {
-            gifEncoderVarD = this.bu.d();
+            syntheticClassVarD = this.bu.d();
         } catch (AbstractMethodError unused) {
-            gifEncoderVarD = null;
+            syntheticClassVarD = null;
         }
         if (dorVarZ != null) {
             String str2 = dorVarZ.b;
@@ -913,7 +913,7 @@ public class CodeEditor extends View implements afp, bph {
                 } else {
                     zH = false;
                 }
-                if (zH && gifEncoderVarD == null) {
+                if (zH && syntheticClassVarD == null) {
                     affVar.l();
                     ud udVar = ahyVar.c;
                     affVar.ab(udVar.b, udVar.c, str2);
@@ -927,7 +927,7 @@ public class CodeEditor extends View implements afp, bph {
                     er(i9, i10, udVar4.b, udVar4.c - str3.length());
                     return;
                 }
-                if (!ahyVar.h() || gifEncoderVarD == null) {
+                if (!ahyVar.h() || syntheticClassVarD == null) {
                     affVar.l();
                     ud udVarN = affVar.x().n(dorVarZ.f);
                     int i11 = udVarN.b;
@@ -2965,19 +2965,19 @@ public class CodeEditor extends View implements afp, bph {
                     if (zE && !zD && !zIsCtrlPressed) {
                         boolValueOf = Boolean.valueOf(io.h(codeEditor2, cursor4, text3, asbVar, btkVar));
                     } else if (!zIsCtrlPressed || zE) {
-                        GifEncoder[] gifEncoderVarArrB = editorLanguage3.b();
-                        if (gifEncoderVarArrB == null || cursor4.h()) {
+                        SyntheticClass[] syntheticClassVarArrB = editorLanguage3.b();
+                        if (syntheticClassVarArrB == null || cursor4.h()) {
                             z = true;
                             codeEditor2.de(str, true);
                         } else {
-                            int length = gifEncoderVarArrB.length;
+                            int length = syntheticClassVarArrB.length;
                             int i10 = 0;
                             while (true) {
                                 if (i10 >= length) {
                                     z = z8;
                                 } else {
-                                    GifEncoder gifEncoderVar = gifEncoderVarArrB[i10];
-                                    if (gifEncoderVar != null) {
+                                    SyntheticClass syntheticClassVar = syntheticClassVarArrB[i10];
+                                    if (syntheticClassVar != null) {
                                         ud udVarD2 = cursor4.c.d();
                                         dnv styles = codeEditor2.getStyles();
                                         afo afoVarY = text3.y(udVarD2.b);
@@ -2998,7 +2998,7 @@ public class CodeEditor extends View implements afp, bph {
                                                     try {
                                                         ud udVarD3 = cursor4.c.d();
                                                         codeEditor2.getStyles();
-                                                        pe peVarF = gifEncoderVar.f(text3, udVarD3, codeEditor2.getTabWidth());
+                                                        pe peVarF = syntheticClassVar.f(text3, udVarD3, codeEditor2.getTabWidth());
                                                         codeEditor2.de(peVarF.a, false);
                                                         int i13 = peVarF.b;
                                                         if (i13 != 0) {

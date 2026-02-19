@@ -19,7 +19,7 @@ public final class cwb extends cwc implements btb {
     }
 
     @Override // me.hd.wauxv.obf.sw
-    public final bsu k() {
+    public final IEmpty6 k() {
         dal.a.getClass();
         return this;
     }

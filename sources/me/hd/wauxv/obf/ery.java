@@ -64,6 +64,6 @@ public final class ery extends LinearLayoutManager {
         } else {
             iEl2 = 0;
         }
-        bdVar.l(bc.g(iEl, 1, iEl2, 1, false));
+        bdVar.l(LateinitProperty.g(iEl, 1, iEl2, 1, false));
     }
 }

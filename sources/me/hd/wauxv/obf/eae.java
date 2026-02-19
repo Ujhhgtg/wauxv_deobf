@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class eae {
     public static final ead Companion = new ead();
-    public static final IHasGetValue[] a = { null, ewz.am(btx.a, new dtr(14)), null };
+    public static final IHasGetValue[] a = { null, StaticAndroidHelpers.am(btx.a, new dtr(14)), null };
     public final Integer b;
     public final List c;
     public final String d;

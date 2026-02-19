@@ -43,8 +43,8 @@ public abstract class dnc {
     }
 
     public static /* synthetic */ void c(String str) {
-        bmo.a.getClass();
-        tryGetClassByName(bmo.n(), str);
+        HostInfoRegistry.INSTANCE.getClass();
+        tryGetClassByName(HostInfoRegistry.getContext(), str);
     }
 
     public static final boolean d(String str) {
@@ -135,11 +135,12 @@ public abstract class dnc {
         return jSONObject;
     }
 
-    public static void g(Context context, int i, String str) {
+    public static void sendToast(Context context, int i, String str) {
         if ((i & 1) != 0) {
-            bmo.a.getClass();
-            context = bmo.n();
+            context = HostInfoRegistry.getContext();
         }
-        ewz.aq(str, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(context, 10));
+        StaticAndroidHelpers.runOnUiThread(str, (obj) -> {
+            Toast.makeText((Context) context, (String) obj, 0).show();
+        });
     }
 }

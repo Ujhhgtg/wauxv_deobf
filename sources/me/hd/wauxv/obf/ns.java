@@ -191,7 +191,7 @@ public abstract class ns extends View {
         setValues(Float.valueOf(this.aq));
         this.av = typedArrayObtainStyledAttributes.getFloat(2, 0.0f);
         this.y = (int) Math
-                .ceil(typedArrayObtainStyledAttributes.getDimension(9, (float) Math.ceil(ewz.ag(getContext(), 48))));
+                .ceil(typedArrayObtainStyledAttributes.getDimension(9, (float) Math.ceil(StaticAndroidHelpers.ag(getContext(), 48))));
         boolean zHasValue = typedArrayObtainStyledAttributes.hasValue(24);
         int i = zHasValue ? 24 : 26;
         int i2 = zHasValue ? 24 : 25;
@@ -440,10 +440,10 @@ public abstract class ns extends View {
         int iBs = bs() - ((this.af / 2) + this.am);
         ekvVar.setBounds(iCf, iBs - ekvVar.getIntrinsicHeight(), ekvVar.getIntrinsicWidth() + iCf, iBs);
         Rect rect = new Rect(ekvVar.getBounds());
-        ama.d(ewz.ah(this), this, rect);
+        ama.d(StaticAndroidHelpers.ah(this), this, rect);
         ekvVar.setBounds(rect);
-        ViewGroup viewGroupAh = ewz.ah(this);
-        ((ViewOverlay) (viewGroupAh == null ? null : new eru(viewGroupAh)).cachedConstructors).add(ekvVar);
+        ViewGroup viewGroupAh = StaticAndroidHelpers.ah(this);
+        ((ViewOverlay) (viewGroupAh == null ? null : new InstantCollection(viewGroupAh)).cachedConstructors).add(ekvVar);
     }
 
     public final void ci(ArrayList arrayList) {
@@ -466,11 +466,11 @@ public abstract class ns extends View {
             for (ekv ekvVar : listSubList) {
                 WeakHashMap weakHashMap = ViewCompat.a;
                 if (isAttachedToWindow()) {
-                    ViewGroup viewGroupAh2 = ewz.ah(this);
-                    eru eruVar = viewGroupAh2 == null ? null : new eru(viewGroupAh2);
-                    if (eruVar != null) {
-                        ((ViewOverlay) eruVar.a).remove(ekvVar);
-                        ViewGroup viewGroupAh3 = ewz.ah(this);
+                    ViewGroup viewGroupAh2 = StaticAndroidHelpers.ah(this);
+                    InstantCollection instantCollectionVar = viewGroupAh2 == null ? null : new InstantCollection(viewGroupAh2);
+                    if (instantCollectionVar != null) {
+                        ((ViewOverlay) instantCollectionVar.instantBuilders).remove(ekvVar);
+                        ViewGroup viewGroupAh3 = StaticAndroidHelpers.ah(this);
                         if (viewGroupAh3 == null) {
                             ekvVar.getClass();
                         } else {
@@ -522,7 +522,7 @@ public abstract class ns extends View {
             typedArrayAn.recycle();
             arrayList2.add(ekvVar2);
             WeakHashMap weakHashMap2 = ViewCompat.a;
-            if (isAttachedToWindow() && (viewGroupAh = ewz.ah(this)) != null) {
+            if (isAttachedToWindow() && (viewGroupAh = StaticAndroidHelpers.ah(this)) != null) {
                 int[] iArr = new int[2];
                 viewGroupAh.getLocationOnScreen(iArr);
                 ekvVar2.o = iArr[0];
@@ -653,7 +653,7 @@ public abstract class ns extends View {
         }
         if (isEnabled()) {
             Rect rect = new Rect();
-            ewz.ah(this).getHitRect(rect);
+            StaticAndroidHelpers.ah(this).getHitRect(rect);
             if (getLocalVisibleRect(rect)) {
                 bv();
                 return;
@@ -859,7 +859,7 @@ public abstract class ns extends View {
         super.onAttachedToWindow();
         getViewTreeObserver().addOnScrollChangedListener(this.bq);
         for (ekv ekvVar : this.l) {
-            ViewGroup viewGroupAh = ewz.ah(this);
+            ViewGroup viewGroupAh = StaticAndroidHelpers.ah(this);
             if (viewGroupAh == null) {
                 ekvVar.getClass();
             } else {
@@ -881,11 +881,11 @@ public abstract class ns extends View {
         }
         this.o = false;
         for (ekv ekvVar : this.l) {
-            ViewGroup viewGroupAh = ewz.ah(this);
-            eru eruVar = viewGroupAh == null ? null : new eru(viewGroupAh);
-            if (eruVar != null) {
-                ((ViewOverlay) eruVar.a).remove(ekvVar);
-                ViewGroup viewGroupAh2 = ewz.ah(this);
+            ViewGroup viewGroupAh = StaticAndroidHelpers.ah(this);
+            InstantCollection instantCollectionVar = viewGroupAh == null ? null : new InstantCollection(viewGroupAh);
+            if (instantCollectionVar != null) {
+                ((ViewOverlay) instantCollectionVar.instantBuilders).remove(ekvVar);
+                ViewGroup viewGroupAh2 = StaticAndroidHelpers.ah(this);
                 if (viewGroupAh2 == null) {
                     ekvVar.getClass();
                 } else {
@@ -1402,14 +1402,14 @@ public abstract class ns extends View {
     public final void onVisibilityChanged(View view, int i) {
         super.onVisibilityChanged(view, i);
         if (i != 0) {
-            ViewGroup viewGroupAh = ewz.ah(this);
-            eru eruVar = viewGroupAh == null ? null : new eru(viewGroupAh);
-            if (eruVar == null) {
+            ViewGroup viewGroupAh = StaticAndroidHelpers.ah(this);
+            InstantCollection instantCollectionVar = viewGroupAh == null ? null : new InstantCollection(viewGroupAh);
+            if (instantCollectionVar == null) {
                 return;
             }
             Iterator it = this.l.iterator();
             while (it.hasNext()) {
-                ((ViewOverlay) eruVar.a).remove((ekv) it.next());
+                ((ViewOverlay) instantCollectionVar.instantBuilders).remove((ekv) it.next());
             }
         }
     }

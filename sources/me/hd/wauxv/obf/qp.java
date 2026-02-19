@@ -127,7 +127,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
                                 ((CodeEditor) erpVar.v).em();
                                 break;
                         }
-                        return KotlinUnit.INSTANCE;
+                        return Kotlin$Unit.INSTANCE;
                     }
                 }, i2);
                 arrayList.add(artVar);
@@ -153,7 +153,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
                                 ((CodeEditor) erpVar.v).em();
                                 break;
                         }
-                        return KotlinUnit.INSTANCE;
+                        return Kotlin$Unit.INSTANCE;
                     }
                 }, i2);
                 arrayList.add(artVar2);
@@ -179,7 +179,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
                                 ((CodeEditor) erpVar.v).em();
                                 break;
                         }
-                        return KotlinUnit.INSTANCE;
+                        return Kotlin$Unit.INSTANCE;
                     }
                 }, i2);
                 arrayList.add(artVar3);
@@ -205,7 +205,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
                                 ((CodeEditor) erpVar.v).em();
                                 break;
                         }
-                        return KotlinUnit.INSTANCE;
+                        return Kotlin$Unit.INSTANCE;
                     }
                 }, i5);
                 arrayList.add(artVar4);
@@ -247,8 +247,8 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
         linearLayoutN.addView((LinearLayout) kotlin$LazyVar5.getValue(), 3);
         Kotlin$Lazy kotlin$LazyVar6 = aekVar.e;
         RecyclerView recyclerView = (RecyclerView) kotlin$LazyVar6.getValue();
-        bmo.a.getClass();
-        bmo.n();
+        HostInfoRegistry.INSTANCE.getClass();
+        HostInfoRegistry.getContext();
         final int i2 = 1;
         recyclerView.setLayoutManager(new LinearLayoutManager(1));
         aekVar.l.ag();
@@ -270,7 +270,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration((Button) kotlin$LazyVar2.getValue()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "setIconResource" /* "setIconResource" /* "setIconResource" /* "setIconResource" /* cnb.z(-394539990776618L)   */;
         Class cls = Integer.TYPE;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(cls) }, 1, methodResolverVarT);
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(cls) }, 1, methodResolverVarT);
         ael aelVar3 = aekVar.a;
         if (aelVar3 == null) {
             throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-394471271299882L)   */);
@@ -279,7 +279,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
         methodHookWrapperVar.e(Integer.valueOf(aelVar3.g));
         MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration((Button) kotlin$LazyVar3.getValue()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.name = "setIconResource" /* "setIconResource" /* "setIconResource" /* "setIconResource" /* cnb.z(-393882860780330L)   */;
-        MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(cls) }, 1, methodResolverVarT2);
+        MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(cls) }, 1, methodResolverVarT2);
         ael aelVar4 = aekVar.a;
         if (aelVar4 == null) {
             throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-393814141303594L)   */);
@@ -371,7 +371,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
                         break;
                     default:
                         if (z) {
-                            ewz.aq(aekVar, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(compoundButton, 2));
+                            StaticAndroidHelpers.runOnUiThread(aekVar, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(compoundButton, 2));
                         }
                         break;
                 }
@@ -402,7 +402,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
                                 break;
                             default:
                                 if (z) {
-                                    ewz.aq(aekVar, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(compoundButton, 2));
+                                    StaticAndroidHelpers.runOnUiThread(aekVar, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(compoundButton, 2));
                                 }
                                 break;
                         }
@@ -411,9 +411,9 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
             }
             i++;
         }
-        bmo.a.getClass();
+        HostInfoRegistry.INSTANCE.getClass();
         ((LinearLayout) kotlin$LazyVar5.getValue())
-                .getLayoutParams().height = bmo.n().getResources().getDisplayMetrics().heightPixels / 2;
+                .getLayoutParams().height = HostInfoRegistry.getContext().getResources().getDisplayMetrics().heightPixels / 2;
     }
 
     @Override // me.hd.wauxv.obf.awz

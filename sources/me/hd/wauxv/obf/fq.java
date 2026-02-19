@@ -58,7 +58,7 @@ public final /* synthetic */ class fq implements bgj {
                     arrayList2.add(((adx) it2.next()).a);
                 }
                 frVar.t(StaticHelpers5.ad(arrayList2));
-                dnc.g(null, 3, "已屏蔽" /* "已屏蔽" /* "已屏蔽" /* cnb.z(-491026431081258L)  */);
+                dnc.sendToast(null, 3, "已屏蔽" /* "已屏蔽" /* "已屏蔽" /* cnb.z(-491026431081258L)  */);
                 return Boolean.FALSE;
             case 1:
                 String str = (String) obj;
@@ -103,7 +103,7 @@ public final /* synthetic */ class fq implements bgj {
                 return bool;
             case 7:
                 MsgInfoBean msgInfoBean = (MsgInfoBean) obj2;
-                KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+                Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
                 long msgId = msgInfoBean.getMsgId();
                 String imgPath = msgInfoBean.getImgPath();
                 throwIfVar1IsNull(imgPath);
@@ -112,11 +112,11 @@ public final /* synthetic */ class fq implements bgj {
                 atp.a.getClass();
                 int i = 0;
                 MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(ato.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                methodResolverVarT.ak(cdy.c);
+                methodResolverVarT.addAccessModifiers(AccessModifierEnum.STATIC);
                 Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
                 throwIfVar1IsNull(objE);
                 MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objE).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                methodResolverVarT2.returnType = dal.b(byte[].class);
+                methodResolverVarT2.returnType = dal.getKClassFromClass(byte[].class);
                 Object objJ = ((MethodHookWrapper) StaticHelpers6
                         .n(new Object[] { "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-90430536416042L)  */ }, 1, methodResolverVarT2))
                         .j(objB);
@@ -149,7 +149,7 @@ public final /* synthetic */ class fq implements bgj {
                     try {
                         fileOutputStream.write(bArr);
                         fileOutputStream.close();
-                        dnc.g(null, 3, "已保存到: " /* "已保存到: " /* "已保存到: " /* cnb.z(-519072567524138L)  */ + file.getAbsolutePath() + '/' + string);
+                        dnc.sendToast(null, 3, "已保存到: " /* "已保存到: " /* "已保存到: " /* cnb.z(-519072567524138L)  */ + file.getAbsolutePath() + '/' + string);
                         objX = kotlinUnitVar;
                     } catch (Throwable th) {
                         try {
@@ -160,13 +160,13 @@ public final /* synthetic */ class fq implements bgj {
                         }
                     }
                 } catch (Throwable th3) {
-                    objX = FastKV.x(th3);
+                    objX = FastKV.getFailureFromException(th3);
                 }
-                Throwable thB = dcy.b(objX);
+                Throwable thB = Success.exceptionOrNull(objX);
                 if (thB != null) {
                     String strZ = "保存失败: " /* "保存失败: " /* "保存失败: " /* cnb.z(-519025322883882L)  */;
                     String message = thB.getMessage();
-                    dnc.g(null, 3, strZ.concat(message != null ? dnj.az(50, message) : "未知错误" /*
+                    dnc.sendToast(null, 3, strZ.concat(message != null ? dnj.az(50, message) : "未知错误" /*
                                                                                                * cnb.z(-
                                                                                                * 518995258112810L)
                                                                                                */));
@@ -237,10 +237,10 @@ public final /* synthetic */ class fq implements bgj {
                     objX2.getClass();
                     break;
                 } catch (Throwable th4) {
-                    objX2 = FastKV.x(th4);
+                    objX2 = FastKV.getFailureFromException(th4);
                 }
                 Object obj3 = Boolean.FALSE;
-                if (objX2 instanceof dcx) {
+                if (objX2 instanceof Failure) {
                     objX2 = obj3;
                 }
                 return (Boolean) objX2;
@@ -250,10 +250,10 @@ public final /* synthetic */ class fq implements bgj {
                     objX3.getClass();
                     break;
                 } catch (Throwable th5) {
-                    objX3 = FastKV.x(th5);
+                    objX3 = FastKV.getFailureFromException(th5);
                 }
                 Object obj4 = Boolean.FALSE;
-                if (objX3 instanceof dcx) {
+                if (objX3 instanceof Failure) {
                     objX3 = obj4;
                 }
                 return (Boolean) objX3;
@@ -267,10 +267,10 @@ public final /* synthetic */ class fq implements bgj {
                     objX4.getClass();
                     break;
                 } catch (Throwable th6) {
-                    objX4 = FastKV.x(th6);
+                    objX4 = FastKV.getFailureFromException(th6);
                 }
                 Object obj5 = Boolean.FALSE;
-                if (objX4 instanceof dcx) {
+                if (objX4 instanceof Failure) {
                     objX4 = obj5;
                 }
                 return (Boolean) objX4;
@@ -327,10 +327,10 @@ public final /* synthetic */ class fq implements bgj {
                     objX5.getClass();
                     break;
                 } catch (Throwable th7) {
-                    objX5 = FastKV.x(th7);
+                    objX5 = FastKV.getFailureFromException(th7);
                 }
                 Object obj6 = Boolean.FALSE;
-                if (objX5 instanceof dcx) {
+                if (objX5 instanceof Failure) {
                     objX5 = obj6;
                 }
                 return (Boolean) objX5;
@@ -342,7 +342,7 @@ public final /* synthetic */ class fq implements bgj {
                 if (set7 == null || !set7.isEmpty()) {
                     Iterator it9 = set7.iterator();
                     while (it9.hasNext()) {
-                        if ((((cdy) it9.next()).h & member.getModifiers()) != 0) {
+                        if ((((AccessModifierEnum) it9.next()).mask & member.getModifiers()) != 0) {
                         }
                     }
                     z = true;
@@ -356,7 +356,7 @@ public final /* synthetic */ class fq implements bgj {
                 if (set8 == null || !set8.isEmpty()) {
                     Iterator it10 = set8.iterator();
                     while (it10.hasNext()) {
-                        if ((((cdy) it10.next()).h & member2.getModifiers()) != 0) {
+                        if ((((AccessModifierEnum) it10.next()).mask & member2.getModifiers()) != 0) {
                         }
                     }
                     z = true;
@@ -368,14 +368,14 @@ public final /* synthetic */ class fq implements bgj {
                 IInvokable bgfVar = (IInvokable) obj;
                 Member member3 = (Member) obj2;
                 try {
-                    cbm cbmVar = cdy.a;
+                    cbm cbmVar = AccessModifierEnum.a;
                     modifiers = member3.getModifiers();
                     cbmVar.getClass();
-                    KotlinEnumEntriesImpl kotlinEnumEntriesImplVar = cdy.g;
+                    KotlinEnumEntriesImpl kotlinEnumEntriesImplVar = AccessModifierEnum.ENUM_ENTRIES;
                     arrayList = new ArrayList();
                     it = kotlinEnumEntriesImplVar.iterator();
                 } catch (Throwable th8) {
-                    objX6 = FastKV.x(th8);
+                    objX6 = FastKV.getFailureFromException(th8);
                 }
                 while (true) {
                     z zVar = (z) it;
@@ -385,12 +385,12 @@ public final /* synthetic */ class fq implements bgj {
                         break;
                     } else {
                         Object next = zVar.next();
-                        if ((((cdy) next).h & modifiers) != 0) {
+                        if ((((AccessModifierEnum) next).mask & modifiers) != 0) {
                             arrayList.add(next);
                         }
                     }
                     Object obj7 = Boolean.FALSE;
-                    if (objX6 instanceof dcx) {
+                    if (objX6 instanceof Failure) {
                         objX6 = obj7;
                     }
                     return (Boolean) objX6;

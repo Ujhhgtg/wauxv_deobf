@@ -15,7 +15,7 @@ import me.hd.wauxv.obf.amw;
 import me.hd.wauxv.obf.bdo;
 import me.hd.wauxv.obf.bew;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bmo;
+import me.hd.wauxv.obf.HostInfoRegistry;
 import me.hd.wauxv.obf.bzo;
 import me.hd.wauxv.obf.bzy;
 import me.hd.wauxv.obf.cbm;
@@ -96,8 +96,8 @@ public final class PolicyFragment extends bdo {
         }
         Context contextDc = dc();
         String strZ2 = "68393b1dbc47b67d83776862" /* "68393b1dbc47b67d83776862" /* "68393b1dbc47b67d83776862" /* cnb.z(-72331544230698L)  */;
-        bmo.a.getClass();
-        UMConfigure.init(contextDc, strZ2, bmo.o(), 1, "" /* "" /* "" /* cnb.z(-71691594103594L)  */);
+        HostInfoRegistry.INSTANCE.getClass();
+        UMConfigure.init(contextDc, strZ2, HostInfoRegistry.getAppName(), 1, "" /* "" /* "" /* cnb.z(-71691594103594L)  */);
         eui.a.getClass();
         if (eui.c()) {
             String strZ3 = "wx" /* "wx" /* "wx" /* cnb.z(-71687299136298L)  */;

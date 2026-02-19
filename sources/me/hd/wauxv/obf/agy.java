@@ -115,9 +115,9 @@ public final class agy implements bzs {
                         dllVar2.d((char) 65532);
                     }
                     boolean z2 = boeVar.i instanceof bvo;
-                    GifEncoder gifEncoderVar = (GifEncoder) blqVar.d;
+                    SyntheticClass syntheticClassVar = (SyntheticClass) blqVar.d;
                     String str = boeVar.d;
-                    gifEncoderVar.getClass();
+                    syntheticClassVar.getClass();
                     aji ajiVar = (aji) chmVar.d;
                     ResourcesCompat.m.c(ajiVar, str);
                     ResourcesCompat.n.c(ajiVar, Boolean.valueOf(z2));

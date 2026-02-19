@@ -186,7 +186,7 @@ public final class HostnamesKt {
     public static final String toCanonicalHost(String str) {
         throwIfVar1IsNull(str, "<this>");
         if (dnj.ab(str, ":", false)) {
-            InetAddress inetAddressDecodeIpv6 = (dnr.bp(str, "[", false) && dnr.bi(str, "]"))
+            InetAddress inetAddressDecodeIpv6 = (dnr.bp(str, "[", false) && dnr.ifVar1EndsWithVar2(str, "]"))
                     ? decodeIpv6(str, 1, str.length() - 1)
                     : decodeIpv6(str, 0, str.length());
             if (inetAddressDecodeIpv6 == null) {

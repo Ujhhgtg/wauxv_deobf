@@ -64,11 +64,11 @@ public final class ci extends AnimatorListenerAdapter {
             case 2:
                 super.onAnimationEnd(animator);
                 ns nsVar = (ns) this.b;
-                ViewGroup viewGroupAh = ewz.ah(nsVar);
-                eru eruVar = viewGroupAh == null ? null : new eru(viewGroupAh);
+                ViewGroup viewGroupAh = StaticAndroidHelpers.ah(nsVar);
+                InstantCollection instantCollectionVar = viewGroupAh == null ? null : new InstantCollection(viewGroupAh);
                 Iterator it = nsVar.l.iterator();
                 while (it.hasNext()) {
-                    ((ViewOverlay) eruVar.a).remove((ekv) it.next());
+                    ((ViewOverlay) instantCollectionVar.instantBuilders).remove((ekv) it.next());
                 }
                 break;
             case 3:

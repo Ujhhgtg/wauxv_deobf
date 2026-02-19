@@ -20,21 +20,21 @@ public final class exk extends Resources {
         try {
             objX = xModuleResources.getAssets();
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        AssetManager assetManager = (AssetManager) (objX instanceof dcx ? null : objX);
+        AssetManager assetManager = (AssetManager) (objX instanceof Failure ? null : objX);
         try {
             objX2 = xModuleResources.getDisplayMetrics();
         } catch (Throwable th2) {
-            objX2 = FastKV.x(th2);
+            objX2 = FastKV.getFailureFromException(th2);
         }
-        DisplayMetrics displayMetrics = (DisplayMetrics) (objX2 instanceof dcx ? null : objX2);
+        DisplayMetrics displayMetrics = (DisplayMetrics) (objX2 instanceof Failure ? null : objX2);
         try {
             objX3 = xModuleResources.getConfiguration();
         } catch (Throwable th3) {
-            objX3 = FastKV.x(th3);
+            objX3 = FastKV.getFailureFromException(th3);
         }
-        super(assetManager, displayMetrics, (Configuration) (objX3 instanceof dcx ? null : objX3));
+        super(assetManager, displayMetrics, (Configuration) (objX3 instanceof Failure ? null : objX3));
         this.b = xModuleResources;
     }
 

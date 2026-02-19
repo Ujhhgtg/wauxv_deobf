@@ -135,7 +135,7 @@ public final class Cookie {
         private final Builder domain(String str, boolean z) {
             String canonicalHost = HostnamesKt.toCanonicalHost(str);
             if (canonicalHost == null) {
-                throw new IllegalArgumentException(yg.k("unexpected domain: ", str));
+                throw new IllegalArgumentException(yg.concat("unexpected domain: ", str));
             }
             this.domain = canonicalHost;
             this.hostOnly = z;
@@ -168,12 +168,12 @@ public final class Cookie {
         /* JADX INFO: Access modifiers changed from: private */
         public final boolean domainMatch(String str, String str2) {
             return nullSafeIsEqual(str, str2)
-                    || (dnr.bi(str, str2) && str.charAt((str.length() - str2.length()) - 1) == '.'
+                    || (dnr.ifVar1EndsWithVar2(str, str2) && str.charAt((str.length() - str2.length()) - 1) == '.'
                             && !Util.canParseAsIpAddress(str));
         }
 
         private final String parseDomain(String str) {
-            if (dnr.bi(str, ".")) {
+            if (dnr.ifVar1EndsWithVar2(str, ".")) {
                 throw new IllegalArgumentException("Failed requirement.");
             }
             String canonicalHost = HostnamesKt.toCanonicalHost(dnj.ao(str, "."));
@@ -287,7 +287,7 @@ public final class Cookie {
                 return true;
             }
             return dnr.bp(strEncodedPath, str, false)
-                    && (dnr.bi(str, "/") || strEncodedPath.charAt(str.length()) == '/');
+                    && (dnr.ifVar1EndsWithVar2(str, "/") || strEncodedPath.charAt(str.length()) == '/');
         }
 
         public final Cookie parse(HttpUrl httpUrl, String str) {

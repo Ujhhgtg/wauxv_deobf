@@ -120,7 +120,7 @@ public abstract class ams {
             }
             Class<?> componentType = cls.getComponentType();
             throwIfVar1IsNull(componentType);
-            return yg.k("[", g(componentType));
+            return yg.concat("[", g(componentType));
         }
         if (cls.equals(Boolean.TYPE)) {
             return "Z";
@@ -152,16 +152,16 @@ public abstract class ams {
         throw new IllegalStateException(concatVar2Var1(cls, "Unknown primitive type: "));
     }
 
-    public static final String h(String str) {
-        throwIfVar1IsNull(str, "typeName");
-        if (!dnr.bi(str, HttpUrl.PATH_SEGMENT_ENCODE_SET_URI)) {
-            String str2 = (String) a.get(str);
+    public static final String h(String typeName) {
+        throwIfVar1IsNull(typeName, "typeName");
+        if (!dnr.ifVar1EndsWithVar2(typeName, "[]")) {
+            String str2 = (String) a.get(typeName);
             return str2 == null ? concat("L",
-                    dnr.bn(str, TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'), ";")
+                    dnr.bn(typeName, TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'), ";")
                     : str2;
         }
-        String strSubstring = str.substring(0, str.length() - 2);
+        String strSubstring = typeName.substring(0, typeName.length() - 2);
         throwIfVar1IsNull(strSubstring, "substring(...)");
-        return yg.k("[", h(strSubstring));
+        return yg.concat("[", h(strSubstring));
     }
 }

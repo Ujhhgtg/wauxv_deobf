@@ -38,12 +38,12 @@ public final class cbn implements IInvokable {
             case 2:
                 Member member3 = (Member) obj;
                 throwIfVar1IsNull(member3, "null cannot be cast to non-null type java.lang.reflect.Field");
-                azk azkVar = new azk((Field) member3);
+                BoundField boundFieldVar = new BoundField((Field) member3);
                 Object obj4 = this.b.memberInstance;
                 if (obj4 != null) {
-                    azkVar.copy(obj4);
+                    boundFieldVar.copy(obj4);
                 }
-                return azkVar;
+                return boundFieldVar;
             case 3:
                 Member member4 = (Member) obj;
                 throwIfVar1IsNull(member4, "null cannot be cast to non-null type java.lang.reflect.Method");
@@ -63,12 +63,12 @@ public final class cbn implements IInvokable {
             case 5:
                 Member member6 = (Member) obj;
                 throwIfVar1IsNull(member6, "null cannot be cast to non-null type java.lang.reflect.Field");
-                azk azkVar2 = new azk((Field) member6);
+                BoundField boundFieldVar2 = new BoundField((Field) member6);
                 Object obj7 = this.b.memberInstance;
                 if (obj7 != null) {
-                    azkVar2.copy(obj7);
+                    boundFieldVar2.copy(obj7);
                 }
-                return azkVar2;
+                return boundFieldVar2;
             case 6:
                 Member member7 = (Member) obj;
                 throwIfVar1IsNull(member7, "null cannot be cast to non-null type java.lang.reflect.Method");
@@ -88,12 +88,12 @@ public final class cbn implements IInvokable {
             default:
                 Member member9 = (Member) obj;
                 throwIfVar1IsNull(member9, "null cannot be cast to non-null type java.lang.reflect.Field");
-                azk azkVar3 = new azk((Field) member9);
+                BoundField boundFieldVar3 = new BoundField((Field) member9);
                 Object obj10 = this.b.memberInstance;
                 if (obj10 != null) {
-                    azkVar3.copy(obj10);
+                    boundFieldVar3.copy(obj10);
                 }
-                return azkVar3;
+                return boundFieldVar3;
         }
     }
 }

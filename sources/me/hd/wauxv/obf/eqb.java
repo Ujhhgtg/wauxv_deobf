@@ -9,7 +9,7 @@ public final class eqb extends bws implements IDexFind {
     public static final eqb a = new eqb();
 
     public static String b(String str) {
-        Method methodBb = StaticHelpers7.bb(eqa.a);
+        Method methodBb = StaticHelpers7.toDexMethod(eqa.a);
         epx.a.getClass();
         Object objInvoke = methodBb.invoke(epx.b(), str);
         throwIfVar1IsNull(objInvoke,

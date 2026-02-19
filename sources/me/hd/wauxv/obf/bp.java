@@ -51,7 +51,7 @@ public final /* synthetic */ class bp implements bfu {
                 cc.a.u(String.valueOf(cedVar.n.getText()));
                 by.a.u(String.valueOf(cedVar.k.getText()));
                 bx.a.u(String.valueOf(cedVar.j.getText()));
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 1:
                 Context context = ((RelativeLayout) this.b).getContext();
                 Intent intent = new Intent();
@@ -61,10 +61,10 @@ public final /* synthetic */ class bp implements bfu {
                                                                                                                 * 94811403057962L)
                                                                                                                 */);
                 context.startActivity(intent);
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 2:
                 gg.a.u(String.valueOf(((cee) this.b).c.getText()));
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 3:
                 return cnb.ae((Object[]) this.b);
             case 4:
@@ -72,7 +72,7 @@ public final /* synthetic */ class bp implements bfu {
                 mb.a.p(cefVar.d.isChecked());
                 mc.a.p(cefVar.e.isChecked());
                 ma.a.p(cefVar.c.isChecked());
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 5:
                 ceg cegVar = (ceg) this.b;
                 qg.a.u(String.valueOf(cegVar.c.getText()));
@@ -83,7 +83,7 @@ public final /* synthetic */ class bp implements bfu {
                 qn.a.p(((MaterialCheckBox) cegVar.j).isChecked());
                 qk.a.p(((MaterialCheckBox) cegVar.h).isChecked());
                 qj.a.p(((MaterialCheckBox) cegVar.g).isChecked());
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 6:
                 ceh cehVar = (ceh) this.b;
                 qr.a.u(String.valueOf(cehVar.c.getText()));
@@ -92,7 +92,7 @@ public final /* synthetic */ class bp implements bfu {
                 qq.a.u(String.valueOf(cehVar.b.getText()));
                 qu.a.u(String.valueOf(cehVar.f.getText()));
                 qs.a.u(String.valueOf(cehVar.d.getText()));
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 7:
                 cei ceiVar = (cei) this.b;
                 vc vcVar = vc.a;
@@ -109,7 +109,7 @@ public final /* synthetic */ class bp implements bfu {
                 uv.a.u(String.valueOf(ceiVar.b.getText()));
                 uy.a.u(String.valueOf(ceiVar.d.getText()));
                 vd.a.u(String.valueOf(ceiVar.h.getText()));
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 8:
                 cej cejVar = (cej) this.b;
                 vr.a.u(String.valueOf(cejVar.j.getText()));
@@ -121,12 +121,12 @@ public final /* synthetic */ class bp implements bfu {
                 vl.a.u(String.valueOf(cejVar.e.getText()));
                 vn.a.u(String.valueOf(cejVar.g.getText()));
                 vp.a.p(cejVar.b.isChecked());
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 9:
                 bqr bqrVar = (bqr) this.b;
                 vz.a.u(String.valueOf(((TextInputEditText) bqrVar.e).getText()));
                 vy.a.p(((MaterialCheckBox) bqrVar.d).isChecked());
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 10:
                 bqs bqsVar = (bqs) this.b;
                 int checkedRadioButtonId = ((RadioGroup) bqsVar.f).getCheckedRadioButtonId();
@@ -137,14 +137,14 @@ public final /* synthetic */ class bp implements bfu {
                 } else if (checkedRadioButtonId == ((MaterialRadioButton) bqsVar.e).getId()) {
                     xb.a.r(wy.c.e);
                 }
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 11:
                 return new aml(((yu) this.b).f);
             case 12:
                 cek cekVar = (cek) this.b;
                 zq.a.p(cekVar.d.isChecked());
                 zp.a.p(cekVar.c.isChecked());
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 13:
                 cel celVar = (cel) this.b;
                 int checkedRadioButtonId2 = celVar.n.getCheckedRadioButtonId();
@@ -182,7 +182,7 @@ public final /* synthetic */ class bp implements bfu {
                 aih aihVar = aih.a;
                 Float fBd10 = dnp.bd(String.valueOf(celVar.d.getText()));
                 aihVar.q(fBd10 != null ? fBd10.floatValue() : 100000.0f);
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 14:
                 cem cemVar = (cem) this.b;
                 aip aipVar = aip.a;
@@ -191,29 +191,29 @@ public final /* synthetic */ class bp implements bfu {
                 aiq aiqVar = aiq.a;
                 Integer numBf9 = dnq.bf(String.valueOf(cemVar.d.getText()));
                 aiqVar.r(numBf9 != null ? numBf9.intValue() : 1888);
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 15:
                 cee ceeVar = (cee) this.b;
                 ait aitVar = ait.a;
                 Integer numBf10 = dnq.bf(String.valueOf(ceeVar.c.getText()));
                 aitVar.r(numBf10 != null ? numBf10.intValue() : 99);
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 16:
                 DexDescData amnVar = (DexDescData) this.b;
                 StringBuilder sb = new StringBuilder();
-                bmo.a.getClass();
-                sb.append(bmo.s());
+                HostInfoRegistry.INSTANCE.getClass();
+                sb.append(HostInfoRegistry.getVersionString());
                 sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
-                sb.append(amnVar.b);
+                sb.append(amnVar.signatureId);
                 return sb.toString();
             case 17:
-                amq amqVar = (amq) this.b;
-                return "(" + StaticHelpers5.k(amqVar.c, "", null, null, new amb(1), 30) + ")" + ams.h(amqVar.d);
+                MethodDesc methodDescVar = (MethodDesc) this.b;
+                return "(" + StaticHelpers5.k(methodDescVar.parameterTypes, "", null, null, new amb(1), 30) + ")" + ams.h(methodDescVar.returnType);
             case 18:
                 cek cekVar2 = (cek) this.b;
                 aod.a.p(cekVar2.d.isChecked());
                 aoc.a.p(cekVar2.c.isChecked());
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 19:
                 cen cenVar = (cen) this.b;
                 int checkedRadioButtonId3 = ((RadioGroup) cenVar.m).getCheckedRadioButtonId();
@@ -238,14 +238,14 @@ public final /* synthetic */ class bp implements bfu {
                 } else if (checkedRadioButtonId4 == ((MaterialRadioButton) cenVar.h).getId()) {
                     atv.a.r(atr.f.i);
                 }
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 20:
                 ceo ceoVar = (ceo) this.b;
                 bbg.a.u(String.valueOf(ceoVar.d.getText()));
                 bbi.a.u(String.valueOf(ceoVar.f.getText()));
                 bbf.a.u(String.valueOf(ceoVar.c.getText()));
                 bbh.a.u(String.valueOf(ceoVar.e.getText()));
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 21:
                 bqs bqsVar2 = (bqs) this.b;
                 bct.a.u(String.valueOf(((TextInputEditText) bqsVar2.c).getText()));
@@ -256,7 +256,7 @@ public final /* synthetic */ class bp implements bfu {
                 } else if (((MaterialRadioButton) bqsVar2.f).isChecked()) {
                     bcs.a.r(bcr.c.e);
                 }
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 22:
                 cep cepVar = (cep) this.b;
                 bjh.a.u(String.valueOf(cepVar.k.getText()));
@@ -271,34 +271,34 @@ public final /* synthetic */ class bp implements bfu {
                 bje.a.u(String.valueOf(cepVar.h.getText()));
                 bjf.a.u(String.valueOf(cepVar.i.getText()));
                 bjg.a.u(String.valueOf(cepVar.j.getText()));
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 23:
                 cem cemVar2 = (cem) this.b;
                 bjv.a.u(String.valueOf(cemVar2.c.getText()));
                 bjw.a.u(String.valueOf(cemVar2.d.getText()));
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 24:
                 bld.a.t(StaticHelpers5.ad(dnj.as(String.valueOf(((cee) this.b).c.getText()), new String[] { "," /*
                                                                                                       * cnb.z(-
                                                                                                       * 463053309082410L)
                                                                                                       */ })));
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 25:
                 cek cekVar3 = (cek) this.b;
                 bli.a.p(cekVar3.c.isChecked());
                 blj.a.p(cekVar3.d.isChecked());
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 26:
                 return ((Context) this.b).getFilesDir().getAbsolutePath() + "/fastkv/" /* "/fastkv/" /* "/fastkv/" /* cnb.z(-5781025979178L)  */;
             case 27:
-                return new amq(((cdf) this.b).f);
+                return new MethodDesc(((cdf) this.b).f);
             case 28:
                 ceo ceoVar2 = (ceo) this.b;
                 cfj.a.u(String.valueOf(ceoVar2.d.getText()));
                 cfl.a.u(String.valueOf(ceoVar2.f.getText()));
                 cfi.a.u(String.valueOf(ceoVar2.c.getText()));
                 cfk.a.u(String.valueOf(ceoVar2.e.getText()));
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             default:
                 ceg cegVar2 = (ceg) this.b;
                 cfp.a.u(String.valueOf(cegVar2.e.getText()));
@@ -309,7 +309,7 @@ public final /* synthetic */ class bp implements bfu {
                 cfo.a.u(String.valueOf(cegVar2.d.getText()));
                 cfr.a.u(String.valueOf(((TextInputEditText) cegVar2.g).getText()));
                 cfs.a.u(String.valueOf(((TextInputEditText) cegVar2.h).getText()));
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
         }
     }
 }

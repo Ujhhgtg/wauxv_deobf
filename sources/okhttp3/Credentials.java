@@ -2,7 +2,7 @@ package okhttp3;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import me.hd.wauxv.obf.KotlinHelpers;
+
 import me.hd.wauxv.obf.sj;
 import me.hd.wauxv.obf.yg;
 
@@ -37,6 +37,6 @@ public final class Credentials {
         throwIfVar1IsNull(str3, "<this>");
         byte[] bytes = str3.getBytes(charset);
         throwIfVar1IsNull(bytes, "this as java.lang.String).getBytes(charset)");
-        return yg.k("Basic ", new sj(bytes).e());
+        return yg.concat("Basic ", new sj(bytes).e());
     }
 }

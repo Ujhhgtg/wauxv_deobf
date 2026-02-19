@@ -365,7 +365,7 @@ public final class bpm {
                     String strY2 = y(g);
                     if (strY2 != null) {
                         String strJ = yg.j(strY2, 1, 1);
-                        bvoVar = new bvo(yg.k("mailto:", strJ), null);
+                        bvoVar = new bvo(yg.concat("mailto:", strJ), null);
                         bvoVar.n(new dqe(strJ));
                     } else {
                         String strY3 = y(h);
@@ -707,7 +707,7 @@ public final class bpm {
                                 String strReplace = this.q.substring(i31, this.r - strY4.length()).replace('\n', ' ');
                                 if (strReplace.length() >= 3 && strReplace.charAt(0) == ' ' && strReplace.charAt(strReplace.length() - 1) == ' ') {
                                     int length2 = strReplace.length();
-                                    if (ewz.au(' ', 0, length2, strReplace) != length2) {
+                                    if (StaticAndroidHelpers.au(' ', 0, length2, strReplace) != length2) {
                                         strReplace = yg.j(strReplace, 1, 1);
                                     }
                                 }

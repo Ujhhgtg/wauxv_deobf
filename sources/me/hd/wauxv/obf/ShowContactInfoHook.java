@@ -33,8 +33,8 @@ public final class ShowContactInfoHook extends SwitchHook implements bnd {
                 String prefKey2 = "WAuxiliary_contact_info_pref" /* "WAuxiliary_contact_info_pref" /* "WAuxiliary_contact_info_pref" /* cnb.z(-583436947421994L)  */;
                 String idDisplayStr = "ID: " /* "ID: " /* "ID: " /* cnb.z(-583346753108778L)  */.concat(stringExtra);
                 Object objC = ReflectionWrapper.createInstanceWithArgs(cvh.a.b(), new Object[] { activity });
-                StaticHelpers7.bb(cvd.a).invoke(objC, prefKey2);
-                StaticHelpers7.bb(cvf.a).invoke(objC, idDisplayStr);
+                StaticHelpers7.toDexMethod(cvd.a).invoke(objC, prefKey2);
+                StaticHelpers7.toDexMethod(cvf.a).invoke(objC, idDisplayStr);
                 return dqc.toSingletonList(new aep(prefKey1, objC, 1, new bka(stringExtra, 4, activity)));
             }
         }

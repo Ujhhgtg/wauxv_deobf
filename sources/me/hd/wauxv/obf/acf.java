@@ -24,7 +24,7 @@ public final /* synthetic */ class acf implements Runnable {
         switch (this.a) {
             case 0:
                 acg acgVar = (acg) this.b;
-                Object obj = ((bc) this.d).e;
+                Object obj = ((LateinitProperty) this.d).e;
                 String str = (String) acgVar.a.get(Integer.valueOf(this.c));
                 if (str != null) {
                     dv dvVar = (dv) acgVar.e.get(str);

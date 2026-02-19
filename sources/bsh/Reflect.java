@@ -335,7 +335,7 @@ public final class Reflect {
             if (e2.getCause() instanceof UtilEvalError) {
                 throw new UtilTargetError(e2.getCause());
             }
-            throw new ReflectError(yg.k("Can't access field: ", str), e2.getCause());
+            throw new ReflectError(yg.concat("Can't access field: ", str), e2.getCause());
         }
     }
 
@@ -832,7 +832,7 @@ public final class Reflect {
 
     public static TargetError targetErrorFromTargetException(InvocationTargetException invocationTargetException,
             String str, CallStack callStack, Node node) {
-        String strK = yg.k("Method Invocation ", str);
+        String strK = yg.concat("Method Invocation ", str);
         Throwable cause = invocationTargetException.getCause();
         boolean z = true;
         if ((cause instanceof EvalError)

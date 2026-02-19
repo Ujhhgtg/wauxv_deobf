@@ -41,7 +41,7 @@ import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.dfg;
 import me.hd.wauxv.obf.eqq;
 import me.hd.wauxv.obf.ViewCompat;
-import me.hd.wauxv.obf.ewz;
+import me.hd.wauxv.obf.StaticAndroidHelpers;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -983,11 +983,11 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         int width;
         float axisValue;
         if (motionEvent.getAction() == 8 && !this.o) {
-            if (ewz.ak(motionEvent, 2)) {
+            if (StaticAndroidHelpers.ak(motionEvent, 2)) {
                 axisValue = motionEvent.getAxisValue(9);
                 i = 9;
                 width = (int) motionEvent.getX();
-            } else if (ewz.ak(motionEvent, 4194304)) {
+            } else if (StaticAndroidHelpers.ak(motionEvent, 4194304)) {
                 float axisValue2 = motionEvent.getAxisValue(26);
                 width = getWidth() / 2;
                 i = 26;
@@ -999,7 +999,7 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
             }
             if (axisValue != 0.0f) {
                 ax(-((int) (getVerticalScrollFactorCompat() * axisValue)), i, motionEvent, width, 1,
-                        ewz.ak(motionEvent, q.cachedConstructors.s));
+                        StaticAndroidHelpers.ak(motionEvent, q.cachedConstructors.s));
                 if (i == 0) {
                     return true;
                 }

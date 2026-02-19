@@ -10,7 +10,7 @@ import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.IInvokable;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.dts;
-import me.hd.wauxv.obf.KotlinUnit;
+import me.hd.wauxv.obf.Kotlin$Unit;
 import me.hd.wauxv.obf.rh;
 import me.hd.wauxv.obf.rm;
 import me.hd.wauxv.obf.sj;
@@ -42,12 +42,12 @@ public abstract class ResponseBody implements Closeable {
 
         @Override // java.io.Reader, java.io.Closeable, java.lang.AutoCloseable
         public void close() throws IOException {
-            KotlinUnit kotlinUnitVar;
+            Kotlin$Unit kotlinUnitVar;
             this.closed = true;
             Reader reader = this.delegate;
             if (reader != null) {
                 reader.close();
-                kotlinUnitVar = KotlinUnit.INSTANCE;
+                kotlinUnitVar = Kotlin$Unit.INSTANCE;
             } else {
                 kotlinUnitVar = null;
             }

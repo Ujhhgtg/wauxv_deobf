@@ -18,10 +18,10 @@ import me.hd.wauxv.data.bean.ConversationBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class Function1$VarIsInt implements IInvokable {
+public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
     public final /* synthetic */ int a;
 
-    public /* synthetic */ Function1$VarIsInt(int i) {
+    public /* synthetic */ Function1$VarIsObj(int i) {
         this.a = i;
     }
 
@@ -45,7 +45,7 @@ public final /* synthetic */ class Function1$VarIsInt implements IInvokable {
         obj = null;
         Object obj2 = null;
         int i5 = 0;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 View view = (View) obj;
@@ -86,8 +86,8 @@ public final /* synthetic */ class Function1$VarIsInt implements IInvokable {
                         materialButton2.setOnClickListener(new d(i4));
                         materialButton.setOnClickListener(new d(4));
                         DefaultConfig ioVar = new DefaultConfig(view2.getContext(), 13);
-                        PanelEmojiHook.a.getClass();
-                        ioVar.ay(PanelEmojiHook.i);
+                        PanelEmojiHook.INSTANCE.getClass();
+                        ioVar.ay(PanelEmojiHook.NAME);
                         ioVar.d = (LinearLayout) viewK2;
                         DefaultConfig.g(ioVar, null, 3);
                         DefaultConfig.f(ioVar, null, 3);
@@ -101,9 +101,9 @@ public final /* synthetic */ class Function1$VarIsInt implements IInvokable {
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
                 cls3 = ArrayList.class;
-                Class<ArrayList> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
+                Class<ArrayList> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cdjVar.r(clsBf != null ? clsBf : ArrayList.class);
-                Class<Integer> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<Integer> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar.q(clsBf2 != null ? clsBf2 : Integer.class);
                 cdjVar.t("MicroMsg.emoji.EmojiGroupInfoStorage" /* "MicroMsg.emoji.EmojiGroupInfoStorage" /* "MicroMsg.emoji.EmojiGroupInfoStorage" /* "MicroMsg.emoji.EmojiGroupInfoStorage" /* cnb.z(-472287488768810L)   */,
                         "get Panel EmojiGroupInfo." /* "get Panel EmojiGroupInfo." /* "get Panel EmojiGroupInfo." /* "get Panel EmojiGroupInfo." /* cnb.z(-472661150923562L)   */);
@@ -149,7 +149,7 @@ public final /* synthetic */ class Function1$VarIsInt implements IInvokable {
                 int i8 = 0;
                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objC).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.name = "convertFrom" /* "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-78438987725610L)   */;
-                methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.b(ContentValues.class), dal.b(Boolean.TYPE) }, 2));
+                methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(ContentValues.class), dal.getKClassFromClass(Boolean.TYPE) }, 2));
                 methodResolverVarT.enableSuperclass();
                 ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(contentValues, Boolean.TRUE);
                 list.add(0, objC);
@@ -163,26 +163,26 @@ public final /* synthetic */ class Function1$VarIsInt implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                Object obj3 = objX instanceof dcx ? null : objX;
+                Object obj3 = objX instanceof Failure ? null : objX;
                 throwIfVar1IsNull(obj3);
                 int i9 = 0;
                 SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(obj3);
                 MethodResolver methodResolverVarT2 = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
-                methodResolverVarT2.ak(cdy.d);
-                methodResolverVarT2.ai = new Function1$VarIsInt(9);
+                methodResolverVarT2.addAccessModifiers(AccessModifierEnum.FINAL);
+                methodResolverVarT2.ai = new Function1$VarIsObj(9);
                 Object objE = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).e(new Object[0]);
                 throwIfVar1IsNull(objE);
                 FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objE).r();
                 fieldResolverVarR.fieldType = ajn.tryGetClassByClassName("com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* cnb.z(-78585016613674L)   */);
-                Object objD = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).d();
+                Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue();
                 throwIfVar1IsNull(objD);
                 FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objD).r();
                 fieldResolverVarR2.name = "field_packName" /* "field_packName" /* "field_packName" /* "field_packName" /* cnb.z(-470968933808938L)   */;
-                String str = (String) ((azk) yg.e(fieldResolverVarR2)).e();
+                String str = (String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue_();
                 MethodResolver methodResolverVarT3 = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
-                methodResolverVarT3.returnType = dal.b(List.class);
+                methodResolverVarT3.returnType = dal.getKClassFromClass(List.class);
                 Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT3)).j(new Object[0]);
                 throwIfVar1IsNull(objJ);
                 List list2 = (List) objJ;
@@ -191,39 +191,39 @@ public final /* synthetic */ class Function1$VarIsInt implements IInvokable {
                 }
                 return kotlinUnitVar;
             case 6:
-                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new Function1$VarIsInt(10);
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new Function1$VarIsObj(10);
                 return kotlinUnitVar;
             case 7:
-                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new Function1$VarIsInt(i3);
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new Function1$VarIsObj(i3);
                 return kotlinUnitVar;
             case 8:
-                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new Function1$VarIsInt(i4);
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new Function1$VarIsObj(i4);
                 return kotlinUnitVar;
             case 9:
                 Class cls6 = (Class) obj;
                 cls4 = Boolean.class;
-                Class<Boolean> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
+                Class<Boolean> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
                 zF = nullSafeIsEqual(cls6, clsBf3 != null ? clsBf3 : Boolean.class);
                 break;
             case 10:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar4 = new cdj();
                 Class clsAg = ajn.tryGetClassByClassName("com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-472497942166314L)   */);
-                Class<Integer> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<Integer> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf4 == null) {
                     clsBf4 = cls;
                 }
                 cls5 = String.class;
-                Class<String> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls5));
+                Class<String> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls5));
                 cls5 = clsBf5 != null ? clsBf5 : String.class;
-                Class<Integer> clsBf6 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<Integer> clsBf6 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar4.q(clsAg, clsBf4, cls5, clsBf6 != null ? clsBf6 : Integer.class);
                 cdjVar4.t("emojiInfo" /* "emojiInfo" /* "emojiInfo" /* "emojiInfo" /* cnb.z(-472351913278250L)   */, "sosDocId" /* "sosDocId" /* "sosDocId" /* "sosDocId" /* cnb.z(-472326143474474L)   */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar4;
                 return kotlinUnitVar;
             case 11:
-                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new Function1$VarIsInt(12);
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new Function1$VarIsObj(12);
                 return kotlinUnitVar;
             case 12:
                 bag bagVar = (bag) obj;
@@ -281,9 +281,9 @@ public final /* synthetic */ class Function1$VarIsInt implements IInvokable {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = FastKV.x(th2);
+                    objX2 = FastKV.getFailureFromException(th2);
                 }
-                if (objX2 instanceof dcx) {
+                if (objX2 instanceof Failure) {
                     objX2 = null;
                 }
                 Integer num = (Integer) objX2;
@@ -350,7 +350,7 @@ public final /* synthetic */ class Function1$VarIsInt implements IInvokable {
                 agp.c(agp.a, agcVar5.b(contentValues6), conversationBean6.getUsername());
                 return kotlinUnitVar;
             case 20:
-                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new Function1$VarIsInt(21);
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new Function1$VarIsObj(21);
                 return kotlinUnitVar;
             case 21:
                 bah bahVar4 = (bah) obj;
@@ -392,18 +392,18 @@ public final /* synthetic */ class Function1$VarIsInt implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new cvc(i5);
                 return kotlinUnitVar;
             case 25:
-                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new Function1$VarIsInt(27);
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new Function1$VarIsObj(27);
                 return kotlinUnitVar;
             case 26:
                 FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar = (FindDexClassMethodDslWrapper) obj;
-                findDexClassMethodDslWrapperVar.onMethodCallback = new Function1$VarIsInt(28);
-                findDexClassMethodDslWrapperVar.onResultCallback = new Function1$VarIsInt(29);
+                findDexClassMethodDslWrapperVar.onMethodCallback = new Function1$VarIsObj(28);
+                findDexClassMethodDslWrapperVar.onResultCallback = new Function1$VarIsObj(29);
                 return kotlinUnitVar;
             case 27:
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar6 = new cdj();
                 cdjVar6.o(cvh.a.b());
-                Class<CharSequence> clsBf7 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<CharSequence> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar6.q(clsBf7 != null ? clsBf7 : CharSequence.class);
                 cdjVar6.u(0);
                 bahVar5.getClass();
@@ -413,13 +413,13 @@ public final /* synthetic */ class Function1$VarIsInt implements IInvokable {
                 bah bahVar6 = (bah) obj;
                 cdj cdjVar7 = new cdj();
                 cdjVar7.o(cvh.a.b());
-                Class<CharSequence> clsBf8 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<CharSequence> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar7.q(clsBf8 != null ? clsBf8 : CharSequence.class);
                 bahVar6.getClass();
                 bahVar6.d = cdjVar7;
                 return kotlinUnitVar;
             default:
-                zF = nullSafeIsEqual(((cdf) obj).f, cvf.a.d());
+                zF = nullSafeIsEqual(((cdf) obj).f, cvf.a.getResolvedName());
                 break;
         }
         return Boolean.valueOf(!zF);

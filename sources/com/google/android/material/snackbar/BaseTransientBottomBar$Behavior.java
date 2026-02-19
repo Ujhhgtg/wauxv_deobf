@@ -4,7 +4,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import com.google.android.material.behavior.SwipeDismissBehavior;
-import me.hd.wauxv.obf.bc;
+import me.hd.wauxv.obf.LateinitProperty;
 import me.hd.wauxv.obf.nu;
 import me.hd.wauxv.obf.nw;
 
@@ -27,17 +27,17 @@ public class BaseTransientBottomBar$Behavior extends SwipeDismissBehavior<View> 
         int actionMasked = motionEvent.getActionMasked();
         if (actionMasked != 0) {
             if (actionMasked == 1 || actionMasked == 3) {
-                if (bc.a == null) {
-                    bc.a = new bc(5);
+                if (LateinitProperty.a == null) {
+                    LateinitProperty.a = new LateinitProperty(5);
                 }
-                synchronized (bc.a.e) {
+                synchronized (LateinitProperty.a.e) {
                 }
             }
         } else if (coordinatorLayout.ao(view, (int) motionEvent.getX(), (int) motionEvent.getY())) {
-            if (bc.a == null) {
-                bc.a = new bc(5);
+            if (LateinitProperty.a == null) {
+                LateinitProperty.a = new LateinitProperty(5);
             }
-            synchronized (bc.a.e) {
+            synchronized (LateinitProperty.a.e) {
             }
         }
         return super.t(coordinatorLayout, view, motionEvent);

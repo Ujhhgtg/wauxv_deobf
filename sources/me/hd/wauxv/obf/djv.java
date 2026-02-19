@@ -60,9 +60,9 @@ public final class djv extends SwitchHook implements IDexFind, IDatabaseOperatio
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         djv djvVar = a;
-        aki akiVarAd = djvVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
-        djvVar.x(akiVarAd, new djk(3));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = djvVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+        djvVar.x(hookManagerVarAd, new djk(3));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

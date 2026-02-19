@@ -12,7 +12,7 @@ public abstract class dnr extends dnq {
         return bytes;
     }
 
-    public static boolean bi(String str, String str2) {
+    public static boolean ifVar1EndsWithVar2(String str, String str2) {
         throwIfVar1IsNull(str, "<this>");
         throwIfVar1IsNull(str2, "suffix");
         return str.endsWith(str2);

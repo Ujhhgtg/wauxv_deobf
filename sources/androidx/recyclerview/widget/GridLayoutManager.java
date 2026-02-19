@@ -18,7 +18,7 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.WeakHashMap;
 import me.hd.wauxv.obf.ax;
-import me.hd.wauxv.obf.bc;
+import me.hd.wauxv.obf.LateinitProperty;
 import me.hd.wauxv.obf.bd;
 import me.hd.wauxv.obf.biq;
 import me.hd.wauxv.obf.bir;
@@ -1340,9 +1340,9 @@ public class GridLayoutManager extends LinearLayoutManager {
         bir birVar = (bir) layoutParams;
         int iAx = ax(birVar.c.z(), recyclerViewVar, cztVar);
         if (this.bd == 0) {
-            bdVar.l(bc.g(birVar.a, birVar.b, iAx, 1, false));
+            bdVar.l(LateinitProperty.g(birVar.a, birVar.b, iAx, 1, false));
         } else {
-            bdVar.l(bc.g(iAx, 1, birVar.a, birVar.b, false));
+            bdVar.l(LateinitProperty.g(iAx, 1, birVar.a, birVar.b, false));
         }
     }
 

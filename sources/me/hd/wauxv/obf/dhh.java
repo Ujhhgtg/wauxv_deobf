@@ -25,14 +25,14 @@ public final class dhh extends SwitchHook {
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
         dhh dhhVar = a;
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
-        aki akiVarAd = dhhVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
-        dhhVar.x(akiVarAd, new dhg(0));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = dhhVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+        dhhVar.x(hookManagerVarAd, new dhg(0));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
         MethodResolver methodResolverVarT2 = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.name = "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* cnb.z(-594822905723690L)   */;
-        aki akiVarAd2 = dhhVar.ad((MethodHookWrapper) StaticHelpers6.n(new Object[] { eoz.a, cvh.a.b() }, 2, methodResolverVarT2), hookPriorityEnumVar);
-        dhhVar.y(akiVarAd2, new dhg(1));
-        akiVarAd2.o();
+        HookManager hookManagerVarAd2 = dhhVar.createImmediateHook((MethodHookWrapper) StaticHelpers6.n(new Object[] { eoz.a, cvh.a.b() }, 2, methodResolverVarT2), hookPriorityEnumVar);
+        dhhVar.y(hookManagerVarAd2, new dhg(1));
+        hookManagerVarAd2.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

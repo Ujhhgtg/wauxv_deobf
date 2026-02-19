@@ -6,6 +6,6 @@ public final /* synthetic */ class brh extends bgr implements IInvokable {
     @Override // me.hd.wauxv.obf.bgf
     public final Object invoke(Object obj) {
         ((bri) this.d).d((Throwable) obj);
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

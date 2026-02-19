@@ -38,7 +38,7 @@ public final /* synthetic */ class ls implements bfu {
                 Long lBg = dnq.bg(String.valueOf(ceeVar.c.getText()));
                 luVar.s(lBg != null ? lBg.longValue() : 86400L);
                 lt.a.t(StaticHelpers5.ad((Set) zmVar.c));
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 1:
                 cit citVar = (cit) this.b;
                 SomeFragmentManager someFragmentManagerVar = (SomeFragmentManager) this.c;
@@ -49,10 +49,10 @@ public final /* synthetic */ class ls implements bfu {
                     }
                     citVar.k(cioVar);
                 }
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 2:
                 cnh.ac((MainActivity) this.b, ((bhl) this.c).b);
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 3:
                 dfx dfxVar = (dfx) this.b;
                 brn brnVar = (brn) this.c;
@@ -131,12 +131,12 @@ public final /* synthetic */ class ls implements bfu {
                         throw th2;
                     }
                 }
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 6:
                 cee ceeVar2 = (cee) this.b;
                 View view = (View) this.c;
                 String strValueOf = String.valueOf(ceeVar2.c.getText());
-                if (dnr.bi(strValueOf, "@chatroom" /* "@chatroom" /* "@chatroom" /* "@chatroom" /* cnb.z(-513020958604074L)   */)) {
+                if (dnr.ifVar1EndsWithVar2(strValueOf, "@chatroom" /* "@chatroom" /* "@chatroom" /* "@chatroom" /* cnb.z(-513020958604074L)   */)) {
                     Context context = view.getContext();
                     Intent intent = new Intent();
                     intent.setClassName(context, "com.tencent.mm.chatroom.ui.ChatroomInfoUI" /*
@@ -154,13 +154,13 @@ public final /* synthetic */ class ls implements bfu {
                     intent2.putExtra("Contact_User" /* "Contact_User" /* "Contact_User" /* "Contact_User" /* cnb.z(-89442693937962L)   */, strValueOf);
                     context2.startActivity(intent2);
                 }
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 7:
                 cua cuaVar = (cua) this.b;
                 ctx ctxVar = (ctx) this.c;
                 KotlinHelpers2.ar(cuaVar).j(R.id.codeFragment, ResourcesCompat.r(new Pair("pluginId" /* "pluginId" /* "pluginId" /* "pluginId" /* cnb.z(-418085001493290L)   */, ctxVar.f),
                         new Pair("pluginPath" /* "pluginPath" /* "pluginPath" /* "pluginPath" /* cnb.z(-417994807180074L)   */, ctxVar.b.getAbsolutePath())));
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             case 8:
                 return ((dap) this.b).d((CharSequence) this.c);
             default:
@@ -173,7 +173,7 @@ public final /* synthetic */ class ls implements bfu {
                     dpd.a.r(doz.b.d);
                     dpc.a.t(StaticHelpers5.ad(arrayList3));
                 }
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
         }
     }
 

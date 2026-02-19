@@ -46,13 +46,13 @@ public final class cbo implements IInvokable {
                                                 "returnTypeCondition", methodResolverVar.ai, new fq(15)),
                                         configurationVar, "isBridge", null, new fq(17)), configurationVar, "isBridgeNot", null, new fq(25)),
                                 configurationVar, "isDefault", null, new cbk(2)), configurationVar, "isDefaultNot", null, new cbk(3));
-                zc zcVarB = dal.b(Method.class);
-                if (zcVarB.equals(dal.b(Method.class))) {
+                KClass zcVarB = dal.getKClassFromClass(Method.class);
+                if (zcVarB.equals(dal.getKClassFromClass(Method.class))) {
                     dpuVar = new dpu(baeVarO, new cbn(configurationVar, 6), 1);
-                } else if (zcVarB.equals(dal.b(Constructor.class))) {
+                } else if (zcVarB.equals(dal.getKClassFromClass(Constructor.class))) {
                     dpuVar = new dpu(baeVarO, new cbn(configurationVar, 7), 1);
                 } else {
-                    if (!zcVarB.equals(dal.b(Field.class))) {
+                    if (!zcVarB.equals(dal.getKClassFromClass(Field.class))) {
                         throw new IllegalStateException(("Unsupported member type: " + baeVarO).toString());
                     }
                     dpuVar = new dpu(baeVarO, new cbn(configurationVar, 8), 1);
@@ -66,13 +66,13 @@ public final class cbo implements IInvokable {
                     cbmVar = cbmVar3;
                 }
                 bae baeVarF = cbp.f(cbp.b(StaticHelpers5.a(cbmVar.b(cls2)), adtVar, configurationVar), adtVar, configurationVar);
-                zc zcVarB2 = dal.b(Constructor.class);
-                if (zcVarB2.equals(dal.b(Method.class))) {
+                KClass zcVarB2 = dal.getKClassFromClass(Constructor.class);
+                if (zcVarB2.equals(dal.getKClassFromClass(Method.class))) {
                     dpuVar2 = new dpu(baeVarF, new cbn(configurationVar, 0), 1);
-                } else if (zcVarB2.equals(dal.b(Constructor.class))) {
+                } else if (zcVarB2.equals(dal.getKClassFromClass(Constructor.class))) {
                     dpuVar2 = new dpu(baeVarF, new cbn(configurationVar, 1), 1);
                 } else {
-                    if (!zcVarB2.equals(dal.b(Field.class))) {
+                    if (!zcVarB2.equals(dal.getKClassFromClass(Field.class))) {
                         throw new IllegalStateException(("Unsupported member type: " + baeVarF).toString());
                     }
                     dpuVar2 = new dpu(baeVarF, new cbn(configurationVar, 2), 1);
@@ -89,14 +89,14 @@ public final class cbo implements IInvokable {
                     objX = SomeStaticHelpers.ab(cls3.getDeclaredFields());
                     break;
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                Throwable thB = dcy.b(objX);
+                Throwable thB = Success.exceptionOrNull(objX);
                 if (thB != null) {
-                    Kotlin$Lazy kotlin$LazyVar = bth.a;
-                    bth.e("Failed to get declared fields in " + cbmVar + " because got an exception.", thB);
+                    Kotlin$Lazy kotlin$LazyVar = LogConfig.isDevelopmentMode;
+                    LogConfig.logE("Failed to get declared fields in " + cbmVar + " because got an exception.", thB);
                 }
-                if (objX instanceof dcx) {
+                if (objX instanceof Failure) {
                     objX = null;
                 }
                 Iterable iterable = (List) objX;
@@ -110,13 +110,13 @@ public final class cbo implements IInvokable {
                                         "type", fieldResolverVar.fieldType, new cbi(configurationVar, i3)),
                                 configurationVar, "typeCondition", fieldResolverVar.b, new cbk(6)), configurationVar, "genericType", null, new fq(8)),
                         configurationVar, "genericTypeCondition", null, new fq(9));
-                zc zcVarB3 = dal.b(Field.class);
-                if (zcVarB3.equals(dal.b(Method.class))) {
+                KClass zcVarB3 = dal.getKClassFromClass(Field.class);
+                if (zcVarB3.equals(dal.getKClassFromClass(Method.class))) {
                     dpuVar3 = new dpu(baeVarO2, new cbn(configurationVar, 3), 1);
-                } else if (zcVarB3.equals(dal.b(Constructor.class))) {
+                } else if (zcVarB3.equals(dal.getKClassFromClass(Constructor.class))) {
                     dpuVar3 = new dpu(baeVarO2, new cbn(configurationVar, 4), 1);
                 } else {
-                    if (!zcVarB3.equals(dal.b(Field.class))) {
+                    if (!zcVarB3.equals(dal.getKClassFromClass(Field.class))) {
                         throw new IllegalStateException(("Unsupported member type: " + baeVarO2).toString());
                     }
                     dpuVar3 = new dpu(baeVarO2, new cbn(configurationVar, 5), 1);

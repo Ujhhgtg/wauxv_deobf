@@ -18,7 +18,7 @@ public final class ejx {
     static {
         efq efqVar = new efq(13);
         btx btxVar = btx.a;
-        a = new IHasGetValue[] { null, null, null, null, ewz.am(btxVar, efqVar), ewz.am(btxVar, new efq(14)), null };
+        a = new IHasGetValue[] { null, null, null, null, StaticAndroidHelpers.am(btxVar, efqVar), StaticAndroidHelpers.am(btxVar, new efq(14)), null };
     }
 
     public /* synthetic */ ejx(int i, String str, String str2, Double d, Integer num, List list, List list2,

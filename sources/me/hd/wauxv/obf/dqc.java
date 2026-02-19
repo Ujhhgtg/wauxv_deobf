@@ -49,9 +49,9 @@ public abstract class dqc {
         return new dfz(str, emcVar, zdVar.b.size(), SomeStaticHelpers.ab(dfxVarArr), zdVar);
     }
 
-    public static MethodHookWrapper ay(String str) {
+    public static MethodHookWrapper initModuleStatus(String str) {
         MethodHookWrapper methodHookWrapperVar = null;
-        String str2 = "com.highcapable.yukihookapi.hook.xposed.bridge.status.YukiXposedModuleStatus_Impl_Impl_me_hd_wauxv" instanceof dcx
+        String str2 = "com.highcapable.yukihookapi.hook.xposed.bridge.status.YukiXposedModuleStatus_Impl_Impl_me_hd_wauxv" instanceof Failure
                 ? null
                 : "com.highcapable.yukihookapi.hook.xposed.bridge.status.YukiXposedModuleStatus_Impl_Impl_me_hd_wauxv";
         if (str2 == null) {
@@ -67,7 +67,7 @@ public abstract class dqc {
             methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
         }
         if (methodHookWrapperVar == null) {
-            ewq.h("Failed to initialize YukiXposedModuleStatus");
+            Logger.logW("Failed to initialize YukiXposedModuleStatus");
         }
         return methodHookWrapperVar;
     }
@@ -82,7 +82,7 @@ public abstract class dqc {
         return j;
     }
 
-    public static final Object ba(long j, doi doiVar) {
+    public static final Object delayCoroutine(long j, doi doiVar) {
         if (j > 0) {
             CancellableContinuation cancellableContinuationVar = new CancellableContinuation(cmz.ab(doiVar));
             aox aoxVarU = cancellableContinuationVar.u();
@@ -103,11 +103,11 @@ public abstract class dqc {
                 return objT;
             }
         }
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 
     /* JADX WARN: Found duplicated region for block: B:49:0x0167 */
-    public static void bb(ayd aydVar, int i) {
+    public static void compactStorage(ayd aydVar, int i) {
         int i2;
         MappedByteBuffer mappedByteBufferAw;
         ArrayList arrayList = aydVar.s;
@@ -306,16 +306,16 @@ public abstract class dqc {
     }
 
     public static /* synthetic */ SyntheticPileOfMess bg(IEmpty5 bsvVar) {
-        return new SyntheticPileOfMess(GifEncoder.initConfig(null, HugeSyntheticPileOfHelpers.getJavaClass(bsvVar), 15));
+        return new SyntheticPileOfMess(SyntheticClass.initConfig(null, HugeSyntheticPileOfHelpers.getJavaClass(bsvVar), 15));
     }
 
     public static SyntheticPileOfMess bh(Class cls) {
-        return new SyntheticPileOfMess(GifEncoder.initConfig(null, cls, 15));
+        return new SyntheticPileOfMess(SyntheticClass.initConfig(null, cls, 15));
     }
 
     public static SyntheticPileOfMess getWrapperConfiguration(Object obj) {
-        return obj instanceof IEmpty5 ? new SyntheticPileOfMess(GifEncoder.initConfig(obj, HugeSyntheticPileOfHelpers.getJavaClass((IEmpty5) obj), 14))
-                : obj instanceof Class ? new SyntheticPileOfMess(GifEncoder.initConfig(obj, (Class) obj, 14)) : new SyntheticPileOfMess(GifEncoder.initConfig(obj, obj.getClass(), 14));
+        return obj instanceof IEmpty5 ? new SyntheticPileOfMess(SyntheticClass.initConfig(obj, HugeSyntheticPileOfHelpers.getJavaClass((IEmpty5) obj), 14))
+                : obj instanceof Class ? new SyntheticPileOfMess(SyntheticClass.initConfig(obj, (Class) obj, 14)) : new SyntheticPileOfMess(SyntheticClass.initConfig(obj, obj.getClass(), 14));
     }
 
     public static KotlinIntProgression bj(IntRange intRangeVar, int i) {
@@ -346,9 +346,9 @@ public abstract class dqc {
         }
     }
 
-    public static final void throwSomething(String str, zc zcVar) {
+    public static final void throwSomething(String str, KClass zcVar) {
         String strO;
-        String str2 = "in the polymorphic scope of '" + zcVar.d() + '\'';
+        String str2 = "in the polymorphic scope of '" + zcVar.getKotlinSimpleName() + '\'';
         if (str == null) {
             strO = StaticHelpers6.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH,
                     "Class discriminator was missing and no default serializers were registered ", str2);
@@ -356,7 +356,7 @@ public abstract class dqc {
             strO = "Serializer for subclass '" + str + "' is not found " + str2 + ".\nCheck if class with serial name '"
                     + str
                     + "' exists and serializer is registered in a corresponding SerializersModule.\nTo be registered automatically, class '"
-                    + str + "' has to be '@Serializable', and the base class '" + zcVar.d()
+                    + str + "' has to be '@Serializable', and the base class '" + zcVar.getKotlinSimpleName()
                     + "' has to be sealed and '@Serializable'.";
         }
         throw new SomeIllegalArgumentException(strO);

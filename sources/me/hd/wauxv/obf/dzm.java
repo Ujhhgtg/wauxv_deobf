@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dzm {
     public static final dzl Companion = new dzl();
-    public static final IHasGetValue[] a = { ewz.am(btx.a, new dtr(10)) };
+    public static final IHasGetValue[] a = { StaticAndroidHelpers.am(btx.a, new dtr(10)) };
     public final List b;
 
     public /* synthetic */ dzm(int i, List list) {

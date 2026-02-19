@@ -104,7 +104,7 @@ class Name implements Serializable {
 
     private Object completeRound(String str, String str2, Object obj) {
         if (obj == null) {
-            throw new InterpreterError(yg.k("lastEvalName = ", str));
+            throw new InterpreterError(yg.concat("lastEvalName = ", str));
         }
         this.lastEvalName = str;
         this.evalName = str2;
@@ -167,7 +167,7 @@ class Name implements Serializable {
         Object obj2 = name.evalBaseObject;
         if ((obj2 == null || (obj2 instanceof This)) && !z && z2) {
             NameSpace nameSpace = obj2 == null ? name.namespace : ((This) obj2).namespace;
-            This r10 = new NameSpace(nameSpace, yg.k("auto: ", strPrefix)).getThis(interpreter2);
+            This r10 = new NameSpace(nameSpace, yg.concat("auto: ", strPrefix)).getThis(interpreter2);
             nameSpace.setVariable(strPrefix, r10, false, name.evalBaseObject == null);
             return completeRound(strPrefix, suffix(name.evalName), r10);
         }

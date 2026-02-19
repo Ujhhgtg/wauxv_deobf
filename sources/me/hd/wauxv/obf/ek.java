@@ -427,12 +427,12 @@ public class ek implements dcq, IHandlesSwipeDismiss, sg {
                         emc.af(3, bssVar2);
                         bss bssVar3 = new bss(bssVar2.e, afwVar);
                         bssVar3.d = ajxVar;
-                        Object objI = bssVar3.i(KotlinUnit.INSTANCE);
+                        Object objI = bssVar3.i(Kotlin$Unit.INSTANCE);
                         if (objI != ahq.a) {
                             afwVar._bn(objI);
                         }
                     } catch (Throwable th) {
-                        afwVar._bn(FastKV.x(th));
+                        afwVar._bn(FastKV.getFailureFromException(th));
                     }
                 } else {
                     ajxVar.e = ahqVar;

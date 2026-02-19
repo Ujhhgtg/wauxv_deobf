@@ -32,7 +32,7 @@ public final class HookParam {
         try {
             iOrdinal = bhs.r().ordinal();
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
         if (iOrdinal != 0) {
             if (iOrdinal != 1) {
@@ -42,7 +42,7 @@ public final class HookParam {
                     "YukiHookAPI cannot support current Hook API or cannot found any available Hook APIs in current environment");
         }
         objX = XposedBridge.invokeOriginalMethod(member, obj, objArrCopyOf);
-        Throwable thB = dcy.b(objX);
+        Throwable thB = Success.exceptionOrNull(objX);
         if (thB != null) {
             String message = thB.getMessage();
             if (message != null) {
@@ -56,10 +56,10 @@ public final class HookParam {
                     throw new IllegalStateException(message2.toString());
                 }
             }
-            ArrayList arrayList = ewq.a;
-            ewq.g(4, "Invoke original Member [" + member + "] failed", thB);
+            ArrayList arrayList = Logger.a;
+            Logger.logException(4, "Invoke original Member [" + member + "] failed", thB);
         }
-        if (objX instanceof dcx) {
+        if (objX instanceof Failure) {
             return null;
         }
         return objX;

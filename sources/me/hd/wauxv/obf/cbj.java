@@ -26,7 +26,7 @@ public final /* synthetic */ class cbj implements IInvokable {
     public final Object invoke(Object obj) {
         int i = this.a;
         boolean zBooleanValue = true;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         Object obj2 = this.d;
         Object obj3 = this.c;
         Object obj4 = this.e;
@@ -47,11 +47,11 @@ public final /* synthetic */ class cbj implements IInvokable {
                     String strBo2 = obj != null ? dnr.bo(obj.toString(), " (Kotlin reflection is not available)", "")
                             : null;
                     if (configurationVar.optional != OptionalType.ENUM_SILENT) {
-                        Kotlin$Lazy kotlin$LazyVar = bth.a;
+                        Kotlin$Lazy kotlin$LazyVar = LogConfig.isDevelopmentMode;
                         String str2 = "[FILTER] [" + (zBooleanValue ? "HIT" : "MISS") + "] " + str + ": " + strBo
                                 + " [RESOLVED] " + strBo2;
-                        if (bth.d.ordinal() <= 0) {
-                            bth.c.debug(str2);
+                        if (LogConfig.logLevelEnum.ordinal() <= 0) {
+                            LogConfig.logBackend.logD(str2);
                         }
                     }
                 }

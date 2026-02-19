@@ -50,14 +50,14 @@ public final /* synthetic */ class bn implements IInvokable {
         cdj cdjVar = new cdj();
         cdjVar.t("MicroMsg.SDK.XmlParser" /* "MicroMsg.SDK.XmlParser" /* "MicroMsg.SDK.XmlParser" /* cnb.z(-442235602598698L)  */, "[ %s ]" /* "[ %s ]" /* "[ %s ]" /* cnb.z(-442119638481706L)  */);
         bahVar.d = cdjVar;
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 
     private final Object c(Object obj) {
         HookParam hookParam = (HookParam) obj;
         hookParam.getClass();
         new ek(hookParam, 0, 8).q("" /* "" /* "" /* cnb.z(-544253960780586L)  */);
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 
     private final Object d(Object obj) {
@@ -70,9 +70,9 @@ public final /* synthetic */ class bn implements IInvokable {
                 objX = null;
             }
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        if (objX instanceof dcx) {
+        if (objX instanceof Failure) {
             objX = null;
         }
         Integer num = (Integer) objX;
@@ -80,7 +80,7 @@ public final /* synthetic */ class bn implements IInvokable {
         if (iIntValue == 0 || iIntValue == 1) {
             hookParam.setResult(null);
         }
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 
     private final Object e(Object obj) {
@@ -104,7 +104,7 @@ public final /* synthetic */ class bn implements IInvokable {
                     egVar.r = linearLayout;
                 }
                 bzyVar.i().show();
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             }
         }
         throw new NullPointerException("Missing required view with ID: "
@@ -136,7 +136,7 @@ public final /* synthetic */ class bn implements IInvokable {
         final int i7 = 1;
         cst cstVar = null;
         final int i8 = 0;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 ((RelativeLayout.LayoutParams) obj).addRule(14);
@@ -393,9 +393,9 @@ public final /* synthetic */ class bn implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                if (objX instanceof dcx) {
+                if (objX instanceof Failure) {
                     objX = null;
                 }
                 throwIfVar1IsNull(objX);
@@ -423,7 +423,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 cfVar.getClass();
                 LinkedHashMap linkedHashMap = blu.a;
                 cls = ViewGroup.LayoutParams.class;
-                Class<ViewGroup.LayoutParams> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<ViewGroup.LayoutParams> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cls = clsBf != null ? clsBf : ViewGroup.LayoutParams.class;
                 ArrayList arrayList2 = new ArrayList();
                 if (blu.c) {
@@ -432,9 +432,9 @@ public final /* synthetic */ class bn implements IInvokable {
                 blu bluVar = new blu(StaticHelpers5.z(arrayList2));
                 blr blrVarI = blu.i(bluVar, cls, null, false, context);
                 blu bluVar2 = blrVarI.f;
-                blq blqVarD = GifEncoder.d(bluVar2, blrVarI.a, blrVarI.b, blr.g(blrVarI, 0, 0, null, 55));
+                blq blqVarD = SyntheticClass.d(bluVar2, blrVarI.a, blrVarI.b, blr.g(blrVarI, 0, 0, null, 55));
                 cls2 = RelativeLayout.class;
-                Class<RelativeLayout> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<RelativeLayout> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 if (clsBf2 == null) {
                     clsBf2 = cls2;
                 }
@@ -442,7 +442,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 LinkedHashMap linkedHashMap2 = bluVar2.f;
                 ViewGroup viewGroup2 = (ViewGroup) viewH;
                 viewGroup2.setLayoutParams(blqVarD.f());
-                Class<RelativeLayout> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<RelativeLayout> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 if (clsBf3 == null) {
                     clsBf3 = cls2;
                 }
@@ -465,17 +465,17 @@ public final /* synthetic */ class bn implements IInvokable {
                 if (linkedHashMap2.size() != size) {
                     throw new cth(concat("Performers are not allowed to appear in ", name, " DSL creation process."));
                 }
-                Class<RelativeLayout> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<RelativeLayout> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 blr.i(blrVarI, null, clsBf4 != null ? clsBf4 : RelativeLayout.class);
                 blr.h(blrVarI, viewGroup2);
                 cls3 = RelativeLayout.LayoutParams.class;
-                Class<RelativeLayout.LayoutParams> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
+                Class<RelativeLayout.LayoutParams> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 blr blrVarI2 = blu.i(bluVar2, clsBf5 != null ? clsBf5 : RelativeLayout.LayoutParams.class, viewGroup2,
                         true, null);
                 blu bluVar3 = blrVarI2.f;
-                blq blqVarD2 = GifEncoder.d(bluVar3, blrVarI2.a, blrVarI2.b, blr.g(blrVarI2, 0, 0, new bn(i8), 31));
+                blq blqVarD2 = SyntheticClass.d(bluVar3, blrVarI2.a, blrVarI2.b, blr.g(blrVarI2, 0, 0, new bn(i8), 31));
                 cls4 = FrameLayout.class;
-                Class<FrameLayout> clsBf6 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
+                Class<FrameLayout> clsBf6 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
                 if (clsBf6 == null) {
                     clsBf6 = cls4;
                 }
@@ -483,7 +483,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 LinkedHashMap linkedHashMap3 = bluVar3.f;
                 ViewGroup viewGroup3 = (ViewGroup) viewH2;
                 viewGroup3.setLayoutParams(blqVarD2.f());
-                Class<FrameLayout> clsBf7 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
+                Class<FrameLayout> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
                 if (clsBf7 == null) {
                     clsBf7 = cls4;
                 }
@@ -495,27 +495,27 @@ public final /* synthetic */ class bn implements IInvokable {
                 if (linkedHashMap3.size() != size2) {
                     throw new cth(concat("Performers are not allowed to appear in ", name2, " DSL creation process."));
                 }
-                Class<FrameLayout> clsBf8 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
+                Class<FrameLayout> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
                 blr.i(blrVarI2, null, clsBf8 != null ? clsBf8 : FrameLayout.class);
                 blr.h(blrVarI2, viewGroup3);
                 cls5 = FrameLayout.LayoutParams.class;
-                Class<FrameLayout.LayoutParams> clsBf9 = HugeSyntheticPileOfHelpers.bf(dal.b(cls5));
+                Class<FrameLayout.LayoutParams> clsBf9 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls5));
                 blr blrVarI3 = blu.i(bluVar3, clsBf9 != null ? clsBf9 : FrameLayout.LayoutParams.class, viewGroup3,
                         true, null);
                 blu bluVar4 = blrVarI3.f;
                 bv bvVar = bv.a;
-                blq blqVarD3 = GifEncoder.d(bluVar4, blrVarI3.a, blrVarI3.b,
+                blq blqVarD3 = SyntheticClass.d(bluVar4, blrVarI3.a, blrVarI3.b,
                         blr.g(blrVarI3, blrVarI3.k(Integer.valueOf(bvVar.k())).intValue(),
                                 blrVarI3.k(Integer.valueOf(bvVar.k())).intValue(), null, 60));
                 cls6 = ImageView.class;
-                Class<ImageView> clsBf10 = HugeSyntheticPileOfHelpers.bf(dal.b(cls6));
+                Class<ImageView> clsBf10 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls6));
                 if (clsBf10 == null) {
                     clsBf10 = cls6;
                 }
                 View viewH3 = blu.dexFind(bluVar4, clsBf10, null, blrVarI3.j());
                 LinkedHashMap linkedHashMap4 = bluVar4.f;
                 viewH3.setLayoutParams(blqVarD3.f());
-                Class<ImageView> clsBf11 = HugeSyntheticPileOfHelpers.bf(dal.b(cls6));
+                Class<ImageView> clsBf11 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls6));
                 if (clsBf11 == null) {
                     clsBf11 = cls6;
                 }
@@ -588,7 +588,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 if (linkedHashMap4.size() != size3) {
                     throw new cth(concat("Performers are not allowed to appear in ", name3, " DSL creation process."));
                 }
-                Class<ImageView> clsBf12 = HugeSyntheticPileOfHelpers.bf(dal.b(cls6));
+                Class<ImageView> clsBf12 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls6));
                 blr.i(blrVarI3, null, clsBf12 != null ? clsBf12 : ImageView.class);
                 blr.h(blrVarI3, viewH3);
                 cf.n(cfVar, blrVarI2, R.id.AccountInfoCenter_tvName, R.id.AccountInfoCenter_flAvatar, cb.a.k(), 18.0f,
@@ -666,9 +666,9 @@ public final /* synthetic */ class bn implements IInvokable {
                 aqx aqxVar2 = new aqx();
                 byoVar.getClass();
                 int i11 = 0;
-                ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(Context.class), dal.b(String.class), dal.b(String.class),
-                        dal.b(String.class), dal.b(String.class), dal.b(DialogInterface.OnClickListener.class),
-                        dal.b(DialogInterface.OnClickListener.class) }, 7, dqc.bh(StaticHelpers7.az(byn.a)).getMethodResolverBasedOnPreviouslyProvidedConfig()))
+                ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(Context.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class),
+                        dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(DialogInterface.OnClickListener.class),
+                        dal.getKClassFromClass(DialogInterface.OnClickListener.class) }, 7, dqc.bh(StaticHelpers7.az(byn.a)).getMethodResolverBasedOnPreviouslyProvidedConfig()))
                         .e(context4, str, strZ9, strZ10, strZ11, aqxVar, aqxVar2);
                 return kotlinUnitVar;
             case 5:
@@ -680,29 +680,29 @@ public final /* synthetic */ class bn implements IInvokable {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = FastKV.x(th2);
+                    objX2 = FastKV.getFailureFromException(th2);
                 }
-                Object obj2 = objX2 instanceof dcx ? null : objX2;
+                Object obj2 = objX2 instanceof Failure ? null : objX2;
                 throwIfVar1IsNull(obj2);
                 int i12 = 0;
                 FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).r();
                 fieldResolverVarR.name = "f" /* "f" /* "f" /* cnb.z(-477029132663594L)  */;
-                Object objD = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).d();
+                Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue();
                 throwIfVar1IsNull(objD);
                 FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objD).r();
                 fieldResolverVarR2.name = "f" /* "f" /* "f" /* cnb.z(-477037722598186L)  */;
-                Object objE = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).e();
+                Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue_();
                 throwIfVar1IsNull(objE);
                 try {
                     if (new JSONObject((String) objE)
                             .optJSONArray("ad_slot_data" /* "ad_slot_data" /* "ad_slot_data" /* cnb.z(-477046312532778L)  */) != null) {
                         FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objD).r();
                         fieldResolverVarR3.name = "f" /* "f" /* "f" /* cnb.z(-476973298088746L)  */;
-                        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).f("{}" /* "{}" /* "{}" /* cnb.z(-476981888023338L)  */);
+                        ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).setValue("{}" /* "{}" /* "{}" /* cnb.z(-476981888023338L)  */);
                     }
                     break;
                 } catch (Throwable th3) {
-                    FastKV.x(th3);
+                    FastKV.getFailureFromException(th3);
                 }
                 return kotlinUnitVar;
             case 6:
@@ -736,7 +736,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 bahVar.d = cdjVar;
                 return kotlinUnitVar;
             case 8:
-                ewz.aq(fs.a, new bn(9));
+                StaticAndroidHelpers.runOnUiThread(fs.a, new bn(9));
                 return kotlinUnitVar;
             case 9:
                 bn bnVar = new bn(i4);
@@ -808,7 +808,7 @@ public final /* synthetic */ class bn implements IInvokable {
                                 gc.a.u(String.valueOf(ceeVarD.c.getText()));
                                 break;
                         }
-                        return KotlinUnit.INSTANCE;
+                        return Kotlin$Unit.INSTANCE;
                     }
                 }, 0));
                 bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */);
@@ -871,7 +871,7 @@ public final /* synthetic */ class bn implements IInvokable {
                                 gc.a.u(String.valueOf(ceeVarD2.c.getText()));
                                 break;
                         }
-                        return KotlinUnit.INSTANCE;
+                        return Kotlin$Unit.INSTANCE;
                     }
                 }, 0));
                 bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar3, "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */);
@@ -892,9 +892,9 @@ public final /* synthetic */ class bn implements IInvokable {
                         objX3 = null;
                     }
                 } catch (Throwable th4) {
-                    objX3 = FastKV.x(th4);
+                    objX3 = FastKV.getFailureFromException(th4);
                 }
-                if (objX3 instanceof dcx) {
+                if (objX3 instanceof Failure) {
                     objX3 = null;
                 }
                 String str5 = (String) objX3;
@@ -905,9 +905,9 @@ public final /* synthetic */ class bn implements IInvokable {
                         objX4 = null;
                     }
                 } catch (Throwable th5) {
-                    objX4 = FastKV.x(th5);
+                    objX4 = FastKV.getFailureFromException(th5);
                 }
-                if (objX4 instanceof dcx) {
+                if (objX4 instanceof Failure) {
                     objX4 = null;
                 }
                 String str7 = (String) objX4;
@@ -939,7 +939,7 @@ public final /* synthetic */ class bn implements IInvokable {
                                 dlx.a.getClass();
                                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
                                 methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
-                                Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class), dal.b(Object[].class) },
+                                Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) },
                                         2, methodResolverVarT)).j("SELECT createTime FROM message WHERE msgSvrId = ?" /*
                                                                                                             * cnb.z(-
                                                                                                             * 442695164099370L)
@@ -960,7 +960,7 @@ public final /* synthetic */ class bn implements IInvokable {
                                         throwIfVar1IsNull(patternCompile, "compile(...)");
                                         Matcher matcher = patternCompile.matcher(str9);
                                         throwIfVar1IsNull(matcher, "matcher(...)");
-                                        bzx bzxVarY = ewz.y(matcher, 0, str9);
+                                        bzx bzxVarY = StaticAndroidHelpers.y(matcher, 0, str9);
                                         aye.w(ewg.j.w, str8,
                                                 "\"" + (bzxVarY != null ? (String) ((bzv) bzxVarY.e()).get(2) : null)
                                                         + "\" " /* "\" " /* "\" " /* cnb.z(-442905617496874L)  */ + gc.a.o(),

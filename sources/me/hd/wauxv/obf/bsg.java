@@ -23,7 +23,7 @@ public final class bsg implements btd {
             btd btdVar = (btd) ((bzd) it).next();
             if ("kotlinx.serialization.json.JsonLiteral".equals(btdVar.getDescriptor().b())) {
                 String str = "\n                The name of serial descriptor should uniquely identify associated serializer.\n                For serial name kotlinx.serialization.json.JsonLiteral there already exists "
-                        + dal.b(btdVar.getClass()).d()
+                        + dal.getKClassFromClass(btdVar.getClass()).getKotlinSimpleName()
                         + ".\n                Please refer to SerialDescriptor documentation for additional information.\n            ";
                 throwIfVar1IsNull(str, "<this>");
                 bvn bvnVar = new bvn(str);
@@ -117,7 +117,7 @@ public final class bsg implements btd {
         if (brxVarBw instanceof bsf) {
             return (bsf) brxVarBw;
         }
-        throw KotlinHelpers2.ak(-1, "Unexpected JSON element, expected JsonLiteral, had " + dal.b(brxVarBw.getClass()),
+        throw KotlinHelpers2.ak(-1, "Unexpected JSON element, expected JsonLiteral, had " + dal.getKClassFromClass(brxVarBw.getClass()),
                 brxVarBw.toString());
     }
 

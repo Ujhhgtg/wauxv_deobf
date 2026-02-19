@@ -16,7 +16,7 @@ public final class ClassTooLargeException extends IndexOutOfBoundsException {
     }
 
     private static /* synthetic */ String stringConcat$0(String str) {
-        return yg.k("Class too large: ", str);
+        return yg.concat("Class too large: ", str);
     }
 
     public String getClassName() {

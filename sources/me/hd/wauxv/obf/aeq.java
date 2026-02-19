@@ -17,13 +17,13 @@ public final class aeq extends bws {
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
         aeq aeqVar = a;
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
-        aki akiVarAd = aeqVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
-        akiVarAd.m(new act(21));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = aeqVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+        hookManagerVarAd.m(new act(21));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
         MethodResolver methodResolverVarT2 = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.name = "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* cnb.z(-38311108279082L)   */;
-        aki akiVarAd2 = aeqVar.ad((MethodHookWrapper) StaticHelpers6.n(new Object[] { eoz.a, cvh.a.b() }, 2, methodResolverVarT2), hookPriorityEnumVar);
-        akiVarAd2.n(new act(22));
-        akiVarAd2.o();
+        HookManager hookManagerVarAd2 = aeqVar.createImmediateHook((MethodHookWrapper) StaticHelpers6.n(new Object[] { eoz.a, cvh.a.b() }, 2, methodResolverVarT2), hookPriorityEnumVar);
+        hookManagerVarAd2.n(new act(22));
+        hookManagerVarAd2.initInstantCollectionAndApplyHooks();
     }
 }

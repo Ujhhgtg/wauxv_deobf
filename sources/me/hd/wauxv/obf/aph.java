@@ -407,7 +407,7 @@ public final class aph {
                                         if (this.i < 4) {
                                             CharSequence charSequence3 = this.c;
                                             int i24 = this.g;
-                                            int iAu = ewz.au('#', i24, charSequence3.length(), charSequence3) - i24;
+                                            int iAu = StaticAndroidHelpers.au('#', i24, charSequence3.length(), charSequence3) - i24;
                                             if (iAu == 0 || iAu > 6) {
                                                 bkmVar = null;
                                             } else {
@@ -465,11 +465,11 @@ public final class aph {
                                             } else {
                                                 char cCharAt9 = charSequence3.charAt(i24);
                                                 if (cCharAt9 == '-') {
-                                                    i3 = ewz.av(ewz.au(SignatureVisitor.SUPER, i24 + 1, charSequence3.length(), charSequence3), charSequence3.length(), charSequence3) >= charSequence3.length() ? 2 : i;
+                                                    i3 = StaticAndroidHelpers.av(StaticAndroidHelpers.au(SignatureVisitor.SUPER, i24 + 1, charSequence3.length(), charSequence3), charSequence3.length(), charSequence3) >= charSequence3.length() ? 2 : i;
                                                 } else if (cCharAt9 == '=') {
-                                                    if (ewz.av(ewz.au(SignatureVisitor.INSTANCEOF, i24 + 1, charSequence3.length(), charSequence3), charSequence3.length(), charSequence3) >= charSequence3.length()) {
+                                                    if (StaticAndroidHelpers.av(StaticAndroidHelpers.au(SignatureVisitor.INSTANCEOF, i24 + 1, charSequence3.length(), charSequence3), charSequence3.length(), charSequence3) >= charSequence3.length()) {
                                                         i3 = 1;
-                                                    } else if (ewz.av(ewz.au(SignatureVisitor.SUPER, i24 + 1, charSequence3.length(), charSequence3), charSequence3.length(), charSequence3) >= charSequence3.length()) {
+                                                    } else if (StaticAndroidHelpers.av(StaticAndroidHelpers.au(SignatureVisitor.SUPER, i24 + 1, charSequence3.length(), charSequence3), charSequence3.length(), charSequence3) >= charSequence3.length()) {
                                                     }
                                                 }
                                                 if (i3 > 0) {

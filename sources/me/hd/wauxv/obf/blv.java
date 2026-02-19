@@ -49,7 +49,7 @@ public final /* synthetic */ class blv implements IEmpty4 {
                 while (it.hasNext()) {
                     qVar.invoke(((cnv) it.next()).h);
                 }
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
         }
     }
 }

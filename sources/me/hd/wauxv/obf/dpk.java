@@ -148,7 +148,7 @@ public final class dpk extends LinearLayout {
             if (iMax <= 0) {
                 return;
             }
-            if (iMax * childCount <= getMeasuredWidth() - (((int) ewz.ag(getContext(), 16)) * 2)) {
+            if (iMax * childCount <= getMeasuredWidth() - (((int) StaticAndroidHelpers.ag(getContext(), 16)) * 2)) {
                 boolean z2 = false;
                 for (int i4 = 0; i4 < childCount; i4++) {
                     LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) getChildAt(i4).getLayoutParams();

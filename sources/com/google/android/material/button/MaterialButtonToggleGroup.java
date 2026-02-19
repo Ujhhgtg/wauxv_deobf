@@ -23,7 +23,7 @@ import java.util.Set;
 import java.util.TreeMap;
 import java.util.WeakHashMap;
 import me.hd.wauxv.R;
-import me.hd.wauxv.obf.bc;
+import me.hd.wauxv.obf.LateinitProperty;
 import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.SyntheticPileOfMess;
 import me.hd.wauxv.obf.cae;
@@ -33,7 +33,7 @@ import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.dgl;
 import me.hd.wauxv.obf.dgm;
 import me.hd.wauxv.obf.ViewCompat;
-import me.hd.wauxv.obf.ewz;
+import me.hd.wauxv.obf.StaticAndroidHelpers;
 import me.hd.wauxv.obf.o;
 import me.hd.wauxv.obf.yb;
 
@@ -268,7 +268,7 @@ public class MaterialButtonToggleGroup extends LinearLayout {
     @Override // android.view.View
     public final void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo accessibilityNodeInfo) {
         super.onInitializeAccessibilityNodeInfo(accessibilityNodeInfo);
-        accessibilityNodeInfo.setCollectionInfo((AccessibilityNodeInfo.CollectionInfo) bc.f(1, getVisibleButtonCount(), this.h ? 1 : 2).e);
+        accessibilityNodeInfo.setCollectionInfo((AccessibilityNodeInfo.CollectionInfo) LateinitProperty.f(1, getVisibleButtonCount(), this.h ? 1 : 2).e);
     }
 
     @Override // android.widget.LinearLayout, android.view.View
@@ -306,9 +306,9 @@ public class MaterialButtonToggleGroup extends LinearLayout {
                     boolean z = getOrientation() == 0;
                     o oVar = caf.a;
                     if (i == firstVisibleChildIndex) {
-                        cafVar = z ? ewz.al(this) ? new caf(oVar, oVar, cafVar2.c, cafVar2.d) : new caf(cafVar2.b, cafVar2.e, oVar, oVar) : new caf(cafVar2.b, oVar, cafVar2.c, oVar);
+                        cafVar = z ? StaticAndroidHelpers.al(this) ? new caf(oVar, oVar, cafVar2.c, cafVar2.d) : new caf(cafVar2.b, cafVar2.e, oVar, oVar) : new caf(cafVar2.b, oVar, cafVar2.c, oVar);
                     } else if (i == lastVisibleChildIndex) {
-                        cafVar = z ? ewz.al(this) ? new caf(cafVar2.b, cafVar2.e, oVar, oVar) : new caf(oVar, oVar, cafVar2.c, cafVar2.d) : new caf(oVar, cafVar2.e, oVar, cafVar2.d);
+                        cafVar = z ? StaticAndroidHelpers.al(this) ? new caf(cafVar2.b, cafVar2.e, oVar, oVar) : new caf(oVar, oVar, cafVar2.c, cafVar2.d) : new caf(oVar, cafVar2.e, oVar, cafVar2.d);
                     } else {
                         cafVar2 = null;
                     }

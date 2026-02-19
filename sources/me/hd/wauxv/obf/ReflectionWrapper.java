@@ -203,9 +203,9 @@ public abstract class ReflectionWrapper {
         try {
             objX = createInstanceWithArgs(cls, Arrays.copyOf(objArr, objArr.length));
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        if (objX instanceof dcx) {
+        if (objX instanceof Failure) {
             return null;
         }
         return objX;
@@ -219,9 +219,9 @@ public abstract class ReflectionWrapper {
         try {
             objX = tryGetClassByName(classLoader, str);
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        return (Class) (objX instanceof dcx ? null : objX);
+        return (Class) (objX instanceof Failure ? null : objX);
     }
 
     public static final boolean g(ClassLoader classLoader, String str) {
@@ -232,9 +232,9 @@ public abstract class ReflectionWrapper {
                 objX = null;
             }
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        return ((Class) (objX instanceof dcx ? null : objX)) != null;
+        return ((Class) (objX instanceof Failure ? null : objX)) != null;
     }
 
     public static FactoryPools h(String str, amd amdVar, int i) {

@@ -41,7 +41,7 @@ public final /* synthetic */ class gi implements bgf {
         Class cls;
         int i = this.a;
         int i2 = 8;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 ((bmm) obj).h(null);
@@ -55,15 +55,15 @@ public final /* synthetic */ class gi implements bgf {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                if (objX instanceof dcx) {
+                if (objX instanceof Failure) {
                     objX = null;
                 }
                 if (objX != null) {
                     int i3 = 0;
                     MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objX).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                    methodResolverVarT.returnType = dal.b(Integer.TYPE);
+                    methodResolverVarT.returnType = dal.getKClassFromClass(Integer.TYPE);
                     Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT)).j(new Object[0]);
                     throwIfVar1IsNull(objJ);
                     switch (((Number) objJ).intValue()) {
@@ -138,9 +138,9 @@ public final /* synthetic */ class gi implements bgf {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = FastKV.x(th2);
+                    objX2 = FastKV.getFailureFromException(th2);
                 }
-                if (objX2 instanceof dcx) {
+                if (objX2 instanceof Failure) {
                     objX2 = null;
                 }
                 try {
@@ -149,9 +149,9 @@ public final /* synthetic */ class gi implements bgf {
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = FastKV.x(th3);
+                    objX3 = FastKV.getFailureFromException(th3);
                 }
-                String str = (String) (objX3 instanceof dcx ? null : objX3);
+                String str = (String) (objX3 instanceof Failure ? null : objX3);
                 JSONObject jSONObject = new JSONObject(str != null ? str : "");
                 if (nullSafeIsEqual(jSONObject.get("api_name" /* "api_name" /* "api_name" /* "api_name" /* cnb.z(-412488659106602L)   */), "webapi_getadvert" /* "webapi_getadvert" /* "webapi_getadvert" /* "webapi_getadvert" /* cnb.z(-412450004400938L)   */)) {
                     JSONObject jSONObject2 = jSONObject.getJSONObject("data" /* "data" /* "data" /* "data" /* cnb.z(-412325450349354L)   */);
@@ -194,9 +194,9 @@ public final /* synthetic */ class gi implements bgf {
                         objX4 = null;
                     }
                 } catch (Throwable th4) {
-                    objX4 = FastKV.x(th4);
+                    objX4 = FastKV.getFailureFromException(th4);
                 }
-                if (objX4 instanceof dcx) {
+                if (objX4 instanceof Failure) {
                     objX4 = null;
                 }
                 String str2 = (String) objX4;
@@ -207,9 +207,9 @@ public final /* synthetic */ class gi implements bgf {
                         objX5 = null;
                     }
                 } catch (Throwable th5) {
-                    objX5 = FastKV.x(th5);
+                    objX5 = FastKV.getFailureFromException(th5);
                 }
-                String str4 = (String) (objX5 instanceof dcx ? null : objX5);
+                String str4 = (String) (objX5 instanceof Failure ? null : objX5);
                 String str5 = str4 != null ? str4 : "";
                 if (str3.equals("onVideoTimeUpdate" /* "onVideoTimeUpdate" /* "onVideoTimeUpdate" /* "onVideoTimeUpdate" /* cnb.z(-434173948984106L)   */)) {
                     ek ekVar = new ek(hookParam3, 1, 8);
@@ -285,9 +285,9 @@ public final /* synthetic */ class gi implements bgf {
                         objX6 = null;
                     }
                 } catch (Throwable th6) {
-                    objX6 = FastKV.x(th6);
+                    objX6 = FastKV.getFailureFromException(th6);
                 }
-                if (objX6 instanceof dcx) {
+                if (objX6 instanceof Failure) {
                     objX6 = null;
                 }
                 Boolean bool = (Boolean) objX6;
@@ -298,19 +298,19 @@ public final /* synthetic */ class gi implements bgf {
                             objX7 = null;
                         }
                     } catch (Throwable th7) {
-                        objX7 = FastKV.x(th7);
+                        objX7 = FastKV.getFailureFromException(th7);
                     }
-                    Object obj2 = objX7 instanceof dcx ? null : objX7;
+                    Object obj2 = objX7 instanceof Failure ? null : objX7;
                     throwIfVar1IsNull(obj2);
                     int i5 = 0;
                     FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).r();
                     fieldResolverVarR.name = "field_UserName" /* "field_UserName" /* "field_UserName" /* "field_UserName" /* cnb.z(-443841920367402L)   */;
-                    Object objE = ((azk) yg.e(fieldResolverVarR)).e();
+                    Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
                     throwIfVar1IsNull(objE);
                     bcp.a.getClass();
-                    Method methodBb = StaticHelpers7.bb(bco.a);
+                    Method methodBb = StaticHelpers7.toDexMethod(bco.a);
                     dgf.a.getClass();
-                    methodBb.invoke(dgf.b(StaticHelpers7.bb(bcn.a).getDeclaringClass()), (String) objE);
+                    methodBb.invoke(dgf.b(StaticHelpers7.toDexMethod(bcn.a).getDeclaringClass()), (String) objE);
                 }
                 return kotlinUnitVar;
             case 25:
@@ -360,7 +360,7 @@ public final /* synthetic */ class gi implements bgf {
                 Activity activity = (Activity) (objE2 instanceof Activity ? objE2 : null);
                 if (activity == null) {
                     cls = Activity.class;
-                    Class<Activity> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                    Class<Activity> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                     throw new IllegalStateException("HookParam instance cannot cast to ".concat((clsBf != null ? clsBf : Activity.class).getName()).toString());
                 }
                 boolean zI = mb.a.i();
@@ -378,8 +378,8 @@ public final /* synthetic */ class gi implements bgf {
             default:
                 int i8 = 0;
                 FieldResolver fieldResolverVarAa = StaticHelpers6.aa((bmm) obj);
-                fieldResolverVarAa.fieldType = dal.b(Button.class);
-                Object objE3 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).e();
+                fieldResolverVarAa.fieldType = dal.getKClassFromClass(Button.class);
+                Object objE3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue_();
                 throwIfVar1IsNull(objE3);
                 ((Button) objE3).callOnClick();
                 return kotlinUnitVar;

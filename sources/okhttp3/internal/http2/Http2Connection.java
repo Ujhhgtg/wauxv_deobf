@@ -15,7 +15,7 @@ import me.hd.wauxv.obf.bfu;
 import me.hd.wauxv.obf.dai;
 import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.emc;
-import me.hd.wauxv.obf.KotlinUnit;
+import me.hd.wauxv.obf.Kotlin$Unit;
 import me.hd.wauxv.obf.rh;
 import me.hd.wauxv.obf.rl;
 import me.hd.wauxv.obf.rm;
@@ -513,7 +513,7 @@ public final class Http2Connection implements Closeable {
         @Override // me.hd.wauxv.obf.bfu
         public /* bridge */ /* synthetic */ Object invoke() throws Throwable {
             m13invoke();
-            return KotlinUnit.INSTANCE;
+            return Kotlin$Unit.INSTANCE;
         }
 
         /*

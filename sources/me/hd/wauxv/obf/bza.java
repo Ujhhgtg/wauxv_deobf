@@ -12,7 +12,7 @@ public abstract class bza {
 
     static {
         String property;
-        int i = dpg.a;
+        int i = JustAStaticField.availableProcessors;
         Object next = null;
         try {
             property = System.getProperty("kotlinx.coroutines.fast.service.loader");

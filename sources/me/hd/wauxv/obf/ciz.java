@@ -7,7 +7,7 @@ public abstract class ciz {
 
     static {
         bpg bpgVar = new bpg(0);
-        bpgVar.b(dal.b(ciy.class), new cgu(16));
+        bpgVar.b(dal.getKClassFromClass(ciy.class), new cgu(16));
         a = bpgVar.c();
     }
 }

@@ -1,6 +1,5 @@
 package com.umeng.analytics.pro;
 
-import com.umeng.analytics.pro.da;
 import java.io.ByteArrayOutputStream;
 import java.io.UnsupportedEncodingException;
 import me.hd.wauxv.obf.yg;
@@ -38,7 +37,7 @@ public class cq {
         try {
             return new String(a(chVar), str);
         } catch (UnsupportedEncodingException unused) {
-            throw new cn(yg.k("JVM DOES NOT SUPPORT ENCODING: ", str));
+            throw new cn(yg.concat("JVM DOES NOT SUPPORT ENCODING: ", str));
         }
     }
 }

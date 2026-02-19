@@ -31,12 +31,12 @@ public final class xf extends SwitchHook implements bmz, bng {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void getThisObject() {
-        aki akiVarAb = PackageParam.ab(this, dqc.toSingletonList(StaticHelpers7.bb(xa.a)));
+        HookManager hookManagerVarAb = PackageParam.createHook(this, dqc.toSingletonList(StaticHelpers7.toDexMethod(xa.a)));
         ws wsVar = new ws(3);
         xf xfVar = a;
-        xfVar.y(akiVarAb, wsVar);
-        xfVar.x(akiVarAb, new ws(4));
-        akiVarAb.o();
+        xfVar.y(hookManagerVarAb, wsVar);
+        xfVar.x(hookManagerVarAb, new ws(4));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -157,7 +157,7 @@ public final class xf extends SwitchHook implements bmz, bng {
             Context context = linearLayout.getContext();
             LinkedHashMap linkedHashMap = blu.a;
             cls = ViewGroup.LayoutParams.class;
-            Class<ViewGroup.LayoutParams> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+            Class<ViewGroup.LayoutParams> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
             if (clsBf == null) {
                 clsBf = cls;
             }
@@ -170,15 +170,15 @@ public final class xf extends SwitchHook implements bmz, bng {
             blr blrVarI = blu.i(bluVar, clsBf, null, false, context);
             blu bluVar2 = blrVarI.f;
             LinkedHashMap linkedHashMap2 = bluVar2.f;
-            blq blqVarD = GifEncoder.d(bluVar2, blrVarI.a, blrVarI.b, blr.g(blrVarI, 0, 0, null, 55));
+            blq blqVarD = SyntheticClass.d(bluVar2, blrVarI.a, blrVarI.b, blr.g(blrVarI, 0, 0, null, 55));
             cls2 = RecyclerView.class;
-            Class<RecyclerView> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+            Class<RecyclerView> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
             if (clsBf2 == null) {
                 clsBf2 = cls2;
             }
             View viewH = blu.dexFind(bluVar2, clsBf2, null, blrVarI.j());
             viewH.setLayoutParams(blqVarD.f());
-            Class<RecyclerView> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+            Class<RecyclerView> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
             if (clsBf3 == null) {
                 clsBf3 = cls2;
             }
@@ -203,7 +203,7 @@ public final class xf extends SwitchHook implements bmz, bng {
             ws wsVar = new ws(6);
             wx wxVar = new wx(i2);
             bep bepVar = new bep(25);
-            Class<ViewGroup.LayoutParams> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+            Class<ViewGroup.LayoutParams> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
             ((LinkedHashSet) eaVar.c).add(
                     new daa(new erp(
                             new DefaultConfig(clsBf4 != null ? clsBf4 : ViewGroup.LayoutParams.class, bepVar, wsVar),
@@ -273,7 +273,7 @@ public final class xf extends SwitchHook implements bmz, bng {
             if (linkedHashMap2.size() != size) {
                 throw new cth(concat("Performers are not allowed to appear in ", name, " DSL creation process."));
             }
-            Class<RecyclerView> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+            Class<RecyclerView> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
             blr.i(blrVarI, null, clsBf5 != null ? clsBf5 : RecyclerView.class);
             blr.h(blrVarI, viewH);
             linearLayout.addView(bluVar.k(), 0);

@@ -45,7 +45,7 @@ import me.hd.wauxv.obf.dqk;
 import me.hd.wauxv.obf.eqq;
 import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.ewc;
-import me.hd.wauxv.obf.ewz;
+import me.hd.wauxv.obf.StaticAndroidHelpers;
 import me.hd.wauxv.obf.hf;
 import me.hd.wauxv.obf.ot;
 import me.hd.wauxv.obf.yj;
@@ -222,7 +222,7 @@ public class Chip extends hf implements yn, dgx, Checkable {
         FastKV.q(context2, attributeSet, iArr, me.hd.wauxv.R.attr.chipStyle, me.hd.wauxv.R.style.Widget_MaterialComponents_Chip_Action, new int[0]);
         TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(attributeSet, iArr, me.hd.wauxv.R.attr.chipStyle, me.hd.wauxv.R.style.Widget_MaterialComponents_Chip_Action);
         this.m = typedArrayObtainStyledAttributes.getBoolean(32, false);
-        this.o = (int) Math.ceil(typedArrayObtainStyledAttributes.getDimension(20, (float) Math.ceil(ewz.ag(getContext(), 48))));
+        this.o = (int) Math.ceil(typedArrayObtainStyledAttributes.getDimension(20, (float) Math.ceil(StaticAndroidHelpers.ag(getContext(), 48))));
         typedArrayObtainStyledAttributes.recycle();
         setChipDrawable(yoVar);
         yoVar.dy(eqq.e(this));

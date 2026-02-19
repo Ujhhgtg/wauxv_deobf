@@ -334,7 +334,7 @@ public abstract class cjy extends FrameLayout implements ccn {
             accessibilityNodeInfo.setContentDescription(((Object) charSequence) + ", " + ((Object) this.aj.p()));
         }
         accessibilityNodeInfo.setCollectionItemInfo(
-                (AccessibilityNodeInfo.CollectionItemInfo) bc.g(0, 1, getItemVisiblePosition(), 1, isSelected()).e);
+                (AccessibilityNodeInfo.CollectionItemInfo) LateinitProperty.g(0, 1, getItemVisiblePosition(), 1, isSelected()).e);
         if (isSelected()) {
             accessibilityNodeInfo.setClickable(false);
             accessibilityNodeInfo.removeAction((AccessibilityNodeInfo.AccessibilityAction) ax.a.l);

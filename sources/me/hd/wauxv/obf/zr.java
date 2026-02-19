@@ -17,12 +17,12 @@ public final class zr extends SwitchHook implements bnn {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i2 = 0;
-        aki akiVarAd = ad(
-                (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(Integer.TYPE), dal.b(ViewGroup.class) }, 2,
+        HookManager hookManagerVarAd = createImmediateHook(
+                (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(ViewGroup.class) }, 2,
                         dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.ui.LauncherUIBottomTabView" /* "com.tencent.mm.ui.LauncherUIBottomTabView" /* "com.tencent.mm.ui.LauncherUIBottomTabView" /* cnb.z(-523419074427690L)  */)).getMethodResolverBasedOnPreviouslyProvidedConfig()),
                 HookPriorityEnum.ENUM_DEFAULT);
-        a.x(akiVarAd, new ws(25));
-        akiVarAd.o();
+        a.x(hookManagerVarAd, new ws(25));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

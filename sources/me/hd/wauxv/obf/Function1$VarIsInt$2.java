@@ -21,7 +21,7 @@ public final /* synthetic */ class Function1$VarIsInt$2 implements bfu {
     public final Object invoke() {
         int i = this.a;
         int i2 = 3;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 Bitmap bitmapCreateBitmap = Bitmap.createBitmap(1, 1, Bitmap.Config.ARGB_8888);
@@ -75,12 +75,12 @@ public final /* synthetic */ class Function1$VarIsInt$2 implements bfu {
                 cgo.a.p(true);
                 return kotlinUnitVar;
             case 7:
-                dnc.g(null, 3, "隐藏中" /* "隐藏中" /* "隐藏中" /* "隐藏中" /* cnb.z(-524630255205162L)   */);
-                ewz.aq(cha.a, new cgu(4));
+                dnc.sendToast(null, 3, "隐藏中" /* "隐藏中" /* "隐藏中" /* "隐藏中" /* cnb.z(-524630255205162L)   */);
+                StaticAndroidHelpers.runOnUiThread(cha.a, new cgu(4));
                 return kotlinUnitVar;
             case 8:
-                dnc.g(null, 3, "显示中" /* "显示中" /* "显示中" /* "显示中" /* cnb.z(-524948082785066L)   */);
-                ewz.aq(cha.a, new cgu(i2));
+                dnc.sendToast(null, 3, "显示中" /* "显示中" /* "显示中" /* "显示中" /* cnb.z(-524948082785066L)   */);
+                StaticAndroidHelpers.runOnUiThread(cha.a, new cgu(i2));
                 return kotlinUnitVar;
             case 9:
                 che.a.u("#FF000000" /* "#FF000000" /* "#FF000000" /* "#FF000000" /* cnb.z(-450095392750378L)   */);
@@ -92,7 +92,7 @@ public final /* synthetic */ class Function1$VarIsInt$2 implements bfu {
                 return new deq();
             case 11:
                 bpg bpgVar = new bpg(0);
-                bpgVar.b(dal.b(cip.class), new cgu(11));
+                bpgVar.b(dal.getKClassFromClass(cip.class), new cgu(11));
                 return bpgVar.c();
             case 12:
                 return new ko(cnt.b);
@@ -124,9 +124,9 @@ public final /* synthetic */ class Function1$VarIsInt$2 implements bfu {
                 return Environment.getExternalStorageDirectory().getAbsolutePath();
             case 16:
                 StringBuilder sb = new StringBuilder();
-                yg.decryptVar2UsingCnbZAndConcatToVar1(sb, (String) PathUtils.externalStorageRoot.getValue(), -47841640708906L);
-                bmo.a.getClass();
-                sb.append(bmo.p());
+                sb.append((String) PathUtils.externalStorageRoot.getValue());
+                sb.append("/Android/media/");
+                sb.append(HostInfoRegistry.getPackageName());
                 return sb.toString();
             case 17:
                 cbm cbmVar = PolicyFragment.a;
@@ -152,7 +152,7 @@ public final /* synthetic */ class Function1$VarIsInt$2 implements bfu {
             case 23:
                 int i3 = 0;
                 adt adtVarM = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.storage.emotion.SmileyPanelConfigInfo" /* "com.tencent.mm.storage.emotion.SmileyPanelConfigInfo" /* "com.tencent.mm.storage.emotion.SmileyPanelConfigInfo" /* "com.tencent.mm.storage.emotion.SmileyPanelConfigInfo" /* cnb.z(-458655262571306L)   */)).m();
-                adtVarM.setParams(Arrays.copyOf(new Object[]{dal.b(Integer.TYPE), dal.b(String.class)}, 2));
+                adtVarM.setParams(Arrays.copyOf(new Object[]{dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(String.class)}, 2));
                 return (ConstructorHookWrapper) StaticHelpers5.safeGetFirstInList(adtVarM.a());
             case 24:
                 dip.a.u(diq.b);

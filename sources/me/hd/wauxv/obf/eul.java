@@ -16,16 +16,16 @@ public final class eul extends bws {
         SyntheticPileOfMess bmuVarS = yg.s(-57591216470826L);
         MethodResolver methodResolverVarT = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-59051505351466L)  */;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(Bundle.class) }, 1, methodResolverVarT);
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(Bundle.class) }, 1, methodResolverVarT);
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_HIGHEST;
         eul eulVar = a;
-        aki akiVarAd = eulVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
-        akiVarAd.m(new epy(17));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = eulVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+        hookManagerVarAd.m(new epy(17));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
         MethodResolver methodResolverVarT2 = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.name = "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* cnb.z(-59030030514986L)  */;
-        aki akiVarAd2 = eulVar.ad((MethodHookWrapper) StaticHelpers6.n(new Object[] { eoz.a, cvh.a.b() }, 2, methodResolverVarT2), HookPriorityEnum.ENUM_DEFAULT);
-        akiVarAd2.n(new epy(18));
-        akiVarAd2.o();
+        HookManager hookManagerVarAd2 = eulVar.createImmediateHook((MethodHookWrapper) StaticHelpers6.n(new Object[] { eoz.a, cvh.a.b() }, 2, methodResolverVarT2), HookPriorityEnum.ENUM_DEFAULT);
+        hookManagerVarAd2.n(new epy(18));
+        hookManagerVarAd2.initInstantCollectionAndApplyHooks();
     }
 }

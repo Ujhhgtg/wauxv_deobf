@@ -28,7 +28,7 @@ public final class dgh extends doi implements bgj {
             case 0:
                 break;
         }
-        return ((dgh) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
+        return ((dgh) h(ahpVar, afwVar)).i(Kotlin$Unit.INSTANCE);
     }
 
     @Override // me.hd.wauxv.obf.nc
@@ -44,7 +44,7 @@ public final class dgh extends doi implements bgj {
     @Override // me.hd.wauxv.obf.nc
     public final Object i(Object obj) throws Throwable {
         int i = this.a;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         View view = this.e;
         ahq ahqVar = ahq.a;
         switch (i) {
@@ -55,7 +55,7 @@ public final class dgh extends doi implements bgj {
                     lw lwVar = new lw(2, null, 6);
                     this.d = 1;
                     Kotlin$Lazy kotlin$LazyVar = doh.a;
-                    alc alcVar = aou.a;
+                    Dispatchers$Default alcVar = aou.a;
                     obj = ajn.ak(akq.f, lwVar, this);
                     if (obj == ahqVar) {
                         return ahqVar;
@@ -94,7 +94,7 @@ public final class dgh extends doi implements bgj {
                     FastKV.bd(obj);
                     ((TextView) view).setText("加载完成, 准备重启中..." /* "加载完成, 准备重启中..." /* "加载完成, 准备重启中..." /* cnb.z(-58488864635690L)  */);
                     this.d = 1;
-                    if (dqc.ba(1000L, this) == ahqVar) {
+                    if (dqc.delayCoroutine(1000L, this) == ahqVar) {
                         return ahqVar;
                     }
                 } else {

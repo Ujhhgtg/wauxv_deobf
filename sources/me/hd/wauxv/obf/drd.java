@@ -580,11 +580,11 @@ public final class drd {
     }
 
     public final void aa(drb drbVar, boolean z) {
-        bnh eruVar = (!z || this.e.c <= 0) ? this.f : new eru(this.f);
+        TimestampDataSource eruVar = (!z || this.e.c <= 0) ? this.f : new InstantCollection(this.f);
         cjn cjnVarAb = null;
-        for (int i = 0; i < eruVar.c(); i++) {
-            int iE = eruVar.e(i);
-            int iMax = Math.max(eruVar.d(i), this.g);
+        for (int i = 0; i < eruVar.size(); i++) {
+            int iE = eruVar.getLowBits(i);
+            int iMax = Math.max(eruVar.getHighBits(i), this.g);
             int iMin = Math.min(iE, this.h);
             if (iMax < iMin) {
                 cjnVarAb = ab(iMax);

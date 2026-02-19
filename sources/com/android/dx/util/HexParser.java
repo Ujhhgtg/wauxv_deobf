@@ -29,7 +29,7 @@ public final class HexParser {
                 String strTrim = strSubstring.substring(i2, iIndexOf4).trim();
                 strSubstring = strSubstring.substring(iIndexOf4 + 1);
                 if (Integer.parseInt(strTrim, 16) != i4) {
-                    throw new RuntimeException(yg.k("bogus offset marker: ", strTrim));
+                    throw new RuntimeException(yg.concat("bogus offset marker: ", strTrim));
                 }
             }
             int length2 = strSubstring.length();

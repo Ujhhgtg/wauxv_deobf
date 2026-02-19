@@ -39,15 +39,15 @@ public final class mh extends SwitchHook implements bnc {
             int i = 0;
             FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).r();
             gp.a.getClass();
-            fieldResolverVarR.fieldType = StaticHelpers7.bb(go.a).getDeclaringClass();
-            Object objD = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).d();
+            fieldResolverVarR.fieldType = StaticHelpers7.toDexMethod(go.a).getDeclaringClass();
+            Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue();
             throwIfVar1IsNull(objD);
             elb.a.getClass();
             Object objB = gp.b((Class) SomeStaticHelpers.p(StaticHelpers7.az(ela.a).getInterfaces()), objD);
             long msgId = msgInfoBean.getMsgId();
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objB).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.ai = new dos(4);
-            Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(Long.TYPE) }, 1, methodResolverVarT)).j(Long.valueOf(msgId));
+            Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(Long.TYPE) }, 1, methodResolverVarT)).j(Long.valueOf(msgId));
             throwIfVar1IsNull(objJ);
             if (nullSafeIsEqual(objJ.toString(), "NoTransform" /* "NoTransform" /* "NoTransform" /* cnb.z(-440878392933162L)  */)) {
                 mgVar.put(Long.valueOf(msgInfoBean.getMsgId()), bool);
@@ -56,9 +56,9 @@ public final class mh extends SwitchHook implements bnc {
                 methodResolverVarT2.returnType = Void.TYPE;
                 cge.a.getClass();
                 Class clsAz = StaticHelpers7.az(cgd.a);
-                zc zcVarB = dal.b(Boolean.TYPE);
+                KClass zcVarB = dal.getKClassFromClass(Boolean.TYPE);
                 Class cls = Integer.TYPE;
-                ((MethodHookWrapper) StaticHelpers6.n(new Object[] { clsAz, zcVarB, dal.b(cls), dal.b(cls) }, 4, methodResolverVarT2)).e(origin,
+                ((MethodHookWrapper) StaticHelpers6.n(new Object[] { clsAz, zcVarB, dal.getKClassFromClass(cls), dal.getKClassFromClass(cls) }, 4, methodResolverVarT2)).e(origin,
                         Boolean.FALSE, -1, 0);
             }
         }

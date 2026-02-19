@@ -71,7 +71,7 @@ public class CancellableContinuation extends aot implements afw, ahr {
 
     @Override // me.hd.wauxv.obf.afw
     public final void _bn(Object obj) throws aoq {
-        Throwable thB = dcy.b(obj);
+        Throwable thB = Success.exceptionOrNull(obj);
         if (thB != null) {
             obj = new abr(thB, false);
         }
@@ -405,6 +405,6 @@ public class CancellableContinuation extends aot implements afw, ahr {
     public final void y(Dispatcher dispatcherVar) throws aoq {
         afw afwVar = this.f;
         DispatchedContinuation dispatchedContinuationVar = afwVar instanceof DispatchedContinuation ? (DispatchedContinuation) afwVar : null;
-        i(this, KotlinUnit.INSTANCE, (dispatchedContinuationVar != null ? dispatchedContinuationVar.d : null) == dispatcherVar ? 4 : this.z);
+        i(this, Kotlin$Unit.INSTANCE, (dispatchedContinuationVar != null ? dispatchedContinuationVar.d : null) == dispatcherVar ? 4 : this.z);
     }
 }

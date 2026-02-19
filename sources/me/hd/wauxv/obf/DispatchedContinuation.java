@@ -28,7 +28,7 @@ public final class DispatchedContinuation extends aot implements ahr, afw {
     @Override // me.hd.wauxv.obf.afw
     public final void _bn(Object obj) throws aoq {
         Object objAl;
-        Throwable thB = dcy.b(obj);
+        Throwable thB = Success.exceptionOrNull(obj);
         Object abrVar = thB == null ? obj : new abr(thB, false);
         Dispatcher dispatcherVar = this.d;
         afx afxVar = this.e;

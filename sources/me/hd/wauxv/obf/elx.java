@@ -13,11 +13,11 @@ public final class elx extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(elw.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(elw.a));
         elx elxVar = a;
-        aki akiVarAb = PackageParam.ab(elxVar, listBf);
-        elxVar.y(akiVarAb, new dos(7));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(elxVar, listBf);
+        elxVar.y(hookManagerVarAb, new dos(7));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

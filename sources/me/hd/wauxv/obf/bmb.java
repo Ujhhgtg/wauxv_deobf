@@ -12,14 +12,14 @@ public final class bmb extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(blz.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(blz.a));
         bmb bmbVar = a;
-        aki akiVarAb = PackageParam.ab(bmbVar, listBf);
-        akiVarAb.m(new bep(27));
-        akiVarAb.o();
-        aki akiVarAb2 = PackageParam.ab(bmbVar, dqc.toSingletonList(StaticHelpers7.bb(bma.a)));
-        akiVarAb2.m(new bep(26));
-        akiVarAb2.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(bmbVar, listBf);
+        hookManagerVarAb.m(new bep(27));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
+        HookManager hookManagerVarAb2 = PackageParam.createHook(bmbVar, dqc.toSingletonList(StaticHelpers7.toDexMethod(bma.a)));
+        hookManagerVarAb2.m(new bep(26));
+        hookManagerVarAb2.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.IDexFind

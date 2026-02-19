@@ -1105,7 +1105,7 @@ public abstract class bmy {
                 DisableMsgClipHook.a, DisablePatHook.a,
                 DisablePlayRingtoneHook.a, DisableSendStatusHook.a,
                 MsgFormatHook.a, cgr.c,
-                cgz.c, PanelEmojiHook.a,
+                cgz.c, PanelEmojiHook.INSTANCE,
                 cww.a, cxg.a, cxl.a, dhm.a, die.a, bcu.a, ble.a, blg.a, blh.a, blk.a, blm.a, blo.a, cud.a, fs.a,
                 CustomUnReadCountHook.a,
                 azr.a, elx.a, un.a, uo.a, cie.a, cif.a, fp.a, cnl.a, bjm.a, bjx.a, atx.a, bxj.a, etr.a, dlv.a,

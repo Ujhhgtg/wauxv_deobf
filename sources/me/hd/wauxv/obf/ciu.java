@@ -24,6 +24,6 @@ public final /* synthetic */ class ciu implements IInvokable {
         this.a.a = true;
         this.b.a = true;
         this.c.am(cioVar, this.d, this.e);
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

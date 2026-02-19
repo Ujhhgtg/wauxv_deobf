@@ -54,14 +54,14 @@ public final class ds extends bhs {
 
     /* JADX WARN: Multi-variable type inference failed */
     @Override // me.hd.wauxv.obf.bhs
-    public bc c(hb hbVar, String str) {
+    public LateinitProperty c(hb hbVar, String str) {
         switch (this.a) {
             case 0:
                 return null;
             case 1:
                 String[] strArr = (String[]) str;
                 if (strArr.length == 0) {
-                    return new bc(EmptyReadonlyMap.INSTANCE, 2);
+                    return new LateinitProperty(EmptyReadonlyMap.INSTANCE, 2);
                 }
                 for (String str2 : strArr) {
                     if (ResourcesCompat.s(hbVar, str2) != 0) {
@@ -76,7 +76,7 @@ public final class ds extends bhs {
                 for (String str3 : strArr) {
                     linkedHashMap.put(str3, Boolean.TRUE);
                 }
-                return new bc(linkedHashMap, 2);
+                return new LateinitProperty(linkedHashMap, 2);
             default:
                 return super.c(hbVar, str);
         }

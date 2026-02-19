@@ -35,7 +35,7 @@ public final class dap implements Serializable {
         throwIfVar1IsNull(charSequence, "input");
         Matcher matcher = this.a.matcher(charSequence);
         throwIfVar1IsNull(matcher, "matcher(...)");
-        return ewz.y(matcher, 0, charSequence);
+        return StaticAndroidHelpers.y(matcher, 0, charSequence);
     }
 
     public final bzx e(String str) {

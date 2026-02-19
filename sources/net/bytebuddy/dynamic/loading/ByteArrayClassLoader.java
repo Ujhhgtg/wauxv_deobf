@@ -264,7 +264,7 @@ public class ByteArrayClassLoader extends InjectionClassLoader {
                     if (packageApply == null) {
                         ByteArrayClassLoader.this.definePackage(strSubstring, definitionDefine.getSpecificationTitle(), definitionDefine.getSpecificationVersion(), definitionDefine.getSpecificationVendor(), definitionDefine.getImplementationTitle(), definitionDefine.getImplementationVersion(), definitionDefine.getImplementationVendor(), definitionDefine.getSealBase());
                     } else if (!definitionDefine.isCompatibleTo(packageApply)) {
-                        throw new SecurityException(yg.k("Sealing violation for package ", strSubstring));
+                        throw new SecurityException(yg.concat("Sealing violation for package ", strSubstring));
                     }
                 }
             }

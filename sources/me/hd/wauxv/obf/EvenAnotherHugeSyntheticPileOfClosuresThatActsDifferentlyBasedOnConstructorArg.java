@@ -44,7 +44,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
         cls = View.OnClickListener.class;
         int i5 = 12;
         int i6 = 1;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 dnh dnhVar = dnh.b;
@@ -63,9 +63,9 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                if (objX instanceof dcx) {
+                if (objX instanceof Failure) {
                     objX = null;
                 }
                 Integer num = (Integer) objX;
@@ -76,9 +76,9 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = FastKV.x(th2);
+                    objX2 = FastKV.getFailureFromException(th2);
                 }
-                if (objX2 instanceof dcx) {
+                if (objX2 instanceof Failure) {
                     objX2 = null;
                 }
                 Integer num2 = (Integer) objX2;
@@ -128,7 +128,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 azl azlVar = new azl();
                 azi aziVar = new azi();
                 zb zbVar2 = new zb();
-                Class<View.OnClickListener> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<View.OnClickListener> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 zb.h(zbVar2, (clsBf != null ? clsBf : View.OnClickListener.class).getName());
                 aziVar.b = zbVar2;
                 azlVar.e(aziVar);
@@ -156,27 +156,27 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = FastKV.x(th3);
+                    objX3 = FastKV.getFailureFromException(th3);
                 }
-                Object obj3 = objX3 instanceof dcx ? null : objX3;
+                Object obj3 = objX3 instanceof Failure ? null : objX3;
                 throwIfVar1IsNull(obj3);
                 MenuItem menuItem = (MenuItem) obj3;
                 int i7 = 0;
                 FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam2);
-                fieldResolverVarAa.fieldType = dal.b(View.class);
-                Object objE = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).e();
+                fieldResolverVarAa.fieldType = dal.getKClassFromClass(View.class);
+                Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue_();
                 throwIfVar1IsNull(objE);
                 View view = (View) objE;
                 FieldResolver fieldResolverVarAa2 = StaticHelpers6.aa(hookParam2);
                 fieldResolverVarAa2.b = new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(9);
-                Object objE2 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).e();
+                Object objE2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).getValue_();
                 throwIfVar1IsNull(objE2);
                 FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration((View.OnClickListener) objE2).r();
                 fieldResolverVarR.name = "d" /* "d" /* "d" /* cnb.z(-70201240451882L)  */;
-                Object objD = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).d();
+                Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue();
                 throwIfVar1IsNull(objD);
                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objD).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                methodResolverVarT.returnType = dal.b(List.class);
+                methodResolverVarT.returnType = dal.getKClassFromClass(List.class);
                 Object objJ = ((MethodHookWrapper) bjs.h(methodResolverVarT)).j(new Object[0]);
                 throwIfVar1IsNull(objJ);
                 List list = (List) objJ;
@@ -193,10 +193,10 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                             }
                         }
                     } catch (Exception e) {
-                        ArrayList arrayList2 = ewq.a;
+                        ArrayList arrayList2 = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-70209830386474L)  */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
                                 bnqVar instanceof SwitchHook ? ((SwitchHook) bnqVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 70162585746218L)
@@ -214,23 +214,23 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                         objX4 = null;
                     }
                 } catch (Throwable th4) {
-                    objX4 = FastKV.x(th4);
+                    objX4 = FastKV.getFailureFromException(th4);
                 }
-                Object obj4 = objX4 instanceof dcx ? null : objX4;
+                Object obj4 = objX4 instanceof Failure ? null : objX4;
                 throwIfVar1IsNull(obj4);
                 ContextMenu contextMenu = (ContextMenu) obj4;
                 Kotlin$Lazy kotlin$LazyVar = new Kotlin$Lazy(new ayu(contextMenu, i4));
                 int i8 = 0;
                 FieldResolver fieldResolverVarAa3 = StaticHelpers6.aa(hookParam3);
                 fieldResolverVarAa3.b = new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(i3);
-                Object objE3 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa3.resolve())).e();
+                Object objE3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa3.resolve())).getValue_();
                 throwIfVar1IsNull(objE3);
                 FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration((View.OnClickListener) objE3).r();
                 fieldResolverVarR2.name = "d" /* "d" /* "d" /* cnb.z(-69831873264426L)  */;
-                Object objD2 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).d();
+                Object objD2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue();
                 throwIfVar1IsNull(objD2);
                 MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objD2).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                methodResolverVarT2.returnType = dal.b(List.class);
+                methodResolverVarT2.returnType = dal.getKClassFromClass(List.class);
                 Object objJ2 = ((MethodHookWrapper) bjs.h(methodResolverVarT2)).j(new Object[0]);
                 throwIfVar1IsNull(objJ2);
                 List list2 = (List) objJ2;
@@ -247,10 +247,10 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                             methodHookWrapperVarD.e(Integer.valueOf(cevVar2.a), cevVar2.b);
                         }
                     } catch (Exception e2) {
-                        ArrayList arrayList4 = ewq.a;
+                        ArrayList arrayList4 = Logger.a;
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-69840463199018L)  */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
                                 bnqVar2 instanceof SwitchHook ? ((SwitchHook) bnqVar2).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -261,12 +261,12 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 }
                 return kotlinUnitVar;
             case 8:
-                zc zcVarB = dal.b(cls);
+                KClass zcVarB = dal.getKClassFromClass(cls);
                 ConcurrentHashMap concurrentHashMap = ReflectionWrapper.cachedConstructors;
                 zIsAssignableFrom = HugeSyntheticPileOfHelpers.getJavaClass(zcVarB).isAssignableFrom((Class) obj);
                 break;
             case 9:
-                zc zcVarB2 = dal.b(cls);
+                KClass zcVarB2 = dal.getKClassFromClass(cls);
                 ConcurrentHashMap concurrentHashMap2 = ReflectionWrapper.cachedConstructors;
                 zIsAssignableFrom = HugeSyntheticPileOfHelpers.getJavaClass(zcVarB2).isAssignableFrom((Class) obj);
                 break;
@@ -289,7 +289,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 azl azlVar2 = new azl();
                 azi aziVar2 = new azi();
                 zb zbVar4 = new zb();
-                Class<View.OnClickListener> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<View.OnClickListener> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 zb.h(zbVar4, (clsBf2 != null ? clsBf2 : View.OnClickListener.class).getName());
                 aziVar2.b = zbVar4;
                 azlVar2.e(aziVar2);
@@ -606,10 +606,10 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                     try {
                         bnrVar.h(hookParam4.getThisObject());
                     } catch (Exception e3) {
-                        ArrayList arrayList5 = ewq.a;
+                        ArrayList arrayList5 = Logger.a;
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("onConvert " /* "onConvert " /* "onConvert " /* cnb.z(-66645007530794L)  */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb3,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb3,
                                 bnrVar instanceof SwitchHook ? ((SwitchHook) bnrVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 66563403152170L)
@@ -854,19 +854,19 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                         objX5 = null;
                     }
                 } catch (Throwable th5) {
-                    objX5 = FastKV.x(th5);
+                    objX5 = FastKV.getFailureFromException(th5);
                 }
-                Object obj5 = objX5 instanceof dcx ? null : objX5;
+                Object obj5 = objX5 instanceof Failure ? null : objX5;
                 throwIfVar1IsNull(obj5);
                 MsgInfoBean msgInfoBean = new MsgInfoBean(obj5);
                 for (bns bnsVar : cgt.b) {
                     try {
                         bnsVar.m(msgInfoBean);
                     } catch (Exception e4) {
-                        ArrayList arrayList6 = ewq.a;
+                        ArrayList arrayList6 = Logger.a;
                         StringBuilder sb4 = new StringBuilder();
                         sb4.append("onInsert " /* "onInsert " /* "onInsert " /* cnb.z(-66932770339626L)  */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb4,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb4,
                                 bnsVar instanceof SwitchHook ? ((SwitchHook) bnsVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 66838281059114L)

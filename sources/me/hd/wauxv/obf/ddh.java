@@ -15,15 +15,15 @@ public final class ddh extends SwitchHook implements IDexFind {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         StaticHelpers7.bc(ddf.a, new dbj(8));
-        aki akiVarAb = PackageParam.ab(this, dqc.toSingletonList(StaticHelpers7.ba(ddd.a)));
+        HookManager hookManagerVarAb = PackageParam.createHook(this, dqc.toSingletonList(StaticHelpers7.ba(ddd.a)));
         dbj dbjVar = new dbj(9);
         ddh ddhVar = a;
-        ddhVar.y(akiVarAb, dbjVar);
-        akiVarAb.o();
+        ddhVar.y(hookManagerVarAb, dbjVar);
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
         if (cnb.ab(ewk.i) || cnb.ac(ewh.h)) {
-            aki akiVarAb2 = PackageParam.ab(this, dqc.toSingletonList(StaticHelpers7.bb(dde.a)));
-            ddhVar.y(akiVarAb2, new dbj(10));
-            akiVarAb2.o();
+            HookManager hookManagerVarAb2 = PackageParam.createHook(this, dqc.toSingletonList(StaticHelpers7.toDexMethod(dde.a)));
+            ddhVar.y(hookManagerVarAb2, new dbj(10));
+            hookManagerVarAb2.initInstantCollectionAndApplyHooks();
         }
     }
 

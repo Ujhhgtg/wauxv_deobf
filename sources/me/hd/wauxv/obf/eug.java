@@ -26,7 +26,7 @@ public final class eug extends doi implements bgj {
     @Override // me.hd.wauxv.obf.bgj
     public final Object g(Object obj, Object obj2) throws Throwable {
         eug eugVar = (eug) h((ahp) obj, (afw) obj2);
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         eugVar.i(kotlinUnitVar);
         return kotlinUnitVar;
     }
@@ -52,6 +52,6 @@ public final class eug extends doi implements bgj {
         sb.append("ms" /* "ms" /* "ms" /* cnb.z(-58725087836970L)  */);
         this.d.setText(sb.toString());
         this.o.setProgress(((i + 1) * 100) / list.size());
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

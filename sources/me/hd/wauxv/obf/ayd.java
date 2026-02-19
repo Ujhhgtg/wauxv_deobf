@@ -121,7 +121,7 @@ public final class ayd implements SharedPreferences, SharedPreferences.Editor {
                 afbVar.k = bArr.length;
                 ao();
                 if (this.r >= 8192 || this.s.size() >= 100) {
-                    dqc.bb(this, 0);
+                    dqc.compactStorage(this, 0);
                 }
                 if (str2 != null) {
                     if (this.aa == 0) {
@@ -245,7 +245,7 @@ public final class ayd implements SharedPreferences, SharedPreferences.Editor {
                     }
                 }
             } else {
-                dqc.bb(this, i3);
+                dqc.compactStorage(this, i3);
             }
         }
         int i7 = this.h;
@@ -938,7 +938,7 @@ public final class ayd implements SharedPreferences, SharedPreferences.Editor {
                     }
                 }
                 if (this.r >= 8192 || this.s.size() >= 100) {
-                    dqc.bb(this, 0);
+                    dqc.compactStorage(this, 0);
                 }
                 if (this.aa != 0 && this.ab) {
                     ae();

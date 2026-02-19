@@ -203,7 +203,7 @@ public final class SyntheticPileOfMess implements cdw, ero, ajh, cab, ank, cbu, 
     @Override // me.hd.wauxv.obf.ero
     public erk l(Class cls, chq chqVar) {
         erm ermVar;
-        zc zcVarB = dal.b(cls);
+        KClass zcVarB = dal.getKClassFromClass(cls);
         erm[] ermVarArr = (erm[]) this.obj;
         erm[] ermVarArr2 = (erm[]) Arrays.copyOf(ermVarArr, ermVarArr.length);
         throwIfVar1IsNull(ermVarArr2, "initializers");
@@ -321,7 +321,7 @@ public final class SyntheticPileOfMess implements cdw, ero, ajh, cab, ank, cbu, 
             fitsSystemWindows3 = ckjVar.getFitsSystemWindows();
         }
         if (fitsSystemWindows3) {
-            bawVar.a += ewz.al(view) ? bpsVarN.d : bpsVarN.b;
+            bawVar.a += StaticAndroidHelpers.al(view) ? bpsVarN.d : bpsVarN.b;
         }
         int i = bawVar.a;
         int i2 = bawVar.b;

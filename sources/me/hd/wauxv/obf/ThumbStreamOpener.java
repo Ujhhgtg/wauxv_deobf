@@ -49,7 +49,7 @@ public final class ThumbStreamOpener implements ajb {
                 ((nu) this.g).getClass();
                 return InputStream.class;
             case 1:
-                switch (((GifEncoder) this.g).b) {
+                switch (((SyntheticClass) this.g).b) {
                     case 6:
                         return ParcelFileDescriptor.class;
                     default:
@@ -79,7 +79,7 @@ public final class ThumbStreamOpener implements ajb {
                 Object obj = this.h;
                 if (obj != null) {
                     try {
-                        switch (((GifEncoder) this.g).b) {
+                        switch (((SyntheticClass) this.g).b) {
                             case 6:
                                 ((ParcelFileDescriptor) obj).close();
                                 break;
@@ -127,9 +127,9 @@ public final class ThumbStreamOpener implements ajb {
                 break;
             case 1:
                 try {
-                    GifEncoder gifEncoderVar = (GifEncoder) this.g;
+                    SyntheticClass syntheticClassVar = (SyntheticClass) this.g;
                     File file = (File) this.c;
-                    switch (gifEncoderVar.b) {
+                    switch (syntheticClassVar.b) {
                         case 6:
                             objOpen = ParcelFileDescriptor.open(file, 268435456);
                             break;

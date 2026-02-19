@@ -31,7 +31,7 @@ public class OptimizerOptions {
                 hashSet.add(line);
             }
         } catch (IOException e) {
-            throw new RuntimeException(yg.k("Error with optimize list: ", str), e);
+            throw new RuntimeException(yg.concat("Error with optimize list: ", str), e);
         }
     }
 

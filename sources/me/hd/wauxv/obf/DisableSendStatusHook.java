@@ -16,11 +16,11 @@ public final class DisableSendStatusHook extends SwitchHook implements IDexFind 
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(aof.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(aof.a));
         DisableSendStatusHook aogVar = a;
-        aki akiVarAb = PackageParam.ab(aogVar, listBf);
-        aogVar.y(akiVarAb, new amb(16));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(aogVar, listBf);
+        aogVar.y(hookManagerVarAb, new amb(16));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

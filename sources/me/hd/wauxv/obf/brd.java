@@ -17,8 +17,8 @@ public final class brd implements btq {
     public static final aao i = chm.i("${1:${CLIPBOARD}}");
     public DefaultConfig j;
     public final brc k;
-    public final GifEncoder l = new GifEncoder(20);
-    public final GifEncoder[] m = { new GifEncoder(this) };
+    public final SyntheticClass l = new SyntheticClass(20);
+    public final SyntheticClass[] m = { new SyntheticClass(this) };
 
     public brd() {
         String[] strArr = bre.b;
@@ -48,7 +48,7 @@ public final class brd implements btq {
     }
 
     @Override // me.hd.wauxv.obf.btq
-    public final GifEncoder[] b() {
+    public final SyntheticClass[] b() {
         return this.m;
     }
 
@@ -59,7 +59,7 @@ public final class brd implements btq {
     }
 
     @Override // me.hd.wauxv.obf.btq
-    public final GifEncoder d() {
+    public final SyntheticClass d() {
         return this.l;
     }
 
@@ -189,8 +189,8 @@ public final class brd implements btq {
                         throwIfVar1IsNull(bgsVar2, "<set-?>");
                         dlbVar.b = bgsVar2;
                     } else {
-                        String strAa2 = ewz.aa(dhrVar3.b);
-                        String lowerCase3 = ewz.aa(dhrVar3.b).toLowerCase(Locale.ROOT);
+                        String strAa2 = StaticAndroidHelpers.aa(dhrVar3.b);
+                        String lowerCase3 = StaticAndroidHelpers.aa(dhrVar3.b).toLowerCase(Locale.ROOT);
                         throwIfVar1IsNull(lowerCase3, "toLowerCase(...)");
                         throwIfVar1IsNull(lowerCase2, "lowPattern");
                         throwIfVar1IsNull(strAa2, "wordText");

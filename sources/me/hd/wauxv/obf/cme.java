@@ -10,7 +10,7 @@ public final class cme extends bws implements IDexFind {
 
     public static void b(cme cmeVar, Object obj) {
         cmeVar.getClass();
-        Method methodBb = StaticHelpers7.bb(cmc.a);
+        Method methodBb = StaticHelpers7.toDexMethod(cmc.a);
         byr.a.getClass();
         methodBb.invoke(byr.c(), obj, 0);
     }

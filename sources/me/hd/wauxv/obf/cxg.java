@@ -16,12 +16,12 @@ public final class cxg extends SwitchHook implements IDexFind {
     static {
         boolean z;
         ewk ewkVar = ewk.k;
-        bmo bmoVar = bmo.a;
-        bmoVar.getClass();
-        if (bmo.q() > ewkVar.r || bmo.r()) {
+        HostInfoRegistry hostInfoRegistryVar = HostInfoRegistry.INSTANCE;
+        hostInfoRegistryVar.getClass();
+        if (HostInfoRegistry.getVerCode() > ewkVar.r || HostInfoRegistry.getIsPlay()) {
             ewh ewhVar = ewh.k;
-            bmoVar.getClass();
-            z = bmo.q() <= ewhVar.u && bmo.r();
+            hostInfoRegistryVar.getClass();
+            z = HostInfoRegistry.getVerCode() <= ewhVar.u && HostInfoRegistry.getIsPlay();
         }
         j = z;
     }
@@ -34,11 +34,11 @@ public final class cxg extends SwitchHook implements IDexFind {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         if (j) {
-            List listBf = dqc.toSingletonList(StaticHelpers7.bb(cxe.a));
+            List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(cxe.a));
             cxg cxgVar = a;
-            aki akiVarAb = PackageParam.ab(cxgVar, listBf);
-            cxgVar.y(akiVarAb, new cvc(6));
-            akiVarAb.o();
+            HookManager hookManagerVarAb = PackageParam.createHook(cxgVar, listBf);
+            cxgVar.y(hookManagerVarAb, new cvc(6));
+            hookManagerVarAb.initInstantCollectionAndApplyHooks();
         }
     }
 

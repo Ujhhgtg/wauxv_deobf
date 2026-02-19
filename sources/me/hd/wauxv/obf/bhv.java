@@ -199,7 +199,7 @@ public abstract class bhv {
     public static final void ah(CancellableContinuation cancellableContinuationVar, afw afwVar, boolean z) {
         Object obj = CancellableContinuation.d.get(cancellableContinuationVar);
         Throwable thM = cancellableContinuationVar.m(obj);
-        Object objX = thM != null ? FastKV.x(thM) : cancellableContinuationVar.n(obj);
+        Object objX = thM != null ? FastKV.getFailureFromException(thM) : cancellableContinuationVar.n(obj);
         if (!z) {
             afwVar._bn(objX);
             return;
@@ -312,7 +312,7 @@ public abstract class bhv {
                 DisablePlayRingtoneHook.a,
                 DisableSendStatusHook.a, MsgFormatHook.a, cgr.c,
                 cgz.c,
-                PanelEmojiHook.a, cww.a,
+                PanelEmojiHook.INSTANCE, cww.a,
                 cxg.a, cxl.a, dhm.a, die.a, bcu.a, ble.a, blg.a, blh.a, blk.a, blm.a, blo.a, cud.a, fs.a,
                 CustomUnReadCountHook.a, azr.a,
                 elx.a, un.a, uo.a, cie.a, cif.a, fp.a, cnl.a, bjm.a, bjx.a, atx.a, bxj.a, etr.a, dlv.a,
@@ -345,7 +345,7 @@ public abstract class bhv {
         throwIfVar1IsNull(bmuVar, "factory");
         throwIfVar1IsNull(ahvVar, "extras");
         chm chmVar = new chm(erqVar, bmuVar, ahvVar);
-        zc zcVarB = dal.b(ciy.class);
+        KClass zcVarB = dal.getKClassFromClass(ciy.class);
         String strAo = emc.ao(zcVarB);
         if (strAo != null) {
             return (ciy) chmVar.ah("androidx.lifecycle.ViewModelProvider.DefaultKey:".concat(strAo), zcVarB);

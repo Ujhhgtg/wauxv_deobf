@@ -2,7 +2,7 @@ package net.bytebuddy.jar.asm;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
-import me.hd.wauxv.obf.bjs;
+
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.pool.TypePool;
 import okhttp3.HttpUrl;
@@ -147,7 +147,7 @@ public final class Type {
     }
 
     private static /* synthetic */ String stringConcat$0(String str) {
-        return yg.k("Invalid descriptor: ", str);
+        return yg.concat("Invalid descriptor: ", str);
     }
 
     private static /* synthetic */ String stringConcat$1(String str) {

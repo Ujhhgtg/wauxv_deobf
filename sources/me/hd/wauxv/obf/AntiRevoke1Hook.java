@@ -13,11 +13,11 @@ public final class AntiRevoke1Hook extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(ft.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(ft.a));
         AntiRevoke1Hook fuVar = a;
-        aki akiVarAb = PackageParam.ab(fuVar, listBf);
-        fuVar.y(akiVarAb, new bn(11));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(fuVar, listBf);
+        fuVar.y(hookManagerVarAb, new bn(11));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

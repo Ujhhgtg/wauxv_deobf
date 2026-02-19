@@ -31,7 +31,7 @@ public final class etb extends doi implements bgj {
             case 0:
                 break;
         }
-        return ((etb) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
+        return ((etb) h(ahpVar, afwVar)).i(Kotlin$Unit.INSTANCE);
     }
 
     @Override // me.hd.wauxv.obf.nc
@@ -51,7 +51,7 @@ public final class etb extends doi implements bgj {
     @Override // me.hd.wauxv.obf.nc
     public final Object i(Object obj) throws Throwable {
         int i = this.a;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         String str = this.r;
         String str2 = this.p;
         String str3 = this.o;
@@ -70,7 +70,7 @@ public final class etb extends doi implements bgj {
                     return kotlinUnitVar;
                 }
                 FastKV.bd(obj);
-                dnc.g(null, 3, "开始下载" /* "开始下载" /* "开始下载" /* cnb.z(-582217176709930L)  */ + str4 + "图片" /* "图片" /* "图片" /* cnb.z(-582711097948970L)  */);
+                dnc.sendToast(null, 3, "开始下载" /* "开始下载" /* "开始下载" /* cnb.z(-582217176709930L)  */ + str4 + "图片" /* "图片" /* "图片" /* cnb.z(-582711097948970L)  */);
                 StringBuilder sb = new StringBuilder();
                 sb.append(eta.a.o());
                 sb.append('/');
@@ -80,7 +80,7 @@ public final class etb extends doi implements bgj {
                 String str5 = str2 + str;
                 int i3 = 2;
                 beo beoVar = new beo(strN, i3);
-                alc alcVar = aou.a;
+                Dispatchers$Default alcVar = aou.a;
                 akq akqVar = akq.f;
                 dob dobVar = new dob();
                 akqVar.getClass();
@@ -99,7 +99,7 @@ public final class etb extends doi implements bgj {
                     return kotlinUnitVar;
                 }
                 FastKV.bd(obj);
-                dnc.g(null, 3, "开始下载" /* "开始下载" /* "开始下载" /* cnb.z(-586980295441194L)  */ + str4 + "图片" /* "图片" /* "图片" /* cnb.z(-586941640735530L)  */);
+                dnc.sendToast(null, 3, "开始下载" /* "开始下载" /* "开始下载" /* cnb.z(-586980295441194L)  */ + str4 + "图片" /* "图片" /* "图片" /* cnb.z(-586941640735530L)  */);
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append(etf.a.o());
                 sb2.append('/');
@@ -109,7 +109,7 @@ public final class etb extends doi implements bgj {
                 String str6 = str2 + str;
                 int i5 = 5;
                 beo beoVar2 = new beo(strN2, i5);
-                alc alcVar2 = aou.a;
+                Dispatchers$Default alcVar2 = aou.a;
                 akq akqVar2 = akq.f;
                 dob dobVar2 = new dob();
                 akqVar2.getClass();

@@ -38,7 +38,7 @@ import me.hd.wauxv.obf.dgl;
 import me.hd.wauxv.obf.dgm;
 import me.hd.wauxv.obf.dgx;
 import me.hd.wauxv.obf.ViewCompat;
-import me.hd.wauxv.obf.ewz;
+import me.hd.wauxv.obf.StaticAndroidHelpers;
 import me.hd.wauxv.obf.hd;
 import me.hd.wauxv.obf.yg;
 
@@ -72,7 +72,7 @@ public class MaterialButton extends hd implements Checkable, dgx {
         this.m = typedArrayAn.getDimensionPixelSize(12, 0);
         int i = typedArrayAn.getInt(15, -1);
         PorterDuff.Mode mode = PorterDuff.Mode.SRC_IN;
-        this.f = ewz.ap(i, mode);
+        this.f = StaticAndroidHelpers.ap(i, mode);
         this.g = cnb.v(getContext(), typedArrayAn, 14);
         this.h = cnb.x(getContext(), typedArrayAn, 10);
         this.p = typedArrayAn.getInteger(11, 1);
@@ -92,7 +92,7 @@ public class MaterialButton extends hd implements Checkable, dgx {
             cadVar.p = true;
         }
         cadVar.h = typedArrayAn.getDimensionPixelSize(20, 0);
-        cadVar.i = ewz.ap(typedArrayAn.getInt(7, -1), mode);
+        cadVar.i = StaticAndroidHelpers.ap(typedArrayAn.getInt(7, -1), mode);
         cadVar.j = cnb.v(getContext(), typedArrayAn, 6);
         cadVar.k = cnb.v(getContext(), typedArrayAn, 19);
         cadVar.l = cnb.v(getContext(), typedArrayAn, 16);

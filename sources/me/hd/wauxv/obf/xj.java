@@ -9,7 +9,7 @@ public final class xj extends bws implements IDexFind {
     public static final xj a = new xj();
 
     public static String b(String str, String str2) throws IllegalAccessException, InvocationTargetException {
-        Object objInvoke = StaticHelpers7.bb(xi.a).invoke(null, str, str2);
+        Object objInvoke = StaticHelpers7.toDexMethod(xi.a).invoke(null, str, str2);
         throwIfVar1IsNull(objInvoke,
                 "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* cnb.z(-99454262704938L)  */);
         return (String) objInvoke;

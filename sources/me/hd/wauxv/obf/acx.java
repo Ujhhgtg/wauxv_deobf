@@ -9,7 +9,7 @@ public final class acx extends bws implements IDexFind {
     public static final acx a = new acx();
 
     public static String b() {
-        Object objInvoke = StaticHelpers7.bb(acw.a).invoke(null, null);
+        Object objInvoke = StaticHelpers7.toDexMethod(acw.a).invoke(null, null);
         throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.collections.Map<*, *>" /*
                                                                                                           * cnb.z(-
                                                                                                           * 107949708016426L)

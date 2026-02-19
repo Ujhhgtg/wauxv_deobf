@@ -21,7 +21,7 @@ public final class das {
     public final FactoryPools j;
 
     public das() {
-        FactoryPools factoryPoolsVar = new FactoryPools(new cux(20), new GifEncoder(4), new GifEncoder(5));
+        FactoryPools factoryPoolsVar = new FactoryPools(new cux(20), new SyntheticClass(4), new SyntheticClass(5));
         this.j = factoryPoolsVar;
         this.a = new but(factoryPoolsVar);
         this.b = new avw(0);

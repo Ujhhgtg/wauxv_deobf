@@ -41,7 +41,7 @@ public final /* synthetic */ class cgu implements IInvokable {
         int i2 = 1;
         int i3 = 2;
         int i4 = 0;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 bah bahVar = (bah) obj;
@@ -194,9 +194,9 @@ public final /* synthetic */ class cgu implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th5) {
-                    objX = FastKV.x(th5);
+                    objX = FastKV.getFailureFromException(th5);
                 }
-                if (objX instanceof dcx) {
+                if (objX instanceof Failure) {
                     objX = null;
                 }
                 String str = (String) objX;
@@ -210,9 +210,9 @@ public final /* synthetic */ class cgu implements IInvokable {
                             objX2 = null;
                         }
                     } catch (Throwable th6) {
-                        objX2 = FastKV.x(th6);
+                        objX2 = FastKV.getFailureFromException(th6);
                     }
-                    Object obj2 = objX2 instanceof dcx ? null : objX2;
+                    Object obj2 = objX2 instanceof Failure ? null : objX2;
                     throwIfVar1IsNull(obj2);
                     Intent intent = (Intent) obj2;
                     intent.addFlags(Opcodes.ASM8);
@@ -237,12 +237,12 @@ public final /* synthetic */ class cgu implements IInvokable {
                 int i6 = 0;
                 FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
                 fieldResolverVarR.name = "field_type" /* "field_type" /* "field_type" /* cnb.z(-478429292002090L)  */;
-                Object objE = ((azk) yg.e(fieldResolverVarR)).e();
+                Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
                 throwIfVar1IsNull(objE);
                 if (((Number) objE).intValue() == 3) {
                     FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj).r();
                     fieldResolverVarR2.name = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-478416407100202L)  */;
-                    Object objD = ((azk) yg.e(fieldResolverVarR2)).d();
+                    Object objD = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue();
                     throwIfVar1IsNull(objD);
                     MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objD).getMethodResolverBasedOnPreviouslyProvidedConfig();
                     methodResolverVarT.name = "getData" /* "getData" /* "getData" /* cnb.z(-478334802721578L)  */;
@@ -267,23 +267,23 @@ public final /* synthetic */ class cgu implements IInvokable {
                         string = sbY.toString();
                     }
                     if (new File(string).exists()) {
-                        ewz.aq(cie.a, new cid(string, aysVar, i4));
+                        StaticAndroidHelpers.runOnUiThread(cie.a, new cid(string, aysVar, i4));
                     } else {
-                        dnc.g(null, 3, "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-478837313895210L)  */);
+                        dnc.sendToast(null, 3, "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-478837313895210L)  */);
                     }
                 } else {
-                    dnc.g(null, 3, "暂不支持的转发类型" /* "暂不支持的转发类型" /* "暂不支持的转发类型" /* cnb.z(-478704169909034L)  */);
+                    dnc.sendToast(null, 3, "暂不支持的转发类型" /* "暂不支持的转发类型" /* "暂不支持的转发类型" /* cnb.z(-478704169909034L)  */);
                 }
                 return kotlinUnitVar;
             case 10:
                 int i7 = 0;
                 FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).r();
                 fieldResolverVarR3.name = "field_type" /* "field_type" /* "field_type" /* cnb.z(-475856606591786L)  */;
-                Integer num = (Integer) ((azk) yg.e(fieldResolverVarR3)).e();
+                Integer num = (Integer) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
                 if (num != null && num.intValue() == 3) {
                     FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(obj).r();
                     fieldResolverVarR4.name = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-475826541820714L)  */;
-                    Object objD2 = ((azk) yg.e(fieldResolverVarR4)).d();
+                    Object objD2 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR4)).getValue();
                     throwIfVar1IsNull(objD2);
                     MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objD2).getMethodResolverBasedOnPreviouslyProvidedConfig();
                     methodResolverVarT2.name = "getData" /* "getData" /* "getData" /* cnb.z(-475212361497386L)  */;
@@ -308,12 +308,12 @@ public final /* synthetic */ class cgu implements IInvokable {
                         string2 = sbY2.toString();
                     }
                     if (new File(string2).exists()) {
-                        ewz.aq(cif.a, new cid(string2, aysVar2, i3));
+                        StaticAndroidHelpers.runOnUiThread(cif.a, new cid(string2, aysVar2, i3));
                     } else {
-                        dnc.g(null, 3, "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-475147936987946L)  */);
+                        dnc.sendToast(null, 3, "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-475147936987946L)  */);
                     }
                 } else {
-                    dnc.g(null, 3, "暂不支持的转发类型" /* "暂不支持的转发类型" /* "暂不支持的转发类型" /* cnb.z(-475031972870954L)  */);
+                    dnc.sendToast(null, 3, "暂不支持的转发类型" /* "暂不支持的转发类型" /* "暂不支持的转发类型" /* cnb.z(-475031972870954L)  */);
                 }
                 return kotlinUnitVar;
             case 11:
@@ -412,17 +412,17 @@ public final /* synthetic */ class cgu implements IInvokable {
             case 25:
                 bah bahVar4 = (bah) obj;
                 cdj cdjVar4 = new cdj();
-                Class<String> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf == null) {
                     clsBf = cls;
                 }
                 cls2 = List.class;
-                Class<List> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<List> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cls2 = clsBf2 != null ? clsBf2 : List.class;
-                Class<String> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cls = clsBf3 != null ? clsBf3 : String.class;
                 cls3 = Object.class;
-                Class<Object> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
+                Class<Object> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cdjVar4.q(clsBf, cls2, cls, clsBf4 != null ? clsBf4 : Object.class);
                 bahVar4.getClass();
                 bahVar4.d = cdjVar4;
@@ -445,11 +445,11 @@ public final /* synthetic */ class cgu implements IInvokable {
             case 28:
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar5 = new cdj();
-                Class<String> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf5 == null) {
                     clsBf5 = cls;
                 }
-                Class<String> clsBf6 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf6 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar5.q(clsBf5, clsBf6 != null ? clsBf6 : String.class);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar5;

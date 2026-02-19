@@ -9,7 +9,7 @@ public final /* synthetic */ class bxk extends cwc implements bfu {
     }
 
     @Override // me.hd.wauxv.obf.sw
-    public final bsu k() {
+    public final IEmpty6 k() {
         dal.a.getClass();
         return this;
     }

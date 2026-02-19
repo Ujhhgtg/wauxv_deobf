@@ -25,7 +25,7 @@ public final class bml {
         Object objX2;
         ClassLoader classLoader;
         ClassLoader classLoader2;
-        bmk bmkVar;
+        HookScopeEnum hookScopeEnumVar;
         blx blxVar;
         String str;
         boolean z = (i & 1) == 0;
@@ -33,17 +33,17 @@ public final class bml {
         XC_LoadPackage.LoadPackageParam loadPackageParam2 = (i & 2) != 0 ? null : loadPackageParam;
         bmlVar.getClass();
         boolean z2 = b;
-        Object objX3 = KotlinUnit.INSTANCE;
+        Object objX3 = Kotlin$Unit.INSTANCE;
         if (!z2) {
             try {
                 c.getClass();
                 cna.d = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-71829033057066L)  */;
                 cnb.k = false;
             } catch (Throwable th) {
-                objX = FastKV.x(th);
+                objX = FastKV.getFailureFromException(th);
             }
             if (!exm.b && exm.g != null) {
-                ewq.g(4, "You cannot load a hooker in \"onInit\" or \"onXposedEvent\" method! Aborted" /*
+                Logger.logException(4, "You cannot load a hooker in \"onInit\" or \"onXposedEvent\" method! Aborted" /*
                                                                                                         * cnb.z(-
                                                                                                         * 77674483546922L)
                                                                                                         */, null);
@@ -54,27 +54,27 @@ public final class bml {
             if (exm.l()) {
                 exm.g = blxVar2;
             } else {
-                ewq.g(2, "Could not found any available Hook APIs in current environment! Aborted", null);
+                Logger.logException(2, "Could not found any available Hook APIs in current environment! Aborted", null);
             }
             exm.b = true;
             objX = objX3;
-            Throwable thB = dcy.b(objX);
+            Throwable thB = Success.exceptionOrNull(objX);
             if (thB != null) {
-                ewq.g(4, "YukiHookAPI try to load hook entry class failed" /* "YukiHookAPI try to load hook entry class failed" /* "YukiHookAPI try to load hook entry class failed" /* cnb.z(-77915001715498L)  */, thB);
+                Logger.logException(4, "YukiHookAPI try to load hook entry class failed" /* "YukiHookAPI try to load hook entry class failed" /* "YukiHookAPI try to load hook entry class failed" /* cnb.z(-77915001715498L)  */, thB);
             }
         }
-        bmk bmkVar2 = bmk.b;
-        bmk bmkVar3 = bmk.a;
-        bmk bmkVar4 = (z || loadPackageParam2 == null) ? bmkVar3 : bmkVar2;
+        HookScopeEnum hookScopeEnumVar2 = HookScopeEnum.PACKAGE;
+        HookScopeEnum hookScopeEnumVar3 = HookScopeEnum.ZYGOTE;
+        HookScopeEnum hookScopeEnumVar4 = (z || loadPackageParam2 == null) ? hookScopeEnumVar3 : hookScopeEnumVar2;
         String str2 = (loadPackageParam2 == null || (str = loadPackageParam2.packageName) == null) ? null : str;
         String str3 = loadPackageParam2 != null ? loadPackageParam2.processName : null;
         if (loadPackageParam2 == null || (classLoader = loadPackageParam2.classLoader) == null) {
             try {
                 objX2 = XposedBridge.BOOTCLASSLOADER;
             } catch (Throwable th2) {
-                objX2 = FastKV.x(th2);
+                objX2 = FastKV.getFailureFromException(th2);
             }
-            if (objX2 instanceof dcx) {
+            if (objX2 instanceof Failure) {
                 objX2 = null;
             }
             classLoader = (ClassLoader) objX2;
@@ -86,61 +86,61 @@ public final class bml {
                 && (classLoader2 = exm.class.getClassLoader()) != null && zf.g(classLoader2, "android.miui.R")) {
             return;
         }
-        int iOrdinal = bmkVar4.ordinal();
+        int iOrdinal = hookScopeEnumVar4.ordinal();
         if (iOrdinal != 0) {
             if (iOrdinal != 1) {
                 if (iOrdinal != 2) {
                     throw new abt();
                 }
-                bmk bmkVar5 = bmk.c;
-                if (!exm.k(str2, bmkVar5)) {
+                HookScopeEnum hookScopeEnumVar5 = HookScopeEnum.RESOURCES;
+                if (!exm.k(str2, hookScopeEnumVar5)) {
                     ki.a.getClass();
                     if (nullSafeIsEqual(str2, ki.i())) {
-                        cscVarJ = exm.j(bmkVar5, str2, null, null, null, null, 28);
+                        cscVarJ = exm.j(hookScopeEnumVar5, str2, null, null, null, null, 28);
                     }
                 }
-            } else if (!exm.k(str2, bmkVar2)) {
-                cscVarJ = exm.j(bmkVar2, str2, str3, classLoader3, applicationInfo, null, 32);
+            } else if (!exm.k(str2, hookScopeEnumVar2)) {
+                cscVarJ = exm.j(hookScopeEnumVar2, str2, str3, classLoader3, applicationInfo, null, 32);
             }
-            bmkVar = bmkVar3;
+            hookScopeEnumVar = hookScopeEnumVar3;
         } else {
-            bmkVar = bmkVar3;
-            cscVarJ = exm.j(bmkVar, "android", "android", classLoader3, null, null, 48);
+            hookScopeEnumVar = hookScopeEnumVar3;
+            cscVarJ = exm.j(hookScopeEnumVar, "android", "android", classLoader3, null, null, 48);
         }
         if (cscVarJ != null) {
             try {
-                bmk bmkVar6 = cscVarJ.a;
-                if ((bmkVar6 == bmkVar || (bmkVar6 != bmkVar && (cscVarJ.d instanceof PathClassLoader)))
+                HookScopeEnum hookScopeEnumVar6 = cscVarJ.hookScope;
+                if ((hookScopeEnumVar6 == hookScopeEnumVar || (hookScopeEnumVar6 != hookScopeEnumVar && (cscVarJ.appClassLoader instanceof PathClassLoader)))
                         && (blxVar = exm.g) != null) {
                     LinkedHashMap linkedHashMap = exm.d;
                     String str4 = "android-zygote";
-                    PackageParam packageParamVar = (PackageParam) linkedHashMap.get(bmkVar6 == bmkVar ? "android-zygote" : cscVarJ.b);
+                    PackageParam packageParamVar = (PackageParam) linkedHashMap.get(hookScopeEnumVar6 == hookScopeEnumVar ? "android-zygote" : cscVarJ.packageName);
                     if (packageParamVar == null) {
                         packageParamVar = new PackageParam();
-                        if (cscVarJ.a != bmkVar) {
-                            str4 = cscVarJ.b;
+                        if (cscVarJ.hookScope != hookScopeEnumVar) {
+                            str4 = cscVarJ.packageName;
                         }
                         linkedHashMap.put(str4, packageParamVar);
                     }
-                    packageParamVar.aa = cscVarJ;
+                    packageParamVar.processInfo = cscVarJ;
                     blxVar.invoke(packageParamVar);
                 }
-                if (cscVarJ.a != bmkVar && cscVarJ.b.equals(exm.h)) {
+                if (cscVarJ.hookScope != hookScopeEnumVar && cscVarJ.packageName.equals(exm.h)) {
                     ki kiVar = ki.a;
-                    ClassLoader classLoader4 = cscVarJ.d;
-                    bmk bmkVar7 = cscVarJ.a;
+                    ClassLoader classLoader4 = cscVarJ.appClassLoader;
+                    HookScopeEnum hookScopeEnumVar7 = cscVarJ.hookScope;
                     kiVar.getClass();
-                    ki.j(classLoader4, bmkVar7);
+                    ki.j(classLoader4, hookScopeEnumVar7);
                 }
-                if (cscVarJ.a == bmkVar2) {
-                    ki.a.k(cscVarJ.b);
+                if (cscVarJ.hookScope == hookScopeEnumVar2) {
+                    ki.a.k(cscVarJ.packageName);
                 }
             } catch (Throwable th3) {
-                objX3 = FastKV.x(th3);
+                objX3 = FastKV.getFailureFromException(th3);
             }
-            Throwable thB2 = dcy.b(objX3);
+            Throwable thB2 = Success.exceptionOrNull(objX3);
             if (thB2 != null) {
-                ewq.g(4, "An exception occurred in the Hooking Process of YukiHookAPI", thB2);
+                Logger.logException(4, "An exception occurred in the Hooking Process of YukiHookAPI", thB2);
             }
         }
     }

@@ -25,7 +25,7 @@ public final /* synthetic */ class byx implements bgk {
         Object objX;
         Object objX2;
         int i = this.a;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         Object obj4 = this.c;
         switch (i) {
             case 0:
@@ -64,9 +64,9 @@ public final /* synthetic */ class byx implements bgk {
                     byxVar.b(obj, obj2, ebVar2);
                     objX = kotlinUnitVar;
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                Throwable thB = dcy.b(objX);
+                Throwable thB = Success.exceptionOrNull(objX);
                 if (thB == null) {
                     return kotlinUnitVar;
                 }
@@ -109,12 +109,12 @@ public final /* synthetic */ class byx implements bgk {
                             objX2 = concurrentHashMap;
                         }
                     } catch (Throwable th2) {
-                        objX2 = FastKV.x(th2);
+                        objX2 = FastKV.getFailureFromException(th2);
                     }
-                    Throwable thB2 = dcy.b(objX2);
+                    Throwable thB2 = Success.exceptionOrNull(objX2);
                     if (thB2 != null) {
-                        ArrayList arrayList3 = ewq.a;
-                        ewq.g(4, "Received action \"" + action + "\" failed", thB2);
+                        ArrayList arrayList3 = Logger.a;
+                        Logger.logException(4, "Received action \"" + action + "\" failed", thB2);
                     }
                     break;
                 }

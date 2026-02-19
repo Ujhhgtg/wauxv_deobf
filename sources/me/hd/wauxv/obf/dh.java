@@ -233,16 +233,16 @@ public final /* synthetic */ class dh implements Runnable {
                             try {
                                 Method method2 = TraceCompat.b;
                                 Trace.beginSection("EmojiCompat.FontRequestEmojiCompatConfig.buildTypeface");
-                                GifEncoder gifEncoderVar = bbuVar.d;
+                                SyntheticClass syntheticClassVar = bbuVar.d;
                                 Context context = bbuVar.a;
-                                gifEncoderVar.getClass();
+                                syntheticClassVar.getClass();
                                 bce[] bceVarArr = {bceVarK};
                                 StaticHelpers7 emnVar = TypefaceCompat.a;
                                 HugeSyntheticPileOfHelpers.beginTrace("TypefaceCompat.createFromFontInfo");
                                 try {
                                     Typeface typefaceT = TypefaceCompat.a.t(context, bceVarArr, 0);
                                     Trace.endSection();
-                                    MappedByteBuffer mappedByteBufferAo = ewz.ao(bbuVar.a, bceVarK.a);
+                                    MappedByteBuffer mappedByteBufferAo = StaticAndroidHelpers.ao(bbuVar.a, bceVarK.a);
                                     if (mappedByteBufferAo == null || typefaceT == null) {
                                         throw new RuntimeException("Unable to open file.");
                                     }

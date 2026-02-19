@@ -16,16 +16,16 @@ public abstract class exl {
         Boolean bool;
         boolean z2 = exm.a;
         if (!exm.l()) {
-            MethodHookWrapper methodHookWrapperVarAy = dqc.ay("__--");
+            MethodHookWrapper methodHookWrapperVarAy = dqc.initModuleStatus("__--");
             z = ((methodHookWrapperVarAy == null || (bool = (Boolean) methodHookWrapperVarAy.j(new Object[0])) == null) ? false : bool.booleanValue()) || KotlinHelpers2.az();
         }
         a = z;
         try {
             objX = 1771232894858L;
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        if (objX instanceof dcx) {
+        if (objX instanceof Failure) {
             objX = null;
         }
         Long l = (Long) objX;

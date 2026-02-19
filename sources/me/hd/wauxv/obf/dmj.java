@@ -56,7 +56,7 @@ public final class dmj extends LinearLayout {
             this.e = cnb.w(getContext(), factoryPoolsVar, 69);
         }
         if (typedArray.hasValue(70)) {
-            this.f = ewz.ap(typedArray.getInt(70, -1), null);
+            this.f = StaticAndroidHelpers.ap(typedArray.getInt(70, -1), null);
         }
         if (typedArray.hasValue(66)) {
             l(factoryPoolsVar.s(66));

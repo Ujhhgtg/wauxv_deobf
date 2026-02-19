@@ -79,7 +79,7 @@ public final class yd extends bri {
                 if (!(obj2 instanceof abr)) {
                     brjVar._bn(bhv.ak(obj2));
                 } else {
-                    brjVar._bn(FastKV.x(((abr) obj2).c));
+                    brjVar._bn(FastKV.getFailureFromException(((abr) obj2).c));
                 }
                 break;
         }

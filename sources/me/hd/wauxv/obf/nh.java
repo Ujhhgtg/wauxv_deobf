@@ -57,7 +57,7 @@ public abstract class nh implements cdw {
 
     @Override // me.hd.wauxv.obf.cdw
     public cdv u(chm chmVar) {
-        return new rv((GifEncoder) this.g, 2);
+        return new rv((SyntheticClass) this.g, 2);
     }
 
     /*

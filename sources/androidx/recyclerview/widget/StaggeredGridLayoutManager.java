@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.BitSet;
 import java.util.WeakHashMap;
 import me.hd.wauxv.obf.atb;
-import me.hd.wauxv.obf.bc;
+import me.hd.wauxv.obf.LateinitProperty;
 import me.hd.wauxv.obf.bd;
 import me.hd.wauxv.obf.bpq;
 import me.hd.wauxv.obf.bts;
@@ -1909,10 +1909,10 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         dmb dmbVar = (dmb) layoutParams;
         if (this.e == 0) {
             byj byjVar = dmbVar.a;
-            bdVar.l(bc.g(byjVar == null ? -1 : byjVar.e, dmbVar.b ? this.a : 1, -1, -1, false));
+            bdVar.l(LateinitProperty.g(byjVar == null ? -1 : byjVar.e, dmbVar.b ? this.a : 1, -1, -1, false));
         } else {
             byj byjVar2 = dmbVar.a;
-            bdVar.l(bc.g(-1, -1, byjVar2 == null ? -1 : byjVar2.e, dmbVar.b ? this.a : 1, false));
+            bdVar.l(LateinitProperty.g(-1, -1, byjVar2 == null ? -1 : byjVar2.e, dmbVar.b ? this.a : 1, false));
         }
     }
 

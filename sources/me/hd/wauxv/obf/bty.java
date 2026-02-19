@@ -42,7 +42,7 @@ public final /* synthetic */ class bty implements IInvokable {
         int i4 = 17;
         int i5 = 29;
         int i6 = 0;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 bah bahVar = (bah) obj;
@@ -128,9 +128,9 @@ public final /* synthetic */ class bty implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                if (objX instanceof dcx) {
+                if (objX instanceof Failure) {
                     objX = null;
                 }
                 throwIfVar1IsNull(objX);
@@ -206,9 +206,9 @@ public final /* synthetic */ class bty implements IInvokable {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = FastKV.x(th2);
+                    objX2 = FastKV.getFailureFromException(th2);
                 }
-                if (objX2 instanceof dcx) {
+                if (objX2 instanceof Failure) {
                     objX2 = null;
                 }
                 throwIfVar1IsNull(objX2);
@@ -219,9 +219,9 @@ public final /* synthetic */ class bty implements IInvokable {
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = FastKV.x(th3);
+                    objX3 = FastKV.getFailureFromException(th3);
                 }
-                if (objX3 instanceof dcx) {
+                if (objX3 instanceof Failure) {
                     objX3 = null;
                 }
                 throwIfVar1IsNull(objX3);
@@ -233,9 +233,9 @@ public final /* synthetic */ class bty implements IInvokable {
                             objX4 = null;
                         }
                     } catch (Throwable th4) {
-                        objX4 = FastKV.x(th4);
+                        objX4 = FastKV.getFailureFromException(th4);
                     }
-                    if (objX4 instanceof dcx) {
+                    if (objX4 instanceof Failure) {
                         objX4 = null;
                     }
                     throwIfVar1IsNull(objX4);
@@ -246,7 +246,7 @@ public final /* synthetic */ class bty implements IInvokable {
                     throwIfVar1IsNull(parcelableExtra);
                     int i8 = 0;
                     MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(parcelableExtra).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                    methodResolverVarT.returnType = dal.b(String.class);
+                    methodResolverVarT.returnType = dal.getKClassFromClass(String.class);
                     Object objJ = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).j(new Object[0]);
                     throwIfVar1IsNull(objJ);
                     String str = (String) objJ;
@@ -255,7 +255,7 @@ public final /* synthetic */ class bty implements IInvokable {
                     throwIfVar1IsNull(patternCompile, "compile(...)");
                     Matcher matcher = patternCompile.matcher(str);
                     throwIfVar1IsNull(matcher, "matcher(...)");
-                    bzx bzxVarY = ewz.y(matcher, 0, str);
+                    bzx bzxVarY = StaticAndroidHelpers.y(matcher, 0, str);
                     if (bzxVarY == null || ((AbstractReadOnlyCollection) bzxVarY.e()).a() != 3) {
                         cem cemVar4 = bxj.c;
                         if (cemVar4 == null) {
@@ -291,15 +291,15 @@ public final /* synthetic */ class bty implements IInvokable {
                 return kotlinUnitVar;
             case 12:
                 bxj bxjVar = bxj.a;
-                aki akiVarAb = PackageParam.ab(bxjVar, dqc.toSingletonList((Method) obj));
-                bxjVar.y(akiVarAb, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(akiVarAb, i2));
-                akiVarAb.o();
+                HookManager hookManagerVarAb = PackageParam.createHook(bxjVar, dqc.toSingletonList((Method) obj));
+                bxjVar.y(hookManagerVarAb, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(hookManagerVarAb, i2));
+                hookManagerVarAb.initInstantCollectionAndApplyHooks();
                 return kotlinUnitVar;
             case 13:
                 bxj bxjVar2 = bxj.a;
-                aki akiVarAb2 = PackageParam.ab(bxjVar2, dqc.toSingletonList((Method) obj));
-                bxjVar2.y(akiVarAb2, new bty(4));
-                akiVarAb2.o();
+                HookManager hookManagerVarAb2 = PackageParam.createHook(bxjVar2, dqc.toSingletonList((Method) obj));
+                bxjVar2.y(hookManagerVarAb2, new bty(4));
+                hookManagerVarAb2.initInstantCollectionAndApplyHooks();
                 return kotlinUnitVar;
             case 14:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new bty(i3);
@@ -355,7 +355,7 @@ public final /* synthetic */ class bty implements IInvokable {
                 byr.a.getClass();
                 cdjVar7.o(StaticHelpers7.az(byp.a));
                 cls = Class.class;
-                Class<Class> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<Class> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar7.q(clsBf != null ? clsBf : Class.class);
                 bahVar7.getClass();
                 bahVar7.d = cdjVar7;
@@ -378,7 +378,7 @@ public final /* synthetic */ class bty implements IInvokable {
                 cdj cdjVar8 = new cdj();
                 Class clsB = cvh.a.b();
                 cls2 = Integer.class;
-                Class<Integer> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<Integer> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar8.q(clsB, clsBf2 != null ? clsBf2 : Integer.class);
                 fj fjVar = new fj();
                 cdj cdjVar9 = new cdj();
@@ -394,26 +394,26 @@ public final /* synthetic */ class bty implements IInvokable {
                 int i9 = 0;
                 FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam3);
                 fieldResolverVarAa.fieldType = "com.tencent.mm.ui.MMFragmentActivity" /* "com.tencent.mm.ui.MMFragmentActivity" /* "com.tencent.mm.ui.MMFragmentActivity" /* cnb.z(-69200513071914L)  */;
-                Object objE = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).e();
+                Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue_();
                 throwIfVar1IsNull(objE);
                 Activity activity = (Activity) objE;
                 FieldResolver fieldResolverVarAa2 = StaticHelpers6.aa(hookParam3);
                 fieldResolverVarAa2.name = "mViewPager" /* "mViewPager" /* "mViewPager" /* cnb.z(-69007239543594L)  */;
-                Object objE2 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).e();
+                Object objE2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).getValue_();
                 throwIfVar1IsNull(objE2);
                 ViewGroup viewGroup = (ViewGroup) objE2;
                 FieldResolver fieldResolverVarAa3 = StaticHelpers6.aa(hookParam3);
                 fieldResolverVarAa3.name = "mTabsAdapter" /* "mTabsAdapter" /* "mTabsAdapter" /* cnb.z(-68444598827818L)  */;
-                Object objD = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa3.resolve())).d();
+                Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa3.resolve())).getValue();
                 throwIfVar1IsNull(objD);
                 for (bnp bnpVar : bzc.b) {
                     try {
                         bnpVar.t(activity, viewGroup, objD);
                     } catch (Exception e) {
-                        ArrayList arrayList = ewq.a;
+                        ArrayList arrayList = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("doOnCreate " /* "doOnCreate " /* "doOnCreate " /* cnb.z(-68354404514602L)  */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
                                 bnpVar instanceof SwitchHook ? ((SwitchHook) bnpVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 68337224645418L)

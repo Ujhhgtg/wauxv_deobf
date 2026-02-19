@@ -13,11 +13,11 @@ public final class DisablePatHook extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(anz.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(anz.a));
         DisablePatHook aoaVar = a;
-        aki akiVarAb = PackageParam.ab(aoaVar, listBf);
-        aoaVar.y(akiVarAb, new amb(9));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(aoaVar, listBf);
+        aoaVar.y(hookManagerVarAb, new amb(9));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

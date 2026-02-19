@@ -16,20 +16,20 @@ public final /* synthetic */ class d implements View.OnClickListener {
         switch (this.a) {
             case 0:
                 dnc.c("1.2.6.r1238.198c77c(1238)" /* "1.2.6.r1238.198c77c(1238)" /* "1.2.6.r1238.198c77c(1238)" /* cnb.z(-415821553728298L)  */);
-                dnc.g(null, 3, "复制成功" /* "复制成功" /* "复制成功" /* cnb.z(-415658344971050L)  */);
+                dnc.sendToast(null, 3, "复制成功" /* "复制成功" /* "复制成功" /* cnb.z(-415658344971050L)  */);
                 break;
             case 1:
                 dnc.c(exl.c);
-                dnc.g(null, 3, "复制成功" /* "复制成功" /* "复制成功" /* cnb.z(-415671229872938L)  */);
+                dnc.sendToast(null, 3, "复制成功" /* "复制成功" /* "复制成功" /* cnb.z(-415671229872938L)  */);
                 break;
             case 2:
-                bmo.a.getClass();
-                dnc.c(bmo.s());
-                dnc.g(null, 3, "复制成功" /* "复制成功" /* "复制成功" /* cnb.z(-415632575167274L)  */);
+                HostInfoRegistry.INSTANCE.getClass();
+                dnc.c(HostInfoRegistry.getVersionString());
+                dnc.sendToast(null, 3, "复制成功" /* "复制成功" /* "复制成功" /* cnb.z(-415632575167274L)  */);
                 break;
             case 3:
-                dnc.c(PanelEmojiHook.b);
-                dnc.g(null, 3, "复制成功" /* "复制成功" /* "复制成功" /* cnb.z(-474211634117418L)  */);
+                dnc.c(PanelEmojiHook.RESOURCE_DIR);
+                dnc.sendToast(null, 3, "复制成功" /* "复制成功" /* "复制成功" /* cnb.z(-474211634117418L)  */);
                 break;
             case 4:
                 String strZ = "EmojiGroupInfo" /* "EmojiGroupInfo" /* "EmojiGroupInfo" /* cnb.z(-474172979411754L)  */;
@@ -40,16 +40,16 @@ public final /* synthetic */ class d implements View.OnClickListener {
                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.name = "delete" /* "delete" /* "delete" /* cnb.z(-103225243990826L)  */;
                 Object objJ = ((MethodHookWrapper) StaticHelpers6.n(
-                        new Object[] { dal.b(String.class), dal.b(String.class), dal.b(String[].class) }, 3, methodResolverVarT))
+                        new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String[].class) }, 3, methodResolverVarT))
                         .j(strZ, strZ2, strArr);
                 throwIfVar1IsNull(objJ);
                 ((Number) objJ).intValue();
-                dnc.g(null, 3, "清除成功" /* "清除成功" /* "清除成功" /* cnb.z(-471226631846698L)  */);
+                dnc.sendToast(null, 3, "清除成功" /* "清除成功" /* "清除成功" /* cnb.z(-471226631846698L)  */);
                 break;
             default:
                 Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
                 dnc.c(PathUtils.getModuleSubDir("Plugin" /* "Plugin" /* "Plugin" /* cnb.z(-47055661693738L)  */));
-                dnc.g(null, 3, "复制成功" /* "复制成功" /* "复制成功" /* cnb.z(-485060721507114L)  */);
+                dnc.sendToast(null, 3, "复制成功" /* "复制成功" /* "复制成功" /* cnb.z(-485060721507114L)  */);
                 break;
         }
     }

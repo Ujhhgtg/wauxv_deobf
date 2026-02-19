@@ -11,9 +11,9 @@ public abstract class kv {
             String property = System.getProperty("kotlinx.serialization.json.pool.size");
             objX = property != null ? dnq.bf(property) : null;
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        Integer num = (Integer) (objX instanceof dcx ? null : objX);
+        Integer num = (Integer) (objX instanceof Failure ? null : objX);
         a = num != null ? num.intValue() : 2097152;
     }
 }

@@ -20,9 +20,9 @@ public final class CustomContactCountHook extends SwitchHook {
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         CustomContactCountHook airVar = a;
-        aki akiVarAd = airVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
-        airVar.y(akiVarAd, new age(25));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = airVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+        airVar.y(hookManagerVarAd, new age(25));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

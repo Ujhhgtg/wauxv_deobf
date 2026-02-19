@@ -62,7 +62,7 @@ public final class Dispatcher2 extends Dispatcher implements als {
         if (brfVar != null) {
             brfVar.q(cancellationException);
         }
-        alc alcVar = aou.a;
+        Dispatchers$Default alcVar = aou.a;
         akq.f.i(ahhVar, runnable);
     }
 
@@ -70,7 +70,7 @@ public final class Dispatcher2 extends Dispatcher implements als {
     public final String toString() {
         Dispatcher2 dispatcher2Var;
         String str;
-        alc alcVar = aou.a;
+        Dispatchers$Default alcVar = aou.a;
         Dispatcher2 dispatcher2Var2 = bza.a;
         if (this == dispatcher2Var2) {
             str = "Dispatchers.Main";

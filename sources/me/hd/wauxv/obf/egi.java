@@ -25,8 +25,8 @@ public final class egi {
     static {
         efq efqVar = new efq(2);
         btx btxVar = btx.a;
-        a = new IHasGetValue[] { null, null, null, null, ewz.am(btxVar, efqVar), null, null, null, null,
-                ewz.am(btxVar, new efq(3)), null, null, null, null };
+        a = new IHasGetValue[] { null, null, null, null, StaticAndroidHelpers.am(btxVar, efqVar), null, null, null, null,
+                StaticAndroidHelpers.am(btxVar, new efq(3)), null, null, null, null };
     }
 
     public /* synthetic */ egi(int i, String str, Long l, Integer num, Integer num2, List list, Integer num3, Long l2,

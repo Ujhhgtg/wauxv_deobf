@@ -25,8 +25,8 @@ public final class cdf extends nd {
         return (obj instanceof cdf) && nullSafeIsEqual(((cdf) obj).f, this.f);
     }
 
-    public final amq h() {
-        return (amq) this.g.getValue();
+    public final MethodDesc h() {
+        return (MethodDesc) this.g.getValue();
     }
 
     public final int hashCode() {
@@ -39,12 +39,12 @@ public final class cdf extends nd {
         if (i != 0) {
             sb.append(Modifier.toString(i) + " ");
         }
-        sb.append(h().d);
+        sb.append(h().returnType);
         sb.append(" ");
-        sb.append(h().a);
+        sb.append(h().declaringClass);
         sb.append(".");
-        sb.append(h().b);
+        sb.append(h().methodName);
         sb.append("(");
-        return yg.concatToVar1(sb, StaticHelpers5.k(h().c, ", ", null, null, null, 62), ")");
+        return yg.concatToVar1(sb, StaticHelpers5.k(h().parameterTypes, ", ", null, null, null, 62), ")");
     }
 }

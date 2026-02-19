@@ -16,8 +16,8 @@ import java.util.WeakHashMap;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class axs extends AccessibilityDelegateCompat {
     public static final Rect t = new Rect(Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE);
-    public static final GifEncoder u = new GifEncoder(1);
-    public static final GifEncoder v = new GifEncoder(2);
+    public static final SyntheticClass u = new SyntheticClass(1);
+    public static final SyntheticClass v = new SyntheticClass(2);
     public final AccessibilityManager aa;
     public final View ab;
     public axr ac;
@@ -241,21 +241,21 @@ public abstract class axs extends AccessibilityDelegateCompat {
         }
         int i10 = this.ae;
         bd bdVar3 = i10 == Integer.MIN_VALUE ? null : (bd) dloVar.f(i10);
-        GifEncoder gifEncoderVar = u;
-        GifEncoder gifEncoderVar2 = v;
+        SyntheticClass syntheticClassVar = u;
+        SyntheticClass syntheticClassVar2 = v;
         View view = this.ab;
         if (i == 1 || i == 2) {
             i2 = 0;
             i3 = -1;
             WeakHashMap weakHashMap = ViewCompat.a;
             boolean z = view.getLayoutDirection() == 1;
-            gifEncoderVar2.getClass();
+            syntheticClassVar2.getClass();
             int i11 = dloVar.i();
             ArrayList arrayList2 = new ArrayList(i11);
             for (int i12 = 0; i12 < i11; i12++) {
                 arrayList2.add((bd) dloVar.j(i12));
             }
-            Collections.sort(arrayList2, new bbq(z, gifEncoderVar));
+            Collections.sort(arrayList2, new bbq(z, syntheticClassVar));
             if (i == 1) {
                 int size = arrayList2.size();
                 if (bdVar3 != null) {
@@ -325,14 +325,14 @@ public abstract class axs extends AccessibilityDelegateCompat {
                     i2 = 0;
                     rect2.offset(0, -(rect4.height() + 1));
                 }
-                gifEncoderVar2.getClass();
+                syntheticClassVar2.getClass();
                 i6 = dloVar.i();
                 rect3 = new Rect();
                 bdVar = null;
                 for (i7 = i2; i7 < i6; i7++) {
                     bdVar2 = (bd) dloVar.j(i7);
                     if (bdVar2 == bdVar3) {
-                        gifEncoderVar.getClass();
+                        syntheticClassVar.getClass();
                         bdVar2.dexFind(rect3);
                         if (KotlinHelpers.ac(i, rect4, rect3)) {
                             if (KotlinHelpers.ac(i, rect4, rect2) || KotlinHelpers.g(i, rect4, rect3, rect2)) {
@@ -373,14 +373,14 @@ public abstract class axs extends AccessibilityDelegateCompat {
                 i2 = 0;
                 rect2.offset(0, -(rect4.height() + 1));
             }
-            gifEncoderVar2.getClass();
+            syntheticClassVar2.getClass();
             i6 = dloVar.i();
             rect3 = new Rect();
             bdVar = null;
             while (i7 < i6) {
                 bdVar2 = (bd) dloVar.j(i7);
                 if (bdVar2 == bdVar3) {
-                    gifEncoderVar.getClass();
+                    syntheticClassVar.getClass();
                     bdVar2.dexFind(rect3);
                     if (KotlinHelpers.ac(i, rect4, rect3)) {
                         if (KotlinHelpers.ac(i, rect4, rect2)) {

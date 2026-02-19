@@ -24,7 +24,7 @@ public final class css extends p {
         while (iAv < charSequence.length()) {
             int iAe = StaticHelpers6.ae(bvqVar.a);
             if (iAe == 0) {
-                int iAv2 = ewz.av(iAv, charSequence.length(), charSequence);
+                int iAv2 = StaticAndroidHelpers.av(iAv, charSequence.length(), charSequence);
                 if (iAv2 >= charSequence.length() || charSequence.charAt(iAv2) != '[') {
                     iAv = -1;
                 } else {
@@ -55,16 +55,16 @@ public final class css extends p {
                         } else {
                             bvqVar.e = strReplaceAll;
                             bvqVar.a = 3;
-                            iAv = ewz.av(iAa + 2, charSequence.length(), charSequence);
+                            iAv = StaticAndroidHelpers.av(iAa + 2, charSequence.length(), charSequence);
                         }
                     }
                 }
             } else if (iAe == 2) {
-                int iAv3 = ewz.av(iAv, charSequence.length(), charSequence);
+                int iAv3 = StaticAndroidHelpers.av(iAv, charSequence.length(), charSequence);
                 int iZ = ResourcesCompat.z(iAv3, charSequence);
                 if (iZ != -1) {
                     bvqVar.f = charSequence.charAt(iAv3) == '<' ? charSequence.subSequence(iAv3 + 1, iZ - 1).toString() : charSequence.subSequence(iAv3, iZ).toString();
-                    iAv = ewz.av(iZ, charSequence.length(), charSequence);
+                    iAv = StaticAndroidHelpers.av(iZ, charSequence.length(), charSequence);
                     if (iAv >= charSequence.length()) {
                         bvqVar.i = true;
                         sb.setLength(0);
@@ -76,7 +76,7 @@ public final class css extends p {
                     iAv = -1;
                 }
             } else if (iAe == 3) {
-                iAv = ewz.av(iAv, charSequence.length(), charSequence);
+                iAv = StaticAndroidHelpers.av(iAv, charSequence.length(), charSequence);
                 if (iAv >= charSequence.length()) {
                     bvqVar.a = 1;
                 } else {
@@ -109,7 +109,7 @@ public final class css extends p {
                         bvqVar.h.append('\n');
                         iAv = iAa;
                     } else {
-                        iAv = ewz.av(iAa + 1, charSequence.length(), charSequence);
+                        iAv = StaticAndroidHelpers.av(iAa + 1, charSequence.length(), charSequence);
                         if (iAv != charSequence.length()) {
                             iAv = -1;
                         } else {

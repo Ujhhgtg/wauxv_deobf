@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class eft {
     public static final efs Companion = new efs();
-    public static final IHasGetValue[] a = { null, ewz.am(btx.a, new efq(0)) };
+    public static final IHasGetValue[] a = { null, StaticAndroidHelpers.am(btx.a, new efq(0)) };
     public final Integer b;
     public final List c;
 

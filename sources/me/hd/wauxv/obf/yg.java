@@ -27,7 +27,7 @@ public abstract /* synthetic */ class yg {
         return new ClassCastException();
     }
 
-    public static Object e(FieldResolver fieldResolverVar) {
+    public static Object enableSuperclassAndResolveFirstField(FieldResolver fieldResolverVar) {
         fieldResolverVar.enableSuperclass();
         return StaticHelpers5.safeGetFirstInList(fieldResolverVar.resolve());
     }
@@ -54,7 +54,7 @@ public abstract /* synthetic */ class yg {
         return str.substring(i2, str.length() - i);
     }
 
-    public static String k(String str, String str2) {
+    public static String concat(String str, String str2) {
         return str + str2;
     }
 

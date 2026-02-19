@@ -33,11 +33,11 @@ public final class vg extends SwitchHook implements IDexFind, bob {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(uu.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(uu.a));
         vg vgVar = a;
-        aki akiVarAb = PackageParam.ab(vgVar, listBf);
-        vgVar.x(akiVarAb, new us(0));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(vgVar, listBf);
+        vgVar.x(hookManagerVarAb, new us(0));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

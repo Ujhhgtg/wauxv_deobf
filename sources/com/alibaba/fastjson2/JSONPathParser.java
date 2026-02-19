@@ -1,9 +1,5 @@
 package com.alibaba.fastjson2;
 
-import com.alibaba.fastjson2.JSONPath;
-import com.alibaba.fastjson2.JSONPathFilter;
-import com.alibaba.fastjson2.JSONPathFunction;
-import com.alibaba.fastjson2.JSONPathSegment;
 import com.alibaba.fastjson2.util.Fnv;
 import com.alibaba.fastjson2.util.TypeUtils;
 import com.umeng.analytics.pro.dn;
@@ -199,13 +195,13 @@ class JSONPathParser {
             } else if (c == 'l') {
                 String fieldNameUnquote = jSONReader2.readFieldNameUnquote();
                 if (!"last".equals(fieldNameUnquote)) {
-                    throw new JSONException(yg.k("not support : ", fieldNameUnquote));
+                    throw new JSONException(yg.concat("not support : ", fieldNameUnquote));
                 }
                 multiNameSegment = JSONPathSegmentIndex.of(-1);
             } else if (c == 'r') {
                 String fieldNameUnquote2 = jSONReader2.readFieldNameUnquote();
                 if (!"randomIndex".equals(fieldNameUnquote2) || !this.jsonReader.nextIfMatch('(') || !this.jsonReader.nextIfMatch(')') || this.jsonReader.ch != ']') {
-                    throw new JSONException(yg.k("not support : ", fieldNameUnquote2));
+                    throw new JSONException(yg.concat("not support : ", fieldNameUnquote2));
                 }
                 multiNameSegment = JSONPathSegment.RandomIndexSegment.INSTANCE;
             } else if (c == '\'') {
@@ -718,23 +714,23 @@ class JSONPathParser {
         } else if (c == 'A') {
             fieldNameUnquote = jSONReader.readFieldNameUnquote();
             if (!"and".equalsIgnoreCase(fieldNameUnquote)) {
-                throw new JSONException(yg.k("syntax error : ", fieldNameUnquote));
+                throw new JSONException(yg.concat("syntax error : ", fieldNameUnquote));
             }
         } else {
             if (c == 'O') {
                 fieldNameUnquote2 = jSONReader.readFieldNameUnquote();
                 if (!"or".equalsIgnoreCase(fieldNameUnquote2)) {
-                    throw new JSONException(yg.k("syntax error : ", fieldNameUnquote2));
+                    throw new JSONException(yg.concat("syntax error : ", fieldNameUnquote2));
                 }
             } else if (c == 'a') {
                 fieldNameUnquote = jSONReader.readFieldNameUnquote();
                 if (!"and".equalsIgnoreCase(fieldNameUnquote)) {
-                    throw new JSONException(yg.k("syntax error : ", fieldNameUnquote));
+                    throw new JSONException(yg.concat("syntax error : ", fieldNameUnquote));
                 }
             } else if (c == 'o') {
                 fieldNameUnquote2 = jSONReader.readFieldNameUnquote();
                 if (!"or".equalsIgnoreCase(fieldNameUnquote2)) {
-                    throw new JSONException(yg.k("syntax error : ", fieldNameUnquote2));
+                    throw new JSONException(yg.concat("syntax error : ", fieldNameUnquote2));
                 }
             } else {
                 if (c != '|') {

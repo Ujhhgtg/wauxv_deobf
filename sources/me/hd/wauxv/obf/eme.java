@@ -7,11 +7,11 @@ import net.bytebuddy.description.type.TypeDescription;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class eme {
-    public final zc a;
+    public final KClass a;
     public final List b;
     public final int c;
 
-    public eme(zc zcVar, boolean z) {
+    public eme(KClass zcVar, boolean z) {
         List list = Collections.EMPTY_LIST;
         throwIfVar1IsNull(list, "arguments");
         this.a = zcVar;

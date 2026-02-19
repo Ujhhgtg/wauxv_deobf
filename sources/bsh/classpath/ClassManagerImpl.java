@@ -254,7 +254,7 @@ public class ClassManagerImpl extends BshClassManager {
                 classSource = BshClassPath.getUserClassPath().getClassSource(str);
             }
             if (classSource == null) {
-                throw new ClassPathException(yg.k("Nothing known about class: ", str));
+                throw new ClassPathException(yg.concat("Nothing known about class: ", str));
             }
             if (classSource instanceof BshClassPath.JarClassSource) {
                 throw new ClassPathException("Cannot reload class: " + str + " from source: " + classSource);
@@ -276,7 +276,7 @@ public class ClassManagerImpl extends BshClassManager {
             classesForPackage = BshClassPath.getUserClassPath().getClassesForPackage(str);
         }
         if (classesForPackage == null) {
-            throw new ClassPathException(yg.k("No classes found for package: ", str));
+            throw new ClassPathException(yg.concat("No classes found for package: ", str));
         }
         reloadClasses((String[]) classesForPackage.toArray(new String[classesForPackage.size()]));
     }

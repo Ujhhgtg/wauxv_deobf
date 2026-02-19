@@ -23,6 +23,6 @@ public final class er extends btp implements IInvokable {
                 ((cky) this.b).getClass();
                 break;
         }
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

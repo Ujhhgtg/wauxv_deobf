@@ -545,7 +545,7 @@ public class d implements c.a {
     }
 
     private void b(String str) {
-        String strK = yg.k(au.b, str);
+        String strK = yg.concat(au.b, str);
         SharedPreferences sharedPreferencesA = au.a(UMGlobalContext.getAppContext());
         if (sharedPreferencesA != null) {
             sharedPreferencesA.edit().putLong(strK, System.currentTimeMillis()).commit();

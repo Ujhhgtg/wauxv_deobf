@@ -307,7 +307,7 @@ public class FactoryPools implements dcq, cuv {
             return ((ek) this.f).g(pa.g(((BitmapDrawable) drawable).getBitmap(), (oz) this.e), crwVar);
         }
         if (drawable instanceof bha) {
-            return ((GifEncoder) this.h).g(dcgVar, crwVar);
+            return ((SyntheticClass) this.h).g(dcgVar, crwVar);
         }
         return null;
     }
@@ -317,7 +317,7 @@ public class FactoryPools implements dcq, cuv {
         if (obj instanceof axw) {
             ((axw) obj).al().a = true;
         }
-        switch (((GifEncoder) this.f).b) {
+        switch (((SyntheticClass) this.f).b) {
             case 3:
                 break;
             default:
@@ -802,11 +802,11 @@ public class FactoryPools implements dcq, cuv {
         }
     }
 
-    public FactoryPools(cux cuxVar, axv axvVar, GifEncoder gifEncoderVar) {
+    public FactoryPools(cux cuxVar, axv axvVar, SyntheticClass syntheticClassVar) {
         this.d = 10;
         this.h = cuxVar;
         this.e = axvVar;
-        this.f = gifEncoderVar;
+        this.f = syntheticClassVar;
     }
 
     public FactoryPools(bzp bzpVar, ArrayList arrayList, bva bvaVar) {

@@ -69,7 +69,7 @@ public abstract class emc {
     public static final SpecificEmojiMatcher t;
     public static final SpecificEmojiMatcher u;
     public static final cbm v = new cbm(11);
-    public static io w;
+    public static DefaultConfig config;
     public static boolean x;
     public static Method y;
     public static boolean z;
@@ -348,10 +348,10 @@ public abstract class emc {
         return typedValue.resourceId != 0 ? i : i2;
     }
 
-    public static final String ao(zc zcVar) {
+    public static final String ao(KClass zcVar) {
         String strO;
-        Map map = zc.b;
-        Class cls = zcVar.c;
+        Map map = KClass.functionInterfaceMap;
+        Class cls = zcVar.javaClass;
         throwIfVar1IsNull(cls, "jClass");
         String strConcat = null;
         if (cls.isAnonymousClass() || cls.isLocalClass()) {
@@ -813,10 +813,10 @@ public abstract class emc {
                             amgVar2.f = true;
                             I = amgVar2.i(assets, "dexopt/baseline.prof");
                             if (I != 0) {
-                                if (Arrays.equals(bArr4, ewz.ar(I, 4))) {
+                                if (Arrays.equals(bArr4, StaticAndroidHelpers.ar(I, 4))) {
                                     throw new IllegalStateException("Invalid magic");
                                 }
-                                amrVarArrAt = StaticHelpers7.at(I, ewz.ar(I, 4), amgVar2.e);
+                                amrVarArrAt = StaticHelpers7.at(I, StaticAndroidHelpers.ar(I, 4), amgVar2.e);
                                 I.close();
                                 amgVar2.g = amrVarArrAt;
                             }
@@ -833,10 +833,10 @@ public abstract class emc {
                                     amgVar = null;
                                     I = r75;
                                 } else {
-                                    if (Arrays.equals(StaticHelpers7.ac, ewz.ar(fileInputStreamI, 4))) {
+                                    if (Arrays.equals(StaticHelpers7.ac, StaticAndroidHelpers.ar(fileInputStreamI, 4))) {
                                         throw new IllegalStateException("Invalid magic");
                                     }
-                                    byte[] bArrAr = ewz.ar(fileInputStreamI, 4);
+                                    byte[] bArrAr = StaticAndroidHelpers.ar(fileInputStreamI, 4);
                                     amgVar2.g = StaticHelpers7.aq(fileInputStreamI, bArrAr, bArr5, amrVarArr);
                                     fileInputStreamI.close();
                                     amgVar = amgVar2;
@@ -948,10 +948,10 @@ public abstract class emc {
                                 I.close();
                                 amrVarArrAt = null;
                             }
-                            if (Arrays.equals(bArr4, ewz.ar(I, 4))) {
+                            if (Arrays.equals(bArr4, StaticAndroidHelpers.ar(I, 4))) {
                                 throw new IllegalStateException("Invalid magic");
                             }
-                            amrVarArrAt = StaticHelpers7.at(I, ewz.ar(I, 4), amgVar2.e);
+                            amrVarArrAt = StaticHelpers7.at(I, StaticAndroidHelpers.ar(I, 4), amgVar2.e);
                             try {
                                 I.close();
                             } catch (IOException e6) {
@@ -978,10 +978,10 @@ public abstract class emc {
                             }
                             if (fileInputStreamI == null) {
                                 try {
-                                    if (Arrays.equals(StaticHelpers7.ac, ewz.ar(fileInputStreamI, 4))) {
+                                    if (Arrays.equals(StaticHelpers7.ac, StaticAndroidHelpers.ar(fileInputStreamI, 4))) {
                                         throw new IllegalStateException("Invalid magic");
                                     }
-                                    byte[] bArrAr2 = ewz.ar(fileInputStreamI, 4);
+                                    byte[] bArrAr2 = StaticAndroidHelpers.ar(fileInputStreamI, 4);
                                     amgVar2.g = StaticHelpers7.aq(fileInputStreamI, bArrAr2, bArr5, amrVarArr);
                                     fileInputStreamI.close();
                                     amgVar = amgVar2;
@@ -1269,7 +1269,7 @@ public abstract class emc {
     public String toString() {
         switch (this.ab) {
             case 13:
-                String strD = dal.b(getClass()).d();
+                String strD = dal.getKClassFromClass(getClass()).getKotlinSimpleName();
                 throwIfVar1IsNull(strD);
                 return strD;
             default:

@@ -19,7 +19,7 @@ public final class deq implements ero {
     }
 
     @Override // me.hd.wauxv.obf.ero
-    public final erk _bh(zc zcVar, chq chqVar) {
+    public final erk _bh(KClass zcVar, chq chqVar) {
         return l(HugeSyntheticPileOfHelpers.getJavaClass(zcVar), chqVar);
     }
 

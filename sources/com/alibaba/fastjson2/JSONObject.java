@@ -597,7 +597,7 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
                 if (jSONReaderOf.isEnd()) {
                     return t2;
                 }
-                throw new JSONException(yg.k("not support input ", jSONString));
+                throw new JSONException(yg.concat("not support input ", jSONString));
             }
         }
         return t;

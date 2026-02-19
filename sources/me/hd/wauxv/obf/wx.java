@@ -44,7 +44,7 @@ public final /* synthetic */ class wx implements bgk {
         Object r3;
         int i = this.a;
         Object obj4 = null;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         // ?? r6 = 1;
         Object r6 = 1;
         switch (i) {
@@ -59,7 +59,7 @@ public final /* synthetic */ class wx implements bgk {
                 LinearLayout linearLayout = (LinearLayout) viewJ;
                 if (linearLayout == null) {
                     cls3 = LinearLayout.class;
-                    Class<LinearLayout> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
+                    Class<LinearLayout> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                     throw new cth("View with id \"" + strZ + "\" is not a "
                             + (clsBf != null ? clsBf : LinearLayout.class).getName() + ".");
                 }
@@ -72,7 +72,7 @@ public final /* synthetic */ class wx implements bgk {
                 ImageView imageView = (ImageView) viewJ2;
                 cls = ImageView.class;
                 if (imageView == null) {
-                    Class<ImageView> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                    Class<ImageView> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                     throw new cth("View with id \"" + strZ2 + "\" is not a "
                             + (clsBf2 != null ? clsBf2 : ImageView.class).getName() + ".");
                 }
@@ -84,7 +84,7 @@ public final /* synthetic */ class wx implements bgk {
                 }
                 ImageView imageView2 = (ImageView) viewJ3;
                 if (imageView2 == null) {
-                    Class<ImageView> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                    Class<ImageView> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                     throw new cth("View with id \"" + strZ3 + "\" is not a "
                             + (clsBf3 != null ? clsBf3 : ImageView.class).getName() + ".");
                 }
@@ -98,7 +98,7 @@ public final /* synthetic */ class wx implements bgk {
                 TextView textView = (TextView) viewJ4;
                 cls2 = TextView.class;
                 if (textView == null) {
-                    Class<TextView> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                    Class<TextView> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                     throw new cth("View with id \"" + strZ4 + "\" is not a "
                             + (clsBf4 != null ? clsBf4 : TextView.class).getName() + ".");
                 }
@@ -110,16 +110,16 @@ public final /* synthetic */ class wx implements bgk {
                     textView2.setVisibility(xbVar.k() == wy.c.e ? 8 : 0);
                     return kotlinUnitVar;
                 }
-                Class<TextView> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                Class<TextView> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 throw new cth("View with id \"" + strZ5 + "\" is not a "
                         + (clsBf5 != null ? clsBf5 : TextView.class).getName() + ".");
             case 1:
                 int i2 = 0;
                 FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).r();
                 fieldResolverVarR.name = "field_snsId" /* "field_snsId" /* "field_snsId" /* cnb.z(-535002601225002L)  */;
-                Object objE = ((azk) yg.e(fieldResolverVarR)).e();
+                Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
                 throwIfVar1IsNull(objE);
-                ewz.aq(diz.b, new cuf(((Number) objE).longValue(), 3));
+                StaticAndroidHelpers.runOnUiThread(diz.b, new cuf(((Number) objE).longValue(), 3));
                 return kotlinUnitVar;
             default:
                 Activity activity = (Activity) obj;
@@ -144,11 +144,11 @@ public final /* synthetic */ class wx implements bgk {
                 ejy ejyVar = (ejy) cwdVar.c(ejy.Companion.serializer(), (byte[]) objJ3);
                 FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj3).r();
                 fieldResolverVarR2.name = "ContentObj" /* "ContentObj" /* "ContentObj" /* cnb.z(-534903816977194L)  */;
-                Object objD = ((azk) yg.e(fieldResolverVarR2)).d();
+                Object objD = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue();
                 throwIfVar1IsNull(objD);
                 FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objD).r();
-                fieldResolverVarR3.fieldType = dal.b(LinkedList.class);
-                Object objE2 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).e();
+                fieldResolverVarR3.fieldType = dal.getKClassFromClass(LinkedList.class);
+                Object objE2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).getValue_();
                 throwIfVar1IsNull(objE2);
                 LinkedList linkedList = (LinkedList) objE2;
                 if (iIntValue == ewj.b.h) {
@@ -163,14 +163,14 @@ public final /* synthetic */ class wx implements bgk {
                     activity.startActivity(intent);
                 } else {
                     int i4 = ewj.a.h;
-                    cdy cdyVar = cdy.c;
+                    AccessModifierEnum accessModifierEnumVar = AccessModifierEnum.STATIC;
                     if (iIntValue == i4) {
                         String str3 = ejyVar.e;
                         throwIfVar1IsNull(str3);
                         ArrayList arrayList = new ArrayList();
                         for (Object obj5 : linkedList) {
                             bub.a.getClass();
-                            Object objInvoke = StaticHelpers7.bb(btz.a).invoke(obj4, obj5);
+                            Object objInvoke = StaticHelpers7.toDexMethod(btz.a).invoke(obj4, obj5);
                             throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.String" /*
                                                                                                                * cnb.z(-
                                                                                                                * 354047039109930L)
@@ -180,7 +180,7 @@ public final /* synthetic */ class wx implements bgk {
                             dkc.a.getClass();
                             int i5 = 0;
                             adt adtVarM = dqc.bh(StaticHelpers7.az(dkb.a)).m();
-                            adtVarM.setParams(Arrays.copyOf(new Object[] { dal.b(String.class) }, (int) r6));
+                            adtVarM.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(String.class) }, (int) r6));
                             ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) StaticHelpers5.safeGetFirstInList(adtVarM.a());
                             Object[] objArr = { "timeline" /* "timeline" /* "timeline" /* cnb.z(-353901010221866L)  */ };
                             Constructor constructor = constructorHookWrapperVar.a;
@@ -194,11 +194,11 @@ public final /* synthetic */ class wx implements bgk {
                             Object objNewInstance = constructor.newInstance(Arrays.copyOf(objArr, (int) r6));
                             diuVar.getClass();
                             dit ditVar = dit.a;
-                            Method methodBb = StaticHelpers7.bb(ditVar);
+                            Method methodBb = StaticHelpers7.toDexMethod(ditVar);
                             dis.a.getClass();
                             MethodResolver methodResolverVarT4 = dqc.bh(StaticHelpers7.az(dir.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                            methodResolverVarT4.ak(cdyVar);
-                            methodResolverVarT4.returnType = StaticHelpers7.bb(ditVar).getDeclaringClass();
+                            methodResolverVarT4.addAccessModifiers(accessModifierEnumVar);
+                            methodResolverVarT4.returnType = StaticHelpers7.toDexMethod(ditVar).getDeclaringClass();
                             Object objE3 = ((MethodHookWrapper) bjs.h(methodResolverVarT4)).e(new Object[0]);
                             throwIfVar1IsNull(objE3);
                             Object objInvoke2 = methodBb.invoke(objE3, obj5, 2, null, objNewInstance);
@@ -218,8 +218,8 @@ public final /* synthetic */ class wx implements bgk {
                         }
                         ArrayList arrayList2 = new ArrayList();
                         StaticHelpers5.x(arrayList, arrayList2);
-                        ((Handler) bij.a.getValue())
-                                .postDelayed(new bjt(new ben(activity, arrayList2, str3, 2), djaVar, 1), 500L);
+                        ((Handler) StaticMainLooperHandlerProvider.HANDLER.getValue())
+                                .postDelayed(new SomeRunnable(new ben(activity, arrayList2, str3, 2), djaVar), 500L);
                     } else if (iIntValue == ewj.c.h) {
                         String str5 = ejyVar.e;
                         throwIfVar1IsNull(str5);
@@ -249,9 +249,9 @@ public final /* synthetic */ class wx implements bgk {
                         throwIfVar1IsNull(str9);
                         Object objE4 = StaticHelpers5.safeGetFirstInList(linkedList);
                         dkt.a.getClass();
-                        Object objInvoke3 = StaticHelpers7.bb(dkr.a).invoke(null, objE4);
+                        Object objInvoke3 = StaticHelpers7.toDexMethod(dkr.a).invoke(null, objE4);
                         String str10 = objInvoke3 instanceof String ? (String) objInvoke3 : null;
-                        Object objInvoke4 = StaticHelpers7.bb(dks.a).invoke(null, objE4);
+                        Object objInvoke4 = StaticHelpers7.toDexMethod(dks.a).invoke(null, objE4);
                         throwIfVar1IsNull(objInvoke4, "null cannot be cast to non-null type kotlin.String" /*
                                                                                                             * cnb.z(-
                                                                                                             * 360532439726890L)
@@ -262,11 +262,11 @@ public final /* synthetic */ class wx implements bgk {
                         String strZ6 = "" /* "" /* "" /* cnb.z(-534873752206122L)  */;
                         dkvVar.getClass();
                         dku dkuVar = dku.a;
-                        Method methodBb2 = StaticHelpers7.bb(dkuVar);
+                        Method methodBb2 = StaticHelpers7.toDexMethod(dkuVar);
                         dis.a.getClass();
                         MethodResolver methodResolverVarT5 = dqc.bh(StaticHelpers7.az(dir.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                        methodResolverVarT5.ak(cdyVar);
-                        methodResolverVarT5.returnType = StaticHelpers7.bb(dkuVar).getDeclaringClass();
+                        methodResolverVarT5.addAccessModifiers(accessModifierEnumVar);
+                        methodResolverVarT5.returnType = StaticHelpers7.toDexMethod(dkuVar).getDeclaringClass();
                         Object objE5 = ((MethodHookWrapper) bjs.h(methodResolverVarT5)).e(new Object[0]);
                         throwIfVar1IsNull(objE5);
                         Object objInvoke5 = methodBb2.invoke(objE5, objE4, Integer.valueOf(iCurrentTimeMillis), str,
@@ -276,17 +276,17 @@ public final /* synthetic */ class wx implements bgk {
                                                                                                              * 358419315817258L)
                                                                                                              */);
                         if (str10 != null) {
-                            ((Handler) bij.a.getValue())
-                                    .postDelayed(new bjt(new cbj(activity, str10, str11, str9), djaVar, 1), 500L);
+                            ((Handler) StaticMainLooperHandlerProvider.HANDLER.getValue())
+                                    .postDelayed(new SomeRunnable(new cbj(activity, str10, str11, str9), djaVar), 500L);
                         } else {
-                            dnc.g(null, 3, "视频暂未缓存或者获取路径失败" /* "视频暂未缓存或者获取路径失败" /* "视频暂未缓存或者获取路径失败" /* cnb.z(-534817917631274L)  */);
+                            dnc.sendToast(null, 3, "视频暂未缓存或者获取路径失败" /* "视频暂未缓存或者获取路径失败" /* "视频暂未缓存或者获取路径失败" /* cnb.z(-534817917631274L)  */);
                         }
                     } else if (iIntValue == ewj.e.h) {
-                        dnc.g(null, 3, "暂不支持 视频号" /* "暂不支持 视频号" /* "暂不支持 视频号" /* cnb.z(-534805032729386L)  */);
+                        dnc.sendToast(null, 3, "暂不支持 视频号" /* "暂不支持 视频号" /* "暂不支持 视频号" /* cnb.z(-534805032729386L)  */);
                     } else if (iIntValue == ewj.f.h) {
-                        dnc.g(null, 3, "暂不支持 实况" /* "暂不支持 实况" /* "暂不支持 实况" /* cnb.z(-534714838416170L)  */);
+                        dnc.sendToast(null, 3, "暂不支持 实况" /* "暂不支持 实况" /* "暂不支持 实况" /* cnb.z(-534714838416170L)  */);
                     } else {
-                        dnc.g(null, 3, "暂不支持的转圈类型: " /* "暂不支持的转圈类型: " /* "暂不支持的转圈类型: " /* cnb.z(-534680478677802L)  */ + iIntValue);
+                        dnc.sendToast(null, 3, "暂不支持的转圈类型: " /* "暂不支持的转圈类型: " /* "暂不支持的转圈类型: " /* cnb.z(-534680478677802L)  */ + iIntValue);
                     }
                 }
                 return kotlinUnitVar;

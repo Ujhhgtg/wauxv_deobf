@@ -19,7 +19,7 @@ public abstract class bhs {
     public static final afw[] e = new afw[0];
     public static final bmc[] f = { bmc.a };
     public static final cbm g = new cbm(22);
-    public static DefaultConfig h = null;
+    public static DefaultConfig config = null;
     public static boolean i = true;
     public static Field j;
     public static boolean k;
@@ -130,9 +130,9 @@ public abstract class bhs {
                     XposedBridge.getXposedVersion();
                     objX = Boolean.TRUE;
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                if (objX instanceof dcx) {
+                if (objX instanceof Failure) {
                     objX = null;
                 }
                 Boolean bool = (Boolean) objX;
@@ -159,25 +159,25 @@ public abstract class bhs {
             throw new QueryDidNotReturnUniqueResultRuntimeException();
         }
         ki.a.getClass();
-        Application applicationH = ki.h();
+        Application applicationH = ki.tryGetApplication();
         if (applicationH != null && (classLoader2 = applicationH.getClassLoader()) != null
                 && ReflectionWrapper.g(classLoader2, "me.weishu.exposed.ExposedBridge")) {
             return "TaiChi";
         }
-        Application applicationH2 = ki.h();
+        Application applicationH2 = ki.tryGetApplication();
         if (applicationH2 != null && (classLoader = applicationH2.getClassLoader()) != null
                 && ReflectionWrapper.g(classLoader, "com.bug.load.BugLoad")) {
             return "BugXposed";
         }
         try {
             int i2 = 0;
-            SyntheticPileOfMess bmuVarBg = dqc.bg(dal.b(XposedBridge.class));
+            SyntheticPileOfMess bmuVarBg = dqc.bg(dal.getKClassFromClass(XposedBridge.class));
             bmuVarBg.setHookOptional(true);
             FieldResolver fieldResolverVarR = bmuVarBg.r();
             fieldResolverVarR.name = "TAG";
-            StaticHelpers2.ao(fieldResolverVarR.modifiers, (cdy[]) Arrays.copyOf(new cdy[] { cdy.c }, 1));
-            azk azkVar = (azk) StaticHelpers5.g(fieldResolverVarR.resolve());
-            if (azkVar != null && (str = (String) azkVar.e()) != null) {
+            StaticHelpers2.addAllFromVar2ToVar1(fieldResolverVarR.modifiers, (AccessModifierEnum[]) Arrays.copyOf(new AccessModifierEnum[] { AccessModifierEnum.STATIC}, 1));
+            BoundField boundFieldVar = (BoundField) StaticHelpers5.g(fieldResolverVarR.resolve());
+            if (boundFieldVar != null && (str = (String) boundFieldVar.getValue_()) != null) {
                 if (dnj.ak(str)) {
                     str = null;
                 }
@@ -186,9 +186,9 @@ public abstract class bhs {
                 }
             }
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        String str2 = (String) (objX instanceof dcx ? null : objX);
+        String str2 = (String) (objX instanceof Failure ? null : objX);
         return str2 == null ? "invalid" : str2;
     }
 
@@ -721,7 +721,7 @@ public abstract class bhs {
 
     public abstract Intent b(hb hbVar, String str);
 
-    public bc c(hb hbVar, String str) {
+    public LateinitProperty c(hb hbVar, String str) {
         return null;
     }
 

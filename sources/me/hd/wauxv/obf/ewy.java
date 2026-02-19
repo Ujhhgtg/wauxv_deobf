@@ -7,17 +7,17 @@ import java.util.ArrayList;
 public abstract class ewy extends PackageParam {
     public final void ak(PackageParam packageParamVar) {
         Object objX;
-        this.aa = packageParamVar.aa;
+        this.processInfo = packageParamVar.processInfo;
         try {
             w();
-            objX = KotlinUnit.INSTANCE;
+            objX = Kotlin$Unit.INSTANCE;
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
-        Throwable thB = dcy.b(objX);
+        Throwable thB = Success.exceptionOrNull(objX);
         if (thB != null) {
-            ArrayList arrayList = ewq.a;
-            ewq.g(4, "An exception occurred in " + this, thB);
+            ArrayList arrayList = Logger.a;
+            Logger.logException(4, "An exception occurred in " + this, thB);
         }
     }
 

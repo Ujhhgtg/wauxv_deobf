@@ -134,7 +134,7 @@ public final class adw extends cyw {
             ImageView imageView = (ImageView) cxdVar.b(R.id.itemContactImageViewAvatar);
             String str = adxVar.a;
             moVar.getClass();
-            XposedBridge.invokeOriginalMethod(StaticHelpers7.bb(mn.a), (Object) null,
+            XposedBridge.invokeOriginalMethod(StaticHelpers7.toDexMethod(mn.a), (Object) null,
                     new Object[] { imageView, str, Float.valueOf(0.1f), Boolean.FALSE });
             ((TextView) cxdVar.b(R.id.itemContactTextViewName)).setText(adxVar.b);
             ((TextView) cxdVar.b(R.id.itemContactTextViewDesc)).setText(adxVar.c);

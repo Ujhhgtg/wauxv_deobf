@@ -18,8 +18,8 @@ public final class acv extends bws implements IDexFind {
         Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objE).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        methodResolverVarT2.returnType = dal.b(Object.class);
-        return ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(Integer.TYPE), dal.b(Object.class) }, 2, methodResolverVarT2))
+        methodResolverVarT2.returnType = dal.getKClassFromClass(Object.class);
+        return ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(Object.class) }, 2, methodResolverVarT2))
                 .e(Integer.valueOf(i), null);
     }
 

@@ -8,7 +8,7 @@ public final class bym extends bws implements IDexFind {
     public static final bym a = new bym();
 
     public static String b(String str, boolean z) {
-        Object objInvoke = StaticHelpers7.bb(byl.a).invoke(null, str);
+        Object objInvoke = StaticHelpers7.toDexMethod(byl.a).invoke(null, str);
         String string = objInvoke instanceof String ? (String) objInvoke : null;
         if (string != null) {
             String strZ = "/" /* "/" /* "/" /* cnb.z(-374168960891690L)  */;

@@ -29,9 +29,9 @@ public final class ga extends SwitchHook implements IDatabaseOperationsListener,
             MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
             HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
             ga gaVar = a;
-            aki akiVarAd = gaVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
-            gaVar.y(akiVarAd, new bn(18));
-            akiVarAd.o();
+            HookManager hookManagerVarAd = gaVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+            gaVar.y(hookManagerVarAd, new bn(18));
+            hookManagerVarAd.initInstantCollectionAndApplyHooks();
         }
     }
 
@@ -70,7 +70,7 @@ public final class ga extends SwitchHook implements IDatabaseOperationsListener,
                 dlx.a.getClass();
                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
-                Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class), dal.b(Object[].class) }, 2, methodResolverVarT)).j(
+                Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) }, 2, methodResolverVarT)).j(
                         "SELECT createTime, talker FROM message WHERE msgId = ?" /* "SELECT createTime, talker FROM message WHERE msgId = ?" /* "SELECT createTime, talker FROM message WHERE msgId = ?" /* cnb.z(-453883553905450L)  */,
                         new Object[] { asLong });
                 throwIfVar1IsNull(objJ);
@@ -84,7 +84,7 @@ public final class ga extends SwitchHook implements IDatabaseOperationsListener,
                         throwIfVar1IsNull(patternCompile, "compile(...)");
                         Matcher matcher = patternCompile.matcher(asString);
                         throwIfVar1IsNull(matcher, "matcher(...)");
-                        bzx bzxVarY = ewz.y(matcher, 0, asString);
+                        bzx bzxVarY = StaticAndroidHelpers.y(matcher, 0, asString);
                         aye.w(ewg.j.w, string, "\"" + (bzxVarY != null ? (String) ((bzv) bzxVarY.e()).get(2) : null)
                                 + "\" " /* "\" " /* "\" " /* cnb.z(-453509891750698L)  */ + fz.a.o(), j + 1);
                         hookParam.setResult(1);

@@ -42,7 +42,7 @@ public final class j extends bdo {
                             if (outputStreamOpenOutputStream != null) {
                                 try {
                                     HugeSyntheticPileOfHelpers.zipDirectory(outputStreamOpenOutputStream);
-                                    dnc.g(null, 3, "导出成功" /* "导出成功" /* "导出成功" /* cnb.z(-415873093335850L)  */);
+                                    dnc.sendToast(null, 3, "导出成功" /* "导出成功" /* "导出成功" /* cnb.z(-415873093335850L)  */);
                                     outputStreamOpenOutputStream.close();
                                     return;
                                 } catch (Throwable th) {
@@ -56,7 +56,7 @@ public final class j extends bdo {
                             }
                             return;
                         } catch (Exception unused) {
-                            dnc.g(null, 3, "导出失败" /* "导出失败" /* "导出失败" /* cnb.z(-415885978237738L)  */);
+                            dnc.sendToast(null, 3, "导出失败" /* "导出失败" /* "导出失败" /* cnb.z(-415885978237738L)  */);
                             return;
                         }
                     default:
@@ -71,7 +71,7 @@ public final class j extends bdo {
                             if (inputStreamOpenInputStream != null) {
                                 try {
                                     HugeSyntheticPileOfHelpers.unzipStream(inputStreamOpenInputStream);
-                                    dnc.g(null, 3, "导入成功" /* "导入成功" /* "导入成功" /* cnb.z(-415847323532074L)  */);
+                                    dnc.sendToast(null, 3, "导入成功" /* "导入成功" /* "导入成功" /* cnb.z(-415847323532074L)  */);
                                     inputStreamOpenInputStream.close();
                                     return;
                                 } catch (Throwable th3) {
@@ -85,7 +85,7 @@ public final class j extends bdo {
                             }
                             return;
                         } catch (Exception unused2) {
-                            dnc.g(null, 3, "导入失败" /* "导入失败" /* "导入失败" /* cnb.z(-415791488957226L)  */);
+                            dnc.sendToast(null, 3, "导入失败" /* "导入失败" /* "导入失败" /* cnb.z(-415791488957226L)  */);
                             return;
                         }
                 }
@@ -114,7 +114,7 @@ public final class j extends bdo {
                             if (outputStreamOpenOutputStream != null) {
                                 try {
                                     HugeSyntheticPileOfHelpers.zipDirectory(outputStreamOpenOutputStream);
-                                    dnc.g(null, 3, "导出成功" /* "导出成功" /* "导出成功" /* cnb.z(-415873093335850L)  */);
+                                    dnc.sendToast(null, 3, "导出成功" /* "导出成功" /* "导出成功" /* cnb.z(-415873093335850L)  */);
                                     outputStreamOpenOutputStream.close();
                                     return;
                                 } catch (Throwable th) {
@@ -128,7 +128,7 @@ public final class j extends bdo {
                             }
                             return;
                         } catch (Exception unused) {
-                            dnc.g(null, 3, "导出失败" /* "导出失败" /* "导出失败" /* cnb.z(-415885978237738L)  */);
+                            dnc.sendToast(null, 3, "导出失败" /* "导出失败" /* "导出失败" /* cnb.z(-415885978237738L)  */);
                             return;
                         }
                     default:
@@ -143,7 +143,7 @@ public final class j extends bdo {
                             if (inputStreamOpenInputStream != null) {
                                 try {
                                     HugeSyntheticPileOfHelpers.unzipStream(inputStreamOpenInputStream);
-                                    dnc.g(null, 3, "导入成功" /* "导入成功" /* "导入成功" /* cnb.z(-415847323532074L)  */);
+                                    dnc.sendToast(null, 3, "导入成功" /* "导入成功" /* "导入成功" /* cnb.z(-415847323532074L)  */);
                                     inputStreamOpenInputStream.close();
                                     return;
                                 } catch (Throwable th3) {
@@ -157,7 +157,7 @@ public final class j extends bdo {
                             }
                             return;
                         } catch (Exception unused2) {
-                            dnc.g(null, 3, "导入失败" /* "导入失败" /* "导入失败" /* cnb.z(-415791488957226L)  */);
+                            dnc.sendToast(null, 3, "导入失败" /* "导入失败" /* "导入失败" /* cnb.z(-415791488957226L)  */);
                             return;
                         }
                 }
@@ -192,13 +192,13 @@ public final class j extends bdo {
                                                                                               */, new d(i4));
         ny nyVar2 = new ny("编译时间" /* "编译时间" /* "编译时间" /* cnb.z(-391503448898346L)  */, exl.c, new d(i));
         String strZ2 = "宿主版本" /* "宿主版本" /* "宿主版本" /* cnb.z(-391516333800234L)  */;
-        bmo.a.getClass();
+        HostInfoRegistry.INSTANCE.getClass();
         final int i5 = 3;
         final int i6 = 10;
         final int i7 = 11;
         final int i8 = 12;
         ArrayList arrayListO2 = StaticHelpers5
-                .o(StaticHelpers5.o(StaticHelpers5.o(arrayListO, OtherStaticHelpers.argsToList(nzVar2, nyVar, nyVar2, new ny(strZ2, bmo.s(), new d(i3)))),
+                .o(StaticHelpers5.o(StaticHelpers5.o(arrayListO, OtherStaticHelpers.argsToList(nzVar2, nyVar, nyVar2, new ny(strZ2, HostInfoRegistry.getVersionString(), new d(i3)))),
                         OtherStaticHelpers.argsToList(new nz("隐私与协议" /* "隐私与协议" /* "隐私与协议" /* cnb.z(-391477679094570L)  */),
                                 new ny("用户协议" /* "用户协议" /* "用户协议" /* cnb.z(-391434729421610L)  */, 0 == true ? 1 : 0,
                                         new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
@@ -390,8 +390,8 @@ public final class j extends bdo {
                                                                                                          * cnb.z(-
                                                                                                          * 416109316537130L)
                                                                                                          */;
-                                                bmo.a.getClass();
-                                                egVar.f = strZ4.concat(bmo.o());
+                                                HostInfoRegistry.INSTANCE.getClass();
+                                                egVar.f = strZ4.concat(HostInfoRegistry.getAppName());
                                                 bzyVar.t("确定" /* "确定" /* "确定" /* cnb.z(-415928927910698L)  */, new amw(new h(0), 0));
                                                 bzyVar.r("取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */,
                                                         new amw((3 & 2) != 0 ? new amd(1) : null, 1));
@@ -406,8 +406,8 @@ public final class j extends bdo {
                                                                                                          * cnb.z(-
                                                                                                          * 415954697714474L)
                                                                                                          */;
-                                                bmo.a.getClass();
-                                                egVar2.f = strZ6.concat(bmo.o());
+                                                HostInfoRegistry.INSTANCE.getClass();
+                                                egVar2.f = strZ6.concat(HostInfoRegistry.getAppName());
                                                 bzyVar2.t("确定" /* "确定" /* "确定" /* cnb.z(-417423576529706L)  */, new amw(new h(1), 0));
                                                 bzyVar2.r("取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */,
                                                         new amw((3 & 2) != 0 ? new amd(1) : null, 1));
@@ -430,8 +430,8 @@ public final class j extends bdo {
                                                                                                                  * (-
                                                                                                                  * 416109316537130L)
                                                                                                                  */;
-                                                        bmo.a.getClass();
-                                                        egVar.f = strZ4.concat(bmo.o());
+                                                        HostInfoRegistry.INSTANCE.getClass();
+                                                        egVar.f = strZ4.concat(HostInfoRegistry.getAppName());
                                                         bzyVar.t("确定" /* "确定" /* "确定" /* cnb.z(-415928927910698L)  */,
                                                                 new amw(new h(0), 0));
                                                         bzyVar.r("取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */,
@@ -448,8 +448,8 @@ public final class j extends bdo {
                                                                                                                  * (-
                                                                                                                  * 415954697714474L)
                                                                                                                  */;
-                                                        bmo.a.getClass();
-                                                        egVar2.f = strZ6.concat(bmo.o());
+                                                        HostInfoRegistry.INSTANCE.getClass();
+                                                        egVar2.f = strZ6.concat(HostInfoRegistry.getAppName());
                                                         bzyVar2.t("确定" /* "确定" /* "确定" /* cnb.z(-417423576529706L)  */,
                                                                 new amw(new h(1), 0));
                                                         bzyVar2.r("取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */,

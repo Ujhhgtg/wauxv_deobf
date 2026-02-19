@@ -38,7 +38,7 @@ class ObjectReaderImplGenericArray implements ObjectReader {
     @Override // com.alibaba.fastjson2.reader.ObjectReader
     public Object readJSONBObject(JSONReader jSONReader, Type type, Object obj, long j) {
         if (jSONReader.nextIfMatch(JSONB.Constants.BC_TYPED_ANY) && jSONReader.readTypeHashCode() != this.arrayClassNameHash) {
-            throw new JSONException(yg.k("not support input typeName ", jSONReader.getString()));
+            throw new JSONException(yg.concat("not support input typeName ", jSONReader.getString()));
         }
         int iStartArray = jSONReader.startArray();
         if (iStartArray > 0 && this.itemObjectReader == null) {

@@ -6,13 +6,13 @@ import net.bytebuddy.pool.TypePool;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bpw implements Comparable, Serializable {
-    public static final bpw a = new bpw(-31557014167219200L, 0);
-    public static final bpw b = new bpw(31556889864403199L, 999999999);
+public final class Instant implements Comparable, Serializable {
+    public static final Instant a = new Instant(-31557014167219200L, 0);
+    public static final Instant b = new Instant(31556889864403199L, 999999999);
     public final long c;
     public final int d;
 
-    public bpw(long j, int i) {
+    public Instant(long j, int i) {
         this.c = j;
         this.d = i;
         if (-31557014167219200L > j || j >= 31556889864403200L) {
@@ -22,23 +22,23 @@ public final class bpw implements Comparable, Serializable {
 
     @Override // java.lang.Comparable
     public final int compareTo(Object obj) {
-        bpw bpwVar = (bpw) obj;
-        throwIfVar1IsNull(bpwVar, "other");
+        Instant instantVar = (Instant) obj;
+        throwIfVar1IsNull(instantVar, "other");
         long j = this.c;
-        long j2 = bpwVar.c;
+        long j2 = instantVar.c;
         int i = j < j2 ? -1 : j == j2 ? 0 : 1;
-        return i != 0 ? i : KotlinHelpers.r(this.d, bpwVar.d);
+        return i != 0 ? i : KotlinHelpers.r(this.d, instantVar.d);
     }
 
     public final boolean equals(Object obj) {
         if (this == obj) {
             return true;
         }
-        if (!(obj instanceof bpw)) {
+        if (!(obj instanceof Instant)) {
             return false;
         }
-        bpw bpwVar = (bpw) obj;
-        return this.c == bpwVar.c && this.d == bpwVar.d;
+        Instant instantVar = (Instant) obj;
+        return this.c == instantVar.c && this.d == instantVar.d;
     }
 
     public final int hashCode() {

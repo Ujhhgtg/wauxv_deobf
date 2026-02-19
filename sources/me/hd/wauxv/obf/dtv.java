@@ -56,7 +56,7 @@ public final class dtv {
         a = new IHasGetValue[] { null, null, null, null, null, null, null, null, null, null, null, null, null, null,
                 null, null,
                 null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
-                null, null, null, null, null, ewz.am(btxVar, cfhVar), null, ewz.am(btxVar, new dtr(0)), null };
+                null, null, null, null, null, StaticAndroidHelpers.am(btxVar, cfhVar), null, StaticAndroidHelpers.am(btxVar, new dtr(0)), null };
     }
 
     public /* synthetic */ dtv(int i, int i2, String str, Integer num, String str2, String str3, Integer num2,

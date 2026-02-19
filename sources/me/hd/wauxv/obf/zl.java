@@ -26,10 +26,10 @@ public final class zl extends doi implements bgj {
         afw afwVar = (afw) obj2;
         switch (this.a) {
             case 0:
-                return ((zl) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
+                return ((zl) h(ahpVar, afwVar)).i(Kotlin$Unit.INSTANCE);
             default:
                 zl zlVar = (zl) h(ahpVar, afwVar);
-                KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+                Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
                 zlVar.i(kotlinUnitVar);
                 return kotlinUnitVar;
         }
@@ -97,7 +97,7 @@ public final class zl extends doi implements bgj {
             default:
                 FastKV.bd(obj);
                 ((AlertDialog) obj2).dismiss();
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
         }
     }
 }

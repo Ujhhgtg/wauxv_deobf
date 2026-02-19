@@ -14,11 +14,11 @@ public final class etr extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(etp.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(etp.a));
         etr etrVar = a;
-        aki akiVarAb = PackageParam.ab(etrVar, listBf);
-        etrVar.y(akiVarAb, new epy(6));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(etrVar, listBf);
+        etrVar.y(hookManagerVarAb, new epy(6));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

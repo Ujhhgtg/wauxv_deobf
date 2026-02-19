@@ -13,17 +13,17 @@ public final class gm extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(gj.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(gj.a));
         gm gmVar = a;
-        aki akiVarAb = PackageParam.ab(gmVar, listBf);
-        gmVar.y(akiVarAb, new gi(1));
-        akiVarAb.o();
-        aki akiVarAb2 = PackageParam.ab(gmVar, dqc.toSingletonList(StaticHelpers7.bb(gk.a)));
-        gmVar.y(akiVarAb2, new gi(0));
-        akiVarAb2.o();
-        aki akiVarAb3 = PackageParam.ab(gmVar, dqc.toSingletonList(StaticHelpers7.bb(gl.a)));
-        gmVar.y(akiVarAb3, new bn(29));
-        akiVarAb3.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(gmVar, listBf);
+        gmVar.y(hookManagerVarAb, new gi(1));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
+        HookManager hookManagerVarAb2 = PackageParam.createHook(gmVar, dqc.toSingletonList(StaticHelpers7.toDexMethod(gk.a)));
+        gmVar.y(hookManagerVarAb2, new gi(0));
+        hookManagerVarAb2.initInstantCollectionAndApplyHooks();
+        HookManager hookManagerVarAb3 = PackageParam.createHook(gmVar, dqc.toSingletonList(StaticHelpers7.toDexMethod(gl.a)));
+        gmVar.y(hookManagerVarAb3, new bn(29));
+        hookManagerVarAb3.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

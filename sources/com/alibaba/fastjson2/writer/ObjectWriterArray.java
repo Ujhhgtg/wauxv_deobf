@@ -30,7 +30,7 @@ final class ObjectWriterArray extends ObjectWriterPrimitiveImpl {
             String str = "[" + TypeUtils.getTypeName((Class) type);
             this.typeNameBytes = JSONB.toBytes(str);
             this.typeNameHash = Fnv.hashCode64(str);
-            strK = yg.k("{\"@type\":\"", str);
+            strK = yg.concat("{\"@type\":\"", str);
         }
         String strS = StaticHelpers6.concat(strK, "\",\"@value\":[");
         this.prefixChars = strS.toCharArray();

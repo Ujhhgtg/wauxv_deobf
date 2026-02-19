@@ -23,11 +23,11 @@ public final class AppBrandAntiSplashAdHook extends SwitchHook implements IDexFi
 
     @Override // me.hd.wauxv.obf.bmf
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(gv.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(gv.a));
         AppBrandAntiSplashAdHook gwVar = a;
-        aki akiVarAb = PackageParam.ab(gwVar, listBf);
-        gwVar.y(akiVarAb, new gi(14));
-        akiVarAb.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(gwVar, listBf);
+        gwVar.y(hookManagerVarAb, new gi(14));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

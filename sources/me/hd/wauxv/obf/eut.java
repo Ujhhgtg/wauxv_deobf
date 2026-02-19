@@ -46,7 +46,7 @@ public final class eut extends ajn implements ck {
     public boolean bj;
     public final eur bk;
     public final eur bl;
-    public final eru bm;
+    public final InstantCollection bm;
 
     public eut(Activity activity, boolean z) {
         new ArrayList();
@@ -56,7 +56,7 @@ public final class eut extends ajn implements ck {
         this.bg = true;
         this.bk = new eur(this, 0);
         this.bl = new eur(this, 1);
-        this.bm = new eru(this);
+        this.bm = new InstantCollection(this);
         View decorView = activity.getWindow().getDecorView();
         bp(decorView);
         if (z) {
@@ -216,7 +216,7 @@ public final class eut extends ajn implements ck {
     public final void bs(boolean z) {
         boolean z2 = this.be;
         boolean z3 = this.bf;
-        eru eruVar = this.bm;
+        InstantCollection instantCollectionVar = this.bm;
         View view = this.av;
         if (!z3 && z2) {
             if (this.bg) {
@@ -243,7 +243,7 @@ public final class eut extends ajn implements ck {
                 esgVarG.f(f);
                 View view2 = (View) esgVarG.a.get();
                 if (view2 != null) {
-                    view2.animate().setUpdateListener(eruVar != null ? new aqi(eruVar, view2) : null);
+                    view2.animate().setUpdateListener(instantCollectionVar != null ? new aqi(instantCollectionVar, view2) : null);
                 }
                 boolean z4 = eshVar2.e;
                 ArrayList arrayList = eshVar2.a;
@@ -297,7 +297,7 @@ public final class eut extends ajn implements ck {
             esgVarG3.f(0.0f);
             View view3 = (View) esgVarG3.a.get();
             if (view3 != null) {
-                view3.animate().setUpdateListener(eruVar != null ? new aqi(eruVar, view3) : null);
+                view3.animate().setUpdateListener(instantCollectionVar != null ? new aqi(instantCollectionVar, view3) : null);
             }
             boolean z6 = eshVar4.e;
             ArrayList arrayList2 = eshVar4.a;
@@ -347,7 +347,7 @@ public final class eut extends ajn implements ck {
         this.bg = true;
         this.bk = new eur(this, 0);
         this.bl = new eur(this, 1);
-        this.bm = new eru(this);
+        this.bm = new InstantCollection(this);
         bp(dialog.getWindow().getDecorView());
     }
 }

@@ -26,6 +26,6 @@ public final class cqm extends btp implements bfu {
                 this.b.i();
                 break;
         }
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

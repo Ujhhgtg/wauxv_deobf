@@ -806,7 +806,7 @@ public abstract class hb extends aci implements he {
             ahv ahvVar = ahv.a;
             throwIfVar1IsNull(ahvVar, "defaultCreationExtras");
             chm chmVar = new chm(erqVarAj, bwv.a, ahvVar);
-            zc zcVarB = dal.b(bwv.class);
+            KClass zcVarB = dal.getKClassFromClass(bwv.class);
             String strAo = emc.ao(zcVarB);
             if (strAo == null) {
                 throw new IllegalArgumentException("Local and anonymous classes can not be ViewModels");

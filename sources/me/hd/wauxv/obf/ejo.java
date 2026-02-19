@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class ejo {
     public static final ejn Companion = new ejn();
-    public static final IHasGetValue[] a = { ewz.am(btx.a, new efq(12)), null, null, null };
+    public static final IHasGetValue[] a = { StaticAndroidHelpers.am(btx.a, new efq(12)), null, null, null };
     public final List b;
     public final eaq c;
     public final Integer d;

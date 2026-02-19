@@ -33,6 +33,6 @@ public final /* synthetic */ class aul implements bfu {
                 etv.a.u(String.valueOf(this.b.c.getText()));
                 break;
         }
-        return KotlinUnit.INSTANCE;
+        return Kotlin$Unit.INSTANCE;
     }
 }

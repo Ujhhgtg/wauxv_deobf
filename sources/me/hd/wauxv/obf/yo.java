@@ -181,7 +181,7 @@ public final class yo extends cau implements Drawable.Callback, dqj {
             Drawable drawable2 = this.ax ? this.y : this.l;
             float fCeil = this.o;
             if (fCeil <= 0.0f && drawable2 != null) {
-                fCeil = (float) Math.ceil(ewz.ag(this.ak, 24));
+                fCeil = (float) Math.ceil(StaticAndroidHelpers.ag(this.ak, 24));
                 if (drawable2.getIntrinsicHeight() <= fCeil) {
                     fCeil = drawable2.getIntrinsicHeight();
                 }

@@ -18,9 +18,9 @@ public final class un extends SwitchHook implements IDexFind {
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         un unVar = a;
-        aki akiVarAd = unVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
-        unVar.y(akiVarAd, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(14));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = unVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+        unVar.y(hookManagerVarAd, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(14));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
         StaticHelpers7.bc(um.a, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(15));
         StaticHelpers7.bc(ul.a, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(16));
     }

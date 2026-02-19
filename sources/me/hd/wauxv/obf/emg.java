@@ -158,7 +158,7 @@ public class emg extends StaticHelpers7 {
         try {
             Object objNewInstance2 = b.newInstance(null);
             for (bcc bccVar2 : bcbVar.a) {
-                File fileAi = ewz.ai(context);
+                File fileAi = StaticAndroidHelpers.ai(context);
                 if (fileAi == null) {
                     return null;
                 }
@@ -167,7 +167,7 @@ public class emg extends StaticHelpers7 {
                 } finally {
                     fileAi.delete();
                 }
-                if (!ewz.ad(fileAi, resources, bccVar2.f)
+                if (!StaticAndroidHelpers.ad(fileAi, resources, bccVar2.f)
                         || !p(objNewInstance2, fileAi.getPath(), bccVar2.b, bccVar2.c)) {
                     return null;
                 }
@@ -204,7 +204,7 @@ public class emg extends StaticHelpers7 {
                         if (bceVar.f == 0) {
                             Uri uri = bceVar.a;
                             if (!map.containsKey(uri)) {
-                                map.put(uri, ewz.trimStackTraceToClass(context, uri));
+                                map.put(uri, StaticAndroidHelpers.trimStackTraceToClass(context, uri));
                             }
                         }
                     }

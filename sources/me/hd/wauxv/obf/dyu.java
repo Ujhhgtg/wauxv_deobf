@@ -7,7 +7,7 @@ import java.util.List;
 public final class dyu {
     public static final dyt Companion = new dyt();
     public static final IHasGetValue[] a = { null, null, null, null, null, null, null, null, null, null,
-            ewz.am(btx.a, new dtr(9)), null, null, null, null, null };
+            StaticAndroidHelpers.am(btx.a, new dtr(9)), null, null, null, null, null };
     public final dsy b;
     public final Integer c;
     public final Integer d;

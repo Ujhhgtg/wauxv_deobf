@@ -47,7 +47,7 @@ public final class cf extends SwitchHook {
         int i7 = (i5 & 256) != 0 ? 0 : 1;
         File file2 = (i5 & 512) != 0 ? null : file;
         cfVar.getClass();
-        blq blqVarD = GifEncoder.d(bluVar, blrVar.a, blrVar.b, blr.g(blrVar, 0, 0, new bgf() { // from class:
+        blq blqVarD = SyntheticClass.d(bluVar, blrVar.a, blrVar.b, blr.g(blrVar, 0, 0, new bgf() { // from class:
                                                                                         // me.hd.wauxv.obf.bo
             @Override // me.hd.wauxv.obf.bgf
             public final Object invoke(Object obj) {
@@ -55,18 +55,18 @@ public final class cf extends SwitchHook {
                 layoutParams.addRule(14);
                 layoutParams.addRule(3, i3);
                 layoutParams.topMargin = blrVar.k(Integer.valueOf(i4)).intValue();
-                return KotlinUnit.INSTANCE;
+                return Kotlin$Unit.INSTANCE;
             }
         }, 31));
         cls = TextView.class;
-        Class<TextView> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+        Class<TextView> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
         if (clsBf == null) {
             clsBf = cls;
         }
         View viewH = blu.h(bluVar, clsBf, null, blrVar.j());
         LinkedHashMap linkedHashMap = bluVar.f;
         viewH.setLayoutParams(blqVarD.f());
-        Class<TextView> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+        Class<TextView> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
         if (clsBf2 == null) {
             clsBf2 = cls;
         }
@@ -90,7 +90,7 @@ public final class cf extends SwitchHook {
         if (linkedHashMap.size() != size) {
             throw new cth(concat("Performers are not allowed to appear in ", name, " DSL creation process."));
         }
-        Class<TextView> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+        Class<TextView> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
         blr.i(blrVar, null, clsBf3 != null ? clsBf3 : TextView.class);
         blr.h(blrVar, viewH);
     }
@@ -98,12 +98,12 @@ public final class cf extends SwitchHook {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i2 = 0;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(View.class) }, 1, yg.s(-431025737956138L).getMethodResolverBasedOnPreviouslyProvidedConfig());
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.getKClassFromClass(View.class) }, 1, yg.s(-431025737956138L).getMethodResolverBasedOnPreviouslyProvidedConfig());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         cf cfVar = a;
-        aki akiVarAd = cfVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
-        cfVar.x(akiVarAd, new bn(2));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = cfVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+        cfVar.x(hookManagerVarAd, new bn(2));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

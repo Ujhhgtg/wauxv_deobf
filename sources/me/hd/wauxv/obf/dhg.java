@@ -56,13 +56,13 @@ public final /* synthetic */ class dhg implements IInvokable {
         int i5 = 4;
         int i6 = 1;
         int i7 = 0;
-        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+        Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
                 Object objE = ((HookParam) obj).getThisObject();
                 Activity activity = (Activity) (!(objE instanceof Activity) ? null : objE);
                 if (activity == null) {
-                    Class<Activity> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                    Class<Activity> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf != null ? clsBf : Activity.class).getName()).toString());
                 }
@@ -87,7 +87,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                 }
                 Activity activity2 = (Activity) objE2;
                 if (activity2 == null) {
-                    Class<Activity> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
+                    Class<Activity> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf2 != null ? clsBf2 : Activity.class).getName()).toString());
                 }
@@ -97,19 +97,19 @@ public final /* synthetic */ class dhg implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = FastKV.x(th);
+                    objX = FastKV.getFailureFromException(th);
                 }
-                if (objX instanceof dcx) {
+                if (objX instanceof Failure) {
                     objX = null;
                 }
                 throwIfVar1IsNull(objX);
                 int i9 = 0;
                 FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objX).r();
-                fieldResolverVarR.fieldType = dal.b(cls);
+                fieldResolverVarR.fieldType = dal.getKClassFromClass(cls);
                 fieldResolverVarR.enableSuperclass();
                 Iterator it = fieldResolverVarR.resolve().iterator();
                 while (it.hasNext()) {
-                    String str = (String) ((azk) it.next()).e();
+                    String str = (String) ((BoundField) it.next()).getValue_();
                     if (str != null && str.equals("WAuxiliary_chatroom_info_pref" /* "WAuxiliary_chatroom_info_pref" /* "WAuxiliary_chatroom_info_pref" /* "WAuxiliary_chatroom_info_pref" /* cnb.z(-593903782722346L)   */)) {
                         String stringExtra2 = activity2.getIntent().getStringExtra("Chat_User" /*
                                                                                                 * cnb.z(-
@@ -119,7 +119,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                             stringExtra2 = "异常" /* "异常" /* "异常" /* "异常" /* cnb.z(-594281739844394L)   */;
                         }
                         dnc.tryGetClassByName(activity2, stringExtra2);
-                        dnc.g(activity2, 2, "复制成功" /* "复制成功" /* "复制成功" /* "复制成功" /* cnb.z(-594234495204138L)   */);
+                        dnc.sendToast(activity2, 2, "复制成功" /* "复制成功" /* "复制成功" /* "复制成功" /* cnb.z(-594234495204138L)   */);
                         hookParam.setResultTrue();
                     }
                 }
@@ -171,9 +171,9 @@ public final /* synthetic */ class dhg implements IInvokable {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = FastKV.x(th2);
+                    objX2 = FastKV.getFailureFromException(th2);
                 }
-                if (objX2 instanceof dcx) {
+                if (objX2 instanceof Failure) {
                     objX2 = null;
                 }
                 throwIfVar1IsNull(objX2);
@@ -184,9 +184,9 @@ public final /* synthetic */ class dhg implements IInvokable {
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = FastKV.x(th3);
+                    objX3 = FastKV.getFailureFromException(th3);
                 }
-                if (objX3 instanceof dcx) {
+                if (objX3 instanceof Failure) {
                     objX3 = null;
                 }
                 throwIfVar1IsNull(objX3);
@@ -197,9 +197,9 @@ public final /* synthetic */ class dhg implements IInvokable {
                         objX4 = null;
                     }
                 } catch (Throwable th4) {
-                    objX4 = FastKV.x(th4);
+                    objX4 = FastKV.getFailureFromException(th4);
                 }
-                if (objX4 instanceof dcx) {
+                if (objX4 instanceof Failure) {
                     objX4 = null;
                 }
                 throwIfVar1IsNull(objX4);
@@ -210,23 +210,23 @@ public final /* synthetic */ class dhg implements IInvokable {
                         objX5 = null;
                     }
                 } catch (Throwable th5) {
-                    objX5 = FastKV.x(th5);
+                    objX5 = FastKV.getFailureFromException(th5);
                 }
-                if (objX5 instanceof dcx) {
+                if (objX5 instanceof Failure) {
                     objX5 = null;
                 }
                 throwIfVar1IsNull(objX5);
                 int i11 = 0;
                 FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objX5).r();
                 fieldResolverVarR2.name = "d" /* "d" /* "d" /* "d" /* cnb.z(-465591634754346L)   */;
-                azk azkVar = (azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve());
+                BoundField boundFieldVar = (BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve());
                 if (iIntValue == 4 && iIntValue2 == -2005) {
-                    Object objE3 = azkVar.e();
+                    Object objE3 = boundFieldVar.getValue_();
                     throwIfVar1IsNull(objE3);
                     if (dnr.bp((String) objE3, "https://weixin110.qq.com/" /* "https://weixin110.qq.com/" /* "https://weixin110.qq.com/" /* "https://weixin110.qq.com/" /* cnb.z(-465600224688938L)   */, false)) {
                         new ek(hookParam2, 3, 8).q(0);
                         new ek(hookParam2, 4, 8).q(0);
-                        azkVar.f(str2);
+                        boundFieldVar.setValue(str2);
                     }
                 }
                 return kotlinUnitVar;
@@ -294,54 +294,54 @@ public final /* synthetic */ class dhg implements IInvokable {
                                     objX9 = null;
                                 }
                             } catch (Throwable th6) {
-                                objX9 = FastKV.x(th6);
+                                objX9 = FastKV.getFailureFromException(th6);
                             }
-                            if (objX9 instanceof dcx) {
+                            if (objX9 instanceof Failure) {
                                 objX9 = null;
                             }
                             throwIfVar1IsNull(objX9);
                             int i12 = 0;
                             FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objX9).r();
                             fieldResolverVarR3.name = "field_userName" /* "field_userName" /* "field_userName" /* "field_userName" /* cnb.z(-542115067067178L)   */;
-                            Object objE5 = ((azk) yg.e(fieldResolverVarR3)).e();
+                            Object objE5 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
                             throwIfVar1IsNull(objE5);
                             String str4 = (String) objE5;
                             FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(objX9).r();
                             fieldResolverVarR4.name = "field_type" /* "field_type" /* "field_type" /* "field_type" /* cnb.z(-542600398371626L)   */;
-                            Object objE6 = ((azk) yg.e(fieldResolverVarR4)).e();
+                            Object objE6 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR4)).getValue_();
                             throwIfVar1IsNull(objE6);
                             int iIntValue3 = ((Number) objE6).intValue();
                             FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(objX9).r();
                             fieldResolverVarR5.name = "field_thumbUrl" /* "field_thumbUrl" /* "field_thumbUrl" /* "field_thumbUrl" /* cnb.z(-542570333600554L)   */;
-                            String str5 = (String) ((azk) yg.e(fieldResolverVarR5)).e();
+                            String str5 = (String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR5)).getValue_();
                             FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(objX9).r();
                             fieldResolverVarR6.name = "field_imageBgUrl" /* "field_imageBgUrl" /* "field_imageBgUrl" /* "field_imageBgUrl" /* cnb.z(-542505909091114L)   */;
-                            String str6 = (String) ((azk) yg.e(fieldResolverVarR6)).e();
+                            String str6 = (String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR6)).getValue_();
                             FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(objX9).r();
                             fieldResolverVarR7.name = "field_videoBgUrl" /* "field_videoBgUrl" /* "field_videoBgUrl" /* "field_videoBgUrl" /* cnb.z(-542432894647082L)   */;
-                            String str7 = (String) ((azk) yg.e(fieldResolverVarR7)).e();
+                            String str7 = (String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR7)).getValue_();
                             if (iIntValue3 == 1 || iIntValue3 == 2 || iIntValue3 == 3) {
                                 if (str5 != null) {
                                     String strConcat = str4.concat(".thumbUrl.png" /* ".thumbUrl.png" /* ".thumbUrl.png" /* ".thumbUrl.png" /* cnb.z(-530763468503850L)   */);
                                     diqVar.getClass();
-                                    alc alcVar = aou.a;
+                                    Dispatchers$Default alcVar = aou.a;
                                     KotlinHelpers2.bf(akq.f, new ckx(str5, strConcat, (afw) null));
                                 }
                                 if (str6 != null) {
                                     String strConcat2 = str4.concat(".imageBgUrl.png" /* ".imageBgUrl.png" /* ".imageBgUrl.png" /* ".imageBgUrl.png" /* cnb.z(-530754878569258L)   */);
                                     diqVar.getClass();
-                                    alc alcVar2 = aou.a;
+                                    Dispatchers$Default alcVar2 = aou.a;
                                     KotlinHelpers2.bf(akq.f, new ckx(str6, strConcat2, (afw) null));
                                 }
                                 if (str7 != null) {
                                     String strConcat3 = str4.concat(".videoBgUrl.png" /* ".videoBgUrl.png" /* ".videoBgUrl.png" /* ".videoBgUrl.png" /* cnb.z(-530686159092522L)   */);
                                     diqVar.getClass();
-                                    alc alcVar3 = aou.a;
+                                    Dispatchers$Default alcVar3 = aou.a;
                                     KotlinHelpers2.bf(akq.f, new ckx(str7, strConcat3, (afw) null));
                                 }
-                                dnc.g(null, 3, "下载完成" /* "下载完成" /* "下载完成" /* "下载完成" /* cnb.z(-530617439615786L)   */);
+                                dnc.sendToast(null, 3, "下载完成" /* "下载完成" /* "下载完成" /* "下载完成" /* cnb.z(-530617439615786L)   */);
                             } else {
-                                dnc.g(null, 3, "暂不支持的封面类型 " /* "暂不支持的封面类型 " /* "暂不支持的封面类型 " /* "暂不支持的封面类型 " /* cnb.z(-530561605040938L)   */ + iIntValue3);
+                                dnc.sendToast(null, 3, "暂不支持的封面类型 " /* "暂不支持的封面类型 " /* "暂不支持的封面类型 " /* "暂不支持的封面类型 " /* cnb.z(-530561605040938L)   */ + iIntValue3);
                             }
                             return true;
                         }
@@ -349,7 +349,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                     return kotlinUnitVar;
                 }
                 cls3 = ViewGroup.class;
-                Class<ViewGroup> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
+                Class<ViewGroup> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 throw new IllegalStateException("HookParam instance cannot cast to "
                         .concat((clsBf3 != null ? clsBf3 : ViewGroup.class).getName()).toString());
             case 12:
@@ -476,10 +476,10 @@ public final /* synthetic */ class dhg implements IInvokable {
                 SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(((HookParam) obj).getThisObject());
                 FieldResolver fieldResolverVarR3 = bmuVarBi.r();
                 djb djbVar = djb.a;
-                fieldResolverVarR3.fieldType = StaticHelpers7.bb(djbVar).getDeclaringClass();
-                Object objD = ((azk) yg.e(fieldResolverVarR3)).d();
+                fieldResolverVarR3.fieldType = StaticHelpers7.toDexMethod(djbVar).getDeclaringClass();
+                Object objD = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue();
                 throwIfVar1IsNull(objD);
-                Object objInvoke = StaticHelpers7.bb(djbVar).invoke(objD, null);
+                Object objInvoke = StaticHelpers7.toDexMethod(djbVar).invoke(objD, null);
                 throwIfVar1IsNull(objInvoke);
                 MethodResolver methodResolverVarT2 = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT2.name = "getPublishTimeText" /* "getPublishTimeText" /* "getPublishTimeText" /* "getPublishTimeText" /* cnb.z(-532193692613418L)   */;
@@ -506,13 +506,13 @@ public final /* synthetic */ class dhg implements IInvokable {
                         objX6 = null;
                     }
                 } catch (Throwable th6) {
-                    objX6 = FastKV.x(th6);
+                    objX6 = FastKV.getFailureFromException(th6);
                 }
-                obj = objX6 instanceof dcx ? null : objX6;
+                obj = objX6 instanceof Failure ? null : objX6;
                 throwIfVar1IsNull(obj);
                 FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(obj).r();
                 fieldResolverVarR4.fieldType = "com.tencent.mm.plugin.sns.storage.SnsInfo" /* "com.tencent.mm.plugin.sns.storage.SnsInfo" /* "com.tencent.mm.plugin.sns.storage.SnsInfo" /* "com.tencent.mm.plugin.sns.storage.SnsInfo" /* cnb.z(-532498635291434L)   */;
-                Object objD2 = ((azk) yg.e(fieldResolverVarR4)).d();
+                Object objD2 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR4)).getValue();
                 throwIfVar1IsNull(objD2);
                 MethodResolver methodResolverVarT4 = bmuVarBi2.getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT4.name = "getPublishTimeText" /* "getPublishTimeText" /* "getPublishTimeText" /* "getPublishTimeText" /* cnb.z(-533984693975850L)   */;
@@ -560,7 +560,7 @@ public final /* synthetic */ class dhg implements IInvokable {
             case 26:
                 bah bahVar8 = (bah) obj;
                 cdj cdjVar8 = new cdj();
-                Class<String> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
+                Class<String> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar8.q(clsBf4 != null ? clsBf4 : String.class);
                 cdjVar8.t("getByLocalId" /* "getByLocalId" /* "getByLocalId" /* "getByLocalId" /* cnb.z(-376969279568682L)   */,
                         "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* cnb.z(-376947804732202L)   */);
@@ -576,9 +576,9 @@ public final /* synthetic */ class dhg implements IInvokable {
                         objX7 = null;
                     }
                 } catch (Throwable th7) {
-                    objX7 = FastKV.x(th7);
+                    objX7 = FastKV.getFailureFromException(th7);
                 }
-                obj = objX7 instanceof dcx ? null : objX7;
+                obj = objX7 instanceof Failure ? null : objX7;
                 throwIfVar1IsNull(obj);
                 ContextMenu contextMenu = (ContextMenu) obj;
                 for (boa boaVar : djo.b) {
@@ -587,10 +587,10 @@ public final /* synthetic */ class dhg implements IInvokable {
                             contextMenu.add(R.id.MenuItem_Group, djlVar.a, 0, djlVar.b);
                         }
                     } catch (Exception e) {
-                        ArrayList arrayList2 = ewq.a;
+                        ArrayList arrayList2 = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-55310588836650L)   */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
                                 boaVar instanceof SwitchHook ? ((SwitchHook) boaVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 56895431768874L)
@@ -608,29 +608,29 @@ public final /* synthetic */ class dhg implements IInvokable {
                         objX8 = null;
                     }
                 } catch (Throwable th8) {
-                    objX8 = FastKV.x(th8);
+                    objX8 = FastKV.getFailureFromException(th8);
                 }
-                obj = objX8 instanceof dcx ? null : objX8;
+                obj = objX8 instanceof Failure ? null : objX8;
                 throwIfVar1IsNull(obj);
                 MenuItem menuItem = (MenuItem) obj;
                 for (boa boaVar2 : djo.b) {
                     try {
                         int i17 = 0;
                         FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(hookParam6.getThisObject()).r();
-                        fieldResolverVarR5.fieldType = dal.b(cls2);
-                        Object objE5 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR5.resolve())).e();
+                        fieldResolverVarR5.fieldType = dal.getKClassFromClass(cls2);
+                        Object objE5 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR5.resolve())).getValue_();
                         throwIfVar1IsNull(objE5);
                         Activity activity3 = (Activity) objE5;
                         FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(hookParam6.getThisObject()).r();
-                        StaticHelpers2.ao(fieldResolverVarR6.modifiersNot, (cdy[]) Arrays.copyOf(new cdy[] { cdy.d }, 1));
-                        fieldResolverVarR6.fieldType = dal.b(cls);
-                        Object objE6 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR6.resolve())).e();
+                        StaticHelpers2.addAllFromVar2ToVar1(fieldResolverVarR6.modifiersNot, (AccessModifierEnum[]) Arrays.copyOf(new AccessModifierEnum[] { AccessModifierEnum.FINAL}, 1));
+                        fieldResolverVarR6.fieldType = dal.getKClassFromClass(cls);
+                        Object objE6 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR6.resolve())).getValue_();
                         throwIfVar1IsNull(objE6);
                         djj.a.getClass();
                         Object objB = djj.b((String) objE6);
                         FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(hookParam6.getThisObject()).r();
                         fieldResolverVarR7.fieldType = "com.tencent.mm.protocal.protobuf.TimeLineObject" /* "com.tencent.mm.protocal.protobuf.TimeLineObject" /* "com.tencent.mm.protocal.protobuf.TimeLineObject" /* "com.tencent.mm.protocal.protobuf.TimeLineObject" /* cnb.z(-56770877717290L)   */;
-                        Object objD3 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR7.resolve())).d();
+                        Object objD3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR7.resolve())).getValue();
                         throwIfVar1IsNull(objD3);
                         for (djl djlVar2 : boaVar2.a()) {
                             if (menuItem.getItemId() == djlVar2.a) {
@@ -638,10 +638,10 @@ public final /* synthetic */ class dhg implements IInvokable {
                             }
                         }
                     } catch (Exception e2) {
-                        ArrayList arrayList3 = ewq.a;
+                        ArrayList arrayList3 = Logger.a;
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-57114475100970L)   */);
-                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
+                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
                                 boaVar2 instanceof SwitchHook ? ((SwitchHook) boaVar2).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-

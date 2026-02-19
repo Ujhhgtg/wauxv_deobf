@@ -6,7 +6,7 @@ import android.view.View;
 /* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class akh implements View.OnClickListener {
     public final /* synthetic */ int a = 0;
-    public final /* synthetic */ aki b;
+    public final /* synthetic */ HookManager b;
 
     @Override // android.view.View.OnClickListener
     public final void onClick(View view) {

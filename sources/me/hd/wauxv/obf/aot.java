@@ -82,9 +82,9 @@ public abstract class aot extends dpy {
                 if (brfVar != null && !brfVar.m()) {
                     CancellationException cancellationExceptionN = brfVar.n();
                     j(cancellationExceptionN);
-                    afxVar._bn(FastKV.x(cancellationExceptionN));
+                    afxVar._bn(FastKV.getFailureFromException(cancellationExceptionN));
                 } else if (thM != null) {
-                    afxVar._bn(FastKV.x(thM));
+                    afxVar._bn(FastKV.getFailureFromException(thM));
                 } else {
                     afxVar._bn(n(objO));
                 }

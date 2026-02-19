@@ -54,9 +54,9 @@ public final class acg {
         Bundle bundleExtra;
         int i2;
         hb hbVar = this.h;
-        bc bcVarC = bhsVar.c(hbVar, str);
-        if (bcVarC != null) {
-            new Handler(Looper.getMainLooper()).post(new acf(this, i, bcVarC, 0));
+        LateinitProperty lateinitPropertyVarC = bhsVar.c(hbVar, str);
+        if (lateinitPropertyVarC != null) {
+            new Handler(Looper.getMainLooper()).post(new acf(this, i, lateinitPropertyVarC, 0));
             return;
         }
         Intent intentB = bhsVar.b(hbVar, str);

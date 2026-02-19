@@ -13,7 +13,7 @@ public final class lx extends SwitchHook implements Runnable {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        ((Handler) bij.a.getValue()).postDelayed(this, 30000L);
+        ((Handler) StaticMainLooperHandlerProvider.HANDLER.getValue()).postDelayed(this, 30000L);
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -42,17 +42,17 @@ public final class lx extends SwitchHook implements Runnable {
         lv lvVar = lv.a;
         if (jCurrentTimeMillis - lvVar.l() > lu.a.l() * 1000) {
             lvVar.s(System.currentTimeMillis());
-            alc alcVar = aou.a;
+            Dispatchers$Default alcVar = aou.a;
             akq akqVar = akq.f;
             lw lwVar = new lw(2, null, 0);
             ahh ahhVarT = KotlinHelpers.t(auz.a, akqVar, true);
-            alc alcVar2 = aou.a;
+            Dispatchers$Default alcVar2 = aou.a;
             if (ahhVarT != alcVar2 && ahhVarT._w(arj.a) == null) {
                 ahhVarT = ahhVarT._v(alcVar2);
             }
             t dmfVar = new dmf(ahhVarT, true);
             dmfVar.h(ahs.a, dmfVar, lwVar);
         }
-        ((Handler) bij.a.getValue()).postDelayed(this, 600000L);
+        ((Handler) StaticMainLooperHandlerProvider.HANDLER.getValue()).postDelayed(this, 600000L);
     }
 }

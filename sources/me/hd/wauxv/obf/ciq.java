@@ -65,7 +65,7 @@ public final class ciq {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(dal.b(cio.class).d());
+        sb.append(dal.getKClassFromClass(cio.class).getKotlinSimpleName());
         sb.append("(" + this.f + ')');
         sb.append(" destination=");
         sb.append(this.b);

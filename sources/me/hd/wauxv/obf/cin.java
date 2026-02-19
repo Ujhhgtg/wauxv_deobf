@@ -51,7 +51,7 @@ public final class cin {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(dal.b(cin.class).d());
+        sb.append(dal.getKClassFromClass(cin.class).getKotlinSimpleName());
         sb.append(" Type: " + this.a);
         sb.append(" Nullable: " + this.b);
         if (this.c) {

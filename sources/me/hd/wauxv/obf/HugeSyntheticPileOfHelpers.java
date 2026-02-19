@@ -271,11 +271,11 @@ public abstract class HugeSyntheticPileOfHelpers {
         }
     }
 
-    public static final zc bb(Annotation annotation) {
+    public static final KClass bb(Annotation annotation) {
         throwIfVar1IsNull(annotation, "<this>");
         Class<? extends Annotation> clsAnnotationType = annotation.annotationType();
         throwIfVar1IsNull(clsAnnotationType, "annotationType(...)");
-        return dal.b(clsAnnotationType);
+        return dal.getKClassFromClass(clsAnnotationType);
     }
 
     public static DefaultConfig bc() {
@@ -361,7 +361,7 @@ public abstract class HugeSyntheticPileOfHelpers {
      * JADX WARN: Failed to restore switch over string. Please report as a
      * decompilation issue
      */
-    public static final Class bf(zc zcVar) {
+    public static final Class getPrimitiveTypeClassByJWrapperClass(KClass zcVar) {
         Class clsA = zcVar.getJClass();
         if (clsA.isPrimitive()) {
             return clsA;
@@ -469,16 +469,16 @@ public abstract class HugeSyntheticPileOfHelpers {
         ki.a.getClass();
         boolean z = exm.a;
         if (!exm.l()) {
-            ewq.h("You can only inject module resources in Xposed Environment");
+            Logger.logW("You can only inject module resources in Xposed Environment");
             return;
         }
         try {
             objX = null;
         } catch (Throwable th) {
-            objX = FastKV.x(th);
+            objX = FastKV.getFailureFromException(th);
         }
         if (ki.i().equals(exm.h)) {
-            ewq.g(6, "You cannot inject module resources into yourself", null);
+            Logger.logException(6, "You cannot inject module resources into yourself", null);
             return;
         }
         int i = 0;
@@ -488,15 +488,15 @@ public abstract class HugeSyntheticPileOfHelpers {
         bmuVarBi.setHookOptional(true);
         MethodResolver methodResolverVarT = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "addAssetPath";
-        methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.b(String.class) }, 1));
+        methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(String.class) }, 1));
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
         if (methodHookWrapperVar != null) {
             objX = methodHookWrapperVar.e(exm.i);
         }
-        Throwable thB = dcy.b(objX);
+        Throwable thB = Success.exceptionOrNull(objX);
         if (thB != null) {
-            ArrayList arrayList = ewq.a;
-            ewq.g(4, "Failed to inject module resources into [" + resources + "]", thB);
+            ArrayList arrayList = Logger.a;
+            Logger.logException(4, "Failed to inject module resources into [" + resources + "]", thB);
         }
     }
 
@@ -532,7 +532,7 @@ public abstract class HugeSyntheticPileOfHelpers {
         Dispatcher dispatcherVar = dispatchedContinuationVar.d;
         afx afxVar = dispatchedContinuationVar.e;
         ahh ahhVar = afxVar.m;
-        Throwable thB = dcy.b(obj);
+        Throwable thB = Success.exceptionOrNull(obj);
         Object abrVar = thB == null ? obj : new abr(thB, false);
         throwIfVar1IsNull(ahhVar);
         try {
@@ -576,7 +576,7 @@ public abstract class HugeSyntheticPileOfHelpers {
                         throw th;
                     }
                 } else {
-                    dispatchedContinuationVar._bn(FastKV.x(brfVar.n()));
+                    dispatchedContinuationVar._bn(FastKV.getFailureFromException(brfVar.n()));
                 }
                 while (awvVarB.ac()) {
                 }

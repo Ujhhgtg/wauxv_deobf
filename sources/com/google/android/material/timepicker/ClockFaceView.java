@@ -26,7 +26,7 @@ import me.hd.wauxv.R;
 import me.hd.wauxv.obf.adk;
 import me.hd.wauxv.obf.adl;
 import me.hd.wauxv.obf.adp;
-import me.hd.wauxv.obf.bc;
+import me.hd.wauxv.obf.LateinitProperty;
 import me.hd.wauxv.obf.ResourcesCompat;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.cxs;
@@ -213,7 +213,7 @@ class ClockFaceView extends cyg implements zz {
     @Override // android.view.View
     public final void onInitializeAccessibilityNodeInfo(AccessibilityNodeInfo accessibilityNodeInfo) {
         super.onInitializeAccessibilityNodeInfo(accessibilityNodeInfo);
-        accessibilityNodeInfo.setCollectionInfo((AccessibilityNodeInfo.CollectionInfo) bc.f(1, this.ai.length, 1).e);
+        accessibilityNodeInfo.setCollectionInfo((AccessibilityNodeInfo.CollectionInfo) LateinitProperty.f(1, this.ai.length, 1).e);
     }
 
     @Override // androidx.constraintlayout.widget.ConstraintLayout, android.view.ViewGroup, android.view.View

@@ -15,13 +15,13 @@ public final class ge extends SwitchHook {
     public final void initOnce() {
         int i = 0;
         adt adtVarM = yg.s(-543880298625834L).m();
-        adtVarM.setParams(Arrays.copyOf(new Object[] { dal.b(String.class) }, 1));
+        adtVarM.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(String.class) }, 1));
         ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) StaticHelpers5.safeGetFirstInList(adtVarM.a());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         ge geVar = a;
-        aki akiVarAd = geVar.ad(constructorHookWrapperVar, hookPriorityEnumVar);
-        geVar.y(akiVarAd, new bn(26));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = geVar.createImmediateHook(constructorHookWrapperVar, hookPriorityEnumVar);
+        geVar.y(hookManagerVarAd, new bn(26));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

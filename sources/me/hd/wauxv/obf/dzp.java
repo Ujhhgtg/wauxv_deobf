@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dzp {
     public static final dzo Companion = new dzo();
-    public static final IHasGetValue[] a = { null, null, null, null, null, null, ewz.am(btx.a, new dtr(11)), null, null,
+    public static final IHasGetValue[] a = { null, null, null, null, null, null, StaticAndroidHelpers.am(btx.a, new dtr(11)), null, null,
             null,
             null };
     public final Integer b;

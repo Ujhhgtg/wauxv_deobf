@@ -11,8 +11,8 @@ public final class dpv extends bws {
         int i = 0;
         MethodResolver methodResolverVarT = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-115977001892650L)  */)).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "setUserName" /* "setUserName" /* "setUserName" /* cnb.z(-115822383069994L)  */;
-        aki akiVarAd = ad((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods()), HookPriorityEnum.ENUM_DEFAULT);
-        akiVarAd.n(new dos(3));
-        akiVarAd.o();
+        HookManager hookManagerVarAd = createImmediateHook((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods()), HookPriorityEnum.ENUM_DEFAULT);
+        hookManagerVarAd.n(new dos(3));
+        hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 }

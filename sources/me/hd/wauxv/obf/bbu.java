@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 public final class bbu implements ate {
     public final Context a;
     public final bbt b;
-    public final GifEncoder d;
+    public final SyntheticClass d;
     public final Object e = new Object();
     public Handler f;
     public ThreadPoolExecutor g;
@@ -77,10 +77,10 @@ public final class bbu implements ate {
 
     public final bce k() {
         try {
-            GifEncoder gifEncoderVar = this.d;
+            SyntheticClass syntheticClassVar = this.d;
             Context context = this.a;
             bbt bbtVar = this.b;
-            gifEncoderVar.getClass();
+            syntheticClassVar.getClass();
             Object[] objArr = { bbtVar };
             ArrayList arrayList = new ArrayList(1);
             Object obj = objArr[0];

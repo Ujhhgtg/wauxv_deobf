@@ -4,7 +4,7 @@ import net.bytebuddy.description.method.MethodDescription;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public abstract class bgr extends sw implements bgq, bsu, IEmpty4 {
+public abstract class bgr extends sw implements bgq, IEmpty6, IEmpty4 {
     public final int m;
     public final int n;
 
@@ -38,13 +38,13 @@ public abstract class bgr extends sw implements bgq, bsu, IEmpty4 {
     }
 
     @Override // me.hd.wauxv.obf.sw
-    public final bsu k() {
+    public final IEmpty6 k() {
         dal.a.getClass();
         return this;
     }
 
     public final String toString() {
-        bsu bsuVarJ = j();
+        IEmpty6 bsuVarJ = j();
         if (bsuVarJ != this) {
             return bsuVarJ.toString();
         }

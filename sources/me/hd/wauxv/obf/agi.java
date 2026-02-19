@@ -12,14 +12,14 @@ public final class agi extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(agg.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(agg.a));
         agi agiVar = a;
-        aki akiVarAb = PackageParam.ab(agiVar, listBf);
-        akiVarAb.n(new age(1));
-        akiVarAb.o();
-        aki akiVarAb2 = PackageParam.ab(agiVar, dqc.toSingletonList(StaticHelpers7.bb(agh.a)));
-        akiVarAb2.n(new age(0));
-        akiVarAb2.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(agiVar, listBf);
+        hookManagerVarAb.n(new age(1));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
+        HookManager hookManagerVarAb2 = PackageParam.createHook(agiVar, dqc.toSingletonList(StaticHelpers7.toDexMethod(agh.a)));
+        hookManagerVarAb2.n(new age(0));
+        hookManagerVarAb2.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.IDexFind

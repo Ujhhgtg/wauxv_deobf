@@ -10,11 +10,11 @@ public final class agc extends bws implements IDexFind {
     public static final agc a = new agc();
 
     public final Object b(ContentValues contentValues) {
-        Object objC = ReflectionWrapper.createInstanceWithArgs(StaticHelpers7.bb(agb.a).getDeclaringClass(), new Object[0]);
+        Object objC = ReflectionWrapper.createInstanceWithArgs(StaticHelpers7.toDexMethod(agb.a).getDeclaringClass(), new Object[0]);
         int i = 0;
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objC).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-79005923408682L)  */;
-        methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.b(ContentValues.class), dal.b(Boolean.TYPE) }, 2));
+        methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(ContentValues.class), dal.getKClassFromClass(Boolean.TYPE) }, 2));
         methodResolverVarT.enableSuperclass();
         ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(contentValues, Boolean.TRUE);
         return objC;

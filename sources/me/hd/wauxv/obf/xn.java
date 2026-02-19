@@ -13,11 +13,11 @@ public final class xn extends bws implements IDexFind {
         byr byrVar = byr.a;
         Class cls = (Class) SomeStaticHelpers.p(StaticHelpers7.az(xm.a).getInterfaces());
         byrVar.getClass();
-        Object objInvoke = StaticHelpers7.bb(byq.a).invoke(null, cls);
+        Object objInvoke = StaticHelpers7.toDexMethod(byq.a).invoke(null, cls);
         throwIfVar1IsNull(objInvoke);
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objInvoke).getMethodResolverBasedOnPreviouslyProvidedConfig();
         xp.a.getClass();
-        methodResolverVarT.returnType = StaticHelpers7.bb(xo.a).getDeclaringClass();
+        methodResolverVarT.returnType = StaticHelpers7.toDexMethod(xo.a).getDeclaringClass();
         Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;

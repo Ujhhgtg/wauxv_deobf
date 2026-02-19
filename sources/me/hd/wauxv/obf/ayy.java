@@ -12,14 +12,14 @@ public final class ayy extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.bb(ayw.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(ayw.a));
         ayy ayyVar = a;
-        aki akiVarAb = PackageParam.ab(ayyVar, listBf);
-        akiVarAb.n(new atn(22));
-        akiVarAb.o();
-        aki akiVarAb2 = PackageParam.ab(ayyVar, dqc.toSingletonList(StaticHelpers7.bb(ayx.a)));
-        akiVarAb2.n(new atn(23));
-        akiVarAb2.o();
+        HookManager hookManagerVarAb = PackageParam.createHook(ayyVar, listBf);
+        hookManagerVarAb.n(new atn(22));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
+        HookManager hookManagerVarAb2 = PackageParam.createHook(ayyVar, dqc.toSingletonList(StaticHelpers7.toDexMethod(ayx.a)));
+        hookManagerVarAb2.n(new atn(23));
+        hookManagerVarAb2.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.IDexFind
