@@ -31,7 +31,7 @@ public final class eer {
             String str5, String str6, String str7, Integer num2, String str8, String str9, String str10, Long l,
             List list, Integer num3) {
         if (131071 != (i & 131071)) {
-            bht.ah(i, 131071, eep.b.getDescriptor());
+            ResourcesCompat.ah(i, 131071, eep.b.getDescriptor());
             throw null;
         }
         this.b = f;
@@ -128,7 +128,7 @@ public final class eer {
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.m, -270028888865578L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.n, -269955874421546L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.o, -270424025856810L);
-        dkz.ad(sb, this.p, -270389666118442L);
+        StaticHelpers6.ad(sb, this.p, -270389666118442L);
         yg.v(sb, this.q, -270312356707114L);
         return concat(sb, this.r, ')');
     }

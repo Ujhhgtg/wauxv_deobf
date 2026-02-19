@@ -33,7 +33,7 @@ public final class bkn extends MetricAffectingSpan implements LeadingMarginSpan 
             paint2.set(paint);
             bzr bzrVar = this.a;
             bzrVar.getClass();
-            paint2.setColor(emn.ae(paint2.getColor(), 75));
+            paint2.setColor(StaticHelpers7.ae(paint2.getColor(), 75));
             paint2.setStyle(Paint.Style.FILL);
             int i9 = bzrVar.f;
             if (i9 >= 0) {

@@ -41,23 +41,23 @@ public final /* synthetic */ class djp implements bgf {
                 djsVar.b = strZ2;
                 bvzVar.add(djsVar);
                 aeg.a.getClass();
-                Method methodBb = emn.bb(aed.a);
+                Method methodBb = StaticHelpers7.bb(aed.a);
                 aec.a.getClass();
                 Object objInvoke = methodBb.invoke(aec.b(), null);
                 throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.collections.List<kotlin.Any>" /* "null cannot be cast to non-null type kotlin.collections.List<kotlin.Any>" /* "null cannot be cast to non-null type kotlin.collections.List<kotlin.Any>" /* "null cannot be cast to non-null type kotlin.collections.List<kotlin.Any>" /* cnb.z(-386645840886570L)   */);
                 List list = (List) objInvoke;
-                ArrayList arrayList = new ArrayList(abb.ak(list, 10));
+                ArrayList arrayList = new ArrayList(StaticHelpers4.ak(list, 10));
                 for (Object obj2 : list) {
                     djs djsVar2 = new djs();
                     djsVar2.a = "" /* "" /* "" /* "" /* cnb.z(-556378653457194L)   */;
                     djsVar2.b = "" /* "" /* "" /* "" /* cnb.z(-556374358489898L)   */;
                     int i3 = 0;
-                    azg azgVarR = dqc.bi(obj2).r();
-                    azgVarR.ab = "field_labelID" /* "field_labelID" /* "field_labelID" /* "field_labelID" /* cnb.z(-556387243391786L)   */;
-                    djsVar2.a = String.valueOf(((azk) yg.e(azgVarR)).e());
-                    azg azgVarR2 = dqc.bi(obj2).r();
-                    azgVarR2.ab = "field_labelName" /* "field_labelName" /* "field_labelName" /* "field_labelName" /* cnb.z(-556859689794346L)   */;
-                    Object objE = ((azk) yg.e(azgVarR2)).e();
+                    FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).r();
+                    fieldResolverVarR.name = "field_labelID" /* "field_labelID" /* "field_labelID" /* "field_labelID" /* cnb.z(-556387243391786L)   */;
+                    djsVar2.a = String.valueOf(((azk) yg.e(fieldResolverVarR)).e());
+                    FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj2).r();
+                    fieldResolverVarR2.name = "field_labelName" /* "field_labelName" /* "field_labelName" /* "field_labelName" /* cnb.z(-556859689794346L)   */;
+                    Object objE = ((azk) yg.e(fieldResolverVarR2)).e();
                     throwIfVar1IsNull(objE);
                     djsVar2.b = (String) objE;
                     arrayList.add(djsVar2);
@@ -71,7 +71,7 @@ public final /* synthetic */ class djp implements bgf {
                 djv djvVar = djv.a;
                 final djp djpVar = new djp(activity, i2);
                 djvVar.getClass();
-                ArrayList arrayList2 = new ArrayList(abb.ak(bvzVar, 10));
+                ArrayList arrayList2 = new ArrayList(StaticHelpers4.ak(bvzVar, 10));
                 ListIterator listIterator = bvzVar.listIterator(0);
                 while (true) {
                     bvx bvxVar = (bvx) listIterator;
@@ -80,7 +80,7 @@ public final /* synthetic */ class djp implements bgf {
                         String str = djsVar3.a;
                         String string = djsVar3.b;
                         if (!str.equals("default" /* "default" /* "default" /* "default" /* cnb.z(-558470302530346L)   */)) {
-                            StringBuilder sbY = dkz.y(string);
+                            StringBuilder sbY = StaticHelpers6.toSb(string);
                             sbY.append(" [" /* " [" /* " [" /* " [" /* cnb.z(-558435942791978L)   */);
                             aeg aegVar = aeg.a;
                             String str2 = djsVar3.a;
@@ -92,12 +92,12 @@ public final /* synthetic */ class djp implements bgf {
                         arrayList2.add(string);
                     } else {
                         String[] strArr = (String[]) arrayList2.toArray(new String[0]);
-                        ArrayList arrayList3 = new ArrayList(abb.ak(bvzVar, 10));
+                        ArrayList arrayList3 = new ArrayList(StaticHelpers4.ak(bvzVar, 10));
                         ListIterator listIterator2 = bvzVar.listIterator(0);
                         while (true) {
                             bvx bvxVar2 = (bvx) listIterator2;
                             if (!bvxVar2.hasNext()) {
-                                final boolean[] zArrV = aaz.v(arrayList3);
+                                final boolean[] zArrV = StaticHelpers5.v(arrayList3);
                                 AlertDialog.Builder builder = new AlertDialog.Builder(activity);
                                 builder.setTitle("请选择过滤标签" /* "请选择过滤标签" /* "请选择过滤标签" /* "请选择过滤标签" /* cnb.z(-558388698151722L)   */);
                                 builder.setMultiChoiceItems(strArr, zArrV, new DialogInterface.OnMultiChoiceClickListener() { // from class: me.hd.wauxv.obf.djq
@@ -115,12 +115,12 @@ public final /* synthetic */ class djp implements bgf {
                                         while (true) {
                                             bvx bvxVar3 = (bvx) listIterator3;
                                             if (!bvxVar3.hasNext()) {
-                                                ArrayList arrayList5 = new ArrayList(abb.ak(arrayList4, 10));
+                                                ArrayList arrayList5 = new ArrayList(StaticHelpers4.ak(arrayList4, 10));
                                                 Iterator it = arrayList4.iterator();
                                                 while (it.hasNext()) {
                                                     arrayList5.add(((djs) it.next()).a);
                                                 }
-                                                Set setAd = aaz.ad(arrayList5);
+                                                Set setAd = StaticHelpers5.ad(arrayList5);
                                                 dju.a.t(setAd);
                                                 djpVar.invoke(setAd);
                                                 return;
@@ -153,18 +153,18 @@ public final /* synthetic */ class djp implements bgf {
                 throwIfVar1IsNull(viewV);
                 ViewGroup viewGroup = (ViewGroup) viewV;
                 int i4 = 0;
-                cde cdeVarT = dqc.bi(viewGroup).t();
+                MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(viewGroup).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 Class cls = Integer.TYPE;
-                ((MethodHookWrapper) dkz.n(new Object[]{dal.b(cls), dal.b(cls), dal.b(cls)}, 3, cdeVarT)).e(0, 0, 0);
-                cde cdeVarT2 = dqc.bi(viewGroup).t();
-                cdeVarT2.ab = "getAdapter" /* "getAdapter" /* "getAdapter" /* "getAdapter" /* cnb.z(-555992106400554L)   */;
-                Object objE2 = ((MethodHookWrapper) dkz.m(cdeVarT2)).e(new Object[0]);
+                ((MethodHookWrapper) StaticHelpers6.n(new Object[]{dal.b(cls), dal.b(cls), dal.b(cls)}, 3, methodResolverVarT)).e(0, 0, 0);
+                MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(viewGroup).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT2.name = "getAdapter" /* "getAdapter" /* "getAdapter" /* "getAdapter" /* cnb.z(-555992106400554L)   */;
+                Object objE2 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).e(new Object[0]);
                 throwIfVar1IsNull(objE2);
-                azg azgVarR3 = dqc.bi(objE2).r();
-                azgVarR3.a = "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* cnb.z(-555962041629482L)   */;
-                Object objD = ((azk) yg.e(azgVarR3)).d();
+                FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objE2).r();
+                fieldResolverVarR3.fieldType = "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* cnb.z(-555962041629482L)   */;
+                Object objD = ((azk) yg.e(fieldResolverVarR3)).d();
                 throwIfVar1IsNull(objD);
-                Method methodBb2 = emn.bb(djt.a);
+                Method methodBb2 = StaticHelpers7.bb(djt.a);
                 if (methodBb2.getParameterCount() == 4) {
                     methodBb2.invoke(null, objD, null, 1, null);
                 } else {

@@ -199,14 +199,14 @@ public final class dbu extends nj {
         dca dcaVar = this.ag;
         synchronized (dcaVar) {
             dcaVar.g.a.add(dpwVar);
-            dhx dhxVar = dcaVar.e;
-            ((Set) dhxVar.d).add(dbsVarAt);
-            if (dhxVar.c) {
+            ConnectivityMonitor connectivityMonitorVar = dcaVar.e;
+            ((Set) connectivityMonitorVar.d).add(dbsVarAt);
+            if (connectivityMonitorVar.c) {
                 dbsVarAt.clear();
                 if (Log.isLoggable("RequestTracker", 2)) {
                     Log.v("RequestTracker", "Paused, delaying request");
                 }
-                ((HashSet) dhxVar.e).add(dbsVarAt);
+                ((HashSet) connectivityMonitorVar.e).add(dbsVarAt);
             } else {
                 dbsVarAt.n();
             }

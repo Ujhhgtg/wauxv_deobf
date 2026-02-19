@@ -9,12 +9,12 @@ import java.util.ArrayList;
 /* JADX INFO: loaded from: classes.dex */
 public final class cua extends bdo {
     public final ArrayList a;
-    public final dov b;
+    public final Kotlin$Lazy b;
 
     public cua() {
         super(ctz.a);
         this.a = new ArrayList();
-        this.b = new dov(new cfx(this, 8));
+        this.b = new Kotlin$Lazy(new cfx(this, 8));
     }
 
     @Override // me.hd.wauxv.obf.bdj

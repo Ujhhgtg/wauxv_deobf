@@ -3,7 +3,7 @@ package com.uyumao;
 import android.content.Context;
 import android.text.TextUtils;
 import com.umeng.analytics.pro.bt;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.utility.JavaConstant;
 
@@ -44,7 +44,7 @@ public class o {
         public final String a;
 
         public a(o oVar, String str) {
-            this.a = TextUtils.isEmpty(str) ? str : dkz.s(str, JavaConstant.Dynamic.DEFAULT_NAME);
+            this.a = TextUtils.isEmpty(str) ? str : StaticHelpers6.concat(str, JavaConstant.Dynamic.DEFAULT_NAME);
         }
 
         public final void a(String str, String str2) {

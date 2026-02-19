@@ -39,7 +39,7 @@ public abstract class dfv extends dfw {
     public static List ak(dft dftVar) {
         Iterator it = dftVar.iterator();
         if (!it.hasNext()) {
-            return EmptyReadonlyList.a;
+            return EmptyReadonlyList.INSTANCE;
         }
         Object next = it.next();
         if (!it.hasNext()) {

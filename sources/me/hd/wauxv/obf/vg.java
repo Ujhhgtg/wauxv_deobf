@@ -33,9 +33,9 @@ public final class vg extends SwitchHook implements IDexFind, bob {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(uu.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(uu.a));
         vg vgVar = a;
-        aki akiVarAb = csb.ab(vgVar, listBf);
+        aki akiVarAb = PackageParam.ab(vgVar, listBf);
         vgVar.x(akiVarAb, new us(0));
         akiVarAb.o();
     }
@@ -52,7 +52,7 @@ public final class vg extends SwitchHook implements IDexFind, bob {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(uu.a, dexKitBridge, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(29));
+        StaticHelpers7.resolveDexAndCache(uu.a, dexKitBridge, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(29));
     }
 
     @Override // me.hd.wauxv.obf.IDatabaseOperationsListener

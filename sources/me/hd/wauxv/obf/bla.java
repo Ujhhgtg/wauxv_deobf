@@ -24,7 +24,7 @@ public final class bla {
     }
 
     public final String toString() {
-        StringBuilder sbY = dkz.y("HexFormat(\n    upperCase = ");
+        StringBuilder sbY = StaticHelpers6.toSb("HexFormat(\n    upperCase = ");
         sbY.append(this.b);
         sbY.append(",\n    bytes = BytesHexFormat(\n");
         this.c.b(sbY, "        ");

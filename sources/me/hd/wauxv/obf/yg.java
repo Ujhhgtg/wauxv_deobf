@@ -27,9 +27,9 @@ public abstract /* synthetic */ class yg {
         return new ClassCastException();
     }
 
-    public static Object e(azg azgVar) {
-        azgVar.ah();
-        return aaz.e(azgVar.c());
+    public static Object e(FieldResolver fieldResolverVar) {
+        fieldResolverVar.enableSuperclass();
+        return StaticHelpers5.safeGetFirstInList(fieldResolverVar.resolve());
     }
 
     public static String f(int i, String str, String str2) {
@@ -58,8 +58,8 @@ public abstract /* synthetic */ class yg {
         return str + str2;
     }
 
-    public static String l(String str, bdj bdjVar, String str2) {
-        return str + bdjVar + str2;
+    public static String l(String str, SomeFragmentManager someFragmentManagerVar, String str2) {
+        return str + someFragmentManagerVar + str2;
     }
 
     public static String concatToVar1(StringBuilder sb, String str, int i) {
@@ -102,7 +102,7 @@ public abstract /* synthetic */ class yg {
         return sb;
     }
 
-    public static bmu s(long j) {
+    public static SyntheticPileOfMess s(long j) {
         return dqc.bh(ajn.tryGetClassByClassName(cnb.z(j)));
     }
 

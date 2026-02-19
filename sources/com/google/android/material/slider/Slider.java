@@ -11,7 +11,7 @@ import android.util.AttributeSet;
 import android.widget.SeekBar;
 import java.util.Iterator;
 import me.hd.wauxv.obf.arj;
-import me.hd.wauxv.obf.bht;
+import me.hd.wauxv.obf.ResourcesCompat;
 import me.hd.wauxv.obf.bhv;
 import me.hd.wauxv.obf.bto;
 import me.hd.wauxv.obf.cau;
@@ -291,7 +291,7 @@ public class Slider extends ns {
 
     public void setThumbStrokeColorResource(int i) {
         if (i != 0) {
-            setThumbStrokeColor(bht.v(getContext(), i));
+            setThumbStrokeColor(ResourcesCompat.v(getContext(), i));
         }
     }
 

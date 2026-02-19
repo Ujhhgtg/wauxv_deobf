@@ -28,9 +28,9 @@ public abstract class cyw {
         return -1L;
     }
 
-    public abstract void f(czx czxVar, int i);
+    public abstract void f(SomeView someViewVar, int i);
 
-    public abstract czx g(ViewGroup viewGroup, int i);
+    public abstract SomeView g(ViewGroup viewGroup, int i);
 
     public int i(int i) {
         return 0;
@@ -39,23 +39,23 @@ public abstract class cyw {
     public void j(RecyclerView recyclerView) {
     }
 
-    public void k(czx czxVar, int i, List list) {
-        f(czxVar, i);
+    public void k(SomeView someViewVar, int i, List list) {
+        f(someViewVar, i);
     }
 
     public void l(RecyclerView recyclerView) {
     }
 
-    public void m(czx czxVar) {
+    public void m(SomeView someViewVar) {
     }
 
-    public void n(czx czxVar) {
+    public void n(SomeView someViewVar) {
     }
 
-    public boolean v(czx czxVar) {
+    public boolean v(SomeView someViewVar) {
         return false;
     }
 
-    public void w(czx czxVar) {
+    public void w(SomeView someViewVar) {
     }
 }

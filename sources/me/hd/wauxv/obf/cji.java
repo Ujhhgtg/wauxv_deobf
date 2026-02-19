@@ -126,11 +126,11 @@ public final class cji extends cjg implements Iterable, IEmpty {
     }
 
     @Override // me.hd.wauxv.obf.cjg
-    public final cjf o(jx jxVar) {
-        cjf cjfVarO = super.o(jxVar);
+    public final cjf o(FactoryPools factoryPoolsVar) {
+        cjf cjfVarO = super.o(factoryPoolsVar);
         xe xeVar = this.b;
         xeVar.getClass();
-        return xeVar.m(cjfVarO, jxVar, false, (cji) xeVar.d);
+        return xeVar.m(cjfVarO, factoryPoolsVar, false, (cji) xeVar.d);
     }
 
     public final cjg p(int i) {
@@ -138,8 +138,8 @@ public final class cji extends cjg implements Iterable, IEmpty {
         return xeVar.k(i, (cji) xeVar.d, null, false);
     }
 
-    public final cjf q(jx jxVar, cjg cjgVar) {
-        return this.b.m(super.o(jxVar), jxVar, true, cjgVar);
+    public final cjf q(FactoryPools factoryPoolsVar, cjg cjgVar) {
+        return this.b.m(super.o(factoryPoolsVar), factoryPoolsVar, true, cjgVar);
     }
 
     @Override // me.hd.wauxv.obf.cjg

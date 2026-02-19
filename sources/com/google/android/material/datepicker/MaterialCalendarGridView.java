@@ -14,7 +14,7 @@ import me.hd.wauxv.obf.cah;
 import me.hd.wauxv.obf.cas;
 import me.hd.wauxv.obf.ceu;
 import me.hd.wauxv.obf.eoq;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -29,7 +29,7 @@ final class MaterialCalendarGridView extends GridView {
             setNextFocusRightId(me.hd.wauxv.R.id.confirm_button);
         }
         this.a = cas.ec(getContext(), me.hd.wauxv.R.attr.nestedScrollable);
-        eqz.s(this, new cah(2));
+        ViewCompat.setAccessibilityDelegate(this, new cah(2));
     }
 
     public final ceu b() {

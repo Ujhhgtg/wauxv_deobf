@@ -5,7 +5,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 /* JADX INFO: loaded from: classes.dex */
-public abstract class dgg extends emn {
+public abstract class dgg extends StaticHelpers7 {
     public static Set _cd(Object... objArr) {
         int length = objArr.length;
         if (length == 0) {
@@ -16,7 +16,7 @@ public abstract class dgg extends emn {
             throwIfVar1IsNull(setSingleton, "singleton(...)");
             return setSingleton;
         }
-        LinkedHashSet linkedHashSet = new LinkedHashSet(KotlinHelpers.ah(objArr.length));
+        LinkedHashSet linkedHashSet = new LinkedHashSet(KotlinHelpers.calcHashMapCapacity(objArr.length));
         for (Object obj : objArr) {
             linkedHashSet.add(obj);
         }
@@ -25,7 +25,7 @@ public abstract class dgg extends emn {
 
     public static Set a(Set set, Set set2) {
         if (set2.isEmpty()) {
-            return aaz.ad(set);
+            return StaticHelpers5.ad(set);
         }
         LinkedHashSet linkedHashSet = new LinkedHashSet();
         for (Object obj : set) {
@@ -38,7 +38,7 @@ public abstract class dgg extends emn {
 
     public static LinkedHashSet b(Set set, cio cioVar) {
         throwIfVar1IsNull(set, "<this>");
-        LinkedHashSet linkedHashSet = new LinkedHashSet(KotlinHelpers.ah(set.size() + 1));
+        LinkedHashSet linkedHashSet = new LinkedHashSet(KotlinHelpers.calcHashMapCapacity(set.size() + 1));
         linkedHashSet.addAll(set);
         linkedHashSet.add(cioVar);
         return linkedHashSet;

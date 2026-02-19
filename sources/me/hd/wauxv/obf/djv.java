@@ -31,9 +31,9 @@ public final class djv extends SwitchHook implements IDexFind, IDatabaseOperatio
                 ArrayList arrayList = new ArrayList();
                 for (String str2 : setN) {
                     aeg.a.getClass();
-                    abf.an(arrayList, aeg.b(str2));
+                    StaticHelpers2.an(arrayList, aeg.b(str2));
                 }
-                String strK = aaz.k(new LinkedHashSet(arrayList), null, "(" /* "(" /* "(" /* cnb.z(-555034328693546L)  */,
+                String strK = StaticHelpers5.k(new LinkedHashSet(arrayList), null, "(" /* "(" /* "(" /* cnb.z(-555034328693546L)  */,
                         ")" /* ")" /* ")" /* cnb.z(-555042918628138L)  */, new djk(4), 25);
                 StringBuilder sb = new StringBuilder();
                 sb.append(
@@ -55,12 +55,12 @@ public final class djv extends SwitchHook implements IDexFind, IDatabaseOperatio
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i2 = 0;
-        cde cdeVarT = yg.s(-557521114757930L).t();
-        cdeVarT.ab = "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-557770222861098L)  */;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
-        exg exgVar = exg.a;
+        MethodResolver methodResolverVarT = yg.s(-557521114757930L).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-557770222861098L)  */;
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         djv djvVar = a;
-        aki akiVarAd = djvVar.ad(methodHookWrapperVar, exgVar);
+        aki akiVarAd = djvVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
         djvVar.x(akiVarAd, new djk(3));
         akiVarAd.o();
     }
@@ -77,7 +77,7 @@ public final class djv extends SwitchHook implements IDexFind, IDatabaseOperatio
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(djt.a, dexKitBridge, new djk(5));
+        StaticHelpers7.resolveDexAndCache(djt.a, dexKitBridge, new djk(5));
     }
 
     @Override // me.hd.wauxv.obf.IDatabaseOperationsListener

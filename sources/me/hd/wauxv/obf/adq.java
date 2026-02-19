@@ -232,7 +232,7 @@ public class adq {
             if (!hashSet.contains(this)) {
                 return;
             }
-            cnf.aq(adrVar, bvmVar, this);
+            HugeSyntheticPileOfHelpers.aq(adrVar, bvmVar, this);
             hashSet.remove(this);
             e(bvmVar, adrVar.ei(64));
         }
@@ -359,7 +359,7 @@ public class adq {
         }
         int i29 = i28;
         int i30 = z6 ? 3 : i6;
-        int iAe = dkz.ae(i);
+        int iAe = StaticHelpers6.ae(i);
         boolean z27 = (iAe == 0 || iAe == 1 || iAe != 2 || i30 == 4) ? false : true;
         int i31 = this.r;
         if (i31 == -1 || !z) {
@@ -1081,7 +1081,7 @@ public class adq {
     }
 
     public adb ck(int i) {
-        switch (dkz.ae(i)) {
+        switch (StaticHelpers6.ae(i)) {
             case 0:
                 return null;
             case 1:
@@ -1391,7 +1391,7 @@ public class adq {
         }
     }
 
-    public void dd(jx jxVar) {
+    public void dd(FactoryPools factoryPoolsVar) {
         this.as.t();
         this.at.t();
         this.au.t();
@@ -4507,7 +4507,7 @@ public class adq {
     }
 
     public String toString() {
-        StringBuilder sbY = dkz.y("");
+        StringBuilder sbY = StaticHelpers6.toSb("");
         sbY.append(this.br != null ? yg.concatToVar1(new StringBuilder("id: "), this.br, " ") : "");
         sbY.append("(");
         sbY.append(this.bi);

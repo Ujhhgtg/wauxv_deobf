@@ -19,7 +19,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
@@ -439,7 +439,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
             }
 
             public int hashCode() {
-                return dkz.e(this.typeDescription, getClass().hashCode() * 31, 31) + this.offset;
+                return StaticHelpers6.e(this.typeDescription, getClass().hashCode() * 31, 31) + this.offset;
             }
         }
 
@@ -926,7 +926,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
 
                 public int hashCode() {
                     return this.steps.hashCode()
-                            + ((this.typing.hashCode() + dkz.h(this.assigner, getClass().hashCode() * 31, 31)) * 31);
+                            + ((this.typing.hashCode() + StaticHelpers6.h(this.assigner, getClass().hashCode() * 31, 31)) * 31);
                 }
 
                 @Override // net.bytebuddy.asm.MemberSubstitution.Substitution.Factory
@@ -1127,8 +1127,8 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                         }
 
                         public int hashCode() {
-                            return dkz.e(this.typeDescription,
-                                    dkz.g(this.stackManipulation, getClass().hashCode() * 31, 31), 31) + this.index;
+                            return StaticHelpers6.e(this.typeDescription,
+                                    StaticHelpers6.g(this.stackManipulation, getClass().hashCode() * 31, 31), 31) + this.index;
                         }
 
                         @Override // net.bytebuddy.asm.MemberSubstitution.Substitution.Chain.Step.Factory
@@ -1180,9 +1180,9 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
 
                     public int hashCode() {
                         return this.typing.hashCode()
-                                + dkz.h(this.assigner,
-                                        (dkz.e(this.typeDescription,
-                                                dkz.g(this.substitution, getClass().hashCode() * 31, 31), 31)
+                                + StaticHelpers6.h(this.assigner,
+                                        (StaticHelpers6.e(this.typeDescription,
+                                                StaticHelpers6.g(this.substitution, getClass().hashCode() * 31, 31), 31)
                                                 + this.index) * 31,
                                         31);
                     }
@@ -1454,8 +1454,8 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                                 }
 
                                 public int hashCode() {
-                                    return this.instrumentedMethod.hashCode() + dkz.f(this.instrumentedType,
-                                            dkz.b(this.delegate, getClass().hashCode() * 31, 31), 31);
+                                    return this.instrumentedMethod.hashCode() + StaticHelpers6.f(this.instrumentedType,
+                                            StaticHelpers6.b(this.delegate, getClass().hashCode() * 31, 31), 31);
                                 }
 
                                 @Override // net.bytebuddy.asm.MemberSubstitution.Substitution.Chain.Step.ForDelegation.BootstrapArgumentResolver.Resolved
@@ -1572,7 +1572,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
 
                                 public int hashCode() {
                                     return this.resolverFactory.hashCode()
-                                            + dkz.b(this.bootstrapMethod, getClass().hashCode() * 31, 31);
+                                            + StaticHelpers6.b(this.bootstrapMethod, getClass().hashCode() * 31, 31);
                                 }
 
                                 @Override // net.bytebuddy.asm.MemberSubstitution.Substitution.Chain.Step.ForDelegation.Dispatcher.Factory
@@ -1628,8 +1628,8 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                                 }
 
                                 public int hashCode() {
-                                    return this.resolver.hashCode() + dkz.b(this.delegate,
-                                            dkz.b(this.bootstrapMethod, getClass().hashCode() * 31, 31), 31);
+                                    return this.resolver.hashCode() + StaticHelpers6.b(this.delegate,
+                                            StaticHelpers6.b(this.bootstrapMethod, getClass().hashCode() * 31, 31), 31);
                                 }
 
                                 @Override // net.bytebuddy.asm.MemberSubstitution.Substitution.Chain.Step.ForDelegation.Dispatcher.Resolved
@@ -1668,8 +1668,8 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                             }
 
                             public int hashCode() {
-                                return this.resolver.hashCode() + dkz.b(this.delegate,
-                                        dkz.b(this.bootstrapMethod, getClass().hashCode() * 31, 31), 31);
+                                return this.resolver.hashCode() + StaticHelpers6.b(this.delegate,
+                                        StaticHelpers6.b(this.bootstrapMethod, getClass().hashCode() * 31, 31), 31);
                             }
 
                             @Override // net.bytebuddy.asm.MemberSubstitution.Substitution.Chain.Step.ForDelegation.Dispatcher
@@ -1834,7 +1834,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
 
                         public int hashCode() {
                             return this.offsetMappings.hashCode() + ((this.dispatcher.hashCode()
-                                    + dkz.b(this.delegate, getClass().hashCode() * 31, 31)) * 31);
+                                    + StaticHelpers6.b(this.delegate, getClass().hashCode() * 31, 31)) * 31);
                         }
 
                         @Override // net.bytebuddy.asm.MemberSubstitution.Substitution.Chain.Step.Factory
@@ -2051,7 +2051,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                                 throw new IllegalArgumentException(typeDescription
                                         + " does not define exactly one abstract method: " + methodListFilter);
                             }
-                            throw new IllegalArgumentException(dkz.x(typeDescription, " is not an interface type"));
+                            throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " is not an interface type"));
                         }
 
                         public WithCustomMapping bootstrap(MethodDescription.InDefinedShape inDefinedShape,
@@ -2134,7 +2134,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
 
                     public int hashCode() {
                         return this.offsetMappings.hashCode()
-                                + ((this.dispatcher.hashCode() + dkz.e(this.returned, getClass().hashCode() * 31, 31))
+                                + ((this.dispatcher.hashCode() + StaticHelpers6.e(this.returned, getClass().hashCode() * 31, 31))
                                         * 31);
                     }
 
@@ -2403,9 +2403,9 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                                 }
 
                                 public int hashCode() {
-                                    return this.instrumentedMethod.hashCode() + dkz.h(this.assigner,
+                                    return this.instrumentedMethod.hashCode() + StaticHelpers6.h(this.assigner,
                                             (((((this.source.hashCode() + ((this.typing.hashCode()
-                                                    + dkz.e(this.targetComponentType, getClass().hashCode() * 31, 31))
+                                                    + StaticHelpers6.e(this.targetComponentType, getClass().hashCode() * 31, 31))
                                                     * 31)) * 31) + (this.includeSelf ? 1 : 0)) * 31)
                                                     + (this.nullIfEmpty ? 1 : 0)) * 31,
                                             31);
@@ -2494,7 +2494,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                             }
 
                             public int hashCode() {
-                                int iE = dkz.e(this.targetComponentType, getClass().hashCode() * 31, 31);
+                                int iE = StaticHelpers6.e(this.targetComponentType, getClass().hashCode() * 31, 31);
                                 Assigner.Typing typing = this.typing;
                                 if (typing != null) {
                                     iE += typing.hashCode();
@@ -2570,8 +2570,8 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                                 }
 
                                 public int hashCode() {
-                                    return this.typing.hashCode() + dkz.h(this.assigner,
-                                            dkz.e(this.targetType, getClass().hashCode() * 31, 31), 31);
+                                    return this.typing.hashCode() + StaticHelpers6.h(this.assigner,
+                                            StaticHelpers6.e(this.targetType, getClass().hashCode() * 31, 31), 31);
                                 }
                             }
 
@@ -2635,7 +2635,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                             }
 
                             public int hashCode() {
-                                int iE = dkz.e(this.targetType, getClass().hashCode() * 31, 31);
+                                int iE = StaticHelpers6.e(this.targetType, getClass().hashCode() * 31, 31);
                                 Assigner.Typing typing = this.typing;
                                 return typing != null ? typing.hashCode() + iE : iE;
                             }
@@ -2807,10 +2807,10 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                             }
 
                             public int hashCode() {
-                                return bjs.g(this.arguments, bjs.g(this.bootstrapParameterTypes, dkz.f(
+                                return bjs.g(this.arguments, bjs.g(this.bootstrapParameterTypes, StaticHelpers6.f(
                                         this.bootstrapReturnType,
-                                        bjs.e(this.bootstrapName, dkz.f(this.bootstrapOwner,
-                                                (this.bootstrapType.hashCode() + dkz.f(this.typeDescription,
+                                        bjs.e(this.bootstrapName, StaticHelpers6.f(this.bootstrapOwner,
+                                                (this.bootstrapType.hashCode() + StaticHelpers6.f(this.typeDescription,
                                                         bjs.e(this.name, getClass().hashCode() * 31, 31), 31)) * 31,
                                                 31), 31),
                                         31), 31), 31) + (this.invokedynamic ? 1 : 0);
@@ -3033,7 +3033,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                             }
 
                             public int hashCode() {
-                                int iE = dkz.e(this.target, getClass().hashCode() * 31, 31);
+                                int iE = StaticHelpers6.e(this.target, getClass().hashCode() * 31, 31);
                                 Assigner.Typing typing = this.typing;
                                 return typing != null ? typing.hashCode() + iE : iE;
                             }
@@ -3744,8 +3744,8 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
 
                             public int hashCode() {
                                 return this.parameterTypes.hashCode()
-                                        + dkz.f(this.returnType,
-                                                bjs.e(this.name, dkz.f(this.owner,
+                                        + StaticHelpers6.f(this.returnType,
+                                                bjs.e(this.name, StaticHelpers6.f(this.owner,
                                                         (this.type.hashCode() + (getClass().hashCode() * 31)) * 31, 31),
                                                         31),
                                                 31);
@@ -4318,7 +4318,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                                 }
 
                                 public int hashCode() {
-                                    return this.typeDescription.hashCode() + dkz.g(this.stackManipulation,
+                                    return this.typeDescription.hashCode() + StaticHelpers6.g(this.stackManipulation,
                                             bjs.d(getClass().hashCode() * 31, 31, this.annotationType), 31);
                                 }
 
@@ -4485,7 +4485,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                                 }
 
                                 public int hashCode() {
-                                    return this.arguments.hashCode() + dkz.b(this.bootstrapMethod,
+                                    return this.arguments.hashCode() + StaticHelpers6.b(this.bootstrapMethod,
                                             bjs.d(getClass().hashCode() * 31, 31, this.annotationType), 31);
                                 }
 
@@ -4569,7 +4569,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                                 }
 
                                 public int hashCode() {
-                                    return this.typeDescription.hashCode() + dkz.g(this.deserialization,
+                                    return this.typeDescription.hashCode() + StaticHelpers6.g(this.deserialization,
                                             bjs.d(getClass().hashCode() * 31, 31, this.annotationType), 31);
                                 }
 
@@ -4633,10 +4633,10 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                                 }
 
                                 public int hashCode() {
-                                    return this.targetType.hashCode() + dkz.e(this.typeDescription, dkz.g(
+                                    return this.targetType.hashCode() + StaticHelpers6.e(this.typeDescription, StaticHelpers6.g(
                                             this.stackManipulation,
                                             (this.typing.hashCode()
-                                                    + dkz.h(this.assigner, getClass().hashCode() * 31, 31)) * 31,
+                                                    + StaticHelpers6.h(this.assigner, getClass().hashCode() * 31, 31)) * 31,
                                             31), 31);
                                 }
                             }
@@ -4667,8 +4667,8 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                             }
 
                             public int hashCode() {
-                                return this.targetType.hashCode() + dkz.e(this.typeDescription,
-                                        dkz.g(this.stackManipulation, getClass().hashCode() * 31, 31), 31);
+                                return this.targetType.hashCode() + StaticHelpers6.e(this.typeDescription,
+                                        StaticHelpers6.g(this.stackManipulation, getClass().hashCode() * 31, 31), 31);
                             }
 
                             @Override // net.bytebuddy.asm.MemberSubstitution.Substitution.Chain.Step.ForDelegation.OffsetMapping
@@ -4909,9 +4909,9 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                                 }
 
                                 public int hashCode() {
-                                    return this.instrumentedMethod.hashCode() + dkz.h(this.assigner,
+                                    return this.instrumentedMethod.hashCode() + StaticHelpers6.h(this.assigner,
                                             (((this.source.hashCode() + ((this.typing.hashCode()
-                                                    + dkz.e(this.targetType, getClass().hashCode() * 31, 31)) * 31))
+                                                    + StaticHelpers6.e(this.targetType, getClass().hashCode() * 31, 31)) * 31))
                                                     * 31) + (this.optional ? 1 : 0)) * 31,
                                             31);
                                 }
@@ -4991,7 +4991,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                             }
 
                             public int hashCode() {
-                                int iE = dkz.e(this.targetType, getClass().hashCode() * 31, 31);
+                                int iE = StaticHelpers6.e(this.targetType, getClass().hashCode() * 31, 31);
                                 Assigner.Typing typing = this.typing;
                                 if (typing != null) {
                                     iE += typing.hashCode();
@@ -5144,9 +5144,9 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                                 }
 
                                 public int hashCode() {
-                                    return this.instrumentedMethod.hashCode() + dkz.h(this.assigner,
+                                    return this.instrumentedMethod.hashCode() + StaticHelpers6.h(this.assigner,
                                             (((this.source.hashCode() + ((this.typing.hashCode()
-                                                    + ((dkz.e(this.targetType, getClass().hashCode() * 31, 31)
+                                                    + ((StaticHelpers6.e(this.targetType, getClass().hashCode() * 31, 31)
                                                             + this.index) * 31))
                                                     * 31)) * 31) + (this.optional ? 1 : 0)) * 31,
                                             31);
@@ -5233,7 +5233,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                             }
 
                             public int hashCode() {
-                                int iE = (dkz.e(this.targetType, getClass().hashCode() * 31, 31) + this.index) * 31;
+                                int iE = (StaticHelpers6.e(this.targetType, getClass().hashCode() * 31, 31) + this.index) * 31;
                                 Assigner.Typing typing = this.typing;
                                 if (typing != null) {
                                     iE += typing.hashCode();
@@ -5555,7 +5555,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                     }
 
                     public int hashCode() {
-                        return this.typing.hashCode() + dkz.h(this.assigner,
+                        return this.typing.hashCode() + StaticHelpers6.h(this.assigner,
                                 (this.fieldDescription.hashCode() + (getClass().hashCode() * 31)) * 31, 31);
                     }
 
@@ -5617,7 +5617,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
 
                         public int hashCode() {
                             return this.substitutions.hashCode()
-                                    + dkz.c(this.methodDescription, getClass().hashCode() * 31, 31);
+                                    + StaticHelpers6.c(this.methodDescription, getClass().hashCode() * 31, 31);
                         }
 
                         @Override // net.bytebuddy.asm.MemberSubstitution.Substitution.Chain.Step.Factory
@@ -5671,8 +5671,8 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                     }
 
                     public int hashCode() {
-                        return this.typing.hashCode() + dkz.h(this.assigner, yg.c(this.substitutions,
-                                dkz.c(this.methodDescription, getClass().hashCode() * 31, 31), 31), 31);
+                        return this.typing.hashCode() + StaticHelpers6.h(this.assigner, yg.c(this.substitutions,
+                                StaticHelpers6.c(this.methodDescription, getClass().hashCode() * 31, 31), 31), 31);
                     }
 
                     @Override // net.bytebuddy.asm.MemberSubstitution.Substitution.Chain.Step
@@ -5859,7 +5859,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
 
                     public int hashCode() {
                         return this.resultType.hashCode()
-                                + dkz.g(this.stackManipulation, getClass().hashCode() * 31, 31);
+                                + StaticHelpers6.g(this.stackManipulation, getClass().hashCode() * 31, 31);
                     }
 
                     @Override // net.bytebuddy.asm.MemberSubstitution.Substitution.Chain.Step.Factory
@@ -5917,7 +5917,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
 
             public int hashCode() {
                 return this.steps.hashCode()
-                        + ((this.typing.hashCode() + dkz.h(this.assigner, getClass().hashCode() * 31, 31)) * 31);
+                        + ((this.typing.hashCode() + StaticHelpers6.h(this.assigner, getClass().hashCode() * 31, 31)) * 31);
             }
 
             @Override // net.bytebuddy.asm.MemberSubstitution.Substitution
@@ -6002,7 +6002,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                     }
 
                     public int hashCode() {
-                        return this.matcher.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31);
+                        return this.matcher.hashCode() + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31);
                     }
 
                     @Override // net.bytebuddy.asm.MemberSubstitution.Substitution.ForFieldAccess.FieldResolver
@@ -6150,7 +6150,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
             }
 
             public int hashCode() {
-                return this.fieldResolver.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31);
+                return this.fieldResolver.hashCode() + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31);
             }
 
             @Override // net.bytebuddy.asm.MemberSubstitution.Substitution
@@ -6238,7 +6238,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
 
                     public int hashCode() {
                         return this.matcher.hashCode() + ((this.methodGraphCompiler.hashCode()
-                                + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31)) * 31);
+                                + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31)) * 31);
                     }
 
                     @Override // net.bytebuddy.asm.MemberSubstitution.Substitution.ForMethodInvocation.MethodResolver
@@ -6374,7 +6374,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                 }
 
                 public int hashCode() {
-                    return this.methodGraphCompiler.hashCode() + dkz.i(this.matcher, getClass().hashCode() * 31, 31);
+                    return this.methodGraphCompiler.hashCode() + StaticHelpers6.i(this.matcher, getClass().hashCode() * 31, 31);
                 }
 
                 @Override // net.bytebuddy.asm.MemberSubstitution.Substitution.Factory
@@ -6403,7 +6403,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
             }
 
             public int hashCode() {
-                return this.methodResolver.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31);
+                return this.methodResolver.hashCode() + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31);
             }
 
             @Override // net.bytebuddy.asm.MemberSubstitution.Substitution
@@ -6471,7 +6471,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
             }
 
             public int hashCode() {
-                return this.typeDescription.hashCode() + dkz.g(this.stackManipulation, getClass().hashCode() * 31, 31);
+                return this.typeDescription.hashCode() + StaticHelpers6.g(this.stackManipulation, getClass().hashCode() * 31, 31);
             }
 
             @Override // net.bytebuddy.asm.MemberSubstitution.Substitution.Factory
@@ -6829,7 +6829,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
             @Override // net.bytebuddy.asm.MemberSubstitution.WithoutSpecification
             public int hashCode() {
                 return this.argumentsMatcher.hashCode() + ((this.typeMatcher.hashCode()
-                        + ((this.nameMatcher.hashCode() + dkz.i(this.handleMatcher, super.hashCode() * 31, 31)) * 31))
+                        + ((this.nameMatcher.hashCode() + StaticHelpers6.i(this.handleMatcher, super.hashCode() * 31, 31)) * 31))
                         * 31);
             }
 
@@ -6896,7 +6896,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
 
             @Override // net.bytebuddy.asm.MemberSubstitution.WithoutSpecification
             public int hashCode() {
-                return ((dkz.i(this.matcher, super.hashCode() * 31, 31) + (this.matchRead ? 1 : 0)) * 31)
+                return ((StaticHelpers6.i(this.matcher, super.hashCode() * 31, 31) + (this.matchRead ? 1 : 0)) * 31)
                         + (this.matchWrite ? 1 : 0);
             }
 
@@ -6962,7 +6962,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
 
             @Override // net.bytebuddy.asm.MemberSubstitution.WithoutSpecification
             public int hashCode() {
-                return ((dkz.i(this.matcher, super.hashCode() * 31, 31) + (this.includeVirtualCalls ? 1 : 0)) * 31)
+                return ((StaticHelpers6.i(this.matcher, super.hashCode() * 31, 31) + (this.includeVirtualCalls ? 1 : 0)) * 31)
                         + (this.includeSuperCalls ? 1 : 0);
             }
 
@@ -7288,7 +7288,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
 
                 public int hashCode() {
                     return this.substitution.hashCode()
-                            + ((this.member.hashCode() + dkz.f(this.receiver, getClass().hashCode() * 31, 31)) * 31);
+                            + ((this.member.hashCode() + StaticHelpers6.f(this.receiver, getClass().hashCode() * 31, 31)) * 31);
                 }
 
                 @Override // net.bytebuddy.asm.MemberSubstitution.Replacement.Binding
@@ -7439,7 +7439,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                 public int hashCode() {
                     return this.substitutionFactory.hashCode() + ((this.argumentsMatcher.hashCode() + ((this.typeMatcher
                             .hashCode()
-                            + ((this.nameMatcher.hashCode() + dkz.i(this.handleMatcher, getClass().hashCode() * 31, 31))
+                            + ((this.nameMatcher.hashCode() + StaticHelpers6.i(this.handleMatcher, getClass().hashCode() * 31, 31))
                                     * 31))
                             * 31)) * 31);
                 }
@@ -7488,7 +7488,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
 
             public int hashCode() {
                 return this.substitution.hashCode() + ((this.argumentsMatcher.hashCode() + ((this.typeMatcher.hashCode()
-                        + ((this.nameMatcher.hashCode() + dkz.i(this.handleMatcher, getClass().hashCode() * 31, 31))
+                        + ((this.nameMatcher.hashCode() + StaticHelpers6.i(this.handleMatcher, getClass().hashCode() * 31, 31))
                                 * 31))
                         * 31)) * 31);
             }
@@ -7585,8 +7585,8 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                 }
 
                 public int hashCode() {
-                    return this.substitutionFactory.hashCode() + ((((((((dkz.i(this.methodMatcher,
-                            dkz.i(this.fieldMatcher, getClass().hashCode() * 31, 31), 31)
+                    return this.substitutionFactory.hashCode() + ((((((((StaticHelpers6.i(this.methodMatcher,
+                            StaticHelpers6.i(this.fieldMatcher, getClass().hashCode() * 31, 31), 31)
                             + (this.matchFieldRead ? 1 : 0)) * 31) + (this.matchFieldWrite ? 1 : 0)) * 31)
                             + (this.includeVirtualCalls ? 1 : 0)) * 31) + (this.includeSuperCalls ? 1 : 0)) * 31);
                 }
@@ -7642,7 +7642,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
 
             public int hashCode() {
                 return this.substitution.hashCode()
-                        + ((((((((dkz.i(this.methodMatcher, dkz.i(this.fieldMatcher, getClass().hashCode() * 31, 31),
+                        + ((((((((StaticHelpers6.i(this.methodMatcher, StaticHelpers6.i(this.fieldMatcher, getClass().hashCode() * 31, 31),
                                 31) + (this.matchFieldRead ? 1 : 0)) * 31) + (this.matchFieldWrite ? 1 : 0)) * 31)
                                 + (this.includeVirtualCalls ? 1 : 0)) * 31) + (this.includeSuperCalls ? 1 : 0)) * 31);
             }

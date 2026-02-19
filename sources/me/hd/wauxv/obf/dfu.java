@@ -13,7 +13,7 @@ public final class dfu implements Iterator, afw, IEmpty {
 
     @Override // me.hd.wauxv.obf.afw
     public final void _bn(Object obj) throws Throwable {
-        bhu.bd(obj);
+        FastKV.bd(obj);
         this.a = 4;
     }
 

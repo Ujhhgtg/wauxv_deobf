@@ -130,6 +130,6 @@ public class bxl {
 
     public String toString() {
         return new bxk(this, ajn.class, "classSimpleName", "getClassSimpleName(Ljava/lang/Object;)Ljava/lang/String;",
-                1) + '@' + ajn.q(this);
+                1) + '@' + ajn.toHexHashCode(this);
     }
 }

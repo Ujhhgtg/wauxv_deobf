@@ -11,7 +11,7 @@ import me.hd.wauxv.obf.akq;
 import me.hd.wauxv.obf.alc;
 import me.hd.wauxv.obf.aou;
 import me.hd.wauxv.obf.bgj;
-import me.hd.wauxv.obf.bhu;
+import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.bmy;
 import me.hd.wauxv.obf.cla;
 import me.hd.wauxv.obf.KotlinHelpers2;
@@ -68,7 +68,7 @@ public final class PluginHttpMethod {
             ahp ahpVar = (ahp) this.d;
             int i = this.a;
             if (i == 0) {
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 cue cueVar = new cue(this.f, this.o, this.p, 0);
                 alc alcVar = aou.a;
                 akq akqVar = akq.f;
@@ -86,7 +86,7 @@ public final class PluginHttpMethod {
                 if (i != 1) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* cnb.z(-403172875041578L)  */);
                 }
-                bhu.bd(obj);
+                FastKV.bd(obj);
             }
             this.r.onSuccess((File) obj);
             return KotlinUnit.INSTANCE;
@@ -130,7 +130,7 @@ public final class PluginHttpMethod {
             ahp ahpVar = (ahp) this.d;
             int i = this.a;
             if (i == 0) {
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 cug cugVar = new cug(this.f, this.o, 0);
                 alc alcVar = aou.a;
                 akq akqVar = akq.f;
@@ -148,7 +148,7 @@ public final class PluginHttpMethod {
                 if (i != 1) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* cnb.z(-402846457527082L)  */);
                 }
-                bhu.bd(obj);
+                FastKV.bd(obj);
             }
             Response response = (Response) obj;
             int iCode = response.code();
@@ -197,7 +197,7 @@ public final class PluginHttpMethod {
             ahp ahpVar = (ahp) this.d;
             int i = this.a;
             if (i == 0) {
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 cue cueVar = new cue(this.f, this.o, this.p, 1);
                 alc alcVar = aou.a;
                 akq akqVar = akq.f;
@@ -215,7 +215,7 @@ public final class PluginHttpMethod {
                 if (i != 1) {
                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* cnb.z(-403688271117098L)  */);
                 }
-                bhu.bd(obj);
+                FastKV.bd(obj);
             }
             Response response = (Response) obj;
             int iCode = response.code();

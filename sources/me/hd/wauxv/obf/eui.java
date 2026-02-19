@@ -9,12 +9,12 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class eui extends ewy {
     public static final eui a;
-    public static final dov b;
+    public static final Kotlin$Lazy b;
 
     static {
         "initDexObfKey" /* "initDexObfKey" /* "initDexObfKey" /* "initDexObfKey" /* cnb.z(-82905753713450L)   */;
         a = new eui();
-        b = new dov(new efq(18));
+        b = new Kotlin$Lazy(new efq(18));
     }
 
     public static boolean c() {
@@ -151,9 +151,9 @@ public final class eui extends ewy {
     @Override // me.hd.wauxv.obf.ewy
     public final void w() {
         int i = 0;
-        cde cdeVarT = dqc.bg(dal.b(Instrumentation.class)).t();
-        cdeVarT.ab = "callApplicationOnCreate" /* "callApplicationOnCreate" /* "callApplicationOnCreate" /* "callApplicationOnCreate" /* cnb.z(-82549271427882L)   */;
-        aki akiVarAd = a.ad((MethodHookWrapper) dkz.n(new Object[] { dal.b(Application.class) }, 1, cdeVarT), exg.a);
+        MethodResolver methodResolverVarT = dqc.bg(dal.b(Instrumentation.class)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "callApplicationOnCreate" /* "callApplicationOnCreate" /* "callApplicationOnCreate" /* "callApplicationOnCreate" /* cnb.z(-82549271427882L)   */;
+        aki akiVarAd = a.ad((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(Application.class) }, 1, methodResolverVarT), HookPriorityEnum.ENUM_DEFAULT);
         akiVarAd.m(new epy(14));
         akiVarAd.o();
     }

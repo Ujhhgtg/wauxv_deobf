@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import javax.annotation.Nonnull;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
@@ -217,7 +217,7 @@ public interface MethodRebaseResolver {
             }
 
             public int hashCode() {
-                return this.placeholderType.hashCode() + dkz.b(this.methodDescription, getClass().hashCode() * 31, 31);
+                return this.placeholderType.hashCode() + StaticHelpers6.b(this.methodDescription, getClass().hashCode() * 31, 31);
             }
 
             @Override // net.bytebuddy.dynamic.scaffold.inline.MethodRebaseResolver.Resolution

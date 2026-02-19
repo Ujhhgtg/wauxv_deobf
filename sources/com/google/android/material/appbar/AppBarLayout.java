@@ -39,7 +39,7 @@ import me.hd.wauxv.obf.agq;
 import me.hd.wauxv.obf.agr;
 import me.hd.wauxv.obf.agu;
 import me.hd.wauxv.obf.ajn;
-import me.hd.wauxv.obf.bhu;
+import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.bki;
 import me.hd.wauxv.obf.bkj;
 import me.hd.wauxv.obf.cau;
@@ -47,11 +47,11 @@ import me.hd.wauxv.obf.ckr;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.KotlinHelpers2;
-import me.hd.wauxv.obf.cnf;
+import me.hd.wauxv.obf.HugeSyntheticPileOfHelpers;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.dhq;
 import me.hd.wauxv.obf.eqq;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.erp;
 import me.hd.wauxv.obf.ert;
 import me.hd.wauxv.obf.evr;
@@ -132,7 +132,7 @@ public class AppBarLayout extends LinearLayout implements agq {
             agr agrVar = ((agu) view2.getLayoutParams()).a;
             if (agrVar instanceof BaseBehavior) {
                 int bottom = (((view2.getBottom() - view.getTop()) + ((BaseBehavior) agrVar)._i) + this.q) - v(view2);
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 view.offsetTopAndBottom(bottom);
             }
             if (!(view2 instanceof AppBarLayout)) {
@@ -149,7 +149,7 @@ public class AppBarLayout extends LinearLayout implements agq {
         @Override // me.hd.wauxv.obf.agr
         public final void d(CoordinatorLayout coordinatorLayout, View view) {
             if (view instanceof AppBarLayout) {
-                eqz.s(coordinatorLayout, null);
+                ViewCompat.setAccessibilityDelegate(coordinatorLayout, null);
             }
         }
 
@@ -194,7 +194,7 @@ public class AppBarLayout extends LinearLayout implements agq {
             setOutlineProvider(ViewOutlineProvider.BOUNDS);
         }
         Context context3 = getContext();
-        TypedArray typedArrayAn = bhu.an(context3, attributeSet, cmz.j, R.attr.appBarLayoutStyle,
+        TypedArray typedArrayAn = FastKV.an(context3, attributeSet, cmz.j, R.attr.appBarLayoutStyle,
                 R.style.Widget_Design_AppBarLayout, new int[0]);
         try {
             if (typedArrayAn.hasValue(0)) {
@@ -202,10 +202,10 @@ public class AppBarLayout extends LinearLayout implements agq {
                         AnimatorInflater.loadStateListAnimator(context3, typedArrayAn.getResourceId(0, 0)));
             }
             typedArrayAn.recycle();
-            TypedArray typedArrayAn2 = bhu.an(context2, attributeSet, cxs.a, R.attr.appBarLayoutStyle,
+            TypedArray typedArrayAn2 = FastKV.an(context2, attributeSet, cxs.a, R.attr.appBarLayoutStyle,
                     R.style.Widget_Design_AppBarLayout, new int[0]);
             Drawable drawable = typedArrayAn2.getDrawable(0);
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             setBackground(drawable);
             final ColorStateList colorStateListV = cnb.v(context2, typedArrayAn2, 6);
             this.p = colorStateListV != null;
@@ -356,7 +356,7 @@ public class AppBarLayout extends LinearLayout implements agq {
     public final void ad(int i) {
         this.b = i;
         if (!willNotDraw()) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             postInvalidateOnAnimation();
         }
         ArrayList arrayList = this.i;
@@ -377,7 +377,7 @@ public class AppBarLayout extends LinearLayout implements agq {
                         ert ertVarAf = CollapsingToolbarLayout.af(childAt);
                         int i4 = aauVar.a;
                         if (i4 == 1) {
-                            ertVarAf.f(cnf.as(-i, 0, ((collapsingToolbarLayout.getHeight()
+                            ertVarAf.f(HugeSyntheticPileOfHelpers.as(-i, 0, ((collapsingToolbarLayout.getHeight()
                                     - CollapsingToolbarLayout.af(childAt).second) - childAt.getHeight())
                                     - ((FrameLayout.LayoutParams) ((aau) childAt.getLayoutParams())).bottomMargin));
                         } else if (i4 == 2) {
@@ -386,11 +386,11 @@ public class AppBarLayout extends LinearLayout implements agq {
                     }
                     collapsingToolbarLayout.ai();
                     if (collapsingToolbarLayout.p != null && iH > 0) {
-                        WeakHashMap weakHashMap2 = eqz.a;
+                        WeakHashMap weakHashMap2 = ViewCompat.a;
                         collapsingToolbarLayout.postInvalidateOnAnimation();
                     }
                     int height = collapsingToolbarLayout.getHeight();
-                    WeakHashMap weakHashMap3 = eqz.a;
+                    WeakHashMap weakHashMap3 = ViewCompat.a;
                     int minimumHeight = (height - collapsingToolbarLayout.getMinimumHeight()) - iH;
                     float scrimVisibleHeightTrigger = height - collapsingToolbarLayout.getScrimVisibleHeightTrigger();
                     float f = minimumHeight;
@@ -533,17 +533,17 @@ public class AppBarLayout extends LinearLayout implements agq {
                     int i4 = ((LinearLayout.LayoutParams) gsVar).topMargin
                             + ((LinearLayout.LayoutParams) gsVar).bottomMargin;
                     if ((i3 & 8) != 0) {
-                        WeakHashMap weakHashMap = eqz.a;
+                        WeakHashMap weakHashMap = ViewCompat.a;
                         minimumHeight = childAt.getMinimumHeight();
                     } else {
                         if ((i3 & 2) != 0) {
-                            WeakHashMap weakHashMap2 = eqz.a;
+                            WeakHashMap weakHashMap2 = ViewCompat.a;
                             minimumHeight = measuredHeight - childAt.getMinimumHeight();
                         } else {
                             iMin = i4 + measuredHeight;
                         }
                         if (childCount == 0) {
-                            WeakHashMap weakHashMap3 = eqz.a;
+                            WeakHashMap weakHashMap3 = ViewCompat.a;
                             if (childAt.getFitsSystemWindows()) {
                                 iMin = Math.min(iMin, measuredHeight - getTopInset());
                             }
@@ -552,7 +552,7 @@ public class AppBarLayout extends LinearLayout implements agq {
                     }
                     iMin = minimumHeight + i4;
                     if (childCount == 0) {
-                        WeakHashMap weakHashMap32 = eqz.a;
+                        WeakHashMap weakHashMap32 = ViewCompat.a;
                         if (childAt.getFitsSystemWindows()) {
                             iMin = Math.min(iMin, measuredHeight - getTopInset());
                         }
@@ -585,7 +585,7 @@ public class AppBarLayout extends LinearLayout implements agq {
                 }
                 minimumHeight += measuredHeight;
                 if ((i3 & 2) != 0) {
-                    WeakHashMap weakHashMap = eqz.a;
+                    WeakHashMap weakHashMap = ViewCompat.a;
                     minimumHeight -= childAt.getMinimumHeight();
                     break;
                 }
@@ -610,7 +610,7 @@ public class AppBarLayout extends LinearLayout implements agq {
 
     public final int getMinimumHeightForVisibleOverlappingContent() {
         int topInset = getTopInset();
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         int minimumHeight = getMinimumHeight();
         if (minimumHeight == 0) {
             int childCount = getChildCount();
@@ -662,14 +662,14 @@ public class AppBarLayout extends LinearLayout implements agq {
                 int topInset = measuredHeight + ((LinearLayout.LayoutParams) gsVar).topMargin
                         + ((LinearLayout.LayoutParams) gsVar).bottomMargin + minimumHeight;
                 if (i2 == 0) {
-                    WeakHashMap weakHashMap = eqz.a;
+                    WeakHashMap weakHashMap = ViewCompat.a;
                     if (childAt.getFitsSystemWindows()) {
                         topInset -= getTopInset();
                     }
                 }
                 minimumHeight = topInset;
                 if ((i3 & 2) != 0) {
-                    WeakHashMap weakHashMap2 = eqz.a;
+                    WeakHashMap weakHashMap2 = ViewCompat.a;
                     minimumHeight -= childAt.getMinimumHeight();
                     break;
                 }
@@ -718,7 +718,7 @@ public class AppBarLayout extends LinearLayout implements agq {
     @Override // android.widget.LinearLayout, android.view.ViewGroup, android.view.View
     public final void onLayout(boolean z, int i, int i2, int i3, int i4) {
         super.onLayout(z, i, i2, i3, i4);
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         boolean z2 = true;
         if (getFitsSystemWindows() && getChildCount() > 0) {
             View childAt = getChildAt(0);
@@ -772,13 +772,13 @@ public class AppBarLayout extends LinearLayout implements agq {
         super.onMeasure(i, i2);
         int mode = View.MeasureSpec.getMode(i2);
         if (mode != 1073741824) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             if (getFitsSystemWindows() && getChildCount() > 0) {
                 View childAt = getChildAt(0);
                 if (childAt.getVisibility() != 8 && !childAt.getFitsSystemWindows()) {
                     int measuredHeight = getMeasuredHeight();
                     if (mode == Integer.MIN_VALUE) {
-                        measuredHeight = cnf.as(getTopInset() + getMeasuredHeight(), 0, View.MeasureSpec.getSize(i2));
+                        measuredHeight = HugeSyntheticPileOfHelpers.as(getTopInset() + getMeasuredHeight(), 0, View.MeasureSpec.getSize(i2));
                     } else if (mode == 0) {
                         measuredHeight += getTopInset();
                     }
@@ -796,7 +796,7 @@ public class AppBarLayout extends LinearLayout implements agq {
     }
 
     public void setExpanded(boolean z) {
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         ae(z, isLaidOut(), true);
     }
 
@@ -864,7 +864,7 @@ public class AppBarLayout extends LinearLayout implements agq {
                     this.w.setState(getDrawableState());
                 }
                 Drawable drawable4 = this.w;
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 drawable4.setLayoutDirection(getLayoutDirection());
                 this.w.setVisible(getVisibility() == 0, false);
                 this.w.setCallback(this);
@@ -873,7 +873,7 @@ public class AppBarLayout extends LinearLayout implements agq {
                 z = true;
             }
             setWillNotDraw(!z);
-            WeakHashMap weakHashMap2 = eqz.a;
+            WeakHashMap weakHashMap2 = ViewCompat.a;
             postInvalidateOnAnimation();
         }
     }
@@ -972,7 +972,7 @@ public class AppBarLayout extends LinearLayout implements agq {
             if (childAt != null) {
                 int i4 = ((gs) childAt.getLayoutParams()).a;
                 if ((i4 & 1) != 0) {
-                    WeakHashMap weakHashMap = eqz.a;
+                    WeakHashMap weakHashMap = ViewCompat.a;
                     int minimumHeight = childAt.getMinimumHeight();
                     zAg = true;
                     if (i2 <= 0 || (i4 & 12) == 0
@@ -1094,7 +1094,7 @@ public class AppBarLayout extends LinearLayout implements agq {
                     dVar.b = z;
                     dVar.a = !z && (-iAg) >= appBarLayout.getTotalScrollRange();
                     dVar.c = i;
-                    WeakHashMap weakHashMap = eqz.a;
+                    WeakHashMap weakHashMap = ViewCompat.a;
                     dVar.e = bottom == appBarLayout.getTopInset() + childAt.getMinimumHeight();
                     dVar.d = bottom / childAt.getHeight();
                     return dVar;
@@ -1136,7 +1136,7 @@ public class AppBarLayout extends LinearLayout implements agq {
                 View childAt = appBarLayout.getChildAt(dVar.c);
                 int i3 = -childAt.getBottom();
                 if (this._l.e) {
-                    WeakHashMap weakHashMap = eqz.a;
+                    WeakHashMap weakHashMap = ViewCompat.a;
                     iRound = appBarLayout.getTopInset() + childAt.getMinimumHeight() + i3;
                 } else {
                     iRound = Math.round(childAt.getHeight() * this._l.d) + i3;
@@ -1145,7 +1145,7 @@ public class AppBarLayout extends LinearLayout implements agq {
             }
             appBarLayout.g = 0;
             this._l = null;
-            int iAs = cnf.as(ag(), -appBarLayout.getTotalScrollRange(), 0);
+            int iAs = HugeSyntheticPileOfHelpers.as(ag(), -appBarLayout.getTotalScrollRange(), 0);
             ert ertVar = this.ae;
             if (ertVar != null) {
                 ertVar.f(iAs);
@@ -1154,10 +1154,10 @@ public class AppBarLayout extends LinearLayout implements agq {
             }
             h(coordinatorLayout, appBarLayout, ag(), 0, true);
             appBarLayout.ad(ag());
-            if (eqz.j(coordinatorLayout) != null) {
+            if (ViewCompat.getAccessibilityDelegate(coordinatorLayout) != null) {
                 return true;
             }
-            eqz.s(coordinatorLayout, new b(coordinatorLayout, this, appBarLayout));
+            ViewCompat.setAccessibilityDelegate(coordinatorLayout, new b(coordinatorLayout, this, appBarLayout));
             return true;
         }
 
@@ -1187,8 +1187,8 @@ public class AppBarLayout extends LinearLayout implements agq {
             } else {
                 coordinatorLayout2 = coordinatorLayout;
             }
-            if (i3 == 0 && eqz.j(coordinatorLayout2) == null) {
-                eqz.s(coordinatorLayout2, new b(coordinatorLayout2, this, appBarLayout));
+            if (i3 == 0 && ViewCompat.getAccessibilityDelegate(coordinatorLayout2) == null) {
+                ViewCompat.setAccessibilityDelegate(coordinatorLayout2, new b(coordinatorLayout2, this, appBarLayout));
             }
         }
 
@@ -1251,7 +1251,7 @@ public class AppBarLayout extends LinearLayout implements agq {
             if (i2 == 0 || iQ < i2 || iQ > i3) {
                 this._i = 0;
             } else {
-                int iAs = cnf.as(i, i2, i3);
+                int iAs = HugeSyntheticPileOfHelpers.as(i, i2, i3);
                 if (iQ != iAs) {
                     if (!appBarLayout.f) {
                         top = iAs;
@@ -1273,13 +1273,13 @@ public class AppBarLayout extends LinearLayout implements agq {
                                     topInset = childAt.getHeight() + ((LinearLayout.LayoutParams) gsVar).topMargin
                                             + ((LinearLayout.LayoutParams) gsVar).bottomMargin;
                                     if ((i6 & 2) != 0) {
-                                        WeakHashMap weakHashMap = eqz.a;
+                                        WeakHashMap weakHashMap = ViewCompat.a;
                                         topInset -= childAt.getMinimumHeight();
                                     }
                                 } else {
                                     topInset = 0;
                                 }
-                                WeakHashMap weakHashMap2 = eqz.a;
+                                WeakHashMap weakHashMap2 = ViewCompat.a;
                                 if (childAt.getFitsSystemWindows()) {
                                     topInset -= appBarLayout.getTopInset();
                                 }
@@ -1320,7 +1320,7 @@ public class AppBarLayout extends LinearLayout implements agq {
                                 rect2.offset(0, -appBarLayout.getTopInset());
                                 float fAbs = rect2.top - Math.abs(fAg);
                                 if (fAbs <= 0.0f) {
-                                    float fAr = 1.0f - cnf.ar(Math.abs(fAbs / rect2.height()), 0.0f, 1.0f);
+                                    float fAr = 1.0f - HugeSyntheticPileOfHelpers.ar(Math.abs(fAbs / rect2.height()), 0.0f, 1.0f);
                                     float fHeight = (-fAbs) - ((rect2.height() * 0.3f) * (1.0f - (fAr * fAr)));
                                     childAt2.setTranslationY(fHeight);
                                     childAt2.getDrawingRect(rect);
@@ -1330,10 +1330,10 @@ public class AppBarLayout extends LinearLayout implements agq {
                                     } else {
                                         childAt2.setVisibility(0);
                                     }
-                                    WeakHashMap weakHashMap3 = eqz.a;
+                                    WeakHashMap weakHashMap3 = ViewCompat.a;
                                     childAt2.setClipBounds(rect);
                                 } else {
-                                    WeakHashMap weakHashMap4 = eqz.a;
+                                    WeakHashMap weakHashMap4 = ViewCompat.a;
                                     childAt2.setClipBounds(null);
                                     childAt2.setTranslationY(0.0f);
                                     childAt2.setVisibility(0);
@@ -1359,10 +1359,10 @@ public class AppBarLayout extends LinearLayout implements agq {
                     i4 = i7;
                 }
             }
-            if (eqz.j(coordinatorLayout) != null) {
+            if (ViewCompat.getAccessibilityDelegate(coordinatorLayout) != null) {
                 return i4;
             }
-            eqz.s(coordinatorLayout, new b(coordinatorLayout, this, appBarLayout));
+            ViewCompat.setAccessibilityDelegate(coordinatorLayout, new b(coordinatorLayout, this, appBarLayout));
             return i4;
         }
 
@@ -1399,16 +1399,16 @@ public class AppBarLayout extends LinearLayout implements agq {
                     int topInset = -childAt2.getTop();
                     int minimumHeight = -childAt2.getBottom();
                     if (i == 0) {
-                        WeakHashMap weakHashMap = eqz.a;
+                        WeakHashMap weakHashMap = ViewCompat.a;
                         if (appBarLayout.getFitsSystemWindows() && childAt2.getFitsSystemWindows()) {
                             topInset -= appBarLayout.getTopInset();
                         }
                     }
                     if ((i3 & 2) == 2) {
-                        WeakHashMap weakHashMap2 = eqz.a;
+                        WeakHashMap weakHashMap2 = ViewCompat.a;
                         minimumHeight += childAt2.getMinimumHeight();
                     } else if ((i3 & 5) == 5) {
-                        WeakHashMap weakHashMap3 = eqz.a;
+                        WeakHashMap weakHashMap3 = ViewCompat.a;
                         int minimumHeight2 = childAt2.getMinimumHeight() + minimumHeight;
                         if (iQ < minimumHeight2) {
                             topInset = minimumHeight2;
@@ -1424,7 +1424,7 @@ public class AppBarLayout extends LinearLayout implements agq {
                         topInset = minimumHeight;
                     }
                     _n(coordinatorLayout, appBarLayout,
-                            cnf.as(topInset + paddingTop, -appBarLayout.getTotalScrollRange(), 0));
+                            HugeSyntheticPileOfHelpers.as(topInset + paddingTop, -appBarLayout.getTotalScrollRange(), 0));
                 }
             }
         }

@@ -10,14 +10,14 @@ public final class dlv extends SwitchHook implements IDexFind {
     public static final String b = "高危" /* "高危" /* "高危" /* "高危" /* cnb.z(-501136784096042L)   */;
     public static final String c = "运动步数" /* "运动步数" /* "运动步数" /* "运动步数" /* cnb.z(-500522603772714L)   */;
     public static final String i = "启用后需要多次打开微信运动使其变化" /* "启用后需要多次打开微信运动使其变化" /* "启用后需要多次打开微信运动使其变化" /* "启用后需要多次打开微信运动使其变化" /* cnb.z(-500552668543786L)   */;
-    public static final dko j = new dko(4);
+    public static final SyntheticMessOfLambdas j = new SyntheticMessOfLambdas(4);
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(dlt.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(dlt.a));
         dlv dlvVar = a;
-        aki akiVarAb = csb.ab(dlvVar, listBf);
-        dlvVar.x(akiVarAb, new dko(5));
+        aki akiVarAb = PackageParam.ab(dlvVar, listBf);
+        dlvVar.x(akiVarAb, new SyntheticMessOfLambdas(5));
         akiVarAb.o();
     }
 
@@ -33,7 +33,7 @@ public final class dlv extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(dlt.a, dexKitBridge, new dko(6));
+        StaticHelpers7.resolveDexAndCache(dlt.a, dexKitBridge, new SyntheticMessOfLambdas(6));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

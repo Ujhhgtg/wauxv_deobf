@@ -26,23 +26,23 @@ public final class djh extends SwitchHook implements IDexFind {
 
     public static String n(Object obj) throws IllegalAccessException {
         int i2 = 0;
-        azg azgVarR = dqc.bi(obj).r();
-        azgVarR.ab = "field_snsId" /* "field_snsId" /* "field_snsId" /* "field_snsId" /* cnb.z(-535771400370986L)   */;
-        Object objE = ((azk) yg.e(azgVarR)).e();
+        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
+        fieldResolverVarR.name = "field_snsId" /* "field_snsId" /* "field_snsId" /* "field_snsId" /* cnb.z(-535771400370986L)   */;
+        Object objE = ((azk) yg.e(fieldResolverVarR)).e();
         throwIfVar1IsNull(objE);
         long jLongValue = ((Number) objE).longValue();
-        azg azgVarR2 = dqc.bi(obj).r();
-        azgVarR2.ab = "field_userName" /* "field_userName" /* "field_userName" /* "field_userName" /* cnb.z(-532936721955626L)   */;
-        Object objE2 = ((azk) yg.e(azgVarR2)).e();
+        FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj).r();
+        fieldResolverVarR2.name = "field_userName" /* "field_userName" /* "field_userName" /* "field_userName" /* cnb.z(-532936721955626L)   */;
+        Object objE2 = ((azk) yg.e(fieldResolverVarR2)).e();
         throwIfVar1IsNull(objE2);
-        azg azgVarR3 = dqc.bi(obj).r();
-        azgVarR3.ab = "field_createTime" /* "field_createTime" /* "field_createTime" /* "field_createTime" /* cnb.z(-532855117577002L)   */;
-        Object objE3 = ((azk) yg.e(azgVarR3)).e();
+        FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).r();
+        fieldResolverVarR3.name = "field_createTime" /* "field_createTime" /* "field_createTime" /* "field_createTime" /* cnb.z(-532855117577002L)   */;
+        Object objE3 = ((azk) yg.e(fieldResolverVarR3)).e();
         throwIfVar1IsNull(objE3);
         int iIntValue = ((Number) objE3).intValue();
-        azg azgVarR4 = dqc.bi(obj).r();
-        azgVarR4.ab = "field_type" /* "field_type" /* "field_type" /* "field_type" /* cnb.z(-532799283002154L)   */;
-        Object objE4 = ((azk) yg.e(azgVarR4)).e();
+        FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(obj).r();
+        fieldResolverVarR4.name = "field_type" /* "field_type" /* "field_type" /* "field_type" /* cnb.z(-532799283002154L)   */;
+        Object objE4 = ((azk) yg.e(fieldResolverVarR4)).e();
         throwIfVar1IsNull(objE4);
         int iIntValue2 = ((Number) objE4).intValue();
         String strBo = dnr.bo(djf.a.o(), "${time}" /* "${time}" /* "${time}" /* "${time}" /* cnb.z(-532769218231082L)   */,
@@ -63,11 +63,11 @@ public final class djh extends SwitchHook implements IDexFind {
         boolean zAb = cnb.ab(ewk.d);
         djh djhVar = a;
         if (zAb || cnb.ac(ewh.d)) {
-            aki akiVarAb = csb.ab(djhVar, dqc.toSingletonList(emn.bb(djc.a)));
+            aki akiVarAb = PackageParam.ab(djhVar, dqc.toSingletonList(StaticHelpers7.bb(djc.a)));
             djhVar.x(akiVarAb, new dhg(18));
             akiVarAb.o();
         } else {
-            aki akiVarAb2 = csb.ab(djhVar, dqc.toSingletonList(emn.bb(djd.a)));
+            aki akiVarAb2 = PackageParam.ab(djhVar, dqc.toSingletonList(StaticHelpers7.bb(djd.a)));
             djhVar.x(akiVarAb2, new dhg(19));
             akiVarAb2.o();
         }
@@ -86,10 +86,10 @@ public final class djh extends SwitchHook implements IDexFind {
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
         if (!cnb.ab(ewk.d) && !cnb.ac(ewh.d)) {
-            emn.aj(djd.a, dexKitBridge, new dhg(22));
+            StaticHelpers7.resolveDexAndCache(djd.a, dexKitBridge, new dhg(22));
         } else {
-            emn.aj(djc.a, dexKitBridge, new dhg(20));
-            emn.aj(djb.a, dexKitBridge, new dhg(21));
+            StaticHelpers7.resolveDexAndCache(djc.a, dexKitBridge, new dhg(20));
+            StaticHelpers7.resolveDexAndCache(djb.a, dexKitBridge, new dhg(21));
         }
     }
 

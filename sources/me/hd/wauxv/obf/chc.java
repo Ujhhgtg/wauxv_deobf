@@ -54,7 +54,7 @@ public final class chc extends SwitchHook implements bna {
                         R.drawable.ic_menu_repeat_24dp, new cbk(20)));
             }
         }
-        return EmptyReadonlyList.a;
+        return EmptyReadonlyList.INSTANCE;
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

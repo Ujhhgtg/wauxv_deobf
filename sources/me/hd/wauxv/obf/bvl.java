@@ -134,8 +134,8 @@ public class bvl {
         czr czrVar = this.l;
         if (view != null) {
             this.g.getClass();
-            czx czxVarCs = RecyclerView.cs(view);
-            if ((czxVarCs != null ? czxVarCs.z() : -1) == this.f) {
+            SomeView someViewVarCs = RecyclerView.cs(view);
+            if ((someViewVarCs != null ? someViewVarCs.z() : -1) == this.f) {
                 View view2 = this.k;
                 czt cztVar = recyclerView.bo;
                 y(view2, czrVar);

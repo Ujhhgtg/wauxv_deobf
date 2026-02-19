@@ -17,7 +17,7 @@ public final class dut {
     public /* synthetic */ dut(int i, String str, String str2, Integer num, Integer num2, String str3, Integer num3,
             String str4, Integer num4, String str5) {
         if (511 != (i & 511)) {
-            bht.ah(i, 511, dur.b.getDescriptor());
+            ResourcesCompat.ah(i, 511, dur.b.getDescriptor());
             throw null;
         }
         this.a = str;

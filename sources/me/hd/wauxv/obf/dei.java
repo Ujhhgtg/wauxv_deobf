@@ -28,8 +28,8 @@ public final class dei implements bul, AutoCloseable {
     }
 
     @Override // me.hd.wauxv.obf.bul
-    public final void e(bup bupVar, bug bugVar) {
-        if (bugVar == bug.ON_DESTROY) {
+    public final void e(bup bupVar, LifeEventEnum lifeEventEnumVar) {
+        if (lifeEventEnumVar == LifeEventEnum.ON_DESTROY) {
             this.c = false;
             bupVar.ap().o(this);
         }

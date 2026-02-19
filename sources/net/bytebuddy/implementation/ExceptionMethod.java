@@ -1,11 +1,10 @@
 package net.bytebuddy.implementation;
 
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.scaffold.InstrumentedType;
-import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
 import net.bytebuddy.implementation.bytecode.Duplication;
 import net.bytebuddy.implementation.bytecode.StackManipulation;
@@ -49,7 +48,7 @@ public class ExceptionMethod implements Implementation, ByteCodeAppender {
             }
 
             public int hashCode() {
-                return this.targetConstructor.hashCode() + dkz.f(this.throwableType, getClass().hashCode() * 31, 31);
+                return this.targetConstructor.hashCode() + StaticHelpers6.f(this.throwableType, getClass().hashCode() * 31, 31);
             }
 
             @Override // net.bytebuddy.implementation.ExceptionMethod.ConstructionDelegate
@@ -83,7 +82,7 @@ public class ExceptionMethod implements Implementation, ByteCodeAppender {
             }
 
             public int hashCode() {
-                return this.message.hashCode() + dkz.c(this.targetConstructor, dkz.f(this.throwableType, getClass().hashCode() * 31, 31), 31);
+                return this.message.hashCode() + StaticHelpers6.c(this.targetConstructor, StaticHelpers6.f(this.throwableType, getClass().hashCode() * 31, 31), 31);
             }
 
             @Override // net.bytebuddy.implementation.ExceptionMethod.ConstructionDelegate
@@ -133,7 +132,7 @@ public class ExceptionMethod implements Implementation, ByteCodeAppender {
         if (typeDescription.isAssignableTo(Throwable.class)) {
             return new ExceptionMethod(new ConstructionDelegate.ForDefaultConstructor(typeDescription));
         }
-        throw new IllegalArgumentException(dkz.x(typeDescription, " does not extend throwable"));
+        throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " does not extend throwable"));
     }
 
     public static Implementation throwing(Class<? extends Throwable> cls, String str) {
@@ -144,6 +143,6 @@ public class ExceptionMethod implements Implementation, ByteCodeAppender {
         if (typeDescription.isAssignableTo(Throwable.class)) {
             return new ExceptionMethod(new ConstructionDelegate.ForStringConstructor(typeDescription, str));
         }
-        throw new IllegalArgumentException(dkz.x(typeDescription, " does not extend throwable"));
+        throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " does not extend throwable"));
     }
 }

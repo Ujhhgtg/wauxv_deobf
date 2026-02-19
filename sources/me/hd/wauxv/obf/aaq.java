@@ -20,7 +20,7 @@ public final class aaq extends MetricAffectingSpan {
         textPaint.setTypeface(Typeface.MONOSPACE);
         textPaint.setTextSize(textPaint.getTextSize() * 0.87f);
         bzrVar.getClass();
-        textPaint.bgColor = emn.ae(textPaint.getColor(), 25);
+        textPaint.bgColor = StaticHelpers7.ae(textPaint.getColor(), 25);
     }
 
     @Override // android.text.style.MetricAffectingSpan

@@ -25,6 +25,6 @@ public final class bts {
         sb.append(", mStartLine=");
         sb.append(this.f);
         sb.append(", mEndLine=");
-        return dkz.v(sb, this.g, '}');
+        return StaticHelpers6.concatFromSb(sb, this.g, '}');
     }
 }

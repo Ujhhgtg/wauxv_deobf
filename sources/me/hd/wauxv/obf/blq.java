@@ -71,13 +71,13 @@ public final class blq {
             ViewGroup viewGroup = (ViewGroup) this.c;
             if (viewGroup != null) {
                 int i3 = 0;
-                bmu bmuVarBi = dqc.bi(viewGroup);
-                bmuVarBi.v(true);
-                cde cdeVarT = bmuVarBi.t();
-                cdeVarT.ab = "generateLayoutParams";
-                cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(ViewGroup.LayoutParams.class) }, 1));
-                cdeVarT.ah();
-                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+                SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(viewGroup);
+                bmuVarBi.setHookOptional(true);
+                MethodResolver methodResolverVarT = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT.name = "generateLayoutParams";
+                methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.b(ViewGroup.LayoutParams.class) }, 1));
+                methodResolverVarT.enableSuperclass();
+                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
                 if (methodHookWrapperVar != null) {
                     layoutParams2 = (ViewGroup.LayoutParams) methodHookWrapperVar.i(layoutParamsF);
                 }
@@ -115,7 +115,7 @@ public final class blq {
         while (true) {
             int i = 0;
             if (!it.hasNext()) {
-                intent.putExtra("android-support-nav:controller:deepLinkIds", aaz.y(arrayList2));
+                intent.putExtra("android-support-nav:controller:deepLinkIds", StaticHelpers5.y(arrayList2));
                 intent.putParcelableArrayListExtra("android-support-nav:controller:deepLinkArgs", arrayList3);
                 dqa dqaVar = new dqa((Context) this.a);
                 Intent intent2 = new Intent(intent);
@@ -208,7 +208,7 @@ public final class blq {
             int i = ((cje) it.next()).a;
             if (h(i) == null) {
                 int i2 = cjg.e;
-                StringBuilder sbZ = dkz.z("Navigation destination ", bmy.r((anr) this.b, i),
+                StringBuilder sbZ = StaticHelpers6.concatAndToSb("Navigation destination ", bmy.r((anr) this.b, i),
                         " cannot be found in the navigation graph ");
                 sbZ.append((cji) this.d);
                 throw new IllegalArgumentException(sbZ.toString());
@@ -219,8 +219,8 @@ public final class blq {
     public blq(awc awcVar) {
         this.a = (bzr) awcVar.a;
         this.b = (dop) awcVar.c;
-        this.c = (awp) awcVar.d;
-        this.d = (awp) awcVar.e;
+        this.c = (GifEncoder) awcVar.d;
+        this.d = (GifEncoder) awcVar.e;
         this.e = (bib) awcVar.g;
     }
 

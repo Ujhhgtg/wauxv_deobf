@@ -3,9 +3,8 @@ package net.bytebuddy.asm;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
-import net.bytebuddy.asm.AsmVisitorWrapper;
+
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.annotation.AnnotationDescription;
 import net.bytebuddy.description.field.FieldDescription;
@@ -235,9 +234,9 @@ public class AnnotationRemoval extends AsmVisitorWrapper.AbstractBase {
     }
 
     public int hashCode() {
-        return dkz.i(this.annotationMatcher,
-                dkz.i(this.methodMatcher,
-                        dkz.i(this.fieldMatcher, ((getClass().hashCode() * 31) + (this.type ? 1 : 0)) * 31, 31), 31),
+        return StaticHelpers6.i(this.annotationMatcher,
+                StaticHelpers6.i(this.methodMatcher,
+                        StaticHelpers6.i(this.fieldMatcher, ((getClass().hashCode() * 31) + (this.type ? 1 : 0)) * 31, 31), 31),
                 31) + this.parameters;
     }
 

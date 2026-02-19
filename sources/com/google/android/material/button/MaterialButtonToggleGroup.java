@@ -24,15 +24,15 @@ import java.util.TreeMap;
 import java.util.WeakHashMap;
 import me.hd.wauxv.R;
 import me.hd.wauxv.obf.bc;
-import me.hd.wauxv.obf.bhu;
-import me.hd.wauxv.obf.bmu;
+import me.hd.wauxv.obf.FastKV;
+import me.hd.wauxv.obf.SyntheticPileOfMess;
 import me.hd.wauxv.obf.cae;
 import me.hd.wauxv.obf.caf;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.dgl;
 import me.hd.wauxv.obf.dgm;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.ewz;
 import me.hd.wauxv.obf.o;
 import me.hd.wauxv.obf.yb;
@@ -42,7 +42,7 @@ import me.hd.wauxv.obf.yb;
 public class MaterialButtonToggleGroup extends LinearLayout {
     public static final /* synthetic */ int a = 0;
     public final ArrayList b;
-    public final bmu c;
+    public final SyntheticPileOfMess c;
     public final LinkedHashSet d;
     public final cae e;
     public Integer[] f;
@@ -55,19 +55,19 @@ public class MaterialButtonToggleGroup extends LinearLayout {
     public MaterialButtonToggleGroup(Context context, AttributeSet attributeSet) {
         super(cmz.aq(context, attributeSet, R.attr.materialButtonToggleGroupStyle, R.style.Widget_MaterialComponents_MaterialButtonToggleGroup), attributeSet, R.attr.materialButtonToggleGroupStyle);
         this.b = new ArrayList();
-        this.c = new bmu(this);
+        this.c = new SyntheticPileOfMess(this);
         this.d = new LinkedHashSet();
         this.e = new cae(this);
         this.g = false;
         this.k = new HashSet();
-        TypedArray typedArrayAn = bhu.an(getContext(), attributeSet, cxs.s, R.attr.materialButtonToggleGroupStyle, R.style.Widget_MaterialComponents_MaterialButtonToggleGroup, new int[0]);
+        TypedArray typedArrayAn = FastKV.an(getContext(), attributeSet, cxs.s, R.attr.materialButtonToggleGroupStyle, R.style.Widget_MaterialComponents_MaterialButtonToggleGroup, new int[0]);
         setSingleSelection(typedArrayAn.getBoolean(3, false));
         this.j = typedArrayAn.getResourceId(1, -1);
         this.i = typedArrayAn.getBoolean(2, false);
         setChildrenDrawingOrderEnabled(true);
         setEnabled(typedArrayAn.getBoolean(0, true));
         typedArrayAn.recycle();
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         setImportantForAccessibility(1);
     }
 
@@ -102,7 +102,7 @@ public class MaterialButtonToggleGroup extends LinearLayout {
 
     private void setGeneratedIdIfNeeded(MaterialButton materialButton) {
         if (materialButton.getId() == -1) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             materialButton.setId(View.generateViewId());
         }
     }
@@ -129,7 +129,7 @@ public class MaterialButtonToggleGroup extends LinearLayout {
         dgm shapeAppearanceModel = materialButton.getShapeAppearanceModel();
         this.b.add(new caf(shapeAppearanceModel.e, shapeAppearanceModel.h, shapeAppearanceModel.f, shapeAppearanceModel.g));
         materialButton.setEnabled(isEnabled());
-        eqz.s(materialButton, new yb(this, 1));
+        ViewCompat.setAccessibilityDelegate(materialButton, new yb(this, 1));
     }
 
     @Override // android.view.ViewGroup, android.view.View

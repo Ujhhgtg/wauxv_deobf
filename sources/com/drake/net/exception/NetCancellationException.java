@@ -4,8 +4,7 @@ import java.util.concurrent.CancellationException;
 import me.hd.wauxv.obf.ahp;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.arj;
-import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.cnf;
+import me.hd.wauxv.obf.HugeSyntheticPileOfHelpers;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -21,6 +20,6 @@ public final class NetCancellationException extends CancellationException {
     public NetCancellationException(ahp ahpVar, String str) {
         super(str);
         throwIfVar1IsNull(ahpVar, "coroutineScope");
-        cnf.ao(ahpVar.e()._w(arj.b));
+        HugeSyntheticPileOfHelpers.cancelNetworkCalls(ahpVar.e()._w(arj.b));
     }
 }

@@ -23,9 +23,9 @@ public final class AppBrandAntiSplashAdHook extends SwitchHook implements IDexFi
 
     @Override // me.hd.wauxv.obf.bmf
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(gv.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(gv.a));
         AppBrandAntiSplashAdHook gwVar = a;
-        aki akiVarAb = csb.ab(gwVar, listBf);
+        aki akiVarAb = PackageParam.ab(gwVar, listBf);
         gwVar.y(akiVarAb, new gi(14));
         akiVarAb.o();
     }
@@ -42,7 +42,7 @@ public final class AppBrandAntiSplashAdHook extends SwitchHook implements IDexFi
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(gv.a, dexKitBridge, new gi(15));
+        StaticHelpers7.resolveDexAndCache(gv.a, dexKitBridge, new gi(15));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

@@ -236,7 +236,7 @@ public abstract class dnj extends dnr {
             return aq(charSequence, String.valueOf(cArr[0]));
         }
         boz bozVar = new boz(new alu(charSequence, new cxa(cArr, 1)), 1);
-        ArrayList arrayList = new ArrayList(abb.ak(bozVar, 10));
+        ArrayList arrayList = new ArrayList(StaticHelpers4.ak(bozVar, 10));
         Iterator it = bozVar.iterator();
         while (true) {
             alt altVar = (alt) it;
@@ -258,7 +258,7 @@ public abstract class dnj extends dnr {
             }
         }
         boz bozVar = new boz(new alu(str, new cxa(SomeStaticHelpers.toList(strArr), 2)), 1);
-        ArrayList arrayList = new ArrayList(abb.ak(bozVar, 10));
+        ArrayList arrayList = new ArrayList(StaticHelpers4.ak(bozVar, 10));
         Iterator it = bozVar.iterator();
         while (true) {
             alt altVar = (alt) it;

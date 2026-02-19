@@ -31,7 +31,7 @@ public abstract class ckg extends FrameLayout {
         ckcVar.b = false;
         this.d = ckcVar;
         Context context2 = getContext();
-        jx jxVarAo = bhu.ao(context2, null, cxs.ae, i, i2, 12, 10);
+        FactoryPools factoryPoolsVarAo = FastKV.ao(context2, null, cxs.ae, i, i2, 12, 10);
         cjz cjzVar = new cjz(context2, getClass(), getMaxItemCount());
         this.b = cjzVar;
         cka ckaVarA = a(context2);
@@ -42,9 +42,9 @@ public abstract class ckg extends FrameLayout {
         cjzVar.aa(ckcVar, cjzVar.b);
         getContext();
         ckcVar.a.ao = cjzVar;
-        TypedArray typedArray = (TypedArray) jxVarAo.e;
+        TypedArray typedArray = (TypedArray) factoryPoolsVarAo.e;
         if (typedArray.hasValue(6)) {
-            ckaVarA.setIconTintList(jxVarAo.r(6));
+            ckaVarA.setIconTintList(factoryPoolsVarAo.r(6));
         } else {
             ckaVarA.setIconTintList(ckaVarA.ar());
         }
@@ -57,7 +57,7 @@ public abstract class ckg extends FrameLayout {
         }
         setItemTextAppearanceActiveBoldEnabled(typedArray.getBoolean(11, true));
         if (typedArray.hasValue(13)) {
-            setItemTextColor(jxVarAo.r(13));
+            setItemTextColor(factoryPoolsVarAo.r(13));
         }
         Drawable background = getBackground();
         ColorStateList colorStateListX = cmz.x(background);
@@ -67,7 +67,7 @@ public abstract class ckg extends FrameLayout {
                 cauVar.dz(colorStateListX);
             }
             cauVar.dx(context2);
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             setBackground(cauVar);
         }
         if (typedArray.hasValue(8)) {
@@ -82,13 +82,13 @@ public abstract class ckg extends FrameLayout {
         if (typedArray.hasValue(2)) {
             setElevation(typedArray.getDimensionPixelSize(2, 0));
         }
-        getBackground().mutate().setTintList(cnb.w(context2, jxVarAo, 1));
+        getBackground().mutate().setTintList(cnb.w(context2, factoryPoolsVarAo, 1));
         setLabelVisibilityMode(typedArray.getInteger(14, -1));
         int resourceId = typedArray.getResourceId(4, 0);
         if (resourceId != 0) {
             ckaVarA.setItemBackgroundRes(resourceId);
         } else {
-            setItemRippleColor(cnb.w(context2, jxVarAo, 9));
+            setItemRippleColor(cnb.w(context2, factoryPoolsVarAo, 9));
         }
         int resourceId2 = typedArray.getResourceId(3, 0);
         if (resourceId2 != 0) {
@@ -108,9 +108,9 @@ public abstract class ckg extends FrameLayout {
             ckcVar.b = false;
             ckcVar.ac(true);
         }
-        jxVarAo.ae();
+        factoryPoolsVarAo.ae();
         addView(ckaVarA);
-        cjzVar.f = new bmu(this);
+        cjzVar.f = new SyntheticPileOfMess(this);
     }
 
     private MenuInflater getMenuInflater() {

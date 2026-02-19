@@ -19,7 +19,7 @@ public final class dty {
     public /* synthetic */ dty(int i, Integer num, Integer num2, String str, Integer num3, Integer num4, Integer num5,
             Integer num6, String str2, Integer num7, String str3, Integer num8) {
         if (2047 != (i & 2047)) {
-            bht.ah(i, 2047, dtw.b.getDescriptor());
+            ResourcesCompat.ah(i, 2047, dtw.b.getDescriptor());
             throw null;
         }
         this.a = num;

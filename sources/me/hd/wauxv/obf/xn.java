@@ -11,14 +11,14 @@ public final class xn extends bws implements IDexFind {
     public static Object b() throws IllegalAccessException, InvocationTargetException {
         int i = 0;
         byr byrVar = byr.a;
-        Class cls = (Class) SomeStaticHelpers.p(emn.az(xm.a).getInterfaces());
+        Class cls = (Class) SomeStaticHelpers.p(StaticHelpers7.az(xm.a).getInterfaces());
         byrVar.getClass();
-        Object objInvoke = emn.bb(byq.a).invoke(null, cls);
+        Object objInvoke = StaticHelpers7.bb(byq.a).invoke(null, cls);
         throwIfVar1IsNull(objInvoke);
-        cde cdeVarT = dqc.bi(objInvoke).t();
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objInvoke).getMethodResolverBasedOnPreviouslyProvidedConfig();
         xp.a.getClass();
-        cdeVarT.a = emn.bb(xo.a).getDeclaringClass();
-        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
+        methodResolverVarT.returnType = StaticHelpers7.bb(xo.a).getDeclaringClass();
+        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }
@@ -29,6 +29,6 @@ public final class xn extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(xm.a, dexKitBridge, new ws(10));
+        StaticHelpers7.resolveDexAndCache(xm.a, dexKitBridge, new ws(10));
     }
 }

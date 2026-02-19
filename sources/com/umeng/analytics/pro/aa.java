@@ -10,7 +10,7 @@ import com.umeng.commonsdk.service.UMGlobalContext;
 import com.umeng.commonsdk.statistics.internal.PreferenceWrapper;
 import java.util.ArrayList;
 import java.util.List;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dts;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -190,7 +190,7 @@ public class aa {
     public String a(Context context, long j) {
         if (TextUtils.isEmpty(this.e)) {
             String strB = dts.b(j, "SUB");
-            StringBuilder sbY = dkz.y(strB);
+            StringBuilder sbY = StaticHelpers6.toSb(strB);
             sbY.append(String.format("%0" + (32 - strB.length()) + "d", 0));
             this.e = sbY.toString();
         }

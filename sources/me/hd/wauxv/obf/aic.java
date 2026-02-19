@@ -13,6 +13,6 @@ public final class aic extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(aib.a, dexKitBridge, new age(19));
+        StaticHelpers7.resolveDexAndCache(aib.a, dexKitBridge, new age(19));
     }
 }

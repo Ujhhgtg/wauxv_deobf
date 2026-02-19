@@ -48,7 +48,7 @@ public final class dlo implements Cloneable {
             return;
         }
         if (this.a && i2 >= this.b.length) {
-            bht.q(this);
+            ResourcesCompat.q(this);
         }
         int i3 = this.d;
         if (i3 >= this.b.length) {
@@ -76,7 +76,7 @@ public final class dlo implements Cloneable {
     public final Object f(int i) {
         Object obj;
         int i2 = KotlinHelpers.i(this.b, this.d, i);
-        if (i2 < 0 || (obj = this.c[i2]) == bht.p) {
+        if (i2 < 0 || (obj = this.c[i2]) == ResourcesCompat.p) {
             return null;
         }
         return obj;
@@ -84,7 +84,7 @@ public final class dlo implements Cloneable {
 
     public final int g(int i) {
         if (this.a) {
-            bht.q(this);
+            ResourcesCompat.q(this);
         }
         return this.b[i];
     }
@@ -99,14 +99,14 @@ public final class dlo implements Cloneable {
         int i4 = this.d;
         if (i3 < i4) {
             Object[] objArr = this.c;
-            if (objArr[i3] == bht.p) {
+            if (objArr[i3] == ResourcesCompat.p) {
                 this.b[i3] = i;
                 objArr[i3] = obj;
                 return;
             }
         }
         if (this.a && i4 >= this.b.length) {
-            bht.q(this);
+            ResourcesCompat.q(this);
             i3 = ~KotlinHelpers.i(this.b, this.d, i);
         }
         int i5 = this.d;
@@ -142,14 +142,14 @@ public final class dlo implements Cloneable {
 
     public final int i() {
         if (this.a) {
-            bht.q(this);
+            ResourcesCompat.q(this);
         }
         return this.d;
     }
 
     public final Object j(int i) {
         if (this.a) {
-            bht.q(this);
+            ResourcesCompat.q(this);
         }
         Object[] objArr = this.c;
         if (i < objArr.length) {

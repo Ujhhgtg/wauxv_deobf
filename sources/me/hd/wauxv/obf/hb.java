@@ -27,7 +27,7 @@ import java.lang.reflect.Method;
 public abstract class hb extends aci implements he {
     public boolean e;
     public boolean f;
-    public ic h;
+    public AppCompatDelegate h;
     public final erp c = new erp(new bdm(this), 25);
     public final bur d = new bur(this);
     public boolean g = true;
@@ -79,24 +79,24 @@ public abstract class hb extends aci implements he {
 
     public static boolean i(beg begVar) {
         boolean zI = false;
-        for (bdj bdjVar : begVar.c.af()) {
-            if (bdjVar != null) {
-                bdm bdmVar = bdjVar.bn;
+        for (SomeFragmentManager someFragmentManagerVar : begVar.c.af()) {
+            if (someFragmentManagerVar != null) {
+                bdm bdmVar = someFragmentManagerVar.bn;
                 if ((bdmVar == null ? null : bdmVar.h) != null) {
-                    zI |= i(bdjVar.cp());
+                    zI |= i(someFragmentManagerVar.cp());
                 }
-                bfg bfgVar = bdjVar.ci;
+                bfg bfgVar = someFragmentManagerVar.ci;
                 buh buhVar = buh.d;
                 buh buhVar2 = buh.c;
                 if (bfgVar != null) {
                     bfgVar.g();
                     if (bfgVar.d.c.compareTo(buhVar) >= 0) {
-                        bdjVar.ci.d.p(buhVar2);
+                        someFragmentManagerVar.ci.d.p(buhVar2);
                         zI = true;
                     }
                 }
-                if (bdjVar.ch.c.compareTo(buhVar) >= 0) {
-                    bdjVar.ch.p(buhVar2);
+                if (someFragmentManagerVar.ch.c.compareTo(buhVar) >= 0) {
+                    someFragmentManagerVar.ch.p(buhVar2);
                     zI = true;
                 }
             }
@@ -107,10 +107,10 @@ public abstract class hb extends aci implements he {
     @Override // android.app.Activity
     public final void addContentView(View view, ViewGroup.LayoutParams layoutParams) {
         ao();
-        ic icVar = (ic) j();
-        icVar.cf();
-        ((ViewGroup) icVar.an.findViewById(R.id.content)).addView(view, layoutParams);
-        icVar.z.f(icVar.y.getCallback());
+        AppCompatDelegate appCompatDelegateVar = (AppCompatDelegate) j();
+        appCompatDelegateVar.cf();
+        ((ViewGroup) appCompatDelegateVar.an.findViewById(R.id.content)).addView(view, layoutParams);
+        appCompatDelegateVar.z.f(appCompatDelegateVar.y.getCallback());
     }
 
     /* JADX WARN: Found duplicated region for block: B:102:0x0193 */
@@ -212,13 +212,13 @@ public abstract class hb extends aci implements he {
         int i38;
         int i39;
         int i40;
-        ic icVar = (ic) j();
-        icVar.bb = true;
-        int i41 = icVar.bf;
+        AppCompatDelegate appCompatDelegateVar = (AppCompatDelegate) j();
+        appCompatDelegateVar.bb = true;
+        int i41 = appCompatDelegateVar.bf;
         if (i41 == -100) {
             i41 = ho.b;
         }
-        int iCl = icVar.cl(context, i41);
+        int iCl = appCompatDelegateVar.cl(context, i41);
         int i42 = 0;
         if (ho.j(context) && ho.j(context)) {
             if (Build.VERSION.SDK_INT < 33) {
@@ -227,7 +227,7 @@ public abstract class hb extends aci implements he {
                         bwy bwyVar = ho.c;
                         if (bwyVar == null) {
                             if (ho.d == null) {
-                                ho.d = bwy.c(bhu.au(context));
+                                ho.d = bwy.c(FastKV.au(context));
                             }
                             if (!ho.d.b.a.isEmpty()) {
                                 ho.c = ho.d;
@@ -235,7 +235,7 @@ public abstract class hb extends aci implements he {
                         } else if (!bwyVar.equals(ho.d)) {
                             bwy bwyVar2 = ho.c;
                             ho.d = bwyVar2;
-                            bhu.as(context, bwyVar2.b.a.toLanguageTags());
+                            FastKV.as(context, bwyVar2.b.a.toLanguageTags());
                         }
                     } catch (Throwable th) {
                         throw th;
@@ -245,16 +245,16 @@ public abstract class hb extends aci implements he {
                 ho.a.execute(new hi(context, i42));
             }
         }
-        bwy bwyVarBu = ic.bu(context);
+        bwy bwyVarBu = AppCompatDelegate.bu(context);
         if (context instanceof ContextThemeWrapper) {
             try {
-                ((ContextThemeWrapper) context).applyOverrideConfiguration(ic.bv(context, iCl, bwyVarBu, null, false));
+                ((ContextThemeWrapper) context).applyOverrideConfiguration(AppCompatDelegate.bv(context, iCl, bwyVarBu, null, false));
             } catch (IllegalStateException unused) {
                 if (context instanceof afv) {
                     try {
-                        ((afv) context).g(ic.bv(context, iCl, bwyVarBu, null, false));
+                        ((afv) context).g(AppCompatDelegate.bv(context, iCl, bwyVarBu, null, false));
                     } catch (IllegalStateException unused2) {
-                        if (ic.v) {
+                        if (AppCompatDelegate.v) {
                             Configuration configuration4 = new Configuration();
                             configuration4.uiMode = -1;
                             configuration4.fontScale = 0.0f;
@@ -376,7 +376,7 @@ public abstract class hb extends aci implements he {
                                     }
                                 }
                             }
-                            Configuration configurationBv = ic.bv(context, iCl, bwyVarBu, configuration3, true);
+                            Configuration configurationBv = AppCompatDelegate.bv(context, iCl, bwyVarBu, configuration3, true);
                             afvVar = new afv(context, me.hd.wauxv.R.style.Theme_AppCompat_Empty);
                             afvVar.g(configurationBv);
                             try {
@@ -420,7 +420,7 @@ public abstract class hb extends aci implements he {
                             context = afvVar;
                         }
                     }
-                } else if (ic.v) {
+                } else if (AppCompatDelegate.v) {
                     Configuration configuration42 = new Configuration();
                     configuration42.uiMode = -1;
                     configuration42.fontScale = 0.0f;
@@ -542,7 +542,7 @@ public abstract class hb extends aci implements he {
                     } else {
                         configuration3 = null;
                     }
-                    Configuration configurationBv2 = ic.bv(context, iCl, bwyVarBu, configuration3, true);
+                    Configuration configurationBv2 = AppCompatDelegate.bv(context, iCl, bwyVarBu, configuration3, true);
                     afvVar = new afv(context, me.hd.wauxv.R.style.Theme_AppCompat_Empty);
                     afvVar.g(configurationBv2);
                     if (context.getTheme() != null) {
@@ -573,8 +573,8 @@ public abstract class hb extends aci implements he {
                 }
             }
         } else if (context instanceof afv) {
-            ((afv) context).g(ic.bv(context, iCl, bwyVarBu, null, false));
-        } else if (ic.v) {
+            ((afv) context).g(AppCompatDelegate.bv(context, iCl, bwyVarBu, null, false));
+        } else if (AppCompatDelegate.v) {
             Configuration configuration422 = new Configuration();
             configuration422.uiMode = -1;
             configuration422.fontScale = 0.0f;
@@ -695,7 +695,7 @@ public abstract class hb extends aci implements he {
             } else {
                 configuration3 = null;
             }
-            Configuration configurationBv22 = ic.bv(context, iCl, bwyVarBu, configuration3, true);
+            Configuration configurationBv22 = AppCompatDelegate.bv(context, iCl, bwyVarBu, configuration3, true);
             afvVar = new afv(context, me.hd.wauxv.R.style.Theme_AppCompat_Empty);
             afvVar.g(configurationBv22);
             if (context.getTheme() != null) {
@@ -729,7 +729,7 @@ public abstract class hb extends aci implements he {
 
     @Override // android.app.Activity
     public final void closeOptionsMenu() {
-        ((ic) j()).cj();
+        ((AppCompatDelegate) j()).cj();
         if (getWindow().hasFeature(0)) {
             super.closeOptionsMenu();
         }
@@ -738,7 +738,7 @@ public abstract class hb extends aci implements he {
     @Override // me.hd.wauxv.obf.aci, android.app.Activity, android.view.Window.Callback
     public final boolean dispatchKeyEvent(KeyEvent keyEvent) {
         keyEvent.getKeyCode();
-        ((ic) j()).cj();
+        ((AppCompatDelegate) j()).cj();
         return super.dispatchKeyEvent(keyEvent);
     }
 
@@ -832,20 +832,20 @@ public abstract class hb extends aci implements he {
 
     @Override // android.app.Activity
     public final View findViewById(int i) {
-        ic icVar = (ic) j();
-        icVar.cf();
-        return icVar.y.findViewById(i);
+        AppCompatDelegate appCompatDelegateVar = (AppCompatDelegate) j();
+        appCompatDelegateVar.cf();
+        return appCompatDelegateVar.y.findViewById(i);
     }
 
     @Override // android.app.Activity
     public final MenuInflater getMenuInflater() {
-        ic icVar = (ic) j();
-        if (icVar.ac == null) {
-            icVar.cj();
-            eut eutVar = icVar.ab;
-            icVar.ac = new dof(eutVar != null ? eutVar.bo() : icVar.x);
+        AppCompatDelegate appCompatDelegateVar = (AppCompatDelegate) j();
+        if (appCompatDelegateVar.ac == null) {
+            appCompatDelegateVar.cj();
+            eut eutVar = appCompatDelegateVar.ab;
+            appCompatDelegateVar.ac = new dof(eutVar != null ? eutVar.bo() : appCompatDelegateVar.x);
         }
-        return icVar.ac;
+        return appCompatDelegateVar.ac;
     }
 
     @Override // android.view.ContextThemeWrapper, android.content.ContextWrapper,
@@ -857,18 +857,18 @@ public abstract class hb extends aci implements he {
 
     @Override // android.app.Activity
     public final void invalidateOptionsMenu() {
-        ic icVar = (ic) j();
-        if (icVar.ab != null) {
-            icVar.cj();
-            icVar.ab.getClass();
-            icVar.ck(0);
+        AppCompatDelegate appCompatDelegateVar = (AppCompatDelegate) j();
+        if (appCompatDelegateVar.ab != null) {
+            appCompatDelegateVar.cj();
+            appCompatDelegateVar.ab.getClass();
+            appCompatDelegateVar.ck(0);
         }
     }
 
     public final ho j() {
         if (this.h == null) {
             hm hmVar = ho.a;
-            this.h = new ic(this, null, this, this);
+            this.h = new AppCompatDelegate(this, null, this, this);
         }
         return this.h;
     }
@@ -876,7 +876,7 @@ public abstract class hb extends aci implements he {
     public final void k() {
         super.onDestroy();
         ((bdm) this.c.v).g.bh();
-        this.d.m(bug.ON_DESTROY);
+        this.d.m(LifeEventEnum.ON_DESTROY);
     }
 
     public final boolean l(int i, MenuItem menuItem) {
@@ -891,7 +891,7 @@ public abstract class hb extends aci implements he {
 
     public final void m() {
         super.onPostResume();
-        this.d.m(bug.ON_RESUME);
+        this.d.m(LifeEventEnum.ON_RESUME);
         beg begVar = ((bdm) this.c.v).g;
         begVar.ah = false;
         begVar.ai = false;
@@ -914,7 +914,7 @@ public abstract class hb extends aci implements he {
             begVar.bq(4);
         }
         bdmVar.g.bw(true);
-        this.d.m(bug.ON_START);
+        this.d.m(LifeEventEnum.ON_START);
         beg begVar2 = bdmVar.g;
         begVar2.ah = false;
         begVar2.ai = false;
@@ -933,7 +933,7 @@ public abstract class hb extends aci implements he {
         begVar.ai = true;
         begVar.ao.g = true;
         begVar.bq(4);
-        this.d.m(bug.ON_STOP);
+        this.d.m(LifeEventEnum.ON_STOP);
     }
 
     @Override // me.hd.wauxv.obf.aci, android.app.Activity
@@ -945,16 +945,16 @@ public abstract class hb extends aci implements he {
     @Override // me.hd.wauxv.obf.aci, android.app.Activity, android.content.ComponentCallbacks
     public void onConfigurationChanged(Configuration configuration) {
         super.onConfigurationChanged(configuration);
-        ic icVar = (ic) j();
-        if (icVar.as && icVar.am) {
-            icVar.cj();
-            eut eutVar = icVar.ab;
+        AppCompatDelegate appCompatDelegateVar = (AppCompatDelegate) j();
+        if (appCompatDelegateVar.as && appCompatDelegateVar.am) {
+            appCompatDelegateVar.cj();
+            eut eutVar = appCompatDelegateVar.ab;
             if (eutVar != null) {
                 eutVar.br(eutVar.ap.getResources().getBoolean(me.hd.wauxv.R.bool.abc_action_bar_embed_tabs));
             }
         }
         C0023if c0023ifD = C0023if.d();
-        Context context = icVar.x;
+        Context context = appCompatDelegateVar.x;
         synchronized (c0023ifD) {
             dcp dcpVar = c0023ifD.c;
             synchronized (dcpVar) {
@@ -964,8 +964,8 @@ public abstract class hb extends aci implements he {
                 }
             }
         }
-        icVar.be = new Configuration(icVar.x.getResources().getConfiguration());
-        icVar.by(false, false);
+        appCompatDelegateVar.be = new Configuration(appCompatDelegateVar.x.getResources().getConfiguration());
+        appCompatDelegateVar.by(false, false);
     }
 
     @Override // android.app.Activity, android.view.Window.Callback
@@ -975,7 +975,7 @@ public abstract class hb extends aci implements he {
     @Override // me.hd.wauxv.obf.aci, android.app.Activity
     public void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        this.d.m(bug.ON_CREATE);
+        this.d.m(LifeEventEnum.ON_CREATE);
         beg begVar = ((bdm) this.c.v).g;
         begVar.ah = false;
         begVar.ai = false;
@@ -999,9 +999,9 @@ public abstract class hb extends aci implements he {
     public final boolean onMenuItemSelected(int i, MenuItem menuItem) {
         Intent intentX;
         if (!l(i, menuItem)) {
-            ic icVar = (ic) j();
-            icVar.cj();
-            eut eutVar = icVar.ab;
+            AppCompatDelegate appCompatDelegateVar = (AppCompatDelegate) j();
+            appCompatDelegateVar.cj();
+            eut eutVar = appCompatDelegateVar.ab;
             if (menuItem.getItemId() != 16908332 || eutVar == null || (((ekt) eutVar.at).b & 4) == 0
                     || (intentX = cna.x(this)) == null) {
                 return false;
@@ -1038,21 +1038,21 @@ public abstract class hb extends aci implements he {
         super.onPause();
         this.f = false;
         ((bdm) this.c.v).g.bq(5);
-        this.d.m(bug.ON_PAUSE);
+        this.d.m(LifeEventEnum.ON_PAUSE);
     }
 
     @Override // android.app.Activity
     public final void onPostCreate(Bundle bundle) {
         super.onPostCreate(bundle);
-        ((ic) j()).cf();
+        ((AppCompatDelegate) j()).cf();
     }
 
     @Override // android.app.Activity
     public final void onPostResume() {
         m();
-        ic icVar = (ic) j();
-        icVar.cj();
-        eut eutVar = icVar.ab;
+        AppCompatDelegate appCompatDelegateVar = (AppCompatDelegate) j();
+        appCompatDelegateVar.cj();
+        eut eutVar = appCompatDelegateVar.ab;
         if (eutVar != null) {
             eutVar.bi = true;
         }
@@ -1076,7 +1076,7 @@ public abstract class hb extends aci implements he {
     @Override // android.app.Activity
     public final void onStart() {
         n();
-        ((ic) j()).by(true, false);
+        ((AppCompatDelegate) j()).by(true, false);
     }
 
     @Override // android.app.Activity
@@ -1087,9 +1087,9 @@ public abstract class hb extends aci implements he {
     @Override // android.app.Activity
     public final void onStop() {
         o();
-        ic icVar = (ic) j();
-        icVar.cj();
-        eut eutVar = icVar.ab;
+        AppCompatDelegate appCompatDelegateVar = (AppCompatDelegate) j();
+        appCompatDelegateVar.cj();
+        eut eutVar = appCompatDelegateVar.ab;
         if (eutVar != null) {
             eutVar.bi = false;
             esh eshVar = eutVar.bh;
@@ -1107,7 +1107,7 @@ public abstract class hb extends aci implements he {
 
     @Override // android.app.Activity
     public final void openOptionsMenu() {
-        ((ic) j()).cj();
+        ((AppCompatDelegate) j()).cj();
         if (getWindow().hasFeature(0)) {
             super.openOptionsMenu();
         }
@@ -1123,7 +1123,7 @@ public abstract class hb extends aci implements he {
               // android.content.ContextWrapper, android.content.Context
     public final void setTheme(int i) {
         super.setTheme(i);
-        ((ic) j()).bg = i;
+        ((AppCompatDelegate) j()).bg = i;
     }
 
     @Override // me.hd.wauxv.obf.aci, android.app.Activity

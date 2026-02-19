@@ -10,7 +10,7 @@ public final class ecp {
         if (1 == (i & 1)) {
             this.a = edbVar;
         } else {
-            bht.ah(i, 1, ecn.b.getDescriptor());
+            ResourcesCompat.ah(i, 1, ecn.b.getDescriptor());
             throw null;
         }
     }

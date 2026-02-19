@@ -115,13 +115,13 @@ public final class agy implements bzs {
                         dllVar2.d((char) 65532);
                     }
                     boolean z2 = boeVar.i instanceof bvo;
-                    awp awpVar = (awp) blqVar.d;
+                    GifEncoder gifEncoderVar = (GifEncoder) blqVar.d;
                     String str = boeVar.d;
-                    awpVar.getClass();
+                    gifEncoderVar.getClass();
                     aji ajiVar = (aji) chmVar.d;
-                    bht.m.c(ajiVar, str);
-                    bht.n.c(ajiVar, Boolean.valueOf(z2));
-                    bht.o.c(ajiVar, null);
+                    ResourcesCompat.m.c(ajiVar, str);
+                    ResourcesCompat.n.c(ajiVar, Boolean.valueOf(z2));
+                    ResourcesCompat.o.c(ajiVar, null);
                     Object objB = pnVar.b(blqVar, ajiVar);
                     StringBuilder sb2 = dllVar2.a;
                     int length = sb2.length();

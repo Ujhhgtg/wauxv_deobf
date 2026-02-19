@@ -14,18 +14,18 @@ public final class md extends SwitchHook {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i = 0;
-        bmu bmuVarS = yg.s(-510474042997546L);
-        cde cdeVarT = bmuVarS.t();
-        cdeVarT.ab = "onCreate" /* "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-511925741943594L)   */;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) dkz.n(new Object[] { dal.b(Bundle.class) }, 1, cdeVarT);
+        SyntheticPileOfMess bmuVarS = yg.s(-510474042997546L);
+        MethodResolver methodResolverVarT = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "onCreate" /* "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-511925741943594L)   */;
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(Bundle.class) }, 1, methodResolverVarT);
         md mdVar = a;
-        exg exgVar = exg.a;
-        aki akiVarAd = mdVar.ad(methodHookWrapperVar, exgVar);
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
+        aki akiVarAd = mdVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
         mdVar.y(akiVarAd, new gi(28));
         akiVarAd.o();
-        cde cdeVarT2 = bmuVarS.t();
-        cdeVarT2.ab = "initView" /* "initView" /* "initView" /* "initView" /* cnb.z(-511887087237930L)   */;
-        aki akiVarAd2 = mdVar.ad((MethodHookWrapper) bjs.h(cdeVarT2), exgVar);
+        MethodResolver methodResolverVarT2 = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT2.name = "initView" /* "initView" /* "initView" /* "initView" /* cnb.z(-511887087237930L)   */;
+        aki akiVarAd2 = mdVar.ad((MethodHookWrapper) bjs.h(methodResolverVarT2), hookPriorityEnumVar);
         mdVar.x(akiVarAd2, new gi(29));
         akiVarAd2.o();
     }

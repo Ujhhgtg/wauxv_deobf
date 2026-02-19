@@ -18,7 +18,7 @@ public final class cbr implements drb {
         this.b = context;
         ActivityManager activityManager = (ActivityManager) context.getSystemService("activity");
         this.c = activityManager;
-        this.d = new bmu(context.getResources().getDisplayMetrics());
+        this.d = new SyntheticPileOfMess(context.getResources().getDisplayMetrics());
         if (activityManager.isLowRamDevice()) {
             this.a = 0.0f;
         }

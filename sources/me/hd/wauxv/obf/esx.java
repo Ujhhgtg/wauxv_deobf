@@ -59,7 +59,7 @@ public final class esx extends AnimatorListenerAdapter implements elk {
             return;
         }
         this.k = z;
-        dqc.bk(viewGroup, z);
+        dqc.tryGetClassByName(viewGroup, z);
     }
 
     @Override // android.animation.AnimatorListenerAdapter,

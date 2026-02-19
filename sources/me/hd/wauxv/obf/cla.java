@@ -34,7 +34,7 @@ public final class cla implements alp {
         Object obj = ckzVar.d;
         int i2 = ckzVar.f;
         if (i2 == 0) {
-            bhu.bd(obj);
+            FastKV.bd(obj);
             StackTraceElement[] stackTrace = new Throwable().getStackTrace();
             throwIfVar1IsNull(stackTrace, "Throwable().stackTrace");
             StackTraceElement stackTraceElement = (StackTraceElement) SomeStaticHelpers.q(stackTrace, 1);
@@ -60,7 +60,7 @@ public final class cla implements alp {
             }
             str2 = ckzVar.a;
             try {
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 return obj;
             } catch (Exception e3) {
                 e = e3;

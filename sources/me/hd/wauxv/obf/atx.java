@@ -24,12 +24,12 @@ public final class atx extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(att.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(att.a));
         atx atxVar = a;
-        aki akiVarAb = csb.ab(atxVar, listBf);
+        aki akiVarAb = PackageParam.ab(atxVar, listBf);
         atxVar.x(akiVarAb, new atn(8));
         akiVarAb.o();
-        aki akiVarAb2 = csb.ab(atxVar, dqc.toSingletonList(emn.bb(ats.a)));
+        aki akiVarAb2 = PackageParam.ab(atxVar, dqc.toSingletonList(StaticHelpers7.bb(ats.a)));
         atxVar.y(akiVarAb2, new atn(5));
         akiVarAb2.o();
     }
@@ -46,8 +46,8 @@ public final class atx extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(att.a, dexKitBridge, new atn(6));
-        emn.aj(ats.a, dexKitBridge, new atn(7));
+        StaticHelpers7.resolveDexAndCache(att.a, dexKitBridge, new atn(6));
+        StaticHelpers7.resolveDexAndCache(ats.a, dexKitBridge, new atn(7));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

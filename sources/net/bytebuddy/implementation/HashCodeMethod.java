@@ -4,14 +4,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.field.FieldDescription;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.type.TypeDefinition;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.scaffold.InstrumentedType;
-import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.bytecode.Addition;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
 import net.bytebuddy.implementation.bytecode.Multiplication;
@@ -63,10 +62,10 @@ public class HashCodeMethod implements Implementation {
         @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
         public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription) {
             if (methodDescription.isStatic()) {
-                throw new IllegalStateException(dkz.t("Hash code method must not be static: ", methodDescription));
+                throw new IllegalStateException(StaticHelpers6.concat("Hash code method must not be static: ", methodDescription));
             }
             if (!methodDescription.getReturnType().represents(Integer.TYPE)) {
-                throw new IllegalStateException(dkz.t("Hash code method does not return primitive integer: ", methodDescription));
+                throw new IllegalStateException(StaticHelpers6.concat("Hash code method does not return primitive integer: ", methodDescription));
             }
             ArrayList arrayList = new ArrayList((this.fieldDescriptions.size() * 8) + 2);
             arrayList.add(this.initialValue);
@@ -104,7 +103,7 @@ public class HashCodeMethod implements Implementation {
         }
 
         public int hashCode() {
-            return this.identity.hashCode() + dkz.i(this.nonNullable, bjs.g(this.fieldDescriptions, (dkz.g(this.initialValue, getClass().hashCode() * 31, 31) + this.multiplier) * 31, 31), 31);
+            return this.identity.hashCode() + StaticHelpers6.i(this.nonNullable, bjs.g(this.fieldDescriptions, (StaticHelpers6.g(this.initialValue, getClass().hashCode() * 31, 31) + this.multiplier) * 31, 31), 31);
         }
     }
 
@@ -220,7 +219,7 @@ public class HashCodeMethod implements Implementation {
             }
 
             public int hashCode() {
-                return this.label.hashCode() + dkz.c(this.instrumentedMethod, getClass().hashCode() * 31, 31);
+                return this.label.hashCode() + StaticHelpers6.c(this.instrumentedMethod, getClass().hashCode() * 31, 31);
             }
         }
 
@@ -290,7 +289,7 @@ public class HashCodeMethod implements Implementation {
                 if (superClass != null) {
                     return new StackManipulation.Compound(MethodVariableAccess.loadThis(), MethodInvocation.invoke(HashCodeMethod.HASH_CODE).special(superClass.asErasure()));
                 }
-                throw new IllegalStateException(dkz.x(typeDescription, " does not declare a super class"));
+                throw new IllegalStateException(StaticHelpers6.concat(typeDescription, " does not declare a super class"));
             }
         }
 

@@ -40,7 +40,7 @@ public final /* synthetic */ class hi implements Runnable {
                             while (true) {
                                 if (kqVar.hasNext()) {
                                     ho hoVar = (ho) ((WeakReference) kqVar.next()).get();
-                                    if (hoVar != null && (context = ((ic) hoVar).x) != null) {
+                                    if (hoVar != null && (context = ((AppCompatDelegate) hoVar).x) != null) {
                                         systemService = context.getSystemService("locale");
                                     }
                                 } else {
@@ -54,7 +54,7 @@ public final /* synthetic */ class hi implements Runnable {
                             }
                         }
                         if (bwyVar.b.a.isEmpty()) {
-                            String strAu = bhu.au(context2);
+                            String strAu = FastKV.au(context2);
                             Object systemService2 = context2.getSystemService("locale");
                             if (systemService2 != null) {
                                 hk.tryGetClassByName(systemService2, hj.a(strAu));

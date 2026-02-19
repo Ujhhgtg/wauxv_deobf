@@ -13,7 +13,7 @@ public final class ebu {
 
     public /* synthetic */ ebu(int i, eie eieVar, Integer num, Integer num2, Long l, String str, Integer num3) {
         if (63 != (i & 63)) {
-            bht.ah(i, 63, ebs.b.getDescriptor());
+            ResourcesCompat.ah(i, 63, ebs.b.getDescriptor());
             throw null;
         }
         this.a = eieVar;
@@ -59,7 +59,7 @@ public final class ebu {
         sb.append(", recommend_video_quality_level=" /* ", recommend_video_quality_level=" /* ", recommend_video_quality_level=" /* cnb.z(-255318625876778L)  */);
         bjs.w(sb, this.b, -255176891956010L);
         bjs.w(sb, this.c, -255610683652906L);
-        dkz.ad(sb, this.d, -255533374241578L);
+        StaticHelpers6.ad(sb, this.d, -255533374241578L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.e, -255426000059178L);
         return concat(sb, this.f, ')');
     }

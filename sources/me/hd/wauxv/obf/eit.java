@@ -9,7 +9,7 @@ public final class eit {
 
     public /* synthetic */ eit(int i, Long l, Long l2) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, eir.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, eir.b.getDescriptor());
             throw null;
         }
         this.a = l;
@@ -37,7 +37,7 @@ public final class eit {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("xq5Proto(animation_start_time_offset_ms=" /* "xq5Proto(animation_start_time_offset_ms=" /* "xq5Proto(animation_start_time_offset_ms=" /* cnb.z(-323801879411498L)  */);
-        dkz.ad(sb, this.a, -323574246144810L);
+        StaticHelpers6.ad(sb, this.a, -323574246144810L);
         sb.append(this.b);
         sb.append(')');
         return sb.toString();

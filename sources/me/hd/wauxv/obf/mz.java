@@ -62,7 +62,7 @@ public final class mz {
             attributeSet = null;
             styleAttribute = 0;
         }
-        TypedArray typedArrayAn = bhu.an(context, attributeSet, cxs.c, R.attr.badgeStyle, styleAttribute == 0 ? R.style.Widget_MaterialComponents_Badge : styleAttribute, new int[0]);
+        TypedArray typedArrayAn = FastKV.an(context, attributeSet, cxs.c, R.attr.badgeStyle, styleAttribute == 0 ? R.style.Widget_MaterialComponents_Badge : styleAttribute, new int[0]);
         Resources resources = context.getResources();
         this.c = typedArrayAn.getDimensionPixelSize(4, -1);
         this.i = context.getResources().getDimensionPixelSize(R.dimen.mtrl_badge_horizontal_edge_offset);

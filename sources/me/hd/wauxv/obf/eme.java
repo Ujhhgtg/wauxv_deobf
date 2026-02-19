@@ -37,7 +37,7 @@ public final class eme {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        Class clsBd = cnf.getJavaClass(this.a);
+        Class clsBd = HugeSyntheticPileOfHelpers.getJavaClass(this.a);
         String name = clsBd.isArray()
                 ? clsBd.equals(boolean[].class) ? "kotlin.BooleanArray"
                         : clsBd.equals(char[].class) ? "kotlin.CharArray"
@@ -51,7 +51,7 @@ public final class eme {
                                                                                 : "kotlin.Array"
                 : clsBd.getName();
         List list = Collections.EMPTY_LIST;
-        sb.append(name + (list.isEmpty() ? "" : aaz.k(list, ", ", "<", ">", new dos(10), 24))
+        sb.append(name + (list.isEmpty() ? "" : StaticHelpers5.k(list, ", ", "<", ">", new dos(10), 24))
                 + ((this.c & 1) != 0 ? TypeDescription.Generic.OfWildcardType.SYMBOL : ""));
         sb.append(" (Kotlin reflection is not available)");
         return sb.toString();

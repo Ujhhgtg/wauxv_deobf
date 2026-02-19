@@ -21,7 +21,7 @@ public final class dvl {
     public /* synthetic */ dvl(int i, Integer num, dwm dwmVar, eji ejiVar, dyl dylVar, String str, String str2,
             List list, efm efmVar, Boolean bool) {
         if (511 != (i & 511)) {
-            bht.ah(i, 511, dvj.b.getDescriptor());
+            ResourcesCompat.ah(i, 511, dvj.b.getDescriptor());
             throw null;
         }
         this.b = num;

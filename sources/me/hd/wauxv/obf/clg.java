@@ -12,7 +12,7 @@ public final class clg extends RequestBody {
     public final RequestBody a;
     public final ConcurrentLinkedQueue b;
     public final afc c = new afc();
-    public final dov d = new dov(new cle(this, 0));
+    public final Kotlin$Lazy d = new Kotlin$Lazy(new cle(this, 0));
 
     public clg(RequestBody requestBody, ConcurrentLinkedQueue concurrentLinkedQueue) {
         this.a = requestBody;

@@ -10,13 +10,13 @@ public final class agc extends bws implements IDexFind {
     public static final agc a = new agc();
 
     public final Object b(ContentValues contentValues) {
-        Object objC = ReflectionWrapper.createInstanceWithArgs(emn.bb(agb.a).getDeclaringClass(), new Object[0]);
+        Object objC = ReflectionWrapper.createInstanceWithArgs(StaticHelpers7.bb(agb.a).getDeclaringClass(), new Object[0]);
         int i = 0;
-        cde cdeVarT = dqc.bi(objC).t();
-        cdeVarT.ab = "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-79005923408682L)  */;
-        cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(ContentValues.class), dal.b(Boolean.TYPE) }, 2));
-        cdeVarT.ah();
-        ((MethodHookWrapper) aaz.e(cdeVarT.aj())).e(contentValues, Boolean.TRUE);
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objC).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-79005923408682L)  */;
+        methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.b(ContentValues.class), dal.b(Boolean.TYPE) }, 2));
+        methodResolverVarT.enableSuperclass();
+        ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(contentValues, Boolean.TRUE);
         return objC;
     }
 
@@ -26,6 +26,6 @@ public final class agc extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(agb.a, dexKitBridge, new act(28));
+        StaticHelpers7.resolveDexAndCache(agb.a, dexKitBridge, new act(28));
     }
 }

@@ -9,7 +9,7 @@ public final class atu {
     public static final atu b;
     public static final atu c;
     public static final /* synthetic */ atu[] d;
-    public static final /* synthetic */ awn e;
+    public static final /* synthetic */ KotlinEnumEntriesImpl e;
     public final int f;
     public final String g;
 
@@ -22,7 +22,7 @@ public final class atu {
         c = atuVar3;
         atu[] atuVarArr = {atuVar, atuVar2, atuVar3};
         d = atuVarArr;
-        e = new awn(atuVarArr);
+        e = new KotlinEnumEntriesImpl(atuVarArr);
     }
 
     public atu(String str, int i, int i2, String str2) {

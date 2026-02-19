@@ -9,18 +9,18 @@ import java.util.Iterator;
 /* JADX INFO: loaded from: classes.dex */
 public final class dbg {
     public final ik a = new ik((byte) 0, 7);
-    public final jx b;
+    public final FactoryPools b;
 
     public dbg(CodeEditor codeEditor) {
-        this.b = Build.VERSION.SDK_INT >= 29 ? new jx(codeEditor, 18) : null;
+        this.b = Build.VERSION.SDK_INT >= 29 ? new FactoryPools(codeEditor, 18) : null;
     }
 
     public final void c() {
-        jx jxVar;
-        if (Build.VERSION.SDK_INT < 29 || (jxVar = this.b) == null) {
+        FactoryPools factoryPoolsVar;
+        if (Build.VERSION.SDK_INT < 29 || (factoryPoolsVar = this.b) == null) {
             return;
         }
-        Iterator it = ((ArrayList) jxVar.f).iterator();
+        Iterator it = ((ArrayList) factoryPoolsVar.f).iterator();
         while (it.hasNext()) {
             ((dbh) it.next()).c = true;
         }

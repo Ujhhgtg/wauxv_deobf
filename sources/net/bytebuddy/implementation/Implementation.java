@@ -10,8 +10,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import javax.annotation.Nonnull;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.CachedReturnPlugin;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
@@ -30,7 +30,6 @@ import net.bytebuddy.dynamic.scaffold.InstrumentedType;
 import net.bytebuddy.dynamic.scaffold.MethodGraph;
 import net.bytebuddy.dynamic.scaffold.TypeInitializer;
 import net.bytebuddy.dynamic.scaffold.TypeWriter;
-import net.bytebuddy.implementation.MethodAccessorFactory;
 import net.bytebuddy.implementation.attribute.AnnotationValueFilter;
 import net.bytebuddy.implementation.auxiliary.AuxiliaryType;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
@@ -340,7 +339,7 @@ public interface Implementation extends InstrumentedType.Prepareable {
                         int i) {
                     this.instrumentedType = typeDescription;
                     this.fieldType = generic;
-                    StringBuilder sbZ = dkz.z("cachedValue$", str, "$");
+                    StringBuilder sbZ = StaticHelpers6.concatAndToSb("cachedValue$", str, "$");
                     sbZ.append(RandomString.hashOf(i));
                     this.name = sbZ.toString();
                 }
@@ -433,7 +432,7 @@ public interface Implementation extends InstrumentedType.Prepareable {
                 }
 
                 public int hashCode() {
-                    return this.visibility.hashCode() + dkz.b(this.methodDescription, getClass().hashCode() * 31, 31);
+                    return this.visibility.hashCode() + StaticHelpers6.b(this.methodDescription, getClass().hashCode() * 31, 31);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
@@ -1054,7 +1053,7 @@ public interface Implementation extends InstrumentedType.Prepareable {
 
                 public int hashCode() {
                     return this.frameGeneration.hashCode() + ((this.classFileVersion.hashCode()
-                            + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31)) * 31);
+                            + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31)) * 31);
                 }
             }
 
@@ -1197,7 +1196,7 @@ public interface Implementation extends InstrumentedType.Prepareable {
             @Override // net.bytebuddy.implementation.Implementation.Context
             public FieldDescription.InDefinedShape cache(StackManipulation stackManipulation,
                     TypeDescription typeDescription) {
-                throw new IllegalStateException(dkz.u("Field values caching was disabled: ", typeDescription));
+                throw new IllegalStateException(StaticHelpers6.concat("Field values caching was disabled: ", typeDescription));
             }
 
             @Override // net.bytebuddy.implementation.Implementation.Context.ExtractableView
@@ -1656,7 +1655,7 @@ public interface Implementation extends InstrumentedType.Prepareable {
 
             public int hashCode() {
                 return this.defaultMethodInvocation.hashCode()
-                        + ((this.methodGraph.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31))
+                        + ((this.methodGraph.hashCode() + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31))
                                 * 31);
             }
 

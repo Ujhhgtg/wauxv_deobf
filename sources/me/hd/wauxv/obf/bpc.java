@@ -101,7 +101,7 @@ public final class bpc {
                 Context context = this.g;
                 boolean zAd = cnb.ad(context);
                 LinearLayout linearLayout = this.i;
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 int paddingStart = editText.getPaddingStart();
                 if (zAd) {
                     paddingStart = context.getResources().getDimensionPixelSize(R.dimen.material_helper_text_font_1_3_padding_horizontal);
@@ -194,7 +194,7 @@ public final class bpc {
     }
 
     public final boolean aj(jp jpVar, CharSequence charSequence) {
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         TextInputLayout textInputLayout = this.h;
         if (textInputLayout.isLaidOut() && textInputLayout.isEnabled()) {
             return (this.o == this.n && jpVar != null && TextUtils.equals(jpVar.getText(), charSequence)) ? false : true;

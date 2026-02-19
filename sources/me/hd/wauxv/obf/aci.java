@@ -29,26 +29,26 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
     public final CopyOnWriteArrayList ad;
     public boolean ae;
     public boolean af;
-    public final dov ag;
+    public final Kotlin$Lazy ag;
     public final bur q = new bur(this);
     public final afr r = new afr();
-    public final jx s;
+    public final FactoryPools s;
     public final but t;
     public erq u;
     public final ace v;
-    public final dov w;
+    public final Kotlin$Lazy w;
     public final acg x;
     public final CopyOnWriteArrayList y;
     public final CopyOnWriteArrayList z;
 
     public aci() {
         final hb hbVar = (hb) this;
-        this.s = new jx(new abx(hbVar, 0));
+        this.s = new FactoryPools(new abx(hbVar, 0));
         deo deoVar = new deo(this, new cfx(this, 12));
         but butVar = new but(deoVar, 10);
         this.t = butVar;
         this.v = new ace(hbVar);
-        this.w = new dov(new ach(hbVar, 2));
+        this.w = new Kotlin$Lazy(new ach(hbVar, 2));
         new AtomicInteger();
         this.x = new acg(hbVar);
         this.y = new CopyOnWriteArrayList();
@@ -65,13 +65,13 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
         final int i = 0;
         burVar.j(new bul() { // from class: me.hd.wauxv.obf.aby
             @Override // me.hd.wauxv.obf.bul
-            public final void e(bup bupVar, bug bugVar) {
+            public final void e(bup bupVar, LifeEventEnum lifeEventEnumVar) {
                 Window window;
                 View viewPeekDecorView;
                 switch (i) {
                     case 0:
                         hb hbVar2 = hbVar;
-                        if (bugVar == bug.ON_STOP && (window = hbVar2.getWindow()) != null
+                        if (lifeEventEnumVar == LifeEventEnum.ON_STOP && (window = hbVar2.getWindow()) != null
                                 && (viewPeekDecorView = window.peekDecorView()) != null) {
                             viewPeekDecorView.cancelPendingInputEvents();
                             break;
@@ -79,7 +79,7 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
                         break;
                     default:
                         hb hbVar3 = hbVar;
-                        if (bugVar == bug.ON_DESTROY) {
+                        if (lifeEventEnumVar == LifeEventEnum.ON_DESTROY) {
                             hbVar3.r.b = null;
                             if (!hbVar3.isChangingConfigurations()) {
                                 hbVar3.aj().b();
@@ -96,13 +96,13 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
         final int i2 = 1;
         this.q.j(new bul() { // from class: me.hd.wauxv.obf.aby
             @Override // me.hd.wauxv.obf.bul
-            public final void e(bup bupVar, bug bugVar) {
+            public final void e(bup bupVar, LifeEventEnum lifeEventEnumVar) {
                 Window window;
                 View viewPeekDecorView;
                 switch (i2) {
                     case 0:
                         hb hbVar2 = hbVar;
-                        if (bugVar == bug.ON_STOP && (window = hbVar2.getWindow()) != null
+                        if (lifeEventEnumVar == LifeEventEnum.ON_STOP && (window = hbVar2.getWindow()) != null
                                 && (viewPeekDecorView = window.peekDecorView()) != null) {
                             viewPeekDecorView.cancelPendingInputEvents();
                             break;
@@ -110,7 +110,7 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
                         break;
                     default:
                         hb hbVar3 = hbVar;
-                        if (bugVar == bug.ON_DESTROY) {
+                        if (lifeEventEnumVar == LifeEventEnum.ON_DESTROY) {
                             hbVar3.r.b = null;
                             if (!hbVar3.isChangingConfigurations()) {
                                 hbVar3.aj().b();
@@ -130,8 +130,8 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
         ((but) butVar.c).ad("android:support:activity-result", new abz(hbVar, 0));
         int i3 = 0;
         am(new aca(hbVar, i3));
-        new dov(new ach(hbVar, i3));
-        this.ag = new dov(new ach(hbVar, 3));
+        new Kotlin$Lazy(new ach(hbVar, i3));
+        this.ag = new Kotlin$Lazy(new ach(hbVar, 3));
     }
 
     @Override // me.hd.wauxv.obf.bkg
@@ -459,8 +459,8 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
     @Override // android.app.Activity
     public final void reportFullyDrawn() {
         try {
-            if (cnf.bj()) {
-                cnf.an("reportFullyDrawn() for ComponentActivity");
+            if (HugeSyntheticPileOfHelpers.isTraceEnabled()) {
+                HugeSyntheticPileOfHelpers.beginTrace("reportFullyDrawn() for ComponentActivity");
             }
             super.reportFullyDrawn();
             bft bftVar = (bft) this.w.getValue();

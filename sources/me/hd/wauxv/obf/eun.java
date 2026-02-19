@@ -30,7 +30,7 @@ public abstract class eun implements alx {
             return null;
         }
         adq adqVar = adbVar2.d;
-        int iAe = dkz.ae(adbVar2.e);
+        int iAe = StaticHelpers6.ae(adbVar2.e);
         if (iAe == 1) {
             return adqVar.n.r;
         }
@@ -56,7 +56,7 @@ public abstract class eun implements alx {
         }
         adq adqVar = adbVar2.d;
         eun eunVar = i == 0 ? adqVar.n : adqVar.o;
-        int iAe = dkz.ae(adbVar2.e);
+        int iAe = StaticHelpers6.ae(adbVar2.e);
         if (iAe == 1 || iAe == 2) {
             return eunVar.r;
         }

@@ -31,7 +31,7 @@ public final class eak {
     public /* synthetic */ eak(int i, Long l, Long l2, Integer num, Integer num2, List list, List list2, Boolean bool,
             Boolean bool2, Integer num3, Integer num4, Integer num5, String str) {
         if (4095 != (i & 4095)) {
-            bht.ah(i, 4095, eai.b.getDescriptor());
+            ResourcesCompat.ah(i, 4095, eai.b.getDescriptor());
             throw null;
         }
         this.b = l;
@@ -95,8 +95,8 @@ public final class eak {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("m40Proto(start_time=" /* "m40Proto(start_time=" /* "m40Proto(start_time=" /* cnb.z(-213605903498026L)  */);
-        dkz.ad(sb, this.b, -215130616888106L);
-        dkz.ad(sb, this.c, -215113437018922L);
+        StaticHelpers6.ad(sb, this.b, -215130616888106L);
+        StaticHelpers6.ad(sb, this.c, -215113437018922L);
         bjs.w(sb, this.d, -215053307476778L);
         bjs.w(sb, this.e, -215457034402602L);
         yg.v(sb, this.f, -215371135056682L);

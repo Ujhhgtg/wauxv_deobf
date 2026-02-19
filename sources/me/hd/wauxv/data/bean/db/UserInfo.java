@@ -1,9 +1,6 @@
 package me.hd.wauxv.data.bean.db;
 
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.cnb;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dts;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -91,8 +88,8 @@ public final class UserInfo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("UserInfo(id=" /* "UserInfo(id=" /* "UserInfo(id=" /* cnb.z(-15010910698282L)  */);
-        dkz.ac(sb, this.id, -14937896254250L);
-        dkz.ac(sb, this.type, -14903536515882L);
+        StaticHelpers6.ac(sb, this.id, -14937896254250L);
+        StaticHelpers6.ac(sb, this.type, -14903536515882L);
         return concat(sb, this.value, ')');
     }
 }

@@ -3,7 +3,7 @@ package bsh;
 import java.lang.reflect.Array;
 import java.util.List;
 import java.util.Map;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -52,7 +52,7 @@ class BSHPrimarySuffix extends SimpleNode {
                 if (objEval2.equals(((Map.Entry) obj).getKey())) {
                     return new LHS(obj);
                 }
-                throw new EvalError(dkz.r(objEval2, "No such property: "), this, callStack);
+                throw new EvalError(StaticHelpers6.concatVar2Var1(objEval2, "No such property: "), this, callStack);
             }
         }
         Class<?> cls = obj.getClass();
@@ -215,7 +215,7 @@ class BSHPrimarySuffix extends SimpleNode {
             Object objectProperty = Reflect.getObjectProperty(obj, (String) objEval);
             return objectProperty == null ? Primitive.NULL : Primitive.unwrap(objectProperty);
         } catch (ReflectError e) {
-            throw new EvalError(dkz.r(objEval, "No such property: "), this, callStack, e);
+            throw new EvalError(StaticHelpers6.concatVar2Var1(objEval, "No such property: "), this, callStack, e);
         }
     }
 

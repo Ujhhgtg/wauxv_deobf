@@ -21,24 +21,24 @@ public final /* synthetic */ class wi implements bfu {
         switch (i) {
             case 0:
                 int i2 = 0;
-                cde cdeVarT = dqc.bi(obj).t();
-                cdeVarT.a = dal.b(MenuItem.class);
+                MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT.returnType = dal.b(MenuItem.class);
                 Class cls = Integer.TYPE;
-                return (MethodHookWrapper) dkz.n(
+                return (MethodHookWrapper) StaticHelpers6.n(
                         new Object[] { dal.b(cls), dal.b(cls), dal.b(cls), dal.b(CharSequence.class), dal.b(cls) }, 5,
-                        cdeVarT);
+                        methodResolverVarT);
             case 1:
                 int i3 = 0;
-                azg azgVarR = dqc.bi(obj).r();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
                 gp.a.getClass();
-                azgVarR.a = emn.bb(go.a).getDeclaringClass();
-                Object objD = ((azk) aaz.e(azgVarR.c())).d();
+                fieldResolverVarR.fieldType = StaticHelpers7.bb(go.a).getDeclaringClass();
+                Object objD = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).d();
                 throwIfVar1IsNull(objD);
                 xx.a.getClass();
-                azg azgVarR2 = dqc.bi(gp.b((Class) SomeStaticHelpers.p(emn.az(xw.a).getInterfaces()), objD)).r();
+                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(gp.b((Class) SomeStaticHelpers.p(StaticHelpers7.az(xw.a).getInterfaces()), objD)).r();
                 uq.a.getClass();
-                azgVarR2.a = ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */);
-                Object objE = ((azk) aaz.e(azgVarR2.c())).e();
+                fieldResolverVarR2.fieldType = ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */);
+                Object objE = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).e();
                 throwIfVar1IsNull(objE);
                 return (FrameLayout) objE;
             default:

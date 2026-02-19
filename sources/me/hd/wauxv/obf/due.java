@@ -10,7 +10,7 @@ public final class due {
 
     public /* synthetic */ due(int i, Float f, Float f2, Float f3) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, duc.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, duc.b.getDescriptor());
             throw null;
         }
         this.a = f;

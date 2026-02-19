@@ -98,7 +98,7 @@ public final class adc {
     }
 
     public final void i(Object obj) {
-        switch (dkz.ae(this.b)) {
+        switch (StaticHelpers6.ae(this.b)) {
             case 0:
             case 7:
                 this.c = ((Integer) obj).intValue();

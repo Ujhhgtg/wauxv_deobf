@@ -26,7 +26,7 @@ public abstract class dcu {
     }
 
     /* JADX WARN: Found duplicated region for block: B:39:0x00c9  */
-    public static Typeface e(Context context, int i, TypedValue typedValue, int i2, bht bhtVar, boolean z, boolean z2) throws Exception {
+    public static Typeface e(Context context, int i, TypedValue typedValue, int i2, ResourcesCompat resourcesCompatVar, boolean z, boolean z2) throws Exception {
         Resources resources = context.getResources();
         resources.getValue(i, typedValue, true);
         CharSequence charSequence = typedValue.string;
@@ -37,11 +37,11 @@ public abstract class dcu {
         Typeface typefaceD = null;
         if (string.startsWith("res/")) {
             int i3 = typedValue.assetCookie;
-            byj byjVar = emf.b;
-            Typeface typeface = (Typeface) byjVar.o(emf.e(resources, i, string, i3, i2));
+            byj byjVar = TypefaceCompat.b;
+            Typeface typeface = (Typeface) byjVar.o(TypefaceCompat.e(resources, i, string, i3, i2));
             if (typeface != null) {
-                if (bhtVar != null) {
-                    new Handler(Looper.getMainLooper()).post(new hl(bhtVar, 7, typeface));
+                if (resourcesCompatVar != null) {
+                    new Handler(Looper.getMainLooper()).post(new hl(resourcesCompatVar, 7, typeface));
                 }
                 typefaceD = typeface;
             } else if (!z2) {
@@ -50,43 +50,43 @@ public abstract class dcu {
                         bca bcaVarAi = cmz.ai(resources.getXml(i), resources);
                         if (bcaVarAi == null) {
                             Log.e("ResourcesCompat", "Failed to find font-family tag");
-                            if (bhtVar != null) {
-                                bhtVar.ai(-3);
+                            if (resourcesCompatVar != null) {
+                                resourcesCompatVar.ai(-3);
                             }
                         } else {
-                            typefaceD = emf.d(context, bcaVarAi, resources, i, string, typedValue.assetCookie, i2, bhtVar, z);
+                            typefaceD = TypefaceCompat.d(context, bcaVarAi, resources, i, string, typedValue.assetCookie, i2, resourcesCompatVar, z);
                         }
                     } else {
                         int i4 = typedValue.assetCookie;
-                        Typeface typefaceU = emf.a.u(context, resources, i, string, i2);
+                        Typeface typefaceU = TypefaceCompat.a.u(context, resources, i, string, i2);
                         if (typefaceU != null) {
-                            byjVar.v(emf.e(resources, i, string, i4, i2), typefaceU);
+                            byjVar.v(TypefaceCompat.e(resources, i, string, i4, i2), typefaceU);
                         }
-                        if (bhtVar != null) {
+                        if (resourcesCompatVar != null) {
                             if (typefaceU != null) {
-                                new Handler(Looper.getMainLooper()).post(new hl(bhtVar, 7, typefaceU));
+                                new Handler(Looper.getMainLooper()).post(new hl(resourcesCompatVar, 7, typefaceU));
                             } else {
-                                bhtVar.ai(-3);
+                                resourcesCompatVar.ai(-3);
                             }
                         }
                         typefaceD = typefaceU;
                     }
                 } catch (IOException e) {
                     Log.e("ResourcesCompat", "Failed to read xml resource ".concat(string), e);
-                    if (bhtVar != null) {
-                        bhtVar.ai(-3);
+                    if (resourcesCompatVar != null) {
+                        resourcesCompatVar.ai(-3);
                     }
                 } catch (XmlPullParserException e2) {
                     Log.e("ResourcesCompat", "Failed to parse xml resource ".concat(string), e2);
-                    if (bhtVar != null) {
-                        bhtVar.ai(-3);
+                    if (resourcesCompatVar != null) {
+                        resourcesCompatVar.ai(-3);
                     }
                 }
             }
-        } else if (bhtVar != null) {
-            bhtVar.ai(-3);
+        } else if (resourcesCompatVar != null) {
+            resourcesCompatVar.ai(-3);
         }
-        if (typefaceD != null || bhtVar != null || z2) {
+        if (typefaceD != null || resourcesCompatVar != null || z2) {
             return typefaceD;
         }
         throw new Resources.NotFoundException("Font resource ID #0x" + Integer.toHexString(i) + " could not be retrieved.");

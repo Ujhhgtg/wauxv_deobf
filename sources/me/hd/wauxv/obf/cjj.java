@@ -41,7 +41,7 @@ public final class cjj implements Iterator, IEmpty {
         int i = this.a;
         Object[] objArr = dloVar.c;
         Object obj = objArr[i];
-        Object obj2 = bht.p;
+        Object obj2 = ResourcesCompat.p;
         if (obj != obj2) {
             objArr[i] = obj2;
             dloVar.a = true;

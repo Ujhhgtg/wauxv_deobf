@@ -11,7 +11,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.method.MethodList;
@@ -285,7 +285,7 @@ public interface MethodGraph {
                                 }
 
                                 public int hashCode() {
-                                    return this.visibility.hashCode() + dkz.c(this.methodDescription, (this.key.hashCode() + (getClass().hashCode() * 31)) * 31, 31);
+                                    return this.visibility.hashCode() + StaticHelpers6.c(this.methodDescription, (this.key.hashCode() + (getClass().hashCode() * 31)) * 31, 31);
                                 }
                             }
 
@@ -508,7 +508,7 @@ public interface MethodGraph {
                                 }
 
                                 public int hashCode() {
-                                    return ((this.visibility.hashCode() + dkz.c(this.methodDescription, (this.key.hashCode() + (getClass().hashCode() * 31)) * 31, 31)) * 31) + (this.visible ? 1 : 0);
+                                    return ((this.visibility.hashCode() + StaticHelpers6.c(this.methodDescription, (this.key.hashCode() + (getClass().hashCode() * 31)) * 31, 31)) * 31) + (this.visible ? 1 : 0);
                                 }
                             }
 
@@ -563,7 +563,7 @@ public interface MethodGraph {
                             }
 
                             public int hashCode() {
-                                return ((this.visibility.hashCode() + dkz.c(this.methodDescription, (this.key.hashCode() + (getClass().hashCode() * 31)) * 31, 31)) * 31) + (this.madeVisible ? 1 : 0);
+                                return ((this.visibility.hashCode() + StaticHelpers6.c(this.methodDescription, (this.key.hashCode() + (getClass().hashCode() * 31)) * 31, 31)) * 31) + (this.madeVisible ? 1 : 0);
                             }
 
                             @Override // net.bytebuddy.dynamic.scaffold.MethodGraph.Compiler.Default.Key.Store.Entry

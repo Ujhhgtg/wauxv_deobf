@@ -11,12 +11,12 @@ public final class uo extends SwitchHook {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i = 0;
-        cde cdeVarT = yg.s(-477694852594474L).t();
-        cdeVarT.ab = "onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477518758935338L)  */;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
-        exg exgVar = exg.a;
+        MethodResolver methodResolverVarT = yg.s(-477694852594474L).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477518758935338L)  */;
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         uo uoVar = a;
-        aki akiVarAd = uoVar.ad(methodHookWrapperVar, exgVar);
+        aki akiVarAd = uoVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
         uoVar.y(akiVarAd, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(23));
         akiVarAd.o();
     }

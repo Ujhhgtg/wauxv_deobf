@@ -9,7 +9,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.annotation.AnnotationValue;
@@ -20,9 +20,6 @@ import net.bytebuddy.description.type.TypeDefinition;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.Transformer;
 import net.bytebuddy.dynamic.VisibilityBridgeStrategy;
-import net.bytebuddy.dynamic.scaffold.InstrumentedType;
-import net.bytebuddy.dynamic.scaffold.MethodGraph;
-import net.bytebuddy.dynamic.scaffold.TypeWriter;
 import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.LoadedTypeInitializer;
 import net.bytebuddy.implementation.attribute.MethodAttributeAppender;
@@ -290,7 +287,7 @@ public interface MethodRegistry {
                 }
 
                 public int hashCode() {
-                    return ((this.visibility.hashCode() + ((this.bridgeTypes.hashCode() + dkz.c(this.methodDescription, (this.attributeAppender.hashCode() + ((this.handler.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31, 31)) * 31)) * 31) + (this.bridgeMethod ? 1 : 0);
+                    return ((this.visibility.hashCode() + ((this.bridgeTypes.hashCode() + StaticHelpers6.c(this.methodDescription, (this.attributeAppender.hashCode() + ((this.handler.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31, 31)) * 31)) * 31) + (this.bridgeMethod ? 1 : 0);
                 }
             }
 
@@ -340,7 +337,7 @@ public interface MethodRegistry {
             }
 
             public int hashCode() {
-                return ((this.implementations.hashCode() + ((this.methods.hashCode() + ((this.typeInitializer.hashCode() + ((this.loadedTypeInitializer.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31)) * 31)) * 31)) * 31)) * 31) + (this.supportsBridges ? 1 : 0);
+                return ((this.implementations.hashCode() + ((this.methods.hashCode() + ((this.typeInitializer.hashCode() + ((this.loadedTypeInitializer.hashCode() + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31)) * 31)) * 31)) * 31)) * 31) + (this.supportsBridges ? 1 : 0);
             }
 
             @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool
@@ -463,7 +460,7 @@ public interface MethodRegistry {
                 }
 
                 public int hashCode() {
-                    return ((this.visibility.hashCode() + ((this.typeTokens.hashCode() + dkz.c(this.methodDescription, (this.attributeAppenderFactory.hashCode() + ((this.handler.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31, 31)) * 31)) * 31) + (this.bridgeMethod ? 1 : 0);
+                    return ((this.visibility.hashCode() + ((this.typeTokens.hashCode() + StaticHelpers6.c(this.methodDescription, (this.attributeAppenderFactory.hashCode() + ((this.handler.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31, 31)) * 31)) * 31) + (this.bridgeMethod ? 1 : 0);
                 }
 
                 public boolean isBridgeMethod() {
@@ -546,7 +543,7 @@ public interface MethodRegistry {
             }
 
             public int hashCode() {
-                return this.methods.hashCode() + ((this.methodGraph.hashCode() + dkz.f(this.instrumentedType, (this.typeInitializer.hashCode() + ((this.loadedTypeInitializer.hashCode() + ((this.implementations.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31)) * 31, 31)) * 31);
+                return this.methods.hashCode() + ((this.methodGraph.hashCode() + StaticHelpers6.f(this.instrumentedType, (this.typeInitializer.hashCode() + ((this.loadedTypeInitializer.hashCode() + ((this.implementations.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31)) * 31, 31)) * 31);
             }
         }
 

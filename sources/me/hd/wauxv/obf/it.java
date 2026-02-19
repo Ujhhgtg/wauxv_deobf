@@ -34,14 +34,14 @@ public final class it extends DefaultConfig {
         is isVar = this.bb;
         Context context = isVar.getContext();
         int[] iArr = cyf.g;
-        jx jxVarK = jx.k(context, attributeSet, iArr, R.attr.seekBarStyle);
-        TypedArray typedArray = (TypedArray) jxVarK.e;
-        eqz.r(isVar, isVar.getContext(), iArr, attributeSet, (TypedArray) jxVarK.e, R.attr.seekBarStyle, 0);
-        Drawable drawableT = jxVarK.t(0);
+        FactoryPools factoryPoolsVarK = FactoryPools.k(context, attributeSet, iArr, R.attr.seekBarStyle);
+        TypedArray typedArray = (TypedArray) factoryPoolsVarK.e;
+        ViewCompat.r(isVar, isVar.getContext(), iArr, attributeSet, (TypedArray) factoryPoolsVarK.e, R.attr.seekBarStyle, 0);
+        Drawable drawableT = factoryPoolsVarK.t(0);
         if (drawableT != null) {
             isVar.setThumb(drawableT);
         }
-        Drawable drawableS = jxVarK.s(1);
+        Drawable drawableS = factoryPoolsVarK.s(1);
         Drawable drawable = this.bc;
         if (drawable != null) {
             drawable.setCallback(null);
@@ -61,10 +61,10 @@ public final class it extends DefaultConfig {
             this.bg = true;
         }
         if (typedArray.hasValue(2)) {
-            this.bd = jxVarK.r(2);
+            this.bd = factoryPoolsVarK.r(2);
             this.bf = true;
         }
-        jxVarK.ae();
+        factoryPoolsVarK.ae();
         bh();
     }
 

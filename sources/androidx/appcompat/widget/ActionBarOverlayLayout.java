@@ -38,7 +38,7 @@ import me.hd.wauxv.obf.eko;
 import me.hd.wauxv.obf.ekt;
 import me.hd.wauxv.obf.eqo;
 import me.hd.wauxv.obf.eqq;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.esh;
 import me.hd.wauxv.obf.eut;
 import me.hd.wauxv.obf.evb;
@@ -345,7 +345,7 @@ public class ActionBarOverlayLayout extends ViewGroup implements aju, ckt, cku {
         ap();
         evr evrVarD = evr.d(this, windowInsets);
         boolean zAf = af(this.g, new Rect(evrVarD.f(), evrVarD.h(), evrVarD.g(), evrVarD.e()), false);
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         Rect rect = this.p;
         eqq.b(this, evrVarD, rect);
         int i = rect.left;
@@ -376,7 +376,7 @@ public class ActionBarOverlayLayout extends ViewGroup implements aju, ckt, cku {
     public final void onConfigurationChanged(Configuration configuration) {
         super.onConfigurationChanged(configuration);
         an(getContext());
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         eqo.c(this);
     }
 
@@ -424,7 +424,7 @@ public class ActionBarOverlayLayout extends ViewGroup implements aju, ckt, cku {
         int iMax2 = Math.max(0, this.g.getMeasuredHeight() + ((ViewGroup.MarginLayoutParams) clVar).topMargin
                 + ((ViewGroup.MarginLayoutParams) clVar).bottomMargin);
         int iCombineMeasuredStates = View.combineMeasuredStates(0, this.g.getMeasuredState());
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         boolean z = (getWindowSystemUiVisibility() & 256) != 0;
         if (z) {
             measuredHeight = this.d;
@@ -470,7 +470,7 @@ public class ActionBarOverlayLayout extends ViewGroup implements aju, ckt, cku {
         if (!this.w.equals(this.v)) {
             evr evrVar4 = this.v;
             this.w = evrVar4;
-            eqz.h(this.f, evrVar4);
+            ViewCompat.h(this.f, evrVar4);
         }
         measureChildWithMargins(this.f, i, 0, i2, 0);
         cl clVar2 = (cl) this.f.getLayoutParams();
@@ -583,7 +583,7 @@ public class ActionBarOverlayLayout extends ViewGroup implements aju, ckt, cku {
         if ((i2 & 256) == 0 || this.x == null) {
             return;
         }
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         eqo.c(this);
     }
 
@@ -609,7 +609,7 @@ public class ActionBarOverlayLayout extends ViewGroup implements aju, ckt, cku {
             int i = this.o;
             if (i != 0) {
                 onWindowSystemUiVisibilityChanged(i);
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 eqo.c(this);
             }
         }
@@ -672,7 +672,7 @@ public class ActionBarOverlayLayout extends ViewGroup implements aju, ckt, cku {
         if ((ektVar.b & 8) != 0) {
             toolbar.setTitle(charSequence);
             if (ektVar.g) {
-                eqz.t(toolbar.getRootView(), charSequence);
+                ViewCompat.setAccessibilityPaneTitle(toolbar.getRootView(), charSequence);
             }
         }
     }

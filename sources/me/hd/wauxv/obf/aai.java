@@ -27,7 +27,7 @@ public final class aai extends MetricAffectingSpan implements LeadingMarginSpan 
         Paint paint2 = this.c;
         paint2.setStyle(style);
         this.a.getClass();
-        paint2.setColor(emn.ae(paint.getColor(), 25));
+        paint2.setColor(StaticHelpers7.ae(paint.getColor(), 25));
         if (i2 > 0) {
             width = canvas.getWidth();
         } else {

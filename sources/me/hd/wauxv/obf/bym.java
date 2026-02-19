@@ -8,7 +8,7 @@ public final class bym extends bws implements IDexFind {
     public static final bym a = new bym();
 
     public static String b(String str, boolean z) {
-        Object objInvoke = emn.bb(byl.a).invoke(null, str);
+        Object objInvoke = StaticHelpers7.bb(byl.a).invoke(null, str);
         String string = objInvoke instanceof String ? (String) objInvoke : null;
         if (string != null) {
             String strZ = "/" /* "/" /* "/" /* cnb.z(-374168960891690L)  */;
@@ -40,6 +40,6 @@ public final class bym extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(byl.a, dexKitBridge, new bty(16));
+        StaticHelpers7.resolveDexAndCache(byl.a, dexKitBridge, new bty(16));
     }
 }

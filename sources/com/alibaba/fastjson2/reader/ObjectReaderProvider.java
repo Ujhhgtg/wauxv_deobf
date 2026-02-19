@@ -12,7 +12,6 @@ import com.alibaba.fastjson2.function.FieldConsumer;
 import com.alibaba.fastjson2.modules.ObjectCodecProvider;
 import com.alibaba.fastjson2.modules.ObjectReaderAnnotationProcessor;
 import com.alibaba.fastjson2.modules.ObjectReaderModule;
-import com.alibaba.fastjson2.reader.ObjectReaderProvider;
 import com.alibaba.fastjson2.support.LambdaMiscCodec;
 import com.alibaba.fastjson2.util.BeanUtils;
 import com.alibaba.fastjson2.util.Fnv;
@@ -42,7 +41,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import me.hd.wauxv.obf.cpy;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -446,7 +445,7 @@ public class ObjectReaderProvider implements ObjectCodecProvider {
                         afterAutoType(str, clsLoadClass);
                         return clsLoadClass;
                     }
-                    StringBuilder sbZ = dkz.z("type not match. ", str, " -> ");
+                    StringBuilder sbZ = StaticHelpers6.concatAndToSb("type not match. ", str, " -> ");
                     sbZ.append(cls.getName());
                     throw new JSONException(sbZ.toString());
                 }
@@ -472,7 +471,7 @@ public class ObjectReaderProvider implements ObjectCodecProvider {
                         afterAutoType(str, clsLoadClass2);
                         return clsLoadClass2;
                     }
-                    StringBuilder sbZ2 = dkz.z("type not match. ", str, " -> ");
+                    StringBuilder sbZ2 = StaticHelpers6.concatAndToSb("type not match. ", str, " -> ");
                     sbZ2.append(cls.getName());
                     throw new JSONException(sbZ2.toString());
                 }
@@ -489,7 +488,7 @@ public class ObjectReaderProvider implements ObjectCodecProvider {
                 afterAutoType(str, mapping);
                 return mapping;
             }
-            StringBuilder sbZ3 = dkz.z("type not match. ", str, " -> ");
+            StringBuilder sbZ3 = StaticHelpers6.concatAndToSb("type not match. ", str, " -> ");
             sbZ3.append(cls.getName());
             throw new JSONException(sbZ3.toString());
         }
@@ -506,7 +505,7 @@ public class ObjectReaderProvider implements ObjectCodecProvider {
                 if ((j & JSONReader.Feature.IgnoreAutoTypeNotMatch.mask) != j8) {
                     return cls;
                 }
-                StringBuilder sbZ4 = dkz.z("type not match. ", str, " -> ");
+                StringBuilder sbZ4 = StaticHelpers6.concatAndToSb("type not match. ", str, " -> ");
                 sbZ4.append(cls.getName());
                 throw new JSONException(sbZ4.toString());
             }

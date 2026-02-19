@@ -53,7 +53,7 @@ public class erp implements ccl, cbu, cqk, jm, cby, afj, afl, cdw, ako, axv {
         switch (this.t) {
             case 4:
                 AppBarLayout appBarLayout = (AppBarLayout) this.v;
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 evrVar2 = appBarLayout.getFitsSystemWindows() ? evrVar : null;
                 if (!Objects.equals(appBarLayout.h, evrVar2)) {
                     appBarLayout.h = evrVar2;
@@ -66,7 +66,7 @@ public class erp implements ccl, cbu, cqk, jm, cby, afj, afl, cdw, ako, axv {
                 return evrVar;
             case 8:
                 CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) this.v;
-                WeakHashMap weakHashMap2 = eqz.a;
+                WeakHashMap weakHashMap2 = ViewCompat.a;
                 evrVar2 = collapsingToolbarLayout.getFitsSystemWindows() ? evrVar : null;
                 if (!Objects.equals(collapsingToolbarLayout.aa, evrVar2)) {
                     collapsingToolbarLayout.aa = evrVar2;
@@ -85,7 +85,7 @@ public class erp implements ccl, cbu, cqk, jm, cby, afj, afl, cdw, ako, axv {
                         int childCount = coordinatorLayout.getChildCount();
                         while (i < childCount) {
                             View childAt = coordinatorLayout.getChildAt(i);
-                            WeakHashMap weakHashMap3 = eqz.a;
+                            WeakHashMap weakHashMap3 = ViewCompat.a;
                             if (!childAt.getFitsSystemWindows() || ((agu) childAt.getLayoutParams()).a == null
                                     || !evoVar.ac()) {
                                 i++;
@@ -204,11 +204,11 @@ public class erp implements ccl, cbu, cqk, jm, cby, afj, afl, cdw, ako, axv {
         switch (this.t) {
             case 21:
                 ik ikVar = (ik) this.v;
-                return new ajr((afr) ikVar.c, (jx) ikVar.d);
+                return new ajr((afr) ikVar.c, (FactoryPools) ikVar.d);
             default:
                 awc awcVar = (awc) this.v;
                 return new awh((bia) awcVar.a, (bia) awcVar.b, (bia) awcVar.c, (bia) awcVar.d, (awd) awcVar.e,
-                        (awd) awcVar.f, (jx) awcVar.g);
+                        (awd) awcVar.f, (FactoryPools) awcVar.g);
         }
     }
 
@@ -402,7 +402,7 @@ public class erp implements ccl, cbu, cqk, jm, cby, afj, afl, cdw, ako, axv {
 
     public int y(int i) {
         int[] iArr = ((DialogXBaseRelativeLayout) this.v).r;
-        int iAe = dkz.ae(i);
+        int iAe = StaticHelpers6.ae(i);
         if (iAe == 0) {
             return iArr[0];
         }

@@ -1,11 +1,10 @@
 package net.bytebuddy.matcher;
 
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.method.MethodList;
 import net.bytebuddy.description.type.TypeDefinition;
-import net.bytebuddy.matcher.ElementMatcher;
 import net.bytebuddy.utility.nullability.MaybeNull;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -35,7 +34,7 @@ public class DeclaringMethodMatcher<T extends TypeDefinition> extends ElementMat
     }
 
     public String toString() {
-        return dkz.w(new StringBuilder("declaresMethods("), this.matcher, ")");
+        return StaticHelpers6.concatFromSb(new StringBuilder("declaresMethods("), this.matcher, ")");
     }
 
     @Override // net.bytebuddy.matcher.ElementMatcher.Junction.ForNonNullValues

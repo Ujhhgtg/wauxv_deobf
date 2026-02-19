@@ -3,7 +3,7 @@ package com.android.dx.dex.file;
 import com.android.dx.util.AnnotatedOutput;
 import com.android.dx.util.Hex;
 import java.util.ArrayList;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -114,7 +114,7 @@ public final class MapItem extends OffsettedItem {
             annotatedOutput.annotate(2, sb.toString());
             annotatedOutput.annotate(2, "  unused: 0");
             annotatedOutput.annotate(4, "  size:   " + Hex.u4(this.itemCount));
-            dkz.ab(fileOffset, new StringBuilder("  offset: "), annotatedOutput, 4);
+            StaticHelpers6.ab(fileOffset, new StringBuilder("  offset: "), annotatedOutput, 4);
         }
         annotatedOutput.writeShort(mapValue);
         annotatedOutput.writeShort(0);

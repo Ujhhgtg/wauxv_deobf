@@ -83,7 +83,7 @@ public final /* synthetic */ class djk implements IInvokable {
                 Activity activity = (Activity) (!(objE instanceof Activity) ? null : objE);
                 if (activity == null) {
                     cls2 = Activity.class;
-                    Class<Activity> clsBf = cnf.bf(dal.b(cls2));
+                    Class<Activity> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf != null ? clsBf : Activity.class).getName()).toString());
                 }
@@ -92,16 +92,16 @@ public final /* synthetic */ class djk implements IInvokable {
                 djp djpVar = new djp(activity, objArr == true ? 1 : 0);
                 djvVar.getClass();
                 int i4 = 0;
-                cde cdeVarT = dqc.bi(activity).t();
-                cdeVarT.ab = "addTextOptionMenu" /* "addTextOptionMenu" /* "addTextOptionMenu" /* cnb.z(-558530432072490L)  */;
-                cdeVarT.z(Arrays.copyOf(
+                MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(activity).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT.name = "addTextOptionMenu" /* "addTextOptionMenu" /* "addTextOptionMenu" /* cnb.z(-558530432072490L)  */;
+                methodResolverVarT.setParams(Arrays.copyOf(
                         new Object[] { dal.b(Integer.TYPE), dal.b(cls), dal.b(MenuItem.OnMenuItemClickListener.class) },
                         3));
-                cdeVarT.ah();
-                ((MethodHookWrapper) aaz.e(cdeVarT.aj())).e(Integer.valueOf(R.id.MenuItem_Sns_LabelFilter), strZ, new ars(djpVar, 1));
+                methodResolverVarT.enableSuperclass();
+                ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(Integer.valueOf(R.id.MenuItem_Sns_LabelFilter), strZ, new ars(djpVar, 1));
                 return kotlinUnitVar;
             case 4:
-                return dkz.o('\'', "'", (String) obj);
+                return StaticHelpers6.o('\'', "'", (String) obj);
             case 5:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new djk(6);
                 return kotlinUnitVar;
@@ -110,7 +110,7 @@ public final /* synthetic */ class djk implements IInvokable {
                 cdj cdjVar3 = new cdj();
                 cdj.l(cdjVar3, "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* cnb.z(-556339998751530L)  */);
                 cls3 = Void.class;
-                Class<Void> clsBf2 = cnf.bf(dal.b(cls3));
+                Class<Void> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
                 cdjVar3.r(clsBf2 != null ? clsBf2 : Void.class);
                 cdjVar3.t("submitRefreshAll" /* "submitRefreshAll" /* "submitRefreshAll" /* cnb.z(-556168200059690L)  */);
                 bahVar3.getClass();
@@ -122,10 +122,10 @@ public final /* synthetic */ class djk implements IInvokable {
             case 8:
                 bah bahVar4 = (bah) obj;
                 cdj cdjVar4 = new cdj();
-                Class<String> clsBf3 = cnf.bf(dal.b(cls));
+                Class<String> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 cls = clsBf3 != null ? clsBf3 : String.class;
                 cls4 = Integer.class;
-                Class<Integer> clsBf4 = cnf.bf(dal.b(cls4));
+                Class<Integer> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
                 cdjVar4.q(cls, clsBf4 != null ? clsBf4 : Integer.class);
                 fj fjVar = new fj();
                 cdj cdjVar5 = new cdj();
@@ -146,11 +146,11 @@ public final /* synthetic */ class djk implements IInvokable {
             case 10:
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar7 = new cdj();
-                Class<String> clsBf5 = cnf.bf(dal.b(cls));
+                Class<String> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 if (clsBf5 == null) {
                     clsBf5 = cls;
                 }
-                Class<String> clsBf6 = cnf.bf(dal.b(cls));
+                Class<String> clsBf6 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 cdjVar7.q(clsBf5, clsBf6 != null ? clsBf6 : String.class);
                 cdjVar7.t("MicroMsg.snsMediaStorage" /* "MicroMsg.snsMediaStorage" /* "MicroMsg.snsMediaStorage" /* cnb.z(-377939942177578L)  */,
                         "convertImg2WxamWithoutZip origPath:%s OutOfMemoryError! rollback" /*
@@ -179,24 +179,24 @@ public final /* synthetic */ class djk implements IInvokable {
                 return kotlinUnitVar;
             case 13:
                 View view = (View) obj;
-                View viewK = dkz.k(view, R.layout.module_dialog_sns_upload_app_info, null, false);
+                View viewK = StaticHelpers6.k(view, R.layout.module_dialog_sns_upload_app_info, null, false);
                 int i5 = R.id.moduleDialogEdtSnsUploadAppInfoPhone;
-                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                         R.id.moduleDialogEdtSnsUploadAppInfoPhone);
                 if (textInputEditText != null) {
                     i5 = R.id.moduleDialogEdtSnsUploadAppInfoTextPlaceholders;
-                    MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.aq(viewK,
+                    MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewK,
                             R.id.moduleDialogEdtSnsUploadAppInfoTextPlaceholders);
                     if (materialTextView != null) {
                         i5 = R.id.moduleDialogEdtSnsUploadAppInfoWindows;
-                        TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                        TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                 R.id.moduleDialogEdtSnsUploadAppInfoWindows);
                         if (textInputEditText2 != null) {
                             i5 = R.id.moduleDialogInputSnsUploadAppInfoPhone;
-                            if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                     R.id.moduleDialogInputSnsUploadAppInfoPhone)) != null) {
                                 i5 = R.id.moduleDialogInputSnsUploadAppInfoWindows;
-                                if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                         R.id.moduleDialogInputSnsUploadAppInfoWindows)) != null) {
                                     cem cemVar = new cem((LinearLayout) viewK, textInputEditText, materialTextView,
                                             textInputEditText2, 6);
@@ -226,7 +226,7 @@ public final /* synthetic */ class djk implements IInvokable {
                                     SnsUploadAppInfoHook.a.getClass();
                                     egVar.d = SnsUploadAppInfoHook.i;
                                     bzyVar.t("保存" /* "保存" /* "保存" /* cnb.z(-561786017282858L)  */, new amw(new cfx(cemVar, 16), 0));
-                                    bzyVar.s("重置" /* "重置" /* "重置" /* cnb.z(-561807492119338L)  */, new amw(new cfh(26), 2));
+                                    bzyVar.s("重置" /* "重置" /* "重置" /* cnb.z(-561807492119338L)  */, new amw(new Function1$VarIsInt$2(26), 2));
                                     bjs.x((c & 2) != 0 ? new amd(1) : null, bzyVar, cnb.z(j3));
                                     LinearLayout linearLayout = cemVar.b;
                                     if (linearLayout != null) {
@@ -263,17 +263,17 @@ public final /* synthetic */ class djk implements IInvokable {
                 return kotlinUnitVar;
             case 17:
                 View view2 = (View) obj;
-                View viewK2 = dkz.k(view2, R.layout.module_dialog_sns_upload_original_photo, null, false);
+                View viewK2 = StaticHelpers6.k(view2, R.layout.module_dialog_sns_upload_original_photo, null, false);
                 int i6 = R.id.moduleDialogRbSnsUploadOriginalPhotoConvert;
-                MaterialRadioButton materialRadioButton = (MaterialRadioButton) KotlinHelpers2.aq(viewK2,
+                MaterialRadioButton materialRadioButton = (MaterialRadioButton) KotlinHelpers2.recursivelyFindViewById(viewK2,
                         R.id.moduleDialogRbSnsUploadOriginalPhotoConvert);
                 if (materialRadioButton != null) {
                     i6 = R.id.moduleDialogRbSnsUploadOriginalPhotoCopy;
-                    MaterialRadioButton materialRadioButton2 = (MaterialRadioButton) KotlinHelpers2.aq(viewK2,
+                    MaterialRadioButton materialRadioButton2 = (MaterialRadioButton) KotlinHelpers2.recursivelyFindViewById(viewK2,
                             R.id.moduleDialogRbSnsUploadOriginalPhotoCopy);
                     if (materialRadioButton2 != null) {
                         i6 = R.id.moduleDialogRgSnsUploadOriginalPhotoMode;
-                        RadioGroup radioGroup = (RadioGroup) KotlinHelpers2.aq(viewK2,
+                        RadioGroup radioGroup = (RadioGroup) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                 R.id.moduleDialogRgSnsUploadOriginalPhotoMode);
                         if (radioGroup != null) {
                             LinearLayout linearLayout2 = (LinearLayout) viewK2;
@@ -311,7 +311,7 @@ public final /* synthetic */ class djk implements IInvokable {
                             objX = null;
                         }
                     } catch (Throwable th) {
-                        objX = bhu.x(th);
+                        objX = FastKV.x(th);
                     }
                     if (objX instanceof dcx) {
                         objX = null;
@@ -324,7 +324,7 @@ public final /* synthetic */ class djk implements IInvokable {
                             objX2 = null;
                         }
                     } catch (Throwable th2) {
-                        objX2 = bhu.x(th2);
+                        objX2 = FastKV.x(th2);
                     }
                     if (objX2 instanceof dcx) {
                         objX2 = null;
@@ -337,7 +337,7 @@ public final /* synthetic */ class djk implements IInvokable {
                             objX3 = null;
                         }
                     } catch (Throwable th3) {
-                        objX3 = bhu.x(th3);
+                        objX3 = FastKV.x(th3);
                     }
                     if (objX3 instanceof dcx) {
                         objX3 = null;
@@ -347,7 +347,7 @@ public final /* synthetic */ class djk implements IInvokable {
                     djz djzVar = djz.a;
                     String strConcat = str4.concat(str);
                     djzVar.getClass();
-                    Object objInvoke = emn.bb(djy.a).invoke(null, str6, strConcat);
+                    Object objInvoke = StaticHelpers7.bb(djy.a).invoke(null, str6, strConcat);
                     throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.Boolean" /*
                                                                                                         * cnb.z(-
                                                                                                         * 376548372773674L)
@@ -365,7 +365,7 @@ public final /* synthetic */ class djk implements IInvokable {
                             objX4 = null;
                         }
                     } catch (Throwable th4) {
-                        objX4 = bhu.x(th4);
+                        objX4 = FastKV.x(th4);
                     }
                     if (objX4 instanceof dcx) {
                         objX4 = null;
@@ -378,7 +378,7 @@ public final /* synthetic */ class djk implements IInvokable {
                             objX5 = null;
                         }
                     } catch (Throwable th5) {
-                        objX5 = bhu.x(th5);
+                        objX5 = FastKV.x(th5);
                     }
                     if (objX5 instanceof dcx) {
                         objX5 = null;
@@ -391,7 +391,7 @@ public final /* synthetic */ class djk implements IInvokable {
                             objX6 = null;
                         }
                     } catch (Throwable th6) {
-                        objX6 = bhu.x(th6);
+                        objX6 = FastKV.x(th6);
                     }
                     if (objX6 instanceof dcx) {
                         objX6 = null;
@@ -404,7 +404,7 @@ public final /* synthetic */ class djk implements IInvokable {
                             objX7 = null;
                         }
                     } catch (Throwable th7) {
-                        objX7 = bhu.x(th7);
+                        objX7 = FastKV.x(th7);
                     }
                     if (objX7 instanceof dcx) {
                         objX7 = null;
@@ -415,7 +415,7 @@ public final /* synthetic */ class djk implements IInvokable {
                         eoy eoyVar = eoy.a;
                         String strConcat2 = str9.concat(str);
                         eoyVar.getClass();
-                        Object objInvoke2 = emn.bb(eox.a).invoke(null, strConcat2, Boolean.TRUE);
+                        Object objInvoke2 = StaticHelpers7.bb(eox.a).invoke(null, strConcat2, Boolean.TRUE);
                         throwIfVar1IsNull(objInvoke2, "null cannot be cast to non-null type kotlin.String" /*
                                                                                                             * cnb.z(-
                                                                                                             * 107696304945962L)
@@ -468,7 +468,7 @@ public final /* synthetic */ class djk implements IInvokable {
                 bagVar2.b = zbVar2;
                 return kotlinUnitVar;
             case 24:
-                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new dko(0);
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new SyntheticMessOfLambdas(0);
                 return kotlinUnitVar;
             case 25:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new djk(28);
@@ -477,7 +477,7 @@ public final /* synthetic */ class djk implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new djk(29);
                 return kotlinUnitVar;
             case 27:
-                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new dko(1);
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new SyntheticMessOfLambdas(1);
                 return kotlinUnitVar;
             case 28:
                 bah bahVar8 = (bah) obj;

@@ -10,7 +10,7 @@ import android.widget.RelativeLayout;
 import me.hd.wauxv.obf.anj;
 import me.hd.wauxv.obf.anm;
 import me.hd.wauxv.obf.bfm;
-import me.hd.wauxv.obf.bht;
+import me.hd.wauxv.obf.ResourcesCompat;
 import me.hd.wauxv.obf.caz;
 import me.hd.wauxv.obf.cxt;
 import me.hd.wauxv.obf.no;
@@ -77,7 +77,7 @@ public class MaxRelativeLayout extends RelativeLayout implements anm {
     public final void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         if (this.j != 0) {
-            bht bhtVar = anj.a;
+            ResourcesCompat resourcesCompatVar = anj.a;
         }
     }
 

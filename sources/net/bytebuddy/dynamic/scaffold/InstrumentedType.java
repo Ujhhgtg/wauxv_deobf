@@ -10,7 +10,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.description.annotation.AnnotationDescription;
 import net.bytebuddy.description.annotation.AnnotationList;
@@ -30,7 +30,6 @@ import net.bytebuddy.description.type.TypeList;
 import net.bytebuddy.description.type.TypeVariableToken;
 import net.bytebuddy.dynamic.TargetType;
 import net.bytebuddy.dynamic.Transformer;
-import net.bytebuddy.dynamic.scaffold.TypeInitializer;
 import net.bytebuddy.implementation.LoadedTypeInitializer;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
 import net.bytebuddy.matcher.ElementMatcher;
@@ -356,7 +355,7 @@ public interface InstrumentedType extends TypeDescription {
                             throw new IllegalStateException("Cannot define array type or primitive type " + next2 + " + as declared type for " + this);
                         }
                         if (!hashSet3.add(next2)) {
-                            throw new IllegalStateException(dkz.u("Duplicate definition of declared type ", next2));
+                            throw new IllegalStateException(StaticHelpers6.concat("Duplicate definition of declared type ", next2));
                         }
                         it2 = it3;
                     }
@@ -374,7 +373,7 @@ public interface InstrumentedType extends TypeDescription {
                                 throw new IllegalStateException("Cannot define nest member " + next3 + " + within different package then " + this);
                             }
                             if (!hashSet4.add(next3)) {
-                                throw new IllegalStateException(dkz.u("Duplicate definition of nest member ", next3));
+                                throw new IllegalStateException(StaticHelpers6.concat("Duplicate definition of nest member ", next3));
                             }
                             it4 = it5;
                         }

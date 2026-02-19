@@ -22,11 +22,11 @@ public final class akz implements bul {
     }
 
     @Override // me.hd.wauxv.obf.bul
-    public final void e(bup bupVar, bug bugVar) {
+    public final void e(bup bupVar, LifeEventEnum lifeEventEnumVar) {
         switch (this.a) {
             case 0:
                 atg atgVar = (atg) this.b;
-                switch (aky.a[bugVar.ordinal()]) {
+                switch (aky.a[lifeEventEnumVar.ordinal()]) {
                     case 1:
                         atgVar.getClass();
                         break;
@@ -55,7 +55,7 @@ public final class akz implements bul {
                 }
                 bul bulVar = (bul) this.c;
                 if (bulVar != null) {
-                    bulVar.e(bupVar, bugVar);
+                    bulVar.e(bupVar, lifeEventEnumVar);
                     return;
                 }
                 return;
@@ -72,14 +72,14 @@ public final class akz implements bul {
                 }
                 return;
             case 2:
-                if (bugVar == bug.ON_DESTROY) {
+                if (lifeEventEnumVar == LifeEventEnum.ON_DESTROY) {
                     ((Handler) this.b).removeCallbacks((dc) this.c);
                     bupVar.ap().o(this);
                     return;
                 }
                 return;
             case 3:
-                if (bugVar == bug.ON_START) {
+                if (lifeEventEnumVar == LifeEventEnum.ON_START) {
                     ((bur) this.b).o(this);
                     ((but) this.c).ag();
                     return;
@@ -87,10 +87,10 @@ public final class akz implements bul {
                 return;
             default:
                 HashMap map = ((zg) this.c).a;
-                List list = (List) map.get(bugVar);
+                List list = (List) map.get(lifeEventEnumVar);
                 Object obj = this.b;
-                zg.c(list, bupVar, bugVar, obj);
-                zg.c((List) map.get(bug.ON_ANY), bupVar, bugVar, obj);
+                zg.c(list, bupVar, lifeEventEnumVar, obj);
+                zg.c((List) map.get(LifeEventEnum.ON_ANY), bupVar, lifeEventEnumVar, obj);
                 return;
         }
     }

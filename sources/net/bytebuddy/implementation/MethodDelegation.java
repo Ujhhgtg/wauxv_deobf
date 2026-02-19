@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.field.FieldDescription;
 import net.bytebuddy.description.method.MethodDescription;
@@ -17,7 +17,6 @@ import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.scaffold.FieldLocator;
 import net.bytebuddy.dynamic.scaffold.InstrumentedType;
 import net.bytebuddy.dynamic.scaffold.MethodGraph;
-import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.bind.MethodDelegationBinder;
 import net.bytebuddy.implementation.bind.annotation.TargetMethodAnnotationDrivenBinder;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
@@ -80,7 +79,7 @@ public class MethodDelegation implements Implementation.Composable {
         }
 
         public int hashCode() {
-            return this.compiled.hashCode() + dkz.h(this.assigner, (this.terminationHandler.hashCode() + ((this.processor.hashCode() + ((this.implementationTarget.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31)) * 31, 31);
+            return this.compiled.hashCode() + StaticHelpers6.h(this.assigner, (this.terminationHandler.hashCode() + ((this.processor.hashCode() + ((this.implementationTarget.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31)) * 31, 31);
         }
     }
 
@@ -119,7 +118,7 @@ public class MethodDelegation implements Implementation.Composable {
                 }
 
                 public int hashCode() {
-                    return this.records.hashCode() + dkz.f(this.typeDescription, getClass().hashCode() * 31, 31);
+                    return this.records.hashCode() + StaticHelpers6.f(this.typeDescription, getClass().hashCode() * 31, 31);
                 }
 
                 @Override // net.bytebuddy.implementation.MethodDelegation.ImplementationDelegate.Compiled
@@ -206,7 +205,7 @@ public class MethodDelegation implements Implementation.Composable {
                 }
 
                 public int hashCode() {
-                    return this.records.hashCode() + dkz.c(this.methodDescription, getClass().hashCode() * 31, 31);
+                    return this.records.hashCode() + StaticHelpers6.c(this.methodDescription, getClass().hashCode() * 31, 31);
                 }
 
                 @Override // net.bytebuddy.implementation.MethodDelegation.ImplementationDelegate.Compiled
@@ -303,7 +302,7 @@ public class MethodDelegation implements Implementation.Composable {
             }
 
             public int hashCode() {
-                return this.records.hashCode() + dkz.f(this.typeDescription, getClass().hashCode() * 31, 31);
+                return this.records.hashCode() + StaticHelpers6.f(this.typeDescription, getClass().hashCode() * 31, 31);
             }
 
             @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
@@ -614,10 +613,10 @@ public class MethodDelegation implements Implementation.Composable {
 
         public MethodDelegation to(TypeDescription typeDescription) {
             if (typeDescription.isArray()) {
-                throw new IllegalArgumentException(dkz.u("Cannot delegate to array ", typeDescription));
+                throw new IllegalArgumentException(StaticHelpers6.concat("Cannot delegate to array ", typeDescription));
             }
             if (typeDescription.isPrimitive()) {
-                throw new IllegalArgumentException(dkz.u("Cannot delegate to primitive ", typeDescription));
+                throw new IllegalArgumentException(StaticHelpers6.concat("Cannot delegate to primitive ", typeDescription));
             }
             return new MethodDelegation(ImplementationDelegate.ForStaticMethod.of(typeDescription.getDeclaredMethods().filter(ElementMatchers.isStatic().and(this.matcher)), TargetMethodAnnotationDrivenBinder.of(this.parameterBinders)), this.parameterBinders, this.ambiguityResolver, this.bindingResolver);
         }

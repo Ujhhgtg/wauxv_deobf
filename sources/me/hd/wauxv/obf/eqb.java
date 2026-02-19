@@ -9,7 +9,7 @@ public final class eqb extends bws implements IDexFind {
     public static final eqb a = new eqb();
 
     public static String b(String str) {
-        Method methodBb = emn.bb(eqa.a);
+        Method methodBb = StaticHelpers7.bb(eqa.a);
         epx.a.getClass();
         Object objInvoke = methodBb.invoke(epx.b(), str);
         throwIfVar1IsNull(objInvoke,
@@ -23,7 +23,7 @@ public final class eqb extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(eqa.a, dexKitBridge, new dos(28));
-        emn.aj(epz.a, dexKitBridge, new dos(29));
+        StaticHelpers7.resolveDexAndCache(eqa.a, dexKitBridge, new dos(28));
+        StaticHelpers7.resolveDexAndCache(epz.a, dexKitBridge, new dos(29));
     }
 }

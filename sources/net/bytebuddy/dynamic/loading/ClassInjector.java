@@ -33,8 +33,8 @@ import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.JarOutputStream;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.asm.MemberRemoval;
@@ -46,8 +46,6 @@ import net.bytebuddy.description.type.PackageDescription;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.ClassFileLocator;
 import net.bytebuddy.dynamic.DynamicType;
-import net.bytebuddy.dynamic.loading.ClassLoadingStrategy;
-import net.bytebuddy.dynamic.loading.PackageDefinitionStrategy;
 import net.bytebuddy.dynamic.scaffold.TypeValidation;
 import net.bytebuddy.dynamic.scaffold.subclass.ConstructorStrategy;
 import net.bytebuddy.implementation.FixedValue;
@@ -610,12 +608,12 @@ public interface ClassInjector {
                 throw new IllegalStateException("The current VM does not support class definition via method handle lookups");
             }
             if (!JavaType.METHOD_HANDLES_LOOKUP.isInstance(obj)) {
-                throw new IllegalArgumentException(dkz.r(obj, "Not a method handle lookup: "));
+                throw new IllegalArgumentException(StaticHelpers6.concatVar2Var1(obj, "Not a method handle lookup: "));
             }
             if ((METHOD_HANDLES_LOOKUP.lookupModes(obj) & 8) != 0) {
                 return new UsingLookup(obj);
             }
-            throw new IllegalArgumentException(dkz.r(obj, "Lookup does not imply package-access: "));
+            throw new IllegalArgumentException(StaticHelpers6.concatVar2Var1(obj, "Lookup does not imply package-access: "));
         }
 
         public boolean equals(@MaybeNull Object obj) {

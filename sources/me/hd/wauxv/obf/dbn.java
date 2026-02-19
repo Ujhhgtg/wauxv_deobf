@@ -9,7 +9,7 @@ public final class dbn extends cwn {
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public dbn(long j, bmu bmuVar, cwd cwdVar, dfx dfxVar) {
+    public dbn(long j, SyntheticPileOfMess bmuVar, cwd cwdVar, dfx dfxVar) {
         super(cwdVar, bmuVar, dfxVar);
         throwIfVar1IsNull(cwdVar, "proto");
         throwIfVar1IsNull(bmuVar, "writer");

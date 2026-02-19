@@ -17,7 +17,7 @@ public final class cez extends SwitchHook implements bnq {
     @Override // me.hd.wauxv.obf.bnq
     public final List a(ArrayList arrayList) {
         if (!z()) {
-            return EmptyReadonlyList.a;
+            return EmptyReadonlyList.INSTANCE;
         }
         ArrayList arrayList2 = new ArrayList();
         if (!arrayList.isEmpty()) {

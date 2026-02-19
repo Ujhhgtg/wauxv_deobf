@@ -13,16 +13,16 @@ public final class un extends SwitchHook implements IDexFind {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i = 0;
-        cde cdeVarT = yg.s(-490090128210730L).t();
-        cdeVarT.ab = "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-489914034551594L)  */;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
-        exg exgVar = exg.a;
+        MethodResolver methodResolverVarT = yg.s(-490090128210730L).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-489914034551594L)  */;
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         un unVar = a;
-        aki akiVarAd = unVar.ad(methodHookWrapperVar, exgVar);
+        aki akiVarAd = unVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
         unVar.y(akiVarAd, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(14));
         akiVarAd.o();
-        emn.bc(um.a, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(15));
-        emn.bc(ul.a, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(16));
+        StaticHelpers7.bc(um.a, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(15));
+        StaticHelpers7.bc(ul.a, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(16));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -37,8 +37,8 @@ public final class un extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(um.a, dexKitBridge, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(19));
-        emn.aj(ul.a, dexKitBridge, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(20));
+        StaticHelpers7.resolveDexAndCache(um.a, dexKitBridge, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(19));
+        StaticHelpers7.resolveDexAndCache(ul.a, dexKitBridge, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(20));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

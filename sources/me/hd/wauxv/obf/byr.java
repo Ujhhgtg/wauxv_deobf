@@ -9,20 +9,20 @@ public final class byr extends bws implements IDexFind {
 
     public static Object b() {
         int i = 0;
-        cde cdeVarT = dqc.bh(emn.az(byp.a)).t();
+        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(byp.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
         ahd.a.getClass();
-        cdeVarT.a = emn.az(ahc.a);
-        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
+        methodResolverVarT.returnType = StaticHelpers7.az(ahc.a);
+        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }
 
     public static Object c() {
         int i = 0;
-        cde cdeVarT = dqc.bh(emn.az(byp.a)).t();
+        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(byp.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
         cme.a.getClass();
-        cdeVarT.a = emn.bb(cmc.a).getDeclaringClass();
-        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
+        methodResolverVarT.returnType = StaticHelpers7.bb(cmc.a).getDeclaringClass();
+        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }
@@ -33,7 +33,7 @@ public final class byr extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(byp.a, dexKitBridge, new bty(20));
-        emn.aj(byq.a, dexKitBridge, new bty(21));
+        StaticHelpers7.resolveDexAndCache(byp.a, dexKitBridge, new bty(20));
+        StaticHelpers7.resolveDexAndCache(byq.a, dexKitBridge, new bty(21));
     }
 }

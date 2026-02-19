@@ -54,13 +54,13 @@ public final /* synthetic */ class yr implements bfu {
                 return (yu) obj;
             default:
                 ArrayList arrayList = yuVar.h;
-                ArrayList arrayList2 = new ArrayList(abb.ak(arrayList, 10));
+                ArrayList arrayList2 = new ArrayList(StaticHelpers4.ak(arrayList, 10));
                 Iterator it = arrayList.iterator();
                 while (it.hasNext()) {
                     arrayList2.add(Long.valueOf(nd.d(i2, ((Number) it.next()).intValue())));
                 }
                 ByteBuffer byteBufferWrap2 = ByteBuffer
-                        .wrap(DexKitBridge.nativeGetClassByIds(DexKitBridge.b(dexKitBridge), aaz.aa(arrayList2)));
+                        .wrap(DexKitBridge.nativeGetClassByIds(DexKitBridge.b(dexKitBridge), StaticHelpers5.aa(arrayList2)));
                 throwIfVar1IsNull(byteBufferWrap2, "wrap(...)");
                 c cVar2 = new c();
                 cVar2.h(byteBufferWrap2.position() + bjs.f(byteBufferWrap2, ByteOrder.LITTLE_ENDIAN), byteBufferWrap2);

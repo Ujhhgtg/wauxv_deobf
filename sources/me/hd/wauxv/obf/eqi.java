@@ -24,19 +24,19 @@ public final class eqi extends cyw {
     }
 
     @Override // me.hd.wauxv.obf.cyw
-    public final void f(czx czxVar, int i) {
-        eqc eqcVar = czxVar instanceof eqc ? (eqc) czxVar : null;
+    public final void f(SomeView someViewVar, int i) {
+        eqc eqcVar = someViewVar instanceof eqc ? (eqc) someViewVar : null;
         if (eqcVar != null) {
             eqcVar.a((oc) this.a.get(i));
         }
     }
 
     @Override // me.hd.wauxv.obf.cyw
-    public final czx g(ViewGroup viewGroup, int i) {
+    public final SomeView g(ViewGroup viewGroup, int i) {
         if (i == 0) {
             View viewInflate = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_rv_view_header,
                     viewGroup, false);
-            MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.aq(viewInflate,
+            MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewInflate,
                     R.id.itemHeaderViewTextViewTitle);
             if (materialTextView != null) {
                 return new eqd(new bqq((LinearLayout) viewInflate, materialTextView, 1));
@@ -56,15 +56,15 @@ public final class eqi extends cyw {
         View viewInflate2 = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_rv_view_content,
                 viewGroup, false);
         int i2 = R.id.itemContentViewImageViewNav;
-        ShapeableImageView shapeableImageView = (ShapeableImageView) KotlinHelpers2.aq(viewInflate2,
+        ShapeableImageView shapeableImageView = (ShapeableImageView) KotlinHelpers2.recursivelyFindViewById(viewInflate2,
                 R.id.itemContentViewImageViewNav);
         if (shapeableImageView != null) {
             i2 = R.id.itemContentViewTextViewDesc;
-            MaterialTextView materialTextView2 = (MaterialTextView) KotlinHelpers2.aq(viewInflate2,
+            MaterialTextView materialTextView2 = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewInflate2,
                     R.id.itemContentViewTextViewDesc);
             if (materialTextView2 != null) {
                 i2 = R.id.itemContentViewTextViewTitle;
-                MaterialTextView materialTextView3 = (MaterialTextView) KotlinHelpers2.aq(viewInflate2,
+                MaterialTextView materialTextView3 = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewInflate2,
                         R.id.itemContentViewTextViewTitle);
                 if (materialTextView3 != null) {
                     return new eqd(new bqr((LinearLayout) viewInflate2, shapeableImageView, materialTextView2,

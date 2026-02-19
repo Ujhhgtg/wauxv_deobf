@@ -17,7 +17,7 @@ public final class edb {
     public /* synthetic */ edb(int i, Integer num, Float f, Integer num2, Integer num3, Float f2, Integer num4,
             Integer num5, Long l, String str) {
         if (511 != (i & 511)) {
-            bht.ah(i, 511, ecz.b.getDescriptor());
+            ResourcesCompat.ah(i, 511, ecz.b.getDescriptor());
             throw null;
         }
         this.a = num;
@@ -77,7 +77,7 @@ public final class edb {
         bjs.v(sb, this.e, -247561914940202L);
         bjs.w(sb, this.f, -247454540757802L);
         bjs.w(sb, this.g, -247871152585514L);
-        dkz.ad(sb, this.h, -247759483435818L);
+        StaticHelpers6.ad(sb, this.h, -247759483435818L);
         return concat(sb, this.i, ')');
     }
 }

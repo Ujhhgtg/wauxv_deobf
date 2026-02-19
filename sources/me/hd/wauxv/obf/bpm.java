@@ -453,7 +453,7 @@ public final class bpm {
                                         Pattern pattern = i;
                                         y(pattern);
                                         i3 = 1;
-                                        int iZ = bht.z(this.r, this.q);
+                                        int iZ = ResourcesCompat.z(this.r, this.q);
                                         if (iZ == -1) {
                                             strE2 = null;
                                         } else {
@@ -476,7 +476,7 @@ public final class bpm {
                                                     if (cCharAt != '\"') {
                                                         c2 = '\'';
                                                         if (cCharAt == '\'') {
-                                                            iAb = bht.ab(str6, i13 + 1, c2);
+                                                            iAb = ResourcesCompat.ab(str6, i13 + 1, c2);
                                                             if (iAb == -1 && iAb < str6.length() && str6.charAt(iAb) == c2) {
                                                                 i4 = iAb + 1;
                                                                 i11 = -1;
@@ -489,7 +489,7 @@ public final class bpm {
                                                             i4 = -1;
                                                         } else {
                                                             c2 = ')';
-                                                            iAb = bht.ab(str6, i13 + 1, c2);
+                                                            iAb = ResourcesCompat.ab(str6, i13 + 1, c2);
                                                             if (iAb == -1) {
                                                                 i11 = -1;
                                                                 i4 = -1;
@@ -499,7 +499,7 @@ public final class bpm {
                                                             }
                                                         }
                                                     } else {
-                                                        iAb = bht.ab(str6, i13 + 1, c2);
+                                                        iAb = ResourcesCompat.ab(str6, i13 + 1, c2);
                                                         if (iAb == -1) {
                                                             i11 = -1;
                                                             i4 = -1;
@@ -540,7 +540,7 @@ public final class bpm {
                                         int i14 = this.r;
                                         if (i14 < this.q.length() && this.q.charAt(this.r) == '[') {
                                             int i15 = this.r + 1;
-                                            int iAa = bht.aa(i15, this.q);
+                                            int iAa = ResourcesCompat.aa(i15, this.q);
                                             int i16 = iAa - i15;
                                             if (iAa != -1 && i16 <= 999 && iAa < this.q.length() && this.q.charAt(iAa) == ']') {
                                                 this.r = iAa + 1;

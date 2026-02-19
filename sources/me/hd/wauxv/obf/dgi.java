@@ -36,7 +36,7 @@ public final class dgi extends LinearLayout {
         layoutParams.gravity = 17;
         textView.setLayoutParams(layoutParams);
         textView.setGravity(17);
-        int iIntValue = bhu.al(32, textView.getContext()).intValue();
+        int iIntValue = FastKV.al(32, textView.getContext()).intValue();
         textView.setPadding(iIntValue, iIntValue, iIntValue, iIntValue);
         textView.setOnClickListener(new ccw(this, i, 1));
         return textView;
@@ -48,17 +48,17 @@ public final class dgi extends LinearLayout {
         LinearLayout linearLayout = new LinearLayout(scrollView.getContext());
         linearLayout.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
         linearLayout.setOrientation(1);
-        int iIntValue = bhu.al(32, linearLayout.getContext()).intValue();
+        int iIntValue = FastKV.al(32, linearLayout.getContext()).intValue();
         linearLayout.setPadding(iIntValue, iIntValue, iIntValue, iIntValue);
         int i2 = 2;
         if (i == 0 || i == 2) {
-            dov dovVar = ajf.a;
+            Kotlin$Lazy kotlin$LazyVar = ajf.a;
             for (oc ocVar : ajf.b(Boolean.valueOf(i == 2))) {
                 if (ocVar instanceof nz) {
                     LinearLayout linearLayout2 = new LinearLayout(linearLayout.getContext());
                     linearLayout2.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
                     linearLayout2.setOrientation(1);
-                    linearLayout2.setPadding(bhu.al(16, linearLayout2.getContext()).intValue(), bhu.al(32, linearLayout2.getContext()).intValue(), bhu.al(16, linearLayout2.getContext()).intValue(), bhu.al(32, linearLayout2.getContext()).intValue());
+                    linearLayout2.setPadding(FastKV.al(16, linearLayout2.getContext()).intValue(), FastKV.al(32, linearLayout2.getContext()).intValue(), FastKV.al(16, linearLayout2.getContext()).intValue(), FastKV.al(32, linearLayout2.getContext()).intValue());
                     TextView textView = new TextView(linearLayout2.getContext());
                     textView.setText(((nz) ocVar).a);
                     textView.setTextSize(16.0f);
@@ -68,7 +68,7 @@ public final class dgi extends LinearLayout {
                     LinearLayout linearLayout3 = new LinearLayout(linearLayout.getContext());
                     linearLayout3.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
                     linearLayout3.setOrientation(1);
-                    linearLayout3.setPadding(bhu.al(16, linearLayout3.getContext()).intValue(), bhu.al(32, linearLayout3.getContext()).intValue(), bhu.al(16, linearLayout3.getContext()).intValue(), bhu.al(32, linearLayout3.getContext()).intValue());
+                    linearLayout3.setPadding(FastKV.al(16, linearLayout3.getContext()).intValue(), FastKV.al(32, linearLayout3.getContext()).intValue(), FastKV.al(16, linearLayout3.getContext()).intValue(), FastKV.al(32, linearLayout3.getContext()).intValue());
                     Switch r10 = new Switch(linearLayout3.getContext());
                     ob obVar = (ob) ocVar;
                     r10.setText(obVar.a);

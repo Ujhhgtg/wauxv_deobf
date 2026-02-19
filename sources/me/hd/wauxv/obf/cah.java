@@ -10,7 +10,7 @@ import androidx.core.widget.NestedScrollView;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cah extends aq {
+public final class cah extends AccessibilityDelegateCompat {
     public final /* synthetic */ int a;
 
     public /* synthetic */ cah(int i) {
@@ -18,25 +18,25 @@ public final class cah extends aq {
     }
 
     @Override // me.hd.wauxv.obf.aq
-    public final void d(View view, bd bdVar) {
+    public final void onInitializeAccessibilityNodeInfo(View view, bd bdVar) {
         int scrollRange;
         switch (this.a) {
             case 0:
                 AccessibilityNodeInfo accessibilityNodeInfo = bdVar.a;
-                this.g.onInitializeAccessibilityNodeInfo(view, accessibilityNodeInfo);
+                this.accessibilityDelegate.onInitializeAccessibilityNodeInfo(view, accessibilityNodeInfo);
                 accessibilityNodeInfo.setCollectionInfo(null);
                 break;
             case 1:
-                this.g.onInitializeAccessibilityNodeInfo(view, bdVar.a);
+                this.accessibilityDelegate.onInitializeAccessibilityNodeInfo(view, bdVar.a);
                 bdVar.m(false);
                 break;
             case 2:
                 AccessibilityNodeInfo accessibilityNodeInfo2 = bdVar.a;
-                this.g.onInitializeAccessibilityNodeInfo(view, accessibilityNodeInfo2);
+                this.accessibilityDelegate.onInitializeAccessibilityNodeInfo(view, accessibilityNodeInfo2);
                 accessibilityNodeInfo2.setCollectionInfo(null);
                 break;
             default:
-                this.g.onInitializeAccessibilityNodeInfo(view, bdVar.a);
+                this.accessibilityDelegate.onInitializeAccessibilityNodeInfo(view, bdVar.a);
                 NestedScrollView nestedScrollView = (NestedScrollView) view;
                 bdVar.k(ScrollView.class.getName());
                 if (nestedScrollView.isEnabled() && (scrollRange = nestedScrollView.getScrollRange()) > 0) {
@@ -58,11 +58,11 @@ public final class cah extends aq {
     /* JADX WARN: Found duplicated region for block: B:29:0x0075  */
     /* JADX WARN: Found duplicated region for block: B:31:0x0092  */
     @Override // me.hd.wauxv.obf.aq
-    public boolean e(View view, int i, Bundle bundle) {
+    public boolean performAccessibilityAction(View view, int i, Bundle bundle) {
         int iMin;
         switch (this.a) {
             case 3:
-                if (super.e(view, i, bundle)) {
+                if (super.performAccessibilityAction(view, i, bundle)) {
                     return true;
                 }
                 NestedScrollView nestedScrollView = (NestedScrollView) view;
@@ -94,15 +94,15 @@ public final class cah extends aq {
                 }
                 return false;
             default:
-                return super.e(view, i, bundle);
+                return super.performAccessibilityAction(view, i, bundle);
         }
     }
 
     @Override // me.hd.wauxv.obf.aq
-    public void k(View view, AccessibilityEvent accessibilityEvent) {
+    public void initializeAccessibilityEvent(View view, AccessibilityEvent accessibilityEvent) {
         switch (this.a) {
             case 3:
-                super.k(view, accessibilityEvent);
+                super.initializeAccessibilityEvent(view, accessibilityEvent);
                 NestedScrollView nestedScrollView = (NestedScrollView) view;
                 accessibilityEvent.setClassName(ScrollView.class.getName());
                 accessibilityEvent.setScrollable(nestedScrollView.getScrollRange() > 0);
@@ -112,7 +112,7 @@ public final class cah extends aq {
                 accessibilityEvent.setMaxScrollY(nestedScrollView.getScrollRange());
                 break;
             default:
-                super.k(view, accessibilityEvent);
+                super.initializeAccessibilityEvent(view, accessibilityEvent);
                 break;
         }
     }

@@ -6,7 +6,7 @@ import java.util.WeakHashMap;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class eur extends emn {
+public final class eur extends StaticHelpers7 {
     public final /* synthetic */ int a;
     public final /* synthetic */ eut b;
 
@@ -37,7 +37,7 @@ public final class eur extends emn {
                 }
                 ActionBarOverlayLayout actionBarOverlayLayout = eutVar.ar;
                 if (actionBarOverlayLayout != null) {
-                    WeakHashMap weakHashMap = eqz.a;
+                    WeakHashMap weakHashMap = ViewCompat.a;
                     eqo.c(actionBarOverlayLayout);
                 }
                 break;

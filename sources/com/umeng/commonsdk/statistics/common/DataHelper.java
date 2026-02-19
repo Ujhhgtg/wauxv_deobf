@@ -13,7 +13,7 @@ import javax.crypto.Cipher;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -37,9 +37,9 @@ public class DataHelper {
         for (byte b : bArr) {
             String hexString = Integer.toHexString(b & 255);
             if (hexString.length() == 1) {
-                strS = dkz.s(strS, "0");
+                strS = StaticHelpers6.concat(strS, "0");
             }
-            strS = dkz.s(strS, hexString);
+            strS = StaticHelpers6.concat(strS, hexString);
         }
         return strS;
     }

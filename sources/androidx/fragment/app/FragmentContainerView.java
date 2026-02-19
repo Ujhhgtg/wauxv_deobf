@@ -10,21 +10,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowInsets;
 import android.widget.FrameLayout;
-import com.umeng.analytics.pro.f;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.WeakHashMap;
 import me.hd.wauxv.R;
-import me.hd.wauxv.obf.bdj;
+import me.hd.wauxv.obf.SomeFragmentManager;
 import me.hd.wauxv.obf.bdm;
 import me.hd.wauxv.obf.bdz;
 import me.hd.wauxv.obf.beg;
-import me.hd.wauxv.obf.bfb;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.KotlinHelpers;
+import me.hd.wauxv.obf.FragmentManager;
 import me.hd.wauxv.obf.cya;
 import me.hd.wauxv.obf.eqo;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.evr;
 import me.hd.wauxv.obf.hb;
 import me.hd.wauxv.obf.mu;
@@ -48,7 +46,7 @@ public final class FragmentContainerView extends FrameLayout {
     public final void addView(View child, int i, ViewGroup.LayoutParams layoutParams) {
         throwIfVar1IsNull(child, "child");
         Object tag = child.getTag(R.id.fragment_container_view_tag);
-        if ((tag instanceof bdj ? (bdj) tag : null) != null) {
+        if ((tag instanceof SomeFragmentManager ? (SomeFragmentManager) tag : null) != null) {
             super.addView(child, i, layoutParams);
             return;
         }
@@ -69,7 +67,7 @@ public final class FragmentContainerView extends FrameLayout {
             throwIfVar1IsNull(windowInsetsOnApplyWindowInsets, "onApplyWindowInsetsListe…lyWindowInsets(v, insets)");
             evrVarD = evr.d(null, windowInsetsOnApplyWindowInsets);
         } else {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             WindowInsets windowInsetsI = evrVarD2.i();
             if (windowInsetsI != null) {
                 WindowInsets windowInsetsB = eqo.tryGetClassByName(this, windowInsetsI);
@@ -82,7 +80,7 @@ public final class FragmentContainerView extends FrameLayout {
         if (!evrVarD.b.ac()) {
             int childCount = getChildCount();
             for (int i = 0; i < childCount; i++) {
-                eqz.h(getChildAt(i), evrVarD);
+                ViewCompat.h(getChildAt(i), evrVarD);
             }
         }
         return insets;
@@ -129,26 +127,26 @@ public final class FragmentContainerView extends FrameLayout {
         super.endViewTransition(view);
     }
 
-    public final <F extends bdj> F getFragment() {
+    public final <F extends SomeFragmentManager> F getFragment() {
         hb hbVar;
-        bdj bdjVar;
+        SomeFragmentManager someFragmentManagerVar;
         beg begVarCp;
         View view = this;
         while (true) {
             hbVar = null;
             if (view == null) {
-                bdjVar = null;
+                someFragmentManagerVar = null;
                 break;
             }
             Object tag = view.getTag(R.id.fragment_container_view_tag);
-            bdjVar = tag instanceof bdj ? (bdj) tag : null;
-            if (bdjVar != null) {
+            someFragmentManagerVar = tag instanceof SomeFragmentManager ? (SomeFragmentManager) tag : null;
+            if (someFragmentManagerVar != null) {
                 break;
             }
             Object parent = view.getParent();
             view = parent instanceof View ? (View) parent : null;
         }
-        if (bdjVar == null) {
+        if (someFragmentManagerVar == null) {
             for (Context context = getContext(); context instanceof ContextWrapper; context = ((ContextWrapper) context)
                     .getBaseContext()) {
                 if (context instanceof hb) {
@@ -161,11 +159,11 @@ public final class FragmentContainerView extends FrameLayout {
             }
             begVarCp = ((bdm) hbVar.c.v).g;
         } else {
-            if (!bdjVar.cv()) {
-                throw new IllegalStateException("The Fragment " + bdjVar + " that owns View " + this
+            if (!someFragmentManagerVar.cv()) {
+                throw new IllegalStateException("The Fragment " + someFragmentManagerVar + " that owns View " + this
                         + " has already been destroyed. Nested fragments should always use the child FragmentManager.");
             }
-            begVarCp = bdjVar.cp();
+            begVarCp = someFragmentManagerVar.cp();
         }
         return (F) begVarCp.ca(getId());
     }
@@ -307,27 +305,27 @@ public final class FragmentContainerView extends FrameLayout {
         String string = typedArrayObtainStyledAttributes.getString(1);
         typedArrayObtainStyledAttributes.recycle();
         int id = getId();
-        bdj bdjVarCa = begVar.ca(id);
-        if (classAttribute != null && bdjVarCa == null) {
+        SomeFragmentManager someFragmentManagerVarCa = begVar.ca(id);
+        if (classAttribute != null && someFragmentManagerVarCa == null) {
             if (id == -1) {
                 throw new IllegalStateException(concat("FragmentContainerView must have an android:id to add Fragment ",
                         classAttribute, string != null ? " with tag ".concat(string) : ""));
             }
             bdz bdzVarCe = begVar.ce();
             context.getClassLoader();
-            bdj bdjVarE = bdzVarCe.e(classAttribute);
-            throwIfVar1IsNull(bdjVarE, "fm.fragmentFactory.insta…ontext.classLoader, name)");
-            bdjVarE.bq = id;
-            bdjVarE.br = id;
-            bdjVarE.bs = string;
-            bdjVarE.bm = begVar;
-            bdjVarE.bn = begVar.w;
-            bdjVarE.i(context, attributeSet, null);
+            SomeFragmentManager someFragmentManagerVarE = bdzVarCe.e(classAttribute);
+            throwIfVar1IsNull(someFragmentManagerVarE, "fm.fragmentFactory.insta…ontext.classLoader, name)");
+            someFragmentManagerVarE.bq = id;
+            someFragmentManagerVarE.br = id;
+            someFragmentManagerVarE.bs = string;
+            someFragmentManagerVarE.bm = begVar;
+            someFragmentManagerVarE.bn = begVar.w;
+            someFragmentManagerVarE.i(context, attributeSet, null);
             mu muVar = new mu(begVar);
             muVar.p = true;
-            bdjVarE.by = this;
-            bdjVarE.bi = true;
-            muVar.ac(getId(), bdjVarE, string, 1);
+            someFragmentManagerVarE.by = this;
+            someFragmentManagerVarE.bi = true;
+            muVar.ac(getId(), someFragmentManagerVarE, string, 1);
             if (!muVar.g) {
                 muVar.h = false;
                 muVar.r.bx(muVar, true);
@@ -335,12 +333,12 @@ public final class FragmentContainerView extends FrameLayout {
                 throw new IllegalStateException("This transaction is already being added to the back stack");
             }
         }
-        for (bfb bfbVar : begVar.c.ac()) {
-            bdj bdjVar = bfbVar.c;
-            if (bdjVar.br == getId() && (view = bdjVar.bz) != null && view.getParent() == null) {
-                bdjVar.by = this;
-                bfbVar.g();
-                bfbVar.p();
+        for (FragmentManager fragmentManagerVar : begVar.c.ac()) {
+            SomeFragmentManager someFragmentManagerVar = fragmentManagerVar.c;
+            if (someFragmentManagerVar.br == getId() && (view = someFragmentManagerVar.bz) != null && view.getParent() == null) {
+                someFragmentManagerVar.by = this;
+                fragmentManagerVar.g();
+                fragmentManagerVar.p();
             }
         }
     }

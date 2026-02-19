@@ -13,7 +13,7 @@ public final class su implements Comparable {
 
     @Override // java.lang.Comparable
     public final int compareTo(Object obj) {
-        return bhu.t(this.b, ((su) obj).b);
+        return FastKV.t(this.b, ((su) obj).b);
     }
 
     public final String toString() {

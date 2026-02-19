@@ -16,7 +16,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.regex.Pattern;
-import me.hd.wauxv.obf.abb;
+import me.hd.wauxv.obf.StaticHelpers4;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.avh;
@@ -361,7 +361,7 @@ public final class HttpUrl {
             }
             int iEffectivePort = effectivePort();
             List<String> list = this.encodedPathSegments;
-            ArrayList arrayList2 = new ArrayList(abb.ak(list, 10));
+            ArrayList arrayList2 = new ArrayList(StaticHelpers4.ak(list, 10));
             Iterator<T> it = list.iterator();
             while (it.hasNext()) {
                 arrayList2.add(Companion.percentDecode$okhttp$default(HttpUrl.Companion, (String) it.next(), 0, 0,
@@ -369,7 +369,7 @@ public final class HttpUrl {
             }
             List<String> list2 = this.encodedQueryNamesAndValues;
             if (list2 != null) {
-                ArrayList arrayList3 = new ArrayList(abb.ak(list2, 10));
+                ArrayList arrayList3 = new ArrayList(StaticHelpers4.ak(list2, 10));
                 for (String str3 : list2) {
                     arrayList3.add(str3 != null
                             ? Companion.percentDecode$okhttp$default(HttpUrl.Companion, str3, 0, 0, true, 3, null)
@@ -1494,7 +1494,7 @@ public final class HttpUrl {
     public final List<String> queryParameterValues(String str) {
         throwIfVar1IsNull(str, "name");
         if (this.queryNamesAndValues == null) {
-            return EmptyReadonlyList.a;
+            return EmptyReadonlyList.INSTANCE;
         }
         ArrayList arrayList = new ArrayList();
         KotlinIntProgression intRangeVarBj = dqc.bj(dqc.bm(0, this.queryNamesAndValues.size()), 2);

@@ -11,14 +11,14 @@ public final class dlx extends bws implements IDexFind {
         int i = 0;
         ahd.a.getClass();
         byr.a.getClass();
-        azg azgVarR = dqc.bi(byr.b()).r();
+        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(byr.b()).r();
         a.getClass();
-        azgVarR.a = emn.az(dlw.a);
-        Object objD = ((azk) aaz.e(azgVarR.c())).d();
+        fieldResolverVarR.fieldType = StaticHelpers7.az(dlw.a);
+        Object objD = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).d();
         throwIfVar1IsNull(objD);
-        cde cdeVarT = dqc.bi(objD).t();
-        cdeVarT.a = "com.tencent.wcdb.database.SQLiteDatabase" /* "com.tencent.wcdb.database.SQLiteDatabase" /* "com.tencent.wcdb.database.SQLiteDatabase" /* "com.tencent.wcdb.database.SQLiteDatabase" /* cnb.z(-102542344190762L)   */;
-        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objD).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.returnType = "com.tencent.wcdb.database.SQLiteDatabase" /* "com.tencent.wcdb.database.SQLiteDatabase" /* "com.tencent.wcdb.database.SQLiteDatabase" /* "com.tencent.wcdb.database.SQLiteDatabase" /* cnb.z(-102542344190762L)   */;
+        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }
@@ -29,6 +29,6 @@ public final class dlx extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(dlw.a, dexKitBridge, new dko(8));
+        StaticHelpers7.resolveDexAndCache(dlw.a, dexKitBridge, new SyntheticMessOfLambdas(8));
     }
 }

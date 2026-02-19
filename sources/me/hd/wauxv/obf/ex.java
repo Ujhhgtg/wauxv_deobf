@@ -20,7 +20,7 @@ public final class ex implements Comparator {
             case 0:
                 return ((int[]) obj)[0] - ((int[]) obj2)[0];
             case 1:
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 float fG = eqq.g((View) obj);
                 float fG2 = eqq.g((View) obj2);
                 if (fG > fG2) {

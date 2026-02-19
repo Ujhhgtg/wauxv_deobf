@@ -10,10 +10,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-import me.hd.wauxv.obf.aaz;
-import me.hd.wauxv.obf.abb;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.KotlinHelpers;
+import me.hd.wauxv.obf.StaticHelpers5;
+import me.hd.wauxv.obf.StaticHelpers4;
 import okhttp3.internal.Util;
 import okhttp3.internal.connection.RealCall;
 
@@ -177,7 +175,7 @@ public final class Dispatcher {
         List<Call> listUnmodifiableList;
         try {
             ArrayDeque<RealCall.AsyncCall> arrayDeque = this.readyAsyncCalls;
-            ArrayList arrayList = new ArrayList(abb.ak(arrayDeque, 10));
+            ArrayList arrayList = new ArrayList(StaticHelpers4.ak(arrayDeque, 10));
             Iterator<T> it = arrayDeque.iterator();
             while (it.hasNext()) {
                 arrayList.add(((RealCall.AsyncCall) it.next()).getCall());
@@ -199,12 +197,12 @@ public final class Dispatcher {
         try {
             ArrayDeque<RealCall> arrayDeque = this.runningSyncCalls;
             ArrayDeque<RealCall.AsyncCall> arrayDeque2 = this.runningAsyncCalls;
-            ArrayList arrayList = new ArrayList(abb.ak(arrayDeque2, 10));
+            ArrayList arrayList = new ArrayList(StaticHelpers4.ak(arrayDeque2, 10));
             Iterator<T> it = arrayDeque2.iterator();
             while (it.hasNext()) {
                 arrayList.add(((RealCall.AsyncCall) it.next()).getCall());
             }
-            listUnmodifiableList = Collections.unmodifiableList(aaz.o(arrayDeque, arrayList));
+            listUnmodifiableList = Collections.unmodifiableList(StaticHelpers5.o(arrayDeque, arrayList));
             throwIfVar1IsNull(listUnmodifiableList, "unmodifiableList(running…yncCalls.map { it.call })");
         } catch (Throwable th) {
             throw th;

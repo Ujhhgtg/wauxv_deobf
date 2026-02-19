@@ -34,7 +34,7 @@ public final class cop implements dfx {
 
     @Override // me.hd.wauxv.obf.dfx
     public final List getAnnotations() {
-        return EmptyReadonlyList.a;
+        return EmptyReadonlyList.INSTANCE;
     }
 
     @Override // me.hd.wauxv.obf.dfx

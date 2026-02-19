@@ -40,7 +40,7 @@ import me.hd.wauxv.obf.cxy;
 import me.hd.wauxv.obf.dhq;
 import me.hd.wauxv.obf.eqo;
 import me.hd.wauxv.obf.eqq;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.ere;
 import me.hd.wauxv.obf.erp;
 import me.hd.wauxv.obf.evr;
@@ -95,7 +95,7 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
         int[] iArr = cxy.a;
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr,
                 R.attr.coordinatorLayoutStyle, 0);
-        eqz.r(this, context, iArr, attributeSet, typedArrayObtainStyledAttributes, R.attr.coordinatorLayoutStyle, 0);
+        ViewCompat.r(this, context, iArr, attributeSet, typedArrayObtainStyledAttributes, R.attr.coordinatorLayoutStyle, 0);
         int resourceId = typedArrayObtainStyledAttributes.getResourceId(0, 0);
         if (resourceId != 0) {
             Resources resources = context.getResources();
@@ -174,7 +174,7 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
         agu aguVar = (agu) view.getLayoutParams();
         int i2 = aguVar.i;
         if (i2 != i) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             view.offsetLeftAndRight(i - i2);
             aguVar.i = i;
         }
@@ -184,7 +184,7 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
         agu aguVar = (agu) view.getLayoutParams();
         int i2 = aguVar.j;
         if (i2 != i) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             view.offsetTopAndBottom(i - i2);
             aguVar.j = i;
         }
@@ -577,11 +577,11 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                             int i15 = rectY6.left - rectY5.left;
                             int i16 = rectY6.top - rectY5.top;
                             if (i15 != 0) {
-                                WeakHashMap weakHashMap = eqz.a;
+                                WeakHashMap weakHashMap = ViewCompat.a;
                                 view.offsetLeftAndRight(i15);
                             }
                             if (i16 != 0) {
-                                WeakHashMap weakHashMap2 = eqz.a;
+                                WeakHashMap weakHashMap2 = ViewCompat.a;
                                 view.offsetTopAndBottom(i16);
                             }
                             if (z3 && (agrVar = aguVar3.a) != null) {
@@ -819,7 +819,7 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                 (getWidth() - getPaddingRight()) - ((ViewGroup.MarginLayoutParams) aguVar4).rightMargin,
                 (getHeight() - getPaddingBottom()) - ((ViewGroup.MarginLayoutParams) aguVar4).bottomMargin);
         if (this.s != null) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             if (getFitsSystemWindows() && !view.getFitsSystemWindows()) {
                 rectY3.left = this.s.f() + rectY3.left;
                 rectY3.top = this.s.h() + rectY3.top;
@@ -1040,7 +1040,7 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
     }
 
     public final void ax() {
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         if (!getFitsSystemWindows()) {
             eqq.l(this, null);
             return;
@@ -1157,7 +1157,7 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
             getViewTreeObserver().addOnPreDrawListener(this.q);
         }
         if (this.s == null) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             if (getFitsSystemWindows()) {
                 eqo.c(this);
             }
@@ -1305,7 +1305,7 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
         int suggestedMinimumWidth = coordinatorLayout.getSuggestedMinimumWidth();
         int suggestedMinimumHeight = coordinatorLayout.getSuggestedMinimumHeight();
         if (coordinatorLayout.s != null) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             z2 = coordinatorLayout.getFitsSystemWindows();
         }
         ArrayList arrayList3 = coordinatorLayout.f;
@@ -1341,7 +1341,7 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                             iMax = Math.max(0, iAn - paddingLeft);
                         }
                         if (z2) {
-                            WeakHashMap weakHashMap2 = eqz.a;
+                            WeakHashMap weakHashMap2 = ViewCompat.a;
                             if (view2.getFitsSystemWindows()) {
                                 i6 = i4;
                                 iMakeMeasureSpec = i;
@@ -1418,7 +1418,7 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                     i5 = iMax;
                     i4 = i25;
                     if (z2) {
-                        WeakHashMap weakHashMap22 = eqz.a;
+                        WeakHashMap weakHashMap22 = ViewCompat.a;
                         if (view2.getFitsSystemWindows()) {
                             i6 = i4;
                             int iG2 = coordinatorLayout.s.g() + coordinatorLayout.s.f();
@@ -1492,7 +1492,7 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                 i4 = size3;
                 i5 = 0;
                 if (z2) {
-                    WeakHashMap weakHashMap222 = eqz.a;
+                    WeakHashMap weakHashMap222 = ViewCompat.a;
                     if (view2.getFitsSystemWindows()) {
                         i6 = i4;
                         int iG22 = coordinatorLayout.s.g() + coordinatorLayout.s.f();

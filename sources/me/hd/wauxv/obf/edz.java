@@ -22,7 +22,7 @@ public final class edz {
     public /* synthetic */ edz(int i, String str, String str2, String str3, String str4, String str5, Integer num,
             List list, String str6, String str7, String str8) {
         if (1023 != (i & 1023)) {
-            bht.ah(i, 1023, edx.b.getDescriptor());
+            ResourcesCompat.ah(i, 1023, edx.b.getDescriptor());
             throw null;
         }
         this.b = str;

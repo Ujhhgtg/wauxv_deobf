@@ -40,8 +40,8 @@ public final class elf implements Iterator, IEmpty {
                 z zVar = viewGroup != null ? new z(viewGroup, 8) : null;
                 if (zVar == null || !zVar.hasNext()) {
                     while (!this.b.hasNext() && !arrayList.isEmpty()) {
-                        this.b = (Iterator) aaz.l(arrayList);
-                        abf.ar(arrayList);
+                        this.b = (Iterator) StaticHelpers5.l(arrayList);
+                        StaticHelpers2.ar(arrayList);
                     }
                 } else {
                     arrayList.add(this.b);

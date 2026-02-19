@@ -51,7 +51,7 @@ public final class aop implements aoh {
     }
 
     @Override // me.hd.wauxv.obf.aoh
-    public final void y(btj btjVar, jx jxVar) {
+    public final void y(btj btjVar, FactoryPools factoryPoolsVar) {
         aoj aojVar;
         String strS = this.a.s(btjVar);
         DefaultConfig ioVar = this.d;
@@ -82,7 +82,7 @@ public final class aop implements aoh {
                         throw new IllegalStateException("Had two simultaneous puts for: ".concat(strS));
                     }
                     try {
-                        if (((avu) jxVar.e).k(jxVar.f, aomVarU.f(), (crw) jxVar.h)) {
+                        if (((avu) factoryPoolsVar.e).saveStreamToFile(factoryPoolsVar.f, aomVarU.f(), (crw) factoryPoolsVar.h)) {
                             aoo.o((aoo) aomVarU.d, aomVarU, true);
                             aomVarU.a = true;
                         }

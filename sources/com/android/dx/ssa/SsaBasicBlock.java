@@ -11,8 +11,6 @@ import com.android.dx.rop.code.Rop;
 import com.android.dx.rop.code.RopMethod;
 import com.android.dx.rop.code.Rops;
 import com.android.dx.rop.code.SourcePosition;
-import com.android.dx.ssa.PhiInsn;
-import com.android.dx.ssa.SsaInsn;
 import com.android.dx.util.Hex;
 import com.android.dx.util.IntList;
 import com.android.dx.util.IntSet;
@@ -21,7 +19,7 @@ import java.util.BitSet;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -200,7 +198,7 @@ public final class SsaBasicBlock {
         if (registerSpec.getReg() == registerSpec2.getReg()) {
             return;
         }
-        NormalSsaInsn normalSsaInsn = (NormalSsaInsn) dkz.l(1, this.insns);
+        NormalSsaInsn normalSsaInsn = (NormalSsaInsn) StaticHelpers6.getLastNElem(1, this.insns);
         if (normalSsaInsn.getResult() != null || normalSsaInsn.getSources().size() > 0) {
             int iNextSetBit = this.successors.nextSetBit(0);
             while (iNextSetBit >= 0) {
@@ -391,7 +389,7 @@ public final class SsaBasicBlock {
         if (insn.getOpcode().getBranchingness() == 1) {
             throw new IllegalArgumentException("last insn must branch");
         }
-        SsaInsn ssaInsn = (SsaInsn) dkz.l(1, this.insns);
+        SsaInsn ssaInsn = (SsaInsn) StaticHelpers6.getLastNElem(1, this.insns);
         SsaInsn ssaInsnMakeFromRop = SsaInsn.makeFromRop(insn, this);
         ArrayList<SsaInsn> arrayList = this.insns;
         arrayList.set(arrayList.size() - 1, ssaInsnMakeFromRop);

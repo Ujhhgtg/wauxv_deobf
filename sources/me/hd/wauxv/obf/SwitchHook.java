@@ -26,7 +26,7 @@ public abstract class SwitchHook extends BaseBaseHook {
     }
 
     public final void aj(boolean z) {
-        DefaultConfig defaultConfig = cnf.ah;
+        DefaultConfig defaultConfig = HugeSyntheticPileOfHelpers.ah;
         if (defaultConfig == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)  */.toString());
         }
@@ -54,7 +54,7 @@ public abstract class SwitchHook extends BaseBaseHook {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final boolean getIsEnabled() {
-        DefaultConfig ioVar = cnf.ah;
+        DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar != null) {
             return ioVar.ah(this.af, false);
         }

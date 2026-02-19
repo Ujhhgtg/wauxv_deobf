@@ -10,7 +10,7 @@ public final class dsy {
         if (1 == (i & 1)) {
             this.a = str;
         } else {
-            bht.ah(i, 1, dsw.b.getDescriptor());
+            ResourcesCompat.ah(i, 1, dsw.b.getDescriptor());
             throw null;
         }
     }

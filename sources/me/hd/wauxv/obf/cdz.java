@@ -15,7 +15,7 @@ public final /* synthetic */ class cdz extends bgr implements IInvokable {
     @Override // me.hd.wauxv.obf.bgf
     public final Object invoke(Object obj) {
         View viewInflate = ((LayoutInflater) obj).inflate(R.layout.activity_module, (ViewGroup) null, false);
-        if (((FragmentContainerView) KotlinHelpers2.aq(viewInflate, R.id.moduleContainerView)) != null) {
+        if (((FragmentContainerView) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.moduleContainerView)) != null) {
             return new dk((FrameLayout) viewInflate);
         }
         throw new NullPointerException("Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-635298677521194L)   */.concat(viewInflate.getResources().getResourceName(R.id.moduleContainerView)));

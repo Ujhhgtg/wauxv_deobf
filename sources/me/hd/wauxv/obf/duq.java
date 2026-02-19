@@ -12,7 +12,7 @@ public final class duq {
 
     public /* synthetic */ duq(int i, String str, String str2, String str3, Long l, Long l2) {
         if (31 != (i & 31)) {
-            bht.ah(i, 31, duo.b.getDescriptor());
+            ResourcesCompat.ah(i, 31, duo.b.getDescriptor());
             throw null;
         }
         this.a = str;
@@ -54,7 +54,7 @@ public final class duq {
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -303061482339114L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -303052892404522L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.c, -302954108156714L);
-        dkz.ad(sb, this.d, -303400784755498L);
+        StaticHelpers6.ad(sb, this.d, -303400784755498L);
         sb.append(this.e);
         sb.append(')');
         return sb.toString();

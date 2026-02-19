@@ -33,7 +33,7 @@ public final class bfa {
 
     public final void h(boolean z) {
         int currentItem;
-        bdj bdjVar;
+        SomeFragmentManager someFragmentManagerVar;
         byu byuVar = this.f;
         ArrayList arrayList = byuVar.t;
         erp erpVar = byuVar.q;
@@ -43,18 +43,18 @@ public final class bfa {
             return;
         }
         long j = currentItem;
-        if ((j != this.e || z) && (bdjVar = (bdj) bycVar.f(j)) != null && bdjVar.cv()) {
+        if ((j != this.e || z) && (someFragmentManagerVar = (SomeFragmentManager) bycVar.f(j)) != null && someFragmentManagerVar.cv()) {
             this.e = j;
             begVar.getClass();
             mu muVar = new mu(begVar);
             ArrayList<List> arrayList2 = new ArrayList();
-            bdj bdjVar2 = null;
+            SomeFragmentManager someFragmentManagerVar2 = null;
             for (int i = 0; i < bycVar.k(); i++) {
                 long jH = bycVar.h(i);
-                bdj bdjVar3 = (bdj) bycVar.l(i);
-                if (bdjVar3.cv()) {
+                SomeFragmentManager someFragmentManagerVar3 = (SomeFragmentManager) bycVar.l(i);
+                if (someFragmentManagerVar3.cv()) {
                     if (jH != this.e) {
-                        muVar.af(bdjVar3, buh.d);
+                        muVar.af(someFragmentManagerVar3, buh.d);
                         erpVar.getClass();
                         ArrayList arrayList3 = new ArrayList();
                         Iterator it = ((CopyOnWriteArrayList) erpVar.v).iterator();
@@ -63,16 +63,16 @@ public final class bfa {
                         }
                         arrayList2.add(arrayList3);
                     } else {
-                        bdjVar2 = bdjVar3;
+                        someFragmentManagerVar2 = someFragmentManagerVar3;
                     }
                     boolean z2 = jH == this.e;
-                    if (bdjVar3.bw != z2) {
-                        bdjVar3.bw = z2;
+                    if (someFragmentManagerVar3.bw != z2) {
+                        someFragmentManagerVar3.bw = z2;
                     }
                 }
             }
-            if (bdjVar2 != null) {
-                muVar.af(bdjVar2, buh.e);
+            if (someFragmentManagerVar2 != null) {
+                muVar.af(someFragmentManagerVar2, buh.e);
                 erpVar.getClass();
                 ArrayList arrayList4 = new ArrayList();
                 Iterator it2 = ((CopyOnWriteArrayList) erpVar.v).iterator();

@@ -27,11 +27,11 @@ import me.hd.wauxv.obf.adk;
 import me.hd.wauxv.obf.adl;
 import me.hd.wauxv.obf.adp;
 import me.hd.wauxv.obf.bc;
-import me.hd.wauxv.obf.bht;
+import me.hd.wauxv.obf.ResourcesCompat;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.cyg;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.zz;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -72,7 +72,7 @@ class ClockFaceView extends cyg implements zz {
         int colorForState = colorStateListV.getColorForState(new int[]{android.R.attr.state_selected}, colorStateListV.getDefaultColor());
         this.ac = new int[]{colorForState, colorForState, colorStateListV.getDefaultColor()};
         clockHandView.c.add(this);
-        int defaultColor = bht.v(context, R.color.material_timepicker_clockface).getDefaultColor();
+        int defaultColor = ResourcesCompat.v(context, R.color.material_timepicker_clockface).getDefaultColor();
         ColorStateList colorStateListV2 = cnb.v(context, typedArrayObtainStyledAttributes, 0);
         setBackgroundColor(colorStateListV2 != null ? colorStateListV2.getDefaultColor() : defaultColor);
         getViewTreeObserver().addOnPreDrawListener(new b(this));
@@ -101,7 +101,7 @@ class ClockFaceView extends cyg implements zz {
                 int i2 = (i / 12) + 1;
                 textView.setTag(R.id.material_clock_level, Integer.valueOf(i2));
                 z = i2 > 1 ? true : z;
-                eqz.s(textView, this.ab);
+                ViewCompat.setAccessibilityDelegate(textView, this.ab);
                 textView.setTextColor(this.ak);
             }
         }

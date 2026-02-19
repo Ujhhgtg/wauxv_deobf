@@ -18,21 +18,21 @@ import me.hd.wauxv.R;
 /* JADX INFO: loaded from: classes.dex */
 public final class aek {
     public ael a;
-    public final dov e;
-    public final dov f;
-    public final dov g;
-    public final dov h;
-    public final dov i;
-    public final dov j;
-    public final dov k;
-    public final dov b = new dov(new h(26));
-    public final dov c = new dov(new h(27));
-    public final dov d = new dov(new h(28));
+    public final Kotlin$Lazy e;
+    public final Kotlin$Lazy f;
+    public final Kotlin$Lazy g;
+    public final Kotlin$Lazy h;
+    public final Kotlin$Lazy i;
+    public final Kotlin$Lazy j;
+    public final Kotlin$Lazy k;
+    public final Kotlin$Lazy b = new Kotlin$Lazy(new h(26));
+    public final Kotlin$Lazy c = new Kotlin$Lazy(new h(27));
+    public final Kotlin$Lazy d = new Kotlin$Lazy(new h(28));
     public adw l = new adw(this);
 
     public aek() {
         final int i = 0;
-        this.e = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+        this.e = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.aej
             public final /* synthetic */ aek b;
 
             {
@@ -61,7 +61,7 @@ public final class aek {
             }
         });
         final int i2 = 1;
-        this.f = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+        this.f = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.aej
             public final /* synthetic */ aek b;
 
             {
@@ -90,7 +90,7 @@ public final class aek {
             }
         });
         final int i3 = 2;
-        this.g = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+        this.g = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.aej
             public final /* synthetic */ aek b;
 
             {
@@ -119,7 +119,7 @@ public final class aek {
             }
         });
         final int i4 = 3;
-        this.h = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+        this.h = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.aej
             public final /* synthetic */ aek b;
 
             {
@@ -148,7 +148,7 @@ public final class aek {
             }
         });
         final int i5 = 4;
-        this.i = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+        this.i = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.aej
             public final /* synthetic */ aek b;
 
             {
@@ -177,7 +177,7 @@ public final class aek {
             }
         });
         final int i6 = 5;
-        this.j = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+        this.j = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.aej
             public final /* synthetic */ aek b;
 
             {
@@ -206,7 +206,7 @@ public final class aek {
             }
         });
         final int i7 = 6;
-        this.k = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+        this.k = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.aej
             public final /* synthetic */ aek b;
 
             {
@@ -289,7 +289,7 @@ public final class aek {
                         list = (List) aelVar.d.get(string2);
                         if (list == null) {
                             obj = list;
-                            obj = EmptyReadonlyList.a;
+                            obj = EmptyReadonlyList.INSTANCE;
                         }
                     }
                     obj = list;

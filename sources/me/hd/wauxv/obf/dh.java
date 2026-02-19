@@ -174,11 +174,11 @@ public final /* synthetic */ class dh implements Runnable {
                 ((CodeEditor) this.b).ek();
                 return;
             case 10:
-                jx jxVar = (jx) this.b;
-                bmu bmuVar = (bmu) jxVar.h;
-                CodeEditor codeEditor2 = (CodeEditor) ((WeakReference) jxVar.e).get();
+                FactoryPools factoryPoolsVar = (FactoryPools) this.b;
+                SyntheticPileOfMess bmuVar = (SyntheticPileOfMess) factoryPoolsVar.h;
+                CodeEditor codeEditor2 = (CodeEditor) ((WeakReference) factoryPoolsVar.e).get();
                 if (bmuVar != null) {
-                    SparseIntArray sparseIntArray = (SparseIntArray) bmuVar.h;
+                    SparseIntArray sparseIntArray = (SparseIntArray) bmuVar.obj;
                     if (codeEditor2 == null || codeEditor2.getCursor().h() || !codeEditor2.bd) {
                         return;
                     }
@@ -201,7 +201,7 @@ public final /* synthetic */ class dh implements Runnable {
                         }
                         cjnVar = i != -1 ? new cjn(i4, i) : null;
                     }
-                    jxVar.f = cjnVar;
+                    factoryPoolsVar.f = cjnVar;
                     codeEditor2.invalidate();
                     return;
                 }
@@ -231,16 +231,16 @@ public final /* synthetic */ class dh implements Runnable {
                                 throw new RuntimeException("fetchFonts result is not OK. (" + i5 + ")");
                             }
                             try {
-                                Method method2 = ekx.b;
+                                Method method2 = TraceCompat.b;
                                 Trace.beginSection("EmojiCompat.FontRequestEmojiCompatConfig.buildTypeface");
-                                awp awpVar = bbuVar.d;
+                                GifEncoder gifEncoderVar = bbuVar.d;
                                 Context context = bbuVar.a;
-                                awpVar.getClass();
+                                gifEncoderVar.getClass();
                                 bce[] bceVarArr = {bceVarK};
-                                emn emnVar = emf.a;
-                                cnf.an("TypefaceCompat.createFromFontInfo");
+                                StaticHelpers7 emnVar = TypefaceCompat.a;
+                                HugeSyntheticPileOfHelpers.beginTrace("TypefaceCompat.createFromFontInfo");
                                 try {
-                                    Typeface typefaceT = emf.a.t(context, bceVarArr, 0);
+                                    Typeface typefaceT = TypefaceCompat.a.t(context, bceVarArr, 0);
                                     Trace.endSection();
                                     MappedByteBuffer mappedByteBufferAo = ewz.ao(bbuVar.a, bceVarK.a);
                                     if (mappedByteBufferAo == null || typefaceT == null) {
@@ -265,7 +265,7 @@ public final /* synthetic */ class dh implements Runnable {
                                         bbuVar.j();
                                         return;
                                     } catch (Throwable th5) {
-                                        Method method3 = ekx.b;
+                                        Method method3 = TraceCompat.b;
                                         Trace.endSection();
                                         throw th5;
                                     }
@@ -274,7 +274,7 @@ public final /* synthetic */ class dh implements Runnable {
                                     throw th6;
                                 }
                             } catch (Throwable th7) {
-                                Method method4 = ekx.b;
+                                Method method4 = TraceCompat.b;
                                 Trace.endSection();
                                 throw th7;
                             }
@@ -298,9 +298,9 @@ public final /* synthetic */ class dh implements Runnable {
                     }
                 }
             case 13:
-                bdj bdjVar = (bdj) this.b;
-                bdjVar.ci.e.aa(bdjVar.av);
-                bdjVar.av = null;
+                SomeFragmentManager someFragmentManagerVar = (SomeFragmentManager) this.b;
+                someFragmentManagerVar.ci.e.aa(someFragmentManagerVar.av);
+                someFragmentManagerVar.av = null;
                 return;
             case 14:
                 Iterator it = ((beg) this.b).n.iterator();
@@ -313,10 +313,10 @@ public final /* synthetic */ class dh implements Runnable {
                 bur burVar = cvtVar.g;
                 if (cvtVar.c == 0) {
                     cvtVar.d = true;
-                    burVar.m(bug.ON_PAUSE);
+                    burVar.m(LifeEventEnum.ON_PAUSE);
                 }
                 if (cvtVar.b == 0 && cvtVar.d) {
-                    burVar.m(bug.ON_STOP);
+                    burVar.m(LifeEventEnum.ON_STOP);
                     cvtVar.e = true;
                     return;
                 }

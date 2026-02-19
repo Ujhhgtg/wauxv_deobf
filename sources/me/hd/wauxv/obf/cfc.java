@@ -25,7 +25,7 @@ public final class cfc extends SwitchHook implements bnq {
                 }
             }
         }
-        return EmptyReadonlyList.a;
+        return EmptyReadonlyList.INSTANCE;
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

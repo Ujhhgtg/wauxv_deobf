@@ -17,8 +17,8 @@ public final class bed implements bec {
 
     @Override // me.hd.wauxv.obf.bec
     public final boolean v(ArrayList arrayList, ArrayList arrayList2) {
-        bdj bdjVar = this.c.z;
-        if (bdjVar != null && this.b < 0 && this.a == null && bdjVar.cp().cm(-1, 0)) {
+        SomeFragmentManager someFragmentManagerVar = this.c.z;
+        if (someFragmentManagerVar != null && this.b < 0 && this.a == null && someFragmentManagerVar.cp().cm(-1, 0)) {
             return false;
         }
         return this.c.cn(arrayList, arrayList2, this.a, this.b, 1);

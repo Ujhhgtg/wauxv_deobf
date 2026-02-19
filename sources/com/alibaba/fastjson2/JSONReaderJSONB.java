@@ -38,7 +38,7 @@ import java.util.UUID;
 import java.util.function.BiFunction;
 import java.util.function.Supplier;
 
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import okhttp3.internal.ws.WebSocketProtocol;
 import org.repackage.com.miui.deviceid.BuildConfig;
@@ -194,7 +194,7 @@ final class JSONReaderJSONB extends JSONReader {
     }
 
     public static JSONException outOfBoundsCheckFromToIndex(int i, int i2) {
-        return new JSONException(dkz.p(i, "offset overflow, offset ", ", end ", i2));
+        return new JSONException(StaticHelpers6.p(i, "offset overflow, offset ", ", end ", i2));
     }
 
     private BigInteger readBigInteger0(byte b) {
@@ -2904,7 +2904,7 @@ final class JSONReaderJSONB extends JSONReader {
                     String string2 = getString();
                     ObjectReader objectReaderAutoType2 = this.context.getObjectReaderAutoType(string2, null);
                     if (objectReaderAutoType2 == null) {
-                        StringBuilder sbZ = dkz.z("autoType not support : ", string2, ", offset ");
+                        StringBuilder sbZ = StaticHelpers6.concatAndToSb("autoType not support : ", string2, ", offset ");
                         sbZ.append(this.offset);
                         sbZ.append("/");
                         sbZ.append(bArr.length);
@@ -2937,7 +2937,7 @@ final class JSONReaderJSONB extends JSONReader {
                                         String string3 = getString();
                                         ObjectReader objectReaderAutoType4 = this.context.getObjectReaderAutoType(string3, cls);
                                         if (objectReaderAutoType4 == null) {
-                                            StringBuilder sbZ2 = dkz.z("autoType not support : ", string3, ", offset ");
+                                            StringBuilder sbZ2 = StaticHelpers6.concatAndToSb("autoType not support : ", string3, ", offset ");
                                             sbZ2.append(this.offset);
                                             sbZ2.append("/");
                                             sbZ2.append(bArr.length);

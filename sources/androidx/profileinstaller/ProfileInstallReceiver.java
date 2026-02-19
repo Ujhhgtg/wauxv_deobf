@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.os.Process;
 import android.util.Log;
 import java.io.File;
-import me.hd.wauxv.obf.bmu;
+import me.hd.wauxv.obf.SyntheticPileOfMess;
 import me.hd.wauxv.obf.cvu;
 import me.hd.wauxv.obf.emc;
 
@@ -24,7 +24,7 @@ public class ProfileInstallReceiver extends BroadcastReceiver {
         }
         String action = intent.getAction();
         if ("androidx.profileinstaller.action.INSTALL_PROFILE".equals(action)) {
-            emc.bc(context, new cvu(), new bmu(this), true);
+            emc.bc(context, new cvu(), new SyntheticPileOfMess(this), true);
             return;
         }
         if ("androidx.profileinstaller.action.SKIP_FILE".equals(action)) {
@@ -40,13 +40,13 @@ public class ProfileInstallReceiver extends BroadcastReceiver {
                     }
                     return;
                 }
-                bmu bmuVar = new bmu(this);
+                SyntheticPileOfMess bmuVar = new SyntheticPileOfMess(this);
                 try {
                     emc.au(context.getPackageManager().getPackageInfo(context.getApplicationContext().getPackageName(), 0), context.getFilesDir());
-                    bmuVar.j(10, null);
+                    bmuVar.logProfileResult(10, null);
                     return;
                 } catch (PackageManager.NameNotFoundException e) {
-                    bmuVar.j(7, e);
+                    bmuVar.logProfileResult(7, e);
                     return;
                 }
             }
@@ -61,15 +61,15 @@ public class ProfileInstallReceiver extends BroadcastReceiver {
                 return;
             }
             String string2 = extras.getString("EXTRA_BENCHMARK_OPERATION");
-            bmu bmuVar2 = new bmu(this);
+            SyntheticPileOfMess bmuVar2 = new SyntheticPileOfMess(this);
             if (!"DROP_SHADER_CACHE".equals(string2)) {
-                bmuVar2.j(16, null);
+                bmuVar2.logProfileResult(16, null);
                 return;
             }
             if (emc.ak(Build.VERSION.SDK_INT >= 34 ? context.createDeviceProtectedStorageContext().getCacheDir() : context.createDeviceProtectedStorageContext().getCodeCacheDir())) {
-                bmuVar2.j(14, null);
+                bmuVar2.logProfileResult(14, null);
             } else {
-                bmuVar2.j(15, null);
+                bmuVar2.logProfileResult(15, null);
             }
         }
     }

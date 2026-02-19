@@ -54,7 +54,7 @@ public class beq extends ckl {
         boolean z2 = (i & 4) != 0;
         ArrayList arrayList = beqVar.h;
         if (z2) {
-            abf.ap(arrayList, new beo(str, 0));
+            StaticHelpers2.ap(arrayList, new beo(str, 0));
         }
         arrayList.add(new Pair(str, Boolean.valueOf(z)));
     }
@@ -78,12 +78,12 @@ public class beq extends ckl {
         Iterator it = list.iterator();
         while (it.hasNext()) {
             cio cioVar = (cio) it.next();
-            boolean zIsEmpty = ((List) ((dml) w().e.h).c()).isEmpty();
+            boolean zIsEmpty = ((List) ((dml) w().e.obj).c()).isEmpty();
             if (cjoVar == null || zIsEmpty || !cjoVar.b || !this.g.remove(cioVar.f)) {
                 mu muVarT = t(cioVar, cjoVar);
                 String str = cioVar.f;
                 if (!zIsEmpty) {
-                    cio cioVar2 = (cio) aaz.m((List) ((dml) w().e.h).c());
+                    cio cioVar2 = (cio) StaticHelpers5.m((List) ((dml) w().e.obj).c());
                     if (cioVar2 != null) {
                         o(this, cioVar2.f, 6);
                     }
@@ -118,13 +118,13 @@ public class beq extends ckl {
             /* JADX WARN: Multi-variable type inference failed */
             /* JADX WARN: Type inference failed for: r5v1, types: [java.lang.Object, me.hd.wauxv.obf.bet] */
             @Override // me.hd.wauxv.obf.beu
-            public final void b(beg begVar, bdj bdjVar) {
+            public final void b(beg begVar, SomeFragmentManager bdjVar) {
                 Object obj;
                 Object objPrevious;
                 throwIfVar1IsNull(begVar, "<unused var>");
                 throwIfVar1IsNull(bdjVar, "fragment");
                 cit citVar2 = citVar;
-                List list = (List) ((dml) citVar2.e.h).c();
+                List list = (List) ((dml) citVar2.e.obj).c();
                 ListIterator listIterator = list.listIterator(list.size());
                 do {
                     obj = null;
@@ -209,9 +209,9 @@ public class beq extends ckl {
             return;
         }
         mu muVarT = t(cioVar, null);
-        List list = (List) ((dml) w().e.h).c();
+        List list = (List) ((dml) w().e.obj).c();
         if (list.size() > 1) {
-            cio cioVar2 = (cio) aaz.h(OtherStaticHelpers.af(list) - 1, list);
+            cio cioVar2 = (cio) StaticHelpers5.h(OtherStaticHelpers.af(list) - 1, list);
             if (cioVar2 != null) {
                 o(this, cioVar2.f, 6);
             }
@@ -237,11 +237,11 @@ public class beq extends ckl {
             Log.i("FragmentNavigator", "Ignoring popBackStack() call: FragmentManager has already saved its state");
             return;
         }
-        List list = (List) ((dml) w().e.h).c();
+        List list = (List) ((dml) w().e.obj).c();
         int iIndexOf = list.indexOf(cioVar);
         List listSubList = list.subList(iIndexOf, list.size());
-        cio cioVar2 = (cio) aaz.e(list);
-        cio cioVar3 = (cio) aaz.h(iIndexOf - 1, list);
+        cio cioVar2 = (cio) StaticHelpers5.safeGetFirstInList(list);
+        cio cioVar3 = (cio) StaticHelpers5.h(iIndexOf - 1, list);
         if (cioVar3 != null) {
             o(this, cioVar3.f, 6);
         }
@@ -254,7 +254,7 @@ public class beq extends ckl {
                     o(this, ((cio) it2.next()).f, 4);
                 }
                 if (z) {
-                    for (cio cioVar4 : aaz.r(listSubList)) {
+                    for (cio cioVar4 : StaticHelpers5.r(listSubList)) {
                         if (nullSafeIsEqual(cioVar4, cioVar2)) {
                             Log.i("FragmentNavigator",
                                     "FragmentManager cannot save the state of the initial destination " + cioVar4);
@@ -275,7 +275,7 @@ public class beq extends ckl {
             }
             Object next = it.next();
             cio cioVar5 = (cio) next;
-            lb lbVarA = aaz.a(this.h);
+            lb lbVarA = StaticHelpers5.a(this.h);
             String str = cioVar5.f;
             Iterator it3 = lbVarA.iterator();
             int i2 = 0;
@@ -309,7 +309,7 @@ public class beq extends ckl {
         if (stringArrayList != null) {
             LinkedHashSet linkedHashSet = this.g;
             linkedHashSet.clear();
-            abf.an(linkedHashSet, stringArrayList);
+            StaticHelpers2.an(linkedHashSet, stringArrayList);
         }
     }
 
@@ -319,15 +319,15 @@ public class beq extends ckl {
         if (linkedHashSet.isEmpty()) {
             return null;
         }
-        return bht.r(new Pair("androidx-nav-fragment:navigator:savedIds", new ArrayList(linkedHashSet)));
+        return ResourcesCompat.r(new Pair("androidx-nav-fragment:navigator:savedIds", new ArrayList(linkedHashSet)));
     }
 
-    public final void s(bdj bdjVar, cio cioVar, cit citVar) {
-        throwIfVar1IsNull(bdjVar, "fragment");
-        erq erqVarAj = bdjVar.aj();
+    public final void s(SomeFragmentManager someFragmentManagerVar, cio cioVar, cit citVar) {
+        throwIfVar1IsNull(someFragmentManagerVar, "fragment");
+        erq erqVarAj = someFragmentManagerVar.aj();
         bpg bpgVar = new bpg(0);
         bpgVar.b(dal.b(a.class), new bep(0));
-        bmu bmuVarC = bpgVar.c();
+        SyntheticPileOfMess bmuVarC = bpgVar.c();
         ahv ahvVar = ahv.a;
         throwIfVar1IsNull(ahvVar, "defaultCreationExtras");
         chm chmVar = new chm(erqVarAj, bmuVarC, ahvVar);
@@ -337,7 +337,7 @@ public class beq extends ckl {
             throw new IllegalArgumentException("Local and anonymous classes can not be ViewModels");
         }
         ((a) chmVar.ah("androidx.lifecycle.ViewModelProvider.DefaultKey:".concat(strAo), zcVarB)).a = new WeakReference(
-                new ls(cioVar, citVar, this, bdjVar));
+                new ls(cioVar, citVar, this, someFragmentManagerVar));
     }
 
     public final mu t(cio cioVar, cjo cjoVar) {
@@ -357,9 +357,9 @@ public class beq extends ckl {
         beg begVar = this.b;
         bdz bdzVarCe = begVar.ce();
         context.getClassLoader();
-        bdj bdjVarE = bdzVarCe.e(str);
-        throwIfVar1IsNull(bdjVarE, "instantiate(...)");
-        bdjVarE.df(bundleL);
+        SomeFragmentManager someFragmentManagerVarE = bdzVarCe.e(str);
+        throwIfVar1IsNull(someFragmentManagerVarE, "instantiate(...)");
+        someFragmentManagerVarE.df(bundleL);
         mu muVar = new mu(begVar);
         int i = cjoVar != null ? cjoVar.f : -1;
         int i2 = cjoVar != null ? cjoVar.g : -1;
@@ -386,8 +386,8 @@ public class beq extends ckl {
         if (i6 == 0) {
             throw new IllegalArgumentException("Must use non-zero containerViewId");
         }
-        muVar.ac(i6, bdjVarE, str2, 2);
-        muVar.ag(bdjVarE);
+        muVar.ac(i6, someFragmentManagerVarE, str2, 2);
+        muVar.ag(someFragmentManagerVarE);
         muVar.p = true;
         return muVar;
     }

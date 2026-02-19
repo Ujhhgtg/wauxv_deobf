@@ -25,7 +25,7 @@ public abstract class evg {
         }
         for (int i2 = 1; i2 <= 512; i2 <<= 1) {
             if ((i & i2) != 0) {
-                this.k[bhu.ag(i2)] = bpsVar;
+                this.k[FastKV.ag(i2)] = bpsVar;
             }
         }
     }
@@ -49,15 +49,15 @@ public abstract class evg {
                 bpsVarN = evrVar.b.n(1);
             }
             i(bps.f(bpsVarN, bpsVarN2));
-            bps bpsVar = this.k[bhu.ag(16)];
+            bps bpsVar = this.k[FastKV.ag(16)];
             if (bpsVar != null) {
                 c(bpsVar);
             }
-            bps bpsVar2 = this.k[bhu.ag(32)];
+            bps bpsVar2 = this.k[FastKV.ag(32)];
             if (bpsVar2 != null) {
                 b(bpsVar2);
             }
-            bps bpsVar3 = this.k[bhu.ag(64)];
+            bps bpsVar3 = this.k[FastKV.ag(64)];
             if (bpsVar3 != null) {
                 d(bpsVar3);
             }

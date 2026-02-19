@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dss {
     public static final dsr Companion = new dsr();
-    public static final IHasGetValue[] a = { null, null, null, null, ewz.am(btx.a, new cfh(27)), null, null, null, null,
+    public static final IHasGetValue[] a = { null, null, null, null, ewz.am(btx.a, new Function1$VarIsInt$2(27)), null, null, null, null,
             null,
             null, null, null, null, null, null, null, null, null, null, null };
     public final String b;
@@ -35,7 +35,7 @@ public final class dss {
             String str4, dty dtyVar, dtb dtbVar, dvo dvoVar, dzj dzjVar, egc egcVar, duh duhVar, edz edzVar,
             Integer num3, dvo dvoVar2, eiq eiqVar, duz duzVar, ebo eboVar, dvo dvoVar3, eaz eazVar) {
         if (2097151 != (i & 2097151)) {
-            bht.ah(i, 2097151, dsq.b.getDescriptor());
+            ResourcesCompat.ah(i, 2097151, dsq.b.getDescriptor());
             throw null;
         }
         this.b = str;

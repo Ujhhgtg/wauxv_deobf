@@ -18,12 +18,12 @@ public final class das {
     public final avw g;
     public final but h = new but(2);
     public final bwu i = new bwu();
-    public final jx j;
+    public final FactoryPools j;
 
     public das() {
-        jx jxVar = new jx(new cux(20), new awp(4), new awp(5));
-        this.j = jxVar;
-        this.a = new but(jxVar);
+        FactoryPools factoryPoolsVar = new FactoryPools(new cux(20), new GifEncoder(4), new GifEncoder(5));
+        this.j = factoryPoolsVar;
+        this.a = new but(factoryPoolsVar);
         this.b = new avw(0);
         this.c = new but(7);
         this.d = new avw(2);

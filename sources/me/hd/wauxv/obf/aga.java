@@ -13,6 +13,6 @@ public final class aga extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(afz.a, dexKitBridge, new act(26));
+        StaticHelpers7.resolveDexAndCache(afz.a, dexKitBridge, new act(26));
     }
 }

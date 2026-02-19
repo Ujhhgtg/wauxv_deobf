@@ -9,10 +9,10 @@ public final class aec extends bws implements IDexFind {
 
     public static Object b() {
         int i = 0;
-        cde cdeVarT = dqc.bh(emn.az(aea.a)).t();
+        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(aea.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
         aeg.a.getClass();
-        cdeVarT.a = emn.bb(aee.a).getDeclaringClass();
-        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
+        methodResolverVarT.returnType = StaticHelpers7.bb(aee.a).getDeclaringClass();
+        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }
@@ -23,7 +23,7 @@ public final class aec extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(aeb.a, dexKitBridge, new act(6));
-        emn.aj(aea.a, dexKitBridge, new act(7));
+        StaticHelpers7.resolveDexAndCache(aeb.a, dexKitBridge, new act(6));
+        StaticHelpers7.resolveDexAndCache(aea.a, dexKitBridge, new act(7));
     }
 }

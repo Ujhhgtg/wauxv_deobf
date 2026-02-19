@@ -17,7 +17,7 @@ public final class cjl {
     public boolean e;
     public final bdx f;
     public final boolean g;
-    public final dov h;
+    public final Kotlin$Lazy h;
 
     public cjl(Context context) {
         this.a = context;
@@ -29,8 +29,8 @@ public final class cjl {
                 this.g = true;
                 ckm ckmVar = this.b.r;
                 ckmVar.c(new cjk(ckmVar));
-                this.b.r.c(new dm(this.a));
-                this.h = new dov(new cis(this, 1));
+                this.b.r.c(new ActivityNavigator(this.a));
+                this.h = new Kotlin$Lazy(new cis(this, 1));
             }
         }
         obj = null;
@@ -39,8 +39,8 @@ public final class cjl {
         this.g = true;
         ckm ckmVar2 = this.b.r;
         ckmVar2.c(new cjk(ckmVar2));
-        this.b.r.c(new dm(this.a));
-        this.h = new dov(new cis(this, 1));
+        this.b.r.c(new ActivityNavigator(this.a));
+        this.h = new Kotlin$Lazy(new cis(this, 1));
     }
 
     public final int i() {
@@ -75,7 +75,7 @@ public final class cjl {
             i2 = cimVarM.a;
             Bundle bundle2 = cimVarM.c;
             if (bundle2 != null) {
-                bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                 bundleR.putAll(bundle2);
             } else {
                 bundleR = null;
@@ -87,7 +87,7 @@ public final class cjl {
         }
         if (bundle != null) {
             if (bundleR == null) {
-                bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
             }
             bundleR.putAll(bundle);
         }
@@ -118,7 +118,7 @@ public final class cjl {
             throw new IllegalArgumentException("Navigation action/destination " + strR
                     + " cannot be found from the current destination " + cjgVar);
         }
-        StringBuilder sbZ = dkz.z("Navigation destination ", strR, " referenced from action ");
+        StringBuilder sbZ = StaticHelpers6.concatAndToSb("Navigation destination ", strR, " referenced from action ");
         sbZ.append(bmy.r(anrVar, i));
         sbZ.append(" cannot be found from the current destination ");
         sbZ.append(cjgVar);

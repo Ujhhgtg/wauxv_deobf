@@ -37,7 +37,7 @@ import java.util.zip.Inflater;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public abstract class ewz {
-    public static final awp q = new awp(3);
+    public static final GifEncoder q = new GifEncoder(3);
     public static final byte[] r = { JSONB.Constants.BC_INT32_BYTE_MIN, 49, 53, 0 };
     public static final byte[] s = { JSONB.Constants.BC_INT32_BYTE_MIN, 49, JSONB.Constants.BC_INT32_BYTE_MIN, 0 };
     public static final byte[] t = { JSONB.Constants.BC_INT32_BYTE_MIN, JSONB.Constants.BC_INT32_BYTE_MIN, 57, 0 };
@@ -164,7 +164,7 @@ public abstract class ewz {
     }
 
     public static void af(View view, esn esnVar) {
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         int paddingStart = view.getPaddingStart();
         int paddingTop = view.getPaddingTop();
         int paddingEnd = view.getPaddingEnd();
@@ -274,7 +274,7 @@ public abstract class ewz {
     }
 
     public static boolean al(View view) {
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         return view.getLayoutDirection() == 1;
     }
 
@@ -282,7 +282,7 @@ public abstract class ewz {
         arj arjVar = arj.n;
         int iOrdinal = btxVar.ordinal();
         if (iOrdinal == 0) {
-            return new dov(bfuVar);
+            return new Kotlin$Lazy(bfuVar);
         }
         if (iOrdinal == 1) {
             deg degVar = new deg();
@@ -469,8 +469,8 @@ public abstract class ewz {
         return i2;
     }
 
-    public static jx aw(int i, axv axvVar) {
-        return new jx(new cux(i), axvVar, q);
+    public static FactoryPools aw(int i, axv axvVar) {
+        return new FactoryPools(new cux(i), axvVar, q);
     }
 
     public static void ax(ArrayList arrayList, int i, int i2) {

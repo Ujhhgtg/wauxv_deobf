@@ -32,7 +32,7 @@ public final class auf implements KeyListener {
     public final boolean onKeyDown(View view, Editable editable, int i, KeyEvent keyEvent) {
         boolean z;
         this.b.getClass();
-        if (i != 67 ? i != 112 ? false : jx.i(editable, keyEvent, true) : jx.i(editable, keyEvent, false)) {
+        if (i != 67 ? i != 112 ? false : FactoryPools.i(editable, keyEvent, true) : FactoryPools.i(editable, keyEvent, false)) {
             MetaKeyKeyListener.adjustMetaAfterKeypress(editable);
             z = true;
         } else {

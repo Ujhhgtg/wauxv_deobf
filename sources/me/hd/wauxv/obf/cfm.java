@@ -19,9 +19,9 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 public final class cfm extends SwitchHook implements bnc {
     public static final cfm a;
     public static final String b;
-    public static final dov c;
-    public static final dov h;
-    public static final dov j;
+    public static final Kotlin$Lazy c;
+    public static final Kotlin$Lazy h;
+    public static final Kotlin$Lazy j;
     public static final String l;
     public static final String m;
     public static final String n;
@@ -30,11 +30,11 @@ public final class cfm extends SwitchHook implements bnc {
     static {
         "#00000000" /* "#00000000" /* "#00000000" /* cnb.z(-451744660192042L)  */;
         a = new cfm("MsgBgBubbleHook" /* "MsgBgBubbleHook" /* "MsgBgBubbleHook" /* cnb.z(-428014965881642L)  */);
-        dov dovVar = ctf.a;
-        b = ctf.c("Resource" /* "Resource" /* "Resource" /* cnb.z(-46505905879850L)  */, "Bubble" /* "Bubble" /* "Bubble" /* cnb.z(-46467251174186L)  */);
-        c = new dov(new cfh(0));
-        h = new dov(new cfh(1));
-        j = new dov(new cfh(2));
+        Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
+        b = PathUtils.getModuleSubDir("Resource" /* "Resource" /* "Resource" /* cnb.z(-46505905879850L)  */, "Bubble" /* "Bubble" /* "Bubble" /* cnb.z(-46467251174186L)  */);
+        c = new Kotlin$Lazy(new Function1$VarIsInt$2(0));
+        h = new Kotlin$Lazy(new Function1$VarIsInt$2(1));
+        j = new Kotlin$Lazy(new Function1$VarIsInt$2(2));
         l = "美化" /* "美化" /* "美化" /* cnb.z(-451718890388266L)  */;
         m = "消息背景气泡" /* "消息背景气泡" /* "消息背景气泡" /* cnb.z(-451723185355562L)  */;
         n = "仅支持配置部分消息, 与背景颜色冲突" /* "仅支持配置部分消息, 与背景颜色冲突" /* "仅支持配置部分消息, 与背景颜色冲突" /* cnb.z(-451693120584490L)  */;

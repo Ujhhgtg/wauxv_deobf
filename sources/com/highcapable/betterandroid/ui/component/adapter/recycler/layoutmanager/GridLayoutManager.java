@@ -3,7 +3,7 @@ package com.highcapable.betterandroid.ui.component.adapter.recycler.layoutmanage
 import android.content.Context;
 import android.util.AttributeSet;
 import androidx.recyclerview.widget.RecyclerView;
-import me.hd.wauxv.obf.bmu;
+import me.hd.wauxv.obf.SyntheticPileOfMess;
 import me.hd.wauxv.obf.cyt;
 import me.hd.wauxv.obf.cyw;
 import me.hd.wauxv.obf.czt;
@@ -41,9 +41,9 @@ public class GridLayoutManager extends androidx.recyclerview.widget.GridLayoutMa
         int iCt = super.ct();
         RecyclerView recyclerView = this.dl;
         if (recyclerView != null && (adapter = recyclerView.getAdapter()) != null) {
-            bmu bmuVar = adapter instanceof cyt ? ((cyt) adapter).a : null;
+            SyntheticPileOfMess bmuVar = adapter instanceof cyt ? ((cyt) adapter).a : null;
             if (bmuVar != null) {
-                ((ea) bmuVar.h).p();
+                ((ea) bmuVar.obj).p();
             }
         }
         return iCt;
@@ -55,9 +55,9 @@ public class GridLayoutManager extends androidx.recyclerview.widget.GridLayoutMa
         int iCu = super.cu();
         RecyclerView recyclerView = this.dl;
         if (recyclerView != null && (adapter = recyclerView.getAdapter()) != null) {
-            bmu bmuVar = adapter instanceof cyt ? ((cyt) adapter).a : null;
+            SyntheticPileOfMess bmuVar = adapter instanceof cyt ? ((cyt) adapter).a : null;
             if (bmuVar != null) {
-                ((ea) bmuVar.h).p();
+                ((ea) bmuVar.obj).p();
             }
         }
         return iCu;
@@ -78,9 +78,9 @@ public class GridLayoutManager extends androidx.recyclerview.widget.GridLayoutMa
         cyw adapter;
         RecyclerView recyclerView = this.dl;
         if (recyclerView != null && (adapter = recyclerView.getAdapter()) != null) {
-            bmu bmuVar = adapter instanceof cyt ? ((cyt) adapter).a : null;
+            SyntheticPileOfMess bmuVar = adapter instanceof cyt ? ((cyt) adapter).a : null;
             if (bmuVar != null) {
-                ((ea) bmuVar.h).p();
+                ((ea) bmuVar.obj).p();
             }
         }
         return i;

@@ -13,7 +13,7 @@ public final class ecg {
 
     public /* synthetic */ ecg(int i, Integer num, Integer num2, Integer num3, String str, String str2, String str3) {
         if (63 != (i & 63)) {
-            bht.ah(i, 63, ece.b.getDescriptor());
+            ResourcesCompat.ah(i, 63, ece.b.getDescriptor());
             throw null;
         }
         this.a = num;

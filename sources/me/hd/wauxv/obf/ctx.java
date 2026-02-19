@@ -29,15 +29,15 @@ public final class ctx {
     public final File b;
     public final File c;
     public final File d;
-    public final dov e;
+    public final Kotlin$Lazy e;
     public final String f;
-    public final dov g;
-    public final dov h;
-    public final dov i;
-    public final dov j;
-    public final dov k;
+    public final Kotlin$Lazy g;
+    public final Kotlin$Lazy h;
+    public final Kotlin$Lazy i;
+    public final Kotlin$Lazy j;
+    public final Kotlin$Lazy k;
     public final String l;
-    public final bmu m;
+    public final SyntheticPileOfMess m;
 
     public ctx(File file) {
         this.a = file;
@@ -45,7 +45,7 @@ public final class ctx {
         this.c = new File(file, "info.prop" /* "info.prop" /* "info.prop" /* cnb.z(-400351081528106L)  */);
         this.d = new File(file, "readme.md" /* "readme.md" /* "readme.md" /* cnb.z(-400325311724330L)  */);
         final int i = 0;
-        this.e = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
+        this.e = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
             public final /* synthetic */ ctx b;
 
             {
@@ -101,7 +101,7 @@ public final class ctx {
         String name = file.getName();
         this.f = name;
         final int i2 = 1;
-        this.g = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
+        this.g = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
             public final /* synthetic */ ctx b;
 
             {
@@ -155,7 +155,7 @@ public final class ctx {
             }
         });
         final int i3 = 2;
-        this.h = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
+        this.h = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
             public final /* synthetic */ ctx b;
 
             {
@@ -209,7 +209,7 @@ public final class ctx {
             }
         });
         final int i4 = 3;
-        this.i = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
+        this.i = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
             public final /* synthetic */ ctx b;
 
             {
@@ -263,7 +263,7 @@ public final class ctx {
             }
         });
         final int i5 = 4;
-        this.j = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
+        this.j = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
             public final /* synthetic */ ctx b;
 
             {
@@ -317,7 +317,7 @@ public final class ctx {
             }
         });
         final int i6 = 5;
-        this.k = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
+        this.k = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
             public final /* synthetic */ ctx b;
 
             {
@@ -370,8 +370,8 @@ public final class ctx {
                 }
             }
         });
-        this.l = yg.h(-400230822443818L, dkz.y(name));
-        this.m = new bmu(this);
+        this.l = yg.h(-400230822443818L, StaticHelpers6.toSb(name));
+        this.m = new SyntheticPileOfMess(this);
     }
 
     public final boolean equals(Object obj) {
@@ -401,7 +401,7 @@ public final class ctx {
                 bshMethod = null;
                 z = false;
             } catch (Throwable th) {
-                objX = bhu.x(th);
+                objX = FastKV.x(th);
             }
             while (true) {
                 if (i >= length) {
@@ -470,7 +470,7 @@ public final class ctx {
         String str = this.f;
         boolean zContainsKey = map2.containsKey(str);
         File file = this.b;
-        if (zContainsKey && nullSafeIsEqual(map.get(str), bht.w(file))) {
+        if (zContainsKey && nullSafeIsEqual(map.get(str), ResourcesCompat.w(file))) {
             Object obj = map2.get(str);
             throwIfVar1IsNull(obj);
             return (Interpreter) obj;
@@ -488,8 +488,8 @@ public final class ctx {
         interpreter.set("hostVerClient" /* "hostVerClient" /* "hostVerClient" /* cnb.z(-390056044919594L)  */, (String) bmo.k.h(btcVarArr[8]));
         interpreter.set("moduleVer" /* "moduleVer" /* "moduleVer" /* cnb.z(-389497699171114L)  */, 1238);
         String strZ3 = "cacheDir" /* "cacheDir" /* "cacheDir" /* cnb.z(-389403209890602L)  */;
-        dov dovVar = ctf.a;
-        interpreter.set(strZ3, ctf.c("Cache" /* "Cache" /* "Cache" /* cnb.z(-47098611366698L)  */));
+        Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
+        interpreter.set(strZ3, PathUtils.getModuleSubDir("Cache" /* "Cache" /* "Cache" /* cnb.z(-47098611366698L)  */));
         interpreter.set("pluginDir" /* "pluginDir" /* "pluginDir" /* cnb.z(-389381735054122L)  */, this.a);
         interpreter.set("pluginId" /* "pluginId" /* "pluginId" /* cnb.z(-389355965250346L)  */, str);
         interpreter.set("pluginName" /* "pluginName" /* "pluginName" /* cnb.z(-389317310544682L)  */, (String) this.g.getValue());
@@ -506,7 +506,7 @@ public final class ctx {
         cuk.f(interpreter, new PluginSnsMethod());
         cuk.f(interpreter, new PluginVipMethod());
         map2.put(str, interpreter);
-        map.put(str, bht.w(file));
+        map.put(str, ResourcesCompat.w(file));
         interpreter.eval(new InputStreamReader(new FileInputStream(file), uj.a));
         return interpreter;
     }

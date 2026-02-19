@@ -38,7 +38,7 @@ public final class eug extends doi implements bgj {
 
     @Override // me.hd.wauxv.obf.nc
     public final Object i(Object obj) throws Throwable {
-        bhu.bd(obj);
+        FastKV.bd(obj);
         long jCurrentTimeMillis = System.currentTimeMillis() - this.a;
         StringBuilder sb = new StringBuilder();
         sb.append("载入 " /* "载入 " /* "载入 " /* cnb.z(-58819577117482L)  */);

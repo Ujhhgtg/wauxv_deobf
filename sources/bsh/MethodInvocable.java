@@ -1,11 +1,10 @@
 package bsh;
 
-import bsh.Invocable;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.reflect.Method;
 import java.util.regex.Pattern;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -65,7 +64,7 @@ class MethodInvocable extends ExecutingInvocable {
                 }
             }
         }
-        StringBuilder sbZ = dkz.z("MethodHandle lookup failed to find a ", name, " in ");
+        StringBuilder sbZ = StaticHelpers6.concatAndToSb("MethodHandle lookup failed to find a ", name, " in ");
         sbZ.append(declaringClass.getName());
         throw new RuntimeException(sbZ.toString());
     }

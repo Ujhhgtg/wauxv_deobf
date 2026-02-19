@@ -22,7 +22,7 @@ import com.android.dx.rop.type.Type;
 import com.android.dx.rop.type.TypeList;
 import com.android.dx.util.ByteArray;
 import com.android.dx.util.Hex;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.dynamic.ClassFileLocator;
 
@@ -174,7 +174,7 @@ public class DirectClassFile implements ClassFile {
             parseObserver2.parsed(this.bytes, endOffset, 2, "access_flags: " + AccessFlags.classString(unsignedShort));
             this.observer.parsed(this.bytes, i, 2, "this_class: " + this.thisClass);
             this.observer.parsed(this.bytes, i2, 2, "super_class: " + stringOrNone(this.superClass));
-            this.observer.parsed(this.bytes, i3, 2, dkz.q(unsignedShort2, new StringBuilder("interfaces_count: ")));
+            this.observer.parsed(this.bytes, i3, 2, StaticHelpers6.q(unsignedShort2, new StringBuilder("interfaces_count: ")));
             if (unsignedShort2 != 0) {
                 this.observer.parsed(this.bytes, endOffset + 8, 0, "interfaces:");
             }
@@ -185,7 +185,7 @@ public class DirectClassFile implements ClassFile {
         if (this.strictParse) {
             String className = this.thisClass.getClassType().getClassName();
             if (!this.filePath.endsWith(ClassFileLocator.CLASS_FILE_EXTENSION) || !this.filePath.startsWith(className) || this.filePath.length() != className.length() + 6) {
-                throw new ParseException(yg.concatToVar1(dkz.z("class name (", className, ") does not match path ("), this.filePath, ")"));
+                throw new ParseException(yg.concatToVar1(StaticHelpers6.concatAndToSb("class name (", className, ") does not match path ("), this.filePath, ")"));
             }
         }
         this.accessFlags = unsignedShort;

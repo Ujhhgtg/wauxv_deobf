@@ -47,7 +47,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dts;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.ByteBuddy;
@@ -3755,7 +3755,7 @@ public interface AgentBuilder {
                     public int hashCode() {
                         return this.classInjector.hashCode() + yg.c(this.loadedTypeInitializers,
                                 (this.classFileLocator.hashCode() + ((this.auxiliaryTypes.hashCode()
-                                        + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31)) * 31)) * 31,
+                                        + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31)) * 31)) * 31,
                                 31);
                     }
 
@@ -4951,7 +4951,7 @@ public interface AgentBuilder {
                     public int hashCode() {
                         return this.dispatcher.hashCode()
                                 + bjs.g(this.declaredFields, (this.specializedLambdaMethod.hashCode()
-                                        + dkz.c(this.targetMethod, getClass().hashCode() * 31, 31)) * 31, 31);
+                                        + StaticHelpers6.c(this.targetMethod, getClass().hashCode() * 31, 31)) * 31, 31);
                     }
                 }
 
@@ -4989,7 +4989,7 @@ public interface AgentBuilder {
 
                 public int hashCode() {
                     return this.specializedLambdaMethod.hashCode()
-                            + ((this.targetMethod.hashCode() + dkz.f(this.targetType, getClass().hashCode() * 31, 31))
+                            + ((this.targetMethod.hashCode() + StaticHelpers6.f(this.targetType, getClass().hashCode() * 31, 31))
                                     * 31);
                 }
 
@@ -5079,8 +5079,8 @@ public interface AgentBuilder {
                     return this.specializedMethod.hashCode()
                             + ((this.targetMethod.hashCode()
                                     + ((this.lambdaMethod.hashCode() + bjs.e(this.lambdaMethodName,
-                                            dkz.f(this.lambdaType,
-                                                    dkz.f(this.targetType, getClass().hashCode() * 31, 31), 31),
+                                            StaticHelpers6.f(this.lambdaType,
+                                                    StaticHelpers6.f(this.targetType, getClass().hashCode() * 31, 31), 31),
                                             31)) * 31))
                                     * 31);
                 }
@@ -5988,7 +5988,7 @@ public interface AgentBuilder {
             }
 
             public int hashCode() {
-                return this.delegate.hashCode() + dkz.i(this.matcher, getClass().hashCode() * 31, 31);
+                return this.delegate.hashCode() + StaticHelpers6.i(this.matcher, getClass().hashCode() * 31, 31);
             }
 
             @Override // net.bytebuddy.agent.builder.AgentBuilder.Listener
@@ -7107,7 +7107,7 @@ public interface AgentBuilder {
 
             public int hashCode() {
                 return this.moduleMatcher.hashCode()
-                        + dkz.i(this.classLoaderMatcher, dkz.i(this.typeMatcher, getClass().hashCode() * 31, 31), 31);
+                        + StaticHelpers6.i(this.classLoaderMatcher, StaticHelpers6.i(this.typeMatcher, getClass().hashCode() * 31, 31), 31);
             }
 
             @Override // net.bytebuddy.agent.builder.AgentBuilder.RawMatcher
@@ -7374,8 +7374,8 @@ public interface AgentBuilder {
                 }
 
                 public int hashCode() {
-                    return this.moduleMatcher.hashCode() + dkz.i(this.classLoaderMatcher,
-                            dkz.i(this.typeNameMatcher, getClass().hashCode() * 31, 31), 31);
+                    return this.moduleMatcher.hashCode() + StaticHelpers6.i(this.classLoaderMatcher,
+                            StaticHelpers6.i(this.typeNameMatcher, getClass().hashCode() * 31, 31), 31);
                 }
 
                 @Override // net.bytebuddy.agent.builder.AgentBuilder.RedefinitionListenable.ResubmissionImmediateMatcher
@@ -7547,8 +7547,8 @@ public interface AgentBuilder {
                 }
 
                 public int hashCode() {
-                    return this.moduleMatcher.hashCode() + dkz.i(this.classLoaderMatcher, dkz.i(this.typeNameMatcher,
-                            dkz.i(this.exceptionMatcher, getClass().hashCode() * 31, 31), 31), 31);
+                    return this.moduleMatcher.hashCode() + StaticHelpers6.i(this.classLoaderMatcher, StaticHelpers6.i(this.typeNameMatcher,
+                            StaticHelpers6.i(this.exceptionMatcher, getClass().hashCode() * 31, 31), 31), 31);
                 }
 
                 @Override // net.bytebuddy.agent.builder.AgentBuilder.RedefinitionListenable.ResubmissionOnErrorMatcher
@@ -8018,7 +8018,7 @@ public interface AgentBuilder {
                     if (i <= i2) {
                         return new Slicing(i, i2, batchAllocator);
                     }
-                    throw new IllegalArgumentException(dkz.p(i, "Minimum must not be bigger than maximum: ", " >", i2));
+                    throw new IllegalArgumentException(StaticHelpers6.p(i, "Minimum must not be bigger than maximum: ", " >", i2));
                 }
 
                 @Override // net.bytebuddy.agent.builder.AgentBuilder.RedefinitionStrategy.BatchAllocator
@@ -9971,7 +9971,7 @@ public interface AgentBuilder {
 
                 @Override // net.bytebuddy.dynamic.DynamicType.AbstractBase
                 public int hashCode() {
-                    return this.classFileLocator.hashCode() + dkz.f(this.typeDescription, super.hashCode() * 31, 31);
+                    return this.classFileLocator.hashCode() + StaticHelpers6.f(this.typeDescription, super.hashCode() * 31, 31);
                 }
             }
 
@@ -10005,7 +10005,7 @@ public interface AgentBuilder {
 
             public int hashCode() {
                 return this.auxiliaries.hashCode() + bjs.g(this.entries, (this.locationStrategy.hashCode()
-                        + ((this.poolStrategy.hashCode() + ((this.classFileLocator.hashCode() + dkz.h(this.assigner,
+                        + ((this.poolStrategy.hashCode() + ((this.classFileLocator.hashCode() + StaticHelpers6.h(this.assigner,
                                 (this.exceptionHandler.hashCode()
                                         + ((this.advice.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31,
                                 31)) * 31)) * 31))

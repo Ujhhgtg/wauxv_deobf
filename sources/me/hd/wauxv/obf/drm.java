@@ -66,7 +66,7 @@ public abstract class drm {
         iArr[0] = i;
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes((AttributeSet) null, iArr);
         try {
-            if (!typedArrayObtainStyledAttributes.hasValue(0) || (resourceId = typedArrayObtainStyledAttributes.getResourceId(0, 0)) == 0 || (colorStateList = bht.v(context, resourceId)) == null) {
+            if (!typedArrayObtainStyledAttributes.hasValue(0) || (resourceId = typedArrayObtainStyledAttributes.getResourceId(0, 0)) == 0 || (colorStateList = ResourcesCompat.v(context, resourceId)) == null) {
                 colorStateList = typedArrayObtainStyledAttributes.getColorStateList(0);
             }
             return colorStateList;

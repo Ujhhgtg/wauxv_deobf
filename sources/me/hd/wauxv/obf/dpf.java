@@ -28,13 +28,13 @@ public final class dpf extends SwitchHook implements IStartActivity {
         String[] strArr = { "weixin.com" /* "weixin.com" /* "weixin.com" /* "weixin.com" /* cnb.z(-539542381656874L)   */, "qq.com" /* "qq.com" /* "qq.com" /* "qq.com" /* cnb.z(-539512316885802L)   */,
                 "weixin.qq.com.cn" /* "weixin.qq.com.cn" /* "weixin.qq.com.cn" /* "weixin.qq.com.cn" /* cnb.z(-539482252114730L)   */, "wechatpay.cn" /* "wechatpay.cn" /* "wechatpay.cn" /* "wechatpay.cn" /* cnb.z(-539409237670698L)   */,
                 "tenpay.com" /* "tenpay.com" /* "tenpay.com" /* "tenpay.com" /* cnb.z(-539336223226666L)   */, "weixinbridge.com" /* "weixinbridge.com" /* "weixinbridge.com" /* "weixinbridge.com" /* cnb.z(-539855914269482L)   */ };
-        LinkedHashSet linkedHashSet = new LinkedHashSet(KotlinHelpers.ah(6));
+        LinkedHashSet linkedHashSet = new LinkedHashSet(KotlinHelpers.calcHashMapCapacity(6));
         for (int i2 = 0; i2 < 6; i2++) {
             linkedHashSet.add(strArr[i2]);
         }
         b = linkedHashSet;
         String[] strArr2 = { "test.com" /* "test.com" /* "test.com" /* "test.com" /* cnb.z(-539731360217898L)   */ };
-        LinkedHashSet linkedHashSet2 = new LinkedHashSet(KotlinHelpers.ah(1));
+        LinkedHashSet linkedHashSet2 = new LinkedHashSet(KotlinHelpers.calcHashMapCapacity(1));
         linkedHashSet2.add(strArr2[0]);
         c = linkedHashSet2;
         i = "杂项" /* "杂项" /* "杂项" /* "杂项" /* cnb.z(-539692705512234L)   */;

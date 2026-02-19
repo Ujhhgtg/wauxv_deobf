@@ -12,8 +12,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
-import me.hd.wauxv.obf.dkz;
-import net.bytebuddy.NamingStrategy;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.AccessControllerPlugin;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.annotation.AnnotationValue;
@@ -482,7 +481,7 @@ public class ByteBuddy {
     }
 
     public DynamicType.Builder<?> makePackage(String str) {
-        return new SubclassDynamicTypeBuilder(this.instrumentedTypeFactory.subclass(dkz.s(str, ".package-info"), PackageDescription.PACKAGE_MODIFIERS, TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(Object.class)), this.classFileVersion, this.auxiliaryTypeNamingStrategy, this.annotationValueFilterFactory, this.annotationRetention, this.implementationContextFactory, this.methodGraphCompiler, this.typeValidation, this.visibilityBridgeStrategy, this.classReaderFactory, this.classWriterFactory, this.ignoredMethods, ConstructorStrategy.Default.NO_CONSTRUCTORS);
+        return new SubclassDynamicTypeBuilder(this.instrumentedTypeFactory.subclass(StaticHelpers6.concat(str, ".package-info"), PackageDescription.PACKAGE_MODIFIERS, TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(Object.class)), this.classFileVersion, this.auxiliaryTypeNamingStrategy, this.annotationValueFilterFactory, this.annotationRetention, this.implementationContextFactory, this.methodGraphCompiler, this.typeValidation, this.visibilityBridgeStrategy, this.classReaderFactory, this.classWriterFactory, this.ignoredMethods, ConstructorStrategy.Default.NO_CONSTRUCTORS);
     }
 
     public DynamicType.Builder<?> makeRecord() {
@@ -572,7 +571,7 @@ public class ByteBuddy {
         if (!typeDescription.isArray() && !typeDescription.isPrimitive()) {
             return new DecoratingDynamicTypeBuilder(typeDescription, this.classFileVersion, this.auxiliaryTypeNamingStrategy, this.annotationValueFilterFactory, this.annotationRetention, this.implementationContextFactory, this.methodGraphCompiler, this.typeValidation, this.classReaderFactory, this.classWriterFactory, this.ignoredMethods, classFileLocator);
         }
-        throw new IllegalArgumentException(dkz.u("Cannot decorate array or primitive type: ", typeDescription));
+        throw new IllegalArgumentException(StaticHelpers6.concat("Cannot decorate array or primitive type: ", typeDescription));
     }
 
     public DynamicType.Builder<?> makeInterface(Type... typeArr) {
@@ -587,7 +586,7 @@ public class ByteBuddy {
         if (!typeDescription.isArray() && !typeDescription.isPrimitive()) {
             return new RedefinitionDynamicTypeBuilder(this.instrumentedTypeFactory.represent(typeDescription), this.classFileVersion, this.auxiliaryTypeNamingStrategy, this.annotationValueFilterFactory, this.annotationRetention, this.implementationContextFactory, this.methodGraphCompiler, this.typeValidation, this.visibilityBridgeStrategy, this.classReaderFactory, this.classWriterFactory, this.ignoredMethods, typeDescription, classFileLocator);
         }
-        throw new IllegalArgumentException(dkz.u("Cannot redefine array or primitive type: ", typeDescription));
+        throw new IllegalArgumentException(StaticHelpers6.concat("Cannot redefine array or primitive type: ", typeDescription));
     }
 
     public DynamicType.Builder<?> subclass(Type type) {
@@ -638,7 +637,7 @@ public class ByteBuddy {
         if (!typeDescription.isArray() && !typeDescription.isPrimitive()) {
             return new RebaseDynamicTypeBuilder(this.instrumentedTypeFactory.represent(typeDescription), this.classFileVersion, this.auxiliaryTypeNamingStrategy, this.annotationValueFilterFactory, this.annotationRetention, this.implementationContextFactory, this.methodGraphCompiler, this.typeValidation, this.visibilityBridgeStrategy, this.classReaderFactory, this.classWriterFactory, this.ignoredMethods, typeDescription, classFileLocator, methodNameTransformer);
         }
-        throw new IllegalArgumentException(dkz.u("Cannot rebase array or primitive type: ", typeDescription));
+        throw new IllegalArgumentException(StaticHelpers6.concat("Cannot rebase array or primitive type: ", typeDescription));
     }
 
     public DynamicType.Builder<?> subclass(TypeDefinition typeDefinition) {

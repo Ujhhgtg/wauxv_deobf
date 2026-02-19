@@ -109,7 +109,7 @@ public abstract class bmy {
     }
 
     public static void af(Activity activity, View view) {
-        bht bhtVar = anj.a;
+        ResourcesCompat resourcesCompatVar = anj.a;
         FrameLayout frameLayout = new FrameLayout(activity);
         if (view.getParent() != null) {
             ((ViewGroup) view.getParent()).removeView(view);
@@ -244,10 +244,10 @@ public abstract class bmy {
         String strSubstring2 = path.substring(length);
         throwIfVar1IsNull(strSubstring2, "substring(...)");
         if (strSubstring2.length() == 0) {
-            list = EmptyReadonlyList.a;
+            list = EmptyReadonlyList.INSTANCE;
         } else {
             List listAr = dnj.ar(strSubstring2, new char[] { c });
-            ArrayList arrayList = new ArrayList(abb.ak(listAr, 10));
+            ArrayList arrayList = new ArrayList(StaticHelpers4.ak(listAr, 10));
             Iterator it = listAr.iterator();
             while (it.hasNext()) {
                 arrayList.add(new File((String) it.next()));
@@ -1041,7 +1041,7 @@ public abstract class bmy {
         if (bundle == null) {
             deh dehVar = new deh();
             new LinkedHashMap();
-            dehVar.a = new blq(ave.a);
+            dehVar.a = new blq(EmptyReadonlyMap.INSTANCE);
             return dehVar;
         }
         ClassLoader classLoader = deh.class.getClassLoader();
@@ -1079,7 +1079,7 @@ public abstract class bmy {
         cusVar.getClass();
         cbmVarA.getClass();
         emc.as(1, null);
-        dqc.bl(str, null);
+        dqc.throwSomething(str, null);
         throw null;
     }
 
@@ -1285,7 +1285,7 @@ public abstract class bmy {
         try {
             Class<?> cls = Class.forName(str);
             try {
-                throw new RuntimeException(dkz.r(cls.getDeclaredConstructor(null).newInstance(null),
+                throw new RuntimeException(StaticHelpers6.concatVar2Var1(cls.getDeclaredConstructor(null).newInstance(null),
                         "Expected instanceof GlideModule, but found: "));
             } catch (IllegalAccessException e) {
                 ag(cls, e);

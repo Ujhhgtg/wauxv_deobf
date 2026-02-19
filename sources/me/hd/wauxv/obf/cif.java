@@ -25,7 +25,7 @@ public final class cif extends SwitchHook implements bnj {
     }
 
     public final List i() {
-        return !z() ? EmptyReadonlyList.a : dqc.toSingletonList(new ayv("转发[WA]" /* "转发[WA]" /* "转发[WA]" /* "转发[WA]" /* cnb.z(-475886671362858L)   */, new cgu(10)));
+        return !z() ? EmptyReadonlyList.INSTANCE : dqc.toSingletonList(new ayv("转发[WA]" /* "转发[WA]" /* "转发[WA]" /* "转发[WA]" /* cnb.z(-475886671362858L)   */, new cgu(10)));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

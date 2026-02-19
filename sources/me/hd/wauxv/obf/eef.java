@@ -15,7 +15,7 @@ public final class eef {
 
     public /* synthetic */ eef(int i, String str, List list, String str2, Integer num, String str3) {
         if (31 != (i & 31)) {
-            bht.ah(i, 31, eed.b.getDescriptor());
+            ResourcesCompat.ah(i, 31, eed.b.getDescriptor());
             throw null;
         }
         this.b = str;

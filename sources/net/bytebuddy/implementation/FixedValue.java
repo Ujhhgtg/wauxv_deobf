@@ -1,14 +1,13 @@
 package net.bytebuddy.implementation;
 
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.field.FieldDescription;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.method.ParameterDescription;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.scaffold.InstrumentedType;
-import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
 import net.bytebuddy.implementation.bytecode.StackManipulation;
 import net.bytebuddy.implementation.bytecode.assign.Assigner;
@@ -152,7 +151,7 @@ public abstract class FixedValue implements Implementation {
 
         @Override // net.bytebuddy.implementation.FixedValue
         public int hashCode() {
-            return this.loadedType.hashCode() + dkz.g(this.valueLoadInstruction, super.hashCode() * 31, 31);
+            return this.loadedType.hashCode() + StaticHelpers6.g(this.valueLoadInstruction, super.hashCode() * 31, 31);
         }
 
         @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
@@ -193,7 +192,7 @@ public abstract class FixedValue implements Implementation {
         public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context,
                 MethodDescription methodDescription) {
             if (methodDescription.getReturnType().isPrimitive()) {
-                throw new IllegalStateException(dkz.t("Cannot return null from ", methodDescription));
+                throw new IllegalStateException(StaticHelpers6.concat("Cannot return null from ", methodDescription));
             }
             return new ByteCodeAppender.Simple(NullConstant.INSTANCE, MethodReturn.REFERENCE).apply(methodVisitor,
                     context, methodDescription);
@@ -243,7 +242,7 @@ public abstract class FixedValue implements Implementation {
             }
 
             public int hashCode() {
-                return ForOriginType.this.hashCode() + dkz.f(this.originType, getClass().hashCode() * 31, 31);
+                return ForOriginType.this.hashCode() + StaticHelpers6.f(this.originType, getClass().hashCode() * 31, 31);
             }
         }
 
@@ -294,7 +293,7 @@ public abstract class FixedValue implements Implementation {
                     MethodDescription methodDescription) {
                 if (methodDescription.isStatic()
                         || !this.instrumentedType.isAssignableTo(methodDescription.getReturnType().asErasure())) {
-                    throw new IllegalStateException(dkz.t("Cannot return 'this' from ", methodDescription));
+                    throw new IllegalStateException(StaticHelpers6.concat("Cannot return 'this' from ", methodDescription));
                 }
                 return new ByteCodeAppender.Simple(MethodVariableAccess.loadThis(), MethodReturn.REFERENCE)
                         .apply(methodVisitor, context, methodDescription);
@@ -490,7 +489,7 @@ public abstract class FixedValue implements Implementation {
     }
 
     public int hashCode() {
-        return this.typing.hashCode() + dkz.h(this.assigner, getClass().hashCode() * 31, 31);
+        return this.typing.hashCode() + StaticHelpers6.h(this.assigner, getClass().hashCode() * 31, 31);
     }
 
     public static AssignerConfigurable reference(Object obj, String str) {

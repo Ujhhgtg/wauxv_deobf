@@ -92,7 +92,7 @@ public final class ajs {
                 if (dcmVar == null) {
                     throw new dar(dcgVarA.get().getClass());
                 }
-                int iAe = dkz.ae(iX);
+                int iAe = StaticHelpers6.ae(iX);
                 if (iAe == 0) {
                     z3 = false;
                     z4 = true;
@@ -109,10 +109,10 @@ public final class ajs {
                 bxpVar.h = z3;
                 bxpVar.g = z4;
                 bxpVar.f = dcgVarA;
-                jx jxVar = ajrVar.i;
-                jxVar.e = aizVar;
-                jxVar.f = dcmVar;
-                jxVar.h = bxpVar;
+                FactoryPools factoryPoolsVar = ajrVar.i;
+                factoryPoolsVar.e = aizVar;
+                factoryPoolsVar.f = dcmVar;
+                factoryPoolsVar.h = bxpVar;
                 dcgVarA = bxpVar;
             }
             return this.c.g(dcgVarA, crwVar);

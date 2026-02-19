@@ -30,7 +30,7 @@ public final class efd {
     public /* synthetic */ efd(int i, List list, egf egfVar, List list2, dwj dwjVar, dwj dwjVar2, dwj dwjVar3,
             dwj dwjVar4, String str, dwj dwjVar5, String str2, Boolean bool) {
         if (2047 != (i & 2047)) {
-            bht.ah(i, 2047, efb.b.getDescriptor());
+            ResourcesCompat.ah(i, 2047, efb.b.getDescriptor());
             throw null;
         }
         this.b = list;

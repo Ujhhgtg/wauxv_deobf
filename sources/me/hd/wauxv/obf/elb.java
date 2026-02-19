@@ -13,6 +13,6 @@ public final class elb extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(ela.a, dexKitBridge, new dos(5));
+        StaticHelpers7.resolveDexAndCache(ela.a, dexKitBridge, new dos(5));
     }
 }

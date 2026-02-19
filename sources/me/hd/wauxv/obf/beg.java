@@ -26,7 +26,7 @@ import me.hd.wauxv.R;
 /* JADX INFO: loaded from: classes.dex */
 public final class beg {
     public final bdz aa;
-    public final awp ab;
+    public final GifEncoder ab;
     public dy ac;
     public dy ad;
     public dy ae;
@@ -55,8 +55,8 @@ public final class beg {
     public int v;
     public bdm w;
     public cnb x;
-    public bdj y;
-    public bdj z;
+    public SomeFragmentManager y;
+    public SomeFragmentManager z;
     public final ArrayList a = new ArrayList();
     public final chm c = new chm(6);
     public ArrayList d = new ArrayList();
@@ -256,7 +256,7 @@ public final class beg {
         this.u = new bdy(this);
         this.v = -1;
         this.aa = new bdz(this);
-        this.ab = new awp(10);
+        this.ab = new GifEncoder(10);
         this.af = new ArrayDeque();
         this.ap = new dc(this, 8);
     }
@@ -264,9 +264,9 @@ public final class beg {
     public static HashSet aq(mu muVar) {
         HashSet hashSet = new HashSet();
         for (int i = 0; i < muVar.a.size(); i++) {
-            bdj bdjVar = ((bfe) muVar.a.get(i)).b;
-            if (bdjVar != null && muVar.g) {
-                hashSet.add(bdjVar);
+            SomeFragmentManager someFragmentManagerVar = ((bfe) muVar.a.get(i)).b;
+            if (someFragmentManagerVar != null && muVar.g) {
+                hashSet.add(someFragmentManagerVar);
             }
         }
         return hashSet;
@@ -276,12 +276,12 @@ public final class beg {
         return Log.isLoggable("FragmentManager", i);
     }
 
-    public static boolean as(bdj bdjVar) {
-        bdjVar.getClass();
+    public static boolean as(SomeFragmentManager someFragmentManagerVar) {
+        someFragmentManagerVar.getClass();
         boolean zAs = false;
-        for (bdj bdjVar2 : bdjVar.bo.c.ad()) {
-            if (bdjVar2 != null) {
-                zAs = as(bdjVar2);
+        for (SomeFragmentManager someFragmentManagerVar2 : someFragmentManagerVar.bo.c.ad()) {
+            if (someFragmentManagerVar2 != null) {
+                zAs = as(someFragmentManagerVar2);
             }
             if (zAs) {
                 return true;
@@ -290,69 +290,69 @@ public final class beg {
         return false;
     }
 
-    public static boolean at(bdj bdjVar) {
-        if (bdjVar == null) {
+    public static boolean at(SomeFragmentManager someFragmentManagerVar) {
+        if (someFragmentManagerVar == null) {
             return true;
         }
-        if (bdjVar.bw) {
-            return bdjVar.bm == null || at(bdjVar.bp);
+        if (someFragmentManagerVar.bw) {
+            return someFragmentManagerVar.bm == null || at(someFragmentManagerVar.bp);
         }
         return false;
     }
 
-    public static boolean au(bdj bdjVar) {
-        if (bdjVar == null) {
+    public static boolean au(SomeFragmentManager someFragmentManagerVar) {
+        if (someFragmentManagerVar == null) {
             return true;
         }
-        beg begVar = bdjVar.bm;
-        return bdjVar.equals(begVar.z) && au(begVar.y);
+        beg begVar = someFragmentManagerVar.bm;
+        return someFragmentManagerVar.equals(begVar.z) && au(begVar.y);
     }
 
-    public static void av(bdj bdjVar) {
+    public static void av(SomeFragmentManager someFragmentManagerVar) {
         if (ar(2)) {
-            Log.v("FragmentManager", "show: " + bdjVar);
+            Log.v("FragmentManager", "show: " + someFragmentManagerVar);
         }
-        if (bdjVar.bt) {
-            bdjVar.bt = false;
-            bdjVar.cd = !bdjVar.cd;
+        if (someFragmentManagerVar.bt) {
+            someFragmentManagerVar.bt = false;
+            someFragmentManagerVar.cd = !someFragmentManagerVar.cd;
         }
     }
 
-    public final bfb aw(bdj bdjVar) {
-        String str = bdjVar.cf;
+    public final FragmentManager aw(SomeFragmentManager someFragmentManagerVar) {
+        String str = someFragmentManagerVar.cf;
         if (str != null) {
-            bfd.d(bdjVar, str);
+            bfd.d(someFragmentManagerVar, str);
         }
         if (ar(2)) {
-            Log.v("FragmentManager", "add: " + bdjVar);
+            Log.v("FragmentManager", "add: " + someFragmentManagerVar);
         }
-        bfb bfbVarBc = bc(bdjVar);
-        bdjVar.bm = this;
+        FragmentManager fragmentManagerVarBc = bc(someFragmentManagerVar);
+        someFragmentManagerVar.bm = this;
         chm chmVar = this.c;
-        chmVar.aj(bfbVarBc);
-        if (!bdjVar.bu) {
-            chmVar.s(bdjVar);
-            bdjVar.bd = false;
-            if (bdjVar.bz == null) {
-                bdjVar.cd = false;
+        chmVar.aj(fragmentManagerVarBc);
+        if (!someFragmentManagerVar.bu) {
+            chmVar.s(someFragmentManagerVar);
+            someFragmentManagerVar.bd = false;
+            if (someFragmentManagerVar.bz == null) {
+                someFragmentManagerVar.cd = false;
             }
-            if (as(bdjVar)) {
+            if (as(someFragmentManagerVar)) {
                 this.ag = true;
             }
         }
-        return bfbVarBc;
+        return fragmentManagerVarBc;
     }
 
-    public final void ax(bdm bdmVar, cnb cnbVar, bdj bdjVar) {
+    public final void ax(bdm bdmVar, cnb cnbVar, SomeFragmentManager someFragmentManagerVar) {
         if (this.w != null) {
             throw new IllegalStateException("Already attached");
         }
         this.w = bdmVar;
         this.x = cnbVar;
-        this.y = bdjVar;
+        this.y = someFragmentManagerVar;
         CopyOnWriteArrayList copyOnWriteArrayList = this.p;
-        if (bdjVar != null) {
-            copyOnWriteArrayList.add(new bea(bdjVar));
+        if (someFragmentManagerVar != null) {
+            copyOnWriteArrayList.add(new bea(someFragmentManagerVar));
         } else if (bdmVar != null) {
             copyOnWriteArrayList.add(bdmVar);
         }
@@ -362,7 +362,7 @@ public final class beg {
         if (bdmVar != null) {
             cqt cqtVarAn = bdmVar.h.an();
             this.g = cqtVarAn;
-            bup bupVar = bdjVar != null ? bdjVar : bdmVar;
+            bup bupVar = someFragmentManagerVar != null ? someFragmentManagerVar : bdmVar;
             cqtVarAn.getClass();
             bdx bdxVar = this.j;
             throwIfVar1IsNull(bdxVar, "onBackPressedCallback");
@@ -374,13 +374,13 @@ public final class beg {
                         0);
             }
         }
-        if (bdjVar != null) {
-            bej bejVar = bdjVar.bm.ao;
+        if (someFragmentManagerVar != null) {
+            bej bejVar = someFragmentManagerVar.bm.ao;
             HashMap map = bejVar.c;
-            bej bejVar2 = (bej) map.get(bdjVar.aw);
+            bej bejVar2 = (bej) map.get(someFragmentManagerVar.aw);
             if (bejVar2 == null) {
                 bejVar2 = new bej(bejVar.e);
-                map.put(bdjVar.aw, bejVar2);
+                map.put(someFragmentManagerVar.aw, bejVar2);
             }
             this.ao = bejVar2;
         } else if (bdmVar != null) {
@@ -400,7 +400,7 @@ public final class beg {
         this.ao.g = ci();
         this.c.f = this.ao;
         bdm bdmVar2 = this.w;
-        if (bdmVar2 != null && bdjVar == null) {
+        if (bdmVar2 != null && someFragmentManagerVar == null) {
             but butVarAk = bdmVar2.ak();
             butVarAk.ad("android:support:fragments", new bdv(this, 0));
             Bundle bundleG = butVarAk.g("android:support:fragments");
@@ -411,10 +411,10 @@ public final class beg {
         bdm bdmVar3 = this.w;
         if (bdmVar3 != null) {
             acg acgVar = bdmVar3.h.x;
-            String strK = yg.k("FragmentManager:", bdjVar != null ? yg.concatToVar1(new StringBuilder(), bdjVar.aw, ":") : "");
-            this.ac = acgVar.k(dkz.s(strK, "StartActivityForResult"), new ds(2), new bdw(this, 1));
-            this.ad = acgVar.k(dkz.s(strK, "StartIntentSenderForResult"), new ds(3), new bdw(this, 2));
-            this.ae = acgVar.k(dkz.s(strK, "RequestPermissions"), new ds(1), new bdw(this, 0));
+            String strK = yg.k("FragmentManager:", someFragmentManagerVar != null ? yg.concatToVar1(new StringBuilder(), someFragmentManagerVar.aw, ":") : "");
+            this.ac = acgVar.k(StaticHelpers6.concat(strK, "StartActivityForResult"), new ds(2), new bdw(this, 1));
+            this.ad = acgVar.k(StaticHelpers6.concat(strK, "StartIntentSenderForResult"), new ds(3), new bdw(this, 2));
+            this.ae = acgVar.k(StaticHelpers6.concat(strK, "RequestPermissions"), new ds(1), new bdw(this, 0));
         }
         bdm bdmVar4 = this.w;
         if (bdmVar4 != null) {
@@ -445,32 +445,32 @@ public final class beg {
             hbVar3.ac.add(bduVar3);
         }
         bdm bdmVar8 = this.w;
-        if (bdmVar8 == null || bdjVar != null) {
+        if (bdmVar8 == null || someFragmentManagerVar != null) {
             return;
         }
         hb hbVar4 = bdmVar8.h;
         hbVar4.getClass();
         bdy bdyVar = this.u;
         throwIfVar1IsNull(bdyVar, com.umeng.analytics.pro.f.M);
-        jx jxVar = hbVar4.s;
-        ((CopyOnWriteArrayList) jxVar.h).add(bdyVar);
-        ((Runnable) jxVar.f).run();
+        FactoryPools factoryPoolsVar = hbVar4.s;
+        ((CopyOnWriteArrayList) factoryPoolsVar.h).add(bdyVar);
+        ((Runnable) factoryPoolsVar.f).run();
     }
 
-    public final void ay(bdj bdjVar) {
+    public final void ay(SomeFragmentManager someFragmentManagerVar) {
         if (ar(2)) {
-            Log.v("FragmentManager", "attach: " + bdjVar);
+            Log.v("FragmentManager", "attach: " + someFragmentManagerVar);
         }
-        if (bdjVar.bu) {
-            bdjVar.bu = false;
-            if (bdjVar.bc) {
+        if (someFragmentManagerVar.bu) {
+            someFragmentManagerVar.bu = false;
+            if (someFragmentManagerVar.bc) {
                 return;
             }
-            this.c.s(bdjVar);
+            this.c.s(someFragmentManagerVar);
             if (ar(2)) {
-                Log.v("FragmentManager", "add from attach: " + bdjVar);
+                Log.v("FragmentManager", "add from attach: " + someFragmentManagerVar);
             }
-            if (as(bdjVar)) {
+            if (as(someFragmentManagerVar)) {
                 this.ag = true;
             }
         }
@@ -487,7 +487,7 @@ public final class beg {
         HashSet hashSet = new HashSet();
         Iterator it = this.c.ac().iterator();
         while (it.hasNext()) {
-            ViewGroup viewGroup = ((bfb) it.next()).c.by;
+            ViewGroup viewGroup = ((FragmentManager) it.next()).c.by;
             if (viewGroup != null) {
                 throwIfVar1IsNull(cf(), "factory");
                 Object tag = viewGroup.getTag(R.id.special_effects_controller_view_tag);
@@ -509,8 +509,8 @@ public final class beg {
         while (i < i2) {
             Iterator it = ((mu) arrayList.get(i)).a.iterator();
             while (it.hasNext()) {
-                bdj bdjVar = ((bfe) it.next()).b;
-                if (bdjVar != null && (viewGroup = bdjVar.by) != null) {
+                SomeFragmentManager someFragmentManagerVar = ((bfe) it.next()).b;
+                if (someFragmentManagerVar != null && (viewGroup = someFragmentManagerVar.by) != null) {
                     hashSet.add(aln.g(viewGroup, this));
                 }
             }
@@ -519,40 +519,40 @@ public final class beg {
         return hashSet;
     }
 
-    public final bfb bc(bdj bdjVar) {
-        String str = bdjVar.aw;
+    public final FragmentManager bc(SomeFragmentManager someFragmentManagerVar) {
+        String str = someFragmentManagerVar.aw;
         chm chmVar = this.c;
-        bfb bfbVar = (bfb) ((HashMap) chmVar.d).get(str);
-        if (bfbVar != null) {
-            return bfbVar;
+        FragmentManager fragmentManagerVar = (FragmentManager) ((HashMap) chmVar.d).get(str);
+        if (fragmentManagerVar != null) {
+            return fragmentManagerVar;
         }
-        bfb bfbVar2 = new bfb(this.o, chmVar, bdjVar);
-        bfbVar2.r(this.w.e.getClassLoader());
-        bfbVar2.e = this.v;
-        return bfbVar2;
+        FragmentManager fragmentManagerVar2 = new FragmentManager(this.o, chmVar, someFragmentManagerVar);
+        fragmentManagerVar2.r(this.w.e.getClassLoader());
+        fragmentManagerVar2.e = this.v;
+        return fragmentManagerVar2;
     }
 
-    public final void bd(bdj bdjVar) {
+    public final void bd(SomeFragmentManager someFragmentManagerVar) {
         if (ar(2)) {
-            Log.v("FragmentManager", "detach: " + bdjVar);
+            Log.v("FragmentManager", "detach: " + someFragmentManagerVar);
         }
-        if (bdjVar.bu) {
+        if (someFragmentManagerVar.bu) {
             return;
         }
-        bdjVar.bu = true;
-        if (bdjVar.bc) {
+        someFragmentManagerVar.bu = true;
+        if (someFragmentManagerVar.bc) {
             if (ar(2)) {
-                Log.v("FragmentManager", "remove from detach: " + bdjVar);
+                Log.v("FragmentManager", "remove from detach: " + someFragmentManagerVar);
             }
             chm chmVar = this.c;
             synchronized (((ArrayList) chmVar.c)) {
-                ((ArrayList) chmVar.c).remove(bdjVar);
+                ((ArrayList) chmVar.c).remove(someFragmentManagerVar);
             }
-            bdjVar.bc = false;
-            if (as(bdjVar)) {
+            someFragmentManagerVar.bc = false;
+            if (as(someFragmentManagerVar)) {
                 this.ag = true;
             }
-            cw(bdjVar);
+            cw(someFragmentManagerVar);
         }
     }
 
@@ -562,11 +562,11 @@ public final class beg {
                     "Do not call dispatchConfigurationChanged() on host. Host implements OnConfigurationChangedProvider and automatically dispatches configuration changes to fragments."));
             throw null;
         }
-        for (bdj bdjVar : this.c.af()) {
-            if (bdjVar != null) {
-                bdjVar.bx = true;
+        for (SomeFragmentManager someFragmentManagerVar : this.c.af()) {
+            if (someFragmentManagerVar != null) {
+                someFragmentManagerVar.bx = true;
                 if (z) {
-                    bdjVar.bo.be(true);
+                    someFragmentManagerVar.bo.be(true);
                 }
             }
         }
@@ -574,9 +574,9 @@ public final class beg {
 
     public final boolean bf() {
         if (this.v >= 1) {
-            for (bdj bdjVar : this.c.af()) {
-                if (bdjVar != null) {
-                    if (!bdjVar.bt ? bdjVar.bo.bf() : false) {
+            for (SomeFragmentManager someFragmentManagerVar : this.c.af()) {
+                if (someFragmentManagerVar != null) {
+                    if (!someFragmentManagerVar.bt ? someFragmentManagerVar.bo.bf() : false) {
                         return true;
                     }
                 }
@@ -591,22 +591,22 @@ public final class beg {
         }
         ArrayList arrayList = null;
         boolean z = false;
-        for (bdj bdjVar : this.c.af()) {
-            if (bdjVar != null && at(bdjVar)) {
-                if (!bdjVar.bt ? bdjVar.bo.bg() : false) {
+        for (SomeFragmentManager someFragmentManagerVar : this.c.af()) {
+            if (someFragmentManagerVar != null && at(someFragmentManagerVar)) {
+                if (!someFragmentManagerVar.bt ? someFragmentManagerVar.bo.bg() : false) {
                     if (arrayList == null) {
                         arrayList = new ArrayList();
                     }
-                    arrayList.add(bdjVar);
+                    arrayList.add(someFragmentManagerVar);
                     z = true;
                 }
             }
         }
         if (this.e != null) {
             for (int i = 0; i < this.e.size(); i++) {
-                bdj bdjVar2 = (bdj) this.e.get(i);
-                if (arrayList == null || !arrayList.contains(bdjVar2)) {
-                    bdjVar2.getClass();
+                SomeFragmentManager someFragmentManagerVar2 = (SomeFragmentManager) this.e.get(i);
+                if (arrayList == null || !arrayList.contains(someFragmentManagerVar2)) {
+                    someFragmentManagerVar2.getClass();
                 }
             }
         }
@@ -677,12 +677,12 @@ public final class beg {
             hbVar6.getClass();
             bdy bdyVar = this.u;
             throwIfVar1IsNull(bdyVar, com.umeng.analytics.pro.f.M);
-            jx jxVar = hbVar6.s;
-            ((CopyOnWriteArrayList) jxVar.h).remove(bdyVar);
-            if (((HashMap) jxVar.e).remove(bdyVar) != null) {
+            FactoryPools factoryPoolsVar = hbVar6.s;
+            ((CopyOnWriteArrayList) factoryPoolsVar.h).remove(bdyVar);
+            if (((HashMap) factoryPoolsVar.e).remove(bdyVar) != null) {
                 throw new ClassCastException();
             }
-            ((Runnable) jxVar.f).run();
+            ((Runnable) factoryPoolsVar.f).run();
         }
         this.w = null;
         this.x = null;
@@ -708,11 +708,11 @@ public final class beg {
                     "Do not call dispatchLowMemory() on host. Host implements OnTrimMemoryProvider and automatically dispatches low memory callbacks to fragments."));
             throw null;
         }
-        for (bdj bdjVar : this.c.af()) {
-            if (bdjVar != null) {
-                bdjVar.bx = true;
+        for (SomeFragmentManager someFragmentManagerVar : this.c.af()) {
+            if (someFragmentManagerVar != null) {
+                someFragmentManagerVar.bx = true;
                 if (z) {
-                    bdjVar.bo.bi(true);
+                    someFragmentManagerVar.bo.bi(true);
                 }
             }
         }
@@ -724,27 +724,27 @@ public final class beg {
                     "Do not call dispatchMultiWindowModeChanged() on host. Host implements OnMultiWindowModeChangedProvider and automatically dispatches multi-window mode changes to fragments."));
             throw null;
         }
-        for (bdj bdjVar : this.c.af()) {
-            if (bdjVar != null && z) {
-                bdjVar.bo.bj(true);
+        for (SomeFragmentManager someFragmentManagerVar : this.c.af()) {
+            if (someFragmentManagerVar != null && z) {
+                someFragmentManagerVar.bo.bj(true);
             }
         }
     }
 
     public final void bk() {
-        for (bdj bdjVar : this.c.ad()) {
-            if (bdjVar != null) {
-                bdjVar.cw();
-                bdjVar.bo.bk();
+        for (SomeFragmentManager someFragmentManagerVar : this.c.ad()) {
+            if (someFragmentManagerVar != null) {
+                someFragmentManagerVar.cw();
+                someFragmentManagerVar.bo.bk();
             }
         }
     }
 
     public final boolean bl() {
         if (this.v >= 1) {
-            for (bdj bdjVar : this.c.af()) {
-                if (bdjVar != null) {
-                    if (!bdjVar.bt ? bdjVar.bo.bl() : false) {
+            for (SomeFragmentManager someFragmentManagerVar : this.c.af()) {
+                if (someFragmentManagerVar != null) {
+                    if (!someFragmentManagerVar.bt ? someFragmentManagerVar.bo.bl() : false) {
                         return true;
                     }
                 }
@@ -757,22 +757,22 @@ public final class beg {
         if (this.v < 1) {
             return;
         }
-        for (bdj bdjVar : this.c.af()) {
-            if (bdjVar != null && !bdjVar.bt) {
-                bdjVar.bo.bm();
+        for (SomeFragmentManager someFragmentManagerVar : this.c.af()) {
+            if (someFragmentManagerVar != null && !someFragmentManagerVar.bt) {
+                someFragmentManagerVar.bo.bm();
             }
         }
     }
 
-    public final void bn(bdj bdjVar) {
-        if (bdjVar != null) {
-            if (bdjVar.equals(this.c.z(bdjVar.aw))) {
-                bdjVar.bm.getClass();
-                boolean zAu = au(bdjVar);
-                Boolean bool = bdjVar.bb;
+    public final void bn(SomeFragmentManager someFragmentManagerVar) {
+        if (someFragmentManagerVar != null) {
+            if (someFragmentManagerVar.equals(this.c.z(someFragmentManagerVar.aw))) {
+                someFragmentManagerVar.bm.getClass();
+                boolean zAu = au(someFragmentManagerVar);
+                Boolean bool = someFragmentManagerVar.bb;
                 if (bool == null || bool.booleanValue() != zAu) {
-                    bdjVar.bb = Boolean.valueOf(zAu);
-                    beg begVar = bdjVar.bo;
+                    someFragmentManagerVar.bb = Boolean.valueOf(zAu);
+                    beg begVar = someFragmentManagerVar.bo;
                     begVar.cz();
                     begVar.bn(begVar.z);
                 }
@@ -786,9 +786,9 @@ public final class beg {
                     "Do not call dispatchPictureInPictureModeChanged() on host. Host implements OnPictureInPictureModeChangedProvider and automatically dispatches picture-in-picture mode changes to fragments."));
             throw null;
         }
-        for (bdj bdjVar : this.c.af()) {
-            if (bdjVar != null && z) {
-                bdjVar.bo.bo(true);
+        for (SomeFragmentManager someFragmentManagerVar : this.c.af()) {
+            if (someFragmentManagerVar != null && z) {
+                someFragmentManagerVar.bo.bo(true);
             }
         }
     }
@@ -798,9 +798,9 @@ public final class beg {
             return false;
         }
         boolean z = false;
-        for (bdj bdjVar : this.c.af()) {
-            if (bdjVar != null && at(bdjVar)) {
-                if (!bdjVar.bt ? bdjVar.bo.bp() : false) {
+        for (SomeFragmentManager someFragmentManagerVar : this.c.af()) {
+            if (someFragmentManagerVar != null && at(someFragmentManagerVar)) {
+                if (!someFragmentManagerVar.bt ? someFragmentManagerVar.bo.bp() : false) {
                     z = true;
                 }
             }
@@ -811,9 +811,9 @@ public final class beg {
     public final void bq(int i) {
         try {
             this.b = true;
-            for (bfb bfbVar : ((HashMap) this.c.d).values()) {
-                if (bfbVar != null) {
-                    bfbVar.e = i;
+            for (FragmentManager fragmentManagerVar : ((HashMap) this.c.d).values()) {
+                if (fragmentManagerVar != null) {
+                    fragmentManagerVar.e = i;
                 }
             }
             cj(i, false);
@@ -839,148 +839,148 @@ public final class beg {
     public final void bs(String str, FileDescriptor fileDescriptor, PrintWriter printWriter, String[] strArr) {
         int size;
         String str2;
-        String strS = dkz.s(str, "    ");
+        String strS = StaticHelpers6.concat(str, "    ");
         chm chmVar = this.c;
         ArrayList arrayList = (ArrayList) chmVar.c;
-        String strS2 = dkz.s(str, "    ");
+        String strS2 = StaticHelpers6.concat(str, "    ");
         HashMap map = (HashMap) chmVar.d;
         if (!map.isEmpty()) {
             printWriter.print(str);
             printWriter.println("Active Fragments:");
-            for (bfb bfbVar : map.values()) {
+            for (FragmentManager fragmentManagerVar : map.values()) {
                 printWriter.print(str);
-                if (bfbVar != null) {
-                    bdj bdjVar = bfbVar.c;
-                    printWriter.println(bdjVar);
-                    bdjVar.getClass();
+                if (fragmentManagerVar != null) {
+                    SomeFragmentManager someFragmentManagerVar = fragmentManagerVar.c;
+                    printWriter.println(someFragmentManagerVar);
+                    someFragmentManagerVar.getClass();
                     printWriter.print(strS2);
                     printWriter.print("mFragmentId=#");
-                    printWriter.print(Integer.toHexString(bdjVar.bq));
+                    printWriter.print(Integer.toHexString(someFragmentManagerVar.bq));
                     printWriter.print(" mContainerId=#");
-                    printWriter.print(Integer.toHexString(bdjVar.br));
+                    printWriter.print(Integer.toHexString(someFragmentManagerVar.br));
                     printWriter.print(" mTag=");
-                    printWriter.println(bdjVar.bs);
+                    printWriter.println(someFragmentManagerVar.bs);
                     printWriter.print(strS2);
                     printWriter.print("mState=");
-                    printWriter.print(bdjVar.as);
+                    printWriter.print(someFragmentManagerVar.as);
                     printWriter.print(" mWho=");
-                    printWriter.print(bdjVar.aw);
+                    printWriter.print(someFragmentManagerVar.aw);
                     printWriter.print(" mBackStackNesting=");
-                    printWriter.println(bdjVar.bl);
+                    printWriter.println(someFragmentManagerVar.bl);
                     printWriter.print(strS2);
                     printWriter.print("mAdded=");
-                    printWriter.print(bdjVar.bc);
+                    printWriter.print(someFragmentManagerVar.bc);
                     printWriter.print(" mRemoving=");
-                    printWriter.print(bdjVar.bd);
+                    printWriter.print(someFragmentManagerVar.bd);
                     printWriter.print(" mFromLayout=");
-                    printWriter.print(bdjVar.bg);
+                    printWriter.print(someFragmentManagerVar.bg);
                     printWriter.print(" mInLayout=");
-                    printWriter.println(bdjVar.bh);
+                    printWriter.println(someFragmentManagerVar.bh);
                     printWriter.print(strS2);
                     printWriter.print("mHidden=");
-                    printWriter.print(bdjVar.bt);
+                    printWriter.print(someFragmentManagerVar.bt);
                     printWriter.print(" mDetached=");
-                    printWriter.print(bdjVar.bu);
+                    printWriter.print(someFragmentManagerVar.bu);
                     printWriter.print(" mMenuVisible=");
-                    printWriter.print(bdjVar.bw);
+                    printWriter.print(someFragmentManagerVar.bw);
                     printWriter.print(" mHasMenu=");
                     printWriter.println(false);
                     printWriter.print(strS2);
                     printWriter.print("mRetainInstance=");
-                    printWriter.print(bdjVar.bv);
+                    printWriter.print(someFragmentManagerVar.bv);
                     printWriter.print(" mUserVisibleHint=");
-                    printWriter.println(bdjVar.cb);
-                    if (bdjVar.bm != null) {
+                    printWriter.println(someFragmentManagerVar.cb);
+                    if (someFragmentManagerVar.bm != null) {
                         printWriter.print(strS2);
                         printWriter.print("mFragmentManager=");
-                        printWriter.println(bdjVar.bm);
+                        printWriter.println(someFragmentManagerVar.bm);
                     }
-                    if (bdjVar.bn != null) {
+                    if (someFragmentManagerVar.bn != null) {
                         printWriter.print(strS2);
                         printWriter.print("mHost=");
-                        printWriter.println(bdjVar.bn);
+                        printWriter.println(someFragmentManagerVar.bn);
                     }
-                    if (bdjVar.bp != null) {
+                    if (someFragmentManagerVar.bp != null) {
                         printWriter.print(strS2);
                         printWriter.print("mParentFragment=");
-                        printWriter.println(bdjVar.bp);
+                        printWriter.println(someFragmentManagerVar.bp);
                     }
-                    if (bdjVar.ax != null) {
+                    if (someFragmentManagerVar.ax != null) {
                         printWriter.print(strS2);
                         printWriter.print("mArguments=");
-                        printWriter.println(bdjVar.ax);
+                        printWriter.println(someFragmentManagerVar.ax);
                     }
-                    if (bdjVar.at != null) {
+                    if (someFragmentManagerVar.at != null) {
                         printWriter.print(strS2);
                         printWriter.print("mSavedFragmentState=");
-                        printWriter.println(bdjVar.at);
+                        printWriter.println(someFragmentManagerVar.at);
                     }
-                    if (bdjVar.au != null) {
+                    if (someFragmentManagerVar.au != null) {
                         printWriter.print(strS2);
                         printWriter.print("mSavedViewState=");
-                        printWriter.println(bdjVar.au);
+                        printWriter.println(someFragmentManagerVar.au);
                     }
-                    if (bdjVar.av != null) {
+                    if (someFragmentManagerVar.av != null) {
                         printWriter.print(strS2);
                         printWriter.print("mSavedViewRegistryState=");
-                        printWriter.println(bdjVar.av);
+                        printWriter.println(someFragmentManagerVar.av);
                     }
-                    Object objZ = bdjVar.ay;
+                    Object objZ = someFragmentManagerVar.ay;
                     if (objZ == null) {
-                        beg begVar = bdjVar.bm;
-                        objZ = (begVar == null || (str2 = bdjVar.az) == null) ? null : begVar.c.z(str2);
+                        beg begVar = someFragmentManagerVar.bm;
+                        objZ = (begVar == null || (str2 = someFragmentManagerVar.az) == null) ? null : begVar.c.z(str2);
                     }
                     if (objZ != null) {
                         printWriter.print(strS2);
                         printWriter.print("mTarget=");
                         printWriter.print(objZ);
                         printWriter.print(" mTargetRequestCode=");
-                        printWriter.println(bdjVar.ba);
+                        printWriter.println(someFragmentManagerVar.ba);
                     }
                     printWriter.print(strS2);
                     printWriter.print("mPopDirection=");
-                    bdg bdgVar = bdjVar.cc;
+                    bdg bdgVar = someFragmentManagerVar.cc;
                     printWriter.println(bdgVar == null ? false : bdgVar.a);
-                    bdg bdgVar2 = bdjVar.cc;
+                    bdg bdgVar2 = someFragmentManagerVar.cc;
                     if ((bdgVar2 == null ? 0 : bdgVar2.b) != 0) {
                         printWriter.print(strS2);
                         printWriter.print("getEnterAnim=");
-                        bdg bdgVar3 = bdjVar.cc;
+                        bdg bdgVar3 = someFragmentManagerVar.cc;
                         printWriter.println(bdgVar3 == null ? 0 : bdgVar3.b);
                     }
-                    bdg bdgVar4 = bdjVar.cc;
+                    bdg bdgVar4 = someFragmentManagerVar.cc;
                     if ((bdgVar4 == null ? 0 : bdgVar4.c) != 0) {
                         printWriter.print(strS2);
                         printWriter.print("getExitAnim=");
-                        bdg bdgVar5 = bdjVar.cc;
+                        bdg bdgVar5 = someFragmentManagerVar.cc;
                         printWriter.println(bdgVar5 == null ? 0 : bdgVar5.c);
                     }
-                    bdg bdgVar6 = bdjVar.cc;
+                    bdg bdgVar6 = someFragmentManagerVar.cc;
                     if ((bdgVar6 == null ? 0 : bdgVar6.d) != 0) {
                         printWriter.print(strS2);
                         printWriter.print("getPopEnterAnim=");
-                        bdg bdgVar7 = bdjVar.cc;
+                        bdg bdgVar7 = someFragmentManagerVar.cc;
                         printWriter.println(bdgVar7 == null ? 0 : bdgVar7.d);
                     }
-                    bdg bdgVar8 = bdjVar.cc;
+                    bdg bdgVar8 = someFragmentManagerVar.cc;
                     if ((bdgVar8 == null ? 0 : bdgVar8.e) != 0) {
                         printWriter.print(strS2);
                         printWriter.print("getPopExitAnim=");
-                        bdg bdgVar9 = bdjVar.cc;
+                        bdg bdgVar9 = someFragmentManagerVar.cc;
                         printWriter.println(bdgVar9 == null ? 0 : bdgVar9.e);
                     }
-                    if (bdjVar.by != null) {
+                    if (someFragmentManagerVar.by != null) {
                         printWriter.print(strS2);
                         printWriter.print("mContainer=");
-                        printWriter.println(bdjVar.by);
+                        printWriter.println(someFragmentManagerVar.by);
                     }
-                    if (bdjVar.bz != null) {
+                    if (someFragmentManagerVar.bz != null) {
                         printWriter.print(strS2);
                         printWriter.print("mView=");
-                        printWriter.println(bdjVar.bz);
+                        printWriter.println(someFragmentManagerVar.bz);
                     }
-                    if (bdjVar.cq() != null) {
-                        erq erqVarAj = bdjVar.aj();
+                    if (someFragmentManagerVar.cq() != null) {
+                        erq erqVarAj = someFragmentManagerVar.aj();
                         bei beiVar = bwv.a;
                         throwIfVar1IsNull(erqVarAj, "store");
                         ahv ahvVar = ahv.a;
@@ -1009,8 +1009,8 @@ public final class beg {
                         }
                     }
                     printWriter.print(strS2);
-                    printWriter.println("Child " + bdjVar.bo + ":");
-                    bdjVar.bo.bs(dkz.s(strS2, "  "), fileDescriptor, printWriter, strArr);
+                    printWriter.println("Child " + someFragmentManagerVar.bo + ":");
+                    someFragmentManagerVar.bo.bs(StaticHelpers6.concat(strS2, "  "), fileDescriptor, printWriter, strArr);
                 } else {
                     printWriter.println("null");
                 }
@@ -1021,12 +1021,12 @@ public final class beg {
             printWriter.print(str);
             printWriter.println("Added Fragments:");
             for (int i = 0; i < size2; i++) {
-                bdj bdjVar2 = (bdj) arrayList.get(i);
+                SomeFragmentManager someFragmentManagerVar2 = (SomeFragmentManager) arrayList.get(i);
                 printWriter.print(str);
                 printWriter.print("  #");
                 printWriter.print(i);
                 printWriter.print(": ");
-                printWriter.println(bdjVar2.toString());
+                printWriter.println(someFragmentManagerVar2.toString());
             }
         }
         ArrayList arrayList2 = this.e;
@@ -1034,12 +1034,12 @@ public final class beg {
             printWriter.print(str);
             printWriter.println("Fragments Created Menus:");
             for (int i2 = 0; i2 < size; i2++) {
-                bdj bdjVar3 = (bdj) this.e.get(i2);
+                SomeFragmentManager someFragmentManagerVar3 = (SomeFragmentManager) this.e.get(i2);
                 printWriter.print(str);
                 printWriter.print("  #");
                 printWriter.print(i2);
                 printWriter.print(": ");
-                printWriter.println(bdjVar3.toString());
+                printWriter.println(someFragmentManagerVar3.toString());
             }
         }
         int size3 = this.d.size();
@@ -1178,9 +1178,9 @@ public final class beg {
             this.a.add(0, this.h);
             Iterator it = this.h.a.iterator();
             while (it.hasNext()) {
-                bdj bdjVar = ((bfe) it.next()).b;
-                if (bdjVar != null) {
-                    bdjVar.be = false;
+                SomeFragmentManager someFragmentManagerVar = ((bfe) it.next()).b;
+                if (someFragmentManagerVar != null) {
+                    someFragmentManagerVar.be = false;
                 }
             }
             this.h = null;
@@ -1243,9 +1243,9 @@ public final class beg {
             this.h.v(this.al, this.am);
             Iterator it = this.h.a.iterator();
             while (it.hasNext()) {
-                bdj bdjVar = ((bfe) it.next()).b;
-                if (bdjVar != null) {
-                    bdjVar.be = false;
+                SomeFragmentManager someFragmentManagerVar = ((bfe) it.next()).b;
+                if (someFragmentManagerVar != null) {
+                    someFragmentManagerVar.be = false;
                 }
             }
             this.h = null;
@@ -1293,7 +1293,7 @@ public final class beg {
             arrayList6.clear();
         }
         this.an.addAll(chmVar.af());
-        bdj bdjVar = this.z;
+        SomeFragmentManager someFragmentManagerVar = this.z;
         int i7 = i6;
         boolean z5 = false;
         while (i7 < i2) {
@@ -1317,10 +1317,10 @@ public final class beg {
                                     arrayList7.add(bfeVar.b);
                                     break;
                                 case 8:
-                                    bdjVar = null;
+                                    someFragmentManagerVar = null;
                                     break;
                                 case 9:
-                                    bdjVar = bfeVar.b;
+                                    someFragmentManagerVar = bfeVar.b;
                                     break;
                                 case 10:
                                     bfeVar.i = bfeVar.h;
@@ -1351,12 +1351,12 @@ public final class beg {
                         if (i11 != 2) {
                             if (i11 == 3 || i11 == 6) {
                                 arrayList9.remove(bfeVar2.b);
-                                bdj bdjVar2 = bfeVar2.b;
-                                if (bdjVar2 == bdjVar) {
-                                    arrayList10.add(i10, new bfe(9, bdjVar2));
+                                SomeFragmentManager someFragmentManagerVar2 = bfeVar2.b;
+                                if (someFragmentManagerVar2 == someFragmentManagerVar) {
+                                    arrayList10.add(i10, new bfe(9, someFragmentManagerVar2));
                                     i10++;
                                     arrayList4 = arrayList5;
-                                    bdjVar = null;
+                                    someFragmentManagerVar = null;
                                 } else {
                                     arrayList4 = arrayList5;
                                 }
@@ -1365,47 +1365,47 @@ public final class beg {
                             } else if (i11 != 8) {
                                 arrayList4 = arrayList5;
                             } else {
-                                arrayList10.add(i10, new bfe(9, bdjVar, 0));
+                                arrayList10.add(i10, new bfe(9, someFragmentManagerVar, 0));
                                 bfeVar2.c = true;
                                 i10++;
                                 arrayList4 = arrayList5;
-                                bdjVar = bfeVar2.b;
+                                someFragmentManagerVar = bfeVar2.b;
                             }
                             i13 = 1;
                         } else {
-                            bdj bdjVar3 = bfeVar2.b;
-                            int i14 = bdjVar3.br;
+                            SomeFragmentManager someFragmentManagerVar3 = bfeVar2.b;
+                            int i14 = someFragmentManagerVar3.br;
                             int size2 = arrayList9.size() - 1;
                             boolean z7 = false;
                             while (size2 >= 0) {
                                 int i15 = size2;
-                                bdj bdjVar4 = (bdj) arrayList9.get(size2);
+                                SomeFragmentManager someFragmentManagerVar4 = (SomeFragmentManager) arrayList9.get(size2);
                                 ArrayList arrayList11 = arrayList5;
-                                if (bdjVar4.br != i14) {
+                                if (someFragmentManagerVar4.br != i14) {
                                     i4 = i14;
-                                } else if (bdjVar4 == bdjVar3) {
+                                } else if (someFragmentManagerVar4 == someFragmentManagerVar3) {
                                     i4 = i14;
                                     z7 = true;
                                 } else {
-                                    if (bdjVar4 == bdjVar) {
+                                    if (someFragmentManagerVar4 == someFragmentManagerVar) {
                                         i4 = i14;
-                                        arrayList10.add(i10, new bfe(9, bdjVar4, 0));
+                                        arrayList10.add(i10, new bfe(9, someFragmentManagerVar4, 0));
                                         i10++;
                                         i5 = 0;
-                                        bdjVar = null;
+                                        someFragmentManagerVar = null;
                                     } else {
                                         i4 = i14;
                                         i5 = 0;
                                     }
-                                    bfe bfeVar3 = new bfe(3, bdjVar4, i5);
+                                    bfe bfeVar3 = new bfe(3, someFragmentManagerVar4, i5);
                                     bfeVar3.d = bfeVar2.d;
                                     bfeVar3.f = bfeVar2.f;
                                     bfeVar3.e = bfeVar2.e;
                                     bfeVar3.g = bfeVar2.g;
                                     arrayList10.add(i10, bfeVar3);
-                                    arrayList9.remove(bdjVar4);
+                                    arrayList9.remove(someFragmentManagerVar4);
                                     i10++;
-                                    bdjVar = bdjVar;
+                                    someFragmentManagerVar = someFragmentManagerVar;
                                 }
                                 size2 = i15 - 1;
                                 i14 = i4;
@@ -1419,7 +1419,7 @@ public final class beg {
                             } else {
                                 bfeVar2.a = 1;
                                 bfeVar2.c = true;
-                                arrayList9.add(bdjVar3);
+                                arrayList9.add(someFragmentManagerVar3);
                             }
                         }
                         i10 += i13;
@@ -1456,9 +1456,9 @@ public final class beg {
             for (int i16 = i6; i16 < i2; i16++) {
                 Iterator it = ((mu) arrayList.get(i16)).a.iterator();
                 while (it.hasNext()) {
-                    bdj bdjVar5 = ((bfe) it.next()).b;
-                    if (bdjVar5 != null && bdjVar5.bm != null) {
-                        chmVar.aj(bc(bdjVar5));
+                    SomeFragmentManager someFragmentManagerVar5 = ((bfe) it.next()).b;
+                    if (someFragmentManagerVar5 != null && someFragmentManagerVar5.bm != null) {
+                        chmVar.aj(bc(someFragmentManagerVar5));
                     }
                 }
             }
@@ -1473,11 +1473,11 @@ public final class beg {
                 ArrayList arrayList13 = muVar2.a;
                 for (int size3 = arrayList13.size() - 1; size3 >= 0; size3--) {
                     bfe bfeVar4 = (bfe) arrayList13.get(size3);
-                    bdj bdjVar6 = bfeVar4.b;
-                    if (bdjVar6 != null) {
-                        bdjVar6.bf = muVar2.u;
-                        if (bdjVar6.cc != null) {
-                            bdjVar6.co().a = true;
+                    SomeFragmentManager someFragmentManagerVar6 = bfeVar4.b;
+                    if (someFragmentManagerVar6 != null) {
+                        someFragmentManagerVar6.bf = muVar2.u;
+                        if (someFragmentManagerVar6.cc != null) {
+                            someFragmentManagerVar6.co().a = true;
                         }
                         int i18 = muVar2.f;
                         int i19 = q.a.s;
@@ -1491,53 +1491,53 @@ public final class beg {
                                 }
                             }
                         }
-                        if (bdjVar6.cc != null || i19 != 0) {
-                            bdjVar6.co();
-                            bdjVar6.cc.f = i19;
+                        if (someFragmentManagerVar6.cc != null || i19 != 0) {
+                            someFragmentManagerVar6.co();
+                            someFragmentManagerVar6.cc.f = i19;
                         }
-                        bdjVar6.co();
-                        bdjVar6.cc.getClass();
+                        someFragmentManagerVar6.co();
+                        someFragmentManagerVar6.cc.getClass();
                     }
                     switch (bfeVar4.a) {
                         case 1:
-                            bdjVar6.de(bfeVar4.d, bfeVar4.e, bfeVar4.f, bfeVar4.g);
-                            begVar.ct(bdjVar6, true);
-                            begVar.co(bdjVar6);
+                            someFragmentManagerVar6.de(bfeVar4.d, bfeVar4.e, bfeVar4.f, bfeVar4.g);
+                            begVar.ct(someFragmentManagerVar6, true);
+                            begVar.co(someFragmentManagerVar6);
                             break;
                         case 2:
                         default:
                             throw new IllegalArgumentException(str2 + bfeVar4.a);
                         case 3:
-                            bdjVar6.de(bfeVar4.d, bfeVar4.e, bfeVar4.f, bfeVar4.g);
-                            begVar.aw(bdjVar6);
+                            someFragmentManagerVar6.de(bfeVar4.d, bfeVar4.e, bfeVar4.f, bfeVar4.g);
+                            begVar.aw(someFragmentManagerVar6);
                             break;
                         case 4:
-                            bdjVar6.de(bfeVar4.d, bfeVar4.e, bfeVar4.f, bfeVar4.g);
+                            someFragmentManagerVar6.de(bfeVar4.d, bfeVar4.e, bfeVar4.f, bfeVar4.g);
                             begVar.getClass();
-                            av(bdjVar6);
+                            av(someFragmentManagerVar6);
                             break;
                         case 5:
-                            bdjVar6.de(bfeVar4.d, bfeVar4.e, bfeVar4.f, bfeVar4.g);
-                            begVar.ct(bdjVar6, true);
-                            begVar.cg(bdjVar6);
+                            someFragmentManagerVar6.de(bfeVar4.d, bfeVar4.e, bfeVar4.f, bfeVar4.g);
+                            begVar.ct(someFragmentManagerVar6, true);
+                            begVar.cg(someFragmentManagerVar6);
                             break;
                         case 6:
-                            bdjVar6.de(bfeVar4.d, bfeVar4.e, bfeVar4.f, bfeVar4.g);
-                            begVar.ay(bdjVar6);
+                            someFragmentManagerVar6.de(bfeVar4.d, bfeVar4.e, bfeVar4.f, bfeVar4.g);
+                            begVar.ay(someFragmentManagerVar6);
                             break;
                         case 7:
-                            bdjVar6.de(bfeVar4.d, bfeVar4.e, bfeVar4.f, bfeVar4.g);
-                            begVar.ct(bdjVar6, true);
-                            begVar.bd(bdjVar6);
+                            someFragmentManagerVar6.de(bfeVar4.d, bfeVar4.e, bfeVar4.f, bfeVar4.g);
+                            begVar.ct(someFragmentManagerVar6, true);
+                            begVar.bd(someFragmentManagerVar6);
                             break;
                         case 8:
                             begVar.cv(null);
                             break;
                         case 9:
-                            begVar.cv(bdjVar6);
+                            begVar.cv(someFragmentManagerVar6);
                             break;
                         case 10:
-                            begVar.cu(bdjVar6, bfeVar4.h);
+                            begVar.cu(someFragmentManagerVar6, bfeVar4.h);
                             break;
                     }
                 }
@@ -1549,26 +1549,26 @@ public final class beg {
                 int i21 = 0;
                 while (i21 < size4) {
                     bfe bfeVar5 = (bfe) arrayList14.get(i21);
-                    bdj bdjVar7 = bfeVar5.b;
-                    if (bdjVar7 != null) {
-                        bdjVar7.bf = muVar2.u;
-                        if (bdjVar7.cc != null) {
-                            bdjVar7.co().a = false;
+                    SomeFragmentManager someFragmentManagerVar7 = bfeVar5.b;
+                    if (someFragmentManagerVar7 != null) {
+                        someFragmentManagerVar7.bf = muVar2.u;
+                        if (someFragmentManagerVar7.cc != null) {
+                            someFragmentManagerVar7.co().a = false;
                         }
                         int i22 = muVar2.f;
-                        if (bdjVar7.cc != null || i22 != 0) {
-                            bdjVar7.co();
-                            bdjVar7.cc.f = i22;
+                        if (someFragmentManagerVar7.cc != null || i22 != 0) {
+                            someFragmentManagerVar7.co();
+                            someFragmentManagerVar7.cc.f = i22;
                         }
-                        bdjVar7.co();
-                        bdjVar7.cc.getClass();
+                        someFragmentManagerVar7.co();
+                        someFragmentManagerVar7.cc.getClass();
                     }
                     switch (bfeVar5.a) {
                         case 1:
                             str = str2;
-                            bdjVar7.de(bfeVar5.d, bfeVar5.e, bfeVar5.f, bfeVar5.g);
-                            begVar2.ct(bdjVar7, false);
-                            begVar2.aw(bdjVar7);
+                            someFragmentManagerVar7.de(bfeVar5.d, bfeVar5.e, bfeVar5.f, bfeVar5.g);
+                            begVar2.ct(someFragmentManagerVar7, false);
+                            begVar2.aw(someFragmentManagerVar7);
                             i21++;
                             str2 = str;
                             break;
@@ -1577,43 +1577,43 @@ public final class beg {
                             throw new IllegalArgumentException(str2 + bfeVar5.a);
                         case 3:
                             str = str2;
-                            bdjVar7.de(bfeVar5.d, bfeVar5.e, bfeVar5.f, bfeVar5.g);
-                            begVar2.co(bdjVar7);
+                            someFragmentManagerVar7.de(bfeVar5.d, bfeVar5.e, bfeVar5.f, bfeVar5.g);
+                            begVar2.co(someFragmentManagerVar7);
                             i21++;
                             str2 = str;
                             break;
                         case 4:
                             str = str2;
-                            bdjVar7.de(bfeVar5.d, bfeVar5.e, bfeVar5.f, bfeVar5.g);
-                            begVar2.cg(bdjVar7);
+                            someFragmentManagerVar7.de(bfeVar5.d, bfeVar5.e, bfeVar5.f, bfeVar5.g);
+                            begVar2.cg(someFragmentManagerVar7);
                             i21++;
                             str2 = str;
                             break;
                         case 5:
                             str = str2;
-                            bdjVar7.de(bfeVar5.d, bfeVar5.e, bfeVar5.f, bfeVar5.g);
-                            begVar2.ct(bdjVar7, false);
-                            av(bdjVar7);
+                            someFragmentManagerVar7.de(bfeVar5.d, bfeVar5.e, bfeVar5.f, bfeVar5.g);
+                            begVar2.ct(someFragmentManagerVar7, false);
+                            av(someFragmentManagerVar7);
                             i21++;
                             str2 = str;
                             break;
                         case 6:
                             str = str2;
-                            bdjVar7.de(bfeVar5.d, bfeVar5.e, bfeVar5.f, bfeVar5.g);
-                            begVar2.bd(bdjVar7);
+                            someFragmentManagerVar7.de(bfeVar5.d, bfeVar5.e, bfeVar5.f, bfeVar5.g);
+                            begVar2.bd(someFragmentManagerVar7);
                             i21++;
                             str2 = str;
                             break;
                         case 7:
                             str = str2;
-                            bdjVar7.de(bfeVar5.d, bfeVar5.e, bfeVar5.f, bfeVar5.g);
-                            begVar2.ct(bdjVar7, false);
-                            begVar2.ay(bdjVar7);
+                            someFragmentManagerVar7.de(bfeVar5.d, bfeVar5.e, bfeVar5.f, bfeVar5.g);
+                            begVar2.ct(someFragmentManagerVar7, false);
+                            begVar2.ay(someFragmentManagerVar7);
                             i21++;
                             str2 = str;
                             break;
                         case 8:
-                            begVar2.cv(bdjVar7);
+                            begVar2.cv(someFragmentManagerVar7);
                             str = str2;
                             i21++;
                             str2 = str;
@@ -1625,7 +1625,7 @@ public final class beg {
                             str2 = str;
                             break;
                         case 10:
-                            begVar2.cu(bdjVar7, bfeVar5.i);
+                            begVar2.cu(someFragmentManagerVar7, bfeVar5.i);
                             str = str2;
                             i21++;
                             str2 = str;
@@ -1647,13 +1647,13 @@ public final class beg {
                 for (bes besVar : arrayList12) {
                     Iterator it3 = linkedHashSet.iterator();
                     while (it3.hasNext()) {
-                        besVar.d((bdj) it3.next(), zBooleanValue);
+                        besVar.d((SomeFragmentManager) it3.next(), zBooleanValue);
                     }
                 }
                 for (bes besVar2 : arrayList12) {
                     Iterator it4 = linkedHashSet.iterator();
                     while (it4.hasNext()) {
-                        besVar2.c((bdj) it4.next(), zBooleanValue);
+                        besVar2.c((SomeFragmentManager) it4.next(), zBooleanValue);
                     }
                 }
             }
@@ -1662,17 +1662,17 @@ public final class beg {
             mu muVar3 = (mu) arrayList.get(i23);
             if (zBooleanValue) {
                 for (int size5 = muVar3.a.size() - 1; size5 >= 0; size5--) {
-                    bdj bdjVar8 = ((bfe) muVar3.a.get(size5)).b;
-                    if (bdjVar8 != null) {
-                        bc(bdjVar8).p();
+                    SomeFragmentManager someFragmentManagerVar8 = ((bfe) muVar3.a.get(size5)).b;
+                    if (someFragmentManagerVar8 != null) {
+                        bc(someFragmentManagerVar8).p();
                     }
                 }
             } else {
                 Iterator it5 = muVar3.a.iterator();
                 while (it5.hasNext()) {
-                    bdj bdjVar9 = ((bfe) it5.next()).b;
-                    if (bdjVar9 != null) {
-                        bc(bdjVar9).p();
+                    SomeFragmentManager someFragmentManagerVar9 = ((bfe) it5.next()).b;
+                    if (someFragmentManagerVar9 != null) {
+                        bc(someFragmentManagerVar9).p();
                     }
                 }
             }
@@ -1773,45 +1773,45 @@ public final class beg {
         return size;
     }
 
-    public final bdj ca(int i) {
+    public final SomeFragmentManager ca(int i) {
         chm chmVar = this.c;
         ArrayList arrayList = (ArrayList) chmVar.c;
         for (int size = arrayList.size() - 1; size >= 0; size--) {
-            bdj bdjVar = (bdj) arrayList.get(size);
-            if (bdjVar != null && bdjVar.bq == i) {
-                return bdjVar;
+            SomeFragmentManager someFragmentManagerVar = (SomeFragmentManager) arrayList.get(size);
+            if (someFragmentManagerVar != null && someFragmentManagerVar.bq == i) {
+                return someFragmentManagerVar;
             }
         }
-        for (bfb bfbVar : ((HashMap) chmVar.d).values()) {
-            if (bfbVar != null) {
-                bdj bdjVar2 = bfbVar.c;
-                if (bdjVar2.bq == i) {
-                    return bdjVar2;
+        for (FragmentManager fragmentManagerVar : ((HashMap) chmVar.d).values()) {
+            if (fragmentManagerVar != null) {
+                SomeFragmentManager someFragmentManagerVar2 = fragmentManagerVar.c;
+                if (someFragmentManagerVar2.bq == i) {
+                    return someFragmentManagerVar2;
                 }
             }
         }
         return null;
     }
 
-    public final bdj cb(String str) {
+    public final SomeFragmentManager cb(String str) {
         chm chmVar = this.c;
         ArrayList arrayList = (ArrayList) chmVar.c;
         if (str != null) {
             for (int size = arrayList.size() - 1; size >= 0; size--) {
-                bdj bdjVar = (bdj) arrayList.get(size);
-                if (bdjVar != null && str.equals(bdjVar.bs)) {
-                    return bdjVar;
+                SomeFragmentManager someFragmentManagerVar = (SomeFragmentManager) arrayList.get(size);
+                if (someFragmentManagerVar != null && str.equals(someFragmentManagerVar.bs)) {
+                    return someFragmentManagerVar;
                 }
             }
         }
         if (str == null) {
             return null;
         }
-        for (bfb bfbVar : ((HashMap) chmVar.d).values()) {
-            if (bfbVar != null) {
-                bdj bdjVar2 = bfbVar.c;
-                if (str.equals(bdjVar2.bs)) {
-                    return bdjVar2;
+        for (FragmentManager fragmentManagerVar : ((HashMap) chmVar.d).values()) {
+            if (fragmentManagerVar != null) {
+                SomeFragmentManager someFragmentManagerVar2 = fragmentManagerVar.c;
+                if (str.equals(someFragmentManagerVar2.bs)) {
+                    return someFragmentManagerVar2;
                 }
             }
         }
@@ -1830,15 +1830,15 @@ public final class beg {
         }
     }
 
-    public final ViewGroup cd(bdj bdjVar) {
-        ViewGroup viewGroup = bdjVar.by;
+    public final ViewGroup cd(SomeFragmentManager someFragmentManagerVar) {
+        ViewGroup viewGroup = someFragmentManagerVar.by;
         if (viewGroup != null) {
             return viewGroup;
         }
-        if (bdjVar.br <= 0 || !this.x.d()) {
+        if (someFragmentManagerVar.br <= 0 || !this.x.d()) {
             return null;
         }
-        View viewC = this.x.c(bdjVar.br);
+        View viewC = this.x.c(someFragmentManagerVar.br);
         if (viewC instanceof ViewGroup) {
             return (ViewGroup) viewC;
         }
@@ -1846,33 +1846,33 @@ public final class beg {
     }
 
     public final bdz ce() {
-        bdj bdjVar = this.y;
-        return bdjVar != null ? bdjVar.bm.ce() : this.aa;
+        SomeFragmentManager someFragmentManagerVar = this.y;
+        return someFragmentManagerVar != null ? someFragmentManagerVar.bm.ce() : this.aa;
     }
 
-    public final awp cf() {
-        bdj bdjVar = this.y;
-        return bdjVar != null ? bdjVar.bm.cf() : this.ab;
+    public final GifEncoder cf() {
+        SomeFragmentManager someFragmentManagerVar = this.y;
+        return someFragmentManagerVar != null ? someFragmentManagerVar.bm.cf() : this.ab;
     }
 
-    public final void cg(bdj bdjVar) {
+    public final void cg(SomeFragmentManager someFragmentManagerVar) {
         if (ar(2)) {
-            Log.v("FragmentManager", "hide: " + bdjVar);
+            Log.v("FragmentManager", "hide: " + someFragmentManagerVar);
         }
-        if (bdjVar.bt) {
+        if (someFragmentManagerVar.bt) {
             return;
         }
-        bdjVar.bt = true;
-        bdjVar.cd = true ^ bdjVar.cd;
-        cw(bdjVar);
+        someFragmentManagerVar.bt = true;
+        someFragmentManagerVar.cd = true ^ someFragmentManagerVar.cd;
+        cw(someFragmentManagerVar);
     }
 
     public final boolean ch() {
-        bdj bdjVar = this.y;
-        if (bdjVar == null) {
+        SomeFragmentManager someFragmentManagerVar = this.y;
+        if (someFragmentManagerVar == null) {
             return true;
         }
-        return bdjVar.cv() && this.y.cs().ch();
+        return someFragmentManagerVar.cv() && this.y.cs().ch();
     }
 
     public final boolean ci() {
@@ -1890,20 +1890,20 @@ public final class beg {
             HashMap map = (HashMap) chmVar.d;
             Iterator it = ((ArrayList) chmVar.c).iterator();
             while (it.hasNext()) {
-                bfb bfbVar = (bfb) map.get(((bdj) it.next()).aw);
-                if (bfbVar != null) {
-                    bfbVar.p();
+                FragmentManager fragmentManagerVar = (FragmentManager) map.get(((SomeFragmentManager) it.next()).aw);
+                if (fragmentManagerVar != null) {
+                    fragmentManagerVar.p();
                 }
             }
-            for (bfb bfbVar2 : map.values()) {
-                if (bfbVar2 != null) {
-                    bfbVar2.p();
-                    bdj bdjVar = bfbVar2.c;
-                    if (bdjVar.bd && !bdjVar.cx()) {
-                        if (bdjVar.bf && !((HashMap) chmVar.e).containsKey(bdjVar.aw)) {
-                            chmVar.as(bdjVar.aw, bfbVar2.t());
+            for (FragmentManager fragmentManagerVar2 : map.values()) {
+                if (fragmentManagerVar2 != null) {
+                    fragmentManagerVar2.p();
+                    SomeFragmentManager someFragmentManagerVar = fragmentManagerVar2.c;
+                    if (someFragmentManagerVar.bd && !someFragmentManagerVar.cx()) {
+                        if (someFragmentManagerVar.bf && !((HashMap) chmVar.e).containsKey(someFragmentManagerVar.aw)) {
+                            chmVar.as(someFragmentManagerVar.aw, fragmentManagerVar2.t());
                         }
-                        chmVar.ak(bfbVar2);
+                        chmVar.ak(fragmentManagerVar2);
                     }
                 }
             }
@@ -1922,9 +1922,9 @@ public final class beg {
         this.ah = false;
         this.ai = false;
         this.ao.g = false;
-        for (bdj bdjVar : this.c.af()) {
-            if (bdjVar != null) {
-                bdjVar.bo.ck();
+        for (SomeFragmentManager someFragmentManagerVar : this.c.af()) {
+            if (someFragmentManagerVar != null) {
+                someFragmentManagerVar.bo.ck();
             }
         }
     }
@@ -1936,8 +1936,8 @@ public final class beg {
     public final boolean cm(int i, int i2) {
         bw(false);
         bv(true);
-        bdj bdjVar = this.z;
-        if (bdjVar != null && i < 0 && bdjVar.cp().cl()) {
+        SomeFragmentManager someFragmentManagerVar = this.z;
+        if (someFragmentManagerVar != null && i < 0 && someFragmentManagerVar.cp().cl()) {
             return true;
         }
         boolean zCn = cn(this.al, this.am, null, i, i2);
@@ -1969,24 +1969,24 @@ public final class beg {
         return true;
     }
 
-    public final void co(bdj bdjVar) {
+    public final void co(SomeFragmentManager someFragmentManagerVar) {
         if (ar(2)) {
-            Log.v("FragmentManager", "remove: " + bdjVar + " nesting=" + bdjVar.bl);
+            Log.v("FragmentManager", "remove: " + someFragmentManagerVar + " nesting=" + someFragmentManagerVar.bl);
         }
-        boolean zCx = bdjVar.cx();
-        if (bdjVar.bu && zCx) {
+        boolean zCx = someFragmentManagerVar.cx();
+        if (someFragmentManagerVar.bu && zCx) {
             return;
         }
         chm chmVar = this.c;
         synchronized (((ArrayList) chmVar.c)) {
-            ((ArrayList) chmVar.c).remove(bdjVar);
+            ((ArrayList) chmVar.c).remove(someFragmentManagerVar);
         }
-        bdjVar.bc = false;
-        if (as(bdjVar)) {
+        someFragmentManagerVar.bc = false;
+        if (as(someFragmentManagerVar)) {
             this.ag = true;
         }
-        bdjVar.bd = true;
-        cw(bdjVar);
+        someFragmentManagerVar.bd = true;
+        cw(someFragmentManagerVar);
     }
 
     public final void cp(ArrayList arrayList, ArrayList arrayList2) {
@@ -2022,7 +2022,7 @@ public final class beg {
 
     public final void cq(Bundle bundle) {
         io ioVar;
-        bfb bfbVar;
+        FragmentManager fragmentManagerVar;
         Bundle bundle2;
         Bundle bundle3;
         for (String str : bundle.keySet()) {
@@ -2057,55 +2057,55 @@ public final class beg {
             }
             Bundle bundleAs = chmVar.as((String) it.next(), null);
             if (bundleAs != null) {
-                bdj bdjVar = (bdj) this.ao.b.get(((bey) bundleAs.getParcelable("state")).b);
-                if (bdjVar != null) {
+                SomeFragmentManager someFragmentManagerVar = (SomeFragmentManager) this.ao.b.get(((bey) bundleAs.getParcelable("state")).b);
+                if (someFragmentManagerVar != null) {
                     if (ar(2)) {
-                        Log.v("FragmentManager", "restoreSaveState: re-attaching retained " + bdjVar);
+                        Log.v("FragmentManager", "restoreSaveState: re-attaching retained " + someFragmentManagerVar);
                     }
-                    bfbVar = new bfb(ioVar, chmVar, bdjVar, bundleAs);
+                    fragmentManagerVar = new FragmentManager(ioVar, chmVar, someFragmentManagerVar, bundleAs);
                 } else {
-                    bfbVar = new bfb(this.o, this.c, this.w.e.getClassLoader(), ce(), bundleAs);
+                    fragmentManagerVar = new FragmentManager(this.o, this.c, this.w.e.getClassLoader(), ce(), bundleAs);
                 }
-                bdj bdjVar2 = bfbVar.c;
-                bdjVar2.at = bundleAs;
-                bdjVar2.bm = this;
+                SomeFragmentManager someFragmentManagerVar2 = fragmentManagerVar.c;
+                someFragmentManagerVar2.at = bundleAs;
+                someFragmentManagerVar2.bm = this;
                 if (ar(2)) {
-                    Log.v("FragmentManager", "restoreSaveState: active (" + bdjVar2.aw + "): " + bdjVar2);
+                    Log.v("FragmentManager", "restoreSaveState: active (" + someFragmentManagerVar2.aw + "): " + someFragmentManagerVar2);
                 }
-                bfbVar.r(this.w.e.getClassLoader());
-                chmVar.aj(bfbVar);
-                bfbVar.e = this.v;
+                fragmentManagerVar.r(this.w.e.getClassLoader());
+                chmVar.aj(fragmentManagerVar);
+                fragmentManagerVar.e = this.v;
             }
         }
         bej bejVar = this.ao;
         bejVar.getClass();
-        for (bdj bdjVar3 : new ArrayList(bejVar.b.values())) {
-            if (map3.get(bdjVar3.aw) == null) {
+        for (SomeFragmentManager someFragmentManagerVar3 : new ArrayList(bejVar.b.values())) {
+            if (map3.get(someFragmentManagerVar3.aw) == null) {
                 if (ar(2)) {
-                    Log.v("FragmentManager", "Discarding retained Fragment " + bdjVar3
+                    Log.v("FragmentManager", "Discarding retained Fragment " + someFragmentManagerVar3
                             + " that was not found in the set of active Fragments " + behVar.a);
                 }
-                this.ao.l(bdjVar3);
-                bdjVar3.bm = this;
-                bfb bfbVar2 = new bfb(ioVar, chmVar, bdjVar3);
-                bfbVar2.e = 1;
-                bfbVar2.p();
-                bdjVar3.bd = true;
-                bfbVar2.p();
+                this.ao.l(someFragmentManagerVar3);
+                someFragmentManagerVar3.bm = this;
+                FragmentManager fragmentManagerVar2 = new FragmentManager(ioVar, chmVar, someFragmentManagerVar3);
+                fragmentManagerVar2.e = 1;
+                fragmentManagerVar2.p();
+                someFragmentManagerVar3.bd = true;
+                fragmentManagerVar2.p();
             }
         }
         ArrayList<String> arrayList = behVar.b;
         ((ArrayList) chmVar.c).clear();
         if (arrayList != null) {
             for (String str3 : arrayList) {
-                bdj bdjVarZ = chmVar.z(str3);
-                if (bdjVarZ == null) {
+                SomeFragmentManager someFragmentManagerVarZ = chmVar.z(str3);
+                if (someFragmentManagerVarZ == null) {
                     throw new IllegalStateException(concat("No instantiated fragment for (", str3, ")"));
                 }
                 if (ar(2)) {
-                    Log.v("FragmentManager", "restoreSaveState: added (" + str3 + "): " + bdjVarZ);
+                    Log.v("FragmentManager", "restoreSaveState: added (" + str3 + "): " + someFragmentManagerVarZ);
                 }
-                chmVar.s(bdjVarZ);
+                chmVar.s(someFragmentManagerVarZ);
             }
         }
         if (behVar.c != null) {
@@ -2147,9 +2147,9 @@ public final class beg {
         this.k.set(behVar.d);
         String str5 = behVar.e;
         if (str5 != null) {
-            bdj bdjVarZ2 = chmVar.z(str5);
-            this.z = bdjVarZ2;
-            bn(bdjVarZ2);
+            SomeFragmentManager someFragmentManagerVarZ2 = chmVar.z(str5);
+            this.z = someFragmentManagerVarZ2;
+            bn(someFragmentManagerVarZ2);
         }
         ArrayList arrayList3 = behVar.f;
         if (arrayList3 != null) {
@@ -2173,13 +2173,13 @@ public final class beg {
         chmVar.getClass();
         HashMap map = (HashMap) chmVar.d;
         ArrayList arrayList2 = new ArrayList(map.size());
-        for (bfb bfbVar : map.values()) {
-            if (bfbVar != null) {
-                bdj bdjVar = bfbVar.c;
-                chmVar.as(bdjVar.aw, bfbVar.t());
-                arrayList2.add(bdjVar.aw);
+        for (FragmentManager fragmentManagerVar : map.values()) {
+            if (fragmentManagerVar != null) {
+                SomeFragmentManager someFragmentManagerVar = fragmentManagerVar.c;
+                chmVar.as(someFragmentManagerVar.aw, fragmentManagerVar.t());
+                arrayList2.add(someFragmentManagerVar.aw);
                 if (ar(2)) {
-                    Log.v("FragmentManager", "Saved state of " + bdjVar + ": " + bdjVar.at);
+                    Log.v("FragmentManager", "Saved state of " + someFragmentManagerVar + ": " + someFragmentManagerVar.at);
                 }
             }
         }
@@ -2192,11 +2192,11 @@ public final class beg {
                         arrayList = null;
                     } else {
                         arrayList = new ArrayList(((ArrayList) chmVar2.c).size());
-                        for (bdj bdjVar2 : (ArrayList) chmVar2.c) {
-                            arrayList.add(bdjVar2.aw);
+                        for (SomeFragmentManager someFragmentManagerVar2 : (ArrayList) chmVar2.c) {
+                            arrayList.add(someFragmentManagerVar2.aw);
                             if (ar(2)) {
                                 Log.v("FragmentManager",
-                                        "saveAllState: adding fragment (" + bdjVar2.aw + "): " + bdjVar2);
+                                        "saveAllState: adding fragment (" + someFragmentManagerVar2.aw + "): " + someFragmentManagerVar2);
                             }
                         }
                     }
@@ -2228,9 +2228,9 @@ public final class beg {
             behVar.b = arrayList;
             behVar.c = mvVarArr;
             behVar.d = this.k.get();
-            bdj bdjVar3 = this.z;
-            if (bdjVar3 != null) {
-                behVar.e = bdjVar3.aw;
+            SomeFragmentManager someFragmentManagerVar3 = this.z;
+            if (someFragmentManagerVar3 != null) {
+                behVar.e = someFragmentManagerVar3.aw;
             }
             arrayList3.addAll(this.l.keySet());
             arrayList4.addAll(this.l.values());
@@ -2263,65 +2263,65 @@ public final class beg {
         }
     }
 
-    public final void ct(bdj bdjVar, boolean z) {
-        ViewGroup viewGroupCd = cd(bdjVar);
+    public final void ct(SomeFragmentManager someFragmentManagerVar, boolean z) {
+        ViewGroup viewGroupCd = cd(someFragmentManagerVar);
         if (viewGroupCd == null || !(viewGroupCd instanceof FragmentContainerView)) {
             return;
         }
         ((FragmentContainerView) viewGroupCd).setDrawDisappearingViewsLast(!z);
     }
 
-    public final void cu(bdj bdjVar, buh buhVar) {
-        if (bdjVar.equals(this.c.z(bdjVar.aw)) && (bdjVar.bn == null || bdjVar.bm == this)) {
-            bdjVar.cg = buhVar;
+    public final void cu(SomeFragmentManager someFragmentManagerVar, buh buhVar) {
+        if (someFragmentManagerVar.equals(this.c.z(someFragmentManagerVar.aw)) && (someFragmentManagerVar.bn == null || someFragmentManagerVar.bm == this)) {
+            someFragmentManagerVar.cg = buhVar;
             return;
         }
         throw new IllegalArgumentException(
-                "Fragment " + bdjVar + " is not an active fragment of FragmentManager " + this);
+                "Fragment " + someFragmentManagerVar + " is not an active fragment of FragmentManager " + this);
     }
 
-    public final void cv(bdj bdjVar) {
-        if (bdjVar != null) {
-            if (!bdjVar.equals(this.c.z(bdjVar.aw)) || (bdjVar.bn != null && bdjVar.bm != this)) {
+    public final void cv(SomeFragmentManager someFragmentManagerVar) {
+        if (someFragmentManagerVar != null) {
+            if (!someFragmentManagerVar.equals(this.c.z(someFragmentManagerVar.aw)) || (someFragmentManagerVar.bn != null && someFragmentManagerVar.bm != this)) {
                 throw new IllegalArgumentException(
-                        "Fragment " + bdjVar + " is not an active fragment of FragmentManager " + this);
+                        "Fragment " + someFragmentManagerVar + " is not an active fragment of FragmentManager " + this);
             }
         }
-        bdj bdjVar2 = this.z;
-        this.z = bdjVar;
-        bn(bdjVar2);
+        SomeFragmentManager someFragmentManagerVar2 = this.z;
+        this.z = someFragmentManagerVar;
+        bn(someFragmentManagerVar2);
         bn(this.z);
     }
 
-    public final void cw(bdj bdjVar) {
-        ViewGroup viewGroupCd = cd(bdjVar);
+    public final void cw(SomeFragmentManager someFragmentManagerVar) {
+        ViewGroup viewGroupCd = cd(someFragmentManagerVar);
         if (viewGroupCd != null) {
-            bdg bdgVar = bdjVar.cc;
+            bdg bdgVar = someFragmentManagerVar.cc;
             if ((bdgVar == null ? 0 : bdgVar.e) + (bdgVar == null ? 0 : bdgVar.d) + (bdgVar == null ? 0 : bdgVar.c)
                     + (bdgVar == null ? 0 : bdgVar.b) > 0) {
                 if (viewGroupCd.getTag(R.id.visible_removing_fragment_view_tag) == null) {
-                    viewGroupCd.setTag(R.id.visible_removing_fragment_view_tag, bdjVar);
+                    viewGroupCd.setTag(R.id.visible_removing_fragment_view_tag, someFragmentManagerVar);
                 }
-                bdj bdjVar2 = (bdj) viewGroupCd.getTag(R.id.visible_removing_fragment_view_tag);
-                bdg bdgVar2 = bdjVar.cc;
+                SomeFragmentManager someFragmentManagerVar2 = (SomeFragmentManager) viewGroupCd.getTag(R.id.visible_removing_fragment_view_tag);
+                bdg bdgVar2 = someFragmentManagerVar.cc;
                 boolean z = bdgVar2 != null ? bdgVar2.a : false;
-                if (bdjVar2.cc == null) {
+                if (someFragmentManagerVar2.cc == null) {
                     return;
                 }
-                bdjVar2.co().a = z;
+                someFragmentManagerVar2.co().a = z;
             }
         }
     }
 
     public final void cx() {
-        for (bfb bfbVar : this.c.ac()) {
-            bdj bdjVar = bfbVar.c;
-            if (bdjVar.ca) {
+        for (FragmentManager fragmentManagerVar : this.c.ac()) {
+            SomeFragmentManager someFragmentManagerVar = fragmentManagerVar.c;
+            if (someFragmentManagerVar.ca) {
                 if (this.b) {
                     this.ak = true;
                 } else {
-                    bdjVar.ca = false;
-                    bfbVar.p();
+                    someFragmentManagerVar.ca = false;
+                    fragmentManagerVar.p();
                 }
             }
         }
@@ -2394,9 +2394,9 @@ public final class beg {
         sb.append("FragmentManager{");
         sb.append(Integer.toHexString(System.identityHashCode(this)));
         sb.append(" in ");
-        bdj bdjVar = this.y;
-        if (bdjVar != null) {
-            sb.append(bdjVar.getClass().getSimpleName());
+        SomeFragmentManager someFragmentManagerVar = this.y;
+        if (someFragmentManagerVar != null) {
+            sb.append(someFragmentManagerVar.getClass().getSimpleName());
             sb.append("{");
             sb.append(Integer.toHexString(System.identityHashCode(this.y)));
             sb.append("}");

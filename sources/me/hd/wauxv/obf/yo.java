@@ -686,7 +686,7 @@ public final class yo extends cau implements Drawable.Callback, dqj {
             cat catVar = this.ct;
             dgm dgmVar = catVar.b;
             float f4 = catVar.j;
-            bmu bmuVar = this.dj;
+            SyntheticPileOfMess bmuVar = this.dj;
             dgo dgoVar = this.dk;
             Path path = this.ap;
             dgoVar.m(dgmVar, f4, rectF2, bmuVar, path);

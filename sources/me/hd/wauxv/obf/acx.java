@@ -9,7 +9,7 @@ public final class acx extends bws implements IDexFind {
     public static final acx a = new acx();
 
     public static String b() {
-        Object objInvoke = emn.bb(acw.a).invoke(null, null);
+        Object objInvoke = StaticHelpers7.bb(acw.a).invoke(null, null);
         throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.collections.Map<*, *>" /*
                                                                                                           * cnb.z(-
                                                                                                           * 107949708016426L)
@@ -25,6 +25,6 @@ public final class acx extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(acw.a, dexKitBridge, new act(2));
+        StaticHelpers7.resolveDexAndCache(acw.a, dexKitBridge, new act(2));
     }
 }

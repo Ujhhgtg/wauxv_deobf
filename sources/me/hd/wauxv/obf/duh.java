@@ -56,7 +56,7 @@ public final class duh {
             Integer num7, String str27, String str28, Integer num8, Integer num9, String str29, String str30,
             String str31, eat eatVar) {
         if ((2047 != (i2 & 2047)) || (-1 != i)) {
-            bht.ag(new int[] { i, i2 }, new int[] { -1, 2047 }, duf.b.getDescriptor());
+            ResourcesCompat.ag(new int[] { i, i2 }, new int[] { -1, 2047 }, duf.b.getDescriptor());
             throw null;
         }
         this.a = str;

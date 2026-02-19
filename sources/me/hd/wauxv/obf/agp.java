@@ -20,7 +20,7 @@ public final class agp extends bws implements IDexFind {
             try {
                 String string = cursorAc.getString(0);
                 a.getClass();
-                Method methodBb = emn.bb(ago.a);
+                Method methodBb = StaticHelpers7.bb(ago.a);
                 dmu.a.getClass();
                 methodBb.invoke(dmu.b(), string);
             } catch (Throwable th) {
@@ -39,20 +39,20 @@ public final class agp extends bws implements IDexFind {
         agpVar.getClass();
         int i = 0;
         dmu.a.getClass();
-        cde cdeVarT = dqc.bi(dmu.b()).t();
-        cdeVarT.a = dal.b(Integer.TYPE);
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dmu.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.returnType = dal.b(Integer.TYPE);
         agc.a.getClass();
-        Class<?> declaringClass = emn.bb(agb.a).getDeclaringClass();
+        Class<?> declaringClass = StaticHelpers7.bb(agb.a).getDeclaringClass();
         zc zcVarB = dal.b(String.class);
         Class cls = Boolean.TYPE;
-        Object objJ = ((MethodHookWrapper) dkz.n(new Object[] { declaringClass, zcVarB, dal.b(cls), dal.b(cls) }, 4, cdeVarT)).j(obj,
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { declaringClass, zcVarB, dal.b(cls), dal.b(cls) }, 4, methodResolverVarT)).j(obj,
                 str, false, true);
         throwIfVar1IsNull(objJ);
         ((Number) objJ).intValue();
     }
 
     public static void d(String str, String[] strArr) {
-        Method methodBb = emn.bb(agn.a);
+        Method methodBb = StaticHelpers7.bb(agn.a);
         if (methodBb.getParameterCount() == 4) {
             dmu.a.getClass();
             methodBb.invoke(dmu.b(), strArr, str, Boolean.TRUE, Boolean.FALSE);
@@ -68,9 +68,9 @@ public final class agp extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(agl.a, dexKitBridge, new age(8));
-        emn.aj(ago.a, dexKitBridge, new age(9));
-        emn.aj(agn.a, dexKitBridge, new age(10));
-        emn.aj(agm.a, dexKitBridge, new age(11));
+        StaticHelpers7.resolveDexAndCache(agl.a, dexKitBridge, new age(8));
+        StaticHelpers7.resolveDexAndCache(ago.a, dexKitBridge, new age(9));
+        StaticHelpers7.resolveDexAndCache(agn.a, dexKitBridge, new age(10));
+        StaticHelpers7.resolveDexAndCache(agm.a, dexKitBridge, new age(11));
     }
 }

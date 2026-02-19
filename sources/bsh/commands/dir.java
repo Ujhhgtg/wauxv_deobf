@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -36,7 +36,7 @@ public class dir {
                 }
                 Arrays.sort(list);
                 for (String str2 : list) {
-                    StringBuilder sbY = dkz.y(absolutePath);
+                    StringBuilder sbY = StaticHelpers6.toSb(absolutePath);
                     sbY.append(File.separator);
                     sbY.append(str2);
                     File file = new File(sbY.toString());

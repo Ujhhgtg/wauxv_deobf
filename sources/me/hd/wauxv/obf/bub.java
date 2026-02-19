@@ -13,7 +13,7 @@ public final class bub extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(btz.a, dexKitBridge, new blx(27));
-        emn.aj(bua.a, dexKitBridge, new blx(28));
+        StaticHelpers7.resolveDexAndCache(btz.a, dexKitBridge, new blx(27));
+        StaticHelpers7.resolveDexAndCache(bua.a, dexKitBridge, new blx(28));
     }
 }

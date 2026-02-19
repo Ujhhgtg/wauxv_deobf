@@ -3,13 +3,12 @@ package net.bytebuddy.implementation;
 import java.util.ArrayList;
 import java.util.List;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.field.FieldDescription;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.scaffold.InstrumentedType;
-import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
 import net.bytebuddy.implementation.bytecode.Duplication;
 import net.bytebuddy.implementation.bytecode.StackManipulation;
@@ -59,10 +58,10 @@ public class ToStringMethod implements Implementation {
         @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
         public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription) {
             if (methodDescription.isStatic()) {
-                throw new IllegalStateException(dkz.t("toString method must not be static: ", methodDescription));
+                throw new IllegalStateException(StaticHelpers6.concat("toString method must not be static: ", methodDescription));
             }
             if (!methodDescription.getReturnType().asErasure().isAssignableFrom(String.class)) {
-                throw new IllegalStateException(dkz.t("toString method does not return String-compatible type: ", methodDescription));
+                throw new IllegalStateException(StaticHelpers6.concat("toString method does not return String-compatible type: ", methodDescription));
             }
             ArrayList arrayList = new ArrayList(Math.max(0, (this.fieldDescriptions.size() * 7) - 2) + 10);
             arrayList.add(TypeCreation.of(TypeDescription.ForLoadedType.of(StringBuilder.class)));

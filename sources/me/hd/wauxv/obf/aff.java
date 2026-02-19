@@ -761,8 +761,8 @@ public final class aff implements CharSequence {
             enr enrVar = this.i;
             enrVar.i = true;
             ArrayList arrayList = enrVar.a;
-            if (!arrayList.isEmpty() && (dkz.l(1, arrayList) instanceof enp)) {
-                enp enpVar = (enp) dkz.l(1, arrayList);
+            if (!arrayList.isEmpty() && (StaticHelpers6.getLastNElem(1, arrayList) instanceof enp)) {
+                enp enpVar = (enp) StaticHelpers6.getLastNElem(1, arrayList);
                 if (enpVar.f.size() == 1) {
                     arrayList.set(arrayList.size() - 1, (enm) enpVar.f.get(0));
                 }

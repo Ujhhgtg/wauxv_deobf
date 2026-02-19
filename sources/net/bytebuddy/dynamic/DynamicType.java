@@ -27,7 +27,7 @@ import java.util.jar.JarInputStream;
 import java.util.jar.JarOutputStream;
 import java.util.jar.Manifest;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.asm.AsmVisitorWrapper;
@@ -50,9 +50,6 @@ import net.bytebuddy.description.type.TypeDefinition;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.description.type.TypeList;
 import net.bytebuddy.description.type.TypeVariableToken;
-import net.bytebuddy.dynamic.ClassFileLocator;
-import net.bytebuddy.dynamic.Transformer;
-import net.bytebuddy.dynamic.TypeResolutionStrategy;
 import net.bytebuddy.dynamic.loading.ClassLoadingStrategy;
 import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 import net.bytebuddy.dynamic.scaffold.FieldRegistry;
@@ -149,7 +146,7 @@ public interface DynamicType extends ClassFileLocator {
                     }
 
                     public int hashCode() {
-                        return Adapter.this.hashCode() + dkz.b(this.methodDescription, getClass().hashCode() * 31, 31);
+                        return Adapter.this.hashCode() + StaticHelpers6.b(this.methodDescription, getClass().hashCode() * 31, 31);
                     }
 
                     @Override // net.bytebuddy.dynamic.DynamicType.Builder.AbstractBase.Delegator
@@ -198,7 +195,7 @@ public interface DynamicType extends ClassFileLocator {
                     }
 
                     public int hashCode() {
-                        return Adapter.this.hashCode() + dkz.f(this.typeDescription, getClass().hashCode() * 31, 31);
+                        return Adapter.this.hashCode() + StaticHelpers6.f(this.typeDescription, getClass().hashCode() * 31, 31);
                     }
 
                     @Override // net.bytebuddy.dynamic.DynamicType.Builder.AbstractBase.Delegator
@@ -2974,7 +2971,7 @@ public interface DynamicType extends ClassFileLocator {
                         if (!typeDescription.isArray() && !typeDescription.isPrimitive()) {
                             arrayList.add(typeDescription.getName());
                         } else {
-                            throw new IllegalArgumentException(dkz.u("A service can only be provided by a regular class: ", typeDescription));
+                            throw new IllegalArgumentException(StaticHelpers6.concat("A service can only be provided by a regular class: ", typeDescription));
                         }
                     }
                     return uses((Collection<String>) arrayList);
@@ -2983,7 +2980,7 @@ public interface DynamicType extends ClassFileLocator {
                 @Override // net.bytebuddy.dynamic.DynamicType.Builder.ModuleDefinition
                 public ModuleDefinition<U> mainClass(@MaybeNull TypeDescription typeDescription) {
                     if (typeDescription != null && (typeDescription.isArray() || typeDescription.isPrimitive())) {
-                        throw new IllegalArgumentException(dkz.u("Cannot use primitive types for main class: ", typeDescription));
+                        throw new IllegalArgumentException(StaticHelpers6.concat("Cannot use primitive types for main class: ", typeDescription));
                     }
                     return mainClass(typeDescription == null ? null : typeDescription.getName());
                 }
@@ -3001,12 +2998,12 @@ public interface DynamicType extends ClassFileLocator {
                             if (!typeDescription2.isArray() && !typeDescription2.isPrimitive() && !typeDescription2.isAbstract()) {
                                 arrayList.add(typeDescription2.getName());
                             } else {
-                                throw new IllegalArgumentException(dkz.u("Service implementation must be a regular, non-abstract class: ", typeDescription2));
+                                throw new IllegalArgumentException(StaticHelpers6.concat("Service implementation must be a regular, non-abstract class: ", typeDescription2));
                             }
                         }
                         return provides(typeDescription.getName(), arrayList);
                     }
-                    throw new IllegalArgumentException(dkz.u("Service must be a regular class: ", typeDescription));
+                    throw new IllegalArgumentException(StaticHelpers6.concat("Service must be a regular class: ", typeDescription));
                 }
 
                 @Override // net.bytebuddy.dynamic.DynamicType.Builder.ModuleDefinition
@@ -3557,7 +3554,7 @@ public interface DynamicType extends ClassFileLocator {
 
         @Override // net.bytebuddy.dynamic.DynamicType.AbstractBase
         public int hashCode() {
-            return this.auxiliaryTypes.hashCode() + ((this.loadedTypeInitializer.hashCode() + ((Arrays.hashCode(this.binaryRepresentation) + dkz.f(this.typeDescription, super.hashCode() * 31, 31)) * 31)) * 31);
+            return this.auxiliaryTypes.hashCode() + ((this.loadedTypeInitializer.hashCode() + ((Arrays.hashCode(this.binaryRepresentation) + StaticHelpers6.f(this.typeDescription, super.hashCode() * 31, 31)) * 31)) * 31);
         }
     }
 

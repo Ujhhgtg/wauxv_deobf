@@ -37,7 +37,7 @@ public final /* synthetic */ class ddx implements bgx {
         }
         acmVarP._bp(dfxVar);
         if (1 != i) {
-            bht.ah(i, 1, descriptor);
+            ResourcesCompat.ah(i, 1, descriptor);
             throw null;
         }
         ddz ddzVar = new ddz();

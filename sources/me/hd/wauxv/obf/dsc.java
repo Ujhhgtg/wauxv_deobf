@@ -9,7 +9,7 @@ public final class dsc {
 
     public /* synthetic */ dsc(int i, Integer num, Integer num2) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, dsa.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, dsa.b.getDescriptor());
             throw null;
         }
         this.a = num;

@@ -22,7 +22,7 @@ import me.hd.wauxv.obf.cbw;
 import me.hd.wauxv.obf.cbz;
 import me.hd.wauxv.obf.ccn;
 import me.hd.wauxv.obf.cyf;
-import me.hd.wauxv.obf.jx;
+import me.hd.wauxv.obf.FactoryPools;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -47,16 +47,16 @@ public class ListMenuItemView extends LinearLayout implements ccn, AbsListView.S
 
     public ListMenuItemView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        jx jxVarK = jx.k(getContext(), attributeSet, cyf.r, R.attr.listMenuViewStyle);
-        this.j = jxVarK.s(5);
-        TypedArray typedArray = (TypedArray) jxVarK.e;
+        FactoryPools factoryPoolsVarK = FactoryPools.k(getContext(), attributeSet, cyf.r, R.attr.listMenuViewStyle);
+        this.j = factoryPoolsVarK.s(5);
+        TypedArray typedArray = (TypedArray) factoryPoolsVarK.e;
         this.k = typedArray.getResourceId(1, -1);
         this.m = typedArray.getBoolean(7, false);
         this.l = context;
-        this.o = jxVarK.s(8);
+        this.o = factoryPoolsVarK.s(8);
         TypedArray typedArrayObtainStyledAttributes = context.getTheme().obtainStyledAttributes(null, new int[]{android.R.attr.divider}, R.attr.dropDownListViewStyle, 0);
         this.p = typedArrayObtainStyledAttributes.hasValue(0);
-        jxVarK.ae();
+        factoryPoolsVarK.ae();
         typedArrayObtainStyledAttributes.recycle();
     }
 

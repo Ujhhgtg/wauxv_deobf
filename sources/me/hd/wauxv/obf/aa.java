@@ -6,15 +6,15 @@ import java.util.NoSuchElementException;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class aa extends z implements ListIterator {
-    public final /* synthetic */ ac d;
+    public final /* synthetic */ KotlinAbstractReadonlyList d;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public aa(ac acVar, int i) {
-        super(acVar, 0);
-        this.d = acVar;
-        int iA = acVar.a();
+    public aa(KotlinAbstractReadonlyList kotlinAbstractReadonlyListVar, int i) {
+        super(kotlinAbstractReadonlyListVar, 0);
+        this.d = kotlinAbstractReadonlyListVar;
+        int iA = kotlinAbstractReadonlyListVar.a();
         if (i < 0 || i > iA) {
-            throw new IndexOutOfBoundsException(dkz.p(i, "index: ", ", size: ", iA));
+            throw new IndexOutOfBoundsException(StaticHelpers6.p(i, "index: ", ", size: ", iA));
         }
         this.b = i;
     }

@@ -27,7 +27,7 @@ public interface btr extends afp {
 
     int o(int i);
 
-    void p(bmu bmuVar);
+    void p(SyntheticPileOfMess bmuVar);
 
     ddm q(int i);
 

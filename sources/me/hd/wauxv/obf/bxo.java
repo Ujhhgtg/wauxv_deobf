@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 public final class bxo {
     public static final /* synthetic */ AtomicReferenceFieldUpdater a = AtomicReferenceFieldUpdater.newUpdater(bxo.class, Object.class, "_next$volatile");
     public static final /* synthetic */ AtomicLongFieldUpdater b = AtomicLongFieldUpdater.newUpdater(bxo.class, "_state$volatile");
-    public static final auj c = new auj("REMOVE_FROZEN", 1);
+    public static final SpecificEmojiMatcher c = new SpecificEmojiMatcher("REMOVE_FROZEN", 1);
     private volatile /* synthetic */ Object _next$volatile;
     private volatile /* synthetic */ long _state$volatile;
     public final int d;

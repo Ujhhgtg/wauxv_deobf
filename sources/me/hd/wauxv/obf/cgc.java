@@ -42,7 +42,7 @@ public final class cgc extends SwitchHook implements bna {
                         R.drawable.ic_menu_forward_24dp, new cbk(14)));
             }
         }
-        return EmptyReadonlyList.a;
+        return EmptyReadonlyList.INSTANCE;
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

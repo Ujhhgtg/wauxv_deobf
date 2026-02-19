@@ -22,7 +22,7 @@ public final class ebc {
     public /* synthetic */ ebc(int i, Integer num, Long l, Integer num2, Integer num3, String str, ebu ebuVar,
             ecp ecpVar, ehs ehsVar, ehs ehsVar2, String str2, String str3, String str4, Long l2, Long l3) {
         if (16383 != (i & 16383)) {
-            bht.ah(i, 16383, eba.b.getDescriptor());
+            ResourcesCompat.ah(i, 16383, eba.b.getDescriptor());
             throw null;
         }
         this.a = num;
@@ -93,7 +93,7 @@ public final class ebc {
         StringBuilder sb = new StringBuilder();
         sb.append("mk1Proto(support_screen_rotate=" /* "mk1Proto(support_screen_rotate=" /* "mk1Proto(support_screen_rotate=" /* cnb.z(-237112259509034L)  */);
         bjs.w(sb, this.a, -236974820555562L);
-        dkz.ad(sb, this.b, -237438677023530L);
+        StaticHelpers6.ad(sb, this.b, -237438677023530L);
         bjs.w(sb, this.c, -237382842448682L);
         bjs.w(sb, this.d, -237279763233578L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.e, -236622633237290L);
@@ -108,7 +108,7 @@ public final class ebc {
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.j, -233830904494890L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.k, -233766479985450L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.l, -233693465541418L);
-        dkz.ad(sb, this.m, -234140142140202L);
+        StaticHelpers6.ad(sb, this.m, -234140142140202L);
         sb.append(this.n);
         sb.append(')');
         return sb.toString();

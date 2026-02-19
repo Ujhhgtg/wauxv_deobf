@@ -43,7 +43,7 @@ public class cau extends Drawable implements dgx {
     public final Paint dg;
     public final Paint dh;
     public final dgk di;
-    public final bmu dj;
+    public final SyntheticPileOfMess dj;
     public final dgo dk;
     public PorterDuffColorFilter dl;
     public PorterDuffColorFilter dm;
@@ -566,6 +566,6 @@ public class cau extends Drawable implements dgx {
         paint.setStyle(Paint.Style.FILL);
         ef();
         ee(getState());
-        this.dj = new bmu(this);
+        this.dj = new SyntheticPileOfMess(this);
     }
 }

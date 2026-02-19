@@ -31,7 +31,7 @@ public final class eaq {
             Integer num14, Integer num15, Integer num16, ebf ebfVar, ebf ebfVar2, ebf ebfVar3, Integer num17,
             ebf ebfVar4) {
         if (2097151 != (i & 2097151)) {
-            bht.ah(i, 2097151, eao.b.getDescriptor());
+            ResourcesCompat.ah(i, 2097151, eao.b.getDescriptor());
             throw null;
         }
         this.a = num;

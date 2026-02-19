@@ -17,9 +17,9 @@ public final class DisablePlayRingtoneHook extends SwitchHook implements IDexFin
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(aob.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(aob.a));
         DisablePlayRingtoneHook aoeVar = a;
-        aki akiVarAb = csb.ab(aoeVar, listBf);
+        aki akiVarAb = PackageParam.ab(aoeVar, listBf);
         aoeVar.y(akiVarAb, new amb(13));
         akiVarAb.o();
     }
@@ -36,7 +36,7 @@ public final class DisablePlayRingtoneHook extends SwitchHook implements IDexFin
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(aob.a, dexKitBridge, new amb(14));
+        StaticHelpers7.resolveDexAndCache(aob.a, dexKitBridge, new amb(14));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

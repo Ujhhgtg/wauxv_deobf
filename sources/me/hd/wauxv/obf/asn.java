@@ -702,9 +702,9 @@ public final class asn {
         } else {
             CodeEditor codeEditor4 = asnVar2.r;
             if (codeEditor4.cp) {
-                jx jxVar = codeEditor4.getRenderContext().b;
+                FactoryPools factoryPoolsVar = codeEditor4.getRenderContext().b;
                 int lastVisibleRow = asnVar2.r.getLastVisibleRow();
-                Iterator it = ((ArrayList) jxVar.f).iterator();
+                Iterator it = ((ArrayList) factoryPoolsVar.f).iterator();
                 udVar = udVar9;
                 throwIfVar1IsNull(it, "iterator(...)");
                 while (it.hasNext()) {
@@ -979,7 +979,7 @@ public final class asn {
         ud udVar13 = udVar;
         int i67 = 31;
         ddoVarI.reset();
-        List<din> list = EmptyReadonlyList.a;
+        List<din> list = EmptyReadonlyList.INSTANCE;
         CodeEditor codeEditor10 = asnVar2.r;
         dik snippetController = codeEditor10.getSnippetController();
         if (snippetController.l()) {
@@ -1196,16 +1196,16 @@ public final class asn {
                                 if (next3.e - next3.d > 128) {
                                     codeEditor12.getProps().getClass();
                                 } else {
-                                    jx jxVar2 = codeEditor12.getRenderContext().b;
+                                    FactoryPools factoryPoolsVar2 = codeEditor12.getRenderContext().b;
                                     float rowHeight = (asnVar2.r.getRowHeight() * i9) - asnVar2.r.getOffsetY();
-                                    CodeEditor codeEditor13 = (CodeEditor) jxVar2.e;
+                                    CodeEditor codeEditor13 = (CodeEditor) factoryPoolsVar2.e;
                                     if (!canvas2.isHardwareAccelerated()) {
                                         throw new UnsupportedOperationException(
                                                 "Only hardware-accelerated canvas can be used");
                                     }
                                     dnv styles = codeEditor13.getStyles();
-                                    Stack stack = (Stack) jxVar2.h;
-                                    ArrayList arrayList5 = (ArrayList) jxVar2.f;
+                                    Stack stack = (Stack) factoryPoolsVar2.h;
+                                    ArrayList arrayList5 = (ArrayList) factoryPoolsVar2.f;
                                     int size = arrayList5.size();
                                     f8 = f2;
                                     int i78 = 0;

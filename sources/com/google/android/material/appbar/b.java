@@ -4,15 +4,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ScrollView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import com.google.android.material.appbar.AppBarLayout;
-import me.hd.wauxv.obf.aq;
+import me.hd.wauxv.obf.AccessibilityDelegateCompat;
 import me.hd.wauxv.obf.ax;
 import me.hd.wauxv.obf.bd;
 import me.hd.wauxv.obf.gs;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class b extends aq {
+public final class b extends AccessibilityDelegateCompat {
     public final /* synthetic */ AppBarLayout a;
     public final /* synthetic */ CoordinatorLayout b;
     public final /* synthetic */ AppBarLayout.BaseBehavior c;
@@ -24,8 +23,8 @@ public final class b extends aq {
     }
 
     @Override // me.hd.wauxv.obf.aq
-    public final void d(View view, bd bdVar) {
-        this.g.onInitializeAccessibilityNodeInfo(view, bdVar.a);
+    public final void onInitializeAccessibilityNodeInfo(View view, bd bdVar) {
+        this.accessibilityDelegate.onInitializeAccessibilityNodeInfo(view, bdVar.a);
         bdVar.k(ScrollView.class.getName());
         AppBarLayout appBarLayout = this.a;
         if (appBarLayout.getTotalScrollRange() == 0) {
@@ -64,14 +63,14 @@ public final class b extends aq {
     }
 
     @Override // me.hd.wauxv.obf.aq
-    public final boolean e(View view, int i, Bundle bundle) {
+    public final boolean performAccessibilityAction(View view, int i, Bundle bundle) {
         AppBarLayout appBarLayout = this.a;
         if (i == 4096) {
             appBarLayout.setExpanded(false);
             return true;
         }
         if (i != 8192) {
-            return super.e(view, i, bundle);
+            return super.performAccessibilityAction(view, i, bundle);
         }
         AppBarLayout.BaseBehavior baseBehavior = this.c;
         if (baseBehavior.q() != 0) {

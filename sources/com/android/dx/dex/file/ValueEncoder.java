@@ -25,7 +25,7 @@ import com.android.dx.rop.cst.CstType;
 import com.android.dx.util.AnnotatedOutput;
 import com.android.dx.util.Hex;
 import java.util.Collection;
-import me.hd.wauxv.obf.emn;
+import me.hd.wauxv.obf.StaticHelpers7;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -198,39 +198,39 @@ public final class ValueEncoder {
         int iConstantToValueType = constantToValueType(constant);
         if (iConstantToValueType != 0 && iConstantToValueType != 6 && iConstantToValueType != 2) {
             if (iConstantToValueType == 3) {
-                emn.bm(this.out, iConstantToValueType, ((CstLiteralBits) constant).getLongBits());
+                StaticHelpers7.bm(this.out, iConstantToValueType, ((CstLiteralBits) constant).getLongBits());
                 return;
             }
             if (iConstantToValueType != 4) {
                 if (iConstantToValueType == 16) {
-                    emn.bk(this.out, iConstantToValueType, ((CstFloat) constant).getLongBits() << 32);
+                    StaticHelpers7.bk(this.out, iConstantToValueType, ((CstFloat) constant).getLongBits() << 32);
                     return;
                 }
                 if (iConstantToValueType == 17) {
-                    emn.bk(this.out, iConstantToValueType, ((CstDouble) constant).getLongBits());
+                    StaticHelpers7.bk(this.out, iConstantToValueType, ((CstDouble) constant).getLongBits());
                     return;
                 }
                 switch (iConstantToValueType) {
                     case 21:
-                        emn.bm(this.out, iConstantToValueType, this.file.getProtoIds().indexOf(((CstProtoRef) constant).getPrototype()));
+                        StaticHelpers7.bm(this.out, iConstantToValueType, this.file.getProtoIds().indexOf(((CstProtoRef) constant).getPrototype()));
                         return;
                     case 22:
-                        emn.bm(this.out, iConstantToValueType, this.file.getMethodHandles().indexOf((CstMethodHandle) constant));
+                        StaticHelpers7.bm(this.out, iConstantToValueType, this.file.getMethodHandles().indexOf((CstMethodHandle) constant));
                         return;
                     case 23:
-                        emn.bm(this.out, iConstantToValueType, this.file.getStringIds().indexOf((CstString) constant));
+                        StaticHelpers7.bm(this.out, iConstantToValueType, this.file.getStringIds().indexOf((CstString) constant));
                         return;
                     case 24:
-                        emn.bm(this.out, iConstantToValueType, this.file.getTypeIds().indexOf((CstType) constant));
+                        StaticHelpers7.bm(this.out, iConstantToValueType, this.file.getTypeIds().indexOf((CstType) constant));
                         return;
                     case 25:
-                        emn.bm(this.out, iConstantToValueType, this.file.getFieldIds().indexOf((CstFieldRef) constant));
+                        StaticHelpers7.bm(this.out, iConstantToValueType, this.file.getFieldIds().indexOf((CstFieldRef) constant));
                         return;
                     case 26:
-                        emn.bm(this.out, iConstantToValueType, this.file.getMethodIds().indexOf((CstMethodRef) constant));
+                        StaticHelpers7.bm(this.out, iConstantToValueType, this.file.getMethodIds().indexOf((CstMethodRef) constant));
                         return;
                     case 27:
-                        emn.bm(this.out, iConstantToValueType, this.file.getFieldIds().indexOf(((CstEnumRef) constant).getFieldRef()));
+                        StaticHelpers7.bm(this.out, iConstantToValueType, this.file.getFieldIds().indexOf(((CstEnumRef) constant).getFieldRef()));
                         return;
                     case 28:
                         this.out.writeByte(iConstantToValueType);
@@ -251,7 +251,7 @@ public final class ValueEncoder {
                 }
             }
         }
-        emn.bl(this.out, iConstantToValueType, ((CstLiteralBits) constant).getLongBits());
+        StaticHelpers7.bl(this.out, iConstantToValueType, ((CstLiteralBits) constant).getLongBits());
     }
 
     public static void addContents(DexFile dexFile, Constant constant) {

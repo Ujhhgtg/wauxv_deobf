@@ -29,7 +29,7 @@ public final class etl extends SwitchHook implements bna {
     @Override // me.hd.wauxv.obf.bna
     public final List l(MsgInfoBean msgInfoBean) {
         return (z() && msgInfoBean.isVoice()) ? dqc.toSingletonList(new wj(R.id.MenuItem_Chat_VoiceForward,
-                "转发" /* "转发" /* "转发" /* cnb.z(-521043957513002L)  */, R.drawable.ic_menu_forward_24dp, new dfq(17))) : EmptyReadonlyList.a;
+                "转发" /* "转发" /* "转发" /* cnb.z(-521043957513002L)  */, R.drawable.ic_menu_forward_24dp, new dfq(17))) : EmptyReadonlyList.INSTANCE;
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

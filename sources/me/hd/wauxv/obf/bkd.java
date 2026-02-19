@@ -14,9 +14,9 @@ public abstract class bkd {
     static {
         Object objX;
         try {
-            objX = new bkb(a(Looper.getMainLooper()), false);
+            objX = new Dispatcher2(a(Looper.getMainLooper()), false);
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         if (objX instanceof dcx) {
             objX = null;

@@ -9,7 +9,7 @@ public final class ejf {
 
     public /* synthetic */ ejf(int i, Long l, Long l2) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, ejd.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, ejd.b.getDescriptor());
             throw null;
         }
         this.a = l;
@@ -37,7 +37,7 @@ public final class ejf {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("yq5Proto(start_time_ms=" /* "yq5Proto(start_time_ms=" /* "yq5Proto(start_time_ms=" /* cnb.z(-321340863150890L)  */);
-        dkz.ad(sb, this.a, -322887051377450L);
+        StaticHelpers6.ad(sb, this.a, -322887051377450L);
         sb.append(this.b);
         sb.append(')');
         return sb.toString();

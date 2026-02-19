@@ -25,13 +25,13 @@ public final class cyo implements bul {
     }
 
     @Override // me.hd.wauxv.obf.bul
-    public final void e(bup bupVar, bug bugVar) {
+    public final void e(bup bupVar, LifeEventEnum lifeEventEnumVar) {
         int iNextIndex;
         View view;
         switch (this.a) {
             case 0:
                 dep depVar = (dep) this.b;
-                if (bugVar != bug.ON_CREATE) {
+                if (lifeEventEnumVar != LifeEventEnum.ON_CREATE) {
                     throw new AssertionError("Next event must be ON_CREATE");
                 }
                 bupVar.ap().o(this);
@@ -89,7 +89,7 @@ public final class cyo implements bul {
                 }
                 return;
             case 1:
-                if (bugVar == bug.ON_DESTROY) {
+                if (lifeEventEnumVar == LifeEventEnum.ON_DESTROY) {
                     ng.ai(((ng) this.b).as());
                     return;
                 }
@@ -121,10 +121,10 @@ public final class cyo implements bul {
                 throw null;
             case 4:
                 ani aniVar = (ani) this.b;
-                int i = anh.a[bugVar.ordinal()];
+                int i = anh.a[lifeEventEnumVar.ordinal()];
                 if (i == 1) {
                     anc ancVar = (anc) bupVar;
-                    Iterable iterable = (Iterable) ((dml) aniVar.w().e.h).c();
+                    Iterable iterable = (Iterable) ((dml) aniVar.w().e.obj).c();
                     if (!(iterable instanceof Collection) || !((Collection) iterable).isEmpty()) {
                         Iterator it = iterable.iterator();
                         while (it.hasNext()) {
@@ -139,7 +139,7 @@ public final class cyo implements bul {
                 Object obj = null;
                 if (i == 2) {
                     anc ancVar2 = (anc) bupVar;
-                    for (Object obj2 : (Iterable) ((dml) aniVar.w().f.h).c()) {
+                    for (Object obj2 : (Iterable) ((dml) aniVar.w().f.obj).c()) {
                         if (nullSafeIsEqual(((cio) obj2).f, ancVar2.bs)) {
                             obj = obj2;
                         }
@@ -156,7 +156,7 @@ public final class cyo implements bul {
                         return;
                     }
                     anc ancVar3 = (anc) bupVar;
-                    for (Object obj3 : (Iterable) ((dml) aniVar.w().f.h).c()) {
+                    for (Object obj3 : (Iterable) ((dml) aniVar.w().f.obj).c()) {
                         if (nullSafeIsEqual(((cio) obj3).f, ancVar3.bs)) {
                             obj = obj3;
                         }
@@ -172,7 +172,7 @@ public final class cyo implements bul {
                 if (ancVar4.al().isShowing()) {
                     return;
                 }
-                List list = (List) ((dml) aniVar.w().e.h).c();
+                List list = (List) ((dml) aniVar.w().e.obj).c();
                 ListIterator listIterator = list.listIterator(list.size());
                 while (true) {
                     if (!listIterator.hasPrevious()) {
@@ -181,8 +181,8 @@ public final class cyo implements bul {
                         iNextIndex = listIterator.nextIndex();
                     }
                 }
-                cio cioVar3 = (cio) aaz.h(iNextIndex, list);
-                if (!nullSafeIsEqual(aaz.m(list), cioVar3)) {
+                cio cioVar3 = (cio) StaticHelpers5.h(iNextIndex, list);
+                if (!nullSafeIsEqual(StaticHelpers5.m(list), cioVar3)) {
                     Log.i("DialogFragmentNavigator", "Dialog " + ancVar4
                             + " was dismissed while it was not the top of the back stack, popping all dialogs above this dismissed dialog");
                 }
@@ -192,7 +192,7 @@ public final class cyo implements bul {
                 }
                 return;
             case 5:
-                if (bugVar != bug.ON_STOP || (view = ((bdj) this.b).bz) == null) {
+                if (lifeEventEnumVar != LifeEventEnum.ON_STOP || (view = ((SomeFragmentManager) this.b).bz) == null) {
                     return;
                 }
                 view.cancelPendingInputEvents();
@@ -201,8 +201,8 @@ public final class cyo implements bul {
                 ((bfa) this.b).h(false);
                 return;
             default:
-                if (bugVar != bug.ON_CREATE) {
-                    throw new IllegalStateException(("Next event must be ON_CREATE, it was " + bugVar).toString());
+                if (lifeEventEnumVar != LifeEventEnum.ON_CREATE) {
+                    throw new IllegalStateException(("Next event must be ON_CREATE, it was " + lifeEventEnumVar).toString());
                 }
                 bupVar.ap().o(this);
                 ((dek) this.b).f();

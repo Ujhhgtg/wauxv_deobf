@@ -12,7 +12,7 @@ import java.util.Set;
 /* JADX INFO: loaded from: classes.dex */
 public class cwl extends ua implements ajt, acm {
     public final cwd ah;
-    public final cwo ai;
+    public final ProtoReader ai;
     public final dfx aj;
     public final int[] ak;
     public HashMap al;
@@ -24,11 +24,11 @@ public class cwl extends ua implements ajt, acm {
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public cwl(cwd cwdVar, cwo cwoVar, dfx dfxVar) {
+    public cwl(cwd cwdVar, ProtoReader protoReaderVar, dfx dfxVar) {
         super(2, false);
         throwIfVar1IsNull(dfxVar, "descriptor");
         this.ah = cwdVar;
-        this.ai = cwoVar;
+        this.ai = protoReaderVar;
         this.aj = dfxVar;
         this.ao = new asx(dfxVar, new brz(2, this, cwl.class, "readIfAbsent",
                 "readIfAbsent(Lkotlinx/serialization/descriptors/SerialDescriptor;I)Z", 0, 0, 1));
@@ -85,16 +85,16 @@ public class cwl extends ua implements ajt, acm {
     }
 
     public String ag(long j) {
-        cwo cwoVar = this.ai;
+        ProtoReader protoReaderVar = this.ai;
         try {
             if (j != 19500) {
-                return cwoVar.s();
+                return protoReaderVar.readString();
             }
-            int iG = cwoVar.g(cwf.DEFAULT);
-            cwo.f(iG);
-            return cwoVar.a.f(iG);
-        } catch (cwm e) {
-            throw new cwm("Error while decoding proto number " + ((int) (j & 2147483647L)) + " of " + this.aj.b(), e);
+            int iG = protoReaderVar.readVarint32(IntEncodingEnum.DEFAULT);
+            ProtoReader.validateLength(iG);
+            return protoReaderVar.sourceBuffer.f(iG);
+        } catch (AnotherIllegalArgumentException e) {
+            throw new AnotherIllegalArgumentException("Error while decoding proto number " + ((int) (j & 2147483647L)) + " of " + this.aj.b(), e);
         }
     }
 
@@ -106,7 +106,7 @@ public class cwl extends ua implements ajt, acm {
             return btdVar instanceof bvt ? aw(btdVar, obj)
                     : nullSafeIsEqual(btdVar.getDescriptor(), rx.j.o) ? av((byte[]) obj)
                             : btdVar instanceof s ? ((s) btdVar).f(this, obj) : btdVar.a(this);
-        } catch (cwm e) {
+        } catch (AnotherIllegalArgumentException e) {
             long j_br = _br();
             dfx descriptor = btdVar.getDescriptor();
             dfx dfxVar = this.aj;
@@ -127,7 +127,7 @@ public class cwl extends ua implements ajt, acm {
                 string = "Error while decoding " + btdVar.getDescriptor().b() + " at proto number "
                         + ((int) (j_br & 2147483647L)) + " of " + dfxVar.b();
             }
-            throw new cwm(string, e);
+            throw new AnotherIllegalArgumentException(string, e);
         }
     }
 
@@ -139,42 +139,42 @@ public class cwl extends ua implements ajt, acm {
         if (iAt == 1) {
             return true;
         }
-        throw new dgb(concatVar2Var1(iAt, "Unexpected boolean value: "));
+        throw new SomeIllegalArgumentException(concatVar2Var1(iAt, "Unexpected boolean value: "));
     }
 
     public final double ar(long j) {
-        cwo cwoVar = this.ai;
+        ProtoReader protoReaderVar = this.ai;
         try {
-            return j == 19500 ? Double.longBitsToDouble(cwoVar.r()) : cwoVar.m();
-        } catch (cwm e) {
-            throw new cwm("Error while decoding proto number " + ((int) (j & 2147483647L)) + " of " + this.aj.b(), e);
+            return j == 19500 ? Double.longBitsToDouble(protoReaderVar.readFixed64()) : protoReaderVar.m();
+        } catch (AnotherIllegalArgumentException e) {
+            throw new AnotherIllegalArgumentException("Error while decoding proto number " + ((int) (j & 2147483647L)) + " of " + this.aj.b(), e);
         }
     }
 
     public final float as(long j) {
-        cwo cwoVar = this.ai;
+        ProtoReader protoReaderVar = this.ai;
         try {
-            return j == 19500 ? Float.intBitsToFloat(cwoVar.p()) : cwoVar.n();
-        } catch (cwm e) {
-            throw new cwm("Error while decoding proto number " + ((int) (j & 2147483647L)) + " of " + this.aj.b(), e);
+            return j == 19500 ? Float.intBitsToFloat(protoReaderVar.readFixed32()) : protoReaderVar.n();
+        } catch (AnotherIllegalArgumentException e) {
+            throw new AnotherIllegalArgumentException("Error while decoding proto number " + ((int) (j & 2147483647L)) + " of " + this.aj.b(), e);
         }
     }
 
     public final int at(long j) {
-        cwo cwoVar = this.ai;
+        ProtoReader protoReaderVar = this.ai;
         try {
-            return j == 19500 ? cwoVar.g(cwf.DEFAULT) : cwoVar.o(ajn.r(j));
-        } catch (cwm e) {
-            throw new cwm("Error while decoding proto number " + ((int) (j & 2147483647L)) + " of " + this.aj.b(), e);
+            return j == 19500 ? protoReaderVar.readVarint32(IntEncodingEnum.DEFAULT) : protoReaderVar.o(ajn.r(j));
+        } catch (AnotherIllegalArgumentException e) {
+            throw new AnotherIllegalArgumentException("Error while decoding proto number " + ((int) (j & 2147483647L)) + " of " + this.aj.b(), e);
         }
     }
 
     public final long au(long j) {
-        cwo cwoVar = this.ai;
+        ProtoReader protoReaderVar = this.ai;
         try {
-            return j == 19500 ? cwoVar.h(cwf.DEFAULT) : cwoVar.q(ajn.r(j));
-        } catch (cwm e) {
-            throw new cwm("Error while decoding proto number " + ((int) (j & 2147483647L)) + " of " + this.aj.b(), e);
+            return j == 19500 ? protoReaderVar.readVarint64(IntEncodingEnum.DEFAULT) : protoReaderVar.q(ajn.r(j));
+        } catch (AnotherIllegalArgumentException e) {
+            throw new AnotherIllegalArgumentException("Error while decoding proto number " + ((int) (j & 2147483647L)) + " of " + this.aj.b(), e);
         }
     }
 
@@ -187,12 +187,12 @@ public class cwl extends ua implements ajt, acm {
         byte[] bArrK;
         byte[] bArrL;
         long j_br = _br();
-        cwo cwoVar = this.ai;
+        ProtoReader protoReaderVar = this.ai;
         try {
             if (j_br == 19500) {
-                bArrL = cwoVar.l();
+                bArrL = protoReaderVar.readRawBytes();
             } else {
-                bArrK = cwoVar.k();
+                bArrK = protoReaderVar.readBytes();
             }
             if (bArr == null) {
                 j_br = bArrK;
@@ -202,8 +202,8 @@ public class cwl extends ua implements ajt, acm {
             j_br = bArrK;
             j_br = bArrL;
             return SomeStaticHelpers.v(bArr, j_br);
-        } catch (cwm e) {
-            throw new cwm("Error while decoding proto number " + ((int) (j_br & 2147483647L)) + " of " + this.aj.b(),
+        } catch (AnotherIllegalArgumentException e) {
+            throw new AnotherIllegalArgumentException("Error while decoding proto number " + ((int) (j_br & 2147483647L)) + " of " + this.aj.b(),
                     e);
         }
     }
@@ -216,7 +216,7 @@ public class cwl extends ua implements ajt, acm {
         bzm bzmVar = new bzm(0);
         Map map = obj instanceof Map ? (Map) obj : null;
         Set<Map.Entry> set = (Set) new ko(bzmVar).f(this, map != null ? map.entrySet() : null);
-        int iAh = KotlinHelpers.ah(abb.ak(set, 10));
+        int iAh = KotlinHelpers.calcHashMapCapacity(StaticHelpers4.ak(set, 10));
         if (iAh < 16) {
             iAh = 16;
         }
@@ -233,7 +233,7 @@ public class cwl extends ua implements ajt, acm {
         for (int i3 = 0; i3 < i; i3++) {
             if (ajn.o(dfxVar, i3, false) == -2) {
                 List listP = ajn.p(dfxVar.l(i3), this.ah.b);
-                ArrayList arrayList = new ArrayList(abb.ak(listP, 10));
+                ArrayList arrayList = new ArrayList(StaticHelpers4.ak(listP, 10));
                 Iterator it = listP.iterator();
                 while (it.hasNext()) {
                     arrayList.add(Integer.valueOf((int) (ajn.n((dfx) it.next(), 0) & 2147483647L)));
@@ -268,17 +268,17 @@ public class cwl extends ua implements ajt, acm {
     public int f(dfx dfxVar) {
         int iIntValue;
         HashMap map;
-        cwo cwoVar = this.ai;
+        ProtoReader protoReaderVar = this.ai;
         throwIfVar1IsNull(dfxVar, "descriptor");
         while (true) {
             try {
-                int iT = cwoVar.t();
+                int iT = protoReaderVar.nextField();
                 asx asxVar = this.ao;
                 if (iT == -1) {
                     return asxVar.g();
                 }
                 if (iT == 0) {
-                    throw new dgb("0 is not allowed as the protobuf field number in " + dfxVar.b()
+                    throw new SomeIllegalArgumentException("0 is not allowed as the protobuf field number in " + dfxVar.b()
                             + ", the input bytes may have been corrupted");
                 }
                 int[] iArr = this.ak;
@@ -299,9 +299,9 @@ public class cwl extends ua implements ajt, acm {
                     asxVar.f(iIntValue);
                     return iIntValue;
                 }
-                cwoVar.u();
-            } catch (cwm e) {
-                throw new cwm("Fail to get element index for " + dfxVar.b() + " in " + this.aj.b(), e);
+                protoReaderVar.skipField();
+            } catch (AnotherIllegalArgumentException e) {
+                throw new AnotherIllegalArgumentException("Fail to get element index for " + dfxVar.b() + " in " + this.aj.b(), e);
             }
         }
     }
@@ -381,7 +381,7 @@ public class cwl extends ua implements ajt, acm {
         dnt dntVar;
         boolean zF;
         cwd cwdVar;
-        cwo cwoVar;
+        ProtoReader protoReaderVar;
         Integer num;
         dfx dfxVar3 = this.aj;
         throwIfVar1IsNull(dfxVar, "descriptor");
@@ -390,8 +390,8 @@ public class cwl extends ua implements ajt, acm {
             dntVar = dnt.b;
             zF = nullSafeIsEqual(emcVarH, dntVar);
             cwdVar = this.ah;
-            cwoVar = this.ai;
-        } catch (cwm e) {
+            protoReaderVar = this.ai;
+        } catch (AnotherIllegalArgumentException e) {
             e = e;
             dfxVar2 = dfxVar;
         }
@@ -400,40 +400,40 @@ public class cwl extends ua implements ajt, acm {
                 if (zF) {
                     long j_br = _br();
                     if (!nullSafeIsEqual(dfxVar3.h(), dntVar) || j_br == 19500 || dfxVar3.equals(dfxVar)) {
-                        return (cwoVar.c == ProtoWireType.ENUM_LENGTH_DELIMITED && ajn.x(dfxVar.l(0))) ? new cse(cwdVar, new cwo(cwoVar.i()), dfxVar)
-                                : new dbm(cwdVar, cwoVar, j_br, dfxVar);
+                        return (protoReaderVar.protoWireType == ProtoWireType.ENUM_LENGTH_DELIMITED && ajn.x(dfxVar.l(0))) ? new cse(cwdVar, new ProtoReader(protoReaderVar.beginMessage()), dfxVar)
+                                : new dbm(cwdVar, protoReaderVar, j_br, dfxVar);
                     }
-                    cwo cwoVarAl = cnf.al(cwoVar, j_br);
-                    cwoVarAl.t();
-                    return new dbm(cwdVar, cwoVarAl, 1, dfxVar);
+                    ProtoReader protoReaderVarAl = HugeSyntheticPileOfHelpers.readProtoSubMessage(protoReaderVar, j_br);
+                    protoReaderVarAl.nextField();
+                    return new dbm(cwdVar, protoReaderVarAl, 1, dfxVar);
                 }
                 if (!nullSafeIsEqual(emcVarH, dnt.a) && !nullSafeIsEqual(emcVarH, dnt.n) && !(emcVarH instanceof cur)) {
                     if (nullSafeIsEqual(emcVarH, dnt.c)) {
-                        return new bzj(cwdVar, new cwo(_br() == 19500 ? cwoVar.j() : cwoVar.i()), _br(), dfxVar);
+                        return new bzj(cwdVar, new ProtoReader(_br() == 19500 ? protoReaderVar.readBytesAsBuffer() : protoReaderVar.beginMessage()), _br(), dfxVar);
                     }
-                    throw new dgb("Primitives are not supported at top-level");
+                    throw new SomeIllegalArgumentException("Primitives are not supported at top-level");
                 }
                 long j_br2 = _br();
                 if (j_br2 == 19500 && nullSafeIsEqual(dfxVar3, dfxVar)) {
                     return this;
                 }
                 if (!ajn.w(j_br2)) {
-                    return new cwl(cwdVar, cnf.al(cwoVar, j_br2), dfxVar);
+                    return new cwl(cwdVar, HugeSyntheticPileOfHelpers.readProtoSubMessage(protoReaderVar, j_br2), dfxVar);
                 }
                 int i = ((int) (j_br2 & 2147483647L)) - 1;
                 HashMap map = this.am;
                 if (map != null && (num = (Integer) map.get(Integer.valueOf(i))) != null) {
                     j_br2 = (j_br2 & 1152921500311879680L) | ((long) num.intValue());
                 }
-                return new crg(cwdVar, cwoVar, j_br2, dfxVar);
-            } catch (cwm e2) {
+                return new crg(cwdVar, protoReaderVar, j_br2, dfxVar);
+            } catch (AnotherIllegalArgumentException e2) {
                 e = e2;
-                throw new cwm("Fail to begin structure for " + dfxVar2.b() + " in " + dfxVar3.b() + " at proto number "
+                throw new AnotherIllegalArgumentException("Fail to begin structure for " + dfxVar2.b() + " in " + dfxVar3.b() + " at proto number "
                         + ((int) (_br() & 2147483647L)), e);
             }
-        } catch (cwm e3) {
+        } catch (AnotherIllegalArgumentException e3) {
             e = e3;
-            throw new cwm("Fail to begin structure for " + dfxVar2.b() + " in " + dfxVar3.b() + " at proto number "
+            throw new AnotherIllegalArgumentException("Fail to begin structure for " + dfxVar2.b() + " in " + dfxVar3.b() + " at proto number "
                     + ((int) (_br() & 2147483647L)), e);
         }
     }

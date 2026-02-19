@@ -20,21 +20,21 @@ import me.hd.wauxv.obf.bts;
 import me.hd.wauxv.obf.but;
 import me.hd.wauxv.obf.bvl;
 import me.hd.wauxv.obf.byj;
-import me.hd.wauxv.obf.cnf;
+import me.hd.wauxv.obf.HugeSyntheticPileOfHelpers;
 import me.hd.wauxv.obf.cyw;
 import me.hd.wauxv.obf.czf;
 import me.hd.wauxv.obf.czg;
 import me.hd.wauxv.obf.czh;
-import me.hd.wauxv.obf.czo;
+import me.hd.wauxv.obf.RecyclerView;
 import me.hd.wauxv.obf.czs;
 import me.hd.wauxv.obf.czt;
 import me.hd.wauxv.obf.dc;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dma;
 import me.hd.wauxv.obf.dmb;
 import me.hd.wauxv.obf.dmc;
 import me.hd.wauxv.obf.dmd;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -148,8 +148,8 @@ public class StaggeredGridLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final void ae(czo czoVar, czt cztVar) {
-        br(czoVar, cztVar, true);
+    public final void ae(RecyclerView recyclerViewVar, czt cztVar) {
+        br(recyclerViewVar, cztVar, true);
     }
 
     @Override // me.hd.wauxv.obf.czg
@@ -161,13 +161,13 @@ public class StaggeredGridLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final int ah(int i, czo czoVar, czt cztVar) {
-        return cq(i, czoVar, cztVar);
+    public final int ah(int i, RecyclerView recyclerViewVar, czt cztVar) {
+        return cq(i, recyclerViewVar, cztVar);
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final int ai(int i, czo czoVar, czt cztVar) {
-        return cq(i, czoVar, cztVar);
+    public final int ai(int i, RecyclerView recyclerViewVar, czt cztVar) {
+        return cq(i, recyclerViewVar, cztVar);
     }
 
     @Override // me.hd.wauxv.obf.czg
@@ -180,14 +180,14 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         int i4 = this.a;
         if (i3 == 1) {
             int iHeight = rect.height() + iEu;
-            RecyclerView recyclerView = this.dp;
-            WeakHashMap weakHashMap = eqz.a;
+            androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
+            WeakHashMap weakHashMap = ViewCompat.a;
             iEd2 = czg.ed(i2, iHeight, recyclerView.getMinimumHeight());
             iEd = czg.ed(i, (this.f * i4) + iEw, this.dp.getMinimumWidth());
         } else {
             int iWidth = rect.width() + iEw;
-            RecyclerView recyclerView2 = this.dp;
-            WeakHashMap weakHashMap2 = eqz.a;
+            androidx.recyclerview.widget.RecyclerView recyclerView2 = this.dp;
+            WeakHashMap weakHashMap2 = ViewCompat.a;
             iEd = czg.ed(i, iWidth, recyclerView2.getMinimumWidth());
             iEd2 = czg.ed(i2, (this.f * i4) + iEu, this.dp.getMinimumHeight());
         }
@@ -292,7 +292,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
             return 0;
         }
         boolean z = !this.au;
-        return cnf.av(cztVar, this.c, bg(z), bf(z), this, this.au, this.i);
+        return HugeSyntheticPileOfHelpers.av(cztVar, this.c, bg(z), bf(z), this, this.au, this.i);
     }
 
     /* JADX WARN: Found duplicated region for block: B:138:0x02a0 */
@@ -316,7 +316,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
     /* JADX WARN: Found duplicated region for block: B:167:0x032b */
     /* JADX WARN: Found duplicated region for block: B:170:0x0332 */
     /* JADX WARN: Found duplicated region for block: B:172:0x033a */
-    public final int be(czo czoVar, bts btsVar, czt cztVar) {
+    public final int be(RecyclerView recyclerViewVar, bts btsVar, czt cztVar) {
         byj byjVar;
         int i;
         int iBm;
@@ -330,7 +330,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         int i5;
         int i6;
         int i7;
-        czo czoVar2 = czoVar;
+        RecyclerView recyclerViewVar2 = recyclerViewVar;
         int i8 = 0;
         int i9 = 1;
         this.j.set(0, this.a, true);
@@ -345,7 +345,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
             if (i11 < 0 || i11 >= cztVar.p() || (!btsVar2.i && this.j.isEmpty())) {
                 break;
             }
-            View view = czoVar2.s(btsVar.c, Long.MAX_VALUE).d;
+            View view = recyclerViewVar2.s(btsVar.c, Long.MAX_VALUE).d;
             btsVar.c += btsVar.d;
             dmb dmbVar = (dmb) view.getLayoutParams();
             int iZ = dmbVar.c.z();
@@ -527,8 +527,8 @@ public class StaggeredGridLayoutManager extends czg implements czs {
                 } else {
                     cu(byjVar, btsVar2.e, i10);
                 }
-                czoVar2 = czoVar;
-                cm(czoVar2, btsVar2);
+                recyclerViewVar2 = recyclerViewVar;
+                cm(recyclerViewVar2, btsVar2);
                 if (!btsVar2.h && view.hasFocusable()) {
                     if (dmbVar.b) {
                         this.j.clear();
@@ -576,8 +576,8 @@ public class StaggeredGridLayoutManager extends czg implements czs {
             } else {
                 cu(byjVar, btsVar2.e, i10);
             }
-            czoVar2 = czoVar;
-            cm(czoVar2, btsVar2);
+            recyclerViewVar2 = recyclerViewVar;
+            cm(recyclerViewVar2, btsVar2);
             if (!btsVar2.h) {
             }
             i9 = 1;
@@ -585,7 +585,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
             i8 = 0;
         }
         if (!z2) {
-            cm(czoVar2, btsVar2);
+            cm(recyclerViewVar2, btsVar2);
         }
         int iN3 = btsVar2.e == -1 ? this.c.n() - bm(this.c.n()) : bl(this.c.j()) - this.c.j();
         if (iN3 > 0) {
@@ -634,11 +634,11 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         return view;
     }
 
-    public final void bh(czo czoVar, czt cztVar, boolean z) {
+    public final void bh(RecyclerView recyclerViewVar, czt cztVar, boolean z) {
         int iJ;
         int iBl = bl(Integer.MIN_VALUE);
         if (iBl != Integer.MIN_VALUE && (iJ = this.c.j() - iBl) > 0) {
-            int i = iJ - (-cq(-iJ, czoVar, cztVar));
+            int i = iJ - (-cq(-iJ, recyclerViewVar, cztVar));
             if (!z || i <= 0) {
                 return;
             }
@@ -646,11 +646,11 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         }
     }
 
-    public final void bi(czo czoVar, czt cztVar, boolean z) {
+    public final void bi(RecyclerView recyclerViewVar, czt cztVar, boolean z) {
         int iN;
         int iBm = bm(Integer.MAX_VALUE);
         if (iBm != Integer.MAX_VALUE && (iN = iBm - this.c.n()) > 0) {
-            int iCq = iN - cq(iN, czoVar, cztVar);
+            int iCq = iN - cq(iN, recyclerViewVar, cztVar);
             if (!z || iCq <= 0) {
                 return;
             }
@@ -805,7 +805,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
                         i4 = byjVar.c;
                     }
                     if (i4 < this.c.j()) {
-                        z2 = ((dmb) ((View) dkz.l(1, (ArrayList) byjVar.f)).getLayoutParams()).b;
+                        z2 = ((dmb) ((View) StaticHelpers6.getLastNElem(1, (ArrayList) byjVar.f)).getLayoutParams()).b;
                         z3 = !z2;
                     } else {
                         z3 = false;
@@ -899,7 +899,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
     }
 
     public final void bq(View view, int i, int i2) {
-        RecyclerView recyclerView = this.dp;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
         Rect rect = this.ar;
         if (recyclerView == null) {
             rect.set(0, 0, 0, 0);
@@ -925,7 +925,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
     /* JADX WARN: Found duplicated region for block: B:262:0x042f */
     /* JADX WARN: Found duplicated region for block: B:273:0x01fc A[SYNTHETIC] */
     /* JADX WARN: Found duplicated region for block: B:277:0x01fc A[SYNTHETIC] */
-    public final void br(czo czoVar, czt cztVar, boolean z) {
+    public final void br(RecyclerView recyclerViewVar, czt cztVar, boolean z) {
         boolean z2;
         dmd dmdVar;
         int iEs;
@@ -938,7 +938,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         dmd dmdVar2 = this.ap;
         dma dmaVar = this.as;
         if (!(dmdVar2 == null && this.k == -1) && cztVar.p() == 0) {
-            fb(czoVar);
+            fb(recyclerViewVar);
             dmaVar.h();
             return;
         }
@@ -1173,7 +1173,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
                 }
             }
         }
-        eq(czoVar);
+        eq(recyclerViewVar);
         bts btsVar = this.g;
         btsVar.a = false;
         this.at = false;
@@ -1183,16 +1183,16 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         ct(dmaVar.a, cztVar);
         if (dmaVar.c) {
             cr(-1);
-            be(czoVar, btsVar, cztVar);
+            be(recyclerViewVar, btsVar, cztVar);
             cr(1);
             btsVar.c = dmaVar.a + btsVar.d;
-            be(czoVar, btsVar, cztVar);
+            be(recyclerViewVar, btsVar, cztVar);
         } else {
             cr(1);
-            be(czoVar, btsVar, cztVar);
+            be(recyclerViewVar, btsVar, cztVar);
             cr(-1);
             btsVar.c = dmaVar.a + btsVar.d;
-            be(czoVar, btsVar, cztVar);
+            be(recyclerViewVar, btsVar, cztVar);
         }
         if (this.d.l() != 1073741824) {
             int iEs3 = es();
@@ -1238,15 +1238,15 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         }
         if (es() > 0) {
             if (this.i) {
-                bh(czoVar, cztVar, true);
-                bi(czoVar, cztVar, false);
+                bh(recyclerViewVar, cztVar, true);
+                bi(recyclerViewVar, cztVar, false);
             } else {
-                bi(czoVar, cztVar, true);
-                bh(czoVar, cztVar, false);
+                bi(recyclerViewVar, cztVar, true);
+                bh(recyclerViewVar, cztVar, false);
             }
         }
         if (z && !cztVar.g && this.am != 0 && es() > 0 && (this.at || bo() != null)) {
-            RecyclerView recyclerView = this.dp;
+            androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
             if (recyclerView != null) {
                 recyclerView.removeCallbacks(this.aw);
             }
@@ -1259,7 +1259,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         this.ao = bp();
         if (z2) {
             dmaVar.h();
-            br(czoVar, cztVar, false);
+            br(recyclerViewVar, cztVar, false);
         }
     }
 
@@ -1360,7 +1360,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
             return 0;
         }
         boolean z = !this.au;
-        return cnf.au(cztVar, this.c, bg(z), bf(z), this, this.au);
+        return HugeSyntheticPileOfHelpers.au(cztVar, this.c, bg(z), bf(z), this, this.au);
     }
 
     @Override // me.hd.wauxv.obf.czg
@@ -1369,7 +1369,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
             return 0;
         }
         boolean z = !this.au;
-        return cnf.au(cztVar, this.c, bg(z), bf(z), this, this.au);
+        return HugeSyntheticPileOfHelpers.au(cztVar, this.c, bg(z), bf(z), this, this.au);
     }
 
     @Override // me.hd.wauxv.obf.czg
@@ -1383,8 +1383,8 @@ public class StaggeredGridLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final void cd(RecyclerView recyclerView) {
-        RecyclerView recyclerView2 = this.dp;
+    public final void cd(androidx.recyclerview.widget.RecyclerView recyclerView) {
+        androidx.recyclerview.widget.RecyclerView recyclerView2 = this.dp;
         if (recyclerView2 != null) {
             recyclerView2.removeCallbacks(this.aw);
         }
@@ -1511,7 +1511,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final void cj(RecyclerView recyclerView, czt cztVar, int i) {
+    public final void cj(androidx.recyclerview.widget.RecyclerView recyclerView, czt cztVar, int i) {
         bvl bvlVar = new bvl(recyclerView.getContext());
         bvlVar.f = i;
         fm(bvlVar);
@@ -1542,16 +1542,16 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         btsVar.b = Math.abs(i);
     }
 
-    public final void cm(czo czoVar, bts btsVar) {
+    public final void cm(RecyclerView recyclerViewVar, bts btsVar) {
         if (!btsVar.a || btsVar.i) {
             return;
         }
         if (btsVar.b == 0) {
             if (btsVar.e == -1) {
-                cn(czoVar, btsVar.g);
+                cn(recyclerViewVar, btsVar.g);
                 return;
             } else {
-                co(czoVar, btsVar.f);
+                co(recyclerViewVar, btsVar.f);
                 return;
             }
         }
@@ -1567,7 +1567,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
                 i++;
             }
             int i3 = i2 - iR;
-            cn(czoVar, i3 < 0 ? btsVar.g : btsVar.g - Math.min(i3, btsVar.b));
+            cn(recyclerViewVar, i3 < 0 ? btsVar.g : btsVar.g - Math.min(i3, btsVar.b));
             return;
         }
         int i4 = btsVar.g;
@@ -1580,10 +1580,10 @@ public class StaggeredGridLayoutManager extends czg implements czs {
             i++;
         }
         int i5 = iP - btsVar.g;
-        co(czoVar, i5 < 0 ? btsVar.f : Math.min(i5, btsVar.b) + btsVar.f);
+        co(recyclerViewVar, i5 < 0 ? btsVar.f : Math.min(i5, btsVar.b) + btsVar.f);
     }
 
-    public final void cn(czo czoVar, int i) {
+    public final void cn(RecyclerView recyclerViewVar, int i) {
         for (int iEs = es() - 1; iEs >= 0; iEs--) {
             View viewEr = er(iEs);
             if (this.c.dexFind(viewEr) < i || this.c.q(viewEr) < i) {
@@ -1604,11 +1604,11 @@ public class StaggeredGridLayoutManager extends czg implements czs {
             } else {
                 dmbVar.a.s();
             }
-            fd(viewEr, czoVar);
+            fd(viewEr, recyclerViewVar);
         }
     }
 
-    public final void co(czo czoVar, int i) {
+    public final void co(RecyclerView recyclerViewVar, int i) {
         while (es() > 0) {
             View viewEr = er(0);
             if (this.c.e(viewEr) > i || this.c.p(viewEr) > i) {
@@ -1629,7 +1629,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
             } else {
                 dmbVar.a.t();
             }
-            fd(viewEr, czoVar);
+            fd(viewEr, recyclerViewVar);
         }
     }
 
@@ -1641,20 +1641,20 @@ public class StaggeredGridLayoutManager extends czg implements czs {
         }
     }
 
-    public final int cq(int i, czo czoVar, czt cztVar) {
+    public final int cq(int i, RecyclerView recyclerViewVar, czt cztVar) {
         if (es() == 0 || i == 0) {
             return 0;
         }
         cl(i, cztVar);
         bts btsVar = this.g;
-        int iBe = be(czoVar, btsVar, cztVar);
+        int iBe = be(recyclerViewVar, btsVar, cztVar);
         if (btsVar.b >= iBe) {
             i = i < 0 ? -iBe : iBe;
         }
         this.c.r(-i);
         this.an = this.i;
         btsVar.b = 0;
-        cm(czoVar, btsVar);
+        cm(recyclerViewVar, btsVar);
         return i;
     }
 
@@ -1693,7 +1693,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
                 iO = 0;
             }
         }
-        RecyclerView recyclerView = this.dp;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
         if (recyclerView == null || !recyclerView.r) {
             btsVar.g = this.c.i() + iO;
             btsVar.f = -iO2;
@@ -1750,7 +1750,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
             return 0;
         }
         boolean z = !this.au;
-        return cnf.aw(cztVar, this.c, bg(z), bf(z), this, this.au);
+        return HugeSyntheticPileOfHelpers.aw(cztVar, this.c, bg(z), bf(z), this, this.au);
     }
 
     @Override // me.hd.wauxv.obf.czg
@@ -1764,7 +1764,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
             return 0;
         }
         boolean z = !this.au;
-        return cnf.aw(cztVar, this.c, bg(z), bf(z), this, this.au);
+        return HugeSyntheticPileOfHelpers.aw(cztVar, this.c, bg(z), bf(z), this, this.au);
     }
 
     @Override // me.hd.wauxv.obf.czg
@@ -1785,7 +1785,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final int u(czo czoVar, czt cztVar) {
+    public final int u(RecyclerView recyclerViewVar, czt cztVar) {
         if (this.e == 1) {
             return Math.min(this.a, cztVar.p());
         }
@@ -1793,7 +1793,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final int v(czo czoVar, czt cztVar) {
+    public final int v(RecyclerView recyclerViewVar, czt cztVar) {
         if (this.e == 0) {
             return Math.min(this.a, cztVar.p());
         }
@@ -1803,12 +1803,12 @@ public class StaggeredGridLayoutManager extends czg implements czs {
     /* JADX WARN: Found duplicated region for block: B:31:0x0048 */
     /* JADX WARN: Found duplicated region for block: B:37:0x0053 */
     @Override // me.hd.wauxv.obf.czg
-    public final View w(View view, int i, czo czoVar, czt cztVar) {
+    public final View w(View view, int i, RecyclerView recyclerViewVar, czt cztVar) {
         View viewM0do;
         int i2;
         View viewQ;
         if (es() != 0) {
-            RecyclerView recyclerView = this.dp;
+            androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
             if (recyclerView == null || (viewM0do = recyclerView.m0do(view)) == null
                     || ((ArrayList) this.f4do.e).contains(viewM0do)) {
                 viewM0do = null;
@@ -1843,7 +1843,7 @@ public class StaggeredGridLayoutManager extends czg implements czs {
                     btsVar.b = (int) (this.c.o() * 0.33333334f);
                     btsVar.h = true;
                     btsVar.a = false;
-                    be(czoVar, btsVar, cztVar);
+                    be(recyclerViewVar, btsVar, cztVar);
                     this.an = this.i;
                     if (!z && (viewQ = byjVar.q(iBk, i2)) != null && viewQ != viewM0do) {
                         return viewQ;
@@ -1894,13 +1894,13 @@ public class StaggeredGridLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final void x(czo czoVar, czt cztVar, bd bdVar) {
-        super.x(czoVar, cztVar, bdVar);
+    public final void x(RecyclerView recyclerViewVar, czt cztVar, bd bdVar) {
+        super.x(recyclerViewVar, cztVar, bdVar);
         bdVar.k("androidx.recyclerview.widget.StaggeredGridLayoutManager");
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final void y(czo czoVar, czt cztVar, View view, bd bdVar) {
+    public final void y(RecyclerView recyclerViewVar, czt cztVar, View view, bd bdVar) {
         ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
         if (!(layoutParams instanceof dmb)) {
             ez(view, bdVar);

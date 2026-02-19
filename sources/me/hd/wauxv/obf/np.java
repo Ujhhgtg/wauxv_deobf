@@ -24,11 +24,11 @@ public final class np implements Runnable {
                 ((ns) this.c).h.ao(this.b, 4);
                 break;
             case 1:
-                bmu bmuVar = (bmu) this.c;
+                SyntheticPileOfMess bmuVar = (SyntheticPileOfMess) this.c;
                 int i = this.b;
-                bht bhtVar = (bht) bmuVar.h;
-                if (bhtVar != null) {
-                    bhtVar.e(i);
+                ResourcesCompat resourcesCompatVar = (ResourcesCompat) bmuVar.obj;
+                if (resourcesCompatVar != null) {
+                    resourcesCompatVar.e(i);
                 }
                 break;
             case 2:

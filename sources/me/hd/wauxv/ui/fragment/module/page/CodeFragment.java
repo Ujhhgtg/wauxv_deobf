@@ -19,14 +19,11 @@ import me.hd.wauxv.obf.bdo;
 import me.hd.wauxv.obf.bdp;
 import me.hd.wauxv.obf.brd;
 import me.hd.wauxv.obf.btq;
-import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.cnb;
-import me.hd.wauxv.obf.ctf;
+import me.hd.wauxv.obf.PathUtils;
 import me.hd.wauxv.obf.dnj;
-import me.hd.wauxv.obf.dov;
+import me.hd.wauxv.obf.Kotlin$Lazy;
 import me.hd.wauxv.obf.eqj;
-import me.hd.wauxv.obf.jx;
-import me.hd.wauxv.ui.fragment.module.page.CodeFragment;
+import me.hd.wauxv.obf.FactoryPools;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -56,9 +53,9 @@ public final class CodeFragment extends bdo {
                 codeEditor.bu = new avc();
             }
             codeEditor.cm = null;
-            jx jxVar = codeEditor.f;
-            jxVar.f = null;
-            jxVar.h = null;
+            FactoryPools factoryPoolsVar = codeEditor.f;
+            factoryPoolsVar.f = null;
+            factoryPoolsVar.h = null;
             aff affVar = codeEditor.bp;
             if (affVar != null) {
                 affVar.b.remove(codeEditor);
@@ -91,8 +88,8 @@ public final class CodeFragment extends bdo {
         throwIfVar1IsNull(eqjVar);
         MaterialToolbar materialToolbar = ((bdp) eqjVar).c;
         materialToolbar.setTitle(strZ);
-        dov dovVar = ctf.a;
-        String strC = ctf.c("Plugin" /* "Plugin" /* "Plugin" /* cnb.z(-47055661693738L)  */);
+        Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
+        String strC = PathUtils.getModuleSubDir("Plugin" /* "Plugin" /* "Plugin" /* cnb.z(-47055661693738L)  */);
         throwIfVar1IsNull(strC, "delimiter");
         int iAl = dnj.al(6, strZ2, strC);
         if (iAl == -1) {

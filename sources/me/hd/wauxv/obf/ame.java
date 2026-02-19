@@ -20,7 +20,7 @@ public final /* synthetic */ class ame extends bgr implements bgk {
         if (zBooleanValue) {
             viewGroup.addView(viewInflate);
         }
-        RecyclerView recyclerView = (RecyclerView) KotlinHelpers2.aq(viewInflate, R.id.developerRecyclerView);
+        RecyclerView recyclerView = (RecyclerView) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.developerRecyclerView);
         if (recyclerView != null) {
             return new bdq((LinearLayout) viewInflate, recyclerView);
         }

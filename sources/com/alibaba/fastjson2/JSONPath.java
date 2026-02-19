@@ -21,7 +21,7 @@ import java.util.UUID;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.ky;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.pool.TypePool;
@@ -275,7 +275,7 @@ public abstract class JSONPath {
     }
 
     public static JSONPathSingle of(JSONPathSegment jSONPathSegment) {
-        StringBuilder sbY = dkz.y(((jSONPathSegment instanceof JSONPathSegment.MultiIndexSegment)
+        StringBuilder sbY = StaticHelpers6.toSb(((jSONPathSegment instanceof JSONPathSegment.MultiIndexSegment)
                 || (jSONPathSegment instanceof JSONPathSegmentIndex)) ? "$" : "$.");
         sbY.append(jSONPathSegment.toString());
         String string = sbY.toString();
@@ -487,7 +487,7 @@ public abstract class JSONPath {
         if (typeConvert != null) {
             return ((Integer) typeConvert.apply(objExtract)).intValue();
         }
-        throw new JSONException(dkz.r(objExtract, "can not convert to int : "));
+        throw new JSONException(StaticHelpers6.concatVar2Var1(objExtract, "can not convert to int : "));
     }
 
     public Long extractInt64(JSONReader jSONReader) {
@@ -512,7 +512,7 @@ public abstract class JSONPath {
         if (typeConvert != null) {
             return ((Long) typeConvert.apply(objExtract)).longValue();
         }
-        throw new JSONException(dkz.r(objExtract, "can not convert to long : "));
+        throw new JSONException(StaticHelpers6.concatVar2Var1(objExtract, "can not convert to long : "));
     }
 
     public abstract String extractScalar(JSONReader jSONReader);

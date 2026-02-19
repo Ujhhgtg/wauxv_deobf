@@ -16,7 +16,7 @@ public final class zc implements IEmpty5, KClassContainer {
         List listAg = OtherStaticHelpers.argsToList(bfu.class, IInvokable.class, bgj.class, bgk.class, blv.class, bgl.class, bgm.class, aak.class,
                 bgn.class, bgo.class, bfv.class, bfw.class, bfx.class, bfy.class, bfz.class, bga.class, bgb.class,
                 bgc.class, bgd.class, bge.class, bgg.class, bgh.class, bgi.class);
-        ArrayList arrayList = new ArrayList(abb.ak(listAg, 10));
+        ArrayList arrayList = new ArrayList(StaticHelpers4.ak(listAg, 10));
         int i = 0;
         for (Object obj : listAg) {
             int i2 = i + 1;
@@ -72,11 +72,11 @@ public final class zc implements IEmpty5, KClassContainer {
     }
 
     public final boolean equals(Object obj) {
-        return (obj instanceof zc) && cnf.be(this).equals(cnf.be((IEmpty5) obj));
+        return (obj instanceof zc) && HugeSyntheticPileOfHelpers.be(this).equals(HugeSyntheticPileOfHelpers.be((IEmpty5) obj));
     }
 
     public final int hashCode() {
-        return cnf.be(this).hashCode();
+        return HugeSyntheticPileOfHelpers.be(this).hashCode();
     }
 
     public final String toString() {

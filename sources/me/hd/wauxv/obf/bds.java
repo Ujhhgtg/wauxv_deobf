@@ -26,7 +26,7 @@ public final class bds implements LayoutInflater.Factory2 {
     @Override // android.view.LayoutInflater.Factory2
     public final View onCreateView(View view, String str, Context context, AttributeSet attributeSet) {
         boolean zIsAssignableFrom;
-        bfb bfbVarBc;
+        FragmentManager fragmentManagerVarBc;
         boolean zEquals = FragmentContainerView.class.getName().equals(str);
         beg begVar = this.a;
         if (zEquals) {
@@ -44,7 +44,7 @@ public final class bds implements LayoutInflater.Factory2 {
             typedArrayObtainStyledAttributes.recycle();
             if (attributeValue != null) {
                 try {
-                    zIsAssignableFrom = bdj.class
+                    zIsAssignableFrom = SomeFragmentManager.class
                             .isAssignableFrom(bdz.createInstanceWithArgs(context.getClassLoader(), attributeValue));
                 } catch (ClassNotFoundException unused) {
                     zIsAssignableFrom = false;
@@ -56,72 +56,72 @@ public final class bds implements LayoutInflater.Factory2 {
                                 + ": Must specify unique android:id, android:tag, or have a parent with an id for "
                                 + attributeValue);
                     }
-                    bdj bdjVarCa = resourceId != -1 ? begVar.ca(resourceId) : null;
-                    if (bdjVarCa == null && string != null) {
-                        bdjVarCa = begVar.cb(string);
+                    SomeFragmentManager someFragmentManagerVarCa = resourceId != -1 ? begVar.ca(resourceId) : null;
+                    if (someFragmentManagerVarCa == null && string != null) {
+                        someFragmentManagerVarCa = begVar.cb(string);
                     }
-                    if (bdjVarCa == null && id != -1) {
-                        bdjVarCa = begVar.ca(id);
+                    if (someFragmentManagerVarCa == null && id != -1) {
+                        someFragmentManagerVarCa = begVar.ca(id);
                     }
-                    if (bdjVarCa == null) {
+                    if (someFragmentManagerVarCa == null) {
                         bdz bdzVarCe = begVar.ce();
                         context.getClassLoader();
-                        bdjVarCa = bdzVarCe.e(attributeValue);
-                        bdjVarCa.bg = true;
-                        bdjVarCa.bq = resourceId != 0 ? resourceId : id;
-                        bdjVarCa.br = id;
-                        bdjVarCa.bs = string;
-                        bdjVarCa.bh = true;
-                        bdjVarCa.bm = begVar;
+                        someFragmentManagerVarCa = bdzVarCe.e(attributeValue);
+                        someFragmentManagerVarCa.bg = true;
+                        someFragmentManagerVarCa.bq = resourceId != 0 ? resourceId : id;
+                        someFragmentManagerVarCa.br = id;
+                        someFragmentManagerVarCa.bs = string;
+                        someFragmentManagerVarCa.bh = true;
+                        someFragmentManagerVarCa.bm = begVar;
                         bdm bdmVar = begVar.w;
-                        bdjVarCa.bn = bdmVar;
-                        bdjVarCa.i(bdmVar.e, attributeSet, bdjVarCa.at);
-                        bfbVarBc = begVar.aw(bdjVarCa);
+                        someFragmentManagerVarCa.bn = bdmVar;
+                        someFragmentManagerVarCa.i(bdmVar.e, attributeSet, someFragmentManagerVarCa.at);
+                        fragmentManagerVarBc = begVar.aw(someFragmentManagerVarCa);
                         if (beg.ar(2)) {
                             Log.v("FragmentManager",
-                                    "Fragment " + bdjVarCa + " has been inflated via the <fragment> tag: id=0x"
+                                    "Fragment " + someFragmentManagerVarCa + " has been inflated via the <fragment> tag: id=0x"
                                             + Integer.toHexString(resourceId));
                         }
                     } else {
-                        if (bdjVarCa.bh) {
+                        if (someFragmentManagerVarCa.bh) {
                             throw new IllegalArgumentException(
                                     attributeSet.getPositionDescription() + ": Duplicate id 0x"
                                             + Integer.toHexString(resourceId) + ", tag " + string + ", or parent id 0x"
                                             + Integer.toHexString(id) + " with another fragment for " + attributeValue);
                         }
-                        bdjVarCa.bh = true;
-                        bdjVarCa.bm = begVar;
+                        someFragmentManagerVarCa.bh = true;
+                        someFragmentManagerVarCa.bm = begVar;
                         bdm bdmVar2 = begVar.w;
-                        bdjVarCa.bn = bdmVar2;
-                        bdjVarCa.i(bdmVar2.e, attributeSet, bdjVarCa.at);
-                        bfbVarBc = begVar.bc(bdjVarCa);
+                        someFragmentManagerVarCa.bn = bdmVar2;
+                        someFragmentManagerVarCa.i(bdmVar2.e, attributeSet, someFragmentManagerVarCa.at);
+                        fragmentManagerVarBc = begVar.bc(someFragmentManagerVarCa);
                         if (beg.ar(2)) {
                             Log.v("FragmentManager",
-                                    "Retained Fragment " + bdjVarCa
+                                    "Retained Fragment " + someFragmentManagerVarCa
                                             + " has been re-attached via the <fragment> tag: id=0x"
                                             + Integer.toHexString(resourceId));
                         }
                     }
                     ViewGroup viewGroup = (ViewGroup) view;
                     bfc bfcVar = bfd.a;
-                    bfd.c(new bex(bdjVarCa, "Attempting to use <fragment> tag to add fragment " + bdjVarCa
+                    bfd.c(new bex(someFragmentManagerVarCa, "Attempting to use <fragment> tag to add fragment " + someFragmentManagerVarCa
                             + " to container " + viewGroup));
-                    bfd.b(bdjVarCa).getClass();
-                    bdjVarCa.by = viewGroup;
-                    bfbVarBc.p();
-                    bfbVarBc.o();
-                    View view2 = bdjVarCa.bz;
+                    bfd.b(someFragmentManagerVarCa).getClass();
+                    someFragmentManagerVarCa.by = viewGroup;
+                    fragmentManagerVarBc.p();
+                    fragmentManagerVarBc.o();
+                    View view2 = someFragmentManagerVarCa.bz;
                     if (view2 == null) {
                         throw new IllegalStateException(concat("Fragment ", attributeValue, " did not create a view."));
                     }
                     if (resourceId != 0) {
                         view2.setId(resourceId);
                     }
-                    if (bdjVarCa.bz.getTag() == null) {
-                        bdjVarCa.bz.setTag(string);
+                    if (someFragmentManagerVarCa.bz.getTag() == null) {
+                        someFragmentManagerVarCa.bz.setTag(string);
                     }
-                    bdjVarCa.bz.addOnAttachStateChangeListener(new bau(this, i, bfbVarBc));
-                    return bdjVarCa.bz;
+                    someFragmentManagerVarCa.bz.addOnAttachStateChangeListener(new bau(this, i, fragmentManagerVarBc));
+                    return someFragmentManagerVarCa.bz;
                 }
             }
         }

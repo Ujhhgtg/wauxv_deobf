@@ -28,12 +28,12 @@ import me.hd.wauxv.obf.amp;
 import me.hd.wauxv.obf.avr;
 import me.hd.wauxv.obf.avs;
 import me.hd.wauxv.obf.azh;
-import me.hd.wauxv.obf.bht;
+import me.hd.wauxv.obf.ResourcesCompat;
 import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.cdh;
 import me.hd.wauxv.obf.cdi;
 import me.hd.wauxv.obf.cwe;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dpr;
 import me.hd.wauxv.obf.dps;
 import me.hd.wauxv.obf.emd;
@@ -614,8 +614,8 @@ public final class DexMerger {
             @Override // com.android.dx.merge.DexMerger.IdMerger
             public cdh read(amj amjVar, IndexMap indexMap, int i) {
                 int i2 = amjVar.i();
-                for (int i3 : dkz.af(9)) {
-                    if (dkz.ae(i3) == i2) {
+                for (int i3 : StaticHelpers6.af(9)) {
+                    if (StaticHelpers6.ae(i3) == i2) {
                         return indexMap.adjust(new cdh(amjVar.d, i3, amjVar.i(), amjVar.i(), amjVar.i()));
                     }
                 }
@@ -630,7 +630,7 @@ public final class DexMerger {
             @Override // com.android.dx.merge.DexMerger.IdMerger
             public void write(cdh cdhVar) {
                 amj amjVar = DexMerger.this.idsDefsOut;
-                amjVar.n(dkz.ae(cdhVar.b));
+                amjVar.n(StaticHelpers6.ae(cdhVar.b));
                 amjVar.n(cdhVar.c);
                 amjVar.n(cdhVar.d);
                 amjVar.n(cdhVar.e);
@@ -725,7 +725,7 @@ public final class DexMerger {
                 amjVar.getClass();
                 try {
                     amjVar.m(str.length());
-                    amjVar.write(bht.u(str));
+                    amjVar.write(ResourcesCompat.u(str));
                     amjVar.writeByte(0);
                 } catch (UTFDataFormatException unused) {
                     throw new AssertionError();

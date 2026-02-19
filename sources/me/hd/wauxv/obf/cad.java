@@ -69,7 +69,7 @@ public final class cad {
     }
 
     public final void x(int i, int i2) {
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         MaterialButton materialButton = this.a;
         int paddingStart = materialButton.getPaddingStart();
         int paddingTop = materialButton.getPaddingTop();

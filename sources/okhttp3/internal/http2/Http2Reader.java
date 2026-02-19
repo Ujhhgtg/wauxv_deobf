@@ -9,7 +9,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.KotlinIntProgression;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dlc;
 import me.hd.wauxv.obf.dqc;
 import me.hd.wauxv.obf.ekc;
@@ -49,7 +49,7 @@ public final class Http2Reader implements Closeable {
             if (i3 <= i) {
                 return i - i3;
             }
-            throw new IOException(dkz.p(i3, "PROTOCOL_ERROR padding ", " > remaining length ", i));
+            throw new IOException(StaticHelpers6.p(i3, "PROTOCOL_ERROR padding ", " > remaining length ", i));
         }
 
         private Companion() {

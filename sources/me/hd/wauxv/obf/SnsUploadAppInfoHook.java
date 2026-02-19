@@ -17,7 +17,7 @@ public final class SnsUploadAppInfoHook extends SwitchHook implements IDexFind {
         "wx8dd6ecd81906fd84" /* "wx8dd6ecd81906fd84" /* "wx8dd6ecd81906fd84" /* cnb.z(-560802469772074L)  */;
         "网抑云音乐" /* "网抑云音乐" /* "网抑云音乐" /* cnb.z(-561287801076522L)  */;
         a = new SnsUploadAppInfoHook("SnsUploadAppInfoHook" /* "SnsUploadAppInfoHook" /* "SnsUploadAppInfoHook" /* cnb.z(-561408060160810L)  */);
-        b = KotlinHelpers.ai(new Pair("仇家多不方便透漏名字" /* "仇家多不方便透漏名字" /* "仇家多不方便透漏名字" /* cnb.z(-561244851403562L)  */,
+        b = KotlinHelpers.mapOf(new Pair("仇家多不方便透漏名字" /* "仇家多不方便透漏名字" /* "仇家多不方便透漏名字" /* cnb.z(-561244851403562L)  */,
                 new Pair("wx528bc3d4b664d037" /* "wx528bc3d4b664d037" /* "wx528bc3d4b664d037" /* cnb.z(-561231966501674L)  */,
                         "仇家多不方便透漏名字" /* "仇家多不方便透漏名字" /* "仇家多不方便透漏名字" /* cnb.z(-561098822515498L)  */)),
                 new Pair("来自一位陌生的透明人" /* "来自一位陌生的透明人" /* "来自一位陌生的透明人" /* cnb.z(-561085937613610L)  */, new Pair(
@@ -81,9 +81,9 @@ public final class SnsUploadAppInfoHook extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(dke.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(dke.a));
         SnsUploadAppInfoHook dkhVar = a;
-        aki akiVarAb = csb.ab(dkhVar, listBf);
+        aki akiVarAb = PackageParam.ab(dkhVar, listBf);
         dkhVar.y(akiVarAb, new djk(14));
         akiVarAb.o();
     }
@@ -100,7 +100,7 @@ public final class SnsUploadAppInfoHook extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(dke.a, dexKitBridge, new djk(15));
+        StaticHelpers7.resolveDexAndCache(dke.a, dexKitBridge, new djk(15));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

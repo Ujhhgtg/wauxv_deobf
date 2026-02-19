@@ -8,11 +8,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.AccessControllerPlugin;
 import net.bytebuddy.description.ByteCodeElement;
-import net.bytebuddy.description.method.MethodDescription;
-import net.bytebuddy.description.method.ParameterDescription;
 import net.bytebuddy.description.type.TypeDefinition;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.description.type.TypeList;
@@ -124,7 +122,7 @@ public interface ParameterList<T extends ParameterDescription> extends Filterabl
             public ParameterDescription.InDefinedShape get(int i) {
                 int iD = !this.methodDescription.isStatic() ? 1 : 0;
                 for (int i2 = 0; i2 < i; i2++) {
-                    iD = dkz.d(this.typeDefinitions.get(i2), iD);
+                    iD = StaticHelpers6.d(this.typeDefinitions.get(i2), iD);
                 }
                 return new ParameterDescription.Latent(this.methodDescription, this.typeDefinitions.get(i).asGenericType(), i, iD);
             }

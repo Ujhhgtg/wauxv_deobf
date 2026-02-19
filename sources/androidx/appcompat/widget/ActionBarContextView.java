@@ -22,7 +22,7 @@ import me.hd.wauxv.obf.cq;
 import me.hd.wauxv.obf.cw;
 import me.hd.wauxv.obf.cyf;
 import me.hd.wauxv.obf.da;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.esg;
 import me.hd.wauxv.obf.k;
 
@@ -116,7 +116,7 @@ public class ActionBarContextView extends ViewGroup {
         }
         k kVar = this.a;
         if (i != 0) {
-            esg esgVarG = eqz.g(this);
+            esg esgVarG = ViewCompat.getOrCreateAnimationHelper(this);
             esgVarG.b(0.0f);
             esgVarG.d(j);
             kVar.c.f = esgVarG;
@@ -127,7 +127,7 @@ public class ActionBarContextView extends ViewGroup {
         if (getVisibility() != 0) {
             setAlpha(0.0f);
         }
-        esg esgVarG2 = eqz.g(this);
+        esg esgVarG2 = ViewCompat.getOrCreateAnimationHelper(this);
         esgVarG2.b(1.0f);
         esgVarG2.d(j);
         kVar.c.f = esgVarG2;
@@ -363,7 +363,7 @@ public class ActionBarContextView extends ViewGroup {
     public void setTitle(CharSequence charSequence) {
         this.i = charSequence;
         z();
-        eqz.t(this, charSequence);
+        ViewCompat.setAccessibilityPaneTitle(this, charSequence);
     }
 
     public void setTitleOptional(boolean z) {

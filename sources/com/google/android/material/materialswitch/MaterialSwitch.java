@@ -11,11 +11,11 @@ import android.view.View;
 import androidx.appcompat.widget.SwitchCompat;
 import me.hd.wauxv.R;
 import me.hd.wauxv.obf.abi;
-import me.hd.wauxv.obf.bhu;
+import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.ewz;
-import me.hd.wauxv.obf.jx;
+import me.hd.wauxv.obf.FactoryPools;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -45,18 +45,18 @@ public class MaterialSwitch extends SwitchCompat {
         this.bb = super.getTrackDrawable();
         this.bg = super.getTrackTintList();
         super.setTrackTintList(null);
-        jx jxVarAo = bhu.ao(context2, attributeSet, cxs.z, R.attr.materialSwitchStyle, R.style.Widget_Material3_CompoundButton_MaterialSwitch, new int[0]);
-        this.az = jxVarAo.s(0);
-        TypedArray typedArray = (TypedArray) jxVarAo.e;
+        FactoryPools factoryPoolsVarAo = FastKV.ao(context2, attributeSet, cxs.z, R.attr.materialSwitchStyle, R.style.Widget_Material3_CompoundButton_MaterialSwitch, new int[0]);
+        this.az = factoryPoolsVarAo.s(0);
+        TypedArray typedArray = (TypedArray) factoryPoolsVarAo.e;
         this.ba = typedArray.getDimensionPixelSize(1, -1);
-        this.be = jxVarAo.r(2);
+        this.be = factoryPoolsVarAo.r(2);
         int i = typedArray.getInt(3, -1);
         PorterDuff.Mode mode = PorterDuff.Mode.SRC_IN;
         this.bf = ewz.ap(i, mode);
-        this.bc = jxVarAo.s(4);
-        this.bh = jxVarAo.r(5);
+        this.bc = factoryPoolsVarAo.s(4);
+        this.bh = factoryPoolsVarAo.r(5);
         this.bi = ewz.ap(typedArray.getInt(6, -1), mode);
-        jxVarAo.ae();
+        factoryPoolsVarAo.ae();
         setEnforceSwitchWidth(false);
         bm();
         bn();

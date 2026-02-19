@@ -28,7 +28,7 @@ public abstract class hz implements cdw {
         hy hyVar = (hy) this.g;
         if (hyVar != null) {
             try {
-                ((ic) this.h).x.unregisterReceiver(hyVar);
+                ((AppCompatDelegate) this.h).x.unregisterReceiver(hyVar);
             } catch (IllegalArgumentException unused) {
             }
             this.g = null;
@@ -122,7 +122,7 @@ public abstract class hz implements cdw {
         if (((hy) this.g) == null) {
             this.g = new hy(this, 0);
         }
-        ((ic) this.h).x.registerReceiver((hy) this.g, intentFilterD);
+        ((AppCompatDelegate) this.h).x.registerReceiver((hy) this.g, intentFilterD);
     }
 
     @Override // me.hd.wauxv.obf.cdw
@@ -142,7 +142,7 @@ public abstract class hz implements cdw {
         this.h = new SparseIntArray();
     }
 
-    public hz(ic icVar) {
-        this.h = icVar;
+    public hz(AppCompatDelegate appCompatDelegateVar) {
+        this.h = appCompatDelegateVar;
     }
 }

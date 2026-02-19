@@ -12,19 +12,19 @@ public final class bap extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(ban.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(ban.a));
         bap bapVar = a;
-        aki akiVarAb = csb.ab(bapVar, listBf);
+        aki akiVarAb = PackageParam.ab(bapVar, listBf);
         akiVarAb.n(new ayz(18));
         akiVarAb.o();
-        aki akiVarAb2 = csb.ab(bapVar, dqc.toSingletonList(emn.bb(bao.a)));
+        aki akiVarAb2 = PackageParam.ab(bapVar, dqc.toSingletonList(StaticHelpers7.bb(bao.a)));
         akiVarAb2.n(new ayz(19));
         akiVarAb2.o();
     }
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(ban.a, dexKitBridge, new ayz(20));
-        emn.aj(bao.a, dexKitBridge, new ayz(21));
+        StaticHelpers7.resolveDexAndCache(ban.a, dexKitBridge, new ayz(20));
+        StaticHelpers7.resolveDexAndCache(bao.a, dexKitBridge, new ayz(21));
     }
 }

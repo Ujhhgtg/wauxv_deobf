@@ -34,7 +34,7 @@ import me.hd.wauxv.obf.dgl;
 import me.hd.wauxv.obf.dgm;
 import me.hd.wauxv.obf.dhp;
 import me.hd.wauxv.obf.eqq;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.era;
 import me.hd.wauxv.obf.ewz;
 import me.hd.wauxv.obf.o;
@@ -195,17 +195,17 @@ public class SideSheetBehavior<V extends View> extends agr {
         if (weakReference == null || (view = (View) weakReference.get()) == null) {
             return;
         }
-        eqz.p(view, 262144);
-        eqz.n(view, 0);
-        eqz.p(view, 1048576);
-        eqz.n(view, 0);
+        ViewCompat.p(view, 262144);
+        ViewCompat.notifyAccessibilityChange(view, 0);
+        ViewCompat.p(view, 1048576);
+        ViewCompat.notifyAccessibilityChange(view, 0);
         int i = 5;
         if (this.w != 5) {
-            eqz.q(view, ax.f, new bux(this, i));
+            ViewCompat.q(view, ax.f, new bux(this, i));
         }
         int i2 = 3;
         if (this.w != 3) {
-            eqz.q(view, ax.d, new bux(this, i2));
+            ViewCompat.q(view, ax.d, new bux(this, i2));
         }
     }
 
@@ -227,7 +227,7 @@ public class SideSheetBehavior<V extends View> extends agr {
         View view3;
         int i2;
         View viewFindViewById;
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         int i3 = 1;
         if (coordinatorLayout.getFitsSystemWindows() && !view.getFitsSystemWindows()) {
             view.setFitsSystemWindows(true);
@@ -268,8 +268,8 @@ public class SideSheetBehavior<V extends View> extends agr {
             if (view.getImportantForAccessibility() == 0) {
                 view.setImportantForAccessibility(1);
             }
-            if (eqz.k(view) == null) {
-                eqz.t(view, view.getResources().getString(R.string.side_sheet_accessibility_pane_title));
+            if (ViewCompat.k(view) == null) {
+                ViewCompat.setAccessibilityPaneTitle(view, view.getResources().getString(R.string.side_sheet_accessibility_pane_title));
             }
         }
         int i6 = Gravity.getAbsoluteGravity(((agu) view.getLayoutParams()).c, i) == 3 ? 1 : 0;
@@ -386,7 +386,7 @@ public class SideSheetBehavior<V extends View> extends agr {
     public final boolean t(CoordinatorLayout coordinatorLayout, View view, MotionEvent motionEvent) {
         era eraVar;
         VelocityTracker velocityTracker;
-        if ((!view.isShown() && eqz.k(view) == null) || !this.v) {
+        if ((!view.isShown() && ViewCompat.k(view) == null) || !this.v) {
             this.y = true;
             return false;
         }
@@ -466,7 +466,7 @@ public class SideSheetBehavior<V extends View> extends agr {
             if (weakReference2 != null) {
                 View view = (View) weakReference2.get();
                 if (resourceId != -1) {
-                    WeakHashMap weakHashMap = eqz.a;
+                    WeakHashMap weakHashMap = ViewCompat.a;
                     if (view.isLaidOut()) {
                         view.requestLayout();
                     }

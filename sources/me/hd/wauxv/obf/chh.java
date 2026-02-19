@@ -46,9 +46,9 @@ public final class chh extends SwitchHook implements bnc {
             if ((type == ewg.a.w || type == ewg.k.w || type == ewg.r.w || type == ewg.s.w)
                     && (viewV = cnh.v(view, bhs.v())) != null) {
                 int i = 0;
-                cde cdeVarT = dqc.bi(viewV).t();
-                cdeVarT.ab = "setTextColor" /* "setTextColor" /* "setTextColor" /* cnb.z(-450211356867370L)  */;
-                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) dkz.m(cdeVarT);
+                MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(viewV).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT.name = "setTextColor" /* "setTextColor" /* "setTextColor" /* cnb.z(-450211356867370L)  */;
+                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT);
                 if (cnh.aa(viewV.getContext())) {
                     color = Color.parseColor((!msgInfoBean.isSend() ? chd.a : chf.a).o());
                 } else {

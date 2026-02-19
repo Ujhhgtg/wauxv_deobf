@@ -26,7 +26,7 @@ import me.hd.wauxv.R;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class el extends acj implements DialogInterface, he {
-    public ic a;
+    public AppCompatDelegate a;
     public final id b;
     public final ej c;
 
@@ -54,7 +54,7 @@ public final class el extends acj implements DialogInterface, he {
             contextThemeWrapper.getTheme().resolveAttribute(R.attr.dialogTheme, typedValue2, true);
             iD = typedValue2.resourceId;
         }
-        ((ic) hoVarE).bg = iD;
+        ((AppCompatDelegate) hoVarE).bg = iD;
         hoVarE.m();
         this.c = new ej(getContext(), this, getWindow());
     }
@@ -71,10 +71,10 @@ public final class el extends acj implements DialogInterface, he {
     @Override // me.hd.wauxv.obf.acj, android.app.Dialog
     public final void addContentView(View view, ViewGroup.LayoutParams layoutParams) {
         m();
-        ic icVar = (ic) initOnce();
-        icVar.cf();
-        ((ViewGroup) icVar.an.findViewById(android.R.id.content)).addView(view, layoutParams);
-        icVar.z.f(icVar.y.getCallback());
+        AppCompatDelegate appCompatDelegateVar = (AppCompatDelegate) initOnce();
+        appCompatDelegateVar.cf();
+        ((ViewGroup) appCompatDelegateVar.an.findViewById(android.R.id.content)).addView(view, layoutParams);
+        appCompatDelegateVar.z.f(appCompatDelegateVar.y.getCallback());
     }
 
     @Override // android.app.Dialog, android.content.DialogInterface
@@ -91,7 +91,7 @@ public final class el extends acj implements DialogInterface, he {
     public final ho getThisObject() {
         if (this.a == null) {
             hm hmVar = ho.a;
-            this.a = new ic(getContext(), getWindow(), this, this);
+            this.a = new AppCompatDelegate(getContext(), getWindow(), this, this);
         }
         return this.a;
     }
@@ -104,9 +104,9 @@ public final class el extends acj implements DialogInterface, he {
 
     @Override // android.app.Dialog
     public final View findViewById(int i) {
-        ic icVar = (ic) initOnce();
-        icVar.cf();
-        return icVar.y.findViewById(i);
+        AppCompatDelegate appCompatDelegateVar = (AppCompatDelegate) initOnce();
+        appCompatDelegateVar.cf();
+        return appCompatDelegateVar.y.findViewById(i);
     }
 
     public final void g(CharSequence charSequence) {
@@ -120,11 +120,11 @@ public final class el extends acj implements DialogInterface, he {
 
     @Override // android.app.Dialog
     public final void invalidateOptionsMenu() {
-        ic icVar = (ic) initOnce();
-        if (icVar.ab != null) {
-            icVar.cj();
-            icVar.ab.getClass();
-            icVar.ck(0);
+        AppCompatDelegate appCompatDelegateVar = (AppCompatDelegate) initOnce();
+        if (appCompatDelegateVar.ab != null) {
+            appCompatDelegateVar.cj();
+            appCompatDelegateVar.ab.getClass();
+            appCompatDelegateVar.ck(0);
         }
     }
 
@@ -311,7 +311,7 @@ public final class el extends acj implements DialogInterface, he {
                 int i3 = z3 ? 2 : 0;
                 View viewFindViewById11 = window.findViewById(R.id.scrollIndicatorUp);
                 View viewFindViewById12 = window.findViewById(R.id.scrollIndicatorDown);
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 eqr.b(view2, i2 | i3, 3);
                 if (viewFindViewById11 != null) {
                     viewGroupAh2.removeView(viewFindViewById11);
@@ -354,9 +354,9 @@ public final class el extends acj implements DialogInterface, he {
     @Override // me.hd.wauxv.obf.acj, android.app.Dialog
     public final void onStop() {
         super.onStop();
-        ic icVar = (ic) initOnce();
-        icVar.cj();
-        eut eutVar = icVar.ab;
+        AppCompatDelegate appCompatDelegateVar = (AppCompatDelegate) initOnce();
+        appCompatDelegateVar.cj();
+        eut eutVar = appCompatDelegateVar.ab;
         if (eutVar != null) {
             eutVar.bi = false;
             esh eshVar = eutVar.bh;

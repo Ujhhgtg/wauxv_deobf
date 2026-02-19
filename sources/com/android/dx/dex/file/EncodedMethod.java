@@ -10,7 +10,7 @@ import com.android.dx.util.AnnotatedOutput;
 import com.android.dx.util.Hex;
 import java.io.PrintWriter;
 import me.hd.wauxv.obf.ajn;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -65,7 +65,7 @@ public final class EncodedMethod extends EncodedMember implements Comparable<Enc
             annotatedOutput.annotate(0, String.format("  [%x] %s", Integer.valueOf(i2), this.method.toHuman()));
             annotatedOutput.annotate(ajn.ai(i3), "    method_idx:   " + Hex.u4(iIndexOf));
             annotatedOutput.annotate(ajn.ai(accessFlags), "    access_flags: " + AccessFlags.methodString(accessFlags));
-            dkz.ab(absoluteOffsetOr0, new StringBuilder("    code_off:     "), annotatedOutput, ajn.ai(absoluteOffsetOr0));
+            StaticHelpers6.ab(absoluteOffsetOr0, new StringBuilder("    code_off:     "), annotatedOutput, ajn.ai(absoluteOffsetOr0));
         }
         annotatedOutput.writeUleb128(i3);
         annotatedOutput.writeUleb128(accessFlags);

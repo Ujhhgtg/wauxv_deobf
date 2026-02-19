@@ -9,7 +9,7 @@ public final class ecy {
 
     public /* synthetic */ ecy(int i, Boolean bool, String str) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, ecw.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, ecw.b.getDescriptor());
             throw null;
         }
         this.a = bool;

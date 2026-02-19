@@ -84,10 +84,10 @@ public final class ie {
 
     public final ColorStateList k(Context context, int i) {
         if (i == R.drawable.abc_edit_text_material) {
-            return bht.v(context, R.color.abc_tint_edittext);
+            return ResourcesCompat.v(context, R.color.abc_tint_edittext);
         }
         if (i == R.drawable.abc_switch_track_mtrl_alpha) {
-            return bht.v(context, R.color.abc_tint_switch_track);
+            return ResourcesCompat.v(context, R.color.abc_tint_switch_track);
         }
         if (i != R.drawable.abc_switch_thumb_material) {
             if (i == R.drawable.abc_btn_default_mtrl_shape) {
@@ -100,19 +100,19 @@ public final class ie {
                 return h(context, drm.j(context, R.attr.colorAccent));
             }
             if (i == R.drawable.abc_spinner_mtrl_am_alpha || i == R.drawable.abc_spinner_textfield_background_material) {
-                return bht.v(context, R.color.abc_tint_spinner);
+                return ResourcesCompat.v(context, R.color.abc_tint_spinner);
             }
             if (g(this.b, i)) {
                 return drm.k(context, R.attr.colorControlNormal);
             }
             if (g(this.e, i)) {
-                return bht.v(context, R.color.abc_tint_default);
+                return ResourcesCompat.v(context, R.color.abc_tint_default);
             }
             if (g(this.f, i)) {
-                return bht.v(context, R.color.abc_tint_btn_checkable);
+                return ResourcesCompat.v(context, R.color.abc_tint_btn_checkable);
             }
             if (i == R.drawable.abc_seekbar_thumb_material) {
-                return bht.v(context, R.color.abc_tint_seek_thumb);
+                return ResourcesCompat.v(context, R.color.abc_tint_seek_thumb);
             }
             return null;
         }

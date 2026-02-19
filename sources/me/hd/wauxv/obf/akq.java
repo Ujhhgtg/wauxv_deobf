@@ -6,7 +6,7 @@ import java.util.concurrent.Executor;
 /* JADX INFO: loaded from: classes.dex */
 public final class akq extends axe implements Executor {
     public static final akq f = new akq();
-    public static final ahj g;
+    public static final Dispatcher g;
 
     static {
         enw enwVar = enw.f;
@@ -14,7 +14,7 @@ public final class akq extends axe implements Executor {
         if (64 >= i) {
             i = 64;
         }
-        g = enwVar.k(bht.af("kotlinx.coroutines.io.parallelism", i, 12));
+        g = enwVar.k(ResourcesCompat.af("kotlinx.coroutines.io.parallelism", i, 12));
     }
 
     @Override // java.io.Closeable, java.lang.AutoCloseable

@@ -13,7 +13,7 @@ import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.util.Date;
 import java.util.Locale;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dts;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -109,10 +109,10 @@ final class ObjectWriterImplDate extends DateTimeCodec implements ObjectWriter {
             }
             long j5 = j3;
             long j6 = ((j5 * 400) + 591) / 146097;
-            long j7 = dkz.j(j6, 400L, ((j6 / 4) + (j6 * 365)) - (j6 / 100), j5);
+            long j7 = StaticHelpers6.j(j6, 400L, ((j6 / 4) + (j6 * 365)) - (j6 / 100), j5);
             if (j7 < 0) {
                 j6--;
-                j7 = dkz.j(j6, 400L, ((j6 / 4) + (365 * j6)) - (j6 / 100), j5);
+                j7 = StaticHelpers6.j(j6, 400L, ((j6 / 4) + (365 * j6)) - (j6 / 100), j5);
             }
             int i = (int) j7;
             int i2 = ((i * 5) + 2) / 153;

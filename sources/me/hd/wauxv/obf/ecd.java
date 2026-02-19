@@ -12,7 +12,7 @@ public final class ecd {
 
     public /* synthetic */ ecd(int i, dsy dsyVar, Integer num, String str, dxq dxqVar, eex eexVar) {
         if (31 != (i & 31)) {
-            bht.ah(i, 31, ecb.b.getDescriptor());
+            ResourcesCompat.ah(i, 31, ecb.b.getDescriptor());
             throw null;
         }
         this.a = dsyVar;

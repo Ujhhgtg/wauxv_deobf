@@ -44,7 +44,7 @@ public abstract class ua {
     public long _bw() {
         int i = this.b;
         if (i < 0) {
-            throw new dgb("No tag in stack for requested element");
+            throw new SomeIllegalArgumentException("No tag in stack for requested element");
         }
         long[] jArr = (long[]) this.c;
         this.b = i - 1;

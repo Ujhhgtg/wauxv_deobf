@@ -125,7 +125,7 @@ public abstract class KotlinHelpers2 implements ajt, acm {
         return false;
     }
 
-    public static View aq(View view, int i) {
+    public static View recursivelyFindViewById(View view, int i) {
         if (!(view instanceof ViewGroup)) {
             return null;
         }
@@ -140,32 +140,32 @@ public abstract class KotlinHelpers2 implements ajt, acm {
         return null;
     }
 
-    public static final cjl ar(bdj bdjVar) {
+    public static final cjl ar(SomeFragmentManager someFragmentManagerVar) {
         Dialog dialog;
         Window window;
-        throwIfVar1IsNull(bdjVar, "<this>");
-        for (bdj bdjVar2 = bdjVar; bdjVar2 != null; bdjVar2 = bdjVar2.bp) {
-            if (bdjVar2 instanceof NavHostFragment) {
-                return ((NavHostFragment) bdjVar2).l();
+        throwIfVar1IsNull(someFragmentManagerVar, "<this>");
+        for (SomeFragmentManager someFragmentManagerVar2 = someFragmentManagerVar; someFragmentManagerVar2 != null; someFragmentManagerVar2 = someFragmentManagerVar2.bp) {
+            if (someFragmentManagerVar2 instanceof NavHostFragment) {
+                return ((NavHostFragment) someFragmentManagerVar2).l();
             }
-            bdj bdjVar3 = bdjVar2.cs().z;
-            if (bdjVar3 instanceof NavHostFragment) {
-                return ((NavHostFragment) bdjVar3).l();
+            SomeFragmentManager someFragmentManagerVar3 = someFragmentManagerVar2.cs().z;
+            if (someFragmentManagerVar3 instanceof NavHostFragment) {
+                return ((NavHostFragment) someFragmentManagerVar3).l();
             }
         }
-        View view = bdjVar.bz;
+        View view = someFragmentManagerVar.bz;
         if (view != null) {
             return cnb.u(view);
         }
         View decorView = null;
-        anc ancVar = bdjVar instanceof anc ? (anc) bdjVar : null;
+        anc ancVar = someFragmentManagerVar instanceof anc ? (anc) someFragmentManagerVar : null;
         if (ancVar != null && (dialog = ancVar.s) != null && (window = dialog.getWindow()) != null) {
             decorView = window.getDecorView();
         }
         if (decorView != null) {
             return cnb.u(decorView);
         }
-        throw new IllegalStateException(yg.l("Fragment ", bdjVar, " does not have a NavController set"));
+        throw new IllegalStateException(yg.l("Fragment ", someFragmentManagerVar, " does not have a NavController set"));
     }
 
     public static long as(File file) {
@@ -400,7 +400,7 @@ public abstract class KotlinHelpers2 implements ajt, acm {
                                 (String) null, (Bundle) null)) == null) ? null
                                         : Boolean.valueOf(bundleCall2.getBoolean("active", false));
             } catch (Throwable th) {
-                objX = bhu.x(th);
+                objX = FastKV.x(th);
             }
             if (objX instanceof dcx) {
                 objX = null;
@@ -419,7 +419,7 @@ public abstract class KotlinHelpers2 implements ajt, acm {
                                     "active", (String) null, (Bundle) null)) == null) ? null
                                             : Boolean.valueOf(bundleCall.getBoolean("active", false));
                 } catch (Throwable th2) {
-                    objX2 = bhu.x(th2);
+                    objX2 = FastKV.x(th2);
                 }
                 Boolean bool2 = (Boolean) (objX2 instanceof dcx ? null : objX2);
                 zBooleanValue = bool2 != null ? bool2.booleanValue() : false;
@@ -436,7 +436,7 @@ public abstract class KotlinHelpers2 implements ajt, acm {
                 int i3 = i + 30;
                 String str = i2 <= 0 ? "" : ".....";
                 String str2 = i3 >= charSequence.length() ? "" : ".....";
-                StringBuilder sbY = dkz.y(str);
+                StringBuilder sbY = StaticHelpers6.toSb(str);
                 if (i2 < 0) {
                     i2 = 0;
                 }
@@ -666,20 +666,20 @@ public abstract class KotlinHelpers2 implements ajt, acm {
         }
     }
 
-    public static final et bf(ahj ahjVar, bgj bgjVar) {
-        throwIfVar1IsNull(ahjVar, "dispatcher");
-        et etVar = new et(bug.ON_DESTROY, ahjVar);
+    public static final et bf(Dispatcher dispatcher, bgj bgjVar) {
+        throwIfVar1IsNull(dispatcher, "dispatcher");
+        et etVar = new et(LifeEventEnum.ON_DESTROY, dispatcher);
         ajn.y(etVar, auz.a, new eq(bgjVar, (afw) null)).af(new er(etVar, 0));
         return etVar;
     }
 
     public static void bg(bgj bgjVar) {
         alc alcVar = aou.a;
-        bkb bkbVar = bza.a;
-        throwIfVar1IsNull(bkbVar, "dispatcher");
-        bug bugVar = bug.ON_DESTROY;
-        throwIfVar1IsNull(bugVar, "lifeEvent");
-        cky ckyVar = new cky(bugVar, bkbVar);
+        Dispatcher2 dispatcher2Var = bza.a;
+        throwIfVar1IsNull(dispatcher2Var, "dispatcher");
+        LifeEventEnum lifeEventEnumVar = LifeEventEnum.ON_DESTROY;
+        throwIfVar1IsNull(lifeEventEnumVar, "lifeEvent");
+        cky ckyVar = new cky(lifeEventEnumVar, dispatcher2Var);
         ajn.y(ckyVar, auz.a, new ckx(ckyVar, bgjVar, (afw) null)).af(new er(ckyVar, 1));
     }
 
@@ -697,7 +697,7 @@ public abstract class KotlinHelpers2 implements ajt, acm {
         }
         float fE = 0.0f;
         for (ViewParent parent = view.getParent(); parent instanceof View; parent = parent.getParent()) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             fE += eqq.e((View) parent);
         }
         cat catVar = cauVar.ct;
@@ -990,7 +990,7 @@ public abstract class KotlinHelpers2 implements ajt, acm {
     }
 
     public void bq() {
-        throw new dgb(dal.b(getClass()) + " can't retrieve untyped values");
+        throw new SomeIllegalArgumentException(dal.b(getClass()) + " can't retrieve untyped values");
     }
 
     @Override // me.hd.wauxv.obf.acm

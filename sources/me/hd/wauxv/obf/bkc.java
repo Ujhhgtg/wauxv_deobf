@@ -5,9 +5,9 @@ package me.hd.wauxv.obf;
 public final class bkc {
     public static final bkc a;
     public static final /* synthetic */ btc[] b;
-    public static final jx c;
-    public static final jx d;
-    public static final dov e;
+    public static final FactoryPools c;
+    public static final FactoryPools d;
+    public static final Kotlin$Lazy e;
 
     static {
         cwb cwbVar = new cwb(bkc.class, "ActivityThreadClass", "getActivityThreadClass()Ljava/lang/Class;");
@@ -16,6 +16,6 @@ public final class bkc {
         a = new bkc();
         c = ReflectionWrapper.h("android.app.ActivityThread", null, 6);
         d = ReflectionWrapper.h("android.app.servertransaction.ClientTransaction", null, 6);
-        e = new dov(new amd(18));
+        e = new Kotlin$Lazy(new amd(18));
     }
 }

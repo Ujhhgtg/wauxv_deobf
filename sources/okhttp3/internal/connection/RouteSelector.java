@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.NoSuchElementException;
-import me.hd.wauxv.obf.abf;
+import me.hd.wauxv.obf.StaticHelpers2;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.dqc;
@@ -102,7 +102,7 @@ public final class RouteSelector {
         this.routeDatabase = routeDatabase;
         this.call = call;
         this.eventListener = eventListener;
-        EmptyReadonlyList emptyReadonlyListVar = EmptyReadonlyList.a;
+        EmptyReadonlyList emptyReadonlyListVar = EmptyReadonlyList.INSTANCE;
         this.proxies = emptyReadonlyListVar;
         this.inetSocketAddresses = emptyReadonlyListVar;
         this.postponedRoutes = new ArrayList();
@@ -218,7 +218,7 @@ public final class RouteSelector {
             }
         }
         if (arrayList.isEmpty()) {
-            abf.an(arrayList, this.postponedRoutes);
+            StaticHelpers2.an(arrayList, this.postponedRoutes);
             this.postponedRoutes.clear();
         }
         return new Selection(arrayList);

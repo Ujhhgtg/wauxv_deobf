@@ -14,8 +14,8 @@ public final class azr extends SwitchHook implements IDexFind {
     public static final ayz l;
 
     static {
-        dov dovVar = ctf.a;
-        b = ctf.c("Download" /* "Download" /* "Download" /* cnb.z(-46437186403114L)  */, "Attachment" /* "Attachment" /* "Attachment" /* cnb.z(-46398531697450L)  */);
+        Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
+        b = PathUtils.getModuleSubDir("Download" /* "Download" /* "Download" /* cnb.z(-46437186403114L)  */, "Attachment" /* "Attachment" /* "Attachment" /* cnb.z(-46398531697450L)  */);
         c = "实验" /* "实验" /* "实验" /* cnb.z(-492383640746794L)  */;
         i = "文件下载重定向" /* "文件下载重定向" /* "文件下载重定向" /* cnb.z(-492387935714090L)  */;
         j = "支持将文件重定向下载到自定义目录中" /* "支持将文件重定向下载到自定义目录中" /* "支持将文件重定向下载到自定义目录中" /* cnb.z(-492353575975722L)  */;
@@ -24,9 +24,9 @@ public final class azr extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(azp.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(azp.a));
         azr azrVar = a;
-        aki akiVarAb = csb.ab(azrVar, listBf);
+        aki akiVarAb = PackageParam.ab(azrVar, listBf);
         azrVar.x(akiVarAb, new ayz(8));
         akiVarAb.o();
     }
@@ -43,7 +43,7 @@ public final class azr extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(azp.a, dexKitBridge, new ayz(7));
+        StaticHelpers7.resolveDexAndCache(azp.a, dexKitBridge, new ayz(7));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

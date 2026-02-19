@@ -31,9 +31,9 @@ public final class bzy extends ek {
         super(contextAq, typedValueAl2 == null ? 0 : typedValueAl2.data);
         ContextThemeWrapper contextThemeWrapper = ((eg) this.d).a;
         Resources.Theme theme = contextThemeWrapper.getTheme();
-        bhu.p(contextThemeWrapper, null, R.attr.alertDialogStyle, R.style.MaterialAlertDialog_MaterialComponents);
+        FastKV.p(contextThemeWrapper, null, R.attr.alertDialogStyle, R.style.MaterialAlertDialog_MaterialComponents);
         int[] iArr = cxs.p;
-        bhu.q(contextThemeWrapper, null, iArr, R.attr.alertDialogStyle, R.style.MaterialAlertDialog_MaterialComponents, new int[0]);
+        FastKV.q(contextThemeWrapper, null, iArr, R.attr.alertDialogStyle, R.style.MaterialAlertDialog_MaterialComponents, new int[0]);
         TypedArray typedArrayObtainStyledAttributes = contextThemeWrapper.obtainStyledAttributes(null, iArr, R.attr.alertDialogStyle, R.style.MaterialAlertDialog_MaterialComponents);
         int dimensionPixelSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(2, contextThemeWrapper.getResources().getDimensionPixelSize(R.dimen.mtrl_alert_dialog_background_inset_start));
         int dimensionPixelSize2 = typedArrayObtainStyledAttributes.getDimensionPixelSize(3, contextThemeWrapper.getResources().getDimensionPixelSize(R.dimen.mtrl_alert_dialog_background_inset_top));
@@ -72,7 +72,7 @@ public final class bzy extends ek {
         View decorView = window.getDecorView();
         cau cauVar = this.v;
         if (cauVar != null) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             cauVar.dy(eqq.e(decorView));
         }
         Rect rect = this.w;

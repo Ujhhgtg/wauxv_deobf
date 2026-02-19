@@ -1,7 +1,7 @@
 package bsh.org.objectweb.asm;
 
 import com.android.dx.cf.attrib.AttBootstrapMethods;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -164,7 +164,7 @@ final class SymbolTable {
             return sort == 10 ? addConstantClass(type.getInternalName()) : sort == 11 ? addConstantMethodType(type.getDescriptor()) : addConstantClass(type.getDescriptor());
         }
         if (!(obj instanceof Handle)) {
-            throw new IllegalArgumentException(dkz.r(obj, "value "));
+            throw new IllegalArgumentException(StaticHelpers6.concatVar2Var1(obj, "value "));
         }
         Handle handle = (Handle) obj;
         return addConstantMethodHandle(handle.getTag(), handle.getOwner(), handle.getName(), handle.getDesc(), handle.isInterface());

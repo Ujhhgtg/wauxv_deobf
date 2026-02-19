@@ -112,28 +112,28 @@ public final class ckw {
                                 strAx = null;
                             }
                             if (strAx == null) {
-                                strAx = dnj.ax((String) aaz.l(response.request().url().pathSegments()),
+                                strAx = dnj.ax((String) StaticHelpers5.l(response.request().url().pathSegments()),
                                         TypeDescription.Generic.OfWildcardType.SYMBOL);
                                 if (dnj.ak(strAx)) {
                                     strAx = "unknown_" + System.currentTimeMillis();
                                 } else {
                                     request = response.request();
                                     throwIfVar1IsNull(request, "<this>");
-                                    if (request.tag(cnf.class) != null) {
+                                    if (request.tag(HugeSyntheticPileOfHelpers.class) != null) {
                                         throw new ClassCastException();
                                     }
                                 }
                             }
                         }
                     } else {
-                        strAx = dnj.ax((String) aaz.l(response.request().url().pathSegments()),
+                        strAx = dnj.ax((String) StaticHelpers5.l(response.request().url().pathSegments()),
                                 TypeDescription.Generic.OfWildcardType.SYMBOL);
                         if (dnj.ak(strAx)) {
                             strAx = "unknown_" + System.currentTimeMillis();
                         } else {
                             request = response.request();
                             throwIfVar1IsNull(request, "<this>");
-                            if (request.tag(cnf.class) != null) {
+                            if (request.tag(HugeSyntheticPileOfHelpers.class) != null) {
                                 throw new ClassCastException();
                             }
                         }

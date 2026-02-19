@@ -6,7 +6,6 @@ import java.net.ProtocolException;
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.b;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.crv;
 import me.hd.wauxv.obf.dfj;
 import me.hd.wauxv.obf.dlc;
@@ -14,7 +13,7 @@ import me.hd.wauxv.obf.dts;
 import me.hd.wauxv.obf.ekb;
 import me.hd.wauxv.obf.ekc;
 import me.hd.wauxv.obf.emc;
-import me.hd.wauxv.obf.emn;
+import me.hd.wauxv.obf.StaticHelpers7;
 import me.hd.wauxv.obf.nu;
 import me.hd.wauxv.obf.rh;
 import me.hd.wauxv.obf.rm;
@@ -170,7 +169,7 @@ public final class MultipartReader implements Closeable {
 
     static {
         sj sjVar = sj.a;
-        afterBoundaryOptions = emn.ao(nu.g("\r\n"), nu.g("--"), nu.g(" "), nu.g("\t"));
+        afterBoundaryOptions = StaticHelpers7.ao(nu.g("\r\n"), nu.g("--"), nu.g(" "), nu.g("\t"));
     }
 
     public MultipartReader(rm rmVar, String str) {

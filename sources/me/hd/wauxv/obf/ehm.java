@@ -11,7 +11,7 @@ public final class ehm {
 
     public /* synthetic */ ehm(int i, dsy dsyVar, dyi dyiVar, String str, String str2) {
         if (15 != (i & 15)) {
-            bht.ah(i, 15, ehk.b.getDescriptor());
+            ResourcesCompat.ah(i, 15, ehk.b.getDescriptor());
             throw null;
         }
         this.a = dsyVar;

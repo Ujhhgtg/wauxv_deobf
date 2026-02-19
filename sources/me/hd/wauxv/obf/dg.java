@@ -40,7 +40,7 @@ public abstract class dg extends hb implements cea {
         Resources resources;
         boolean z = exm.a;
         if (exm.l() && (resources = getResources()) != null) {
-            cnf.bi(resources);
+            HugeSyntheticPileOfHelpers.injectModuleAssets(resources);
         }
         super.onConfigurationChanged(configuration);
     }
@@ -94,7 +94,7 @@ public abstract class dg extends hb implements cea {
         throwIfVar1IsNull(eqjVar2);
         View root = eqjVar2.getRoot();
         df dfVar = new df(0);
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         eqq.l(root, dfVar);
     }
 

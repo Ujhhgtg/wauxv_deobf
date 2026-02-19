@@ -22,14 +22,12 @@ import com.android.dx.rop.cst.Zeroes;
 import com.android.dx.rop.type.StdTypeList;
 import com.android.dx.rop.type.Type;
 import com.android.dx.rop.type.TypeBearer;
-import com.android.dx.ssa.SsaBasicBlock;
-import com.android.dx.ssa.SsaInsn;
 import com.android.dx.util.ToHuman;
 import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.HashSet;
 import java.util.Iterator;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.description.method.MethodDescription;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -91,7 +89,7 @@ public class EscapeAnalysis {
     }
 
     private SsaInsn getInsnForMove(SsaInsn ssaInsn) {
-        return (SsaInsn) dkz.l(1, this.ssaMeth.getBlocks().get(ssaInsn.getBlock().getPredecessors().nextSetBit(0)).getInsns());
+        return (SsaInsn) StaticHelpers6.getLastNElem(1, this.ssaMeth.getBlocks().get(ssaInsn.getBlock().getPredecessors().nextSetBit(0)).getInsns());
     }
 
     private SsaInsn getMoveForInsn(SsaInsn ssaInsn) {

@@ -10,7 +10,7 @@ public final class ayo {
         if (1 == (i & 1)) {
             this.a = str;
         } else {
-            bht.ah(i, 1, aym.b.getDescriptor());
+            ResourcesCompat.ah(i, 1, aym.b.getDescriptor());
             throw null;
         }
     }

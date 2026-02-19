@@ -179,16 +179,16 @@ public abstract class ajn {
 
     public static final String ah(afw afwVar) {
         Object objX;
-        if (afwVar instanceof aor) {
-            return ((aor) afwVar).toString();
+        if (afwVar instanceof DispatchedContinuation) {
+            return ((DispatchedContinuation) afwVar).toString();
         }
         try {
-            objX = afwVar + '@' + q(afwVar);
+            objX = afwVar + '@' + toHexHashCode(afwVar);
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         if (dcy.b(objX) != null) {
-            objX = afwVar.getClass().getName() + '@' + q(afwVar);
+            objX = afwVar.getClass().getName() + '@' + toHexHashCode(afwVar);
         }
         return (String) objX;
     }
@@ -256,7 +256,7 @@ public abstract class ajn {
         cna.q(ahhVar_v);
         if (ahhVar_v == ahhVar2) {
             dex dexVar = new dex(ahhVar_v, doiVar);
-            return bht.ad(dexVar, dexVar, bgjVar);
+            return ResourcesCompat.ad(dexVar, dexVar, bgjVar);
         }
         arj arjVar = arj.a;
         if (nullSafeIsEqual(ahhVar_v._w(arjVar), ahhVar2._w(arjVar))) {
@@ -264,14 +264,14 @@ public abstract class ajn {
             ahh ahhVar3 = enkVar.a;
             Object objAl = bhv.al(ahhVar3, null);
             try {
-                return bht.ad(enkVar, enkVar, bgjVar);
+                return ResourcesCompat.ad(enkVar, enkVar, bgjVar);
             } finally {
                 bhv.ag(ahhVar3, objAl);
             }
         }
         aos aosVar = new aos(ahhVar_v, doiVar);
         try {
-            cnf.bk(KotlinUnit.INSTANCE, cmz.ab(((nc) bgjVar).h(aosVar, aosVar)));
+            HugeSyntheticPileOfHelpers.resumeCoroutine(KotlinUnit.INSTANCE, cmz.ab(((nc) bgjVar).h(aosVar, aosVar)));
             AtomicIntegerFieldUpdater atomicIntegerFieldUpdater = aos.i;
             do {
                 int i = atomicIntegerFieldUpdater.get(aosVar);
@@ -292,7 +292,7 @@ public abstract class ajn {
             if (th instanceof aoq) {
                 th = ((aoq) th).a;
             }
-            aosVar._bn(bhu.x(th));
+            aosVar._bn(FastKV.x(th));
             throw th;
         }
     }
@@ -366,7 +366,7 @@ public abstract class ajn {
         if (i > 0) {
             return;
         }
-        throw new dgb(i + " is not allowed in ProtoNumber for property '" + dfxVar.j(i2) + "' of '" + dfxVar.b()
+        throw new SomeIllegalArgumentException(i + " is not allowed in ProtoNumber for property '" + dfxVar.j(i2) + "' of '" + dfxVar.b()
                 + "', because protobuf supports field numbers in range 1..2147483647");
     }
 
@@ -545,7 +545,7 @@ public abstract class ajn {
         List listK = dfxVar.k(i);
         int i2 = i + 1;
         int size = listK.size();
-        cwf cwfVarType = cwf.DEFAULT;
+        IntEncodingEnum intEncodingVarType = IntEncodingEnum.DEFAULT;
         int iNumber = i2;
         boolean z = false;
         boolean z2 = false;
@@ -555,7 +555,7 @@ public abstract class ajn {
                 iNumber = ((cwg) annotation).number();
                 i(iNumber, i3, dfxVar);
             } else if (annotation instanceof cwj) {
-                cwfVarType = ((cwj) annotation).type();
+                intEncodingVarType = ((cwj) annotation).type();
             } else if (annotation instanceof cwi) {
                 z2 = true;
             } else if (annotation instanceof cwh) {
@@ -565,7 +565,7 @@ public abstract class ajn {
         if (!z) {
             i2 = iNumber;
         }
-        return ((long) i2) | (z ? 68719476736L : 0L) | (z2 ? 4294967296L : 0L) | cwfVarType.e;
+        return ((long) i2) | (z ? 68719476736L : 0L) | (z2 ? 4294967296L : 0L) | intEncodingVarType.value;
     }
 
     public static final int o(dfx dfxVar, int i, boolean z) {
@@ -597,9 +597,9 @@ public abstract class ajn {
         emc emcVarH = dfxVar.h();
         if (nullSafeIsEqual(emcVarH, cuq.a)) {
             IEmpty5 bsvVarQ = bhs.q(dfxVar);
-            listZ = EmptyReadonlyList.a;
+            listZ = EmptyReadonlyList.INSTANCE;
             if (bsvVarQ != null) {
-                listZ = new ArrayList(abb.ak(listZ, 10));
+                listZ = new ArrayList(StaticHelpers4.ak(listZ, 10));
             }
         } else {
             if (!nullSafeIsEqual(emcVarH, cuq.b)) {
@@ -608,7 +608,7 @@ public abstract class ajn {
             }
             dfx dfxVarL = dfxVar.l(1);
             throwIfVar1IsNull(dfxVarL, "<this>");
-            listZ = aaz.z(new boz(dfxVarL, 2));
+            listZ = StaticHelpers5.z(new boz(dfxVarL, 2));
         }
         for (dfx dfxVar2 : listZ) {
             List listK = dfxVar2.k(0);
@@ -625,13 +625,13 @@ public abstract class ajn {
         return listZ;
     }
 
-    public static final String q(Object obj) {
+    public static final String toHexHashCode(Object obj) {
         return Integer.toHexString(System.identityHashCode(obj));
     }
 
-    public static final cwf r(long j) {
+    public static final IntEncodingEnum r(long j) {
         long j2 = j & 25769803776L;
-        return j2 == 0 ? cwf.DEFAULT : j2 == 8589934592L ? cwf.SIGNED : cwf.FIXED;
+        return j2 == 0 ? IntEncodingEnum.DEFAULT : j2 == 8589934592L ? IntEncodingEnum.SIGNED : IntEncodingEnum.FIXED;
     }
 
     public static float s(String[] strArr, int i) {
@@ -684,7 +684,7 @@ public abstract class ajn {
                 || configuration.fontWeightAdjustment == 0 || typeface == null) {
             return null;
         }
-        return Typeface.create(typeface, cnf.as(configuration.fontWeightAdjustment + typeface.getWeight(), 1, 1000),
+        return Typeface.create(typeface, HugeSyntheticPileOfHelpers.as(configuration.fontWeightAdjustment + typeface.getWeight(), 1, 1000),
                 typeface.isItalic());
     }
 }

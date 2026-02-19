@@ -60,7 +60,7 @@ public final class bvz extends ad implements RandomAccess, Serializable {
         j();
         int i2 = this.e;
         if (i < 0 || i >= i2) {
-            throw new IndexOutOfBoundsException(dkz.p(i, "index: ", ", size: ", i2));
+            throw new IndexOutOfBoundsException(StaticHelpers6.p(i, "index: ", ", size: ", i2));
         }
         return l(i);
     }
@@ -96,7 +96,7 @@ public final class bvz extends ad implements RandomAccess, Serializable {
     public final Object get(int i) {
         int i2 = this.e;
         if (i < 0 || i >= i2) {
-            throw new IndexOutOfBoundsException(dkz.p(i, "index: ", ", size: ", i2));
+            throw new IndexOutOfBoundsException(StaticHelpers6.p(i, "index: ", ", size: ", i2));
         }
         return this.d[i];
     }
@@ -215,7 +215,7 @@ public final class bvz extends ad implements RandomAccess, Serializable {
         SomeStaticHelpers._aj(i, i + i2, objArr, this.e, objArr);
         Object[] objArr2 = this.d;
         int i3 = this.e;
-        bhu.az(objArr2, i3 - i2, i3);
+        FastKV.az(objArr2, i3 - i2, i3);
         this.e -= i2;
     }
 
@@ -238,7 +238,7 @@ public final class bvz extends ad implements RandomAccess, Serializable {
         SomeStaticHelpers._aj(i + i4, i2 + i, objArr2, this.e, objArr2);
         Object[] objArr3 = this.d;
         int i7 = this.e;
-        bhu.az(objArr3, i7 - i6, i7);
+        FastKV.az(objArr3, i7 - i6, i7);
         if (i6 > 0) {
             ((AbstractList) this).modCount++;
         }
@@ -275,7 +275,7 @@ public final class bvz extends ad implements RandomAccess, Serializable {
         j();
         int i2 = this.e;
         if (i < 0 || i >= i2) {
-            throw new IndexOutOfBoundsException(dkz.p(i, "index: ", ", size: ", i2));
+            throw new IndexOutOfBoundsException(StaticHelpers6.p(i, "index: ", ", size: ", i2));
         }
         Object[] objArr = this.d;
         Object obj2 = objArr[i];
@@ -309,14 +309,14 @@ public final class bvz extends ad implements RandomAccess, Serializable {
 
     @Override // java.util.AbstractCollection
     public final String toString() {
-        return bhu.n(this.d, 0, this.e, this);
+        return FastKV.n(this.d, 0, this.e, this);
     }
 
     @Override // java.util.AbstractList, java.util.List
     public final ListIterator listIterator(int i) {
         int i2 = this.e;
         if (i < 0 || i > i2) {
-            throw new IndexOutOfBoundsException(dkz.p(i, "index: ", ", size: ", i2));
+            throw new IndexOutOfBoundsException(StaticHelpers6.p(i, "index: ", ", size: ", i2));
         }
         return new bvx(this, i);
     }
@@ -331,7 +331,7 @@ public final class bvz extends ad implements RandomAccess, Serializable {
             h(i, collection, size);
             return size > 0;
         }
-        throw new IndexOutOfBoundsException(dkz.p(i, "index: ", ", size: ", i2));
+        throw new IndexOutOfBoundsException(StaticHelpers6.p(i, "index: ", ", size: ", i2));
     }
 
     @Override // java.util.AbstractList, java.util.List
@@ -344,7 +344,7 @@ public final class bvz extends ad implements RandomAccess, Serializable {
             this.d[i] = obj;
             return;
         }
-        throw new IndexOutOfBoundsException(dkz.p(i, "index: ", ", size: ", i2));
+        throw new IndexOutOfBoundsException(StaticHelpers6.p(i, "index: ", ", size: ", i2));
     }
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List

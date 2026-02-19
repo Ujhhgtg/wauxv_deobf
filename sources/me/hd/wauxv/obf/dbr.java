@@ -52,11 +52,11 @@ public abstract class dbr {
     }
 
     public static PrintStream d() {
-        return dkz.ae(a) != 1 ? System.err : System.out;
+        return StaticHelpers6.ae(a) != 1 ? System.err : System.out;
     }
 
     public static final void e(String str) {
-        if (dkz.ae(3) >= dkz.ae(b)) {
+        if (StaticHelpers6.ae(3) >= StaticHelpers6.ae(b)) {
             d().println("SLF4J(W): " + str);
         }
     }

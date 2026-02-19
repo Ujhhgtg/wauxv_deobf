@@ -22,7 +22,7 @@ public final class pn {
             case 4:
                 return new bkn((bzr) blqVar.a, ((Integer) cmz.d.b(ajiVar)).intValue());
             case 5:
-                return new bvr((bzr) blqVar.a, (String) cmz.e.b(ajiVar), (awp) blqVar.c);
+                return new bvr((bzr) blqVar.a, (String) cmz.e.b(ajiVar), (GifEncoder) blqVar.c);
             case 6:
                 bzr bzrVar = (bzr) blqVar.a;
                 return ahb.a == cmz.a.b(ajiVar) ? new rr(bzrVar, ((Integer) cmz.b.b(ajiVar)).intValue()) : new cry(bzrVar, String.valueOf(cmz.c.b(ajiVar)).concat(". "));

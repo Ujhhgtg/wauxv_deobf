@@ -240,7 +240,7 @@ public final class kz implements Collection, Set, IEmpty2 {
         throwIfVar1IsNull(collection, "elements");
         boolean z = false;
         for (int i = this.c - 1; -1 < i; i--) {
-            if (!aaz.b(collection, this.b[i])) {
+            if (!StaticHelpers5.b(collection, this.b[i])) {
                 d(i);
                 z = true;
             }

@@ -5,15 +5,15 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class ProtoWireType {
-    public static final cbm a;
+    public static final cbm function;
     public static final ProtoWireType[] b;
     public static final ProtoWireType ENUM_INVALID;
     public static final ProtoWireType ENUM_VARINT;
     public static final ProtoWireType ENUM_FIXED64;
     public static final ProtoWireType ENUM_LENGTH_DELIMITED;
     public static final ProtoWireType ENUM_FIXED32;
-    public static final /* synthetic */ ProtoWireType[] h;
-    public static final /* synthetic */ awn i;
+    public static final /* synthetic */ ProtoWireType[] ALL_ENUM_VALUES;
+    public static final /* synthetic */ KotlinEnumEntriesImpl ENUM_ENTRIES;
     public final int value;
 
     static {
@@ -29,14 +29,14 @@ public final class ProtoWireType {
         ProtoWireType protoWireTypeVar5 = new ProtoWireType("i32", 4, 5);
         ENUM_FIXED32 = protoWireTypeVar5;
         ProtoWireType[] protoWireTypeVarArr = {protoWireTypeVar, protoWireTypeVar2, protoWireTypeVar3, protoWireTypeVar4, protoWireTypeVar5};
-        h = protoWireTypeVarArr;
-        i = new awn(protoWireTypeVarArr);
-        a = new cbm(15);
+        ALL_ENUM_VALUES = protoWireTypeVarArr;
+        ENUM_ENTRIES = new KotlinEnumEntriesImpl(protoWireTypeVarArr);
+        function = new cbm(15);
         ProtoWireType[] protoWireTypeVarArr2 = new ProtoWireType[8];
         for (int i2 = 0; i2 < 8; i2++) {
-            awn awnVar = i;
-            awnVar.getClass();
-            z zVar = new z(awnVar, 0);
+            KotlinEnumEntriesImpl kotlinEnumEntriesImplVar = ENUM_ENTRIES;
+            kotlinEnumEntriesImplVar.getClass();
+            z zVar = new z(kotlinEnumEntriesImplVar, 0);
             do {
                 if (!zVar.hasNext()) {
                     next = null;
@@ -62,7 +62,7 @@ public final class ProtoWireType {
     }
 
     public static ProtoWireType[] values() {
-        return (ProtoWireType[]) h.clone();
+        return (ProtoWireType[]) ALL_ENUM_VALUES.clone();
     }
 
     public final int makeTag(int i2) {
@@ -74,6 +74,6 @@ public final class ProtoWireType {
         StringBuilder sb = new StringBuilder();
         sb.append(name());
         sb.append('(');
-        return dkz.v(sb, this.value, ')');
+        return StaticHelpers6.concatFromSb(sb, this.value, ')');
     }
 }

@@ -98,12 +98,12 @@ public final class dld implements ajd, ajc {
             ajh ajhVarQ = this.c.c.l().q(obj);
             Object objD = ajhVarQ.d();
             avu avuVarV = this.c.v(objD);
-            jx jxVar = new jx(avuVarV, objD, this.c.i, 4);
+            FactoryPools factoryPoolsVar = new FactoryPools(avuVarV, objD, this.c.i, 4);
             btj btjVar = this.h.a;
             ajp ajpVar = this.c;
             aiz aizVar = new aiz(btjVar, ajpVar.n);
             aoh aohVarC = ajpVar.h.c();
-            aohVarC.y(aizVar, jxVar);
+            aohVarC.y(aizVar, factoryPoolsVar);
             if (Log.isLoggable("SourceGenerator", 2)) {
                 Log.v("SourceGenerator", "Finished encoding source to cache, key: " + aizVar + ", data: " + obj + ", encoder: " + avuVarV + ", duration: " + bxq.c(jElapsedRealtimeNanos));
             }

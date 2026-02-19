@@ -170,7 +170,7 @@ public abstract class evh extends evo {
             if (i != 2) {
                 if (i == 8) {
                     bps[] bpsVarArr = this.g;
-                    bpsVarAb = bpsVarArr != null ? bpsVarArr[bhu.ag(8)] : null;
+                    bpsVarAb = bpsVarArr != null ? bpsVarArr[FastKV.ag(8)] : null;
                     if (bpsVarAb != null) {
                         return bpsVarAb;
                     }

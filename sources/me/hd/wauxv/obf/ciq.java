@@ -27,10 +27,10 @@ public final class ciq {
         this.f = cioVar.f;
         this.g = cioVar.g;
         this.h = new but(new deo(cioVar, new cfx(cioVar, 12)), 10);
-        dov dovVar = new dov(new cfh(10));
+        Kotlin$Lazy kotlin$LazyVar = new Kotlin$Lazy(new Function1$VarIsInt$2(10));
         this.j = new bur(cioVar);
         this.k = buh.b;
-        new dov(new cfh(11));
+        new Kotlin$Lazy(new Function1$VarIsInt$2(11));
     }
 
     public final Bundle l() {
@@ -38,7 +38,7 @@ public final class ciq {
         if (bundle == null) {
             return null;
         }
-        Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+        Bundle bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
         bundleR.putAll(bundle);
         return bundleR;
     }

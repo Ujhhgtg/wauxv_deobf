@@ -31,15 +31,15 @@ public final class bqt implements czk {
         if (iFindPointerIndex >= 0) {
             bqxVar.aj(actionMasked, iFindPointerIndex, motionEvent);
         }
-        czx czxVar = bqxVar.d;
-        if (czxVar == null) {
+        SomeView someViewVar = bqxVar.d;
+        if (someViewVar == null) {
             return;
         }
         if (actionMasked != 1) {
             if (actionMasked == 2) {
                 if (iFindPointerIndex >= 0) {
                     bqxVar.ar(bqxVar.p, iFindPointerIndex, motionEvent);
-                    bqxVar.ao(czxVar);
+                    bqxVar.ao(someViewVar);
                     bqxVar.s.removeCallbacks(dcVar);
                     dcVar.run();
                     bqxVar.s.invalidate();
@@ -97,15 +97,15 @@ public final class bqt implements czk {
                     }
                 }
                 if (bquVar != null) {
-                    czx czxVar = bquVar.e;
+                    SomeView someViewVar = bquVar.e;
                     bqxVar.e -= bquVar.i;
                     bqxVar.f -= bquVar.j;
-                    bqxVar.al(czxVar, true);
-                    if (bqxVar.a.remove(czxVar.d)) {
+                    bqxVar.al(someViewVar, true);
+                    if (bqxVar.a.remove(someViewVar.d)) {
                         bqxVar.n.getClass();
-                        xe.g(czxVar);
+                        xe.g(someViewVar);
                     }
-                    bqxVar.aq(czxVar, bquVar.f);
+                    bqxVar.aq(someViewVar, bquVar.f);
                     bqxVar.ar(bqxVar.p, 0, motionEvent);
                 }
             }

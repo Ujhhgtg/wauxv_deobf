@@ -79,14 +79,14 @@ public final class bau implements View.OnAttachStateChangeListener {
                     view2.addOnLayoutChangeListener(pwVar22);
                     view2.addOnAttachStateChangeListener(new bau(this, i3, view2));
                 }
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 eqo.c(view);
                 break;
             default:
-                bfb bfbVar = (bfb) this.b;
-                bdj bdjVar = bfbVar.c;
-                bfbVar.p();
-                aln.g((ViewGroup) bdjVar.bz.getParent(), ((bds) obj).a).p();
+                FragmentManager fragmentManagerVar = (FragmentManager) this.b;
+                SomeFragmentManager someFragmentManagerVar = fragmentManagerVar.c;
+                fragmentManagerVar.p();
+                aln.g((ViewGroup) someFragmentManagerVar.bz.getParent(), ((bds) obj).a).p();
                 break;
         }
     }

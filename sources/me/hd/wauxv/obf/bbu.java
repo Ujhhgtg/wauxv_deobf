@@ -16,7 +16,7 @@ import java.util.concurrent.TimeUnit;
 public final class bbu implements ate {
     public final Context a;
     public final bbt b;
-    public final awp d;
+    public final GifEncoder d;
     public final Object e = new Object();
     public Handler f;
     public ThreadPoolExecutor g;
@@ -77,16 +77,16 @@ public final class bbu implements ate {
 
     public final bce k() {
         try {
-            awp awpVar = this.d;
+            GifEncoder gifEncoderVar = this.d;
             Context context = this.a;
             bbt bbtVar = this.b;
-            awpVar.getClass();
+            gifEncoderVar.getClass();
             Object[] objArr = { bbtVar };
             ArrayList arrayList = new ArrayList(1);
             Object obj = objArr[0];
             Objects.requireNonNull(obj);
             arrayList.add(obj);
-            ek ekVarC = bbs.createInstanceWithArgs(context, Collections.unmodifiableList(arrayList));
+            ek ekVarC = FontsProvider.createInstanceWithArgs(context, Collections.unmodifiableList(arrayList));
             int i = ekVarC.c;
             if (i != 0) {
                 throw new RuntimeException(yg.f(i, "fetchFonts failed (", ")"));

@@ -6,7 +6,7 @@ import com.android.dx.io.Opcodes;
 import com.android.dx.util.Hex;
 import java.util.Arrays;
 import me.hd.wauxv.obf.amo;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -513,7 +513,7 @@ public enum InstructionCodec {
                 return new FillArrayDataPayloadDecodedInstruction((InstructionCodec) this, i, iArr);
             }
             if (i2 != 8) {
-                throw new amo(dkz.q(i2, new StringBuilder("bogus element_width: ")), null);
+                throw new amo(StaticHelpers6.q(i2, new StringBuilder("bogus element_width: ")), null);
             }
             long[] jArr = new long[i3];
             while (i4 < i3) {
@@ -541,7 +541,7 @@ public enum InstructionCodec {
                 codeOutput.write((int[]) data);
             } else {
                 if (elementWidthUnit != 8) {
-                    throw new amo(dkz.q(elementWidthUnit, new StringBuilder("bogus element_width: ")), null);
+                    throw new amo(StaticHelpers6.q(elementWidthUnit, new StringBuilder("bogus element_width: ")), null);
                 }
                 codeOutput.write((long[]) data);
             }

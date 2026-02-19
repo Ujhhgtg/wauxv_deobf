@@ -3,7 +3,7 @@ package net.bytebuddy.implementation.bytecode.collection;
 import java.util.Iterator;
 import java.util.List;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.type.TypeDefinition;
 import net.bytebuddy.description.type.TypeDescription;
@@ -207,7 +207,7 @@ public class ArrayFactory implements CollectionFactory {
     }
 
     public int hashCode() {
-        return this.arrayCreator.hashCode() + dkz.e(this.componentType, getClass().hashCode() * 31, 31);
+        return this.arrayCreator.hashCode() + StaticHelpers6.e(this.componentType, getClass().hashCode() * 31, 31);
     }
 
     @Override // net.bytebuddy.implementation.bytecode.collection.CollectionFactory

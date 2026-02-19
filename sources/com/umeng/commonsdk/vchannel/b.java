@@ -3,8 +3,8 @@ package com.umeng.commonsdk.vchannel;
 import android.content.Context;
 import com.umeng.commonsdk.service.UMGlobalContext;
 import java.util.Map;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+
+import me.hd.wauxv.obf.StaticHelpers6;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -72,7 +72,7 @@ public class b {
             for (String str : this.f.keySet()) {
                 Object obj = this.f.get(str);
                 if (obj == null) {
-                    string = dkz.s(str, ": null,");
+                    string = StaticHelpers6.concat(str, ": null,");
                 } else {
                     StringBuilder sbR = concat(str, ": ");
                     sbR.append(obj.toString());

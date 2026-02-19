@@ -562,7 +562,7 @@ public class brm implements brf, csx {
         StringBuilder sb = new StringBuilder();
         sb.append(getClass().getSimpleName() + '{' + u(r.get(this)) + '}');
         sb.append('@');
-        sb.append(ajn.q(this));
+        sb.append(ajn.toHexHashCode(this));
         return sb.toString();
     }
 
@@ -623,7 +623,7 @@ public class brm implements brf, csx {
         AtomicReferenceFieldUpdater atomicReferenceFieldUpdater;
         Object obj2;
         Throwable thH;
-        auj aujVar;
+        SpecificEmojiMatcher specificEmojiMatcherVar;
         bou bouVar;
         cok cokVarAc;
         brl brlVar;
@@ -651,7 +651,7 @@ public class brm implements brf, csx {
                         if (obj2 instanceof brl) {
                             synchronized (obj2) {
                                 if (brl.e.get((brl) obj2) == bhv.n) {
-                                    aujVar = bhv.m;
+                                    specificEmojiMatcherVar = bhv.m;
                                 } else {
                                     boolean zI = ((brl) obj2).i();
                                     if (thZ == null) {
@@ -662,7 +662,7 @@ public class brm implements brf, csx {
                                     if (thH != null) {
                                         aj(((brl) obj2).f, thH);
                                     }
-                                    aujVar = bhv.j;
+                                    specificEmojiMatcherVar = bhv.j;
                                 }
                             }
                         } else if (obj2 instanceof bou) {
@@ -679,7 +679,7 @@ public class brm implements brf, csx {
                                     while (true) {
                                         if (atomicReferenceFieldUpdater.compareAndSet(this, bouVar, brlVar)) {
                                             aj(cokVarAc, thZ);
-                                            aujVar = bhv.j;
+                                            specificEmojiMatcherVar = bhv.j;
                                         } else if (atomicReferenceFieldUpdater.get(this) != bouVar) {
                                         }
                                     }
@@ -695,9 +695,9 @@ public class brm implements brf, csx {
                                 }
                             }
                         } else {
-                            aujVar = bhv.m;
+                            specificEmojiMatcherVar = bhv.m;
                         }
-                        objAo2 = aujVar;
+                        objAo2 = specificEmojiMatcherVar;
                         break;
                     }
                 }
@@ -718,7 +718,7 @@ public class brm implements brf, csx {
                     if (obj2 instanceof brl) {
                         synchronized (obj2) {
                             if (brl.e.get((brl) obj2) == bhv.n) {
-                                aujVar = bhv.m;
+                                specificEmojiMatcherVar = bhv.m;
                             } else {
                                 boolean zI2 = ((brl) obj2).i();
                                 if (thZ == null) {
@@ -730,7 +730,7 @@ public class brm implements brf, csx {
                                 if (thH != null) {
                                     aj(((brl) obj2).f, thH);
                                 }
-                                aujVar = bhv.j;
+                                specificEmojiMatcherVar = bhv.j;
                             }
                         }
                     } else if (obj2 instanceof bou) {
@@ -747,7 +747,7 @@ public class brm implements brf, csx {
                                 while (true) {
                                     if (atomicReferenceFieldUpdater.compareAndSet(this, bouVar, brlVar)) {
                                         aj(cokVarAc, thZ);
-                                        aujVar = bhv.j;
+                                        specificEmojiMatcherVar = bhv.j;
                                     } else if (atomicReferenceFieldUpdater.get(this) != bouVar) {
                                     }
                                 }
@@ -763,9 +763,9 @@ public class brm implements brf, csx {
                             }
                         }
                     } else {
-                        aujVar = bhv.m;
+                        specificEmojiMatcherVar = bhv.m;
                     }
-                    objAo2 = aujVar;
+                    objAo2 = specificEmojiMatcherVar;
                     break;
                 }
             }

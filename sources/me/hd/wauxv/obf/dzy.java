@@ -13,7 +13,7 @@ public final class dzy {
 
     public /* synthetic */ dzy(int i, String str, String str2, String str3, Integer num, Long l, String str4) {
         if (63 != (i & 63)) {
-            bht.ah(i, 63, dzw.b.getDescriptor());
+            ResourcesCompat.ah(i, 63, dzw.b.getDescriptor());
             throw null;
         }
         this.a = str;
@@ -59,7 +59,7 @@ public final class dzy {
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -220967477443370L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.c, -220842923391786L);
         bjs.w(sb, this.d, -220791383784234L);
-        dkz.ad(sb, this.e, -220177203460906L);
+        StaticHelpers6.ad(sb, this.e, -220177203460906L);
         return concat(sb, this.f, ')');
     }
 }

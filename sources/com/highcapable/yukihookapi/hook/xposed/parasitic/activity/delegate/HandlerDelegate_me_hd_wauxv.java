@@ -9,24 +9,24 @@ import android.os.Message;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import me.hd.wauxv.obf.aaz;
-import me.hd.wauxv.obf.azg;
+import me.hd.wauxv.obf.StaticHelpers5;
+import me.hd.wauxv.obf.FieldResolver;
 import me.hd.wauxv.obf.azk;
-import me.hd.wauxv.obf.bhu;
+import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.bkc;
-import me.hd.wauxv.obf.bmu;
+import me.hd.wauxv.obf.SyntheticPileOfMess;
 import me.hd.wauxv.obf.btc;
-import me.hd.wauxv.obf.cbg;
-import me.hd.wauxv.obf.cde;
+import me.hd.wauxv.obf.Configuration;
+import me.hd.wauxv.obf.MethodResolver;
 import me.hd.wauxv.obf.MethodHookWrapper;
 import me.hd.wauxv.obf.dal;
 import me.hd.wauxv.obf.dcx;
 import me.hd.wauxv.obf.dnj;
-import me.hd.wauxv.obf.dov;
+import me.hd.wauxv.obf.Kotlin$Lazy;
 import me.hd.wauxv.obf.dqc;
 import me.hd.wauxv.obf.ep;
 import me.hd.wauxv.obf.eu;
-import me.hd.wauxv.obf.jx;
+import me.hd.wauxv.obf.FactoryPools;
 import me.hd.wauxv.obf.ki;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -55,13 +55,13 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
         int i = message.what;
         if (i == 100) {
             int i2 = 0;
-            bmu bmuVarBi = dqc.bi(message.obj);
-            dov dovVar = ep.a;
-            ((cbg) bmuVarBi.h).c = bhu.aa();
-            bmuVarBi.v(true);
-            azg azgVarR = bmuVarBi.r();
-            azgVarR.ab = "intent";
-            azk azkVar = (azk) aaz.g(azgVarR.c());
+            SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(message.obj);
+            Kotlin$Lazy kotlin$LazyVar = ep.a;
+            ((Configuration) bmuVarBi.obj).processorResolver = FastKV.aa();
+            bmuVarBi.setHookOptional(true);
+            FieldResolver fieldResolverVarR = bmuVarBi.r();
+            fieldResolverVarR.name = "intent";
+            azk azkVar = (azk) StaticHelpers5.g(fieldResolverVarR.resolve());
             Intent intent = azkVar != null ? (Intent) azkVar.e() : null;
             azk azkVar2 = (azk) bkc.e.getValue();
             if (azkVar2 != null) {
@@ -70,7 +70,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                 try {
                     objX = azkVar3.e();
                 } catch (Throwable th) {
-                    objX = bhu.x(th);
+                    objX = FastKV.x(th);
                 }
                 if (objX instanceof dcx) {
                     objX = null;
@@ -89,15 +89,15 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
             }
         } else if (i == 159) {
             int i3 = 0;
-            jx jxVar = bkc.d;
+            FactoryPools factoryPoolsVar = bkc.d;
             btc btcVar = btcVarArr[1];
-            bmu bmuVarBh = dqc.bh(jxVar.w());
-            dov dovVar2 = ep.a;
-            ((cbg) bmuVarBh.h).c = bhu.aa();
-            bmuVarBh.v(true);
-            cde cdeVarT = bmuVarBh.t();
-            cdeVarT.ab = "getCallbacks";
-            MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+            SyntheticPileOfMess bmuVarBh = dqc.bh(factoryPoolsVar.w());
+            Kotlin$Lazy kotlin$LazyVar2 = ep.a;
+            ((Configuration) bmuVarBh.obj).processorResolver = FastKV.aa();
+            bmuVarBh.setHookOptional(true);
+            MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT.name = "getCallbacks";
+            MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
             if (methodHookWrapperVar != null) {
                 methodHookWrapperVar.dexFind(message.obj);
                 list = (List) methodHookWrapperVar.i(new Object[0]);
@@ -116,11 +116,11 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                 }
                 for (Object obj2 : arrayList) {
                     int i4 = 0;
-                    bmu bmuVarBi2 = dqc.bi(obj2);
-                    bmuVarBi2.v(true);
-                    azg azgVarR2 = bmuVarBi2.r();
-                    azgVarR2.ab = "mIntent";
-                    azk azkVar4 = (azk) aaz.g(azgVarR2.c());
+                    SyntheticPileOfMess bmuVarBi2 = dqc.getWrapperConfiguration(obj2);
+                    bmuVarBi2.setHookOptional(true);
+                    FieldResolver fieldResolverVarR2 = bmuVarBi2.r();
+                    fieldResolverVarR2.name = "mIntent";
+                    azk azkVar4 = (azk) StaticHelpers5.g(fieldResolverVarR2.resolve());
                     Intent intent2 = azkVar4 != null ? (Intent) azkVar4.e() : null;
                     bkc.a.getClass();
                     azk azkVar5 = (azk) bkc.e.getValue();
@@ -130,7 +130,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                         try {
                             objX2 = azkVar6.e();
                         } catch (Throwable th2) {
-                            objX2 = bhu.x(th2);
+                            objX2 = FastKV.x(th2);
                         }
                         if (objX2 instanceof dcx) {
                             objX2 = null;
@@ -147,40 +147,40 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                     if (intent2 != null && intent2.hasExtra("")) {
                         Intent intent3 = (Intent) intent2.getParcelableExtra("");
                         if (eu.b(31)) {
-                            jx jxVar2 = bkc.c;
+                            FactoryPools factoryPoolsVar2 = bkc.c;
                             btc btcVar2 = btcVarArr[0];
-                            bmu bmuVarBh2 = dqc.bh(jxVar2.w());
-                            dov dovVar3 = ep.a;
-                            ((cbg) bmuVarBh2.h).c = bhu.aa();
-                            bmuVarBh2.v(true);
-                            cde cdeVarT2 = bmuVarBh2.t();
-                            cdeVarT2.ab = "currentActivityThread";
-                            MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) aaz.g(cdeVarT2.aj());
+                            SyntheticPileOfMess bmuVarBh2 = dqc.bh(factoryPoolsVar2.w());
+                            Kotlin$Lazy kotlin$LazyVar3 = ep.a;
+                            ((Configuration) bmuVarBh2.obj).processorResolver = FastKV.aa();
+                            bmuVarBh2.setHookOptional(true);
+                            MethodResolver methodResolverVarT2 = bmuVarBh2.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                            methodResolverVarT2.name = "currentActivityThread";
+                            MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT2.findMethods());
                             Object objE = methodHookWrapperVar2 != null ? methodHookWrapperVar2.e(new Object[0]) : null;
-                            bmu bmuVarBi3 = dqc.bi(message.obj);
-                            ((cbg) bmuVarBi3.h).c = bhu.aa();
-                            bmuVarBi3.v(true);
-                            cde cdeVarT3 = bmuVarBi3.t();
-                            cdeVarT3.ab = "getActivityToken";
-                            MethodHookWrapper methodHookWrapperVar3 = (MethodHookWrapper) aaz.g(cdeVarT3.aj());
+                            SyntheticPileOfMess bmuVarBi3 = dqc.getWrapperConfiguration(message.obj);
+                            ((Configuration) bmuVarBi3.obj).processorResolver = FastKV.aa();
+                            bmuVarBi3.setHookOptional(true);
+                            MethodResolver methodResolverVarT3 = bmuVarBi3.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                            methodResolverVarT3.name = "getActivityToken";
+                            MethodHookWrapper methodHookWrapperVar3 = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT3.findMethods());
                             Object objF2 = methodHookWrapperVar3 != null ? methodHookWrapperVar3.f(new Object[0]) : null;
                             if (objE != null) {
-                                bmu bmuVarBi4 = dqc.bi(objE);
-                                ((cbg) bmuVarBi4.h).c = bhu.aa();
-                                bmuVarBi4.v(true);
-                                cde cdeVarT4 = bmuVarBi4.t();
-                                cdeVarT4.ab = "getLaunchingActivity";
-                                cdeVarT4.z(Arrays.copyOf(new Object[] { dal.b(IBinder.class) }, 1));
-                                MethodHookWrapper methodHookWrapperVar4 = (MethodHookWrapper) aaz.g(cdeVarT4.aj());
+                                SyntheticPileOfMess bmuVarBi4 = dqc.getWrapperConfiguration(objE);
+                                ((Configuration) bmuVarBi4.obj).processorResolver = FastKV.aa();
+                                bmuVarBi4.setHookOptional(true);
+                                MethodResolver methodResolverVarT4 = bmuVarBi4.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                                methodResolverVarT4.name = "getLaunchingActivity";
+                                methodResolverVarT4.setParams(Arrays.copyOf(new Object[] { dal.b(IBinder.class) }, 1));
+                                MethodHookWrapper methodHookWrapperVar4 = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT4.findMethods());
                                 objF = methodHookWrapperVar4 != null ? methodHookWrapperVar4.f(objF2) : null;
                             }
                             if (objF != null) {
-                                bmu bmuVarBi5 = dqc.bi(objF);
-                                ((cbg) bmuVarBi5.h).c = bhu.aa();
-                                bmuVarBi5.v(true);
-                                azg azgVarR3 = bmuVarBi5.r();
-                                azgVarR3.ab = "intent";
-                                azk azkVar7 = (azk) aaz.g(azgVarR3.c());
+                                SyntheticPileOfMess bmuVarBi5 = dqc.getWrapperConfiguration(objF);
+                                ((Configuration) bmuVarBi5.obj).processorResolver = FastKV.aa();
+                                bmuVarBi5.setHookOptional(true);
+                                FieldResolver fieldResolverVarR3 = bmuVarBi5.r();
+                                fieldResolverVarR3.name = "intent";
+                                azk azkVar7 = (azk) StaticHelpers5.g(fieldResolverVarR3.resolve());
                                 if (azkVar7 != null) {
                                     azkVar7.f(intent3);
                                 }

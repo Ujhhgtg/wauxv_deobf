@@ -9,14 +9,14 @@ import android.view.ViewPropertyAnimator;
 /* JADX INFO: loaded from: classes.dex */
 public final class aks extends AnimatorListenerAdapter {
     public final /* synthetic */ int a = 1;
-    public final /* synthetic */ czx b;
+    public final /* synthetic */ SomeView b;
     public final /* synthetic */ View c;
     public final /* synthetic */ ViewPropertyAnimator d;
     public final /* synthetic */ akx e;
 
-    public aks(akx akxVar, czx czxVar, ViewPropertyAnimator viewPropertyAnimator, View view) {
+    public aks(akx akxVar, SomeView someViewVar, ViewPropertyAnimator viewPropertyAnimator, View view) {
         this.e = akxVar;
-        this.b = czxVar;
+        this.b = someViewVar;
         this.d = viewPropertyAnimator;
         this.c = view;
     }
@@ -40,17 +40,17 @@ public final class aks extends AnimatorListenerAdapter {
                 this.d.setListener(null);
                 this.c.setAlpha(1.0f);
                 akx akxVar = this.e;
-                czx czxVar = this.b;
-                akxVar.ae(czxVar);
-                akxVar.l.remove(czxVar);
+                SomeView someViewVar = this.b;
+                akxVar.ae(someViewVar);
+                akxVar.l.remove(someViewVar);
                 akxVar.t();
                 break;
             default:
                 this.d.setListener(null);
                 akx akxVar2 = this.e;
-                czx czxVar2 = this.b;
-                akxVar2.ae(czxVar2);
-                akxVar2.j.remove(czxVar2);
+                SomeView someViewVar2 = this.b;
+                akxVar2.ae(someViewVar2);
+                akxVar2.j.remove(someViewVar2);
                 akxVar2.t();
                 break;
         }
@@ -68,9 +68,9 @@ public final class aks extends AnimatorListenerAdapter {
         }
     }
 
-    public aks(akx akxVar, czx czxVar, View view, ViewPropertyAnimator viewPropertyAnimator) {
+    public aks(akx akxVar, SomeView someViewVar, View view, ViewPropertyAnimator viewPropertyAnimator) {
         this.e = akxVar;
-        this.b = czxVar;
+        this.b = someViewVar;
         this.c = view;
         this.d = viewPropertyAnimator;
     }

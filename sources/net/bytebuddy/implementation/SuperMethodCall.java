@@ -1,10 +1,9 @@
 package net.bytebuddy.implementation;
 
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.dynamic.scaffold.InstrumentedType;
-import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
 import net.bytebuddy.implementation.bytecode.Removal;
 import net.bytebuddy.implementation.bytecode.StackManipulation;
@@ -53,7 +52,7 @@ public enum SuperMethodCall implements Implementation.Composable {
             if (specialMethodInvocationWithCheckedCompatibilityTo.isValid()) {
                 return new ByteCodeAppender.Size(new StackManipulation.Compound(MethodVariableAccess.allArgumentsOf(methodDescription).prependThisReference(), specialMethodInvocationWithCheckedCompatibilityTo, this.terminationHandler.of(methodDescription)).apply(methodVisitor, context).getMaximalSize(), methodDescription.getStackSize());
             }
-            throw new IllegalStateException(dkz.t("Cannot call super (or default) method for ", methodDescription));
+            throw new IllegalStateException(StaticHelpers6.concat("Cannot call super (or default) method for ", methodDescription));
         }
 
         public boolean equals(@MaybeNull Object obj) {

@@ -22,7 +22,7 @@ public final class css extends p {
         sb.append(charSequence);
         int iAv = 0;
         while (iAv < charSequence.length()) {
-            int iAe = dkz.ae(bvqVar.a);
+            int iAe = StaticHelpers6.ae(bvqVar.a);
             if (iAe == 0) {
                 int iAv2 = ewz.av(iAv, charSequence.length(), charSequence);
                 if (iAv2 >= charSequence.length() || charSequence.charAt(iAv2) != '[') {
@@ -36,7 +36,7 @@ public final class css extends p {
                     }
                 }
             } else if (iAe == 1) {
-                iAa = bht.aa(iAv, charSequence);
+                iAa = ResourcesCompat.aa(iAv, charSequence);
                 if (iAa == -1) {
                     iAv = -1;
                 } else {
@@ -61,7 +61,7 @@ public final class css extends p {
                 }
             } else if (iAe == 2) {
                 int iAv3 = ewz.av(iAv, charSequence.length(), charSequence);
-                int iZ = bht.z(iAv3, charSequence);
+                int iZ = ResourcesCompat.z(iAv3, charSequence);
                 if (iZ != -1) {
                     bvqVar.f = charSequence.charAt(iAv3) == '<' ? charSequence.subSequence(iAv3 + 1, iZ - 1).toString() : charSequence.subSequence(iAv3, iZ).toString();
                     iAv = ewz.av(iZ, charSequence.length(), charSequence);
@@ -100,7 +100,7 @@ public final class css extends p {
                     }
                 }
             } else if (iAe == 4) {
-                iAa = bht.ab(charSequence, iAv, bvqVar.g);
+                iAa = ResourcesCompat.ab(charSequence, iAv, bvqVar.g);
                 if (iAa == -1) {
                     iAv = -1;
                 } else {

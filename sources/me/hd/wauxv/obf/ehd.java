@@ -13,7 +13,7 @@ public final class ehd {
 
     public /* synthetic */ ehd(int i, String str, String str2, Float f, Boolean bool, dwj dwjVar, Boolean bool2) {
         if (63 != (i & 63)) {
-            bht.ah(i, 63, ehb.b.getDescriptor());
+            ResourcesCompat.ah(i, 63, ehb.b.getDescriptor());
             throw null;
         }
         this.a = str;

@@ -10,7 +10,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.HashSet;
 import me.hd.wauxv.data.bean.MsgInfoBean;
-import me.hd.wauxv.obf.aaz;
+import me.hd.wauxv.obf.StaticHelpers5;
 import me.hd.wauxv.obf.acx;
 import me.hd.wauxv.obf.akq;
 import me.hd.wauxv.obf.alc;
@@ -24,7 +24,7 @@ import me.hd.wauxv.obf.bmo;
 import me.hd.wauxv.obf.bsr;
 import me.hd.wauxv.obf.byr;
 import me.hd.wauxv.obf.bzo;
-import me.hd.wauxv.obf.cde;
+import me.hd.wauxv.obf.MethodResolver;
 import me.hd.wauxv.obf.MethodHookWrapper;
 import me.hd.wauxv.obf.cdy;
 import me.hd.wauxv.obf.cgy;
@@ -42,10 +42,10 @@ import me.hd.wauxv.obf.ctd;
 import me.hd.wauxv.obf.cty;
 import me.hd.wauxv.obf.dal;
 import me.hd.wauxv.obf.dgf;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.dqc;
-import me.hd.wauxv.obf.emn;
+import me.hd.wauxv.obf.StaticHelpers7;
 import me.hd.wauxv.obf.ewg;
 import me.hd.wauxv.obf.kc;
 import me.hd.wauxv.obf.kd;
@@ -69,7 +69,7 @@ public final class PluginMsgMethod {
         String strZ = "你撤回了一条消息" /* "你撤回了一条消息" /* "你撤回了一条消息" /* cnb.z(-133358734539562L)  */;
         cmkVar.getClass();
         cgy.a.getClass();
-        cme.b(cme.a, emn.ba(cmj.a).newInstance(cgy.b(j), strZ, "" /* "" /* "" /* cnb.z(-133414569114410L)  */));
+        cme.b(cme.a, StaticHelpers7.ba(cmj.a).newInstance(cgy.b(j), strZ, "" /* "" /* "" /* cnb.z(-133414569114410L)  */));
     }
 
     @cty
@@ -180,17 +180,17 @@ public final class PluginMsgMethod {
         dgf.a.getClass();
         ctdVar.getClass();
         ctc ctcVar = ctc.a;
-        cde cdeVarT = dqc.bi(dgf.b(emn.az(ctcVar))).t();
-        cdeVarT.a = dal.b(String.class);
-        Object objJ = ((MethodHookWrapper) dkz.n(new Object[] { dal.b(String.class), dal.b(String.class) }, 2, cdeVarT)).j(str2, str);
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dgf.b(StaticHelpers7.az(ctcVar))).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.returnType = dal.b(String.class);
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class), dal.b(String.class) }, 2, methodResolverVarT)).j(str2, str);
         throwIfVar1IsNull(objJ);
         String str3 = (String) objJ;
         int iCurrentTimeMillis = (int) (System.currentTimeMillis() / ((long) 1000));
         ctdVar.getClass();
-        cde cdeVarT2 = dqc.bi(dgf.b(emn.az(ctcVar))).t();
-        cdeVarT2.a = dal.b(Pair.class);
-        Object objJ2 = ((MethodHookWrapper) dkz.n(new Object[] { dal.b(String.class), dal.b(String.class), dal.b(String.class),
-                dal.b(String.class), dal.b(Integer.TYPE), dal.b(Long.TYPE) }, 6, cdeVarT2))
+        MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(dgf.b(StaticHelpers7.az(ctcVar))).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT2.returnType = dal.b(Pair.class);
+        Object objJ2 = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class), dal.b(String.class), dal.b(String.class),
+                dal.b(String.class), dal.b(Integer.TYPE), dal.b(Long.TYPE) }, 6, methodResolverVarT2))
                 .j(str, strB, str2, str3, Integer.valueOf(iCurrentTimeMillis), 0L);
         throwIfVar1IsNull(objJ2);
         alc alcVar = aou.a;
@@ -215,11 +215,11 @@ public final class PluginMsgMethod {
         int type = msgInfoBean.getType();
         kdVar.getClass();
         int i = 0;
-        cde cdeVarT = dqc.bh(emn.bb(kc.a).getDeclaringClass()).t();
-        cdeVarT.ak(cdy.c);
+        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.bb(kc.a).getDeclaringClass()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.ak(cdy.c);
         Class cls = Integer.TYPE;
-        cdeVarT.a = dal.b(cls);
-        Object objJ = ((MethodHookWrapper) dkz.n(new Object[] { dal.b(cls) }, 1, cdeVarT)).j(Integer.valueOf(type));
+        methodResolverVarT.returnType = dal.b(cls);
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(cls) }, 1, methodResolverVarT)).j(Integer.valueOf(type));
         throwIfVar1IsNull(objJ);
         jSONObject4.put(strZ4, ((Number) objJ).intValue());
         jSONObject4.put("svrid" /* "svrid" /* "svrid" /* cnb.z(-114873195297578L)  */, msgInfoBean.getMsgSvrId());
@@ -286,15 +286,15 @@ public final class PluginMsgMethod {
         final blv blvVar = new blv(qVar, 1);
         cmeVar.getClass();
         int i = 0;
-        cde cdeVarT = dqc.bi(objC).t();
-        cdeVarT.ab = "doScene" /* "doScene" /* "doScene" /* cnb.z(-135068131523370L)  */;
-        cdeVarT.g = 2;
-        cdeVarT.ah();
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objC).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "doScene" /* "doScene" /* "doScene" /* cnb.z(-135068131523370L)  */;
+        methodResolverVarT.paramCount = 2;
+        methodResolverVarT.enableSuperclass();
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
         if (methodHookWrapperVar == null) {
             return;
         }
-        Class<?> cls = methodHookWrapperVar.a.getParameterTypes()[1];
+        Class<?> cls = methodHookWrapperVar.method.getParameterTypes()[1];
         bmo.a.getClass();
         Object objNewProxyInstance = Proxy.newProxyInstance(bmo.getClassLoader(), new Class[]{cls}, new InvocationHandler() { // from class: me.hd.wauxv.obf.cmb
             /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
@@ -335,25 +335,25 @@ public final class PluginMsgMethod {
                                     String str3 = obj4 instanceof String ? (String) obj4 : null;
                                     throwIfVar1IsNull(objArr[3], "null cannot be cast to non-null type kotlin.Any" /* "null cannot be cast to non-null type kotlin.Any" /* "null cannot be cast to non-null type kotlin.Any" /* cnb.z(-134432476363562L)  */);
                                     int i2 = 0;
-                                    cde cdeVarT2 = dqc.bi(objArr[3]).t();
-                                    cdeVarT2.ab = "getReqResp" /* "getReqResp" /* "getReqResp" /* cnb.z(-135875585375018L)  */;
-                                    cdeVarT2.ah();
-                                    Object objE = ((MethodHookWrapper) aaz.e(cdeVarT2.aj())).e(new Object[0]);
+                                    MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objArr[3]).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                                    methodResolverVarT2.name = "getReqResp" /* "getReqResp" /* "getReqResp" /* cnb.z(-135875585375018L)  */;
+                                    methodResolverVarT2.enableSuperclass();
+                                    Object objE = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).e(new Object[0]);
                                     if (objE != null) {
-                                        cde cdeVarT3 = dqc.bi(objE).t();
-                                        cdeVarT3.ab = "getRespObj" /* "getRespObj" /* "getRespObj" /* cnb.z(-135845520603946L)  */;
-                                        cdeVarT3.ah();
-                                        Object objE2 = ((MethodHookWrapper) aaz.e(cdeVarT3.aj())).e(new Object[0]);
+                                        MethodResolver methodResolverVarT3 = dqc.getWrapperConfiguration(objE).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                                        methodResolverVarT3.name = "getRespObj" /* "getRespObj" /* "getRespObj" /* cnb.z(-135845520603946L)  */;
+                                        methodResolverVarT3.enableSuperclass();
+                                        Object objE2 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT3.findMethods())).e(new Object[0]);
                                         if (objE2 != null) {
-                                            azg azgVarR = dqc.bi(objE2).r();
+                                            azg azgVarR = dqc.getWrapperConfiguration(objE2).r();
                                             azgVarR.ab = "a" /* "a" /* "a" /* cnb.z(-136313672039210L)  */;
                                             azgVarR.ah();
-                                            Object objD = ((azk) aaz.e(azgVarR.c())).d();
+                                            Object objD = ((azk) StaticHelpers5.safeGetFirstInList(azgVarR.c())).d();
                                             if (objD != null) {
-                                                cde cdeVarT4 = dqc.bi(objD).t();
-                                                cdeVarT4.ab = "toByteArray" /* "toByteArray" /* "toByteArray" /* cnb.z(-136322261973802L)  */;
-                                                cdeVarT4.ah();
-                                                ?? r10 = (byte[]) ((MethodHookWrapper) aaz.e(cdeVarT4.aj())).j(new Object[0]);
+                                                MethodResolver methodResolverVarT4 = dqc.getWrapperConfiguration(objD).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                                                methodResolverVarT4.name = "toByteArray" /* "toByteArray" /* "toByteArray" /* cnb.z(-136322261973802L)  */;
+                                                methodResolverVarT4.enableSuperclass();
+                                                ?? r10 = (byte[]) ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT4.findMethods())).j(new Object[0]);
                                                 if (r10 != 0) {
                                                     blvVar2.c(num, num2, str3, r10);
                                                 }
@@ -373,7 +373,7 @@ public final class PluginMsgMethod {
                 return null;
             }
         });
-        Method methodBb = emn.bb(cmd.a);
+        Method methodBb = StaticHelpers7.bb(cmd.a);
         byr.a.getClass();
         Object objInvoke = methodBb.invoke(byr.c(), null);
         throwIfVar1IsNull(objInvoke);

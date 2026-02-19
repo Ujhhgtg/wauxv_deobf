@@ -18,7 +18,7 @@ public final class dxk {
     public /* synthetic */ dxk(int i, String str, Long l, String str2, dyu dyuVar, Integer num, List list,
             Integer num2) {
         if (127 != (i & 127)) {
-            bht.ah(i, 127, dxi.b.getDescriptor());
+            ResourcesCompat.ah(i, 127, dxi.b.getDescriptor());
             throw null;
         }
         this.b = str;
@@ -65,7 +65,7 @@ public final class dxk {
         StringBuilder sb = new StringBuilder();
         sb.append("ff1Proto(live_mic_id=" /* "ff1Proto(live_mic_id=" /* "ff1Proto(live_mic_id=" /* "ff1Proto(live_mic_id=" /* cnb.z(-189481072196394L)   */);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -191018670488362L);
-        dkz.ad(sb, this.c, -191005785586474L);
+        StaticHelpers6.ad(sb, this.c, -191005785586474L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.d, -190872641600298L);
         sb.append(this.e);
         sb.append(", status=" /* ", status=" /* ", status=" /* ", status=" /* cnb.z(-190808217090858L)   */);

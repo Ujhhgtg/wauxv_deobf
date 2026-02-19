@@ -13,6 +13,6 @@ public final class cmr extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(cmq.a, dexKitBridge, new cml(6));
+        StaticHelpers7.resolveDexAndCache(cmq.a, dexKitBridge, new cml(6));
     }
 }

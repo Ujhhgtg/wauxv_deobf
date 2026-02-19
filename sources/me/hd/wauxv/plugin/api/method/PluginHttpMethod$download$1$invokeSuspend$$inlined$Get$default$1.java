@@ -13,7 +13,7 @@ import me.hd.wauxv.obf.ajm;
 import me.hd.wauxv.obf.arj;
 import me.hd.wauxv.obf.bgj;
 import me.hd.wauxv.obf.bhs;
-import me.hd.wauxv.obf.bhu;
+import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.ckv;
 import me.hd.wauxv.obf.ckw;
 import me.hd.wauxv.obf.cna;
@@ -23,7 +23,7 @@ import me.hd.wauxv.obf.dam;
 import me.hd.wauxv.obf.dbv;
 import me.hd.wauxv.obf.doi;
 import me.hd.wauxv.obf.eme;
-import me.hd.wauxv.obf.emn;
+import me.hd.wauxv.obf.StaticHelpers7;
 import me.hd.wauxv.obf.KotlinUnit;
 import me.hd.wauxv.obf.eoj;
 import me.hd.wauxv.obf.zc;
@@ -58,7 +58,7 @@ public final class PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$defaul
 
     @Override // me.hd.wauxv.obf.nc
     public final Object i(Object obj) throws Throwable {
-        bhu.bd(obj);
+        FastKV.bd(obj);
         ahp ahpVar = (ahp) this.a;
         cna.q(ahpVar.e());
         eoj eojVar = new eoj();
@@ -78,7 +78,7 @@ public final class PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$defaul
             ckw ckwVarP = bhs.p(responseExecute.request());
             zc zcVarB2 = dal.b(File.class);
             damVar.getClass();
-            return (File) ckwVarP.b(emn.am(new eme(zcVarB2, true)), responseExecute);
+            return (File) ckwVarP.b(StaticHelpers7.am(new eme(zcVarB2, true)), responseExecute);
         } catch (NetException e) {
             throw e;
         } catch (CancellationException e2) {

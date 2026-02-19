@@ -9,13 +9,13 @@ public final class ati implements Runnable {
     @Override // java.lang.Runnable
     public final void run() {
         try {
-            Method method = ekx.b;
+            Method method = TraceCompat.b;
             Trace.beginSection("EmojiCompat.EmojiCompatInitializer.run");
             if (atf.b != null) {
                 atf.l().n();
             }
         } finally {
-            Method method2 = ekx.b;
+            Method method2 = TraceCompat.b;
             Trace.endSection();
         }
     }

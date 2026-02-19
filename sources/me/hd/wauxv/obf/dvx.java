@@ -12,7 +12,7 @@ public final class dvx {
 
     public /* synthetic */ dvx(int i, dyu dyuVar, Integer num, String str, String str2, Long l) {
         if (31 != (i & 31)) {
-            bht.ah(i, 31, dvv.b.getDescriptor());
+            ResourcesCompat.ah(i, 31, dvv.b.getDescriptor());
             throw null;
         }
         this.a = dyuVar;

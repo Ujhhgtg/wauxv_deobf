@@ -143,12 +143,12 @@ public final class lh extends Thread {
                     if (!this.b) {
                         lj ljVar = this.i;
                         dnv dnvVar2 = this.f;
-                        jx jxVar = (jx) ljVar.g;
-                        if (jxVar != null) {
+                        FactoryPools factoryPoolsVar = (FactoryPools) ljVar.g;
+                        if (factoryPoolsVar != null) {
                             cjn cjnVar = new cjn(i2, i);
-                            CodeEditor codeEditor = (CodeEditor) ((WeakReference) jxVar.e).get();
+                            CodeEditor codeEditor = (CodeEditor) ((WeakReference) factoryPoolsVar.e).get();
                             if (codeEditor != null && ljVar == codeEditor.getEditorLanguage().e()) {
-                                jxVar.af(new ale(codeEditor, dnvVar2, cjnVar, 1));
+                                factoryPoolsVar.af(new ale(codeEditor, dnvVar2, cjnVar, 1));
                                 return true;
                             }
                         }

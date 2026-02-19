@@ -73,10 +73,10 @@ public final class bpw implements Comparable, Serializable {
         long j12 = 365;
         long j13 = 4;
         long j14 = 100;
-        long j15 = dkz.j(j11, j10, ((j11 / j13) + (j12 * j11)) - (j11 / j14), j9);
+        long j15 = StaticHelpers6.j(j11, j10, ((j11 / j13) + (j12 * j11)) - (j11 / j14), j9);
         if (j15 < j) {
             j11--;
-            j15 = dkz.j(j11, j10, ((j11 / j13) + (j12 * j11)) - (j11 / j14), j9);
+            j15 = StaticHelpers6.j(j11, j10, ((j11 / j13) + (j12 * j11)) - (j11 / j14), j9);
         }
         int i2 = (int) j15;
         int i3 = ((i2 * 5) + 2) / 153;
@@ -105,20 +105,20 @@ public final class bpw implements Comparable, Serializable {
             sb.append(i6);
         }
         sb.append(SignatureVisitor.SUPER);
-        bhu.z(sb, sb, i4);
+        FastKV.z(sb, sb, i4);
         sb.append(SignatureVisitor.SUPER);
-        bhu.z(sb, sb, i5);
+        FastKV.z(sb, sb, i5);
         sb.append('T');
-        bhu.z(sb, sb, i7);
+        FastKV.z(sb, sb, i7);
         sb.append(':');
-        bhu.z(sb, sb, i9);
+        FastKV.z(sb, sb, i9);
         sb.append(':');
-        bhu.z(sb, sb, i10);
+        FastKV.z(sb, sb, i10);
         int i12 = this.d;
         if (i12 != 0) {
             sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
             while (true) {
-                iArr = bhu.h;
+                iArr = FastKV.h;
                 int i13 = i11 + 1;
                 if (i12 % iArr[i13] != 0) {
                     break;

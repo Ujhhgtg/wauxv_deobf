@@ -23,13 +23,13 @@ public final /* synthetic */ class cer extends bgr implements bgk {
             viewGroup.addView(viewInflate);
         }
         int i = R.id.moduleNavTabLayout;
-        TabLayout tabLayout = (TabLayout) KotlinHelpers2.aq(viewInflate, R.id.moduleNavTabLayout);
+        TabLayout tabLayout = (TabLayout) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.moduleNavTabLayout);
         if (tabLayout != null) {
             i = R.id.moduleNavViewPager2;
-            ViewPager2 viewPager2 = (ViewPager2) KotlinHelpers2.aq(viewInflate, R.id.moduleNavViewPager2);
+            ViewPager2 viewPager2 = (ViewPager2) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.moduleNavViewPager2);
             if (viewPager2 != null) {
                 i = R.id.moduleToolbar;
-                MaterialToolbar materialToolbar = (MaterialToolbar) KotlinHelpers2.aq(viewInflate, R.id.moduleToolbar);
+                MaterialToolbar materialToolbar = (MaterialToolbar) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.moduleToolbar);
                 if (materialToolbar != null) {
                     return new bek((CoordinatorLayout) viewInflate, tabLayout, viewPager2, materialToolbar);
                 }

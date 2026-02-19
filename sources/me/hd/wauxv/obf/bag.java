@@ -16,12 +16,12 @@ public final class bag extends dqc {
         throwIfVar1IsNull(bbbVar, "fbb");
         List list = this.a;
         if (list != null) {
-            ArrayList arrayList = new ArrayList(abb.ak(list, 10));
+            ArrayList arrayList = new ArrayList(StaticHelpers4.ak(list, 10));
             Iterator it = list.iterator();
             while (it.hasNext()) {
                 arrayList.add(Integer.valueOf(bbbVar.s((String) it.next())));
             }
-            iT = bbbVar.t(aaz.y(arrayList));
+            iT = bbbVar.t(StaticHelpers5.y(arrayList));
         } else {
             iT = 0;
         }

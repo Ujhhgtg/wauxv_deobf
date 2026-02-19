@@ -39,9 +39,9 @@ public final class bef implements bec {
                         if (muVar.u) {
                             Iterator it3 = muVar.a.iterator();
                             while (it3.hasNext()) {
-                                bdj bdjVar = ((bfe) it3.next()).b;
-                                if (bdjVar != null) {
-                                    map.put(bdjVar.aw, bdjVar);
+                                SomeFragmentManager someFragmentManagerVar = ((bfe) it3.next()).b;
+                                if (someFragmentManagerVar != null) {
+                                    map.put(someFragmentManagerVar.aw, someFragmentManagerVar);
                                 }
                             }
                         }
@@ -49,24 +49,24 @@ public final class bef implements bec {
                     ArrayList<String> arrayList3 = mwVar.a;
                     HashMap map2 = new HashMap(arrayList3.size());
                     for (String str : arrayList3) {
-                        bdj bdjVar2 = (bdj) map.get(str);
-                        if (bdjVar2 != null) {
-                            map2.put(bdjVar2.aw, bdjVar2);
+                        SomeFragmentManager someFragmentManagerVar2 = (SomeFragmentManager) map.get(str);
+                        if (someFragmentManagerVar2 != null) {
+                            map2.put(someFragmentManagerVar2.aw, someFragmentManagerVar2);
                         } else {
                             Bundle bundleAs = begVar.c.as(str, null);
                             if (bundleAs != null) {
                                 ClassLoader classLoader = begVar.w.e.getClassLoader();
-                                bdj bdjVarP = ((bey) bundleAs.getParcelable("state")).p(begVar.ce());
-                                bdjVarP.at = bundleAs;
+                                SomeFragmentManager someFragmentManagerVarP = ((bey) bundleAs.getParcelable("state")).p(begVar.ce());
+                                someFragmentManagerVarP.at = bundleAs;
                                 if (bundleAs.getBundle("savedInstanceState") == null) {
-                                    bdjVarP.at.putBundle("savedInstanceState", new Bundle());
+                                    someFragmentManagerVarP.at.putBundle("savedInstanceState", new Bundle());
                                 }
                                 Bundle bundle = bundleAs.getBundle("arguments");
                                 if (bundle != null) {
                                     bundle.setClassLoader(classLoader);
                                 }
-                                bdjVarP.df(bundle);
-                                map2.put(bdjVarP.aw, bdjVarP);
+                                someFragmentManagerVarP.df(bundle);
+                                map2.put(someFragmentManagerVarP.aw, someFragmentManagerVarP);
                             }
                         }
                     }
@@ -78,11 +78,11 @@ public final class bef implements bec {
                         for (int i3 = 0; i3 < arrayList5.size(); i3++) {
                             String str2 = (String) arrayList5.get(i3);
                             if (str2 != null) {
-                                bdj bdjVar3 = (bdj) map2.get(str2);
-                                if (bdjVar3 == null) {
+                                SomeFragmentManager someFragmentManagerVar3 = (SomeFragmentManager) map2.get(str2);
+                                if (someFragmentManagerVar3 == null) {
                                     throw new IllegalStateException("Restoring FragmentTransaction " + mvVar.f + " failed due to missing saved state for Fragment (" + str2 + ")");
                                 }
-                                ((bfe) muVar2.a.get(i3)).b = bdjVar3;
+                                ((bfe) muVar2.a.get(i3)).b = someFragmentManagerVar3;
                             }
                         }
                         arrayList4.add(muVar2);
@@ -115,8 +115,8 @@ public final class bef implements bec {
                             while (it5.hasNext()) {
                                 bfe bfeVar = (bfe) it5.next();
                                 Throwable th2 = th;
-                                bdj bdjVar4 = bfeVar.b;
-                                if (bdjVar4 == null) {
+                                SomeFragmentManager someFragmentManagerVar4 = bfeVar.b;
+                                if (someFragmentManagerVar4 == null) {
                                     th = th2;
                                 } else {
                                     if (bfeVar.c) {
@@ -127,7 +127,7 @@ public final class bef implements bec {
                                         }
                                         i2 = bfeVar.a;
                                         if (i2 != 1 || i2 == 2) {
-                                            hashSet3.add(bdjVar4);
+                                            hashSet3.add(someFragmentManagerVar4);
                                         }
                                         th = th2;
                                         i5 = i;
@@ -136,13 +136,13 @@ public final class bef implements bec {
                                         i = i5;
                                         it = it5;
                                     }
-                                    hashSet.add(bdjVar4);
-                                    hashSet2.add(bdjVar4);
+                                    hashSet.add(someFragmentManagerVar4);
+                                    hashSet2.add(someFragmentManagerVar4);
                                     i2 = bfeVar.a;
                                     if (i2 != 1) {
-                                        hashSet3.add(bdjVar4);
+                                        hashSet3.add(someFragmentManagerVar4);
                                     } else {
-                                        hashSet3.add(bdjVar4);
+                                        hashSet3.add(someFragmentManagerVar4);
                                     }
                                     th = th2;
                                     i5 = i;
@@ -153,7 +153,7 @@ public final class bef implements bec {
                             Throwable th3 = th;
                             hashSet2.removeAll(hashSet3);
                             if (!hashSet2.isEmpty()) {
-                                StringBuilder sbZ = dkz.z("saveBackStack(\"", str3, "\") must be self contained and not reference fragments from non-saved FragmentTransactions. Found reference to fragment");
+                                StringBuilder sbZ = StaticHelpers6.concatAndToSb("saveBackStack(\"", str3, "\") must be self contained and not reference fragments from non-saved FragmentTransactions. Found reference to fragment");
                                 sbZ.append(hashSet2.size() == 1 ? " " + hashSet2.iterator().next() : "s " + hashSet2);
                                 sbZ.append(" in ");
                                 sbZ.append(muVar3);
@@ -167,25 +167,25 @@ public final class bef implements bec {
                         Throwable th4 = th;
                         ArrayDeque arrayDeque = new ArrayDeque(hashSet);
                         while (!arrayDeque.isEmpty()) {
-                            bdj bdjVar5 = (bdj) arrayDeque.removeFirst();
-                            if (bdjVar5.bv) {
-                                StringBuilder sbZ2 = dkz.z("saveBackStack(\"", str3, "\") must not contain retained fragments. Found ");
-                                sbZ2.append(hashSet.contains(bdjVar5) ? "direct reference to retained " : "retained child ");
+                            SomeFragmentManager someFragmentManagerVar5 = (SomeFragmentManager) arrayDeque.removeFirst();
+                            if (someFragmentManagerVar5.bv) {
+                                StringBuilder sbZ2 = StaticHelpers6.concatAndToSb("saveBackStack(\"", str3, "\") must not contain retained fragments. Found ");
+                                sbZ2.append(hashSet.contains(someFragmentManagerVar5) ? "direct reference to retained " : "retained child ");
                                 sbZ2.append("fragment ");
-                                sbZ2.append(bdjVar5);
+                                sbZ2.append(someFragmentManagerVar5);
                                 begVar2.cy(new IllegalArgumentException(sbZ2.toString()));
                                 throw th4;
                             }
-                            for (bdj bdjVar6 : bdjVar5.bo.c.ad()) {
-                                if (bdjVar6 != null) {
-                                    arrayDeque.addLast(bdjVar6);
+                            for (SomeFragmentManager someFragmentManagerVar6 : someFragmentManagerVar5.bo.c.ad()) {
+                                if (someFragmentManagerVar6 != null) {
+                                    arrayDeque.addLast(someFragmentManagerVar6);
                                 }
                             }
                         }
                         ArrayList arrayList6 = new ArrayList();
                         Iterator it6 = hashSet.iterator();
                         while (it6.hasNext()) {
-                            arrayList6.add(((bdj) it6.next()).aw);
+                            arrayList6.add(((SomeFragmentManager) it6.next()).aw);
                         }
                         ArrayList arrayList7 = new ArrayList(begVar2.d.size() - iBz);
                         for (int i8 = iBz; i8 < begVar2.d.size(); i8++) {

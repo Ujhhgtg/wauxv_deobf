@@ -28,7 +28,7 @@ import java.util.ArrayList;
 import java.util.WeakHashMap;
 import me.hd.wauxv.obf.ann;
 import me.hd.wauxv.obf.ard;
-import me.hd.wauxv.obf.bmu;
+import me.hd.wauxv.obf.SyntheticPileOfMess;
 import me.hd.wauxv.obf.cah;
 import me.hd.wauxv.obf.cjn;
 import me.hd.wauxv.obf.cko;
@@ -40,7 +40,7 @@ import me.hd.wauxv.obf.cku;
 import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.dfg;
 import me.hd.wauxv.obf.eqq;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.ewz;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -89,7 +89,7 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         this.v = -1;
         this.w = new int[2];
         this.x = new int[2];
-        this.ae = new ann(getContext(), new bmu(this));
+        this.ae = new ann(getContext(), new SyntheticPileOfMess(this));
         int i = Build.VERSION.SDK_INT;
         this.h = i >= 31 ? ard.a(context, attributeSet) : new EdgeEffect(context);
         this.i = i >= 31 ? ard.a(context, attributeSet) : new EdgeEffect(context);
@@ -109,7 +109,7 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         this.ab = new cjn();
         this.ac = new cks(this);
         setNestedScrollingEnabled(true);
-        eqz.s(this, b);
+        ViewCompat.setAccessibilityDelegate(this, b);
     }
 
     public static boolean af(View view, NestedScrollView nestedScrollView) {
@@ -1549,7 +1549,7 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         cks cksVar = this.ac;
         if (cksVar.d) {
             ViewGroup viewGroup = cksVar.c;
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             eqq.m(viewGroup);
         }
         cksVar.d = z;

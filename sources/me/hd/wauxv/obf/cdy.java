@@ -11,7 +11,7 @@ public final class cdy {
     public static final cdy d;
     public static final cdy e;
     public static final /* synthetic */ cdy[] f;
-    public static final /* synthetic */ awn g;
+    public static final /* synthetic */ KotlinEnumEntriesImpl g;
     public final int h;
 
     static {
@@ -30,7 +30,7 @@ public final class cdy {
         e = cdyVar9;
         cdy[] cdyVarArr = {cdyVar, cdyVar2, cdyVar3, cdyVar4, cdyVar5, cdyVar6, cdyVar7, cdyVar8, cdyVar9, new cdy("INTERFACE", 9, 512), new cdy("ABSTRACT", 10, 1024), new cdy("STRICT", 11, 2048)};
         f = cdyVarArr;
-        g = new awn(cdyVarArr);
+        g = new KotlinEnumEntriesImpl(cdyVarArr);
         a = new cbm(1);
     }
 

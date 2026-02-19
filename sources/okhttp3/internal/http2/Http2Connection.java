@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bfu;
 import me.hd.wauxv.obf.dai;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.emc;
 import me.hd.wauxv.obf.KotlinUnit;
 import me.hd.wauxv.obf.rh;
@@ -720,7 +720,7 @@ public final class Http2Connection implements Closeable {
         this.currentPushRequests = new LinkedHashSet();
         if (builder.getPingIntervalMillis$okhttp() != 0) {
             final long nanos = TimeUnit.MILLISECONDS.toNanos(builder.getPingIntervalMillis$okhttp());
-            final String strS = dkz.s(connectionName$okhttp, " ping");
+            final String strS = StaticHelpers6.concat(connectionName$okhttp, " ping");
             taskQueueNewQueue.schedule(new Task(strS) { // from class:
                                                         // okhttp3.internal.http2.Http2Connection$special$$inlined$schedule$1
                 @Override // okhttp3.internal.concurrent.Task

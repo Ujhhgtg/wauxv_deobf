@@ -37,7 +37,7 @@ public final class ar implements AccessibilityManager.TouchExplorationStateChang
         }
         CheckableImageButton checkableImageButton = aqlVar.ai;
         int i = z ? 2 : 1;
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         checkableImageButton.setImportantForAccessibility(i);
     }
 }

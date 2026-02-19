@@ -15,22 +15,21 @@ import java.util.List;
 import me.hd.wauxv.obf.atb;
 import me.hd.wauxv.obf.ax;
 import me.hd.wauxv.obf.bd;
-import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.bpq;
 import me.hd.wauxv.obf.bvh;
 import me.hd.wauxv.obf.bvi;
 import me.hd.wauxv.obf.bvj;
 import me.hd.wauxv.obf.bvk;
 import me.hd.wauxv.obf.bvl;
-import me.hd.wauxv.obf.cnf;
+import me.hd.wauxv.obf.HugeSyntheticPileOfHelpers;
 import me.hd.wauxv.obf.cyw;
 import me.hd.wauxv.obf.czf;
 import me.hd.wauxv.obf.czg;
 import me.hd.wauxv.obf.czh;
-import me.hd.wauxv.obf.czo;
+import me.hd.wauxv.obf.RecyclerView;
 import me.hd.wauxv.obf.czs;
 import me.hd.wauxv.obf.czt;
-import me.hd.wauxv.obf.czx;
+import me.hd.wauxv.obf.SomeView;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -95,9 +94,9 @@ public class LinearLayoutManager extends czg implements czs {
     /* JADX WARN: Found duplicated region for block: B:138:0x0238 */
     /* JADX WARN: Found duplicated region for block: B:95:0x0194 */
     @Override // me.hd.wauxv.obf.czg
-    public void ae(czo czoVar, czt cztVar) {
+    public void ae(RecyclerView recyclerViewVar, czt cztVar) {
         View focusedChild;
-        RecyclerView recyclerView;
+        androidx.recyclerview.widget.RecyclerView recyclerView;
         View focusedChild2;
         boolean z;
         boolean z2;
@@ -121,7 +120,7 @@ public class LinearLayoutManager extends czg implements czs {
         int i7;
         int i8 = -1;
         if (!(this.bn == null && this.bl == -1) && cztVar.p() == 0) {
-            fb(czoVar);
+            fb(recyclerViewVar);
             return;
         }
         bvk bvkVar = this.bn;
@@ -131,7 +130,7 @@ public class LinearLayoutManager extends czg implements czs {
         cp();
         this.be.a = false;
         de();
-        RecyclerView recyclerView2 = this.dp;
+        androidx.recyclerview.widget.RecyclerView recyclerView2 = this.dp;
         if (recyclerView2 == null || (focusedChild = recyclerView2.getFocusedChild()) == null
                 || ((ArrayList) this.f4do.e).contains(focusedChild)) {
             focusedChild = null;
@@ -151,7 +150,7 @@ public class LinearLayoutManager extends czg implements czs {
                         if (!czhVar.c.af() || czhVar.c.z() < 0 || czhVar.c.z() >= cztVar.p()) {
                             z = this.bg;
                             z2 = this.bj;
-                            if (z == z2 || (viewAm = am(czoVar, cztVar, bvhVar.d, z2)) == null) {
+                            if (z == z2 || (viewAm = am(recyclerViewVar, cztVar, bvhVar.d, z2)) == null) {
                                 bvhVar.f();
                                 bvhVar.b = this.bj ? cztVar.p() - 1 : 0;
                             } else {
@@ -391,8 +390,8 @@ public class LinearLayoutManager extends czg implements czs {
         if (!bvhVar.d ? !this.bi : this.bi) {
             i8 = 1;
         }
-        ao(czoVar, cztVar, bvhVar, i8);
-        eq(czoVar);
+        ao(recyclerViewVar, cztVar, bvhVar, i8);
+        eq(recyclerViewVar);
         this.be.l = this.bf.l() == 0 && this.bf.i() == 0;
         this.be.getClass();
         this.be.i = 0;
@@ -400,7 +399,7 @@ public class LinearLayoutManager extends czg implements czs {
             dk(bvhVar.b, bvhVar.c);
             bvj bvjVar2 = this.be;
             bvjVar2.h = iN2;
-            cq(czoVar, bvjVar2, cztVar, false);
+            cq(recyclerViewVar, bvjVar2, cztVar, false);
             bvj bvjVar3 = this.be;
             i3 = bvjVar3.b;
             int i11 = bvjVar3.d;
@@ -412,7 +411,7 @@ public class LinearLayoutManager extends czg implements czs {
             bvj bvjVar4 = this.be;
             bvjVar4.h = iK;
             bvjVar4.d += bvjVar4.e;
-            cq(czoVar, bvjVar4, cztVar, false);
+            cq(recyclerViewVar, bvjVar4, cztVar, false);
             bvj bvjVar5 = this.be;
             i2 = bvjVar5.b;
             int i13 = bvjVar5.c;
@@ -420,14 +419,14 @@ public class LinearLayoutManager extends czg implements czs {
                 dk(i11, i3);
                 bvj bvjVar6 = this.be;
                 bvjVar6.h = i13;
-                cq(czoVar, bvjVar6, cztVar, false);
+                cq(recyclerViewVar, bvjVar6, cztVar, false);
                 i3 = this.be.b;
             }
         } else {
             dj(bvhVar.b, bvhVar.c);
             bvj bvjVar7 = this.be;
             bvjVar7.h = iK;
-            cq(czoVar, bvjVar7, cztVar, false);
+            cq(recyclerViewVar, bvjVar7, cztVar, false);
             bvj bvjVar8 = this.be;
             i2 = bvjVar8.b;
             int i14 = bvjVar8.d;
@@ -439,7 +438,7 @@ public class LinearLayoutManager extends czg implements czs {
             bvj bvjVar9 = this.be;
             bvjVar9.h = iN2;
             bvjVar9.d += bvjVar9.e;
-            cq(czoVar, bvjVar9, cztVar, false);
+            cq(recyclerViewVar, bvjVar9, cztVar, false);
             bvj bvjVar10 = this.be;
             int i16 = bvjVar10.b;
             int i17 = bvjVar10.c;
@@ -447,38 +446,38 @@ public class LinearLayoutManager extends czg implements czs {
                 dj(i14, i2);
                 bvj bvjVar11 = this.be;
                 bvjVar11.h = i17;
-                cq(czoVar, bvjVar11, cztVar, false);
+                cq(recyclerViewVar, bvjVar11, cztVar, false);
                 i2 = this.be.b;
             }
             i3 = i16;
         }
         if (es() > 0) {
             if (this.bi ^ this.bj) {
-                int iCx2 = cx(i2, czoVar, cztVar, true);
+                int iCx2 = cx(i2, recyclerViewVar, cztVar, true);
                 i4 = i3 + iCx2;
                 i5 = i2 + iCx2;
-                iCx = cy(i4, czoVar, cztVar, false);
+                iCx = cy(i4, recyclerViewVar, cztVar, false);
             } else {
-                int iCy = cy(i3, czoVar, cztVar, true);
+                int iCy = cy(i3, recyclerViewVar, cztVar, true);
                 i4 = i3 + iCy;
                 i5 = i2 + iCy;
-                iCx = cx(i5, czoVar, cztVar, false);
+                iCx = cx(i5, recyclerViewVar, cztVar, false);
             }
             i3 = i4 + iCx;
             i2 = i5 + iCx;
         }
         if (cztVar.k && es() != 0 && !cztVar.g && ak()) {
-            List list2 = czoVar.d;
+            List list2 = recyclerViewVar.d;
             int size = list2.size();
             int iEl = czg.el(er(0));
             int iF = 0;
             int iF2 = 0;
             for (int i18 = 0; i18 < size; i18++) {
-                czx czxVar = (czx) list2.get(i18);
-                boolean zAf = czxVar.af();
-                View view = czxVar.d;
+                SomeView someViewVar = (SomeView) list2.get(i18);
+                boolean zAf = someViewVar.af();
+                View view = someViewVar.d;
                 if (!zAf) {
-                    if ((czxVar.z() < iEl) != this.bi) {
+                    if ((someViewVar.z() < iEl) != this.bi) {
                         iF += this.bf.f(view);
                     } else {
                         iF2 += this.bf.f(view);
@@ -492,7 +491,7 @@ public class LinearLayoutManager extends czg implements czs {
                 bvjVar12.h = iF;
                 bvjVar12.c = 0;
                 bvjVar12.m(null);
-                cq(czoVar, this.be, cztVar, false);
+                cq(recyclerViewVar, this.be, cztVar, false);
             }
             if (iF2 > 0) {
                 dj(czg.el(cz()), i2);
@@ -501,7 +500,7 @@ public class LinearLayoutManager extends czg implements czs {
                 bvjVar13.c = 0;
                 list = null;
                 bvjVar13.m(null);
-                cq(czoVar, this.be, cztVar, false);
+                cq(recyclerViewVar, this.be, cztVar, false);
             } else {
                 list = null;
             }
@@ -536,14 +535,14 @@ public class LinearLayoutManager extends czg implements czs {
                 if (i2 < 0) {
                     return false;
                 }
-                RecyclerView recyclerView = this.dp;
+                androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
                 iMin = Math.min(i2, v(recyclerView.m, recyclerView.bo) - 1);
             } else {
                 int i3 = bundle.getInt("android.view.accessibility.action.ARGUMENT_COLUMN_INT", -1);
                 if (i3 < 0) {
                     return false;
                 }
-                RecyclerView recyclerView2 = this.dp;
+                androidx.recyclerview.widget.RecyclerView recyclerView2 = this.dp;
                 iMin = Math.min(i3, u(recyclerView2.m, recyclerView2.bo) - 1);
             }
             if (iMin >= 0) {
@@ -555,19 +554,19 @@ public class LinearLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public int ah(int i, czo czoVar, czt cztVar) {
+    public int ah(int i, RecyclerView recyclerViewVar, czt cztVar) {
         if (this.bd == 1) {
             return 0;
         }
-        return df(i, czoVar, cztVar);
+        return df(i, recyclerViewVar, cztVar);
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public int ai(int i, czo czoVar, czt cztVar) {
+    public int ai(int i, RecyclerView recyclerViewVar, czt cztVar) {
         if (this.bd == 0) {
             return 0;
         }
-        return df(i, czoVar, cztVar);
+        return df(i, recyclerViewVar, cztVar);
     }
 
     @Override // me.hd.wauxv.obf.czg
@@ -585,7 +584,7 @@ public class LinearLayoutManager extends czg implements czs {
 
     /* JADX WARN: Found duplicated region for block: B:33:0x0075 */
     /* JADX WARN: Found duplicated region for block: B:35:0x0079 */
-    public View am(czo czoVar, czt cztVar, boolean z, boolean z2) {
+    public View am(RecyclerView recyclerViewVar, czt cztVar, boolean z, boolean z2) {
         int i;
         int iEs;
         int i2;
@@ -638,12 +637,12 @@ public class LinearLayoutManager extends czg implements czs {
         return view != null ? view : view2 != null ? view2 : view3;
     }
 
-    public void an(czo czoVar, czt cztVar, bvj bvjVar, bvi bviVar) {
+    public void an(RecyclerView recyclerViewVar, czt cztVar, bvj bvjVar, bvi bviVar) {
         int iEv;
         int i;
         int i2;
         int iG;
-        View viewN = bvjVar.n(czoVar);
+        View viewN = bvjVar.n(recyclerViewVar);
         if (viewN == null) {
             bviVar.b = true;
             return;
@@ -719,7 +718,7 @@ public class LinearLayoutManager extends czg implements czs {
         bviVar.d = viewN.hasFocusable();
     }
 
-    public void ao(czo czoVar, czt cztVar, bvh bvhVar, int i) {
+    public void ao(RecyclerView recyclerViewVar, czt cztVar, bvh bvhVar, int i) {
     }
 
     public void ap(boolean z) {
@@ -829,7 +828,7 @@ public class LinearLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public void cd(RecyclerView recyclerView) {
+    public void cd(androidx.recyclerview.widget.RecyclerView recyclerView) {
     }
 
     @Override // me.hd.wauxv.obf.czg
@@ -909,7 +908,7 @@ public class LinearLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public void cj(RecyclerView recyclerView, czt cztVar, int i) {
+    public void cj(androidx.recyclerview.widget.RecyclerView recyclerView, czt cztVar, int i) {
         bvl bvlVar = new bvl(recyclerView.getContext());
         bvlVar.f = i;
         fm(bvlVar);
@@ -935,7 +934,7 @@ public class LinearLayoutManager extends czg implements czs {
         cp();
         atb atbVar = this.bf;
         boolean z = !this.bk;
-        return cnf.au(cztVar, atbVar, cs(z), cr(z), this, this.bk);
+        return HugeSyntheticPileOfHelpers.au(cztVar, atbVar, cs(z), cr(z), this, this.bk);
     }
 
     public final int cm(czt cztVar) {
@@ -945,7 +944,7 @@ public class LinearLayoutManager extends czg implements czs {
         cp();
         atb atbVar = this.bf;
         boolean z = !this.bk;
-        return cnf.av(cztVar, atbVar, cs(z), cr(z), this, this.bk, this.bi);
+        return HugeSyntheticPileOfHelpers.av(cztVar, atbVar, cs(z), cr(z), this, this.bk, this.bi);
     }
 
     public final int cn(czt cztVar) {
@@ -955,7 +954,7 @@ public class LinearLayoutManager extends czg implements czs {
         cp();
         atb atbVar = this.bf;
         boolean z = !this.bk;
-        return cnf.aw(cztVar, atbVar, cs(z), cr(z), this, this.bk);
+        return HugeSyntheticPileOfHelpers.aw(cztVar, atbVar, cs(z), cr(z), this, this.bk);
     }
 
     public final int co(int i) {
@@ -980,7 +979,7 @@ public class LinearLayoutManager extends czg implements czs {
         }
     }
 
-    public final int cq(czo czoVar, bvj bvjVar, czt cztVar, boolean z) {
+    public final int cq(RecyclerView recyclerViewVar, bvj bvjVar, czt cztVar, boolean z) {
         int i;
         int i2 = bvjVar.c;
         int i3 = bvjVar.g;
@@ -988,7 +987,7 @@ public class LinearLayoutManager extends czg implements czs {
             if (i2 < 0) {
                 bvjVar.g = i3 + i2;
             }
-            dc(czoVar, bvjVar);
+            dc(recyclerViewVar, bvjVar);
         }
         int i4 = bvjVar.c + bvjVar.h;
         while (true) {
@@ -1000,7 +999,7 @@ public class LinearLayoutManager extends czg implements czs {
             bviVar.b = false;
             bviVar.c = false;
             bviVar.d = false;
-            an(czoVar, cztVar, bvjVar, bviVar);
+            an(recyclerViewVar, cztVar, bvjVar, bviVar);
             if (!bviVar.b) {
                 int i5 = bvjVar.b;
                 int i6 = bviVar.a;
@@ -1017,7 +1016,7 @@ public class LinearLayoutManager extends czg implements czs {
                     if (i9 < 0) {
                         bvjVar.g = i8 + i9;
                     }
-                    dc(czoVar, bvjVar);
+                    dc(recyclerViewVar, bvjVar);
                 }
                 if (z && bviVar.d) {
                     break;
@@ -1076,13 +1075,13 @@ public class LinearLayoutManager extends czg implements czs {
         return this.bd == 0 ? this.dq.j(i, i2, i3, 320) : this.dr.j(i, i2, i3, 320);
     }
 
-    public final int cx(int i, czo czoVar, czt cztVar, boolean z) {
+    public final int cx(int i, RecyclerView recyclerViewVar, czt cztVar, boolean z) {
         int iJ;
         int iJ2 = this.bf.j() - i;
         if (iJ2 <= 0) {
             return 0;
         }
-        int i2 = -df(-iJ2, czoVar, cztVar);
+        int i2 = -df(-iJ2, recyclerViewVar, cztVar);
         int i3 = i + i2;
         if (!z || (iJ = this.bf.j() - i3) <= 0) {
             return i2;
@@ -1091,13 +1090,13 @@ public class LinearLayoutManager extends czg implements czs {
         return iJ + i2;
     }
 
-    public final int cy(int i, czo czoVar, czt cztVar, boolean z) {
+    public final int cy(int i, RecyclerView recyclerViewVar, czt cztVar, boolean z) {
         int iN;
         int iN2 = i - this.bf.n();
         if (iN2 <= 0) {
             return 0;
         }
-        int i2 = -df(iN2, czoVar, cztVar);
+        int i2 = -df(iN2, recyclerViewVar, cztVar);
         int i3 = i + i2;
         if (!z || (iN = i3 - this.bf.n()) <= 0) {
             return i2;
@@ -1118,7 +1117,7 @@ public class LinearLayoutManager extends czg implements czs {
         return this.dp.getLayoutDirection() == 1;
     }
 
-    public final void dc(czo czoVar, bvj bvjVar) {
+    public final void dc(RecyclerView recyclerViewVar, bvj bvjVar) {
         if (!bvjVar.a || bvjVar.l) {
             return;
         }
@@ -1134,7 +1133,7 @@ public class LinearLayoutManager extends czg implements czs {
                 for (int i4 = 0; i4 < iEs; i4++) {
                     View viewEr = er(i4);
                     if (this.bf.dexFind(viewEr) < i3 || this.bf.q(viewEr) < i3) {
-                        dd(czoVar, 0, i4);
+                        dd(recyclerViewVar, 0, i4);
                         return;
                     }
                 }
@@ -1144,7 +1143,7 @@ public class LinearLayoutManager extends czg implements czs {
             for (int i6 = i5; i6 >= 0; i6--) {
                 View viewEr2 = er(i6);
                 if (this.bf.dexFind(viewEr2) < i3 || this.bf.q(viewEr2) < i3) {
-                    dd(czoVar, i5, i6);
+                    dd(recyclerViewVar, i5, i6);
                     return;
                 }
             }
@@ -1159,7 +1158,7 @@ public class LinearLayoutManager extends czg implements czs {
             for (int i8 = 0; i8 < iEs2; i8++) {
                 View viewEr3 = er(i8);
                 if (this.bf.e(viewEr3) > i7 || this.bf.p(viewEr3) > i7) {
-                    dd(czoVar, 0, i8);
+                    dd(recyclerViewVar, 0, i8);
                     return;
                 }
             }
@@ -1169,13 +1168,13 @@ public class LinearLayoutManager extends czg implements czs {
         for (int i10 = i9; i10 >= 0; i10--) {
             View viewEr4 = er(i10);
             if (this.bf.e(viewEr4) > i7 || this.bf.p(viewEr4) > i7) {
-                dd(czoVar, i9, i10);
+                dd(recyclerViewVar, i9, i10);
                 return;
             }
         }
     }
 
-    public final void dd(czo czoVar, int i, int i2) {
+    public final void dd(RecyclerView recyclerViewVar, int i, int i2) {
         if (i == i2) {
             return;
         }
@@ -1183,7 +1182,7 @@ public class LinearLayoutManager extends czg implements czs {
             while (i > i2) {
                 View viewEr = er(i);
                 fe(i);
-                czoVar.p(viewEr);
+                recyclerViewVar.p(viewEr);
                 i--;
             }
             return;
@@ -1191,7 +1190,7 @@ public class LinearLayoutManager extends czg implements czs {
         for (int i3 = i2 - 1; i3 >= i; i3--) {
             View viewEr2 = er(i3);
             fe(i3);
-            czoVar.p(viewEr2);
+            recyclerViewVar.p(viewEr2);
         }
     }
 
@@ -1203,7 +1202,7 @@ public class LinearLayoutManager extends czg implements czs {
         }
     }
 
-    public final int df(int i, czo czoVar, czt cztVar) {
+    public final int df(int i, RecyclerView recyclerViewVar, czt cztVar) {
         if (es() != 0 && i != 0) {
             cp();
             this.be.a = true;
@@ -1211,7 +1210,7 @@ public class LinearLayoutManager extends czg implements czs {
             int iAbs = Math.abs(i);
             di(i2, iAbs, true, cztVar);
             bvj bvjVar = this.be;
-            int iCq = cq(czoVar, bvjVar, cztVar, false) + bvjVar.g;
+            int iCq = cq(recyclerViewVar, bvjVar, cztVar, false) + bvjVar.g;
             if (iCq >= 0) {
                 if (iAbs > iCq) {
                     i = i2 * iCq;
@@ -1342,7 +1341,7 @@ public class LinearLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public View w(View view, int i, czo czoVar, czt cztVar) {
+    public View w(View view, int i, RecyclerView recyclerViewVar, czt cztVar) {
         int iCo;
         de();
         if (es() != 0 && (iCo = co(i)) != Integer.MIN_VALUE) {
@@ -1351,7 +1350,7 @@ public class LinearLayoutManager extends czg implements czs {
             bvj bvjVar = this.be;
             bvjVar.g = Integer.MIN_VALUE;
             bvjVar.a = false;
-            cq(czoVar, bvjVar, cztVar, true);
+            cq(recyclerViewVar, bvjVar, cztVar, true);
             View viewCv = iCo == -1 ? this.bi ? cv(es() - 1, -1) : cv(0, es())
                     : this.bi ? cv(0, es()) : cv(es() - 1, -1);
             View viewDa = iCo == -1 ? da() : cz();
@@ -1366,8 +1365,8 @@ public class LinearLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public void x(czo czoVar, czt cztVar, bd bdVar) {
-        super.x(czoVar, cztVar, bdVar);
+    public void x(RecyclerView recyclerViewVar, czt cztVar, bd bdVar) {
+        super.x(recyclerViewVar, cztVar, bdVar);
         cyw cywVar = this.dp.w;
         if (cywVar == null || cywVar.d() <= 0) {
             return;

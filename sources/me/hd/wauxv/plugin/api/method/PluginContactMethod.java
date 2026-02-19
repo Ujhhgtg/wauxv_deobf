@@ -12,7 +12,7 @@ import me.hd.wauxv.obf.arj;
 import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.bmy;
 import me.hd.wauxv.obf.bym;
-import me.hd.wauxv.obf.cde;
+import me.hd.wauxv.obf.MethodResolver;
 import me.hd.wauxv.obf.MethodHookWrapper;
 import me.hd.wauxv.obf.clk;
 import me.hd.wauxv.obf.cll;
@@ -23,10 +23,10 @@ import me.hd.wauxv.obf.clu;
 import me.hd.wauxv.obf.cme;
 import me.hd.wauxv.obf.cty;
 import me.hd.wauxv.obf.dal;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dpv;
 import me.hd.wauxv.obf.dqc;
-import me.hd.wauxv.obf.emn;
+import me.hd.wauxv.obf.StaticHelpers7;
 import me.hd.wauxv.obf.xj;
 import me.hd.wauxv.obf.xn;
 import me.hd.wauxv.obf.xo;
@@ -40,7 +40,7 @@ public final class PluginContactMethod {
             throws IllegalAccessException, InstantiationException, InvocationTargetException {
         List listBf = dqc.toSingletonList(str2);
         cll.a.getClass();
-        cme.b(cme.a, emn.ba(clk.a).newInstance(str, listBf, null, null));
+        cme.b(cme.a, StaticHelpers7.ba(clk.a).newInstance(str, listBf, null, null));
     }
 
     @cty
@@ -48,7 +48,7 @@ public final class PluginContactMethod {
             throws IllegalAccessException, InstantiationException, InvocationTargetException {
         List listBf = dqc.toSingletonList(str2);
         clq.a.getClass();
-        cme.b(cme.a, emn.ba(clp.a).newInstance(str, listBf, 0));
+        cme.b(cme.a, StaticHelpers7.ba(clp.a).newInstance(str, listBf, 0));
     }
 
     @cty
@@ -79,7 +79,7 @@ public final class PluginContactMethod {
     public final int getGroupMemberCount(String str)
             throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         xp.a.getClass();
-        Method methodBb = emn.bb(xo.a);
+        Method methodBb = StaticHelpers7.bb(xo.a);
         xn.a.getClass();
         Object objInvoke = methodBb.invoke(xn.b(), str);
         throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.Int" /* "null cannot be cast to non-null type kotlin.Int" /* "null cannot be cast to non-null type kotlin.Int" /* cnb.z(-380173325171498L)  */);
@@ -91,16 +91,16 @@ public final class PluginContactMethod {
         xp.a.getClass();
         int i = 0;
         xn.a.getClass();
-        cde cdeVarT = dqc.bi(xn.b()).t();
-        cdeVarT.a = dal.b(List.class);
-        List<String> list = (List) ((MethodHookWrapper) dkz.n(new Object[] { dal.b(String.class) }, 1, cdeVarT)).j(str);
-        return list == null ? EmptyReadonlyList.a : list;
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(xn.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.returnType = dal.b(List.class);
+        List<String> list = (List) ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class) }, 1, methodResolverVarT)).j(str);
+        return list == null ? EmptyReadonlyList.INSTANCE : list;
     }
 
     @cty
     public final String getLoginAlias() throws IllegalAccessException, InvocationTargetException {
         acx.a.getClass();
-        Object objInvoke = emn.bb(acw.a).invoke(null, null);
+        Object objInvoke = StaticHelpers7.bb(acw.a).invoke(null, null);
         throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.collections.Map<*, *>" /*
                                                                                                           * cnb.z(-
                                                                                                           * 107949708016426L)
@@ -127,7 +127,7 @@ public final class PluginContactMethod {
             throws IllegalAccessException, InstantiationException, InvocationTargetException {
         List listBf = dqc.toSingletonList(str2);
         clu.a.getClass();
-        cme.b(cme.a, emn.ba(clt.a).newInstance(str, listBf, 0, null));
+        cme.b(cme.a, StaticHelpers7.ba(clt.a).newInstance(str, listBf, 0, null));
     }
 
     @cty
@@ -170,20 +170,20 @@ public final class PluginContactMethod {
     public final void addChatroomMember(String str, List<String> list)
             throws IllegalAccessException, InstantiationException, InvocationTargetException {
         cll.a.getClass();
-        cme.b(cme.a, emn.ba(clk.a).newInstance(str, list, null, null));
+        cme.b(cme.a, StaticHelpers7.ba(clk.a).newInstance(str, list, null, null));
     }
 
     @cty
     public final void delChatroomMember(String str, List<String> list)
             throws IllegalAccessException, InstantiationException, InvocationTargetException {
         clq.a.getClass();
-        cme.b(cme.a, emn.ba(clp.a).newInstance(str, list, 0));
+        cme.b(cme.a, StaticHelpers7.ba(clp.a).newInstance(str, list, 0));
     }
 
     @cty
     public final void inviteChatroomMember(String str, List<String> list)
             throws IllegalAccessException, InstantiationException, InvocationTargetException {
         clu.a.getClass();
-        cme.b(cme.a, emn.ba(clt.a).newInstance(str, list, 0, null));
+        cme.b(cme.a, StaticHelpers7.ba(clt.a).newInstance(str, list, 0, null));
     }
 }

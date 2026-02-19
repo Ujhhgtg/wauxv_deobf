@@ -35,7 +35,7 @@ public final class zw extends SwitchHook implements bnx {
             btd btdVarSerializer = cdqVar.serializer();
             throwIfVar1IsNull(btdVarSerializer, "serializer");
             rw rwVar = new rw();
-            new cwn(cwdVar, new bmu(rwVar), btdVarSerializer.getDescriptor()).x(btdVarSerializer, cdrVar);
+            new cwn(cwdVar, new SyntheticPileOfMess(rwVar), btdVarSerializer.getDescriptor()).x(btdVarSerializer, cdrVar);
             int i2 = rwVar.c;
             byte[] bArr2 = new byte[i2];
             SomeStaticHelpers._an(rwVar.b, 0, i2, bArr2, 2);

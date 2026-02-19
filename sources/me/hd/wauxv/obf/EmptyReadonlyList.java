@@ -12,7 +12,7 @@ import okhttp3.HttpUrl;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class EmptyReadonlyList implements List, Serializable, RandomAccess {
-    public static final EmptyReadonlyList a = new EmptyReadonlyList();
+    public static final EmptyReadonlyList INSTANCE = new EmptyReadonlyList();
 
     @Override // java.util.List
     public final /* bridge */ /* synthetic */ void add(int i, Object obj) {
@@ -111,7 +111,7 @@ public final class EmptyReadonlyList implements List, Serializable, RandomAccess
         if (i == 0 && i2 == 0) {
             return this;
         }
-        throw new IndexOutOfBoundsException(dkz.p(i, "fromIndex: ", ", toIndex: ", i2));
+        throw new IndexOutOfBoundsException(StaticHelpers6.p(i, "fromIndex: ", ", toIndex: ", i2));
     }
 
     @Override // java.util.List, java.util.Collection

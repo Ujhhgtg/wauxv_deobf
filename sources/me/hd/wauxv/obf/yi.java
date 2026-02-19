@@ -47,21 +47,21 @@ public class yi {
     public void ac(View view) {
         ((ArrayList) this.e).add(view);
         cyv cyvVar = (cyv) this.c;
-        czx czxVarCs = RecyclerView.cs(view);
-        if (czxVarCs != null) {
-            View view2 = czxVarCs.d;
+        SomeView someViewVarCs = RecyclerView.cs(view);
+        if (someViewVarCs != null) {
+            View view2 = someViewVarCs.d;
             RecyclerView recyclerView = cyvVar.a;
-            int i = czxVarCs.t;
+            int i = someViewVarCs.t;
             if (i != -1) {
-                czxVarCs.s = i;
+                someViewVarCs.s = i;
             } else {
-                czxVarCs.s = view2.getImportantForAccessibility();
+                someViewVarCs.s = view2.getImportantForAccessibility();
             }
             if (!recyclerView.dy()) {
                 view2.setImportantForAccessibility(4);
             } else {
-                czxVarCs.t = 4;
-                recyclerView.cb.add(czxVarCs);
+                someViewVarCs.t = 4;
+                recyclerView.cb.add(someViewVarCs);
             }
         }
     }
@@ -95,7 +95,7 @@ public class yi {
             char cCharAt = str.charAt(iAg);
             if (cCharAt != '\t' && cCharAt != '\n' && cCharAt != '\r' && cCharAt != ' ') {
                 this.b = iAg;
-                return cnf.ap(cCharAt);
+                return HugeSyntheticPileOfHelpers.ap(cCharAt);
             }
             i = iAg + 1;
         }
@@ -160,7 +160,7 @@ public class yi {
                 throw th;
             }
         }
-        String strBo = cnf.bo(cnf.ap(c));
+        String strBo = HugeSyntheticPileOfHelpers.getJsonTokenName(HugeSyntheticPileOfHelpers.ap(c));
         int i2 = this.b;
         int i3 = i2 - 1;
         g(this, "Expected " + strBo + ", but had '"
@@ -171,17 +171,17 @@ public class yi {
     public void ak(View view) {
         if (((ArrayList) this.e).remove(view)) {
             cyv cyvVar = (cyv) this.c;
-            czx czxVarCs = RecyclerView.cs(view);
-            if (czxVarCs != null) {
+            SomeView someViewVarCs = RecyclerView.cs(view);
+            if (someViewVarCs != null) {
                 RecyclerView recyclerView = cyvVar.a;
-                int i = czxVarCs.s;
+                int i = someViewVarCs.s;
                 if (recyclerView.dy()) {
-                    czxVarCs.t = i;
-                    recyclerView.cb.add(czxVarCs);
+                    someViewVarCs.t = i;
+                    recyclerView.cb.add(someViewVarCs);
                 } else {
-                    czxVarCs.d.setImportantForAccessibility(i);
+                    someViewVarCs.d.setImportantForAccessibility(i);
                 }
-                czxVarCs.s = 0;
+                someViewVarCs.s = 0;
             }
         }
     }
@@ -194,10 +194,10 @@ public class yi {
             ac(view);
         }
         recyclerView.addView(view, childCount);
-        czx czxVarCs = RecyclerView.cs(view);
+        SomeView someViewVarCs = RecyclerView.cs(view);
         cyw cywVar = recyclerView.w;
-        if (cywVar != null && czxVarCs != null) {
-            cywVar.m(czxVarCs);
+        if (cywVar != null && someViewVarCs != null) {
+            cywVar.m(someViewVarCs);
         }
         ArrayList arrayList = recyclerView.am;
         if (arrayList != null) {
@@ -229,17 +229,17 @@ public class yi {
         if (z) {
             ac(view);
         }
-        czx czxVarCs = RecyclerView.cs(view);
-        if (czxVarCs != null) {
-            if (!czxVarCs.ah() && !czxVarCs.am()) {
+        SomeView someViewVarCs = RecyclerView.cs(view);
+        if (someViewVarCs != null) {
+            if (!someViewVarCs.ah() && !someViewVarCs.am()) {
                 StringBuilder sb = new StringBuilder("Called attach on a child which is not detached: ");
-                sb.append(czxVarCs);
+                sb.append(someViewVarCs);
                 throw new IllegalArgumentException(yg.i(recyclerView, sb));
             }
             if (RecyclerView.b) {
-                Log.d("RecyclerView", "reAttach " + czxVarCs);
+                Log.d("RecyclerView", "reAttach " + someViewVarCs);
             }
-            czxVarCs.m &= -257;
+            someViewVarCs.m &= -257;
         } else if (RecyclerView.a) {
             StringBuilder sb2 = new StringBuilder("No ViewHolder found for child: ");
             sb2.append(view);
@@ -366,7 +366,7 @@ public class yi {
             char cCharAt = str.charAt(i);
             if (cCharAt != ' ' && cCharAt != '\n' && cCharAt != '\r' && cCharAt != '\t') {
                 this.b = i2;
-                return cnf.ap(cCharAt);
+                return HugeSyntheticPileOfHelpers.ap(cCharAt);
             }
             i = i2;
         }
@@ -380,7 +380,7 @@ public class yi {
         if (bN == b) {
             return bN;
         }
-        String strBo = cnf.bo(b);
+        String strBo = HugeSyntheticPileOfHelpers.getJsonTokenName(b);
         int i = this.b;
         int i2 = i - 1;
         g(this, "Expected " + strBo + ", but had '"
@@ -467,7 +467,7 @@ public class yi {
                 } else if (cCharAt != '+' || !z4) {
                     z2 = z;
                     if (cCharAt != '-') {
-                        if (cnf.ap(cCharAt) != 0) {
+                        if (HugeSyntheticPileOfHelpers.ap(cCharAt) != 0) {
                             break;
                         }
                         i++;
@@ -590,7 +590,7 @@ public class yi {
             g(this, "EOF", iAh, null, 4);
             throw null;
         }
-        byte bAp = cnf.ap(str.charAt(iAh));
+        byte bAp = HugeSyntheticPileOfHelpers.ap(str.charAt(iAh));
         if (bAp == 1) {
             return r();
         }
@@ -599,7 +599,7 @@ public class yi {
             throw null;
         }
         boolean z = false;
-        while (cnf.ap(str.charAt(iAh)) == 0) {
+        while (HugeSyntheticPileOfHelpers.ap(str.charAt(iAh)) == 0) {
             iAh++;
             if (iAh >= str.length()) {
                 ((StringBuilder) this.e).append((CharSequence) str, this.b, iAh);
@@ -634,7 +634,7 @@ public class yi {
                 StringBuilder sb = new StringBuilder("JsonReader(source='");
                 sb.append(this.f);
                 sb.append("', currentPosition=");
-                return dkz.v(sb, this.b, ')');
+                return StaticHelpers6.concatFromSb(sb, this.b, ')');
         }
     }
 
@@ -644,17 +644,17 @@ public class yi {
         RecyclerView recyclerView = ((cyv) this.c).a;
         View childAt = recyclerView.getChildAt(iZ);
         if (childAt != null) {
-            czx czxVarCs = RecyclerView.cs(childAt);
-            if (czxVarCs != null) {
-                if (czxVarCs.ah() && !czxVarCs.am()) {
+            SomeView someViewVarCs = RecyclerView.cs(childAt);
+            if (someViewVarCs != null) {
+                if (someViewVarCs.ah() && !someViewVarCs.am()) {
                     StringBuilder sb = new StringBuilder("called detach on an already detached child ");
-                    sb.append(czxVarCs);
+                    sb.append(someViewVarCs);
                     throw new IllegalArgumentException(yg.i(recyclerView, sb));
                 }
                 if (RecyclerView.b) {
-                    Log.d("RecyclerView", "tmpDetach " + czxVarCs);
+                    Log.d("RecyclerView", "tmpDetach " + someViewVarCs);
                 }
-                czxVarCs.w(256);
+                someViewVarCs.w(256);
             }
         } else if (RecyclerView.a) {
             StringBuilder sb2 = new StringBuilder("No view at offset ");

@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bzw extends r {
+public final class bzw extends AbstractReadOnlyCollection {
     public final /* synthetic */ bzx b;
 
     public bzw(bzx bzxVar) {
@@ -43,6 +43,6 @@ public final class bzw extends r {
 
     @Override // java.util.Collection, java.lang.Iterable
     public final Iterator iterator() {
-        return new elf(new dpu(aaz.a(new IntRange(0, a() - 1, 1)), new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(this, 6), 1));
+        return new elf(new dpu(StaticHelpers5.a(new IntRange(0, a() - 1, 1)), new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(this, 6), 1));
     }
 }

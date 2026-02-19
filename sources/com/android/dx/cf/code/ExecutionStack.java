@@ -5,7 +5,7 @@ import com.android.dx.rop.type.TypeBearer;
 import com.android.dx.util.Hex;
 import com.android.dx.util.MutabilityControl;
 import me.hd.wauxv.obf.axc;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -34,7 +34,7 @@ public final class ExecutionStack extends MutabilityControl {
         int i = this.stackPtr - 1;
         int i2 = 0;
         while (i2 <= i) {
-            StringBuilder sbZ = dkz.z("stack[", i2 == i ? "top0" : Hex.u2(i - i2), "]: ");
+            StringBuilder sbZ = StaticHelpers6.concatAndToSb("stack[", i2 == i ? "top0" : Hex.u2(i - i2), "]: ");
             sbZ.append(stackElementString(this.stack[i2]));
             axcVar.addContext(sbZ.toString());
             i2++;

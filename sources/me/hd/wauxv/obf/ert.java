@@ -19,7 +19,7 @@ public final class ert {
         int i = this.d;
         View view = this.a;
         int top = i - (view.getTop() - this.b);
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         view.offsetTopAndBottom(top);
         view.offsetLeftAndRight(0 - (view.getLeft() - this.c));
     }

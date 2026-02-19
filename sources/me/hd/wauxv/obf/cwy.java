@@ -27,9 +27,9 @@ public final class cwy extends SwitchHook implements bnn {
 
     @Override // me.hd.wauxv.obf.bnn
     public final List j() {
-        return !z() ? EmptyReadonlyList.a
+        return !z() ? EmptyReadonlyList.INSTANCE
                 : dqc.toSingletonList(new bly(R.id.MenuItem_Home_QuickKill, "快捷终止" /* "快捷终止" /* "快捷终止" /* "快捷终止" /* cnb.z(-513201347230506L)   */,
-                        R.drawable.ic_menu_kill_24dp, new cfh(20)));
+                        R.drawable.ic_menu_kill_24dp, new Function1$VarIsInt$2(20)));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

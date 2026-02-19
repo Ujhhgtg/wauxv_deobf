@@ -13,21 +13,21 @@ public final class dad extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        aki akiVarAb = csb.ab(this, dqc.toSingletonList(emn.bb(dac.a)));
+        aki akiVarAb = PackageParam.ab(this, dqc.toSingletonList(StaticHelpers7.bb(dac.a)));
         cvc cvcVar = new cvc(16);
         dad dadVar = a;
         dadVar.x(akiVarAb, cvcVar);
         akiVarAb.o();
         cma.a.getClass();
-        Class declaringClass = emn.ba(clz.a).getDeclaringClass();
+        Class declaringClass = StaticHelpers7.ba(clz.a).getDeclaringClass();
         cls.a.getClass();
-        for (Class cls : OtherStaticHelpers.argsToList(declaringClass, emn.ba(clr.a).getDeclaringClass())) {
+        for (Class cls : OtherStaticHelpers.argsToList(declaringClass, StaticHelpers7.ba(clr.a).getDeclaringClass())) {
             int i2 = 0;
-            cde cdeVarT = dqc.bi(cls).t();
-            cdeVarT.ab = "onGYNetEnd" /* "onGYNetEnd" /* "onGYNetEnd" /* cnb.z(-540848051714858L)  */;
-            aki akiVarAd = dadVar.ad((MethodHookWrapper) dkz
-                    .n(new Object[] { dal.b(Integer.TYPE), dal.b(String.class), dal.b(JSONObject.class) }, 3, cdeVarT),
-                    exg.a);
+            MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(cls).getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT.name = "onGYNetEnd" /* "onGYNetEnd" /* "onGYNetEnd" /* cnb.z(-540848051714858L)  */;
+            aki akiVarAd = dadVar.ad((MethodHookWrapper) StaticHelpers6
+                    .n(new Object[] { dal.b(Integer.TYPE), dal.b(String.class), dal.b(JSONObject.class) }, 3, methodResolverVarT),
+                    HookPriorityEnum.ENUM_DEFAULT);
             dadVar.y(akiVarAd, new cvc(17));
             akiVarAd.o();
         }
@@ -45,7 +45,7 @@ public final class dad extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(dac.a, dexKitBridge, new cvc(18));
+        StaticHelpers7.resolveDexAndCache(dac.a, dexKitBridge, new cvc(18));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

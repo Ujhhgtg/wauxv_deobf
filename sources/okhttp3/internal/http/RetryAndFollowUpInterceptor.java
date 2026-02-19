@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 import javax.net.ssl.SSLHandshakeException;
 import javax.net.ssl.SSLPeerUnverifiedException;
-import me.hd.wauxv.obf.aaz;
+import me.hd.wauxv.obf.StaticHelpers5;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.EmptyReadonlyList;
 import okhttp3.HttpUrl;
@@ -197,7 +197,7 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
         RealInterceptorChain realInterceptorChain = (RealInterceptorChain) chain;
         Request request$okhttp = realInterceptorChain.getRequest$okhttp();
         RealCall call$okhttp = realInterceptorChain.getCall$okhttp();
-        List listP = EmptyReadonlyList.a;
+        List listP = EmptyReadonlyList.INSTANCE;
         int i = 0;
         Response response = null;
         while (true) {
@@ -215,7 +215,7 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
                             if (!recover(e, call$okhttp, request$okhttp, !(e instanceof ConnectionShutdownException))) {
                                 throw Util.withSuppressed(e, listP);
                             }
-                            listP = aaz.p(listP, e);
+                            listP = StaticHelpers5.p(listP, e);
                             call$okhttp.exitNetworkInterceptorExchange$okhttp(true);
                             z = false;
                         }
@@ -223,7 +223,7 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
                         if (!recover(e2.getLastConnectException(), call$okhttp, request$okhttp, false)) {
                             throw Util.withSuppressed(e2.getFirstConnectException(), listP);
                         }
-                        listP = aaz.p(listP, e2.getFirstConnectException());
+                        listP = StaticHelpers5.p(listP, e2.getFirstConnectException());
                         call$okhttp.exitNetworkInterceptorExchange$okhttp(true);
                         z = false;
                     }

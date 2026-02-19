@@ -12,9 +12,9 @@ public abstract class hv {
         return activity.getOnBackInvokedDispatcher();
     }
 
-    public static OnBackInvokedCallback b(Object obj, ic icVar) {
-        Objects.requireNonNull(icVar);
-        hu huVar = new hu(icVar, 0);
+    public static OnBackInvokedCallback b(Object obj, AppCompatDelegate appCompatDelegateVar) {
+        Objects.requireNonNull(appCompatDelegateVar);
+        hu huVar = new hu(appCompatDelegateVar, 0);
         av.e(obj).registerOnBackInvokedCallback(1000000, huVar);
         return huVar;
     }

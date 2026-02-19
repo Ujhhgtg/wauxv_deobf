@@ -48,7 +48,7 @@ public final class dpn extends LinearLayout {
         int i2 = tabLayout.g;
         int i3 = tabLayout.h;
         int i4 = tabLayout.i;
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         setPaddingRelative(i, i2, i3, i4);
         setGravity(17);
         setOrientation(!tabLayout.ae ? 1 : 0);
@@ -346,7 +346,7 @@ public final class dpn extends LinearLayout {
             }
             rippleDrawable = new RippleDrawable(colorStateListG, gradientDrawable, z ? null : gradientDrawable3);
         }
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         setBackground(rippleDrawable);
         tabLayout.invalidate();
     }

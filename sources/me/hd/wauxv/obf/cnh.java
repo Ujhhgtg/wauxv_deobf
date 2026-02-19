@@ -104,13 +104,13 @@ public abstract class cnh {
     public static void ae(String str, Object obj, String str2) {
         kd.a.getClass();
         int i = 0;
-        cde cdeVarT = dqc.bh(emn.bb(kc.a).getDeclaringClass()).t();
-        cdeVarT.ak(cdy.c);
+        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.bb(kc.a).getDeclaringClass()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.ak(cdy.c);
         Class cls = Integer.TYPE;
-        cdeVarT.a = dal.b(cls);
-        ((MethodHookWrapper) dkz.n(new Object[] { "com.tencent.mm.opensdk.modelmsg.WXMediaMessage" /* "com.tencent.mm.opensdk.modelmsg.WXMediaMessage" /* "com.tencent.mm.opensdk.modelmsg.WXMediaMessage" /* cnb.z(-120332098730794L)  */,
+        methodResolverVarT.returnType = dal.b(cls);
+        ((MethodHookWrapper) StaticHelpers6.n(new Object[] { "com.tencent.mm.opensdk.modelmsg.WXMediaMessage" /* "com.tencent.mm.opensdk.modelmsg.WXMediaMessage" /* "com.tencent.mm.opensdk.modelmsg.WXMediaMessage" /* cnb.z(-120332098730794L)  */,
                 dal.b(String.class), dal.b(String.class), dal.b(String.class), dal.b(cls), dal.b(String.class) }, 6,
-                cdeVarT)).e(obj, str2, "" /* "" /* "" /* cnb.z(-120130235267882L)  */, str, 2, null);
+                methodResolverVarT)).e(obj, str2, "" /* "" /* "" /* cnb.z(-120130235267882L)  */, str, 2, null);
     }
 
     public static File af(File file) throws IOException {
@@ -172,7 +172,7 @@ public abstract class cnh {
             throw new IndexOutOfBoundsException(sbQ.toString());
         }
         if (i > i2) {
-            throw new IllegalArgumentException(dkz.p(i, "startIndex: ", " > endIndex: ", i2));
+            throw new IllegalArgumentException(StaticHelpers6.p(i, "startIndex: ", " > endIndex: ", i2));
         }
     }
 
@@ -189,7 +189,7 @@ public abstract class cnh {
             throw new IndexOutOfBoundsException(sbQ.toString());
         }
         if (i > i2) {
-            throw new IllegalArgumentException(dkz.p(i, "fromIndex: ", " > toIndex: ", i2));
+            throw new IllegalArgumentException(StaticHelpers6.p(i, "fromIndex: ", " > toIndex: ", i2));
         }
     }
 
@@ -325,20 +325,20 @@ public abstract class cnh {
         return number.floatValue() * context.getResources().getDisplayMetrics().density;
     }
 
-    public static String s(String str, dhx dhxVar) {
-        if (dhxVar == null) {
+    public static String s(String str, ConnectivityMonitor connectivityMonitorVar) {
+        if (connectivityMonitorVar == null) {
             return str;
         }
         StringBuilder sb = new StringBuilder();
-        Matcher matcher = ((Pattern) dhxVar.d).matcher(str);
-        int i = dhxVar.c ? Integer.MAX_VALUE : 1;
+        Matcher matcher = ((Pattern) connectivityMonitorVar.d).matcher(str);
+        int i = connectivityMonitorVar.c ? Integer.MAX_VALUE : 1;
         int i2 = 0;
         int i3 = 0;
         while (i2 < i && i3 < str.length() && matcher.find(i3)) {
             int iStart = matcher.start();
             int iEnd = matcher.end();
             sb.append((CharSequence) str, i3, iStart);
-            ArrayList<bcv> arrayList = (ArrayList) dhxVar.e;
+            ArrayList<bcv> arrayList = (ArrayList) connectivityMonitorVar.e;
             StringBuilder sb2 = new StringBuilder();
             boolean z = false;
             for (bcv bcvVar : arrayList) {
@@ -453,7 +453,7 @@ public abstract class cnh {
 
     public static void y(MethodHookWrapper methodHookWrapperVar, nh nhVar) {
         Method method;
-        if (methodHookWrapperVar == null || (method = methodHookWrapperVar.a) == null) {
+        if (methodHookWrapperVar == null || (method = methodHookWrapperVar.method) == null) {
             return;
         }
         z(method, nhVar);

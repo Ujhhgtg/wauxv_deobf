@@ -123,8 +123,8 @@ public final /* synthetic */ class epy implements IInvokable {
                 return kotlinUnitVar;
             case 4:
                 View view3 = (View) obj;
-                View viewK = dkz.k(view3, R.layout.module_dialog_voice_length, null, false);
-                Slider slider = (Slider) KotlinHelpers2.aq(viewK, R.id.moduleDialogSliderVoiceLength);
+                View viewK = StaticHelpers6.k(view3, R.layout.module_dialog_voice_length, null, false);
+                Slider slider = (Slider) KotlinHelpers2.recursivelyFindViewById(viewK, R.id.moduleDialogSliderVoiceLength);
                 if (slider == null) {
                     throw new NullPointerException(
                             "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-660016214309674L)  */.concat(
@@ -158,10 +158,10 @@ public final /* synthetic */ class epy implements IInvokable {
                     }
                     throwIfVar1IsNull(obj);
                     int i4 = 0;
-                    azg azgVarR = dqc.bi(obj).r();
-                    azgVarR.ab = "l" /* "l" /* "l" /* cnb.z(-500058747304746L)  */;
-                    azgVarR.a = dal.b(cls5);
-                    ((azk) aaz.e(azgVarR.c())).f(Integer.valueOf(etq.a.k() * 1000));
+                    FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
+                    fieldResolverVarR.name = "l" /* "l" /* "l" /* cnb.z(-500058747304746L)  */;
+                    fieldResolverVarR.fieldType = dal.b(cls5);
+                    ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).f(Integer.valueOf(etq.a.k() * 1000));
                 } else if (hookParam.getArgs().length == 2 && (hookParam.getArgs()[0] instanceof String)) {
                     c = 1;
                     try {
@@ -170,15 +170,15 @@ public final /* synthetic */ class epy implements IInvokable {
                             objX = null;
                         }
                     } catch (Throwable th) {
-                        objX = bhu.x(th);
+                        objX = FastKV.x(th);
                     }
                     Object obj2 = objX instanceof dcx ? null : objX;
                     throwIfVar1IsNull(obj2);
                     int i42 = 0;
-                    azg azgVarR2 = dqc.bi(obj2).r();
-                    azgVarR2.ab = "l" /* "l" /* "l" /* cnb.z(-500058747304746L)  */;
-                    azgVarR2.a = dal.b(cls5);
-                    ((azk) aaz.e(azgVarR2.c())).f(Integer.valueOf(etq.a.k() * 1000));
+                    FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj2).r();
+                    fieldResolverVarR2.name = "l" /* "l" /* "l" /* cnb.z(-500058747304746L)  */;
+                    fieldResolverVarR2.fieldType = dal.b(cls5);
+                    ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).f(Integer.valueOf(etq.a.k() * 1000));
                 }
                 return kotlinUnitVar;
             case 7:
@@ -195,17 +195,17 @@ public final /* synthetic */ class epy implements IInvokable {
             case 8:
                 List list = (List) obj;
                 Object obj3 = list.get(0);
-                Class<String> clsBf = cnf.bf(dal.b(cls2));
+                Class<String> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                 if (nullSafeIsEqual(obj3, clsBf != null ? clsBf : String.class)) {
                     Object obj4 = list.get(1);
                     cls3 = Integer.class;
-                    Class<Integer> clsBf2 = cnf.bf(dal.b(cls3));
+                    Class<Integer> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
                     if (clsBf2 == null) {
                         clsBf2 = cls3;
                     }
                     if (nullSafeIsEqual(obj4, clsBf2)) {
                         Object obj5 = list.get(2);
-                        Class<Integer> clsBf3 = cnf.bf(dal.b(cls3));
+                        Class<Integer> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
                         if (nullSafeIsEqual(obj5, clsBf3 != null ? clsBf3 : Integer.class)) {
                             z = true;
                         }
@@ -260,7 +260,7 @@ public final /* synthetic */ class epy implements IInvokable {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = bhu.x(th2);
+                    objX2 = FastKV.x(th2);
                 }
                 if (objX2 instanceof dcx) {
                     objX2 = null;
@@ -269,7 +269,7 @@ public final /* synthetic */ class epy implements IInvokable {
                 Context baseContext = ((Application) objX2).getBaseContext();
                 eui euiVar = eui.a;
                 euiVar.getClass();
-                cnf.bh(baseContext);
+                HugeSyntheticPileOfHelpers.bh(baseContext);
                 bmo bmoVar = bmo.a;
                 String str4 = exm.i;
                 bmoVar.getClass();
@@ -283,31 +283,31 @@ public final /* synthetic */ class epy implements IInvokable {
                 bmo.h.i(btcVarArr[5], baseContext.getPackageManager()
                         .getApplicationLabel(baseContext.getApplicationInfo()).toString());
                 int i5 = 0;
-                bmu bmuVarS = yg.s(-28930899704618L);
-                azg azgVarR3 = bmuVarS.r();
-                azgVarR3.ab = "VERSION_NAME" /* "VERSION_NAME" /* "VERSION_NAME" /* cnb.z(-30442728192810L)  */;
-                Object objE = ((azk) aaz.e(azgVarR3.c())).e();
+                SyntheticPileOfMess bmuVarS = yg.s(-28930899704618L);
+                FieldResolver fieldResolverVarR3 = bmuVarS.r();
+                fieldResolverVarR3.name = "VERSION_NAME" /* "VERSION_NAME" /* "VERSION_NAME" /* cnb.z(-30442728192810L)  */;
+                Object objE = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).e();
                 throwIfVar1IsNull(objE);
                 bc bcVar2 = bmo.i;
                 bcVar2.i(btcVarArr[6], (String) objE);
-                azg azgVarR4 = bmuVarS.r();
-                azgVarR4.ab = "VERSION_CODE" /* "VERSION_CODE" /* "VERSION_CODE" /* cnb.z(-30352533879594L)  */;
-                Object objE2 = ((azk) aaz.e(azgVarR4.c())).e();
+                FieldResolver fieldResolverVarR4 = bmuVarS.r();
+                fieldResolverVarR4.name = "VERSION_CODE" /* "VERSION_CODE" /* "VERSION_CODE" /* cnb.z(-30352533879594L)  */;
+                Object objE2 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).e();
                 throwIfVar1IsNull(objE2);
                 bmo.j.i(btcVarArr[7], Integer.valueOf(((Number) objE2).intValue()));
-                azg azgVarR5 = bmuVarS.r();
-                azgVarR5.ab = "CLIENT_VERSION_ARM64" /* "CLIENT_VERSION_ARM64" /* "CLIENT_VERSION_ARM64" /* cnb.z(-30279519435562L)  */;
-                Object objE3 = ((azk) aaz.e(azgVarR5.c())).e();
+                FieldResolver fieldResolverVarR5 = bmuVarS.r();
+                fieldResolverVarR5.name = "CLIENT_VERSION_ARM64" /* "CLIENT_VERSION_ARM64" /* "CLIENT_VERSION_ARM64" /* cnb.z(-30279519435562L)  */;
+                Object objE3 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR5.resolve())).e();
                 throwIfVar1IsNull(objE3);
                 bc bcVar3 = bmo.k;
                 bcVar3.i(btcVarArr[8], (String) objE3);
-                azg azgVarR6 = bmuVarS.r();
-                azgVarR6.ab = "BUILD_TAG" /* "BUILD_TAG" /* "BUILD_TAG" /* cnb.z(-30773440674602L)  */;
-                Object objE4 = ((azk) aaz.e(azgVarR6.c())).e();
+                FieldResolver fieldResolverVarR6 = bmuVarS.r();
+                fieldResolverVarR6.name = "BUILD_TAG" /* "BUILD_TAG" /* "BUILD_TAG" /* cnb.z(-30773440674602L)  */;
+                Object objE4 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR6.resolve())).e();
                 throwIfVar1IsNull(objE4);
                 bmo.l.i(btcVarArr[9],
                         Boolean.valueOf(dnj.ab((CharSequence) objE4, "_GP_" /* "_GP_" /* "_GP_" /* cnb.z(-30747670870826L)  */, false)));
-                bht bhtVar = anj.a;
+                ResourcesCompat resourcesCompatVar = anj.a;
                 ng.af(baseContext);
                 anj.g = 3;
                 anj.a = new caw(1);
@@ -337,7 +337,7 @@ public final /* synthetic */ class epy implements IInvokable {
                     bcmVar = null;
                 }
                 ckv.d = bcmVar;
-                cnf.ah = new DefaultConfig(baseContext, "WAuxiliary_config_default" /* "WAuxiliary_config_default" /* "WAuxiliary_config_default" /* cnb.z(-5665061862186L)  */);
+                HugeSyntheticPileOfHelpers.ah = new DefaultConfig(baseContext, "WAuxiliary_config_default" /* "WAuxiliary_config_default" /* "WAuxiliary_config_default" /* cnb.z(-5665061862186L)  */);
                 emc.w = new DefaultConfig(baseContext, "WAuxiliary_config_dex_desc" /* "WAuxiliary_config_dex_desc" /* "WAuxiliary_config_dex_desc" /* cnb.z(-5922759899946L)  */);
                 bhs.h = new DefaultConfig(baseContext, "WAuxiliary_config_plugin" /* "WAuxiliary_config_plugin" /* "WAuxiliary_config_plugin" /* cnb.z(-29274497088298L)  */);
                 csc cscVar = euiVar.aa;
@@ -361,8 +361,8 @@ public final /* synthetic */ class epy implements IInvokable {
                     LoaderNative.a.loaderInit((String) bcVar.h(btcVarArr[0]),
                             baseContext.getDataDir().getAbsolutePath(), bmo.r(), (String) bcVar2.h(btcVarArr[6]),
                             bmo.q(), (String) bcVar3.h(btcVarArr[8]));
-                    dov dovVar = ctf.a;
-                    cnh.g = ctf.c("Cache" /* "Cache" /* "Cache" /* cnb.z(-47098611366698L)  */);
+                    Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
+                    cnh.g = PathUtils.getModuleSubDir("Cache" /* "Cache" /* "Cache" /* cnb.z(-47098611366698L)  */);
                     String str5 = cnh.g;
                     if (str5 == null) {
                         throw new IllegalArgumentException(
@@ -377,9 +377,9 @@ public final /* synthetic */ class epy implements IInvokable {
                     }
                     if (!eui.c()) {
                         euh euhVar = new euh(3, null);
-                        cde cdeVarT = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.ui.LauncherUI" /* "com.tencent.mm.ui.LauncherUI" /* "com.tencent.mm.ui.LauncherUI" /* cnb.z(-83528523971370L)  */)).t();
-                        cdeVarT.ab = "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-83369610181418L)  */;
-                        aki akiVarAd = euiVar.ad((MethodHookWrapper) aaz.e(cdeVarT.aj()), exg.a);
+                        MethodResolver methodResolverVarT = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.ui.LauncherUI" /* "com.tencent.mm.ui.LauncherUI" /* "com.tencent.mm.ui.LauncherUI" /* cnb.z(-83528523971370L)  */)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                        methodResolverVarT.name = "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-83369610181418L)  */;
+                        aki akiVarAd = euiVar.ad((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods()), HookPriorityEnum.ENUM_DEFAULT);
                         akiVarAd.m(new bka(akiVarAd, i3, euhVar));
                         akiVarAd.o();
                     }
@@ -397,7 +397,7 @@ public final /* synthetic */ class epy implements IInvokable {
                     Activity activity = (Activity) (objE5 instanceof Activity ? objE5 : null);
                     if (activity == null) {
                         cls4 = Activity.class;
-                        Class<Activity> clsBf4 = cnf.bf(dal.b(cls4));
+                        Class<Activity> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
                         throw new IllegalStateException("HookParam instance cannot cast to "
                                 .concat((clsBf4 != null ? clsBf4 : Activity.class).getName()).toString());
                     }
@@ -406,30 +406,30 @@ public final /* synthetic */ class epy implements IInvokable {
                     ars arsVar = new ars(activity, 2);
                     eujVar.getClass();
                     int i6 = 0;
-                    cde cdeVarT2 = dqc.bi(activity).t();
-                    cdeVarT2.ab = "addTextOptionMenu" /* "addTextOptionMenu" /* "addTextOptionMenu" /* cnb.z(-57956288690986L)  */;
-                    cdeVarT2.z(Arrays.copyOf(
+                    MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(activity).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                    methodResolverVarT2.name = "addTextOptionMenu" /* "addTextOptionMenu" /* "addTextOptionMenu" /* cnb.z(-57956288690986L)  */;
+                    methodResolverVarT2.setParams(Arrays.copyOf(
                             new Object[] { dal.b(cls5), dal.b(cls2), dal.b(MenuItem.OnMenuItemClickListener.class) },
                             3));
-                    cdeVarT2.ah();
-                    ((MethodHookWrapper) aaz.e(cdeVarT2.aj())).e(Integer.valueOf(R.id.Wauxv_Entry_Item), strZ, arsVar);
+                    methodResolverVarT2.enableSuperclass();
+                    ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).e(Integer.valueOf(R.id.Wauxv_Entry_Item), strZ, arsVar);
                 }
                 return kotlinUnitVar;
             case 16:
-                emn.ax((Context) obj);
+                StaticHelpers7.ax((Context) obj);
                 return kotlinUnitVar;
             case 17:
                 Object objE6 = ((HookParam) obj).getThisObject();
                 Context context = (Context) (objE6 instanceof Context ? objE6 : null);
                 if (context == null) {
-                    Class<Context> clsBf5 = cnf.bf(dal.b(cls));
+                    Class<Context> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf5 != null ? clsBf5 : Context.class).getName()).toString());
                 }
                 int i7 = 0;
-                azg azgVarR7 = dqc.bi(context).r();
-                azgVarR7.ab = "adapter" /* "adapter" /* "adapter" /* cnb.z(-58918361365290L)  */;
-                Object objE7 = ((azk) yg.e(azgVarR7)).e();
+                FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(context).r();
+                fieldResolverVarR7.name = "adapter" /* "adapter" /* "adapter" /* cnb.z(-58918361365290L)  */;
+                Object objE7 = ((azk) yg.e(fieldResolverVarR7)).e();
                 throwIfVar1IsNull(objE7);
                 BaseAdapter baseAdapter = (BaseAdapter) objE7;
                 for (euk eukVar : eul.b) {
@@ -444,7 +444,7 @@ public final /* synthetic */ class epy implements IInvokable {
                 }
                 Context context2 = (Context) objE8;
                 if (context2 == null) {
-                    Class<Context> clsBf6 = cnf.bf(dal.b(cls));
+                    Class<Context> clsBf6 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf6 != null ? clsBf6 : Context.class).getName()).toString());
                 }
@@ -454,15 +454,15 @@ public final /* synthetic */ class epy implements IInvokable {
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = bhu.x(th3);
+                    objX3 = FastKV.x(th3);
                 }
                 Object obj7 = objX3 instanceof dcx ? null : objX3;
                 throwIfVar1IsNull(obj7);
                 int i8 = 0;
-                azg azgVarR8 = dqc.bi(obj7).r();
-                azgVarR8.a = dal.b(cls2);
-                azgVarR8.ah();
-                Iterator it = azgVarR8.c().iterator();
+                FieldResolver fieldResolverVarR8 = dqc.getWrapperConfiguration(obj7).r();
+                fieldResolverVarR8.fieldType = dal.b(cls2);
+                fieldResolverVarR8.enableSuperclass();
+                Iterator it = fieldResolverVarR8.resolve().iterator();
                 while (it.hasNext()) {
                     String str6 = (String) ((azk) it.next()).e();
                     if (str6 != null) {

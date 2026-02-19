@@ -7,7 +7,7 @@ public final class bzn extends ckn {
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public bzn(long j, bmu bmuVar, cwd cwdVar, dfx dfxVar) {
+    public bzn(long j, SyntheticPileOfMess bmuVar, cwd cwdVar, dfx dfxVar) {
         super(j, bmuVar, cwdVar, dfxVar);
         throwIfVar1IsNull(cwdVar, "proto");
         throwIfVar1IsNull(bmuVar, "parentWriter");
@@ -20,8 +20,8 @@ public final class bzn extends ckn {
         int i2 = i % 2;
         long j = this.ag;
         if (i2 == 0) {
-            return ajn.r(j).e | ((long) 1);
+            return ajn.r(j).value | ((long) 1);
         }
-        return ((long) 2) | ajn.r(j).e;
+        return ((long) 2) | ajn.r(j).value;
     }
 }

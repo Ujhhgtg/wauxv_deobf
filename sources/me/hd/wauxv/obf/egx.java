@@ -9,7 +9,7 @@ public final class egx {
 
     public /* synthetic */ egx(int i, dyi dyiVar, dsy dsyVar) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, egv.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, egv.b.getDescriptor());
             throw null;
         }
         this.a = dyiVar;

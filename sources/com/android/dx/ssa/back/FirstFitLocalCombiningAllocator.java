@@ -20,7 +20,7 @@ import java.util.BitSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -394,7 +394,7 @@ public class FirstFitLocalCombiningAllocator extends RegisterAllocator {
             int reg = result.getReg();
             BitSet predecessors = normalSsaInsn.getBlock().getPredecessors();
             if (predecessors.cardinality() == 1) {
-                SsaInsn ssaInsn = (SsaInsn) dkz.l(1, this.ssaMeth.getBlocks().get(predecessors.nextSetBit(0)).getInsns());
+                SsaInsn ssaInsn = (SsaInsn) StaticHelpers6.getLastNElem(1, this.ssaMeth.getBlocks().get(predecessors.nextSetBit(0)).getInsns());
                 if (ssaInsn.getOpcode().getOpcode() == 43) {
                     RegisterSpec registerSpec = ssaInsn.getSources().get(0);
                     int reg2 = registerSpec.getReg();

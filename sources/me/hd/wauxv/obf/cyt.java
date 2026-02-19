@@ -13,7 +13,7 @@ import net.bytebuddy.description.type.TypeDescription;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class cyt extends cyw {
-    public final bmu a;
+    public final SyntheticPileOfMess a;
     public final /* synthetic */ ea b;
 
     public cyt(ea eaVar) {
@@ -24,7 +24,7 @@ public final class cyt extends cyw {
                 throw new IllegalArgumentException("You can only use once dataSetCount or entities on RecyclerView.Adapter.");
             }
         }
-        this.a = new bmu(eaVar);
+        this.a = new SyntheticPileOfMess(eaVar);
     }
 
     public final boolean c(int i) {
@@ -67,8 +67,8 @@ public final class cyt extends cyw {
     }
 
     @Override // me.hd.wauxv.obf.cyw
-    public final void f(czx czxVar, int i) throws Throwable {
-        dab dabVar = (dab) czxVar;
+    public final void f(SomeView someViewVar, int i) throws Throwable {
+        dab dabVar = (dab) someViewVar;
         int i2 = dabVar.ao;
         final ea eaVar = this.b;
         eaVar.p();
@@ -157,7 +157,7 @@ public final class cyt extends cyw {
     }
 
     @Override // me.hd.wauxv.obf.cyw
-    public final czx g(ViewGroup viewGroup, int i) throws IllegalAccessException, cth {
+    public final SomeView g(ViewGroup viewGroup, int i) throws IllegalAccessException, cth {
         Object next;
         ea eaVar = this.b;
         LinkedHashSet linkedHashSet = (LinkedHashSet) eaVar.c;
@@ -183,9 +183,9 @@ public final class cyt extends cyw {
         ws wsVar = (ws) ioVar.d;
         ArrayList arrayList = new ArrayList();
         if (blu.c) {
-            arrayList.add(new blv(emn.an(context), 0));
+            arrayList.add(new blv(StaticHelpers7.an(context), 0));
         }
-        blu bluVar = new blu(aaz.z(arrayList));
+        blu bluVar = new blu(StaticHelpers5.z(arrayList));
         wsVar.invoke(blu.i(bluVar, cls, viewGroup, false, context));
         return new dab(bluVar, i, bluVar.k());
     }

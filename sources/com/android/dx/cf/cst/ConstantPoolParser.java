@@ -21,8 +21,8 @@ import com.android.dx.rop.type.Type;
 import com.android.dx.util.ByteArray;
 import com.android.dx.util.Hex;
 import java.util.BitSet;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -133,7 +133,7 @@ public final class ConstantPoolParser {
         ParseObserver parseObserver = this.observer;
         if (parseObserver != null) {
             parseObserver.parsed(this.bytes, 8, 2,
-                    dkz.q(this.offsets.length, new StringBuilder("constant_pool_count: ")));
+                    StaticHelpers6.q(this.offsets.length, new StringBuilder("constant_pool_count: ")));
             this.observer.parsed(this.bytes, 10, 0, "\nconstant_pool:");
             this.observer.changeIndent(1);
         }

@@ -6,8 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
-import net.bytebuddy.asm.AsmVisitorWrapper;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.field.FieldDescription;
 import net.bytebuddy.description.field.FieldList;
@@ -57,7 +56,7 @@ public class ModifierAdjustment extends AsmVisitorWrapper.AbstractBase {
         }
 
         public int hashCode() {
-            return this.resolver.hashCode() + dkz.i(this.matcher, getClass().hashCode() * 31, 31);
+            return this.resolver.hashCode() + StaticHelpers6.i(this.matcher, getClass().hashCode() * 31, 31);
         }
 
         @Override // net.bytebuddy.matcher.ElementMatcher

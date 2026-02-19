@@ -4,28 +4,28 @@ import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class buw extends ahj implements als {
+public final class buw extends Dispatcher implements als {
     public static final /* synthetic */ AtomicIntegerFieldUpdater f = AtomicIntegerFieldUpdater.newUpdater(buw.class, "runningWorkers$volatile");
     public final /* synthetic */ als g;
-    public final ahj l;
+    public final Dispatcher l;
     public final int m;
     public final bxm n;
     public final Object o;
     private volatile /* synthetic */ int runningWorkers$volatile;
 
     /* JADX WARN: Multi-variable type inference failed */
-    public buw(ahj ahjVar, int i) {
-        als alsVar = ahjVar instanceof als ? (als) ahjVar : null;
+    public buw(Dispatcher dispatcherVar, int i) {
+        als alsVar = dispatcherVar instanceof als ? (als) dispatcherVar : null;
         this.g = alsVar == null ? akl.a : alsVar;
-        this.l = ahjVar;
+        this.l = dispatcherVar;
         this.m = i;
         this.n = new bxm();
         this.o = new Object();
     }
 
     @Override // me.hd.wauxv.obf.als
-    public final void _av(long j, tc tcVar) {
-        this.g._av(j, tcVar);
+    public final void _av(long j, CancellableContinuation cancellableContinuationVar) {
+        this.g._av(j, cancellableContinuationVar);
     }
 
     @Override // me.hd.wauxv.obf.ahj
@@ -43,7 +43,7 @@ public final class buw extends ahj implements als {
                     return;
                 }
                 try {
-                    cnf.bl(this.l, this, new cs(this, 8, runnableP));
+                    HugeSyntheticPileOfHelpers.bl(this.l, this, new cs(this, 8, runnableP));
                 } catch (Throwable th) {
                     f.decrementAndGet(this);
                     throw th;
@@ -74,6 +74,6 @@ public final class buw extends ahj implements als {
         StringBuilder sb = new StringBuilder();
         sb.append(this.l);
         sb.append(".limitedParallelism(");
-        return dkz.v(sb, this.m, ')');
+        return StaticHelpers6.concatFromSb(sb, this.m, ')');
     }
 }

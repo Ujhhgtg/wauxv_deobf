@@ -40,9 +40,9 @@ public final class bcu extends SwitchHook implements bnc {
     public final void i(View view, Object obj, Object obj2, MsgInfoBean msgInfoBean) {
         if (getIsEnabled()) {
             int i = 0;
-            azg azgVarR = dqc.bi(obj).r();
-            azgVarR.ab = "timeTV" /* "timeTV" /* "timeTV" /* cnb.z(-462086941440810L)  */;
-            TextView textView = (TextView) ((azk) yg.e(azgVarR)).e();
+            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
+            fieldResolverVarR.name = "timeTV" /* "timeTV" /* "timeTV" /* cnb.z(-462086941440810L)  */;
+            TextView textView = (TextView) ((azk) yg.e(fieldResolverVarR)).e();
             int iK = bcs.a.k();
             if (iK == bcr.a.e) {
                 if (textView != null) {

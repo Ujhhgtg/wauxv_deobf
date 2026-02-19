@@ -46,7 +46,7 @@ public final class efz {
             dte dteVar, eiz eizVar, Long l4, eju ejuVar, dte dteVar2, efj efjVar, Integer num6, List list, String str7,
             dvu dvuVar, egx egxVar, ecv ecvVar, Integer num7, String str8, ehy ehyVar) {
         if (1073741823 != (i & 1073741823)) {
-            bht.ah(i, 1073741823, efx.b.getDescriptor());
+            ResourcesCompat.ah(i, 1073741823, efx.b.getDescriptor());
             throw null;
         }
         this.b = l;
@@ -172,27 +172,27 @@ public final class efz {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("uq0Proto(eventTopicId=" /* "uq0Proto(eventTopicId=" /* "uq0Proto(eventTopicId=" /* "uq0Proto(eventTopicId=" /* cnb.z(-311080186280746L)   */);
-        dkz.ad(sb, this.b, -310981402032938L);
+        StaticHelpers6.ad(sb, this.b, -310981402032938L);
         sb.append(this.c);
         sb.append(", eventName=" /* ", eventName=" /* ", eventName=" /* ", eventName=" /* cnb.z(-310951337261866L)   */);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.d, -310328567003946L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.e, -310246962625322L);
         bjs.w(sb, this.f, -310195423017770L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.g, -310130998508330L);
-        dkz.ad(sb, this.h, -310551905303338L);
+        StaticHelpers6.ad(sb, this.h, -310551905303338L);
         bjs.w(sb, this.i, -310530430466858L);
         bjs.w(sb, this.j, -310466005957418L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.k, -310435941186346L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.l, -310350041840426L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.m, -311926294838058L);
         bjs.w(sb, this.n, -311904820001578L);
-        dkz.ad(sb, this.o, -311823215622954L);
+        StaticHelpers6.ad(sb, this.o, -311823215622954L);
         bjs.w(sb, this.p, -311763086080810L);
         sb.append(this.q);
         sb.append(", hashTagInfo=" /* ", hashTagInfo=" /* ", hashTagInfo=" /* ", hashTagInfo=" /* cnb.z(-311745906211626L)   */);
         sb.append(this.r);
         sb.append(", displayMask=" /* ", displayMask=" /* ", displayMask=" /* ", displayMask=" /* cnb.z(-312214057646890L)   */);
-        dkz.ad(sb, this.s, -312149633137450L);
+        StaticHelpers6.ad(sb, this.s, -312149633137450L);
         sb.append(this.t);
         sb.append(", descJumpInfo=" /* ", descJumpInfo=" /* ", descJumpInfo=" /* ", descJumpInfo=" /* cnb.z(-312068028758826L)   */);
         sb.append(this.u);

@@ -20,7 +20,7 @@ public final class drz {
     public /* synthetic */ drz(int i, Integer num, String str, Integer num2, String str2, String str3, String str4,
             dso dsoVar, String str5, dsc dscVar, dsi dsiVar, dsl dslVar, dsl dslVar2) {
         if (4095 != (i & 4095)) {
-            bht.ah(i, 4095, drx.b.getDescriptor());
+            ResourcesCompat.ah(i, 4095, drx.b.getDescriptor());
             throw null;
         }
         this.a = num;

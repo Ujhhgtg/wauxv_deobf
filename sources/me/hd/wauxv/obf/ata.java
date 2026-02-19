@@ -4,7 +4,7 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class ata {
     public final atf a;
-    public volatile jx b;
+    public volatile FactoryPools b;
     public volatile chm c;
 
     public ata(atf atfVar) {

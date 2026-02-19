@@ -10,7 +10,7 @@ public final class efg {
         if (1 == (i & 1)) {
             this.a = num;
         } else {
-            bht.ah(i, 1, efe.b.getDescriptor());
+            ResourcesCompat.ah(i, 1, efe.b.getDescriptor());
             throw null;
         }
     }

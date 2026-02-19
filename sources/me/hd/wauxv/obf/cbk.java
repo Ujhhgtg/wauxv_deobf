@@ -76,7 +76,7 @@ public final /* synthetic */ class cbk implements bgj {
                     }
                 }
                 if (!arrayList.isEmpty()) {
-                    String strK = aaz.k(arrayList, "\n" /* "\n" /* "\n" /* "\n" /* cnb.z(-512393893378858L)   */, null, null, null, 62);
+                    String strK = StaticHelpers5.k(arrayList, "\n" /* "\n" /* "\n" /* "\n" /* cnb.z(-512393893378858L)   */, null, null, null, 62);
                     Intent intent = new Intent();
                     intent.setClassName(context, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /*
                                                                                              * "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-95086280964906L)  */
@@ -117,7 +117,7 @@ public final /* synthetic */ class cbk implements bgj {
                     }
                 }
                 if (!arrayList3.isEmpty()) {
-                    String strK2 = aaz.k(arrayList2, "\n" /* "\n" /* "\n" /* "\n" /* cnb.z(-512402483313450L)   */, null, null, null, 62);
+                    String strK2 = StaticHelpers5.k(arrayList2, "\n" /* "\n" /* "\n" /* "\n" /* cnb.z(-512402483313450L)   */, null, null, null, 62);
                     ArrayList<String> arrayList4 = new ArrayList<>(arrayList3);
                     Intent intent2 = new Intent();
                     intent2.setClassName(context2, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /*
@@ -152,13 +152,13 @@ public final /* synthetic */ class cbk implements bgj {
                     }
                 }
                 if (!arrayList6.isEmpty()) {
-                    String strK3 = aaz.k(arrayList5, "\n" /* "\n" /* "\n" /* "\n" /* cnb.z(-512892109585194L)   */, null, null, null, 62);
+                    String strK3 = StaticHelpers5.k(arrayList5, "\n" /* "\n" /* "\n" /* "\n" /* cnb.z(-512892109585194L)   */, null, null, null, 62);
                     eqb eqbVar = eqb.a;
-                    String str2 = (String) aaz.l(arrayList6);
+                    String str2 = (String) StaticHelpers5.l(arrayList6);
                     eqbVar.getClass();
                     String strB3 = eqb.b(str2);
-                    String str3 = (String) aaz.l(arrayList6);
-                    Method methodBb = emn.bb(epz.a);
+                    String str3 = (String) StaticHelpers5.l(arrayList6);
+                    Method methodBb = StaticHelpers7.bb(epz.a);
                     epx.a.getClass();
                     Object objInvoke = methodBb.invoke(epx.b(), str3);
                     throwIfVar1IsNull(objInvoke,
@@ -191,7 +191,7 @@ public final /* synthetic */ class cbk implements bgj {
                     String strZ = "你撤回了一条消息" /* "你撤回了一条消息" /* "你撤回了一条消息" /* "你撤回了一条消息" /* cnb.z(-133358734539562L)   */;
                     cmkVar.getClass();
                     cgy.a.getClass();
-                    cme.b(cme.a, emn.ba(cmj.a).newInstance(cgy.b(msgId), strZ, "" /* "" /* "" /* "" /* cnb.z(-133414569114410L)   */));
+                    cme.b(cme.a, StaticHelpers7.ba(cmj.a).newInstance(cgy.b(msgId), strZ, "" /* "" /* "" /* "" /* cnb.z(-133414569114410L)   */));
                 }
                 return kotlinUnitVar;
             case 11:
@@ -230,9 +230,9 @@ public final /* synthetic */ class cbk implements bgj {
                 return kotlinUnitVar;
             case 12:
                 int i4 = 0;
-                cde cdeVarT = dqc.bi(obj).t();
-                cdeVarT.a = dal.b(Activity.class);
-                Object objJ = ((MethodHookWrapper) aaz.e(cdeVarT.aj())).j(new Object[0]);
+                MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT.returnType = dal.b(Activity.class);
+                Object objJ = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).j(new Object[0]);
                 throwIfVar1IsNull(objJ);
                 Activity activity = (Activity) objJ;
                 String content5 = ((MsgInfoBean) obj2).getContent();
@@ -245,9 +245,9 @@ public final /* synthetic */ class cbk implements bgj {
                 return kotlinUnitVar;
             case 13:
                 int i5 = 0;
-                cde cdeVarT2 = dqc.bi(obj).t();
-                cdeVarT2.a = dal.b(Activity.class);
-                Object objJ2 = ((MethodHookWrapper) aaz.e(cdeVarT2.aj())).j(new Object[0]);
+                MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT2.returnType = dal.b(Activity.class);
+                Object objJ2 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).j(new Object[0]);
                 throwIfVar1IsNull(objJ2);
                 Activity activity2 = (Activity) objJ2;
                 bop bopVar2 = bop.a;
@@ -264,16 +264,16 @@ public final /* synthetic */ class cbk implements bgj {
                 return kotlinUnitVar;
             case 14:
                 int i6 = 0;
-                cde cdeVarT3 = dqc.bi(obj).t();
-                cdeVarT3.a = dal.b(Activity.class);
-                Object objJ3 = ((MethodHookWrapper) aaz.e(cdeVarT3.aj())).j(new Object[0]);
+                MethodResolver methodResolverVarT3 = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT3.returnType = dal.b(Activity.class);
+                Object objJ3 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT3.findMethods())).j(new Object[0]);
                 throwIfVar1IsNull(objJ3);
                 Activity activity3 = (Activity) objJ3;
                 String imgPath3 = ((MsgInfoBean) obj2).getImgPath();
                 throwIfVar1IsNull(imgPath3);
                 eqb.a.getClass();
                 String strB4 = eqb.b(imgPath3);
-                Method methodBb2 = emn.bb(epz.a);
+                Method methodBb2 = StaticHelpers7.bb(epz.a);
                 epx.a.getClass();
                 Object objInvoke2 = methodBb2.invoke(epx.b(), imgPath3);
                 throwIfVar1IsNull(objInvoke2, "null cannot be cast to non-null type kotlin.String" /*

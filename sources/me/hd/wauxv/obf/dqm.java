@@ -34,7 +34,7 @@ public final class dqm implements TextWatcher {
         int i = this.a;
         if (lineCount != i) {
             if (lineCount < i) {
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 int minimumHeight = editText.getMinimumHeight();
                 int i2 = textInputLayout.br;
                 if (minimumHeight != i2) {

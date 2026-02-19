@@ -101,9 +101,9 @@ public final class alj extends dlq {
         DefaultConfig ioVarJ = alhVar.j(context);
         this.d = ioVarJ != null ? (AnimatorSet) ioVarJ.d : null;
         dlr dlrVar = (dlr) alhVar.g;
-        bdj bdjVar = dlrVar.c;
+        SomeFragmentManager someFragmentManagerVar = dlrVar.c;
         boolean z = dlrVar.a == 3;
-        View view = bdjVar.bz;
+        View view = someFragmentManagerVar.bz;
         viewGroup.startViewTransition(view);
         AnimatorSet animatorSet = this.d;
         if (animatorSet != null) {

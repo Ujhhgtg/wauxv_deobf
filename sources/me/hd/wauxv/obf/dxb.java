@@ -9,7 +9,7 @@ public final class dxb {
 
     public /* synthetic */ dxb(int i, String str, Long l) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, dwz.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, dwz.b.getDescriptor());
             throw null;
         }
         this.a = str;

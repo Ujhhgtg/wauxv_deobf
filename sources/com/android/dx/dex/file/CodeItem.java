@@ -12,7 +12,7 @@ import com.android.dx.util.Hex;
 import java.io.PrintWriter;
 import java.util.Iterator;
 import me.hd.wauxv.obf.axc;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -175,7 +175,7 @@ public final class CodeItem extends OffsettedItem {
             annotatedOutput.annotate(2, "  outs_size:      " + Hex.u2(outsSize));
             annotatedOutput.annotate(2, "  tries_size:     " + Hex.u2(iTriesSize));
             annotatedOutput.annotate(4, "  debug_off:      " + Hex.u4(absoluteOffset));
-            dkz.ab(iCodeSize, new StringBuilder("  insns_size:     "), annotatedOutput, 4);
+            StaticHelpers6.ab(iCodeSize, new StringBuilder("  insns_size:     "), annotatedOutput, 4);
             if (this.throwsList.size() != 0) {
                 annotatedOutput.annotate(0, "  throws " + StdTypeList.toHuman(this.throwsList));
             }

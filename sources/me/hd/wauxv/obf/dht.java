@@ -36,12 +36,12 @@ public final class dht implements dbs, dic {
     public final cbm u;
     public final hn v;
     public dcg w;
-    public jx x;
+    public FactoryPools x;
     public long y;
     public volatile awd z;
 
     public dht(Context context, bhw bhwVar, Object obj, Object obj2, Class cls, nj njVar, int i, int i2, cvq cvqVar, dpw dpwVar, ArrayList arrayList, dbw dbwVar, awd awdVar, cbm cbmVar) {
-        hn hnVar = emn.z;
+        hn hnVar = StaticHelpers7.z;
         this.b = a ? String.valueOf(hashCode()) : null;
         this.c = new dmn();
         this.d = obj;
@@ -59,7 +59,7 @@ public final class dht implements dbs, dic {
         this.u = cbmVar;
         this.v = hnVar;
         this.ah = 1;
-        if (this.ag == null && bhwVar.i.a.containsKey(bht.class)) {
+        if (this.ag == null && bhwVar.i.a.containsKey(ResourcesCompat.class)) {
             this.ag = new RuntimeException("Glide request origin trace");
         }
     }
@@ -70,10 +70,10 @@ public final class dht implements dbs, dic {
         }
         this.c.b();
         this.s.k(this);
-        jx jxVar = this.x;
-        if (jxVar != null) {
-            synchronized (((awd) jxVar.h)) {
-                ((awh) jxVar.e).ad((dht) jxVar.f);
+        FactoryPools factoryPoolsVar = this.x;
+        if (factoryPoolsVar != null) {
+            synchronized (((awd) factoryPoolsVar.h)) {
+                ((awh) factoryPoolsVar.e).ad((dht) factoryPoolsVar.f);
             }
             this.x = null;
         }

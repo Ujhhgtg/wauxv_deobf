@@ -32,10 +32,10 @@ public final class hw implements Window.Callback {
     public boolean b;
     public boolean c;
     public boolean d;
-    public final /* synthetic */ ic e;
+    public final /* synthetic */ AppCompatDelegate e;
 
-    public hw(ic icVar, Window.Callback callback) {
-        this.e = icVar;
+    public hw(AppCompatDelegate appCompatDelegateVar, Window.Callback callback) {
+        this.e = appCompatDelegateVar;
         if (callback == null) {
             throw new IllegalArgumentException("Window callback may not be null");
         }
@@ -67,21 +67,21 @@ public final class hw implements Window.Callback {
         boolean zPerformShortcut;
         if (!this.a.dispatchKeyShortcutEvent(keyEvent)) {
             int keyCode = keyEvent.getKeyCode();
-            ic icVar = this.e;
-            icVar.cj();
-            eut eutVar = icVar.ab;
+            AppCompatDelegate appCompatDelegateVar = this.e;
+            appCompatDelegateVar.cj();
+            eut eutVar = appCompatDelegateVar.ab;
             if (eutVar == null) {
-                ibVar = icVar.az;
-                if (ibVar == null && icVar.co(ibVar, keyEvent.getKeyCode(), keyEvent)) {
-                    ib ibVar2 = icVar.az;
+                ibVar = appCompatDelegateVar.az;
+                if (ibVar == null && appCompatDelegateVar.co(ibVar, keyEvent.getKeyCode(), keyEvent)) {
+                    ib ibVar2 = appCompatDelegateVar.az;
                     if (ibVar2 != null) {
                         ibVar2.l = true;
                     }
                 } else {
-                    if (icVar.az == null) {
-                        ib ibVarCi = icVar.ci(0);
-                        icVar.cp(ibVarCi, keyEvent);
-                        zCo = icVar.co(ibVarCi, keyEvent.getKeyCode(), keyEvent);
+                    if (appCompatDelegateVar.az == null) {
+                        ib ibVarCi = appCompatDelegateVar.ci(0);
+                        appCompatDelegateVar.cp(ibVarCi, keyEvent);
+                        zCo = appCompatDelegateVar.co(ibVarCi, keyEvent.getKeyCode(), keyEvent);
                         ibVarCi.k = false;
                         if (zCo) {
                         }
@@ -100,12 +100,12 @@ public final class hw implements Window.Callback {
                 if (zPerformShortcut) {
                     z = true;
                 } else {
-                    ibVar = icVar.az;
+                    ibVar = appCompatDelegateVar.az;
                     if (ibVar == null) {
-                        if (icVar.az == null) {
-                            ib ibVarCi2 = icVar.ci(0);
-                            icVar.cp(ibVarCi2, keyEvent);
-                            zCo = icVar.co(ibVarCi2, keyEvent.getKeyCode(), keyEvent);
+                        if (appCompatDelegateVar.az == null) {
+                            ib ibVarCi2 = appCompatDelegateVar.ci(0);
+                            appCompatDelegateVar.cp(ibVarCi2, keyEvent);
+                            zCo = appCompatDelegateVar.co(ibVarCi2, keyEvent.getKeyCode(), keyEvent);
                             ibVarCi2.k = false;
                             if (zCo) {
                                 z = true;
@@ -113,10 +113,10 @@ public final class hw implements Window.Callback {
                         }
                         z = false;
                     } else {
-                        if (icVar.az == null) {
-                            ib ibVarCi22 = icVar.ci(0);
-                            icVar.cp(ibVarCi22, keyEvent);
-                            zCo = icVar.co(ibVarCi22, keyEvent.getKeyCode(), keyEvent);
+                        if (appCompatDelegateVar.az == null) {
+                            ib ibVarCi22 = appCompatDelegateVar.ci(0);
+                            appCompatDelegateVar.cp(ibVarCi22, keyEvent);
+                            zCo = appCompatDelegateVar.co(ibVarCi22, keyEvent.getKeyCode(), keyEvent);
                             ibVarCi22.k = false;
                             if (zCo) {
                                 z = true;
@@ -218,9 +218,9 @@ public final class hw implements Window.Callback {
     public final boolean onMenuOpened(int i, Menu menu) {
         g(i, menu);
         if (i == 108) {
-            ic icVar = this.e;
-            icVar.cj();
-            eut eutVar = icVar.ab;
+            AppCompatDelegate appCompatDelegateVar = this.e;
+            appCompatDelegateVar.cj();
+            eut eutVar = appCompatDelegateVar.ab;
             if (eutVar != null) {
                 ArrayList arrayList = eutVar.bb;
                 if (true != eutVar.ba) {
@@ -242,20 +242,20 @@ public final class hw implements Window.Callback {
             return;
         }
         h(i, menu);
-        ic icVar = this.e;
+        AppCompatDelegate appCompatDelegateVar = this.e;
         if (i != 108) {
             if (i == 0) {
-                ib ibVarCi = icVar.ci(i);
+                ib ibVarCi = appCompatDelegateVar.ci(i);
                 if (ibVarCi.m) {
-                    icVar.cc(ibVarCi, false);
+                    appCompatDelegateVar.cc(ibVarCi, false);
                     return;
                 }
                 return;
             }
             return;
         }
-        icVar.cj();
-        eut eutVar = icVar.ab;
+        appCompatDelegateVar.cj();
+        eut eutVar = appCompatDelegateVar.ab;
         if (eutVar != null) {
             ArrayList arrayList = eutVar.bb;
             if (eutVar.ba) {
@@ -321,21 +321,21 @@ public final class hw implements Window.Callback {
         if (i != 0) {
             return euo.b(this.a, callback, i);
         }
-        ic icVar = this.e;
-        Context context = icVar.x;
+        AppCompatDelegate appCompatDelegateVar = this.e;
+        Context context = appCompatDelegateVar.x;
         chm chmVar = new chm();
         chmVar.e = context;
         chmVar.d = callback;
         chmVar.c = new ArrayList();
         boolean z = false;
         chmVar.f = new dhq(0);
-        da daVar = icVar.ah;
+        da daVar = appCompatDelegateVar.ah;
         if (daVar != null) {
             daVar.c();
         }
-        DefaultConfig ioVar = new DefaultConfig(icVar, chmVar, 3, z);
-        icVar.cj();
-        eut eutVar = icVar.ab;
+        DefaultConfig ioVar = new DefaultConfig(appCompatDelegateVar, chmVar, 3, z);
+        appCompatDelegateVar.cj();
+        eut eutVar = appCompatDelegateVar.ab;
         int i2 = 1;
         if (eutVar != null) {
             eus eusVar = eutVar.ax;
@@ -358,23 +358,23 @@ public final class hw implements Window.Callback {
                 } else {
                     eusVar2 = null;
                 }
-                icVar.ah = eusVar2;
+                appCompatDelegateVar.ah = eusVar2;
             } catch (Throwable th) {
                 cbwVar.au();
                 throw th;
             }
         }
-        if (icVar.ah == null) {
-            esg esgVar = icVar.al;
+        if (appCompatDelegateVar.ah == null) {
+            esg esgVar = appCompatDelegateVar.al;
             if (esgVar != null) {
                 esgVar.c();
             }
-            da daVar2 = icVar.ah;
+            da daVar2 = appCompatDelegateVar.ah;
             if (daVar2 != null) {
                 daVar2.c();
             }
-            if (icVar.ai == null) {
-                if (icVar.av) {
+            if (appCompatDelegateVar.ai == null) {
+                if (appCompatDelegateVar.av) {
                     TypedValue typedValue = new TypedValue();
                     Resources.Theme theme = context.getTheme();
                     theme.resolveAttribute(R.attr.actionBarTheme, typedValue, true);
@@ -386,38 +386,38 @@ public final class hw implements Window.Callback {
                         afvVar.getTheme().setTo(themeNewTheme);
                         context = afvVar;
                     }
-                    icVar.ai = new ActionBarContextView(context, null);
+                    appCompatDelegateVar.ai = new ActionBarContextView(context, null);
                     PopupWindow popupWindow = new PopupWindow(context, (AttributeSet) null, R.attr.actionModePopupWindowStyle);
-                    icVar.aj = popupWindow;
+                    appCompatDelegateVar.aj = popupWindow;
                     popupWindow.setWindowLayoutType(2);
-                    icVar.aj.setContentView(icVar.ai);
-                    icVar.aj.setWidth(-1);
+                    appCompatDelegateVar.aj.setContentView(appCompatDelegateVar.ai);
+                    appCompatDelegateVar.aj.setWidth(-1);
                     context.getTheme().resolveAttribute(R.attr.actionBarSize, typedValue, true);
-                    icVar.ai.setContentHeight(TypedValue.complexToDimensionPixelSize(typedValue.data, context.getResources().getDisplayMetrics()));
-                    icVar.aj.setHeight(-2);
-                    icVar.ak = new hp(icVar, i2);
+                    appCompatDelegateVar.ai.setContentHeight(TypedValue.complexToDimensionPixelSize(typedValue.data, context.getResources().getDisplayMetrics()));
+                    appCompatDelegateVar.aj.setHeight(-2);
+                    appCompatDelegateVar.ak = new hp(appCompatDelegateVar, i2);
                 } else {
-                    ViewStubCompat viewStubCompat = (ViewStubCompat) icVar.an.findViewById(R.id.action_mode_bar_stub);
+                    ViewStubCompat viewStubCompat = (ViewStubCompat) appCompatDelegateVar.an.findViewById(R.id.action_mode_bar_stub);
                     if (viewStubCompat != null) {
-                        icVar.cj();
-                        eut eutVar2 = icVar.ab;
+                        appCompatDelegateVar.cj();
+                        eut eutVar2 = appCompatDelegateVar.ab;
                         Context contextBo = eutVar2 != null ? eutVar2.bo() : null;
                         if (contextBo != null) {
                             context = contextBo;
                         }
                         viewStubCompat.setLayoutInflater(LayoutInflater.from(context));
-                        icVar.ai = (ActionBarContextView) viewStubCompat.e();
+                        appCompatDelegateVar.ai = (ActionBarContextView) viewStubCompat.e();
                     }
                 }
             }
-            if (icVar.ai != null) {
-                esg esgVar2 = icVar.al;
+            if (appCompatDelegateVar.ai != null) {
+                esg esgVar2 = appCompatDelegateVar.al;
                 if (esgVar2 != null) {
                     esgVar2.c();
                 }
-                icVar.ai.aa();
-                Context context2 = icVar.ai.getContext();
-                ActionBarContextView actionBarContextView = icVar.ai;
+                appCompatDelegateVar.ai.aa();
+                Context context2 = appCompatDelegateVar.ai.getContext();
+                ActionBarContextView actionBarContextView = appCompatDelegateVar.ai;
                 dme dmeVar = new dme();
                 dmeVar.q = context2;
                 dmeVar.r = actionBarContextView;
@@ -428,35 +428,35 @@ public final class hw implements Window.Callback {
                 cbwVar2.f = dmeVar;
                 if (chmVar.an(dmeVar, cbwVar2)) {
                     dmeVar.i();
-                    icVar.ai.y(dmeVar);
-                    icVar.ah = dmeVar;
-                    if (icVar.am && (viewGroup = icVar.an) != null && viewGroup.isLaidOut()) {
-                        icVar.ai.setAlpha(0.0f);
-                        esg esgVarG = eqz.g(icVar.ai);
+                    appCompatDelegateVar.ai.y(dmeVar);
+                    appCompatDelegateVar.ah = dmeVar;
+                    if (appCompatDelegateVar.am && (viewGroup = appCompatDelegateVar.an) != null && viewGroup.isLaidOut()) {
+                        appCompatDelegateVar.ai.setAlpha(0.0f);
+                        esg esgVarG = ViewCompat.getOrCreateAnimationHelper(appCompatDelegateVar.ai);
                         esgVarG.b(1.0f);
-                        icVar.al = esgVarG;
-                        esgVarG.e(new hr(icVar, i2));
+                        appCompatDelegateVar.al = esgVarG;
+                        esgVarG.e(new hr(appCompatDelegateVar, i2));
                     } else {
-                        icVar.ai.setAlpha(1.0f);
-                        icVar.ai.setVisibility(0);
-                        if (icVar.ai.getParent() instanceof View) {
-                            View view = (View) icVar.ai.getParent();
-                            WeakHashMap weakHashMap = eqz.a;
+                        appCompatDelegateVar.ai.setAlpha(1.0f);
+                        appCompatDelegateVar.ai.setVisibility(0);
+                        if (appCompatDelegateVar.ai.getParent() instanceof View) {
+                            View view = (View) appCompatDelegateVar.ai.getParent();
+                            WeakHashMap weakHashMap = ViewCompat.a;
                             eqo.c(view);
                         }
                     }
-                    if (icVar.aj != null) {
-                        icVar.y.getDecorView().post(icVar.ak);
+                    if (appCompatDelegateVar.aj != null) {
+                        appCompatDelegateVar.y.getDecorView().post(appCompatDelegateVar.ak);
                     }
                 } else {
-                    icVar.ah = null;
+                    appCompatDelegateVar.ah = null;
                 }
             }
-            icVar.cr();
-            icVar.ah = icVar.ah;
+            appCompatDelegateVar.cr();
+            appCompatDelegateVar.ah = appCompatDelegateVar.ah;
         }
-        icVar.cr();
-        da daVar3 = icVar.ah;
+        appCompatDelegateVar.cr();
+        da daVar3 = appCompatDelegateVar.ah;
         if (daVar3 != null) {
             return chmVar.ab(daVar3);
         }

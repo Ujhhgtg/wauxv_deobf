@@ -13,7 +13,7 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 import java.util.Locale;
 import me.hd.wauxv.R;
-import me.hd.wauxv.obf.bhu;
+import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.ih;
@@ -27,9 +27,9 @@ public class TextInputEditText extends ih {
     public TextInputEditText(Context context, AttributeSet attributeSet) {
         super(cmz.aq(context, attributeSet, R.attr.editTextStyle, 0), attributeSet);
         this.a = new Rect();
-        bhu.p(context, attributeSet, R.attr.editTextStyle, R.style.Widget_Design_TextInputEditText);
+        FastKV.p(context, attributeSet, R.attr.editTextStyle, R.style.Widget_Design_TextInputEditText);
         int[] iArr = cxs.ap;
-        bhu.q(context, attributeSet, iArr, R.attr.editTextStyle, R.style.Widget_Design_TextInputEditText, new int[0]);
+        FastKV.q(context, attributeSet, iArr, R.attr.editTextStyle, R.style.Widget_Design_TextInputEditText, new int[0]);
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr, R.attr.editTextStyle, R.style.Widget_Design_TextInputEditText);
         setTextInputLayoutFocusedRectEnabled(typedArrayObtainStyledAttributes.getBoolean(0, false));
         typedArrayObtainStyledAttributes.recycle();

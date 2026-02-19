@@ -28,7 +28,7 @@ public abstract class ir {
                 afkVar.c = 3;
                 erpVar = afkVar;
             }
-            eqz.o(textView, erpVar.build());
+            ViewCompat.o(textView, erpVar.build());
             return true;
         } finally {
             textView.endBatchEdit();
@@ -47,7 +47,7 @@ public abstract class ir {
             afkVar.c = 3;
             erpVar = afkVar;
         }
-        eqz.o(view, erpVar.build());
+        ViewCompat.o(view, erpVar.build());
         return true;
     }
 }

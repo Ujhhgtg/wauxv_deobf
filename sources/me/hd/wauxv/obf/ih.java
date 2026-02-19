@@ -144,9 +144,9 @@ public class ih extends EditText implements crb {
         this.d.getClass();
         jl.o(editorInfo, inputConnectionOnCreateInputConnection, this);
         KotlinHelpers.ak(editorInfo, inputConnectionOnCreateInputConnection, this);
-        if (inputConnectionOnCreateInputConnection != null && Build.VERSION.SDK_INT <= 30 && (strArrM = eqz.m(this)) != null) {
+        if (inputConnectionOnCreateInputConnection != null && Build.VERSION.SDK_INT <= 30 && (strArrM = ViewCompat.m(this)) != null) {
             editorInfo.contentMimeTypes = strArrM;
-            inputConnectionOnCreateInputConnection = new bpn(inputConnectionOnCreateInputConnection, new qp(this, 8));
+            inputConnectionOnCreateInputConnection = new InputConnectionCompat(inputConnectionOnCreateInputConnection, new qp(this, 8));
         }
         return this.g.an(inputConnectionOnCreateInputConnection, editorInfo);
     }
@@ -165,7 +165,7 @@ public class ih extends EditText implements crb {
     public final boolean onDragEvent(DragEvent dragEvent) {
         Activity activity;
         boolean zA = false;
-        if (Build.VERSION.SDK_INT < 31 && dragEvent.getLocalState() == null && eqz.m(this) != null) {
+        if (Build.VERSION.SDK_INT < 31 && dragEvent.getLocalState() == null && ViewCompat.m(this) != null) {
             Context context = getContext();
             while (true) {
                 if (!(context instanceof ContextWrapper)) {
@@ -197,7 +197,7 @@ public class ih extends EditText implements crb {
         int i2;
         erp erpVar;
         int i3 = Build.VERSION.SDK_INT;
-        if (i3 >= 31 || eqz.m(this) == null || !(i == 16908322 || i == 16908337)) {
+        if (i3 >= 31 || ViewCompat.m(this) == null || !(i == 16908322 || i == 16908337)) {
             return super.onTextContextMenuItem(i);
         }
         ClipboardManager clipboardManager = (ClipboardManager) getContext().getSystemService("clipboard");
@@ -220,7 +220,7 @@ public class ih extends EditText implements crb {
                 i2 = 1;
             }
             afjVar.k(i2);
-            eqz.o(this, afjVar.build());
+            ViewCompat.o(this, afjVar.build());
         }
         return true;
     }

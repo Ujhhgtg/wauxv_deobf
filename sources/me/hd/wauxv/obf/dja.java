@@ -13,7 +13,7 @@ public final class dja extends SwitchHook implements boa {
 
     @Override // me.hd.wauxv.obf.boa
     public final List a() {
-        return !z() ? EmptyReadonlyList.a
+        return !z() ? EmptyReadonlyList.INSTANCE
                 : dqc.toSingletonList(new djl(R.id.MenuItem_Sns_Forward, "转发[WA]" /* "转发[WA]" /* "转发[WA]" /* cnb.z(-534517269920554L)  */, new wx(2)));
     }
 

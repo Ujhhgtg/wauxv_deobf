@@ -24,7 +24,7 @@ public final class ejx {
     public /* synthetic */ ejx(int i, String str, String str2, Double d, Integer num, List list, List list2,
             Double d2) {
         if (127 != (i & 127)) {
-            bht.ah(i, 127, ejv.b.getDescriptor());
+            ResourcesCompat.ah(i, 127, ejv.b.getDescriptor());
             throw null;
         }
         this.b = str;

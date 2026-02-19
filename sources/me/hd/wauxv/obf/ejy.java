@@ -38,7 +38,7 @@ public final class ejy {
             drz drzVar, Integer num5, duk dukVar, String str8, String str9, dut dutVar, Integer num6, duw duwVar,
             Integer num7, dtn dtnVar, duq duqVar, String str10, Boolean bool, dtk dtkVar) {
         if (268435455 != (i & 268435455)) {
-            bht.ah(i, 268435455, drw.b.getDescriptor());
+            ResourcesCompat.ah(i, 268435455, drw.b.getDescriptor());
             throw null;
         }
         this.a = str;

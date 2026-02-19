@@ -61,14 +61,14 @@ public final class ds extends bhs {
             case 1:
                 String[] strArr = (String[]) str;
                 if (strArr.length == 0) {
-                    return new bc(ave.a, 2);
+                    return new bc(EmptyReadonlyMap.INSTANCE, 2);
                 }
                 for (String str2 : strArr) {
-                    if (bht.s(hbVar, str2) != 0) {
+                    if (ResourcesCompat.s(hbVar, str2) != 0) {
                         return null;
                     }
                 }
-                int iAh = KotlinHelpers.ah(strArr.length);
+                int iAh = KotlinHelpers.calcHashMapCapacity(strArr.length);
                 if (iAh < 16) {
                     iAh = 16;
                 }
@@ -104,10 +104,10 @@ public final class ds extends bhs {
                         for (int i2 : intArrayExtra) {
                             arrayList.add(Boolean.valueOf(i2 == 0));
                         }
-                        return KotlinHelpers.as(aaz.ae(SomeStaticHelpers.o(stringArrayExtra), arrayList));
+                        return KotlinHelpers.as(StaticHelpers5.ae(SomeStaticHelpers.o(stringArrayExtra), arrayList));
                     }
                 }
-                return ave.a;
+                return EmptyReadonlyMap.INSTANCE;
             case 2:
                 return new dp(intent, i);
             default:

@@ -65,7 +65,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.asm.Advice;
 import net.bytebuddy.jar.asm.Opcodes;
@@ -3812,7 +3812,7 @@ public abstract class JSONReader implements Closeable {
             try {
                 return simpleDateFormat.parse(string2).getTime();
             } catch (ParseException unused) {
-                StringBuilder sbZ = dkz.z("parse date error, ", string2, ", expect format ");
+                StringBuilder sbZ = StaticHelpers6.concatAndToSb("parse date error, ", string2, ", expect format ");
                 sbZ.append(simpleDateFormat.toPattern());
                 throw new JSONException(sbZ.toString());
             }

@@ -13,7 +13,7 @@ public final class bpy implements bqa {
 
     @Override // me.hd.wauxv.obf.bqa
     public bpw toInstant() {
-        throw new bpx(this.a + " when parsing an Instant from \"" + bhu.bg(64, this.b) + '\"');
+        throw new bpx(this.a + " when parsing an Instant from \"" + FastKV.bg(64, this.b) + '\"');
     }
 
     public bpy(String str, String str2) {

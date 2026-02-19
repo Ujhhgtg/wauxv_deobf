@@ -13,6 +13,6 @@ public final class aup extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(auo.a, dexKitBridge, new atn(17));
+        StaticHelpers7.resolveDexAndCache(auo.a, dexKitBridge, new atn(17));
     }
 }

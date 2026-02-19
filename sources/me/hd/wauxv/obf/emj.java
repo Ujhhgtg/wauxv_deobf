@@ -24,7 +24,7 @@ public final class emj extends emi {
             if (typefaceCreate == null || typefaceCreate.equals(typefaceCreate2)) {
                 typefaceCreate = null;
             }
-            if (typefaceCreate != null && (fontG = emf.g(typefaceCreate)) != null) {
+            if (typefaceCreate != null && (fontG = TypefaceCompat.g(typefaceCreate)) != null) {
                 if (TextUtils.isEmpty(str)) {
                     return fontG;
                 }

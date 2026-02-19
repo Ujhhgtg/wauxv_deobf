@@ -68,8 +68,8 @@ import java.util.function.ObjDoubleConsumer;
 import java.util.function.ObjIntConsumer;
 import java.util.function.ObjLongConsumer;
 import java.util.function.Supplier;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.method.ParameterDescription;
@@ -217,13 +217,13 @@ public final class ASMUtils {
                 + TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER;
         DESC_FIELD_READER = str2;
         DESC_FIELD_READER_ARRAY = yg.k("[", str2);
-        DESC_JSON_READER = dkz.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L",
+        DESC_JSON_READER = StaticHelpers6.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L",
                 strReplace);
-        DESC_JSON_WRITER = dkz.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L",
+        DESC_JSON_WRITER = StaticHelpers6.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L",
                 strReplace4);
-        DESC_OBJECT_READER = dkz.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L",
+        DESC_OBJECT_READER = StaticHelpers6.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L",
                 strReplace2);
-        DESC_OBJECT_WRITER = dkz.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L",
+        DESC_OBJECT_WRITER = StaticHelpers6.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, "L",
                 strReplace3);
         DESC_JSONSCHEMA = "L"
                 + JSONSchema.class.getName()

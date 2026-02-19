@@ -20,7 +20,7 @@ public final class cwe implements Comparable {
         cwe cweVar = (cwe) obj;
         int i = cweVar.c;
         int i2 = this.c;
-        return i2 != i ? bhu.t(i2, i) : bhu.t(this.d, cweVar.d);
+        return i2 != i ? FastKV.t(i2, i) : FastKV.t(this.d, cweVar.d);
     }
 
     public final String toString() {

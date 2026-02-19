@@ -23,7 +23,7 @@ public final class aos extends dex {
                 if (i2 != 1) {
                     throw new IllegalStateException("Already resumed");
                 }
-                cnf.bk(aye.x(obj), cmz.ab(this.aq));
+                HugeSyntheticPileOfHelpers.resumeCoroutine(aye.x(obj), cmz.ab(this.aq));
                 return;
             }
         } while (!atomicIntegerFieldUpdater.compareAndSet(this, 0, 2));

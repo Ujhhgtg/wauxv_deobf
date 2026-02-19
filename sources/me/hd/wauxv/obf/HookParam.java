@@ -32,7 +32,7 @@ public final class HookParam {
         try {
             iOrdinal = bhs.r().ordinal();
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         if (iOrdinal != 0) {
             if (iOrdinal != 1) {

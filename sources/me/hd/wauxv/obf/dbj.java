@@ -55,15 +55,15 @@ public final /* synthetic */ class dbj implements IInvokable {
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
                 cls = Object.class;
-                Class<Object> clsBf = cnf.bf(dal.b(cls));
+                Class<Object> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 if (clsBf == null) {
                     clsBf = cls;
                 }
                 cdjVar.r(clsBf);
                 cls2 = String.class;
-                Class<String> clsBf2 = cnf.bf(dal.b(cls2));
+                Class<String> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                 cls2 = clsBf2 != null ? clsBf2 : String.class;
-                Class<Object> clsBf3 = cnf.bf(dal.b(cls));
+                Class<Object> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 cdjVar.q(cls2, clsBf3 != null ? clsBf3 : Object.class);
                 cdjVar.t("String" /* "String" /* "String" /* cnb.z(-55147380079402L)  */, "Int" /* "Int" /* "Int" /* cnb.z(-55100135439146L)  */,
                         "Long" /* "Long" /* "Long" /* cnb.z(-55048595831594L)  */, "Float" /* "Float" /* "Float" /* cnb.z(-55078660602666L)  */);
@@ -72,8 +72,8 @@ public final /* synthetic */ class dbj implements IInvokable {
                 return KotlinUnit.INSTANCE;
             case 3:
                 View view = (View) obj;
-                View viewK = dkz.k(view, R.layout.module_dialog_round_avatar, null, false);
-                Slider slider = (Slider) KotlinHelpers2.aq(viewK, R.id.moduleDialogSliderRoundAvatar);
+                View viewK = StaticHelpers6.k(view, R.layout.module_dialog_round_avatar, null, false);
+                Slider slider = (Slider) KotlinHelpers2.recursivelyFindViewById(viewK, R.id.moduleDialogSliderRoundAvatar);
                 if (slider == null) {
                     throw new NullPointerException(
                             "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-660428531170090L)  */.concat(
@@ -110,16 +110,16 @@ public final /* synthetic */ class dbj implements IInvokable {
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
                 cls3 = ImageView.class;
-                Class<ImageView> clsBf4 = cnf.bf(dal.b(cls3));
+                Class<ImageView> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
                 cls3 = clsBf4 != null ? clsBf4 : ImageView.class;
                 cls4 = String.class;
-                Class<String> clsBf5 = cnf.bf(dal.b(cls4));
+                Class<String> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
                 cls4 = clsBf5 != null ? clsBf5 : String.class;
                 cls5 = Float.class;
-                Class<Float> clsBf6 = cnf.bf(dal.b(cls5));
+                Class<Float> clsBf6 = HugeSyntheticPileOfHelpers.bf(dal.b(cls5));
                 cls5 = clsBf6 != null ? clsBf6 : Float.class;
                 cls6 = Boolean.class;
-                Class<Boolean> clsBf7 = cnf.bf(dal.b(cls6));
+                Class<Boolean> clsBf7 = HugeSyntheticPileOfHelpers.bf(dal.b(cls6));
                 cdjVar3.q(cls3, cls4, cls5, clsBf7 != null ? clsBf7 : Boolean.class);
                 cdjVar3.t("MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* cnb.z(-455657375398698L)  */);
                 bahVar3.getClass();
@@ -127,7 +127,7 @@ public final /* synthetic */ class dbj implements IInvokable {
                 return KotlinUnit.INSTANCE;
             case 8:
                 ddh ddhVar = ddh.a;
-                aki akiVarAb = csb.ab(ddhVar, dqc.toSingletonList((Method) obj));
+                aki akiVarAb = PackageParam.ab(ddhVar, dqc.toSingletonList((Method) obj));
                 ddhVar.y(akiVarAb, new dbj(14));
                 akiVarAb.o();
                 return KotlinUnit.INSTANCE;
@@ -181,34 +181,34 @@ public final /* synthetic */ class dbj implements IInvokable {
                 cdjVar5.j = fjVar;
                 cdj.m(cdjVar5, 9);
                 cls7 = Runnable.class;
-                Class<Runnable> clsBf8 = cnf.bf(dal.b(cls7));
+                Class<Runnable> clsBf8 = HugeSyntheticPileOfHelpers.bf(dal.b(cls7));
                 cls7 = clsBf8 != null ? clsBf8 : Runnable.class;
                 cls8 = String.class;
-                Class<String> clsBf9 = cnf.bf(dal.b(cls8));
+                Class<String> clsBf9 = HugeSyntheticPileOfHelpers.bf(dal.b(cls8));
                 cdjVar5.q(cls7, clsBf9 != null ? clsBf9 : String.class);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar5;
                 return KotlinUnit.INSTANCE;
             case 18:
                 View view2 = (View) obj;
-                View viewK2 = dkz.k(view2, R.layout.module_dialog_say_hi_remark_name, null, false);
+                View viewK2 = StaticHelpers6.k(view2, R.layout.module_dialog_say_hi_remark_name, null, false);
                 int i = R.id.moduleDialogEdtSayHiRemarkNameTextFormat;
-                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                         R.id.moduleDialogEdtSayHiRemarkNameTextFormat);
                 if (textInputEditText != null) {
                     i = R.id.moduleDialogEdtSayHiRemarkNameTextPlaceholders;
-                    MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.aq(viewK2,
+                    MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewK2,
                             R.id.moduleDialogEdtSayHiRemarkNameTextPlaceholders);
                     if (materialTextView != null) {
                         i = R.id.moduleDialogEdtSayHiRemarkNameTimeFormat;
-                        TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                        TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                 R.id.moduleDialogEdtSayHiRemarkNameTimeFormat);
                         if (textInputEditText2 != null) {
                             i = R.id.moduleDialogInputSayHiRemarkNameTextFormat;
-                            if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                     R.id.moduleDialogInputSayHiRemarkNameTextFormat)) != null) {
                                 i = R.id.moduleDialogInputSayHiRemarkNameTimeFormat;
-                                if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                         R.id.moduleDialogInputSayHiRemarkNameTimeFormat)) != null) {
                                     cem cemVar = new cem((LinearLayout) viewK2, textInputEditText, materialTextView,
                                             textInputEditText2, 5);
@@ -229,7 +229,7 @@ public final /* synthetic */ class dbj implements IInvokable {
                                     deu.a.getClass();
                                     egVar2.d = deu.h;
                                     bzyVar2.t("保存" /* "保存" /* "保存" /* cnb.z(-515151262382890L)  */, new amw(new cfx(cemVar, 13), 0));
-                                    bzyVar2.s("重置" /* "重置" /* "重置" /* cnb.z(-515653773556522L)  */, new amw(new cfh(22), 2));
+                                    bzyVar2.s("重置" /* "重置" /* "重置" /* cnb.z(-515653773556522L)  */, new amw(new Function1$VarIsInt$2(22), 2));
                                     bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2,
                                             "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */);
                                     LinearLayout linearLayout2 = cemVar.b;
@@ -253,7 +253,7 @@ public final /* synthetic */ class dbj implements IInvokable {
                 Activity activity = (Activity) objE;
                 if (activity == null) {
                     cls9 = Activity.class;
-                    Class<Activity> clsBf10 = cnf.bf(dal.b(cls9));
+                    Class<Activity> clsBf10 = HugeSyntheticPileOfHelpers.bf(dal.b(cls9));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf10 != null ? clsBf10 : Activity.class).getName()).toString());
                 }

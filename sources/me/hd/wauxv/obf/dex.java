@@ -20,7 +20,7 @@ public class dex extends t implements ahr {
 
     @Override // me.hd.wauxv.obf.brm
     public void j(Object obj) {
-        cnf.bk(aye.x(obj), cmz.ab(this.aq));
+        HugeSyntheticPileOfHelpers.resumeCoroutine(aye.x(obj), cmz.ab(this.aq));
     }
 
     @Override // me.hd.wauxv.obf.ahr

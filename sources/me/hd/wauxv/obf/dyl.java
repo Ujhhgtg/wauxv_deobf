@@ -12,7 +12,7 @@ public final class dyl {
 
     public /* synthetic */ dyl(int i, String str, Integer num, Integer num2, Integer num3, Integer num4) {
         if (31 != (i & 31)) {
-            bht.ah(i, 31, dyj.b.getDescriptor());
+            ResourcesCompat.ah(i, 31, dyj.b.getDescriptor());
             throw null;
         }
         this.a = str;

@@ -174,7 +174,7 @@ public final class acg {
         this.e.remove(str);
         LinkedHashMap linkedHashMap = this.f;
         if (linkedHashMap.containsKey(str)) {
-            StringBuilder sbZ = dkz.z("Dropping pending result for request ", str, ": ");
+            StringBuilder sbZ = StaticHelpers6.concatAndToSb("Dropping pending result for request ", str, ": ");
             sbZ.append(linkedHashMap.get(str));
             Log.w("ActivityResultRegistry", sbZ.toString());
             linkedHashMap.remove(str);

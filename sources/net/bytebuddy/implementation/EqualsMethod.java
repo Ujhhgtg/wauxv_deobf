@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.build.SafeVarargsPlugin;
 import net.bytebuddy.description.field.FieldDescription;
@@ -16,7 +16,6 @@ import net.bytebuddy.description.method.ParameterDescription;
 import net.bytebuddy.description.type.TypeDefinition;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.scaffold.InstrumentedType;
-import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
 import net.bytebuddy.implementation.bytecode.StackManipulation;
 import net.bytebuddy.implementation.bytecode.StackSize;
@@ -65,13 +64,13 @@ public class EqualsMethod implements Implementation {
         @Override // net.bytebuddy.implementation.bytecode.ByteCodeAppender
         public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription) {
             if (methodDescription.isStatic()) {
-                throw new IllegalStateException(dkz.t("Hash code method must not be static: ", methodDescription));
+                throw new IllegalStateException(StaticHelpers6.concat("Hash code method must not be static: ", methodDescription));
             }
             if (methodDescription.getParameters().size() != 1 || ((ParameterDescription) methodDescription.getParameters().getOnly()).getType().isPrimitive()) {
                 throw new IllegalStateException();
             }
             if (!methodDescription.getReturnType().represents(Boolean.TYPE)) {
-                throw new IllegalStateException(dkz.t("Hash code method does not return primitive boolean: ", methodDescription));
+                throw new IllegalStateException(StaticHelpers6.concat("Hash code method does not return primitive boolean: ", methodDescription));
             }
             ArrayList arrayList = new ArrayList((this.fieldDescriptions.size() * 8) + 3);
             arrayList.add(this.baseline);
@@ -109,7 +108,7 @@ public class EqualsMethod implements Implementation {
         }
 
         public int hashCode() {
-            return this.identity.hashCode() + dkz.i(this.nonNullable, bjs.g(this.fieldDescriptions, dkz.g(this.baseline, dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31), 31), 31), 31);
+            return this.identity.hashCode() + StaticHelpers6.i(this.nonNullable, bjs.g(this.fieldDescriptions, StaticHelpers6.g(this.baseline, StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31), 31), 31), 31);
         }
     }
 
@@ -366,7 +365,7 @@ public class EqualsMethod implements Implementation {
             }
 
             public int hashCode() {
-                return this.endOfBlock.hashCode() + ((this.secondValueNull.hashCode() + ((this.firstValueNull.hashCode() + dkz.c(this.instrumentedMethod, getClass().hashCode() * 31, 31)) * 31)) * 31);
+                return this.endOfBlock.hashCode() + ((this.secondValueNull.hashCode() + ((this.firstValueNull.hashCode() + StaticHelpers6.c(this.instrumentedMethod, getClass().hashCode() * 31, 31)) * 31)) * 31);
             }
         }
 
@@ -392,7 +391,7 @@ public class EqualsMethod implements Implementation {
                 if (superClass != null) {
                     return new StackManipulation.Compound(MethodVariableAccess.loadThis(), MethodVariableAccess.REFERENCE.loadFrom(1), MethodInvocation.invoke(EqualsMethod.EQUALS).special(superClass.asErasure()), ConditionalReturn.onZeroInteger());
                 }
-                throw new IllegalStateException(dkz.x(typeDescription, " does not declare a super class"));
+                throw new IllegalStateException(StaticHelpers6.concat(typeDescription, " does not declare a super class"));
             }
         };
 

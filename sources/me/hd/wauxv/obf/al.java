@@ -182,7 +182,7 @@ public abstract class al implements Future {
         String lowerCase = string2.toLowerCase(locale);
         String strS = "Waited " + j + " " + timeUnit.toString().toLowerCase(locale);
         if (nanos + 1000 < 0) {
-            String strS2 = dkz.s(strS, " (plus ");
+            String strS2 = StaticHelpers6.concat(strS, " (plus ");
             long j2 = -nanos;
             long jConvert = timeUnit.convert(j2, TimeUnit.NANOSECONDS);
             long nanos2 = j2 - timeUnit.toNanos(jConvert);
@@ -190,17 +190,17 @@ public abstract class al implements Future {
             if (jConvert > 0) {
                 String strS3 = strS2 + jConvert + " " + lowerCase;
                 if (z) {
-                    strS3 = dkz.s(strS3, ",");
+                    strS3 = StaticHelpers6.concat(strS3, ",");
                 }
-                strS2 = dkz.s(strS3, " ");
+                strS2 = StaticHelpers6.concat(strS3, " ");
             }
             if (z) {
                 strS2 = strS2 + nanos2 + " nanoseconds ";
             }
-            strS = dkz.s(strS2, "delay)");
+            strS = StaticHelpers6.concat(strS2, "delay)");
         }
         if (isDone()) {
-            throw new TimeoutException(dkz.s(strS, " but future completed as timeout expired"));
+            throw new TimeoutException(StaticHelpers6.concat(strS, " but future completed as timeout expired"));
         }
         throw new TimeoutException(strS + " for " + string);
     }

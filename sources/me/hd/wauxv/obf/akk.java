@@ -47,7 +47,7 @@ public final class akk extends awu implements Runnable {
     }
 
     @Override // me.hd.wauxv.obf.awv
-    public final void m(long j, aws awsVar) {
+    public final void m(long j, Delayed delayedVar) {
         throw new RejectedExecutionException("DefaultExecutor was shut down. This error indicates that Dispatchers.shutdown() was invoked prior to completion of exiting coroutines, leaving coroutines in incomplete state. Please refer to Dispatchers.shutdown documentation for more details");
     }
 

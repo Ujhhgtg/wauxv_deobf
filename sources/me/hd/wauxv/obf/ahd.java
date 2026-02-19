@@ -13,6 +13,6 @@ public final class ahd extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(ahc.a, dexKitBridge, new age(16));
+        StaticHelpers7.resolveDexAndCache(ahc.a, dexKitBridge, new age(16));
     }
 }

@@ -13,7 +13,7 @@ public final class biv {
 
     public /* synthetic */ biv(int i, String str, int i2, String str2, boolean z, String[] strArr) {
         if (31 != (i & 31)) {
-            bht.ah(i, 31, bit.b.getDescriptor());
+            ResourcesCompat.ah(i, 31, bit.b.getDescriptor());
             throw null;
         }
         this.b = str;
@@ -25,9 +25,9 @@ public final class biv {
 
     public final String g(String str) {
         Object next;
-        awn awnVar = bis.c;
-        awnVar.getClass();
-        z zVar = new z(awnVar, 0);
+        KotlinEnumEntriesImpl kotlinEnumEntriesImplVar = bis.c;
+        kotlinEnumEntriesImplVar.getClass();
+        z zVar = new z(kotlinEnumEntriesImplVar, 0);
         do {
             if (!zVar.hasNext()) {
                 next = null;
@@ -41,7 +41,7 @@ public final class biv {
         }
         StringBuilder sb = new StringBuilder();
         sb.append(" where (username in " /* " where (username in " /* " where (username in " /* cnb.z(-593036199328554L)  */);
-        return yg.decryptVar3UsingCnbZAndConcatToVar1(sb, SomeStaticHelpers.u(this.f, null, "(" /* "(" /* "(" /* cnb.z(-592928825146154L)  */, ")" /* ")" /* ")" /* cnb.z(-592937415080746L)  */,
+        return yg.decryptVar3UsingCnbZAndConcatToVar1(sb, SomeStaticHelpers.joinToString(this.f, null, "(" /* "(" /* "(" /* cnb.z(-592928825146154L)  */, ")" /* ")" /* ")" /* cnb.z(-592937415080746L)  */,
                 new bep(2), 25), -592946005015338L);
     }
 

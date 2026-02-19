@@ -10,7 +10,7 @@ public final class ecs {
         if (1 == (i & 1)) {
             this.a = num;
         } else {
-            bht.ah(i, 1, ecq.b.getDescriptor());
+            ResourcesCompat.ah(i, 1, ecq.b.getDescriptor());
             throw null;
         }
     }

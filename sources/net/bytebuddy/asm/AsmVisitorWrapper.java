@@ -8,7 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.field.FieldDescription;
 import net.bytebuddy.description.field.FieldList;
@@ -159,7 +159,7 @@ public interface AsmVisitorWrapper {
             }
 
             public int hashCode() {
-                return this.fieldVisitorWrappers.hashCode() + dkz.i(this.matcher, getClass().hashCode() * 31, 31);
+                return this.fieldVisitorWrappers.hashCode() + StaticHelpers6.i(this.matcher, getClass().hashCode() * 31, 31);
             }
 
             @Override // net.bytebuddy.asm.AsmVisitorWrapper.ForDeclaredFields.FieldVisitorWrapper
@@ -288,7 +288,7 @@ public interface AsmVisitorWrapper {
             }
 
             public int hashCode() {
-                return this.methodVisitorWrappers.hashCode() + dkz.i(this.matcher, getClass().hashCode() * 31, 31);
+                return this.methodVisitorWrappers.hashCode() + StaticHelpers6.i(this.matcher, getClass().hashCode() * 31, 31);
             }
 
             @Override // net.bytebuddy.asm.AsmVisitorWrapper.ForDeclaredMethods.MethodVisitorWrapper

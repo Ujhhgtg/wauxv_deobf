@@ -20,15 +20,15 @@ public final class cre extends cwl {
         throwIfVar1IsNull(dfxVar, "descriptor");
         emc emcVarH = dfxVar.h();
         if (!nullSafeIsEqual(emcVarH, dnt.a) && !nullSafeIsEqual(emcVarH, dnt.n) && !(emcVarH instanceof cur)) {
-            throw new dgb("Type " + dfxVar.h() + " cannot be directly child of oneof element");
+            throw new SomeIllegalArgumentException("Type " + dfxVar.h() + " cannot be directly child of oneof element");
         }
         long j_br = _br();
         if (j_br == 19500 && nullSafeIsEqual(this.aj, dfxVar)) {
             return this;
         }
         if (ajn.w(j_br)) {
-            throw new dgb("An oneof element cannot be directly child of another oneof element");
+            throw new SomeIllegalArgumentException("An oneof element cannot be directly child of another oneof element");
         }
-        return new cwl(this.ah, cnf.al(this.ai, j_br), dfxVar);
+        return new cwl(this.ah, HugeSyntheticPileOfHelpers.readProtoSubMessage(this.ai, j_br), dfxVar);
     }
 }

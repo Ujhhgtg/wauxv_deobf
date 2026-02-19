@@ -14,11 +14,11 @@ import java.util.Set;
 /* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class cbi implements bgj {
     public final /* synthetic */ int a;
-    public final /* synthetic */ cbg b;
+    public final /* synthetic */ Configuration b;
 
-    public /* synthetic */ cbi(cbg cbgVar, int i) {
+    public /* synthetic */ cbi(Configuration configurationVar, int i) {
         this.a = i;
-        this.b = cbgVar;
+        this.b = configurationVar;
     }
 
     @Override // me.hd.wauxv.obf.bgj
@@ -40,7 +40,7 @@ public final /* synthetic */ class cbi implements bgj {
                 for (Annotation[] annotationArr : parameterAnnotations) {
                     ArrayList arrayList2 = new ArrayList(annotationArr.length);
                     for (Annotation annotation : annotationArr) {
-                        arrayList2.add(cnf.getJavaClass(cnf.bb(annotation)));
+                        arrayList2.add(HugeSyntheticPileOfHelpers.getJavaClass(HugeSyntheticPileOfHelpers.bb(annotation)));
                     }
                     arrayList.add(arrayList2);
                 }
@@ -71,7 +71,7 @@ public final /* synthetic */ class cbi implements bgj {
                 for (Annotation[] annotationArr2 : parameterAnnotations2) {
                     ArrayList arrayList5 = new ArrayList(annotationArr2.length);
                     for (Annotation annotation2 : annotationArr2) {
-                        arrayList5.add(cnf.getJavaClass(cnf.bb(annotation2)));
+                        arrayList5.add(HugeSyntheticPileOfHelpers.getJavaClass(HugeSyntheticPileOfHelpers.bb(annotation2)));
                     }
                     arrayList4.add(arrayList5);
                 }
@@ -133,7 +133,7 @@ public final /* synthetic */ class cbi implements bgj {
                 Annotation[] annotationArrP = cbp.p((Member) obj2);
                 ArrayList arrayList7 = new ArrayList(annotationArrP.length);
                 for (Annotation annotation3 : annotationArrP) {
-                    arrayList7.add(cnf.getJavaClass(cnf.bb(annotation3)));
+                    arrayList7.add(HugeSyntheticPileOfHelpers.getJavaClass(HugeSyntheticPileOfHelpers.bb(annotation3)));
                 }
                 zF = cbp.e(set, arrayList7, this.b);
                 return Boolean.valueOf(zF);
@@ -142,7 +142,7 @@ public final /* synthetic */ class cbi implements bgj {
                 Annotation[] annotationArrP2 = cbp.p((Member) obj2);
                 ArrayList arrayList8 = new ArrayList(annotationArrP2.length);
                 for (Annotation annotation4 : annotationArrP2) {
-                    arrayList8.add(cnf.getJavaClass(cnf.bb(annotation4)));
+                    arrayList8.add(HugeSyntheticPileOfHelpers.getJavaClass(HugeSyntheticPileOfHelpers.bb(annotation4)));
                 }
                 zE = cbp.e(set2, arrayList8, this.b);
                 break;

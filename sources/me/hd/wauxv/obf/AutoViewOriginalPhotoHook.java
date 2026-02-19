@@ -20,9 +20,9 @@ public final class AutoViewOriginalPhotoHook extends SwitchHook implements IDexF
     public final void initOnce() {
         Iterator it = OtherStaticHelpers.argsToList(MethodSetImageHdImgBtnVisibility.a, MethodCheckNeedShowOriginVideoBtn.a).iterator();
         while (it.hasNext()) {
-            List listBf = dqc.toSingletonList(emn.bb((DexDescData) it.next()));
+            List listBf = dqc.toSingletonList(StaticHelpers7.bb((DexDescData) it.next()));
             AutoViewOriginalPhotoHook mmVar = a;
-            aki akiVarAb = csb.ab(mmVar, listBf);
+            aki akiVarAb = PackageParam.ab(mmVar, listBf);
             mmVar.x(akiVarAb, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(0));
             akiVarAb.o();
         }
@@ -40,8 +40,8 @@ public final class AutoViewOriginalPhotoHook extends SwitchHook implements IDexF
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(MethodSetImageHdImgBtnVisibility.a, dexKitBridge, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(1));
-        emn.aj(MethodCheckNeedShowOriginVideoBtn.a, dexKitBridge, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(2));
+        StaticHelpers7.resolveDexAndCache(MethodSetImageHdImgBtnVisibility.a, dexKitBridge, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(1));
+        StaticHelpers7.resolveDexAndCache(MethodCheckNeedShowOriginVideoBtn.a, dexKitBridge, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(2));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

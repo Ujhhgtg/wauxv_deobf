@@ -1,6 +1,6 @@
 package net.bytebuddy.implementation.bytecode.assign;
 
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.implementation.Implementation;
@@ -20,7 +20,7 @@ public class InstanceCheck extends StackManipulation.AbstractBase {
 
     public static StackManipulation of(TypeDescription typeDescription) {
         if (typeDescription.isPrimitive()) {
-            throw new IllegalArgumentException(dkz.u("Cannot check an instance against a primitive type: ", typeDescription));
+            throw new IllegalArgumentException(StaticHelpers6.concat("Cannot check an instance against a primitive type: ", typeDescription));
         }
         return new InstanceCheck(typeDescription);
     }

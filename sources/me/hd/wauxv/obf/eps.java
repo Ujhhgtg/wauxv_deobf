@@ -14,7 +14,7 @@ public final class eps extends eun {
         float f2;
         float f3;
         int i;
-        if (dkz.ae(this.t) == 3) {
+        if (StaticHelpers6.ae(this.t) == 3) {
             adq adqVar = this.l;
             z(adqVar.at, adqVar.av, 1);
             return;

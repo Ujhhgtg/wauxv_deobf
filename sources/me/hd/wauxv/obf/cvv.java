@@ -5,5 +5,5 @@ package me.hd.wauxv.obf;
 public interface cvv {
     void i();
 
-    void j(int i, Object obj);
+    void logProfileResult(int i, Object obj);
 }

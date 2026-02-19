@@ -23,7 +23,7 @@ import me.hd.wauxv.obf.cbz;
 import me.hd.wauxv.obf.ccn;
 import me.hd.wauxv.obf.dcu;
 import me.hd.wauxv.obf.eku;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.yb;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -53,7 +53,7 @@ public class NavigationMenuItemView extends bcq implements ccn {
         CheckedTextView checkedTextView = (CheckedTextView) findViewById(me.hd.wauxv.R.id.design_menu_item_text);
         this.f = checkedTextView;
         checkedTextView.setDuplicateParentStateEnabled(true);
-        eqz.s(checkedTextView, ybVar);
+        ViewCompat.setAccessibilityDelegate(checkedTextView, ybVar);
     }
 
     private void setActionView(View view) {
@@ -92,7 +92,7 @@ public class NavigationMenuItemView extends bcq implements ccn {
             } else {
                 stateListDrawable = null;
             }
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             setBackground(stateListDrawable);
         }
         setCheckable(cbzVar.isCheckable());
@@ -140,7 +140,7 @@ public class NavigationMenuItemView extends bcq implements ccn {
         refreshDrawableState();
         if (this.d != z) {
             this.d = z;
-            this.l.n(this.f, 2048);
+            this.l.sendAccessibilityEvent(this.f, 2048);
         }
     }
 

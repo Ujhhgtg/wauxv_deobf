@@ -15,8 +15,8 @@ public final class bve extends czd {
         cyw adapter = recyclerView.getAdapter();
         int iD = adapter != null ? adapter.d() : 0;
         if (iD >= 0) {
-            czx czxVarCs = RecyclerView.cs(view);
-            rect.set(0, 0, (czxVarCs != null ? czxVarCs.x() : -1) == iD + (-1) ? 0 : this.a, 0);
+            SomeView someViewVarCs = RecyclerView.cs(view);
+            rect.set(0, 0, (someViewVarCs != null ? someViewVarCs.x() : -1) == iD + (-1) ? 0 : this.a, 0);
         }
     }
 }

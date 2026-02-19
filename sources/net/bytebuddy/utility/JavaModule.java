@@ -5,7 +5,7 @@ import java.lang.reflect.AnnotatedElement;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
 import java.util.Set;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.AccessControllerPlugin;
 import net.bytebuddy.description.NamedElement;
@@ -104,7 +104,7 @@ public class JavaModule implements NamedElement.WithOptionalName, AnnotationSour
         if (MODULE.isInstance(obj)) {
             return new JavaModule((AnnotatedElement) obj);
         }
-        throw new IllegalArgumentException(dkz.r(obj, "Not a Java module: "));
+        throw new IllegalArgumentException(StaticHelpers6.concatVar2Var1(obj, "Not a Java module: "));
     }
 
     @MaybeNull

@@ -59,11 +59,11 @@ public final class chm implements dom {
     }
 
     public static void g(String str, ArrayList arrayList) {
-        if (arrayList.isEmpty() || !(dkz.l(1, arrayList) instanceof cts)) {
+        if (arrayList.isEmpty() || !(StaticHelpers6.getLastNElem(1, arrayList) instanceof cts)) {
             arrayList.add(new cts(str));
             return;
         }
-        cts ctsVar = (cts) dkz.l(1, arrayList);
+        cts ctsVar = (cts) StaticHelpers6.getLastNElem(1, arrayList);
         String str2 = ctsVar.a + str;
         throwIfVar1IsNull(str2, "<set-?>");
         ctsVar.a = str2;
@@ -133,7 +133,7 @@ public final class chm implements dom {
             parcelObtain.recycle();
             objX = Integer.valueOf(iDataSize);
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         if (objX instanceof dcx) {
             objX = null;
@@ -386,8 +386,8 @@ public final class chm implements dom {
                                 }
                             }
                         } else if (chmVar.r(ekj.Forwardslash)) {
-                            dhx dhxVar = new dhx(3);
-                            if (chmVar.ap(dhxVar)) {
+                            ConnectivityMonitor connectivityMonitorVar = new ConnectivityMonitor(3);
+                            if (chmVar.ap(connectivityMonitorVar)) {
                                 int i5 = Integer.parseInt(strO);
                                 ikVar.h(i5, null);
                                 for (ctq ctqVar3 : (ArrayList) ikVar.c) {
@@ -397,7 +397,7 @@ public final class chm implements dom {
                                     }
                                 }
                                 Objects.requireNonNull(ctqVar);
-                                ctqVar.d = dhxVar;
+                                ctqVar.d = connectivityMonitorVar;
                             } else {
                                 chmVar.t(adhVar3);
                                 adhVar = (adh) chmVar.f;
@@ -488,7 +488,7 @@ public final class chm implements dom {
         Context context = (Context) chmVar.c;
         final exf exfVar = (exf) chmVar.f;
         exfVar.g.put(
-                dkz.s(str,
+                StaticHelpers6.concat(str,
                         chmVar.ag() + JavaConstant.Dynamic.DEFAULT_NAME
                                 + (exf.a ? "X" : context != null ? context.getClass().getName() : "M") + "_0"),
                 new Pair(context, new bgj(exfVar, chmVar, str, bgfVar) { // from class: me.hd.wauxv.obf.exd
@@ -539,7 +539,7 @@ public final class chm implements dom {
                                         : null;
                                 objX = serializable instanceof tx ? (tx) serializable : null;
                             } catch (Throwable th) {
-                                objX = bhu.x(th);
+                                objX = FastKV.x(th);
                             }
                             if (objX instanceof dcx) {
                                 objX = null;
@@ -575,7 +575,7 @@ public final class chm implements dom {
                                         arrayList3 = exeVar.b;
                                         arrayList4 = exeVar.a;
                                     } catch (Throwable th2) {
-                                        objX2 = bhu.x(th2);
+                                        objX2 = FastKV.x(th2);
                                     }
                                     if (obj3 instanceof List) {
                                         objX2 = (List) obj3;
@@ -680,15 +680,15 @@ public final class chm implements dom {
                 }));
     }
 
-    public bdj aa(String str) {
-        for (bfb bfbVar : ((HashMap) this.d).values()) {
-            if (bfbVar != null) {
-                bdj bdjVarAa = bfbVar.c;
-                if (!str.equals(bdjVarAa.aw)) {
-                    bdjVarAa = bdjVarAa.bo.c.aa(str);
+    public SomeFragmentManager aa(String str) {
+        for (FragmentManager fragmentManagerVar : ((HashMap) this.d).values()) {
+            if (fragmentManagerVar != null) {
+                SomeFragmentManager someFragmentManagerVarAa = fragmentManagerVar.c;
+                if (!str.equals(someFragmentManagerVarAa.aw)) {
+                    someFragmentManagerVarAa = someFragmentManagerVarAa.bo.c.aa(str);
                 }
-                if (bdjVarAa != null) {
-                    return bdjVarAa;
+                if (someFragmentManagerVarAa != null) {
+                    return someFragmentManagerVarAa;
                 }
             }
         }
@@ -711,9 +711,9 @@ public final class chm implements dom {
 
     public ArrayList ac() {
         ArrayList arrayList = new ArrayList();
-        for (bfb bfbVar : ((HashMap) this.d).values()) {
-            if (bfbVar != null) {
-                arrayList.add(bfbVar);
+        for (FragmentManager fragmentManagerVar : ((HashMap) this.d).values()) {
+            if (fragmentManagerVar != null) {
+                arrayList.add(fragmentManagerVar);
             }
         }
         return arrayList;
@@ -721,9 +721,9 @@ public final class chm implements dom {
 
     public ArrayList ad() {
         ArrayList arrayList = new ArrayList();
-        for (bfb bfbVar : ((HashMap) this.d).values()) {
-            if (bfbVar != null) {
-                arrayList.add(bfbVar.c);
+        for (FragmentManager fragmentManagerVar : ((HashMap) this.d).values()) {
+            if (fragmentManagerVar != null) {
+                arrayList.add(fragmentManagerVar.c);
             } else {
                 arrayList.add(null);
             }
@@ -794,7 +794,7 @@ public final class chm implements dom {
                     zIsInstance = emc.as(num.intValue(), erkVar);
                 } else {
                     if (clsBe.isPrimitive()) {
-                        clsBe = cnf.be(dal.b(clsBe));
+                        clsBe = HugeSyntheticPileOfHelpers.be(dal.b(clsBe));
                     }
                     zIsInstance = clsBe.isInstance(erkVar);
                 }
@@ -822,10 +822,10 @@ public final class chm implements dom {
                         try {
                             erkVarB = eroVar2._bh(zcVar, chqVar);
                         } catch (AbstractMethodError unused) {
-                            erkVarB = eroVar2.b(cnf.getJavaClass(zcVar));
+                            erkVarB = eroVar2.b(HugeSyntheticPileOfHelpers.getJavaClass(zcVar));
                         }
                     } catch (AbstractMethodError unused2) {
-                        erkVarB = eroVar2.l(cnf.getJavaClass(zcVar), chqVar);
+                        erkVarB = eroVar2.l(HugeSyntheticPileOfHelpers.getJavaClass(zcVar), chqVar);
                     }
                     erkVar = erkVarB;
                     erq erqVar2 = (erq) this.c;
@@ -847,27 +847,27 @@ public final class chm implements dom {
         return ((dll) this.e).a.length();
     }
 
-    public void aj(bfb bfbVar) {
-        bdj bdjVar = bfbVar.c;
-        String str = bdjVar.aw;
+    public void aj(FragmentManager fragmentManagerVar) {
+        SomeFragmentManager someFragmentManagerVar = fragmentManagerVar.c;
+        String str = someFragmentManagerVar.aw;
         HashMap map = (HashMap) this.d;
         if (map.get(str) != null) {
             return;
         }
-        map.put(bdjVar.aw, bfbVar);
+        map.put(someFragmentManagerVar.aw, fragmentManagerVar);
         if (beg.ar(2)) {
-            Log.v("FragmentManager", "Added fragment to active set " + bdjVar);
+            Log.v("FragmentManager", "Added fragment to active set " + someFragmentManagerVar);
         }
     }
 
-    public void ak(bfb bfbVar) {
+    public void ak(FragmentManager fragmentManagerVar) {
         HashMap map = (HashMap) this.d;
-        bdj bdjVar = bfbVar.c;
-        if (bdjVar.bv) {
-            ((bej) this.f).l(bdjVar);
+        SomeFragmentManager someFragmentManagerVar = fragmentManagerVar.c;
+        if (someFragmentManagerVar.bv) {
+            ((bej) this.f).l(someFragmentManagerVar);
         }
-        if (map.get(bdjVar.aw) == bfbVar && ((bfb) map.put(bdjVar.aw, null)) != null && beg.ar(2)) {
-            Log.v("FragmentManager", "Removed fragment from active set " + bdjVar);
+        if (map.get(someFragmentManagerVar.aw) == fragmentManagerVar && ((FragmentManager) map.put(someFragmentManagerVar.aw, null)) != null && beg.ar(2)) {
+            Log.v("FragmentManager", "Removed fragment from active set " + someFragmentManagerVar);
         }
     }
 
@@ -1072,7 +1072,7 @@ public final class chm implements dom {
         }
     }
 
-    public boolean ap(dhx dhxVar) {
+    public boolean ap(ConnectivityMonitor connectivityMonitorVar) {
         adh adhVar = (adh) this.f;
         StringBuilder sb = new StringBuilder();
         while (true) {
@@ -1109,9 +1109,9 @@ public final class chm implements dom {
                             if (sb2.indexOf("m") != -1) {
                                 i |= 8;
                             }
-                            dhxVar.c = sb2.indexOf("g") != -1;
-                            dhxVar.d = Pattern.compile(sb.toString(), i);
-                            dhxVar.e = arrayList;
+                            connectivityMonitorVar.c = sb2.indexOf("g") != -1;
+                            connectivityMonitorVar.d = Pattern.compile(sb.toString(), i);
+                            connectivityMonitorVar.e = arrayList;
                             return true;
                         } catch (PatternSyntaxException unused) {
                             t(adhVar);
@@ -1303,23 +1303,23 @@ public final class chm implements dom {
         esa esaVar2 = (esa) this.c;
         ViewPager2 viewPager2 = (ViewPager2) this.f;
         int i = R.id.accessibilityActionPageLeft;
-        eqz.p(viewPager2, R.id.accessibilityActionPageLeft);
-        eqz.n(viewPager2, 0);
-        eqz.p(viewPager2, R.id.accessibilityActionPageRight);
-        eqz.n(viewPager2, 0);
-        eqz.p(viewPager2, R.id.accessibilityActionPageUp);
-        eqz.n(viewPager2, 0);
-        eqz.p(viewPager2, R.id.accessibilityActionPageDown);
-        eqz.n(viewPager2, 0);
+        ViewCompat.p(viewPager2, R.id.accessibilityActionPageLeft);
+        ViewCompat.notifyAccessibilityChange(viewPager2, 0);
+        ViewCompat.p(viewPager2, R.id.accessibilityActionPageRight);
+        ViewCompat.notifyAccessibilityChange(viewPager2, 0);
+        ViewCompat.p(viewPager2, R.id.accessibilityActionPageUp);
+        ViewCompat.notifyAccessibilityChange(viewPager2, 0);
+        ViewCompat.p(viewPager2, R.id.accessibilityActionPageDown);
+        ViewCompat.notifyAccessibilityChange(viewPager2, 0);
         if (viewPager2.getAdapter() == null || (iD = viewPager2.getAdapter().d()) == 0 || !viewPager2.r) {
             return;
         }
         if (viewPager2.getOrientation() != 0) {
             if (viewPager2.d < iD - 1) {
-                eqz.q(viewPager2, new ax(R.id.accessibilityActionPageDown), esaVar2);
+                ViewCompat.q(viewPager2, new ax(R.id.accessibilityActionPageDown), esaVar2);
             }
             if (viewPager2.d > 0) {
-                eqz.q(viewPager2, new ax(R.id.accessibilityActionPageUp), esaVar);
+                ViewCompat.q(viewPager2, new ax(R.id.accessibilityActionPageUp), esaVar);
                 return;
             }
             return;
@@ -1330,10 +1330,10 @@ public final class chm implements dom {
             i = 16908361;
         }
         if (viewPager2.d < iD - 1) {
-            eqz.q(viewPager2, new ax(i2), esaVar2);
+            ViewCompat.q(viewPager2, new ax(i2), esaVar2);
         }
         if (viewPager2.d > 0) {
-            eqz.q(viewPager2, new ax(i), esaVar);
+            ViewCompat.q(viewPager2, new ax(i), esaVar);
         }
     }
 
@@ -1406,9 +1406,9 @@ public final class chm implements dom {
                 t(adhVar);
                 return null;
             }
-            dhx dhxVar = new dhx(3);
-            if (ap(dhxVar)) {
-                return new epb(-1, strO, null, dhxVar);
+            ConnectivityMonitor connectivityMonitorVar = new ConnectivityMonitor(3);
+            if (ap(connectivityMonitorVar)) {
+                return new epb(-1, strO, null, connectivityMonitorVar);
             }
             t(adhVar);
             return null;
@@ -1446,14 +1446,14 @@ public final class chm implements dom {
         return true;
     }
 
-    public void s(bdj bdjVar) {
-        if (((ArrayList) this.c).contains(bdjVar)) {
-            throw new IllegalStateException("Fragment already added: " + bdjVar);
+    public void s(SomeFragmentManager someFragmentManagerVar) {
+        if (((ArrayList) this.c).contains(someFragmentManagerVar)) {
+            throw new IllegalStateException("Fragment already added: " + someFragmentManagerVar);
         }
         synchronized (((ArrayList) this.c)) {
-            ((ArrayList) this.c).add(bdjVar);
+            ((ArrayList) this.c).add(someFragmentManagerVar);
         }
-        bdjVar.bc = true;
+        someFragmentManagerVar.bc = true;
     }
 
     public void t(adh adhVar) {
@@ -1503,9 +1503,9 @@ public final class chm implements dom {
             }
             if (arrayList.size() > 1) {
                 cbm cbmVar = (cbm) this.d;
-                jx jxVar = (jx) this.f;
+                FactoryPools factoryPoolsVar = (FactoryPools) this.f;
                 cbmVar.getClass();
-                return new le(arrayList, 2, jxVar);
+                return new le(arrayList, 2, factoryPoolsVar);
             }
             if (arrayList.size() == 1) {
                 return (cdv) arrayList.get(0);
@@ -1548,10 +1548,10 @@ public final class chm implements dom {
         dllVar.d('\n');
     }
 
-    public bdj z(String str) {
-        bfb bfbVar = (bfb) ((HashMap) this.d).get(str);
-        if (bfbVar != null) {
-            return bfbVar.c;
+    public SomeFragmentManager z(String str) {
+        FragmentManager fragmentManagerVar = (FragmentManager) ((HashMap) this.d).get(str);
+        if (fragmentManagerVar != null) {
+            return fragmentManagerVar.c;
         }
         return null;
     }
@@ -1592,7 +1592,7 @@ public final class chm implements dom {
         this.f = new dop(4);
     }
 
-    public chm(Typeface typeface, cdc cdcVar) {
+    public chm(Typeface typeface, GenericMetadataIterator3 cdcVar) {
         int i;
         int i2;
         int i3;
@@ -1600,7 +1600,7 @@ public final class chm implements dom {
         this.f = typeface;
         this.c = cdcVar;
         this.e = new cdd(1024);
-        int iF = cdcVar.f(6);
+        int iF = cdcVar.getVTableOffset(6);
         if (iF != 0) {
             int i5 = iF + cdcVar.b;
             i = ((ByteBuffer) cdcVar.e).getInt(((ByteBuffer) cdcVar.e).getInt(i5) + i5);
@@ -1608,7 +1608,7 @@ public final class chm implements dom {
             i = 0;
         }
         this.d = new char[i * 2];
-        int iF2 = cdcVar.f(6);
+        int iF2 = cdcVar.getVTableOffset(6);
         if (iF2 != 0) {
             int i6 = iF2 + cdcVar.b;
             i2 = ((ByteBuffer) cdcVar.e).getInt(((ByteBuffer) cdcVar.e).getInt(i6) + i6);
@@ -1616,12 +1616,12 @@ public final class chm implements dom {
             i2 = 0;
         }
         for (int i7 = 0; i7 < i2; i7++) {
-            emk emkVar = new emk(this, i7);
-            cdb cdbVarF = emkVar.f();
-            int iF3 = cdbVarF.f(4);
+            EmojiMetadata emojiMetadataVar = new EmojiMetadata(this, i7);
+            FlatBufferTable cdbVarF = emojiMetadataVar.f();
+            int iF3 = cdbVarF.getVTableOffset(4);
             Character.toChars(iF3 != 0 ? ((ByteBuffer) cdbVarF.e).getInt(iF3 + cdbVarF.b) : 0, (char[]) this.d, i7 * 2);
-            cdb cdbVarF2 = emkVar.f();
-            int iF4 = cdbVarF2.f(16);
+            FlatBufferTable cdbVarF2 = emojiMetadataVar.f();
+            int iF4 = cdbVarF2.getVTableOffset(16);
             if (iF4 != 0) {
                 int i8 = iF4 + cdbVarF2.b;
                 i3 = ((ByteBuffer) cdbVarF2.e).getInt(((ByteBuffer) cdbVarF2.e).getInt(i8) + i8);
@@ -1630,15 +1630,15 @@ public final class chm implements dom {
             }
             cna.g("invalid metadata codepoint length", i3 > 0);
             cdd cddVar = (cdd) this.e;
-            cdb cdbVarF3 = emkVar.f();
-            int iF5 = cdbVarF3.f(16);
+            FlatBufferTable cdbVarF3 = emojiMetadataVar.f();
+            int iF5 = cdbVarF3.getVTableOffset(16);
             if (iF5 != 0) {
                 int i9 = iF5 + cdbVarF3.b;
                 i4 = ((ByteBuffer) cdbVarF3.e).getInt(((ByteBuffer) cdbVarF3.e).getInt(i9) + i9);
             } else {
                 i4 = 0;
             }
-            cddVar.c(emkVar, 0, i4 - 1);
+            cddVar.c(emojiMetadataVar, 0, i4 - 1);
         }
     }
 }

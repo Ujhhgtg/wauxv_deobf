@@ -35,7 +35,7 @@ public final /* synthetic */ class bdv implements den {
                 km<cio> kmVar = cixVar.f;
                 LinkedHashMap linkedHashMap3 = cixVar.k;
                 ArrayList arrayList = new ArrayList();
-                Bundle bundleR2 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                Bundle bundleR2 = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                 for (Map.Entry entry : KotlinHelpers.at(cixVar.r.b).entrySet()) {
                     String str = (String) entry.getKey();
                     Bundle bundleR3 = ((ckl) entry.getValue()).r();
@@ -47,7 +47,7 @@ public final /* synthetic */ class bdv implements den {
                 if (arrayList.isEmpty()) {
                     bundleR = null;
                 } else {
-                    bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                    bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                     cnb.ai(bundleR2, "android-support-nav:controller:navigatorState:names", arrayList);
                     cnb.ag(bundleR, "android-support-nav:controller:navigatorState", bundleR2);
                 }
@@ -55,7 +55,7 @@ public final /* synthetic */ class bdv implements den {
                     linkedHashMap = linkedHashMap2;
                 } else {
                     if (bundleR == null) {
-                        bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                        bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                     }
                     ArrayList<? extends Parcelable> arrayList2 = new ArrayList<>();
                     for (cio cioVar : kmVar) {
@@ -65,13 +65,13 @@ public final /* synthetic */ class bdv implements den {
                         ciq ciqVar = cioVar.h;
                         Bundle bundleL = ciqVar.l();
                         LinkedHashMap linkedHashMap4 = linkedHashMap2;
-                        Bundle bundleR4 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                        Bundle bundleR4 = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                         ciqVar.h.ab(bundleR4);
-                        Bundle bundleR5 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                        Bundle bundleR5 = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                         cnb.ah("nav-entry-state:id", str2, bundleR5);
                         bundleR5.putInt("nav-entry-state:destination-id", i);
                         if (bundleL == null) {
-                            bundleL = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                            bundleL = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                         }
                         cnb.ag(bundleR5, "nav-entry-state:args", bundleL);
                         cnb.ag(bundleR5, "nav-entry-state:saved-state", bundleR4);
@@ -83,7 +83,7 @@ public final /* synthetic */ class bdv implements den {
                 }
                 if (!linkedHashMap3.isEmpty()) {
                     if (bundleR == null) {
-                        bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                        bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                     }
                     int[] iArr = new int[linkedHashMap3.size()];
                     ArrayList arrayList3 = new ArrayList();
@@ -104,7 +104,7 @@ public final /* synthetic */ class bdv implements den {
                 }
                 if (!linkedHashMap.isEmpty()) {
                     if (bundleR == null) {
-                        bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                        bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                     }
                     ArrayList arrayList4 = new ArrayList();
                     for (Map.Entry entry3 : linkedHashMap.entrySet()) {
@@ -116,12 +116,12 @@ public final /* synthetic */ class bdv implements den {
                         while (it.hasNext()) {
                             xe xeVar = ((cir) it.next()).a;
                             xeVar.getClass();
-                            Bundle bundleR6 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                            Bundle bundleR6 = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                             cnb.ah("nav-entry-state:id", (String) xeVar.d, bundleR6);
                             bundleR6.putInt("nav-entry-state:destination-id", xeVar.c);
                             Bundle bundleR7 = (Bundle) xeVar.e;
                             if (bundleR7 == null) {
-                                bundleR7 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                                bundleR7 = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                             }
                             cnb.ag(bundleR6, "nav-entry-state:args", bundleR7);
                             cnb.ag(bundleR6, "nav-entry-state:saved-state", (Bundle) xeVar.f);
@@ -135,7 +135,7 @@ public final /* synthetic */ class bdv implements den {
                 }
                 if (cjlVar.e) {
                     if (bundleR == null) {
-                        bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                        bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                     }
                     bundleR.putBoolean("android-support-nav:controller:deepLinkHandled", cjlVar.e);
                 }
@@ -148,7 +148,7 @@ public final /* synthetic */ class bdv implements den {
             case 2:
                 int i4 = ((NavHostFragment) this.b).c;
                 if (i4 != 0) {
-                    return bht.r(new Pair("android-support-nav:fragment:graphId", Integer.valueOf(i4)));
+                    return ResourcesCompat.r(new Pair("android-support-nav:fragment:graphId", Integer.valueOf(i4)));
                 }
                 Bundle bundle2 = Bundle.EMPTY;
                 throwIfVar1IsNull(bundle2);
@@ -171,7 +171,7 @@ public final /* synthetic */ class bdv implements den {
                     }
                     pairVarArr = (Pair[]) arrayList6.toArray(new Pair[0]);
                 }
-                return bht.r((Pair[]) Arrays.copyOf(pairVarArr, pairVarArr.length));
+                return ResourcesCompat.r((Pair[]) Arrays.copyOf(pairVarArr, pairVarArr.length));
         }
     }
 }

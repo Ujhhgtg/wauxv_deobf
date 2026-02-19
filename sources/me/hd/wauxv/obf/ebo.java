@@ -10,7 +10,7 @@ public final class ebo {
 
     public /* synthetic */ ebo(int i, Boolean bool, duh duhVar, Integer num) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, ebm.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, ebm.b.getDescriptor());
             throw null;
         }
         this.a = bool;

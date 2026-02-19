@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.annotation.AnnotationValue;
 import net.bytebuddy.description.enumeration.EnumerationDescription;
@@ -24,7 +24,6 @@ import net.bytebuddy.description.type.TypeList;
 import net.bytebuddy.dynamic.scaffold.FieldLocator;
 import net.bytebuddy.dynamic.scaffold.InstrumentedType;
 import net.bytebuddy.dynamic.scaffold.MethodGraph;
-import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
 import net.bytebuddy.implementation.bytecode.Removal;
 import net.bytebuddy.implementation.bytecode.StackManipulation;
@@ -275,7 +274,7 @@ public class InvokeDynamic implements Implementation.Composable {
         }
 
         public int hashCode() {
-            return InvokeDynamic.this.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31);
+            return InvokeDynamic.this.hashCode() + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31);
         }
     }
 
@@ -382,7 +381,7 @@ public class InvokeDynamic implements Implementation.Composable {
 
                     public int hashCode() {
                         return ConstantPoolWrapper.this.hashCode()
-                                + dkz.g(this.stackManipulation, getClass().hashCode() * 31, 31);
+                                + StaticHelpers6.g(this.stackManipulation, getClass().hashCode() * 31, 31);
                     }
 
                     @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.ArgumentProvider
@@ -1255,7 +1254,7 @@ public class InvokeDynamic implements Implementation.Composable {
                         Assigner assigner, Assigner.Typing typing) {
                     if (methodDescription.isStatic()) {
                         throw new IllegalStateException(
-                                dkz.t("Cannot get this instance from static method: ", methodDescription));
+                                StaticHelpers6.concat("Cannot get this instance from static method: ", methodDescription));
                     }
                     if (typeDescription.isAssignableTo(this.typeDescription)) {
                         return new Resolved.Simple(MethodVariableAccess.loadThis(), this.typeDescription);
@@ -1307,7 +1306,7 @@ public class InvokeDynamic implements Implementation.Composable {
 
                     public int hashCode() {
                         return this.loadedTypes.hashCode()
-                                + dkz.g(this.stackManipulation, getClass().hashCode() * 31, 31);
+                                + StaticHelpers6.g(this.stackManipulation, getClass().hashCode() * 31, 31);
                     }
 
                     public Simple(StackManipulation stackManipulation, List<TypeDescription> list) {
@@ -1371,7 +1370,7 @@ public class InvokeDynamic implements Implementation.Composable {
 
                 public int hashCode() {
                     return this.instrumentedMethod.hashCode() + bjs.g(this.argumentProviders,
-                            dkz.f(this.returnType, bjs.e(this.internalName, getClass().hashCode() * 31, 31), 31), 31);
+                            StaticHelpers6.f(this.returnType, bjs.e(this.internalName, getClass().hashCode() * 31, 31), 31), 31);
                 }
 
                 @Override // net.bytebuddy.implementation.InvokeDynamic.InvocationProvider.Target
@@ -1636,8 +1635,8 @@ public class InvokeDynamic implements Implementation.Composable {
                     }
 
                     public int hashCode() {
-                        return this.parameterTypes.hashCode() + dkz.f(this.returnType, bjs.e(this.internalName,
-                                dkz.g(this.stackManipulation, getClass().hashCode() * 31, 31), 31), 31);
+                        return this.parameterTypes.hashCode() + StaticHelpers6.f(this.returnType, bjs.e(this.internalName,
+                                StaticHelpers6.g(this.stackManipulation, getClass().hashCode() * 31, 31), 31), 31);
                     }
                 }
 
@@ -2297,9 +2296,9 @@ public class InvokeDynamic implements Implementation.Composable {
     }
 
     public int hashCode() {
-        return this.typing.hashCode() + dkz.h(this.assigner,
+        return this.typing.hashCode() + StaticHelpers6.h(this.assigner,
                 (this.terminationHandler.hashCode() + ((this.invocationProvider.hashCode()
-                        + bjs.g(this.arguments, dkz.b(this.bootstrap, getClass().hashCode() * 31, 31), 31)) * 31)) * 31,
+                        + bjs.g(this.arguments, StaticHelpers6.b(this.bootstrap, getClass().hashCode() * 31, 31), 31)) * 31)) * 31,
                 31);
     }
 
@@ -2491,7 +2490,7 @@ public class InvokeDynamic implements Implementation.Composable {
         ArrayList arrayList = new ArrayList(typeDescriptionArr.length);
         for (TypeDescription typeDescription : typeDescriptionArr) {
             if (typeDescription.isPrimitive()) {
-                throw new IllegalArgumentException(dkz.u("Cannot assign null to primitive type: ", typeDescription));
+                throw new IllegalArgumentException(StaticHelpers6.concat("Cannot assign null to primitive type: ", typeDescription));
             }
             arrayList.add(new InvocationProvider.ArgumentProvider.ForNullValue(typeDescription));
         }

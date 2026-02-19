@@ -3,10 +3,9 @@ package net.bytebuddy.implementation.bytecode;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.description.type.TypeDefinition;
-import net.bytebuddy.implementation.bytecode.StackManipulation;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -108,7 +107,7 @@ public enum StackSize {
         Iterator<? extends TypeDefinition> it = collection.iterator();
         int iD = 0;
         while (it.hasNext()) {
-            iD = dkz.d(it.next(), iD);
+            iD = StaticHelpers6.d(it.next(), iD);
         }
         return iD;
     }

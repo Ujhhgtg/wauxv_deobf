@@ -11,7 +11,7 @@ public final class eel {
 
     public /* synthetic */ eel(int i, Long l, Long l2, Integer num, Boolean bool) {
         if (15 != (i & 15)) {
-            bht.ah(i, 15, eej.b.getDescriptor());
+            ResourcesCompat.ah(i, 15, eej.b.getDescriptor());
             throw null;
         }
         this.a = l;
@@ -46,8 +46,8 @@ public final class eel {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("sf0Proto(diff_extra_count=" /* "sf0Proto(diff_extra_count=" /* "sf0Proto(diff_extra_count=" /* cnb.z(-265304424839978L)  */);
-        dkz.ad(sb, this.a, -271270134414122L);
-        dkz.ad(sb, this.b, -271145580362538L);
+        StaticHelpers6.ad(sb, this.a, -271270134414122L);
+        StaticHelpers6.ad(sb, this.b, -271145580362538L);
         bjs.w(sb, this.c, -271111220624170L);
         sb.append(this.d);
         sb.append(')');

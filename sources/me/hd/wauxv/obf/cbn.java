@@ -9,11 +9,11 @@ import java.lang.reflect.Method;
 /* JADX INFO: loaded from: classes.dex */
 public final class cbn implements IInvokable {
     public final /* synthetic */ int a;
-    public final /* synthetic */ cbg b;
+    public final /* synthetic */ Configuration b;
 
-    public /* synthetic */ cbn(cbg cbgVar, int i) {
+    public /* synthetic */ cbn(Configuration configurationVar, int i) {
         this.a = i;
-        this.b = cbgVar;
+        this.b = configurationVar;
     }
 
     @Override // me.hd.wauxv.obf.bgf
@@ -23,9 +23,9 @@ public final class cbn implements IInvokable {
                 Member member = (Member) obj;
                 throwIfVar1IsNull(member, "null cannot be cast to non-null type java.lang.reflect.Method");
                 MethodHookWrapper methodHookWrapperVar = new MethodHookWrapper((Method) member);
-                Object obj2 = this.b.b;
+                Object obj2 = this.b.memberInstance;
                 if (obj2 != null) {
-                    methodHookWrapperVar.c(obj2);
+                    methodHookWrapperVar.copy(obj2);
                 }
                 return methodHookWrapperVar;
             case 1:
@@ -33,24 +33,24 @@ public final class cbn implements IInvokable {
                 throwIfVar1IsNull(member2,
                         "null cannot be cast to non-null type java.lang.reflect.Constructor<T of com.highcapable.kavaref.resolver.processor.MemberProcessor.resolve>");
                 ConstructorHookWrapper constructorHookWrapperVar = new ConstructorHookWrapper((Constructor) member2);
-                Object obj3 = this.b.b;
+                Object obj3 = this.b.memberInstance;
                 return constructorHookWrapperVar;
             case 2:
                 Member member3 = (Member) obj;
                 throwIfVar1IsNull(member3, "null cannot be cast to non-null type java.lang.reflect.Field");
                 azk azkVar = new azk((Field) member3);
-                Object obj4 = this.b.b;
+                Object obj4 = this.b.memberInstance;
                 if (obj4 != null) {
-                    azkVar.c(obj4);
+                    azkVar.copy(obj4);
                 }
                 return azkVar;
             case 3:
                 Member member4 = (Member) obj;
                 throwIfVar1IsNull(member4, "null cannot be cast to non-null type java.lang.reflect.Method");
                 MethodHookWrapper methodHookWrapperVar2 = new MethodHookWrapper((Method) member4);
-                Object obj5 = this.b.b;
+                Object obj5 = this.b.memberInstance;
                 if (obj5 != null) {
-                    methodHookWrapperVar2.c(obj5);
+                    methodHookWrapperVar2.copy(obj5);
                 }
                 return methodHookWrapperVar2;
             case 4:
@@ -58,24 +58,24 @@ public final class cbn implements IInvokable {
                 throwIfVar1IsNull(member5,
                         "null cannot be cast to non-null type java.lang.reflect.Constructor<T of com.highcapable.kavaref.resolver.processor.MemberProcessor.resolve>");
                 ConstructorHookWrapper constructorHookWrapperVar2 = new ConstructorHookWrapper((Constructor) member5);
-                Object obj6 = this.b.b;
+                Object obj6 = this.b.memberInstance;
                 return constructorHookWrapperVar2;
             case 5:
                 Member member6 = (Member) obj;
                 throwIfVar1IsNull(member6, "null cannot be cast to non-null type java.lang.reflect.Field");
                 azk azkVar2 = new azk((Field) member6);
-                Object obj7 = this.b.b;
+                Object obj7 = this.b.memberInstance;
                 if (obj7 != null) {
-                    azkVar2.c(obj7);
+                    azkVar2.copy(obj7);
                 }
                 return azkVar2;
             case 6:
                 Member member7 = (Member) obj;
                 throwIfVar1IsNull(member7, "null cannot be cast to non-null type java.lang.reflect.Method");
                 MethodHookWrapper methodHookWrapperVar3 = new MethodHookWrapper((Method) member7);
-                Object obj8 = this.b.b;
+                Object obj8 = this.b.memberInstance;
                 if (obj8 != null) {
-                    methodHookWrapperVar3.c(obj8);
+                    methodHookWrapperVar3.copy(obj8);
                 }
                 return methodHookWrapperVar3;
             case 7:
@@ -83,15 +83,15 @@ public final class cbn implements IInvokable {
                 throwIfVar1IsNull(member8,
                         "null cannot be cast to non-null type java.lang.reflect.Constructor<T of com.highcapable.kavaref.resolver.processor.MemberProcessor.resolve>");
                 ConstructorHookWrapper constructorHookWrapperVar3 = new ConstructorHookWrapper((Constructor) member8);
-                Object obj9 = this.b.b;
+                Object obj9 = this.b.memberInstance;
                 return constructorHookWrapperVar3;
             default:
                 Member member9 = (Member) obj;
                 throwIfVar1IsNull(member9, "null cannot be cast to non-null type java.lang.reflect.Field");
                 azk azkVar3 = new azk((Field) member9);
-                Object obj10 = this.b.b;
+                Object obj10 = this.b.memberInstance;
                 if (obj10 != null) {
-                    azkVar3.c(obj10);
+                    azkVar3.copy(obj10);
                 }
                 return azkVar3;
         }

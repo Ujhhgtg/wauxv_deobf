@@ -12,7 +12,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.HashMap;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.dynamic.ClassFileLocator;
 import net.bytebuddy.pool.TypePool;
 
@@ -37,7 +37,7 @@ public class DexClassLoaderHelper {
     }
 
     private byte[] convertClassToDex(String str, byte[] bArr) throws IOException {
-        String strS = dkz.s(str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'), ClassFileLocator.CLASS_FILE_EXTENSION);
+        String strS = StaticHelpers6.concat(str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'), ClassFileLocator.CLASS_FILE_EXTENSION);
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         try {
             DirectClassFile directClassFile = new DirectClassFile(bArr, strS, true);

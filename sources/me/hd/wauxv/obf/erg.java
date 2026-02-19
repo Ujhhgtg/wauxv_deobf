@@ -35,7 +35,7 @@ public final class erg extends dcw implements bgj {
         View view = this.e;
         ahq ahqVar = ahq.a;
         if (i == 0) {
-            bhu.bd(obj);
+            FastKV.bd(obj);
             dfu dfuVar = (dfu) this.d;
             this.d = dfuVar;
             this.a = 1;
@@ -49,11 +49,11 @@ public final class erg extends dcw implements bgj {
             if (i != 2) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            bhu.bd(obj);
+            FastKV.bd(obj);
             return kotlinUnitVar;
         }
         dfu dfuVar2 = (dfu) this.d;
-        bhu.bd(obj);
+        FastKV.bd(obj);
         if (view instanceof ViewGroup) {
             this.d = null;
             this.a = 2;

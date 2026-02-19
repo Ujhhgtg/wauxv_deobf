@@ -14,7 +14,7 @@ public final class dyc {
 
     public /* synthetic */ dyc(int i, Boolean bool, Long l, Long l2, String str, String str2, dvf dvfVar, String str3) {
         if (127 != (i & 127)) {
-            bht.ah(i, 127, dya.b.getDescriptor());
+            ResourcesCompat.ah(i, 127, dya.b.getDescriptor());
             throw null;
         }
         this.a = bool;
@@ -61,8 +61,8 @@ public final class dyc {
         StringBuilder sb = new StringBuilder();
         sb.append("gl1Proto(enable_flag=" /* "gl1Proto(enable_flag=" /* "gl1Proto(enable_flag=" /* cnb.z(-202864190290730L)  */);
         dts.g(sb, this.a, -203370996431658L);
-        dkz.ad(sb, this.b, -203259327281962L);
-        dkz.ad(sb, this.c, -203143363164970L);
+        StaticHelpers6.ad(sb, this.b, -203259327281962L);
+        StaticHelpers6.ad(sb, this.c, -203143363164970L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.d, -202524887874346L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.e, -202460463364906L);
         sb.append(this.f);

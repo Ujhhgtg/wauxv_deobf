@@ -10,7 +10,7 @@ import java.util.Iterator;
 /* JADX INFO: loaded from: classes.dex */
 public final class adr extends adq {
     public ArrayList a = new ArrayList();
-    public final jx b = new jx(this);
+    public final FactoryPools b = new FactoryPools(this);
     public final aly c;
     public int d;
     public final bvm dn;
@@ -179,11 +179,11 @@ public final class adr extends adq {
     }
 
     @Override // me.hd.wauxv.obf.adq
-    public final void dd(jx jxVar) {
-        super.dd(jxVar);
+    public final void dd(FactoryPools factoryPoolsVar) {
+        super.dd(factoryPoolsVar);
         int size = this.a.size();
         for (int i = 0; i < size; i++) {
-            ((adq) this.a.get(i)).dd(jxVar);
+            ((adq) this.a.get(i)).dd(factoryPoolsVar);
         }
     }
 
@@ -305,7 +305,7 @@ public final class adr extends adq {
             bvmVar2 = bvmVar;
             adrVar.ce(this, bvmVar2, hashSet2, this.bz[0] == 2 ? 0 : 1, false);
             for (adq adqVar6 : hashSet2) {
-                cnf.aq(this, bvmVar2, adqVar6);
+                HugeSyntheticPileOfHelpers.aq(this, bvmVar2, adqVar6);
                 adqVar6.e(bvmVar2, zEi);
             }
         } else {
@@ -331,7 +331,7 @@ public final class adr extends adq {
                         adqVar7.dj(i10);
                     }
                 } else {
-                    cnf.aq(this, bvmVar2, adqVar7);
+                    HugeSyntheticPileOfHelpers.aq(this, bvmVar2, adqVar7);
                     if (!(adqVar7 instanceof bbp) && !(adqVar7 instanceof bjp)) {
                         adqVar7.e(bvmVar2, zEi);
                     }
@@ -579,7 +579,7 @@ public final class adr extends adq {
         ArrayList arrayList4;
         int i11;
         boolean z15;
-        boolean[] zArr2 = cnf.ag;
+        boolean[] zArr2 = HugeSyntheticPileOfHelpers.ag;
         this.bi = 0;
         this.bj = 0;
         this.dv = false;
@@ -593,7 +593,7 @@ public final class adr extends adq {
         int i14 = this.d;
         adb adbVar4 = this.at;
         adb adbVar5 = this.as;
-        if (i14 == 0 && cnf.az(this.du, 1)) {
+        if (i14 == 0 && HugeSyntheticPileOfHelpers.az(this.du, 1)) {
             adg adgVar2 = this.i;
             int i15 = iArr[0];
             int i16 = iArr[1];
@@ -754,7 +754,7 @@ public final class adr extends adq {
             r21 = iArr;
         }
         bvm bvmVar = this.dn;
-        if (size2 > 2 && ((i13 == 2 || i12 == 2) && cnf.az(this.du, 1024))) {
+        if (size2 > 2 && ((i13 == 2 || i12 == 2) && HugeSyntheticPileOfHelpers.az(this.du, 1024))) {
             adg adgVar3 = this.i;
             ArrayList arrayList6 = this.a;
             int size4 = arrayList6.size();
@@ -779,7 +779,7 @@ public final class adr extends adq {
                         ArrayList arrayList15 = arrayList9;
                         int[] iArr3 = adqVar11.bz;
                         ArrayList arrayList16 = arrayList10;
-                        if (!emn.bf(r3, r6, iArr3[0], iArr3[1])) {
+                        if (!StaticHelpers7.bf(r3, r6, iArr3[0], iArr3[1])) {
                             ed(adqVar11, adgVar3, this.ec);
                         }
                         boolean z21 = adqVar11 instanceof bjp;
@@ -876,14 +876,14 @@ public final class adr extends adq {
                     if (arrayList20 != null) {
                         Iterator it = arrayList20.iterator();
                         while (it.hasNext()) {
-                            emn.ai((bjp) it.next(), 0, arrayList24, null);
+                            StaticHelpers7.ai((bjp) it.next(), 0, arrayList24, null);
                         }
                     }
                     eum eumVar5 = null;
                     int i33 = 0;
                     if (arrayList21 != null) {
                         for (bkw bkwVar2 : arrayList21) {
-                            eum eumVarAi = emn.ai(bkwVar2, i33, arrayList24, eumVar5);
+                            eum eumVarAi = StaticHelpers7.ai(bkwVar2, i33, arrayList24, eumVar5);
                             bkwVar2.ex(i33, arrayList24, eumVarAi);
                             eumVarAi.g(arrayList24);
                             eumVar5 = null;
@@ -894,40 +894,40 @@ public final class adr extends adq {
                     if (hashSet != null) {
                         Iterator it2 = hashSet.iterator();
                         while (it2.hasNext()) {
-                            emn.ai(((adb) it2.next()).d, 0, arrayList24, null);
+                            StaticHelpers7.ai(((adb) it2.next()).d, 0, arrayList24, null);
                         }
                     }
                     HashSet hashSet2 = ck(4).a;
                     if (hashSet2 != null) {
                         Iterator it3 = hashSet2.iterator();
                         while (it3.hasNext()) {
-                            emn.ai(((adb) it3.next()).d, 0, arrayList24, null);
+                            StaticHelpers7.ai(((adb) it3.next()).d, 0, arrayList24, null);
                         }
                     }
                     HashSet hashSet3 = ck(7).a;
                     if (hashSet3 != null) {
                         Iterator it4 = hashSet3.iterator();
                         while (it4.hasNext()) {
-                            emn.ai(((adb) it4.next()).d, 0, arrayList24, null);
+                            StaticHelpers7.ai(((adb) it4.next()).d, 0, arrayList24, null);
                         }
                     }
                     eum eumVar6 = null;
                     if (arrayList11 != null) {
                         Iterator it5 = arrayList11.iterator();
                         while (it5.hasNext()) {
-                            emn.ai((adq) it5.next(), 0, arrayList24, null);
+                            StaticHelpers7.ai((adq) it5.next(), 0, arrayList24, null);
                         }
                     }
                     if (arrayList22 != null) {
                         Iterator it6 = arrayList22.iterator();
                         while (it6.hasNext()) {
-                            emn.ai((bjp) it6.next(), 1, arrayList24, null);
+                            StaticHelpers7.ai((bjp) it6.next(), 1, arrayList24, null);
                         }
                     }
                     int i34 = 1;
                     if (arrayList23 != null) {
                         for (bkw bkwVar3 : arrayList23) {
-                            eum eumVarAi2 = emn.ai(bkwVar3, i34, arrayList24, eumVar6);
+                            eum eumVarAi2 = StaticHelpers7.ai(bkwVar3, i34, arrayList24, eumVar6);
                             bkwVar3.ex(i34, arrayList24, eumVarAi2);
                             eumVarAi2.g(arrayList24);
                             eumVar6 = null;
@@ -938,35 +938,35 @@ public final class adr extends adq {
                     if (hashSet4 != null) {
                         Iterator it7 = hashSet4.iterator();
                         while (it7.hasNext()) {
-                            emn.ai(((adb) it7.next()).d, 1, arrayList24, null);
+                            StaticHelpers7.ai(((adb) it7.next()).d, 1, arrayList24, null);
                         }
                     }
                     HashSet hashSet5 = ck(6).a;
                     if (hashSet5 != null) {
                         Iterator it8 = hashSet5.iterator();
                         while (it8.hasNext()) {
-                            emn.ai(((adb) it8.next()).d, 1, arrayList24, null);
+                            StaticHelpers7.ai(((adb) it8.next()).d, 1, arrayList24, null);
                         }
                     }
                     HashSet hashSet6 = ck(5).a;
                     if (hashSet6 != null) {
                         Iterator it9 = hashSet6.iterator();
                         while (it9.hasNext()) {
-                            emn.ai(((adb) it9.next()).d, 1, arrayList24, null);
+                            StaticHelpers7.ai(((adb) it9.next()).d, 1, arrayList24, null);
                         }
                     }
                     HashSet hashSet7 = ck(7).a;
                     if (hashSet7 != null) {
                         Iterator it10 = hashSet7.iterator();
                         while (it10.hasNext()) {
-                            emn.ai(((adb) it10.next()).d, 1, arrayList24, null);
+                            StaticHelpers7.ai(((adb) it10.next()).d, 1, arrayList24, null);
                         }
                     }
                     boolean z22 = true;
                     if (arrayList12 != null) {
                         Iterator it11 = arrayList12.iterator();
                         while (it11.hasNext()) {
-                            emn.ai((adq) it11.next(), 1, arrayList24, null);
+                            StaticHelpers7.ai((adq) it11.next(), 1, arrayList24, null);
                         }
                     }
                     int i35 = 0;
@@ -1095,7 +1095,7 @@ public final class adr extends adq {
                     int i43 = i30;
                     int[] iArr5 = adqVar13.bz;
                     adbVar = adbVar5;
-                    if (emn.bf(r32, r62, iArr5[0], iArr5[1]) && !(adqVar13 instanceof bbp)) {
+                    if (StaticHelpers7.bf(r32, r62, iArr5[0], iArr5[1]) && !(adqVar13 instanceof bbp)) {
                         i30 = i43 + 1;
                         adbVar5 = adbVar;
                     }

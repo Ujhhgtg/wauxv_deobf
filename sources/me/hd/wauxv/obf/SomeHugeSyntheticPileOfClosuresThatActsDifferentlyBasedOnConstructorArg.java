@@ -61,9 +61,9 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
         switch (i) {
             case 0:
                 int i7 = 0;
-                azg azgVarAa = dkz.aa((HookParam) obj);
-                azgVarAa.a = dal.b(Button.class);
-                Iterator it = azgVarAa.c().iterator();
+                FieldResolver fieldResolverVarAa = StaticHelpers6.aa((HookParam) obj);
+                fieldResolverVarAa.fieldType = dal.b(Button.class);
+                Iterator it = fieldResolverVarAa.resolve().iterator();
                 while (it.hasNext()) {
                     Button button = (Button) ((azk) it.next()).e();
                     if (button != null && button.getVisibility() == 0) {
@@ -117,15 +117,15 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
                 cls2 = ImageView.class;
-                Class<ImageView> clsBf = cnf.bf(dal.b(cls2));
+                Class<ImageView> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                 cls2 = clsBf != null ? clsBf : ImageView.class;
                 cls3 = String.class;
-                Class<String> clsBf2 = cnf.bf(dal.b(cls3));
+                Class<String> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
                 cls3 = clsBf2 != null ? clsBf2 : String.class;
                 cls4 = Float.class;
-                Class<Float> clsBf3 = cnf.bf(dal.b(cls4));
+                Class<Float> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
                 cls4 = clsBf3 != null ? clsBf3 : Float.class;
-                Class<Boolean> clsBf4 = cnf.bf(dal.b(cls));
+                Class<Boolean> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 cdjVar3.q(cls2, cls3, cls4, clsBf4 != null ? clsBf4 : Boolean.class);
                 cdjVar3.t("MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* cnb.z(-118858924948266L)  */);
                 bahVar3.getClass();
@@ -177,50 +177,50 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 return kotlinUnitVar;
             case 11:
                 View view = (View) obj;
-                View viewK = dkz.k(view, R.layout.module_dialog_bottom_tab_custom, null, false);
+                View viewK = StaticHelpers6.k(view, R.layout.module_dialog_bottom_tab_custom, null, false);
                 int i8 = R.id.moduleDialogCbBottomTabViewHideTab;
-                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.aq(viewK,
+                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.recursivelyFindViewById(viewK,
                         R.id.moduleDialogCbBottomTabViewHideTab);
                 if (materialCheckBox != null) {
                     i8 = R.id.moduleDialogCbBottomTabViewHideTitle;
-                    MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) KotlinHelpers2.aq(viewK,
+                    MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) KotlinHelpers2.recursivelyFindViewById(viewK,
                             R.id.moduleDialogCbBottomTabViewHideTitle);
                     if (materialCheckBox2 != null) {
                         i8 = R.id.moduleDialogCbBottomTabViewModIcon;
-                        MaterialCheckBox materialCheckBox3 = (MaterialCheckBox) KotlinHelpers2.aq(viewK,
+                        MaterialCheckBox materialCheckBox3 = (MaterialCheckBox) KotlinHelpers2.recursivelyFindViewById(viewK,
                                 R.id.moduleDialogCbBottomTabViewModIcon);
                         if (materialCheckBox3 != null) {
                             i8 = R.id.moduleDialogCbBottomTabViewModTitle;
-                            MaterialCheckBox materialCheckBox4 = (MaterialCheckBox) KotlinHelpers2.aq(viewK,
+                            MaterialCheckBox materialCheckBox4 = (MaterialCheckBox) KotlinHelpers2.recursivelyFindViewById(viewK,
                                     R.id.moduleDialogCbBottomTabViewModTitle);
                             if (materialCheckBox4 != null) {
                                 i8 = R.id.moduleDialogEdtBottomTabViewChats;
-                                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                         R.id.moduleDialogEdtBottomTabViewChats);
                                 if (textInputEditText != null) {
                                     i8 = R.id.moduleDialogEdtBottomTabViewContacts;
-                                    TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                                    TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                             R.id.moduleDialogEdtBottomTabViewContacts);
                                     if (textInputEditText2 != null) {
                                         i8 = R.id.moduleDialogEdtBottomTabViewDiscover;
-                                        TextInputEditText textInputEditText3 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                                        TextInputEditText textInputEditText3 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                 R.id.moduleDialogEdtBottomTabViewDiscover);
                                         if (textInputEditText3 != null) {
                                             i8 = R.id.moduleDialogEdtBottomTabViewMe;
-                                            TextInputEditText textInputEditText4 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                                            TextInputEditText textInputEditText4 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                     R.id.moduleDialogEdtBottomTabViewMe);
                                             if (textInputEditText4 != null) {
                                                 i8 = R.id.moduleDialogInputBottomTabViewChats;
-                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                         R.id.moduleDialogInputBottomTabViewChats)) != null) {
                                                     i8 = R.id.moduleDialogInputBottomTabViewContacts;
-                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                             R.id.moduleDialogInputBottomTabViewContacts)) != null) {
                                                         i8 = R.id.moduleDialogInputBottomTabViewDiscover;
-                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                 R.id.moduleDialogInputBottomTabViewDiscover)) != null) {
                                                             i8 = R.id.moduleDialogInputBottomTabViewMe;
-                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                     R.id.moduleDialogInputBottomTabViewMe)) != null) {
                                                                 LinearLayout linearLayout = (LinearLayout) viewK;
                                                                 ceg cegVar = new ceg(linearLayout, materialCheckBox,
@@ -271,7 +271,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 RelativeLayout relativeLayout = (RelativeLayout) (!(objE instanceof RelativeLayout) ? null : objE);
                 if (relativeLayout == null) {
                     cls5 = RelativeLayout.class;
-                    Class<RelativeLayout> clsBf5 = cnf.bf(dal.b(cls5));
+                    Class<RelativeLayout> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls5));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf5 != null ? clsBf5 : RelativeLayout.class).getName()).toString());
                 }
@@ -332,48 +332,48 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 return kotlinUnitVar;
             case 13:
                 View view2 = (View) obj;
-                View viewK2 = dkz.k(view2, R.layout.module_dialog_bottom_tab_material, null, false);
+                View viewK2 = StaticHelpers6.k(view2, R.layout.module_dialog_bottom_tab_material, null, false);
                 int i10 = R.id.moduleDialogEdtBottomTabViewBottomDarkColor;
-                TextInputEditText textInputEditText5 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                TextInputEditText textInputEditText5 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                         R.id.moduleDialogEdtBottomTabViewBottomDarkColor);
                 if (textInputEditText5 != null) {
                     i10 = R.id.moduleDialogEdtBottomTabViewBottomLightColor;
-                    TextInputEditText textInputEditText6 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                    TextInputEditText textInputEditText6 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                             R.id.moduleDialogEdtBottomTabViewBottomLightColor);
                     if (textInputEditText6 != null) {
                         i10 = R.id.moduleDialogEdtBottomTabViewIconDarkColor;
-                        TextInputEditText textInputEditText7 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                        TextInputEditText textInputEditText7 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                 R.id.moduleDialogEdtBottomTabViewIconDarkColor);
                         if (textInputEditText7 != null) {
                             i10 = R.id.moduleDialogEdtBottomTabViewIconLightColor;
-                            TextInputEditText textInputEditText8 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                            TextInputEditText textInputEditText8 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                     R.id.moduleDialogEdtBottomTabViewIconLightColor);
                             if (textInputEditText8 != null) {
                                 i10 = R.id.moduleDialogEdtBottomTabViewSelectDarkColor;
-                                TextInputEditText textInputEditText9 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                                TextInputEditText textInputEditText9 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                         R.id.moduleDialogEdtBottomTabViewSelectDarkColor);
                                 if (textInputEditText9 != null) {
                                     i10 = R.id.moduleDialogEdtBottomTabViewSelectLightColor;
-                                    TextInputEditText textInputEditText10 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                                    TextInputEditText textInputEditText10 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                             R.id.moduleDialogEdtBottomTabViewSelectLightColor);
                                     if (textInputEditText10 != null) {
                                         i10 = R.id.moduleDialogInputBottomTabViewBottomDarkColor;
-                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                                 R.id.moduleDialogInputBottomTabViewBottomDarkColor)) != null) {
                                             i10 = R.id.moduleDialogInputBottomTabViewBottomLightColor;
-                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                                     R.id.moduleDialogInputBottomTabViewBottomLightColor)) != null) {
                                                 i10 = R.id.moduleDialogInputBottomTabViewIconDarkColor;
-                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                                         R.id.moduleDialogInputBottomTabViewIconDarkColor)) != null) {
                                                     i10 = R.id.moduleDialogInputBottomTabViewIconLightColor;
-                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                                                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                                             R.id.moduleDialogInputBottomTabViewIconLightColor)) != null) {
                                                         i10 = R.id.moduleDialogInputBottomTabViewSelectDarkColor;
-                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                                                 R.id.moduleDialogInputBottomTabViewSelectDarkColor)) != null) {
                                                             i10 = R.id.moduleDialogInputBottomTabViewSelectLightColor;
-                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                                                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                                                     R.id.moduleDialogInputBottomTabViewSelectLightColor)) != null) {
                                                                 LinearLayout linearLayout2 = (LinearLayout) viewK2;
                                                                 ceh cehVar = new ceh(linearLayout2, textInputEditText5,
@@ -426,18 +426,18 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                     return kotlinUnitVar;
                 }
                 cls6 = Activity.class;
-                Class<Activity> clsBf6 = cnf.bf(dal.b(cls6));
+                Class<Activity> clsBf6 = HugeSyntheticPileOfHelpers.bf(dal.b(cls6));
                 throw new IllegalStateException("HookParam instance cannot cast to "
                         .concat((clsBf6 != null ? clsBf6 : Activity.class).getName()).toString());
             case 15:
                 un unVar = un.a;
-                aki akiVarAb = csb.ab(unVar, dqc.toSingletonList((Method) obj));
+                aki akiVarAb = PackageParam.ab(unVar, dqc.toSingletonList((Method) obj));
                 unVar.y(akiVarAb, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(17));
                 akiVarAb.o();
                 return kotlinUnitVar;
             case 16:
                 un unVar2 = un.a;
-                aki akiVarAb2 = csb.ab(unVar2, dqc.toSingletonList((Method) obj));
+                aki akiVarAb2 = PackageParam.ab(unVar2, dqc.toSingletonList((Method) obj));
                 unVar2.y(akiVarAb2, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(18));
                 akiVarAb2.o();
                 return kotlinUnitVar;
@@ -453,7 +453,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = bhu.x(th);
+                    objX = FastKV.x(th);
                 }
                 if (objX instanceof dcx) {
                     objX = null;
@@ -462,40 +462,40 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 View view3 = (View) objX;
                 Object tag = view3.getTag();
                 int i11 = 0;
-                azg azgVarR = dqc.bi(tag).r();
-                azgVarR.ab = "a" /* "a" /* "a" /* cnb.z(-490369301084970L)  */;
-                Object objD = ((azk) yg.e(azgVarR)).d();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(tag).r();
+                fieldResolverVarR.name = "a" /* "a" /* "a" /* cnb.z(-490369301084970L)  */;
+                Object objD = ((azk) yg.e(fieldResolverVarR)).d();
                 throwIfVar1IsNull(objD);
-                azg azgVarR2 = dqc.bi(hookParam.getThisObject()).r();
-                azgVarR2.ab = "d" /* "d" /* "d" /* cnb.z(-490377891019562L)  */;
-                Object objD2 = ((azk) aaz.e(azgVarR2.c())).d();
+                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(hookParam.getThisObject()).r();
+                fieldResolverVarR2.name = "d" /* "d" /* "d" /* cnb.z(-490377891019562L)  */;
+                Object objD2 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).d();
                 throwIfVar1IsNull(objD2);
                 if (cnb.ab(ewk.a) || cnb.ac(ewh.c)) {
-                    azg azgVarR3 = dqc.bi(objD2).r();
-                    azgVarR3.ab = "w" /* "w" /* "w" /* cnb.z(-490317761477418L)  */;
-                    Object objE3 = ((azk) aaz.e(azgVarR3.c())).e();
+                    FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objD2).r();
+                    fieldResolverVarR3.name = "w" /* "w" /* "w" /* cnb.z(-490317761477418L)  */;
+                    Object objE3 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).e();
                     throwIfVar1IsNull(objE3);
                     zBooleanValue = ((Boolean) objE3).booleanValue();
                 } else {
-                    azg azgVarR4 = dqc.bi(objD2).r();
-                    azgVarR4.ab = "d" /* "d" /* "d" /* cnb.z(-490326351412010L)  */;
-                    Object objE4 = ((azk) aaz.e(azgVarR4.c())).e();
+                    FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(objD2).r();
+                    fieldResolverVarR4.name = "d" /* "d" /* "d" /* cnb.z(-490326351412010L)  */;
+                    Object objE4 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).e();
                     throwIfVar1IsNull(objE4);
                     zBooleanValue = ((Number) objE4).intValue() == 1;
                 }
                 if (zBooleanValue) {
-                    azg azgVarR5 = dqc.bi(objD).r();
-                    azgVarR5.ab = "field_type" /* "field_type" /* "field_type" /* cnb.z(-490334941346602L)  */;
-                    Object objE5 = ((azk) yg.e(azgVarR5)).e();
+                    FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(objD).r();
+                    fieldResolverVarR5.name = "field_type" /* "field_type" /* "field_type" /* cnb.z(-490334941346602L)  */;
+                    Object objE5 = ((azk) yg.e(fieldResolverVarR5)).e();
                     throwIfVar1IsNull(objE5);
                     if (((Number) objE5).intValue() == 3) {
-                        azg azgVarR6 = dqc.bi(objD).r();
-                        azgVarR6.ab = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-490253336967978L)  */;
-                        Object objD3 = ((azk) yg.e(azgVarR6)).d();
+                        FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(objD).r();
+                        fieldResolverVarR6.name = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-490253336967978L)  */;
+                        Object objD3 = ((azk) yg.e(fieldResolverVarR6)).d();
                         throwIfVar1IsNull(objD3);
-                        cde cdeVarT = dqc.bi(objD3).t();
-                        cdeVarT.ab = "getData" /* "getData" /* "getData" /* cnb.z(-490240452066090L)  */;
-                        Object objJ = ((MethodHookWrapper) dkz.m(cdeVarT)).j(new Object[0]);
+                        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objD3).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                        methodResolverVarT.name = "getData" /* "getData" /* "getData" /* cnb.z(-490240452066090L)  */;
+                        Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT)).j(new Object[0]);
                         throwIfVar1IsNull(objJ);
                         cwd cwdVar = cwd.a;
                         cwdVar.getClass();
@@ -505,7 +505,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                         if (string == null) {
                             String strZ = cmz.z();
                             String strValueOf = String.valueOf(str.hashCode() & Opcodes.CONST_METHOD_TYPE);
-                            StringBuilder sbY = dkz.y(strZ);
+                            StringBuilder sbY = StaticHelpers6.toSb(strZ);
                             sbY.append("/favorite/" /* "/favorite/" /* "/favorite/" /* cnb.z(-490206092327722L)  */);
                             sbY.append(strValueOf);
                             sbY.append('/');
@@ -588,7 +588,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = bhu.x(th2);
+                    objX2 = FastKV.x(th2);
                 }
                 if (objX2 instanceof dcx) {
                     objX2 = null;
@@ -597,22 +597,22 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 View view4 = (View) objX2;
                 Object tag2 = view4.getTag();
                 int i12 = 0;
-                azg azgVarR7 = dqc.bi(tag2).r();
-                azgVarR7.ab = "a" /* "a" /* "a" /* cnb.z(-479082127031082L)  */;
-                Object objD4 = ((azk) yg.e(azgVarR7)).d();
+                FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(tag2).r();
+                fieldResolverVarR7.name = "a" /* "a" /* "a" /* cnb.z(-479082127031082L)  */;
+                Object objD4 = ((azk) yg.e(fieldResolverVarR7)).d();
                 throwIfVar1IsNull(objD4);
-                azg azgVarR8 = dqc.bi(objD4).r();
-                azgVarR8.ab = "field_type" /* "field_type" /* "field_type" /* cnb.z(-479090716965674L)  */;
-                Object objE6 = ((azk) yg.e(azgVarR8)).e();
+                FieldResolver fieldResolverVarR8 = dqc.getWrapperConfiguration(objD4).r();
+                fieldResolverVarR8.name = "field_type" /* "field_type" /* "field_type" /* cnb.z(-479090716965674L)  */;
+                Object objE6 = ((azk) yg.e(fieldResolverVarR8)).e();
                 throwIfVar1IsNull(objE6);
                 if (((Number) objE6).intValue() == 3) {
-                    azg azgVarR9 = dqc.bi(objD4).r();
-                    azgVarR9.ab = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-479077832063786L)  */;
-                    Object objD5 = ((azk) yg.e(azgVarR9)).d();
+                    FieldResolver fieldResolverVarR9 = dqc.getWrapperConfiguration(objD4).r();
+                    fieldResolverVarR9.name = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-479077832063786L)  */;
+                    Object objD5 = ((azk) yg.e(fieldResolverVarR9)).d();
                     throwIfVar1IsNull(objD5);
-                    cde cdeVarT2 = dqc.bi(objD5).t();
-                    cdeVarT2.ab = "getData" /* "getData" /* "getData" /* cnb.z(-478996227685162L)  */;
-                    Object objJ2 = ((MethodHookWrapper) dkz.m(cdeVarT2)).j(new Object[0]);
+                    MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objD5).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                    methodResolverVarT2.name = "getData" /* "getData" /* "getData" /* cnb.z(-478996227685162L)  */;
+                    Object objJ2 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).j(new Object[0]);
                     throwIfVar1IsNull(objJ2);
                     cwd cwdVar2 = cwd.a;
                     cwdVar2.getClass();
@@ -622,7 +622,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                     if (string2 == null) {
                         String strZ2 = cmz.z();
                         String strValueOf2 = String.valueOf(str2.hashCode() & Opcodes.CONST_METHOD_TYPE);
-                        StringBuilder sbY2 = dkz.y(strZ2);
+                        StringBuilder sbY2 = StaticHelpers6.toSb(strZ2);
                         sbY2.append("/favorite/" /* "/favorite/" /* "/favorite/" /* cnb.z(-478961867946794L)  */);
                         sbY2.append(strValueOf2);
                         sbY2.append('/');
@@ -676,11 +676,11 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 uq.a.getClass();
                 cdjVar8.o(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */));
                 cdjVar8.r(Void.TYPE);
-                Class<Boolean> clsBf7 = cnf.bf(dal.b(cls));
+                Class<Boolean> clsBf7 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 if (clsBf7 == null) {
                     clsBf7 = cls;
                 }
-                Class<Boolean> clsBf8 = cnf.bf(dal.b(cls));
+                Class<Boolean> clsBf8 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 cdjVar8.q(clsBf7, clsBf8 != null ? clsBf8 : Boolean.class);
                 fj fjVar3 = new fj();
                 cdj cdjVar9 = new cdj();
@@ -696,13 +696,13 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
             case 26:
                 Object obj4 = ((List) obj).get(0);
                 cge.a.getClass();
-                return Boolean.valueOf(nullSafeIsEqual(obj4, emn.az(cgd.a)));
+                return Boolean.valueOf(nullSafeIsEqual(obj4, StaticHelpers7.az(cgd.a)));
             case 27:
                 Object objE7 = ((HookParam) obj).getThisObject();
                 FrameLayout frameLayout = (FrameLayout) (!(objE7 instanceof FrameLayout) ? null : objE7);
                 if (frameLayout == null) {
                     cls7 = FrameLayout.class;
-                    Class<FrameLayout> clsBf9 = cnf.bf(dal.b(cls7));
+                    Class<FrameLayout> clsBf9 = HugeSyntheticPileOfHelpers.bf(dal.b(cls7));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf9 != null ? clsBf9 : FrameLayout.class).getName()).toString());
                 }
@@ -724,79 +724,79 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 return kotlinUnitVar;
             case 28:
                 View view5 = (View) obj;
-                View viewK3 = dkz.k(view5, R.layout.module_dialog_chat_group_nav, null, false);
+                View viewK3 = StaticHelpers6.k(view5, R.layout.module_dialog_chat_group_nav, null, false);
                 int i14 = R.id.moduleDialogEdtChatGroupNavActiveDarkColor;
-                TextInputEditText textInputEditText11 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
+                TextInputEditText textInputEditText11 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK3,
                         R.id.moduleDialogEdtChatGroupNavActiveDarkColor);
                 if (textInputEditText11 != null) {
                     i14 = R.id.moduleDialogEdtChatGroupNavActiveLightColor;
-                    TextInputEditText textInputEditText12 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
+                    TextInputEditText textInputEditText12 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK3,
                             R.id.moduleDialogEdtChatGroupNavActiveLightColor);
                     if (textInputEditText12 != null) {
                         i14 = R.id.moduleDialogEdtChatGroupNavIconDarkColor;
-                        TextInputEditText textInputEditText13 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
+                        TextInputEditText textInputEditText13 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK3,
                                 R.id.moduleDialogEdtChatGroupNavIconDarkColor);
                         if (textInputEditText13 != null) {
                             i14 = R.id.moduleDialogEdtChatGroupNavIconLightColor;
-                            TextInputEditText textInputEditText14 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
+                            TextInputEditText textInputEditText14 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK3,
                                     R.id.moduleDialogEdtChatGroupNavIconLightColor);
                             if (textInputEditText14 != null) {
                                 i14 = R.id.moduleDialogEdtChatGroupNavNavDarkColor;
-                                TextInputEditText textInputEditText15 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
+                                TextInputEditText textInputEditText15 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK3,
                                         R.id.moduleDialogEdtChatGroupNavNavDarkColor);
                                 if (textInputEditText15 != null) {
                                     i14 = R.id.moduleDialogEdtChatGroupNavNavLightColor;
-                                    TextInputEditText textInputEditText16 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
+                                    TextInputEditText textInputEditText16 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK3,
                                             R.id.moduleDialogEdtChatGroupNavNavLightColor);
                                     if (textInputEditText16 != null) {
                                         i14 = R.id.moduleDialogEdtChatGroupNavTextDarkColor;
-                                        TextInputEditText textInputEditText17 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
+                                        TextInputEditText textInputEditText17 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK3,
                                                 R.id.moduleDialogEdtChatGroupNavTextDarkColor);
                                         if (textInputEditText17 != null) {
                                             i14 = R.id.moduleDialogEdtChatGroupNavTextLightColor;
-                                            TextInputEditText textInputEditText18 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
+                                            TextInputEditText textInputEditText18 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK3,
                                                     R.id.moduleDialogEdtChatGroupNavTextLightColor);
                                             if (textInputEditText18 != null) {
                                                 i14 = R.id.moduleDialogEdtChatGroupNavWidth;
                                                 TextInputEditText textInputEditText19 = (TextInputEditText) KotlinHelpers2
-                                                        .aq(viewK3, R.id.moduleDialogEdtChatGroupNavWidth);
+                                                        .recursivelyFindViewById(viewK3, R.id.moduleDialogEdtChatGroupNavWidth);
                                                 if (textInputEditText19 != null) {
                                                     i14 = R.id.moduleDialogEdtChatGroupTopPadding;
                                                     TextInputEditText textInputEditText20 = (TextInputEditText) KotlinHelpers2
-                                                            .aq(viewK3, R.id.moduleDialogEdtChatGroupTopPadding);
+                                                            .recursivelyFindViewById(viewK3, R.id.moduleDialogEdtChatGroupTopPadding);
                                                     if (textInputEditText20 != null) {
                                                         i14 = R.id.moduleDialogInputChatGroupNavActiveDarkColor;
-                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK3,
+                                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK3,
                                                                 R.id.moduleDialogInputChatGroupNavActiveDarkColor)) != null) {
                                                             i14 = R.id.moduleDialogInputChatGroupNavActiveLightColor;
-                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK3,
+                                                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK3,
                                                                     R.id.moduleDialogInputChatGroupNavActiveLightColor)) != null) {
                                                                 i14 = R.id.moduleDialogInputChatGroupNavIconDarkColor;
-                                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK3,
+                                                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK3,
                                                                         R.id.moduleDialogInputChatGroupNavIconDarkColor)) != null) {
                                                                     i14 = R.id.moduleDialogInputChatGroupNavIconLightColor;
-                                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK3,
+                                                                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK3,
                                                                             R.id.moduleDialogInputChatGroupNavIconLightColor)) != null) {
                                                                         i14 = R.id.moduleDialogInputChatGroupNavNavDarkColor;
-                                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK3,
+                                                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK3,
                                                                                 R.id.moduleDialogInputChatGroupNavNavDarkColor)) != null) {
                                                                             i14 = R.id.moduleDialogInputChatGroupNavNavLightColor;
-                                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK3,
+                                                                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK3,
                                                                                     R.id.moduleDialogInputChatGroupNavNavLightColor)) != null) {
                                                                                 i14 = R.id.moduleDialogInputChatGroupNavTextDarkColor;
-                                                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK3,
+                                                                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK3,
                                                                                         R.id.moduleDialogInputChatGroupNavTextDarkColor)) != null) {
                                                                                     i14 = R.id.moduleDialogInputChatGroupNavTextLightColor;
-                                                                                    if (((TextInputLayout) KotlinHelpers2.aq(
+                                                                                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(
                                                                                             viewK3,
                                                                                             R.id.moduleDialogInputChatGroupNavTextLightColor)) != null) {
                                                                                         i14 = R.id.moduleDialogInputChatGroupNavWidth;
-                                                                                        if (((TextInputLayout) KotlinHelpers2.aq(
+                                                                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(
                                                                                                 viewK3,
                                                                                                 R.id.moduleDialogInputChatGroupNavWidth)) != null) {
                                                                                             i14 = R.id.moduleDialogInputChatGroupTopPadding;
                                                                                             if (((TextInputLayout) KotlinHelpers2
-                                                                                                    .aq(viewK3,
+                                                                                                    .recursivelyFindViewById(viewK3,
                                                                                                             R.id.moduleDialogInputChatGroupTopPadding)) != null) {
                                                                                                 LinearLayout linearLayout3 = (LinearLayout) viewK3;
                                                                                                 cei ceiVar = new cei(

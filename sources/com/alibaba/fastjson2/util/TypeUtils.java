@@ -87,9 +87,9 @@ import java.util.function.ObjIntConsumer;
 import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 import java.util.function.ToLongFunction;
-import me.hd.wauxv.obf.bjs;
+
 import me.hd.wauxv.obf.cpv;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.pool.TypePool;
 import okhttp3.HttpUrl;
@@ -5296,7 +5296,7 @@ public class TypeUtils {
                 return t;
             }
         }
-        throw new JSONException(concatVar1GetClass(obj, dkz.z("can not cast to ", name, ", from ")));
+        throw new JSONException(concatVar1GetClass(obj, StaticHelpers6.concatAndToSb("can not cast to ", name, ", from ")));
     }
 
     public static boolean isInteger(char[] cArr, int i, int i2) {

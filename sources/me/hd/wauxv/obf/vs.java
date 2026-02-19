@@ -32,12 +32,12 @@ public final class vs implements dpi {
         if (((biv) next) != null) {
             vi.a.u(String.valueOf(dplVar.b));
             aic.a.getClass();
-            Method methodBb = emn.bb(aib.a);
+            Method methodBb = StaticHelpers7.bb(aib.a);
             Object[] objArr = { Boolean.TRUE };
             BaseAdapter baseAdapter = this.a;
             methodBb.invoke(baseAdapter, objArr);
             agk.a.getClass();
-            emn.bb(agj.a).invoke(this.b, null);
+            StaticHelpers7.bb(agj.a).invoke(this.b, null);
             baseAdapter.notifyDataSetChanged();
         }
     }

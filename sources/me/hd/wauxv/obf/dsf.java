@@ -15,7 +15,7 @@ public final class dsf {
     public /* synthetic */ dsf(int i, String str, String str2, String str3, String str4, String str5, Integer num,
             Integer num2) {
         if (127 != (i & 127)) {
-            bht.ah(i, 127, dsd.b.getDescriptor());
+            ResourcesCompat.ah(i, 127, dsd.b.getDescriptor());
             throw null;
         }
         this.a = str;

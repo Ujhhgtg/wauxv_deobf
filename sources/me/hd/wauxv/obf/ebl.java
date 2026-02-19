@@ -17,7 +17,7 @@ public final class ebl {
     public /* synthetic */ ebl(int i, String str, Long l, Integer num, Boolean bool, eak eakVar, Long l2, Boolean bool2,
             Long l3, Long l4) {
         if (511 != (i & 511)) {
-            bht.ah(i, 511, ebj.b.getDescriptor());
+            ResourcesCompat.ah(i, 511, ebj.b.getDescriptor());
             throw null;
         }
         this.a = str;
@@ -71,14 +71,14 @@ public final class ebl {
         StringBuilder sb = new StringBuilder();
         sb.append("n84Proto(finder_username=" /* "n84Proto(finder_username=" /* "n84Proto(finder_username=" /* cnb.z(-258050225077034L)  */);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -257955735796522L);
-        dkz.ad(sb, this.b, -257882721352490L);
+        StaticHelpers6.ad(sb, this.b, -257882721352490L);
         bjs.w(sb, this.c, -258329397951274L);
         dts.g(sb, this.d, -258264973441834L);
         sb.append(this.e);
         sb.append(", extra_reward_wecoin=" /* ", extra_reward_wecoin=" /* ", extra_reward_wecoin=" /* cnb.z(-258200548932394L)  */);
-        dkz.ad(sb, this.f, -257552008870698L);
+        StaticHelpers6.ad(sb, this.f, -257552008870698L);
         dts.g(sb, this.g, -257483289393962L);
-        dkz.ad(sb, this.h, -257444634688298L);
+        StaticHelpers6.ad(sb, this.h, -257444634688298L);
         sb.append(this.i);
         sb.append(')');
         return sb.toString();

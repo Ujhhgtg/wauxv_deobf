@@ -13,7 +13,7 @@ public final class bcp extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(bcn.a, dexKitBridge, new ayz(25));
-        emn.aj(bco.a, dexKitBridge, new ayz(26));
+        StaticHelpers7.resolveDexAndCache(bcn.a, dexKitBridge, new ayz(25));
+        StaticHelpers7.resolveDexAndCache(bco.a, dexKitBridge, new ayz(26));
     }
 }

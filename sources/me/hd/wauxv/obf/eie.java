@@ -19,7 +19,7 @@ public final class eie {
     public /* synthetic */ eie(int i, Integer num, String str, Integer num2, String str2, Integer num3, Integer num4,
             Integer num5, String str3, Integer num6, String str4, Integer num7) {
         if (2047 != (i & 2047)) {
-            bht.ah(i, 2047, eic.b.getDescriptor());
+            ResourcesCompat.ah(i, 2047, eic.b.getDescriptor());
             throw null;
         }
         this.a = num;

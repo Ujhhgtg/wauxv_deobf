@@ -62,7 +62,7 @@ public final class etc extends doi implements bgj {
                 ahp ahpVar = (ahp) this.e;
                 int i3 = this.d;
                 if (i3 == 0) {
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                     dnc.g(null, 3, "开始下载视频" /* "开始下载视频" /* "开始下载视频" /* cnb.z(-587899418442538L)  */);
                     StringBuilder sb = new StringBuilder();
                     sb.append(eta.a.o());
@@ -87,7 +87,7 @@ public final class etc extends doi implements bgj {
                     if (i3 != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* cnb.z(-587813519096618L)  */);
                     }
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                 }
                 dnc.g(null, 3, "下载视频完成" /* "下载视频完成" /* "下载视频完成" /* cnb.z(-587860763736874L)  */);
                 return kotlinUnitVar;
@@ -95,7 +95,7 @@ public final class etc extends doi implements bgj {
                 ahp ahpVar2 = (ahp) this.e;
                 int i4 = this.d;
                 if (i4 == 0) {
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                     dnc.g(null, 3, "开始下载视频" /* "开始下载视频" /* "开始下载视频" /* cnb.z(-609722147273514L)  */);
                     StringBuilder sb2 = new StringBuilder();
                     sb2.append(etf.a.o());
@@ -121,7 +121,7 @@ public final class etc extends doi implements bgj {
                     if (i4 != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* cnb.z(-610186003741482L)  */);
                     }
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                 }
                 dnc.g(null, 3, "下载视频完成" /* "下载视频完成" /* "下载视频完成" /* cnb.z(-610216068512554L)  */);
                 return kotlinUnitVar;

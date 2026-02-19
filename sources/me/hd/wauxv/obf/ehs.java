@@ -10,7 +10,7 @@ public final class ehs {
 
     public /* synthetic */ ehs(int i, Integer num, String str, String str2) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, ehq.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, ehq.b.getDescriptor());
             throw null;
         }
         this.a = num;

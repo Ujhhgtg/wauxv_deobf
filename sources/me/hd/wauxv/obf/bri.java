@@ -80,6 +80,6 @@ public abstract class bri extends bxl implements aox, bou {
 
     @Override // me.hd.wauxv.obf.bxl
     public final String toString() {
-        return getClass().getSimpleName() + '@' + ajn.q(this) + "[job@" + ajn.q(h()) + ']';
+        return getClass().getSimpleName() + '@' + ajn.toHexHashCode(this) + "[job@" + ajn.toHexHashCode(h()) + ']';
     }
 }

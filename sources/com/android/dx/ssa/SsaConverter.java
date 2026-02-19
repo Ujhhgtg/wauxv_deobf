@@ -2,12 +2,11 @@ package com.android.dx.ssa;
 
 import com.android.dx.rop.code.RegisterSpec;
 import com.android.dx.rop.code.RopMethod;
-import com.android.dx.ssa.DomFront;
 import com.android.dx.util.IntIterator;
 import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.Iterator;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -68,7 +67,7 @@ public class SsaConverter {
     }
 
     private static boolean needsNewSuccessor(SsaBasicBlock ssaBasicBlock, SsaBasicBlock ssaBasicBlock2) {
-        SsaInsn ssaInsn = (SsaInsn) dkz.l(1, ssaBasicBlock.getInsns());
+        SsaInsn ssaInsn = (SsaInsn) StaticHelpers6.getLastNElem(1, ssaBasicBlock.getInsns());
         if (ssaBasicBlock.getSuccessors().cardinality() <= 1 || ssaBasicBlock2.getPredecessors().cardinality() <= 1) {
             return (ssaInsn.getResult() != null || ssaInsn.getSources().size() > 0) && ssaBasicBlock2.getPredecessors().cardinality() > 1;
         }

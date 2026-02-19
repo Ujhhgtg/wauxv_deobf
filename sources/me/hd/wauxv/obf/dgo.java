@@ -32,7 +32,7 @@ public final class dgo {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public final void m(dgm dgmVar, float f, RectF rectF, bmu bmuVar, Path path) {
+    public final void m(dgm dgmVar, float f, RectF rectF, SyntheticPileOfMess bmuVar, Path path) {
         Matrix[] matrixArr;
         float[] fArr;
         int i;
@@ -106,7 +106,7 @@ public final class dgo {
             if (bmuVar != null) {
                 dgw dgwVar4 = dgwVarArr[i5];
                 Matrix matrix = matrixArr2[i5];
-                cau cauVar = (cau) bmuVar.h;
+                cau cauVar = (cau) bmuVar.obj;
                 BitSet bitSet = cauVar.cw;
                 dgwVar4.getClass();
                 bitSet.set(i5, (boolean) c);
@@ -154,7 +154,7 @@ public final class dgo {
             }
             if (bmuVar != null) {
                 Matrix matrix2 = matrixArr[i5];
-                cau cauVar2 = (cau) bmuVar.h;
+                cau cauVar2 = (cau) bmuVar.obj;
                 c2 = 0;
                 cauVar2.cw.set(i5 + 4, false);
                 dgv[] dgvVarArr2 = cauVar2.cv;

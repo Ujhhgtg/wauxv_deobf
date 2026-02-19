@@ -23,7 +23,7 @@ public final class ow implements dcm {
     java.lang.NullPointerException
      */
     @Override // me.hd.wauxv.obf.avu
-    public final boolean k(Object obj, File file, crw crwVar) throws Throwable {
+    public final boolean saveStreamToFile(Object obj, File file, crw crwVar) throws Throwable {
         boolean z;
         Bitmap bitmap = (Bitmap) ((dcg) obj).get();
         cru cruVar = b;

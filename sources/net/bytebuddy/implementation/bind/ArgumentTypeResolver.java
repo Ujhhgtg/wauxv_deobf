@@ -1,11 +1,10 @@
 package net.bytebuddy.implementation.bind;
 
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.method.ParameterDescription;
 import net.bytebuddy.description.method.ParameterList;
 import net.bytebuddy.description.type.TypeDescription;
-import net.bytebuddy.implementation.bind.MethodDelegationBinder;
 import net.bytebuddy.utility.nullability.MaybeNull;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -75,7 +74,7 @@ public enum ArgumentTypeResolver implements MethodDelegationBinder.AmbiguityReso
             if (typeDescription.represents(Double.TYPE)) {
                 return DOUBLE;
             }
-            throw new IllegalArgumentException(dkz.u("Not a non-void, primitive type ", typeDescription));
+            throw new IllegalArgumentException(StaticHelpers6.concat("Not a non-void, primitive type ", typeDescription));
         }
 
         public MethodDelegationBinder.AmbiguityResolver.Resolution resolve(PrimitiveTypePrecedence primitiveTypePrecedence) {

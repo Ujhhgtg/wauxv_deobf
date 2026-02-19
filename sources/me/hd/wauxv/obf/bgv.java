@@ -1,7 +1,7 @@
 package me.hd.wauxv.obf;
 
 import android.os.Trace;
-import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.TimeUnit;
@@ -16,18 +16,18 @@ public final class bgv implements Runnable {
     public final ArrayList c = new ArrayList();
     public final ArrayList f = new ArrayList();
 
-    public static czx g(RecyclerView recyclerView, int i, long j) {
+    public static SomeView g(androidx.recyclerview.widget.RecyclerView recyclerView, int i, long j) {
         int iAb = recyclerView.p.ab();
         for (int i2 = 0; i2 < iAb; i2++) {
-            czx czxVarCs = RecyclerView.cs(recyclerView.p.aa(i2));
-            if (czxVarCs.f == i && !czxVarCs.ad()) {
+            SomeView someViewVarCs = androidx.recyclerview.widget.RecyclerView.cs(recyclerView.p.aa(i2));
+            if (someViewVarCs.f == i && !someViewVarCs.ad()) {
                 return null;
             }
         }
-        czo czoVar = recyclerView.m;
+        RecyclerView recyclerViewVar = recyclerView.m;
         if (j == Long.MAX_VALUE) {
             try {
-                if (ekx.c()) {
+                if (TraceCompat.c()) {
                     Trace.beginSection("RV Prefetch forced - needed next frame");
                 }
             } finally {
@@ -36,20 +36,20 @@ public final class bgv implements Runnable {
             }
         }
         recyclerView.ec();
-        czx czxVarS = czoVar.s(i, j);
-        if (czxVarS != null) {
-            if (!czxVarS.ac() || czxVarS.ad()) {
-                czoVar.i(czxVarS, false);
+        SomeView someViewVarS = recyclerViewVar.s(i, j);
+        if (someViewVarS != null) {
+            if (!someViewVarS.ac() || someViewVarS.ad()) {
+                recyclerViewVar.i(someViewVarS, false);
             } else {
-                czoVar.p(czxVarS.d);
+                recyclerViewVar.p(someViewVarS.d);
             }
         }
-        return czxVarS;
+        return someViewVarS;
     }
 
-    public final void h(RecyclerView recyclerView, int i, int i2) {
+    public final void h(androidx.recyclerview.widget.RecyclerView recyclerView, int i, int i2) {
         if (recyclerView.ac) {
-            if (RecyclerView.a && !this.c.contains(recyclerView)) {
+            if (androidx.recyclerview.widget.RecyclerView.a && !this.c.contains(recyclerView)) {
                 throw new IllegalStateException("attempting to post unregistered view!");
             }
             if (this.d == 0) {
@@ -65,15 +65,15 @@ public final class bgv implements Runnable {
     /* JADX WARN: Found duplicated region for block: B:46:0x00d0  */
     public final void i(long j) {
         bgu bguVar;
-        RecyclerView recyclerView;
-        RecyclerView recyclerView2;
+        androidx.recyclerview.widget.RecyclerView recyclerView;
+        androidx.recyclerview.widget.RecyclerView recyclerView2;
         bgu bguVar2;
         ArrayList arrayList = this.c;
         int size = arrayList.size();
         int i = 0;
         int i2 = 0;
         for (int i3 = 0; i3 < size; i3++) {
-            RecyclerView recyclerView3 = (RecyclerView) arrayList.get(i3);
+            androidx.recyclerview.widget.RecyclerView recyclerView3 = (androidx.recyclerview.widget.RecyclerView) arrayList.get(i3);
             int windowVisibility = recyclerView3.getWindowVisibility();
             bpq bpqVar = recyclerView3.bn;
             if (windowVisibility == 0) {
@@ -86,7 +86,7 @@ public final class bgv implements Runnable {
         int i4 = 0;
         int i5 = 0;
         while (i4 < size) {
-            RecyclerView recyclerView4 = (RecyclerView) arrayList.get(i4);
+            androidx.recyclerview.widget.RecyclerView recyclerView4 = (androidx.recyclerview.widget.RecyclerView) arrayList.get(i4);
             if (recyclerView4.getWindowVisibility() == 0) {
                 bpq bpqVar2 = recyclerView4.bn;
                 int iAbs = Math.abs(bpqVar2.c) + Math.abs(bpqVar2.b);
@@ -112,21 +112,21 @@ public final class bgv implements Runnable {
         }
         Collections.sort(arrayList2, b);
         for (int i8 = 0; i8 < arrayList2.size() && (recyclerView = (bguVar = (bgu) arrayList2.get(i8)).d) != null; i8++) {
-            czx czxVarG = g(recyclerView, bguVar.e, bguVar.a ? Long.MAX_VALUE : j);
-            if (czxVarG != null && czxVarG.e != null && czxVarG.ac() && !czxVarG.ad() && (recyclerView2 = (RecyclerView) czxVarG.e.get()) != null) {
+            SomeView someViewVarG = g(recyclerView, bguVar.e, bguVar.a ? Long.MAX_VALUE : j);
+            if (someViewVarG != null && someViewVarG.e != null && someViewVarG.ac() && !someViewVarG.ad() && (recyclerView2 = (androidx.recyclerview.widget.RecyclerView) someViewVarG.e.get()) != null) {
                 if (recyclerView2.an && recyclerView2.p.ab() != 0) {
-                    czo czoVar = recyclerView2.m;
+                    RecyclerView recyclerViewVar = recyclerView2.m;
                     czc czcVar = recyclerView2.aw;
                     if (czcVar != null) {
                         czcVar.q();
                     }
                     czg czgVar = recyclerView2.x;
                     if (czgVar != null) {
-                        czgVar.fb(czoVar);
-                        recyclerView2.x.fc(czoVar);
+                        czgVar.fb(recyclerViewVar);
+                        recyclerView2.x.fc(recyclerViewVar);
                     }
-                    czoVar.a.clear();
-                    czoVar.n();
+                    recyclerViewVar.a.clear();
+                    recyclerViewVar.n();
                 }
                 bpq bpqVar3 = recyclerView2.bn;
                 bpqVar3.g(recyclerView2, true);
@@ -167,7 +167,7 @@ public final class bgv implements Runnable {
                 int size = arrayList.size();
                 long jMax = 0;
                 for (int i = 0; i < size; i++) {
-                    RecyclerView recyclerView = (RecyclerView) arrayList.get(i);
+                    androidx.recyclerview.widget.RecyclerView recyclerView = (androidx.recyclerview.widget.RecyclerView) arrayList.get(i);
                     if (recyclerView.getWindowVisibility() == 0) {
                         jMax = Math.max(recyclerView.getDrawingTime(), jMax);
                     }

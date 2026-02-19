@@ -16,7 +16,7 @@ public final class dws {
 
     public /* synthetic */ dws(int i, List list, String str, String str2, String str3, Boolean bool, String str4) {
         if (63 != (i & 63)) {
-            bht.ah(i, 63, dwq.b.getDescriptor());
+            ResourcesCompat.ah(i, 63, dwq.b.getDescriptor());
             throw null;
         }
         this.b = list;

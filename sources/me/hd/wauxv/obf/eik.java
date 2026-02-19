@@ -32,7 +32,7 @@ public final class eik {
     public /* synthetic */ eik(int i, Integer num, Integer num2, List list, String str, Integer num3, String str2,
             String str3, List list2, Boolean bool, List list3, String str4, List list4, List list5) {
         if (8191 != (i & 8191)) {
-            bht.ah(i, 8191, eii.b.getDescriptor());
+            ResourcesCompat.ah(i, 8191, eii.b.getDescriptor());
             throw null;
         }
         this.b = num;

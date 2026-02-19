@@ -7,12 +7,12 @@ import android.util.Log;
 public abstract class bfd {
     public static final bfc a = bfc.a;
 
-    public static bfc b(bdj bdjVar) {
-        while (bdjVar != null) {
-            if (bdjVar.cv()) {
-                bdjVar.cs();
+    public static bfc b(SomeFragmentManager someFragmentManagerVar) {
+        while (someFragmentManagerVar != null) {
+            if (someFragmentManagerVar.cv()) {
+                someFragmentManagerVar.cs();
             }
-            bdjVar = bdjVar.bp;
+            someFragmentManagerVar = someFragmentManagerVar.bp;
         }
         return a;
     }
@@ -23,9 +23,9 @@ public abstract class bfd {
         }
     }
 
-    public static final void d(bdj bdjVar, String str) {
+    public static final void d(SomeFragmentManager someFragmentManagerVar, String str) {
         throwIfVar1IsNull(str, "previousFragmentId");
-        c(new bex(bdjVar, "Attempting to reuse fragment " + bdjVar + " with previous ID " + str));
-        b(bdjVar).getClass();
+        c(new bex(someFragmentManagerVar, "Attempting to reuse fragment " + someFragmentManagerVar + " with previous ID " + str));
+        b(someFragmentManagerVar).getClass();
     }
 }

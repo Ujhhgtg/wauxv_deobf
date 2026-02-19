@@ -6,11 +6,11 @@ import android.view.ViewGroup;
 /* JADX INFO: loaded from: classes.dex */
 public final class hp implements Runnable {
     public final /* synthetic */ int a;
-    public final /* synthetic */ ic b;
+    public final /* synthetic */ AppCompatDelegate b;
 
-    public /* synthetic */ hp(ic icVar, int i) {
+    public /* synthetic */ hp(AppCompatDelegate appCompatDelegateVar, int i) {
         this.a = i;
-        this.b = icVar;
+        this.b = appCompatDelegateVar;
     }
 
     @Override // java.lang.Runnable
@@ -18,32 +18,32 @@ public final class hp implements Runnable {
         ViewGroup viewGroup;
         switch (this.a) {
             case 0:
-                ic icVar = this.b;
-                if ((icVar.bm & 1) != 0) {
-                    icVar.ce(0);
+                AppCompatDelegate appCompatDelegateVar = this.b;
+                if ((appCompatDelegateVar.bm & 1) != 0) {
+                    appCompatDelegateVar.ce(0);
                 }
-                if ((icVar.bm & 4096) != 0) {
-                    icVar.ce(108);
+                if ((appCompatDelegateVar.bm & 4096) != 0) {
+                    appCompatDelegateVar.ce(108);
                 }
-                icVar.bl = false;
-                icVar.bm = 0;
+                appCompatDelegateVar.bl = false;
+                appCompatDelegateVar.bm = 0;
                 break;
             default:
-                ic icVar2 = this.b;
-                icVar2.aj.showAtLocation(icVar2.ai, 55, 0, 0);
-                esg esgVar = icVar2.al;
+                AppCompatDelegate appCompatDelegateVar2 = this.b;
+                appCompatDelegateVar2.aj.showAtLocation(appCompatDelegateVar2.ai, 55, 0, 0);
+                esg esgVar = appCompatDelegateVar2.al;
                 if (esgVar != null) {
                     esgVar.c();
                 }
-                if (icVar2.am && (viewGroup = icVar2.an) != null && viewGroup.isLaidOut()) {
-                    icVar2.ai.setAlpha(0.0f);
-                    esg esgVarG = eqz.g(icVar2.ai);
+                if (appCompatDelegateVar2.am && (viewGroup = appCompatDelegateVar2.an) != null && viewGroup.isLaidOut()) {
+                    appCompatDelegateVar2.ai.setAlpha(0.0f);
+                    esg esgVarG = ViewCompat.getOrCreateAnimationHelper(appCompatDelegateVar2.ai);
                     esgVarG.b(1.0f);
-                    icVar2.al = esgVarG;
+                    appCompatDelegateVar2.al = esgVarG;
                     esgVarG.e(new hr(this, 0));
                 } else {
-                    icVar2.ai.setAlpha(1.0f);
-                    icVar2.ai.setVisibility(0);
+                    appCompatDelegateVar2.ai.setAlpha(1.0f);
+                    appCompatDelegateVar2.ai.setVisibility(0);
                 }
                 break;
         }

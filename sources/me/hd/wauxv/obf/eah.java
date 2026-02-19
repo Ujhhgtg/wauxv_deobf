@@ -30,7 +30,7 @@ public final class eah {
             String str2, Integer num3, Integer num4, String str3, Long l2, Integer num5, Integer num6, Integer num7,
             String str4) {
         if (65535 != (i & 65535)) {
-            bht.ah(i, 65535, eaf.b.getDescriptor());
+            ResourcesCompat.ah(i, 65535, eaf.b.getDescriptor());
             throw null;
         }
         this.b = l;
@@ -109,7 +109,7 @@ public final class eah {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("lt1Proto(music_topic_id=" /* "lt1Proto(music_topic_id=" /* "lt1Proto(music_topic_id=" /* cnb.z(-224751343631146L)  */);
-        dkz.ad(sb, this.b, -224661149317930L);
+        StaticHelpers6.ad(sb, this.b, -224661149317930L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.c, -224609609710378L);
         yg.v(sb, this.d, -226160092904234L);
         sb.append(this.e);
@@ -122,7 +122,7 @@ public final class eah {
         bjs.w(sb, this.j, -226361956367146L);
         bjs.w(sb, this.k, -226276057021226L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.l, -225610337090346L);
-        dkz.ad(sb, this.m, -225550207548202L);
+        StaticHelpers6.ad(sb, this.m, -225550207548202L);
         bjs.w(sb, this.n, -225460013234986L);
         bjs.w(sb, this.o, -225949639506730L);
         bjs.w(sb, this.p, -225825085455146L);

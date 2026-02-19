@@ -63,7 +63,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = bhu.x(th);
+                    objX = FastKV.x(th);
                 }
                 if (objX instanceof dcx) {
                     objX = null;
@@ -76,7 +76,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = bhu.x(th2);
+                    objX2 = FastKV.x(th2);
                 }
                 if (objX2 instanceof dcx) {
                     objX2 = null;
@@ -128,7 +128,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 azl azlVar = new azl();
                 azi aziVar = new azi();
                 zb zbVar2 = new zb();
-                Class<View.OnClickListener> clsBf = cnf.bf(dal.b(cls));
+                Class<View.OnClickListener> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 zb.h(zbVar2, (clsBf != null ? clsBf : View.OnClickListener.class).getName());
                 aziVar.b = zbVar2;
                 azlVar.e(aziVar);
@@ -156,31 +156,31 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = bhu.x(th3);
+                    objX3 = FastKV.x(th3);
                 }
                 Object obj3 = objX3 instanceof dcx ? null : objX3;
                 throwIfVar1IsNull(obj3);
                 MenuItem menuItem = (MenuItem) obj3;
                 int i7 = 0;
-                azg azgVarAa = dkz.aa(hookParam2);
-                azgVarAa.a = dal.b(View.class);
-                Object objE = ((azk) aaz.e(azgVarAa.c())).e();
+                FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam2);
+                fieldResolverVarAa.fieldType = dal.b(View.class);
+                Object objE = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).e();
                 throwIfVar1IsNull(objE);
                 View view = (View) objE;
-                azg azgVarAa2 = dkz.aa(hookParam2);
-                azgVarAa2.b = new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(9);
-                Object objE2 = ((azk) aaz.e(azgVarAa2.c())).e();
+                FieldResolver fieldResolverVarAa2 = StaticHelpers6.aa(hookParam2);
+                fieldResolverVarAa2.b = new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(9);
+                Object objE2 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).e();
                 throwIfVar1IsNull(objE2);
-                azg azgVarR = dqc.bi((View.OnClickListener) objE2).r();
-                azgVarR.ab = "d" /* "d" /* "d" /* cnb.z(-70201240451882L)  */;
-                Object objD = ((azk) aaz.e(azgVarR.c())).d();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration((View.OnClickListener) objE2).r();
+                fieldResolverVarR.name = "d" /* "d" /* "d" /* cnb.z(-70201240451882L)  */;
+                Object objD = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).d();
                 throwIfVar1IsNull(objD);
-                cde cdeVarT = dqc.bi(objD).t();
-                cdeVarT.a = dal.b(List.class);
-                Object objJ = ((MethodHookWrapper) bjs.h(cdeVarT)).j(new Object[0]);
+                MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objD).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT.returnType = dal.b(List.class);
+                Object objJ = ((MethodHookWrapper) bjs.h(methodResolverVarT)).j(new Object[0]);
                 throwIfVar1IsNull(objJ);
                 List list = (List) objJ;
-                ArrayList arrayList = new ArrayList(abb.ak(list, 10));
+                ArrayList arrayList = new ArrayList(StaticHelpers4.ak(list, 10));
                 Iterator it2 = list.iterator();
                 while (it2.hasNext()) {
                     arrayList.add(new MsgInfoBean(it2.next()));
@@ -214,27 +214,27 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                         objX4 = null;
                     }
                 } catch (Throwable th4) {
-                    objX4 = bhu.x(th4);
+                    objX4 = FastKV.x(th4);
                 }
                 Object obj4 = objX4 instanceof dcx ? null : objX4;
                 throwIfVar1IsNull(obj4);
                 ContextMenu contextMenu = (ContextMenu) obj4;
-                dov dovVar = new dov(new ayu(contextMenu, i4));
+                Kotlin$Lazy kotlin$LazyVar = new Kotlin$Lazy(new ayu(contextMenu, i4));
                 int i8 = 0;
-                azg azgVarAa3 = dkz.aa(hookParam3);
-                azgVarAa3.b = new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(i3);
-                Object objE3 = ((azk) aaz.e(azgVarAa3.c())).e();
+                FieldResolver fieldResolverVarAa3 = StaticHelpers6.aa(hookParam3);
+                fieldResolverVarAa3.b = new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(i3);
+                Object objE3 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa3.resolve())).e();
                 throwIfVar1IsNull(objE3);
-                azg azgVarR2 = dqc.bi((View.OnClickListener) objE3).r();
-                azgVarR2.ab = "d" /* "d" /* "d" /* cnb.z(-69831873264426L)  */;
-                Object objD2 = ((azk) aaz.e(azgVarR2.c())).d();
+                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration((View.OnClickListener) objE3).r();
+                fieldResolverVarR2.name = "d" /* "d" /* "d" /* cnb.z(-69831873264426L)  */;
+                Object objD2 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).d();
                 throwIfVar1IsNull(objD2);
-                cde cdeVarT2 = dqc.bi(objD2).t();
-                cdeVarT2.a = dal.b(List.class);
-                Object objJ2 = ((MethodHookWrapper) bjs.h(cdeVarT2)).j(new Object[0]);
+                MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objD2).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT2.returnType = dal.b(List.class);
+                Object objJ2 = ((MethodHookWrapper) bjs.h(methodResolverVarT2)).j(new Object[0]);
                 throwIfVar1IsNull(objJ2);
                 List list2 = (List) objJ2;
-                ArrayList arrayList3 = new ArrayList(abb.ak(list2, 10));
+                ArrayList arrayList3 = new ArrayList(StaticHelpers4.ak(list2, 10));
                 Iterator it3 = list2.iterator();
                 while (it3.hasNext()) {
                     arrayList3.add(new MsgInfoBean(it3.next()));
@@ -242,7 +242,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 for (bnq bnqVar2 : cey.b) {
                     try {
                         for (cev cevVar2 : bnqVar2.a(arrayList3)) {
-                            MethodHookWrapper methodHookWrapperVarD = ((MethodHookWrapper) dovVar.getValue()).d();
+                            MethodHookWrapper methodHookWrapperVarD = ((MethodHookWrapper) kotlin$LazyVar.getValue()).d();
                             methodHookWrapperVarD.dexFind(contextMenu);
                             methodHookWrapperVarD.e(Integer.valueOf(cevVar2.a), cevVar2.b);
                         }
@@ -263,12 +263,12 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
             case 8:
                 zc zcVarB = dal.b(cls);
                 ConcurrentHashMap concurrentHashMap = ReflectionWrapper.cachedConstructors;
-                zIsAssignableFrom = cnf.getJavaClass(zcVarB).isAssignableFrom((Class) obj);
+                zIsAssignableFrom = HugeSyntheticPileOfHelpers.getJavaClass(zcVarB).isAssignableFrom((Class) obj);
                 break;
             case 9:
                 zc zcVarB2 = dal.b(cls);
                 ConcurrentHashMap concurrentHashMap2 = ReflectionWrapper.cachedConstructors;
-                zIsAssignableFrom = cnf.getJavaClass(zcVarB2).isAssignableFrom((Class) obj);
+                zIsAssignableFrom = HugeSyntheticPileOfHelpers.getJavaClass(zcVarB2).isAssignableFrom((Class) obj);
                 break;
             case 10:
                 FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar = (FindDexClassMethodDslWrapper) obj;
@@ -289,7 +289,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 azl azlVar2 = new azl();
                 azi aziVar2 = new azi();
                 zb zbVar4 = new zb();
-                Class<View.OnClickListener> clsBf2 = cnf.bf(dal.b(cls));
+                Class<View.OnClickListener> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 zb.h(zbVar4, (clsBf2 != null ? clsBf2 : View.OnClickListener.class).getName());
                 aziVar2.b = zbVar4;
                 azlVar2.e(aziVar2);
@@ -311,45 +311,45 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
             case 14:
                 int i9 = 3;
                 View view2 = (View) obj;
-                View viewK = dkz.k(view2, R.layout.module_dialog_msg_bg_bubble, null, false);
+                View viewK = StaticHelpers6.k(view2, R.layout.module_dialog_msg_bg_bubble, null, false);
                 int i10 = R.id.moduleDialogEdtMsgBgBubbleLeftBubble;
-                if (((TextInputEditText) KotlinHelpers2.aq(viewK, R.id.moduleDialogEdtMsgBgBubbleLeftBubble)) != null) {
+                if (((TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK, R.id.moduleDialogEdtMsgBgBubbleLeftBubble)) != null) {
                     i10 = R.id.moduleDialogEdtMsgBgBubbleLeftDarkBubbleColor;
-                    TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                    TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                             R.id.moduleDialogEdtMsgBgBubbleLeftDarkBubbleColor);
                     if (textInputEditText != null) {
                         i10 = R.id.moduleDialogEdtMsgBgBubbleLeftLightBubbleColor;
-                        TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                        TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                 R.id.moduleDialogEdtMsgBgBubbleLeftLightBubbleColor);
                         if (textInputEditText2 != null) {
                             i10 = R.id.moduleDialogEdtMsgBgBubbleRightBubble;
-                            if (((TextInputEditText) KotlinHelpers2.aq(viewK,
+                            if (((TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                     R.id.moduleDialogEdtMsgBgBubbleRightBubble)) != null) {
                                 i10 = R.id.moduleDialogEdtMsgBgBubbleRightDarkBubbleColor;
-                                TextInputEditText textInputEditText3 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                                TextInputEditText textInputEditText3 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                         R.id.moduleDialogEdtMsgBgBubbleRightDarkBubbleColor);
                                 if (textInputEditText3 != null) {
                                     i10 = R.id.moduleDialogEdtMsgBgBubbleRightLightBubbleColor;
-                                    TextInputEditText textInputEditText4 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                                    TextInputEditText textInputEditText4 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                             R.id.moduleDialogEdtMsgBgBubbleRightLightBubbleColor);
                                     if (textInputEditText4 != null) {
                                         i10 = R.id.moduleDialogInputMsgBgBubbleLeftBubble;
-                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                 R.id.moduleDialogInputMsgBgBubbleLeftBubble)) != null) {
                                             i10 = R.id.moduleDialogInputMsgBgBubbleLeftDarkBubbleColor;
-                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                     R.id.moduleDialogInputMsgBgBubbleLeftDarkBubbleColor)) != null) {
                                                 i10 = R.id.moduleDialogInputMsgBgBubbleLeftLightBubbleColor;
-                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                         R.id.moduleDialogInputMsgBgBubbleLeftLightBubbleColor)) != null) {
                                                     i10 = R.id.moduleDialogInputMsgBgBubbleRightBubble;
-                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                             R.id.moduleDialogInputMsgBgBubbleRightBubble)) != null) {
                                                         i10 = R.id.moduleDialogInputMsgBgBubbleRightDarkBubbleColor;
-                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                 R.id.moduleDialogInputMsgBgBubbleRightDarkBubbleColor)) != null) {
                                                             i10 = R.id.moduleDialogInputMsgBgBubbleRightLightBubbleColor;
-                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                     R.id.moduleDialogInputMsgBgBubbleRightLightBubbleColor)) != null) {
                                                                 LinearLayout linearLayout = (LinearLayout) viewK;
                                                                 ceo ceoVar = new ceo(linearLayout, textInputEditText,
@@ -366,7 +366,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                                                                 bzyVar.t("保存" /* "保存" /* "保存" /* cnb.z(-451409652742954L)  */,
                                                                         new amw(new bp(ceoVar, 28), 0));
                                                                 bzyVar.s("重置" /* "重置" /* "重置" /* cnb.z(-451413947710250L)  */,
-                                                                        new amw(new cfh(i9), 2));
+                                                                        new amw(new Function1$VarIsInt$2(i9), 2));
                                                                 bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar,
                                                                         "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */);
                                                                 if (linearLayout != null) {
@@ -390,62 +390,62 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                         /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-661940359658282L)  */.concat(viewK.getResources().getResourceName(i10)));
             case 15:
                 View view3 = (View) obj;
-                View viewK2 = dkz.k(view3, R.layout.module_dialog_msg_bg_color, null, false);
+                View viewK2 = StaticHelpers6.k(view3, R.layout.module_dialog_msg_bg_color, null, false);
                 int i11 = R.id.moduleDialogEdtMsgBgColorLeftDarkBgColor;
-                TextInputEditText textInputEditText5 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                TextInputEditText textInputEditText5 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                         R.id.moduleDialogEdtMsgBgColorLeftDarkBgColor);
                 if (textInputEditText5 != null) {
                     i11 = R.id.moduleDialogEdtMsgBgColorLeftDarkStrokeColor;
-                    TextInputEditText textInputEditText6 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                    TextInputEditText textInputEditText6 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                             R.id.moduleDialogEdtMsgBgColorLeftDarkStrokeColor);
                     if (textInputEditText6 != null) {
                         i11 = R.id.moduleDialogEdtMsgBgColorLeftLightBgColor;
-                        TextInputEditText textInputEditText7 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                        TextInputEditText textInputEditText7 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                 R.id.moduleDialogEdtMsgBgColorLeftLightBgColor);
                         if (textInputEditText7 != null) {
                             i11 = R.id.moduleDialogEdtMsgBgColorLeftLightStrokeColor;
-                            TextInputEditText textInputEditText8 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                            TextInputEditText textInputEditText8 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                     R.id.moduleDialogEdtMsgBgColorLeftLightStrokeColor);
                             if (textInputEditText8 != null) {
                                 i11 = R.id.moduleDialogEdtMsgBgColorRightDarkBgColor;
-                                TextInputEditText textInputEditText9 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                                TextInputEditText textInputEditText9 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                         R.id.moduleDialogEdtMsgBgColorRightDarkBgColor);
                                 if (textInputEditText9 != null) {
                                     i11 = R.id.moduleDialogEdtMsgBgColorRightDarkStrokeColor;
-                                    TextInputEditText textInputEditText10 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                                    TextInputEditText textInputEditText10 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                             R.id.moduleDialogEdtMsgBgColorRightDarkStrokeColor);
                                     if (textInputEditText10 != null) {
                                         i11 = R.id.moduleDialogEdtMsgBgColorRightLightBgColor;
-                                        TextInputEditText textInputEditText11 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                                        TextInputEditText textInputEditText11 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                                 R.id.moduleDialogEdtMsgBgColorRightLightBgColor);
                                         if (textInputEditText11 != null) {
                                             i11 = R.id.moduleDialogEdtMsgBgColorRightLightStrokeColor;
-                                            TextInputEditText textInputEditText12 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                                            TextInputEditText textInputEditText12 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                                     R.id.moduleDialogEdtMsgBgColorRightLightStrokeColor);
                                             if (textInputEditText12 != null) {
                                                 i11 = R.id.moduleDialogInputMsgBgColorLeftDarkBgColor;
-                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                                         R.id.moduleDialogInputMsgBgColorLeftDarkBgColor)) != null) {
                                                     i11 = R.id.moduleDialogInputMsgBgColorLeftDarkStrokeColor;
-                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                                                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                                             R.id.moduleDialogInputMsgBgColorLeftDarkStrokeColor)) != null) {
                                                         i11 = R.id.moduleDialogInputMsgBgColorLeftLightBgColor;
-                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                                                 R.id.moduleDialogInputMsgBgColorLeftLightBgColor)) != null) {
                                                             i11 = R.id.moduleDialogInputMsgBgColorLeftLightStrokeColor;
-                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                                                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                                                     R.id.moduleDialogInputMsgBgColorLeftLightStrokeColor)) != null) {
                                                                 i11 = R.id.moduleDialogInputMsgBgColorRightDarkBgColor;
-                                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                                                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                                                         R.id.moduleDialogInputMsgBgColorRightDarkBgColor)) != null) {
                                                                     i11 = R.id.moduleDialogInputMsgBgColorRightDarkStrokeColor;
-                                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                                                                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                                                             R.id.moduleDialogInputMsgBgColorRightDarkStrokeColor)) != null) {
                                                                         i11 = R.id.moduleDialogInputMsgBgColorRightLightBgColor;
-                                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                                                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                                                                 R.id.moduleDialogInputMsgBgColorRightLightBgColor)) != null) {
                                                                             i11 = R.id.moduleDialogInputMsgBgColorRightLightStrokeColor;
-                                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                                                                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                                                                     R.id.moduleDialogInputMsgBgColorRightLightStrokeColor)) != null) {
                                                                                 LinearLayout linearLayout2 = (LinearLayout) viewK2;
                                                                                 ceg cegVar = new ceg(linearLayout2,
@@ -479,7 +479,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                                                                                         "重置" /*
                                                                                               * "重置" /* "重置" /* cnb.z(-449545636936490L)  */
                                                                                               */,
-                                                                                        new amw(new cfh(i4), 2));
+                                                                                        new amw(new Function1$VarIsInt$2(i4), 2));
                                                                                 bjs.x((3 & 2) != 0 ? new amd(1) : null,
                                                                                         bzyVar2, "取消" /*
                                                                                                        * cnb.z(-
@@ -510,23 +510,23 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                         /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-662352676518698L)  */.concat(viewK2.getResources().getResourceName(i11)));
             case 16:
                 View view4 = (View) obj;
-                View viewK3 = dkz.k(view4, R.layout.module_dialog_msg_format, null, false);
+                View viewK3 = StaticHelpers6.k(view4, R.layout.module_dialog_msg_format, null, false);
                 int i12 = R.id.moduleDialogEdtMsgFormatTextFormat;
-                TextInputEditText textInputEditText13 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
+                TextInputEditText textInputEditText13 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK3,
                         R.id.moduleDialogEdtMsgFormatTextFormat);
                 if (textInputEditText13 != null) {
                     i12 = R.id.moduleDialogEdtMsgFormatTextPlaceholders;
-                    MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.aq(viewK3,
+                    MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewK3,
                             R.id.moduleDialogEdtMsgFormatTextPlaceholders);
                     if (materialTextView != null) {
                         i12 = R.id.moduleDialogEdtMsgFormatTimeFormat;
-                        TextInputEditText textInputEditText14 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
+                        TextInputEditText textInputEditText14 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK3,
                                 R.id.moduleDialogEdtMsgFormatTimeFormat);
                         if (textInputEditText14 != null) {
                             i12 = R.id.moduleDialogInputMsgFormatTextFormat;
-                            if (((TextInputLayout) KotlinHelpers2.aq(viewK3, R.id.moduleDialogInputMsgFormatTextFormat)) != null) {
+                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK3, R.id.moduleDialogInputMsgFormatTextFormat)) != null) {
                                 i12 = R.id.moduleDialogInputMsgFormatTimeFormat;
-                                if (((TextInputLayout) KotlinHelpers2.aq(viewK3,
+                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK3,
                                         R.id.moduleDialogInputMsgFormatTimeFormat)) != null) {
                                     cem cemVar = new cem((LinearLayout) viewK3, textInputEditText13, materialTextView,
                                             textInputEditText14, 3);
@@ -547,7 +547,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                                     MsgFormatHook.a.getClass();
                                     egVar3.d = MsgFormatHook.i;
                                     bzyVar3.t("保存" /* "保存" /* "保存" /* cnb.z(-468666831338282L)  */, new amw(new cfx(cemVar, 0), 0));
-                                    bzyVar3.s("重置" /* "重置" /* "重置" /* cnb.z(-468602406828842L)  */, new amw(new cfh(i2), 2));
+                                    bzyVar3.s("重置" /* "重置" /* "重置" /* cnb.z(-468602406828842L)  */, new amw(new Function1$VarIsInt$2(i2), 2));
                                     bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar3,
                                             "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */);
                                     LinearLayout linearLayout3 = cemVar.b;
@@ -620,85 +620,85 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 return kotlinUnitVar;
             case 23:
                 View view5 = (View) obj;
-                View viewK4 = dkz.k(view5, R.layout.module_dialog_msg_info, null, false);
+                View viewK4 = StaticHelpers6.k(view5, R.layout.module_dialog_msg_info, null, false);
                 int i13 = R.id.moduleDialogCbMsgInfoTextClickInfo;
-                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.aq(viewK4,
+                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.recursivelyFindViewById(viewK4,
                         R.id.moduleDialogCbMsgInfoTextClickInfo);
                 if (materialCheckBox != null) {
                     i13 = R.id.moduleDialogCbMsgInfoTextContentStyle;
-                    MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) KotlinHelpers2.aq(viewK4,
+                    MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) KotlinHelpers2.recursivelyFindViewById(viewK4,
                             R.id.moduleDialogCbMsgInfoTextContentStyle);
                     if (materialCheckBox2 != null) {
                         i13 = R.id.moduleDialogEdtMsgInfoDarkBgColor;
-                        TextInputEditText textInputEditText15 = (TextInputEditText) KotlinHelpers2.aq(viewK4,
+                        TextInputEditText textInputEditText15 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK4,
                                 R.id.moduleDialogEdtMsgInfoDarkBgColor);
                         if (textInputEditText15 != null) {
                             i13 = R.id.moduleDialogEdtMsgInfoDarkTextColor;
-                            TextInputEditText textInputEditText16 = (TextInputEditText) KotlinHelpers2.aq(viewK4,
+                            TextInputEditText textInputEditText16 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK4,
                                     R.id.moduleDialogEdtMsgInfoDarkTextColor);
                             if (textInputEditText16 != null) {
                                 i13 = R.id.moduleDialogEdtMsgInfoFont;
-                                TextInputEditText textInputEditText17 = (TextInputEditText) KotlinHelpers2.aq(viewK4,
+                                TextInputEditText textInputEditText17 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK4,
                                         R.id.moduleDialogEdtMsgInfoFont);
                                 if (textInputEditText17 != null) {
                                     i13 = R.id.moduleDialogEdtMsgInfoLeftMargin;
-                                    TextInputEditText textInputEditText18 = (TextInputEditText) KotlinHelpers2.aq(viewK4,
+                                    TextInputEditText textInputEditText18 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK4,
                                             R.id.moduleDialogEdtMsgInfoLeftMargin);
                                     if (textInputEditText18 != null) {
                                         i13 = R.id.moduleDialogEdtMsgInfoLightBgColor;
-                                        TextInputEditText textInputEditText19 = (TextInputEditText) KotlinHelpers2.aq(viewK4,
+                                        TextInputEditText textInputEditText19 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK4,
                                                 R.id.moduleDialogEdtMsgInfoLightBgColor);
                                         if (textInputEditText19 != null) {
                                             i13 = R.id.moduleDialogEdtMsgInfoLightTextColor;
-                                            TextInputEditText textInputEditText20 = (TextInputEditText) KotlinHelpers2.aq(viewK4,
+                                            TextInputEditText textInputEditText20 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK4,
                                                     R.id.moduleDialogEdtMsgInfoLightTextColor);
                                             if (textInputEditText20 != null) {
                                                 i13 = R.id.moduleDialogEdtMsgInfoRightMargin;
                                                 TextInputEditText textInputEditText21 = (TextInputEditText) KotlinHelpers2
-                                                        .aq(viewK4, R.id.moduleDialogEdtMsgInfoRightMargin);
+                                                        .recursivelyFindViewById(viewK4, R.id.moduleDialogEdtMsgInfoRightMargin);
                                                 if (textInputEditText21 != null) {
                                                     i13 = R.id.moduleDialogEdtMsgInfoTextFormat;
                                                     TextInputEditText textInputEditText22 = (TextInputEditText) KotlinHelpers2
-                                                            .aq(viewK4, R.id.moduleDialogEdtMsgInfoTextFormat);
+                                                            .recursivelyFindViewById(viewK4, R.id.moduleDialogEdtMsgInfoTextFormat);
                                                     if (textInputEditText22 != null) {
                                                         i13 = R.id.moduleDialogEdtMsgInfoTextPlaceholders;
-                                                        MaterialTextView materialTextView2 = (MaterialTextView) KotlinHelpers2.aq(
+                                                        MaterialTextView materialTextView2 = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(
                                                                 viewK4, R.id.moduleDialogEdtMsgInfoTextPlaceholders);
                                                         if (materialTextView2 != null) {
                                                             i13 = R.id.moduleDialogEdtMsgInfoTimeFormat;
                                                             TextInputEditText textInputEditText23 = (TextInputEditText) KotlinHelpers2
-                                                                    .aq(viewK4, R.id.moduleDialogEdtMsgInfoTimeFormat);
+                                                                    .recursivelyFindViewById(viewK4, R.id.moduleDialogEdtMsgInfoTimeFormat);
                                                             if (textInputEditText23 != null) {
                                                                 i13 = R.id.moduleDialogInputMsgInfoDarkBgColor;
-                                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK4,
+                                                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK4,
                                                                         R.id.moduleDialogInputMsgInfoDarkBgColor)) != null) {
                                                                     i13 = R.id.moduleDialogInputMsgInfoDarkTextColor;
-                                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK4,
+                                                                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK4,
                                                                             R.id.moduleDialogInputMsgInfoDarkTextColor)) != null) {
                                                                         i13 = R.id.moduleDialogInputMsgInfoFont;
-                                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK4,
+                                                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK4,
                                                                                 R.id.moduleDialogInputMsgInfoFont)) != null) {
                                                                             i13 = R.id.moduleDialogInputMsgInfoLeftMargin;
-                                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK4,
+                                                                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK4,
                                                                                     R.id.moduleDialogInputMsgInfoLeftMargin)) != null) {
                                                                                 i13 = R.id.moduleDialogInputMsgInfoLightBgColor;
-                                                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK4,
+                                                                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK4,
                                                                                         R.id.moduleDialogInputMsgInfoLightBgColor)) != null) {
                                                                                     i13 = R.id.moduleDialogInputMsgInfoLightTextColor;
-                                                                                    if (((TextInputLayout) KotlinHelpers2.aq(
+                                                                                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(
                                                                                             viewK4,
                                                                                             R.id.moduleDialogInputMsgInfoLightTextColor)) != null) {
                                                                                         i13 = R.id.moduleDialogInputMsgInfoRightMargin;
-                                                                                        if (((TextInputLayout) KotlinHelpers2.aq(
+                                                                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(
                                                                                                 viewK4,
                                                                                                 R.id.moduleDialogInputMsgInfoRightMargin)) != null) {
                                                                                             i13 = R.id.moduleDialogInputMsgInfoTextFormat;
                                                                                             if (((TextInputLayout) KotlinHelpers2
-                                                                                                    .aq(viewK4,
+                                                                                                    .recursivelyFindViewById(viewK4,
                                                                                                             R.id.moduleDialogInputMsgInfoTextFormat)) != null) {
                                                                                                 i13 = R.id.moduleDialogInputMsgInfoTimeFormat;
                                                                                                 if (((TextInputLayout) KotlinHelpers2
-                                                                                                        .aq(viewK4,
+                                                                                                        .recursivelyFindViewById(viewK4,
                                                                                                                 R.id.moduleDialogInputMsgInfoTimeFormat)) != null) {
                                                                                                     cen cenVar = new cen(
                                                                                                             (LinearLayout) viewK4,
@@ -804,7 +804,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                                                                                                                   * z(-
                                                                                                                   * 467464240495402L)
                                                                                                                   */,
-                                                                                                            new amw(new cfh(
+                                                                                                            new amw(new Function1$VarIsInt$2(
                                                                                                                     6),
                                                                                                                     2));
                                                                                                     bjs.x((3 & 2) != 0
@@ -854,7 +854,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                         objX5 = null;
                     }
                 } catch (Throwable th5) {
-                    objX5 = bhu.x(th5);
+                    objX5 = FastKV.x(th5);
                 }
                 Object obj5 = objX5 instanceof dcx ? null : objX5;
                 throwIfVar1IsNull(obj5);

@@ -26,7 +26,7 @@ public abstract class dnk extends aye {
                 listBf = dqc.toSingletonList(next);
             }
         } else {
-            listBf = EmptyReadonlyList.a;
+            listBf = EmptyReadonlyList.INSTANCE;
         }
         int length = str.length();
         listBf.size();
@@ -68,7 +68,7 @@ public abstract class dnk extends aye {
             i = i2;
         }
         StringBuilder sb = new StringBuilder(length);
-        aaz.i(arrayList2, sb, "\n", "", "", "...", null);
+        StaticHelpers5.i(arrayList2, sb, "\n", "", "", "...", null);
         return sb.toString();
     }
 }

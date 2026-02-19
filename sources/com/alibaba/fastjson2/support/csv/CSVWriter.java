@@ -28,7 +28,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.IntFunction;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dts;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -269,10 +269,10 @@ public abstract class CSVWriter implements Closeable, Flushable {
             j3 = 0;
         }
         long j7 = ((j2 * 400) + 591) / 146097;
-        long j8 = dkz.j(j7, 400L, ((j7 / 4) + (j7 * 365)) - (j7 / 100), j2);
+        long j8 = StaticHelpers6.j(j7, 400L, ((j7 / 4) + (j7 * 365)) - (j7 / 100), j2);
         if (j8 < 0) {
             j7--;
-            j8 = dkz.j(j7, 400L, ((j7 / 4) + (365 * j7)) - (j7 / 100), j2);
+            j8 = StaticHelpers6.j(j7, 400L, ((j7 / 4) + (365 * j7)) - (j7 / 100), j2);
         }
         long j9 = j7 + j3;
         int i = (int) j8;

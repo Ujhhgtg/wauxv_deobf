@@ -15,9 +15,9 @@ public final class DisableMsgClipHook extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(anx.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(anx.a));
         DisableMsgClipHook anyVar = a;
-        aki akiVarAb = csb.ab(anyVar, listBf);
+        aki akiVarAb = PackageParam.ab(anyVar, listBf);
         anyVar.y(akiVarAb, new amb(5));
         akiVarAb.o();
     }
@@ -34,7 +34,7 @@ public final class DisableMsgClipHook extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(anx.a, dexKitBridge, new amb(6));
+        StaticHelpers7.resolveDexAndCache(anx.a, dexKitBridge, new amb(6));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

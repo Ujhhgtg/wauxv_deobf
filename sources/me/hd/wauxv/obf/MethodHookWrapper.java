@@ -6,35 +6,35 @@ import java.util.Arrays;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class MethodHookWrapper extends bpu {
-    public final Method a;
+public final class MethodHookWrapper extends InstanceResolver {
+    public final Method method;
 
     public MethodHookWrapper(Method method) {
-        this.a = method;
+        this.method = method;
     }
 
     @Override // me.hd.wauxv.obf.cbq
-    public final Member b() {
-        return this.a;
+    public final Member getMember() {
+        return this.method;
     }
 
     @Override // me.hd.wauxv.obf.bpu
-    public final bpu c(Object obj) {
-        h(obj);
+    public final InstanceResolver copy(Object obj) {
+        bindInstance(obj);
         return this;
     }
 
     public final MethodHookWrapper d() {
-        return new MethodHookWrapper(this.a);
+        return new MethodHookWrapper(this.method);
     }
 
     public final Object e(Object... objArr) {
-        Method method = this.a;
+        Method method = this.method;
         Method method2 = method != null ? method : null;
         if (method2 != null && !method2.isAccessible()) {
             method2.setAccessible(true);
         }
-        return method.invoke(this.g, Arrays.copyOf(objArr, objArr.length));
+        return method.invoke(this.boundInstance, Arrays.copyOf(objArr, objArr.length));
     }
 
     public final Object f(Object... objArr) {
@@ -42,7 +42,7 @@ public final class MethodHookWrapper extends bpu {
         try {
             objX = e(Arrays.copyOf(objArr, objArr.length));
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         if (objX instanceof dcx) {
             return null;
@@ -55,7 +55,7 @@ public final class MethodHookWrapper extends bpu {
         try {
             objX = j(Arrays.copyOf(objArr, objArr.length));
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         if (objX instanceof dcx) {
             return null;
@@ -64,12 +64,12 @@ public final class MethodHookWrapper extends bpu {
     }
 
     public final Object j(Object... objArr) {
-        Method method = this.a;
+        Method method = this.method;
         Method method2 = method != null ? method : null;
         if (method2 != null && !method2.isAccessible()) {
             method2.setAccessible(true);
         }
-        Object objInvoke = method.invoke(this.g, Arrays.copyOf(objArr, objArr.length));
+        Object objInvoke = method.invoke(this.boundInstance, Arrays.copyOf(objArr, objArr.length));
         if (objInvoke == null) {
             return null;
         }

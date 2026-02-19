@@ -38,6 +38,6 @@ public final class evx {
         sb.append(", endColumn=");
         sb.append(this.b);
         sb.append(", line=");
-        return dkz.v(sb, this.d, '}');
+        return StaticHelpers6.concatFromSb(sb, this.d, '}');
     }
 }

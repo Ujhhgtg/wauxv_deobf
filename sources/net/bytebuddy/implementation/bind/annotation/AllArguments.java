@@ -6,7 +6,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.util.ArrayList;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.description.annotation.AnnotationDescription;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.method.MethodList;
@@ -14,7 +14,6 @@ import net.bytebuddy.description.method.ParameterDescription;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.bind.MethodDelegationBinder;
-import net.bytebuddy.implementation.bind.annotation.TargetMethodAnnotationDrivenBinder;
 import net.bytebuddy.implementation.bytecode.StackManipulation;
 import net.bytebuddy.implementation.bytecode.assign.Assigner;
 import net.bytebuddy.implementation.bytecode.collection.ArrayFactory;
@@ -68,7 +67,7 @@ public @interface AllArguments {
                 componentType = TypeDescription.Generic.OfNonGenericType.ForLoadedType.of(Object.class);
             } else {
                 if (!parameterDescription.getType().isArray()) {
-                    throw new IllegalStateException(dkz.t("Expected an array type for all argument annotation on ", methodDescription));
+                    throw new IllegalStateException(StaticHelpers6.concat("Expected an array type for all argument annotation on ", methodDescription));
                 }
                 componentType = parameterDescription.getType().getComponentType();
             }

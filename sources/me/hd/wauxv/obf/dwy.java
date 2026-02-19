@@ -27,7 +27,7 @@ public final class dwy {
             String str2, Boolean bool, Boolean bool2, String str3, String str4, String str5, Integer num, dwj dwjVar5,
             dwj dwjVar6, dwj dwjVar7, dwj dwjVar8, dwj dwjVar9) {
         if (262143 != (i & 262143)) {
-            bht.ah(i, 262143, dww.b.getDescriptor());
+            ResourcesCompat.ah(i, 262143, dww.b.getDescriptor());
             throw null;
         }
         this.a = str;

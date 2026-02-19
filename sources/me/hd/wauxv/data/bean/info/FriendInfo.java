@@ -1,7 +1,7 @@
 package me.hd.wauxv.data.bean.info;
 
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dts;
 import me.hd.wauxv.obf.yg;
 
@@ -171,7 +171,7 @@ public final class FriendInfo {
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.alias, -15320148343594L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.remark, -15225659063082L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.nickname, -15208479193898L);
-        dkz.ac(sb, this.type, -15174119455530L);
+        StaticHelpers6.ac(sb, this.type, -15174119455530L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.sourceExtInfo, -14568529066794L);
         sb.append(this.createTime);
         sb.append(')');

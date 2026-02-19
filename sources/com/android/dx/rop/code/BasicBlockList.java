@@ -1,11 +1,10 @@
 package com.android.dx.rop.code;
 
-import com.android.dx.rop.code.Insn;
 import com.android.dx.rop.type.StdTypeList;
 import com.android.dx.util.IntList;
 import com.android.dx.util.LabeledItem;
 import com.android.dx.util.LabeledList;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -165,7 +164,7 @@ public final class BasicBlockList extends LabeledList {
         if (iIndexOfLabel >= 0) {
             return get(iIndexOfLabel);
         }
-        throw new IllegalArgumentException(dkz.q(i, new StringBuilder("no such label: ")));
+        throw new IllegalArgumentException(StaticHelpers6.q(i, new StringBuilder("no such label: ")));
     }
 
     public BasicBlock preferredSuccessorOf(BasicBlock basicBlock) {

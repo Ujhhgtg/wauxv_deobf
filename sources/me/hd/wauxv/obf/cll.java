@@ -13,6 +13,6 @@ public final class cll extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(clk.a, dexKitBridge, new cgu(23));
+        StaticHelpers7.resolveDexAndCache(clk.a, dexKitBridge, new cgu(23));
     }
 }

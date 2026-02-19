@@ -18,6 +18,6 @@ public final class bpp implements ajg {
 
     @Override // me.hd.wauxv.obf.ajg
     public final ajh c(Object obj) {
-        return new bmu((InputStream) obj, this.a);
+        return new SyntheticPileOfMess((InputStream) obj, this.a);
     }
 }

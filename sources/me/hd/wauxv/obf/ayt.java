@@ -9,7 +9,7 @@ public final class ayt {
 
     public /* synthetic */ ayt(int i, ayo ayoVar, ays aysVar) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, ayl.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, ayl.b.getDescriptor());
             throw null;
         }
         this.a = ayoVar;

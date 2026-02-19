@@ -27,16 +27,16 @@ public final class cjd {
     public final String i;
     public final ArrayList j;
     public final String k;
-    public final dov l;
-    public final dov m;
+    public final Kotlin$Lazy l;
+    public final Kotlin$Lazy m;
     public final Object n;
     public boolean o;
     public final Object p;
     public final Object q;
     public final Object r;
-    public final dov s;
+    public final Kotlin$Lazy s;
     public final String t;
-    public final dov u;
+    public final Kotlin$Lazy u;
     public final boolean v;
 
     public cjd(String str, String str2, String str3) {
@@ -48,7 +48,7 @@ public final class cjd {
         ArrayList arrayList = new ArrayList();
         this.j = arrayList;
         final int i = 0;
-        this.l = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.cja
+        this.l = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.cja
             public final /* synthetic */ cjd b;
 
             {
@@ -98,7 +98,7 @@ public final class cjd {
                                             + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
                                             .toString());
                                 }
-                                String str8 = (String) aaz.g(queryParameters);
+                                String str8 = (String) StaticHelpers5.g(queryParameters);
                                 if (str8 == null) {
                                     cjdVar.o = true;
                                     str8 = str7;
@@ -180,7 +180,7 @@ public final class cjd {
             }
         });
         final int i2 = 1;
-        this.m = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.cja
+        this.m = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.cja
             public final /* synthetic */ cjd b;
 
             {
@@ -230,7 +230,7 @@ public final class cjd {
                                             + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
                                             .toString());
                                 }
-                                String str8 = (String) aaz.g(queryParameters);
+                                String str8 = (String) StaticHelpers5.g(queryParameters);
                                 if (str8 == null) {
                                     cjdVar.o = true;
                                     str8 = str7;
@@ -362,7 +362,7 @@ public final class cjd {
                                             + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
                                             .toString());
                                 }
-                                String str8 = (String) aaz.g(queryParameters);
+                                String str8 = (String) StaticHelpers5.g(queryParameters);
                                 if (str8 == null) {
                                     cjdVar.o = true;
                                     str8 = str7;
@@ -496,7 +496,7 @@ public final class cjd {
                                             + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
                                             .toString());
                                 }
-                                String str8 = (String) aaz.g(queryParameters);
+                                String str8 = (String) StaticHelpers5.g(queryParameters);
                                 if (str8 == null) {
                                     cjdVar.o = true;
                                     str8 = str7;
@@ -628,7 +628,7 @@ public final class cjd {
                                             + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
                                             .toString());
                                 }
-                                String str8 = (String) aaz.g(queryParameters);
+                                String str8 = (String) StaticHelpers5.g(queryParameters);
                                 if (str8 == null) {
                                     cjdVar.o = true;
                                     str8 = str7;
@@ -760,7 +760,7 @@ public final class cjd {
                                             + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
                                             .toString());
                                 }
-                                String str8 = (String) aaz.g(queryParameters);
+                                String str8 = (String) StaticHelpers5.g(queryParameters);
                                 if (str8 == null) {
                                     cjdVar.o = true;
                                     str8 = str7;
@@ -842,7 +842,7 @@ public final class cjd {
             }
         });
         final int i7 = 6;
-        this.s = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.cja
+        this.s = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.cja
             public final /* synthetic */ cjd b;
 
             {
@@ -892,7 +892,7 @@ public final class cjd {
                                             + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
                                             .toString());
                                 }
-                                String str8 = (String) aaz.g(queryParameters);
+                                String str8 = (String) StaticHelpers5.g(queryParameters);
                                 if (str8 == null) {
                                     cjdVar.o = true;
                                     str8 = str7;
@@ -974,7 +974,7 @@ public final class cjd {
             }
         });
         final int i8 = 7;
-        this.u = new dov(new bfu(this) { // from class: me.hd.wauxv.obf.cja
+        this.u = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.cja
             public final /* synthetic */ cjd b;
 
             {
@@ -1024,7 +1024,7 @@ public final class cjd {
                                             + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
                                             .toString());
                                 }
-                                String str8 = (String) aaz.g(queryParameters);
+                                String str8 = (String) StaticHelpers5.g(queryParameters);
                                 if (str8 == null) {
                                     cjdVar.o = true;
                                     str8 = str7;
@@ -1154,15 +1154,15 @@ public final class cjd {
             listBf = dqc.toSingletonList(str3.toString());
         }
         if (listBf.isEmpty()) {
-            listU = EmptyReadonlyList.a;
+            listU = EmptyReadonlyList.INSTANCE;
         } else {
             ListIterator listIterator = listBf.listIterator(listBf.size());
             while (listIterator.hasPrevious()) {
                 if (((String) listIterator.previous()).length() != 0) {
-                    listU = aaz.u(listIterator.nextIndex() + 1, listBf);
+                    listU = StaticHelpers5.u(listIterator.nextIndex() + 1, listBf);
                 }
             }
-            listU = EmptyReadonlyList.a;
+            listU = EmptyReadonlyList.INSTANCE;
         }
         this.t = dnr.bo("^(" + ((String) listU.get(0)) + "|[*]+)/(" + ((String) listU.get(1)) + "|[*]+)$", "*|[*]",
                 "[\\s\\S]");
@@ -1212,7 +1212,7 @@ public final class cjd {
 
     public final boolean aa(bzx bzxVar, Bundle bundle, Map map) {
         ArrayList arrayList = this.j;
-        ArrayList arrayList2 = new ArrayList(abb.ak(arrayList, 10));
+        ArrayList arrayList2 = new ArrayList(StaticHelpers4.ak(arrayList, 10));
         int i = 0;
         for (Object obj : arrayList) {
             int i2 = i + 1;
@@ -1266,7 +1266,7 @@ public final class cjd {
             }
             KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
             boolean z2 = false;
-            Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+            Bundle bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
             for (String str2 : cjcVar.b) {
                 cin cinVar = (cin) map.get(str2);
                 cjv cjvVar = cinVar != null ? cinVar.a : null;
@@ -1281,7 +1281,7 @@ public final class cjd {
                         case 5:
                         case 7:
                         default:
-                            obj = EmptyReadonlyList.a;
+                            obj = EmptyReadonlyList.INSTANCE;
                             break;
                         case 2:
                             obj = new float[0];
@@ -1313,7 +1313,7 @@ public final class cjd {
                     return z2;
                 }
                 ArrayList arrayList = cjcVar.b;
-                ArrayList arrayList2 = new ArrayList(abb.ak(arrayList, 10));
+                ArrayList arrayList2 = new ArrayList(StaticHelpers4.ak(arrayList, 10));
                 ?? r14 = z2;
                 for (Object obj2 : arrayList) {
                     int i = r14 + 1;
@@ -1395,8 +1395,8 @@ public final class cjd {
         ArrayList arrayList = new ArrayList();
         Iterator it = collectionValues.iterator();
         while (it.hasNext()) {
-            abf.an(arrayList, ((cjc) it.next()).b);
+            StaticHelpers2.an(arrayList, ((cjc) it.next()).b);
         }
-        return aaz.o(aaz.o(this.j, arrayList), (List) this.q.getValue());
+        return StaticHelpers5.o(StaticHelpers5.o(this.j, arrayList), (List) this.q.getValue());
     }
 }

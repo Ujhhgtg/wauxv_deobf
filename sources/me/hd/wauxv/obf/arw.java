@@ -36,10 +36,10 @@ public final class arw extends ase {
         throwIfVar1IsNull(akiVar, "value");
         if (this.b == null || this.c != akiVar) {
             this.c = akiVar;
-            akiVar.c = this;
+            akiVar.hookPriority = this;
             LayoutInflater layoutInflaterFrom = LayoutInflater.from(this.aa.getContext());
             throwIfVar1IsNull(layoutInflaterFrom, "from(...)");
-            arw arwVar = (arw) akiVar.c;
+            arw arwVar = (arw) akiVar.hookPriority;
             if (arwVar == null) {
                 throwLateinitPropNotInitYet("window");
                 throw null;
@@ -47,9 +47,9 @@ public final class arw extends ase {
             Context context = arwVar.aa.getContext();
             View viewInflate = layoutInflaterFrom.inflate(R.layout.diagnostic_tooltip_window, (ViewGroup) null);
             throwIfVar1IsNull(viewInflate, "inflate(...)");
-            akiVar.d = viewInflate;
+            akiVar.resolutionStrategy = viewInflate;
             viewInflate.setClipToOutline(true);
-            View view = (View) akiVar.d;
+            View view = (View) akiVar.resolutionStrategy;
             if (view == null) {
                 throwLateinitPropNotInitYet("root");
                 throw null;
@@ -67,7 +67,7 @@ public final class arw extends ase {
                     return false;
                 }
             });
-            View view2 = (View) akiVar.d;
+            View view2 = (View) akiVar.resolutionStrategy;
             if (view2 == null) {
                 throwLateinitPropNotInitYet("root");
                 throw null;
@@ -75,7 +75,7 @@ public final class arw extends ase {
             View viewFindViewById = view2.findViewById(R.id.diagnostic_tooltip_brief_message);
             throwIfVar1IsNull(viewFindViewById, "findViewById(...)");
             akiVar.e = (TextView) viewFindViewById;
-            View view3 = (View) akiVar.d;
+            View view3 = (View) akiVar.resolutionStrategy;
             if (view3 == null) {
                 throwLateinitPropNotInitYet("root");
                 throw null;
@@ -83,7 +83,7 @@ public final class arw extends ase {
             View viewFindViewById2 = view3.findViewById(R.id.diagnostic_tooltip_detailed_message);
             throwIfVar1IsNull(viewFindViewById2, "findViewById(...)");
             akiVar.f = (TextView) viewFindViewById2;
-            View view4 = (View) akiVar.d;
+            View view4 = (View) akiVar.resolutionStrategy;
             if (view4 == null) {
                 throwLateinitPropNotInitYet("root");
                 throw null;
@@ -91,7 +91,7 @@ public final class arw extends ase {
             View viewFindViewById3 = view4.findViewById(R.id.diagnostic_tooltip_preferred_action);
             throwIfVar1IsNull(viewFindViewById3, "findViewById(...)");
             akiVar.g = (TextView) viewFindViewById3;
-            View view5 = (View) akiVar.d;
+            View view5 = (View) akiVar.resolutionStrategy;
             if (view5 == null) {
                 throwLateinitPropNotInitYet("root");
                 throw null;
@@ -99,15 +99,15 @@ public final class arw extends ase {
             View viewFindViewById4 = view5.findViewById(R.id.diagnostic_tooltip_more_actions);
             throwIfVar1IsNull(viewFindViewById4, "findViewById(...)");
             akiVar.h = (TextView) viewFindViewById4;
-            View view6 = (View) akiVar.d;
+            View view6 = (View) akiVar.resolutionStrategy;
             if (view6 == null) {
                 throwLateinitPropNotInitYet("root");
                 throw null;
             }
             View viewFindViewById5 = view6.findViewById(R.id.diagnostic_container_message);
             throwIfVar1IsNull(viewFindViewById5, "findViewById(...)");
-            akiVar.i = (ViewGroup) viewFindViewById5;
-            View view7 = (View) akiVar.d;
+            akiVar.members = (ViewGroup) viewFindViewById5;
+            View view7 = (View) akiVar.resolutionStrategy;
             if (view7 == null) {
                 throwLateinitPropNotInitYet("root");
                 throw null;
@@ -136,7 +136,7 @@ public final class arw extends ase {
                 throw null;
             }
             textView3.setOnClickListener(new akh(akiVar, context));
-            View view8 = (View) akiVar.d;
+            View view8 = (View) akiVar.resolutionStrategy;
             if (view8 == null) {
                 throwLateinitPropNotInitYet("root");
                 throw null;
@@ -230,27 +230,27 @@ public final class arw extends ase {
                             if (i6 < 1) {
                                 i6 = 1;
                             }
-                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.members;
                             if (viewGroup5 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
-                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.members;
                             if (viewGroup6 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.members;
                             if (viewGroup7 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup7.measure(iMakeMeasureSpec,
                                     View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE));
-                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.members;
                             if (viewGroup8 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -260,13 +260,13 @@ public final class arw extends ase {
                                 i6 = measuredHeight2;
                             }
                             layoutParams.height = i6;
-                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.members;
                             if (viewGroup9 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.members;
                             if (viewGroup10 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -382,27 +382,27 @@ public final class arw extends ase {
                             if (i6 < 1) {
                                 i6 = 1;
                             }
-                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.members;
                             if (viewGroup5 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
-                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.members;
                             if (viewGroup6 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.members;
                             if (viewGroup7 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup7.measure(iMakeMeasureSpec,
                                     View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE));
-                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.members;
                             if (viewGroup8 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -412,13 +412,13 @@ public final class arw extends ase {
                                 i6 = measuredHeight2;
                             }
                             layoutParams.height = i6;
-                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.members;
                             if (viewGroup9 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.members;
                             if (viewGroup10 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -535,27 +535,27 @@ public final class arw extends ase {
                             if (i6 < 1) {
                                 i6 = 1;
                             }
-                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.members;
                             if (viewGroup5 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
-                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.members;
                             if (viewGroup6 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.members;
                             if (viewGroup7 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup7.measure(iMakeMeasureSpec,
                                     View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE));
-                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.members;
                             if (viewGroup8 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -565,13 +565,13 @@ public final class arw extends ase {
                                 i6 = measuredHeight2;
                             }
                             layoutParams.height = i6;
-                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.members;
                             if (viewGroup9 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.members;
                             if (viewGroup10 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -687,27 +687,27 @@ public final class arw extends ase {
                             if (i62 < 1) {
                                 i62 = 1;
                             }
-                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.members;
                             if (viewGroup5 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
-                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.members;
                             if (viewGroup6 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.members;
                             if (viewGroup7 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup7.measure(iMakeMeasureSpec,
                                     View.MeasureSpec.makeMeasureSpec(i62, Integer.MIN_VALUE));
-                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.members;
                             if (viewGroup8 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -717,13 +717,13 @@ public final class arw extends ase {
                                 i62 = measuredHeight2;
                             }
                             layoutParams.height = i62;
-                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.members;
                             if (viewGroup9 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.members;
                             if (viewGroup10 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -839,27 +839,27 @@ public final class arw extends ase {
                             if (i62 < 1) {
                                 i62 = 1;
                             }
-                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.members;
                             if (viewGroup5 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
-                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.members;
                             if (viewGroup6 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.members;
                             if (viewGroup7 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup7.measure(iMakeMeasureSpec,
                                     View.MeasureSpec.makeMeasureSpec(i62, Integer.MIN_VALUE));
-                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.members;
                             if (viewGroup8 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -869,13 +869,13 @@ public final class arw extends ase {
                                 i62 = measuredHeight2;
                             }
                             layoutParams.height = i62;
-                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.members;
                             if (viewGroup9 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.members;
                             if (viewGroup10 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -991,27 +991,27 @@ public final class arw extends ase {
                             if (i62 < 1) {
                                 i62 = 1;
                             }
-                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup5 = (ViewGroup) akiVar2.members;
                             if (viewGroup5 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             ViewGroup.LayoutParams layoutParams = viewGroup5.getLayoutParams();
                             layoutParams.height = -2;
-                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup6 = (ViewGroup) akiVar2.members;
                             if (viewGroup6 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup6.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup7 = (ViewGroup) akiVar2.members;
                             if (viewGroup7 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup7.measure(iMakeMeasureSpec,
                                     View.MeasureSpec.makeMeasureSpec(i62, Integer.MIN_VALUE));
-                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup8 = (ViewGroup) akiVar2.members;
                             if (viewGroup8 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -1021,13 +1021,13 @@ public final class arw extends ase {
                                 i62 = measuredHeight2;
                             }
                             layoutParams.height = i62;
-                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup9 = (ViewGroup) akiVar2.members;
                             if (viewGroup9 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
                             }
                             viewGroup9.setLayoutParams(layoutParams);
-                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.i;
+                            ViewGroup viewGroup10 = (ViewGroup) akiVar2.members;
                             if (viewGroup10 == null) {
                                 throwLateinitPropNotInitYet("messagePanel");
                                 throw null;
@@ -1091,7 +1091,7 @@ public final class arw extends ase {
         aki akiVar = this.c;
         akiVar.getClass();
         SparseIntArray sparseIntArray = colorScheme.b;
-        arw arwVar = (arw) akiVar.c;
+        arw arwVar = (arw) akiVar.hookPriority;
         if (arwVar == null) {
             throwLateinitPropNotInitYet("window");
             throw null;
@@ -1125,7 +1125,7 @@ public final class arw extends ase {
         GradientDrawable gradientDrawable = new GradientDrawable();
         gradientDrawable.setCornerRadius(codeEditor.getDpUnit() * 5);
         gradientDrawable.setColor(sparseIntArray.get(53));
-        View view = (View) akiVar.d;
+        View view = (View) akiVar.resolutionStrategy;
         if (view != null) {
             view.setBackground(gradientDrawable);
         } else {

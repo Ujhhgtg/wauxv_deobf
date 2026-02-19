@@ -10,7 +10,7 @@ public final class eiw {
 
     public /* synthetic */ eiw(int i, Integer num, Integer num2, String str) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, eiu.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, eiu.b.getDescriptor());
             throw null;
         }
         this.a = num;

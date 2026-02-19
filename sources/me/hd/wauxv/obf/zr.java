@@ -18,9 +18,9 @@ public final class zr extends SwitchHook implements bnn {
     public final void initOnce() {
         int i2 = 0;
         aki akiVarAd = ad(
-                (MethodHookWrapper) dkz.n(new Object[] { dal.b(Integer.TYPE), dal.b(ViewGroup.class) }, 2,
-                        dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.ui.LauncherUIBottomTabView" /* "com.tencent.mm.ui.LauncherUIBottomTabView" /* "com.tencent.mm.ui.LauncherUIBottomTabView" /* cnb.z(-523419074427690L)  */)).t()),
-                exg.a);
+                (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(Integer.TYPE), dal.b(ViewGroup.class) }, 2,
+                        dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.ui.LauncherUIBottomTabView" /* "com.tencent.mm.ui.LauncherUIBottomTabView" /* "com.tencent.mm.ui.LauncherUIBottomTabView" /* cnb.z(-523419074427690L)  */)).getMethodResolverBasedOnPreviouslyProvidedConfig()),
+                HookPriorityEnum.ENUM_DEFAULT);
         a.x(akiVarAd, new ws(25));
         akiVarAd.o();
     }
@@ -38,7 +38,7 @@ public final class zr extends SwitchHook implements bnn {
     @Override // me.hd.wauxv.obf.bnn
     public final List j() {
         return (z() && zp.a.i()) ? dqc.toSingletonList(new bly(R.id.MenuItem_Home_ClearAllUnRead,
-                "清空未读" /* "清空未读" /* "清空未读" /* cnb.z(-523805621484330L)  */, R.drawable.ic_menu_clear_24dp, new h(25))) : EmptyReadonlyList.a;
+                "清空未读" /* "清空未读" /* "清空未读" /* cnb.z(-523805621484330L)  */, R.drawable.ic_menu_clear_24dp, new h(25))) : EmptyReadonlyList.INSTANCE;
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

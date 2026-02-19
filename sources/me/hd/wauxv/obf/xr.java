@@ -13,6 +13,6 @@ public final class xr extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(xq.a, dexKitBridge, new ws(14));
+        StaticHelpers7.resolveDexAndCache(xq.a, dexKitBridge, new ws(14));
     }
 }

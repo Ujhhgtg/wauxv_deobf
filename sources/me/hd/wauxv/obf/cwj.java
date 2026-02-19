@@ -7,5 +7,5 @@ import java.lang.annotation.RetentionPolicy;
 /* JADX INFO: loaded from: classes.dex */
 @Retention(RetentionPolicy.RUNTIME)
 public @interface cwj {
-    cwf type();
+    IntEncodingEnum type();
 }

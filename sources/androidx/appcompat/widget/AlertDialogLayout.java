@@ -11,7 +11,7 @@ import java.util.WeakHashMap;
 import me.hd.wauxv.R;
 import me.hd.wauxv.obf.bvf;
 import me.hd.wauxv.obf.bvg;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -21,7 +21,7 @@ public class AlertDialogLayout extends bvg {
     }
 
     public static int a(View view) {
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         int minimumHeight = view.getMinimumHeight();
         if (minimumHeight > 0) {
             return minimumHeight;

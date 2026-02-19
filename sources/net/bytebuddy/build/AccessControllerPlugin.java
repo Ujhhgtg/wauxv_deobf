@@ -13,10 +13,8 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.asm.AsmVisitorWrapper;
-import net.bytebuddy.build.HashCodeAndEqualsPlugin;
-import net.bytebuddy.build.Plugin;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.modifier.FieldManifestation;
 import net.bytebuddy.description.modifier.Ownership;
@@ -264,7 +262,7 @@ public class AccessControllerPlugin extends Plugin.ForElementMatcher implements 
         }
 
         public int hashCode() {
-            return this.name.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31);
+            return this.name.hashCode() + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31);
         }
 
         public abstract int onAccessController(MethodVisitor methodVisitor);
@@ -300,7 +298,7 @@ public class AccessControllerPlugin extends Plugin.ForElementMatcher implements 
     public DynamicType.Builder<?> apply(DynamicType.Builder<?> builder, TypeDescription typeDescription, ClassFileLocator classFileLocator) {
         String strS = NAME;
         while (!typeDescription.getDeclaredFields().filter(ElementMatchers.named(strS)).isEmpty()) {
-            strS = dkz.s(strS, "$");
+            strS = StaticHelpers6.concat(strS, "$");
         }
         DynamicType.Builder<?> builderVisit = builder.defineField(strS, Boolean.TYPE, Visibility.PRIVATE, Ownership.STATIC, FieldManifestation.FINAL).visit(new AsmVisitorWrapper.ForDeclaredMethods().method(ElementMatchers.isAnnotatedWith((Class<? extends Annotation>) Enhance.class), new AccessControlWrapper(strS)));
         String str = this.property;

@@ -8,7 +8,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.field.FieldDescription;
 import net.bytebuddy.description.method.MethodDescription;
@@ -17,7 +17,6 @@ import net.bytebuddy.description.type.TypeDefinition;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.scaffold.FieldLocator;
 import net.bytebuddy.dynamic.scaffold.InstrumentedType;
-import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
 import net.bytebuddy.implementation.bytecode.StackManipulation;
 import net.bytebuddy.implementation.bytecode.assign.Assigner;
@@ -620,7 +619,7 @@ public abstract class FieldAccessor implements Implementation {
             }
 
             public int hashCode() {
-                int iF = dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31);
+                int iF = StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31);
                 T t = this.initialized;
                 if (t != null) {
                     iF += t.hashCode();
@@ -674,7 +673,7 @@ public abstract class FieldAccessor implements Implementation {
             @Override // net.bytebuddy.implementation.FieldAccessor.ForSetter,
                       // net.bytebuddy.implementation.FieldAccessor
             public int hashCode() {
-                return this.stackManipulation.hashCode() + dkz.e(this.typeDescription, super.hashCode() * 31, 31);
+                return this.stackManipulation.hashCode() + StaticHelpers6.e(this.typeDescription, super.hashCode() * 31, 31);
             }
 
             @Override // net.bytebuddy.implementation.FieldAccessor.ForSetter
@@ -977,7 +976,7 @@ public abstract class FieldAccessor implements Implementation {
                         return MethodReturn.VOID;
                     }
                     throw new IllegalStateException(
-                            dkz.t("Cannot implement setter with return value for ", methodDescription));
+                            StaticHelpers6.concat("Cannot implement setter with return value for ", methodDescription));
                 }
             },
             NON_OPERATIONAL { // from class:
@@ -1105,7 +1104,7 @@ public abstract class FieldAccessor implements Implementation {
 
     public int hashCode() {
         return this.typing.hashCode()
-                + dkz.h(this.assigner, (this.fieldLocation.hashCode() + (getClass().hashCode() * 31)) * 31, 31);
+                + StaticHelpers6.h(this.assigner, (this.fieldLocation.hashCode() + (getClass().hashCode() * 31)) * 31, 31);
     }
 
     public static OwnerTypeLocatable of(FieldNameExtractor... fieldNameExtractorArr) {

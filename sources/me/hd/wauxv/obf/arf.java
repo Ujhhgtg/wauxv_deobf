@@ -15,7 +15,7 @@ public class arf {
         throwIfVar1IsNull(doxVar2, "navigationBarStyle");
         throwIfVar1IsNull(window, "window");
         throwIfVar1IsNull(view, "view");
-        bht.ac(window, false);
+        ResourcesCompat.ac(window, false);
         window.setStatusBarColor(z ? doxVar.b : doxVar.a);
         window.setNavigationBarColor(z2 ? doxVar2.b : doxVar2.a);
         cbm cbmVar = new cbm(view, 24);

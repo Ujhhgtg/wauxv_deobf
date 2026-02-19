@@ -38,7 +38,7 @@ public final class bdm extends cnb implements err, bup, dep, beu {
     }
 
     @Override // me.hd.wauxv.obf.beu
-    public final void b(beg begVar, bdj bdjVar) {
+    public final void b(beg begVar, SomeFragmentManager someFragmentManagerVar) {
     }
 
     @Override // me.hd.wauxv.obf.cnb

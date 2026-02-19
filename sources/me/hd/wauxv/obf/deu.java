@@ -26,12 +26,12 @@ public final class deu extends SwitchHook {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i2 = 0;
-        cde cdeVarT = yg.s(-518239343868714L).t();
-        cdeVarT.ab = "initView" /* "initView" /* "initView" /* cnb.z(-515258636565290L)  */;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) bjs.h(cdeVarT);
-        exg exgVar = exg.a;
+        MethodResolver methodResolverVarT = yg.s(-518239343868714L).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "initView" /* "initView" /* "initView" /* cnb.z(-515258636565290L)  */;
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) bjs.h(methodResolverVarT);
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         deu deuVar = a;
-        aki akiVarAd = deuVar.ad(methodHookWrapperVar, exgVar);
+        aki akiVarAd = deuVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
         deuVar.y(akiVarAd, new dbj(19));
         akiVarAd.o();
     }

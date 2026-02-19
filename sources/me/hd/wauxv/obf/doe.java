@@ -86,7 +86,7 @@ public final class doe {
                 dodVar.d = cls.getMethod(str, dod.a);
                 menuItem.setOnMenuItemClickListener(dodVar);
             } catch (Exception e) {
-                StringBuilder sbZ = dkz.z("Couldn't resolve menu item onClick handler ", str, " in class ");
+                StringBuilder sbZ = StaticHelpers6.concatAndToSb("Couldn't resolve menu item onClick handler ", str, " in class ");
                 sbZ.append(cls.getName());
                 InflateException inflateException = new InflateException(sbZ.toString());
                 inflateException.initCause(e);

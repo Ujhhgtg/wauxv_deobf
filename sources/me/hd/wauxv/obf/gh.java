@@ -57,7 +57,7 @@ public final class gh extends SwitchHook implements IDatabaseOperationsListener 
         if (getIsEnabled()) {
             byte[] bArrV = null;
             if (str.equals("SnsInfo" /* "SnsInfo" /* "SnsInfo" /* cnb.z(-544881026005802L)  */)) {
-                if (aaz.tryGetClassByName(
+                if (StaticHelpers5.tryGetClassByName(
                         OtherStaticHelpers.argsToList(Integer.valueOf(ewj.a.h), Integer.valueOf(ewj.b.h), Integer.valueOf(ewj.c.h),
                                 Integer.valueOf(ewj.d.h), Integer.valueOf(ewj.f.h)),
                         contentValues.get("type" /* "type" /* "type" /* cnb.z(-544846666267434L)  */))

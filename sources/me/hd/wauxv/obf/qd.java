@@ -10,7 +10,7 @@ import java.util.LinkedHashSet;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class qd extends cnf {
+public final class qd extends HugeSyntheticPileOfHelpers {
     public final /* synthetic */ int a;
     public final /* synthetic */ agr b;
 
@@ -26,7 +26,7 @@ public final class qd extends cnf {
                 return view.getLeft();
             default:
                 SideSheetBehavior sideSheetBehavior = (SideSheetBehavior) this.b;
-                return cnf.as(i, sideSheetBehavior.f.h(), sideSheetBehavior.f.g());
+                return HugeSyntheticPileOfHelpers.as(i, sideSheetBehavior.f.h(), sideSheetBehavior.f.g());
         }
     }
 
@@ -34,7 +34,7 @@ public final class qd extends cnf {
     public final int d(View view, int i) {
         switch (this.a) {
             case 0:
-                return cnf.as(i, ((BottomSheetBehavior) this.b).cb(), f());
+                return HugeSyntheticPileOfHelpers.as(i, ((BottomSheetBehavior) this.b).cb(), f());
             default:
                 return view.getTop();
         }

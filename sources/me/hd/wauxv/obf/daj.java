@@ -60,7 +60,7 @@ public final class daj extends aax {
     public final Object i(Object obj) {
         ArrayList arrayList = (ArrayList) obj;
         throwIfVar1IsNull(arrayList, "<this>");
-        Object objNewInstance = Array.newInstance((Class<?>) cnf.getJavaClass(this.j), arrayList.size());
+        Object objNewInstance = Array.newInstance((Class<?>) HugeSyntheticPileOfHelpers.getJavaClass(this.j), arrayList.size());
         throwIfVar1IsNull(objNewInstance,
                 "null cannot be cast to non-null type kotlin.Array<E of kotlinx.serialization.internal.PlatformKt.toNativeArrayImpl>");
         Object[] array = arrayList.toArray((Object[]) objNewInstance);

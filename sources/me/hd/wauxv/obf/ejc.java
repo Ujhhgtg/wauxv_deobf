@@ -9,7 +9,7 @@ public final class ejc {
 
     public /* synthetic */ ejc(int i, Integer num, String str) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, eja.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, eja.b.getDescriptor());
             throw null;
         }
         this.a = str;

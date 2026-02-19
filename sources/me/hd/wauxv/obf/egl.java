@@ -10,7 +10,7 @@ public final class egl {
         if (1 == (i & 1)) {
             this.a = num;
         } else {
-            bht.ah(i, 1, egj.b.getDescriptor());
+            ResourcesCompat.ah(i, 1, egj.b.getDescriptor());
             throw null;
         }
     }

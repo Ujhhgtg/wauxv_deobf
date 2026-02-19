@@ -13,10 +13,10 @@ public final class day extends SwitchHook {
         int i = 0;
         adt adtVarM = yg.s(-499139624303402L).m();
         adtVarM.y();
-        ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) aaz.e(adtVarM.a());
-        exg exgVar = exg.a;
+        ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) StaticHelpers5.safeGetFirstInList(adtVarM.a());
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         day dayVar = a;
-        aki akiVarAd = dayVar.ad(constructorHookWrapperVar, exgVar);
+        aki akiVarAd = dayVar.ad(constructorHookWrapperVar, hookPriorityEnumVar);
         dayVar.x(akiVarAd, new cvc(26));
         akiVarAd.o();
     }

@@ -6,9 +6,9 @@ import java.util.ArrayDeque;
 /* JADX INFO: loaded from: classes.dex */
 public final class bmv implements cdv {
     public static final cru a = cru.f(2500, "com.bumptech.glide.load.model.stream.HttpGlideUrlLoader.Timeout");
-    public final bmu b;
+    public final SyntheticPileOfMess b;
 
-    public bmv(bmu bmuVar) {
+    public bmv(SyntheticPileOfMess bmuVar) {
         this.b = bmuVar;
     }
 
@@ -20,9 +20,9 @@ public final class bmv implements cdv {
     @Override // me.hd.wauxv.obf.cdv
     public final cdu e(Object obj, int i, int i2, crw crwVar) {
         bid bidVar = (bid) obj;
-        bmu bmuVar = this.b;
+        SyntheticPileOfMess bmuVar = this.b;
         if (bmuVar != null) {
-            cds cdsVar = (cds) bmuVar.h;
+            cds cdsVar = (cds) bmuVar.obj;
             cdt cdtVarC = cdt.c(bidVar);
             Object objD = cdsVar.d(cdtVarC);
             ArrayDeque arrayDeque = cdt.a;
@@ -36,6 +36,6 @@ public final class bmv implements cdv {
                 bidVar = bidVar2;
             }
         }
-        return new cdu(bidVar, new bmw(bidVar, ((Integer) crwVar.b(a)).intValue()));
+        return new cdu(bidVar, new HttpUrlFetcher(bidVar, ((Integer) crwVar.b(a)).intValue()));
     }
 }

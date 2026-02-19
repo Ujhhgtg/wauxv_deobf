@@ -16,7 +16,7 @@ public final class euv implements View.OnApplyWindowInsetsListener {
     public euv(View view, ua uaVar) {
         evr evrVarG;
         this.a = uaVar;
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         evr evrVarA = eqr.a(view);
         if (evrVarA != null) {
             int i = Build.VERSION.SDK_INT;
@@ -38,7 +38,7 @@ public final class euv implements View.OnApplyWindowInsetsListener {
         evr evrVarD = evr.d(view, windowInsets);
         evo evoVar = evrVarD.b;
         if (this.b == null) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             this.b = eqr.a(view);
         }
         if (this.b == null) {

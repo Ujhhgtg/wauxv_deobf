@@ -48,11 +48,10 @@ import java.util.jar.JarFile;
 import java.util.jar.JarOutputStream;
 import java.util.jar.Manifest;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.ClassFileVersion;
-import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.ClassFileLocator;
 import net.bytebuddy.dynamic.DynamicType;
@@ -2079,7 +2078,7 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                 }
 
                 public int hashCode() {
-                    return dkz.i(this.matcher, (this.delegate.hashCode() + (getClass().hashCode() * 31)) * 31, 31)
+                    return StaticHelpers6.i(this.matcher, (this.delegate.hashCode() + (getClass().hashCode() * 31)) * 31, 31)
                             + (this.manifest ? 1 : 0);
                 }
 
@@ -2450,7 +2449,7 @@ public interface Plugin extends ElementMatcher<TypeDescription>, Closeable {
                     }
 
                     public int hashCode() {
-                        return dkz.i(this.matcher, (this.delegate.hashCode() + (getClass().hashCode() * 31)) * 31, 31)
+                        return StaticHelpers6.i(this.matcher, (this.delegate.hashCode() + (getClass().hashCode() * 31)) * 31, 31)
                                 + (this.manifest ? 1 : 0);
                     }
 

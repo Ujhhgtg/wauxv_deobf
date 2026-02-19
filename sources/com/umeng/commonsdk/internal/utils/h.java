@@ -1,9 +1,9 @@
 package com.umeng.commonsdk.internal.utils;
 
 import android.os.Build;
-import com.umeng.commonsdk.internal.utils.e;
+
 import java.io.File;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -38,7 +38,7 @@ public class h {
     private static boolean e() {
         String[] strArr = {"/bin", "/system/bin/", "/system/xbin/", "/system/sbin/", "/sbin/", "/vendor/bin/", "/su/bin/", "/data/local/xbin/", "/data/local/bin/", "/system/sd/xbin/", "/system/bin/failsafe/", "/data/local/"};
         for (int i = 0; i < 12; i++) {
-            if (new File(dkz.s(strArr[i], "su")).exists()) {
+            if (new File(StaticHelpers6.concat(strArr[i], "su")).exists()) {
                 return true;
             }
         }

@@ -3,11 +3,11 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class avc implements btq {
-    public static final jx a = new jx(19);
+    public static final FactoryPools a = new FactoryPools(19);
 
     @Override // me.hd.wauxv.obf.btq
-    public final awp[] b() {
-        return new awp[0];
+    public final GifEncoder[] b() {
+        return new GifEncoder[0];
     }
 
     @Override // me.hd.wauxv.obf.btq
@@ -16,7 +16,7 @@ public final class avc implements btq {
     }
 
     @Override // me.hd.wauxv.obf.btq
-    public final awp d() {
+    public final GifEncoder d() {
         return null;
     }
 
@@ -34,7 +34,7 @@ public final class avc implements btq {
     }
 
     @Override // me.hd.wauxv.obf.btq
-    public final jx g() {
+    public final FactoryPools g() {
         return a;
     }
 }

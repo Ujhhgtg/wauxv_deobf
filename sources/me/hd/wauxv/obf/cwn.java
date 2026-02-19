@@ -9,14 +9,14 @@ import java.util.Set;
 public class cwn extends ua implements avt, acn {
     public cwp ak;
     public final cwd al;
-    public final bmu am;
+    public final SyntheticPileOfMess am;
     public final dfx an;
 
     /*
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public cwn(cwd cwdVar, bmu bmuVar, dfx dfxVar) {
+    public cwn(cwd cwdVar, SyntheticPileOfMess bmuVar, dfx dfxVar) {
         super(2, false);
         throwIfVar1IsNull(cwdVar, "proto");
         throwIfVar1IsNull(bmuVar, "writer");
@@ -61,7 +61,7 @@ public class cwn extends ua implements avt, acn {
 
     public void _cb(long j, String str) {
         throwIfVar1IsNull(str, "value");
-        bmu bmuVar = this.am;
+        SyntheticPileOfMess bmuVar = this.am;
         if (j == 19500) {
             bmuVar.getClass();
             bmuVar.w(dnr.bh(str));
@@ -69,7 +69,7 @@ public class cwn extends ua implements avt, acn {
         }
         bmuVar.getClass();
         byte[] bArrBh = dnr.bh(str);
-        bmuVar.n((rw) bmuVar.h, ProtoWireType.ENUM_LENGTH_DELIMITED.makeTag((int) (j & 2147483647L)), cwf.DEFAULT);
+        bmuVar.writeVarInt32((rw) bmuVar.obj, ProtoWireType.ENUM_LENGTH_DELIMITED.makeTag((int) (j & 2147483647L)), IntEncodingEnum.DEFAULT);
         bmuVar.w(bArrBh);
     }
 
@@ -108,51 +108,51 @@ public class cwn extends ua implements avt, acn {
     }
 
     public final void ao(long j, double d) {
-        bmu bmuVar = this.am;
+        SyntheticPileOfMess bmuVar = this.am;
         if (j == 19500) {
-            ((rw) bmuVar.h).g(Long.reverseBytes(Double.doubleToRawLongBits(d)));
+            ((rw) bmuVar.obj).g(Long.reverseBytes(Double.doubleToRawLongBits(d)));
             return;
         }
-        bmuVar.n((rw) bmuVar.h, ProtoWireType.ENUM_FIXED64.makeTag((int) (j & 2147483647L)), cwf.DEFAULT);
-        ((rw) bmuVar.h).g(Long.reverseBytes(Double.doubleToRawLongBits(d)));
+        bmuVar.writeVarInt32((rw) bmuVar.obj, ProtoWireType.ENUM_FIXED64.makeTag((int) (j & 2147483647L)), IntEncodingEnum.DEFAULT);
+        ((rw) bmuVar.obj).g(Long.reverseBytes(Double.doubleToRawLongBits(d)));
     }
 
     public final void ap(long j, float f) {
-        bmu bmuVar = this.am;
+        SyntheticPileOfMess bmuVar = this.am;
         if (j == 19500) {
-            ((rw) bmuVar.h).f(Integer.reverseBytes(Float.floatToRawIntBits(f)));
+            ((rw) bmuVar.obj).f(Integer.reverseBytes(Float.floatToRawIntBits(f)));
             return;
         }
-        bmuVar.n((rw) bmuVar.h, ProtoWireType.ENUM_FIXED32.makeTag((int) (j & 2147483647L)), cwf.DEFAULT);
-        ((rw) bmuVar.h).f(Integer.reverseBytes(Float.floatToRawIntBits(f)));
+        bmuVar.writeVarInt32((rw) bmuVar.obj, ProtoWireType.ENUM_FIXED32.makeTag((int) (j & 2147483647L)), IntEncodingEnum.DEFAULT);
+        ((rw) bmuVar.obj).f(Integer.reverseBytes(Float.floatToRawIntBits(f)));
     }
 
     public final void aq(int i, long j) {
-        bmu bmuVar = this.am;
+        SyntheticPileOfMess bmuVar = this.am;
         if (j == 19500) {
-            bmuVar.n((rw) bmuVar.h, i, cwf.DEFAULT);
+            bmuVar.writeVarInt32((rw) bmuVar.obj, i, IntEncodingEnum.DEFAULT);
             return;
         }
         int i2 = (int) (2147483647L & j);
-        cwf cwfVarR = ajn.r(j);
-        rw rwVar = (rw) bmuVar.h;
-        bmuVar.n(rwVar, (cwfVarR == cwf.FIXED ? ProtoWireType.ENUM_FIXED32 : ProtoWireType.ENUM_VARINT).makeTag(i2), cwf.DEFAULT);
-        bmuVar.n(rwVar, i, cwfVarR);
+        IntEncodingEnum intEncodingVarR = ajn.r(j);
+        rw rwVar = (rw) bmuVar.obj;
+        bmuVar.writeVarInt32(rwVar, (intEncodingVarR == IntEncodingEnum.FIXED ? ProtoWireType.ENUM_FIXED32 : ProtoWireType.ENUM_VARINT).makeTag(i2), IntEncodingEnum.DEFAULT);
+        bmuVar.writeVarInt32(rwVar, i, intEncodingVarR);
     }
 
     public final void ar(long j, long j2) {
-        cwf cwfVar = cwf.DEFAULT;
-        bmu bmuVar = this.am;
+        IntEncodingEnum intEncodingVar = IntEncodingEnum.DEFAULT;
+        SyntheticPileOfMess bmuVar = this.am;
         if (j == 19500) {
-            bmuVar.o((rw) bmuVar.h, j2, cwfVar);
+            bmuVar.writeVarInt64((rw) bmuVar.obj, j2, intEncodingVar);
             return;
         }
         int i = (int) (2147483647L & j);
-        cwf cwfVarR = ajn.r(j);
+        IntEncodingEnum intEncodingVarR = ajn.r(j);
         bmuVar.getClass();
-        rw rwVar = (rw) bmuVar.h;
-        bmuVar.n(rwVar, (cwfVarR == cwf.FIXED ? ProtoWireType.ENUM_FIXED64 : ProtoWireType.ENUM_VARINT).makeTag(i), cwfVar);
-        bmuVar.o(rwVar, j2, cwfVarR);
+        rw rwVar = (rw) bmuVar.obj;
+        bmuVar.writeVarInt32(rwVar, (intEncodingVarR == IntEncodingEnum.FIXED ? ProtoWireType.ENUM_FIXED64 : ProtoWireType.ENUM_VARINT).makeTag(i), intEncodingVar);
+        bmuVar.writeVarInt64(rwVar, j2, intEncodingVarR);
     }
 
     @Override // me.hd.wauxv.obf.acn
@@ -257,7 +257,7 @@ public class cwn extends ua implements avt, acn {
         if (nullSafeIsEqual(emcVarH, dnt.c)) {
             return new bzn(_br(), this.am, this.al, dfxVar);
         }
-        throw new dgb("This serial kind is not supported as structure: " + dfxVar);
+        throw new SomeIllegalArgumentException("This serial kind is not supported as structure: " + dfxVar);
     }
 
     @Override // me.hd.wauxv.obf.avt
@@ -270,7 +270,7 @@ public class cwn extends ua implements avt, acn {
         cwp cwpVar = this.ak;
         if (cwpVar != cwp.a) {
             int iOrdinal = cwpVar.ordinal();
-            throw new dgb(iOrdinal != 1
+            throw new SomeIllegalArgumentException(iOrdinal != 1
                     ? iOrdinal != 2
                             ? iOrdinal != 3
                                     ? iOrdinal != 4 ? "'null' is not supported in ProtoBuf"
@@ -310,15 +310,15 @@ public class cwn extends ua implements avt, acn {
             if (nullSafeIsEqual(emcVarH, dnt.c)) {
                 return new bzn(((long[]) this.c)[this.b], this.am, this.al, dfxVar);
             }
-            throw new dgb("This serial kind is not supported as collection: " + dfxVar);
+            throw new SomeIllegalArgumentException("This serial kind is not supported as collection: " + dfxVar);
         }
         long j_br = _br();
         if ((4294967296L & j_br) != 0 && ajn.x(dfxVar.l(0))) {
             return new csf(_br(), this.am, this.al, dfxVar);
         }
         if (j_br == 19500) {
-            bmu bmuVar = this.am;
-            bmuVar.n((rw) bmuVar.h, i, cwf.DEFAULT);
+            SyntheticPileOfMess bmuVar = this.am;
+            bmuVar.writeVarInt32((rw) bmuVar.obj, i, IntEncodingEnum.DEFAULT);
         }
         dfx dfxVar2 = this.an;
         if (!nullSafeIsEqual(dfxVar2.h(), dntVar) || j_br == 19500 || dfxVar2.equals(dfxVar)) {
@@ -343,13 +343,13 @@ public class cwn extends ua implements avt, acn {
             throwIfVar1IsNull(obj, "null cannot be cast to non-null type kotlin.ByteArray");
             byte[] bArr = (byte[]) obj;
             long j_bx = _bx();
-            bmu bmuVar = this.am;
+            SyntheticPileOfMess bmuVar = this.am;
             if (j_bx == 19500) {
                 bmuVar.w(bArr);
                 return;
             }
             bmuVar.getClass();
-            bmuVar.n((rw) bmuVar.h, ProtoWireType.ENUM_LENGTH_DELIMITED.makeTag((int) (j_bx & 2147483647L)), cwf.DEFAULT);
+            bmuVar.writeVarInt32((rw) bmuVar.obj, ProtoWireType.ENUM_LENGTH_DELIMITED.makeTag((int) (j_bx & 2147483647L)), IntEncodingEnum.DEFAULT);
             bmuVar.w(bArr);
             return;
         }

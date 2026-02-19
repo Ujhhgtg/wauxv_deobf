@@ -16,7 +16,7 @@ import java.util.WeakHashMap;
 import me.hd.wauxv.R;
 import me.hd.wauxv.obf.ajn;
 import me.hd.wauxv.obf.cxs;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.ewz;
 import me.hd.wauxv.obf.ff;
 import me.hd.wauxv.obf.zz;
@@ -58,7 +58,7 @@ class ClockHandView extends View {
         paint.setColor(color);
         o(0.0f);
         ViewConfiguration.get(context).getScaledTouchSlop();
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         setImportantForAccessibility(2);
         typedArrayObtainStyledAttributes.recycle();
     }

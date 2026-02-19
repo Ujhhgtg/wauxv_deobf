@@ -20,19 +20,19 @@ public final class exk extends Resources {
         try {
             objX = xModuleResources.getAssets();
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         AssetManager assetManager = (AssetManager) (objX instanceof dcx ? null : objX);
         try {
             objX2 = xModuleResources.getDisplayMetrics();
         } catch (Throwable th2) {
-            objX2 = bhu.x(th2);
+            objX2 = FastKV.x(th2);
         }
         DisplayMetrics displayMetrics = (DisplayMetrics) (objX2 instanceof dcx ? null : objX2);
         try {
             objX3 = xModuleResources.getConfiguration();
         } catch (Throwable th3) {
-            objX3 = bhu.x(th3);
+            objX3 = FastKV.x(th3);
         }
         super(assetManager, displayMetrics, (Configuration) (objX3 instanceof dcx ? null : objX3));
         this.b = xModuleResources;

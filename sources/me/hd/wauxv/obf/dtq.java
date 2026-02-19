@@ -25,7 +25,7 @@ public final class dtq {
     public /* synthetic */ dtq(int i, Float f, Float f2, String str, String str2, String str3, String str4, Integer num,
             String str5, Integer num2, Integer num3, Integer num4, Float f3, Integer num5, String str6, String str7) {
         if (32767 != (i & Advice.MethodSizeHandler.UNDEFINED_SIZE)) {
-            bht.ah(i, Advice.MethodSizeHandler.UNDEFINED_SIZE, dto.b.getDescriptor());
+            ResourcesCompat.ah(i, Advice.MethodSizeHandler.UNDEFINED_SIZE, dto.b.getDescriptor());
             throw null;
         }
         this.a = f;

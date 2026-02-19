@@ -46,11 +46,11 @@ import me.hd.wauxv.obf.ekq;
 import me.hd.wauxv.obf.ekr;
 import me.hd.wauxv.obf.ekt;
 import me.hd.wauxv.obf.eku;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.ij;
 import me.hd.wauxv.obf.il;
 import me.hd.wauxv.obf.jp;
-import me.hd.wauxv.obf.jx;
+import me.hd.wauxv.obf.FactoryPools;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -62,7 +62,7 @@ public class Toolbar extends ViewGroup {
     public final ArrayList ad;
     public final ArrayList ae;
     public final int[] af;
-    public final jx ag;
+    public final FactoryPools ag;
     public ArrayList ah;
     public final ekm ai;
     public ekt aj;
@@ -617,9 +617,9 @@ public class Toolbar extends ViewGroup {
             ektVar.i = getSubtitle();
             ektVar.g = ektVar.h != null;
             ektVar.f = getNavigationIcon();
-            jx jxVarK = jx.k(getContext(), null, cyf.a, R.attr.actionBarStyle);
-            TypedArray typedArray = (TypedArray) jxVarK.e;
-            ektVar.o = jxVarK.s(15);
+            FactoryPools factoryPoolsVarK = FactoryPools.k(getContext(), null, cyf.a, R.attr.actionBarStyle);
+            TypedArray typedArray = (TypedArray) factoryPoolsVarK.e;
+            ektVar.o = factoryPoolsVarK.s(15);
             CharSequence text = typedArray.getText(27);
             if (!TextUtils.isEmpty(text)) {
                 ektVar.g = true;
@@ -627,7 +627,7 @@ public class Toolbar extends ViewGroup {
                 if ((ektVar.b & 8) != 0) {
                     setTitle(text);
                     if (ektVar.g) {
-                        eqz.t(getRootView(), text);
+                        ViewCompat.setAccessibilityPaneTitle(getRootView(), text);
                     }
                 }
             }
@@ -638,12 +638,12 @@ public class Toolbar extends ViewGroup {
                     setSubtitle(text2);
                 }
             }
-            Drawable drawableS = jxVarK.s(20);
+            Drawable drawableS = factoryPoolsVarK.s(20);
             if (drawableS != null) {
                 ektVar.e = drawableS;
                 ektVar.r();
             }
-            Drawable drawableS2 = jxVarK.s(17);
+            Drawable drawableS2 = factoryPoolsVarK.s(17);
             if (drawableS2 != null) {
                 ektVar.d = drawableS2;
                 ektVar.r();
@@ -706,7 +706,7 @@ public class Toolbar extends ViewGroup {
             if (resourceId4 != 0) {
                 setPopupTheme(resourceId4);
             }
-            jxVarK.ae();
+            factoryPoolsVarK.ae();
             if (R.string.abc_action_bar_up_description != ektVar.n) {
                 ektVar.n = R.string.abc_action_bar_up_description;
                 if (TextUtils.isEmpty(getNavigationContentDescription())) {
@@ -873,7 +873,7 @@ public class Toolbar extends ViewGroup {
         int[] iArr = this.af;
         iArr[1] = 0;
         iArr[0] = 0;
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         int minimumHeight = getMinimumHeight();
         int iMin2 = minimumHeight >= 0 ? Math.min(minimumHeight, i4 - i2) : 0;
         if (bk(this.d)) {
@@ -1669,15 +1669,15 @@ public class Toolbar extends ViewGroup {
         this.ad = new ArrayList();
         this.ae = new ArrayList();
         this.af = new int[2];
-        this.ag = new jx(new ekl(this, 1));
+        this.ag = new FactoryPools(new ekl(this, 1));
         this.ah = new ArrayList();
         this.ai = new ekm(this);
         this.aq = new dc(this, 18);
         Context context2 = getContext();
         int[] iArr = cyf.x;
-        jx jxVarK = jx.k(context2, attributeSet, iArr, R.attr.toolbarStyle);
-        eqz.r(this, context, iArr, attributeSet, (TypedArray) jxVarK.e, R.attr.toolbarStyle, 0);
-        TypedArray typedArray = (TypedArray) jxVarK.e;
+        FactoryPools factoryPoolsVarK = FactoryPools.k(context2, attributeSet, iArr, R.attr.toolbarStyle);
+        ViewCompat.r(this, context, iArr, attributeSet, (TypedArray) factoryPoolsVarK.e, R.attr.toolbarStyle, 0);
+        TypedArray typedArray = (TypedArray) factoryPoolsVarK.e;
         this.l = typedArray.getResourceId(28, 0);
         this.m = typedArray.getResourceId(19, 0);
         this.w = typedArray.getInteger(0, 8388627);
@@ -1726,7 +1726,7 @@ public class Toolbar extends ViewGroup {
         }
         this.u = typedArray.getDimensionPixelOffset(10, Integer.MIN_VALUE);
         this.v = typedArray.getDimensionPixelOffset(6, Integer.MIN_VALUE);
-        this.f = jxVarK.s(4);
+        this.f = factoryPoolsVarK.s(4);
         this.g = typedArray.getText(3);
         CharSequence text = typedArray.getText(21);
         if (!TextUtils.isEmpty(text)) {
@@ -1738,7 +1738,7 @@ public class Toolbar extends ViewGroup {
         }
         this.j = getContext();
         setPopupTheme(typedArray.getResourceId(17, 0));
-        Drawable drawableS = jxVarK.s(16);
+        Drawable drawableS = factoryPoolsVarK.s(16);
         if (drawableS != null) {
             setNavigationIcon(drawableS);
         }
@@ -1746,7 +1746,7 @@ public class Toolbar extends ViewGroup {
         if (!TextUtils.isEmpty(text3)) {
             setNavigationContentDescription(text3);
         }
-        Drawable drawableS2 = jxVarK.s(11);
+        Drawable drawableS2 = factoryPoolsVarK.s(11);
         if (drawableS2 != null) {
             setLogo(drawableS2);
         }
@@ -1755,15 +1755,15 @@ public class Toolbar extends ViewGroup {
             setLogoDescription(text4);
         }
         if (typedArray.hasValue(29)) {
-            setTitleTextColor(jxVarK.r(29));
+            setTitleTextColor(factoryPoolsVarK.r(29));
         }
         if (typedArray.hasValue(20)) {
-            setSubtitleTextColor(jxVarK.r(20));
+            setSubtitleTextColor(factoryPoolsVarK.r(20));
         }
         if (typedArray.hasValue(14)) {
             bd(typedArray.getResourceId(14, 0));
         }
-        jxVarK.ae();
+        factoryPoolsVarK.ae();
     }
 
     @Override // android.view.ViewGroup

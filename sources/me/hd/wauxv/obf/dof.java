@@ -128,7 +128,7 @@ public final class dof extends MenuInflater {
                             doeVar.ad = null;
                         }
                         if (typedArrayObtainStyledAttributes2.hasValue(18)) {
-                            if (!typedArrayObtainStyledAttributes2.hasValue(18) || (resourceId = typedArrayObtainStyledAttributes2.getResourceId(18, 0)) == 0 || (colorStateList = bht.v(context, resourceId)) == null) {
+                            if (!typedArrayObtainStyledAttributes2.hasValue(18) || (resourceId = typedArrayObtainStyledAttributes2.getResourceId(18, 0)) == 0 || (colorStateList = ResourcesCompat.v(context, resourceId)) == null) {
                                 colorStateList = typedArrayObtainStyledAttributes2.getColorStateList(18);
                             }
                             doeVar.ac = colorStateList;

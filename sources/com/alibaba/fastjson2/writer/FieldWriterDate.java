@@ -10,7 +10,7 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dts;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -201,10 +201,10 @@ abstract class FieldWriterDate<T> extends FieldWriter<T> {
                 }
                 j5 = j3;
                 j6 = ((j5 * 400) + 591) / 146097;
-                j7 = dkz.j(j6, 400L, ((j6 / 4) + (j6 * 365)) - (j6 / 100), j5);
+                j7 = StaticHelpers6.j(j6, 400L, ((j6 / 4) + (j6 * 365)) - (j6 / 100), j5);
                 if (j7 < j2) {
                     j6--;
-                    j7 = dkz.j(j6, 400L, ((j6 / 4) + (365 * j6)) - (j6 / 100), j5);
+                    j7 = StaticHelpers6.j(j6, 400L, ((j6 / 4) + (365 * j6)) - (j6 / 100), j5);
                 }
                 int i = (int) j7;
                 int i2 = ((i * 5) + 2) / 153;
@@ -264,10 +264,10 @@ abstract class FieldWriterDate<T> extends FieldWriter<T> {
             }
             j5 = j3;
             j6 = ((j5 * 400) + 591) / 146097;
-            j7 = dkz.j(j6, 400L, ((j6 / 4) + (j6 * 365)) - (j6 / 100), j5);
+            j7 = StaticHelpers6.j(j6, 400L, ((j6 / 4) + (j6 * 365)) - (j6 / 100), j5);
             if (j7 < j2) {
                 j6--;
-                j7 = dkz.j(j6, 400L, ((j6 / 4) + (365 * j6)) - (j6 / 100), j5);
+                j7 = StaticHelpers6.j(j6, 400L, ((j6 / 4) + (365 * j6)) - (j6 / 100), j5);
             }
             int i9 = (int) j7;
             int i22 = ((i9 * 5) + 2) / 153;

@@ -33,10 +33,10 @@ public final class zm extends cyw {
     }
 
     @Override // me.hd.wauxv.obf.cyw
-    public final void f(czx czxVar, final int i) {
+    public final void f(SomeView someViewVar, final int i) {
         switch (this.a) {
             case 0:
-                bqq bqqVar = ((zk) czxVar).a;
+                bqq bqqVar = ((zk) someViewVar).a;
                 zn znVar = (zn) this.b.get(i);
                 ((MaterialCheckBox) bqqVar.c).setText(znVar.a.concat(" (计算中...)" /* " (计算中...)" /* " (计算中...)" /* cnb.z(-11935714114346L)  */));
                 MaterialCheckBox materialCheckBox = (MaterialCheckBox) bqqVar.c;
@@ -48,7 +48,7 @@ public final class zm extends cyw {
                 KotlinHelpers2.bf(bza.a, eqVar);
                 break;
             default:
-                dpb dpbVar = (dpb) czxVar;
+                dpb dpbVar = (dpb) someViewVar;
                 ((MaterialTextView) dpbVar.a.c).setText((CharSequence) ((ArrayList) this.b).get(i));
                 dpbVar.d.setOnLongClickListener(new View.OnLongClickListener() { // from class: me.hd.wauxv.obf.dpa
                     @Override // android.view.View.OnLongClickListener
@@ -67,18 +67,18 @@ public final class zm extends cyw {
     }
 
     @Override // me.hd.wauxv.obf.cyw
-    public final czx g(ViewGroup viewGroup, int i) {
+    public final SomeView g(ViewGroup viewGroup, int i) {
         switch (this.a) {
             case 0:
                 View viewInflate = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_rv_auto_clean, viewGroup, false);
-                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.aq(viewInflate, R.id.itemAutoCleanCheckBox);
+                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.itemAutoCleanCheckBox);
                 if (materialCheckBox != null) {
                     return new zk(new bqq((LinearLayout) viewInflate, materialCheckBox, 2));
                 }
                 throw new NullPointerException("Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-640109040892714L)  */.concat(viewInflate.getResources().getResourceName(R.id.itemAutoCleanCheckBox)));
             default:
                 View viewInflate2 = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_rv_system_browser, viewGroup, false);
-                MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.aq(viewInflate2, R.id.itemSystemBrowserTvHost);
+                MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewInflate2, R.id.itemSystemBrowserTvHost);
                 if (materialTextView != null) {
                     return new dpb(new bqq((LinearLayout) viewInflate2, materialTextView, 0));
                 }

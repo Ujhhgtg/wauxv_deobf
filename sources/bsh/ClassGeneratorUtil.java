@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.ok;
 import me.hd.wauxv.obf.ra;
 import me.hd.wauxv.obf.rb;
@@ -517,7 +517,7 @@ public class ClassGeneratorUtil implements Opcodes {
 
     public static void startInterpreterForClass(Class<?> cls) {
         String strSuffix = Name.suffix(cls.getName(), 1);
-        String strS = dkz.s(strSuffix, ".bsh");
+        String strS = StaticHelpers6.concat(strSuffix, ".bsh");
         if (cls.getResource(strS) == null) {
             throw new InterpreterError("Script (" + strS + ") for BeanShell generated class: " + cls + " not found.");
         }

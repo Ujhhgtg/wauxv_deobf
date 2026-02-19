@@ -15,7 +15,7 @@ import me.hd.wauxv.R;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class adw extends cyw {
-    public List a = EmptyReadonlyList.a;
+    public List a = EmptyReadonlyList.INSTANCE;
     public final aek b;
 
     public adw(aek aekVar) {
@@ -31,7 +31,7 @@ public final class adw extends cyw {
     public static void h(adw adwVar, List list) {
         adwVar.getClass();
         if (list == null) {
-            list = EmptyReadonlyList.a;
+            list = EmptyReadonlyList.INSTANCE;
         }
         c(adwVar);
         List list2 = adwVar.a;
@@ -56,16 +56,16 @@ public final class adw extends cyw {
     }
 
     @Override // me.hd.wauxv.obf.cyw
-    public final void f(czx czxVar, int i) {
-        if (czxVar instanceof dmm) {
-            cbm.g(((dmm) czxVar).b);
+    public final void f(SomeView someViewVar, int i) {
+        if (someViewVar instanceof dmm) {
+            cbm.g(((dmm) someViewVar).b);
         } else {
-            o(czxVar, aaz.h(i, this.a));
+            o(someViewVar, StaticHelpers5.h(i, this.a));
         }
     }
 
     @Override // me.hd.wauxv.obf.cyw
-    public final czx g(ViewGroup viewGroup, int i) {
+    public final SomeView g(ViewGroup viewGroup, int i) {
         if (i == R.id.BaseQuickAdapter_empty_view) {
             return new dmm(viewGroup);
         }
@@ -85,14 +85,14 @@ public final class adw extends cyw {
     }
 
     @Override // me.hd.wauxv.obf.cyw
-    public final void k(czx czxVar, int i, List list) {
+    public final void k(SomeView someViewVar, int i, List list) {
         throwIfVar1IsNull(list, "payloads");
         if (list.isEmpty()) {
-            f(czxVar, i);
-        } else if (czxVar instanceof dmm) {
-            cbm.g(((dmm) czxVar).b);
+            f(someViewVar, i);
+        } else if (someViewVar instanceof dmm) {
+            cbm.g(((dmm) someViewVar).b);
         } else {
-            o(czxVar, aaz.h(i, this.a));
+            o(someViewVar, StaticHelpers5.h(i, this.a));
         }
     }
 
@@ -101,15 +101,15 @@ public final class adw extends cyw {
     }
 
     @Override // me.hd.wauxv.obf.cyw
-    public final void m(czx czxVar) {
-        if (!(czxVar instanceof dmm)) {
-            int iY = czxVar.y();
+    public final void m(SomeView someViewVar) {
+        if (!(someViewVar instanceof dmm)) {
+            int iY = someViewVar.y();
             c(this);
             if (iY != R.id.BaseQuickAdapter_empty_view) {
                 return;
             }
         }
-        View view = czxVar.d;
+        View view = someViewVar.d;
         if (view.getLayoutParams() instanceof dmb) {
             ViewGroup.LayoutParams layoutParams = view.getLayoutParams();
             throwIfVar1IsNull(layoutParams,
@@ -119,11 +119,11 @@ public final class adw extends cyw {
     }
 
     @Override // me.hd.wauxv.obf.cyw
-    public final void n(czx czxVar) {
+    public final void n(SomeView someViewVar) {
     }
 
-    public final void o(czx czxVar, Object obj) {
-        cxd cxdVar = (cxd) czxVar;
+    public final void o(SomeView someViewVar, Object obj) {
+        cxd cxdVar = (cxd) someViewVar;
         adx adxVar = (adx) obj;
         if (adxVar != null) {
             CheckBox checkBox = (CheckBox) cxdVar.b(R.id.itemContactCheckBoxSelect);
@@ -134,7 +134,7 @@ public final class adw extends cyw {
             ImageView imageView = (ImageView) cxdVar.b(R.id.itemContactImageViewAvatar);
             String str = adxVar.a;
             moVar.getClass();
-            XposedBridge.invokeOriginalMethod(emn.bb(mn.a), (Object) null,
+            XposedBridge.invokeOriginalMethod(StaticHelpers7.bb(mn.a), (Object) null,
                     new Object[] { imageView, str, Float.valueOf(0.1f), Boolean.FALSE });
             ((TextView) cxdVar.b(R.id.itemContactTextViewName)).setText(adxVar.b);
             ((TextView) cxdVar.b(R.id.itemContactTextViewDesc)).setText(adxVar.c);

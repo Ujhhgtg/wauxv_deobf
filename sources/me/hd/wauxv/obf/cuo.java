@@ -23,13 +23,13 @@ public final /* synthetic */ class cuo extends bgr implements bgk {
             viewGroup.addView(viewInflate);
         }
         int i = R.id.policyButtonAccept;
-        MaterialButton materialButton = (MaterialButton) KotlinHelpers2.aq(viewInflate, R.id.policyButtonAccept);
+        MaterialButton materialButton = (MaterialButton) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.policyButtonAccept);
         if (materialButton != null) {
             i = R.id.policyTextViewDesc;
-            MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.aq(viewInflate, R.id.policyTextViewDesc);
+            MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.policyTextViewDesc);
             if (materialTextView != null) {
                 i = R.id.policyToolbar;
-                if (((MaterialToolbar) KotlinHelpers2.aq(viewInflate, R.id.policyToolbar)) != null) {
+                if (((MaterialToolbar) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.policyToolbar)) != null) {
                     return new bew((CoordinatorLayout) viewInflate, materialButton, materialTextView);
                 }
             }

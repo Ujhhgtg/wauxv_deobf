@@ -37,7 +37,7 @@ public abstract class ng implements bup {
     public final int[] l;
     public boolean m;
     public boolean n;
-    public final bht o;
+    public final ResourcesCompat o;
     public final boolean p;
     public long q;
     public final long r;
@@ -169,7 +169,7 @@ public abstract class ng implements bup {
     public static void ai(Activity activity) {
         WeakReference weakReference;
         WeakReference weakReference2;
-        int iAe = dkz.ae(anj.h);
+        int iAe = StaticHelpers6.ae(anj.h);
         if (iAe != 1) {
             if (iAe != 2) {
                 if (iAe != 3 && c != null) {
@@ -207,12 +207,12 @@ public abstract class ng implements bup {
                 weakReference4.clear();
             }
             b = null;
-            bht bhtVar = anj.a;
+            ResourcesCompat resourcesCompatVar = anj.a;
         }
     }
 
     public static void aj(Runnable runnable) {
-        bht bhtVar = anj.a;
+        ResourcesCompat resourcesCompatVar = anj.a;
         if (a == null) {
             a = Looper.getMainLooper().getThread();
         }
@@ -251,13 +251,13 @@ public abstract class ng implements bup {
         sb.append(".show on ");
         sb.append(ngVar.aw() ? ngVar.as() : "window");
         String string = sb.toString();
-        bht bhtVar = anj.a;
+        ResourcesCompat resourcesCompatVar = anj.a;
         Log.i(">>>", string.toString());
         if (c == null) {
             c = new CopyOnWriteArrayList();
         }
         c.add(ngVar);
-        int iAe = dkz.ae(ngVar.v);
+        int iAe = StaticHelpers6.ae(ngVar.v);
         if (iAe == 1) {
             Activity activityAs = ngVar.as();
             try {
@@ -331,7 +331,7 @@ public abstract class ng implements bup {
         }
         ng ngVar = (ng) view.getTag();
         String str = ngVar.ao() + ".dismiss";
-        bht bhtVar = anj.a;
+        ResourcesCompat resourcesCompatVar = anj.a;
         Log.i(">>>", str.toString());
         CopyOnWriteArrayList copyOnWriteArrayList = c;
         if (copyOnWriteArrayList != null) {
@@ -341,7 +341,7 @@ public abstract class ng implements bup {
         if (weakReference != null) {
             weakReference.clear();
         }
-        int iAe = dkz.ae(ngVar.v);
+        int iAe = StaticHelpers6.ae(ngVar.v);
         int i = 1;
         if (iAe == 1) {
             bmy.n(view);
@@ -362,7 +362,7 @@ public abstract class ng implements bup {
     }
 
     public static void y(String str) {
-        bht bhtVar = anj.a;
+        ResourcesCompat resourcesCompatVar = anj.a;
         Log.e(">>>", str.toString());
     }
 

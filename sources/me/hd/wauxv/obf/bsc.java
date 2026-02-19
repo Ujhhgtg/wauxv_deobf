@@ -5,10 +5,10 @@ import java.util.List;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class bsc implements dfx {
-    public final dov a;
+    public final Kotlin$Lazy a;
 
     public bsc(bfu bfuVar) {
-        this.a = new dov(bfuVar);
+        this.a = new Kotlin$Lazy(bfuVar);
     }
 
     @Override // me.hd.wauxv.obf.dfx
@@ -38,7 +38,7 @@ public final class bsc implements dfx {
 
     @Override // me.hd.wauxv.obf.dfx
     public final List getAnnotations() {
-        return EmptyReadonlyList.a;
+        return EmptyReadonlyList.INSTANCE;
     }
 
     @Override // me.hd.wauxv.obf.dfx

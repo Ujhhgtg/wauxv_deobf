@@ -9,7 +9,7 @@ import java.security.PrivilegedAction;
 import java.util.Collections;
 import java.util.List;
 import javax.annotation.Nonnull;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.AccessControllerPlugin;
 import net.bytebuddy.build.CachedReturnPlugin;
 import net.bytebuddy.description.ByteCodeElement;
@@ -19,7 +19,6 @@ import net.bytebuddy.description.annotation.AnnotationDescription;
 import net.bytebuddy.description.annotation.AnnotationList;
 import net.bytebuddy.description.annotation.AnnotationSource;
 import net.bytebuddy.description.method.MethodDescription;
-import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.jar.asm.signature.SignatureVisitor;
 import net.bytebuddy.jar.asm.signature.SignatureWriter;
 import net.bytebuddy.matcher.ElementMatcher;
@@ -141,7 +140,7 @@ public interface RecordComponentDescription extends DeclaredByType.WithMandatory
             if (RECORD_COMPONENT.isInstance(obj)) {
                 return new ForLoadedRecordComponent((AnnotatedElement) obj);
             }
-            throw new IllegalArgumentException(dkz.r(obj, "Not a record component: "));
+            throw new IllegalArgumentException(StaticHelpers6.concatVar2Var1(obj, "Not a record component: "));
         }
 
         @Override // net.bytebuddy.description.NamedElement
@@ -293,7 +292,7 @@ public interface RecordComponentDescription extends DeclaredByType.WithMandatory
             if (this.hashCode != 0) {
                 iE = 0;
             } else {
-                iE = dkz.e(this.type, this.name.hashCode() * 31, 31) + this.annotations.hashCode();
+                iE = StaticHelpers6.e(this.type, this.name.hashCode() * 31, 31) + this.annotations.hashCode();
             }
             if (iE == 0) {
                 return this.hashCode;

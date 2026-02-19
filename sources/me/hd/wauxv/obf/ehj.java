@@ -12,7 +12,7 @@ public final class ehj {
 
     public /* synthetic */ ehj(int i, Integer num, List list) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, ehh.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, ehh.b.getDescriptor());
             throw null;
         }
         this.b = list;

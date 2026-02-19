@@ -11,9 +11,9 @@ public final class auh extends bws implements IDexFind {
     public static String b(String str) {
         int i = 0;
         atm.a.getClass();
-        cde cdeVarT = dqc.bi(atm.b()).t();
-        cdeVarT.a = dal.b(String.class);
-        Object objJ = ((MethodHookWrapper) dkz.n(new Object[] { dal.b(Context.class), dal.b(String.class) }, 2, cdeVarT)).j(null,
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(atm.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.returnType = dal.b(String.class);
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(Context.class), dal.b(String.class) }, 2, methodResolverVarT)).j(null,
                 str);
         throwIfVar1IsNull(objJ);
         return (String) objJ;
@@ -23,11 +23,11 @@ public final class auh extends bws implements IDexFind {
         auhVar.getClass();
         int i = 0;
         atm.a.getClass();
-        cde cdeVarT = dqc.bi(atm.b()).t();
-        cdeVarT.a = Void.TYPE;
-        cdeVarT.d = new atn(13);
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
-        int parameterCount = methodHookWrapperVar.a.getParameterCount();
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(atm.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.returnType = Void.TYPE;
+        methodResolverVarT.d = new atn(13);
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
+        int parameterCount = methodHookWrapperVar.method.getParameterCount();
         if (parameterCount == 4) {
             methodHookWrapperVar.e(str, obj, null, null);
         } else if (parameterCount != 5) {
@@ -43,6 +43,6 @@ public final class auh extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(aug.a, dexKitBridge, new atn(14));
+        StaticHelpers7.resolveDexAndCache(aug.a, dexKitBridge, new atn(14));
     }
 }

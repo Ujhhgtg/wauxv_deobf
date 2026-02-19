@@ -291,7 +291,7 @@ public final class cbz implements dog {
         this.n.ao(true);
         cca ccaVar2 = this.ac;
         if (ccaVar2 != null) {
-            ccaVar2.a = new bmu(this);
+            ccaVar2.a = new SyntheticPileOfMess(this);
             ccaVar2.b.setVisibilityListener(ccaVar2);
         }
         return this;

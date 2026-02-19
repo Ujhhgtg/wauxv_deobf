@@ -11,11 +11,11 @@ public final class aeg extends bws implements IDexFind {
     public static final aeg a = new aeg();
 
     public static List b(String str) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
-        Method methodBb = emn.bb(aef.a);
+        Method methodBb = StaticHelpers7.bb(aef.a);
         aec.a.getClass();
         Object objInvoke = methodBb.invoke(aec.b(), str);
         List list = objInvoke instanceof List ? (List) objInvoke : null;
-        return list == null ? EmptyReadonlyList.a : list;
+        return list == null ? EmptyReadonlyList.INSTANCE : list;
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -24,8 +24,8 @@ public final class aeg extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(aee.a, dexKitBridge, new act(10));
-        emn.aj(aed.a, dexKitBridge, new act(11));
-        emn.aj(aef.a, dexKitBridge, new act(12));
+        StaticHelpers7.resolveDexAndCache(aee.a, dexKitBridge, new act(10));
+        StaticHelpers7.resolveDexAndCache(aed.a, dexKitBridge, new act(11));
+        StaticHelpers7.resolveDexAndCache(aef.a, dexKitBridge, new act(12));
     }
 }

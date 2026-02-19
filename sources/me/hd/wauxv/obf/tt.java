@@ -14,25 +14,25 @@ public final class tt extends elm {
 
     @Override // me.hd.wauxv.obf.elm, me.hd.wauxv.obf.elk
     public final void c(ell ellVar) {
-        dqc.bk(this.b, false);
+        dqc.tryGetClassByName(this.b, false);
         this.a = true;
     }
 
     @Override // me.hd.wauxv.obf.elm, me.hd.wauxv.obf.elk
     public final void d() {
-        dqc.bk(this.b, false);
+        dqc.tryGetClassByName(this.b, false);
     }
 
     @Override // me.hd.wauxv.obf.elm, me.hd.wauxv.obf.elk
     public final void e(ell ellVar) {
         if (!this.a) {
-            dqc.bk(this.b, false);
+            dqc.tryGetClassByName(this.b, false);
         }
         ellVar.n(this);
     }
 
     @Override // me.hd.wauxv.obf.elm, me.hd.wauxv.obf.elk
     public final void f() {
-        dqc.bk(this.b, true);
+        dqc.tryGetClassByName(this.b, true);
     }
 }

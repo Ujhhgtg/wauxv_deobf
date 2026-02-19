@@ -18,7 +18,7 @@ public final class dvo {
     public /* synthetic */ dvo(int i, String str, Integer num, String str2, String str3, ehg ehgVar, String str4,
             dzy dzyVar, String str5) {
         if (255 != (i & Opcodes.CONST_METHOD_TYPE)) {
-            bht.ah(i, Opcodes.CONST_METHOD_TYPE, dvm.b.getDescriptor());
+            ResourcesCompat.ah(i, Opcodes.CONST_METHOD_TYPE, dvm.b.getDescriptor());
             throw null;
         }
         this.a = str;

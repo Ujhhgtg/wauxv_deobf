@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.text.TextUtils;
 import com.umeng.analytics.pro.j;
 import java.io.File;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -34,7 +34,7 @@ class b extends SQLiteOpenHelper {
         if (!file.exists()) {
             file.mkdirs();
         }
-        StringBuilder sbY = dkz.y(strB);
+        StringBuilder sbY = StaticHelpers6.toSb(strB);
         sbY.append(a.e);
         return String.format(sbY.toString(), str);
     }

@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import javax.net.ssl.SSLPeerUnverifiedException;
-import me.hd.wauxv.obf.aaz;
-import me.hd.wauxv.obf.abb;
+import me.hd.wauxv.obf.StaticHelpers5;
+import me.hd.wauxv.obf.StaticHelpers4;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.bfu;
@@ -49,7 +49,7 @@ public final class CertificatePinner {
 
         /* JADX WARN: Multi-variable type inference failed */
         public final CertificatePinner build() {
-            return new CertificatePinner(aaz.ad(this.pins), null, 2, 0 == true ? 1 : 0);
+            return new CertificatePinner(StaticHelpers5.ad(this.pins), null, 2, 0 == true ? 1 : 0);
         }
 
         public final List<Pin> getPins() {
@@ -239,7 +239,7 @@ public final class CertificatePinner {
                     .clean(this.$peerCertificates, this.$hostname)) == null) {
                 listClean = this.$peerCertificates;
             }
-            ArrayList arrayList = new ArrayList(abb.ak(listClean, 10));
+            ArrayList arrayList = new ArrayList(StaticHelpers4.ak(listClean, 10));
             for (Certificate certificate : listClean) {
                 throwIfVar1IsNull(certificate,
                         "null cannot be cast to non-null type java.security.cert.X509Certificate");
@@ -336,7 +336,7 @@ public final class CertificatePinner {
 
     public final List<Pin> findMatchingPins(String str) {
         throwIfVar1IsNull(str, "hostname");
-        List arrayList = EmptyReadonlyList.a;
+        List arrayList = EmptyReadonlyList.INSTANCE;
         for (Object obj : this.pins) {
             if (((Pin) obj).matchesHostname(str)) {
                 if (arrayList.isEmpty()) {

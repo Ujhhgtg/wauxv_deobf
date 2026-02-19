@@ -47,7 +47,7 @@ public final class awa extends LinearLayout {
     public qp u;
     public final avx v;
 
-    public awa(TextInputLayout textInputLayout, jx jxVar) {
+    public awa(TextInputLayout textInputLayout, FactoryPools factoryPoolsVar) {
         CharSequence text;
         super(textInputLayout.getContext());
         this.i = 0;
@@ -68,28 +68,28 @@ public final class awa extends LinearLayout {
         this.c = checkableImageButtonW;
         CheckableImageButton checkableImageButtonW2 = w(frameLayout, layoutInflaterFrom, R.id.text_input_end_icon);
         this.g = checkableImageButtonW2;
-        this.h = new avz(this, jxVar);
+        this.h = new avz(this, factoryPoolsVar);
         jp jpVar = new jp(getContext(), null);
         this.q = jpVar;
-        TypedArray typedArray = (TypedArray) jxVar.e;
+        TypedArray typedArray = (TypedArray) factoryPoolsVar.e;
         if (typedArray.hasValue(38)) {
-            this.d = cnb.w(getContext(), jxVar, 38);
+            this.d = cnb.w(getContext(), factoryPoolsVar, 38);
         }
         if (typedArray.hasValue(39)) {
             this.e = ewz.ap(typedArray.getInt(39, -1), null);
         }
         if (typedArray.hasValue(37)) {
-            ae(jxVar.s(37));
+            ae(factoryPoolsVar.s(37));
         }
         checkableImageButtonW.setContentDescription(getResources().getText(R.string.error_icon_content_description));
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         checkableImageButtonW.setImportantForAccessibility(2);
         checkableImageButtonW.setClickable(false);
         checkableImageButtonW.setPressable(false);
         checkableImageButtonW.setFocusable(false);
         if (!typedArray.hasValue(53)) {
             if (typedArray.hasValue(32)) {
-                this.k = cnb.w(getContext(), jxVar, 32);
+                this.k = cnb.w(getContext(), factoryPoolsVar, 32);
             }
             if (typedArray.hasValue(33)) {
                 this.l = ewz.ap(typedArray.getInt(33, -1), null);
@@ -105,7 +105,7 @@ public final class awa extends LinearLayout {
             checkableImageButtonW2.setCheckable(typedArray.getBoolean(26, true));
         } else if (typedArray.hasValue(53)) {
             if (typedArray.hasValue(54)) {
-                this.k = cnb.w(getContext(), jxVar, 54);
+                this.k = cnb.w(getContext(), factoryPoolsVar, 54);
             }
             if (typedArray.hasValue(55)) {
                 this.l = ewz.ap(typedArray.getInt(55, -1), null);
@@ -129,7 +129,7 @@ public final class awa extends LinearLayout {
             checkableImageButtonW.setMinimumHeight(dimensionPixelSize);
         }
         if (typedArray.hasValue(31)) {
-            ImageView.ScaleType scaleTypeU = bhu.u(typedArray.getInt(31, -1));
+            ImageView.ScaleType scaleTypeU = FastKV.u(typedArray.getInt(31, -1));
             this.n = scaleTypeU;
             checkableImageButtonW2.setScaleType(scaleTypeU);
             checkableImageButtonW.setScaleType(scaleTypeU);
@@ -140,7 +140,7 @@ public final class awa extends LinearLayout {
         jpVar.setAccessibilityLiveRegion(1);
         jpVar.setTextAppearance(typedArray.getResourceId(72, 0));
         if (typedArray.hasValue(73)) {
-            jpVar.setTextColor(jxVar.r(73));
+            jpVar.setTextColor(factoryPoolsVar.r(73));
         }
         CharSequence text3 = typedArray.getText(71);
         this.p = TextUtils.isEmpty(text3) ? null : text3;
@@ -181,7 +181,7 @@ public final class awa extends LinearLayout {
             checkableImageButton.setActivated(!zIsActivated);
         }
         if (z || z4) {
-            bhu.av(this.a, checkableImageButton, this.k);
+            FastKV.av(this.a, checkableImageButton, this.k);
         }
     }
 
@@ -213,8 +213,8 @@ public final class awa extends LinearLayout {
         checkableImageButton.setImageDrawable(drawableY);
         TextInputLayout textInputLayout = this.a;
         if (drawableY != null) {
-            bhu.o(textInputLayout, checkableImageButton, this.k, this.l);
-            bhu.av(textInputLayout, checkableImageButton, this.k);
+            FastKV.o(textInputLayout, checkableImageButton, this.k, this.l);
+            FastKV.av(textInputLayout, checkableImageButton, this.k);
         }
         int iK = awbVarX2.k();
         CharSequence text = iK != 0 ? getResources().getText(iK) : null;
@@ -230,7 +230,7 @@ public final class awa extends LinearLayout {
         qp qpVarY = awbVarX2.y();
         this.u = qpVarY;
         if (qpVarY != null && accessibilityManager != null) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             if (isAttachedToWindow()) {
                 accessibilityManager.addTouchExplorationStateChangeListener(new ar(this.u));
             }
@@ -238,13 +238,13 @@ public final class awa extends LinearLayout {
         View.OnClickListener onClickListenerN = awbVarX2.n();
         View.OnLongClickListener onLongClickListener = this.o;
         checkableImageButton.setOnClickListener(onClickListenerN);
-        bhu.bb(checkableImageButton, onLongClickListener);
+        FastKV.bb(checkableImageButton, onLongClickListener);
         EditText editText = this.s;
         if (editText != null) {
             awbVarX2.p(editText);
             af(awbVarX2);
         }
-        bhu.o(textInputLayout, checkableImageButton, this.k, this.l);
+        FastKV.o(textInputLayout, checkableImageButton, this.k, this.l);
         ab(true);
     }
 
@@ -261,7 +261,7 @@ public final class awa extends LinearLayout {
         CheckableImageButton checkableImageButton = this.c;
         checkableImageButton.setImageDrawable(drawable);
         ah();
-        bhu.o(this.a, checkableImageButton, this.d, this.e);
+        FastKV.o(this.a, checkableImageButton, this.d, this.e);
     }
 
     public final void af(awb awbVar) {
@@ -304,14 +304,14 @@ public final class awa extends LinearLayout {
             paddingEnd = 0;
         } else {
             EditText editText = textInputLayout.e;
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             paddingEnd = editText.getPaddingEnd();
         }
         int dimensionPixelSize = getContext().getResources()
                 .getDimensionPixelSize(R.dimen.material_input_text_to_prefix_suffix_padding);
         int paddingTop = textInputLayout.e.getPaddingTop();
         int paddingBottom = textInputLayout.e.getPaddingBottom();
-        WeakHashMap weakHashMap2 = eqz.a;
+        WeakHashMap weakHashMap2 = ViewCompat.a;
         this.q.setPaddingRelative(dimensionPixelSize, paddingTop, paddingEnd, paddingBottom);
     }
 
@@ -374,7 +374,7 @@ public final class awa extends LinearLayout {
         } else {
             marginStart = 0;
         }
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         return this.q.getPaddingEnd() + getPaddingEnd() + marginStart;
     }
 

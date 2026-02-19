@@ -51,7 +51,7 @@ public final /* synthetic */ class acf implements Runnable {
                                         sendIntentException));
                 break;
             case 2:
-                ((amg) this.b).b.j(this.c, this.d);
+                ((amg) this.b).b.logProfileResult(this.c, this.d);
                 break;
             default:
                 bvb bvbVar = (bvb) this.b;

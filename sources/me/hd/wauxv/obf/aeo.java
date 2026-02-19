@@ -13,7 +13,7 @@ public final class aeo extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(aem.a, dexKitBridge, new act(17));
-        emn.aj(aen.a, dexKitBridge, new act(18));
+        StaticHelpers7.resolveDexAndCache(aem.a, dexKitBridge, new act(17));
+        StaticHelpers7.resolveDexAndCache(aen.a, dexKitBridge, new act(18));
     }
 }

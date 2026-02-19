@@ -41,7 +41,7 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
         ?? r7 = this.b;
         switch (i) {
             case 0:
-                return obj == ((r) r7) ? "(this Collection)" : String.valueOf(obj);
+                return obj == ((AbstractReadOnlyCollection) r7) ? "(this Collection)" : String.valueOf(obj);
             case 1:
                 qb qbVar = (qb) r7;
                 HookParam hookParam = (bmm) obj;
@@ -52,7 +52,7 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = bhu.x(th);
+                    objX = FastKV.x(th);
                 }
                 Integer num = (Integer) (objX instanceof dcx ? null : objX);
                 qbVar.setSelectedItemId(num != null ? num.intValue() : 0);
@@ -77,7 +77,7 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
                         list = (List) aelVar.d.get(string);
                         if (list == null) {
                             list2 = list;
-                            list2 = EmptyReadonlyList.a;
+                            list2 = EmptyReadonlyList.INSTANCE;
                         }
                     }
                     list2 = list;
@@ -118,23 +118,23 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = bhu.x(th2);
+                    objX2 = FastKV.x(th2);
                 }
                 Object obj2 = objX2 instanceof dcx ? null : objX2;
                 if (obj2 != null) {
                     int i3 = 0;
-                    bmu bmuVarBi = dqc.bi(obj2);
+                    SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(obj2);
                     bxj bxjVar = bxj.a;
-                    cde cdeVarT = bmuVarBi.t();
-                    cdeVarT.ab = "getLatitude" /* "getLatitude" /* "getLatitude" /* cnb.z(-493470267472682L)  */;
-                    MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
-                    exg exgVar = exg.a;
-                    aki akiVarAd = bxjVar.ad(methodHookWrapperVar, exgVar);
+                    MethodResolver methodResolverVarT = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                    methodResolverVarT.name = "getLatitude" /* "getLatitude" /* "getLatitude" /* cnb.z(-493470267472682L)  */;
+                    MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
+                    HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
+                    aki akiVarAd = bxjVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
                     bxjVar.y(akiVarAd, new bty(i));
                     akiVarAd.o();
-                    cde cdeVarT2 = bmuVarBi.t();
-                    cdeVarT2.ab = "getLongitude" /* "getLongitude" /* "getLongitude" /* cnb.z(-492834612312874L)  */;
-                    aki akiVarAd2 = bxjVar.ad((MethodHookWrapper) aaz.e(cdeVarT2.aj()), exgVar);
+                    MethodResolver methodResolverVarT2 = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                    methodResolverVarT2.name = "getLongitude" /* "getLongitude" /* "getLongitude" /* cnb.z(-492834612312874L)  */;
+                    aki akiVarAd2 = bxjVar.ad((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods()), hookPriorityEnumVar);
                     bxjVar.y(akiVarAd2, new bty(i2));
                     akiVarAd2.o();
                 }
@@ -153,7 +153,7 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = bhu.x(th3);
+                    objX3 = FastKV.x(th3);
                 }
                 if (objX3 instanceof dcx) {
                     objX3 = null;

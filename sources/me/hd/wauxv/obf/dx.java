@@ -35,7 +35,7 @@ public final class dx extends btp implements bfu {
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public dx(bug bugVar, et etVar) {
+    public dx(LifeEventEnum lifeEventEnumVar, et etVar) {
         super(0);
         this.c = 2;
     }

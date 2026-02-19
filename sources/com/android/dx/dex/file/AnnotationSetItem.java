@@ -5,7 +5,7 @@ import com.android.dx.rop.annotation.Annotations;
 import com.android.dx.util.AnnotatedOutput;
 import com.android.dx.util.Hex;
 import java.util.Iterator;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -79,7 +79,7 @@ public final class AnnotationSetItem extends OffsettedItem {
         int length = this.items.length;
         if (zAnnotates) {
             annotatedOutput.annotate(0, offsetString() + " annotation set");
-            dkz.ab(length, new StringBuilder("  size: "), annotatedOutput, 4);
+            StaticHelpers6.ab(length, new StringBuilder("  size: "), annotatedOutput, 4);
         }
         annotatedOutput.writeInt(length);
         for (int i = 0; i < length; i++) {

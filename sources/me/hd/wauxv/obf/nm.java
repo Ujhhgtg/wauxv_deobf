@@ -9,7 +9,7 @@ public final class nm {
 
     public /* synthetic */ nm(int i, int i2, ddv ddvVar) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, nk.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, nk.b.getDescriptor());
             throw null;
         }
         this.a = i2;
@@ -34,7 +34,7 @@ public final class nm {
     public final String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("BaseResponse(ret=" /* "BaseResponse(ret=" /* "BaseResponse(ret=" /* cnb.z(-123725122894634L)  */);
-        dkz.ac(sb, this.a, -124146029689642L);
+        StaticHelpers6.ac(sb, this.a, -124146029689642L);
         sb.append(this.b);
         sb.append(')');
         return sb.toString();

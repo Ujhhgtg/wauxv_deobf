@@ -10,7 +10,7 @@ public final class dza {
 
     public /* synthetic */ dza(int i, dyu dyuVar, String str, String str2) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, dyy.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, dyy.b.getDescriptor());
             throw null;
         }
         this.a = dyuVar;

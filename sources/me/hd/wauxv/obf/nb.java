@@ -211,12 +211,12 @@ public final class nb extends bkw {
         for (int i = 0; i < this.ew; i++) {
             adq adqVar = this.ev[i];
             if (i > 0) {
-                strO = dkz.s(strO, ", ");
+                strO = StaticHelpers6.concat(strO, ", ");
             }
-            StringBuilder sbY = dkz.y(strO);
+            StringBuilder sbY = StaticHelpers6.toSb(strO);
             sbY.append(adqVar.br);
             strO = sbY.toString();
         }
-        return dkz.s(strO, "}");
+        return StaticHelpers6.concat(strO, "}");
     }
 }

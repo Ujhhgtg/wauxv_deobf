@@ -18,7 +18,7 @@ public abstract class bwr {
     public void d() {
     }
 
-    public boolean f(bdj bdjVar) {
+    public boolean f(SomeFragmentManager someFragmentManagerVar) {
         return false;
     }
 

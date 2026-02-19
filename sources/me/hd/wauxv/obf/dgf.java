@@ -9,7 +9,7 @@ public final class dgf extends bws implements IDexFind {
     public static final dgf a = new dgf();
 
     public static Object b(Class cls) throws IllegalAccessException, InvocationTargetException {
-        Object objInvoke = emn.bb(dge.a).invoke(null, cls);
+        Object objInvoke = StaticHelpers7.bb(dge.a).invoke(null, cls);
         throwIfVar1IsNull(objInvoke);
         return objInvoke;
     }
@@ -20,6 +20,6 @@ public final class dgf extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(dge.a, dexKitBridge, new dbj(25));
+        StaticHelpers7.resolveDexAndCache(dge.a, dexKitBridge, new dbj(25));
     }
 }

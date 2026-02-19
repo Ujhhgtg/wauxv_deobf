@@ -16,10 +16,10 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import me.hd.wauxv.obf.bjs;
+
 import me.hd.wauxv.obf.cpt;
 import me.hd.wauxv.obf.cpv;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.rb;
 import okhttp3.HttpUrl;
 
@@ -124,7 +124,7 @@ public class StringUtil {
     }
 
     public static String valueString(Object obj) {
-        StringBuilder sb = new StringBuilder(dkz.r(obj, ""));
+        StringBuilder sb = new StringBuilder(StaticHelpers6.concatVar2Var1(obj, ""));
         if (obj != null && obj.getClass().isArray()) {
             StringBuilder sb2 = new StringBuilder("{");
             for (int i = 0; i < Array.getLength(obj); i++) {

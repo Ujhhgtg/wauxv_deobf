@@ -66,27 +66,27 @@ public final class don extends ViewGroup {
                         chmVar = (chm) domVar;
                         int i2 = 0;
                         obj = chmVar.d;
-                        azg azgVarR = dqc.bi(obj).r();
-                        azgVarR.ab = "checkBox" /* "checkBox" /* "checkBox" /* "checkBox" /* cnb.z(-473640403467050L)   */;
-                        objE = ((azk) yg.e(azgVarR)).e();
+                        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
+                        fieldResolverVarR.name = "checkBox" /* "checkBox" /* "checkBox" /* "checkBox" /* cnb.z(-473640403467050L)   */;
+                        objE = ((azk) yg.e(fieldResolverVarR)).e();
                         throwIfVar1IsNull(objE);
                         if (((View) objE).getVisibility() == 0) {
-                            azg azgVarR2 = dqc.bi(obj).r();
-                            azgVarR2.ab = "maskView" /* "maskView" /* "maskView" /* "maskView" /* cnb.z(-473051992947498L)   */;
-                            Object objE2 = ((azk) yg.e(azgVarR2)).e();
+                            FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj).r();
+                            fieldResolverVarR2.name = "maskView" /* "maskView" /* "maskView" /* "maskView" /* cnb.z(-473051992947498L)   */;
+                            Object objE2 = ((azk) yg.e(fieldResolverVarR2)).e();
                             throwIfVar1IsNull(objE2);
                             ((View) objE2).performClick();
                         } else {
-                            dov dovVar = new dov(new wi(chmVar.f, i));
+                            Kotlin$Lazy kotlin$LazyVar = new Kotlin$Lazy(new wi(chmVar.f, i));
                             uq uqVar = uq.a;
-                            FrameLayout frameLayout = (FrameLayout) dovVar.getValue();
+                            FrameLayout frameLayout = (FrameLayout) kotlin$LazyVar.getValue();
                             origin = ((MsgInfoBean) chmVar.e).getOrigin();
                             uqVar.getClass();
-                            cde cdeVarT = dqc.bi(frameLayout).t();
-                            cdeVarT.a = dal.b(Boolean.TYPE);
-                            cdeVarT.d = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(26);
-                            methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
-                            if (methodHookWrapperVar.a.getParameterCount() == 2) {
+                            MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(frameLayout).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                            methodResolverVarT.returnType = dal.b(Boolean.TYPE);
+                            methodResolverVarT.d = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(26);
+                            methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
+                            if (methodHookWrapperVar.method.getParameterCount() == 2) {
                                 methodHookWrapperVar.e(origin, null);
                             } else {
                                 methodHookWrapperVar.e(origin);
@@ -159,27 +159,27 @@ public final class don extends ViewGroup {
                         chmVar = (chm) domVar;
                         int i22 = 0;
                         obj = chmVar.d;
-                        azg azgVarR3 = dqc.bi(obj).r();
-                        azgVarR3.ab = "checkBox" /* "checkBox" /* "checkBox" /* "checkBox" /* cnb.z(-473640403467050L)   */;
-                        objE = ((azk) yg.e(azgVarR3)).e();
+                        FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).r();
+                        fieldResolverVarR3.name = "checkBox" /* "checkBox" /* "checkBox" /* "checkBox" /* cnb.z(-473640403467050L)   */;
+                        objE = ((azk) yg.e(fieldResolverVarR3)).e();
                         throwIfVar1IsNull(objE);
                         if (((View) objE).getVisibility() == 0) {
-                            azg azgVarR22 = dqc.bi(obj).r();
-                            azgVarR22.ab = "maskView" /* "maskView" /* "maskView" /* "maskView" /* cnb.z(-473051992947498L)   */;
-                            Object objE22 = ((azk) yg.e(azgVarR22)).e();
+                            FieldResolver fieldResolverVarR22 = dqc.getWrapperConfiguration(obj).r();
+                            fieldResolverVarR22.name = "maskView" /* "maskView" /* "maskView" /* "maskView" /* cnb.z(-473051992947498L)   */;
+                            Object objE22 = ((azk) yg.e(fieldResolverVarR22)).e();
                             throwIfVar1IsNull(objE22);
                             ((View) objE22).performClick();
                         } else {
-                            dov dovVar2 = new dov(new wi(chmVar.f, i));
+                            Kotlin$Lazy kotlin$LazyVar2 = new Kotlin$Lazy(new wi(chmVar.f, i));
                             uq uqVar2 = uq.a;
-                            FrameLayout frameLayout2 = (FrameLayout) dovVar2.getValue();
+                            FrameLayout frameLayout2 = (FrameLayout) kotlin$LazyVar2.getValue();
                             origin = ((MsgInfoBean) chmVar.e).getOrigin();
                             uqVar2.getClass();
-                            cde cdeVarT2 = dqc.bi(frameLayout2).t();
-                            cdeVarT2.a = dal.b(Boolean.TYPE);
-                            cdeVarT2.d = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(26);
-                            methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT2.aj());
-                            if (methodHookWrapperVar.a.getParameterCount() == 2) {
+                            MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(frameLayout2).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                            methodResolverVarT2.returnType = dal.b(Boolean.TYPE);
+                            methodResolverVarT2.d = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(26);
+                            methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods());
+                            if (methodHookWrapperVar.method.getParameterCount() == 2) {
                                 methodHookWrapperVar.e(origin, null);
                             } else {
                                 methodHookWrapperVar.e(origin);
@@ -226,7 +226,7 @@ public final class don extends ViewGroup {
     @Override // android.view.ViewGroup, android.view.View
     public final void onLayout(boolean z, int i, int i2, int i3, int i4) {
         int paddingLeft = getPaddingLeft();
-        baa baaVar = new baa(new bae(new lb(this, 3), true, new dko(25)));
+        baa baaVar = new baa(new bae(new lb(this, 3), true, new SyntheticMessOfLambdas(25)));
         while (baaVar.hasNext()) {
             View view = (View) baaVar.next();
             view.layout(paddingLeft, getPaddingTop(), view.getMeasuredWidth() + paddingLeft,
@@ -241,7 +241,7 @@ public final class don extends ViewGroup {
         super.onMeasure(i, i2);
         int measuredWidth = 0;
         donVar.b = 0;
-        baa baaVar = new baa(new bae(new lb(donVar, 3), true, new dko(26)));
+        baa baaVar = new baa(new bae(new lb(donVar, 3), true, new SyntheticMessOfLambdas(26)));
         int iMax = 0;
         boolean z = false;
         int i3 = 0;
@@ -279,7 +279,7 @@ public final class don extends ViewGroup {
         donVar.c = (donVar.b * 4) / 10;
         if (z) {
             int iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(donVar.getMeasuredHeight(), 1073741824);
-            baa baaVar2 = new baa(new bae(new lb(donVar, 3), true, new dko(27)));
+            baa baaVar2 = new baa(new bae(new lb(donVar, 3), true, new SyntheticMessOfLambdas(27)));
             while (baaVar2.hasNext()) {
                 View view2 = (View) baaVar2.next();
                 ViewGroup.LayoutParams layoutParams2 = view2.getLayoutParams();

@@ -2,7 +2,7 @@ package net.bytebuddy.implementation.auxiliary;
 
 import java.io.Serializable;
 import java.util.Iterator;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
@@ -102,7 +102,7 @@ public class TypeProxy implements AuxiliaryType {
         }
 
         public int hashCode() {
-            return ((this.implementationTarget.hashCode() + dkz.f(this.proxiedType, getClass().hashCode() * 31, 31)) * 31) + (this.serializableProxy ? 1 : 0);
+            return ((this.implementationTarget.hashCode() + StaticHelpers6.f(this.proxiedType, getClass().hashCode() * 31, 31)) * 31) + (this.serializableProxy ? 1 : 0);
         }
     }
 
@@ -154,7 +154,7 @@ public class TypeProxy implements AuxiliaryType {
         }
 
         public int hashCode() {
-            return ((((this.implementationTarget.hashCode() + dkz.b(this.constructor, dkz.f(this.proxiedType, getClass().hashCode() * 31, 31), 31)) * 31) + (this.ignoreFinalizer ? 1 : 0)) * 31) + (this.serializableProxy ? 1 : 0);
+            return ((((this.implementationTarget.hashCode() + StaticHelpers6.b(this.constructor, StaticHelpers6.f(this.proxiedType, getClass().hashCode() * 31, 31), 31)) * 31) + (this.ignoreFinalizer ? 1 : 0)) * 31) + (this.serializableProxy ? 1 : 0);
         }
     }
 
@@ -191,7 +191,7 @@ public class TypeProxy implements AuxiliaryType {
         }
 
         public int hashCode() {
-            return ((((this.implementationTarget.hashCode() + dkz.f(this.proxiedType, getClass().hashCode() * 31, 31)) * 31) + (this.ignoreFinalizer ? 1 : 0)) * 31) + (this.serializableProxy ? 1 : 0);
+            return ((((this.implementationTarget.hashCode() + StaticHelpers6.f(this.proxiedType, getClass().hashCode() * 31, 31)) * 31) + (this.ignoreFinalizer ? 1 : 0)) * 31) + (this.serializableProxy ? 1 : 0);
         }
     }
 
@@ -256,7 +256,7 @@ public class TypeProxy implements AuxiliaryType {
                 }
 
                 public int hashCode() {
-                    return Appender.this.hashCode() + ((this.specialMethodInvocation.hashCode() + dkz.c(this.instrumentedMethod, getClass().hashCode() * 31, 31)) * 31);
+                    return Appender.this.hashCode() + ((this.specialMethodInvocation.hashCode() + StaticHelpers6.c(this.instrumentedMethod, getClass().hashCode() * 31, 31)) * 31);
                 }
 
                 @Override // net.bytebuddy.implementation.bytecode.StackManipulation
@@ -287,7 +287,7 @@ public class TypeProxy implements AuxiliaryType {
             }
 
             public int hashCode() {
-                return MethodCall.this.hashCode() + dkz.g(this.fieldLoadingInstruction, getClass().hashCode() * 31, 31);
+                return MethodCall.this.hashCode() + StaticHelpers6.g(this.fieldLoadingInstruction, getClass().hashCode() * 31, 31);
             }
         }
 
@@ -416,7 +416,7 @@ public class TypeProxy implements AuxiliaryType {
     }
 
     public int hashCode() {
-        return ((((this.invocationFactory.hashCode() + ((this.implementationTarget.hashCode() + dkz.f(this.proxiedType, getClass().hashCode() * 31, 31)) * 31)) * 31) + (this.ignoreFinalizer ? 1 : 0)) * 31) + (this.serializableProxy ? 1 : 0);
+        return ((((this.invocationFactory.hashCode() + ((this.implementationTarget.hashCode() + StaticHelpers6.f(this.proxiedType, getClass().hashCode() * 31, 31)) * 31)) * 31) + (this.ignoreFinalizer ? 1 : 0)) * 31) + (this.serializableProxy ? 1 : 0);
     }
 
     @Override // net.bytebuddy.implementation.auxiliary.AuxiliaryType

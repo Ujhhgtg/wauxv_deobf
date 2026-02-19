@@ -17,8 +17,8 @@ public abstract class nh implements cdw {
     public void d(blq blqVar) {
     }
 
-    public exg e() {
-        return (exg) this.g;
+    public HookPriorityEnum e() {
+        return (HookPriorityEnum) this.g;
     }
 
     public boolean h() {
@@ -57,7 +57,7 @@ public abstract class nh implements cdw {
 
     @Override // me.hd.wauxv.obf.cdw
     public cdv u(chm chmVar) {
-        return new rv((awp) this.g, 2);
+        return new rv((GifEncoder) this.g, 2);
     }
 
     /*
@@ -65,7 +65,7 @@ public abstract class nh implements cdw {
      * semantics)
      */
     public nh(int i) {
-        this(exg.a);
+        this(HookPriorityEnum.ENUM_DEFAULT);
         switch (i) {
             case 3:
                 break;

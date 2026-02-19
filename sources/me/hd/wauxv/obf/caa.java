@@ -36,7 +36,7 @@ public final class caa extends hc {
         super(cmz.aq(context, attributeSet, R.attr.autoCompleteTextViewStyle, 0), attributeSet);
         this.c = new Rect();
         Context context2 = getContext();
-        TypedArray typedArrayAn = bhu.an(context2, attributeSet, cxs.q, R.attr.autoCompleteTextViewStyle, R.style.Widget_AppCompat_AutoCompleteTextView, new int[0]);
+        TypedArray typedArrayAn = FastKV.an(context2, attributeSet, cxs.q, R.attr.autoCompleteTextViewStyle, R.style.Widget_AppCompat_AutoCompleteTextView, new int[0]);
         if (typedArrayAn.hasValue(0) && typedArrayAn.getInt(0, 0) == 0) {
             setKeyListener(null);
         }

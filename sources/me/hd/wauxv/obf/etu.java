@@ -12,7 +12,7 @@ public final class etu extends bws implements IDexFind {
     public static String b(etu etuVar, String str) {
         Object objInvoke;
         etuVar.getClass();
-        Method methodBb = emn.bb(ett.a);
+        Method methodBb = StaticHelpers7.bb(ett.a);
         if (Modifier.isStatic(methodBb.getModifiers())) {
             objInvoke = methodBb.invoke(null, str, true);
         } else {
@@ -32,7 +32,7 @@ public final class etu extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(ets.a, dexKitBridge, new epy(9));
-        emn.aj(ett.a, dexKitBridge, new epy(10));
+        StaticHelpers7.resolveDexAndCache(ets.a, dexKitBridge, new epy(9));
+        StaticHelpers7.resolveDexAndCache(ett.a, dexKitBridge, new epy(10));
     }
 }

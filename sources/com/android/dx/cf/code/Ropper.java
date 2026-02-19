@@ -1,7 +1,5 @@
 package com.android.dx.cf.code;
 
-import com.android.dx.cf.code.ByteCatchList;
-import com.android.dx.cf.code.LocalVariableList;
 import com.android.dx.cf.iface.MethodList;
 import com.android.dx.dex.DexOptions;
 import com.android.dx.rop.code.BasicBlock;
@@ -33,7 +31,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -181,7 +179,7 @@ public final class Ropper {
                         StringBuilder sb = new StringBuilder("ret instruction returns to label ");
                         sb.append(Hex.u2(subroutineSubroutineFromRetBlock.startBlock));
                         sb.append(" expected: ");
-                        throw new RuntimeException(dkz.q(this.subroutineStart, sb));
+                        throw new RuntimeException(StaticHelpers6.q(this.subroutineStart, sb));
                     }
                     intListMakeImmutable = IntList.makeImmutable(this.subroutineSuccessor);
                     i3 = this.subroutineSuccessor;
@@ -619,7 +617,7 @@ public final class Ropper {
         if (iLabelToResultIndex >= 0) {
             return this.result.get(iLabelToResultIndex);
         }
-        throw new IllegalArgumentException(dkz.q(i, new StringBuilder("no such label ")));
+        throw new IllegalArgumentException(StaticHelpers6.q(i, new StringBuilder("no such label ")));
     }
 
     private int labelToResultIndex(int i) {
@@ -844,7 +842,7 @@ public final class Ropper {
             if (i3 >= minimumUnreservedLabel) {
                 int iLabelToResultIndex = labelToResultIndex(i3);
                 if (iLabelToResultIndex < 0) {
-                    throw new RuntimeException(dkz.q(i3, new StringBuilder("Invalid label ")));
+                    throw new RuntimeException(StaticHelpers6.q(i3, new StringBuilder("Invalid label ")));
                 }
                 removeBlockAndSpecialSuccessors(iLabelToResultIndex);
             }

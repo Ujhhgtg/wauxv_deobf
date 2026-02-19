@@ -13,7 +13,7 @@ public final class enk extends dex {
         this.i = new ThreadLocal();
         ahh ahhVar2 = doiVar.m;
         throwIfVar1IsNull(ahhVar2);
-        if (ahhVar2._w(arj.a) instanceof ahj) {
+        if (ahhVar2._w(arj.a) instanceof Dispatcher) {
             return;
         }
         Object objAl = bhv.al(ahhVar, null);

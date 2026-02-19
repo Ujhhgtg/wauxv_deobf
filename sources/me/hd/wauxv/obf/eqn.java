@@ -19,7 +19,7 @@ public final class eqn implements ViewTreeObserver.OnGlobalLayoutListener, View.
                 boolean zBooleanValue = ((Boolean) entry.getValue()).booleanValue();
                 boolean z = view.isShown() && view.getWindowVisibility() == 0;
                 if (zBooleanValue != z) {
-                    eqz.n(view, z ? 16 : 32);
+                    ViewCompat.notifyAccessibilityChange(view, z ? 16 : 32);
                     entry.setValue(Boolean.valueOf(z));
                 }
             }

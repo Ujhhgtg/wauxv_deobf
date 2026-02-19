@@ -18,12 +18,10 @@ import javax.net.ssl.SSLPeerUnverifiedException;
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
-import me.hd.wauxv.obf.abb;
+import me.hd.wauxv.obf.StaticHelpers4;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bfu;
-import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.btp;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dnk;
 import me.hd.wauxv.obf.ekc;
 import me.hd.wauxv.obf.emc;
@@ -183,7 +181,7 @@ public final class RealConnection extends Http2Connection.Listener implements Co
             Handshake handshake = RealConnection.this.handshake;
             throwIfVar1IsNull(handshake);
             List<Certificate> listPeerCertificates = handshake.peerCertificates();
-            ArrayList arrayList = new ArrayList(abb.ak(listPeerCertificates, 10));
+            ArrayList arrayList = new ArrayList(StaticHelpers4.ak(listPeerCertificates, 10));
             for (Certificate certificate : listPeerCertificates) {
                 throwIfVar1IsNull(certificate,
                         "null cannot be cast to non-null type java.security.cert.X509Certificate");

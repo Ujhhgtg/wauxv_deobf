@@ -19,13 +19,13 @@ import me.hd.wauxv.obf.bmo;
 import me.hd.wauxv.obf.bzo;
 import me.hd.wauxv.obf.bzy;
 import me.hd.wauxv.obf.cbm;
-import me.hd.wauxv.obf.cfh;
+import me.hd.wauxv.obf.Function1$VarIsInt$2;
 import me.hd.wauxv.obf.KotlinHelpers2;
-import me.hd.wauxv.obf.cnf;
+import me.hd.wauxv.obf.HugeSyntheticPileOfHelpers;
 import me.hd.wauxv.obf.cun;
 import me.hd.wauxv.obf.cuo;
 import me.hd.wauxv.obf.cup;
-import me.hd.wauxv.obf.dov;
+import me.hd.wauxv.obf.Kotlin$Lazy;
 import me.hd.wauxv.obf.eg;
 import me.hd.wauxv.obf.eqj;
 import me.hd.wauxv.obf.eui;
@@ -35,13 +35,13 @@ import me.hd.wauxv.obf.io;
 /* JADX INFO: loaded from: classes.dex */
 public final class PolicyFragment extends bdo {
     public static final cbm a;
-    public static final dov b;
+    public static final Kotlin$Lazy b;
     public CountDownTimer l;
 
     static {
         "policyAcceptKey" /* "policyAcceptKey" /* "policyAcceptKey" /* cnb.z(-412097817082666L)  */;
         a = new cbm(10);
-        b = new dov(new cfh(17));
+        b = new Kotlin$Lazy(new Function1$VarIsInt$2(17));
     }
 
     public PolicyFragment() {
@@ -60,14 +60,14 @@ public final class PolicyFragment extends bdo {
     @Override // me.hd.wauxv.obf.bdj
     public final void k(View view) {
         Bundle bundle = this.ax;
-        dov dovVar = b;
+        Kotlin$Lazy kotlin$LazyVar = b;
         cbm cbmVar = a;
         if (bundle != null && bundle.getBoolean("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-419072843971370L)  */, false)) {
             eqj eqjVar = this.d;
             throwIfVar1IsNull(eqjVar);
             MaterialTextView materialTextView = ((bew) eqjVar).c;
             cbmVar.getClass();
-            materialTextView.setText(Html.fromHtml((String) dovVar.getValue(), 63));
+            materialTextView.setText(Html.fromHtml((String) kotlin$LazyVar.getValue(), 63));
             eqj eqjVar2 = this.d;
             throwIfVar1IsNull(eqjVar2);
             ((bew) eqjVar2).b.setText("你已阅读并同意以上协议" /* "你已阅读并同意以上协议" /* "你已阅读并同意以上协议" /* cnb.z(-419051369134890L)  */);
@@ -81,16 +81,16 @@ public final class PolicyFragment extends bdo {
         }
         cbmVar.getClass();
         String strZ = "policyAcceptKey" /* "policyAcceptKey" /* "policyAcceptKey" /* cnb.z(-419652664556330L)  */;
-        io ioVar = cnf.ah;
+        io ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)  */.toString());
         }
-        if (ioVar.aj().getInt(strZ, 0) != ((String) dovVar.getValue()).hashCode()) {
+        if (ioVar.aj().getInt(strZ, 0) != ((String) kotlin$LazyVar.getValue()).hashCode()) {
             eqj eqjVar5 = this.d;
             throwIfVar1IsNull(eqjVar5);
             MaterialTextView materialTextView2 = ((bew) eqjVar5).c;
             cbmVar.getClass();
-            materialTextView2.setText(Html.fromHtml((String) dovVar.getValue(), 63));
+            materialTextView2.setText(Html.fromHtml((String) kotlin$LazyVar.getValue(), 63));
             this.l = new cup(this).start();
             return;
         }
@@ -110,7 +110,7 @@ public final class PolicyFragment extends bdo {
         eg egVar = (eg) bzyVar.d;
         egVar.d = "提示" /* "提示" /* "提示" /* cnb.z(-418965469788970L)  */;
         egVar.f = "核心模块异常, 是否重启加载?" /* "核心模块异常, 是否重启加载?" /* "核心模块异常, 是否重启加载?" /* cnb.z(-418969764756266L)  */;
-        bzyVar.t("确定" /* "确定" /* "确定" /* cnb.z(-419450801093418L)  */, new amw(new cfh(18), 0));
+        bzyVar.t("确定" /* "确定" /* "确定" /* cnb.z(-419450801093418L)  */, new amw(new Function1$VarIsInt$2(18), 0));
         bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */);
         egVar.m = false;
         bzyVar.i().show();

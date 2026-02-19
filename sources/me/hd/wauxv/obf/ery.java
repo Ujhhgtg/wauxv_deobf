@@ -4,7 +4,6 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.view.View;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -19,7 +18,7 @@ public final class ery extends LinearLayoutManager {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final boolean _g(RecyclerView recyclerView, View view, Rect rect, boolean z, boolean z2) {
+    public final boolean _g(androidx.recyclerview.widget.RecyclerView recyclerView, View view, Rect rect, boolean z, boolean z2) {
         return false;
     }
 
@@ -37,19 +36,19 @@ public final class ery extends LinearLayoutManager {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final boolean fa(czo czoVar, czt cztVar, int i, Bundle bundle) {
+    public final boolean fa(RecyclerView recyclerViewVar, czt cztVar, int i, Bundle bundle) {
         this.a.t.getClass();
-        return super.fa(czoVar, cztVar, i, bundle);
+        return super.fa(recyclerViewVar, cztVar, i, bundle);
     }
 
     @Override // androidx.recyclerview.widget.LinearLayoutManager, me.hd.wauxv.obf.czg
-    public final void x(czo czoVar, czt cztVar, bd bdVar) {
-        super.x(czoVar, cztVar, bdVar);
+    public final void x(RecyclerView recyclerViewVar, czt cztVar, bd bdVar) {
+        super.x(recyclerViewVar, cztVar, bdVar);
         this.a.t.getClass();
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final void y(czo czoVar, czt cztVar, View view, bd bdVar) {
+    public final void y(RecyclerView recyclerViewVar, czt cztVar, View view, bd bdVar) {
         int iEl;
         int iEl2;
         ViewPager2 viewPager2 = (ViewPager2) this.a.t.f;

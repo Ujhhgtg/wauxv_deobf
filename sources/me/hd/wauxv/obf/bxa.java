@@ -28,9 +28,9 @@ public final /* synthetic */ class bxa implements View.OnClickListener {
                                                                                                         */);
                 Context context2 = view2.getContext();
                 bxj.a.getClass();
-                jx jxVar = bxj.i;
+                FactoryPools factoryPoolsVar = bxj.i;
                 btc btcVar = bxj.b[0];
-                Intent intent = new Intent(context2, (Class<?>) jxVar.w());
+                Intent intent = new Intent(context2, (Class<?>) factoryPoolsVar.w());
                 intent.putExtra("map_view_type" /* "map_view_type" /* "map_view_type" /* cnb.z(-496326420724522L)  */, 8);
                 ((Activity) context).startActivityForResult(intent, 6);
                 break;

@@ -36,7 +36,7 @@ public final /* synthetic */ class bka implements IInvokable {
         Object obj3 = this.b;
         switch (i) {
             case 0:
-                ((bkb) obj3).f.removeCallbacks((hl) obj2);
+                ((Dispatcher2) obj3).f.removeCallbacks((hl) obj2);
                 return kotlinUnitVar;
             case 1:
                 ant antVar = (ant) obj3;
@@ -108,7 +108,7 @@ public final /* synthetic */ class bka implements IInvokable {
                 Context context = (Context) objE;
                 if (context == null) {
                     cls = Context.class;
-                    Class<Context> clsBf = cnf.bf(dal.b(cls));
+                    Class<Context> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf != null ? clsBf : Context.class).getName()).toString());
                 }

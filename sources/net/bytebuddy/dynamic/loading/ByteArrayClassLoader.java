@@ -24,15 +24,12 @@ import java.util.NoSuchElementException;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.AccessControllerPlugin;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.type.TypeDescription;
-import net.bytebuddy.dynamic.loading.ClassFilePostProcessor;
-import net.bytebuddy.dynamic.loading.ClassLoaderDecorator;
-import net.bytebuddy.dynamic.loading.PackageDefinitionStrategy;
 import net.bytebuddy.implementation.auxiliary.TypeProxy;
 import net.bytebuddy.pool.TypePool;
 import net.bytebuddy.utility.GraalImageCode;
@@ -200,7 +197,7 @@ public class ByteArrayClassLoader extends InjectionClassLoader {
                         }
                         linkedHashMap.put(typeDescription, cls);
                     } catch (ClassNotFoundException e) {
-                        throw new IllegalStateException(dkz.u("Cannot load class ", typeDescription), e);
+                        throw new IllegalStateException(StaticHelpers6.concat("Cannot load class ", typeDescription), e);
                     }
                 }
             }
@@ -856,7 +853,7 @@ public class ByteArrayClassLoader extends InjectionClassLoader {
                     }
                     linkedHashMap.put(typeDescription, cls);
                 } catch (ClassNotFoundException e) {
-                    throw new IllegalStateException(dkz.u("Cannot load class ", typeDescription), e);
+                    throw new IllegalStateException(StaticHelpers6.concat("Cannot load class ", typeDescription), e);
                 }
             }
         }

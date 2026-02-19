@@ -9,7 +9,7 @@ public final class aid {
     public static final aid b;
     public static final aid c;
     public static final /* synthetic */ aid[] d;
-    public static final /* synthetic */ awn e;
+    public static final /* synthetic */ KotlinEnumEntriesImpl e;
     public final int f;
 
     static {
@@ -21,7 +21,7 @@ public final class aid {
         c = aidVar3;
         aid[] aidVarArr = {aidVar, aidVar2, aidVar3};
         d = aidVarArr;
-        e = new awn(aidVarArr);
+        e = new KotlinEnumEntriesImpl(aidVarArr);
     }
 
     public aid(String str, int i, int i2) {

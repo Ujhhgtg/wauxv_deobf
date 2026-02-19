@@ -43,7 +43,7 @@ public final /* synthetic */ class amb implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = bhu.x(th);
+                    objX = FastKV.x(th);
                 }
                 if (objX instanceof dcx) {
                     objX = null;
@@ -56,7 +56,7 @@ public final /* synthetic */ class amb implements IInvokable {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = bhu.x(th2);
+                    objX2 = FastKV.x(th2);
                 }
                 if (objX2 instanceof dcx) {
                     objX2 = null;
@@ -71,43 +71,43 @@ public final /* synthetic */ class amb implements IInvokable {
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = bhu.x(th3);
+                    objX3 = FastKV.x(th3);
                 }
                 String str2 = (String) (objX3 instanceof dcx ? null : objX3);
                 String str3 = str2 != null ? str2 : "";
                 if (iIntValue == 0) {
                     String strZ = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-647689658170154L)  */;
-                    StringBuilder sbY = dkz.y(str);
+                    StringBuilder sbY = StaticHelpers6.toSb(str);
                     sbY.append(": " /* ": " /* ": " /* cnb.z(-647659593399082L)  */);
                     sbY.append(str3);
                     Log.v(strZ, sbY.toString());
                 } else if (iIntValue == 1) {
                     String strZ2 = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-647681068235562L)  */;
-                    StringBuilder sbY2 = dkz.y(str);
+                    StringBuilder sbY2 = StaticHelpers6.toSb(str);
                     sbY2.append(": " /* ": " /* ": " /* cnb.z(-648132039801642L)  */);
                     sbY2.append(str3);
                     Log.d(strZ2, sbY2.toString());
                 } else if (iIntValue == 2) {
                     String strZ3 = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-648153514638122L)  */;
-                    StringBuilder sbY3 = dkz.y(str);
+                    StringBuilder sbY3 = StaticHelpers6.toSb(str);
                     sbY3.append(": " /* ": " /* ": " /* cnb.z(-648123449867050L)  */);
                     sbY3.append(str3);
                     Log.i(strZ3, sbY3.toString());
                 } else if (iIntValue == 3) {
                     String strZ4 = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-648076205226794L)  */;
-                    StringBuilder sbY4 = dkz.y(str);
+                    StringBuilder sbY4 = StaticHelpers6.toSb(str);
                     sbY4.append(": " /* ": " /* ": " /* cnb.z(-648046140455722L)  */);
                     sbY4.append(str3);
                     Log.w(strZ4, sbY4.toString());
                 } else if (iIntValue == 4) {
                     String strZ5 = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-647998895815466L)  */;
-                    StringBuilder sbY5 = dkz.y(str);
+                    StringBuilder sbY5 = StaticHelpers6.toSb(str);
                     sbY5.append(": " /* ": " /* ": " /* cnb.z(-647968831044394L)  */);
                     sbY5.append(str3);
                     Log.e(strZ5, sbY5.toString());
                 } else if (iIntValue == 5) {
                     String strZ6 = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-647990305880874L)  */;
-                    StringBuilder sbY6 = dkz.y(str);
+                    StringBuilder sbY6 = StaticHelpers6.toSb(str);
                     sbY6.append(": " /* ": " /* ": " /* cnb.z(-647891521633066L)  */);
                     sbY6.append(str3);
                     Log.wtf(strZ6, sbY6.toString());
@@ -134,7 +134,7 @@ public final /* synthetic */ class amb implements IInvokable {
                         objX4 = null;
                     }
                 } catch (Throwable th4) {
-                    objX4 = bhu.x(th4);
+                    objX4 = FastKV.x(th4);
                 }
                 Object obj2 = objX4 instanceof dcx ? null : objX4;
                 throwIfVar1IsNull(obj2);
@@ -192,13 +192,13 @@ public final /* synthetic */ class amb implements IInvokable {
                 return kotlinUnitVar;
             case 12:
                 View view = (View) obj;
-                View viewK = dkz.k(view, R.layout.module_dialog_disable_ringtone_play, null, false);
+                View viewK = StaticHelpers6.k(view, R.layout.module_dialog_disable_ringtone_play, null, false);
                 int i3 = R.id.moduleDialogCbDisableRingtoneInCall;
-                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.aq(viewK,
+                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.recursivelyFindViewById(viewK,
                         R.id.moduleDialogCbDisableRingtoneInCall);
                 if (materialCheckBox != null) {
                     i3 = R.id.moduleDialogCbDisableRingtoneOutCall;
-                    MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) KotlinHelpers2.aq(viewK,
+                    MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) KotlinHelpers2.recursivelyFindViewById(viewK,
                             R.id.moduleDialogCbDisableRingtoneOutCall);
                     if (materialCheckBox2 != null) {
                         LinearLayout linearLayout = (LinearLayout) viewK;
@@ -229,7 +229,7 @@ public final /* synthetic */ class amb implements IInvokable {
                         objX5 = null;
                     }
                 } catch (Throwable th5) {
-                    objX5 = bhu.x(th5);
+                    objX5 = FastKV.x(th5);
                 }
                 Object obj3 = objX5 instanceof dcx ? null : objX5;
                 throwIfVar1IsNull(obj3);
@@ -293,7 +293,7 @@ public final /* synthetic */ class amb implements IInvokable {
                         objX6 = null;
                     }
                 } catch (Throwable th6) {
-                    objX6 = bhu.x(th6);
+                    objX6 = FastKV.x(th6);
                 }
                 if (objX6 instanceof dcx) {
                     objX6 = null;
@@ -331,12 +331,12 @@ public final /* synthetic */ class amb implements IInvokable {
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar5 = new cdj();
                 cls = String.class;
-                Class<String> clsBf = cnf.bf(dal.b(cls));
+                Class<String> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 if (clsBf == null) {
                     clsBf = cls;
                 }
                 cdjVar5.r(clsBf);
-                Class<String> clsBf2 = cnf.bf(dal.b(cls));
+                Class<String> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 cdjVar5.q(clsBf2 != null ? clsBf2 : String.class);
                 cdjVar5.t("MicroMsg.DynamicConfig" /* "MicroMsg.DynamicConfig" /* "MicroMsg.DynamicConfig" /* cnb.z(-36481452210986L)  */, "DynamicConfig hadnot load" /*
                                                                                                                * cnb.z(-

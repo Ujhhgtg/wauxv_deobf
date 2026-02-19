@@ -66,7 +66,7 @@ public final class cct {
         this.n = textView5;
         this.a = ng.z(view);
         ccuVar.ar().setTranslationZ(0);
-        bht bhtVar = anj.a;
+        ResourcesCompat resourcesCompatVar = anj.a;
         TextPaint paint = textView.getPaint();
         int i = 1;
         paint.setFakeBoldText(true);
@@ -77,7 +77,7 @@ public final class cct {
         dialogXBaseRelativeLayout.s(0.0f);
         dialogXBaseRelativeLayout.t(ccuVar.bd);
         dialogXBaseRelativeLayout.g = new bfl(this, i);
-        dialogXBaseRelativeLayout.h = new bmu(this);
+        dialogXBaseRelativeLayout.h = new SyntheticPileOfMess(this);
         textView5.setOnClickListener(new ccr(this, 0));
         textView4.setOnClickListener(new ccr(this, i));
         textView3.setOnClickListener(new ccr(this, 2));
@@ -110,7 +110,7 @@ public final class cct {
             if (jQ < 0) {
                 return;
             }
-            bht bhtVar = anj.a;
+            ResourcesCompat resourcesCompatVar = anj.a;
             ng.ac().postDelayed(dcVar, jQ);
         }
     }
@@ -133,7 +133,7 @@ public final class cct {
         if (dialogXBaseRelativeLayout != null) {
             ccu ccuVar = this.o;
             Activity activityAs = ccuVar.as();
-            bht bhtVar = ccuVar.o;
+            ResourcesCompat resourcesCompatVar = ccuVar.o;
             if (activityAs == null) {
                 return;
             }
@@ -150,7 +150,7 @@ public final class cct {
             iArr2[1] = i2;
             iArr2[2] = i4;
             iArr2[3] = i6;
-            bht bhtVar2 = anj.a;
+            ResourcesCompat resourcesCompatVar2 = anj.a;
             MaxRelativeLayout maxRelativeLayout = this.c;
             maxRelativeLayout.getClass();
             int i7 = ccuVar.s;
@@ -220,7 +220,7 @@ public final class cct {
             View view2 = this.l;
             if (view2 != null) {
                 ccuVar.ax();
-                bhtVar.getClass();
+                resourcesCompatVar.getClass();
                 if (ng.aa() == null) {
                     ng.y("DialogX 未初始化(E7)。\n请检查是否在启动对话框前进行初始化操作，使用以下代码进行初始化：\nDialogX.init(context);\n\n另外建议您前往查看 DialogX 的文档进行使用：https://github.com/kongzue/DialogX");
                     color = -16777216;
@@ -230,34 +230,34 @@ public final class cct {
                 view2.setBackgroundColor(color);
             }
             linearLayout.setOrientation(0);
-            bhtVar.aj();
-            if (bhtVar.aj().length != 0) {
+            resourcesCompatVar.aj();
+            if (resourcesCompatVar.aj().length != 0) {
                 linearLayout.removeAllViews();
-                int[] iArrAj = bhtVar.aj();
+                int[] iArrAj = resourcesCompatVar.aj();
                 int length = iArrAj.length;
                 int i9 = 0;
                 while (i9 < length) {
                     int i10 = iArrAj[i9];
                     if (i10 == 1) {
                         linearLayout.addView(textView);
-                        bhtVar.al();
-                        textView.setBackgroundResource(bhtVar.al().ad(ccuVar.ax()));
+                        resourcesCompatVar.al();
+                        textView.setBackgroundResource(resourcesCompatVar.al().ad(ccuVar.ax()));
                     } else if (i10 == i3) {
                         linearLayout.addView(textView2);
-                        bhtVar.al();
-                        textView2.setBackgroundResource(bhtVar.al().ac(ccuVar.ax()));
+                        resourcesCompatVar.al();
+                        textView2.setBackgroundResource(resourcesCompatVar.al().ac(ccuVar.ax()));
                     } else if (i10 == i5) {
                         linearLayout.addView(textView3);
-                        bhtVar.al();
-                        textView3.setBackgroundResource(bhtVar.al().ae(ccuVar.ax()));
+                        resourcesCompatVar.al();
+                        textView3.setBackgroundResource(resourcesCompatVar.al().ae(ccuVar.ax()));
                     } else if (i10 != 4) {
                         if (i10 == 5 && linearLayout.getChildCount() >= 1 && linearLayout.getChildAt(linearLayout.getChildCount() - 1).getVisibility() != i8) {
                             View view3 = new View(ccuVar.as());
                             Resources resourcesAt = ccuVar.at();
                             ccuVar.ax();
-                            bhtVar.getClass();
+                            resourcesCompatVar.getClass();
                             view3.setBackgroundColor(resourcesAt.getColor(0));
-                            bhtVar.getClass();
+                            resourcesCompatVar.getClass();
                             linearLayout.addView(view3, new LinearLayout.LayoutParams(1, -1));
                         }
                     } else if (linearLayout.getChildCount() >= 1 && linearLayout.getChildAt(linearLayout.getChildCount() - 1).getVisibility() != 8) {

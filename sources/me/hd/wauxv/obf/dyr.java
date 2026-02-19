@@ -10,7 +10,7 @@ public final class dyr {
 
     public /* synthetic */ dyr(int i, Integer num, Integer num2, Long l) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, dyp.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, dyp.b.getDescriptor());
             throw null;
         }
         this.a = num;

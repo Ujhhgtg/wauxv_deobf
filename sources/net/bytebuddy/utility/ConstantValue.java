@@ -1,6 +1,6 @@
 package net.bytebuddy.utility;
 
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.enumeration.EnumerationDescription;
 import net.bytebuddy.description.type.TypeDescription;
@@ -8,7 +8,6 @@ import net.bytebuddy.implementation.bytecode.StackManipulation;
 import net.bytebuddy.implementation.bytecode.constant.ClassConstant;
 import net.bytebuddy.implementation.bytecode.constant.IntegerConstant;
 import net.bytebuddy.implementation.bytecode.member.FieldAccess;
-import net.bytebuddy.utility.JavaConstant;
 import net.bytebuddy.utility.nullability.MaybeNull;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -31,7 +30,7 @@ public interface ConstantValue {
             if (constantValueWrapOrNull != null) {
                 return constantValueWrapOrNull;
             }
-            throw new IllegalArgumentException(dkz.r(obj, "Not a constant value: "));
+            throw new IllegalArgumentException(StaticHelpers6.concatVar2Var1(obj, "Not a constant value: "));
         }
 
         @MaybeNull
@@ -87,7 +86,7 @@ public interface ConstantValue {
         }
 
         public int hashCode() {
-            return this.typeDescription.hashCode() + dkz.g(this.stackManipulation, getClass().hashCode() * 31, 31);
+            return this.typeDescription.hashCode() + StaticHelpers6.g(this.stackManipulation, getClass().hashCode() * 31, 31);
         }
 
         @Override // net.bytebuddy.utility.ConstantValue

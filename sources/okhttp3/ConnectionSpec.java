@@ -5,9 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import javax.net.ssl.SSLSocket;
-import me.hd.wauxv.obf.aaz;
+import me.hd.wauxv.obf.StaticHelpers5;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cil;
 import okhttp3.internal.Util;
 
@@ -149,7 +148,7 @@ public final class ConnectionSpec {
         for (String str : strArr) {
             arrayList.add(CipherSuite.Companion.forJavaName(str));
         }
-        return aaz.z(arrayList);
+        return StaticHelpers5.z(arrayList);
     }
 
     public boolean equals(Object obj) {
@@ -211,7 +210,7 @@ public final class ConnectionSpec {
         for (String str : strArr) {
             arrayList.add(TlsVersion.Companion.forJavaName(str));
         }
-        return aaz.z(arrayList);
+        return StaticHelpers5.z(arrayList);
     }
 
     public String toString() {

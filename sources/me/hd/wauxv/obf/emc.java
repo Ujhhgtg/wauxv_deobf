@@ -66,8 +66,8 @@ import org.xmlpull.v1.XmlPullParser;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class emc {
     public static Field aa;
-    public static final auj t;
-    public static final auj u;
+    public static final SpecificEmojiMatcher t;
+    public static final SpecificEmojiMatcher u;
     public static final cbm v = new cbm(11);
     public static io w;
     public static boolean x;
@@ -77,8 +77,8 @@ public abstract class emc {
 
     static {
         int i = 1;
-        t = new auj("REMOVED_TASK", i);
-        u = new auj("CLOSED_EMPTY", i);
+        t = new SpecificEmojiMatcher("REMOVED_TASK", i);
+        u = new SpecificEmojiMatcher("CLOSED_EMPTY", i);
     }
 
     public /* synthetic */ emc(int i) {
@@ -146,16 +146,16 @@ public abstract class emc {
             }
             arrayList2.add(Integer.valueOf(iIntValue2));
         }
-        return new ColorStateList((int[][]) arrayList.toArray(new int[0][]), aaz.y(arrayList2));
+        return new ColorStateList((int[][]) arrayList.toArray(new int[0][]), StaticHelpers5.y(arrayList2));
     }
 
-    public static Bitmap aj(InputStream inputStream, BitmapFactory.Options options, jx jxVar) throws Throwable {
+    public static Bitmap aj(InputStream inputStream, BitmapFactory.Options options, FactoryPools factoryPoolsVar) throws Throwable {
         int i = Build.VERSION.SDK_INT;
         Bitmap bitmap = null;
         if (i == 34) {
             if (((i == 34 && options.inPreferredConfig == Bitmap.Config.HARDWARE)
                     ? ((Boolean) aye.c.get()).booleanValue()
-                    : false) && at(jxVar)) {
+                    : false) && at(factoryPoolsVar)) {
                 Bitmap.Config config = options.inPreferredConfig;
                 Bitmap.Config config2 = Bitmap.Config.HARDWARE;
                 cmz.k("", config == config2);
@@ -211,7 +211,7 @@ public abstract class emc {
         ArrayList arrayList;
         int size;
         int iIndexOfKey;
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         if (Build.VERSION.SDK_INT >= 28) {
             return false;
         }
@@ -294,7 +294,7 @@ public abstract class emc {
                     return true;
                 }
                 View decorView = window.getDecorView();
-                if (eqz.i(decorView, keyEvent)) {
+                if (ViewCompat.i(decorView, keyEvent)) {
                     return true;
                 }
                 return keyEvent.dispatch(activity, decorView != null ? decorView.getKeyDispatcherState() : null,
@@ -329,13 +329,13 @@ public abstract class emc {
                     return true;
                 }
                 View decorView2 = window2.getDecorView();
-                if (eqz.i(decorView2, keyEvent)) {
+                if (ViewCompat.i(decorView2, keyEvent)) {
                     return true;
                 }
                 return keyEvent.dispatch(dialog, decorView2 != null ? decorView2.getKeyDispatcherState() : null,
                         dialog);
             }
-            if ((view != null && eqz.i(view, keyEvent)) || btlVar.b(keyEvent)) {
+            if ((view != null && ViewCompat.i(view, keyEvent)) || btlVar.b(keyEvent)) {
                 return true;
             }
         }
@@ -419,9 +419,9 @@ public abstract class emc {
         return false;
     }
 
-    public static boolean at(jx jxVar) {
+    public static boolean at(FactoryPools factoryPoolsVar) {
         try {
-            boolean zY = jxVar.y();
+            boolean zY = factoryPoolsVar.y();
             if (!Log.isLoggable("GlideBitmapFactory", 2)) {
                 return zY;
             }
@@ -460,7 +460,7 @@ public abstract class emc {
                 : theme.obtainStyledAttributes(attributeSet, iArr, 0, 0);
     }
 
-    public static cdc aw(MappedByteBuffer mappedByteBuffer) throws IOException {
+    public static GenericMetadataIterator3 aw(MappedByteBuffer mappedByteBuffer) throws IOException {
         long j;
         ByteBuffer byteBufferDuplicate = mappedByteBuffer.duplicate();
         byteBufferDuplicate.order(ByteOrder.BIG_ENDIAN);
@@ -496,7 +496,7 @@ public abstract class emc {
                 byteBufferDuplicate.getInt();
                 if (1164798569 == i5 || 1701669481 == i5) {
                     byteBufferDuplicate.position((int) (j3 + j));
-                    cdc cdcVar = new cdc();
+                    GenericMetadataIterator3 cdcVar = new GenericMetadataIterator3();
                     int iPosition = byteBufferDuplicate.position()
                             + bjs.f(byteBufferDuplicate, ByteOrder.LITTLE_ENDIAN);
                     cdcVar.e = byteBufferDuplicate;
@@ -778,7 +778,7 @@ public abstract class emc {
                             dataInputStream.close();
                             z7 = j == packageInfo.lastUpdateTime;
                             if (z7) {
-                                cvvVar.j(2, null);
+                                cvvVar.logProfileResult(2, null);
                             }
                         } catch (Throwable th3) {
                             try {
@@ -802,7 +802,7 @@ public abstract class emc {
                 }
             }
             Log.d("ProfileInstaller", "Installing profile for " + context.getPackageName());
-            byte[] bArr4 = emn.ab;
+            byte[] bArr4 = StaticHelpers7.ab;
             File file2 = new File(new File("/data/misc/profiles/cur/0", packageName), "primary.prof");
             amg amgVar2 = new amg(assets, executor, cvvVar, name, file2);
             byte[] bArr5 = amgVar2.c;
@@ -816,7 +816,7 @@ public abstract class emc {
                                 if (Arrays.equals(bArr4, ewz.ar(I, 4))) {
                                     throw new IllegalStateException("Invalid magic");
                                 }
-                                amrVarArrAt = emn.at(I, ewz.ar(I, 4), amgVar2.e);
+                                amrVarArrAt = StaticHelpers7.at(I, ewz.ar(I, 4), amgVar2.e);
                                 I.close();
                                 amgVar2.g = amrVarArrAt;
                             }
@@ -833,11 +833,11 @@ public abstract class emc {
                                     amgVar = null;
                                     I = r75;
                                 } else {
-                                    if (Arrays.equals(emn.ac, ewz.ar(fileInputStreamI, 4))) {
+                                    if (Arrays.equals(StaticHelpers7.ac, ewz.ar(fileInputStreamI, 4))) {
                                         throw new IllegalStateException("Invalid magic");
                                     }
                                     byte[] bArrAr = ewz.ar(fileInputStreamI, 4);
-                                    amgVar2.g = emn.aq(fileInputStreamI, bArrAr, bArr5, amrVarArr);
+                                    amgVar2.g = StaticHelpers7.aq(fileInputStreamI, bArrAr, bArr5, amrVarArr);
                                     fileInputStreamI.close();
                                     amgVar = amgVar2;
                                     I = bArrAr;
@@ -859,14 +859,14 @@ public abstract class emc {
                                 byteArrayOutputStream = new ByteArrayOutputStream();
                                 byteArrayOutputStream.write(bArr4);
                                 byteArrayOutputStream.write(bArr);
-                                if (emn.be(byteArrayOutputStream, bArr, amrVarArr2)) {
+                                if (StaticHelpers7.be(byteArrayOutputStream, bArr, amrVarArr2)) {
                                     amgVar2.h = byteArrayOutputStream.toByteArray();
                                     byteArrayOutputStream.close();
                                     r74 = byteArrayOutputStream;
                                     amgVar2.g = null;
                                     r7 = r74;
                                 } else {
-                                    cvvVar2.j(5, null);
+                                    cvvVar2.logProfileResult(5, null);
                                     amgVar2.g = null;
                                     byteArrayOutputStream.close();
                                     r7 = byteArrayOutputStream;
@@ -924,10 +924,10 @@ public abstract class emc {
                     try {
                         I = amgVar2.i(assets, "dexopt/baseline.prof");
                     } catch (FileNotFoundException e) {
-                        cvvVar.j(6, e);
+                        cvvVar.logProfileResult(6, e);
                         I = 0;
                     } catch (IOException e2) {
-                        cvvVar.j(7, e2);
+                        cvvVar.logProfileResult(7, e2);
                         I = 0;
                     }
                     try {
@@ -935,27 +935,27 @@ public abstract class emc {
                             try {
                                 try {
                                 } catch (IllegalStateException e3) {
-                                    cvvVar.j(8, e3);
+                                    cvvVar.logProfileResult(8, e3);
                                     try {
                                         I.close();
                                     } catch (IOException e4) {
-                                        cvvVar.j(7, e4);
+                                        cvvVar.logProfileResult(7, e4);
                                     }
                                     amrVarArrAt = null;
                                 }
                             } catch (IOException e5) {
-                                cvvVar.j(7, e5);
+                                cvvVar.logProfileResult(7, e5);
                                 I.close();
                                 amrVarArrAt = null;
                             }
                             if (Arrays.equals(bArr4, ewz.ar(I, 4))) {
                                 throw new IllegalStateException("Invalid magic");
                             }
-                            amrVarArrAt = emn.at(I, ewz.ar(I, 4), amgVar2.e);
+                            amrVarArrAt = StaticHelpers7.at(I, ewz.ar(I, 4), amgVar2.e);
                             try {
                                 I.close();
                             } catch (IOException e6) {
-                                cvvVar.j(7, e6);
+                                cvvVar.logProfileResult(7, e6);
                             }
                             amgVar2.g = amrVarArrAt;
                         }
@@ -966,23 +966,23 @@ public abstract class emc {
                                 fileInputStreamI = amgVar2.i(assets, "dexopt/baseline.profm");
                                 r75 = str;
                             } catch (FileNotFoundException e7) {
-                                cvvVar.j(9, e7);
+                                cvvVar.logProfileResult(9, e7);
                                 r75 = I;
                             } catch (IOException e8) {
-                                cvvVar.j(7, e8);
+                                cvvVar.logProfileResult(7, e8);
                                 r75 = I;
                             } catch (IllegalStateException e9) {
                                 amgVar2.g = null;
-                                cvvVar.j(8, e9);
+                                cvvVar.logProfileResult(8, e9);
                                 r75 = I;
                             }
                             if (fileInputStreamI == null) {
                                 try {
-                                    if (Arrays.equals(emn.ac, ewz.ar(fileInputStreamI, 4))) {
+                                    if (Arrays.equals(StaticHelpers7.ac, ewz.ar(fileInputStreamI, 4))) {
                                         throw new IllegalStateException("Invalid magic");
                                     }
                                     byte[] bArrAr2 = ewz.ar(fileInputStreamI, 4);
-                                    amgVar2.g = emn.aq(fileInputStreamI, bArrAr2, bArr5, amrVarArr);
+                                    amgVar2.g = StaticHelpers7.aq(fileInputStreamI, bArrAr2, bArr5, amrVarArr);
                                     fileInputStreamI.close();
                                     amgVar = amgVar2;
                                     I = bArrAr2;
@@ -1032,14 +1032,14 @@ public abstract class emc {
                                     }
                                 }
                             } catch (IOException e10) {
-                                cvvVar2.j(7, e10);
+                                cvvVar2.logProfileResult(7, e10);
                                 r74 = z6;
                             } catch (IllegalStateException e11) {
-                                cvvVar2.j(8, e11);
+                                cvvVar2.logProfileResult(8, e11);
                                 r74 = z6;
                             }
-                            if (emn.be(byteArrayOutputStream, bArr, amrVarArr2)) {
-                                cvvVar2.j(5, null);
+                            if (StaticHelpers7.be(byteArrayOutputStream, bArr, amrVarArr2)) {
+                                cvvVar2.logProfileResult(5, null);
                                 amgVar2.g = null;
                                 byteArrayOutputStream.close();
                                 r7 = byteArrayOutputStream;
@@ -1217,7 +1217,7 @@ public abstract class emc {
                             I.close();
                             throw th24;
                         } catch (IOException e16) {
-                            cvvVar.j(7, e16);
+                            cvvVar.logProfileResult(7, e16);
                             throw th24;
                         }
                     }
@@ -1232,7 +1232,7 @@ public abstract class emc {
             r76 = z3;
             cvz.f(context, (z5 || !z2) ? 0 : r76);
         } catch (PackageManager.NameNotFoundException e17) {
-            cvvVar.j(7, e17);
+            cvvVar.logProfileResult(7, e17);
             cvz.f(context, false);
         }
     }

@@ -10,7 +10,7 @@ public final class ein {
 
     public /* synthetic */ ein(int i, String str, dwj dwjVar, dwj dwjVar2) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, eil.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, eil.b.getDescriptor());
             throw null;
         }
         this.a = str;

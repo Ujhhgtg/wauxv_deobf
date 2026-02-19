@@ -18,13 +18,13 @@ public abstract class awu extends awv implements als {
     private volatile /* synthetic */ Object _queue$volatile;
 
     @Override // me.hd.wauxv.obf.als
-    public final void _av(long j, tc tcVar) {
+    public final void _av(long j, CancellableContinuation cancellableContinuationVar) {
         long j2 = j > 0 ? j >= 9223372036854L ? Long.MAX_VALUE : 1000000 * j : 0L;
         if (j2 < 4611686018427387903L) {
             long jNanoTime = System.nanoTime();
-            awr awrVar = new awr(this, j2 + jNanoTime, tcVar);
+            awr awrVar = new awr(this, j2 + jNanoTime, cancellableContinuationVar);
             w(jNanoTime, awrVar);
-            bhv.ad(tcVar, new sz(awrVar, 1));
+            bhv.ad(cancellableContinuationVar, new sz(awrVar, 1));
         }
     }
 
@@ -46,7 +46,7 @@ public abstract class awu extends awv implements als {
     }
 
     public final void s() {
-        aws awsVarE;
+        Delayed delayedVarE;
         awt awtVar = (awt) q.get(this);
         if (awtVar == null || drp.b.get(awtVar) == 0) {
             return;
@@ -55,32 +55,32 @@ public abstract class awu extends awv implements als {
         do {
             synchronized (awtVar) {
                 try {
-                    aws[] awsVarArr = awtVar.c;
-                    aws awsVar = awsVarArr != null ? awsVarArr[0] : null;
-                    if (awsVar != null) {
-                        awsVarE = ((jNanoTime - awsVar.c) > 0L ? 1 : ((jNanoTime - awsVar.c) == 0L ? 0 : -1)) >= 0
-                                ? t(awsVar)
+                    Delayed[] delayedVarArr = awtVar.c;
+                    Delayed delayedVar = delayedVarArr != null ? delayedVarArr[0] : null;
+                    if (delayedVar != null) {
+                        delayedVarE = ((jNanoTime - delayedVar.c) > 0L ? 1 : ((jNanoTime - delayedVar.c) == 0L ? 0 : -1)) >= 0
+                                ? t(delayedVar)
                                 : false ? awtVar.e(0) : null;
                     }
                 } catch (Throwable th) {
                     throw th;
                 }
             }
-        } while (awsVarE != null);
+        } while (delayedVarE != null);
     }
 
     @Override // me.hd.wauxv.obf.awv
     public void shutdown() {
-        aws awsVarE;
+        Delayed delayedVarE;
         dro.a.set(null);
         r.set(this, 1);
-        auj aujVar = emc.u;
+        SpecificEmojiMatcher specificEmojiMatcherVar = emc.u;
         AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = p;
         loop0: while (true) {
             Object obj = atomicReferenceFieldUpdater.get(this);
             if (obj == null) {
                 do {
-                    if (atomicReferenceFieldUpdater.compareAndSet(this, null, aujVar)) {
+                    if (atomicReferenceFieldUpdater.compareAndSet(this, null, specificEmojiMatcherVar)) {
                         break loop0;
                     }
                 } while (atomicReferenceFieldUpdater.get(this) == null);
@@ -88,7 +88,7 @@ public abstract class awu extends awv implements als {
                 ((bxo) obj).i();
                 break;
             } else {
-                if (obj == aujVar) {
+                if (obj == specificEmojiMatcherVar) {
                     break;
                 }
                 bxo bxoVar = new bxo(8, true);
@@ -109,12 +109,12 @@ public abstract class awu extends awv implements als {
                 return;
             }
             synchronized (awtVar) {
-                awsVarE = drp.b.get(awtVar) > 0 ? awtVar.e(0) : null;
+                delayedVarE = drp.b.get(awtVar) > 0 ? awtVar.e(0) : null;
             }
-            if (awsVarE == null) {
+            if (delayedVarE == null) {
                 return;
             } else {
-                m(jNanoTime, awsVarE);
+                m(jNanoTime, delayedVarE);
             }
         }
     }
@@ -204,8 +204,8 @@ public abstract class awu extends awv implements als {
 
     public final long v() {
         Runnable runnable;
-        aws awsVar;
-        auj aujVar = emc.u;
+        Delayed delayedVar;
+        SpecificEmojiMatcher specificEmojiMatcherVar = emc.u;
         AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = p;
         if (!ac()) {
             s();
@@ -223,7 +223,7 @@ public abstract class awu extends awv implements als {
                         while (!atomicReferenceFieldUpdater.compareAndSet(this, obj, bxoVarJ)
                                 && atomicReferenceFieldUpdater.get(this) == obj) {
                         }
-                    } else if (obj != aujVar) {
+                    } else if (obj != specificEmojiMatcherVar) {
                         do {
                             if (atomicReferenceFieldUpdater.compareAndSet(this, obj, null)) {
                                 runnable = (Runnable) obj;
@@ -248,18 +248,18 @@ public abstract class awu extends awv implements als {
                         if (((int) (1073741823 & j)) != ((int) ((j & 1152921503533105152L) >> 30))) {
                             return 0L;
                         }
-                    } else if (obj2 == aujVar) {
+                    } else if (obj2 == specificEmojiMatcherVar) {
                         return Long.MAX_VALUE;
                     }
                 }
                 awt awtVar = (awt) q.get(this);
                 if (awtVar != null) {
                     synchronized (awtVar) {
-                        aws[] awsVarArr = awtVar.c;
-                        awsVar = awsVarArr != null ? awsVarArr[0] : null;
+                        Delayed[] delayedVarArr = awtVar.c;
+                        delayedVar = delayedVarArr != null ? delayedVarArr[0] : null;
                     }
-                    if (awsVar != null) {
-                        long jNanoTime = awsVar.c - System.nanoTime();
+                    if (delayedVar != null) {
+                        long jNanoTime = delayedVar.c - System.nanoTime();
                         if (jNanoTime >= 0) {
                             return jNanoTime;
                         }
@@ -271,7 +271,7 @@ public abstract class awu extends awv implements als {
         return 0L;
     }
 
-    public final void w(long j, aws awsVar) {
+    public final void w(long j, Delayed delayedVar) {
         int iF;
         Thread threadG;
         AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = q;
@@ -289,11 +289,11 @@ public abstract class awu extends awv implements als {
                 throwIfVar1IsNull(obj);
                 awtVar = (awt) obj;
             }
-            iF = awsVar.f(j, awtVar, this);
+            iF = delayedVar.f(j, awtVar, this);
         }
         if (iF != 0) {
             if (iF == 1) {
-                m(j, awsVar);
+                m(j, delayedVar);
                 return;
             } else {
                 if (iF != 2) {
@@ -305,11 +305,11 @@ public abstract class awu extends awv implements als {
         awt awtVar3 = (awt) atomicReferenceFieldUpdater.get(this);
         if (awtVar3 != null) {
             synchronized (awtVar3) {
-                aws[] awsVarArr = awtVar3.c;
-                awsVar = awsVarArr != null ? awsVarArr[0] : null;
+                Delayed[] delayedVarArr = awtVar3.c;
+                delayedVar = delayedVarArr != null ? delayedVarArr[0] : null;
             }
         }
-        if (awsVar != awsVar || Thread.currentThread() == (threadG = g())) {
+        if (delayedVar != delayedVar || Thread.currentThread() == (threadG = g())) {
             return;
         }
         LockSupport.unpark(threadG);

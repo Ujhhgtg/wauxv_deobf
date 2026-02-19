@@ -14,7 +14,7 @@ public final class sz implements coo {
     public final String toString() {
         switch (this.a) {
             case 0:
-                return "CancelHandler.UserSupplied[" + bka.class.getSimpleName() + '@' + ajn.q(this) + ']';
+                return "CancelHandler.UserSupplied[" + bka.class.getSimpleName() + '@' + ajn.toHexHashCode(this) + ']';
             default:
                 return "DisposeOnCancel[" + ((aox) this.b) + ']';
         }

@@ -15,7 +15,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSocketFactory;
-import me.hd.wauxv.obf.abf;
+import me.hd.wauxv.obf.StaticHelpers2;
 import me.hd.wauxv.obf.aye;
 import me.hd.wauxv.obf.bzo;
 import me.hd.wauxv.obf.lo;
@@ -427,13 +427,13 @@ public final class RealCall implements Call {
 
     public final Response getResponseWithInterceptorChain$okhttp() {
         ArrayList arrayList = new ArrayList();
-        abf.an(arrayList, this.client.interceptors());
+        StaticHelpers2.an(arrayList, this.client.interceptors());
         arrayList.add(new RetryAndFollowUpInterceptor(this.client));
         arrayList.add(new BridgeInterceptor(this.client.cookieJar()));
         arrayList.add(new CacheInterceptor(this.client.cache()));
         arrayList.add(ConnectInterceptor.INSTANCE);
         if (!this.forWebSocket) {
-            abf.an(arrayList, this.client.networkInterceptors());
+            StaticHelpers2.an(arrayList, this.client.networkInterceptors());
         }
         arrayList.add(new CallServerInterceptor(this.forWebSocket));
         try {

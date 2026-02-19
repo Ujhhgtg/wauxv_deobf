@@ -11,10 +11,10 @@ public final class dmu extends bws implements IDexFind {
         int i = 0;
         dgf.a.getClass();
         a.getClass();
-        cde cdeVarT = dqc.bi(dgf.b(emn.az(dmt.a))).t();
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dgf.b(StaticHelpers7.az(dmt.a))).getMethodResolverBasedOnPreviouslyProvidedConfig();
         agp.a.getClass();
-        cdeVarT.a = emn.az(agl.a);
-        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
+        methodResolverVarT.returnType = StaticHelpers7.az(agl.a);
+        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }
@@ -25,9 +25,9 @@ public final class dmu extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(dmq.a, dexKitBridge, new dko(17));
-        emn.aj(dms.a, dexKitBridge, new dko(18));
-        emn.aj(dmr.a, dexKitBridge, new dko(19));
-        emn.aj(dmt.a, dexKitBridge, new dko(20));
+        StaticHelpers7.resolveDexAndCache(dmq.a, dexKitBridge, new SyntheticMessOfLambdas(17));
+        StaticHelpers7.resolveDexAndCache(dms.a, dexKitBridge, new SyntheticMessOfLambdas(18));
+        StaticHelpers7.resolveDexAndCache(dmr.a, dexKitBridge, new SyntheticMessOfLambdas(19));
+        StaticHelpers7.resolveDexAndCache(dmt.a, dexKitBridge, new SyntheticMessOfLambdas(20));
     }
 }

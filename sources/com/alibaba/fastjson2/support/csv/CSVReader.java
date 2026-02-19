@@ -32,7 +32,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.IntConsumer;
 import java.util.stream.IntStream;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.jar.asm.Opcodes;
 
@@ -84,7 +84,7 @@ public abstract class CSVReader<T> extends StreamReader<T> implements Closeable 
         if (str == null || str.isEmpty()) {
             strS = strM + i;
         } else {
-            strS = dkz.s(strM, str);
+            strS = StaticHelpers6.concat(strM, str);
         }
         throw new JSONException(strS, exc);
     }

@@ -25,7 +25,7 @@ public class byj {
             throw null;
         }
         this.f = new bpg(1);
-        this.g = new awp(25);
+        this.g = new GifEncoder(25);
     }
 
     public void h(View view) {
@@ -44,7 +44,7 @@ public class byj {
 
     public void i() {
         dmc dmcVarP;
-        View view = (View) dkz.l(1, (ArrayList) this.f);
+        View view = (View) StaticHelpers6.getLastNElem(1, (ArrayList) this.f);
         dmb dmbVar = (dmb) view.getLayoutParams();
         StaggeredGridLayoutManager staggeredGridLayoutManager = (StaggeredGridLayoutManager) this.g;
         this.c = staggeredGridLayoutManager.c.e(view);
@@ -106,7 +106,7 @@ public class byj {
 
     public Object o(Object obj) {
         throwIfVar1IsNull(obj, "key");
-        synchronized (((awp) this.g)) {
+        synchronized (((GifEncoder) this.g)) {
             bpg bpgVar = (bpg) this.f;
             bpgVar.getClass();
             Object obj2 = bpgVar.a.get(obj);
@@ -207,7 +207,7 @@ public class byj {
         String str;
         switch (this.a) {
             case 0:
-                synchronized (((awp) this.g)) {
+                synchronized (((GifEncoder) this.g)) {
                     try {
                         int i = this.d;
                         int i2 = this.e + i;
@@ -240,7 +240,7 @@ public class byj {
     public Object v(Object obj, Object obj2) {
         Object objPut;
         throwIfVar1IsNull(obj, "key");
-        synchronized (((awp) this.g)) {
+        synchronized (((GifEncoder) this.g)) {
             this.c++;
             bpg bpgVar = (bpg) this.f;
             bpgVar.getClass();
@@ -251,7 +251,7 @@ public class byj {
         }
         int i = this.b;
         while (true) {
-            synchronized (((awp) this.g)) {
+            synchronized (((GifEncoder) this.g)) {
                 try {
                     if (this.c < 0 || (((bpg) this.f).a.isEmpty() && this.c != 0)) {
                         break;
@@ -259,7 +259,7 @@ public class byj {
                     if (this.c > i && !((bpg) this.f).a.isEmpty()) {
                         Set setEntrySet = ((bpg) this.f).a.entrySet();
                         throwIfVar1IsNull(setEntrySet, "<get-entries>(...)");
-                        Map.Entry entry = (Map.Entry) aaz.f(setEntrySet);
+                        Map.Entry entry = (Map.Entry) StaticHelpers5.f(setEntrySet);
                         if (entry == null) {
                             return objPut;
                         }

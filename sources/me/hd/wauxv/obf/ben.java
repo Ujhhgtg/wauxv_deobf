@@ -25,7 +25,7 @@ public final /* synthetic */ class ben implements IInvokable {
         switch (this.a) {
             case 0:
                 beq beqVar = (beq) this.b;
-                bdj bdjVar = (bdj) this.c;
+                SomeFragmentManager someFragmentManagerVar = (SomeFragmentManager) this.c;
                 cio cioVar = (cio) this.d;
                 bup bupVar = (bup) obj;
                 ArrayList arrayList = beqVar.h;
@@ -33,16 +33,16 @@ public final /* synthetic */ class ben implements IInvokable {
                 if (arrayList == null || !arrayList.isEmpty()) {
                     Iterator it = arrayList.iterator();
                     while (it.hasNext()) {
-                        if (nullSafeIsEqual(((Pair) it.next()).first, bdjVar.bs)) {
+                        if (nullSafeIsEqual(((Pair) it.next()).first, someFragmentManagerVar.bs)) {
                             z = true;
                         }
                     }
                 }
                 if (bupVar != null && !z) {
-                    bfg bfgVar = bdjVar.ci;
+                    bfg bfgVar = someFragmentManagerVar.ci;
                     if (bfgVar == null) {
                         throw new IllegalStateException(yg.l("Can't access the Fragment View's LifecycleOwner for ",
-                                bdjVar,
+                                someFragmentManagerVar,
                                 " when getView() is null i.e., before onCreateView() or after onDestroyView()"));
                     }
                     bfgVar.g();

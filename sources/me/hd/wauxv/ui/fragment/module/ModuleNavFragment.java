@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 import me.hd.wauxv.R;
 import me.hd.wauxv.obf.OtherStaticHelpers;
-import me.hd.wauxv.obf.abb;
+import me.hd.wauxv.obf.StaticHelpers4;
 import me.hd.wauxv.obf.abi;
 import me.hd.wauxv.obf.acw;
 import me.hd.wauxv.obf.acx;
@@ -30,7 +30,7 @@ import me.hd.wauxv.obf.cyw;
 import me.hd.wauxv.obf.dpo;
 import me.hd.wauxv.obf.dpp;
 import me.hd.wauxv.obf.dpq;
-import me.hd.wauxv.obf.emn;
+import me.hd.wauxv.obf.StaticHelpers7;
 import me.hd.wauxv.obf.eqj;
 import me.hd.wauxv.obf.etz;
 import me.hd.wauxv.obf.eua;
@@ -60,7 +60,7 @@ public final class ModuleNavFragment extends bdo {
         sb2.append(acx.b());
         sb2.append('\n');
         sb.append(sb2.toString());
-        Object objInvoke = emn.bb(acw.a).invoke(null, null);
+        Object objInvoke = StaticHelpers7.bb(acw.a).invoke(null, null);
         throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.collections.Map<*, *>" /*
                                                                                                           * cnb.z(-
                                                                                                           * 107949708016426L)
@@ -95,7 +95,7 @@ public final class ModuleNavFragment extends bdo {
                                                                                                   * 395141286198058L)
                                                                                                   */));
         hb hbVarDb = db();
-        ArrayList arrayList = new ArrayList(abb.ak(listAg, 10));
+        ArrayList arrayList = new ArrayList(StaticHelpers4.ak(listAg, 10));
         Iterator it = listAg.iterator();
         while (it.hasNext()) {
             arrayList.add((bdo) ((Pair) it.next()).first);

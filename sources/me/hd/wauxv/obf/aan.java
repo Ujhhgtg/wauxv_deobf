@@ -22,10 +22,10 @@ public final /* synthetic */ class aan extends bgr implements bgk {
             viewGroup.addView(viewInflate);
         }
         int i = R.id.codeEditor;
-        CodeEditor codeEditor = (CodeEditor) KotlinHelpers2.aq(viewInflate, R.id.codeEditor);
+        CodeEditor codeEditor = (CodeEditor) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.codeEditor);
         if (codeEditor != null) {
             i = R.id.codeToolbar;
-            MaterialToolbar materialToolbar = (MaterialToolbar) KotlinHelpers2.aq(viewInflate, R.id.codeToolbar);
+            MaterialToolbar materialToolbar = (MaterialToolbar) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.codeToolbar);
             if (materialToolbar != null) {
                 return new bdp((CoordinatorLayout) viewInflate, codeEditor, materialToolbar);
             }

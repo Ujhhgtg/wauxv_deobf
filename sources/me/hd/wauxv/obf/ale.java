@@ -28,7 +28,7 @@ public final /* synthetic */ class ale implements Runnable {
 
     @Override // java.lang.Runnable
     public final void run() {
-        jx jxVar;
+        FactoryPools factoryPoolsVar;
         switch (this.a) {
             case 0:
                 ViewGroup viewGroup = (ViewGroup) this.b;
@@ -52,8 +52,8 @@ public final /* synthetic */ class ale implements Runnable {
                 }
                 dbg dbgVar = codeEditor.cn;
                 dbgVar.getClass();
-                if (Build.VERSION.SDK_INT >= 29 && (jxVar = dbgVar.b) != null) {
-                    Iterator it = ((ArrayList) jxVar.f).iterator();
+                if (Build.VERSION.SDK_INT >= 29 && (factoryPoolsVar = dbgVar.b) != null) {
+                    Iterator it = ((ArrayList) factoryPoolsVar.f).iterator();
                     throwIfVar1IsNull(it, "iterator(...)");
                     while (it.hasNext()) {
                         Object next = it.next();
@@ -64,7 +64,7 @@ public final /* synthetic */ class ale implements Runnable {
                         if (i <= cjnVar.b && i2 <= i) {
                             it.remove();
                             dbhVar.b.discardDisplayList();
-                            ((Stack) jxVar.h).push(dbhVar);
+                            ((Stack) factoryPoolsVar.h).push(dbhVar);
                         }
                     }
                 }

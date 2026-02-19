@@ -11,8 +11,8 @@ public class kw {
     public final ArrayList c = new ArrayList();
     public boolean e = false;
 
-    public kw(jx jxVar) {
-        this.d = new kn(this, jxVar);
+    public kw(FactoryPools factoryPoolsVar) {
+        this.d = new kn(this, factoryPoolsVar);
     }
 
     public final void f(bvm bvmVar, int i) {
@@ -147,9 +147,9 @@ public class kw {
 
     public String toString() {
         boolean z;
-        String strS = dkz.s(this.a == null ? "0" : "" + this.a, " = ");
+        String strS = StaticHelpers6.concat(this.a == null ? "0" : "" + this.a, " = ");
         if (this.b != 0.0f) {
-            StringBuilder sbY = dkz.y(strS);
+            StringBuilder sbY = StaticHelpers6.toSb(strS);
             sbY.append(this.b);
             strS = sbY.toString();
             z = true;
@@ -165,20 +165,20 @@ public class kw {
                     String string = dlaVarO.toString();
                     if (z) {
                         if (fP > 0.0f) {
-                            strS = dkz.s(strS, " + ");
+                            strS = StaticHelpers6.concat(strS, " + ");
                         } else {
-                            strS = dkz.s(strS, " - ");
+                            strS = StaticHelpers6.concat(strS, " - ");
                             fP *= -1.0f;
                         }
                     } else if (fP < 0.0f) {
-                        strS = dkz.s(strS, "- ");
+                        strS = StaticHelpers6.concat(strS, "- ");
                         fP *= -1.0f;
                     }
-                    strS = fP == 1.0f ? dkz.s(strS, string) : strS + fP + " " + string;
+                    strS = fP == 1.0f ? StaticHelpers6.concat(strS, string) : strS + fP + " " + string;
                     z = true;
                 }
             }
         }
-        return !z ? dkz.s(strS, "0.0") : strS;
+        return !z ? StaticHelpers6.concat(strS, "0.0") : strS;
     }
 }

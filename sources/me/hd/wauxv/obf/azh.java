@@ -21,11 +21,11 @@ public final class azh implements Comparable {
         int i = azhVar.b;
         int i2 = this.b;
         if (i2 != i) {
-            return bhu.t(i2, i);
+            return FastKV.t(i2, i);
         }
         int i3 = azhVar.d;
         int i4 = this.d;
-        return i4 != i3 ? bhu.t(i4, i3) : bhu.t(this.c, azhVar.c);
+        return i4 != i3 ? FastKV.t(i4, i3) : FastKV.t(this.c, azhVar.c);
     }
 
     public final String toString() {

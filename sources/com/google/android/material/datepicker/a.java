@@ -23,7 +23,7 @@ public final class a implements AdapterView.OnItemClickListener {
         if (i < ceuVarB.f() || i > ceuVarB.h()) {
             return;
         }
-        if (materialCalendarGridView.b().getItem(i).longValue() >= ((cal) this.b.b.h).b.c.a) {
+        if (materialCalendarGridView.b().getItem(i).longValue() >= ((cal) this.b.b.obj).b.c.a) {
             throw null;
         }
     }

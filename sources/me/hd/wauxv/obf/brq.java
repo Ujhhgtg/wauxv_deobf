@@ -41,7 +41,7 @@ public final class brq implements dfx {
     @Override // me.hd.wauxv.obf.dfx
     public final List getAnnotations() {
         this.e.getClass();
-        return EmptyReadonlyList.a;
+        return EmptyReadonlyList.INSTANCE;
     }
 
     @Override // me.hd.wauxv.obf.dfx
@@ -65,7 +65,7 @@ public final class brq implements dfx {
     @Override // me.hd.wauxv.obf.dfx
     public final List k(int i) {
         this.e.k(i);
-        return EmptyReadonlyList.a;
+        return EmptyReadonlyList.INSTANCE;
     }
 
     @Override // me.hd.wauxv.obf.dfx

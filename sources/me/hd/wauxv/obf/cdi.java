@@ -21,11 +21,11 @@ public final class cdi implements Comparable {
         int i = cdiVar.b;
         int i2 = this.b;
         if (i2 != i) {
-            return bhu.t(i2, i);
+            return FastKV.t(i2, i);
         }
         int i3 = cdiVar.d;
         int i4 = this.d;
-        return i4 != i3 ? bhu.t(i4, i3) : bhu.t(this.c, cdiVar.c);
+        return i4 != i3 ? FastKV.t(i4, i3) : FastKV.t(this.c, cdiVar.c);
     }
 
     public final String toString() {

@@ -17,7 +17,7 @@ import com.android.dx.util.Writers;
 import java.io.PrintWriter;
 import java.io.Writer;
 import java.util.ArrayList;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -205,7 +205,7 @@ public final class ClassDefItem extends IndexedItem {
             CstType cstType2 = this.superclass;
             sb2.append(cstType2 == null ? "<none>" : cstType2.toHuman());
             annotatedOutput.annotate(4, sb2.toString());
-            dkz.ab(absoluteOffsetOr0, new StringBuilder("  interfaces_off:      "), annotatedOutput, 4);
+            StaticHelpers6.ab(absoluteOffsetOr0, new StringBuilder("  interfaces_off:      "), annotatedOutput, 4);
             if (absoluteOffsetOr0 != 0) {
                 TypeList list = this.interfaces.getList();
                 int size = list.size();
@@ -221,7 +221,7 @@ public final class ClassDefItem extends IndexedItem {
             annotatedOutput.annotate(4, sb3.toString());
             annotatedOutput.annotate(4, "  annotations_off:     " + Hex.u4(absoluteOffset));
             annotatedOutput.annotate(4, "  class_data_off:      " + Hex.u4(absoluteOffset2));
-            dkz.ab(absoluteOffsetOr02, new StringBuilder("  static_values_off:   "), annotatedOutput, 4);
+            StaticHelpers6.ab(absoluteOffsetOr02, new StringBuilder("  static_values_off:   "), annotatedOutput, 4);
         }
         annotatedOutput.writeInt(iIndexOf);
         annotatedOutput.writeInt(this.accessFlags);

@@ -44,7 +44,7 @@ public final class cjq extends cju {
         if (r4 != null) {
             return r4;
         }
-        StringBuilder sbZ = dkz.z("Enum value ", str, " not found for type ");
+        StringBuilder sbZ = StaticHelpers6.concatAndToSb("Enum value ", str, " not found for type ");
         sbZ.append(cls.getName());
         sbZ.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
         throw new IllegalArgumentException(sbZ.toString());

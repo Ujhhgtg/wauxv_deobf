@@ -7,7 +7,7 @@ import java.util.WeakHashMap;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class dol extends cnf {
+public final class dol extends HugeSyntheticPileOfHelpers {
     public int a;
     public int b = -1;
     public final /* synthetic */ SwipeDismissBehavior k;
@@ -34,7 +34,7 @@ public final class dol extends cnf {
         int width;
         int width2;
         int width3;
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         boolean z = view.getLayoutDirection() == 1;
         int i2 = this.k.h;
         if (i2 == 0) {
@@ -103,7 +103,7 @@ public final class dol extends cnf {
         boolean z = false;
         SwipeDismissBehavior swipeDismissBehavior = this.k;
         if (f != 0.0f) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             boolean z2 = view.getLayoutDirection() == 1;
             int i2 = swipeDismissBehavior.h;
             if (i2 != 2 && (i2 != 0 ? i2 != 1 || (!z2 ? f < 0.0f : f > 0.0f) : !z2 ? f > 0.0f : f < 0.0f)) {
@@ -131,7 +131,7 @@ public final class dol extends cnf {
         }
         if (swipeDismissBehavior.a.ak(i, view.getTop())) {
             cs csVar = new cs(swipeDismissBehavior, view, z);
-            WeakHashMap weakHashMap2 = eqz.a;
+            WeakHashMap weakHashMap2 = ViewCompat.a;
             view.postOnAnimation(csVar);
         }
     }

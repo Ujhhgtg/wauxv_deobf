@@ -7,7 +7,7 @@ public abstract class akl {
 
     static {
         String property;
-        bkb bkbVar;
+        Dispatcher2 dispatcher2Var;
         als alsVar;
         int i = dpg.a;
         try {
@@ -17,16 +17,16 @@ public abstract class akl {
         }
         if (property != null ? Boolean.parseBoolean(property) : false) {
             alc alcVar = aou.a;
-            bkbVar = bza.a;
-            bkb bkbVar2 = bkbVar.l;
-            if (bkbVar == null) {
-                alsVar = bkbVar;
+            dispatcher2Var = bza.a;
+            Dispatcher2 dispatcher2Var2 = dispatcher2Var.l;
+            if (dispatcher2Var == null) {
+                alsVar = dispatcher2Var;
                 alsVar = akk.f;
             }
         } else {
             alsVar = akk.f;
         }
-        alsVar = bkbVar;
+        alsVar = dispatcher2Var;
         a = alsVar;
     }
 }

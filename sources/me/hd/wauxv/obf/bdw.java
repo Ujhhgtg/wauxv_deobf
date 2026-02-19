@@ -45,11 +45,11 @@ public final class bdw implements dq {
                 } else {
                     String str2 = bebVar2.a;
                     int i2 = bebVar2.b;
-                    bdj bdjVarAa = begVar2.c.aa(str2);
-                    if (bdjVarAa == null) {
+                    SomeFragmentManager someFragmentManagerVarAa = begVar2.c.aa(str2);
+                    if (someFragmentManagerVarAa == null) {
                         Log.w("FragmentManager", "Activity result delivered for unknown Fragment " + str2);
                     } else {
-                        bdjVarAa.cy(i2, dpVar.a, dpVar.b);
+                        someFragmentManagerVarAa.cy(i2, dpVar.a, dpVar.b);
                     }
                 }
                 break;
@@ -62,11 +62,11 @@ public final class bdw implements dq {
                 } else {
                     String str3 = bebVar3.a;
                     int i3 = bebVar3.b;
-                    bdj bdjVarAa2 = begVar3.c.aa(str3);
-                    if (bdjVarAa2 == null) {
+                    SomeFragmentManager someFragmentManagerVarAa2 = begVar3.c.aa(str3);
+                    if (someFragmentManagerVarAa2 == null) {
                         Log.w("FragmentManager", "Intent Sender result delivered for unknown Fragment " + str3);
                     } else {
-                        bdjVarAa2.cy(i3, dpVar2.a, dpVar2.b);
+                        someFragmentManagerVarAa2.cy(i3, dpVar2.a, dpVar2.b);
                     }
                 }
                 break;

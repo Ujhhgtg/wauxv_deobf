@@ -22,7 +22,7 @@ import me.hd.wauxv.obf.cyk;
 import me.hd.wauxv.obf.cyl;
 import me.hd.wauxv.obf.dap;
 import me.hd.wauxv.obf.dhy;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dlc;
 import me.hd.wauxv.obf.dnj;
 import me.hd.wauxv.obf.dnr;
@@ -721,7 +721,7 @@ public final class DiskLruCache implements Closeable, Flushable {
     private final void validateKey(String str) {
         if (!LEGAL_KEY_PATTERN.f(str)) {
             throw new IllegalArgumentException(
-                    dkz.o('\"', "keys must match regex [a-z0-9_-]{1,120}: \"", str).toString());
+                    StaticHelpers6.o('\"', "keys must match regex [a-z0-9_-]{1,120}: \"", str).toString());
         }
     }
 

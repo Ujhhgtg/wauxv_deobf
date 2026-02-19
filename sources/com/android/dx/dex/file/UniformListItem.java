@@ -1,10 +1,9 @@
 package com.android.dx.dex.file;
 
-import com.android.dx.dex.file.OffsettedItem;
 import com.android.dx.util.AnnotatedOutput;
 import java.util.Iterator;
 import java.util.List;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -111,7 +110,7 @@ public final class UniformListItem<T extends OffsettedItem> extends OffsettedIte
         int size = this.items.size();
         if (annotatedOutput.annotates()) {
             annotatedOutput.annotate(0, offsetString() + " " + typeName());
-            dkz.ab(size, new StringBuilder("  size: "), annotatedOutput, 4);
+            StaticHelpers6.ab(size, new StringBuilder("  size: "), annotatedOutput, 4);
         }
         annotatedOutput.writeInt(size);
         Iterator<T> it = this.items.iterator();

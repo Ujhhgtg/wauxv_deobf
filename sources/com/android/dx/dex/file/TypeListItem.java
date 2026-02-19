@@ -5,7 +5,7 @@ import com.android.dx.rop.type.Type;
 import com.android.dx.rop.type.TypeList;
 import com.android.dx.util.AnnotatedOutput;
 import com.android.dx.util.Hex;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -58,7 +58,7 @@ public final class TypeListItem extends OffsettedItem {
         int size = this.list.size();
         if (annotatedOutput.annotates()) {
             annotatedOutput.annotate(0, offsetString() + " type_list");
-            dkz.ab(size, new StringBuilder("  size: "), annotatedOutput, 4);
+            StaticHelpers6.ab(size, new StringBuilder("  size: "), annotatedOutput, 4);
             for (int i = 0; i < size; i++) {
                 Type type = this.list.getType(i);
                 annotatedOutput.annotate(2, "  " + Hex.u2(typeIds.indexOf(type)) + " // " + type.toHuman());

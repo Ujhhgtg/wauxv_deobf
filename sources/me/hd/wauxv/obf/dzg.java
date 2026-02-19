@@ -17,7 +17,7 @@ public final class dzg {
     public /* synthetic */ dzg(int i, Integer num, String str, Integer num2, Integer num3, String str2, Long l, Long l2,
             Long l3, String str3) {
         if (511 != (i & 511)) {
-            bht.ah(i, 511, dze.b.getDescriptor());
+            ResourcesCompat.ah(i, 511, dze.b.getDescriptor());
             throw null;
         }
         this.a = num;
@@ -75,9 +75,9 @@ public final class dzg {
         bjs.w(sb, this.c, -201923592452906L);
         bjs.w(sb, this.d, -201867757878058L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.e, -201897822649130L);
-        dkz.ad(sb, this.f, -201841988074282L);
-        dkz.ad(sb, this.g, -201803333368618L);
-        dkz.ad(sb, this.h, -201816218270506L);
+        StaticHelpers6.ad(sb, this.f, -201841988074282L);
+        StaticHelpers6.ad(sb, this.g, -201803333368618L);
+        StaticHelpers6.ad(sb, this.h, -201816218270506L);
         return concat(sb, this.i, ')');
     }
 }

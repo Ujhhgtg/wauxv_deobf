@@ -10,7 +10,7 @@ public final class dtn {
 
     public /* synthetic */ dtn(int i, String str, String str2, String str3) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, dtl.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, dtl.b.getDescriptor());
             throw null;
         }
         this.a = str;

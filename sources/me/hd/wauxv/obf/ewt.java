@@ -22,10 +22,10 @@ public final class ewt extends cyw {
     }
 
     @Override // me.hd.wauxv.obf.cyw
-    public final void f(czx czxVar, int i) {
+    public final void f(SomeView someViewVar, int i) {
         cal calVar = this.a;
         int i2 = calVar.b.a.c + i;
-        TextView textView = ((ews) czxVar).a;
+        TextView textView = ((ews) someViewVar).a;
         textView.setText(String.format(Locale.getDefault(), "%d", Integer.valueOf(i2)));
         Context context = textView.getContext();
         textView.setContentDescription(eoq.c().get(1) == i2 ? String.format(context.getString(R.string.mtrl_picker_navigate_to_current_year_description), Integer.valueOf(i2)) : String.format(context.getString(R.string.mtrl_picker_navigate_to_year_description), Integer.valueOf(i2)));
@@ -39,7 +39,7 @@ public final class ewt extends cyw {
     }
 
     @Override // me.hd.wauxv.obf.cyw
-    public final czx g(ViewGroup viewGroup, int i) {
+    public final SomeView g(ViewGroup viewGroup, int i) {
         return new ews((TextView) LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.mtrl_calendar_year, viewGroup, false));
     }
 }

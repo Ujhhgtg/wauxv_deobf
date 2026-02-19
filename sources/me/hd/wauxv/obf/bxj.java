@@ -10,7 +10,7 @@ public final class bxj extends SwitchHook implements IDexFind {
     public static final bxj a;
     public static final /* synthetic */ btc[] b;
     public static cem c;
-    public static final jx i;
+    public static final FactoryPools i;
     public static final String j;
     public static final String l;
     public static final String m;
@@ -43,17 +43,17 @@ public final class bxj extends SwitchHook implements IDexFind {
     public final void initOnce() {
         int i2 = 0;
         btc btcVar = b[0];
-        cde cdeVarT = dqc.bh(i.w()).t();
-        cdeVarT.ab = "onActivityResult" /* "onActivityResult" /* "onActivityResult" /* "onActivityResult" /* cnb.z(-496794572159786L)   */;
+        MethodResolver methodResolverVarT = dqc.bh(i.w()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "onActivityResult" /* "onActivityResult" /* "onActivityResult" /* "onActivityResult" /* cnb.z(-496794572159786L)   */;
         Class cls = Integer.TYPE;
-        aki akiVarAd = ad((MethodHookWrapper) dkz.n(new Object[] { dal.b(cls), dal.b(cls), dal.b(Intent.class) }, 3, cdeVarT), exg.a);
+        aki akiVarAd = ad((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(cls), dal.b(cls), dal.b(Intent.class) }, 3, methodResolverVarT), HookPriorityEnum.ENUM_DEFAULT);
         a.x(akiVarAd, new bty(11));
         akiVarAd.o();
         Iterator it = OtherStaticHelpers.argsToList(bxc.a, bxd.a, bxb.a).iterator();
         while (it.hasNext()) {
-            emn.bc((DexDescData) it.next(), new bty(12));
+            StaticHelpers7.bc((DexDescData) it.next(), new bty(12));
         }
-        emn.bc(bxe.a, new bty(13));
+        StaticHelpers7.bc(bxe.a, new bty(13));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -68,10 +68,10 @@ public final class bxj extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(bxc.a, dexKitBridge, new bty(14));
-        emn.aj(bxd.a, dexKitBridge, new bty(15));
-        emn.aj(bxb.a, dexKitBridge, new bty(2));
-        emn.aj(bxe.a, dexKitBridge, new bty(3));
+        StaticHelpers7.resolveDexAndCache(bxc.a, dexKitBridge, new bty(14));
+        StaticHelpers7.resolveDexAndCache(bxd.a, dexKitBridge, new bty(15));
+        StaticHelpers7.resolveDexAndCache(bxb.a, dexKitBridge, new bty(2));
+        StaticHelpers7.resolveDexAndCache(bxe.a, dexKitBridge, new bty(3));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

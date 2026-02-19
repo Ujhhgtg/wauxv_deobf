@@ -41,7 +41,7 @@ import com.android.dx.rop.cst.TypedConstant;
 import com.android.dx.util.ByteArray;
 import com.android.dx.util.Hex;
 import java.io.IOException;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -63,7 +63,7 @@ public class StdAttributeFactory extends AttributeFactory {
         ByteArray bytes = directClassFile.getBytes();
         int unsignedShort = bytes.getUnsignedShort(i);
         if (parseObserver != null) {
-            parseObserver.parsed(bytes, i, 2, dkz.q(unsignedShort, new StringBuilder("num_boostrap_methods: ")));
+            parseObserver.parsed(bytes, i, 2, StaticHelpers6.q(unsignedShort, new StringBuilder("num_boostrap_methods: ")));
         }
         return new AttBootstrapMethods(parseBootstrapMethods(bytes, directClassFile.getConstantPool(), directClassFile.getThisClass(), unsignedShort, i + 2, i2 - 2, parseObserver));
     }
@@ -80,8 +80,8 @@ public class StdAttributeFactory extends AttributeFactory {
         int i4 = i + 4;
         int i5 = bytes.getInt(i4);
         if (parseObserver != null) {
-            parseObserver.parsed(bytes, i, 2, dkz.q(unsignedShort, new StringBuilder("max_stack: ")));
-            parseObserver.parsed(bytes, i3, 2, dkz.q(unsignedShort2, new StringBuilder("max_locals: ")));
+            parseObserver.parsed(bytes, i, 2, StaticHelpers6.q(unsignedShort, new StringBuilder("max_stack: ")));
+            parseObserver.parsed(bytes, i3, 2, StaticHelpers6.q(unsignedShort2, new StringBuilder("max_locals: ")));
             parseObserver.parsed(bytes, i4, 4, "code_length: " + Hex.u4(i5));
         }
         int i6 = i + 8;
@@ -98,7 +98,7 @@ public class StdAttributeFactory extends AttributeFactory {
         int unsignedShort3 = bytes.getUnsignedShort(i8);
         ByteCatchList byteCatchList = unsignedShort3 == 0 ? ByteCatchList.EMPTY : new ByteCatchList(unsignedShort3);
         if (parseObserver != null) {
-            parseObserver.parsed(bytes, i8, 2, dkz.q(unsignedShort3, new StringBuilder("exception_table_length: ")));
+            parseObserver.parsed(bytes, i8, 2, StaticHelpers6.q(unsignedShort3, new StringBuilder("exception_table_length: ")));
         }
         int i10 = i8 + 2;
         int i11 = i9 - 2;
@@ -181,7 +181,7 @@ public class StdAttributeFactory extends AttributeFactory {
         ByteArray bytes = directClassFile.getBytes();
         int unsignedShort = bytes.getUnsignedShort(i);
         if (parseObserver != null) {
-            parseObserver.parsed(bytes, i, 2, dkz.q(unsignedShort, new StringBuilder("number_of_exceptions: ")));
+            parseObserver.parsed(bytes, i, 2, StaticHelpers6.q(unsignedShort, new StringBuilder("number_of_exceptions: ")));
         }
         int i3 = i + 2;
         int i4 = unsignedShort * 2;
@@ -199,7 +199,7 @@ public class StdAttributeFactory extends AttributeFactory {
         ConstantPool constantPool = directClassFile.getConstantPool();
         int unsignedShort = bytes.getUnsignedShort(i);
         if (parseObserver != null) {
-            parseObserver.parsed(bytes, i, 2, dkz.q(unsignedShort, new StringBuilder("number_of_classes: ")));
+            parseObserver.parsed(bytes, i, 2, StaticHelpers6.q(unsignedShort, new StringBuilder("number_of_classes: ")));
         }
         int i3 = i + 2;
         int i4 = unsignedShort * 8;
@@ -238,7 +238,7 @@ public class StdAttributeFactory extends AttributeFactory {
         ByteArray bytes = directClassFile.getBytes();
         int unsignedShort = bytes.getUnsignedShort(i);
         if (parseObserver != null) {
-            parseObserver.parsed(bytes, i, 2, dkz.q(unsignedShort, new StringBuilder("line_number_table_length: ")));
+            parseObserver.parsed(bytes, i, 2, StaticHelpers6.q(unsignedShort, new StringBuilder("line_number_table_length: ")));
         }
         int i3 = i + 2;
         int i4 = unsignedShort * 4;
@@ -266,7 +266,7 @@ public class StdAttributeFactory extends AttributeFactory {
         ByteArray bytes = directClassFile.getBytes();
         int unsignedShort = bytes.getUnsignedShort(i);
         if (parseObserver != null) {
-            parseObserver.parsed(bytes, i, 2, dkz.q(unsignedShort, new StringBuilder("local_variable_table_length: ")));
+            parseObserver.parsed(bytes, i, 2, StaticHelpers6.q(unsignedShort, new StringBuilder("local_variable_table_length: ")));
         }
         return new AttLocalVariableTable(parseLocalVariables(bytes.slice(i + 2, i + i2), directClassFile.getConstantPool(), parseObserver, unsignedShort, false));
     }
@@ -278,7 +278,7 @@ public class StdAttributeFactory extends AttributeFactory {
         ByteArray bytes = directClassFile.getBytes();
         int unsignedShort = bytes.getUnsignedShort(i);
         if (parseObserver != null) {
-            parseObserver.parsed(bytes, i, 2, dkz.q(unsignedShort, new StringBuilder("local_variable_type_table_length: ")));
+            parseObserver.parsed(bytes, i, 2, StaticHelpers6.q(unsignedShort, new StringBuilder("local_variable_type_table_length: ")));
         }
         return new AttLocalVariableTypeTable(parseLocalVariables(bytes.slice(i + 2, i + i2), directClassFile.getConstantPool(), parseObserver, unsignedShort, true));
     }
@@ -295,8 +295,8 @@ public class StdAttributeFactory extends AttributeFactory {
             int i7 = i4 + 2;
             int unsignedShort2 = byteArray.getUnsignedShort(i7);
             if (parseObserver != null) {
-                parseObserver.parsed(byteArray, i4, 2, dkz.q(unsignedShort, new StringBuilder("bootstrap_method_ref: ")));
-                parseObserver.parsed(byteArray, i7, 2, dkz.q(unsignedShort2, new StringBuilder("num_bootstrap_arguments: ")));
+                parseObserver.parsed(byteArray, i4, 2, StaticHelpers6.q(unsignedShort, new StringBuilder("bootstrap_method_ref: ")));
+                parseObserver.parsed(byteArray, i7, 2, StaticHelpers6.q(unsignedShort2, new StringBuilder("num_bootstrap_arguments: ")));
             }
             i4 += 4;
             i5 -= 4;
@@ -308,7 +308,7 @@ public class StdAttributeFactory extends AttributeFactory {
             while (i8 < unsignedShort2) {
                 int unsignedShort3 = byteArray.getUnsignedShort(i4);
                 if (parseObserver != null) {
-                    parseObserver.parsed(byteArray, i4, 2, dkz.q(unsignedShort3, yg.concatVar213(i8, "bootstrap_arguments[", "]")));
+                    parseObserver.parsed(byteArray, i4, 2, StaticHelpers6.q(unsignedShort3, yg.concatVar213(i8, "bootstrap_arguments[", "]")));
                 }
                 bootstrapMethodArgumentsList.set(i8, constantPool.get(unsignedShort3));
                 i8++;

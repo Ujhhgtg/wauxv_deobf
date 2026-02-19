@@ -41,7 +41,7 @@ public abstract class bad extends bmy {
         try {
             FileOutputStream fileOutputStream = new FileOutputStream(file2);
             try {
-                bhu.w(fileInputStream, fileOutputStream);
+                FastKV.w(fileInputStream, fileOutputStream);
                 fileOutputStream.close();
                 fileInputStream.close();
             } catch (Throwable th) {
@@ -75,7 +75,7 @@ public abstract class bad extends bmy {
             if (!nullSafeIsEqual(name, ".")) {
                 if (!nullSafeIsEqual(name, "..")) {
                     arrayList.add(file2);
-                } else if (arrayList.isEmpty() || nullSafeIsEqual(((File) aaz.l(arrayList)).getName(), "..")) {
+                } else if (arrayList.isEmpty() || nullSafeIsEqual(((File) StaticHelpers5.l(arrayList)).getName(), "..")) {
                     arrayList.add(file2);
                 }
             }
@@ -172,13 +172,13 @@ public abstract class bad extends bmy {
                                     throw new IllegalArgumentException(yg.f(i, "Requested element count ", " is less than zero.").toString());
                                 }
                                 if (i == 0) {
-                                    listBf = aaz.z(r2);
+                                    listBf = StaticHelpers5.z(r2);
                                 } else {
                                     size = ((Collection) r2).size() - i;
                                     if (size <= 0) {
-                                        listBf = EmptyReadonlyList.a;
+                                        listBf = EmptyReadonlyList.INSTANCE;
                                     } else if (size == 1) {
-                                        listBf = dqc.toSingletonList(aaz.l((List) r2));
+                                        listBf = dqc.toSingletonList(StaticHelpers5.l((List) r2));
                                     } else {
                                         arrayList = new ArrayList(size);
                                         if (r2 instanceof RandomAccess) {
@@ -199,7 +199,7 @@ public abstract class bad extends bmy {
                                 }
                                 String str = File.separator;
                                 throwIfVar1IsNull(str, "separator");
-                                aaz.i(listBf, sb, str, "", "", "...", null);
+                                StaticHelpers5.i(listBf, sb, str, "", "", "...", null);
                             }
                             string = sb.toString();
                         }
@@ -214,13 +214,13 @@ public abstract class bad extends bmy {
                         throw new IllegalArgumentException(yg.f(i, "Requested element count ", " is less than zero.").toString());
                     }
                     if (i == 0) {
-                        listBf = aaz.z(r2);
+                        listBf = StaticHelpers5.z(r2);
                     } else {
                         size = ((Collection) r2).size() - i;
                         if (size <= 0) {
-                            listBf = EmptyReadonlyList.a;
+                            listBf = EmptyReadonlyList.INSTANCE;
                         } else if (size == 1) {
-                            listBf = dqc.toSingletonList(aaz.l((List) r2));
+                            listBf = dqc.toSingletonList(StaticHelpers5.l((List) r2));
                         } else {
                             arrayList = new ArrayList(size);
                             if (r2 instanceof RandomAccess) {
@@ -241,7 +241,7 @@ public abstract class bad extends bmy {
                     }
                     String str2 = File.separator;
                     throwIfVar1IsNull(str2, "separator");
-                    aaz.i(listBf, sb, str2, "", "", "...", null);
+                    StaticHelpers5.i(listBf, sb, str2, "", "", "...", null);
                 }
                 string = sb.toString();
             }

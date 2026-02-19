@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import java.util.WeakHashMap;
 import me.hd.wauxv.R;
 import me.hd.wauxv.obf.cyf;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -22,7 +22,7 @@ public class ButtonBarLayout extends LinearLayout {
         this.c = -1;
         int[] iArr = cyf.k;
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr);
-        eqz.r(this, context, iArr, attributeSet, typedArrayObtainStyledAttributes, 0, 0);
+        ViewCompat.r(this, context, iArr, attributeSet, typedArrayObtainStyledAttributes, 0, 0);
         this.a = typedArrayObtainStyledAttributes.getBoolean(0, true);
         typedArrayObtainStyledAttributes.recycle();
         if (getOrientation() == 1) {
@@ -105,7 +105,7 @@ public class ButtonBarLayout extends LinearLayout {
                 paddingBottom = getPaddingBottom() + measuredHeight;
             }
         }
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         if (getMinimumHeight() != paddingBottom) {
             setMinimumHeight(paddingBottom);
             if (i2 == 0) {

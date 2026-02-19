@@ -15,7 +15,7 @@ import okhttp3.HttpUrl;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class bpv {
     public static final chm a = new chm(2);
-    public static final Object b = KotlinHelpers.ai(new Pair("boolean", Boolean.TYPE), new Pair("byte", Byte.TYPE),
+    public static final Object b = KotlinHelpers.mapOf(new Pair("boolean", Boolean.TYPE), new Pair("byte", Byte.TYPE),
             new Pair("char", Character.TYPE), new Pair("short", Short.TYPE), new Pair("int", Integer.TYPE),
             new Pair("long", Long.TYPE), new Pair("float", Float.TYPE), new Pair("double", Double.TYPE),
             new Pair("void", Void.TYPE));
@@ -324,11 +324,11 @@ public abstract class bpv {
             try {
                 objX = c(classLoader, (String) it.next());
             } catch (Throwable th) {
-                objX = bhu.x(th);
+                objX = FastKV.x(th);
             }
             Throwable thB = dcy.b(objX);
             if (thB != null) {
-                return bhu.x(thB);
+                return FastKV.x(thB);
             }
             arrayList2.add((Class) objX);
         }

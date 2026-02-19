@@ -15,7 +15,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import java.util.WeakHashMap;
 import me.hd.wauxv.R;
 import me.hd.wauxv.obf.dh;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -38,7 +38,7 @@ class ChipTextInputComboView extends FrameLayout implements Checkable {
         addView(chip);
         addView(textInputLayout);
         TextView textView = (TextView) findViewById(R.id.material_label);
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         editText.setId(View.generateViewId());
         textView.setLabelFor(editText.getId());
         editText.setSaveEnabled(false);

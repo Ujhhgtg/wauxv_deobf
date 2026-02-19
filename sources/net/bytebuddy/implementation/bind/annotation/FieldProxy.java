@@ -8,7 +8,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.util.Collection;
 import java.util.Collections;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
@@ -29,7 +29,6 @@ import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.MethodAccessorFactory;
 import net.bytebuddy.implementation.auxiliary.AuxiliaryType;
 import net.bytebuddy.implementation.bind.MethodDelegationBinder;
-import net.bytebuddy.implementation.bind.annotation.TargetMethodAnnotationDrivenBinder;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
 import net.bytebuddy.implementation.bytecode.Duplication;
 import net.bytebuddy.implementation.bytecode.StackManipulation;
@@ -103,7 +102,7 @@ public @interface FieldProxy {
             }
 
             public int hashCode() {
-                return dkz.h(this.assigner, (this.fieldResolver.hashCode() + dkz.f(this.instrumentedType, (this.fieldDescription.hashCode() + (getClass().hashCode() * 31)) * 31, 31)) * 31, 31) + (this.serializableProxy ? 1 : 0);
+                return StaticHelpers6.h(this.assigner, (this.fieldResolver.hashCode() + StaticHelpers6.f(this.instrumentedType, (this.fieldDescription.hashCode() + (getClass().hashCode() * 31)) * 31, 31)) * 31, 31) + (this.serializableProxy ? 1 : 0);
             }
 
             @Override // net.bytebuddy.implementation.auxiliary.AuxiliaryType
@@ -146,7 +145,7 @@ public @interface FieldProxy {
                 }
 
                 public int hashCode() {
-                    return FieldGetter.this.hashCode() + dkz.f(this.typeDescription, getClass().hashCode() * 31, 31);
+                    return FieldGetter.this.hashCode() + StaticHelpers6.f(this.typeDescription, getClass().hashCode() * 31, 31);
                 }
             }
 
@@ -173,7 +172,7 @@ public @interface FieldProxy {
             }
 
             public int hashCode() {
-                return this.methodAccessorFactory.hashCode() + dkz.h(this.assigner, (this.fieldDescription.hashCode() + (getClass().hashCode() * 31)) * 31, 31);
+                return this.methodAccessorFactory.hashCode() + StaticHelpers6.h(this.assigner, (this.fieldDescription.hashCode() + (getClass().hashCode() * 31)) * 31, 31);
             }
 
             @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
@@ -213,7 +212,7 @@ public @interface FieldProxy {
                     }
 
                     public int hashCode() {
-                        return this.setterMethod.hashCode() + dkz.b(this.getterMethod, dkz.f(this.proxyType, getClass().hashCode() * 31, 31), 31);
+                        return this.setterMethod.hashCode() + StaticHelpers6.b(this.getterMethod, StaticHelpers6.f(this.proxyType, getClass().hashCode() * 31, 31), 31);
                     }
 
                     @Override // net.bytebuddy.implementation.bind.annotation.FieldProxy.Binder.FieldResolver.Factory
@@ -248,7 +247,7 @@ public @interface FieldProxy {
                     }
 
                     public int hashCode() {
-                        return this.setterMethod.hashCode() + dkz.b(this.getterMethod, getClass().hashCode() * 31, 31);
+                        return this.setterMethod.hashCode() + StaticHelpers6.b(this.getterMethod, getClass().hashCode() * 31, 31);
                     }
 
                     @Override // net.bytebuddy.implementation.bind.annotation.FieldProxy.Binder.FieldResolver.Factory
@@ -344,7 +343,7 @@ public @interface FieldProxy {
                 }
 
                 public int hashCode() {
-                    return this.setterMethod.hashCode() + dkz.b(this.getterMethod, dkz.f(this.proxyType, getClass().hashCode() * 31, 31), 31);
+                    return this.setterMethod.hashCode() + StaticHelpers6.b(this.getterMethod, StaticHelpers6.f(this.proxyType, getClass().hashCode() * 31, 31), 31);
                 }
 
                 @Override // net.bytebuddy.implementation.bind.annotation.FieldProxy.Binder.FieldResolver
@@ -451,7 +450,7 @@ public @interface FieldProxy {
                 }
 
                 public int hashCode() {
-                    return FieldSetter.this.hashCode() + dkz.f(this.typeDescription, getClass().hashCode() * 31, 31);
+                    return FieldSetter.this.hashCode() + StaticHelpers6.f(this.typeDescription, getClass().hashCode() * 31, 31);
                 }
             }
 
@@ -478,7 +477,7 @@ public @interface FieldProxy {
             }
 
             public int hashCode() {
-                return this.methodAccessorFactory.hashCode() + dkz.h(this.assigner, (this.fieldDescription.hashCode() + (getClass().hashCode() * 31)) * 31, 31);
+                return this.methodAccessorFactory.hashCode() + StaticHelpers6.h(this.assigner, (this.fieldDescription.hashCode() + (getClass().hashCode() * 31)) * 31, 31);
             }
 
             @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
@@ -581,19 +580,19 @@ public @interface FieldProxy {
 
         private static MethodDescription.InDefinedShape onlyMethod(TypeDescription typeDescription) {
             if (!typeDescription.isInterface()) {
-                throw new IllegalArgumentException(dkz.x(typeDescription, " is not an interface"));
+                throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " is not an interface"));
             }
             if (!typeDescription.getInterfaces().isEmpty()) {
-                throw new IllegalArgumentException(dkz.x(typeDescription, " must not extend other interfaces"));
+                throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " must not extend other interfaces"));
             }
             if (!typeDescription.isPublic()) {
-                throw new IllegalArgumentException(dkz.x(typeDescription, " is not public"));
+                throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " is not public"));
             }
             MethodList methodListFilter = typeDescription.getDeclaredMethods().filter(ElementMatchers.isAbstract());
             if (methodListFilter.size() == 1) {
                 return (MethodDescription.InDefinedShape) methodListFilter.getOnly();
             }
-            throw new IllegalArgumentException(dkz.x(typeDescription, " must declare exactly one abstract method"));
+            throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " must declare exactly one abstract method"));
         }
 
         @Override // net.bytebuddy.implementation.bind.annotation.TargetMethodAnnotationDrivenBinder.ParameterBinder.ForFieldBinding
@@ -634,27 +633,27 @@ public @interface FieldProxy {
 
         public static TargetMethodAnnotationDrivenBinder.ParameterBinder<FieldProxy> install(TypeDescription typeDescription) {
             if (!typeDescription.isInterface()) {
-                throw new IllegalArgumentException(dkz.x(typeDescription, " is not an interface"));
+                throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " is not an interface"));
             }
             if (!typeDescription.getInterfaces().isEmpty()) {
-                throw new IllegalArgumentException(dkz.x(typeDescription, " must not extend other interfaces"));
+                throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " must not extend other interfaces"));
             }
             if (!typeDescription.isPublic()) {
-                throw new IllegalArgumentException(dkz.x(typeDescription, " is not public"));
+                throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " is not public"));
             }
             MethodList methodListFilter = typeDescription.getDeclaredMethods().filter(ElementMatchers.isAbstract());
             if (methodListFilter.size() != 2) {
-                throw new IllegalArgumentException(dkz.x(typeDescription, " does not declare exactly two non-abstract methods"));
+                throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " does not declare exactly two non-abstract methods"));
             }
             MethodList methodListFilter2 = methodListFilter.filter(ElementMatchers.isGetter((Class<?>) Object.class));
             if (methodListFilter2.size() != 1) {
-                throw new IllegalArgumentException(dkz.x(typeDescription, " does not declare a getter with an Object type"));
+                throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " does not declare a getter with an Object type"));
             }
             MethodList methodListFilter3 = methodListFilter.filter(ElementMatchers.isSetter((Class<?>) Object.class));
             if (methodListFilter3.size() == 1) {
                 return new Binder(typeDescription, (MethodDescription.InDefinedShape) methodListFilter2.getOnly(), (MethodDescription.InDefinedShape) methodListFilter3.getOnly());
             }
-            throw new IllegalArgumentException(dkz.x(typeDescription, " does not declare a setter with an Object type"));
+            throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " does not declare a setter with an Object type"));
         }
 
         public Binder(FieldResolver.Factory factory) {

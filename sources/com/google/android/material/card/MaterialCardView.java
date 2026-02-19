@@ -14,8 +14,8 @@ import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.Checkable;
-import me.hd.wauxv.obf.bht;
-import me.hd.wauxv.obf.bhu;
+import me.hd.wauxv.obf.ResourcesCompat;
+import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.cam;
 import me.hd.wauxv.obf.cao;
 import me.hd.wauxv.obf.cau;
@@ -46,7 +46,7 @@ public class MaterialCardView extends te implements Checkable, dgx {
         this.f = false;
         this.g = false;
         this.e = true;
-        TypedArray typedArrayAn = bhu.an(getContext(), attributeSet, cxs.v, me.hd.wauxv.R.attr.materialCardViewStyle, me.hd.wauxv.R.style.Widget_MaterialComponents_CardView, new int[0]);
+        TypedArray typedArrayAn = FastKV.an(getContext(), attributeSet, cxs.v, me.hd.wauxv.R.attr.materialCardViewStyle, me.hd.wauxv.R.style.Widget_MaterialComponents_CardView, new int[0]);
         cao caoVar = new cao(this, attributeSet);
         this.d = caoVar;
         ColorStateList cardBackgroundColor = super.getCardBackgroundColor();
@@ -431,7 +431,7 @@ public class MaterialCardView extends te implements Checkable, dgx {
     }
 
     public void setRippleColorResource(int i) {
-        ColorStateList colorStateListV = bht.v(getContext(), i);
+        ColorStateList colorStateListV = ResourcesCompat.v(getContext(), i);
         cao caoVar = this.d;
         caoVar.m = colorStateListV;
         int[] iArr = ddb.a;

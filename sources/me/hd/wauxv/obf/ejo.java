@@ -14,7 +14,7 @@ public final class ejo {
 
     public /* synthetic */ ejo(int i, List list, eaq eaqVar, Integer num, String str) {
         if (15 != (i & 15)) {
-            bht.ah(i, 15, ejm.b.getDescriptor());
+            ResourcesCompat.ah(i, 15, ejm.b.getDescriptor());
             throw null;
         }
         this.b = list;

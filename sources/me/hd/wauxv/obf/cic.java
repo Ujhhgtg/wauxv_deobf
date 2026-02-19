@@ -52,7 +52,7 @@ public final /* synthetic */ class cic implements bgj {
                 ArrayList arrayList2 = (ArrayList) this.c;
                 List<adx> list3 = (List) obj;
                 for (adx adxVar : list3) {
-                    for (Pair pairVar : aaz.ae(arrayList, arrayList2)) {
+                    for (Pair pairVar : StaticHelpers5.ae(arrayList, arrayList2)) {
                         arj.ah(adxVar.a, (String) pairVar.first, ((Number) pairVar.second).intValue());
                     }
                 }

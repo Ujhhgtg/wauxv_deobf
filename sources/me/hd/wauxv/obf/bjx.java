@@ -40,7 +40,7 @@ public final class bjx extends SwitchHook implements IDexFind, bob {
         String str4 = "weixin://weixinhongbao/wauxv/chatroom_userinfo/"
                 /* "weixin://weixinhongbao/wauxv/chatroom_userinfo/" /* "weixin://weixinhongbao/wauxv/chatroom_userinfo/" /* cnb.z(-502841886112554L)  */ + dnj.ax(str, "@chatroom" /* "@chatroom" /* "@chatroom" /* cnb.z(-502867655916330L)  */)
                 + "__" /* "__" /* "__" /* cnb.z(-508683041635114L)  */ + str2;
-        StringBuilder sbY = dkz.y(strB);
+        StringBuilder sbY = StaticHelpers6.toSb(strB);
         sbY.append("(<_wc_custom_link_ color=\"" /* "(<_wc_custom_link_ color=\"" /* "(<_wc_custom_link_ color=\"" /* cnb.z(-508635796994858L)  */);
         sbY.append(strO);
         sbY.append("\" href=\"" /* "\" href=\"" /* "\" href=\"" /* cnb.z(-508537012747050L)  */);
@@ -54,9 +54,9 @@ public final class bjx extends SwitchHook implements IDexFind, bob {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(bju.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(bju.a));
         bjx bjxVar = a;
-        aki akiVarAb = csb.ab(bjxVar, listBf);
+        aki akiVarAb = PackageParam.ab(bjxVar, listBf);
         bjxVar.y(akiVarAb, new bep(6));
         akiVarAb.o();
     }
@@ -73,7 +73,7 @@ public final class bjx extends SwitchHook implements IDexFind, bob {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(bju.a, dexKitBridge, new bep(5));
+        StaticHelpers7.resolveDexAndCache(bju.a, dexKitBridge, new bep(5));
     }
 
     @Override // me.hd.wauxv.obf.IDatabaseOperationsListener
@@ -88,12 +88,12 @@ public final class bjx extends SwitchHook implements IDexFind, bob {
             if (asString2 == null || dnj.ak(asString2)) {
                 return;
             }
-            Set setAd = aaz.ad(dnj.as(asString2, new String[] { ";" /* ";" /* ";" /* cnb.z(-508184825428778L)  */ }));
+            Set setAd = StaticHelpers5.ad(dnj.as(asString2, new String[] { ";" /* ";" /* ";" /* cnb.z(-508184825428778L)  */ }));
             int i3 = 0;
             dlx.a.getClass();
-            cde cdeVarT = dqc.bi(dlx.b()).t();
-            cdeVarT.ab = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
-            Object objJ = ((MethodHookWrapper) dkz.n(new Object[] { dal.b(String.class), dal.b(Object[].class) }, 2, cdeVarT)).j(
+            MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
+            Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class), dal.b(Object[].class) }, 2, methodResolverVarT)).j(
                     "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* cnb.z(-508193415363370L)  */,
                     new Object[] { asString });
             throwIfVar1IsNull(objJ);
@@ -108,7 +108,7 @@ public final class bjx extends SwitchHook implements IDexFind, bob {
                     String string = cursor
                             .getString(cursor.getColumnIndex("memberlist" /* "memberlist" /* "memberlist" /* cnb.z(-508399573793578L)  */));
                     if (string != null && !dnj.ak(string)) {
-                        Set setAd2 = aaz.ad(dnj.as(string, new String[] { ";" /* ";" /* ";" /* cnb.z(-508386688891690L)  */ }));
+                        Set setAd2 = StaticHelpers5.ad(dnj.as(string, new String[] { ";" /* ";" /* ";" /* cnb.z(-508386688891690L)  */ }));
                         if (asInteger.intValue() < i4) {
                             for (String str3 : dgg.a(setAd2, setAd)) {
                                 bjx bjxVar = a;

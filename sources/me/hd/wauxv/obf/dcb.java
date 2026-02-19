@@ -61,9 +61,9 @@ public final class dcb implements Handler.Callback {
                 }
                 bum bumVar = new bum(burVar);
                 cbm cbmVar = (cbm) butVar.c;
-                awp awpVar = new awp(butVar, begVar);
+                GifEncoder gifEncoderVar = new GifEncoder(butVar, begVar);
                 cbmVar.getClass();
-                dca dcaVar2 = new dca(aVarJ, bumVar, awpVar, hbVar);
+                dca dcaVar2 = new dca(aVarJ, bumVar, gifEncoderVar, hbVar);
                 ((HashMap) butVar.b).put(burVar, dcaVar2);
                 bumVar.al(new bus(butVar, burVar));
                 if (z) {

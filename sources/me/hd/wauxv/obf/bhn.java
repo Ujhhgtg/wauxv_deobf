@@ -98,7 +98,7 @@ public final class bhn extends doi implements bgj {
         Serializable serializable = this.e;
         switch (i) {
             case 0:
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 String strZ = "检测到差异版本" /* "检测到差异版本" /* "检测到差异版本" /* "检测到差异版本" /* cnb.z(-47704201755434L)   */;
                 bhl bhlVar = (bhl) serializable;
                 StringBuilder sb = new StringBuilder();
@@ -111,7 +111,7 @@ public final class bhn extends doi implements bgj {
                 ((byx) this.d).b(strZ, concat(sb, bhlVar.c, '\n'), new ls((MainActivity) obj2, 2, bhlVar));
                 return KotlinUnit.INSTANCE;
             case 1:
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 ahp ahpVar = (ahp) this.d;
                 cna.q(ahpVar.e());
                 eoj eojVar = new eoj();
@@ -124,7 +124,7 @@ public final class bhn extends doi implements bgj {
                 dbv.a(eojVar.d, dal.c(File.class));
                 Response responseExecute = eojVar.e.newCall(eojVar.f()).execute();
                 try {
-                    Object objB = bhs.p(responseExecute.request()).b(emn.am(dal.c(File.class)), responseExecute);
+                    Object objB = bhs.p(responseExecute.request()).b(StaticHelpers7.am(dal.c(File.class)), responseExecute);
                     if (objB != null) {
                         return (File) objB;
                     }
@@ -142,7 +142,7 @@ public final class bhn extends doi implements bgj {
                             null);
                 }
             case 2:
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 ahp ahpVar2 = (ahp) this.d;
                 cna.q(ahpVar2.e());
                 eoj eojVar2 = new eoj();
@@ -155,7 +155,7 @@ public final class bhn extends doi implements bgj {
                 dbv.a(eojVar2.d, dal.c(File.class));
                 Response responseExecute2 = eojVar2.e.newCall(eojVar2.f()).execute();
                 try {
-                    Object objB2 = bhs.p(responseExecute2.request()).b(emn.am(dal.c(File.class)), responseExecute2);
+                    Object objB2 = bhs.p(responseExecute2.request()).b(StaticHelpers7.am(dal.c(File.class)), responseExecute2);
                     if (objB2 != null) {
                         return (File) objB2;
                     }
@@ -173,7 +173,7 @@ public final class bhn extends doi implements bgj {
                             8, null);
                 }
             case 3:
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 ahp ahpVar3 = (ahp) this.d;
                 cna.q(ahpVar3.e());
                 eoj eojVar3 = new eoj();
@@ -186,7 +186,7 @@ public final class bhn extends doi implements bgj {
                 dbv.a(eojVar3.d, dal.c(File.class));
                 Response responseExecute3 = eojVar3.e.newCall(eojVar3.f()).execute();
                 try {
-                    Object objB3 = bhs.p(responseExecute3.request()).b(emn.am(dal.c(File.class)), responseExecute3);
+                    Object objB3 = bhs.p(responseExecute3.request()).b(StaticHelpers7.am(dal.c(File.class)), responseExecute3);
                     if (objB3 != null) {
                         return (File) objB3;
                     }
@@ -204,7 +204,7 @@ public final class bhn extends doi implements bgj {
                             8, null);
                 }
             case 4:
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 ahp ahpVar4 = (ahp) this.d;
                 cna.q(ahpVar4.e());
                 eoj eojVar4 = new eoj();
@@ -217,7 +217,7 @@ public final class bhn extends doi implements bgj {
                 dbv.a(eojVar4.d, dal.c(File.class));
                 Response responseExecute4 = eojVar4.e.newCall(eojVar4.f()).execute();
                 try {
-                    Object objB4 = bhs.p(responseExecute4.request()).b(emn.am(dal.c(File.class)), responseExecute4);
+                    Object objB4 = bhs.p(responseExecute4.request()).b(StaticHelpers7.am(dal.c(File.class)), responseExecute4);
                     if (objB4 != null) {
                         return (File) objB4;
                     }
@@ -235,7 +235,7 @@ public final class bhn extends doi implements bgj {
                             8, null);
                 }
             case 5:
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 ahp ahpVar5 = (ahp) this.d;
                 cna.q(ahpVar5.e());
                 eoj eojVar5 = new eoj();
@@ -248,7 +248,7 @@ public final class bhn extends doi implements bgj {
                 dbv.a(eojVar5.d, dal.c(File.class));
                 Response responseExecute5 = eojVar5.e.newCall(eojVar5.f()).execute();
                 try {
-                    Object objB5 = bhs.p(responseExecute5.request()).b(emn.am(dal.c(File.class)), responseExecute5);
+                    Object objB5 = bhs.p(responseExecute5.request()).b(StaticHelpers7.am(dal.c(File.class)), responseExecute5);
                     if (objB5 != null) {
                         return (File) objB5;
                     }
@@ -266,7 +266,7 @@ public final class bhn extends doi implements bgj {
                             8, null);
                 }
             case 6:
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 ahp ahpVar6 = (ahp) this.d;
                 cna.q(ahpVar6.e());
                 eoj eojVar6 = new eoj();
@@ -279,7 +279,7 @@ public final class bhn extends doi implements bgj {
                 dbv.a(eojVar6.d, dal.c(File.class));
                 Response responseExecute6 = eojVar6.e.newCall(eojVar6.f()).execute();
                 try {
-                    Object objB6 = bhs.p(responseExecute6.request()).b(emn.am(dal.c(File.class)), responseExecute6);
+                    Object objB6 = bhs.p(responseExecute6.request()).b(StaticHelpers7.am(dal.c(File.class)), responseExecute6);
                     if (objB6 != null) {
                         return (File) objB6;
                     }
@@ -297,7 +297,7 @@ public final class bhn extends doi implements bgj {
                             8, null);
                 }
             default:
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 ahp ahpVar7 = (ahp) this.d;
                 cna.q(ahpVar7.e());
                 eoj eojVar7 = new eoj();
@@ -310,7 +310,7 @@ public final class bhn extends doi implements bgj {
                 dbv.a(eojVar7.d, dal.c(File.class));
                 Response responseExecute7 = eojVar7.e.newCall(eojVar7.f()).execute();
                 try {
-                    Object objB7 = bhs.p(responseExecute7.request()).b(emn.am(dal.c(File.class)), responseExecute7);
+                    Object objB7 = bhs.p(responseExecute7.request()).b(StaticHelpers7.am(dal.c(File.class)), responseExecute7);
                     if (objB7 != null) {
                         return (File) objB7;
                     }

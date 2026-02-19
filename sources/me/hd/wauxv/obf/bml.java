@@ -40,7 +40,7 @@ public final class bml {
                 cna.d = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-71829033057066L)  */;
                 cnb.k = false;
             } catch (Throwable th) {
-                objX = bhu.x(th);
+                objX = FastKV.x(th);
             }
             if (!exm.b && exm.g != null) {
                 ewq.g(4, "You cannot load a hooker in \"onInit\" or \"onXposedEvent\" method! Aborted" /*
@@ -72,7 +72,7 @@ public final class bml {
             try {
                 objX2 = XposedBridge.BOOTCLASSLOADER;
             } catch (Throwable th2) {
-                objX2 = bhu.x(th2);
+                objX2 = FastKV.x(th2);
             }
             if (objX2 instanceof dcx) {
                 objX2 = null;
@@ -114,16 +114,16 @@ public final class bml {
                         && (blxVar = exm.g) != null) {
                     LinkedHashMap linkedHashMap = exm.d;
                     String str4 = "android-zygote";
-                    csb csbVar = (csb) linkedHashMap.get(bmkVar6 == bmkVar ? "android-zygote" : cscVarJ.b);
-                    if (csbVar == null) {
-                        csbVar = new csb();
+                    PackageParam packageParamVar = (PackageParam) linkedHashMap.get(bmkVar6 == bmkVar ? "android-zygote" : cscVarJ.b);
+                    if (packageParamVar == null) {
+                        packageParamVar = new PackageParam();
                         if (cscVarJ.a != bmkVar) {
                             str4 = cscVarJ.b;
                         }
-                        linkedHashMap.put(str4, csbVar);
+                        linkedHashMap.put(str4, packageParamVar);
                     }
-                    csbVar.aa = cscVarJ;
-                    blxVar.invoke(csbVar);
+                    packageParamVar.aa = cscVarJ;
+                    blxVar.invoke(packageParamVar);
                 }
                 if (cscVarJ.a != bmkVar && cscVarJ.b.equals(exm.h)) {
                     ki kiVar = ki.a;
@@ -136,7 +136,7 @@ public final class bml {
                     ki.a.k(cscVarJ.b);
                 }
             } catch (Throwable th3) {
-                objX3 = bhu.x(th3);
+                objX3 = FastKV.x(th3);
             }
             Throwable thB2 = dcy.b(objX3);
             if (thB2 != null) {

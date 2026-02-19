@@ -187,9 +187,9 @@ public final /* synthetic */ class cfx implements bfu {
                 }
                 ((but) navHostFragment.ck.c).ad("android-support-nav:fragment:graphId", new bdv(navHostFragment, i4));
                 int i9 = navHostFragment.c;
-                dov dovVar = cjlVar.h;
+                Kotlin$Lazy kotlin$LazyVar = cjlVar.h;
                 if (i9 != 0) {
-                    cixVar.ap(((cjm) dovVar.getValue()).f(i9), null);
+                    cixVar.ap(((cjm) kotlin$LazyVar.getValue()).f(i9), null);
                 } else {
                     Bundle bundle3 = navHostFragment.ax;
                     if (bundle3 != null) {
@@ -197,7 +197,7 @@ public final /* synthetic */ class cfx implements bfu {
                     }
                     Bundle bundle4 = bundle3 != null ? bundle3.getBundle("android-support-nav:fragment:startDestinationArgs") : null;
                     if (i != 0) {
-                        cixVar.ap(((cjm) dovVar.getValue()).f(i), bundle4);
+                        cixVar.ap(((cjm) kotlin$LazyVar.getValue()).f(i), bundle4);
                     }
                 }
                 return cjlVar;
@@ -385,7 +385,7 @@ public final /* synthetic */ class cfx implements bfu {
                 return kotlinUnitVar;
             case 14:
                 dfz dfzVar = (dfz) obj;
-                return Integer.valueOf(bhu.af(dfzVar, dfzVar.u));
+                return Integer.valueOf(FastKV.af(dfzVar, dfzVar.u));
             case 15:
                 bqr bqrVar = (bqr) obj;
                 djf.a.u(String.valueOf(((TextInputEditText) bqrVar.c).getText()));

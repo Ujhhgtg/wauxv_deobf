@@ -17,33 +17,33 @@ public final class dmi extends bws {
     public final void initOnce() {
         for (IEmpty5 bsvVar : OtherStaticHelpers.argsToList(dal.b(ContextWrapper.class), dal.b(Activity.class))) {
             int i = 0;
-            cde cdeVarT = dqc.bg(bsvVar).t();
-            cdeVarT.ac = new dko(15);
-            List<cbq> listAj = cdeVarT.aj();
+            MethodResolver methodResolverVarT = dqc.bg(bsvVar).getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT.nameCondition = new SyntheticMessOfLambdas(15);
+            List<MemberWrapper> listAj = methodResolverVarT.findMethods();
             dmi dmiVar = a;
             dmiVar.getClass();
-            for (cbq cbqVar : listAj) {
-                if (!(cbqVar instanceof ConstructorHookWrapper) && !(cbqVar instanceof MethodHookWrapper)) {
+            for (MemberWrapper memberWrapperVar : listAj) {
+                if (!(memberWrapperVar instanceof ConstructorHookWrapper) && !(memberWrapperVar instanceof MethodHookWrapper)) {
                     throw new IllegalStateException(
-                            ("This type [" + cbqVar + "] not support to hook, supported are Constructors and Methods")
+                            ("This type [" + memberWrapperVar + "] not support to hook, supported are Constructors and Methods")
                                     .toString());
                 }
             }
-            ArrayList arrayList = new ArrayList(abb.ak(listAj, 10));
+            ArrayList arrayList = new ArrayList(StaticHelpers4.ak(listAj, 10));
             Iterator it = listAj.iterator();
             while (it.hasNext()) {
-                arrayList.add(((cbq) it.next()).b());
+                arrayList.add(((MemberWrapper) it.next()).getMember());
             }
             Throwable th = new Throwable("There is no hook class instance");
             erp erpVar = new erp(29, false);
             erpVar.v = th;
-            aki akiVar = new aki(new but(dmiVar, erpVar), exg.a, exi.c);
+            aki akiVar = new aki(new but(dmiVar), HookPriorityEnum.ENUM_DEFAULT, ResolutionStrategyEnum.ENUM_IMMEDIATE);
             if (!arrayList.isEmpty()) {
-                LinkedHashSet linkedHashSet = (LinkedHashSet) akiVar.i;
+                LinkedHashSet linkedHashSet = (LinkedHashSet) akiVar.members;
                 linkedHashSet.clear();
                 linkedHashSet.addAll(arrayList);
             }
-            akiVar.n(new dko(16));
+            akiVar.n(new SyntheticMessOfLambdas(16));
             akiVar.o();
         }
     }

@@ -156,8 +156,8 @@ public final class atf {
         if (charSequence.length() == 0 || i == i2) {
             return charSequence;
         }
-        jx jxVar = this.g.b;
-        jxVar.getClass();
+        FactoryPools factoryPoolsVar = this.g.b;
+        factoryPoolsVar.getClass();
         boolean z = charSequence instanceof dlm;
         if (z) {
             ((dlm) charSequence).c();
@@ -231,7 +231,7 @@ public final class atf {
             } else {
                 charSequence2 = charSequence;
                 try {
-                    eny enyVar2 = (eny) jxVar.ac(charSequence2, i3, i4, Integer.MAX_VALUE, false, new DefaultConfig(enyVar, 17, (nu) jxVar.e));
+                    eny enyVar2 = (eny) factoryPoolsVar.ac(charSequence2, i3, i4, Integer.MAX_VALUE, false, new DefaultConfig(enyVar, 17, (nu) factoryPoolsVar.e));
                     if (enyVar2 != null) {
                         Spannable spannable = enyVar2.b;
                         if (z) {

@@ -29,7 +29,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.AccessControllerPlugin;
 import net.bytebuddy.build.CachedReturnPlugin;
@@ -48,11 +48,6 @@ import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.method.MethodList;
 import net.bytebuddy.description.method.ParameterDescription;
 import net.bytebuddy.description.module.ModuleDescription;
-import net.bytebuddy.description.type.PackageDescription;
-import net.bytebuddy.description.type.RecordComponentDescription;
-import net.bytebuddy.description.type.RecordComponentList;
-import net.bytebuddy.description.type.TypeDefinition;
-import net.bytebuddy.description.type.TypeList;
 import net.bytebuddy.dynamic.TargetType;
 import net.bytebuddy.implementation.MethodDelegation;
 import net.bytebuddy.implementation.bytecode.StackSize;
@@ -2838,7 +2833,7 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Builder
                 public int hashCode() {
-                    int iF = dkz.f(this.typeDescription, super.hashCode() * 31, 31);
+                    int iF = StaticHelpers6.f(this.typeDescription, super.hashCode() * 31, 31);
                     Generic generic = this.ownerType;
                     return generic != null ? generic.hashCode() + iF : iF;
                 }
@@ -2960,7 +2955,7 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 @Override // net.bytebuddy.description.type.TypeDescription.Generic.Builder
                 public int hashCode() {
-                    int iF = dkz.f(this.rawType, super.hashCode() * 31, 31);
+                    int iF = StaticHelpers6.f(this.rawType, super.hashCode() * 31, 31);
                     Generic generic = this.ownerType;
                     if (generic != null) {
                         iF += generic.hashCode();
@@ -3273,7 +3268,7 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                 if (!typeDescription.represents(TargetType.class)) {
                     if (typeDescription.isGenerified()) {
                         if (generic == null && declaringType != null && !typeDescription.isStatic()) {
-                            throw new IllegalArgumentException(dkz.x(typeDescription, " requires an owner type"));
+                            throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " requires an owner type"));
                         }
                         if (generic != null && !generic.asErasure().equals(declaringType)) {
                             throw new IllegalArgumentException(
@@ -3288,7 +3283,7 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
                                     + " does not contain number of required parameters for " + typeDescription);
                         }
                     } else {
-                        throw new IllegalArgumentException(dkz.x(typeDescription, " is not a parameterized type"));
+                        throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " is not a parameterized type"));
                     }
                 }
                 return new OfParameterizedType(typeDescription, generic,
@@ -6776,7 +6771,7 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                 public int hashCode() {
                     return this.typeVariableTokens.hashCode()
-                            + dkz.f(this.declaringType, getClass().hashCode() * 31, 31);
+                            + StaticHelpers6.f(this.declaringType, getClass().hashCode() * 31, 31);
                 }
 
                 public Reducing(TypeDescription typeDescription, List<? extends TypeVariableToken> list) {
@@ -6963,7 +6958,7 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                     public int hashCode() {
                         return this.typeVariableSource.hashCode()
-                                + dkz.f(this.declaringType, getClass().hashCode() * 31, 31);
+                                + StaticHelpers6.f(this.declaringType, getClass().hashCode() * 31, 31);
                     }
 
                     @Override // net.bytebuddy.description.type.TypeDescription.Generic.Visitor.Substitutor,
@@ -7281,7 +7276,7 @@ public interface TypeDescription extends TypeDefinition, ByteCodeElement, TypeVa
 
                         public int hashCode() {
                             return ForTypeVariableBinding.this.hashCode()
-                                    + dkz.e(this.typeVariable, getClass().hashCode() * 31, 31);
+                                    + StaticHelpers6.e(this.typeVariable, getClass().hashCode() * 31, 31);
                         }
 
                         @Override // net.bytebuddy.description.TypeVariableSource.Visitor

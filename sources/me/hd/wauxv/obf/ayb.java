@@ -17,7 +17,7 @@ public final /* synthetic */ class ayb implements Runnable {
             case 0:
                 ayd aydVar = this.b;
                 aydVar.getClass();
-                bhu.bj(aydVar);
+                FastKV.bj(aydVar);
                 return;
             default:
                 ayd aydVar2 = this.b;
@@ -29,8 +29,8 @@ public final /* synthetic */ class ayb implements Runnable {
                             break;
                         }
                         System.nanoTime();
-                        if (!bhu.ai(aydVar2) && aydVar2.aa == 0) {
-                            bhu.ah(aydVar2);
+                        if (!FastKV.ai(aydVar2) && aydVar2.aa == 0) {
+                            FastKV.ah(aydVar2);
                         }
                         if (aydVar2.l == null) {
                             aydVar2.l = new ik(ayd.c);
@@ -39,7 +39,7 @@ public final /* synthetic */ class ayb implements Runnable {
                             aydVar2.h = 12;
                         }
                         if (aydVar2.p) {
-                            bhu.ba(aydVar2);
+                            FastKV.ba(aydVar2);
                             bhv.ab(aydVar2, "rewrite data");
                         }
                     } catch (Throwable th) {

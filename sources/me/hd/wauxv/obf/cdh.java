@@ -23,7 +23,7 @@ public final class cdh implements Comparable {
         int i = cdhVar.b;
         int i2 = this.b;
         if (i2 == i) {
-            return bhu.t(this.d, cdhVar.d);
+            return FastKV.t(this.d, cdhVar.d);
         }
         if (i2 == 0 || i == 0) {
             throw null;
@@ -41,7 +41,7 @@ public final class cdh implements Comparable {
         StringBuilder sb = new StringBuilder();
         sb.append(bjs.aa(i2));
         sb.append(" ");
-        int iAe = dkz.ae(i2);
+        int iAe = StaticHelpers6.ae(i2);
         sb.append((iAe == 0 || iAe == 1 || iAe == 2 || iAe == 3) ? (Comparable) amkVar.i.get(i) : (Comparable) amkVar.j.get(i));
         return sb.toString();
     }

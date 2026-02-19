@@ -28,11 +28,11 @@ public class hc extends AutoCompleteTextView {
         super(context, attributeSet, me.hd.wauxv.R.attr.autoCompleteTextViewStyle);
         ekd.b(context);
         drm.h(this, getContext());
-        jx jxVarK = jx.k(getContext(), attributeSet, d, me.hd.wauxv.R.attr.autoCompleteTextViewStyle);
-        if (((TypedArray) jxVarK.e).hasValue(0)) {
-            setDropDownBackgroundDrawable(jxVarK.s(0));
+        FactoryPools factoryPoolsVarK = FactoryPools.k(getContext(), attributeSet, d, me.hd.wauxv.R.attr.autoCompleteTextViewStyle);
+        if (((TypedArray) factoryPoolsVarK.e).hasValue(0)) {
+            setDropDownBackgroundDrawable(factoryPoolsVarK.s(0));
         }
-        jxVarK.ae();
+        factoryPoolsVarK.ae();
         ea eaVar = new ea(this);
         this.e = eaVar;
         eaVar.t(attributeSet, me.hd.wauxv.R.attr.autoCompleteTextViewStyle);

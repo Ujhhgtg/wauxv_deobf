@@ -41,9 +41,9 @@ public final class RemoveMultiSelectLimitHook extends SwitchHook implements IDex
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(dau.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(dau.a));
         RemoveMultiSelectLimitHook davVar = a;
-        aki akiVarAb = csb.ab(davVar, listBf);
+        aki akiVarAb = PackageParam.ab(davVar, listBf);
         davVar.y(akiVarAb, new cvc(20));
         akiVarAb.o();
     }
@@ -60,7 +60,7 @@ public final class RemoveMultiSelectLimitHook extends SwitchHook implements IDex
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(dau.a, dexKitBridge, new cvc(21));
+        StaticHelpers7.resolveDexAndCache(dau.a, dexKitBridge, new cvc(21));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

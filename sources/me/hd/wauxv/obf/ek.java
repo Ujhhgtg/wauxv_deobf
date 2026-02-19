@@ -23,7 +23,7 @@ import java.util.LinkedHashMap;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public class ek implements dcq, bm, sg {
+public class ek implements dcq, IHandlesSwipeDismiss, sg {
     public final /* synthetic */ int a;
     public int c;
     public Object d;
@@ -67,7 +67,7 @@ public class ek implements dcq, bm, sg {
             linkedHashMap = bstVar.e;
             ekVar2 = bstVar.d;
             ajxVar2 = bstVar.a;
-            bhu.bd(obj);
+            FastKV.bd(obj);
             linkedHashMap.put(str, (brx) obj);
             bN = ((yi) ekVar2.d).n();
             if (bN == 4) {
@@ -86,7 +86,7 @@ public class ek implements dcq, bm, sg {
             }
             return new bsl(linkedHashMap);
         }
-        bhu.bd(obj);
+        FastKV.bd(obj);
         byte bO = yiVar2.o((byte) 6);
         if (yiVar2.ae() == 4) {
             yi.g(yiVar2, "Unexpected leading comma", 0, null, 6);
@@ -167,7 +167,7 @@ public class ek implements dcq, bm, sg {
     }
 
     @Override // me.hd.wauxv.obf.bm
-    public boolean _bm(View view) {
+    public boolean handleSwipeDismiss(View view) {
         ((BottomSheetBehavior) this.d).cf(this.c);
         return true;
     }
@@ -403,7 +403,7 @@ public class ek implements dcq, bm, sg {
             if (bAe == 8) {
                 return n();
             }
-            yi.g(yiVar, "Cannot read Json element because of unexpected ".concat(cnf.bo(bAe)), 0, null, 6);
+            yi.g(yiVar, "Cannot read Json element because of unexpected ".concat(HugeSyntheticPileOfHelpers.getJsonTokenName(bAe)), 0, null, 6);
             throw null;
         }
         int i = this.c + 1;
@@ -432,14 +432,14 @@ public class ek implements dcq, bm, sg {
                             afwVar._bn(objI);
                         }
                     } catch (Throwable th) {
-                        afwVar._bn(bhu.x(th));
+                        afwVar._bn(FastKV.x(th));
                     }
                 } else {
                     ajxVar.e = ahqVar;
                     afwVar._bn(obj);
                 }
             }
-            bhu.bd(obj);
+            FastKV.bd(obj);
             bslVar = (brx) obj;
         } else {
             byte bO = yiVar.o((byte) 6);

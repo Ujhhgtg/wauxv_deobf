@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.build.AccessControllerPlugin;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
@@ -120,7 +120,7 @@ public abstract class ClassVisitorFactory<T> {
         }
 
         public int hashCode() {
-            return this.targetWrapper.hashCode() + dkz.f(this.sourceWrapper, bjs.d(bjs.d(getClass().hashCode() * 31, 31, this.sourceAttribute), 31, this.targetAttribute), 31);
+            return this.targetWrapper.hashCode() + StaticHelpers6.f(this.sourceWrapper, bjs.d(bjs.d(getClass().hashCode() * 31, 31, this.sourceAttribute), 31, this.targetAttribute), 31);
         }
     }
 

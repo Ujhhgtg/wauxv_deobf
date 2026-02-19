@@ -198,7 +198,7 @@ public final class pr extends cjv {
             case 1:
                 List list = (List) obj;
                 ps psVar = cjv.u;
-                return list != null ? aaz.o(list, dqc.toSingletonList(psVar.i(str))) : dqc.toSingletonList(psVar.i(str));
+                return list != null ? StaticHelpers5.o(list, dqc.toSingletonList(psVar.i(str))) : dqc.toSingletonList(psVar.i(str));
             case 2:
                 float[] fArr = (float[]) obj;
                 if (fArr == null) {
@@ -213,7 +213,7 @@ public final class pr extends cjv {
             case 3:
                 List list2 = (List) obj;
                 ps psVar2 = cjv.r;
-                return list2 != null ? aaz.o(list2, dqc.toSingletonList(psVar2.i(str))) : dqc.toSingletonList(psVar2.i(str));
+                return list2 != null ? StaticHelpers5.o(list2, dqc.toSingletonList(psVar2.i(str))) : dqc.toSingletonList(psVar2.i(str));
             case 4:
                 int[] iArr = (int[]) obj;
                 if (iArr == null) {
@@ -228,7 +228,7 @@ public final class pr extends cjv {
             case 5:
                 List list3 = (List) obj;
                 ps psVar3 = cjv.k;
-                return list3 != null ? aaz.o(list3, dqc.toSingletonList(psVar3.i(str))) : dqc.toSingletonList(psVar3.i(str));
+                return list3 != null ? StaticHelpers5.o(list3, dqc.toSingletonList(psVar3.i(str))) : dqc.toSingletonList(psVar3.i(str));
             case 6:
                 long[] jArr = (long[]) obj;
                 if (jArr == null) {
@@ -243,7 +243,7 @@ public final class pr extends cjv {
             case 7:
                 List list4 = (List) obj;
                 ps psVar4 = cjv.o;
-                return list4 != null ? aaz.o(list4, dqc.toSingletonList(psVar4.i(str))) : dqc.toSingletonList(psVar4.i(str));
+                return list4 != null ? StaticHelpers5.o(list4, dqc.toSingletonList(psVar4.i(str))) : dqc.toSingletonList(psVar4.i(str));
             case 8:
                 String[] strArr = (String[]) obj;
                 if (strArr == null) {
@@ -256,7 +256,7 @@ public final class pr extends cjv {
                 return (String[]) objArrCopyOf;
             default:
                 List list5 = (List) obj;
-                return list5 != null ? aaz.o(list5, dqc.toSingletonList(str)) : dqc.toSingletonList(str);
+                return list5 != null ? StaticHelpers5.o(list5, dqc.toSingletonList(str)) : dqc.toSingletonList(str);
         }
     }
 
@@ -310,7 +310,7 @@ public final class pr extends cjv {
                 if (list == null) {
                     cnb.af(str, bundle);
                 } else {
-                    bundle.putBooleanArray(str, aaz.v(list));
+                    bundle.putBooleanArray(str, StaticHelpers5.v(list));
                 }
                 break;
             case 2:
@@ -351,7 +351,7 @@ public final class pr extends cjv {
                 List list3 = (List) obj;
                 throwIfVar1IsNull(str, "key");
                 if (list3 != null) {
-                    bundle.putIntArray(str, aaz.y(list3));
+                    bundle.putIntArray(str, StaticHelpers5.y(list3));
                 }
                 break;
             case 6:
@@ -369,7 +369,7 @@ public final class pr extends cjv {
                 if (list4 == null) {
                     cnb.af(str, bundle);
                 } else {
-                    bundle.putLongArray(str, aaz.aa(list4));
+                    bundle.putLongArray(str, StaticHelpers5.aa(list4));
                 }
                 break;
             case 8:

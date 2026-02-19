@@ -21,9 +21,8 @@ import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
-import me.hd.wauxv.obf.abb;
+import me.hd.wauxv.obf.StaticHelpers4;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.rh;
 import okhttp3.OkHttpClient;
 import okhttp3.Protocol;
@@ -120,7 +119,7 @@ public class Platform {
                     arrayList.add(obj);
                 }
             }
-            ArrayList arrayList2 = new ArrayList(abb.ak(arrayList, 10));
+            ArrayList arrayList2 = new ArrayList(StaticHelpers4.ak(arrayList, 10));
             Iterator it = arrayList.iterator();
             while (it.hasNext()) {
                 arrayList2.add(((Protocol) it.next()).toString());

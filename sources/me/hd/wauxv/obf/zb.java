@@ -47,12 +47,12 @@ public final class zb extends dqc {
         int iC5 = fjVar3 != null ? fjVar3.c(bbbVar) : 0;
         List list = this.g;
         if (list != null) {
-            ArrayList arrayList = new ArrayList(abb.ak(list, 10));
+            ArrayList arrayList = new ArrayList(StaticHelpers4.ak(list, 10));
             Iterator it = list.iterator();
             while (it.hasNext()) {
                 arrayList.add(Integer.valueOf(((dnf) it.next()).c(bbbVar)));
             }
-            iT = bbbVar.t(aaz.y(arrayList));
+            iT = bbbVar.t(StaticHelpers5.y(arrayList));
         } else {
             iT = 0;
         }
@@ -81,6 +81,6 @@ public final class zb extends dqc {
         for (String str : strArr) {
             arrayList.add(new dnf(str, dne.Equals, false));
         }
-        this.g = aaz.ab(arrayList);
+        this.g = StaticHelpers5.ab(arrayList);
     }
 }

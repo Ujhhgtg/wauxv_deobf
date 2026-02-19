@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Queue;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.description.type.TypeList;
@@ -79,7 +79,7 @@ public enum GenericTypeAwareAssigner implements Assigner {
             }
 
             public int hashCode() {
-                return dkz.e(this.typeDescription, getClass().hashCode() * 31, 31) + (this.polymorphic ? 1 : 0);
+                return StaticHelpers6.e(this.typeDescription, getClass().hashCode() * 31, 31) + (this.polymorphic ? 1 : 0);
             }
 
             /* JADX WARN: Can't rename method to resolve collision */
@@ -293,7 +293,7 @@ public enum GenericTypeAwareAssigner implements Assigner {
         }
 
         public int hashCode() {
-            return dkz.e(this.typeDescription, getClass().hashCode() * 31, 31) + (this.polymorphic ? 1 : 0);
+            return StaticHelpers6.e(this.typeDescription, getClass().hashCode() * 31, 31) + (this.polymorphic ? 1 : 0);
         }
 
         public IsAssignableToVisitor(TypeDescription.Generic generic, boolean z) {

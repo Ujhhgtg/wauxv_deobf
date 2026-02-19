@@ -38,9 +38,9 @@ public abstract class bvg extends ViewGroup {
         this.y = 0;
         this.aa = 8388659;
         int[] iArr = cyf.n;
-        jx jxVarK = jx.k(context, attributeSet, iArr, 0);
-        eqz.r(this, context, iArr, attributeSet, (TypedArray) jxVarK.e, 0, 0);
-        TypedArray typedArray = (TypedArray) jxVarK.e;
+        FactoryPools factoryPoolsVarK = FactoryPools.k(context, attributeSet, iArr, 0);
+        ViewCompat.r(this, context, iArr, attributeSet, (TypedArray) factoryPoolsVarK.e, 0, 0);
+        TypedArray typedArray = (TypedArray) factoryPoolsVarK.e;
         int i2 = typedArray.getInt(1, -1);
         if (i2 >= 0) {
             setOrientation(i2);
@@ -56,10 +56,10 @@ public abstract class bvg extends ViewGroup {
         this.ac = typedArray.getFloat(4, -1.0f);
         this.x = typedArray.getInt(3, -1);
         this.ad = typedArray.getBoolean(7, false);
-        setDividerDrawable(jxVarK.s(5));
+        setDividerDrawable(factoryPoolsVarK.s(5));
         this.aj = typedArray.getInt(8, 0);
         this.ak = typedArray.getDimensionPixelSize(6, 0);
-        jxVarK.ae();
+        factoryPoolsVarK.ae();
     }
 
     public final void al(Canvas canvas, int i) {

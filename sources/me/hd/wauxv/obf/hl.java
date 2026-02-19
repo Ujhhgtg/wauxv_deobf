@@ -56,7 +56,7 @@ public final /* synthetic */ class hl implements Runnable {
                 cmz.s(new File(aydVar.d + aydVar.e, (String) obj));
                 return;
             case 5:
-                ((tc) obj2).y((bkb) obj);
+                ((CancellableContinuation) obj2).y((Dispatcher2) obj);
                 return;
             case 6:
                 buv buvVar = (buv) obj2;
@@ -69,7 +69,7 @@ public final /* synthetic */ class hl implements Runnable {
                     buvVar.c();
                 }
             default:
-                ((bht) obj2).f((Typeface) obj);
+                ((ResourcesCompat) obj2).f((Typeface) obj);
                 return;
         }
     }

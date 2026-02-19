@@ -38,7 +38,7 @@ public final class bru extends KotlinHelpers2 {
             dnq.be(strS);
             throw null;
         } catch (IllegalArgumentException unused) {
-            yi.g(yiVar, dkz.o('\'', "Failed to parse type 'UInt' for input '", strS), 0, null, 6);
+            yi.g(yiVar, StaticHelpers6.o('\'', "Failed to parse type 'UInt' for input '", strS), 0, null, 6);
             throw null;
         }
     }
@@ -56,7 +56,7 @@ public final class bru extends KotlinHelpers2 {
             dnq.be(strS);
             throw null;
         } catch (IllegalArgumentException unused) {
-            yi.g(yiVar, dkz.o('\'', "Failed to parse type 'ULong' for input '", strS), 0, null, 6);
+            yi.g(yiVar, StaticHelpers6.o('\'', "Failed to parse type 'ULong' for input '", strS), 0, null, 6);
             throw null;
         }
     }
@@ -79,7 +79,7 @@ public final class bru extends KotlinHelpers2 {
             dnq.be(strS);
             throw null;
         } catch (IllegalArgumentException unused) {
-            yi.g(yiVar, dkz.o('\'', "Failed to parse type 'UByte' for input '", strS), 0, null, 6);
+            yi.g(yiVar, StaticHelpers6.o('\'', "Failed to parse type 'UByte' for input '", strS), 0, null, 6);
             throw null;
         }
     }
@@ -102,7 +102,7 @@ public final class bru extends KotlinHelpers2 {
             dnq.be(strS);
             throw null;
         } catch (IllegalArgumentException unused) {
-            yi.g(yiVar, dkz.o('\'', "Failed to parse type 'UShort' for input '", strS), 0, null, 6);
+            yi.g(yiVar, StaticHelpers6.o('\'', "Failed to parse type 'UShort' for input '", strS), 0, null, 6);
             throw null;
         }
     }

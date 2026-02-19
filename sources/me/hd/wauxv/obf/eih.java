@@ -17,7 +17,7 @@ public final class eih {
     public /* synthetic */ eih(int i, Integer num, String str, String str2, Float f, Float f2, Integer num2,
             String str3, String str4, String str5) {
         if (511 != (i & 511)) {
-            bht.ah(i, 511, eif.b.getDescriptor());
+            ResourcesCompat.ah(i, 511, eif.b.getDescriptor());
             throw null;
         }
         this.a = num;

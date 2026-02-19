@@ -57,14 +57,14 @@ public abstract class t extends brm implements afw, ahp {
         KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         if (iOrdinal == 0) {
             try {
-                cnf.bk(kotlinUnitVar, cmz.ab(((nc) bgjVar).h(tVar, this)));
+                HugeSyntheticPileOfHelpers.resumeCoroutine(kotlinUnitVar, cmz.ab(((nc) bgjVar).h(tVar, this)));
                 return;
             } catch (Throwable th) {
                 th = th;
                 if (th instanceof aoq) {
                     th = ((aoq) th).a;
                 }
-                _bn(bhu.x(th));
+                _bn(FastKV.x(th));
                 throw th;
             }
         }
@@ -95,7 +95,7 @@ public abstract class t extends brm implements afw, ahp {
                 if (th instanceof aoq) {
                     th = ((aoq) th).a;
                 }
-                _bn(bhu.x(th));
+                _bn(FastKV.x(th));
             }
         }
     }

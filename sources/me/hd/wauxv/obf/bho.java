@@ -57,7 +57,7 @@ public final class bho extends doi implements bgj {
         String str = this.e;
         switch (i) {
             case 0:
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 ahp ahpVar = (ahp) this.d;
                 cna.q(ahpVar.e());
                 eoj eojVar = new eoj();
@@ -69,7 +69,7 @@ public final class bho extends doi implements bgj {
                 dbv.a(eojVar.d, dal.c(String.class));
                 Response responseExecute = eojVar.e.newCall(eojVar.f()).execute();
                 try {
-                    Object objB = bhs.p(responseExecute.request()).b(emn.am(dal.c(String.class)), responseExecute);
+                    Object objB = bhs.p(responseExecute.request()).b(StaticHelpers7.am(dal.c(String.class)), responseExecute);
                     if (objB != null) {
                         return (String) objB;
                     }
@@ -82,7 +82,7 @@ public final class bho extends doi implements bgj {
                     throw new ConvertException(responseExecute, "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* cnb.z(-44946832751402L)  */, th, null, 8, null);
                 }
             case 1:
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 ahp ahpVar2 = (ahp) this.d;
                 cna.q(ahpVar2.e());
                 eoj eojVar2 = new eoj();
@@ -94,7 +94,7 @@ public final class bho extends doi implements bgj {
                 dbv.a(eojVar2.d, dal.c(String.class));
                 Response responseExecute2 = eojVar2.e.newCall(eojVar2.f()).execute();
                 try {
-                    Object objB2 = bhs.p(responseExecute2.request()).b(emn.am(dal.c(String.class)), responseExecute2);
+                    Object objB2 = bhs.p(responseExecute2.request()).b(StaticHelpers7.am(dal.c(String.class)), responseExecute2);
                     if (objB2 != null) {
                         return (String) objB2;
                     }
@@ -107,7 +107,7 @@ public final class bho extends doi implements bgj {
                     throw new ConvertException(responseExecute2, "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* cnb.z(-483454403738410L)  */, th2, null, 8, null);
                 }
             default:
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 ahp ahpVar3 = (ahp) this.d;
                 cna.q(ahpVar3.e());
                 eoj eojVar3 = new eoj();
@@ -119,7 +119,7 @@ public final class bho extends doi implements bgj {
                 dbv.a(eojVar3.d, dal.c(String.class));
                 Response responseExecute3 = eojVar3.e.newCall(eojVar3.f()).execute();
                 try {
-                    Object objB3 = bhs.p(responseExecute3.request()).b(emn.am(dal.c(String.class)), responseExecute3);
+                    Object objB3 = bhs.p(responseExecute3.request()).b(StaticHelpers7.am(dal.c(String.class)), responseExecute3);
                     if (objB3 != null) {
                         return (String) objB3;
                     }

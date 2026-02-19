@@ -32,13 +32,13 @@ public final class akr implements Runnable {
                         akxVar.h.remove(arrayList);
                     } else {
                         akw akwVar = (akw) it.next();
-                        czx czxVar = akwVar.a;
+                        SomeView someViewVar = akwVar.a;
                         int i = akwVar.b;
                         int i2 = akwVar.c;
                         int i3 = akwVar.d;
                         int i4 = akwVar.e;
                         akxVar.getClass();
-                        View view = czxVar.d;
+                        View view = someViewVar.d;
                         int i5 = i3 - i;
                         int i6 = i4 - i2;
                         if (i5 != 0) {
@@ -48,8 +48,8 @@ public final class akr implements Runnable {
                             view.animate().translationY(0.0f);
                         }
                         ViewPropertyAnimator viewPropertyAnimatorAnimate = view.animate();
-                        akxVar.k.add(czxVar);
-                        viewPropertyAnimatorAnimate.setDuration(akxVar.ab).setListener(new akt(akxVar, czxVar, i5, view, i6, viewPropertyAnimatorAnimate)).start();
+                        akxVar.k.add(someViewVar);
+                        viewPropertyAnimatorAnimate.setDuration(akxVar.ab).setListener(new akt(akxVar, someViewVar, i5, view, i6, viewPropertyAnimatorAnimate)).start();
                     }
                     break;
                 }
@@ -68,10 +68,10 @@ public final class akr implements Runnable {
                         akv akvVar = (akv) it2.next();
                         ArrayList arrayList3 = akxVar2.m;
                         long j = akxVar2.ac;
-                        czx czxVar2 = akvVar.a;
-                        View view2 = czxVar2 == null ? null : czxVar2.d;
-                        czx czxVar3 = akvVar.b;
-                        View view3 = czxVar3 != null ? czxVar3.d : null;
+                        SomeView someViewVar2 = akvVar.a;
+                        View view2 = someViewVar2 == null ? null : someViewVar2.d;
+                        SomeView someViewVar3 = akvVar.b;
+                        View view3 = someViewVar3 != null ? someViewVar3.d : null;
                         if (view2 != null) {
                             ViewPropertyAnimator duration = view2.animate().setDuration(j);
                             arrayList3.add(akvVar.a);
@@ -97,12 +97,12 @@ public final class akr implements Runnable {
                         arrayList4.clear();
                         akxVar3.g.remove(arrayList4);
                     } else {
-                        czx czxVar4 = (czx) it3.next();
+                        SomeView someViewVar4 = (SomeView) it3.next();
                         akxVar3.getClass();
-                        View view4 = czxVar4.d;
+                        View view4 = someViewVar4.d;
                         ViewPropertyAnimator viewPropertyAnimatorAnimate3 = view4.animate();
-                        akxVar3.j.add(czxVar4);
-                        viewPropertyAnimatorAnimate3.alpha(1.0f).setDuration(akxVar3.z).setListener(new aks(akxVar3, czxVar4, view4, viewPropertyAnimatorAnimate3)).start();
+                        akxVar3.j.add(someViewVar4);
+                        viewPropertyAnimatorAnimate3.alpha(1.0f).setDuration(akxVar3.z).setListener(new aks(akxVar3, someViewVar4, view4, viewPropertyAnimatorAnimate3)).start();
                     }
                     break;
                 }

@@ -166,7 +166,7 @@ public final class aql extends awb {
         TextInputLayout textInputLayout = this.af;
         textInputLayout.setErrorIconDrawable((Drawable) null);
         if (editText.getInputType() == 0 && this.v.isTouchExplorationEnabled()) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             this.ai.setImportantForAccessibility(2);
         }
         textInputLayout.setEndIconVisible(true);

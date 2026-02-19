@@ -9,7 +9,7 @@ import java.util.WeakHashMap;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class bux implements w, bm {
+public final /* synthetic */ class bux implements w, IHandlesSwipeDismiss {
     public final /* synthetic */ int c;
     public final /* synthetic */ Object d;
 
@@ -19,7 +19,7 @@ public final /* synthetic */ class bux implements w, bm {
     }
 
     @Override // me.hd.wauxv.obf.bm
-    public boolean _bm(View view) {
+    public boolean handleSwipeDismiss(View view) {
         SideSheetBehavior sideSheetBehavior = (SideSheetBehavior) this.d;
         int i = this.c;
         int i2 = 1;
@@ -35,7 +35,7 @@ public final /* synthetic */ class bux implements w, bm {
         dct dctVar = new dct(sideSheetBehavior, i, i2);
         ViewParent parent = view2.getParent();
         if (parent != null && parent.isLayoutRequested()) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             if (view2.isAttachedToWindow()) {
                 view2.post(dctVar);
                 return true;

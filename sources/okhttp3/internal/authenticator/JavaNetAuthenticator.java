@@ -7,11 +7,9 @@ import java.net.PasswordAuthentication;
 import java.net.Proxy;
 import java.net.SocketAddress;
 import java.util.List;
-import me.hd.wauxv.obf.aaz;
+import me.hd.wauxv.obf.StaticHelpers5;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.KotlinHelpers;
 import okhttp3.Address;
-import okhttp3.Authenticator;
 import okhttp3.Challenge;
 import okhttp3.Credentials;
 import okhttp3.Dns;
@@ -50,7 +48,7 @@ public final class JavaNetAuthenticator implements Authenticator {
     private final InetAddress connectToInetAddress(Proxy proxy, HttpUrl httpUrl, Dns dns) {
         Proxy.Type type = proxy.type();
         if ((type == null ? -1 : WhenMappings.$EnumSwitchMapping$0[type.ordinal()]) == 1) {
-            return (InetAddress) aaz.e(dns.lookup(httpUrl.host()));
+            return (InetAddress) StaticHelpers5.safeGetFirstInList(dns.lookup(httpUrl.host()));
         }
         SocketAddress socketAddressAddress = proxy.address();
         throwIfVar1IsNull(socketAddressAddress, "null cannot be cast to non-null type java.net.InetSocketAddress");

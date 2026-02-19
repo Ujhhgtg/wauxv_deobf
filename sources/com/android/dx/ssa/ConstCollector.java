@@ -19,7 +19,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -60,7 +60,7 @@ public class ConstCollector {
                 if (typeBearer.isConstant()) {
                     TypedConstant typedConstant = (TypedConstant) typeBearer;
                     if (definitionForRegister.getOpcode().getOpcode() == 56) {
-                        definitionForRegister = (SsaInsn) dkz.l(1, this.ssaMeth.getBlocks().get(definitionForRegister.getBlock().getPredecessors().nextSetBit(0)).getInsns());
+                        definitionForRegister = (SsaInsn) StaticHelpers6.getLastNElem(1, this.ssaMeth.getBlocks().get(definitionForRegister.getBlock().getPredecessors().nextSetBit(0)).getInsns());
                     }
                     if (!definitionForRegister.canThrow() && !this.ssaMeth.isRegALocal(result)) {
                         Integer num = (Integer) map.get(typedConstant);

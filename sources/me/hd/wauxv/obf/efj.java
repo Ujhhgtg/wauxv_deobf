@@ -10,7 +10,7 @@ public final class efj {
         if (1 == (i & 1)) {
             this.a = dsyVar;
         } else {
-            bht.ah(i, 1, efh.b.getDescriptor());
+            ResourcesCompat.ah(i, 1, efh.b.getDescriptor());
             throw null;
         }
     }

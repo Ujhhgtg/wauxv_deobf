@@ -1,7 +1,7 @@
 package net.bytebuddy.jar.asm.commons;
 
 import java.util.ArrayList;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.jar.asm.Opcodes;
 import net.bytebuddy.jar.asm.signature.SignatureVisitor;
 
@@ -21,7 +21,7 @@ public class SignatureRemapper extends SignatureVisitor {
     }
 
     private static /* synthetic */ String stringConcat$1(String str) {
-        return dkz.s(str, "$");
+        return StaticHelpers6.concat(str, "$");
     }
 
     @Override // net.bytebuddy.jar.asm.signature.SignatureVisitor

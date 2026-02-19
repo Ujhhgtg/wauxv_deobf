@@ -9,7 +9,7 @@ public final class dzd {
 
     public /* synthetic */ dzd(int i, Integer num, String str) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, dzb.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, dzb.b.getDescriptor());
             throw null;
         }
         this.a = num;

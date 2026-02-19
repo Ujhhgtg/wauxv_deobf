@@ -33,7 +33,7 @@ public final /* synthetic */ class abz implements den {
         do {
             hbVar = this.b;
         } while (hb.i(((bdm) hbVar.c.v).g));
-        hbVar.d.m(bug.ON_STOP);
+        hbVar.d.m(LifeEventEnum.ON_STOP);
         return new Bundle();
     }
 }

@@ -57,6 +57,6 @@ public final class bps {
         sb.append(", right=");
         sb.append(this.d);
         sb.append(", bottom=");
-        return dkz.v(sb, this.e, '}');
+        return StaticHelpers6.concatFromSb(sb, this.e, '}');
     }
 }

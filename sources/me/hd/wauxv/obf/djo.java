@@ -12,19 +12,19 @@ public final class djo extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(djm.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(djm.a));
         djo djoVar = a;
-        aki akiVarAb = csb.ab(djoVar, listBf);
+        aki akiVarAb = PackageParam.ab(djoVar, listBf);
         akiVarAb.n(new dhg(27));
         akiVarAb.o();
-        aki akiVarAb2 = csb.ab(djoVar, dqc.toSingletonList(emn.bb(djn.a)));
+        aki akiVarAb2 = PackageParam.ab(djoVar, dqc.toSingletonList(StaticHelpers7.bb(djn.a)));
         akiVarAb2.n(new dhg(28));
         akiVarAb2.o();
     }
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(djm.a, dexKitBridge, new dhg(29));
-        emn.aj(djn.a, dexKitBridge, new djk(0));
+        StaticHelpers7.resolveDexAndCache(djm.a, dexKitBridge, new dhg(29));
+        StaticHelpers7.resolveDexAndCache(djn.a, dexKitBridge, new djk(0));
     }
 }

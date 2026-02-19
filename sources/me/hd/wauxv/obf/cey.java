@@ -12,19 +12,19 @@ public final class cey extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(cew.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(cew.a));
         cey ceyVar = a;
-        aki akiVarAb = csb.ab(ceyVar, listBf);
+        aki akiVarAb = PackageParam.ab(ceyVar, listBf);
         akiVarAb.n(new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(7));
         akiVarAb.o();
-        aki akiVarAb2 = csb.ab(ceyVar, dqc.toSingletonList(emn.bb(cex.a)));
+        aki akiVarAb2 = PackageParam.ab(ceyVar, dqc.toSingletonList(StaticHelpers7.bb(cex.a)));
         akiVarAb2.m(new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(6));
         akiVarAb2.o();
     }
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(cew.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(10));
-        emn.aj(cex.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(11));
+        StaticHelpers7.resolveDexAndCache(cew.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(10));
+        StaticHelpers7.resolveDexAndCache(cex.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(11));
     }
 }

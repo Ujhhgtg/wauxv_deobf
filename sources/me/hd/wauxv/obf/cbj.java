@@ -34,7 +34,7 @@ public final /* synthetic */ class cbj implements IInvokable {
         switch (i) {
             case 0:
                 bgj bgjVar = (bgj) obj3;
-                cbg cbgVar = (cbg) obj2;
+                Configuration configurationVar = (Configuration) obj2;
                 String str = (String) obj4;
                 if ((obj5 instanceof Collection) && ((Collection) obj5).isEmpty()) {
                     obj5 = null;
@@ -46,8 +46,8 @@ public final /* synthetic */ class cbj implements IInvokable {
                             : null;
                     String strBo2 = obj != null ? dnr.bo(obj.toString(), " (Kotlin reflection is not available)", "")
                             : null;
-                    if (cbgVar.e != cbf.c) {
-                        dov dovVar = bth.a;
+                    if (configurationVar.optional != OptionalType.ENUM_SILENT) {
+                        Kotlin$Lazy kotlin$LazyVar = bth.a;
                         String str2 = "[FILTER] [" + (zBooleanValue ? "HIT" : "MISS") + "] " + str + ": " + strBo
                                 + " [RESOLVED] " + strBo2;
                         if (bth.d.ordinal() <= 0) {
@@ -60,7 +60,7 @@ public final /* synthetic */ class cbj implements IInvokable {
                 cio cioVar = (cio) obj;
                 throwIfVar1IsNull(cioVar, "it");
                 ((dag) obj5).a = true;
-                ((cix) obj3).ab((cjg) obj2, (Bundle) obj4, cioVar, EmptyReadonlyList.a);
+                ((cix) obj3).ab((cjg) obj2, (Bundle) obj4, cioVar, EmptyReadonlyList.INSTANCE);
                 return kotlinUnitVar;
             default:
                 Activity activity = (Activity) obj5;

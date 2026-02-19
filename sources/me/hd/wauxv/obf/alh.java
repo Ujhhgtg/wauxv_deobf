@@ -41,9 +41,9 @@ public final class alh extends nh {
             return this.f;
         }
         dlr dlrVar = (dlr) this.g;
-        bdj bdjVar = dlrVar.c;
+        SomeFragmentManager someFragmentManagerVar = dlrVar.c;
         boolean z = dlrVar.a == 2;
-        bdg bdgVar = bdjVar.cc;
+        bdg bdgVar = someFragmentManagerVar.cc;
         int i = bdgVar == null ? 0 : bdgVar.f;
         if (this.a) {
             if (z) {
@@ -58,13 +58,13 @@ public final class alh extends nh {
         } else if (bdgVar != null) {
             iAh = bdgVar.c;
         }
-        bdjVar.de(0, 0, 0, 0);
-        ViewGroup viewGroup = bdjVar.by;
+        someFragmentManagerVar.de(0, 0, 0, 0);
+        ViewGroup viewGroup = someFragmentManagerVar.by;
         DefaultConfig ioVar2 = null;
         if (viewGroup != null && viewGroup.getTag(R.id.visible_removing_fragment_view_tag) != null) {
-            bdjVar.by.setTag(R.id.visible_removing_fragment_view_tag, null);
+            someFragmentManagerVar.by.setTag(R.id.visible_removing_fragment_view_tag, null);
         }
-        ViewGroup viewGroup2 = bdjVar.by;
+        ViewGroup viewGroup2 = someFragmentManagerVar.by;
         if (viewGroup2 == null || viewGroup2.getLayoutTransition() == null) {
             if (iAh == 0 && i != 0) {
                 iAh = i != 4097

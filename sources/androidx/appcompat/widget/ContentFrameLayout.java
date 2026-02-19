@@ -14,8 +14,8 @@ import me.hd.wauxv.obf.cq;
 import me.hd.wauxv.obf.cw;
 import me.hd.wauxv.obf.ekt;
 import me.hd.wauxv.obf.esg;
-import me.hd.wauxv.obf.hq;
-import me.hd.wauxv.obf.ic;
+import me.hd.wauxv.obf.ViewUtils;
+import me.hd.wauxv.obf.AppCompatDelegate;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -91,8 +91,8 @@ public class ContentFrameLayout extends FrameLayout {
         super.onDetachedFromWindow();
         afi afiVar = this.h;
         if (afiVar != null) {
-            ic icVar = ((hq) afiVar).b;
-            aju ajuVar = icVar.ae;
+            AppCompatDelegate appCompatDelegateVar = ((ViewUtils) afiVar).b;
+            aju ajuVar = appCompatDelegateVar.ae;
             if (ajuVar != null) {
                 ActionBarOverlayLayout actionBarOverlayLayout = (ActionBarOverlayLayout) ajuVar;
                 actionBarOverlayLayout.ap();
@@ -105,21 +105,21 @@ public class ContentFrameLayout extends FrameLayout {
                     }
                 }
             }
-            if (icVar.aj != null) {
-                icVar.y.getDecorView().removeCallbacks(icVar.ak);
-                if (icVar.aj.isShowing()) {
+            if (appCompatDelegateVar.aj != null) {
+                appCompatDelegateVar.y.getDecorView().removeCallbacks(appCompatDelegateVar.ak);
+                if (appCompatDelegateVar.aj.isShowing()) {
                     try {
-                        icVar.aj.dismiss();
+                        appCompatDelegateVar.aj.dismiss();
                     } catch (IllegalArgumentException unused) {
                     }
                 }
-                icVar.aj = null;
+                appCompatDelegateVar.aj = null;
             }
-            esg esgVar = icVar.al;
+            esg esgVar = appCompatDelegateVar.al;
             if (esgVar != null) {
                 esgVar.c();
             }
-            cbw cbwVar = icVar.ci(0).h;
+            cbw cbwVar = appCompatDelegateVar.ci(0).h;
             if (cbwVar != null) {
                 cbwVar.ab(true);
             }

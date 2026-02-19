@@ -13,7 +13,7 @@ public final class bbe {
 
     public /* synthetic */ bbe(int i, String str, int i2, String str2, String str3, String str4, boolean z) {
         if (63 != (i & 63)) {
-            bht.ah(i, 63, bbc.b.getDescriptor());
+            ResourcesCompat.ah(i, 63, bbc.b.getDescriptor());
             throw null;
         }
         this.a = str;

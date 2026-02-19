@@ -48,8 +48,8 @@ public final class je extends Spinner {
         this.i = new Rect();
         drm.h(this, getContext());
         int[] iArr = cyf.u;
-        jx jxVarK = jx.k(context, attributeSet, iArr, me.hd.wauxv.R.attr.spinnerStyle);
-        TypedArray typedArray = (TypedArray) jxVarK.e;
+        FactoryPools factoryPoolsVarK = FactoryPools.k(context, attributeSet, iArr, me.hd.wauxv.R.attr.spinnerStyle);
+        TypedArray typedArray = (TypedArray) factoryPoolsVarK.e;
         this.b = new ea(this);
         int resourceId = typedArray.getResourceId(4, 0);
         if (resourceId != 0) {
@@ -77,11 +77,11 @@ public final class je extends Spinner {
                         ixVar.c = typedArray.getString(2);
                     } else if (i == 1) {
                         jb jbVar = new jb(this, this.c, attributeSet);
-                        jx jxVarK2 = jx.k(this.c, attributeSet, iArr, me.hd.wauxv.R.attr.spinnerStyle);
-                        this.h = ((TypedArray) jxVarK2.e).getLayoutDimension(3, -2);
-                        jbVar.k(jxVarK2.s(1));
+                        FactoryPools factoryPoolsVarK2 = FactoryPools.k(this.c, attributeSet, iArr, me.hd.wauxv.R.attr.spinnerStyle);
+                        this.h = ((TypedArray) factoryPoolsVarK2.e).getLayoutDimension(3, -2);
+                        jbVar.k(factoryPoolsVarK2.s(1));
                         jbVar.a = typedArray.getString(2);
-                        jxVarK2.ae();
+                        factoryPoolsVarK2.ae();
                         this.g = jbVar;
                         this.d = new iu(this, this, jbVar);
                     }
@@ -91,7 +91,7 @@ public final class je extends Spinner {
                         arrayAdapter.setDropDownViewResource(me.hd.wauxv.R.layout.support_simple_spinner_dropdown_item);
                         setAdapter((SpinnerAdapter) arrayAdapter);
                     }
-                    jxVarK.ae();
+                    factoryPoolsVarK.ae();
                     this.f = true;
                     spinnerAdapter = this.e;
                     if (spinnerAdapter != null) {
@@ -125,11 +125,11 @@ public final class je extends Spinner {
             ixVar2.c = typedArray.getString(2);
         } else if (i == 1) {
             jb jbVar2 = new jb(this, this.c, attributeSet);
-            jx jxVarK22 = jx.k(this.c, attributeSet, iArr, me.hd.wauxv.R.attr.spinnerStyle);
-            this.h = ((TypedArray) jxVarK22.e).getLayoutDimension(3, -2);
-            jbVar2.k(jxVarK22.s(1));
+            FactoryPools factoryPoolsVarK22 = FactoryPools.k(this.c, attributeSet, iArr, me.hd.wauxv.R.attr.spinnerStyle);
+            this.h = ((TypedArray) factoryPoolsVarK22.e).getLayoutDimension(3, -2);
+            jbVar2.k(factoryPoolsVarK22.s(1));
             jbVar2.a = typedArray.getString(2);
-            jxVarK22.ae();
+            factoryPoolsVarK22.ae();
             this.g = jbVar2;
             this.d = new iu(this, this, jbVar2);
         }
@@ -139,7 +139,7 @@ public final class je extends Spinner {
             arrayAdapter2.setDropDownViewResource(me.hd.wauxv.R.layout.support_simple_spinner_dropdown_item);
             setAdapter((SpinnerAdapter) arrayAdapter2);
         }
-        jxVarK.ae();
+        factoryPoolsVarK.ae();
         this.f = true;
         spinnerAdapter = this.e;
         if (spinnerAdapter != null) {

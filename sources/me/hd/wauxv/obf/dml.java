@@ -4,7 +4,7 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class dml extends emn implements chy {
+public final class dml extends StaticHelpers7 implements chy {
     public static final /* synthetic */ AtomicReferenceFieldUpdater a = AtomicReferenceFieldUpdater
             .newUpdater(dml.class, Object.class, "_state$volatile");
     private volatile /* synthetic */ Object _state$volatile;
@@ -15,9 +15,9 @@ public final class dml extends emn implements chy {
     }
 
     public final Object c() {
-        auj aujVar = cnb.j;
+        SpecificEmojiMatcher specificEmojiMatcherVar = cnb.j;
         Object obj = a.get(this);
-        if (obj == aujVar) {
+        if (obj == specificEmojiMatcherVar) {
             return null;
         }
         return obj;

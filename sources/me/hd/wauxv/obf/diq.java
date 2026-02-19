@@ -11,8 +11,8 @@ public final class diq extends SwitchHook {
     public static final dhg j;
 
     static {
-        dov dovVar = ctf.a;
-        b = ctf.c("Download" /* "Download" /* "Download" /* cnb.z(-46304042416938L)  */, "Sns" /* "Sns" /* "Sns" /* cnb.z(-46282567580458L)  */);
+        Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
+        b = PathUtils.getModuleSubDir("Download" /* "Download" /* "Download" /* cnb.z(-46304042416938L)  */, "Sns" /* "Sns" /* "Sns" /* cnb.z(-46282567580458L)  */);
         c = "朋友圈" /* "朋友圈" /* "朋友圈" /* cnb.z(-530548720139050L)  */;
         h = "朋友圈封面保存" /* "朋友圈封面保存" /* "朋友圈封面保存" /* cnb.z(-531046936345386L)  */;
         i = "支持长按朋友圈封面保存到本地存储中" /* "支持长按朋友圈封面保存到本地存储中" /* "支持长按朋友圈封面保存到本地存储中" /* cnb.z(-531012576607018L)  */;
@@ -26,12 +26,12 @@ public final class diq extends SwitchHook {
                 "com.tencent.mm.plugin.sns.cover.preview.SnsVideoBackPreview" /* "com.tencent.mm.plugin.sns.cover.preview.SnsVideoBackPreview" /* "com.tencent.mm.plugin.sns.cover.preview.SnsVideoBackPreview" /* cnb.z(-542737837325098L)  */,
                 "com.tencent.mm.plugin.finder.view.snscover.SnsFinderVideoBackPreview" /* "com.tencent.mm.plugin.finder.view.snscover.SnsFinderVideoBackPreview" /* "com.tencent.mm.plugin.finder.view.snscover.SnsFinderVideoBackPreview" /* cnb.z(-542995535362858L)  */)) {
             int i2 = 0;
-            cde cdeVarT = dqc.bh(ajn.tryGetClassByClassName(str)).t();
-            cdeVarT.ab = "loadCover" /* "loadCover" /* "loadCover" /* cnb.z(-542183786543914L)  */;
-            MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
-            exg exgVar = exg.a;
+            MethodResolver methodResolverVarT = dqc.bh(ajn.tryGetClassByClassName(str)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT.name = "loadCover" /* "loadCover" /* "loadCover" /* cnb.z(-542183786543914L)  */;
+            MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
+            HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
             diq diqVar = a;
-            aki akiVarAd = diqVar.ad(methodHookWrapperVar, exgVar);
+            aki akiVarAd = diqVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
             diqVar.x(akiVarAd, new dhg(11));
             akiVarAd.o();
         }

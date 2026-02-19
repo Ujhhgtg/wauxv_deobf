@@ -25,8 +25,8 @@ public final class ckj extends ckg {
         int dimensionPixelSize = getResources().getDimensionPixelSize(R.dimen.mtrl_navigation_rail_margin);
         this.g = dimensionPixelSize;
         Context context2 = getContext();
-        jx jxVarAo = bhu.ao(context2, null, cxs.af, R.attr.navigationRailStyle, R.style.Widget_MaterialComponents_NavigationRailView, new int[0]);
-        TypedArray typedArray = (TypedArray) jxVarAo.e;
+        FactoryPools factoryPoolsVarAo = FastKV.ao(context2, null, cxs.af, R.attr.navigationRailStyle, R.style.Widget_MaterialComponents_NavigationRailView, new int[0]);
+        TypedArray typedArray = (TypedArray) factoryPoolsVarAo.e;
         int resourceId = typedArray.getResourceId(0, 0);
         if (resourceId != 0) {
             View viewInflate = LayoutInflater.from(getContext()).inflate(resourceId, (ViewGroup) this, false);
@@ -61,8 +61,8 @@ public final class ckj extends ckg {
         float fH2 = ff.h(getItemPaddingBottom(), fG, dimensionPixelOffset2);
         setItemPaddingTop(Math.round(fH));
         setItemPaddingBottom(Math.round(fH2));
-        jxVarAo.ae();
-        ewz.af(this, new bmu(this));
+        factoryPoolsVarAo.ae();
+        ewz.af(this, new SyntheticPileOfMess(this));
     }
 
     private cki getNavigationRailMenuView() {

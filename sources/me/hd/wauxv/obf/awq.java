@@ -9,12 +9,12 @@ public abstract class awq {
     public static final Pattern a = Pattern.compile("[\\\\&]");
     public static final Pattern b = Pattern.compile("\\\\[!\"#$%&'()*+,./:;<=>?@\\[\\\\\\]^_`{|}~-]|&(?:#x[a-f0-9]{1,6}|#[0-9]{1,7}|[a-z][a-z0-9]{1,31});", 2);
     public static final Pattern c;
-    public static final awp d;
+    public static final GifEncoder d;
 
     static {
         Pattern.compile("(%[a-fA-F0-9]{0,2}|[^:/?#@!$&'()*+,;=a-zA-Z0-9\\-._~])");
         c = Pattern.compile("[ \t\r\n]+");
-        d = new awp(0);
+        d = new GifEncoder(0);
     }
 
     public static String e(String str) {

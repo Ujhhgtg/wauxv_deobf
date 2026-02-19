@@ -45,14 +45,14 @@ public final class bqb implements btd {
             }
             int i7 = i6 - i;
             if (i7 > 10) {
-                bqaVarAq = bhu.aq(strV, "Expected at most 10 digits for the year number, got " + i7 + " digits");
+                bqaVarAq = FastKV.aq(strV, "Expected at most 10 digits for the year number, got " + i7 + " digits");
             } else if (i7 == 10 && KotlinHelpers.r(strV.charAt(i), 50) >= 0) {
-                bqaVarAq = bhu.aq(strV,
+                bqaVarAq = FastKV.aq(strV,
                         "Expected at most 9 digits for the year number or year 1000000000, got " + i7 + " digits");
             } else if (i7 < 4) {
-                bqaVarAq = bhu.aq(strV, "The year number must be padded to 4 digits, got " + i7 + " digits");
+                bqaVarAq = FastKV.aq(strV, "The year number must be padded to 4 digits, got " + i7 + " digits");
             } else if (cCharAt3 == '+' && i7 == 4) {
-                bqaVarAq = bhu.aq(strV,
+                bqaVarAq = FastKV.aq(strV,
                         "The '+' sign at the start is only valid for year numbers longer than 4 digits");
             } else if (cCharAt3 != ' ' || i7 == 4) {
                 if (cCharAt3 == '-') {
@@ -60,32 +60,32 @@ public final class bqb implements btd {
                 }
                 int i8 = i6 + 16;
                 if (strV.length() < i8) {
-                    bqaVarAq = bhu.aq(strV, "The input string is too short");
+                    bqaVarAq = FastKV.aq(strV, "The input string is too short");
                 } else {
-                    bpy bpyVarAp5 = bhu.ap(strV, "'-'", i6, new blx(18));
+                    bpy bpyVarAp5 = FastKV.ap(strV, "'-'", i6, new blx(18));
                     if (bpyVarAp5 != null) {
                         bqaVarAq = bpyVarAp5;
                     } else {
-                        bpyVarAp = bhu.ap(strV, "'-'", i6 + 3, new blx(19));
-                        if (bpyVarAp == null && (bpyVarAp2 = bhu.ap(strV, "'T' or 't'", i6 + 6, new blx(20))) == null
-                                && (bpyVarAp3 = bhu.ap(strV, "':'", i6 + 9, new blx(21))) == null
-                                && (bpyVarAp4 = bhu.ap(strV, "':'", i6 + 12, new blx(22))) == null) {
+                        bpyVarAp = FastKV.ap(strV, "'-'", i6 + 3, new blx(19));
+                        if (bpyVarAp == null && (bpyVarAp2 = FastKV.ap(strV, "'T' or 't'", i6 + 6, new blx(20))) == null
+                                && (bpyVarAp3 = FastKV.ap(strV, "':'", i6 + 9, new blx(21))) == null
+                                && (bpyVarAp4 = FastKV.ap(strV, "':'", i6 + 12, new blx(22))) == null) {
                             bqaVarAq = bpyVarAp;
                             bqaVarAq = bpyVarAp2;
                             bqaVarAq = bpyVarAp3;
                             bqaVarAq = bpyVarAp4;
-                            int[] iArr = bhu.i;
+                            int[] iArr = FastKV.i;
                             for (int i9 = 0; i9 < 10; i9++) {
-                                bpy bpyVarAp6 = bhu.ap(strV, "an ASCII digit", iArr[i9] + i6, new blx(23));
+                                bpy bpyVarAp6 = FastKV.ap(strV, "an ASCII digit", iArr[i9] + i6, new blx(23));
                                 if (bpyVarAp6 != null) {
                                     bqaVarAq = bpyVarAp6;
                                 }
                             }
-                            int iAr = bhu.ar(i6 + 1, strV);
-                            int iAr2 = bhu.ar(i6 + 4, strV);
-                            int iAr3 = bhu.ar(i6 + 7, strV);
-                            int iAr4 = bhu.ar(i6 + 10, strV);
-                            int iAr5 = bhu.ar(i6 + 13, strV);
+                            int iAr = FastKV.ar(i6 + 1, strV);
+                            int iAr2 = FastKV.ar(i6 + 4, strV);
+                            int iAr3 = FastKV.ar(i6 + 7, strV);
+                            int iAr4 = FastKV.ar(i6 + 10, strV);
+                            int iAr5 = FastKV.ar(i6 + 13, strV);
                             int i10 = i6 + 15;
                             if (strV.charAt(i10) == '.') {
                                 i10 = i8;
@@ -96,31 +96,31 @@ public final class bqb implements btd {
                                 }
                                 int i11 = i10 - i8;
                                 if (1 > i11 || i11 >= 10) {
-                                    bqaVarAq = bhu.aq(strV,
+                                    bqaVarAq = FastKV.aq(strV,
                                             "1..9 digits are supported for the fraction of the second, got " + i11
                                                     + " digits");
                                 } else {
-                                    i2 = iCharAt2 * bhu.h[9 - i11];
+                                    i2 = iCharAt2 * FastKV.h[9 - i11];
                                 }
                             } else {
                                 i2 = 0;
                             }
                             if (i10 >= strV.length()) {
-                                bqaVarAq = bhu.aq(strV, "The UTC offset at the end of the string is missing");
+                                bqaVarAq = FastKV.aq(strV, "The UTC offset at the end of the string is missing");
                             } else {
                                 char cCharAt4 = strV.charAt(i10);
                                 if (cCharAt4 == '+' || cCharAt4 == '-') {
                                     int length = strV.length() - i10;
                                     if (length > 9) {
-                                        bqaVarAq = bhu.aq(strV,
+                                        bqaVarAq = FastKV.aq(strV,
                                                 "The UTC offset string \""
-                                                        + bhu.bg(16, strV.subSequence(i10, strV.length()).toString())
+                                                        + FastKV.bg(16, strV.subSequence(i10, strV.length()).toString())
                                                         + "\" is too long");
                                     } else if (length % 3 != 0) {
-                                        bqaVarAq = bhu.aq(strV, "Invalid UTC offset string \""
+                                        bqaVarAq = FastKV.aq(strV, "Invalid UTC offset string \""
                                                 + strV.subSequence(i10, strV.length()).toString() + '\"');
                                     } else {
-                                        int[] iArr2 = bhu.j;
+                                        int[] iArr2 = FastKV.j;
                                         int i12 = 0;
                                         for (int i13 = 2; i12 < i13; i13 = 2) {
                                             int i14 = i10 + iArr2[i12];
@@ -131,12 +131,12 @@ public final class bqb implements btd {
                                                 StringBuilder sbR = yg.concatVar213(i14, "Expected ':' at index ", ", got '");
                                                 sbR.append(strV.charAt(i14));
                                                 sbR.append('\'');
-                                                bqaVarAq = bhu.aq(strV, sbR.toString());
+                                                bqaVarAq = FastKV.aq(strV, sbR.toString());
                                             } else {
                                                 i12++;
                                             }
                                         }
-                                        int[] iArr3 = bhu.k;
+                                        int[] iArr3 = FastKV.k;
                                         int i15 = 0;
                                         while (i15 < 6 && (i3 = iArr3[i15] + i10) < strV.length()) {
                                             char cCharAt5 = strV.charAt(i3);
@@ -146,20 +146,20 @@ public final class bqb implements btd {
                                                         ", got '");
                                                 sbR2.append(strV.charAt(i3));
                                                 sbR2.append('\'');
-                                                bqaVarAq = bhu.aq(strV, sbR2.toString());
+                                                bqaVarAq = FastKV.aq(strV, sbR2.toString());
                                             } else {
                                                 i15++;
                                                 iArr3 = iArr4;
                                             }
                                         }
-                                        int iAr6 = bhu.ar(i10 + 1, strV);
-                                        int iAr7 = length > 3 ? bhu.ar(i10 + 4, strV) : 0;
-                                        int iAr8 = length > 6 ? bhu.ar(i10 + 7, strV) : 0;
+                                        int iAr6 = FastKV.ar(i10 + 1, strV);
+                                        int iAr7 = length > 3 ? FastKV.ar(i10 + 4, strV) : 0;
+                                        int iAr8 = length > 6 ? FastKV.ar(i10 + 7, strV) : 0;
                                         if (iAr7 > 59) {
-                                            bqaVarAq = bhu.aq(strV,
+                                            bqaVarAq = FastKV.aq(strV,
                                                     "Expected offset-minute-of-hour in 0..59, got " + iAr7);
                                         } else if (iAr8 > 59) {
-                                            bqaVarAq = bhu.aq(strV,
+                                            bqaVarAq = FastKV.aq(strV,
                                                     "Expected offset-second-of-minute in 0..59, got " + iAr8);
                                         } else if (iAr6 <= 17 || (iAr6 == 18 && iAr7 == 0 && iAr8 == 0)) {
                                             iC = bjs.c(iAr7, 60, iAr6 * 3600, iAr8) * (cCharAt4 == '-' ? -1 : 1);
@@ -169,7 +169,7 @@ public final class bqb implements btd {
                                                             "Expected a valid day-of-month for month ", " of year ",
                                                             ", got ");
                                                     sbQ.append(iAr2);
-                                                    bqaVarAq = bhu.aq(strV, sbQ.toString());
+                                                    bqaVarAq = FastKV.aq(strV, sbQ.toString());
                                                 } else {
                                                     int i16 = iCharAt & 3;
                                                     if (iAr2 > (iAr != 2
@@ -181,14 +181,14 @@ public final class bqb implements btd {
                                                                 "Expected a valid day-of-month for month ", " of year ",
                                                                 ", got ");
                                                         sbQ2.append(iAr2);
-                                                        bqaVarAq = bhu.aq(strV, sbQ2.toString());
+                                                        bqaVarAq = FastKV.aq(strV, sbQ2.toString());
                                                     } else if (iAr3 > 23) {
-                                                        bqaVarAq = bhu.aq(strV, "Expected hour in 0..23, got " + iAr3);
+                                                        bqaVarAq = FastKV.aq(strV, "Expected hour in 0..23, got " + iAr3);
                                                     } else if (iAr4 > 59) {
-                                                        bqaVarAq = bhu.aq(strV,
+                                                        bqaVarAq = FastKV.aq(strV,
                                                                 "Expected minute-of-hour in 0..59, got " + iAr4);
                                                     } else if (iAr5 > 59) {
-                                                        bqaVarAq = bhu.aq(strV,
+                                                        bqaVarAq = FastKV.aq(strV,
                                                                 "Expected second-of-minute in 0..59, got " + iAr5);
                                                     } else {
                                                         long j2 = iCharAt;
@@ -203,7 +203,7 @@ public final class bqb implements btd {
                                                         } else {
                                                             i4 = iAr;
                                                             i5 = iAr5;
-                                                            j = dkz.j(j2, -400,
+                                                            j = StaticHelpers6.j(j2, -400,
                                                                     (j2 / ((long) (-4))) - (j2 / ((long) (-100))), j3);
                                                         }
                                                         long j4 = j + ((long) (((r1 * 367) - 362) / 12))
@@ -225,7 +225,7 @@ public final class bqb implements btd {
                                                 }
                                             }
                                         } else {
-                                            bqaVarAq = bhu.aq(strV, "Expected an offset in -18:00..+18:00, got "
+                                            bqaVarAq = FastKV.aq(strV, "Expected an offset in -18:00..+18:00, got "
                                                     + strV.subSequence(i10, strV.length()).toString());
                                         }
                                     }
@@ -234,13 +234,13 @@ public final class bqb implements btd {
                                     if (strV.length() == i17) {
                                         iC = 0;
                                         bqaVarAq = 1 > iAr
-                                                ? bhu.aq(strV, "Expected a month number in 1..12, got " + iAr)
-                                                : bhu.aq(strV, "Expected a month number in 1..12, got " + iAr);
+                                                ? FastKV.aq(strV, "Expected a month number in 1..12, got " + iAr)
+                                                : FastKV.aq(strV, "Expected a month number in 1..12, got " + iAr);
                                     } else {
-                                        bqaVarAq = bhu.aq(strV, "Extra text after the instant at position " + i17);
+                                        bqaVarAq = FastKV.aq(strV, "Extra text after the instant at position " + i17);
                                     }
                                 } else {
-                                    bqaVarAq = bhu.aq(strV,
+                                    bqaVarAq = FastKV.aq(strV,
                                             "Expected the UTC offset at position " + i10 + ", got '" + cCharAt4 + '\'');
                                 }
                             }
@@ -248,7 +248,7 @@ public final class bqb implements btd {
                     }
                 }
             } else {
-                bqaVarAq = bhu.aq(strV, "A '+' or '-' sign is required for year numbers longer than 4 digits");
+                bqaVarAq = FastKV.aq(strV, "A '+' or '-' sign is required for year numbers longer than 4 digits");
             }
         }
         bqaVarAq = bpyVarAp;

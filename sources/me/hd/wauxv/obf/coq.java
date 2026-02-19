@@ -8,13 +8,13 @@ public final class coq implements btd {
 
     @Override // me.hd.wauxv.obf.btd
     public final Object a(ajt ajtVar) {
-        throw new dgb("'kotlin.Nothing' does not have instances");
+        throw new SomeIllegalArgumentException("'kotlin.Nothing' does not have instances");
     }
 
     @Override // me.hd.wauxv.obf.btd
     public final void c(avt avtVar, Object obj) {
         throwIfVar1IsNull((Void) obj, "value");
-        throw new dgb("'kotlin.Nothing' cannot be serialized");
+        throw new SomeIllegalArgumentException("'kotlin.Nothing' cannot be serialized");
     }
 
     @Override // me.hd.wauxv.obf.btd

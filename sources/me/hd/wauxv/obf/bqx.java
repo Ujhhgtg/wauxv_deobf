@@ -41,7 +41,7 @@ public final class bqx extends czd implements czi {
     public bqw z;
     public final ArrayList a = new ArrayList();
     public final float[] b = new float[2];
-    public czx d = null;
+    public SomeView d = null;
     public int m = -1;
     public int o = 0;
     public final ArrayList q = new ArrayList();
@@ -75,24 +75,24 @@ public final class bqx extends czd implements czi {
             f = 0.0f;
             f2 = 0.0f;
         }
-        czx czxVar = this.d;
+        SomeView someViewVar = this.d;
         this.n.getClass();
         ArrayList arrayList = this.q;
         int size = arrayList.size();
         for (int i = 0; i < size; i++) {
             bqu bquVar = (bqu) arrayList.get(i);
-            czx czxVar2 = bquVar.e;
+            SomeView someViewVar2 = bquVar.e;
             float f3 = bquVar.a;
             float f4 = bquVar.c;
             if (f3 == f4) {
-                bquVar.i = czxVar2.d.getTranslationX();
+                bquVar.i = someViewVar2.d.getTranslationX();
             } else {
                 bquVar.i = yg.a(f4, f3, bquVar.m, f3);
             }
             float f5 = bquVar.b;
             float f6 = bquVar.d;
             if (f5 == f6) {
-                bquVar.j = czxVar2.d.getTranslationY();
+                bquVar.j = someViewVar2.d.getTranslationY();
             } else {
                 bquVar.j = yg.a(f6, f5, bquVar.m, f5);
             }
@@ -100,9 +100,9 @@ public final class bqx extends czd implements czi {
             xe.j(recyclerView, bquVar.e, bquVar.i, bquVar.j, false);
             canvas.restoreToCount(iSave);
         }
-        if (czxVar != null) {
+        if (someViewVar != null) {
             int iSave2 = canvas.save();
-            xe.j(recyclerView, czxVar, f, f2, true);
+            xe.j(recyclerView, someViewVar, f, f2, true);
             canvas.restoreToCount(iSave2);
         }
     }
@@ -110,19 +110,19 @@ public final class bqx extends czd implements czi {
     @Override // me.hd.wauxv.obf.czi
     public final void ae(View view) {
         ap(view);
-        czx czxVarDv = this.s.dv(view);
-        if (czxVarDv == null) {
+        SomeView someViewVarDv = this.s.dv(view);
+        if (someViewVarDv == null) {
             return;
         }
-        czx czxVar = this.d;
-        if (czxVar != null && czxVarDv == czxVar) {
+        SomeView someViewVar = this.d;
+        if (someViewVar != null && someViewVarDv == someViewVar) {
             aq(null, 0);
             return;
         }
-        al(czxVarDv, false);
-        if (this.a.remove(czxVarDv.d)) {
+        al(someViewVarDv, false);
+        if (this.a.remove(someViewVarDv.d)) {
             this.n.getClass();
-            xe.g(czxVarDv);
+            xe.g(someViewVarDv);
         }
     }
 
@@ -168,7 +168,7 @@ public final class bqx extends czd implements czi {
             }
             czg layoutManager = this.s.getLayoutManager();
             int i3 = this.m;
-            czx czxVarDv = null;
+            SomeView someViewVarDv = null;
             if (i3 != -1) {
                 int iFindPointerIndex = motionEvent.findPointerIndex(i3);
                 float x = motionEvent.getX(iFindPointerIndex) - this.e;
@@ -178,10 +178,10 @@ public final class bqx extends czd implements czi {
                 float f = this.r;
                 if ((fAbs >= f || fAbs2 >= f) && ((fAbs <= fAbs2 || !layoutManager.bu())
                         && ((fAbs2 <= fAbs || !layoutManager.bv()) && (viewAm = am(motionEvent)) != null))) {
-                    czxVarDv = this.s.dv(viewAm);
+                    someViewVarDv = this.s.dv(viewAm);
                 }
             }
-            if (czxVarDv == null || (iH = (xe.h(786444, this.s.getLayoutDirection()) & 65280) >> 8) == 0) {
+            if (someViewVarDv == null || (iH = (xe.h(786444, this.s.getLayoutDirection()) & 65280) >> 8) == 0) {
                 return;
             }
             float x2 = motionEvent.getX(i2);
@@ -210,7 +210,7 @@ public final class bqx extends czd implements czi {
                 this.j = 0.0f;
                 this.i = 0.0f;
                 this.m = motionEvent.getPointerId(0);
-                aq(czxVarDv, 1);
+                aq(someViewVarDv, 1);
             }
         }
     }
@@ -243,11 +243,11 @@ public final class bqx extends czd implements czi {
         return i2;
     }
 
-    public final void al(czx czxVar, boolean z) {
+    public final void al(SomeView someViewVar, boolean z) {
         ArrayList arrayList = this.q;
         for (int size = arrayList.size() - 1; size >= 0; size--) {
             bqu bquVar = (bqu) arrayList.get(size);
-            if (bquVar.e == czxVar) {
+            if (bquVar.e == someViewVar) {
                 bquVar.k |= z;
                 if (!bquVar.l) {
                     bquVar.g.cancel();
@@ -261,9 +261,9 @@ public final class bqx extends czd implements czi {
     public final View am(MotionEvent motionEvent) {
         float x = motionEvent.getX();
         float y = motionEvent.getY();
-        czx czxVar = this.d;
-        if (czxVar != null) {
-            View view = czxVar.d;
+        SomeView someViewVar = this.d;
+        if (someViewVar != null) {
+            View view = someViewVar.d;
             if (ad(view, x, y, this.k + this.i, this.l + this.j)) {
                 return view;
             }
@@ -302,7 +302,7 @@ public final class bqx extends czd implements czi {
         }
     }
 
-    public final void ao(czx czxVar) {
+    public final void ao(SomeView someViewVar) {
         akf akfVar;
         int bottom;
         int iAbs;
@@ -320,7 +320,7 @@ public final class bqx extends czd implements czi {
             xeVar.getClass();
             int i4 = (int) (this.k + this.i);
             int i5 = (int) (this.l + this.j);
-            View view = czxVar.d;
+            View view = someViewVar.d;
             if (Math.abs(i5 - view.getTop()) >= view.getHeight() * 0.5f
                     || Math.abs(i4 - view.getLeft()) >= view.getWidth() * 0.5f) {
                 ArrayList arrayList = this.v;
@@ -348,7 +348,7 @@ public final class bqx extends czd implements czi {
                         i = i8;
                         if (viewEr.getBottom() >= iRound2 && viewEr.getTop() <= height && viewEr.getRight() >= iRound
                                 && viewEr.getLeft() <= width) {
-                            czx czxVarDv = this.s.dv(viewEr);
+                            SomeView someViewVarDv = this.s.dv(viewEr);
                             int iAbs5 = Math.abs(i6 - ((viewEr.getRight() + viewEr.getLeft()) / 2));
                             int iAbs6 = Math.abs(i7 - ((viewEr.getBottom() + viewEr.getTop()) / 2));
                             int i9 = (iAbs6 * iAbs6) + (iAbs5 * iAbs5);
@@ -366,7 +366,7 @@ public final class bqx extends czd implements czi {
                                 i10++;
                                 size = i12;
                             }
-                            this.v.add(i11, czxVarDv);
+                            this.v.add(i11, someViewVarDv);
                             this.w.add(i11, Integer.valueOf(i9));
                         }
                         i8 = i + 1;
@@ -390,41 +390,41 @@ public final class bqx extends czd implements czi {
                 int left2 = i13 - view.getLeft();
                 int top2 = i14 - view.getTop();
                 int size2 = arrayList2.size();
-                czx czxVar2 = null;
+                SomeView someViewVar2 = null;
                 int i15 = -1;
                 for (int i16 = 0; i16 < size2; i16++) {
-                    czx czxVar3 = (czx) arrayList2.get(i16);
-                    if (left2 > 0 && (right = czxVar3.d.getRight() - width2) < 0
-                            && czxVar3.d.getRight() > view.getRight() && (iAbs4 = Math.abs(right)) > i15) {
+                    SomeView someViewVar3 = (SomeView) arrayList2.get(i16);
+                    if (left2 > 0 && (right = someViewVar3.d.getRight() - width2) < 0
+                            && someViewVar3.d.getRight() > view.getRight() && (iAbs4 = Math.abs(right)) > i15) {
                         i15 = iAbs4;
-                        czxVar2 = czxVar3;
+                        someViewVar2 = someViewVar3;
                     }
-                    if (left2 < 0 && (left = czxVar3.d.getLeft() - i13) > 0 && czxVar3.d.getLeft() < view.getLeft()
+                    if (left2 < 0 && (left = someViewVar3.d.getLeft() - i13) > 0 && someViewVar3.d.getLeft() < view.getLeft()
                             && (iAbs3 = Math.abs(left)) > i15) {
                         i15 = iAbs3;
-                        czxVar2 = czxVar3;
+                        someViewVar2 = someViewVar3;
                     }
-                    if (top2 < 0 && (top = czxVar3.d.getTop() - i14) > 0 && czxVar3.d.getTop() < view.getTop()
+                    if (top2 < 0 && (top = someViewVar3.d.getTop() - i14) > 0 && someViewVar3.d.getTop() < view.getTop()
                             && (iAbs2 = Math.abs(top)) > i15) {
                         i15 = iAbs2;
-                        czxVar2 = czxVar3;
+                        someViewVar2 = someViewVar3;
                     }
-                    if (top2 > 0 && (bottom = czxVar3.d.getBottom() - height2) < 0
-                            && czxVar3.d.getBottom() > view.getBottom() && (iAbs = Math.abs(bottom)) > i15) {
+                    if (top2 > 0 && (bottom = someViewVar3.d.getBottom() - height2) < 0
+                            && someViewVar3.d.getBottom() > view.getBottom() && (iAbs = Math.abs(bottom)) > i15) {
                         i15 = iAbs;
-                        czxVar2 = czxVar3;
+                        someViewVar2 = someViewVar3;
                     }
                 }
-                if (czxVar2 == null) {
+                if (someViewVar2 == null) {
                     this.v.clear();
                     this.w.clear();
                     return;
                 }
-                View view2 = czxVar2.d;
-                int iX = czxVar2.x();
-                czxVar.x();
-                int iY = czxVar.y();
-                int iY2 = czxVar2.y();
+                View view2 = someViewVar2.d;
+                int iX = someViewVar2.x();
+                someViewVar.x();
+                int iY = someViewVar.y();
+                int iY2 = someViewVar2.y();
                 List list = (List) xeVar.d;
                 list.add(iY2, list.remove(iY));
                 ((cyw) xeVar.e).ac.c(iY, iY2);
@@ -444,7 +444,7 @@ public final class bqx extends czd implements czi {
                         break;
                     }
                 }
-                akfVar.u(aaz.k((List) xeVar.d, "," /* "," /* "," /* cnb.z(-549502410816298L)  */, null, null, new ws(7), 30));
+                akfVar.u(StaticHelpers5.k((List) xeVar.d, "," /* "," /* "," /* cnb.z(-549502410816298L)  */, null, null, new ws(7), 30));
                 RecyclerView recyclerView = this.s;
                 czg layoutManager2 = recyclerView.getLayoutManager();
                 if (!(layoutManager2 instanceof LinearLayoutManager)) {
@@ -516,7 +516,7 @@ public final class bqx extends czd implements czi {
     /* JADX WARN: Type inference failed for: r12v7, types: [boolean] */
     /* JADX WARN: Type inference failed for: r12v9 */
     /* JADX WARN: Type inference failed for: r2v1, types: [me.hd.wauxv.obf.czx] */
-    public final void aq(czx czxVar, int i) {
+    public final void aq(SomeView someViewVar, int i) {
         xe xeVar;
         ?? r12;
         boolean z;
@@ -527,18 +527,18 @@ public final class bqx extends czd implements czi {
         char c;
         float fSignum;
         char c2;
-        if (czxVar == this.d && i == this.o) {
+        if (someViewVar == this.d && i == this.o) {
             return;
         }
         this.ac = Long.MIN_VALUE;
         int i3 = this.o;
-        al(czxVar, true);
+        al(someViewVar, true);
         this.o = i;
         if (i == 2) {
-            if (czxVar == null) {
+            if (someViewVar == null) {
                 throw new IllegalArgumentException("Must pass a ViewHolder when dragging");
             }
-            this.x = czxVar.d;
+            this.x = someViewVar.d;
         }
         int i4 = (1 << ((i * 8) + 8)) - 1;
         ?? r2 = this.d;
@@ -627,14 +627,14 @@ public final class bqx extends czd implements czi {
             r12 = 0;
             z = false;
         }
-        if (czxVar != null) {
-            View view2 = czxVar.d;
+        if (someViewVar != null) {
+            View view2 = someViewVar.d;
             RecyclerView recyclerView2 = this.s;
             xeVar.getClass();
             this.p = (xe.h(786444, recyclerView2.getLayoutDirection()) & i4) >> (this.o * 8);
             this.k = view2.getLeft();
             this.l = view2.getTop();
-            this.d = czxVar;
+            this.d = someViewVar;
             if (i == 2) {
                 view2.performHapticFeedback(r12 == true ? 1 : 0);
             }
@@ -698,7 +698,7 @@ public final class bqx extends czd implements czi {
             float f = fArr[0];
             float f2 = fArr[1];
         }
-        czx czxVar = this.d;
+        SomeView someViewVar = this.d;
         this.n.getClass();
         ArrayList arrayList = this.q;
         int size = arrayList.size();
@@ -708,7 +708,7 @@ public final class bqx extends czd implements czi {
             View view = bquVar.e.d;
             canvas.restoreToCount(iSave);
         }
-        if (czxVar != null) {
+        if (someViewVar != null) {
             canvas.restoreToCount(canvas.save());
         }
         for (int i2 = size - 1; i2 >= 0; i2--) {

@@ -5,7 +5,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class esa implements bm {
+public final class esa implements IHandlesSwipeDismiss {
     public final /* synthetic */ int a;
     public final /* synthetic */ chm c;
 
@@ -15,7 +15,7 @@ public final class esa implements bm {
     }
 
     @Override // me.hd.wauxv.obf.bm
-    public final boolean _bm(View view) {
+    public final boolean handleSwipeDismiss(View view) {
         switch (this.a) {
             case 0:
                 int currentItem = ((ViewPager2) view).getCurrentItem() + 1;

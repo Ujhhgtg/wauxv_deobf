@@ -4,7 +4,7 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class dnq extends dnp {
     public static final void be(String str) {
-        throw new NumberFormatException(dkz.o('\'', "Invalid number format: '", str));
+        throw new NumberFormatException(StaticHelpers6.o('\'', "Invalid number format: '", str));
     }
 
     public static Integer bf(String str) {

@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationHandler;
 import java.util.ArrayList;
 import java.util.List;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.field.FieldDescription;
 import net.bytebuddy.description.method.MethodDescription;
@@ -12,8 +12,6 @@ import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.description.type.TypeList;
 import net.bytebuddy.dynamic.scaffold.FieldLocator;
 import net.bytebuddy.dynamic.scaffold.InstrumentedType;
-import net.bytebuddy.implementation.Implementation;
-import net.bytebuddy.implementation.LoadedTypeInitializer;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
 import net.bytebuddy.implementation.bytecode.Removal;
 import net.bytebuddy.implementation.bytecode.StackManipulation;
@@ -183,7 +181,7 @@ public abstract class InvocationHandlerAdapter implements Implementation.Composa
             }
 
             public int hashCode() {
-                return ForInstance.this.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31);
+                return ForInstance.this.hashCode() + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31);
             }
         }
 
@@ -281,7 +279,7 @@ public abstract class InvocationHandlerAdapter implements Implementation.Composa
 
     public ByteCodeAppender.Size apply(MethodVisitor methodVisitor, Implementation.Context context, MethodDescription methodDescription, StackManipulation stackManipulation, FieldDescription fieldDescription) {
         if (methodDescription.isStatic() || methodDescription.isConstructor()) {
-            throw new IllegalStateException(dkz.t("It is not possible to apply an invocation handler onto the static method or constructor ", methodDescription));
+            throw new IllegalStateException(StaticHelpers6.concat("It is not possible to apply an invocation handler onto the static method or constructor ", methodDescription));
         }
         MethodConstant.CanCache canCacheOfPrivileged = this.privileged ? MethodConstant.ofPrivileged(methodDescription.asDefined()) : MethodConstant.of(methodDescription.asDefined());
         StackManipulation stackManipulation2 = FieldAccess.forField(fieldDescription).read();

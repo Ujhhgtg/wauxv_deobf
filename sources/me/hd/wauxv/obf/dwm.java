@@ -13,7 +13,7 @@ public final class dwm {
 
     public /* synthetic */ dwm(int i, List list, String str, String str2) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, dwk.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, dwk.b.getDescriptor());
             throw null;
         }
         this.b = list;

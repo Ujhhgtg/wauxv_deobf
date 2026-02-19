@@ -11,7 +11,7 @@ public final class dvi {
 
     public /* synthetic */ dvi(int i, Integer num, Integer num2, Long l, Long l2) {
         if (15 != (i & 15)) {
-            bht.ah(i, 15, dvg.b.getDescriptor());
+            ResourcesCompat.ah(i, 15, dvg.b.getDescriptor());
             throw null;
         }
         this.a = num;
@@ -48,7 +48,7 @@ public final class dvi {
         sb.append("ah4Proto(pk_extra_times_multi_100=" /* "ah4Proto(pk_extra_times_multi_100=" /* "ah4Proto(pk_extra_times_multi_100=" /* cnb.z(-142670223637290L)  */);
         bjs.w(sb, this.a, -141987323837226L);
         bjs.w(sb, this.b, -141931489262378L);
-        dkz.ad(sb, this.c, -141854179851050L);
+        StaticHelpers6.ad(sb, this.c, -141854179851050L);
         sb.append(this.d);
         sb.append(')');
         return sb.toString();

@@ -18,7 +18,7 @@ public final class afr implements bic {
             synchronized (this) {
                 try {
                     if (((aoh) this.b) == null) {
-                        File cacheDir = ((anr) ((bmu) this.a).h).b.getCacheDir();
+                        File cacheDir = ((anr) ((SyntheticPileOfMess) this.a).obj).b.getCacheDir();
                         aop aopVar = null;
                         File file = cacheDir == null ? null : new File(cacheDir, "image_manager_disk_cache");
                         if (file != null && (file.isDirectory() || file.mkdirs())) {

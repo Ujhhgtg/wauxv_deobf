@@ -318,7 +318,7 @@ public class nu implements oz, esn, cdw, avu, aoh, bfh, app, cvg, ccv, dcc {
     }
 
     @Override // me.hd.wauxv.obf.avu
-    public boolean k(Object obj, File file, crw crwVar) throws Throwable {
+    public boolean saveStreamToFile(Object obj, File file, crw crwVar) throws Throwable {
         try {
             sf.e((ByteBuffer) obj, file);
             return true;
@@ -358,7 +358,7 @@ public class nu implements oz, esn, cdw, avu, aoh, bfh, app, cvg, ccv, dcc {
     @Override // me.hd.wauxv.obf.esn
     public evr q(View view, evr evrVar, baw bawVar) {
         bawVar.d = evrVar.e() + bawVar.d;
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         boolean z = view.getLayoutDirection() == 1;
         int iF = evrVar.f();
         int iG = evrVar.g();
@@ -420,7 +420,7 @@ public class nu implements oz, esn, cdw, avu, aoh, bfh, app, cvg, ccv, dcc {
     }
 
     @Override // me.hd.wauxv.obf.aoh
-    public void y(btj btjVar, jx jxVar) {
+    public void y(btj btjVar, FactoryPools factoryPoolsVar) {
     }
 
     @Override // me.hd.wauxv.obf.oz

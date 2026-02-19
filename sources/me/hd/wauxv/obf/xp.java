@@ -10,10 +10,10 @@ public final class xp extends bws implements IDexFind {
     public static Object b(String str) {
         int i = 0;
         xn.a.getClass();
-        cde cdeVarT = dqc.bi(xn.b()).t();
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(xn.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         wv.a.getClass();
-        cdeVarT.a = emn.az(wt.a);
-        return ((MethodHookWrapper) dkz.n(new Object[] { dal.b(String.class) }, 1, cdeVarT)).e(str);
+        methodResolverVarT.returnType = StaticHelpers7.az(wt.a);
+        return ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class) }, 1, methodResolverVarT)).e(str);
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -22,6 +22,6 @@ public final class xp extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(xo.a, dexKitBridge, new ws(12));
+        StaticHelpers7.resolveDexAndCache(xo.a, dexKitBridge, new ws(12));
     }
 }

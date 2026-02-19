@@ -25,10 +25,10 @@ public final class cee implements eqj {
     public static cee d(LayoutInflater layoutInflater) {
         View viewInflate = layoutInflater.inflate(R.layout.module_dialog_anti_revoke, (ViewGroup) null, false);
         int i = R.id.moduleDialogEdtAntiRevokeTip;
-        TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewInflate, R.id.moduleDialogEdtAntiRevokeTip);
+        TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.moduleDialogEdtAntiRevokeTip);
         if (textInputEditText != null) {
             i = R.id.moduleDialogInputAntiRevokeTip;
-            if (((TextInputLayout) KotlinHelpers2.aq(viewInflate, R.id.moduleDialogInputAntiRevokeTip)) != null) {
+            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.moduleDialogInputAntiRevokeTip)) != null) {
                 return new cee((LinearLayout) viewInflate, textInputEditText, 0);
             }
         }
@@ -38,10 +38,10 @@ public final class cee implements eqj {
     public static cee e(LayoutInflater layoutInflater) {
         View viewInflate = layoutInflater.inflate(R.layout.module_dialog_menu_save, (ViewGroup) null, false);
         int i = R.id.moduleDialogEdtMenuSavePath;
-        TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewInflate, R.id.moduleDialogEdtMenuSavePath);
+        TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.moduleDialogEdtMenuSavePath);
         if (textInputEditText != null) {
             i = R.id.moduleDialogInputMenuSavePath;
-            if (((TextInputLayout) KotlinHelpers2.aq(viewInflate, R.id.moduleDialogInputMenuSavePath)) != null) {
+            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.moduleDialogInputMenuSavePath)) != null) {
                 return new cee((LinearLayout) viewInflate, textInputEditText, 5);
             }
         }

@@ -11,7 +11,7 @@ public final class egu {
 
     public /* synthetic */ egu(int i, String str, Integer num, Integer num2, Integer num3) {
         if (15 != (i & 15)) {
-            bht.ah(i, 15, egs.b.getDescriptor());
+            ResourcesCompat.ah(i, 15, egs.b.getDescriptor());
             throw null;
         }
         this.a = str;

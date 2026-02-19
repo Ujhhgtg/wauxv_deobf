@@ -11,7 +11,7 @@ public final class cud extends SwitchHook {
     public static final String b = "核心" /* "核心" /* "核心" /* "核心" /* cnb.z(-485412908825386L)   */;
     public static final String c = "插件" /* "插件" /* "插件" /* "插件" /* cnb.z(-485434383661866L)   */;
     public static final String h = "相关说明:\n请确认插件安全再进行加载，\n否则造成的后果需自行承担。" /* "相关说明:\n请确认插件安全再进行加载，\n否则造成的后果需自行承担。" /* "相关说明:\n请确认插件安全再进行加载，\n否则造成的后果需自行承担。" /* "相关说明:\n请确认插件安全再进行加载，\n否则造成的后果需自行承担。" /* cnb.z(-485369959152426L)   */;
-    public static final AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg i = new AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(22);
+    public static final Function1$VarIsInt i = new Function1$VarIsInt(22);
     public static final boolean j = true;
 
     @Override // me.hd.wauxv.obf.SwitchHook

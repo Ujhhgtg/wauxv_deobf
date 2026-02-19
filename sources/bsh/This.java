@@ -1,6 +1,5 @@
 package bsh;
 
-import bsh.ClassGenerator;
 import java.io.Serializable;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
@@ -13,7 +12,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.bqn;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.ol;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -372,7 +371,7 @@ public final class This implements Serializable, Runnable {
                 variable.validateFinalIsSet(true);
             }
         } catch (Exception e) {
-            StringBuilder sbZ = dkz.z("Exception in static init block <clinit> for class ", simpleName, ". With message: ");
+            StringBuilder sbZ = StaticHelpers6.concatAndToSb("Exception in static init block <clinit> for class ", simpleName, ". With message: ");
             sbZ.append(e.getMessage());
             throw new UtilEvalError(sbZ.toString(), e);
         }

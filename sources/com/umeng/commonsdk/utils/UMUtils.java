@@ -57,7 +57,7 @@ import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.microedition.khronos.opengles.GL10;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dts;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.utility.JavaConstant;
@@ -154,9 +154,9 @@ public class UMUtils {
         for (byte b : bArr) {
             String hexString = Integer.toHexString(b & 255);
             if (hexString.length() == 1) {
-                strS = dkz.s(strS, "0");
+                strS = StaticHelpers6.concat(strS, "0");
             }
-            strS = dkz.s(strS, hexString);
+            strS = StaticHelpers6.concat(strS, hexString);
         }
         return strS;
     }

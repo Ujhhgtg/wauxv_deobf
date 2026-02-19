@@ -4,7 +4,7 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class bfe {
     public int a;
-    public bdj b;
+    public SomeFragmentManager b;
     public boolean c = false;
     public int d;
     public int e;
@@ -13,17 +13,17 @@ public final class bfe {
     public buh h;
     public buh i;
 
-    public bfe(int i, bdj bdjVar) {
+    public bfe(int i, SomeFragmentManager someFragmentManagerVar) {
         this.a = i;
-        this.b = bdjVar;
+        this.b = someFragmentManagerVar;
         buh buhVar = buh.e;
         this.h = buhVar;
         this.i = buhVar;
     }
 
-    public bfe(int i, bdj bdjVar, int i2) {
+    public bfe(int i, SomeFragmentManager someFragmentManagerVar, int i2) {
         this.a = i;
-        this.b = bdjVar;
+        this.b = someFragmentManagerVar;
         buh buhVar = buh.e;
         this.h = buhVar;
         this.i = buhVar;

@@ -46,7 +46,7 @@ public final /* synthetic */ class cug implements IInvokable {
                 aelVar.f = "搜索好友" /* "搜索好友" /* "搜索好友" /* "搜索好友" /* cnb.z(-534916701879082L)   */;
                 String strZ = "好友" /* "好友" /* "好友" /* "好友" /* cnb.z(-534946766650154L)   */;
                 ArrayList arrayListS = bmy.s();
-                ArrayList arrayList = new ArrayList(abb.ak(arrayListS, 10));
+                ArrayList arrayList = new ArrayList(StaticHelpers4.ak(arrayListS, 10));
                 Iterator it = arrayListS.iterator();
                 while (true) {
                     boolean zHasNext = it.hasNext();
@@ -60,12 +60,12 @@ public final /* synthetic */ class cug implements IInvokable {
                             public final Object g(Object obj2, Object obj3) {
                                 long j2;
                                 List list = (List) obj2;
-                                ArrayList arrayList2 = new ArrayList(abb.ak(list, 10));
+                                ArrayList arrayList2 = new ArrayList(StaticHelpers4.ak(list, 10));
                                 Iterator it2 = list.iterator();
                                 while (it2.hasNext()) {
                                     arrayList2.add(((adx) it2.next()).a);
                                 }
-                                Set setAd = aaz.ad(arrayList2);
+                                Set setAd = StaticHelpers5.ad(arrayList2);
                                 diy diyVar = diy.a;
                                 Set setN = diyVar.n();
                                 ArrayList arrayList3 = new ArrayList();
@@ -87,7 +87,7 @@ public final /* synthetic */ class cug implements IInvokable {
                                 LinkedHashSet linkedHashSet = new LinkedHashSet(arrayList3);
                                 if (!setAd.isEmpty()) {
                                     linkedHashSet.add(j2 + '|'
-                                            + aaz.k(setAd, ";" /* ";" /* ";" /* ";" /* cnb.z(-535264594230058L)   */, null, null, null, 62));
+                                            + StaticHelpers5.k(setAd, ";" /* ";" /* ";" /* ";" /* cnb.z(-535264594230058L)   */, null, null, null, 62));
                                 }
                                 diyVar.t(linkedHashSet);
                                 dnc.g(null, 3, "已点赞" /* "已点赞" /* "已点赞" /* "已点赞" /* cnb.z(-535273184164650L)   */);

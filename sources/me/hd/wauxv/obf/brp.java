@@ -139,7 +139,7 @@ public final class brp extends brx implements List<brx>, IEmpty {
     }
 
     public final String toString() {
-        return aaz.k(this.a, ",", "[", "]", null, 56);
+        return StaticHelpers5.k(this.a, ",", "[", "]", null, 56);
     }
 
     @Override // java.util.List, java.util.Collection

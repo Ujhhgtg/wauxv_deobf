@@ -9,7 +9,7 @@ public final class dxq {
 
     public /* synthetic */ dxq(int i, Integer num, Integer num2) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, dxo.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, dxo.b.getDescriptor());
             throw null;
         }
         this.a = num;

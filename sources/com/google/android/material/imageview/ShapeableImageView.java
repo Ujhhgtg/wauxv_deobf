@@ -11,7 +11,7 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import me.hd.wauxv.R;
-import me.hd.wauxv.obf.bht;
+import me.hd.wauxv.obf.ResourcesCompat;
 import me.hd.wauxv.obf.cau;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cnb;
@@ -240,7 +240,7 @@ public class ShapeableImageView extends il implements dgx {
     }
 
     public void setStrokeColorResource(int i) {
-        setStrokeColor(bht.v(getContext(), i));
+        setStrokeColor(ResourcesCompat.v(getContext(), i));
     }
 
     public void setStrokeWidth(float f) {

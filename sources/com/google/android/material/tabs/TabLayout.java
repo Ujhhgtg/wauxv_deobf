@@ -29,8 +29,8 @@ import me.hd.wauxv.R;
 import me.hd.wauxv.obf.ajn;
 import me.hd.wauxv.obf.asw;
 import me.hd.wauxv.obf.bc;
-import me.hd.wauxv.obf.bht;
-import me.hd.wauxv.obf.bhu;
+import me.hd.wauxv.obf.ResourcesCompat;
+import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.cau;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cnb;
@@ -47,7 +47,7 @@ import me.hd.wauxv.obf.dpk;
 import me.hd.wauxv.obf.dpl;
 import me.hd.wauxv.obf.dpn;
 import me.hd.wauxv.obf.eqq;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.esf;
 import me.hd.wauxv.obf.ewz;
 import me.hd.wauxv.obf.ff;
@@ -114,13 +114,13 @@ public class TabLayout extends HorizontalScrollView {
         dpk dpkVar = new dpk(this, context2);
         this.e = dpkVar;
         super.addView(dpkVar, 0, new FrameLayout.LayoutParams(-2, -1));
-        TypedArray typedArrayAn = bhu.an(context2, attributeSet, cxs.an, R.attr.tabStyle, R.style.Widget_Design_TabLayout, 24);
+        TypedArray typedArrayAn = FastKV.an(context2, attributeSet, cxs.an, R.attr.tabStyle, R.style.Widget_Design_TabLayout, 24);
         ColorStateList colorStateListX = cmz.x(getBackground());
         if (colorStateListX != null) {
             cau cauVar = new cau();
             cauVar.dz(colorStateListX);
             cauVar.dx(context2);
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             cauVar.dy(eqq.e(this));
             setBackground(cauVar);
         }
@@ -304,7 +304,7 @@ public class TabLayout extends HorizontalScrollView {
             return;
         }
         if (getWindowToken() != null) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             if (isLaidOut()) {
                 dpk dpkVar = this.e;
                 int childCount = dpkVar.getChildCount();
@@ -333,7 +333,7 @@ public class TabLayout extends HorizontalScrollView {
     public final void at() {
         int i = this.ad;
         int iMax = (i == 0 || i == 2) ? Math.max(0, this.z - this.f) : 0;
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         dpk dpkVar = this.e;
         dpkVar.setPaddingRelative(iMax, 0, 0, 0);
         int i2 = this.ad;
@@ -368,7 +368,7 @@ public class TabLayout extends HorizontalScrollView {
         int width2 = childAt2 != null ? childAt2.getWidth() : 0;
         int left = ((width / 2) + childAt.getLeft()) - (getWidth() / 2);
         int i4 = (int) ((width + width2) * 0.5f * f);
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         return getLayoutDirection() == 0 ? left + i4 : left - i4;
     }
 
@@ -503,7 +503,7 @@ public class TabLayout extends HorizontalScrollView {
             int iAu = au(i, f);
             int scrollX = getScrollX();
             boolean z4 = (i < getSelectedTabPosition() && iAu >= scrollX) || (i > getSelectedTabPosition() && iAu <= scrollX) || i == getSelectedTabPosition();
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             if (getLayoutDirection() == 1) {
                 z4 = (i < getSelectedTabPosition() && iAu <= scrollX) || (i > getSelectedTabPosition() && iAu >= scrollX) || i == getSelectedTabPosition();
             }
@@ -769,7 +769,7 @@ public class TabLayout extends HorizontalScrollView {
     public void setSelectedTabIndicatorGravity(int i) {
         if (this.ac != i) {
             this.ac = i;
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             this.e.postInvalidateOnAnimation();
         }
     }
@@ -802,7 +802,7 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     public void setTabIconTintResource(int i) {
-        setTabIconTint(bht.v(getContext(), i));
+        setTabIconTint(ResourcesCompat.v(getContext(), i));
     }
 
     public void setTabIndicatorAnimationMode(int i) {
@@ -827,7 +827,7 @@ public class TabLayout extends HorizontalScrollView {
         int i = dpk.a;
         dpk dpkVar = this.e;
         dpkVar.d(dpkVar.c.getSelectedTabPosition());
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         dpkVar.postInvalidateOnAnimation();
     }
 
@@ -860,7 +860,7 @@ public class TabLayout extends HorizontalScrollView {
     }
 
     public void setTabRippleColorResource(int i) {
-        setTabRippleColor(bht.v(getContext(), i));
+        setTabRippleColor(ResourcesCompat.v(getContext(), i));
     }
 
     public void setTabTextColors(ColorStateList colorStateList) {

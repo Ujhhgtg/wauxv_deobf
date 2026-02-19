@@ -16,9 +16,9 @@ public final class DisableSendStatusHook extends SwitchHook implements IDexFind 
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(aof.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(aof.a));
         DisableSendStatusHook aogVar = a;
-        aki akiVarAb = csb.ab(aogVar, listBf);
+        aki akiVarAb = PackageParam.ab(aogVar, listBf);
         aogVar.y(akiVarAb, new amb(16));
         akiVarAb.o();
     }
@@ -35,7 +35,7 @@ public final class DisableSendStatusHook extends SwitchHook implements IDexFind 
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(aof.a, dexKitBridge, new amb(17));
+        StaticHelpers7.resolveDexAndCache(aof.a, dexKitBridge, new amb(17));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

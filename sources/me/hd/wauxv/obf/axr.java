@@ -38,7 +38,7 @@ public final class axr extends erp {
         axs axsVar = this.m;
         View view = axsVar.ab;
         if (i == -1) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             return view.performAccessibilityAction(i2, bundle);
         }
         if (i2 == 1) {

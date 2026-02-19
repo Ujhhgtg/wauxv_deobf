@@ -4,7 +4,7 @@ import com.android.dx.rop.cst.CstString;
 import com.android.dx.util.AnnotatedOutput;
 import com.android.dx.util.Hex;
 import com.umeng.ccg.a;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -37,10 +37,10 @@ public final class HeaderItem extends IndexedItem {
             annotatedOutput.annotate(20, a.A);
             annotatedOutput.annotate(4, "file_size:       " + Hex.u4(dexFile.getFileSize()));
             annotatedOutput.annotate(4, "header_size:     " + Hex.u4(112));
-            dkz.ab(305419896, new StringBuilder("endian_tag:      "), annotatedOutput, 4);
+            StaticHelpers6.ab(305419896, new StringBuilder("endian_tag:      "), annotatedOutput, 4);
             annotatedOutput.annotate(4, "link_size:       0");
             annotatedOutput.annotate(4, "link_off:        0");
-            dkz.ab(fileOffset, new StringBuilder("map_off:         "), annotatedOutput, 4);
+            StaticHelpers6.ab(fileOffset, new StringBuilder("map_off:         "), annotatedOutput, 4);
         }
         for (int i = 0; i < 8; i++) {
             annotatedOutput.writeByte(magic.charAt(i));
@@ -59,7 +59,7 @@ public final class HeaderItem extends IndexedItem {
         dexFile.getClassDefs().writeHeaderPart(annotatedOutput);
         if (annotatedOutput.annotates()) {
             annotatedOutput.annotate(4, "data_size:       " + Hex.u4(iWriteSize));
-            dkz.ab(fileOffset2, new StringBuilder("data_off:        "), annotatedOutput, 4);
+            StaticHelpers6.ab(fileOffset2, new StringBuilder("data_off:        "), annotatedOutput, 4);
         }
         annotatedOutput.writeInt(iWriteSize);
         annotatedOutput.writeInt(fileOffset2);

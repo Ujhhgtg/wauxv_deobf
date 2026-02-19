@@ -670,7 +670,7 @@ public final class Cache implements Closeable, Flushable {
         private final List<Certificate> readCertificateList(rm rmVar) throws IOException {
             int int$okhttp = Cache.Companion.readInt$okhttp(rmVar);
             if (int$okhttp == -1) {
-                return EmptyReadonlyList.a;
+                return EmptyReadonlyList.INSTANCE;
             }
             try {
                 CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");

@@ -11,11 +11,11 @@ import me.hd.wauxv.obf.azh;
 import me.hd.wauxv.obf.cdh;
 import me.hd.wauxv.obf.cdi;
 import me.hd.wauxv.obf.cwe;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dps;
 import me.hd.wauxv.obf.ek;
 import me.hd.wauxv.obf.emd;
-import me.hd.wauxv.obf.emn;
+import me.hd.wauxv.obf.StaticHelpers7;
 import me.hd.wauxv.obf.fg;
 import me.hd.wauxv.obf.sg;
 import me.hd.wauxv.obf.sh;
@@ -81,42 +81,42 @@ public final class IndexMap {
                 sh shVar = this.out;
                 avsVar.e(0);
                 avsVar.b = -1;
-                emn.bl(shVar, 0, (byte) emn.au(sgVar, avsVar.d));
+                StaticHelpers7.bl(shVar, 0, (byte) StaticHelpers7.au(sgVar, avsVar.d));
                 return;
             }
             if (iF == 6) {
-                emn.bl(this.out, 6, avsVar.i());
+                StaticHelpers7.bl(this.out, 6, avsVar.i());
                 return;
             }
             if (iF == 2) {
                 sh shVar2 = this.out;
                 avsVar.e(2);
                 avsVar.b = -1;
-                emn.bl(shVar2, 2, (short) emn.au(sgVar, avsVar.d));
+                StaticHelpers7.bl(shVar2, 2, (short) StaticHelpers7.au(sgVar, avsVar.d));
                 return;
             }
             if (iF == 3) {
                 sh shVar3 = this.out;
                 avsVar.e(3);
                 avsVar.b = -1;
-                emn.bm(shVar3, 3, (char) emn.aw(sgVar, avsVar.d, false));
+                StaticHelpers7.bm(shVar3, 3, (char) StaticHelpers7.aw(sgVar, avsVar.d, false));
                 return;
             }
             if (iF == 4) {
                 sh shVar4 = this.out;
                 avsVar.e(4);
                 avsVar.b = -1;
-                emn.bl(shVar4, 4, emn.au(sgVar, avsVar.d));
+                StaticHelpers7.bl(shVar4, 4, StaticHelpers7.au(sgVar, avsVar.d));
                 return;
             }
             if (iF == 16) {
                 avsVar.e(16);
                 avsVar.b = -1;
-                emn.bk(this.out, 16, ((long) Float.floatToIntBits(Float.intBitsToFloat(emn.aw(sgVar, avsVar.d, true)))) << 32);
+                StaticHelpers7.bk(this.out, 16, ((long) Float.floatToIntBits(Float.intBitsToFloat(StaticHelpers7.aw(sgVar, avsVar.d, true)))) << 32);
                 return;
             }
             if (iF == 17) {
-                emn.bk(this.out, 17, Double.doubleToLongBits(avsVar.h()));
+                StaticHelpers7.bk(this.out, 17, Double.doubleToLongBits(avsVar.h()));
                 return;
             }
             switch (iF) {
@@ -125,45 +125,45 @@ public final class IndexMap {
                     IndexMap indexMap = IndexMap.this;
                     avsVar.e(21);
                     avsVar.b = -1;
-                    emn.bm(shVar5, 21, indexMap.adjustProto(emn.aw(sgVar, avsVar.d, false)));
+                    StaticHelpers7.bm(shVar5, 21, indexMap.adjustProto(StaticHelpers7.aw(sgVar, avsVar.d, false)));
                     return;
                 case 22:
                     sh shVar6 = this.out;
                     IndexMap indexMap2 = IndexMap.this;
                     avsVar.e(22);
                     avsVar.b = -1;
-                    emn.bm(shVar6, 22, indexMap2.adjustMethodHandle(emn.aw(sgVar, avsVar.d, false)));
+                    StaticHelpers7.bm(shVar6, 22, indexMap2.adjustMethodHandle(StaticHelpers7.aw(sgVar, avsVar.d, false)));
                     return;
                 case 23:
-                    emn.bm(this.out, 23, IndexMap.this.adjustString(avsVar.j()));
+                    StaticHelpers7.bm(this.out, 23, IndexMap.this.adjustString(avsVar.j()));
                     return;
                 case 24:
                     sh shVar7 = this.out;
                     IndexMap indexMap3 = IndexMap.this;
                     avsVar.e(24);
                     avsVar.b = -1;
-                    emn.bm(shVar7, 24, indexMap3.adjustType(emn.aw(sgVar, avsVar.d, false)));
+                    StaticHelpers7.bm(shVar7, 24, indexMap3.adjustType(StaticHelpers7.aw(sgVar, avsVar.d, false)));
                     return;
                 case 25:
                     sh shVar8 = this.out;
                     IndexMap indexMap4 = IndexMap.this;
                     avsVar.e(25);
                     avsVar.b = -1;
-                    emn.bm(shVar8, 25, indexMap4.adjustField(emn.aw(sgVar, avsVar.d, false)));
+                    StaticHelpers7.bm(shVar8, 25, indexMap4.adjustField(StaticHelpers7.aw(sgVar, avsVar.d, false)));
                     return;
                 case 26:
                     sh shVar9 = this.out;
                     IndexMap indexMap5 = IndexMap.this;
                     avsVar.e(26);
                     avsVar.b = -1;
-                    emn.bm(shVar9, 26, indexMap5.adjustMethod(emn.aw(sgVar, avsVar.d, false)));
+                    StaticHelpers7.bm(shVar9, 26, indexMap5.adjustMethod(StaticHelpers7.aw(sgVar, avsVar.d, false)));
                     return;
                 case 27:
                     sh shVar10 = this.out;
                     IndexMap indexMap6 = IndexMap.this;
                     avsVar.e(27);
                     avsVar.b = -1;
-                    emn.bm(shVar10, 27, indexMap6.adjustField(emn.aw(sgVar, avsVar.d, false)));
+                    StaticHelpers7.bm(shVar10, 27, indexMap6.adjustField(StaticHelpers7.aw(sgVar, avsVar.d, false)));
                     return;
                 case 28:
                     writeTypeAndArg(28, 0);
@@ -350,7 +350,7 @@ public final class IndexMap {
         int i = cdhVar.b;
         int i2 = cdhVar.d;
         int i3 = cdhVar.c;
-        int iAe = dkz.ae(i);
+        int iAe = StaticHelpers6.ae(i);
         if (iAe != 0 && iAe != 1 && iAe != 2 && iAe != 3) {
             iAdjustField = adjustMethod(i2);
         } else {

@@ -25,9 +25,9 @@ public abstract class bcq extends bvg {
         this.t = 119;
         this.u = true;
         this.v = false;
-        bhu.p(context, attributeSet, 0, 0);
+        FastKV.p(context, attributeSet, 0, 0);
         int[] iArr = cxs.o;
-        bhu.q(context, attributeSet, iArr, 0, 0, new int[0]);
+        FastKV.q(context, attributeSet, iArr, 0, 0, new int[0]);
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr, 0, 0);
         this.t = typedArrayObtainStyledAttributes.getInt(1, this.t);
         Drawable drawable = typedArrayObtainStyledAttributes.getDrawable(0);

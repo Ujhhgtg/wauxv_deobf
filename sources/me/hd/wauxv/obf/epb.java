@@ -5,13 +5,13 @@ package me.hd.wauxv.obf;
 public final class epb extends din implements ctk {
     public final String a;
     public final String e;
-    public final dhx f;
+    public final ConnectivityMonitor f;
 
-    public epb(int i, String str, String str2, dhx dhxVar) {
+    public epb(int i, String str, String str2, ConnectivityMonitor connectivityMonitorVar) {
         super(i);
         this.a = str;
         this.e = str2;
-        this.f = dhxVar;
+        this.f = connectivityMonitorVar;
     }
 
     @Override // me.hd.wauxv.obf.din

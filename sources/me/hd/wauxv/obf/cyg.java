@@ -33,7 +33,7 @@ public abstract class cyg extends ConstraintLayout {
         cauVar.setShapeAppearanceModel(dglVarQ.m());
         this.ap.dz(ColorStateList.valueOf(-1));
         cau cauVar2 = this.ap;
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         setBackground(cauVar2);
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, cxs.ag, R.attr.materialClockStyle, 0);
         this.ao = typedArrayObtainStyledAttributes.getDimensionPixelSize(0, 0);
@@ -45,7 +45,7 @@ public abstract class cyg extends ConstraintLayout {
     public final void addView(View view, int i, ViewGroup.LayoutParams layoutParams) {
         super.addView(view, i, layoutParams);
         if (view.getId() == -1) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             view.setId(View.generateViewId());
         }
         Handler handler = getHandler();

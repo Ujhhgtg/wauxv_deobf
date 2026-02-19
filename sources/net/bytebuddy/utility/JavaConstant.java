@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.AccessControllerPlugin;
 import net.bytebuddy.description.enumeration.EnumerationDescription;
@@ -193,7 +193,7 @@ public interface JavaConstant extends ConstantValue {
 
         public int hashCode() {
             return this.arguments.hashCode()
-                    + ((this.bootstrap.hashCode() + dkz.f(this.typeDescription, this.name.hashCode() * 31, 31)) * 31);
+                    + ((this.bootstrap.hashCode() + StaticHelpers6.f(this.typeDescription, this.name.hashCode() * 31, 31)) * 31);
         }
 
         @Override // net.bytebuddy.utility.JavaConstant
@@ -251,7 +251,7 @@ public interface JavaConstant extends ConstantValue {
 
         public static JavaConstant ofArrayVarHandle(TypeDescription typeDescription) {
             if (!typeDescription.isArray()) {
-                throw new IllegalArgumentException(dkz.u("Not an array type: ", typeDescription));
+                throw new IllegalArgumentException(StaticHelpers6.concat("Not an array type: ", typeDescription));
             }
             JavaType javaType = JavaType.VAR_HANDLE;
             return new Dynamic(DEFAULT_NAME, javaType.getTypeStub(),
@@ -311,7 +311,7 @@ public interface JavaConstant extends ConstantValue {
                                         TypeDescription.ForLoadedType.of(Class.class))),
                         Collections.EMPTY_LIST);
             }
-            throw new IllegalArgumentException(dkz.u("Not a primitive type: ", typeDescription));
+            throw new IllegalArgumentException(StaticHelpers6.concat("Not a primitive type: ", typeDescription));
         }
 
         public static JavaConstant ofVarHandle(FieldDescription.InDefinedShape inDefinedShape) {
@@ -768,8 +768,8 @@ public interface JavaConstant extends ConstantValue {
         }
 
         public int hashCode() {
-            return this.parameterTypes.hashCode() + dkz.f(this.returnType,
-                    bjs.e(this.name, dkz.f(this.ownerType, this.handleType.hashCode() * 31, 31), 31), 31);
+            return this.parameterTypes.hashCode() + StaticHelpers6.f(this.returnType,
+                    bjs.e(this.name, StaticHelpers6.f(this.ownerType, this.handleType.hashCode() * 31, 31), 31), 31);
         }
 
         @Override // net.bytebuddy.utility.JavaConstant
@@ -820,10 +820,10 @@ public interface JavaConstant extends ConstantValue {
 
         public static MethodHandle ofLoaded(Object obj, Object obj2) {
             if (!JavaType.METHOD_HANDLE.isInstance(obj)) {
-                throw new IllegalArgumentException(dkz.r(obj, "Expected method handle object: "));
+                throw new IllegalArgumentException(StaticHelpers6.concatVar2Var1(obj, "Expected method handle object: "));
             }
             if (!JavaType.METHOD_HANDLES_LOOKUP.isInstance(obj2)) {
-                throw new IllegalArgumentException(dkz.r(obj2, "Expected method handle lookup object: "));
+                throw new IllegalArgumentException(StaticHelpers6.concatVar2Var1(obj2, "Expected method handle lookup object: "));
             }
             Object objRevealDirect = ClassFileVersion.ofThisVm(ClassFileVersion.JAVA_V8)
                     .isAtMost(ClassFileVersion.JAVA_V7) ? METHOD_HANDLE_INFO.revealDirect(obj)
@@ -1024,7 +1024,7 @@ public interface JavaConstant extends ConstantValue {
 
         public static MethodType ofLoaded(Object obj) {
             if (!JavaType.METHOD_TYPE.isInstance(obj)) {
-                throw new IllegalArgumentException(dkz.r(obj, "Expected method type object: "));
+                throw new IllegalArgumentException(StaticHelpers6.concatVar2Var1(obj, "Expected method type object: "));
             }
             Dispatcher dispatcher = DISPATCHER;
             return of(dispatcher.returnType(obj), dispatcher.parameterArray(obj));
@@ -1472,7 +1472,7 @@ public interface JavaConstant extends ConstantValue {
         public static JavaConstant of(TypeDescription typeDescription) {
             if (typeDescription.isPrimitive()) {
                 throw new IllegalArgumentException(
-                        dkz.u("A primitive type cannot be represented as a type constant: ", typeDescription));
+                        StaticHelpers6.concat("A primitive type cannot be represented as a type constant: ", typeDescription));
             }
             return new OfTypeDescription(typeDescription);
         }
@@ -1500,7 +1500,7 @@ public interface JavaConstant extends ConstantValue {
                 if (obj instanceof ConstantDynamic) {
                     return Dynamic.ofAsm(typePool, (ConstantDynamic) obj);
                 }
-                throw new IllegalArgumentException(dkz.r(obj, "Not an ASM constant: "));
+                throw new IllegalArgumentException(StaticHelpers6.concatVar2Var1(obj, "Not an ASM constant: "));
             }
             Type type = (Type) obj;
             if (type.getSort() == 11) {
@@ -1525,7 +1525,7 @@ public interface JavaConstant extends ConstantValue {
             if (javaConstantOfLoadedOrNull != null) {
                 return javaConstantOfLoadedOrNull;
             }
-            throw new IllegalArgumentException(dkz.r(obj, "Not a constant: "));
+            throw new IllegalArgumentException(StaticHelpers6.concatVar2Var1(obj, "Not a constant: "));
         }
 
         @MaybeNull
@@ -1744,7 +1744,7 @@ public interface JavaConstant extends ConstantValue {
                         arrayList4);
             }
             throw new IllegalArgumentException(
-                    dkz.r(obj, "Not a resolvable constant description or not expressible as a constant pool value: "));
+                    StaticHelpers6.concatVar2Var1(obj, "Not a resolvable constant description or not expressible as a constant pool value: "));
         }
 
         public static List<JavaConstant> wrap(List<?> list) {

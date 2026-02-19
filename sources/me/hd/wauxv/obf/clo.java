@@ -40,13 +40,13 @@ public final /* synthetic */ class clo implements IInvokable {
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
                 cls = String.class;
-                Class<String> clsBf = cnf.bf(dal.b(cls));
+                Class<String> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 cls = clsBf != null ? clsBf : String.class;
                 cls2 = List.class;
-                Class<List> clsBf2 = cnf.bf(dal.b(cls2));
+                Class<List> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                 cls2 = clsBf2 != null ? clsBf2 : List.class;
                 cls3 = Integer.class;
-                Class<Integer> clsBf3 = cnf.bf(dal.b(cls3));
+                Class<Integer> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
                 cdjVar.q(cls, cls2, clsBf3 != null ? clsBf3 : Integer.class);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
@@ -69,22 +69,22 @@ public final /* synthetic */ class clo implements IInvokable {
                 bah bahVar2 = (bah) obj;
                 cdj cdjVar2 = new cdj();
                 cls4 = String.class;
-                Class<String> clsBf4 = cnf.bf(dal.b(cls4));
+                Class<String> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
                 if (clsBf4 == null) {
                     clsBf4 = cls4;
                 }
                 cls5 = Integer.class;
-                Class<Integer> clsBf5 = cnf.bf(dal.b(cls5));
+                Class<Integer> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls5));
                 if (clsBf5 == null) {
                     clsBf5 = cls5;
                 }
-                Class<Integer> clsBf6 = cnf.bf(dal.b(cls5));
+                Class<Integer> clsBf6 = HugeSyntheticPileOfHelpers.bf(dal.b(cls5));
                 cls5 = clsBf6 != null ? clsBf6 : Integer.class;
-                Class<String> clsBf7 = cnf.bf(dal.b(cls4));
+                Class<String> clsBf7 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
                 if (clsBf7 == null) {
                     clsBf7 = cls4;
                 }
-                Class<String> clsBf8 = cnf.bf(dal.b(cls4));
+                Class<String> clsBf8 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
                 cdjVar2.q(clsBf4, clsBf5, cls5, clsBf7, clsBf8 != null ? clsBf8 : String.class);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
@@ -107,16 +107,16 @@ public final /* synthetic */ class clo implements IInvokable {
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
                 cls6 = String.class;
-                Class<String> clsBf9 = cnf.bf(dal.b(cls6));
+                Class<String> clsBf9 = HugeSyntheticPileOfHelpers.bf(dal.b(cls6));
                 cls6 = clsBf9 != null ? clsBf9 : String.class;
                 cls7 = List.class;
-                Class<List> clsBf10 = cnf.bf(dal.b(cls7));
+                Class<List> clsBf10 = HugeSyntheticPileOfHelpers.bf(dal.b(cls7));
                 cls7 = clsBf10 != null ? clsBf10 : List.class;
                 cls8 = Integer.class;
-                Class<Integer> clsBf11 = cnf.bf(dal.b(cls8));
+                Class<Integer> clsBf11 = HugeSyntheticPileOfHelpers.bf(dal.b(cls8));
                 cls8 = clsBf11 != null ? clsBf11 : Integer.class;
                 cls9 = Object.class;
-                Class<Object> clsBf12 = cnf.bf(dal.b(cls9));
+                Class<Object> clsBf12 = HugeSyntheticPileOfHelpers.bf(dal.b(cls9));
                 cdjVar3.q(cls6, cls7, cls8, clsBf12 != null ? clsBf12 : Object.class);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
@@ -129,7 +129,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 cdj cdjVar4 = new cdj();
                 cdjVar4.t("/cgi-bin/micromsg-bin/modifycontactlabellist" /* "/cgi-bin/micromsg-bin/modifycontactlabellist" /* "/cgi-bin/micromsg-bin/modifycontactlabellist" /* "/cgi-bin/micromsg-bin/modifycontactlabellist" /* cnb.z(-110436494080810L)   */);
                 cls10 = LinkedList.class;
-                Class<LinkedList> clsBf13 = cnf.bf(dal.b(cls10));
+                Class<LinkedList> clsBf13 = HugeSyntheticPileOfHelpers.bf(dal.b(cls10));
                 cdjVar4.q(clsBf13 != null ? clsBf13 : LinkedList.class);
                 bahVar4.getClass();
                 bahVar4.d = cdjVar4;
@@ -150,21 +150,21 @@ public final /* synthetic */ class clo implements IInvokable {
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar5 = new cdj();
                 cls11 = String.class;
-                Class<String> clsBf14 = cnf.bf(dal.b(cls11));
+                Class<String> clsBf14 = HugeSyntheticPileOfHelpers.bf(dal.b(cls11));
                 if (clsBf14 == null) {
                     clsBf14 = cls11;
                 }
-                Class<String> clsBf15 = cnf.bf(dal.b(cls11));
+                Class<String> clsBf15 = HugeSyntheticPileOfHelpers.bf(dal.b(cls11));
                 cls11 = clsBf15 != null ? clsBf15 : String.class;
                 cls12 = Integer.class;
-                Class<Integer> clsBf16 = cnf.bf(dal.b(cls12));
+                Class<Integer> clsBf16 = HugeSyntheticPileOfHelpers.bf(dal.b(cls12));
                 if (clsBf16 == null) {
                     clsBf16 = cls12;
                 }
-                Class<Integer> clsBf17 = cnf.bf(dal.b(cls12));
+                Class<Integer> clsBf17 = HugeSyntheticPileOfHelpers.bf(dal.b(cls12));
                 cls12 = clsBf17 != null ? clsBf17 : Integer.class;
                 cls13 = Object.class;
-                Class<Object> clsBf18 = cnf.bf(dal.b(cls13));
+                Class<Object> clsBf18 = HugeSyntheticPileOfHelpers.bf(dal.b(cls13));
                 cdjVar5.q(clsBf14, cls11, clsBf16, cls12, clsBf18 != null ? clsBf18 : Object.class);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar5;
@@ -186,23 +186,23 @@ public final /* synthetic */ class clo implements IInvokable {
             case 16:
                 bah bahVar6 = (bah) obj;
                 cdj cdjVar6 = new cdj();
-                Class clsBf19 = cnf.bf(dal.b(Integer.class));
+                Class clsBf19 = HugeSyntheticPileOfHelpers.bf(dal.b(Integer.class));
                 Class cls15 = clsBf19 == null ? Integer.class : clsBf19;
-                Class clsBf20 = cnf.bf(dal.b(Integer.class));
+                Class clsBf20 = HugeSyntheticPileOfHelpers.bf(dal.b(Integer.class));
                 Class cls16 = clsBf20 == null ? Integer.class : clsBf20;
-                Class clsBf21 = cnf.bf(dal.b(String.class));
+                Class clsBf21 = HugeSyntheticPileOfHelpers.bf(dal.b(String.class));
                 Class cls17 = clsBf21 == null ? String.class : clsBf21;
-                Class clsBf22 = cnf.bf(dal.b(String.class));
+                Class clsBf22 = HugeSyntheticPileOfHelpers.bf(dal.b(String.class));
                 Class cls18 = clsBf22 == null ? String.class : clsBf22;
-                Class clsBf23 = cnf.bf(dal.b(String.class));
+                Class clsBf23 = HugeSyntheticPileOfHelpers.bf(dal.b(String.class));
                 Class cls19 = clsBf23 == null ? String.class : clsBf23;
-                Class clsBf24 = cnf.bf(dal.b(String.class));
+                Class clsBf24 = HugeSyntheticPileOfHelpers.bf(dal.b(String.class));
                 Class cls20 = clsBf24 == null ? String.class : clsBf24;
-                Class clsBf25 = cnf.bf(dal.b(String.class));
+                Class clsBf25 = HugeSyntheticPileOfHelpers.bf(dal.b(String.class));
                 Class cls21 = clsBf25 == null ? String.class : clsBf25;
-                Class clsBf26 = cnf.bf(dal.b(String.class));
+                Class clsBf26 = HugeSyntheticPileOfHelpers.bf(dal.b(String.class));
                 Class cls22 = clsBf26 == null ? String.class : clsBf26;
-                Class clsBf27 = cnf.bf(dal.b(String.class));
+                Class clsBf27 = HugeSyntheticPileOfHelpers.bf(dal.b(String.class));
                 cdjVar6.q(cls15, cls16, cls17, cls18, cls19, cls20, cls21, cls22, clsBf27 == null ? String.class : clsBf27);
                 bahVar6.getClass();
                 bahVar6.d = cdjVar6;
@@ -224,7 +224,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 bah bahVar8 = (bah) obj;
                 cdj cdjVar8 = new cdj();
                 cme.a.getClass();
-                cdjVar8.o(emn.bb(cmc.a).getDeclaringClass());
+                cdjVar8.o(StaticHelpers7.bb(cmc.a).getDeclaringClass());
                 fj fjVar = new fj();
                 cdj cdjVar9 = new cdj();
                 cdjVar9.t("MicroMsg.BigBallSysCmdMsgConsumer" /* "MicroMsg.BigBallSysCmdMsgConsumer" /* "MicroMsg.BigBallSysCmdMsgConsumer" /* "MicroMsg.BigBallSysCmdMsgConsumer" /* cnb.z(-135441793678122L)   */, "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* cnb.z(-135244225182506L)   */);
@@ -253,25 +253,25 @@ public final /* synthetic */ class clo implements IInvokable {
             case 23:
                 bah bahVar9 = (bah) obj;
                 cdj cdjVar11 = new cdj();
-                Class clsBf28 = cnf.bf(dal.b(Integer.class));
+                Class clsBf28 = HugeSyntheticPileOfHelpers.bf(dal.b(Integer.class));
                 Class cls23 = clsBf28 == null ? Integer.class : clsBf28;
-                Class clsBf29 = cnf.bf(dal.b(Integer.class));
+                Class clsBf29 = HugeSyntheticPileOfHelpers.bf(dal.b(Integer.class));
                 Class cls24 = clsBf29 == null ? Integer.class : clsBf29;
-                Class clsBf30 = cnf.bf(dal.b(String.class));
+                Class clsBf30 = HugeSyntheticPileOfHelpers.bf(dal.b(String.class));
                 if (clsBf30 == null) {
                     clsBf30 = String.class;
                 }
-                Class clsBf31 = cnf.bf(dal.b(String.class));
+                Class clsBf31 = HugeSyntheticPileOfHelpers.bf(dal.b(String.class));
                 if (clsBf31 == null) {
                     clsBf31 = String.class;
                 }
-                Class clsBf32 = cnf.bf(dal.b(Integer.class));
+                Class clsBf32 = HugeSyntheticPileOfHelpers.bf(dal.b(Integer.class));
                 if (clsBf32 == null) {
                     clsBf32 = Integer.class;
                 }
-                Class clsBf33 = cnf.bf(dal.b(String.class));
+                Class clsBf33 = HugeSyntheticPileOfHelpers.bf(dal.b(String.class));
                 Class cls25 = clsBf33 == null ? String.class : clsBf33;
-                Class clsBf34 = cnf.bf(dal.b(String.class));
+                Class clsBf34 = HugeSyntheticPileOfHelpers.bf(dal.b(String.class));
                 cdjVar11.q(cls23, cls24, clsBf30, clsBf31, clsBf32, cls25, clsBf34 == null ? String.class : clsBf34);
                 bahVar9.getClass();
                 bahVar9.d = cdjVar11;
@@ -315,11 +315,11 @@ public final /* synthetic */ class clo implements IInvokable {
                 bah bahVar11 = (bah) obj;
                 cdj cdjVar13 = new cdj();
                 cls14 = String.class;
-                Class<String> clsBf35 = cnf.bf(dal.b(cls14));
+                Class<String> clsBf35 = HugeSyntheticPileOfHelpers.bf(dal.b(cls14));
                 if (clsBf35 == null) {
                     clsBf35 = cls14;
                 }
-                Class<String> clsBf36 = cnf.bf(dal.b(cls14));
+                Class<String> clsBf36 = HugeSyntheticPileOfHelpers.bf(dal.b(cls14));
                 cdjVar13.q(null, clsBf35, clsBf36 != null ? clsBf36 : String.class);
                 bahVar11.getClass();
                 bahVar11.d = cdjVar13;

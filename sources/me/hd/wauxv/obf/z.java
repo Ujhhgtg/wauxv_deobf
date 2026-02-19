@@ -21,7 +21,7 @@ public class z implements Iterator, IEmpty {
     public final boolean hasNext() {
         switch (this.a) {
             case 0:
-                return this.b < ((ac) this.c).a();
+                return this.b < ((KotlinAbstractReadonlyList) this.c).a();
             case 1:
                 return this.b < ((Object[]) this.c).length;
             case 2:
@@ -48,10 +48,10 @@ public class z implements Iterator, IEmpty {
                 if (!hasNext()) {
                     throw new NoSuchElementException();
                 }
-                ac acVar = (ac) this.c;
+                KotlinAbstractReadonlyList kotlinAbstractReadonlyListVar = (KotlinAbstractReadonlyList) this.c;
                 int i = this.b;
                 this.b = i + 1;
-                return acVar.get(i);
+                return kotlinAbstractReadonlyListVar.get(i);
             case 1:
                 try {
                     Object[] objArr = (Object[]) this.c;

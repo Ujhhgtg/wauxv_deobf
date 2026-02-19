@@ -67,49 +67,49 @@ public final /* synthetic */ class atn implements IInvokable {
                 return kotlinUnitVar;
             case 2:
                 View view = (View) obj;
-                View viewK = dkz.k(view, R.layout.module_dialog_emoji_game, null, false);
+                View viewK = StaticHelpers6.k(view, R.layout.module_dialog_emoji_game, null, false);
                 int i6 = R.id.moduleDialogRbEmojiGameDice1;
-                MaterialRadioButton materialRadioButton = (MaterialRadioButton) KotlinHelpers2.aq(viewK,
+                MaterialRadioButton materialRadioButton = (MaterialRadioButton) KotlinHelpers2.recursivelyFindViewById(viewK,
                         R.id.moduleDialogRbEmojiGameDice1);
                 if (materialRadioButton != null) {
                     i6 = R.id.moduleDialogRbEmojiGameDice2;
-                    MaterialRadioButton materialRadioButton2 = (MaterialRadioButton) KotlinHelpers2.aq(viewK,
+                    MaterialRadioButton materialRadioButton2 = (MaterialRadioButton) KotlinHelpers2.recursivelyFindViewById(viewK,
                             R.id.moduleDialogRbEmojiGameDice2);
                     if (materialRadioButton2 != null) {
                         i6 = R.id.moduleDialogRbEmojiGameDice3;
-                        MaterialRadioButton materialRadioButton3 = (MaterialRadioButton) KotlinHelpers2.aq(viewK,
+                        MaterialRadioButton materialRadioButton3 = (MaterialRadioButton) KotlinHelpers2.recursivelyFindViewById(viewK,
                                 R.id.moduleDialogRbEmojiGameDice3);
                         if (materialRadioButton3 != null) {
                             i6 = R.id.moduleDialogRbEmojiGameDice4;
-                            MaterialRadioButton materialRadioButton4 = (MaterialRadioButton) KotlinHelpers2.aq(viewK,
+                            MaterialRadioButton materialRadioButton4 = (MaterialRadioButton) KotlinHelpers2.recursivelyFindViewById(viewK,
                                     R.id.moduleDialogRbEmojiGameDice4);
                             if (materialRadioButton4 != null) {
                                 i6 = R.id.moduleDialogRbEmojiGameDice5;
-                                MaterialRadioButton materialRadioButton5 = (MaterialRadioButton) KotlinHelpers2.aq(viewK,
+                                MaterialRadioButton materialRadioButton5 = (MaterialRadioButton) KotlinHelpers2.recursivelyFindViewById(viewK,
                                         R.id.moduleDialogRbEmojiGameDice5);
                                 if (materialRadioButton5 != null) {
                                     i6 = R.id.moduleDialogRbEmojiGameDice6;
-                                    MaterialRadioButton materialRadioButton6 = (MaterialRadioButton) KotlinHelpers2.aq(viewK,
+                                    MaterialRadioButton materialRadioButton6 = (MaterialRadioButton) KotlinHelpers2.recursivelyFindViewById(viewK,
                                             R.id.moduleDialogRbEmojiGameDice6);
                                     if (materialRadioButton6 != null) {
                                         i6 = R.id.moduleDialogRbEmojiGameMorra0;
-                                        MaterialRadioButton materialRadioButton7 = (MaterialRadioButton) KotlinHelpers2.aq(viewK,
+                                        MaterialRadioButton materialRadioButton7 = (MaterialRadioButton) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                 R.id.moduleDialogRbEmojiGameMorra0);
                                         if (materialRadioButton7 != null) {
                                             i6 = R.id.moduleDialogRbEmojiGameMorra1;
                                             MaterialRadioButton materialRadioButton8 = (MaterialRadioButton) KotlinHelpers2
-                                                    .aq(viewK, R.id.moduleDialogRbEmojiGameMorra1);
+                                                    .recursivelyFindViewById(viewK, R.id.moduleDialogRbEmojiGameMorra1);
                                             if (materialRadioButton8 != null) {
                                                 i6 = R.id.moduleDialogRbEmojiGameMorra2;
                                                 MaterialRadioButton materialRadioButton9 = (MaterialRadioButton) KotlinHelpers2
-                                                        .aq(viewK, R.id.moduleDialogRbEmojiGameMorra2);
+                                                        .recursivelyFindViewById(viewK, R.id.moduleDialogRbEmojiGameMorra2);
                                                 if (materialRadioButton9 != null) {
                                                     i6 = R.id.moduleDialogRgEmojiGameDice;
-                                                    RadioGroup radioGroup = (RadioGroup) KotlinHelpers2.aq(viewK,
+                                                    RadioGroup radioGroup = (RadioGroup) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                             R.id.moduleDialogRgEmojiGameDice);
                                                     if (radioGroup != null) {
                                                         i6 = R.id.moduleDialogRgEmojiGameMorra;
-                                                        RadioGroup radioGroup2 = (RadioGroup) KotlinHelpers2.aq(viewK,
+                                                        RadioGroup radioGroup2 = (RadioGroup) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                 R.id.moduleDialogRgEmojiGameMorra);
                                                         if (radioGroup2 != null) {
                                                             LinearLayout linearLayout = (LinearLayout) viewK;
@@ -177,16 +177,16 @@ public final /* synthetic */ class atn implements IInvokable {
                 bahVar.a = SomeStaticHelpers.ab(strArr);
                 cdj cdjVar = new cdj();
                 cls2 = Integer.class;
-                Class<Integer> clsBf = cnf.bf(dal.b(cls2));
+                Class<Integer> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                 if (clsBf == null) {
                     clsBf = cls2;
                 }
                 cdjVar.r(clsBf);
-                Class<Integer> clsBf2 = cnf.bf(dal.b(cls2));
+                Class<Integer> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                 if (clsBf2 == null) {
                     clsBf2 = cls2;
                 }
-                Class<Integer> clsBf3 = cnf.bf(dal.b(cls2));
+                Class<Integer> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                 cdjVar.q(clsBf2, clsBf3 != null ? clsBf3 : Integer.class);
                 fj fjVar = new fj();
                 cdj cdjVar2 = new cdj();
@@ -217,26 +217,26 @@ public final /* synthetic */ class atn implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = bhu.x(th);
+                    objX = FastKV.x(th);
                 }
                 if (objX instanceof dcx) {
                     objX = null;
                 }
                 throwIfVar1IsNull(objX);
                 int i7 = 0;
-                azg azgVarR = dqc.bi(objX).r();
-                abf.ao(azgVarR.ad, (cdy[]) Arrays.copyOf(new cdy[] { cdy.d }, 1));
-                azgVarR.a = dal.b(cls4);
-                Object objE = ((azk) aaz.e(azgVarR.c())).e();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objX).r();
+                StaticHelpers2.ao(fieldResolverVarR.modifiers, (cdy[]) Arrays.copyOf(new cdy[] { cdy.d }, 1));
+                fieldResolverVarR.fieldType = dal.b(cls4);
+                Object objE = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).e();
                 throwIfVar1IsNull(objE);
                 if (((Number) objE).intValue() == 0) {
-                    azg azgVarR2 = dqc.bi(objX).r();
-                    azgVarR2.a = "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-507897062619946L)  */;
-                    Object objD = ((azk) aaz.e(azgVarR2.c())).d();
+                    FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objX).r();
+                    fieldResolverVarR2.fieldType = "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-507897062619946L)  */;
+                    Object objD = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).d();
                     throwIfVar1IsNull(objD);
-                    cde cdeVarT = dqc.bi(objD).t();
-                    cdeVarT.ab = "getMd5" /* "getMd5" /* "getMd5" /* cnb.z(-507751033731882L)  */;
-                    Object objJ = ((MethodHookWrapper) aaz.e(cdeVarT.aj())).j(new Object[0]);
+                    MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objD).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                    methodResolverVarT.name = "getMd5" /* "getMd5" /* "getMd5" /* cnb.z(-507751033731882L)  */;
+                    Object objJ = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).j(new Object[0]);
                     throwIfVar1IsNull(objJ);
                     String str = (String) objJ;
                     if (str.equals("9bd1281af3a31710a45b84d736363691" /* "9bd1281af3a31710a45b84d736363691" /* "9bd1281af3a31710a45b84d736363691" /* cnb.z(-507703789091626L)  */)) {
@@ -398,7 +398,7 @@ public final /* synthetic */ class atn implements IInvokable {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = bhu.x(th2);
+                    objX2 = FastKV.x(th2);
                 }
                 if (objX2 instanceof dcx) {
                     objX2 = null;
@@ -439,14 +439,14 @@ public final /* synthetic */ class atn implements IInvokable {
             case 13:
                 List list = (List) obj;
                 Object obj2 = list.get(0);
-                Class<String> clsBf4 = cnf.bf(dal.b(cls));
+                Class<String> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 if (nullSafeIsEqual(obj2, clsBf4 != null ? clsBf4 : String.class)) {
                     Object obj3 = list.get(1);
                     atz.a.getClass();
-                    if (nullSafeIsEqual(obj3, emn.bb(aty.a).getDeclaringClass())) {
+                    if (nullSafeIsEqual(obj3, StaticHelpers7.bb(aty.a).getDeclaringClass())) {
                         Object obj4 = list.get(2);
                         cge.a.getClass();
-                        z = nullSafeIsEqual(obj4, emn.az(cgd.a));
+                        z = nullSafeIsEqual(obj4, StaticHelpers7.az(cgd.a));
                     }
                 }
                 return Boolean.valueOf(z);
@@ -508,7 +508,7 @@ public final /* synthetic */ class atn implements IInvokable {
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = bhu.x(th3);
+                    objX3 = FastKV.x(th3);
                 }
                 if (objX3 instanceof dcx) {
                     objX3 = null;
@@ -521,7 +521,7 @@ public final /* synthetic */ class atn implements IInvokable {
                         objX4 = null;
                     }
                 } catch (Throwable th4) {
-                    objX4 = bhu.x(th4);
+                    objX4 = FastKV.x(th4);
                 }
                 for (bni bniVar : axu.b) {
                     try {
@@ -550,19 +550,19 @@ public final /* synthetic */ class atn implements IInvokable {
             case 21:
                 bah bahVar4 = (bah) obj;
                 cdj cdjVar6 = new cdj();
-                Class<String> clsBf5 = cnf.bf(dal.b(cls));
+                Class<String> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 if (clsBf5 == null) {
                     clsBf5 = cls;
                 }
                 cdjVar6.r(clsBf5);
-                Class<String> clsBf6 = cnf.bf(dal.b(cls));
+                Class<String> clsBf6 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 if (clsBf6 == null) {
                     clsBf6 = cls;
                 }
-                Class<String> clsBf7 = cnf.bf(dal.b(cls));
+                Class<String> clsBf7 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 cls = clsBf7 != null ? clsBf7 : String.class;
                 cls3 = Boolean.class;
-                Class<Boolean> clsBf8 = cnf.bf(dal.b(cls3));
+                Class<Boolean> clsBf8 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
                 cdjVar6.q(clsBf6, cls, clsBf8 != null ? clsBf8 : Boolean.class);
                 cdjVar6.t("MicroMsg.ExptService" /* "MicroMsg.ExptService" /* "MicroMsg.ExptService" /* cnb.z(-36588826393386L)  */,
                         "Fail to query value, return default value '%s' instead." /* "Fail to query value, return default value '%s' instead." /* "Fail to query value, return default value '%s' instead." /* cnb.z(-42528766163754L)  */);
@@ -579,26 +579,26 @@ public final /* synthetic */ class atn implements IInvokable {
                         objX5 = null;
                     }
                 } catch (Throwable th5) {
-                    objX5 = bhu.x(th5);
+                    objX5 = FastKV.x(th5);
                 }
                 Object obj5 = objX5 instanceof dcx ? null : objX5;
                 throwIfVar1IsNull(obj5);
                 ContextMenu contextMenu = (ContextMenu) obj5;
                 if (cnb.ab(ewk.b) || cnb.ac(ewh.c)) {
                     int i8 = 0;
-                    azg azgVarR3 = dqc.bi(contextMenu).r();
-                    azgVarR3.a = dal.b(Context.class);
-                    Object objE2 = ((azk) aaz.e(azgVarR3.c())).e();
+                    FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(contextMenu).r();
+                    fieldResolverVarR3.fieldType = dal.b(Context.class);
+                    Object objE2 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).e();
                     throwIfVar1IsNull(objE2);
                     Resources resources = ((Context) objE2).getResources();
                     if (resources != null) {
-                        cnf.bi(resources);
+                        HugeSyntheticPileOfHelpers.injectModuleAssets(resources);
                     }
-                    dov dovVar = new dov(new ayu(contextMenu, 0));
+                    Kotlin$Lazy kotlin$LazyVar = new Kotlin$Lazy(new ayu(contextMenu, 0));
                     for (bnj bnjVar : linkedHashSet) {
                         try {
                             for (ayv ayvVar : ((cif) bnjVar).i()) {
-                                MethodHookWrapper methodHookWrapperVarD = ((MethodHookWrapper) dovVar.getValue()).d();
+                                MethodHookWrapper methodHookWrapperVarD = ((MethodHookWrapper) kotlin$LazyVar.getValue()).d();
                                 methodHookWrapperVarD.dexFind(contextMenu);
                                 try {
                                     Integer numValueOf2 = Integer.valueOf(R.id.MenuItem_Group);
@@ -646,24 +646,24 @@ public final /* synthetic */ class atn implements IInvokable {
                         objX6 = null;
                     }
                 } catch (Throwable th6) {
-                    objX6 = bhu.x(th6);
+                    objX6 = FastKV.x(th6);
                 }
                 Object obj6 = objX6 instanceof dcx ? null : objX6;
                 throwIfVar1IsNull(obj6);
                 MenuItem menuItem = (MenuItem) obj6;
                 int i9 = 0;
-                azg azgVarAa = dkz.aa(hookParam5);
-                azgVarAa.a = dal.b(cls4);
-                Object objE3 = ((azk) aaz.e(azgVarAa.c())).e();
+                FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam5);
+                fieldResolverVarAa.fieldType = dal.b(cls4);
+                Object objE3 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).e();
                 throwIfVar1IsNull(objE3);
                 int iIntValue = ((Number) objE3).intValue();
-                azg azgVarAa2 = dkz.aa(hookParam5);
-                azgVarAa2.a = "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* cnb.z(-42253888256810L)  */;
-                Object objE4 = ((azk) aaz.e(azgVarAa2.c())).e();
+                FieldResolver fieldResolverVarAa2 = StaticHelpers6.aa(hookParam5);
+                fieldResolverVarAa2.fieldType = "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* cnb.z(-42253888256810L)  */;
+                Object objE4 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).e();
                 throwIfVar1IsNull(objE4);
-                azg azgVarR4 = dqc.bi((Activity) objE4).r();
-                azgVarR4.b = new atn(26);
-                Object objE5 = ((azk) aaz.e(azgVarR4.c())).e();
+                FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration((Activity) objE4).r();
+                fieldResolverVarR4.b = new atn(26);
+                Object objE5 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).e();
                 throwIfVar1IsNull(objE5);
                 Object item = ((BaseAdapter) objE5).getItem(iIntValue);
                 for (bnj bnjVar3 : ayy.b) {
@@ -733,25 +733,25 @@ public final /* synthetic */ class atn implements IInvokable {
                         objX7 = null;
                     }
                 } catch (Throwable th7) {
-                    objX7 = bhu.x(th7);
+                    objX7 = FastKV.x(th7);
                 }
                 Object obj7 = objX7 instanceof dcx ? null : objX7;
                 throwIfVar1IsNull(obj7);
                 ContextMenu contextMenu2 = (ContextMenu) obj7;
                 int i10 = 0;
-                azg azgVarR5 = dqc.bi(contextMenu2).r();
-                azgVarR5.a = dal.b(Context.class);
-                Object objE6 = ((azk) aaz.e(azgVarR5.c())).e();
+                FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(contextMenu2).r();
+                fieldResolverVarR5.fieldType = dal.b(Context.class);
+                Object objE6 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR5.resolve())).e();
                 throwIfVar1IsNull(objE6);
                 Resources resources2 = ((Context) objE6).getResources();
                 if (resources2 != null) {
-                    cnf.bi(resources2);
+                    HugeSyntheticPileOfHelpers.injectModuleAssets(resources2);
                 }
-                dov dovVar2 = new dov(new ayu(contextMenu2, 1));
+                Kotlin$Lazy kotlin$LazyVar2 = new Kotlin$Lazy(new ayu(contextMenu2, 1));
                 for (bnk bnkVar : azd.b) {
                     try {
                         for (aza azaVar : ((cie) bnkVar).i()) {
-                            MethodHookWrapper methodHookWrapperVarD2 = ((MethodHookWrapper) dovVar2.getValue()).d();
+                            MethodHookWrapper methodHookWrapperVarD2 = ((MethodHookWrapper) kotlin$LazyVar2.getValue()).d();
                             methodHookWrapperVarD2.dexFind(contextMenu2);
                             Integer numValueOf3 = Integer.valueOf(i2);
                             azaVar.getClass();

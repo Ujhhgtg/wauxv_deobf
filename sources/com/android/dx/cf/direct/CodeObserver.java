@@ -15,8 +15,8 @@ import com.android.dx.rop.type.Type;
 import com.android.dx.util.ByteArray;
 import com.android.dx.util.Hex;
 import java.util.ArrayList;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -130,7 +130,7 @@ public class CodeObserver implements BytecodeArray.Visitor {
         } else if (i == 197) {
             strQ = ", " + Hex.u1(i4);
         } else {
-            strQ = dkz.q(i4, new StringBuilder(", "));
+            strQ = StaticHelpers6.q(i4, new StringBuilder(", "));
         }
         this.observer.parsed(this.bytes, i2, i3, header(i2) + " " + constant + strQ);
     }

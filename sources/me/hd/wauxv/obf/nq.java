@@ -74,7 +74,7 @@ public final class nq extends axs {
         if (slider.cb()) {
             fRound = -fRound;
         }
-        if (!slider.cj(i, cnf.ar(slider.getValues().get(i).floatValue() + fRound, slider.getValueFrom(), slider.getValueTo()))) {
+        if (!slider.cj(i, HugeSyntheticPileOfHelpers.ar(slider.getValues().get(i).floatValue() + fRound, slider.getValueFrom(), slider.getValueTo()))) {
             return false;
         }
         slider.cm();

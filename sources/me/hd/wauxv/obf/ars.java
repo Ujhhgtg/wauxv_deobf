@@ -28,7 +28,7 @@ public final /* synthetic */ class ars implements MenuItem.OnMenuItemClickListen
                 ((djp) this.b).invoke(menuItem);
                 return Boolean.TRUE.booleanValue();
             default:
-                emn.ax((Activity) this.b);
+                StaticHelpers7.ax((Activity) this.b);
                 return true;
         }
     }

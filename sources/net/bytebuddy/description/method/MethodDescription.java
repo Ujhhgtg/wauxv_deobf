@@ -15,7 +15,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import javax.annotation.Nonnull;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.AccessControllerPlugin;
 import net.bytebuddy.build.CachedReturnPlugin;
 import net.bytebuddy.description.ByteCodeElement;
@@ -27,8 +27,6 @@ import net.bytebuddy.description.annotation.AnnotationDescription;
 import net.bytebuddy.description.annotation.AnnotationList;
 import net.bytebuddy.description.annotation.AnnotationValue;
 import net.bytebuddy.description.enumeration.EnumerationDescription;
-import net.bytebuddy.description.method.ParameterDescription;
-import net.bytebuddy.description.method.ParameterList;
 import net.bytebuddy.description.modifier.ModifierContributor;
 import net.bytebuddy.description.modifier.Visibility;
 import net.bytebuddy.description.type.TypeDefinition;
@@ -1072,7 +1070,7 @@ public interface MethodDescription extends TypeVariableSource, ModifierReviewabl
             if (this.hashCode != 0) {
                 iF = 0;
             } else {
-                iF = dkz.f(this.returnType, this.name.hashCode() * 31, 31) + this.parameterTypes.hashCode();
+                iF = StaticHelpers6.f(this.returnType, this.name.hashCode() * 31, 31) + this.parameterTypes.hashCode();
             }
             if (iF == 0) {
                 return this.hashCode;
@@ -1199,7 +1197,7 @@ public interface MethodDescription extends TypeVariableSource, ModifierReviewabl
         @CachedReturnPlugin.Enhance("hashCode")
         public int hashCode() {
             if (this.hashCode == 0) {
-                int iHashCode = (this.annotations.hashCode() + ((this.exceptionTypes.hashCode() + ((this.parameterTokens.hashCode() + dkz.e(this.returnType, (this.typeVariableTokens.hashCode() + (((this.name.hashCode() * 31) + this.modifiers) * 31)) * 31, 31)) * 31)) * 31)) * 31;
+                int iHashCode = (this.annotations.hashCode() + ((this.exceptionTypes.hashCode() + ((this.parameterTokens.hashCode() + StaticHelpers6.e(this.returnType, (this.typeVariableTokens.hashCode() + (((this.name.hashCode() * 31) + this.modifiers) * 31)) * 31, 31)) * 31)) * 31)) * 31;
                 AnnotationValue<?, ?> annotationValue = this.defaultValue;
                 int iHashCode2 = (iHashCode + (annotationValue != null ? annotationValue.hashCode() : 0)) * 31;
                 TypeDescription.Generic generic = this.receiverType;

@@ -77,12 +77,12 @@ public final /* synthetic */ class act implements IInvokable {
                 bag bagVar2 = (bag) obj;
                 zb zbVar2 = new zb();
                 azl azlVar = new azl();
-                Class<String> clsBf = cnf.bf(dal.b(cls3));
+                Class<String> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
                 if (clsBf == null) {
                     clsBf = cls3;
                 }
                 azlVar.f(clsBf);
-                Class<String> clsBf2 = cnf.bf(dal.b(cls3));
+                Class<String> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
                 azlVar.f(clsBf2 != null ? clsBf2 : String.class);
                 azlVar.d = new bqh(2);
                 zbVar2.e = azlVar;
@@ -133,14 +133,14 @@ public final /* synthetic */ class act implements IInvokable {
                 azl azlVar2 = new azl();
                 aeg.a.getClass();
                 aee aeeVar = aee.a;
-                azlVar2.f(emn.bb(aeeVar).getDeclaringClass());
+                azlVar2.f(StaticHelpers7.bb(aeeVar).getDeclaringClass());
                 zbVar3.e = azlVar2;
                 fj fjVar3 = new fj();
                 cdj cdjVar8 = new cdj();
                 cdj.m(cdjVar8, 8);
-                cdjVar8.r(emn.bb(aeeVar).getDeclaringClass());
+                cdjVar8.r(StaticHelpers7.bb(aeeVar).getDeclaringClass());
                 fj fjVar4 = new fj(i3);
-                fjVar4.b = aaz.ab(EmptyReadonlyList.a);
+                fjVar4.b = StaticHelpers5.ab(EmptyReadonlyList.INSTANCE);
                 cdjVar8.f = fjVar4;
                 fjVar3.f(cdjVar8);
                 zbVar3.f = fjVar3;
@@ -160,7 +160,7 @@ public final /* synthetic */ class act implements IInvokable {
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar9 = new cdj();
                 aeg.a.getClass();
-                cdjVar9.o(emn.bb(aee.a).getDeclaringClass());
+                cdjVar9.o(StaticHelpers7.bb(aee.a).getDeclaringClass());
                 cdjVar9.t("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-386474042194730L)  */,
                         "getAllContactLable time:%s count:%s stack:%s" /* "getAllContactLable time:%s count:%s stack:%s" /* "getAllContactLable time:%s count:%s stack:%s" /* cnb.z(-386289358601002L)  */,
                         "select * from ContactLabel where isTemporary = 0  order by createTime ASC " /*
@@ -184,7 +184,7 @@ public final /* synthetic */ class act implements IInvokable {
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar11 = new cdj();
                 aeg.a.getClass();
-                cdjVar11.o(emn.bb(aee.a).getDeclaringClass());
+                cdjVar11.o(StaticHelpers7.bb(aee.a).getDeclaringClass());
                 cdjVar11.t("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-383574939269930L)  */,
                         "getUserNameListById time:%s id:%s count:%s stack:%s" /* "getUserNameListById time:%s id:%s count:%s stack:%s" /* "getUserNameListById time:%s id:%s count:%s stack:%s" /* cnb.z(-382892039469866L)  */);
                 bahVar5.getClass();
@@ -202,10 +202,10 @@ public final /* synthetic */ class act implements IInvokable {
                 bah bahVar6 = (bah) obj;
                 cdj cdjVar12 = new cdj();
                 aeo.a.getClass();
-                cdjVar12.o(emn.az(aem.a));
-                Class<String> clsBf3 = cnf.bf(dal.b(cls3));
+                cdjVar12.o(StaticHelpers7.az(aem.a));
+                Class<String> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
                 cls3 = clsBf3 != null ? clsBf3 : String.class;
-                Class<Boolean> clsBf4 = cnf.bf(dal.b(cls2));
+                Class<Boolean> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                 cdjVar12.q(cls3, clsBf4 != null ? clsBf4 : Boolean.class);
                 cdjVar12.t("[get]username = %s" /* "[get]username = %s" /* "[get]username = %s" /* cnb.z(-384309378677546L)  */);
                 bahVar6.getClass();
@@ -224,14 +224,14 @@ public final /* synthetic */ class act implements IInvokable {
                 Object objE = ((HookParam) obj).getThisObject();
                 Activity activity = (Activity) (objE instanceof Activity ? objE : null);
                 if (activity == null) {
-                    Class<Activity> clsBf5 = cnf.bf(dal.b(cls));
+                    Class<Activity> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf5 != null ? clsBf5 : Activity.class).getName()).toString());
                 }
                 int i6 = 0;
-                cde cdeVarT = dqc.bi(activity).t();
-                cdeVarT.ab = "getPreferenceScreen" /* "getPreferenceScreen" /* "getPreferenceScreen" /* cnb.z(-37649683315498L)  */;
-                Object objJ = ((MethodHookWrapper) dkz.m(cdeVarT)).j(new Object[0]);
+                MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(activity).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT.name = "getPreferenceScreen" /* "getPreferenceScreen" /* "getPreferenceScreen" /* cnb.z(-37649683315498L)  */;
+                Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT)).j(new Object[0]);
                 throwIfVar1IsNull(objJ);
                 BaseAdapter baseAdapter = (BaseAdapter) objJ;
                 for (bnd bndVar : aeq.b) {
@@ -260,7 +260,7 @@ public final /* synthetic */ class act implements IInvokable {
                 }
                 Activity activity2 = (Activity) objE2;
                 if (activity2 == null) {
-                    Class<Activity> clsBf6 = cnf.bf(dal.b(cls));
+                    Class<Activity> clsBf6 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf6 != null ? clsBf6 : Activity.class).getName()).toString());
                 }
@@ -270,15 +270,15 @@ public final /* synthetic */ class act implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = bhu.x(th);
+                    objX = FastKV.x(th);
                 }
                 Object obj2 = objX instanceof dcx ? null : objX;
                 throwIfVar1IsNull(obj2);
                 int i7 = 0;
-                azg azgVarR = dqc.bi(obj2).r();
-                azgVarR.a = dal.b(cls3);
-                azgVarR.ah();
-                Iterator it = azgVarR.c().iterator();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).r();
+                fieldResolverVarR.fieldType = dal.b(cls3);
+                fieldResolverVarR.enableSuperclass();
+                Iterator it = fieldResolverVarR.resolve().iterator();
                 while (it.hasNext()) {
                     String str = (String) ((azk) it.next()).e();
                     if (str != null) {
@@ -310,7 +310,7 @@ public final /* synthetic */ class act implements IInvokable {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = bhu.x(th2);
+                    objX2 = FastKV.x(th2);
                 }
                 if (objX2 instanceof dcx) {
                     objX2 = null;
@@ -321,7 +321,7 @@ public final /* synthetic */ class act implements IInvokable {
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = bhu.x(th3);
+                    objX3 = FastKV.x(th3);
                 }
                 if (objX3 instanceof dcx) {
                     objX3 = null;
@@ -334,7 +334,7 @@ public final /* synthetic */ class act implements IInvokable {
                         objX4 = null;
                     }
                 } catch (Throwable th4) {
-                    objX4 = bhu.x(th4);
+                    objX4 = FastKV.x(th4);
                 }
                 if (objX4 instanceof dcx) {
                     objX4 = null;
@@ -345,7 +345,7 @@ public final /* synthetic */ class act implements IInvokable {
                         objX5 = null;
                     }
                 } catch (Throwable th5) {
-                    objX5 = bhu.x(th5);
+                    objX5 = FastKV.x(th5);
                 }
                 if (objX5 instanceof dcx) {
                     objX5 = null;
@@ -356,7 +356,7 @@ public final /* synthetic */ class act implements IInvokable {
                         objX6 = null;
                     }
                 } catch (Throwable th6) {
-                    objX6 = bhu.x(th6);
+                    objX6 = FastKV.x(th6);
                 }
                 Boolean bool = (Boolean) (objX6 instanceof dcx ? null : objX6);
                 boolean zBooleanValue = bool != null ? bool.booleanValue() : false;
@@ -383,23 +383,23 @@ public final /* synthetic */ class act implements IInvokable {
                 bah bahVar7 = (bah) obj;
                 cdj cdjVar13 = new cdj();
                 cls4 = MenuItem.class;
-                Class<MenuItem> clsBf7 = cnf.bf(dal.b(cls4));
+                Class<MenuItem> clsBf7 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
                 cdjVar13.r(clsBf7 != null ? clsBf7 : MenuItem.class);
                 cls5 = Integer.class;
-                Class<Integer> clsBf8 = cnf.bf(dal.b(cls5));
+                Class<Integer> clsBf8 = HugeSyntheticPileOfHelpers.bf(dal.b(cls5));
                 if (clsBf8 == null) {
                     clsBf8 = cls5;
                 }
                 cls6 = CharSequence.class;
-                Class<CharSequence> clsBf9 = cnf.bf(dal.b(cls6));
+                Class<CharSequence> clsBf9 = HugeSyntheticPileOfHelpers.bf(dal.b(cls6));
                 cls6 = clsBf9 != null ? clsBf9 : CharSequence.class;
-                Class<Integer> clsBf10 = cnf.bf(dal.b(cls5));
+                Class<Integer> clsBf10 = HugeSyntheticPileOfHelpers.bf(dal.b(cls5));
                 if (clsBf10 == null) {
                     clsBf10 = cls5;
                 }
-                Class<Integer> clsBf11 = cnf.bf(dal.b(cls5));
+                Class<Integer> clsBf11 = HugeSyntheticPileOfHelpers.bf(dal.b(cls5));
                 cls5 = clsBf11 != null ? clsBf11 : Integer.class;
-                Class<Boolean> clsBf12 = cnf.bf(dal.b(cls2));
+                Class<Boolean> clsBf12 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                 cdjVar13.q(clsBf8, cls6, clsBf10, cls5, clsBf12 != null ? clsBf12 : Boolean.class);
                 bahVar7.getClass();
                 bahVar7.d = cdjVar13;

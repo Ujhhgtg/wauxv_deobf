@@ -52,7 +52,7 @@ public final class cbd implements cdv {
                 }
                 cpi cpiVar = new cpi(uri2);
                 Context context = this.b;
-                return new cdu(cpiVar, ajj.i(context, uri2, new drr(context.getContentResolver(), 0)));
+                return new cdu(cpiVar, ThumbStreamOpener.i(context, uri2, new drr(context.getContentResolver(), 0)));
             default:
                 Uri uri3 = (Uri) obj;
                 if (i == Integer.MIN_VALUE || i2 == Integer.MIN_VALUE || i > 512 || i2 > 384 || (l = (Long) crwVar.b(epu.a)) == null || l.longValue() != -1) {
@@ -60,7 +60,7 @@ public final class cbd implements cdv {
                 }
                 cpi cpiVar2 = new cpi(uri3);
                 Context context2 = this.b;
-                return new cdu(cpiVar2, ajj.i(context2, uri3, new drr(context2.getContentResolver(), 1)));
+                return new cdu(cpiVar2, ThumbStreamOpener.i(context2, uri3, new drr(context2.getContentResolver(), 1)));
         }
     }
 }

@@ -65,15 +65,15 @@ public final /* synthetic */ class efq implements bfu {
             default:
                 int i2 = 0;
                 ewm.a.getClass();
-                jx jxVar = ewm.d;
+                FactoryPools factoryPoolsVar = ewm.d;
                 btc btcVar = ewm.b[1];
-                bmu bmuVarBh = dqc.bh(jxVar.w());
-                ((cbg) bmuVarBh.h).c = ewm.h;
-                bmuVarBh.v(false);
-                cde cdeVarT = bmuVarBh.t();
-                cdeVarT.ab = "newParser";
-                cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(Integer.TYPE) }, 1));
-                return (MethodHookWrapper) aaz.g(cdeVarT.aj());
+                SyntheticPileOfMess bmuVarBh = dqc.bh(factoryPoolsVar.w());
+                ((Configuration) bmuVarBh.obj).processorResolver = ewm.h;
+                bmuVarBh.setHookOptional(false);
+                MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT.name = "newParser";
+                methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.b(Integer.TYPE) }, 1));
+                return (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
         }
     }
 }

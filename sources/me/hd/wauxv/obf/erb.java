@@ -50,7 +50,7 @@ public abstract class erb {
                 X = 0;
             }
         } catch (Throwable th) {
-            X = bhu.x(th);
+            X = FastKV.x(th);
         }
         return (View) (X instanceof dcx ? 0 : X);
     }

@@ -43,7 +43,7 @@ public final /* synthetic */ class h implements bfu {
                 Process.killProcess(Process.myPid());
                 return kotlinUnitVar;
             case 1:
-                io ioVar2 = cnf.ah;
+                io ioVar2 = HugeSyntheticPileOfHelpers.ah;
                 if (ioVar2 == null) {
                     throw new IllegalArgumentException("DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)  */.toString());
                 }
@@ -221,12 +221,12 @@ public final /* synthetic */ class h implements bfu {
                 return ccuVar;
             case 27:
                 bmo.a.getClass();
-                View viewInflate = View.inflate(aqu.e(cnf.am(bmo.n())), R.layout.module_dialog_choose_contacts, null);
+                View viewInflate = View.inflate(aqu.e(HugeSyntheticPileOfHelpers.wrapModuleContext(bmo.n())), R.layout.module_dialog_choose_contacts, null);
                 throwIfVar1IsNull(viewInflate, "null cannot be cast to non-null type android.widget.LinearLayout" /* "null cannot be cast to non-null type android.widget.LinearLayout" /* "null cannot be cast to non-null type android.widget.LinearLayout" /* cnb.z(-394157738687274L)  */);
                 return (LinearLayout) viewInflate;
             case 28:
                 bmo.a.getClass();
-                return (LinearLayout) View.inflate(aqu.e(cnf.am(bmo.n())), R.layout.item_rv_contact_tab, null).findViewById(R.id.itemContactLinearLayout);
+                return (LinearLayout) View.inflate(aqu.e(HugeSyntheticPileOfHelpers.wrapModuleContext(bmo.n())), R.layout.item_rv_contact_tab, null).findViewById(R.id.itemContactLinearLayout);
             default:
                 try {
                     bmf[] bmfVarArrW = bhv.w();
@@ -240,7 +240,7 @@ public final /* synthetic */ class h implements bfu {
                 } catch (Exception e) {
                     ArrayList arrayList = ewq.a;
                     ewq.e("getAnnoHookList Failed" /* "getAnnoHookList Failed" /* "getAnnoHookList Failed" /* cnb.z(-22694607190826L)  */, e, 12);
-                    return EmptyReadonlyList.a;
+                    return EmptyReadonlyList.INSTANCE;
                 }
         }
     }

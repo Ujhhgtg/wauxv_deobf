@@ -17,16 +17,16 @@ public final class awd implements awi, awk {
     public final awc e;
     public final cxc f;
     public final ik g;
-    public final jx h;
+    public final FactoryPools h;
 
-    public awd(byk bykVar, bmu bmuVar, bia biaVar, bia biaVar2, bia biaVar3, bia biaVar4) {
+    public awd(byk bykVar, SyntheticPileOfMess bmuVar, bia biaVar, bia biaVar2, bia biaVar3, bia biaVar4) {
         this.d = bykVar;
         afr afrVar = new afr(bmuVar);
-        jx jxVar = new jx(1);
-        this.h = jxVar;
+        FactoryPools factoryPoolsVar = new FactoryPools(1);
+        this.h = factoryPoolsVar;
         synchronized (this) {
-            synchronized (jxVar) {
-                jxVar.h = this;
+            synchronized (factoryPoolsVar) {
+                factoryPoolsVar.h = this;
             }
         }
         this.c = new nu(29);
@@ -60,7 +60,7 @@ public final class awd implements awi, awk {
         ((awl) dcgVar).l();
     }
 
-    public final jx k(bhw bhwVar, Object obj, btj btjVar, int i, int i2, Class cls, Class cls2, cvq cvqVar, aoi aoiVar, sp spVar, boolean z, boolean z2, crw crwVar, boolean z3, boolean z4, dht dhtVar, hn hnVar) {
+    public final FactoryPools k(bhw bhwVar, Object obj, btj btjVar, int i, int i2, Class cls, Class cls2, cvq cvqVar, aoi aoiVar, sp spVar, boolean z, boolean z2, crw crwVar, boolean z3, boolean z4, dht dhtVar, hn hnVar) {
         long jElapsedRealtimeNanos;
         if (a) {
             int i3 = bxq.b;
@@ -100,17 +100,17 @@ public final class awd implements awi, awk {
         awj awjVar2;
         awl awlVar2;
         if (z) {
-            jx jxVar = this.h;
-            synchronized (jxVar) {
+            FactoryPools factoryPoolsVar = this.h;
+            synchronized (factoryPoolsVar) {
                 try {
-                    de deVar = (de) ((HashMap) jxVar.e).get(awjVar);
+                    de deVar = (de) ((HashMap) factoryPoolsVar.e).get(awjVar);
                     if (deVar == null) {
                         awlVar = null;
                     } else {
                         awlVar = (awl) deVar.get();
                         if (awlVar == null) {
                             try {
-                                jxVar.n(deVar);
+                                factoryPoolsVar.n(deVar);
                             } catch (Throwable th2) {
                                 th = th2;
                                 while (true) {
@@ -206,9 +206,9 @@ public final class awd implements awi, awk {
     }
 
     public final void n(btj btjVar, awl awlVar) {
-        jx jxVar = this.h;
-        synchronized (jxVar) {
-            de deVar = (de) ((HashMap) jxVar.e).remove(btjVar);
+        FactoryPools factoryPoolsVar = this.h;
+        synchronized (factoryPoolsVar) {
+            de deVar = (de) ((HashMap) factoryPoolsVar.e).remove(btjVar);
             if (deVar != null) {
                 deVar.c = null;
                 deVar.clear();
@@ -220,23 +220,23 @@ public final class awd implements awi, awk {
         }
     }
 
-    public final jx o(bhw bhwVar, Object obj, btj btjVar, int i, int i2, Class cls, Class cls2, cvq cvqVar, aoi aoiVar, Map map, boolean z, boolean z2, crw crwVar, boolean z3, boolean z4, dht dhtVar, Executor executor, awj awjVar, long j) {
+    public final FactoryPools o(bhw bhwVar, Object obj, btj btjVar, int i, int i2, Class cls, Class cls2, cvq cvqVar, aoi aoiVar, Map map, boolean z, boolean z2, crw crwVar, boolean z3, boolean z4, dht dhtVar, Executor executor, awj awjVar, long j) {
         awh awhVar = (awh) this.b.b.get(awjVar);
         if (awhVar != null) {
             awhVar.x(dhtVar, executor);
             if (a) {
                 i("Added to existing load", j, awjVar);
             }
-            return new jx(this, dhtVar, awhVar);
+            return new FactoryPools(this, dhtVar, awhVar);
         }
-        awh awhVar2 = (awh) ((jx) this.e.g).acquire();
+        awh awhVar2 = (awh) ((FactoryPools) this.e.g).acquire();
         synchronized (awhVar2) {
             awhVar2.l = awjVar;
             awhVar2.m = z3;
             awhVar2.n = z4;
         }
         ik ikVar = this.g;
-        ajr ajrVar = (ajr) ((jx) ikVar.d).acquire();
+        ajr ajrVar = (ajr) ((FactoryPools) ikVar.d).acquire();
         int i3 = ikVar.b;
         ikVar.b = i3 + 1;
         ajp ajpVar = ajrVar.d;
@@ -281,6 +281,6 @@ public final class awd implements awi, awk {
         if (a) {
             i("Started new load", j, awjVar);
         }
-        return new jx(this, dhtVar, awhVar2);
+        return new FactoryPools(this, dhtVar, awhVar2);
     }
 }

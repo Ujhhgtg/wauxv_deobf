@@ -77,16 +77,16 @@ public final class jl {
         }
         int length = text.length();
         if (i4 < 0 || i2 > length) {
-            cnf.bm(editorInfo, null, 0, 0);
+            HugeSyntheticPileOfHelpers.bm(editorInfo, null, 0, 0);
             return;
         }
         int i5 = editorInfo.inputType & 4095;
         if (i5 == 129 || i5 == 225 || i5 == 18) {
-            cnf.bm(editorInfo, null, 0, 0);
+            HugeSyntheticPileOfHelpers.bm(editorInfo, null, 0, 0);
             return;
         }
         if (length <= 2048) {
-            cnf.bm(editorInfo, text, i4, i2);
+            HugeSyntheticPileOfHelpers.bm(editorInfo, text, i4, i2);
             return;
         }
         int i6 = i2 - i4;
@@ -103,7 +103,7 @@ public final class jl {
             iMin--;
         }
         int i10 = iMin2 + i7;
-        cnf.bm(editorInfo,
+        HugeSyntheticPileOfHelpers.bm(editorInfo,
                 i7 != i6 ? TextUtils.concat(text.subSequence(i9, i9 + iMin2), text.subSequence(i2, iMin + i2))
                         : text.subSequence(i9, i10 + iMin + i9),
                 iMin2, i10);
@@ -169,9 +169,9 @@ public final class jl {
         Context context = textView.getContext();
         C0023if c0023ifD = C0023if.d();
         int[] iArr = cyf.h;
-        jx jxVarK = jx.k(context, attributeSet, iArr, i);
-        eqz.r(textView, textView.getContext(), iArr, attributeSet, (TypedArray) jxVarK.e, i, 0);
-        TypedArray typedArray = (TypedArray) jxVarK.e;
+        FactoryPools factoryPoolsVarK = FactoryPools.k(context, attributeSet, iArr, i);
+        ViewCompat.r(textView, textView.getContext(), iArr, attributeSet, (TypedArray) factoryPoolsVarK.e, i, 0);
+        TypedArray typedArray = (TypedArray) factoryPoolsVarK.e;
         int resourceId3 = typedArray.getResourceId(0, -1);
         if (typedArray.hasValue(3)) {
             this.b = n(context, c0023ifD, typedArray.getResourceId(3, 0));
@@ -191,12 +191,12 @@ public final class jl {
         if (typedArray.hasValue(6)) {
             this.g = n(context, c0023ifD, typedArray.getResourceId(6, 0));
         }
-        jxVarK.ae();
+        factoryPoolsVarK.ae();
         boolean z3 = textView.getTransformationMethod() instanceof PasswordTransformationMethod;
         int[] iArr2 = cyf.w;
         if (resourceId3 != -1) {
             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(resourceId3, iArr2);
-            jx jxVar = new jx(context, typedArrayObtainStyledAttributes);
+            FactoryPools factoryPoolsVar = new FactoryPools(context, typedArrayObtainStyledAttributes);
             if (z3 || !typedArrayObtainStyledAttributes.hasValue(14)) {
                 z = false;
                 z2 = false;
@@ -204,12 +204,12 @@ public final class jl {
                 z2 = typedArrayObtainStyledAttributes.getBoolean(14, false);
                 z = true;
             }
-            x(context, jxVar);
+            x(context, factoryPoolsVar);
             string2 = typedArrayObtainStyledAttributes.hasValue(15) ? typedArrayObtainStyledAttributes.getString(15)
                     : null;
             string = typedArrayObtainStyledAttributes.hasValue(13) ? typedArrayObtainStyledAttributes.getString(13)
                     : null;
-            jxVar.ae();
+            factoryPoolsVar.ae();
         } else {
             z = false;
             z2 = false;
@@ -217,7 +217,7 @@ public final class jl {
             string2 = null;
         }
         TypedArray typedArrayObtainStyledAttributes2 = context.obtainStyledAttributes(attributeSet, iArr2, i, 0);
-        jx jxVar2 = new jx(context, typedArrayObtainStyledAttributes2);
+        FactoryPools factoryPoolsVar2 = new FactoryPools(context, typedArrayObtainStyledAttributes2);
         if (!z3 && typedArrayObtainStyledAttributes2.hasValue(14)) {
             z2 = typedArrayObtainStyledAttributes2.getBoolean(14, false);
             z = true;
@@ -234,8 +234,8 @@ public final class jl {
                 && typedArrayObtainStyledAttributes2.getDimensionPixelSize(0, -1) == 0) {
             textView.setTextSize(0, 0.0f);
         }
-        x(context, jxVar2);
-        jxVar2.ae();
+        x(context, factoryPoolsVar2);
+        factoryPoolsVar2.ae();
         if (!z3 && z) {
             textView.setAllCaps(z4);
         }
@@ -258,7 +258,7 @@ public final class jl {
         int[] iArr3 = cyf.i;
         TypedArray typedArrayObtainStyledAttributes3 = context2.obtainStyledAttributes(attributeSet, iArr3, i, 0);
         TextView textView2 = jtVar.g;
-        eqz.r(textView2, textView2.getContext(), iArr3, attributeSet, typedArrayObtainStyledAttributes3, i, 0);
+        ViewCompat.r(textView2, textView2.getContext(), iArr3, attributeSet, typedArrayObtainStyledAttributes3, i, 0);
         if (typedArrayObtainStyledAttributes3.hasValue(5)) {
             jtVar.a = typedArrayObtainStyledAttributes3.getInt(5, 0);
         }
@@ -413,7 +413,7 @@ public final class jl {
         if (typedArrayObtainStyledAttributes4.hasValue(11)) {
             if (!typedArrayObtainStyledAttributes4.hasValue(11)
                     || (resourceId = typedArrayObtainStyledAttributes4.getResourceId(11, 0)) == 0
-                    || (colorStateList = bht.v(context, resourceId)) == null) {
+                    || (colorStateList = ResourcesCompat.v(context, resourceId)) == null) {
                 colorStateList = typedArrayObtainStyledAttributes4.getColorStateList(11);
             }
             textView.setCompoundDrawableTintList(colorStateList);
@@ -466,7 +466,7 @@ public final class jl {
     public final void u(Context context, int i) {
         String string;
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(i, cyf.w);
-        jx jxVar = new jx(context, typedArrayObtainStyledAttributes);
+        FactoryPools factoryPoolsVar = new FactoryPools(context, typedArrayObtainStyledAttributes);
         boolean zHasValue = typedArrayObtainStyledAttributes.hasValue(14);
         TextView textView = this.a;
         if (zHasValue) {
@@ -476,12 +476,12 @@ public final class jl {
                 && typedArrayObtainStyledAttributes.getDimensionPixelSize(0, -1) == 0) {
             textView.setTextSize(0, 0.0f);
         }
-        x(context, jxVar);
+        x(context, factoryPoolsVar);
         if (typedArrayObtainStyledAttributes.hasValue(13)
                 && (string = typedArrayObtainStyledAttributes.getString(13)) != null) {
             jj.d(textView, string);
         }
-        jxVar.ae();
+        factoryPoolsVar.ae();
         Typeface typeface = this.l;
         if (typeface != null) {
             textView.setTypeface(typeface, this.j);
@@ -518,10 +518,10 @@ public final class jl {
         this.g = ekeVar;
     }
 
-    public final void x(Context context, jx jxVar) {
+    public final void x(Context context, FactoryPools factoryPoolsVar) {
         String string;
         int i = this.j;
-        TypedArray typedArray = (TypedArray) jxVar.e;
+        TypedArray typedArray = (TypedArray) factoryPoolsVar.e;
         this.j = typedArray.getInt(2, i);
         int i2 = Build.VERSION.SDK_INT;
         if (i2 >= 28) {
@@ -557,7 +557,7 @@ public final class jl {
         int i7 = this.j;
         if (!context.isRestricted()) {
             try {
-                Typeface typefaceU = jxVar.u(i5, this.j, new jg(this, i6, i7, new WeakReference(this.a)));
+                Typeface typefaceU = factoryPoolsVar.u(i5, this.j, new jg(this, i6, i7, new WeakReference(this.a)));
                 if (typefaceU != null) {
                     if (i2 < 28 || this.k == -1) {
                         this.l = typefaceU;

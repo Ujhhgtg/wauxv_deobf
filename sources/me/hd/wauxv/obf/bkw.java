@@ -20,7 +20,7 @@ public abstract class bkw extends adq {
             }
         }
         for (int i3 = 0; i3 < this.ew; i3++) {
-            emn.ai(this.ev[i3], i, arrayList, eumVar);
+            StaticHelpers7.ai(this.ev[i3], i, arrayList, eumVar);
         }
     }
 }

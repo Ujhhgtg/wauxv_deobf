@@ -16,9 +16,9 @@ public final class dbe extends SwitchHook implements IDexFind {
     public final void initOnce() {
         Iterator it = OtherStaticHelpers.argsToList(dbc.a, dbd.a, dbb.a, dba.a).iterator();
         while (it.hasNext()) {
-            List listBf = dqc.toSingletonList(emn.bb((DexDescData) it.next()));
+            List listBf = dqc.toSingletonList(StaticHelpers7.bb((DexDescData) it.next()));
             dbe dbeVar = a;
-            aki akiVarAb = csb.ab(dbeVar, listBf);
+            aki akiVarAb = PackageParam.ab(dbeVar, listBf);
             dbeVar.y(akiVarAb, new cvc(27));
             akiVarAb.o();
         }
@@ -36,13 +36,13 @@ public final class dbe extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(dbc.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.multitalk.model" /* "com.tencent.mm.plugin.multitalk.model" /* "com.tencent.mm.plugin.multitalk.model" /* cnb.z(-522083339598634L)  */,
+        StaticHelpers7.resolveDexAndCache(dbc.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.multitalk.model" /* "com.tencent.mm.plugin.multitalk.model" /* "com.tencent.mm.plugin.multitalk.model" /* cnb.z(-522083339598634L)  */,
                 "Lcom/tencent/mm/autogen/events/MultiTalkActionEvent;" /* "Lcom/tencent/mm/autogen/events/MultiTalkActionEvent;" /* "Lcom/tencent/mm/autogen/events/MultiTalkActionEvent;" /* cnb.z(-521353195158314L)  */));
-        emn.aj(dbd.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.voip.model" /* "com.tencent.mm.plugin.voip.model" /* "com.tencent.mm.plugin.voip.model" /* cnb.z(-521658137836330L)  */,
+        StaticHelpers7.resolveDexAndCache(dbd.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.voip.model" /* "com.tencent.mm.plugin.voip.model" /* "com.tencent.mm.plugin.voip.model" /* cnb.z(-521658137836330L)  */,
                 "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* cnb.z(-521516403915562L)  */));
-        emn.aj(dbb.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.ipcall" /* "com.tencent.mm.plugin.ipcall" /* "com.tencent.mm.plugin.ipcall" /* cnb.z(-522942333057834L)  */,
+        StaticHelpers7.resolveDexAndCache(dbb.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.ipcall" /* "com.tencent.mm.plugin.ipcall" /* "com.tencent.mm.plugin.ipcall" /* cnb.z(-522942333057834L)  */,
                 "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* cnb.z(-523350354950954L)  */));
-        emn.aj(dba.a, dexKitBridge,
+        StaticHelpers7.resolveDexAndCache(dba.a, dexKitBridge,
                 new daz(0, (cnb.ab(ewk.f) || cnb.ac(ewh.f)) ? "com.tencent.mm.voipmp.helper"
                         /* "com.tencent.mm.voipmp.helper" /* "com.tencent.mm.voipmp.helper" /* cnb.z(-523127016651562L)  */ : "com.tencent.mm.plugin_flutter_ilinkvoip.helper" /*
                                                                                                            * cnb.z(-

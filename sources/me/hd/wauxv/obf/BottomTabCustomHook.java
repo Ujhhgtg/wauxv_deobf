@@ -7,11 +7,11 @@ import android.content.Context;
 public final class BottomTabCustomHook extends SwitchHook {
     public static final BottomTabCustomHook INSTANCE;
     public static final String b;
-    public static final dov c;
-    public static final dov d;
-    public static final dov h;
-    public static final dov i;
-    public static final dov j;
+    public static final Kotlin$Lazy c;
+    public static final Kotlin$Lazy d;
+    public static final Kotlin$Lazy h;
+    public static final Kotlin$Lazy i;
+    public static final Kotlin$Lazy j;
     public static final String l;
     public static final String m;
     public static final String n;
@@ -24,13 +24,13 @@ public final class BottomTabCustomHook extends SwitchHook {
         "发现" /* "发现" /* "发现" /* cnb.z(-439280665099050L)  */;
         "我的" /* "我的" /* "我的" /* cnb.z(-439284960066346L)  */;
         INSTANCE = new BottomTabCustomHook("BottomTabCustomHook" /* "BottomTabCustomHook" /* "BottomTabCustomHook" /* cnb.z(-438546225691434L)  */);
-        dov dovVar = ctf.a;
-        b = ctf.c("Resource" /* "Resource" /* "Resource" /* cnb.z(-46621869996842L)  */, "BottomTab" /* "BottomTab" /* "BottomTab" /* cnb.z(-46531675683626L)  */);
-        c = new dov(new h(8));
-        d = new dov(new h(9));
-        h = new dov(new h(10));
-        i = new dov(new h(11));
-        j = new dov(new h(12));
+        Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
+        b = PathUtils.getModuleSubDir("Resource" /* "Resource" /* "Resource" /* cnb.z(-46621869996842L)  */, "BottomTab" /* "BottomTab" /* "BottomTab" /* cnb.z(-46531675683626L)  */);
+        c = new Kotlin$Lazy(new h(8));
+        d = new Kotlin$Lazy(new h(9));
+        h = new Kotlin$Lazy(new h(10));
+        i = new Kotlin$Lazy(new h(11));
+        j = new Kotlin$Lazy(new h(12));
         l = "美化" /* "美化" /* "美化" /* cnb.z(-439787471239978L)  */;
         m = "底栏自定义" /* "底栏自定义" /* "底栏自定义" /* cnb.z(-439791766207274L)  */;
         n = "替换主页底部标签栏相关资源为自定义" /* "替换主页底部标签栏相关资源为自定义" /* "替换主页底部标签栏相关资源为自定义" /* cnb.z(-439748816534314L)  */;
@@ -41,11 +41,11 @@ public final class BottomTabCustomHook extends SwitchHook {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         adt adtVarM = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.ui.LauncherUIBottomTabView")).m();
-        adtVarM.z(dal.b(Context.class));
-        ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) aaz.e(adtVarM.a());
-        exg exgVar = exg.a;
+        adtVarM.setParams(dal.b(Context.class));
+        ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) StaticHelpers5.safeGetFirstInList(adtVarM.a());
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         BottomTabCustomHook bottomTabCustomHookVar = INSTANCE;
-        aki akiVarAd = bottomTabCustomHookVar.ad(constructorHookWrapperVar, exgVar);
+        aki akiVarAd = bottomTabCustomHookVar.ad(constructorHookWrapperVar, hookPriorityEnumVar);
         bottomTabCustomHookVar.x(akiVarAd, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(12));
         akiVarAd.o();
     }

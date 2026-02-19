@@ -6,7 +6,7 @@ import com.alibaba.fastjson2.util.Fnv;
 import com.alibaba.fastjson2.util.TypeUtils;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -32,7 +32,7 @@ final class ObjectWriterArray extends ObjectWriterPrimitiveImpl {
             this.typeNameHash = Fnv.hashCode64(str);
             strK = yg.k("{\"@type\":\"", str);
         }
-        String strS = dkz.s(strK, "\",\"@value\":[");
+        String strS = StaticHelpers6.concat(strK, "\",\"@value\":[");
         this.prefixChars = strS.toCharArray();
         this.prefixBytes = strS.getBytes(StandardCharsets.UTF_8);
     }

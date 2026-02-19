@@ -10,7 +10,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.IntRange;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dqc;
 import me.hd.wauxv.obf.nu;
 import me.hd.wauxv.obf.rl;
@@ -254,12 +254,12 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
         String strHeader$default = Response.header$default(response, "Connection", null, 2, null);
         if (!"Upgrade".equalsIgnoreCase(strHeader$default)) {
             throw new ProtocolException(
-                    dkz.o('\'', "Expected 'Connection' header value 'Upgrade' but was '", strHeader$default));
+                    StaticHelpers6.o('\'', "Expected 'Connection' header value 'Upgrade' but was '", strHeader$default));
         }
         String strHeader$default2 = Response.header$default(response, "Upgrade", null, 2, null);
         if (!"websocket".equalsIgnoreCase(strHeader$default2)) {
             throw new ProtocolException(
-                    dkz.o('\'', "Expected 'Upgrade' header value 'websocket' but was '", strHeader$default2));
+                    StaticHelpers6.o('\'', "Expected 'Upgrade' header value 'websocket' but was '", strHeader$default2));
         }
         String strHeader$default3 = Response.header$default(response, "Sec-WebSocket-Accept", null, 2, null);
         sj sjVar = sj.a;

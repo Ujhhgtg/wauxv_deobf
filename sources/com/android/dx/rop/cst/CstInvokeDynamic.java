@@ -4,7 +4,7 @@ import com.android.dx.rop.type.Prototype;
 import com.android.dx.rop.type.Type;
 import java.util.ArrayList;
 import java.util.List;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -103,7 +103,7 @@ public final class CstInvokeDynamic extends Constant {
     @Override // com.android.dx.util.ToHuman
     public String toHuman() {
         CstType cstType = this.declaringClass;
-        StringBuilder sbZ = dkz.z("InvokeDynamic(", cstType != null ? cstType.toHuman() : "Unknown", ":");
+        StringBuilder sbZ = StaticHelpers6.concatAndToSb("InvokeDynamic(", cstType != null ? cstType.toHuman() : "Unknown", ":");
         sbZ.append(this.bootstrapMethodIndex);
         sbZ.append(", ");
         sbZ.append(this.nat.toHuman());

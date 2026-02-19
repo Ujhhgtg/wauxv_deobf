@@ -41,7 +41,7 @@ public final class cyu implements Runnable {
                 if (czcVar != null) {
                     akx akxVar = (akx) czcVar;
                     long j = akxVar.aa;
-                    ArrayList<czx> arrayList = akxVar.c;
+                    ArrayList<SomeView> arrayList = akxVar.c;
                     boolean zIsEmpty = arrayList.isEmpty();
                     ArrayList arrayList2 = akxVar.e;
                     boolean zIsEmpty2 = arrayList2.isEmpty();
@@ -52,11 +52,11 @@ public final class cyu implements Runnable {
                     if (zIsEmpty && zIsEmpty2 && zIsEmpty4 && zIsEmpty3) {
                         z = false;
                     } else {
-                        for (czx czxVar : arrayList) {
-                            View view = czxVar.d;
+                        for (SomeView someViewVar : arrayList) {
+                            View view = someViewVar.d;
                             ViewPropertyAnimator viewPropertyAnimatorAnimate = view.animate();
-                            akxVar.l.add(czxVar);
-                            viewPropertyAnimatorAnimate.setDuration(j).alpha(0.0f).setListener(new aks(akxVar, czxVar, viewPropertyAnimatorAnimate, view)).start();
+                            akxVar.l.add(someViewVar);
+                            viewPropertyAnimatorAnimate.setDuration(j).alpha(0.0f).setListener(new aks(akxVar, someViewVar, viewPropertyAnimatorAnimate, view)).start();
                             arrayList = arrayList;
                             zIsEmpty = zIsEmpty;
                         }
@@ -72,7 +72,7 @@ public final class cyu implements Runnable {
                                 akrVar.run();
                             } else {
                                 View view2 = ((akw) arrayList5.get(0)).a.d;
-                                WeakHashMap weakHashMap = eqz.a;
+                                WeakHashMap weakHashMap = ViewCompat.a;
                                 view2.postOnAnimationDelayed(akrVar, j);
                             }
                         }
@@ -86,7 +86,7 @@ public final class cyu implements Runnable {
                                 akrVar2.run();
                             } else {
                                 View view3 = ((akv) arrayList6.get(0)).a.d;
-                                WeakHashMap weakHashMap2 = eqz.a;
+                                WeakHashMap weakHashMap2 = ViewCompat.a;
                                 view3.postOnAnimationDelayed(akrVar2, j);
                             }
                         }
@@ -107,8 +107,8 @@ public final class cyu implements Runnable {
                                 }
                                 long jMax = Math.max(!zIsEmpty2 ? akxVar.ab : 0L, zIsEmpty3 ? 0L : akxVar.ac) + j;
                                 z = false;
-                                View view4 = ((czx) arrayList7.get(0)).d;
-                                WeakHashMap weakHashMap3 = eqz.a;
+                                View view4 = ((SomeView) arrayList7.get(0)).d;
+                                WeakHashMap weakHashMap3 = ViewCompat.a;
                                 view4.postOnAnimationDelayed(akrVar3, jMax);
                             }
                         }

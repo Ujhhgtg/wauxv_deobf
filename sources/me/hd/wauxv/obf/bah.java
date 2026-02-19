@@ -19,18 +19,18 @@ public final class bah extends dqc {
         throwIfVar1IsNull(bbbVar, "fbb");
         List list = this.a;
         if (list != null) {
-            ArrayList arrayList = new ArrayList(abb.ak(list, 10));
+            ArrayList arrayList = new ArrayList(StaticHelpers4.ak(list, 10));
             Iterator it = list.iterator();
             while (it.hasNext()) {
                 arrayList.add(Integer.valueOf(bbbVar.s((String) it.next())));
             }
-            iT = bbbVar.t(aaz.y(arrayList));
+            iT = bbbVar.t(StaticHelpers5.y(arrayList));
         } else {
             iT = 0;
         }
         List<yu> list2 = this.b;
         if (list2 != null) {
-            ArrayList arrayList2 = new ArrayList(abb.ak(list2, 10));
+            ArrayList arrayList2 = new ArrayList(StaticHelpers4.ak(list2, 10));
             for (yu yuVar : list2) {
                 int i = yuVar.b;
                 if (i < 0) {
@@ -38,7 +38,7 @@ public final class bah extends dqc {
                 }
                 arrayList2.add(Long.valueOf(nd.d(yuVar.c, i)));
             }
-            long[] jArrAa = aaz.aa(arrayList2);
+            long[] jArrAa = StaticHelpers5.aa(arrayList2);
             bbbVar.ac(8, jArrAa.length, 8);
             for (int length = jArrAa.length - 1; -1 < length; length--) {
                 long j = jArrAa[length];

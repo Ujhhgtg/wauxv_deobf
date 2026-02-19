@@ -14,7 +14,7 @@ public final class dzv {
 
     public /* synthetic */ dzv(int i, List list, Long l, Integer num, Long l2) {
         if (15 != (i & 15)) {
-            bht.ah(i, 15, dzt.b.getDescriptor());
+            ResourcesCompat.ah(i, 15, dzt.b.getDescriptor());
             throw null;
         }
         this.b = list;
@@ -50,7 +50,7 @@ public final class dzv {
         StringBuilder sb = new StringBuilder();
         sb.append("lh1Proto(members=" /* "lh1Proto(members=" /* "lh1Proto(members=" /* cnb.z(-222105643776810L)  */);
         yg.v(sb, this.b, -222595270048554L);
-        dkz.ad(sb, this.c, -222539435473706L);
+        StaticHelpers6.ad(sb, this.c, -222539435473706L);
         bjs.w(sb, this.d, -222513665669930L);
         sb.append(this.e);
         sb.append(')');

@@ -9,14 +9,14 @@ import java.util.LinkedHashMap;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class bfg implements bkg, dep, err {
-    public final bdj a;
+    public final SomeFragmentManager a;
     public final erq b;
     public final dh c;
     public bur d = null;
     public but e = null;
 
-    public bfg(bdj bdjVar, erq erqVar, dh dhVar) {
-        this.a = bdjVar;
+    public bfg(SomeFragmentManager someFragmentManagerVar, erq erqVar, dh dhVar) {
+        this.a = someFragmentManagerVar;
         this.b = erqVar;
         this.c = dhVar;
     }
@@ -24,8 +24,8 @@ public final class bfg implements bkg, dep, err {
     @Override // me.hd.wauxv.obf.bkg
     public final chq ai() {
         Application application;
-        bdj bdjVar = this.a;
-        Context applicationContext = bdjVar.dc().getApplicationContext();
+        SomeFragmentManager someFragmentManagerVar = this.a;
+        Context applicationContext = someFragmentManagerVar.dc().getApplicationContext();
         while (true) {
             if (!(applicationContext instanceof ContextWrapper)) {
                 application = null;
@@ -42,9 +42,9 @@ public final class bfg implements bkg, dep, err {
         if (application != null) {
             linkedHashMap.put(ern.n, application);
         }
-        linkedHashMap.put(aye.d, bdjVar);
+        linkedHashMap.put(aye.d, someFragmentManagerVar);
         linkedHashMap.put(aye.e, this);
-        Bundle bundle = bdjVar.ax;
+        Bundle bundle = someFragmentManagerVar.ax;
         if (bundle != null) {
             linkedHashMap.put(aye.f, bundle);
         }
@@ -69,8 +69,8 @@ public final class bfg implements bkg, dep, err {
         return this.d;
     }
 
-    public final void f(bug bugVar) {
-        this.d.m(bugVar);
+    public final void f(LifeEventEnum lifeEventEnumVar) {
+        this.d.m(lifeEventEnumVar);
     }
 
     public final void g() {

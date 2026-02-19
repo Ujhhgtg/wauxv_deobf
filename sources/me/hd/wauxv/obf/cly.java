@@ -16,18 +16,18 @@ public final class cly extends bws implements IDexFind {
             StringBuilder sb = new StringBuilder();
             sb.append("<![CDATA[" /* "<![CDATA[" /* "<![CDATA[" /* "<![CDATA[" /* cnb.z(-111677739629354L)   */);
             Pair[] pairVarArr = { new Pair(strZ, yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
-                    aaz.k(list, "," /* "," /* "," /* "," /* cnb.z(-111651969825578L)   */, null, null, null, 62), -111660559760170L)) };
-            map = new HashMap(KotlinHelpers.ah(1));
-            KotlinHelpers.am(map, pairVarArr);
+                    StaticHelpers5.k(list, "," /* "," /* "," /* "," /* cnb.z(-111651969825578L)   */, null, null, null, 62), -111660559760170L)) };
+            map = new HashMap(KotlinHelpers.calcHashMapCapacity(1));
+            KotlinHelpers.addVar2PairArrayToVar1Map(map, pairVarArr);
         } else {
             map = null;
         }
-        return emn.ba(clx.a).newInstance(str, str2, Integer.valueOf(i), Integer.valueOf(z ? 1 : 0), map);
+        return StaticHelpers7.ba(clx.a).newInstance(str, str2, Integer.valueOf(i), Integer.valueOf(z ? 1 : 0), map);
     }
 
     public static Object c(cly clyVar, String str, String str2, int i, int i2) {
         clyVar.getClass();
-        return b(str, str2, i, false, EmptyReadonlyList.a);
+        return b(str, str2, i, false, EmptyReadonlyList.INSTANCE);
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -36,6 +36,6 @@ public final class cly extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(clx.a, dexKitBridge, new clo(11));
+        StaticHelpers7.resolveDexAndCache(clx.a, dexKitBridge, new clo(11));
     }
 }

@@ -13,16 +13,16 @@ public final class cse extends cwl {
 
     @Override // me.hd.wauxv.obf.cwl
     public final String ag(long j) {
-        throw new dgb("Packing only supports primitive number types. The actual reading is for string.");
+        throw new SomeIllegalArgumentException("Packing only supports primitive number types. The actual reading is for string.");
     }
 
     @Override // me.hd.wauxv.obf.cwl, me.hd.wauxv.obf.acm
     public final int f(dfx dfxVar) {
         throwIfVar1IsNull(dfxVar, "descriptor");
-        cwo cwoVar = this.ai;
-        if (!cwoVar.d) {
-            ru ruVar = cwoVar.a;
-            if (ruVar.a - ruVar.b == 0) {
+        ProtoReader protoReaderVar = this.ai;
+        if (!protoReaderVar.isPushed) {
+            SourceBuffer sourceBufferVar = protoReaderVar.sourceBuffer;
+            if (sourceBufferVar.a - sourceBufferVar.b == 0) {
                 return -1;
             }
         }
@@ -34,6 +34,6 @@ public final class cse extends cwl {
     @Override // me.hd.wauxv.obf.cwl, me.hd.wauxv.obf.ajt
     public final acm p(dfx dfxVar) {
         throwIfVar1IsNull(dfxVar, "descriptor");
-        throw new dgb("Packing only supports primitive number types. The input type however was a struct: " + dfxVar);
+        throw new SomeIllegalArgumentException("Packing only supports primitive number types. The input type however was a struct: " + dfxVar);
     }
 }

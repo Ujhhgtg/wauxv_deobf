@@ -76,7 +76,7 @@ public final class bhp extends doi implements bgj {
                 ahp ahpVar = (ahp) this.e;
                 int i3 = this.d;
                 if (i3 == 0) {
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                     String strZ = "https://api.github.com/repos/HdShare/WAuxiliary_Public/releases/latest" /*
                                                                                                             * cnb.z(-
                                                                                                             * 44044889619242L)
@@ -100,10 +100,10 @@ public final class bhp extends doi implements bgj {
                                                                                                            * 45801531243306L)
                                                                                                            */);
                     }
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                     return kotlinUnitVar;
                 }
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 obj_be = obj;
                 JSONObject jSONObject = new JSONObject((String) obj_be);
                 String str = (String) this.f;
@@ -127,7 +127,7 @@ public final class bhp extends doi implements bgj {
                 bhn bhnVar = new bhn(byxVar, bhlVar, mainActivity, (afw) null);
                 this.e = null;
                 this.d = 2;
-                dov dovVar = doh.a;
+                Kotlin$Lazy kotlin$LazyVar = doh.a;
                 alc alcVar2 = aou.a;
                 if (ajn.ak(bza.a, bhnVar, this) != ahqVar) {
                     return kotlinUnitVar;
@@ -138,14 +138,14 @@ public final class bhp extends doi implements bgj {
                 ArrayList arrayList = cuaVar2.a;
                 int i4 = this.d;
                 if (i4 == 0) {
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                     bvzVar = new bvz(10);
                     lw lwVar = new lw(i2, afwVar, 5);
                     this.e = cuaVar2;
                     this.f = bvzVar;
                     this.o = bvzVar;
                     this.d = 1;
-                    dov dovVar2 = doh.a;
+                    Kotlin$Lazy kotlin$LazyVar2 = doh.a;
                     alc alcVar3 = aou.a;
                     objAk = ajn.ak(akq.f, lwVar, this);
                     if (objAk == ahqVar) {
@@ -163,7 +163,7 @@ public final class bhp extends doi implements bgj {
                     bvz bvzVar3 = (bvz) this.o;
                     bvzVar2 = (bvz) this.f;
                     cua cuaVar3 = (cua) this.e;
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                     cuaVar = cuaVar3;
                     bvzVar = bvzVar3;
                     objAk = obj;
@@ -203,7 +203,7 @@ public final class bhp extends doi implements bgj {
             default:
                 int i5 = this.d;
                 if (i5 == 0) {
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                     euh euhVar = (euh) this.e;
                     TextView textView = (TextView) this.f;
                     ProgressBar progressBar = (ProgressBar) this.o;
@@ -219,15 +219,15 @@ public final class bhp extends doi implements bgj {
                                                                                                            * 81471234636586L)
                                                                                                            */);
                     }
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                     return kotlinUnitVar;
                 }
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 alc alcVar4 = aou.a;
-                bkb bkbVar = bza.a;
+                Dispatcher2 dispatcher2Var = bza.a;
                 zl zlVar = new zl((AlertDialog) onCreateContextMenuListener, null, 1);
                 this.d = 2;
-                if (ajn.ak(bkbVar, zlVar, this) != ahqVar) {
+                if (ajn.ak(dispatcher2Var, zlVar, this) != ahqVar) {
                     return kotlinUnitVar;
                 }
                 return ahqVar;

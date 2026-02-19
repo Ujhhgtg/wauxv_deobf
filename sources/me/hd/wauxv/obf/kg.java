@@ -31,7 +31,7 @@ public final class kg extends nh {
                 try {
                     obj2 = ((bmh) blqVar.b).b.thisObject;
                 } catch (Throwable th) {
-                    objX4 = bhu.x(th);
+                    objX4 = FastKV.x(th);
                 }
                 if ((obj2 instanceof Application ? (Application) obj2 : null) == null) {
                     return;
@@ -70,7 +70,7 @@ public final class kg extends nh {
                     }
                     objX = KotlinUnit.INSTANCE;
                 } catch (Throwable th2) {
-                    objX = bhu.x(th2);
+                    objX = FastKV.x(th2);
                 }
                 Throwable thB2 = dcy.b(objX);
                 if (thB2 != null) {
@@ -92,7 +92,7 @@ public final class kg extends nh {
                     }
                     objX2 = KotlinUnit.INSTANCE;
                 } catch (Throwable th3) {
-                    objX2 = bhu.x(th3);
+                    objX2 = FastKV.x(th3);
                 }
                 Throwable thB3 = dcy.b(objX2);
                 if (thB3 != null) {
@@ -114,7 +114,7 @@ public final class kg extends nh {
                     }
                     objX5 = KotlinUnit.INSTANCE;
                 } catch (Throwable th4) {
-                    objX5 = bhu.x(th4);
+                    objX5 = FastKV.x(th4);
                 }
                 Throwable thB4 = dcy.b(objX5);
                 if (thB4 != null) {
@@ -126,7 +126,7 @@ public final class kg extends nh {
                 try {
                     obj = ((bmh) blqVar.b).b.thisObject;
                 } catch (Throwable th5) {
-                    objX3 = bhu.x(th5);
+                    objX3 = FastKV.x(th5);
                 }
                 if ((obj instanceof Application ? (Application) obj : null) == null) {
                     return;
@@ -172,7 +172,7 @@ public final class kg extends nh {
                     }
                     objX = KotlinUnit.INSTANCE;
                 } catch (Throwable th) {
-                    objX = bhu.x(th);
+                    objX = FastKV.x(th);
                 }
                 Throwable thB = dcy.b(objX);
                 if (thB != null) {

@@ -86,7 +86,7 @@ public abstract class cmz {
         ahh ahhVar = afxVar.m;
         throwIfVar1IsNull(ahhVar);
         afy afyVar = (afy) ahhVar._w(arj.a);
-        afw aorVar = afyVar != null ? new aor((ahj) afyVar, afxVar) : afxVar;
+        afw aorVar = afyVar != null ? new DispatchedContinuation((Dispatcher) afyVar, afxVar) : afxVar;
         afxVar.n = aorVar;
         return aorVar;
     }

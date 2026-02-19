@@ -106,17 +106,17 @@ public final class bur {
                 buh buhVar3 = buqVar.a;
                 ArrayList arrayList = this.h;
                 arrayList.add(buhVar3);
-                bue bueVar = bug.Companion;
+                bue bueVar = LifeEventEnum.Companion;
                 buh buhVar4 = buqVar.a;
                 bueVar.getClass();
                 throwIfVar1IsNull(buhVar4, "state");
                 int iOrdinal = buhVar4.ordinal();
-                bug bugVar = iOrdinal != 1 ? iOrdinal != 2 ? iOrdinal != 3 ? null : bug.ON_RESUME : bug.ON_START
-                        : bug.ON_CREATE;
-                if (bugVar == null) {
+                LifeEventEnum lifeEventEnumVar = iOrdinal != 1 ? iOrdinal != 2 ? iOrdinal != 3 ? null : LifeEventEnum.ON_RESUME : LifeEventEnum.ON_START
+                        : LifeEventEnum.ON_CREATE;
+                if (lifeEventEnumVar == null) {
                     throw new IllegalStateException("no event up from " + buqVar.a);
                 }
-                buqVar.c(bupVar, bugVar);
+                buqVar.c(bupVar, lifeEventEnumVar);
                 arrayList.remove(arrayList.size() - 1);
                 buhVarK = k(buoVar);
             }
@@ -132,7 +132,7 @@ public final class bur {
         deb debVar = map.containsKey(buoVar) ? ((deb) map.get(buoVar)).d : null;
         buh buhVar = debVar != null ? ((buq) debVar.b).a : null;
         ArrayList arrayList = this.h;
-        buh buhVar2 = arrayList.isEmpty() ? null : (buh) dkz.l(1, arrayList);
+        buh buhVar2 = arrayList.isEmpty() ? null : (buh) StaticHelpers6.getLastNElem(1, arrayList);
         buh buhVar3 = this.c;
         throwIfVar1IsNull(buhVar3, "state1");
         if (buhVar == null || buhVar.compareTo(buhVar3) >= 0) {
@@ -151,10 +151,10 @@ public final class bur {
         }
     }
 
-    public final void m(bug bugVar) {
-        throwIfVar1IsNull(bugVar, "event");
+    public final void m(LifeEventEnum lifeEventEnumVar) {
+        throwIfVar1IsNull(lifeEventEnumVar, "event");
         l("handleLifecycleEvent");
-        n(bugVar.a());
+        n(lifeEventEnumVar.a());
     }
 
     public final void n(buh buhVar) {
@@ -236,19 +236,19 @@ public final class bur {
                         buo buoVar = (buo) entry.getKey();
                         buq buqVar = (buq) entry.getValue();
                         while (buqVar.a.compareTo(this.c) > 0 && !this.g && this.b.a.containsKey(buoVar)) {
-                            bue bueVar = bug.Companion;
+                            bue bueVar = LifeEventEnum.Companion;
                             buh buhVar4 = buqVar.a;
                             bueVar.getClass();
                             throwIfVar1IsNull(buhVar4, "state");
                             int iOrdinal = buhVar4.ordinal();
-                            bug bugVar = iOrdinal != 2
-                                    ? iOrdinal != 3 ? iOrdinal != 4 ? null : bug.ON_PAUSE : bug.ON_STOP
-                                    : bug.ON_DESTROY;
-                            if (bugVar == null) {
+                            LifeEventEnum lifeEventEnumVar = iOrdinal != 2
+                                    ? iOrdinal != 3 ? iOrdinal != 4 ? null : LifeEventEnum.ON_PAUSE : LifeEventEnum.ON_STOP
+                                    : LifeEventEnum.ON_DESTROY;
+                            if (lifeEventEnumVar == null) {
                                 throw new IllegalStateException("no event down from " + buqVar.a);
                             }
-                            arrayList.add(bugVar.a());
-                            buqVar.c(bupVar, bugVar);
+                            arrayList.add(lifeEventEnumVar.a());
+                            buqVar.c(bupVar, lifeEventEnumVar);
                             arrayList.remove(arrayList.size() - 1);
                         }
                     }
@@ -265,18 +265,18 @@ public final class bur {
                         buq buqVar2 = (buq) entry2.getValue();
                         while (buqVar2.a.compareTo(this.c) < 0 && !this.g && this.b.a.containsKey(buoVar2)) {
                             arrayList.add(buqVar2.a);
-                            bue bueVar2 = bug.Companion;
+                            bue bueVar2 = LifeEventEnum.Companion;
                             buh buhVar5 = buqVar2.a;
                             bueVar2.getClass();
                             throwIfVar1IsNull(buhVar5, "state");
                             int iOrdinal2 = buhVar5.ordinal();
-                            bug bugVar2 = iOrdinal2 != 1
-                                    ? iOrdinal2 != 2 ? iOrdinal2 != 3 ? null : bug.ON_RESUME : bug.ON_START
-                                    : bug.ON_CREATE;
-                            if (bugVar2 == null) {
+                            LifeEventEnum lifeEventEnumVar2 = iOrdinal2 != 1
+                                    ? iOrdinal2 != 2 ? iOrdinal2 != 3 ? null : LifeEventEnum.ON_RESUME : LifeEventEnum.ON_START
+                                    : LifeEventEnum.ON_CREATE;
+                            if (lifeEventEnumVar2 == null) {
                                 throw new IllegalStateException("no event up from " + buqVar2.a);
                             }
-                            buqVar2.c(bupVar, bugVar2);
+                            buqVar2.c(bupVar, lifeEventEnumVar2);
                             arrayList.remove(arrayList.size() - 1);
                         }
                     }

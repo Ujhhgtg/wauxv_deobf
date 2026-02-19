@@ -10,7 +10,7 @@ public final class eeo {
 
     public /* synthetic */ eeo(int i, Integer num, String str, String str2) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, eem.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, eem.b.getDescriptor());
             throw null;
         }
         this.a = str;

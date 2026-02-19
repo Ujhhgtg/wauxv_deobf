@@ -5,15 +5,15 @@ package me.hd.wauxv.obf;
 public class ckn extends cwn {
     public final /* synthetic */ int af = 1;
     public final long ag;
-    public final bmu ah;
+    public final SyntheticPileOfMess ah;
     public final rw ai;
 
-    public ckn(long j, bmu bmuVar, cwd cwdVar, dfx dfxVar) {
+    public ckn(long j, SyntheticPileOfMess bmuVar, cwd cwdVar, dfx dfxVar) {
         rw rwVar = new rw();
         throwIfVar1IsNull(cwdVar, "proto");
         throwIfVar1IsNull(bmuVar, "parentWriter");
         throwIfVar1IsNull(dfxVar, "descriptor");
-        super(cwdVar, new bmu(rwVar), dfxVar);
+        super(cwdVar, new SyntheticPileOfMess(rwVar), dfxVar);
         this.ag = j;
         this.ah = bmuVar;
         this.ai = rwVar;
@@ -36,24 +36,24 @@ public class ckn extends cwn {
             case 0:
                 throwIfVar1IsNull(dfxVar, "descriptor");
                 int i = (int) (this.ag & 2147483647L);
-                bmu bmuVar = this.ah;
+                SyntheticPileOfMess bmuVar = this.ah;
                 bmuVar.getClass();
                 rw rwVar = this.ai;
                 throwIfVar1IsNull(rwVar, "output");
-                bmuVar.n((rw) bmuVar.h, ProtoWireType.ENUM_LENGTH_DELIMITED.makeTag(i), cwf.DEFAULT);
+                bmuVar.writeVarInt32((rw) bmuVar.obj, ProtoWireType.ENUM_LENGTH_DELIMITED.makeTag(i), IntEncodingEnum.DEFAULT);
                 bmuVar.x(rwVar);
                 break;
             default:
                 throwIfVar1IsNull(dfxVar, "descriptor");
                 long j = this.ag;
                 rw rwVar2 = this.ai;
-                bmu bmuVar2 = this.ah;
+                SyntheticPileOfMess bmuVar2 = this.ah;
                 if (j == 19500) {
                     bmuVar2.x(rwVar2);
                 } else {
                     bmuVar2.getClass();
                     throwIfVar1IsNull(rwVar2, "output");
-                    bmuVar2.n((rw) bmuVar2.h, ProtoWireType.ENUM_LENGTH_DELIMITED.makeTag((int) (j & 2147483647L)), cwf.DEFAULT);
+                    bmuVar2.writeVarInt32((rw) bmuVar2.obj, ProtoWireType.ENUM_LENGTH_DELIMITED.makeTag((int) (j & 2147483647L)), IntEncodingEnum.DEFAULT);
                     bmuVar2.x(rwVar2);
                 }
                 break;
@@ -64,8 +64,8 @@ public class ckn extends cwn {
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public ckn(cwd cwdVar, bmu bmuVar, long j, dfx dfxVar, rw rwVar) {
-        super(cwdVar, new bmu(rwVar), dfxVar);
+    public ckn(cwd cwdVar, SyntheticPileOfMess bmuVar, long j, dfx dfxVar, rw rwVar) {
+        super(cwdVar, new SyntheticPileOfMess(rwVar), dfxVar);
         throwIfVar1IsNull(cwdVar, "proto");
         throwIfVar1IsNull(bmuVar, "writer");
         throwIfVar1IsNull(dfxVar, "descriptor");

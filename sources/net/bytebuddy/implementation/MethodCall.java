@@ -12,7 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.Callable;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.enumeration.EnumerationDescription;
 import net.bytebuddy.description.field.FieldDescription;
@@ -25,7 +25,6 @@ import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.scaffold.FieldLocator;
 import net.bytebuddy.dynamic.scaffold.InstrumentedType;
 import net.bytebuddy.dynamic.scaffold.MethodGraph;
-import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
 import net.bytebuddy.implementation.bytecode.Duplication;
 import net.bytebuddy.implementation.bytecode.Removal;
@@ -571,7 +570,7 @@ public class MethodCall implements Implementation.Composable {
             }
 
             public int hashCode() {
-                return this.targetHandler.hashCode() + dkz.c(this.instrumentedMethod, dkz.c(this.methodDescription,
+                return this.targetHandler.hashCode() + StaticHelpers6.c(this.instrumentedMethod, StaticHelpers6.c(this.methodDescription,
                         (this.appender.hashCode() + (getClass().hashCode() * 31)) * 31, 31), 31);
             }
 
@@ -1018,7 +1017,7 @@ public class MethodCall implements Implementation.Composable {
             }
 
             public int hashCode() {
-                return this.typeDefinition.hashCode() + dkz.g(this.stackManipulation, getClass().hashCode() * 31, 31);
+                return this.typeDefinition.hashCode() + StaticHelpers6.g(this.stackManipulation, getClass().hashCode() * 31, 31);
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.ArgumentLoader.Factory
@@ -1328,7 +1327,7 @@ public class MethodCall implements Implementation.Composable {
                     if (typeDescription.getSuperClass() != null) {
                         return new ForSuperMethodInvocation(typeDescription);
                     }
-                    throw new IllegalStateException(dkz.u("Cannot invoke super method for ", typeDescription));
+                    throw new IllegalStateException(StaticHelpers6.concat("Cannot invoke super method for ", typeDescription));
                 }
             }
 
@@ -1510,7 +1509,7 @@ public class MethodCall implements Implementation.Composable {
                 }
 
                 public int hashCode() {
-                    return this.methodGraphCompiler.hashCode() + dkz.i(this.matcher, getClass().hashCode() * 31, 31);
+                    return this.methodGraphCompiler.hashCode() + StaticHelpers6.i(this.matcher, getClass().hashCode() * 31, 31);
                 }
 
                 @Override // net.bytebuddy.implementation.MethodCall.MethodLocator.Factory
@@ -1541,7 +1540,7 @@ public class MethodCall implements Implementation.Composable {
 
             public int hashCode() {
                 return this.methodGraphCompiler.hashCode()
-                        + dkz.i(this.matcher, dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31), 31);
+                        + StaticHelpers6.i(this.matcher, StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31), 31);
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.MethodLocator
@@ -1957,7 +1956,7 @@ public class MethodCall implements Implementation.Composable {
                 }
 
                 public int hashCode() {
-                    return this.targetHandler.hashCode() + dkz.c(this.instrumentedMethod, dkz.c(this.methodDescription,
+                    return this.targetHandler.hashCode() + StaticHelpers6.c(this.instrumentedMethod, StaticHelpers6.c(this.methodDescription,
                             (this.appender.hashCode() + (getClass().hashCode() * 31)) * 31, 31), 31);
                 }
 
@@ -2152,7 +2151,7 @@ public class MethodCall implements Implementation.Composable {
 
                 public int hashCode() {
                     return this.instrumentedMethod.hashCode()
-                            + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31);
+                            + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31);
                 }
 
                 @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Resolved
@@ -2339,7 +2338,7 @@ public class MethodCall implements Implementation.Composable {
             }
 
             public int hashCode() {
-                return this.stackManipulation.hashCode() + dkz.f(this.typeDescription, getClass().hashCode() * 31, 31);
+                return this.stackManipulation.hashCode() + StaticHelpers6.f(this.typeDescription, getClass().hashCode() * 31, 31);
             }
 
             @Override // net.bytebuddy.implementation.MethodCall.TargetHandler.Factory
@@ -2726,7 +2725,7 @@ public class MethodCall implements Implementation.Composable {
     }
 
     public int hashCode() {
-        return this.typing.hashCode() + dkz.h(this.assigner,
+        return this.typing.hashCode() + StaticHelpers6.h(this.assigner,
                 (this.terminationHandler.hashCode() + ((this.methodInvoker.hashCode() + bjs.g(this.argumentLoaders,
                         (this.targetHandler.hashCode()
                                 + ((this.methodLocator.hashCode() + (getClass().hashCode() * 31)) * 31)) * 31,
@@ -2820,7 +2819,7 @@ public class MethodCall implements Implementation.Composable {
                     MethodInvoker.ForContextualInvocation.Factory.INSTANCE, TerminationHandler.Simple.RETURNING,
                     Assigner.DEFAULT, Assigner.Typing.STATIC);
         }
-        throw new IllegalArgumentException(dkz.t("Not a constructor: ", methodDescription));
+        throw new IllegalArgumentException(StaticHelpers6.concat("Not a constructor: ", methodDescription));
     }
 
     public static WithoutSpecifiedTarget invoke(Constructor<?> constructor) {

@@ -12,13 +12,13 @@ import java.util.concurrent.ConcurrentHashMap;
 public final class aki {
     public final /* synthetic */ int a = 0;
     public boolean b;
-    public Object c;
-    public Object d;
+    public Object hookPriority;
+    public Object resolutionStrategy;
     public Object e;
     public Object f;
     public Object g;
     public Object h;
-    public Object i;
+    public Object members;
     public Object j;
 
     public /* synthetic */ aki() {
@@ -30,12 +30,12 @@ public final class aki {
             return;
         }
         cls3 = Object.class;
-        Class<Object> clsBf = cnf.bf(dal.b(cls3));
+        Class<Object> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
         if (cls.equals(clsBf != null ? clsBf : Object.class)) {
             return;
         }
-        Class clsBd = emn.bd(cls);
-        Class<?> clsBd2 = emn.bd(cls2);
+        Class clsBd = StaticHelpers7.bd(cls);
+        Class<?> clsBd2 = StaticHelpers7.bd(cls2);
         ConcurrentHashMap concurrentHashMap = ReflectionWrapper.cachedConstructors;
         if (clsBd2.isAssignableFrom(clsBd) || clsBd.isAssignableFrom(clsBd2)) {
             return;
@@ -65,7 +65,7 @@ public final class aki {
                         throw new ClassCastException();
                     }
                 } catch (Throwable th) {
-                    bhu.x(th);
+                    FastKV.x(th);
                 }
                 linkedHashSet.clear();
             }
@@ -106,22 +106,22 @@ public final class aki {
 
     public void q(boolean z) {
         Object objX;
-        exi exiVar = (exi) this.d;
-        if ((z && exiVar == exi.b) || exiVar == exi.c) {
+        ResolutionStrategyEnum resolutionStrategyEnumVar = (ResolutionStrategyEnum) this.resolutionStrategy;
+        if ((z && resolutionStrategyEnumVar == ResolutionStrategyEnum.ENUM_LAZY_MEMBERS) || resolutionStrategyEnumVar == ResolutionStrategyEnum.ENUM_IMMEDIATE) {
             but butVar = (but) this.j;
             if (bhs.r() != bmc.b) {
-                csc cscVar = ((csb) butVar.b).aa;
+                csc cscVar = ((PackageParam) butVar.b).aa;
                 if ((cscVar != null ? cscVar.a : null) == bmk.c || this.b) {
                     return;
                 }
                 this.b = true;
-                LinkedHashSet<Member> linkedHashSet = (LinkedHashSet) this.i;
+                LinkedHashSet<Member> linkedHashSet = (LinkedHashSet) this.members;
                 if (linkedHashSet.isEmpty()) {
                     linkedHashSet = null;
                 }
                 if (linkedHashSet == null) {
                     Throwable th = new Throwable("Finding Error isSetUpMember [false]");
-                    if (exiVar != exi.a) {
+                    if (resolutionStrategyEnumVar != ResolutionStrategyEnum.ENUM_LAZY_CLASSES) {
                         return;
                     }
                     ewq.g(4, "Hooked Member cannot be null", th);
@@ -129,7 +129,7 @@ public final class aki {
                 }
                 for (Member member : linkedHashSet) {
                     try {
-                        exh exhVarZ = cnh.z(member, new exj(butVar, this, member, (exg) this.c));
+                        exh exhVarZ = cnh.z(member, new exj(butVar, this, member, (HookPriorityEnum) this.hookPriority));
                         exa exaVar = exhVarZ.a;
                         if ((exaVar != null ? exaVar.a.xposedUnhook.getHookedMethod() : null) == null) {
                             throw new IllegalStateException(("Hook Member [" + member + "] failed").toString());
@@ -137,7 +137,7 @@ public final class aki {
                         ((LinkedHashSet) this.h).add(exhVarZ.a);
                         objX = exhVarZ;
                     } catch (Throwable th2) {
-                        objX = bhu.x(th2);
+                        objX = FastKV.x(th2);
                     }
                     Throwable thB = dcy.b(objX);
                     if (thB != null) {
@@ -148,24 +148,11 @@ public final class aki {
         }
     }
 
-    public String toString() {
-        switch (this.a) {
-            case 1:
-                LinkedHashSet linkedHashSet = (LinkedHashSet) this.i;
-                return "[priority] " + ((exg) this.c) + " [members] " + linkedHashSet;
-            default:
-                return super.toString();
-        }
-    }
-
-    public aki(but butVar, exg exgVar, exi exiVar) {
+    public aki(but butVar, HookPriorityEnum hookPriorityEnumVar, ResolutionStrategyEnum resolutionStrategyEnumVar) {
         this.j = butVar;
-        this.c = exgVar;
-        this.d = exiVar;
-        arj.s();
-        arj.s();
-        arj.s();
+        this.hookPriority = hookPriorityEnumVar;
+        this.resolutionStrategy = resolutionStrategyEnumVar;
         this.h = new LinkedHashSet();
-        this.i = new LinkedHashSet();
+        this.members = new LinkedHashSet();
     }
 }

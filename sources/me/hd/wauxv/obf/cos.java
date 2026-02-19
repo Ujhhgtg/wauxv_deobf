@@ -11,13 +11,13 @@ public final class cos extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() throws NoSuchMethodException {
-        aki akiVarAb = csb.ab(a, dqc.toSingletonList(emn.bb(cor.a)));
+        aki akiVarAb = PackageParam.ab(a, dqc.toSingletonList(StaticHelpers7.bb(cor.a)));
         akiVarAb.n(new cml(20));
         akiVarAb.o();
     }
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(cor.a, dexKitBridge, new cml(21));
+        StaticHelpers7.resolveDexAndCache(cor.a, dexKitBridge, new cml(21));
     }
 }

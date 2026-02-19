@@ -117,7 +117,7 @@ public abstract class KotlinHelpers {
         return Math.max(0, i2 - i3);
     }
 
-    public static int ah(int i) {
+    public static int calcHashMapCapacity(int i) {
         if (i < 0) {
             return i;
         }
@@ -130,12 +130,12 @@ public abstract class KotlinHelpers {
         return Integer.MAX_VALUE;
     }
 
-    public static Map ai(Pair... pairVarArr) {
+    public static Map mapOf(Pair... pairVarArr) {
         if (pairVarArr.length <= 0) {
-            return ave.a;
+            return EmptyReadonlyMap.INSTANCE;
         }
-        LinkedHashMap linkedHashMap = new LinkedHashMap(ah(pairVarArr.length));
-        am(linkedHashMap, pairVarArr);
+        LinkedHashMap linkedHashMap = new LinkedHashMap(calcHashMapCapacity(pairVarArr.length));
+        addVar2PairArrayToVar1Map(linkedHashMap, pairVarArr);
         return linkedHashMap;
     }
 
@@ -166,7 +166,7 @@ public abstract class KotlinHelpers {
         return (((long) i2) & 4294967295L) | ((((long) i) & 4294967295L) << 32);
     }
 
-    public static final void am(HashMap map, Pair[] pairVarArr) {
+    public static final void addVar2PairArrayToVar1Map(HashMap map, Pair[] pairVarArr) {
         for (Pair pairVar : pairVarArr) {
             map.put(pairVar.first, pairVar.second);
         }
@@ -235,7 +235,7 @@ public abstract class KotlinHelpers {
     public static Map as(ArrayList arrayList) {
         int size = arrayList.size();
         if (size == 0) {
-            return ave.a;
+            return EmptyReadonlyMap.INSTANCE;
         }
         if (size == 1) {
             Pair pairVar = (Pair) arrayList.get(0);
@@ -244,7 +244,7 @@ public abstract class KotlinHelpers {
             p(mapSingletonMap, "singletonMap(...)");
             return mapSingletonMap;
         }
-        LinkedHashMap linkedHashMap = new LinkedHashMap(ah(arrayList.size()));
+        LinkedHashMap linkedHashMap = new LinkedHashMap(calcHashMapCapacity(arrayList.size()));
         Iterator it = arrayList.iterator();
         while (it.hasNext()) {
             Pair pairVar2 = (Pair) it.next();
@@ -257,7 +257,7 @@ public abstract class KotlinHelpers {
         throwIfVar1IsNull(map, "<this>");
         int size = map.size();
         if (size == 0) {
-            return ave.a;
+            return EmptyReadonlyMap.INSTANCE;
         }
         if (size != 1) {
             return new LinkedHashMap(map);
@@ -655,7 +655,7 @@ public abstract class KotlinHelpers {
 
     public static final ArrayList w(String str, Bundle bundle) {
         throwIfVar1IsNull(str, "key");
-        ArrayList arrayListC = Build.VERSION.SDK_INT >= 34 ? az.c(bundle, str, cnf.getJavaClass(dal.b(Bundle.class)))
+        ArrayList arrayListC = Build.VERSION.SDK_INT >= 34 ? az.c(bundle, str, HugeSyntheticPileOfHelpers.getJavaClass(dal.b(Bundle.class)))
                 : bundle.getParcelableArrayList(str);
         if (arrayListC != null) {
             return arrayListC;
@@ -680,7 +680,7 @@ public abstract class KotlinHelpers {
         int i5;
         throwIfVar1IsNull(affVar, "text");
         afo afoVarY = affVar.y(i);
-        long jX = bht.x(afoVarY, i2, z);
+        long jX = ResourcesCompat.x(afoVarY, i2, z);
         int i6 = (int) (jX >> 32);
         int i7 = (int) (jX & 4294967295L);
         if (i6 != i7) {

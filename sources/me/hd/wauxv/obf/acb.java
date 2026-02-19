@@ -18,12 +18,12 @@ public final /* synthetic */ class acb implements bul {
     }
 
     @Override // me.hd.wauxv.obf.bul
-    public final void e(bup bupVar, bug bugVar) {
+    public final void e(bup bupVar, LifeEventEnum lifeEventEnumVar) {
         switch (this.a) {
             case 0:
                 cqt cqtVar = (cqt) this.b;
                 hb hbVar = (hb) this.c;
-                if (bugVar == bug.ON_CREATE) {
+                if (lifeEventEnumVar == LifeEventEnum.ON_CREATE) {
                     OnBackInvokedDispatcher onBackInvokedDispatcherB = acc.a.b(hbVar);
                     throwIfVar1IsNull(onBackInvokedDispatcherB, "invoker");
                     cqtVar.e = onBackInvokedDispatcherB;
@@ -33,14 +33,14 @@ public final /* synthetic */ class acb implements bul {
             default:
                 beq beqVar = (beq) this.b;
                 cio cioVar = (cio) this.c;
-                if (bugVar == bug.ON_RESUME && ((List) ((dml) beqVar.w().e.h).c()).contains(cioVar)) {
+                if (lifeEventEnumVar == LifeEventEnum.ON_RESUME && ((List) ((dml) beqVar.w().e.obj).c()).contains(cioVar)) {
                     if (beq.p()) {
                         Log.v("FragmentNavigator", "Marking transition complete for entry " + cioVar
                                 + " due to fragment " + bupVar + " view lifecycle reaching RESUMED");
                     }
                     beqVar.w().k(cioVar);
                 }
-                if (bugVar == bug.ON_DESTROY) {
+                if (lifeEventEnumVar == LifeEventEnum.ON_DESTROY) {
                     if (beq.p()) {
                         Log.v("FragmentNavigator", "Marking transition complete for entry " + cioVar
                                 + " due to fragment " + bupVar + " view lifecycle reaching DESTROYED");

@@ -7,7 +7,7 @@ package me.hd.wauxv.obf;
 public final class bis {
     public static final bis a;
     public static final /* synthetic */ bis[] b;
-    public static final /* synthetic */ awn c;
+    public static final /* synthetic */ KotlinEnumEntriesImpl c;
     public final String d;
     public final String e;
 
@@ -21,7 +21,7 @@ public final class bis {
         sb.append(" where ((parentRef is null) or (parentRef != 'officialaccounts')) and (username like '%@openim' or username not like '%@%' ) and (username not like 'gh_%') and (username not in " /* " where ((parentRef is null) or (parentRef != 'officialaccounts')) and (username like '%@openim' or username not like '%@%' ) and (username not like 'gh_%') and (username not in " /* " where ((parentRef is null) or (parentRef != 'officialaccounts')) and (username like '%@openim' or username not like '%@%' ) and (username not like 'gh_%') and (username not in " /* " where ((parentRef is null) or (parentRef != 'officialaccounts')) and (username like '%@openim' or username not like '%@%' ) and (username not like 'gh_%') and (username not in " /* cnb.z(-592490738481962L)   */);
         bis[] bisVarArr = {bisVar, bisVar2, new bis(strZ, 2, strZ2, yg.decryptVar3UsingCnbZAndConcatToVar1(sb, biw.b, -593392681614122L)), new bis("OFFICIAL" /* "OFFICIAL" /* "OFFICIAL" /* "OFFICIAL" /* cnb.z(-593268127562538L)   */, 3, "官方" /* "官方" /* "官方" /* "官方" /* cnb.z(-593246652726058L)   */, " where (parentRef = 'officialaccounts') or (username like 'gh_%') order by flag desc" /* " where (parentRef = 'officialaccounts') or (username like 'gh_%') order by flag desc" /* " where (parentRef = 'officialaccounts') or (username like 'gh_%') order by flag desc" /* " where (parentRef = 'officialaccounts') or (username like 'gh_%') order by flag desc" /* cnb.z(-593250947693354L)   */)};
         b = bisVarArr;
-        c = new awn(bisVarArr);
+        c = new KotlinEnumEntriesImpl(bisVarArr);
     }
 
     public bis(String str, int i, String str2, String str3) {

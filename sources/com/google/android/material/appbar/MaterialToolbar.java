@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.WeakHashMap;
 import me.hd.wauxv.R;
-import me.hd.wauxv.obf.bhu;
+import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.bmy;
 import me.hd.wauxv.obf.cau;
 import me.hd.wauxv.obf.cbw;
@@ -23,7 +23,7 @@ import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.eqq;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.ex;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -39,7 +39,7 @@ public class MaterialToolbar extends Toolbar {
     public MaterialToolbar(Context context, AttributeSet attributeSet) {
         super(cmz.aq(context, attributeSet, R.attr.toolbarStyle, R.style.Widget_MaterialComponents_Toolbar), attributeSet, 0);
         Context context2 = getContext();
-        TypedArray typedArrayAn = bhu.an(context2, attributeSet, cxs.ac, R.attr.toolbarStyle, R.style.Widget_MaterialComponents_Toolbar, new int[0]);
+        TypedArray typedArrayAn = FastKV.an(context2, attributeSet, cxs.ac, R.attr.toolbarStyle, R.style.Widget_MaterialComponents_Toolbar, new int[0]);
         if (typedArrayAn.hasValue(2)) {
             setNavigationIconTint(typedArrayAn.getColor(2, -1));
         }
@@ -62,7 +62,7 @@ public class MaterialToolbar extends Toolbar {
             cau cauVar = new cau();
             cauVar.dz(colorStateListValueOf);
             cauVar.dx(context2);
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             cauVar.dy(eqq.e(this));
             setBackground(cauVar);
         }

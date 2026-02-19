@@ -58,7 +58,7 @@ public final class evr {
         windowInsets.getClass();
         evr evrVar = new evr(windowInsets);
         if (view != null && view.isAttachedToWindow()) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             evr evrVarA = eqr.a(view);
             evo evoVar = evrVar.b;
             evoVar.t(evrVarA);

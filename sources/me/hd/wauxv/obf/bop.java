@@ -10,16 +10,16 @@ public final class bop extends bws implements IDexFind {
     public static String b(Object obj) {
         int i = 0;
         bol.a.getClass();
-        cde cdeVarT = dqc.bh(emn.az(boj.a)).t();
-        cdeVarT.ak(cdy.c);
+        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(boj.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.ak(cdy.c);
         a.getClass();
-        cdeVarT.a = emn.az(boo.a);
-        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
+        methodResolverVarT.returnType = StaticHelpers7.az(boo.a);
+        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
-        cde cdeVarT2 = dqc.bi(objE).t();
-        cdeVarT2.a = dal.b(String.class);
+        MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objE).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT2.returnType = dal.b(String.class);
         cge.a.getClass();
-        Object objJ = ((MethodHookWrapper) dkz.n(new Object[] { emn.az(cgd.a) }, 1, cdeVarT2)).j(obj);
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { StaticHelpers7.az(cgd.a) }, 1, methodResolverVarT2)).j(obj);
         throwIfVar1IsNull(objJ);
         return (String) objJ;
     }
@@ -30,6 +30,6 @@ public final class bop extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(boo.a, dexKitBridge, new blx(13));
+        StaticHelpers7.resolveDexAndCache(boo.a, dexKitBridge, new blx(13));
     }
 }

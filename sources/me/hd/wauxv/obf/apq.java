@@ -68,8 +68,8 @@ public final class apq {
      * Code decompiled incorrectly, please refer to instructions dump.
      * To view partially-correct add '--show-bad-code' argument
      */
-    public static android.graphics.Bitmap l(me.hd.wauxv.obf.jx r9, android.graphics.BitmapFactory.Options r10,
-            me.hd.wauxv.obf.app r11, me.hd.wauxv.obf.oz r12) {
+    public static android.graphics.Bitmap l(FactoryPools r9, android.graphics.BitmapFactory.Options r10,
+                                            me.hd.wauxv.obf.app r11, me.hd.wauxv.obf.oz r12) {
         /*
          * java.lang.String r0 = "Downsampler"
          * boolean r1 = r10.inJustDecodeBounds
@@ -187,7 +187,7 @@ public final class apq {
         options.inMutable = true;
     }
 
-    public final pa o(jx jxVar, int i, int i2, crw crwVar, app appVar) {
+    public final pa o(FactoryPools factoryPoolsVar, int i, int i2, crw crwVar, app appVar) {
         ArrayDeque arrayDeque;
         BitmapFactory.Options options;
         byte[] bArr = (byte[]) this.i.i(65536, byte[].class);
@@ -208,7 +208,7 @@ public final class apq {
         boolean zBooleanValue = ((Boolean) crwVar.b(c)).booleanValue();
         cru cruVar = d;
         try {
-            pa paVarG = pa.g(p(jxVar, options, apoVar, ajoVar, cviVar,
+            pa paVarG = pa.g(p(factoryPoolsVar, options, apoVar, ajoVar, cviVar,
                     crwVar.b(cruVar) != null && ((Boolean) crwVar.b(cruVar)).booleanValue(), i, i2, zBooleanValue,
                     appVar), this.g);
             n(options);
@@ -293,8 +293,8 @@ public final class apq {
      * JADX WARN: Found duplicated region for block: B:72:0x0155 A[ADDED_TO_REGION]
      */
     /* JADX WARN: Found duplicated region for block: B:73:0x0157 A[MOVE_INLINED] */
-    public final Bitmap p(jx jxVar, BitmapFactory.Options options, apo apoVar, ajo ajoVar, cvi cviVar, boolean z, int i,
-            int i2, boolean z2, app appVar) throws Throwable {
+    public final Bitmap p(FactoryPools factoryPoolsVar, BitmapFactory.Options options, apo apoVar, ajo ajoVar, cvi cviVar, boolean z, int i,
+                          int i2, boolean z2, app appVar) throws Throwable {
         long j;
         String str;
         int iM;
@@ -340,7 +340,7 @@ public final class apq {
         long jElapsedRealtimeNanos = SystemClock.elapsedRealtimeNanos();
         options.inJustDecodeBounds = true;
         oz ozVar3 = this.g;
-        l(jxVar, options, appVar, ozVar3);
+        l(factoryPoolsVar, options, appVar, ozVar3);
         options.inJustDecodeBounds = false;
         int[] iArr = { options.outWidth, options.outHeight };
         int i15 = iArr[0];
@@ -348,13 +348,13 @@ public final class apq {
         String str6 = options.outMimeType;
         boolean z6 = (i15 == -1 || i16 == -1) ? false : z;
         cyp cypVar2 = null;
-        switch (jxVar.d) {
+        switch (factoryPoolsVar.d) {
             case 11:
                 j = jElapsedRealtimeNanos;
                 str = str6;
-                List list2 = (List) jxVar.f;
-                ByteBuffer byteBufferD = sf.d((ByteBuffer) jxVar.e);
-                bva bvaVar = (bva) jxVar.h;
+                List list2 = (List) factoryPoolsVar.f;
+                ByteBuffer byteBufferD = sf.d((ByteBuffer) factoryPoolsVar.e);
+                bva bvaVar = (bva) factoryPoolsVar.h;
                 if (byteBufferD != null) {
                     int size = list2.size();
                     int i17 = 0;
@@ -412,7 +412,7 @@ public final class apq {
                                         i5 = i;
                                     }
                                     i6 = i2 == Integer.MIN_VALUE ? (i3 != 90 || i3 == i4) ? i15 : i16 : i2;
-                                    imageHeaderParser$ImageTypeV = jxVar.v();
+                                    imageHeaderParser$ImageTypeV = factoryPoolsVar.v();
                                     i7 = iY;
                                     boolean z7 = z3;
                                     if (i15 > 0 || i16 <= 0) {
@@ -489,7 +489,7 @@ public final class apq {
                                                 iFloor2 = i21 / iMax;
                                             } else {
                                                 options.inJustDecodeBounds = true;
-                                                l(jxVar, options, appVar, ozVar3);
+                                                l(factoryPoolsVar, options, appVar, ozVar3);
                                                 options.inJustDecodeBounds = false;
                                                 int[] iArr2 = { options.outWidth, options.outHeight };
                                                 iFloor = iArr2[0];
@@ -555,7 +555,7 @@ public final class apq {
                                     if (zK) {
                                         if (ajoVar != ajo.a) {
                                             try {
-                                                zHasAlpha = jxVar.v().hasAlpha();
+                                                zHasAlpha = factoryPoolsVar.v().hasAlpha();
                                             } catch (IOException e2) {
                                                 if (Log.isLoggable("Downsampler", 3)) {
                                                     Log.d("Downsampler",
@@ -631,7 +631,7 @@ public final class apq {
                                             options.inPreferredColorSpace = ColorSpace.get(ColorSpace.Named.SRGB);
                                         }
                                     }
-                                    bitmapL = l(jxVar, options, appVar, ozVar2);
+                                    bitmapL = l(factoryPoolsVar, options, appVar, ozVar2);
                                     appVar.l(bitmapL, ozVar2);
                                     if (Log.isLoggable("Downsampler", 2)) {
                                         Log.v("Downsampler", "Decoded " + m(bitmapL) + " from [" + i15 + "x" + i16
@@ -749,7 +749,7 @@ public final class apq {
                 }
                 if (i2 == Integer.MIN_VALUE) {
                 }
-                imageHeaderParser$ImageTypeV = jxVar.v();
+                imageHeaderParser$ImageTypeV = factoryPoolsVar.v();
                 i7 = iY;
                 boolean z72 = z3;
                 if (i15 > 0) {
@@ -782,7 +782,7 @@ public final class apq {
                 if (zK) {
                     z5 = true;
                 } else if (ajoVar != ajo.a) {
-                    zHasAlpha = jxVar.v().hasAlpha();
+                    zHasAlpha = factoryPoolsVar.v().hasAlpha();
                     if (zHasAlpha) {
                     }
                     options.inPreferredConfig = config;
@@ -861,7 +861,7 @@ public final class apq {
                         options.inPreferredColorSpace = ColorSpace.get(ColorSpace.Named.SRGB);
                     }
                 }
-                bitmapL = l(jxVar, options, appVar, ozVar2);
+                bitmapL = l(factoryPoolsVar, options, appVar, ozVar2);
                 appVar.l(bitmapL, ozVar2);
                 if (Log.isLoggable("Downsampler", 2)) {
                     Log.v("Downsampler",
@@ -924,10 +924,10 @@ public final class apq {
             case 12:
                 j = jElapsedRealtimeNanos;
                 str = str6;
-                List list4 = (List) jxVar.h;
-                cyp cypVar3 = (cyp) ((bmu) jxVar.e).h;
+                List list4 = (List) factoryPoolsVar.h;
+                cyp cypVar3 = (cyp) ((SyntheticPileOfMess) factoryPoolsVar.e).obj;
                 cypVar3.reset();
-                iY = bhv.y(list4, cypVar3, (bva) jxVar.f);
+                iY = bhv.y(list4, cypVar3, (bva) factoryPoolsVar.f);
                 switch (iY) {
                     case 3:
                     case 4:
@@ -975,7 +975,7 @@ public final class apq {
                 }
                 if (i2 == Integer.MIN_VALUE) {
                 }
-                imageHeaderParser$ImageTypeV = jxVar.v();
+                imageHeaderParser$ImageTypeV = factoryPoolsVar.v();
                 i7 = iY;
                 boolean z722 = z3;
                 if (i15 > 0) {
@@ -1008,7 +1008,7 @@ public final class apq {
                 if (zK) {
                     z5 = true;
                 } else if (ajoVar != ajo.a) {
-                    zHasAlpha = jxVar.v().hasAlpha();
+                    zHasAlpha = factoryPoolsVar.v().hasAlpha();
                     if (zHasAlpha) {
                     }
                     options.inPreferredConfig = config;
@@ -1088,7 +1088,7 @@ public final class apq {
                         options.inPreferredColorSpace = ColorSpace.get(ColorSpace.Named.SRGB);
                     }
                 }
-                bitmapL = l(jxVar, options, appVar, ozVar2);
+                bitmapL = l(factoryPoolsVar, options, appVar, ozVar2);
                 appVar.l(bitmapL, ozVar2);
                 if (Log.isLoggable("Downsampler", 2)) {
                     Log.v("Downsampler",
@@ -1149,10 +1149,10 @@ public final class apq {
                 }
                 return bitmapL;
             default:
-                List list5 = (List) jxVar.f;
+                List list5 = (List) factoryPoolsVar.f;
                 j = jElapsedRealtimeNanos;
-                com.bumptech.glide.load.data.a aVar = (com.bumptech.glide.load.data.a) jxVar.h;
-                bva bvaVar3 = (bva) jxVar.e;
+                com.bumptech.glide.load.data.a aVar = (com.bumptech.glide.load.data.a) factoryPoolsVar.h;
+                bva bvaVar3 = (bva) factoryPoolsVar.e;
                 int size2 = list5.size();
                 str = str6;
                 int i30 = 0;
@@ -1240,7 +1240,7 @@ public final class apq {
                 }
                 if (i2 == Integer.MIN_VALUE) {
                 }
-                imageHeaderParser$ImageTypeV = jxVar.v();
+                imageHeaderParser$ImageTypeV = factoryPoolsVar.v();
                 i7 = iY;
                 boolean z7222 = z3;
                 if (i15 > 0) {
@@ -1273,7 +1273,7 @@ public final class apq {
                 if (zK) {
                     z5 = true;
                 } else if (ajoVar != ajo.a) {
-                    zHasAlpha = jxVar.v().hasAlpha();
+                    zHasAlpha = factoryPoolsVar.v().hasAlpha();
                     if (zHasAlpha) {
                     }
                     options.inPreferredConfig = config;
@@ -1353,7 +1353,7 @@ public final class apq {
                         options.inPreferredColorSpace = ColorSpace.get(ColorSpace.Named.SRGB);
                     }
                 }
-                bitmapL = l(jxVar, options, appVar, ozVar2);
+                bitmapL = l(factoryPoolsVar, options, appVar, ozVar2);
                 appVar.l(bitmapL, ozVar2);
                 if (Log.isLoggable("Downsampler", 2)) {
                     Log.v("Downsampler",

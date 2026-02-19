@@ -13,7 +13,7 @@ public final class efw {
 
     public /* synthetic */ efw(int i, Boolean bool, String str, Long l, Long l2, Boolean bool2, Integer num) {
         if (63 != (i & 63)) {
-            bht.ah(i, 63, efu.b.getDescriptor());
+            ResourcesCompat.ah(i, 63, efu.b.getDescriptor());
             throw null;
         }
         this.a = bool;
@@ -57,8 +57,8 @@ public final class efw {
         sb.append("u93Proto(is_concert_live=" /* "u93Proto(is_concert_live=" /* "u93Proto(is_concert_live=" /* cnb.z(-286573102889770L)  */);
         dts.g(sb, this.a, -286478613609258L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -286963944913706L);
-        dkz.ad(sb, this.c, -286878045567786L);
-        dkz.ad(sb, this.d, -286869455633194L);
+        StaticHelpers6.ad(sb, this.c, -286878045567786L);
+        StaticHelpers6.ad(sb, this.d, -286869455633194L);
         dts.g(sb, this.e, -286800736156458L);
         return concat(sb, this.f, ')');
     }

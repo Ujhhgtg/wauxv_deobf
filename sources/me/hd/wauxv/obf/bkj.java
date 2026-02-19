@@ -33,7 +33,7 @@ public abstract class bkj extends ers {
         }
         int size = View.MeasureSpec.getSize(i3);
         if (size > 0) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             if (appBarLayout_q.getFitsSystemWindows() && (lastWindowInsets = coordinatorLayout.getLastWindowInsets()) != null) {
                 size += lastWindowInsets.e() + lastWindowInsets.h();
             }
@@ -69,7 +69,7 @@ public abstract class bkj extends ers {
         rect.set(paddingLeft, bottom, width, bottom2);
         evr lastWindowInsets = coordinatorLayout.getLastWindowInsets();
         if (lastWindowInsets != null) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             if (coordinatorLayout.getFitsSystemWindows() && !view.getFitsSystemWindows()) {
                 rect.left = lastWindowInsets.f() + rect.left;
                 rect.right -= lastWindowInsets.g();
@@ -105,7 +105,7 @@ public abstract class bkj extends ers {
             }
         }
         int i2 = this.r;
-        return cnf.as((int) (f * i2), 0, i2);
+        return HugeSyntheticPileOfHelpers.as((int) (f * i2), 0, i2);
     }
 
     public bkj(int i) {

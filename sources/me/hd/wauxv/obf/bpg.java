@@ -31,14 +31,14 @@ public final class bpg {
                 + emc.ao(zcVar) + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH).toString());
     }
 
-    public bmu c() {
+    public SyntheticPileOfMess c() {
         Collection collectionValues = this.a.values();
         throwIfVar1IsNull(collectionValues, "initializers");
         erm[] ermVarArr = (erm[]) collectionValues.toArray(new erm[0]);
         erm[] ermVarArr2 = (erm[]) Arrays.copyOf(ermVarArr, ermVarArr.length);
         throwIfVar1IsNull(ermVarArr2, "initializers");
-        bmu bmuVar = new bmu();
-        bmuVar.h = ermVarArr2;
+        SyntheticPileOfMess bmuVar = new SyntheticPileOfMess();
+        bmuVar.obj = ermVarArr2;
         return bmuVar;
     }
 }

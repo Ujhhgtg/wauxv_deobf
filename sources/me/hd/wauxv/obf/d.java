@@ -37,18 +37,18 @@ public final /* synthetic */ class d implements View.OnClickListener {
                 String[] strArr = { "wa.panel.emoji.group" /* "wa.panel.emoji.group" /* "wa.panel.emoji.group" /* cnb.z(-471334006029098L)  */ };
                 int i = 0;
                 dlx.a.getClass();
-                cde cdeVarT = dqc.bi(dlx.b()).t();
-                cdeVarT.ab = "delete" /* "delete" /* "delete" /* cnb.z(-103225243990826L)  */;
-                Object objJ = ((MethodHookWrapper) dkz.n(
-                        new Object[] { dal.b(String.class), dal.b(String.class), dal.b(String[].class) }, 3, cdeVarT))
+                MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT.name = "delete" /* "delete" /* "delete" /* cnb.z(-103225243990826L)  */;
+                Object objJ = ((MethodHookWrapper) StaticHelpers6.n(
+                        new Object[] { dal.b(String.class), dal.b(String.class), dal.b(String[].class) }, 3, methodResolverVarT))
                         .j(strZ, strZ2, strArr);
                 throwIfVar1IsNull(objJ);
                 ((Number) objJ).intValue();
                 dnc.g(null, 3, "清除成功" /* "清除成功" /* "清除成功" /* cnb.z(-471226631846698L)  */);
                 break;
             default:
-                dov dovVar = ctf.a;
-                dnc.c(ctf.c("Plugin" /* "Plugin" /* "Plugin" /* cnb.z(-47055661693738L)  */));
+                Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
+                dnc.c(PathUtils.getModuleSubDir("Plugin" /* "Plugin" /* "Plugin" /* cnb.z(-47055661693738L)  */));
                 dnc.g(null, 3, "复制成功" /* "复制成功" /* "复制成功" /* cnb.z(-485060721507114L)  */);
                 break;
         }

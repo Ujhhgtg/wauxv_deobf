@@ -33,18 +33,18 @@ public abstract class afx extends nc {
             throwIfVar1IsNull(ahhVar);
             ahf ahfVar_w = ahhVar._w(arj.a);
             throwIfVar1IsNull(ahfVar_w);
-            aor aorVar = (aor) afwVar;
-            AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = aor.a;
-            while (atomicReferenceFieldUpdater.get(aorVar) == cnf.af) {
+            DispatchedContinuation dispatchedContinuationVar = (DispatchedContinuation) afwVar;
+            AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = DispatchedContinuation.a;
+            while (atomicReferenceFieldUpdater.get(dispatchedContinuationVar) == HugeSyntheticPileOfHelpers.af) {
             }
-            Object obj = atomicReferenceFieldUpdater.get(aorVar);
-            tc tcVar = obj instanceof tc ? (tc) obj : null;
-            if (tcVar != null) {
-                AtomicReferenceFieldUpdater atomicReferenceFieldUpdater2 = tc.e;
-                aox aoxVar = (aox) atomicReferenceFieldUpdater2.get(tcVar);
+            Object obj = atomicReferenceFieldUpdater.get(dispatchedContinuationVar);
+            CancellableContinuation cancellableContinuationVar = obj instanceof CancellableContinuation ? (CancellableContinuation) obj : null;
+            if (cancellableContinuationVar != null) {
+                AtomicReferenceFieldUpdater atomicReferenceFieldUpdater2 = CancellableContinuation.e;
+                aox aoxVar = (aox) atomicReferenceFieldUpdater2.get(cancellableContinuationVar);
                 if (aoxVar != null) {
                     aoxVar.e();
-                    atomicReferenceFieldUpdater2.set(tcVar, con.b);
+                    atomicReferenceFieldUpdater2.set(cancellableContinuationVar, con.b);
                 }
             }
         }

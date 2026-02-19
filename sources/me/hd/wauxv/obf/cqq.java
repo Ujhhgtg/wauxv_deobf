@@ -29,8 +29,8 @@ public final class cqq implements bul, tb {
     }
 
     @Override // me.hd.wauxv.obf.bul
-    public final void e(bup bupVar, bug bugVar) {
-        if (bugVar == bug.ON_START) {
+    public final void e(bup bupVar, LifeEventEnum lifeEventEnumVar) {
+        if (lifeEventEnumVar == LifeEventEnum.ON_START) {
             bdx bdxVar = this.b;
             throwIfVar1IsNull(bdxVar, "onBackPressedCallback");
             cqt cqtVar = this.d;
@@ -42,8 +42,8 @@ public final class cqq implements bul, tb {
             this.c = cqrVar;
             return;
         }
-        if (bugVar != bug.ON_STOP) {
-            if (bugVar == bug.ON_DESTROY) {
+        if (lifeEventEnumVar != LifeEventEnum.ON_STOP) {
+            if (lifeEventEnumVar == LifeEventEnum.ON_DESTROY) {
                 cancel();
             }
         } else {

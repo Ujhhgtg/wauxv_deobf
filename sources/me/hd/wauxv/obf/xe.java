@@ -25,17 +25,17 @@ public final class xe {
         this.c = i;
         ciq ciqVar = cioVar.h;
         this.e = ciqVar.l();
-        Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+        Bundle bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
         this.f = bundleR;
         ciqVar.h.ab(bundleR);
     }
 
-    public static void g(czx czxVar) {
-        View view = czxVar.d;
+    public static void g(SomeView someViewVar) {
+        View view = someViewVar.d;
         Object tag = view.getTag(R.id.item_touch_helper_previous_elevation);
         if (tag instanceof Float) {
             float fFloatValue = ((Float) tag).floatValue();
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             eqq.k(view, fFloatValue);
         }
         view.setTag(R.id.item_touch_helper_previous_elevation, null);
@@ -77,17 +77,17 @@ public final class xe {
         return i5 | i3;
     }
 
-    public static void j(RecyclerView recyclerView, czx czxVar, float f, float f2, boolean z) {
-        View view = czxVar.d;
+    public static void j(RecyclerView recyclerView, SomeView someViewVar, float f, float f2, boolean z) {
+        View view = someViewVar.d;
         if (z && view.getTag(R.id.item_touch_helper_previous_elevation) == null) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             Float fValueOf = Float.valueOf(eqq.e(view));
             int childCount = recyclerView.getChildCount();
             float f3 = 0.0f;
             for (int i = 0; i < childCount; i++) {
                 View childAt = recyclerView.getChildAt(i);
                 if (childAt != view) {
-                    WeakHashMap weakHashMap2 = eqz.a;
+                    WeakHashMap weakHashMap2 = ViewCompat.a;
                     float fE = eqq.e(childAt);
                     if (fE > f3) {
                         f3 = fE;
@@ -148,7 +148,7 @@ public final class xe {
         return interpolation == 0 ? i2 > 0 ? 1 : -1 : interpolation;
     }
 
-    public cjf m(cjf cjfVar, jx jxVar, boolean z, cjg cjgVar) {
+    public cjf m(cjf cjfVar, FactoryPools factoryPoolsVar, boolean z, cjg cjgVar) {
         cjf cjfVarQ;
         cji cjiVar = (cji) this.d;
         ArrayList arrayList = new ArrayList();
@@ -159,17 +159,17 @@ public final class xe {
                 break;
             }
             cjg cjgVar2 = (cjg) cjjVar.next();
-            cjfVarQ = nullSafeIsEqual(cjgVar2, cjgVar) ? null : cjgVar2.o(jxVar);
+            cjfVarQ = nullSafeIsEqual(cjgVar2, cjgVar) ? null : cjgVar2.o(factoryPoolsVar);
             if (cjfVarQ != null) {
                 arrayList.add(cjfVarQ);
             }
         }
-        cjf cjfVar2 = (cjf) aaz.n(arrayList);
+        cjf cjfVar2 = (cjf) StaticHelpers5.n(arrayList);
         cji cjiVar2 = cjiVar.h;
         if (cjiVar2 != null && z && !cjiVar2.equals(cjgVar)) {
-            cjfVarQ = cjiVar2.q(jxVar, cjiVar);
+            cjfVarQ = cjiVar2.q(factoryPoolsVar, cjiVar);
         }
-        return (cjf) aaz.n(SomeStaticHelpers.o(new cjf[] { cjfVar, cjfVar2, cjfVarQ }));
+        return (cjf) StaticHelpers5.n(SomeStaticHelpers.o(new cjf[] { cjfVar, cjfVar2, cjfVarQ }));
     }
 
     public xe(cji cjiVar) {

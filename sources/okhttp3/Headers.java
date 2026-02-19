@@ -12,7 +12,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.TreeSet;
-import me.hd.wauxv.obf.abf;
+import me.hd.wauxv.obf.StaticHelpers2;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.IEmpty;
@@ -384,7 +384,7 @@ public final class Headers implements Iterable<Pair>, IEmpty {
 
     public final Builder newBuilder() {
         Builder builder = new Builder();
-        abf.ao(builder.getNamesAndValues$okhttp(), this.namesAndValues);
+        StaticHelpers2.ao(builder.getNamesAndValues$okhttp(), this.namesAndValues);
         return builder;
     }
 
@@ -448,7 +448,7 @@ public final class Headers implements Iterable<Pair>, IEmpty {
             }
         }
         if (arrayList == null) {
-            return EmptyReadonlyList.a;
+            return EmptyReadonlyList.INSTANCE;
         }
         List<String> listUnmodifiableList = Collections.unmodifiableList(arrayList);
         throwIfVar1IsNull(listUnmodifiableList, "{\n      Collections.unmodifiableList(result)\n    }");

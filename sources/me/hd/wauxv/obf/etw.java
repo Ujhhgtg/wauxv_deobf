@@ -15,8 +15,8 @@ public final class etw extends SwitchHook implements bna {
     public static final epy j;
 
     static {
-        dov dovVar = ctf.a;
-        b = ctf.c("Download" /* "Download" /* "Download" /* cnb.z(-46231027972906L)  */, "Voice" /* "Voice" /* "Voice" /* cnb.z(-46192373267242L)  */);
+        Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
+        b = PathUtils.getModuleSubDir("Download" /* "Download" /* "Download" /* cnb.z(-46231027972906L)  */, "Voice" /* "Voice" /* "Voice" /* cnb.z(-46192373267242L)  */);
         c = "菜单" /* "菜单" /* "菜单" /* cnb.z(-526305292450602L)  */;
         h = "语音保存" /* "语音保存" /* "语音保存" /* cnb.z(-526309587417898L)  */;
         i = "支持将语音消息自由保存到本地存储中" /* "支持将语音消息自由保存到本地存储中" /* "支持将语音消息自由保存到本地存储中" /* cnb.z(-526270932712234L)  */;
@@ -40,7 +40,7 @@ public final class etw extends SwitchHook implements bna {
     @Override // me.hd.wauxv.obf.bna
     public final List l(MsgInfoBean msgInfoBean) {
         return (z() && msgInfoBean.isVoice()) ? dqc.toSingletonList(new wj(R.id.MenuItem_Chat_VoiceSave,
-                "保存" /* "保存" /* "保存" /* cnb.z(-520382532549418L)  */, R.drawable.ic_menu_save_24dp, new dfq(18))) : EmptyReadonlyList.a;
+                "保存" /* "保存" /* "保存" /* cnb.z(-520382532549418L)  */, R.drawable.ic_menu_save_24dp, new dfq(18))) : EmptyReadonlyList.INSTANCE;
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

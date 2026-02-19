@@ -13,18 +13,18 @@ public final class eul extends bws {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i = 0;
-        bmu bmuVarS = yg.s(-57591216470826L);
-        cde cdeVarT = bmuVarS.t();
-        cdeVarT.ab = "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-59051505351466L)  */;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) dkz.n(new Object[] { dal.b(Bundle.class) }, 1, cdeVarT);
-        exg exgVar = exg.c;
+        SyntheticPileOfMess bmuVarS = yg.s(-57591216470826L);
+        MethodResolver methodResolverVarT = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-59051505351466L)  */;
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(Bundle.class) }, 1, methodResolverVarT);
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_HIGHEST;
         eul eulVar = a;
-        aki akiVarAd = eulVar.ad(methodHookWrapperVar, exgVar);
+        aki akiVarAd = eulVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
         akiVarAd.m(new epy(17));
         akiVarAd.o();
-        cde cdeVarT2 = bmuVarS.t();
-        cdeVarT2.ab = "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* cnb.z(-59030030514986L)  */;
-        aki akiVarAd2 = eulVar.ad((MethodHookWrapper) dkz.n(new Object[] { eoz.a, cvh.a.b() }, 2, cdeVarT2), exg.a);
+        MethodResolver methodResolverVarT2 = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT2.name = "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* cnb.z(-59030030514986L)  */;
+        aki akiVarAd2 = eulVar.ad((MethodHookWrapper) StaticHelpers6.n(new Object[] { eoz.a, cvh.a.b() }, 2, methodResolverVarT2), HookPriorityEnum.ENUM_DEFAULT);
         akiVarAd2.n(new epy(18));
         akiVarAd2.o();
     }

@@ -18,11 +18,11 @@ import me.hd.wauxv.R;
 public final class BottomTabMaterialHook extends SwitchHook implements bnp {
     public static final BottomTabMaterialHook a;
     public static final String b;
-    public static final dov c;
-    public static final dov d;
-    public static final dov h;
-    public static final dov i;
-    public static final dov j;
+    public static final Kotlin$Lazy c;
+    public static final Kotlin$Lazy d;
+    public static final Kotlin$Lazy h;
+    public static final Kotlin$Lazy i;
+    public static final Kotlin$Lazy j;
     public static final String l;
     public static final String m;
     public static final String n;
@@ -37,13 +37,13 @@ public final class BottomTabMaterialHook extends SwitchHook implements bnp {
         // "#FF324B48" /* "#FF324B48" /* "#FF324B48" /* "#FF324B48" /* cnb.z(-436789584067370L)   */;
         // "#FFF7F7F7" /* "#FFF7F7F7" /* "#FFF7F7F7" /* "#FFF7F7F7" /* cnb.z(-425218942171946L)   */;
         a = new BottomTabMaterialHook("BottomTabMaterialHook" /* "BottomTabMaterialHook" /* "BottomTabMaterialHook" /* "BottomTabMaterialHook" /* cnb.z(-435664302635818L)   */);
-        dov dovVar = ctf.a;
-        b = ctf.c("Resource" /* "Resource" /* "Resource" /* "Resource" /* cnb.z(-46621869996842L)   */, "BottomTab" /* "BottomTab" /* "BottomTab" /* "BottomTab" /* cnb.z(-46531675683626L)   */);
-        c = new dov(new h(14));
-        d = new dov(new h(15));
-        h = new dov(new h(16));
-        i = new dov(new h(17));
-        j = new dov(new h(18));
+        Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
+        b = PathUtils.getModuleSubDir("Resource" /* "Resource" /* "Resource" /* "Resource" /* cnb.z(-46621869996842L)   */, "BottomTab" /* "BottomTab" /* "BottomTab" /* "BottomTab" /* cnb.z(-46531675683626L)   */);
+        c = new Kotlin$Lazy(new h(14));
+        d = new Kotlin$Lazy(new h(15));
+        h = new Kotlin$Lazy(new h(16));
+        i = new Kotlin$Lazy(new h(17));
+        j = new Kotlin$Lazy(new h(18));
         l = "美化" /* "美化" /* "美化" /* "美化" /* cnb.z(-425193172368170L)   */;
         m = "底栏 Material You" /* "底栏 Material You" /* "底栏 Material You" /* "底栏 Material You" /* cnb.z(-425197467335466L)   */;
         n = "替换主页底部标签栏为 Material You 样式" /* "替换主页底部标签栏为 Material You 样式" /* "替换主页底部标签栏为 Material You 样式" /* "替换主页底部标签栏为 Material You 样式" /* cnb.z(-425128747858730L)   */;
@@ -83,17 +83,17 @@ public final class BottomTabMaterialHook extends SwitchHook implements bnp {
     @Override // me.hd.wauxv.obf.bnp
     public final void t(Activity activity, ViewGroup viewGroup, Object obj) {
         if (getIsEnabled()) {
-            qb qbVar = new qb(aqu.e(cnf.am(activity)), R.attr.bottomNavigationStyle,
+            qb qbVar = new qb(aqu.e(HugeSyntheticPileOfHelpers.wrapModuleContext(activity)), R.attr.bottomNavigationStyle,
                     R.style.Widget_Design_BottomNavigationView);
-            jx jxVarAo = bhu.ao(qbVar.getContext(), null, cxs.d, R.attr.bottomNavigationStyle,
+            FactoryPools factoryPoolsVarAo = FastKV.ao(qbVar.getContext(), null, cxs.d, R.attr.bottomNavigationStyle,
                     R.style.Widget_Design_BottomNavigationView, new int[0]);
-            TypedArray typedArray = (TypedArray) jxVarAo.e;
+            TypedArray typedArray = (TypedArray) factoryPoolsVarAo.e;
             qbVar.setItemHorizontalTranslationEnabled(typedArray.getBoolean(2, true));
             if (typedArray.hasValue(0)) {
                 qbVar.setMinimumHeight(typedArray.getDimensionPixelSize(0, 0));
             }
             typedArray.getBoolean(1, true);
-            jxVarAo.ae();
+            factoryPoolsVarAo.ae();
             ewz.af(qbVar, new nu(4));
             qbVar.setLayoutParams(new FrameLayout.LayoutParams(-1, (int) cnh.r(56, qbVar.getContext())));
             qbVar.setLabelVisibilityMode(2);
@@ -130,9 +130,9 @@ public final class BottomTabMaterialHook extends SwitchHook implements bnp {
                                                                                                       */);
             ((ViewGroup) childAt).addView(qbVar);
             int i2 = 0;
-            cde cdeVarT = dqc.bi(obj).t();
-            cdeVarT.ab = "onPageSelected" /* "onPageSelected" /* "onPageSelected" /* "onPageSelected" /* cnb.z(-437253440535338L)   */;
-            aki akiVarAd = ad((MethodHookWrapper) aaz.e(cdeVarT.aj()), exg.a);
+            MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT.name = "onPageSelected" /* "onPageSelected" /* "onPageSelected" /* "onPageSelected" /* cnb.z(-437253440535338L)   */;
+            aki akiVarAd = ad((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods()), HookPriorityEnum.ENUM_DEFAULT);
             qwVar.x(akiVarAd, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(qbVar, 1));
             akiVarAd.o();
         }

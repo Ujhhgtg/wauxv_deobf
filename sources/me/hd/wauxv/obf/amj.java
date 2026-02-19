@@ -44,7 +44,7 @@ public final class amj implements sg, sh {
         try {
             try {
                 int iAc = ajn.ac(this);
-                String strT = bht.t(this, new char[iAc]);
+                String strT = ResourcesCompat.t(this, new char[iAc]);
                 if (strT.length() == iAc) {
                     byteBuffer.position(iPosition);
                     byteBuffer.limit(iLimit);

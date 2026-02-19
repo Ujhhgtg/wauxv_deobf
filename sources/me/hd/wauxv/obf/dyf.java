@@ -10,7 +10,7 @@ public final class dyf {
 
     public /* synthetic */ dyf(int i, Integer num, String str, dxh dxhVar) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, dyd.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, dyd.b.getDescriptor());
             throw null;
         }
         this.a = num;

@@ -12,7 +12,7 @@ public final class eec {
 
     public /* synthetic */ eec(int i, Integer num, List list) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, eea.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, eea.b.getDescriptor());
             throw null;
         }
         this.b = num;

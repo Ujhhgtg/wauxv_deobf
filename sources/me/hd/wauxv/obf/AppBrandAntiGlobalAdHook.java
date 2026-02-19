@@ -17,9 +17,9 @@ public final class AppBrandAntiGlobalAdHook extends SwitchHook implements IDexFi
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.ba(gt.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.ba(gt.a));
         AppBrandAntiGlobalAdHook guVar = a;
-        aki akiVarAb = csb.ab(guVar, listBf);
+        aki akiVarAb = PackageParam.ab(guVar, listBf);
         guVar.y(akiVarAb, new gi(11));
         akiVarAb.o();
     }
@@ -36,7 +36,7 @@ public final class AppBrandAntiGlobalAdHook extends SwitchHook implements IDexFi
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(gt.a, dexKitBridge, new gi(12));
+        StaticHelpers7.resolveDexAndCache(gt.a, dexKitBridge, new gi(12));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

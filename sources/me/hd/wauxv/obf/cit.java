@@ -18,8 +18,8 @@ public final class cit {
     public final dml b;
     public final dml c;
     public boolean d;
-    public final bmu e;
-    public final bmu f;
+    public final SyntheticPileOfMess e;
+    public final SyntheticPileOfMess f;
     public final ckl g;
     public final /* synthetic */ cjl h;
 
@@ -27,12 +27,12 @@ public final class cit {
         throwIfVar1IsNull(cklVar, "navigator");
         this.h = cjlVar;
         this.a = new dop(2);
-        dml dmlVar = new dml(EmptyReadonlyList.a);
+        dml dmlVar = new dml(EmptyReadonlyList.INSTANCE);
         this.b = dmlVar;
         dml dmlVar2 = new dml(avh.a);
         this.c = dmlVar2;
-        this.e = new bmu(dmlVar);
-        this.f = new bmu(dmlVar2);
+        this.e = new SyntheticPileOfMess(dmlVar);
+        this.f = new SyntheticPileOfMess(dmlVar2);
         this.g = cklVar;
     }
 
@@ -40,7 +40,7 @@ public final class cit {
         throwIfVar1IsNull(cioVar, "backStackEntry");
         synchronized (this.a) {
             dml dmlVar = this.b;
-            dmlVar.g(aaz.p((Collection) dmlVar.c(), cioVar));
+            dmlVar.g(StaticHelpers5.p((Collection) dmlVar.c(), cioVar));
         }
     }
 
@@ -63,7 +63,7 @@ public final class cit {
         dml dmlVar2 = this.c;
         Set set = (Set) dmlVar2.c();
         throwIfVar1IsNull(set, "<this>");
-        LinkedHashSet linkedHashSet = new LinkedHashSet(KotlinHelpers.ah(set.size()));
+        LinkedHashSet linkedHashSet = new LinkedHashSet(KotlinHelpers.calcHashMapCapacity(set.size()));
         boolean z = false;
         for (Object obj : set) {
             boolean z2 = true;
@@ -83,7 +83,7 @@ public final class cit {
                 return;
             }
             cixVar.ar();
-            cixVar.g.g(aaz.ab(kmVar));
+            cixVar.g.g(StaticHelpers5.ab(kmVar));
             dmlVar.g(cixVar.an());
             return;
         }
@@ -119,7 +119,7 @@ public final class cit {
         int iNextIndex;
         synchronized (this.a) {
             try {
-                ArrayList arrayListAb = aaz.ab((Collection) ((dml) this.e.h).c());
+                ArrayList arrayListAb = StaticHelpers5.ab((Collection) ((dml) this.e.obj).c());
                 ListIterator listIterator = arrayListAb.listIterator(arrayListAb.size());
                 while (true) {
                     if (!listIterator.hasPrevious()) {
@@ -179,12 +179,12 @@ public final class cit {
         dml dmlVar = this.c;
         Iterable iterable = (Iterable) dmlVar.c();
         boolean z2 = iterable instanceof Collection;
-        bmu bmuVar = this.e;
+        SyntheticPileOfMess bmuVar = this.e;
         if (!z2 || !((Collection) iterable).isEmpty()) {
             Iterator it = iterable.iterator();
             while (it.hasNext()) {
                 if (((cio) it.next()) == cioVar) {
-                    Iterable iterable2 = (Iterable) ((dml) bmuVar.h).c();
+                    Iterable iterable2 = (Iterable) ((dml) bmuVar.obj).c();
                     if ((iterable2 instanceof Collection) && ((Collection) iterable2).isEmpty()) {
                         return;
                     }
@@ -199,8 +199,8 @@ public final class cit {
             }
         }
         dmlVar.g(dgg.b((Set) dmlVar.c(), cioVar));
-        dml dmlVar2 = (dml) bmuVar.h;
-        dml dmlVar3 = (dml) bmuVar.h;
+        dml dmlVar2 = (dml) bmuVar.obj;
+        dml dmlVar3 = (dml) bmuVar.obj;
         List list = (List) dmlVar2.c();
         ListIterator listIterator = list.listIterator(list.size());
         while (true) {
@@ -252,12 +252,12 @@ public final class cit {
         dml dmlVar = this.c;
         Iterable iterable = (Iterable) dmlVar.c();
         boolean z = iterable instanceof Collection;
-        bmu bmuVar = this.e;
+        SyntheticPileOfMess bmuVar = this.e;
         if (!z || !((Collection) iterable).isEmpty()) {
             Iterator it = iterable.iterator();
             while (it.hasNext()) {
                 if (((cio) it.next()) == cioVar) {
-                    Iterable iterable2 = (Iterable) ((dml) bmuVar.h).c();
+                    Iterable iterable2 = (Iterable) ((dml) bmuVar.obj).c();
                     if (!(iterable2 instanceof Collection) || !((Collection) iterable2).isEmpty()) {
                         Iterator it2 = iterable2.iterator();
                         while (it2.hasNext()) {
@@ -271,7 +271,7 @@ public final class cit {
                 }
             }
         }
-        cio cioVar2 = (cio) aaz.m((List) ((dml) bmuVar.h).c());
+        cio cioVar2 = (cio) StaticHelpers5.m((List) ((dml) bmuVar.obj).c());
         if (cioVar2 != null) {
             dmlVar.g(dgg.b((Set) dmlVar.c(), cioVar2));
         }

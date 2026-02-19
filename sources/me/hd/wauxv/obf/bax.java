@@ -38,7 +38,7 @@ public final class bax {
             int i = bawVar.a;
             int i2 = bawVar.b;
             int i3 = bawVar.c;
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             dialogXBaseRelativeLayout.setPaddingRelative(i, i2, i3, iY);
         }
         int i4 = bawVar.a;
@@ -159,7 +159,7 @@ public final class bax {
             this.c.getClass();
             bawVar.d = Math.max(i7, iE) + bawVar.d;
             DialogXBaseRelativeLayout dialogXBaseRelativeLayout = this.b;
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             boolean z2 = dialogXBaseRelativeLayout.getLayoutDirection() == 1;
             this.c.getClass();
             if (z2) {

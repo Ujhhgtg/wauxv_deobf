@@ -13,9 +13,9 @@ public final class cho extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(chn.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(chn.a));
         cho choVar = a;
-        aki akiVarAb = csb.ab(choVar, listBf);
+        aki akiVarAb = PackageParam.ab(choVar, listBf);
         choVar.y(akiVarAb, new cgu(6));
         akiVarAb.o();
     }
@@ -32,7 +32,7 @@ public final class cho extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(chn.a, dexKitBridge, new cgu(7));
+        StaticHelpers7.resolveDexAndCache(chn.a, dexKitBridge, new cgu(7));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

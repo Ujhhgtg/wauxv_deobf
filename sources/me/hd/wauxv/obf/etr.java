@@ -14,9 +14,9 @@ public final class etr extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(etp.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(etp.a));
         etr etrVar = a;
-        aki akiVarAb = csb.ab(etrVar, listBf);
+        aki akiVarAb = PackageParam.ab(etrVar, listBf);
         etrVar.y(akiVarAb, new epy(6));
         akiVarAb.o();
     }
@@ -33,7 +33,7 @@ public final class etr extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(etp.a, dexKitBridge, new epy(5));
+        StaticHelpers7.resolveDexAndCache(etp.a, dexKitBridge, new epy(5));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

@@ -15,8 +15,8 @@ public final class VnHomeShareMenuCopyOrDownHook extends SwitchHook implements b
     public static final epy j;
 
     static {
-        dov dovVar = ctf.a;
-        b = ctf.c("Download" /* "Download" /* "Download" /* cnb.z(-46699179408170L)  */, "VideoNumber" /* "VideoNumber" /* "VideoNumber" /* cnb.z(-46677704571690L)  */);
+        Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
+        b = PathUtils.getModuleSubDir("Download" /* "Download" /* "Download" /* cnb.z(-46699179408170L)  */, "VideoNumber" /* "VideoNumber" /* "VideoNumber" /* cnb.z(-46677704571690L)  */);
         c = "视频号" /* "视频号" /* "视频号" /* cnb.z(-584991725583146L)  */;
         h = "主页分享菜单复制下载" /* "主页分享菜单复制下载" /* "主页分享菜单复制下载" /* cnb.z(-585008905452330L)  */;
         i = "为视频号菜单添加复制链接或下载视频" /* "为视频号菜单添加复制链接或下载视频" /* "为视频号菜单添加复制链接或下载视频" /* cnb.z(-585459877018410L)  */;
@@ -38,7 +38,7 @@ public final class VnHomeShareMenuCopyOrDownHook extends SwitchHook implements b
     }
 
     public final List m() {
-        return !z() ? EmptyReadonlyList.a
+        return !z() ? EmptyReadonlyList.INSTANCE
                 : OtherStaticHelpers.argsToList(
                         new bam(R.id.MenuItem_VideoNumber_CopyLink, "复制链接" /* "复制链接" /* "复制链接" /* cnb.z(-588483533994794L)  */,
                                 R.drawable.ic_menu_copy_24dp, new dfq(13)),

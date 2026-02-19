@@ -23,14 +23,12 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.AccessControllerPlugin;
 import net.bytebuddy.build.CachedReturnPlugin;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
-import net.bytebuddy.description.annotation.AnnotationList;
-import net.bytebuddy.description.annotation.AnnotationValue;
 import net.bytebuddy.description.enumeration.EnumerationDescription;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.method.MethodList;
@@ -416,14 +414,14 @@ public interface AnnotationDescription {
         }
 
         public int hashCode() {
-            return this.annotationValues.hashCode() + dkz.f(this.annotationType, getClass().hashCode() * 31, 31);
+            return this.annotationValues.hashCode() + StaticHelpers6.f(this.annotationType, getClass().hashCode() * 31, 31);
         }
 
         public static Builder ofType(TypeDescription typeDescription) {
             if (typeDescription.isAnnotation()) {
                 return new Builder(typeDescription, Collections.EMPTY_MAP);
             }
-            throw new IllegalArgumentException(dkz.u("Not an annotation type: ", typeDescription));
+            throw new IllegalArgumentException(StaticHelpers6.concat("Not an annotation type: ", typeDescription));
         }
 
         public Builder defineArray(String str, byte... bArr) {
@@ -458,7 +456,7 @@ public interface AnnotationDescription {
                 }
                 return defineEnumerationArray(str, typeDescription, enumerationDescriptionArr);
             }
-            throw new IllegalArgumentException(dkz.u("Not an enumeration type: ", typeDescription));
+            throw new IllegalArgumentException(StaticHelpers6.concat("Not an enumeration type: ", typeDescription));
         }
 
         public Builder defineArray(String str, long... jArr) {

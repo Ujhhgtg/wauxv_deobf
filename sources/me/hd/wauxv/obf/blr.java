@@ -83,6 +83,6 @@ public final class blr {
     }
 
     public final Number k(Integer num) {
-        return bhu.am(num, j());
+        return FastKV.am(num, j());
     }
 }

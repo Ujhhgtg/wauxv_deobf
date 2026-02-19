@@ -322,8 +322,8 @@ public final class ahm extends Thread {
                     this.h = false;
                     if (this.f == 0) {
                         Object obj = this.nextParkedWorker;
-                        auj aujVar = aho.d;
-                        if (obj != aujVar) {
+                        SpecificEmojiMatcher specificEmojiMatcherVar = aho.d;
+                        if (obj != specificEmojiMatcherVar) {
                             a.set(this, -1);
                             while (this.nextParkedWorker != aho.d) {
                                 AtomicIntegerFieldUpdater atomicIntegerFieldUpdater = a;
@@ -384,7 +384,7 @@ public final class ahm extends Thread {
                             }
                         } else {
                             aho ahoVar4 = this.i;
-                            if (this.nextParkedWorker == aujVar) {
+                            if (this.nextParkedWorker == specificEmojiMatcherVar) {
                                 AtomicLongFieldUpdater atomicLongFieldUpdater2 = aho.a;
                                 while (true) {
                                     long j2 = atomicLongFieldUpdater2.get(ahoVar4);

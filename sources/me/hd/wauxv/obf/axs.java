@@ -14,10 +14,10 @@ import java.util.WeakHashMap;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public abstract class axs extends aq {
+public abstract class axs extends AccessibilityDelegateCompat {
     public static final Rect t = new Rect(Integer.MAX_VALUE, Integer.MAX_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE);
-    public static final awp u = new awp(1);
-    public static final awp v = new awp(2);
+    public static final GifEncoder u = new GifEncoder(1);
+    public static final GifEncoder v = new GifEncoder(2);
     public final AccessibilityManager aa;
     public final View ab;
     public axr ac;
@@ -33,7 +33,7 @@ public abstract class axs extends aq {
         this.ab = view;
         this.aa = (AccessibilityManager) view.getContext().getSystemService("accessibility");
         view.setFocusable(true);
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         if (view.getImportantForAccessibility() == 0) {
             view.setImportantForAccessibility(1);
         }
@@ -241,21 +241,21 @@ public abstract class axs extends aq {
         }
         int i10 = this.ae;
         bd bdVar3 = i10 == Integer.MIN_VALUE ? null : (bd) dloVar.f(i10);
-        awp awpVar = u;
-        awp awpVar2 = v;
+        GifEncoder gifEncoderVar = u;
+        GifEncoder gifEncoderVar2 = v;
         View view = this.ab;
         if (i == 1 || i == 2) {
             i2 = 0;
             i3 = -1;
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             boolean z = view.getLayoutDirection() == 1;
-            awpVar2.getClass();
+            gifEncoderVar2.getClass();
             int i11 = dloVar.i();
             ArrayList arrayList2 = new ArrayList(i11);
             for (int i12 = 0; i12 < i11; i12++) {
                 arrayList2.add((bd) dloVar.j(i12));
             }
-            Collections.sort(arrayList2, new bbq(z, awpVar));
+            Collections.sort(arrayList2, new bbq(z, gifEncoderVar));
             if (i == 1) {
                 int size = arrayList2.size();
                 if (bdVar3 != null) {
@@ -325,14 +325,14 @@ public abstract class axs extends aq {
                     i2 = 0;
                     rect2.offset(0, -(rect4.height() + 1));
                 }
-                awpVar2.getClass();
+                gifEncoderVar2.getClass();
                 i6 = dloVar.i();
                 rect3 = new Rect();
                 bdVar = null;
                 for (i7 = i2; i7 < i6; i7++) {
                     bdVar2 = (bd) dloVar.j(i7);
                     if (bdVar2 == bdVar3) {
-                        awpVar.getClass();
+                        gifEncoderVar.getClass();
                         bdVar2.dexFind(rect3);
                         if (KotlinHelpers.ac(i, rect4, rect3)) {
                             if (KotlinHelpers.ac(i, rect4, rect2) || KotlinHelpers.g(i, rect4, rect3, rect2)) {
@@ -373,14 +373,14 @@ public abstract class axs extends aq {
                 i2 = 0;
                 rect2.offset(0, -(rect4.height() + 1));
             }
-            awpVar2.getClass();
+            gifEncoderVar2.getClass();
             i6 = dloVar.i();
             rect3 = new Rect();
             bdVar = null;
             while (i7 < i6) {
                 bdVar2 = (bd) dloVar.j(i7);
                 if (bdVar2 == bdVar3) {
-                    awpVar.getClass();
+                    gifEncoderVar.getClass();
                     bdVar2.dexFind(rect3);
                     if (KotlinHelpers.ac(i, rect4, rect3)) {
                         if (KotlinHelpers.ac(i, rect4, rect2)) {
@@ -407,7 +407,7 @@ public abstract class axs extends aq {
             iG = Integer.MIN_VALUE;
         } else {
             if (dloVar.a) {
-                bht.q(dloVar);
+                ResourcesCompat.q(dloVar);
             }
             int i15 = dloVar.d;
             int i16 = i2;
@@ -434,7 +434,7 @@ public abstract class axs extends aq {
         View view = this.ab;
         AccessibilityNodeInfo accessibilityNodeInfoObtain = AccessibilityNodeInfo.obtain(view);
         bd bdVar = new bd(accessibilityNodeInfoObtain);
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         view.onInitializeAccessibilityNodeInfo(accessibilityNodeInfoObtain);
         ArrayList arrayList = new ArrayList();
         p(arrayList);
@@ -478,8 +478,8 @@ public abstract class axs extends aq {
     public abstract int c(float f, float f2);
 
     @Override // me.hd.wauxv.obf.aq
-    public final void d(View view, bd bdVar) {
-        this.g.onInitializeAccessibilityNodeInfo(view, bdVar.a);
+    public final void onInitializeAccessibilityNodeInfo(View view, bd bdVar) {
+        this.accessibilityDelegate.onInitializeAccessibilityNodeInfo(view, bdVar.a);
         _au(bdVar);
     }
 

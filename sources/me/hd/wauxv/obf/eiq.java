@@ -30,7 +30,7 @@ public final class eiq {
             String str7, String str8, Long l, String str9, Integer num, String str10, String str11, String str12,
             String str13, String str14, String str15, String str16, Integer num2, String str17, String str18) {
         if (2097151 != (i & 2097151)) {
-            bht.ah(i, 2097151, eio.b.getDescriptor());
+            ResourcesCompat.ah(i, 2097151, eio.b.getDescriptor());
             throw null;
         }
         this.a = str;
@@ -135,7 +135,7 @@ public final class eiq {
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.f, -318656508590890L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.g, -318652213623594L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.h, -318025148398378L);
-        dkz.ad(sb, this.i, -317934954085162L);
+        StaticHelpers6.ad(sb, this.i, -317934954085162L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.j, -317874824543018L);
         bjs.w(sb, this.k, -317818989968170L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.l, -317771745327914L);

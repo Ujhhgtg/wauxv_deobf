@@ -45,7 +45,7 @@ public final class py extends cka {
         for (int i7 = 0; i7 < childCount; i7++) {
             View childAt = getChildAt(i7);
             if (childAt.getVisibility() != 8) {
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 if (getLayoutDirection() == 1) {
                     int i8 = i5 - measuredWidth;
                     childAt.layout(i8 - childAt.getMeasuredWidth(), 0, i8, i6);

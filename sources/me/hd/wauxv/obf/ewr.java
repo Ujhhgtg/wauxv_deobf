@@ -51,36 +51,36 @@ public final class ewr implements Serializable {
         ki.a.getClass();
         String strI2 = ki.i();
         int i2 = 0;
-        jx jxVar = ki.e;
+        FactoryPools factoryPoolsVar = ki.e;
         btc btcVar = ki.b[0];
-        bmu bmuVarBh = dqc.bh(jxVar.w());
-        dov dovVar = ep.a;
-        ((cbg) bmuVarBh.h).c = bhu.aa();
-        bmuVarBh.v(true);
-        cde cdeVarT = bmuVarBh.t();
-        cdeVarT.ab = "currentActivityThread";
-        cdeVarT.y();
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+        SyntheticPileOfMess bmuVarBh = dqc.bh(factoryPoolsVar.w());
+        Kotlin$Lazy kotlin$LazyVar = ep.a;
+        ((Configuration) bmuVarBh.obj).processorResolver = FastKV.aa();
+        bmuVarBh.setHookOptional(true);
+        MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "currentActivityThread";
+        methodResolverVarT.y();
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
         Context context = null;
         Object objE = methodHookWrapperVar != null ? methodHookWrapperVar.e(new Object[0]) : null;
-        cde cdeVarT2 = bmuVarBh.t();
-        cdeVarT2.ab = "getSystemContext";
-        cdeVarT2.y();
-        MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) aaz.g(cdeVarT2.aj());
+        MethodResolver methodResolverVarT2 = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT2.name = "getSystemContext";
+        methodResolverVarT2.y();
+        MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT2.findMethods());
         if (methodHookWrapperVar2 != null) {
-            methodHookWrapperVar2.h(objE);
+            methodHookWrapperVar2.bindInstance(objE);
             context = (Context) methodHookWrapperVar2.i(new Object[0]);
         }
         if (context != null && (packageManager = context.getPackageManager()) != null
                 && (applicationInfo = packageManager.getApplicationInfo(strI2, 1)) != null) {
             int i3 = applicationInfo.uid;
-            bmu bmuVarBg = dqc.bg(dal.b(UserHandle.class));
-            ((cbg) bmuVarBg.h).c = bhu.aa();
-            bmuVarBg.v(true);
-            cde cdeVarT3 = bmuVarBg.t();
-            cdeVarT3.ab = "getUserId";
-            cdeVarT3.z(Arrays.copyOf(new Object[] { dal.b(Integer.TYPE) }, 1));
-            MethodHookWrapper methodHookWrapperVar3 = (MethodHookWrapper) aaz.g(cdeVarT3.aj());
+            SyntheticPileOfMess bmuVarBg = dqc.bg(dal.b(UserHandle.class));
+            ((Configuration) bmuVarBg.obj).processorResolver = FastKV.aa();
+            bmuVarBg.setHookOptional(true);
+            MethodResolver methodResolverVarT3 = bmuVarBg.getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT3.name = "getUserId";
+            methodResolverVarT3.setParams(Arrays.copyOf(new Object[] { dal.b(Integer.TYPE) }, 1));
+            MethodHookWrapper methodHookWrapperVar3 = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT3.findMethods());
             if (methodHookWrapperVar3 != null && (num = (Integer) methodHookWrapperVar3.j(Integer.valueOf(i3))) != null) {
                 iIntValue = num.intValue();
             }

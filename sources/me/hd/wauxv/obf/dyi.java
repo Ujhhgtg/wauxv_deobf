@@ -27,7 +27,7 @@ public final class dyi {
             String str7, String str8, String str9, Integer num, String str10, Integer num2, String str11, Integer num3,
             String str12, String str13, String str14, dyx dyxVar) {
         if (262143 != (i & 262143)) {
-            bht.ah(i, 262143, dyg.b.getDescriptor());
+            ResourcesCompat.ah(i, 262143, dyg.b.getDescriptor());
             throw null;
         }
         this.a = str;

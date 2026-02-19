@@ -16,7 +16,7 @@ public final class ewo {
         for (byte b : bArr) {
             arrayList.add(Byte.valueOf((byte) (b ^ ((byte) this.a))));
         }
-        return aaz.w(arrayList);
+        return StaticHelpers5.w(arrayList);
     }
 
     public final byte[] c(byte[] bArr) {
@@ -24,6 +24,6 @@ public final class ewo {
         for (byte b : bArr) {
             arrayList.add(Byte.valueOf((byte) (b ^ ((byte) this.a))));
         }
-        return aaz.w(arrayList);
+        return StaticHelpers5.w(arrayList);
     }
 }

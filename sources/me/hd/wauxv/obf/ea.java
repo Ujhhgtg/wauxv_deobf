@@ -34,9 +34,9 @@ public final class ea {
     public static final Object g(ea eaVar, int i) {
         List list;
         if (((h) eaVar.f) == null || (list = xf.l) == null) {
-            list = EmptyReadonlyList.a;
+            list = EmptyReadonlyList.INSTANCE;
         }
-        return (!list.isEmpty() || eaVar.a <= 0) ? aaz.h(i, list) : new Object();
+        return (!list.isEmpty() || eaVar.a <= 0) ? StaticHelpers5.h(i, list) : new Object();
     }
 
     public void aa(ColorStateList colorStateList) {
@@ -160,7 +160,7 @@ public final class ea {
                 ekeVar.d = false;
                 ekeVar.b = null;
                 ekeVar.c = false;
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 ColorStateList colorStateListC = eqq.c(view);
                 if (colorStateListC != null) {
                     ekeVar.d = true;
@@ -404,10 +404,10 @@ public final class ea {
         View view = (View) this.b;
         Context context = view.getContext();
         int[] iArr = cyf.z;
-        jx jxVarK = jx.k(context, attributeSet, iArr, i);
-        TypedArray typedArray = (TypedArray) jxVarK.e;
+        FactoryPools factoryPoolsVarK = FactoryPools.k(context, attributeSet, iArr, i);
+        TypedArray typedArray = (TypedArray) factoryPoolsVarK.e;
         View view2 = (View) this.b;
-        eqz.r(view2, view2.getContext(), iArr, attributeSet, (TypedArray) jxVarK.e, i, 0);
+        ViewCompat.r(view2, view2.getContext(), iArr, attributeSet, (TypedArray) factoryPoolsVarK.e, i, 0);
         try {
             if (typedArray.hasValue(0)) {
                 this.a = typedArray.getResourceId(0, -1);
@@ -422,14 +422,14 @@ public final class ea {
                 }
             }
             if (typedArray.hasValue(1)) {
-                eqq.i(view, jxVarK.r(1));
+                eqq.i(view, factoryPoolsVarK.r(1));
             }
             if (typedArray.hasValue(2)) {
                 eqq.j(view, apy.f(typedArray.getInt(2, -1), null));
             }
-            jxVarK.ae();
+            factoryPoolsVarK.ae();
         } catch (Throwable th) {
-            jxVarK.ae();
+            factoryPoolsVarK.ae();
             throw th;
         }
     }
@@ -544,7 +544,7 @@ public final class ea {
         int i12;
         cuw cuwVar = (cuw) this.b;
         cyv cyvVar = (cyv) this.e;
-        bmu bmuVar = (bmu) this.f;
+        SyntheticPileOfMess bmuVar = (SyntheticPileOfMess) this.f;
         ArrayList arrayList = (ArrayList) this.c;
         bmuVar.getClass();
         while (true) {
@@ -567,7 +567,7 @@ public final class ea {
                 break;
             }
             int i13 = size + 1;
-            ea eaVar = (ea) bmuVar.h;
+            ea eaVar = (ea) bmuVar.obj;
             cuw cuwVar2 = (cuw) eaVar.b;
             dz dzVar = (dz) arrayList.get(size);
             dz dzVar2 = (dz) arrayList.get(i13);
@@ -951,6 +951,6 @@ public final class ea {
         this.d = new ArrayList();
         this.a = 0;
         this.e = cyvVar;
-        this.f = new bmu(this);
+        this.f = new SyntheticPileOfMess(this);
     }
 }

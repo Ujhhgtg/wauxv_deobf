@@ -12,7 +12,7 @@ public final class bzm implements btd {
         this.b = i;
         switch (i) {
             case 1:
-                this.d = ewz.am(btx.a, new cfh(this));
+                this.d = ewz.am(btx.a, new Function1$VarIsInt$2(this));
                 break;
             default:
                 dnh dnhVar = dnh.b;
@@ -38,10 +38,10 @@ public final class bzm implements btd {
                     int iF = acmVarP.f(dfzVar);
                     if (iF == -1) {
                         if (objH == obj) {
-                            throw new dgb("Element 'key' is missing");
+                            throw new SomeIllegalArgumentException("Element 'key' is missing");
                         }
                         if (objH2 == obj) {
-                            throw new dgb("Element 'value' is missing");
+                            throw new SomeIllegalArgumentException("Element 'value' is missing");
                         }
                         bzl bzlVar = new bzl(objH, objH2);
                         acmVarP._bp(dfzVar);
@@ -51,7 +51,7 @@ public final class bzm implements btd {
                         objH = acmVarP.h(dfzVar, 0, dnhVar, null);
                     } else {
                         if (iF != 1) {
-                            throw new dgb(concatVar2Var1(iF, "Invalid index: "));
+                            throw new SomeIllegalArgumentException(concatVar2Var1(iF, "Invalid index: "));
                         }
                         objH2 = acmVarP.h(dfzVar, 1, bsbVar, null);
                     }
@@ -63,7 +63,7 @@ public final class bzm implements btd {
                 acmVarP2.getClass();
                 int iF2 = acmVarP2.f(getDescriptor());
                 if (iF2 != -1) {
-                    throw new dgb(concatVar2Var1(iF2, "Unexpected index "));
+                    throw new SomeIllegalArgumentException(concatVar2Var1(iF2, "Unexpected index "));
                 }
                 acmVarP2._bp(descriptor);
                 return KotlinUnit.INSTANCE;

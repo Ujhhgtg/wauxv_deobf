@@ -1,7 +1,7 @@
 package net.bytebuddy.implementation.bytecode.member;
 
 import java.util.List;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.method.MethodDescription;
@@ -69,7 +69,7 @@ public enum MethodInvocation {
         }
 
         public int hashCode() {
-            return this.type.hashCode() + dkz.b(this.methodDescription, getClass().hashCode() * 31, 31);
+            return this.type.hashCode() + StaticHelpers6.b(this.methodDescription, getClass().hashCode() * 31, 31);
         }
     }
 
@@ -158,7 +158,7 @@ public enum MethodInvocation {
         }
 
         public int hashCode() {
-            return MethodInvocation.this.hashCode() + dkz.b(this.methodDescription, dkz.f(this.typeDescription, getClass().hashCode() * 31, 31), 31);
+            return MethodInvocation.this.hashCode() + StaticHelpers6.b(this.methodDescription, StaticHelpers6.f(this.typeDescription, getClass().hashCode() * 31, 31), 31);
         }
 
         @Override // net.bytebuddy.implementation.bytecode.member.MethodInvocation.WithImplicitInvocationTargetType
@@ -243,7 +243,7 @@ public enum MethodInvocation {
         }
 
         public int hashCode() {
-            return this.invocation.hashCode() + dkz.f(this.targetType, getClass().hashCode() * 31, 31);
+            return this.invocation.hashCode() + StaticHelpers6.f(this.targetType, getClass().hashCode() * 31, 31);
         }
 
         @Override // net.bytebuddy.implementation.bytecode.StackManipulation

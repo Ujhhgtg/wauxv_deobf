@@ -8,7 +8,7 @@ import java.util.Arrays;
 public final class bvm {
     public static boolean a;
     public final cvr e;
-    public final jx n;
+    public final FactoryPools n;
     public kw q;
     public int b = 1000;
     public boolean c = false;
@@ -26,18 +26,18 @@ public final class bvm {
 
     public bvm() {
         aj();
-        jx jxVar = new jx(3, false);
-        jxVar.e = new cuw();
-        jxVar.f = new cuw();
-        jxVar.h = new dla[32];
-        this.n = jxVar;
-        cvr cvrVar = new cvr(jxVar);
+        FactoryPools factoryPoolsVar = new FactoryPools(3, false);
+        factoryPoolsVar.e = new cuw();
+        factoryPoolsVar.f = new cuw();
+        factoryPoolsVar.h = new dla[32];
+        this.n = factoryPoolsVar;
+        cvr cvrVar = new cvr(factoryPoolsVar);
         cvrVar.o = new dla[128];
         cvrVar.p = new dla[128];
         cvrVar.q = 0;
         cvrVar.r = new but(cvrVar);
         this.e = cvrVar;
-        this.q = new kw(jxVar);
+        this.q = new kw(factoryPoolsVar);
     }
 
     public static int r(Object obj) {
@@ -92,8 +92,8 @@ public final class bvm {
             dlaVar = adbVar.i;
         }
         int i = dlaVar.b;
-        jx jxVar = this.n;
-        if (i != -1 && i <= this.d && ((dla[]) jxVar.h)[i] != null) {
+        FactoryPools factoryPoolsVar = this.n;
+        if (i != -1 && i <= this.d && ((dla[]) factoryPoolsVar.h)[i] != null) {
             return dlaVar;
         }
         if (i != -1) {
@@ -104,14 +104,14 @@ public final class bvm {
         this.k++;
         dlaVar.b = i2;
         dlaVar.l = 1;
-        ((dla[]) jxVar.h)[i2] = dlaVar;
+        ((dla[]) factoryPoolsVar.h)[i2] = dlaVar;
         return dlaVar;
     }
 
     public final kw ad() {
         Object obj;
-        jx jxVar = this.n;
-        cuw cuwVar = (cuw) jxVar.e;
+        FactoryPools factoryPoolsVar = this.n;
+        cuw cuwVar = (cuw) factoryPoolsVar.e;
         int i = cuwVar.b;
         if (i > 0) {
             int i2 = i - 1;
@@ -124,7 +124,7 @@ public final class bvm {
         }
         kw kwVar = (kw) obj;
         if (kwVar == null) {
-            return new kw(jxVar);
+            return new kw(factoryPoolsVar);
         }
         kwVar.a = null;
         kwVar.d.l();
@@ -150,8 +150,8 @@ public final class bvm {
         int i = this.f * 2;
         this.f = i;
         this.h = (kw[]) Arrays.copyOf(this.h, i);
-        jx jxVar = this.n;
-        jxVar.h = (dla[]) Arrays.copyOf((dla[]) jxVar.h, this.f);
+        FactoryPools factoryPoolsVar = this.n;
+        factoryPoolsVar.h = (dla[]) Arrays.copyOf((dla[]) factoryPoolsVar.h, this.f);
         int i2 = this.f;
         this.j = new boolean[i2];
         this.g = i2;
@@ -338,11 +338,11 @@ public final class bvm {
     }
 
     public final void ak() {
-        jx jxVar;
+        FactoryPools factoryPoolsVar;
         int i = 0;
         while (true) {
-            jxVar = this.n;
-            dla[] dlaVarArr = (dla[]) jxVar.h;
+            factoryPoolsVar = this.n;
+            dla[] dlaVarArr = (dla[]) factoryPoolsVar.h;
             if (i >= dlaVarArr.length) {
                 break;
             }
@@ -352,7 +352,7 @@ public final class bvm {
             }
             i++;
         }
-        cuw cuwVar = (cuw) jxVar.f;
+        cuw cuwVar = (cuw) factoryPoolsVar.f;
         dla[] dlaVarArr2 = this.o;
         int length = this.p;
         cuwVar.getClass();
@@ -369,7 +369,7 @@ public final class bvm {
             }
         }
         this.p = 0;
-        Arrays.fill((dla[]) jxVar.h, (Object) null);
+        Arrays.fill((dla[]) factoryPoolsVar.h, (Object) null);
         this.d = 0;
         cvr cvrVar = this.e;
         cvrVar.q = 0;
@@ -380,7 +380,7 @@ public final class bvm {
         }
         aj();
         this.l = 0;
-        this.q = new kw(jxVar);
+        this.q = new kw(factoryPoolsVar);
     }
 
     public final dla s(int i) {
@@ -584,8 +584,8 @@ public final class bvm {
                 this.d = i6;
                 this.k++;
                 dlaVarS.b = i6;
-                jx jxVar = this.n;
-                ((dla[]) jxVar.h)[i6] = dlaVarS;
+                FactoryPools factoryPoolsVar = this.n;
+                ((dla[]) factoryPoolsVar.h)[i6] = dlaVarS;
                 kwVar.a = dlaVarS;
                 int i7 = this.l;
                 z(kwVar);
@@ -604,7 +604,7 @@ public final class bvm {
                         if (!kwVar.e) {
                             kwVar.a.q(this, kwVar);
                         }
-                        ((cuw) jxVar.e).c(kwVar);
+                        ((cuw) factoryPoolsVar.e).c(kwVar);
                         this.l--;
                     }
                     z = true;

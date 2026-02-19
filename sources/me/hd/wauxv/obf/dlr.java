@@ -11,7 +11,7 @@ import net.bytebuddy.pool.TypePool;
 public final class dlr {
     public int a;
     public int b;
-    public final bdj c;
+    public final SomeFragmentManager c;
     public final ArrayList d;
     public boolean e;
     public boolean f;
@@ -20,25 +20,25 @@ public final class dlr {
     public boolean i;
     public final ArrayList j;
     public final ArrayList k;
-    public final bfb l;
+    public final FragmentManager l;
 
-    public dlr(int i, int i2, bfb bfbVar) {
+    public dlr(int i, int i2, FragmentManager fragmentManagerVar) {
         bjs.t(i, "finalState");
         bjs.t(i2, "lifecycleImpact");
-        bdj bdjVar = bfbVar.c;
-        throwIfVar1IsNull(bdjVar, "fragmentStateManager.fragment");
+        SomeFragmentManager someFragmentManagerVar = fragmentManagerVar.c;
+        throwIfVar1IsNull(someFragmentManagerVar, "fragmentStateManager.fragment");
         bjs.t(i, "finalState");
         bjs.t(i2, "lifecycleImpact");
-        throwIfVar1IsNull(bdjVar, "fragment");
+        throwIfVar1IsNull(someFragmentManagerVar, "fragment");
         this.a = i;
         this.b = i2;
-        this.c = bdjVar;
+        this.c = someFragmentManagerVar;
         this.d = new ArrayList();
         this.i = true;
         ArrayList arrayList = new ArrayList();
         this.j = arrayList;
         this.k = arrayList;
-        this.l = bfbVar;
+        this.l = fragmentManagerVar;
     }
 
     public final void m(ViewGroup viewGroup) {
@@ -52,7 +52,7 @@ public final class dlr {
             n();
             return;
         }
-        for (dlq dlqVar : aaz.z(this.k)) {
+        for (dlq dlqVar : StaticHelpers5.z(this.k)) {
             dlqVar.getClass();
             if (!dlqVar.h) {
                 dlqVar.b(viewGroup);
@@ -88,13 +88,13 @@ public final class dlr {
     public final void p(int i, int i2) {
         bjs.t(i, "finalState");
         bjs.t(i2, "lifecycleImpact");
-        int iAe = dkz.ae(i2);
-        bdj bdjVar = this.c;
+        int iAe = StaticHelpers6.ae(i2);
+        SomeFragmentManager someFragmentManagerVar = this.c;
         if (iAe == 0) {
             if (this.a != 1) {
                 if (beg.ar(2)) {
                     Log.v("FragmentManager",
-                            "SpecialEffectsController: For fragment " + bdjVar + " mFinalState = " + bjs.ac(this.a)
+                            "SpecialEffectsController: For fragment " + someFragmentManagerVar + " mFinalState = " + bjs.ac(this.a)
                                     + " -> " + bjs.ac(i)
                                     + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
                 }
@@ -107,7 +107,7 @@ public final class dlr {
             if (this.a == 1) {
                 if (beg.ar(2)) {
                     Log.v("FragmentManager",
-                            "SpecialEffectsController: For fragment " + bdjVar
+                            "SpecialEffectsController: For fragment " + someFragmentManagerVar
                                     + " mFinalState = REMOVED -> VISIBLE. mLifecycleImpact = " + bjs.ab(this.b)
                                     + " to ADDING.");
                 }
@@ -122,7 +122,7 @@ public final class dlr {
             return;
         }
         if (beg.ar(2)) {
-            Log.v("FragmentManager", "SpecialEffectsController: For fragment " + bdjVar + " mFinalState = "
+            Log.v("FragmentManager", "SpecialEffectsController: For fragment " + someFragmentManagerVar + " mFinalState = "
                     + bjs.ac(this.a) + " -> REMOVED. mLifecycleImpact  = " + bjs.ab(this.b) + " to REMOVING.");
         }
         this.a = 1;
@@ -131,7 +131,7 @@ public final class dlr {
     }
 
     public final String toString() {
-        StringBuilder sbZ = dkz.z("Operation {", Integer.toHexString(System.identityHashCode(this)),
+        StringBuilder sbZ = StaticHelpers6.concatAndToSb("Operation {", Integer.toHexString(System.identityHashCode(this)),
                 "} {finalState = ");
         sbZ.append(bjs.ac(this.a));
         sbZ.append(" lifecycleImpact = ");

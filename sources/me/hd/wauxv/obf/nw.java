@@ -35,7 +35,7 @@ public abstract class nw extends FrameLayout {
         TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(attributeSet, cxs.am);
         if (typedArrayObtainStyledAttributes.hasValue(6)) {
             float dimensionPixelSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(6, 0);
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             eqq.k(this, dimensionPixelSize);
         }
         this.c = typedArrayObtainStyledAttributes.getInt(2, 0);
@@ -73,7 +73,7 @@ public abstract class nw extends FrameLayout {
             if (colorStateList != null) {
                 drawable.setTintList(colorStateList);
             }
-            WeakHashMap weakHashMap2 = eqz.a;
+            WeakHashMap weakHashMap2 = ViewCompat.a;
             setBackground(drawable);
         }
     }
@@ -104,7 +104,7 @@ public abstract class nw extends FrameLayout {
     @Override // android.view.ViewGroup, android.view.View
     public final void onAttachedToWindow() {
         super.onAttachedToWindow();
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         eqo.c(this);
     }
 

@@ -56,10 +56,10 @@ public final class avz implements ddo {
         this.b = this.a;
     }
 
-    public avz(awa awaVar, jx jxVar) {
+    public avz(awa awaVar, FactoryPools factoryPoolsVar) {
         this.c = new SparseArray();
         this.d = awaVar;
-        TypedArray typedArray = (TypedArray) jxVar.e;
+        TypedArray typedArray = (TypedArray) factoryPoolsVar.e;
         this.a = typedArray.getResourceId(28, 0);
         this.b = typedArray.getResourceId(52, 0);
     }

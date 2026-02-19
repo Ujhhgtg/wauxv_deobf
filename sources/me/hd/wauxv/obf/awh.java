@@ -32,13 +32,13 @@ public final class awh implements axw {
     public final AtomicInteger k = new AtomicInteger();
     public final nu f = a;
 
-    public awh(bia biaVar, bia biaVar2, bia biaVar3, bia biaVar4, awd awdVar, awd awdVar2, jx jxVar) {
+    public awh(bia biaVar, bia biaVar2, bia biaVar3, bia biaVar4, awd awdVar, awd awdVar2, FactoryPools factoryPoolsVar) {
         this.h = biaVar;
         this.i = biaVar2;
         this.j = biaVar4;
         this.g = awdVar;
         this.d = awdVar2;
-        this.e = jxVar;
+        this.e = factoryPoolsVar;
     }
 
     public final synchronized void aa(int i) {
@@ -84,7 +84,7 @@ public final class awh implements axw {
     public final synchronized void ad(dht dhtVar) {
         try {
             this.c.b();
-            this.b.a.remove(new awf(dhtVar, emn.aa));
+            this.b.a.remove(new awf(dhtVar, StaticHelpers7.aa));
             if (this.b.a.isEmpty()) {
                 y();
                 if (this.q || this.s) {

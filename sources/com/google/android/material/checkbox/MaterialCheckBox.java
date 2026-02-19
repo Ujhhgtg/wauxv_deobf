@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import me.hd.wauxv.R;
-import me.hd.wauxv.obf.bhu;
+import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.cap;
 import me.hd.wauxv.obf.caq;
 import me.hd.wauxv.obf.ci;
@@ -37,7 +37,7 @@ import me.hd.wauxv.obf.fc;
 import me.hd.wauxv.obf.fd;
 import me.hd.wauxv.obf.fe;
 import me.hd.wauxv.obf.hf;
-import me.hd.wauxv.obf.jx;
+import me.hd.wauxv.obf.FactoryPools;
 import me.hd.wauxv.obf.yg;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -87,9 +87,9 @@ public class MaterialCheckBox extends hf {
         this.l = getButtonDrawable();
         this.o = getSuperButtonTintList();
         setSupportButtonTintList(null);
-        jx jxVarAo = bhu.ao(context3, attributeSet, cxs.w, R.attr.checkboxStyle, R.style.Widget_MaterialComponents_CompoundButton_CheckBox, new int[0]);
-        TypedArray typedArray = (TypedArray) jxVarAo.e;
-        this.m = jxVarAo.s(2);
+        FactoryPools factoryPoolsVarAo = FastKV.ao(context3, attributeSet, cxs.w, R.attr.checkboxStyle, R.style.Widget_MaterialComponents_CompoundButton_CheckBox, new int[0]);
+        TypedArray typedArray = (TypedArray) factoryPoolsVarAo.e;
+        this.m = factoryPoolsVarAo.s(2);
         if (this.l != null && cmz.am(context3, R.attr.isMaterial3Theme, false)) {
             int resourceId = typedArray.getResourceId(0, 0);
             int resourceId2 = typedArray.getResourceId(1, 0);
@@ -102,7 +102,7 @@ public class MaterialCheckBox extends hf {
                 }
             }
         }
-        this.p = cnb.w(context3, jxVarAo, 3);
+        this.p = cnb.w(context3, factoryPoolsVarAo, 3);
         this.q = ewz.ap(typedArray.getInt(4, -1), PorterDuff.Mode.SRC_IN);
         this.h = typedArray.getBoolean(10, false);
         this.i = typedArray.getBoolean(6, true);
@@ -111,7 +111,7 @@ public class MaterialCheckBox extends hf {
         if (typedArray.hasValue(7)) {
             setCheckedState(typedArray.getInt(7, 0));
         }
-        jxVarAo.ae();
+        factoryPoolsVarAo.ae();
         y();
     }
 

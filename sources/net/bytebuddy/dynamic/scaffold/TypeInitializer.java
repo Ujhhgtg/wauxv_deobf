@@ -1,10 +1,9 @@
 package net.bytebuddy.dynamic.scaffold;
 
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.type.TypeDescription;
-import net.bytebuddy.dynamic.scaffold.TypeWriter;
 import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.attribute.AnnotationValueFilter;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
@@ -49,7 +48,7 @@ public interface TypeInitializer extends ByteCodeAppender {
             }
 
             public int hashCode() {
-                return this.annotationValueFilterFactory.hashCode() + ((this.methodPool.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31)) * 31);
+                return this.annotationValueFilterFactory.hashCode() + ((this.methodPool.hashCode() + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31)) * 31);
             }
         }
 

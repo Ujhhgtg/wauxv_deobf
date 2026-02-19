@@ -13,15 +13,13 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import me.hd.wauxv.obf.aye;
 import me.hd.wauxv.obf.bmo;
-import me.hd.wauxv.obf.bmu;
+import me.hd.wauxv.obf.SyntheticPileOfMess;
 import me.hd.wauxv.obf.bpy;
 import me.hd.wauxv.obf.but;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.chm;
 import me.hd.wauxv.obf.cme;
 import me.hd.wauxv.obf.cmq;
 import me.hd.wauxv.obf.cmr;
-import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.cot;
 import me.hd.wauxv.obf.cpc;
 import me.hd.wauxv.obf.ctx;
@@ -32,8 +30,8 @@ import me.hd.wauxv.obf.dgc;
 import me.hd.wauxv.obf.dgd;
 import me.hd.wauxv.obf.dnc;
 import me.hd.wauxv.obf.dnj;
-import me.hd.wauxv.obf.dov;
-import me.hd.wauxv.obf.emn;
+import me.hd.wauxv.obf.Kotlin$Lazy;
+import me.hd.wauxv.obf.StaticHelpers7;
 import me.hd.wauxv.obf.eu;
 import me.hd.wauxv.obf.ewq;
 
@@ -82,8 +80,8 @@ public final class PluginOtherMethod {
         sb.append("]: " /* "]: " /* "]: " /* cnb.z(-400999621589802L)  */);
         sb.append(obj);
         ewq.d(14, sb.toString());
-        bmu bmuVar = ctxVar.m;
-        bmuVar.s(new cuh(((ctx) bmuVar.h).f, "D" /* "D" /* "D" /* cnb.z(-390322332891946L)  */, String.valueOf(obj)));
+        SyntheticPileOfMess bmuVar = ctxVar.m;
+        bmuVar.writePluginLog(new cuh(((ctx) bmuVar.obj).f, "D" /* "D" /* "D" /* cnb.z(-390322332891946L)  */, String.valueOf(obj)));
     }
 
     @cty
@@ -101,9 +99,9 @@ public final class PluginOtherMethod {
         chmVar.e = this.a.f + ": " /* ": " /* ": " /* cnb.z(-400857887669034L)  */ + str;
         chmVar.f = str2;
         but butVar2 = new but(chmVar);
-        dov dovVar = (dov) new but(butVar2).c;
-        cpc cpcVar = (cpc) dovVar.getValue();
-        cot cotVar = (cot) ((dov) butVar.c).getValue();
+        Kotlin$Lazy kotlin$LazyVar = (Kotlin$Lazy) new but(butVar2).c;
+        cpc cpcVar = (cpc) kotlin$LazyVar.getValue();
+        cot cotVar = (cot) ((Kotlin$Lazy) butVar.c).getValue();
         cpcVar.getClass();
         NotificationChannel notificationChannel = new NotificationChannel(cotVar.a, cotVar.b, cotVar.c);
         notificationChannel.setDescription(cotVar.d);
@@ -115,11 +113,11 @@ public final class PluginOtherMethod {
         notificationChannel.setVibrationPattern(null);
         notificationChannel.enableVibration(false);
         cpcVar.g.createNotificationChannel(notificationChannel);
-        Notification notification = (Notification) ((dov) butVar2.c).getValue();
+        Notification notification = (Notification) ((Kotlin$Lazy) butVar2.c).getValue();
         if (dnj.ak("")) {
-            ((cpc) dovVar.getValue()).h(null, notification);
+            ((cpc) kotlin$LazyVar.getValue()).h(null, notification);
         } else {
-            ((cpc) dovVar.getValue()).h("", notification);
+            ((cpc) kotlin$LazyVar.getValue()).h("", notification);
         }
         ((Number) eu.a.getValue()).intValue();
     }
@@ -133,7 +131,7 @@ public final class PluginOtherMethod {
     public final void uploadDeviceStep(long j)
             throws IllegalAccessException, NoSuchMethodException, InstantiationException, InvocationTargetException {
         cmr.a.getClass();
-        Constructor constructorBa = emn.ba(cmq.a);
+        Constructor constructorBa = StaticHelpers7.ba(cmq.a);
         String strZ = "" /* "" /* "" /* cnb.z(-140136192932650L)  */;
         String strZ2 = "gh_43f2581f6fd6" /* "gh_43f2581f6fd6" /* "gh_43f2581f6fd6" /* cnb.z(-140131897965354L)  */;
         Calendar calendar = Calendar.getInstance();
@@ -146,7 +144,7 @@ public final class PluginOtherMethod {
         Integer numValueOf2 = Integer.valueOf((int) (System.currentTimeMillis() / j2));
         Integer numValueOf3 = Integer.valueOf((int) j);
         dgd.a.getClass();
-        Object objInvoke = emn.bb(dgc.a).invoke(null, null);
+        Object objInvoke = StaticHelpers7.bb(dgc.a).invoke(null, null);
         throwIfVar1IsNull(objInvoke);
         cme.b(cme.a, constructorBa.newInstance(strZ, strZ2, numValueOf, numValueOf2, numValueOf3, objInvoke, 1));
     }

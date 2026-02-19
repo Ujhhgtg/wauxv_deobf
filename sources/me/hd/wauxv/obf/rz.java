@@ -8,16 +8,16 @@ import java.nio.ByteBuffer;
 /* JADX INFO: loaded from: classes.dex */
 public final class rz implements dcj {
     public final /* synthetic */ int a;
-    public final ox b;
+    public final BitmapImageDecoder b;
 
     public rz(int i) {
         this.a = i;
         switch (i) {
             case 1:
-                this.b = new ox();
+                this.b = new BitmapImageDecoder();
                 break;
             default:
-                this.b = new ox();
+                this.b = new BitmapImageDecoder();
                 break;
         }
     }

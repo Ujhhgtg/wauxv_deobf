@@ -6,7 +6,6 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import net.bytebuddy.description.method.MethodDescription;
-import net.bytebuddy.pool.TypePool;
 import org.luckypray.dexkit.util.NativeReflect;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -16,12 +15,12 @@ public final class amq {
     public final String b;
     public final ArrayList c;
     public final String d;
-    public final dov e;
+    public final Kotlin$Lazy e;
 
     public amq(String str) {
         int i;
         throwIfVar1IsNull(str, "descriptor");
-        this.e = new dov(new bp(this, 17));
+        this.e = new Kotlin$Lazy(new bp(this, 17));
         int iAh = 0;
         int iAi = dnj.ai(str, "->", 0, false, 6);
         int iAi2 = dnj.ai(str, "(", iAi + 1, false, 4);
@@ -78,7 +77,7 @@ public final class amq {
     public static Method f(amq amqVar, ClassLoader classLoader) throws NoSuchMethodException {
         Object objX;
         Object objX2;
-        dov dovVar = amqVar.e;
+        Kotlin$Lazy kotlin$LazyVar = amqVar.e;
         chm chmVar = bpv.a;
         String str = amqVar.b;
         if (nullSafeIsEqual(str, MethodDescription.TYPE_INITIALIZER_INTERNAL_NAME)
@@ -98,7 +97,7 @@ public final class amq {
         try {
             objX = bpv.c(classLoader, amqVar.d);
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         Throwable thB2 = dcy.b(objX);
         if (thB2 != null) {
@@ -119,7 +118,7 @@ public final class amq {
                         throwIfVar1IsNull(declaredMethods, "getDeclaredMethods(...)");
                         for (Method method : declaredMethods) {
                             if (nullSafeIsEqual(method.getName(), str)
-                                    && nullSafeIsEqual((String) dovVar.getValue(), ams.d(method))) {
+                                    && nullSafeIsEqual((String) kotlin$LazyVar.getValue(), ams.d(method))) {
                                 method.setAccessible(true);
                                 bool = method;
                                 return bool;
@@ -128,7 +127,7 @@ public final class amq {
                     } catch (Throwable unused) {
                     }
                 }
-                Member reflectedMethod = NativeReflect.getReflectedMethod(clsC, str, (String) dovVar.getValue(), bool);
+                Member reflectedMethod = NativeReflect.getReflectedMethod(clsC, str, (String) kotlin$LazyVar.getValue(), bool);
                 if (reflectedMethod != null) {
                     Method method2 = (Method) reflectedMethod;
                     method2.setAccessible(true);
@@ -142,7 +141,7 @@ public final class amq {
                 declaredMethod.setAccessible(true);
                 objX2 = declaredMethod;
             } catch (Throwable th2) {
-                objX2 = bhu.x(th2);
+                objX2 = FastKV.x(th2);
             }
             Method method3 = (Method) (objX2 instanceof dcx ? null : objX2);
             if (method3 != null && nullSafeIsEqual(method3.getReturnType(), cls)) {
@@ -171,7 +170,7 @@ public final class amq {
         Member reflectedMethod;
         Constructor<?>[] declaredConstructors;
         int i;
-        dov dovVar = this.e;
+        Kotlin$Lazy kotlin$LazyVar = this.e;
         chm chmVar = bpv.a;
         String str = this.b;
         if (!nullSafeIsEqual(str, MethodDescription.CONSTRUCTOR_INTERNAL_NAME)) {
@@ -193,7 +192,7 @@ public final class amq {
             declaredConstructor.setAccessible(true);
             objX = declaredConstructor;
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         boolean z = objX instanceof dcx;
         Object obj = objX;
@@ -210,13 +209,13 @@ public final class amq {
         } catch (Throwable unused) {
         }
         for (Constructor<?> constructor2 : declaredConstructors) {
-            String str2 = (String) dovVar.getValue();
+            String str2 = (String) kotlin$LazyVar.getValue();
             throwIfVar1IsNull(constructor2);
             if (nullSafeIsEqual(str2, ams.c(constructor2))) {
                 constructor2.setAccessible(true);
                 return constructor2;
             }
-            reflectedMethod = NativeReflect.getReflectedMethod(clsC, str, (String) dovVar.getValue(), Boolean.FALSE);
+            reflectedMethod = NativeReflect.getReflectedMethod(clsC, str, (String) kotlin$LazyVar.getValue(), Boolean.FALSE);
             if (reflectedMethod != null) {
                 Constructor constructor3 = (Constructor) reflectedMethod;
                 constructor3.setAccessible(true);
@@ -224,7 +223,7 @@ public final class amq {
             }
             throw new NoSuchMethodException("Constructor " + this + " not found");
         }
-        reflectedMethod = NativeReflect.getReflectedMethod(clsC, str, (String) dovVar.getValue(), Boolean.FALSE);
+        reflectedMethod = NativeReflect.getReflectedMethod(clsC, str, (String) kotlin$LazyVar.getValue(), Boolean.FALSE);
         if (reflectedMethod != null) {
             Constructor constructor32 = (Constructor) reflectedMethod;
             constructor32.setAccessible(true);

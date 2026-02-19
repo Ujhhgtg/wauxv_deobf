@@ -9,7 +9,7 @@ public final class dub {
 
     public /* synthetic */ dub(int i, Integer num, String str) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, dtz.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, dtz.b.getDescriptor());
             throw null;
         }
         this.a = str;

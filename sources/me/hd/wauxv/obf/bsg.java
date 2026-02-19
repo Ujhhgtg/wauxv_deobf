@@ -19,7 +19,7 @@ public final class bsg implements btd {
             throw new IllegalArgumentException("Blank serial names are prohibited");
         }
         Object it = ((bzi) cvp.a.values()).iterator();
-        while (((bzf) it).hasNext()) {
+        while (((GenericMetadataIterator) it).hasNext()) {
             btd btdVar = (btd) ((bzd) it).next();
             if ("kotlinx.serialization.json.JsonLiteral".equals(btdVar.getDescriptor().b())) {
                 String str = "\n                The name of serial descriptor should uniquely identify associated serializer.\n                For serial name kotlinx.serialization.json.JsonLiteral there already exists "
@@ -40,7 +40,7 @@ public final class bsg implements btd {
                         listBf = dqc.toSingletonList(next);
                     }
                 } else {
-                    listBf = EmptyReadonlyList.a;
+                    listBf = EmptyReadonlyList.INSTANCE;
                 }
                 ArrayList arrayList2 = new ArrayList();
                 for (Object obj : listBf) {
@@ -48,7 +48,7 @@ public final class bsg implements btd {
                         arrayList2.add(obj);
                     }
                 }
-                ArrayList arrayList3 = new ArrayList(abb.ak(arrayList2, 10));
+                ArrayList arrayList3 = new ArrayList(StaticHelpers4.ak(arrayList2, 10));
                 Iterator it2 = arrayList2.iterator();
                 while (true) {
                     length = 0;
@@ -104,7 +104,7 @@ public final class bsg implements btd {
                     length = i;
                 }
                 StringBuilder sb = new StringBuilder(length3);
-                aaz.i(arrayList4, sb, "\n", "", "", "...", null);
+                StaticHelpers5.i(arrayList4, sb, "\n", "", "", "...", null);
                 throw new IllegalArgumentException(sb.toString());
             }
         }

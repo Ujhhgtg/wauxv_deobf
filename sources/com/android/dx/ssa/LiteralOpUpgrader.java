@@ -12,9 +12,9 @@ import com.android.dx.rop.code.TranslationAdvice;
 import com.android.dx.rop.cst.Constant;
 import com.android.dx.rop.cst.CstLiteralBits;
 import com.android.dx.rop.type.TypeBearer;
-import com.android.dx.ssa.SsaInsn;
+
 import java.util.ArrayList;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -96,7 +96,7 @@ public class LiteralOpUpgrader {
                 RegisterSpecList registerSpecList = RegisterSpecList.EMPTY;
                 replacePlainInsn(normalSsaInsn, registerSpecList, 5, (Constant) typeBearer);
                 if (opcode.getOpcode() == 56) {
-                    replacePlainInsn((NormalSsaInsn) dkz.l(1, this.ssaMeth.getBlocks().get(normalSsaInsn.getBlock().getPredecessors().nextSetBit(0)).getInsns()), registerSpecList, 6, null);
+                    replacePlainInsn((NormalSsaInsn) StaticHelpers6.getLastNElem(1, this.ssaMeth.getBlocks().get(normalSsaInsn.getBlock().getPredecessors().nextSetBit(0)).getInsns()), registerSpecList, 6, null);
                 }
                 return true;
             }

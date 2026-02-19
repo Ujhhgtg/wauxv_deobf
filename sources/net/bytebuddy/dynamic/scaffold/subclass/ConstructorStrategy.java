@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.method.MethodList;
@@ -187,7 +187,7 @@ public interface ConstructorStrategy {
         public List<MethodDescription.Token> extractConstructors(TypeDescription typeDescription) {
             TypeDescription.Generic superClass = typeDescription.getSuperClass();
             if (superClass == null) {
-                throw new IllegalArgumentException(dkz.u("Cannot extract constructors for ", typeDescription));
+                throw new IllegalArgumentException(StaticHelpers6.concat("Cannot extract constructors for ", typeDescription));
             }
             if (superClass.getDeclaredMethods().filter(ElementMatchers.isConstructor()).isEmpty()) {
                 throw new IllegalStateException("Cannot define default constructor for class without super class constructor");
@@ -196,14 +196,14 @@ public interface ConstructorStrategy {
         }
 
         public int hashCode() {
-            return this.methodAttributeAppenderFactory.hashCode() + dkz.i(this.elementMatcher, getClass().hashCode() * 31, 31);
+            return this.methodAttributeAppenderFactory.hashCode() + StaticHelpers6.i(this.elementMatcher, getClass().hashCode() * 31, 31);
         }
 
         @Override // net.bytebuddy.dynamic.scaffold.subclass.ConstructorStrategy
         public MethodRegistry inject(TypeDescription typeDescription, MethodRegistry methodRegistry) {
             TypeDescription.Generic superClass = typeDescription.getSuperClass();
             if (superClass == null) {
-                throw new IllegalArgumentException(dkz.u("Cannot inject constructors for ", typeDescription));
+                throw new IllegalArgumentException(StaticHelpers6.concat("Cannot inject constructors for ", typeDescription));
             }
             MethodList methodListFilter = superClass.getDeclaredMethods().filter(ElementMatchers.isConstructor().and(this.elementMatcher));
             if (methodListFilter.isEmpty()) {

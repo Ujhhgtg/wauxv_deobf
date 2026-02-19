@@ -66,10 +66,10 @@ public final class etb extends doi implements bgj {
                     if (i2 != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* cnb.z(-582676738210602L)  */);
                     }
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                     return kotlinUnitVar;
                 }
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 dnc.g(null, 3, "开始下载" /* "开始下载" /* "开始下载" /* cnb.z(-582217176709930L)  */ + str4 + "图片" /* "图片" /* "图片" /* cnb.z(-582711097948970L)  */);
                 StringBuilder sb = new StringBuilder();
                 sb.append(eta.a.o());
@@ -95,10 +95,10 @@ public final class etb extends doi implements bgj {
                     if (i4 != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* cnb.z(-586907280997162L)  */);
                     }
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                     return kotlinUnitVar;
                 }
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 dnc.g(null, 3, "开始下载" /* "开始下载" /* "开始下载" /* cnb.z(-586980295441194L)  */ + str4 + "图片" /* "图片" /* "图片" /* cnb.z(-586941640735530L)  */);
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append(etf.a.o());

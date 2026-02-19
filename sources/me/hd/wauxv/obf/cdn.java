@@ -9,7 +9,7 @@ public final class cdn {
     public static final cdn b;
     public static final cdn c;
     public static final /* synthetic */ cdn[] d;
-    public static final /* synthetic */ awn e;
+    public static final /* synthetic */ KotlinEnumEntriesImpl e;
     public final int f;
     public final int g;
 
@@ -22,7 +22,7 @@ public final class cdn {
         c = cdnVar3;
         cdn[] cdnVarArr = {cdnVar, cdnVar2, cdnVar3};
         d = cdnVarArr;
-        e = new awn(cdnVarArr);
+        e = new KotlinEnumEntriesImpl(cdnVarArr);
     }
 
     public cdn(String str, int i, int i2, int i3) {

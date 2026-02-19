@@ -26,7 +26,7 @@ public abstract class nc implements afw, ahr, Serializable {
                     return;
                 }
             } catch (Throwable th) {
-                obj = bhu.x(th);
+                obj = FastKV.x(th);
             }
             ncVar.l();
             if (!(afwVar2 instanceof nc)) {
@@ -83,27 +83,27 @@ public abstract class nc implements afw, ahr, Serializable {
                 iIntValue = -1;
             }
             int i = iIntValue >= 0 ? ajmVar.l()[iIntValue] : -1;
-            jx jxVar = cna.b;
-            jx jxVar2 = cna.c;
-            if (jxVar2 == null) {
+            FactoryPools factoryPoolsVar = cna.b;
+            FactoryPools factoryPoolsVar2 = cna.c;
+            if (factoryPoolsVar2 == null) {
                 try {
-                    jx jxVar3 = new jx(Class.class.getDeclaredMethod("getModule", null),
+                    FactoryPools factoryPoolsVar3 = new FactoryPools(Class.class.getDeclaredMethod("getModule", null),
                             getClass().getClassLoader().loadClass("java.lang.Module").getDeclaredMethod("getDescriptor",
                                     null),
                             getClass().getClassLoader().loadClass("java.lang.module.ModuleDescriptor")
                                     .getDeclaredMethod("name", null),
                             16);
-                    cna.c = jxVar3;
-                    jxVar2 = jxVar3;
+                    cna.c = factoryPoolsVar3;
+                    factoryPoolsVar2 = factoryPoolsVar3;
                 } catch (Exception unused2) {
-                    cna.c = jxVar;
-                    jxVar2 = jxVar;
+                    cna.c = factoryPoolsVar;
+                    factoryPoolsVar2 = factoryPoolsVar;
                 }
             }
-            if (jxVar2 != jxVar && (method = (Method) jxVar2.e) != null
-                    && (objInvoke = method.invoke(getClass(), null)) != null && (method2 = (Method) jxVar2.f) != null
+            if (factoryPoolsVar2 != factoryPoolsVar && (method = (Method) factoryPoolsVar2.e) != null
+                    && (objInvoke = method.invoke(getClass(), null)) != null && (method2 = (Method) factoryPoolsVar2.f) != null
                     && (objInvoke2 = method2.invoke(objInvoke, null)) != null) {
-                Method method3 = (Method) jxVar2.h;
+                Method method3 = (Method) factoryPoolsVar2.h;
                 Object objInvoke3 = method3 != null ? method3.invoke(objInvoke2, null) : null;
                 if (objInvoke3 instanceof String) {
                     str = (String) objInvoke3;

@@ -29,7 +29,7 @@ public final class dyu {
             String str, Integer num5, String str2, Boolean bool, List list, Integer num6, Long l, Boolean bool2,
             Long l2, dvr dvrVar) {
         if (65535 != (i & 65535)) {
-            bht.ah(i, 65535, dys.b.getDescriptor());
+            ResourcesCompat.ah(i, 65535, dys.b.getDescriptor());
             throw null;
         }
         this.b = dsyVar;
@@ -120,9 +120,9 @@ public final class dyu {
         dts.g(sb, this.k, -194201241254698L);
         yg.v(sb, this.l, -194119636876074L);
         bjs.w(sb, this.m, -194570608442154L);
-        dkz.ad(sb, this.n, -194484709096234L);
+        StaticHelpers6.ad(sb, this.n, -194484709096234L);
         dts.g(sb, this.o, -194420284586794L);
-        dkz.ad(sb, this.p, -194373039946538L);
+        StaticHelpers6.ad(sb, this.p, -194373039946538L);
         sb.append(this.q);
         sb.append(')');
         return sb.toString();

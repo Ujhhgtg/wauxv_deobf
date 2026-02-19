@@ -15,7 +15,7 @@ public final class efp {
     public /* synthetic */ efp(int i, String str, dwj dwjVar, dwj dwjVar2, dwj dwjVar3, dwj dwjVar4, dwj dwjVar5,
             dwj dwjVar6) {
         if (127 != (i & 127)) {
-            bht.ah(i, 127, efn.b.getDescriptor());
+            ResourcesCompat.ah(i, 127, efn.b.getDescriptor());
             throw null;
         }
         this.a = str;

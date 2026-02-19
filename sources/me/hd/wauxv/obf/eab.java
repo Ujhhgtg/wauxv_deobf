@@ -9,7 +9,7 @@ public final class eab {
 
     public /* synthetic */ eab(int i, Integer num, String str) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, dzz.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, dzz.b.getDescriptor());
             throw null;
         }
         this.a = num;

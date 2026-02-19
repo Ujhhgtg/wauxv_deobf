@@ -59,7 +59,7 @@ public final class avs {
     public final int j() {
         e(23);
         this.b = -1;
-        return emn.aw(this.a, this.d, false);
+        return StaticHelpers7.aw(this.a, this.d, false);
     }
 
     public final void k() {
@@ -69,7 +69,7 @@ public final class avs {
         if (iF == 0) {
             e(0);
             this.b = -1;
-            emn.au(sgVar, this.d);
+            StaticHelpers7.au(sgVar, this.d);
             return;
         }
         if (iF == 6) {
@@ -79,25 +79,25 @@ public final class avs {
         if (iF == 2) {
             e(2);
             this.b = -1;
-            emn.au(sgVar, this.d);
+            StaticHelpers7.au(sgVar, this.d);
             return;
         }
         if (iF == 3) {
             e(3);
             this.b = -1;
-            emn.aw(sgVar, this.d, false);
+            StaticHelpers7.aw(sgVar, this.d, false);
             return;
         }
         if (iF == 4) {
             e(4);
             this.b = -1;
-            emn.au(sgVar, this.d);
+            StaticHelpers7.au(sgVar, this.d);
             return;
         }
         if (iF == 16) {
             e(16);
             this.b = -1;
-            Float.intBitsToFloat(emn.aw(sgVar, this.d, true));
+            Float.intBitsToFloat(StaticHelpers7.aw(sgVar, this.d, true));
             return;
         }
         if (iF == 17) {
@@ -108,12 +108,12 @@ public final class avs {
             case 21:
                 e(21);
                 this.b = -1;
-                emn.aw(sgVar, this.d, false);
+                StaticHelpers7.aw(sgVar, this.d, false);
                 return;
             case 22:
                 e(22);
                 this.b = -1;
-                emn.aw(sgVar, this.d, false);
+                StaticHelpers7.aw(sgVar, this.d, false);
                 return;
             case 23:
                 j();
@@ -121,22 +121,22 @@ public final class avs {
             case 24:
                 e(24);
                 this.b = -1;
-                emn.aw(sgVar, this.d, false);
+                StaticHelpers7.aw(sgVar, this.d, false);
                 return;
             case 25:
                 e(25);
                 this.b = -1;
-                emn.aw(sgVar, this.d, false);
+                StaticHelpers7.aw(sgVar, this.d, false);
                 return;
             case 26:
                 e(26);
                 this.b = -1;
-                emn.aw(sgVar, this.d, false);
+                StaticHelpers7.aw(sgVar, this.d, false);
                 return;
             case 27:
                 e(27);
                 this.b = -1;
-                emn.aw(sgVar, this.d, false);
+                StaticHelpers7.aw(sgVar, this.d, false);
                 return;
             case 28:
                 e(28);

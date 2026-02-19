@@ -2,7 +2,7 @@ package net.bytebuddy.implementation.bytecode.member;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.CachedReturnPlugin;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.method.MethodDescription;
@@ -123,7 +123,7 @@ public final class MethodVariableAccess {
         }
 
         public int hashCode() {
-            return this.typeCastingHandler.hashCode() + dkz.c(this.methodDescription, getClass().hashCode() * 31, 31);
+            return this.typeCastingHandler.hashCode() + StaticHelpers6.c(this.methodDescription, getClass().hashCode() * 31, 31);
         }
 
         public StackManipulation prependThisReference() {

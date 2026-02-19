@@ -29,7 +29,7 @@ public final class exf {
         try {
             objX = 1771232894858L;
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         if (objX instanceof dcx) {
             objX = null;
@@ -89,7 +89,7 @@ public final class exf {
             }
             objX = Boolean.valueOf(z);
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         Boolean bool = (Boolean) (objX instanceof dcx ? null : objX);
         if (bool != null) {

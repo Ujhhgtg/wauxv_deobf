@@ -21,7 +21,7 @@ public abstract class ckl {
     }
 
     public void i(List list, cjo cjoVar) {
-        baa baaVar = new baa(new bae(new dpu(aaz.a(list), new bka(this, 3, cjoVar), 1), false, new dbj(21)));
+        baa baaVar = new baa(new bae(new dpu(StaticHelpers5.a(list), new bka(this, 3, cjoVar), 1), false, new dbj(21)));
         while (baaVar.hasNext()) {
             w().o((cio) baaVar.next());
         }
@@ -52,7 +52,7 @@ public abstract class ckl {
     }
 
     public void l(cio cioVar, boolean z) {
-        List list = (List) ((dml) w().e.h).c();
+        List list = (List) ((dml) w().e.obj).c();
         if (!list.contains(cioVar)) {
             throw new IllegalStateException(
                     ("popBackStack was called with " + cioVar + " which does not exist in back stack " + list)

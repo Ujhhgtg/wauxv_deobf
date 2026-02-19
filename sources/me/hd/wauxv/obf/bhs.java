@@ -130,7 +130,7 @@ public abstract class bhs {
                     XposedBridge.getXposedVersion();
                     objX = Boolean.TRUE;
                 } catch (Throwable th) {
-                    objX = bhu.x(th);
+                    objX = FastKV.x(th);
                 }
                 if (objX instanceof dcx) {
                     objX = null;
@@ -171,12 +171,12 @@ public abstract class bhs {
         }
         try {
             int i2 = 0;
-            bmu bmuVarBg = dqc.bg(dal.b(XposedBridge.class));
-            bmuVarBg.v(true);
-            azg azgVarR = bmuVarBg.r();
-            azgVarR.ab = "TAG";
-            abf.ao(azgVarR.ad, (cdy[]) Arrays.copyOf(new cdy[] { cdy.c }, 1));
-            azk azkVar = (azk) aaz.g(azgVarR.c());
+            SyntheticPileOfMess bmuVarBg = dqc.bg(dal.b(XposedBridge.class));
+            bmuVarBg.setHookOptional(true);
+            FieldResolver fieldResolverVarR = bmuVarBg.r();
+            fieldResolverVarR.name = "TAG";
+            StaticHelpers2.ao(fieldResolverVarR.modifiers, (cdy[]) Arrays.copyOf(new cdy[] { cdy.c }, 1));
+            azk azkVar = (azk) StaticHelpers5.g(fieldResolverVarR.resolve());
             if (azkVar != null && (str = (String) azkVar.e()) != null) {
                 if (dnj.ak(str)) {
                     str = null;
@@ -186,7 +186,7 @@ public abstract class bhs {
                 }
             }
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         String str2 = (String) (objX instanceof dcx ? null : objX);
         return str2 == null ? "invalid" : str2;

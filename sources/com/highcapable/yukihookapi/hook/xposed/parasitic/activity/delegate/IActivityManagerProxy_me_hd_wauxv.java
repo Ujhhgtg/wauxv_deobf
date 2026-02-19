@@ -6,10 +6,10 @@ import android.content.Intent;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.util.Arrays;
-import me.hd.wauxv.obf.bhu;
+import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.bmy;
 import me.hd.wauxv.obf.cea;
-import me.hd.wauxv.obf.cnf;
+import me.hd.wauxv.obf.HugeSyntheticPileOfHelpers;
 import me.hd.wauxv.obf.dal;
 import me.hd.wauxv.obf.dcx;
 import me.hd.wauxv.obf.ki;
@@ -61,7 +61,7 @@ public final class IActivityManagerProxy_me_hd_wauxv implements InvocationHandle
                     Class<?> clsF = ReflectionWrapper.f(component.getClassName(), 3, null);
                     if (clsF != null) {
                         try {
-                            if (cnf.getJavaClass(dal.b(cls)).isAssignableFrom(clsF)) {
+                            if (HugeSyntheticPileOfHelpers.getJavaClass(dal.b(cls)).isAssignableFrom(clsF)) {
                                 try {
                                     Object[] objArrCopyOf = Arrays.copyOf(new Object[0], 0);
                                     Object objC = ReflectionWrapper.createInstanceWithArgs(clsF,
@@ -71,7 +71,7 @@ public final class IActivityManagerProxy_me_hd_wauxv implements InvocationHandle
                                     }
                                     objX = (cea) objC;
                                     if (objX == null) {
-                                        Class<cea> clsBf = cnf.bf(dal.b(cls));
+                                        Class<cea> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                                         if (clsBf != null) {
                                             cls = clsBf;
                                         }
@@ -79,7 +79,7 @@ public final class IActivityManagerProxy_me_hd_wauxv implements InvocationHandle
                                                 (clsF + "'s instance cannot be cast to type " + cls + ".").toString());
                                     }
                                 } catch (Throwable th) {
-                                    objX = bhu.x(th);
+                                    objX = FastKV.x(th);
                                 }
                                 if (objX instanceof dcx) {
                                     objX = null;
@@ -92,7 +92,7 @@ public final class IActivityManagerProxy_me_hd_wauxv implements InvocationHandle
                                 }
                             }
                         } catch (Throwable th2) {
-                            strX = bhu.x(th2);
+                            strX = FastKV.x(th2);
                         }
                         if (strX instanceof dcx) {
                             strX = null;

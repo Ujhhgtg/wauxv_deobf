@@ -116,39 +116,39 @@ public final /* synthetic */ class aoz implements cwg {
             case 0:
                 StringBuilder sb = new StringBuilder();
                 sb.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-338632401484586L)   */);
-                return dkz.v(sb, this.b, ')');
+                return StaticHelpers6.concatFromSb(sb, this.b, ')');
             case 1:
                 StringBuilder sb2 = new StringBuilder();
                 sb2.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-334848535296810L)   */);
-                return dkz.v(sb2, this.b, ')');
+                return StaticHelpers6.concatFromSb(sb2, this.b, ')');
             case 2:
                 StringBuilder sb3 = new StringBuilder();
                 sb3.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-123205431851818L)   */);
-                return dkz.v(sb3, this.b, ')');
+                return StaticHelpers6.concatFromSb(sb3, this.b, ')');
             case 3:
                 StringBuilder sb4 = new StringBuilder();
                 sb4.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-334655261768490L)   */);
-                return dkz.v(sb4, this.b, ')');
+                return StaticHelpers6.concatFromSb(sb4, this.b, ')');
             case 4:
                 StringBuilder sb5 = new StringBuilder();
                 sb5.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-335454125685546L)   */);
-                return dkz.v(sb5, this.b, ')');
+                return StaticHelpers6.concatFromSb(sb5, this.b, ')');
             case 5:
                 StringBuilder sb6 = new StringBuilder();
                 sb6.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-341935231335210L)   */);
-                return dkz.v(sb6, this.b, ')');
+                return StaticHelpers6.concatFromSb(sb6, this.b, ')');
             case 6:
                 StringBuilder sb7 = new StringBuilder();
                 sb7.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-130257768151850L)   */);
-                return dkz.v(sb7, this.b, ')');
+                return StaticHelpers6.concatFromSb(sb7, this.b, ')');
             case 7:
                 StringBuilder sb8 = new StringBuilder();
                 sb8.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-129673652599594L)   */);
-                return dkz.v(sb8, this.b, ')');
+                return StaticHelpers6.concatFromSb(sb8, this.b, ')');
             default:
                 StringBuilder sb9 = new StringBuilder();
                 sb9.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-221701916850986L)   */);
-                return dkz.v(sb9, this.b, ')');
+                return StaticHelpers6.concatFromSb(sb9, this.b, ')');
         }
     }
 }

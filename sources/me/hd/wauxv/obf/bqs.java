@@ -32,16 +32,16 @@ public final class bqs implements eqj {
     public static bqs g(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         View viewInflate = layoutInflater.inflate(R.layout.item_rv_view_switch, viewGroup, false);
         int i = R.id.itemSwitchViewCanClick;
-        LinearLayout linearLayout = (LinearLayout) KotlinHelpers2.aq(viewInflate, R.id.itemSwitchViewCanClick);
+        LinearLayout linearLayout = (LinearLayout) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.itemSwitchViewCanClick);
         if (linearLayout != null) {
             i = R.id.itemSwitchViewSwitchFunc;
-            MaterialSwitch materialSwitch = (MaterialSwitch) KotlinHelpers2.aq(viewInflate, R.id.itemSwitchViewSwitchFunc);
+            MaterialSwitch materialSwitch = (MaterialSwitch) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.itemSwitchViewSwitchFunc);
             if (materialSwitch != null) {
                 i = R.id.itemSwitchViewTextViewDesc;
-                MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.aq(viewInflate, R.id.itemSwitchViewTextViewDesc);
+                MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.itemSwitchViewTextViewDesc);
                 if (materialTextView != null) {
                     i = R.id.itemSwitchViewTextViewTitle;
-                    MaterialTextView materialTextView2 = (MaterialTextView) KotlinHelpers2.aq(viewInflate, R.id.itemSwitchViewTextViewTitle);
+                    MaterialTextView materialTextView2 = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.itemSwitchViewTextViewTitle);
                     if (materialTextView2 != null) {
                         return new bqs((LinearLayout) viewInflate, linearLayout, materialSwitch, materialTextView, materialTextView2, 0);
                     }

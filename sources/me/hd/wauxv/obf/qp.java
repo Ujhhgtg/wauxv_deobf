@@ -60,32 +60,32 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
         Object obj = this.c;
         if (itemId == 0) {
             int i = 0;
-            cde cdeVarT = dqc.bi(obj).t();
-            cdeVarT.ab = "onTabClick" /* "onTabClick" /* "onTabClick" /* "onTabClick" /* cnb.z(-436634965244714L)   */;
-            ((MethodHookWrapper) aaz.e(cdeVarT.aj())).e(0);
+            MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT.name = "onTabClick" /* "onTabClick" /* "onTabClick" /* "onTabClick" /* cnb.z(-436634965244714L)   */;
+            ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(0);
             return true;
         }
         if (itemId == 1) {
             int i2 = 0;
-            cde cdeVarT2 = dqc.bi(obj).t();
-            cdeVarT2.ab = "onTabClick" /* "onTabClick" /* "onTabClick" /* "onTabClick" /* cnb.z(-436604900473642L)   */;
-            ((MethodHookWrapper) aaz.e(cdeVarT2.aj())).e(1);
+            MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT2.name = "onTabClick" /* "onTabClick" /* "onTabClick" /* "onTabClick" /* cnb.z(-436604900473642L)   */;
+            ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).e(1);
             return true;
         }
         if (itemId == 2) {
             int i3 = 0;
-            cde cdeVarT3 = dqc.bi(obj).t();
-            cdeVarT3.ab = "onTabClick" /* "onTabClick" /* "onTabClick" /* "onTabClick" /* cnb.z(-436523296095018L)   */;
-            ((MethodHookWrapper) aaz.e(cdeVarT3.aj())).e(2);
+            MethodResolver methodResolverVarT3 = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT3.name = "onTabClick" /* "onTabClick" /* "onTabClick" /* "onTabClick" /* cnb.z(-436523296095018L)   */;
+            ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT3.findMethods())).e(2);
             return true;
         }
         if (itemId != 3) {
             return true;
         }
         int i4 = 0;
-        cde cdeVarT4 = dqc.bi(obj).t();
-        cdeVarT4.ab = "onTabClick" /* "onTabClick" /* "onTabClick" /* "onTabClick" /* cnb.z(-437042987137834L)   */;
-        ((MethodHookWrapper) aaz.e(cdeVarT4.aj())).e(3);
+        MethodResolver methodResolverVarT4 = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT4.name = "onTabClick" /* "onTabClick" /* "onTabClick" /* "onTabClick" /* cnb.z(-437042987137834L)   */;
+        ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT4.findMethods())).e(3);
         return true;
     }
 
@@ -233,53 +233,53 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
         Drawable.ConstantState constantState;
         Drawable.ConstantState constantState2;
         final aek aekVar = (aek) this.c;
-        dov dovVar = aekVar.f;
-        dov dovVar2 = aekVar.h;
-        dov dovVar3 = aekVar.g;
-        dov dovVar4 = aekVar.i;
+        Kotlin$Lazy kotlin$LazyVar = aekVar.f;
+        Kotlin$Lazy kotlin$LazyVar2 = aekVar.h;
+        Kotlin$Lazy kotlin$LazyVar3 = aekVar.g;
+        Kotlin$Lazy kotlin$LazyVar4 = aekVar.i;
         RelativeLayout relativeLayout = ((ccu) ngVar).bl.g;
         final int i = 0;
         relativeLayout.setVisibility(0);
         relativeLayout.addView(aekVar.n(), new RelativeLayout.LayoutParams(-1, -2));
         aekVar.n().removeViewAt(3);
         LinearLayout linearLayoutN = aekVar.n();
-        dov dovVar5 = aekVar.d;
-        linearLayoutN.addView((LinearLayout) dovVar5.getValue(), 3);
-        dov dovVar6 = aekVar.e;
-        RecyclerView recyclerView = (RecyclerView) dovVar6.getValue();
+        Kotlin$Lazy kotlin$LazyVar5 = aekVar.d;
+        linearLayoutN.addView((LinearLayout) kotlin$LazyVar5.getValue(), 3);
+        Kotlin$Lazy kotlin$LazyVar6 = aekVar.e;
+        RecyclerView recyclerView = (RecyclerView) kotlin$LazyVar6.getValue();
         bmo.a.getClass();
         bmo.n();
         final int i2 = 1;
         recyclerView.setLayoutManager(new LinearLayoutManager(1));
         aekVar.l.ag();
-        ((RecyclerView) dovVar6.getValue()).setAdapter(aekVar.l);
+        ((RecyclerView) kotlin$LazyVar6.getValue()).setAdapter(aekVar.l);
         ael aelVar = aekVar.a;
         if (aelVar == null) {
             throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-394565760580394L)   */);
             throw null;
         }
-        ((EditText) dovVar.getValue()).setHint(aelVar.f);
-        ((EditText) dovVar.getValue()).addTextChangedListener(new wg(aekVar, i2));
+        ((EditText) kotlin$LazyVar.getValue()).setHint(aelVar.f);
+        ((EditText) kotlin$LazyVar.getValue()).addTextChangedListener(new wg(aekVar, i2));
         ael aelVar2 = aekVar.a;
         if (aelVar2 == null) {
             throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-394527105874730L)   */);
             throw null;
         }
-        ((Button) dovVar3.getValue()).setText(aelVar2.h);
+        ((Button) kotlin$LazyVar3.getValue()).setText(aelVar2.h);
         int i3 = 0;
-        cde cdeVarT = dqc.bi((Button) dovVar2.getValue()).t();
-        cdeVarT.ab = "setIconResource" /* "setIconResource" /* "setIconResource" /* "setIconResource" /* cnb.z(-394539990776618L)   */;
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration((Button) kotlin$LazyVar2.getValue()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "setIconResource" /* "setIconResource" /* "setIconResource" /* "setIconResource" /* cnb.z(-394539990776618L)   */;
         Class cls = Integer.TYPE;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) dkz.n(new Object[] { dal.b(cls) }, 1, cdeVarT);
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(cls) }, 1, methodResolverVarT);
         ael aelVar3 = aekVar.a;
         if (aelVar3 == null) {
             throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-394471271299882L)   */);
             throw null;
         }
         methodHookWrapperVar.e(Integer.valueOf(aelVar3.g));
-        cde cdeVarT2 = dqc.bi((Button) dovVar3.getValue()).t();
-        cdeVarT2.ab = "setIconResource" /* "setIconResource" /* "setIconResource" /* "setIconResource" /* cnb.z(-393882860780330L)   */;
-        MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) dkz.n(new Object[] { dal.b(cls) }, 1, cdeVarT2);
+        MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration((Button) kotlin$LazyVar3.getValue()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT2.name = "setIconResource" /* "setIconResource" /* "setIconResource" /* "setIconResource" /* cnb.z(-393882860780330L)   */;
+        MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(cls) }, 1, methodResolverVarT2);
         ael aelVar4 = aekVar.a;
         if (aelVar4 == null) {
             throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-393814141303594L)   */);
@@ -291,20 +291,20 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
             throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-393827026205482L)   */);
             throw null;
         }
-        ((Button) dovVar3.getValue()).setOnClickListener(new aeh(aelVar5.k, i, aekVar));
+        ((Button) kotlin$LazyVar3.getValue()).setOnClickListener(new aeh(aelVar5.k, i, aekVar));
         ael aelVar6 = aekVar.a;
         if (aelVar6 == null) {
             throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-393788371499818L)   */);
             throw null;
         }
-        ((Button) dovVar2.getValue()).setText(aelVar6.j);
+        ((Button) kotlin$LazyVar2.getValue()).setText(aelVar6.j);
         ael aelVar7 = aekVar.a;
         if (aelVar7 == null) {
             throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-393732536924970L)   */);
             throw null;
         }
-        ((Button) dovVar2.getValue()).setOnClickListener(new aeh(aelVar7.l, i2, aekVar));
-        RadioGroup radioGroup = (RadioGroup) dovVar4.getValue();
+        ((Button) kotlin$LazyVar2.getValue()).setOnClickListener(new aeh(aelVar7.l, i2, aekVar));
+        RadioGroup radioGroup = (RadioGroup) kotlin$LazyVar4.getValue();
         int childCount = radioGroup.getChildCount();
         for (int i4 = 0; i4 < childCount; i4++) {
             View childAt = radioGroup.getChildAt(i4);
@@ -317,8 +317,8 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
             throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-393762601696042L)   */);
             throw null;
         }
-        for (String str : aaz.z(aelVar8.d.keySet())) {
-            RadioButton radioButton = (RadioButton) ((RadioGroup) dovVar4.getValue())
+        for (String str : StaticHelpers5.z(aelVar8.d.keySet())) {
+            RadioButton radioButton = (RadioButton) ((RadioGroup) kotlin$LazyVar4.getValue())
                     .findViewById(me.hd.wauxv.R.id.rbAll);
             ip ipVar = new ip(radioButton.getContext(), null, 0);
             ipVar.setTextColor(radioButton.getTextColors());
@@ -336,7 +336,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
             ipVar.setBackground((background == null || (constantState = background.getConstantState()) == null) ? null
                     : constantState.newDrawable());
             ipVar.setText(str);
-            ((RadioGroup) dovVar4.getValue()).addView(ipVar);
+            ((RadioGroup) kotlin$LazyVar4.getValue()).addView(ipVar);
         }
         adw adwVar = aekVar.l;
         ael aelVar9 = aekVar.a;
@@ -361,7 +361,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
                         if (compoundButton.isPressed()) {
                             aek aekVar2 = aekVar;
                             List<adx> list = aekVar2.l.a;
-                            ArrayList arrayList2 = new ArrayList(abb.ak(list, 10));
+                            ArrayList arrayList2 = new ArrayList(StaticHelpers4.ak(list, 10));
                             for (adx adxVar : list) {
                                 adxVar.d = z;
                                 arrayList2.add(adxVar);
@@ -377,7 +377,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
                 }
             }
         });
-        RadioGroup radioGroup2 = (RadioGroup) dovVar4.getValue();
+        RadioGroup radioGroup2 = (RadioGroup) kotlin$LazyVar4.getValue();
         int childCount2 = radioGroup2.getChildCount();
         while (i < childCount2) {
             View childAt2 = radioGroup2.getChildAt(i);
@@ -392,7 +392,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
                                 if (compoundButton.isPressed()) {
                                     aek aekVar2 = aekVar;
                                     List<adx> list = aekVar2.l.a;
-                                    ArrayList arrayList2 = new ArrayList(abb.ak(list, 10));
+                                    ArrayList arrayList2 = new ArrayList(StaticHelpers4.ak(list, 10));
                                     for (adx adxVar : list) {
                                         adxVar.d = z;
                                         arrayList2.add(adxVar);
@@ -412,7 +412,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
             i++;
         }
         bmo.a.getClass();
-        ((LinearLayout) dovVar5.getValue())
+        ((LinearLayout) kotlin$LazyVar5.getValue())
                 .getLayoutParams().height = bmo.n().getResources().getDisplayMetrics().heightPixels / 2;
     }
 
@@ -479,9 +479,9 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
                 }
                 break;
             case 6:
-                jx jxVar = (jx) this.c;
+                FactoryPools factoryPoolsVar = (FactoryPools) this.c;
                 if (!((dfn) uaVar).n()) {
-                    jxVar.af(new dh(jxVar, 10));
+                    factoryPoolsVar.af(new dh(factoryPoolsVar, 10));
                 }
                 break;
             default:

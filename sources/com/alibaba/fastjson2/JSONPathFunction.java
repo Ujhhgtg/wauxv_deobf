@@ -1,7 +1,5 @@
 package com.alibaba.fastjson2;
 
-import com.alibaba.fastjson2.JSONPath;
-import com.alibaba.fastjson2.JSONPathSegment;
 import com.alibaba.fastjson2.function.impl.ToDouble;
 import com.alibaba.fastjson2.util.TypeUtils;
 import java.lang.reflect.Array;
@@ -15,7 +13,7 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.function.BiFunction;
 import java.util.function.Function;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -271,7 +269,7 @@ final class JSONPathFunction extends JSONPathSegment implements JSONPathSegment.
             return ((BigInteger) obj).abs();
         }
         if (!(obj instanceof List)) {
-            throw new JSONException(dkz.r(obj, "abs not support "));
+            throw new JSONException(StaticHelpers6.concatVar2Var1(obj, "abs not support "));
         }
         List list = (List) obj;
         JSONArray jSONArray = new JSONArray(list.size());

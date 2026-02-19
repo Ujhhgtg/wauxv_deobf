@@ -33,8 +33,8 @@ import java.util.jar.Manifest;
 import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.agent.builder.AgentBuilder;
 import net.bytebuddy.build.AccessControllerPlugin;
@@ -144,7 +144,7 @@ public interface ClassFileLocator extends Closeable {
         }
 
         public int hashCode() {
-            return this.delegate.hashCode() + dkz.i(this.matcher, getClass().hashCode() * 31, 31);
+            return this.delegate.hashCode() + StaticHelpers6.i(this.matcher, getClass().hashCode() * 31, 31);
         }
 
         @Override // net.bytebuddy.dynamic.ClassFileLocator
@@ -951,7 +951,7 @@ public interface ClassFileLocator extends Closeable {
             if (file != null) {
                 return of(file);
             }
-            StringBuilder sbZ = dkz.z("Runtime jar does not exist in ", strReplace, " for any of ");
+            StringBuilder sbZ = StaticHelpers6.concatAndToSb("Runtime jar does not exist in ", strReplace, " for any of ");
             sbZ.append(RUNTIME_LOCATIONS);
             throw new IllegalStateException(sbZ.toString());
         }
@@ -1463,7 +1463,7 @@ public interface ClassFileLocator extends Closeable {
             if (file != null) {
                 return ofBootPath(file);
             }
-            StringBuilder sbZ = dkz.z("Boot modules do not exist in ", strReplace, " for any of ");
+            StringBuilder sbZ = StaticHelpers6.concatAndToSb("Boot modules do not exist in ", strReplace, " for any of ");
             sbZ.append(BOOT_LOCATIONS);
             throw new IllegalStateException(sbZ.toString());
         }

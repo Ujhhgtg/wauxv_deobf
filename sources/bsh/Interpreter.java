@@ -15,7 +15,7 @@ import java.io.StringReader;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import me.hd.wauxv.obf.bqn;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -436,7 +436,7 @@ public class Interpreter implements Runnable, Serializable, BshClassManager.List
         String str2 = (String) getu("bsh.cwd");
         File file = new File(str);
         if (!file.isAbsolute()) {
-            file = new File(yg.concatToVar1(dkz.y(str2), File.separator, str));
+            file = new File(yg.concatToVar1(StaticHelpers6.toSb(str2), File.separator, str));
         }
         return new File(file.getCanonicalPath());
     }

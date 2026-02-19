@@ -10,12 +10,12 @@ public final class dbm extends cwl {
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public dbm(cwd cwdVar, cwo cwoVar, long j, dfx dfxVar) {
-        super(cwdVar, cwoVar, dfxVar);
+    public dbm(cwd cwdVar, ProtoReader protoReaderVar, long j, dfx dfxVar) {
+        super(cwdVar, protoReaderVar, dfxVar);
         throwIfVar1IsNull(dfxVar, "descriptor");
         this.ac = -1;
         if (j == 19500) {
-            int iG = cwoVar.g(cwf.DEFAULT);
+            int iG = protoReaderVar.readVarint32(IntEncodingEnum.DEFAULT);
             if (iG < 0) {
                 throw new IllegalArgumentException(
                         ("Expected positive length for " + dfxVar + ", but got " + iG).toString());
@@ -39,17 +39,17 @@ public final class dbm extends cwl {
     public final int f(dfx dfxVar) {
         throwIfVar1IsNull(dfxVar, "descriptor");
         long j = this.ae;
-        cwo cwoVar = this.ai;
+        ProtoReader protoReaderVar = this.ai;
         if (j > 0) {
-            if ((this.ac == -1 ? cwoVar.b : cwoVar.t()) == ((int) (j & 2147483647L))) {
+            if ((this.ac == -1 ? protoReaderVar.tag : protoReaderVar.nextField()) == ((int) (j & 2147483647L))) {
                 int i = this.ac + 1;
                 this.ac = i;
                 return i;
             }
-            cwoVar.d = true;
-            int i2 = (cwoVar.b << 3) | cwoVar.c.value;
-            cwoVar.v(cwoVar.e);
-            cwoVar.e = i2;
+            protoReaderVar.isPushed = true;
+            int i2 = (protoReaderVar.tag << 3) | protoReaderVar.protoWireType.value;
+            protoReaderVar.decodeTag(protoReaderVar.pushedTag);
+            protoReaderVar.pushedTag = i2;
             return -1;
         }
         long j2 = -j;
@@ -58,9 +58,9 @@ public final class dbm extends cwl {
         if (i3 == j2) {
             return -1;
         }
-        if (!cwoVar.d) {
-            ru ruVar = cwoVar.a;
-            if (ruVar.a - ruVar.b == 0) {
+        if (!protoReaderVar.isPushed) {
+            SourceBuffer sourceBufferVar = protoReaderVar.sourceBuffer;
+            if (sourceBufferVar.a - sourceBufferVar.b == 0) {
                 return -1;
             }
         }

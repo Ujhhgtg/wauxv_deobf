@@ -5,7 +5,7 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.annotation.AnnotationDescription;
 import net.bytebuddy.description.method.MethodDescription;
@@ -15,7 +15,6 @@ import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.auxiliary.TypeProxy;
 import net.bytebuddy.implementation.bind.MethodDelegationBinder;
-import net.bytebuddy.implementation.bind.annotation.TargetMethodAnnotationDrivenBinder;
 import net.bytebuddy.implementation.bytecode.assign.Assigner;
 import net.bytebuddy.matcher.ElementMatchers;
 import net.bytebuddy.utility.nullability.MaybeNull;
@@ -63,7 +62,7 @@ public @interface Default {
                     if (typeDescription.isInterface()) {
                         return new ForType(typeDescription);
                     }
-                    throw new IllegalStateException(dkz.u("Cannot assign proxy to ", typeDescription));
+                    throw new IllegalStateException(StaticHelpers6.concat("Cannot assign proxy to ", typeDescription));
                 }
 
                 public boolean equals(@MaybeNull Object obj) {

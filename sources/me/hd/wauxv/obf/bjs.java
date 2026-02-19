@@ -19,7 +19,7 @@ public abstract /* synthetic */ class bjs {
         if (beg.ar(2)) {
             Log.v("FragmentManager", "SpecialEffectsController: Calling apply state");
         }
-        int iAe = dkz.ae(i);
+        int iAe = StaticHelpers6.ae(i);
         if (iAe == 0) {
             ViewParent parent = view.getParent();
             ViewGroup viewGroup2 = parent instanceof ViewGroup ? (ViewGroup) parent : null;
@@ -128,9 +128,9 @@ public abstract /* synthetic */ class bjs {
         return (list.hashCode() + i) * i2;
     }
 
-    public static Object h(cde cdeVar) {
-        cdeVar.y();
-        return aaz.e(cdeVar.aj());
+    public static Object h(MethodResolver methodResolverVar) {
+        methodResolverVar.y();
+        return StaticHelpers5.safeGetFirstInList(methodResolverVar.findMethods());
     }
 
     public static String i(int i, String str) {

@@ -122,7 +122,7 @@ public final class aat {
     }
 
     public final boolean bt(CharSequence charSequence) {
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         boolean z = this.a.getLayoutDirection() == 1;
         if (this.aj) {
             return (z ? dqi.d : dqi.c).k(charSequence.length(), charSequence);
@@ -433,7 +433,7 @@ public final class aat {
         }
         ayf ayfVar = ff.b;
         this.bk = 1.0f - bs(0.0f, 1.0f, 1.0f - f2, ayfVar);
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         viewGroup.postInvalidateOnAnimation();
         this.bl = bs(1.0f, 0.0f, f2, ayfVar);
         viewGroup.postInvalidateOnAnimation();
@@ -589,7 +589,7 @@ public final class aat {
 
     public final void cg(float f) {
         float f2;
-        float fAr = cnf.ar(f, 0.0f, 1.0f);
+        float fAr = HugeSyntheticPileOfHelpers.ar(f, 0.0f, 1.0f);
         if (fAr != this.b) {
             this.b = fAr;
             boolean z = this.c;
@@ -625,7 +625,7 @@ public final class aat {
             }
             ayf ayfVar = ff.b;
             this.bk = 1.0f - bs(0.0f, 1.0f, 1.0f - fAr, ayfVar);
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             ViewGroup viewGroup = this.a;
             viewGroup.postInvalidateOnAnimation();
             this.bl = bs(1.0f, 0.0f, fAr, ayfVar);
@@ -673,7 +673,7 @@ public final class aat {
 
     public final void ch(float f) {
         bu(f, false);
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         this.a.postInvalidateOnAnimation();
     }
 }

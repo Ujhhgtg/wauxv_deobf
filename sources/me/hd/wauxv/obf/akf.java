@@ -12,7 +12,7 @@ public abstract class akf {
     public final int e;
     public final float f;
     public final long g;
-    public final dov h;
+    public final Kotlin$Lazy h;
 
     public akf(String str, String str2, Set set, boolean z, int i, float f, long j, int i2) {
         str2 = (i2 & 2) != 0 ? "" /* "" /* "" /* "" /* cnb.z(-5514738006826L)   */ : str2;
@@ -27,12 +27,12 @@ public abstract class akf {
         this.e = i;
         this.f = f;
         this.g = j;
-        this.h = new dov(new ake(str, 0));
+        this.h = new Kotlin$Lazy(new ake(str, 0));
     }
 
     public final boolean i() {
         String strM = m();
-        DefaultConfig ioVar = cnf.ah;
+        DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar != null) {
             return ioVar.ah(strM, this.d);
         }
@@ -41,7 +41,7 @@ public abstract class akf {
 
     public final float j() {
         String strM = m();
-        DefaultConfig ioVar = cnf.ah;
+        DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar != null) {
             return ioVar.aj().getFloat(strM, this.f);
         }
@@ -50,7 +50,7 @@ public abstract class akf {
 
     public final int k() {
         String strM = m();
-        DefaultConfig ioVar = cnf.ah;
+        DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar != null) {
             return ioVar.aj().getInt(strM, this.e);
         }
@@ -59,7 +59,7 @@ public abstract class akf {
 
     public final long l() {
         String strM = m();
-        DefaultConfig ioVar = cnf.ah;
+        DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar != null) {
             return ioVar.aj().getLong(strM, this.g);
         }
@@ -72,7 +72,7 @@ public abstract class akf {
 
     public final Set n() {
         String strM = m();
-        DefaultConfig ioVar = cnf.ah;
+        DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)   */.toString());
         }
@@ -83,7 +83,7 @@ public abstract class akf {
 
     public final String o() {
         String strM = m();
-        DefaultConfig ioVar = cnf.ah;
+        DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)   */.toString());
         }
@@ -94,7 +94,7 @@ public abstract class akf {
 
     public final void p(boolean z) {
         String strM = m();
-        DefaultConfig ioVar = cnf.ah;
+        DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)   */.toString());
         }
@@ -103,7 +103,7 @@ public abstract class akf {
 
     public final void q(float f) {
         String strM = m();
-        DefaultConfig ioVar = cnf.ah;
+        DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)   */.toString());
         }
@@ -112,7 +112,7 @@ public abstract class akf {
 
     public final void r(int i) {
         String strM = m();
-        DefaultConfig ioVar = cnf.ah;
+        DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)   */.toString());
         }
@@ -121,7 +121,7 @@ public abstract class akf {
 
     public final void s(long j) {
         String strM = m();
-        DefaultConfig ioVar = cnf.ah;
+        DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)   */.toString());
         }
@@ -130,7 +130,7 @@ public abstract class akf {
 
     public final void t(Set set) {
         String strM = m();
-        DefaultConfig ioVar = cnf.ah;
+        DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)   */.toString());
         }
@@ -139,7 +139,7 @@ public abstract class akf {
 
     public final void u(String str) {
         String strM = m();
-        DefaultConfig ioVar = cnf.ah;
+        DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar == null) {
             throw new IllegalArgumentException("DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)   */.toString());
         }

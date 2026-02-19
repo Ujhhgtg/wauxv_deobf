@@ -24,17 +24,17 @@ public final class akx extends czc {
 
     public static void n(ArrayList arrayList) {
         for (int size = arrayList.size() - 1; size >= 0; size--) {
-            ((czx) arrayList.get(size)).d.animate().cancel();
+            ((SomeView) arrayList.get(size)).d.animate().cancel();
         }
     }
 
     @Override // me.hd.wauxv.obf.czc
-    public final boolean o(czx czxVar, czx czxVar2, cjn cjnVar, cjn cjnVar2) {
+    public final boolean o(SomeView someViewVar, SomeView someViewVar2, cjn cjnVar, cjn cjnVar2) {
         int i;
         int i2;
         int i3 = cjnVar.a;
         int i4 = cjnVar.b;
-        if (czxVar2.am()) {
+        if (someViewVar2.am()) {
             int i5 = cjnVar.a;
             i2 = cjnVar.b;
             i = i5;
@@ -42,26 +42,26 @@ public final class akx extends czc {
             i = cjnVar2.a;
             i2 = cjnVar2.b;
         }
-        if (czxVar == czxVar2) {
-            return s(czxVar, i3, i4, i, i2);
+        if (someViewVar == someViewVar2) {
+            return s(someViewVar, i3, i4, i, i2);
         }
-        View view = czxVar.d;
+        View view = someViewVar.d;
         float translationX = view.getTranslationX();
         float translationY = view.getTranslationY();
         float alpha = view.getAlpha();
-        w(czxVar);
+        w(someViewVar);
         view.setTranslationX(translationX);
         view.setTranslationY(translationY);
         view.setAlpha(alpha);
-        View view2 = czxVar2.d;
-        w(czxVar2);
+        View view2 = someViewVar2.d;
+        w(someViewVar2);
         view2.setTranslationX(-((int) ((i - i3) - translationX)));
         view2.setTranslationY(-((int) ((i2 - i4) - translationY)));
         view2.setAlpha(0.0f);
         ArrayList arrayList = this.f;
         akv akvVar = new akv();
-        akvVar.a = czxVar;
-        akvVar.b = czxVar2;
+        akvVar.a = someViewVar;
+        akvVar.b = someViewVar2;
         akvVar.c = i3;
         akvVar.d = i4;
         akvVar.e = i;
@@ -71,11 +71,11 @@ public final class akx extends czc {
     }
 
     @Override // me.hd.wauxv.obf.czc
-    public final void p(czx czxVar) {
+    public final void p(SomeView someViewVar) {
         ArrayList arrayList = this.g;
         ArrayList arrayList2 = this.h;
         ArrayList arrayList3 = this.i;
-        View view = czxVar.d;
+        View view = someViewVar.d;
         view.animate().cancel();
         ArrayList arrayList4 = this.e;
         int size = arrayList4.size();
@@ -84,25 +84,25 @@ public final class akx extends czc {
             if (size < 0) {
                 break;
             }
-            if (((akw) arrayList4.get(size)).a == czxVar) {
+            if (((akw) arrayList4.get(size)).a == someViewVar) {
                 view.setTranslationY(0.0f);
                 view.setTranslationX(0.0f);
-                ae(czxVar);
+                ae(someViewVar);
                 arrayList4.remove(size);
             }
         }
-        u(this.f, czxVar);
-        if (this.c.remove(czxVar)) {
+        u(this.f, someViewVar);
+        if (this.c.remove(someViewVar)) {
             view.setAlpha(1.0f);
-            ae(czxVar);
+            ae(someViewVar);
         }
-        if (this.d.remove(czxVar)) {
+        if (this.d.remove(someViewVar)) {
             view.setAlpha(1.0f);
-            ae(czxVar);
+            ae(someViewVar);
         }
         for (int size2 = arrayList3.size() - 1; size2 >= 0; size2--) {
             ArrayList arrayList5 = (ArrayList) arrayList3.get(size2);
-            u(arrayList5, czxVar);
+            u(arrayList5, someViewVar);
             if (arrayList5.isEmpty()) {
                 arrayList3.remove(size2);
             }
@@ -110,10 +110,10 @@ public final class akx extends czc {
         for (int size3 = arrayList2.size() - 1; size3 >= 0; size3--) {
             ArrayList arrayList6 = (ArrayList) arrayList2.get(size3);
             for (int size4 = arrayList6.size() - 1; size4 >= 0; size4--) {
-                if (((akw) arrayList6.get(size4)).a == czxVar) {
+                if (((akw) arrayList6.get(size4)).a == someViewVar) {
                     view.setTranslationY(0.0f);
                     view.setTranslationX(0.0f);
-                    ae(czxVar);
+                    ae(someViewVar);
                     arrayList6.remove(size4);
                     if (!arrayList6.isEmpty()) {
                         break;
@@ -125,18 +125,18 @@ public final class akx extends czc {
         }
         for (int size5 = arrayList.size() - 1; size5 >= 0; size5--) {
             ArrayList arrayList7 = (ArrayList) arrayList.get(size5);
-            if (arrayList7.remove(czxVar)) {
+            if (arrayList7.remove(someViewVar)) {
                 view.setAlpha(1.0f);
-                ae(czxVar);
+                ae(someViewVar);
                 if (arrayList7.isEmpty()) {
                     arrayList.remove(size5);
                 }
             }
         }
-        this.l.remove(czxVar);
-        this.j.remove(czxVar);
-        this.m.remove(czxVar);
-        this.k.remove(czxVar);
+        this.l.remove(someViewVar);
+        this.j.remove(someViewVar);
+        this.m.remove(someViewVar);
+        this.k.remove(someViewVar);
         t();
     }
 
@@ -163,7 +163,7 @@ public final class akx extends czc {
             arrayList7.remove(size);
         }
         for (int size2 = arrayList6.size() - 1; size2 >= 0; size2--) {
-            ae((czx) arrayList6.get(size2));
+            ae((SomeView) arrayList6.get(size2));
             arrayList6.remove(size2);
         }
         int size3 = arrayList5.size();
@@ -172,20 +172,20 @@ public final class akx extends czc {
             if (size3 < 0) {
                 break;
             }
-            czx czxVar = (czx) arrayList5.get(size3);
-            czxVar.d.setAlpha(1.0f);
-            ae(czxVar);
+            SomeView someViewVar = (SomeView) arrayList5.get(size3);
+            someViewVar.d.setAlpha(1.0f);
+            ae(someViewVar);
             arrayList5.remove(size3);
         }
         for (int size4 = arrayList4.size() - 1; size4 >= 0; size4--) {
             akv akvVar = (akv) arrayList4.get(size4);
-            czx czxVar2 = akvVar.a;
-            if (czxVar2 != null) {
-                v(akvVar, czxVar2);
+            SomeView someViewVar2 = akvVar.a;
+            if (someViewVar2 != null) {
+                v(akvVar, someViewVar2);
             }
-            czx czxVar3 = akvVar.b;
-            if (czxVar3 != null) {
-                v(akvVar, czxVar3);
+            SomeView someViewVar3 = akvVar.b;
+            if (someViewVar3 != null) {
+                v(akvVar, someViewVar3);
             }
         }
         arrayList4.clear();
@@ -207,9 +207,9 @@ public final class akx extends czc {
             for (int size7 = arrayList2.size() - 1; size7 >= 0; size7--) {
                 ArrayList arrayList9 = (ArrayList) arrayList2.get(size7);
                 for (int size8 = arrayList9.size() - 1; size8 >= 0; size8--) {
-                    czx czxVar4 = (czx) arrayList9.get(size8);
-                    czxVar4.d.setAlpha(1.0f);
-                    ae(czxVar4);
+                    SomeView someViewVar4 = (SomeView) arrayList9.get(size8);
+                    someViewVar4.d.setAlpha(1.0f);
+                    ae(someViewVar4);
                     arrayList9.remove(size8);
                     if (arrayList9.isEmpty()) {
                         arrayList2.remove(arrayList9);
@@ -220,13 +220,13 @@ public final class akx extends czc {
                 ArrayList arrayList10 = (ArrayList) arrayList.get(size9);
                 for (int size10 = arrayList10.size() - 1; size10 >= 0; size10--) {
                     akv akvVar2 = (akv) arrayList10.get(size10);
-                    czx czxVar5 = akvVar2.a;
-                    if (czxVar5 != null) {
-                        v(akvVar2, czxVar5);
+                    SomeView someViewVar5 = akvVar2.a;
+                    if (someViewVar5 != null) {
+                        v(akvVar2, someViewVar5);
                     }
-                    czx czxVar6 = akvVar2.b;
-                    if (czxVar6 != null) {
-                        v(akvVar2, czxVar6);
+                    SomeView someViewVar6 = akvVar2.b;
+                    if (someViewVar6 != null) {
+                        v(akvVar2, someViewVar6);
                     }
                     if (arrayList10.isEmpty()) {
                         arrayList.remove(arrayList10);
@@ -251,15 +251,15 @@ public final class akx extends czc {
         return (this.d.isEmpty() && this.f.isEmpty() && this.e.isEmpty() && this.c.isEmpty() && this.k.isEmpty() && this.l.isEmpty() && this.j.isEmpty() && this.m.isEmpty() && this.h.isEmpty() && this.g.isEmpty() && this.i.isEmpty()) ? false : true;
     }
 
-    public final boolean s(czx czxVar, int i, int i2, int i3, int i4) {
-        View view = czxVar.d;
+    public final boolean s(SomeView someViewVar, int i, int i2, int i3, int i4) {
+        View view = someViewVar.d;
         int translationX = i + ((int) view.getTranslationX());
-        int translationY = i2 + ((int) czxVar.d.getTranslationY());
-        w(czxVar);
+        int translationY = i2 + ((int) someViewVar.d.getTranslationY());
+        w(someViewVar);
         int i5 = i3 - translationX;
         int i6 = i4 - translationY;
         if (i5 == 0 && i6 == 0) {
-            ae(czxVar);
+            ae(someViewVar);
             return false;
         }
         if (i5 != 0) {
@@ -270,7 +270,7 @@ public final class akx extends czc {
         }
         ArrayList arrayList = this.e;
         akw akwVar = new akw();
-        akwVar.a = czxVar;
+        akwVar.a = someViewVar;
         akwVar.b = translationX;
         akwVar.c = translationY;
         akwVar.d = i3;
@@ -292,38 +292,38 @@ public final class akx extends czc {
         }
     }
 
-    public final void u(ArrayList arrayList, czx czxVar) {
+    public final void u(ArrayList arrayList, SomeView someViewVar) {
         for (int size = arrayList.size() - 1; size >= 0; size--) {
             akv akvVar = (akv) arrayList.get(size);
-            if (v(akvVar, czxVar) && akvVar.a == null && akvVar.b == null) {
+            if (v(akvVar, someViewVar) && akvVar.a == null && akvVar.b == null) {
                 arrayList.remove(akvVar);
             }
         }
     }
 
-    public final boolean v(akv akvVar, czx czxVar) {
-        if (akvVar.b == czxVar) {
+    public final boolean v(akv akvVar, SomeView someViewVar) {
+        if (akvVar.b == someViewVar) {
             akvVar.b = null;
         } else {
-            if (akvVar.a != czxVar) {
+            if (akvVar.a != someViewVar) {
                 return false;
             }
             akvVar.a = null;
         }
-        View view = czxVar.d;
-        View view2 = czxVar.d;
+        View view = someViewVar.d;
+        View view2 = someViewVar.d;
         view.setAlpha(1.0f);
         view2.setTranslationX(0.0f);
         view2.setTranslationY(0.0f);
-        ae(czxVar);
+        ae(someViewVar);
         return true;
     }
 
-    public final void w(czx czxVar) {
+    public final void w(SomeView someViewVar) {
         if (a == null) {
             a = new ValueAnimator().getInterpolator();
         }
-        czxVar.d.animate().setInterpolator(a);
-        p(czxVar);
+        someViewVar.d.animate().setInterpolator(a);
+        p(someViewVar);
     }
 }

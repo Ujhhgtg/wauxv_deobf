@@ -3,11 +3,10 @@ package net.bytebuddy.matcher;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Queue;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.type.TypeDefinition;
 import net.bytebuddy.description.type.TypeDescription;
-import net.bytebuddy.matcher.ElementMatcher;
 import net.bytebuddy.utility.QueueFactory;
 import net.bytebuddy.utility.nullability.MaybeNull;
 
@@ -38,7 +37,7 @@ public class HasSuperTypeMatcher<T extends TypeDescription> extends ElementMatch
     }
 
     public String toString() {
-        return dkz.w(new StringBuilder("hasSuperType("), this.matcher, ")");
+        return StaticHelpers6.concatFromSb(new StringBuilder("hasSuperType("), this.matcher, ")");
     }
 
     @Override // net.bytebuddy.matcher.ElementMatcher.Junction.ForNonNullValues

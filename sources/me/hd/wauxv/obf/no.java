@@ -35,7 +35,7 @@ public final class no implements ValueAnimator.AnimatorUpdateListener {
                     ekvVar.s = ff.g(0.0f, 1.0f, 0.19f, 1.0f, fFloatValue);
                     ekvVar.invalidateSelf();
                 }
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 nsVar.postInvalidateOnAnimation();
                 break;
             case 1:

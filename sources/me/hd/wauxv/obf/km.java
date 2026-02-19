@@ -28,7 +28,7 @@ public final class km extends ad {
         int length;
         int i2 = this.f;
         if (i < 0 || i > i2) {
-            throw new IndexOutOfBoundsException(dkz.p(i, "index: ", ", size: ", i2));
+            throw new IndexOutOfBoundsException(StaticHelpers6.p(i, "index: ", ", size: ", i2));
         }
         if (i == i2) {
             addLast(obj);
@@ -93,7 +93,7 @@ public final class km extends ad {
         throwIfVar1IsNull(collection, "elements");
         int i2 = this.f;
         if (i < 0 || i > i2) {
-            throw new IndexOutOfBoundsException(dkz.p(i, "index: ", ", size: ", i2));
+            throw new IndexOutOfBoundsException(StaticHelpers6.p(i, "index: ", ", size: ", i2));
         }
         if (collection.isEmpty()) {
             return false;
@@ -197,7 +197,7 @@ public final class km extends ad {
     public final Object b(int i) {
         int i2 = this.f;
         if (i < 0 || i >= i2) {
-            throw new IndexOutOfBoundsException(dkz.p(i, "index: ", ", size: ", i2));
+            throw new IndexOutOfBoundsException(StaticHelpers6.p(i, "index: ", ", size: ", i2));
         }
         if (i == OtherStaticHelpers.af(this)) {
             return removeLast();
@@ -283,7 +283,7 @@ public final class km extends ad {
     public final Object get(int i) {
         int iA = a();
         if (i < 0 || i >= iA) {
-            throw new IndexOutOfBoundsException(dkz.p(i, "index: ", ", size: ", iA));
+            throw new IndexOutOfBoundsException(StaticHelpers6.p(i, "index: ", ", size: ", iA));
         }
         return this.e[m(this.d + i)];
     }
@@ -670,7 +670,7 @@ public final class km extends ad {
     public final Object set(int i, Object obj) {
         int iA = a();
         if (i < 0 || i >= iA) {
-            throw new IndexOutOfBoundsException(dkz.p(i, "index: ", ", size: ", iA));
+            throw new IndexOutOfBoundsException(StaticHelpers6.p(i, "index: ", ", size: ", iA));
         }
         int iM = m(this.d + i);
         Object[] objArr = this.e;

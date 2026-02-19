@@ -75,36 +75,36 @@ public final class mu implements bec {
         this.r.bx(this, false);
     }
 
-    public final void ac(int i, bdj bdjVar, String str, int i2) {
-        String str2 = bdjVar.cf;
+    public final void ac(int i, SomeFragmentManager someFragmentManagerVar, String str, int i2) {
+        String str2 = someFragmentManagerVar.cf;
         if (str2 != null) {
-            bfd.d(bdjVar, str2);
+            bfd.d(someFragmentManagerVar, str2);
         }
-        Class<?> cls = bdjVar.getClass();
+        Class<?> cls = someFragmentManagerVar.getClass();
         int modifiers = cls.getModifiers();
         if (cls.isAnonymousClass() || !Modifier.isPublic(modifiers) || (cls.isMemberClass() && !Modifier.isStatic(modifiers))) {
             throw new IllegalStateException("Fragment " + cls.getCanonicalName() + " must be a public static class to be  properly recreated from instance state.");
         }
         if (str != null) {
-            String str3 = bdjVar.bs;
+            String str3 = someFragmentManagerVar.bs;
             if (str3 != null && !str.equals(str3)) {
-                throw new IllegalStateException("Can't change tag of fragment " + bdjVar + ": was " + bdjVar.bs + " now " + str);
+                throw new IllegalStateException("Can't change tag of fragment " + someFragmentManagerVar + ": was " + someFragmentManagerVar.bs + " now " + str);
             }
-            bdjVar.bs = str;
+            someFragmentManagerVar.bs = str;
         }
         if (i != 0) {
             if (i == -1) {
-                throw new IllegalArgumentException("Can't add fragment " + bdjVar + " with tag " + str + " to container view with no id");
+                throw new IllegalArgumentException("Can't add fragment " + someFragmentManagerVar + " with tag " + str + " to container view with no id");
             }
-            int i3 = bdjVar.bq;
+            int i3 = someFragmentManagerVar.bq;
             if (i3 != 0 && i3 != i) {
-                throw new IllegalStateException("Can't change container ID of fragment " + bdjVar + ": was " + bdjVar.bq + " now " + i);
+                throw new IllegalStateException("Can't change container ID of fragment " + someFragmentManagerVar + ": was " + someFragmentManagerVar.bq + " now " + i);
             }
-            bdjVar.bq = i;
-            bdjVar.br = i;
+            someFragmentManagerVar.bq = i;
+            someFragmentManagerVar.br = i;
         }
-        w(new bfe(i2, bdjVar));
-        bdjVar.bm = this.r;
+        w(new bfe(i2, someFragmentManagerVar));
+        someFragmentManagerVar.bm = this.r;
     }
 
     public final void ad(PrintWriter printWriter, String str, boolean z) {
@@ -224,22 +224,22 @@ public final class mu implements bec {
         }
     }
 
-    public final void ae(bdj bdjVar) {
-        beg begVar = bdjVar.bm;
+    public final void ae(SomeFragmentManager someFragmentManagerVar) {
+        beg begVar = someFragmentManagerVar.bm;
         if (begVar == null || begVar == this.r) {
-            w(new bfe(3, bdjVar));
+            w(new bfe(3, someFragmentManagerVar));
             return;
         }
-        throw new IllegalStateException("Cannot remove Fragment attached to a different FragmentManager. Fragment " + bdjVar.toString() + " is already attached to a FragmentManager.");
+        throw new IllegalStateException("Cannot remove Fragment attached to a different FragmentManager. Fragment " + someFragmentManagerVar.toString() + " is already attached to a FragmentManager.");
     }
 
-    public final void af(bdj bdjVar, buh buhVar) {
-        beg begVar = bdjVar.bm;
+    public final void af(SomeFragmentManager someFragmentManagerVar, buh buhVar) {
+        beg begVar = someFragmentManagerVar.bm;
         beg begVar2 = this.r;
         if (begVar != begVar2) {
             throw new IllegalArgumentException("Cannot setMaxLifecycle for Fragment not attached to FragmentManager " + begVar2);
         }
-        if (buhVar == buh.b && bdjVar.as > -1) {
+        if (buhVar == buh.b && someFragmentManagerVar.as > -1) {
             throw new IllegalArgumentException("Cannot set maximum Lifecycle to " + buhVar + " after the Fragment has been created");
         }
         if (buhVar == buh.a) {
@@ -247,20 +247,20 @@ public final class mu implements bec {
         }
         bfe bfeVar = new bfe();
         bfeVar.a = 10;
-        bfeVar.b = bdjVar;
+        bfeVar.b = someFragmentManagerVar;
         bfeVar.c = false;
-        bfeVar.h = bdjVar.cg;
+        bfeVar.h = someFragmentManagerVar.cg;
         bfeVar.i = buhVar;
         w(bfeVar);
     }
 
-    public final void ag(bdj bdjVar) {
-        beg begVar = bdjVar.bm;
+    public final void ag(SomeFragmentManager someFragmentManagerVar) {
+        beg begVar = someFragmentManagerVar.bm;
         if (begVar == null || begVar == this.r) {
-            w(new bfe(8, bdjVar));
+            w(new bfe(8, someFragmentManagerVar));
             return;
         }
-        throw new IllegalStateException("Cannot setPrimaryNavigation for Fragment attached to a different FragmentManager. Fragment " + bdjVar.toString() + " is already attached to a FragmentManager.");
+        throw new IllegalStateException("Cannot setPrimaryNavigation for Fragment attached to a different FragmentManager. Fragment " + someFragmentManagerVar.toString() + " is already attached to a FragmentManager.");
     }
 
     public final String toString() {
@@ -310,9 +310,9 @@ public final class mu implements bec {
             int size = arrayList.size();
             for (int i2 = 0; i2 < size; i2++) {
                 bfe bfeVar = (bfe) arrayList.get(i2);
-                bdj bdjVar = bfeVar.b;
-                if (bdjVar != null) {
-                    bdjVar.bl += i;
+                SomeFragmentManager someFragmentManagerVar = bfeVar.b;
+                if (someFragmentManagerVar != null) {
+                    someFragmentManagerVar.bl += i;
                     if (beg.ar(2)) {
                         Log.v("FragmentManager", "Bump nesting of " + bfeVar.b + " to " + bfeVar.b.bl);
                     }

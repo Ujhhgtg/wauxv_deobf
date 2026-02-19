@@ -10,7 +10,7 @@ public final class dth {
         if (1 == (i & 1)) {
             this.a = str;
         } else {
-            bht.ah(i, 1, dtf.b.getDescriptor());
+            ResourcesCompat.ah(i, 1, dtf.b.getDescriptor());
             throw null;
         }
     }

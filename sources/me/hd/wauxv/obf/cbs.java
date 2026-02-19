@@ -20,7 +20,7 @@ public final class cbs {
         int i = activityManager.isLowRamDevice() ? 2097152 : 4194304;
         this.c = i;
         int iRound = Math.round(activityManager.getMemoryClass() * 1048576 * (activityManager.isLowRamDevice() ? 0.33f : 0.4f));
-        DisplayMetrics displayMetrics = (DisplayMetrics) ((bmu) cbrVar.d).h;
+        DisplayMetrics displayMetrics = (DisplayMetrics) ((SyntheticPileOfMess) cbrVar.d).obj;
         float f2 = displayMetrics.widthPixels * displayMetrics.heightPixels * 4;
         int iRound2 = Math.round(f2 * f);
         int iRound3 = Math.round(f2 * 2.0f);

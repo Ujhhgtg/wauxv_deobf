@@ -51,10 +51,10 @@ public final class dgh extends doi implements bgj {
             case 0:
                 int i2 = this.d;
                 if (i2 == 0) {
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                     lw lwVar = new lw(2, null, 6);
                     this.d = 1;
-                    dov dovVar = doh.a;
+                    Kotlin$Lazy kotlin$LazyVar = doh.a;
                     alc alcVar = aou.a;
                     obj = ajn.ak(akq.f, lwVar, this);
                     if (obj == ahqVar) {
@@ -64,14 +64,14 @@ public final class dgh extends doi implements bgj {
                     if (i2 != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* cnb.z(-60498909330218L)  */);
                     }
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                 }
                 LinearLayout linearLayout = (LinearLayout) view;
                 for (ctx ctxVar : (Iterable) obj) {
                     LinearLayout linearLayout2 = new LinearLayout(linearLayout.getContext());
                     linearLayout2.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
                     linearLayout2.setOrientation(1);
-                    linearLayout2.setPadding(bhu.al(new Integer(16), linearLayout2.getContext()).intValue(), bhu.al(new Integer(32), linearLayout2.getContext()).intValue(), bhu.al(new Integer(16), linearLayout2.getContext()).intValue(), bhu.al(new Integer(32), linearLayout2.getContext()).intValue());
+                    linearLayout2.setPadding(FastKV.al(new Integer(16), linearLayout2.getContext()).intValue(), FastKV.al(new Integer(32), linearLayout2.getContext()).intValue(), FastKV.al(new Integer(16), linearLayout2.getContext()).intValue(), FastKV.al(new Integer(32), linearLayout2.getContext()).intValue());
                     Switch r5 = new Switch(linearLayout2.getContext());
                     r5.setText(((String) ctxVar.g.getValue()) + '(' + ctxVar.f + ')');
                     r5.setEnabled(cud.a.z());
@@ -91,7 +91,7 @@ public final class dgh extends doi implements bgj {
             default:
                 int i3 = this.d;
                 if (i3 == 0) {
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                     ((TextView) view).setText("加载完成, 准备重启中..." /* "加载完成, 准备重启中..." /* "加载完成, 准备重启中..." /* cnb.z(-58488864635690L)  */);
                     this.d = 1;
                     if (dqc.ba(1000L, this) == ahqVar) {
@@ -101,7 +101,7 @@ public final class dgh extends doi implements bgj {
                     if (i3 != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* cnb.z(-58475979733802L)  */);
                     }
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                 }
                 Process.killProcess(Process.myPid());
                 return kotlinUnitVar;

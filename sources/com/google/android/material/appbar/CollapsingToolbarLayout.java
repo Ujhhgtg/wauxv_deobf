@@ -34,14 +34,14 @@ import me.hd.wauxv.obf.aaw;
 import me.hd.wauxv.obf.ajn;
 import me.hd.wauxv.obf.ama;
 import me.hd.wauxv.obf.asy;
-import me.hd.wauxv.obf.bht;
-import me.hd.wauxv.obf.bhu;
+import me.hd.wauxv.obf.ResourcesCompat;
+import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.eqo;
 import me.hd.wauxv.obf.eqq;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.erp;
 import me.hd.wauxv.obf.ert;
 import me.hd.wauxv.obf.evr;
@@ -101,9 +101,9 @@ public class CollapsingToolbarLayout extends FrameLayout {
         aatVar.bz(false);
         aatVar.aj = false;
         this.l = new asy(context2);
-        bhu.p(context2, attributeSet, R.attr.collapsingToolbarLayoutStyle, R.style.Widget_Design_CollapsingToolbar);
+        FastKV.p(context2, attributeSet, R.attr.collapsingToolbarLayoutStyle, R.style.Widget_Design_CollapsingToolbar);
         int[] iArr = cxs.k;
-        bhu.q(context2, attributeSet, iArr, R.attr.collapsingToolbarLayoutStyle,
+        FastKV.q(context2, attributeSet, iArr, R.attr.collapsingToolbarLayoutStyle,
                 R.style.Widget_Design_CollapsingToolbar, new int[0]);
         TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(attributeSet, iArr,
                 R.attr.collapsingToolbarLayoutStyle, R.style.Widget_Design_CollapsingToolbar);
@@ -184,7 +184,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
         typedArrayObtainStyledAttributes.recycle();
         setWillNotDraw(false);
         erp erpVar = new erp(this, i3);
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         eqq.l(this, erpVar);
     }
 
@@ -206,7 +206,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
         if (typedValueAl != null) {
             int i = typedValueAl.resourceId;
             if (i != 0) {
-                colorStateListValueOf = bht.v(context, i);
+                colorStateListValueOf = ResourcesCompat.v(context, i);
             } else {
                 int i2 = typedValueAl.data;
                 colorStateListValueOf = i2 != 0 ? ColorStateList.valueOf(i2) : null;
@@ -300,7 +300,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
         if (!this.m || (view = this.e) == null) {
             return;
         }
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         int titleMarginStart = 0;
         boolean z2 = view.isAttachedToWindow() && this.e.getVisibility() == 0;
         this.n = z2;
@@ -554,7 +554,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
         }
         evr evrVar = this.aa;
         int iH = evrVar != null ? evrVar.h() : 0;
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         int minimumHeight = getMinimumHeight();
         return minimumHeight > 0 ? Math.min((minimumHeight * 2) + iH, getHeight()) : getHeight() / 3;
     }
@@ -591,7 +591,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
             if (this.z == 1) {
                 appBarLayout.setLiftOnScroll(false);
             }
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             setFitsSystemWindows(appBarLayout.getFitsSystemWindows());
             if (this.x == null) {
                 this.x = new aav(this);
@@ -633,7 +633,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
             int childCount = getChildCount();
             for (int i5 = 0; i5 < childCount; i5++) {
                 View childAt = getChildAt(i5);
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 if (!childAt.getFitsSystemWindows() && childAt.getTop() < iH) {
                     childAt.offsetTopAndBottom(iH);
                 }
@@ -782,7 +782,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
                 this.o.setCallback(this);
                 this.o.setAlpha(this.q);
             }
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             postInvalidateOnAnimation();
         }
     }
@@ -895,11 +895,11 @@ public class CollapsingToolbarLayout extends FrameLayout {
         ViewGroup viewGroup;
         if (i != this.q) {
             if (this.o != null && (viewGroup = this.c) != null) {
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 viewGroup.postInvalidateOnAnimation();
             }
             this.q = i;
-            WeakHashMap weakHashMap2 = eqz.a;
+            WeakHashMap weakHashMap2 = ViewCompat.a;
             postInvalidateOnAnimation();
         }
     }
@@ -916,7 +916,7 @@ public class CollapsingToolbarLayout extends FrameLayout {
     }
 
     public void setScrimsShown(boolean z) {
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         boolean z2 = isLaidOut() && !isInEditMode();
         if (this.r != z) {
             if (z2) {
@@ -963,13 +963,13 @@ public class CollapsingToolbarLayout extends FrameLayout {
                     this.p.setState(getDrawableState());
                 }
                 Drawable drawable3 = this.p;
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 drawable3.setLayoutDirection(getLayoutDirection());
                 this.p.setVisible(getVisibility() == 0, false);
                 this.p.setCallback(this);
                 this.p.setAlpha(this.q);
             }
-            WeakHashMap weakHashMap2 = eqz.a;
+            WeakHashMap weakHashMap2 = ViewCompat.a;
             postInvalidateOnAnimation();
         }
     }

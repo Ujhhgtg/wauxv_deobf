@@ -20,10 +20,10 @@ public final class bjm extends SwitchHook implements bnc {
     public static final String c;
     public static final String h;
     public static final bep j;
-    public static final dov l;
-    public static final dov m;
-    public static final dov n;
-    public static final dov r;
+    public static final Kotlin$Lazy l;
+    public static final Kotlin$Lazy m;
+    public static final Kotlin$Lazy n;
+    public static final Kotlin$Lazy r;
     public static final LinkedHashMap s;
 
     static {
@@ -53,10 +53,10 @@ public final class bjm extends SwitchHook implements bnc {
         c = "显示群头衔" /* "显示群头衔" /* "显示群头衔" /* cnb.z(-503035159640874L)  */;
         h = "在微信群成员聊天列表显示对应的头衔" /* "在微信群成员聊天列表显示对应的头衔" /* "在微信群成员聊天列表显示对应的头衔" /* cnb.z(-503060929444650L)  */;
         j = new bep(3);
-        l = new dov(new amd(11));
-        m = new dov(new amd(12));
-        n = new dov(new amd(13));
-        r = new dov(new amd(14));
+        l = new Kotlin$Lazy(new amd(11));
+        m = new Kotlin$Lazy(new amd(12));
+        n = new Kotlin$Lazy(new amd(13));
+        r = new Kotlin$Lazy(new amd(14));
         s = new LinkedHashMap();
     }
 
@@ -146,9 +146,9 @@ public final class bjm extends SwitchHook implements bnc {
                 } else {
                     wv.a.getClass();
                     int i = 0;
-                    azg azgVarR = dqc.bi(objB).r();
-                    azgVarR.ab = "field_roomowner" /* "field_roomowner" /* "field_roomowner" /* cnb.z(-99733435579178L)  */;
-                    zF = nullSafeIsEqual((String) ((azk) yg.e(azgVarR)).e(), sendTalker);
+                    FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objB).r();
+                    fieldResolverVarR.name = "field_roomowner" /* "field_roomowner" /* "field_roomowner" /* cnb.z(-99733435579178L)  */;
+                    zF = nullSafeIsEqual((String) ((azk) yg.e(fieldResolverVarR)).e(), sendTalker);
                     mgVar2.put(pairVar3, Boolean.valueOf(zF));
                 }
             }
@@ -172,12 +172,12 @@ public final class bjm extends SwitchHook implements bnc {
                         zBooleanValue = false;
                     } else {
                         wv.a.getClass();
-                        Object objInvoke = emn.bb(wu.a).invoke(objB2, sendTalker2);
+                        Object objInvoke = StaticHelpers7.bb(wu.a).invoke(objB2, sendTalker2);
                         if (objInvoke != null) {
                             int i2 = 0;
-                            azg azgVarR2 = dqc.bi(objInvoke).r();
-                            azgVarR2.ab = "f" /* "f" /* "f" /* cnb.z(-99664716102442L)  */;
-                            Object objE = ((azk) aaz.e(azgVarR2.c())).e();
+                            FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objInvoke).r();
+                            fieldResolverVarR2.name = "f" /* "f" /* "f" /* cnb.z(-99664716102442L)  */;
+                            Object objE = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).e();
                             throwIfVar1IsNull(objE);
                             zBooleanValue = (((Number) objE).intValue() & 2048) != 0;
                         }
@@ -191,9 +191,9 @@ public final class bjm extends SwitchHook implements bnc {
                     str = (String) pairVar2.a;
                     bixVar = (bix) pairVar2.b;
                     int i3 = 0;
-                    azg azgVarR3 = dqc.bi(obj).r();
-                    azgVarR3.ab = "userTV" /* "userTV" /* "userTV" /* cnb.z(-505667974593322L)  */;
-                    textView = (TextView) ((azk) yg.e(azgVarR3)).e();
+                    FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).r();
+                    fieldResolverVarR3.name = "userTV" /* "userTV" /* "userTV" /* cnb.z(-505667974593322L)  */;
+                    textView = (TextView) ((azk) yg.e(fieldResolverVarR3)).e();
                     strValueOf = String.valueOf(textView != null ? textView.getText() : null);
                     if (textView != null) {
                         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(
@@ -215,9 +215,9 @@ public final class bjm extends SwitchHook implements bnc {
             str = (String) pairVar2.a;
             bixVar = (bix) pairVar2.b;
             int i32 = 0;
-            azg azgVarR32 = dqc.bi(obj).r();
-            azgVarR32.ab = "userTV" /* "userTV" /* "userTV" /* cnb.z(-505667974593322L)  */;
-            textView = (TextView) ((azk) yg.e(azgVarR32)).e();
+            FieldResolver fieldResolverVarR32 = dqc.getWrapperConfiguration(obj).r();
+            fieldResolverVarR32.name = "userTV" /* "userTV" /* "userTV" /* cnb.z(-505667974593322L)  */;
+            textView = (TextView) ((azk) yg.e(fieldResolverVarR32)).e();
             strValueOf = String.valueOf(textView != null ? textView.getText() : null);
             if (textView != null) {
                 SpannableStringBuilder spannableStringBuilder2 = new SpannableStringBuilder(str + ' ' + strValueOf);

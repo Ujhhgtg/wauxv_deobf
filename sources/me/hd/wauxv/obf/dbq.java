@@ -10,7 +10,7 @@ import android.os.Bundle;
 /* JADX INFO: loaded from: classes.dex */
 public class dbq extends Fragment {
     public static final /* synthetic */ int a = 0;
-    public bmu b;
+    public SyntheticPileOfMess b;
 
     /*
      * JADX INFO: compiled from:
@@ -44,42 +44,42 @@ public class dbq extends Fragment {
         public void onActivityPostCreated(Activity activity, Bundle bundle) {
             throwIfVar1IsNull(activity, "activity");
             int i = dbq.a;
-            dbo.a(activity, bug.ON_CREATE);
+            dbo.a(activity, LifeEventEnum.ON_CREATE);
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityPostResumed(Activity activity) {
             throwIfVar1IsNull(activity, "activity");
             int i = dbq.a;
-            dbo.a(activity, bug.ON_RESUME);
+            dbo.a(activity, LifeEventEnum.ON_RESUME);
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityPostStarted(Activity activity) {
             throwIfVar1IsNull(activity, "activity");
             int i = dbq.a;
-            dbo.a(activity, bug.ON_START);
+            dbo.a(activity, LifeEventEnum.ON_START);
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityPreDestroyed(Activity activity) {
             throwIfVar1IsNull(activity, "activity");
             int i = dbq.a;
-            dbo.a(activity, bug.ON_DESTROY);
+            dbo.a(activity, LifeEventEnum.ON_DESTROY);
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityPrePaused(Activity activity) {
             throwIfVar1IsNull(activity, "activity");
             int i = dbq.a;
-            dbo.a(activity, bug.ON_PAUSE);
+            dbo.a(activity, LifeEventEnum.ON_PAUSE);
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
         public void onActivityPreStopped(Activity activity) {
             throwIfVar1IsNull(activity, "activity");
             int i = dbq.a;
-            dbo.a(activity, bug.ON_STOP);
+            dbo.a(activity, LifeEventEnum.ON_STOP);
         }
 
         @Override // android.app.Application.ActivityLifecycleCallbacks
@@ -104,62 +104,62 @@ public class dbq extends Fragment {
         }
     }
 
-    public final void c(bug bugVar) {
+    public final void c(LifeEventEnum lifeEventEnumVar) {
         if (Build.VERSION.SDK_INT < 29) {
             Activity activity = getActivity();
             throwIfVar1IsNull(activity, "getActivity(...)");
-            dbo.a(activity, bugVar);
+            dbo.a(activity, lifeEventEnumVar);
         }
     }
 
     @Override // android.app.Fragment
     public final void onActivityCreated(Bundle bundle) {
         super.onActivityCreated(bundle);
-        c(bug.ON_CREATE);
+        c(LifeEventEnum.ON_CREATE);
     }
 
     @Override // android.app.Fragment
     public final void onDestroy() {
         super.onDestroy();
-        c(bug.ON_DESTROY);
+        c(LifeEventEnum.ON_DESTROY);
         this.b = null;
     }
 
     @Override // android.app.Fragment
     public final void onPause() {
         super.onPause();
-        c(bug.ON_PAUSE);
+        c(LifeEventEnum.ON_PAUSE);
     }
 
     @Override // android.app.Fragment
     public final void onResume() {
         super.onResume();
-        bmu bmuVar = this.b;
+        SyntheticPileOfMess bmuVar = this.b;
         if (bmuVar != null) {
-            ((cvt) bmuVar.h).j();
+            ((cvt) bmuVar.obj).j();
         }
-        c(bug.ON_RESUME);
+        c(LifeEventEnum.ON_RESUME);
     }
 
     @Override // android.app.Fragment
     public final void onStart() {
         super.onStart();
-        bmu bmuVar = this.b;
+        SyntheticPileOfMess bmuVar = this.b;
         if (bmuVar != null) {
-            cvt cvtVar = (cvt) bmuVar.h;
+            cvt cvtVar = (cvt) bmuVar.obj;
             int i = cvtVar.b + 1;
             cvtVar.b = i;
             if (i == 1 && cvtVar.e) {
-                cvtVar.g.m(bug.ON_START);
+                cvtVar.g.m(LifeEventEnum.ON_START);
                 cvtVar.e = false;
             }
         }
-        c(bug.ON_START);
+        c(LifeEventEnum.ON_START);
     }
 
     @Override // android.app.Fragment
     public final void onStop() {
         super.onStop();
-        c(bug.ON_STOP);
+        c(LifeEventEnum.ON_STOP);
     }
 }

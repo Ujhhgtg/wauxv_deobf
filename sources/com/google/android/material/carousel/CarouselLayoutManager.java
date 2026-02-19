@@ -8,14 +8,12 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.accessibility.AccessibilityEvent;
-import androidx.recyclerview.widget.RecyclerView;
 import me.hd.wauxv.R;
-import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.chi;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.czg;
 import me.hd.wauxv.obf.czh;
-import me.hd.wauxv.obf.czo;
+import me.hd.wauxv.obf.RecyclerView;
 import me.hd.wauxv.obf.czs;
 import me.hd.wauxv.obf.czt;
 import me.hd.wauxv.obf.tf;
@@ -40,7 +38,7 @@ public class CarouselLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final boolean _g(RecyclerView recyclerView, View view, Rect rect, boolean z, boolean z2) {
+    public final boolean _g(androidx.recyclerview.widget.RecyclerView recyclerView, View view, Rect rect, boolean z, boolean z2) {
         return false;
     }
 
@@ -60,16 +58,16 @@ public class CarouselLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final void ae(czo czoVar, czt cztVar) {
+    public final void ae(RecyclerView recyclerViewVar, czt cztVar) {
         if (cztVar.p() > 0) {
             if ((f() ? this.eb : this.ec) > 0.0f) {
                 g();
-                View view = czoVar.s(0, Long.MAX_VALUE).d;
+                View view = recyclerViewVar.s(0, Long.MAX_VALUE).d;
                 throw new IllegalStateException(
                         "All children of a RecyclerView using CarouselLayoutManager must use MaskableFrameLayout as their root ViewGroup.");
             }
         }
-        fb(czoVar);
+        fb(recyclerViewVar);
     }
 
     @Override // me.hd.wauxv.obf.czg
@@ -81,21 +79,21 @@ public class CarouselLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final int ah(int i, czo czoVar, czt cztVar) {
+    public final int ah(int i, RecyclerView recyclerViewVar, czt cztVar) {
         if (!f() || es() == 0 || i == 0) {
             return 0;
         }
-        View view = czoVar.s(0, Long.MAX_VALUE).d;
+        View view = recyclerViewVar.s(0, Long.MAX_VALUE).d;
         throw new IllegalStateException(
                 "All children of a RecyclerView using CarouselLayoutManager must use MaskableFrameLayout as their root ViewGroup.");
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final int ai(int i, czo czoVar, czt cztVar) {
+    public final int ai(int i, RecyclerView recyclerViewVar, czt cztVar) {
         if (!bv() || es() == 0 || i == 0) {
             return 0;
         }
-        View view = czoVar.s(0, Long.MAX_VALUE).d;
+        View view = recyclerViewVar.s(0, Long.MAX_VALUE).d;
         throw new IllegalStateException(
                 "All children of a RecyclerView using CarouselLayoutManager must use MaskableFrameLayout as their root ViewGroup.");
     }
@@ -133,7 +131,7 @@ public class CarouselLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final void cd(RecyclerView recyclerView) {
+    public final void cd(androidx.recyclerview.widget.RecyclerView recyclerView) {
         recyclerView.removeOnLayoutChangeListener(this.c);
     }
 
@@ -151,14 +149,14 @@ public class CarouselLayoutManager extends czg implements czs {
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final void cj(RecyclerView recyclerView, czt cztVar, int i) {
+    public final void cj(androidx.recyclerview.widget.RecyclerView recyclerView, czt cztVar, int i) {
         tg tgVar = new tg(this, recyclerView.getContext());
         tgVar.f = i;
         fm(tgVar);
     }
 
     @Override // me.hd.wauxv.obf.czg
-    public final void dm(RecyclerView recyclerView) {
+    public final void dm(androidx.recyclerview.widget.RecyclerView recyclerView) {
         Context context = recyclerView.getContext();
         chi chiVar = this.a;
         float dimension = chiVar.a;
@@ -233,7 +231,7 @@ public class CarouselLayoutManager extends czg implements czs {
     /* JADX WARN: Found duplicated region for block: B:20:0x003c */
     /* JADX WARN: Found duplicated region for block: B:24:0x0046 */
     @Override // me.hd.wauxv.obf.czg
-    public final View w(View view, int i, czo czoVar, czt cztVar) {
+    public final View w(View view, int i, RecyclerView recyclerViewVar, czt cztVar) {
         byte b;
         if (es() == 0) {
             return null;

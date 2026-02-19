@@ -37,15 +37,15 @@ public final /* synthetic */ class ls implements bfu {
                 lu luVar = lu.a;
                 Long lBg = dnq.bg(String.valueOf(ceeVar.c.getText()));
                 luVar.s(lBg != null ? lBg.longValue() : 86400L);
-                lt.a.t(aaz.ad((Set) zmVar.c));
+                lt.a.t(StaticHelpers5.ad((Set) zmVar.c));
                 return KotlinUnit.INSTANCE;
             case 1:
                 cit citVar = (cit) this.b;
-                bdj bdjVar = (bdj) this.c;
-                for (cio cioVar : (Iterable) ((dml) citVar.f.h).c()) {
+                SomeFragmentManager someFragmentManagerVar = (SomeFragmentManager) this.c;
+                for (cio cioVar : (Iterable) ((dml) citVar.f.obj).c()) {
                     if (beq.p()) {
                         Log.v("FragmentNavigator", "Marking transition complete for entry " + cioVar
-                                + " due to fragment " + bdjVar + " viewmodel being cleared");
+                                + " due to fragment " + someFragmentManagerVar + " viewmodel being cleared");
                     }
                     citVar.k(cioVar);
                 }
@@ -68,7 +68,7 @@ public final /* synthetic */ class ls implements bfu {
                             arrayList.add(obj);
                         }
                     }
-                    bsh bshVar = (bsh) aaz.s(arrayList);
+                    bsh bshVar = (bsh) StaticHelpers5.s(arrayList);
                     if (bshVar != null && (strArrNames = bshVar.names()) != null) {
                         for (String str : strArrNames) {
                             String str2 = nullSafeIsEqual(dfxVar.h(), dga.b) ? "enum value" : "property";
@@ -84,9 +84,9 @@ public final /* synthetic */ class ls implements bfu {
                         }
                     }
                 }
-                return linkedHashMap.isEmpty() ? ave.a : linkedHashMap;
+                return linkedHashMap.isEmpty() ? EmptyReadonlyMap.INSTANCE : linkedHashMap;
             case 4:
-                ayc aycVar = new ayc((String) ((dov) ((DefaultConfig) this.b).c).getValue(), (String) this.c);
+                ayc aycVar = new ayc((String) ((Kotlin$Lazy) ((DefaultConfig) this.b).c).getValue(), (String) this.c);
                 String strZ = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-29381871270698L)   */;
                 if (strZ.length() == 0) {
                     throw new NoSuchElementException("Char sequence is empty.");
@@ -158,7 +158,7 @@ public final /* synthetic */ class ls implements bfu {
             case 7:
                 cua cuaVar = (cua) this.b;
                 ctx ctxVar = (ctx) this.c;
-                KotlinHelpers2.ar(cuaVar).j(R.id.codeFragment, bht.r(new Pair("pluginId" /* "pluginId" /* "pluginId" /* "pluginId" /* cnb.z(-418085001493290L)   */, ctxVar.f),
+                KotlinHelpers2.ar(cuaVar).j(R.id.codeFragment, ResourcesCompat.r(new Pair("pluginId" /* "pluginId" /* "pluginId" /* "pluginId" /* cnb.z(-418085001493290L)   */, ctxVar.f),
                         new Pair("pluginPath" /* "pluginPath" /* "pluginPath" /* "pluginPath" /* cnb.z(-417994807180074L)   */, ctxVar.b.getAbsolutePath())));
                 return KotlinUnit.INSTANCE;
             case 8:
@@ -168,19 +168,19 @@ public final /* synthetic */ class ls implements bfu {
                 ArrayList arrayList3 = (ArrayList) this.c;
                 if (((MaterialRadioButton) bqrVar.e).isChecked()) {
                     dpd.a.r(doz.a.d);
-                    dpe.a.t(aaz.ad(arrayList3));
+                    dpe.a.t(StaticHelpers5.ad(arrayList3));
                 } else if (((MaterialRadioButton) bqrVar.c).isChecked()) {
                     dpd.a.r(doz.b.d);
-                    dpc.a.t(aaz.ad(arrayList3));
+                    dpc.a.t(StaticHelpers5.ad(arrayList3));
                 }
                 return KotlinUnit.INSTANCE;
         }
     }
 
-    public /* synthetic */ ls(cio cioVar, cit citVar, beq beqVar, bdj bdjVar) {
+    public /* synthetic */ ls(cio cioVar, cit citVar, beq beqVar, SomeFragmentManager someFragmentManagerVar) {
         this.a = 1;
         this.b = citVar;
-        this.c = bdjVar;
+        this.c = someFragmentManagerVar;
     }
 
     public /* synthetic */ ls(cit citVar, cio cioVar, boolean z) {

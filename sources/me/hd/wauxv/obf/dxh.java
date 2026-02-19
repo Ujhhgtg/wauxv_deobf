@@ -19,7 +19,7 @@ public final class dxh {
     public /* synthetic */ dxh(int i, String str, String str2, String str3, String str4, Integer num, Float f,
             Integer num2, Boolean bool, Boolean bool2, String str5, Integer num3) {
         if (2047 != (i & 2047)) {
-            bht.ah(i, 2047, dxf.b.getDescriptor());
+            ResourcesCompat.ah(i, 2047, dxf.b.getDescriptor());
             throw null;
         }
         this.a = str;

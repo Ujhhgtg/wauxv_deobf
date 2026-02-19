@@ -11,20 +11,20 @@ public final class aub extends bws implements IDexFind {
         int i = 0;
         aup.a.getClass();
         auo auoVar = auo.a;
-        cde cdeVarT = dqc.bh(emn.az(auoVar)).t();
-        cdeVarT.ak(cdy.c);
-        cdeVarT.a = emn.az(auoVar);
-        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
+        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(auoVar)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.ak(cdy.c);
+        methodResolverVarT.returnType = StaticHelpers7.az(auoVar);
+        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
-        cde cdeVarT2 = dqc.bi(objE).t();
+        MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objE).getMethodResolverBasedOnPreviouslyProvidedConfig();
         a.getClass();
-        cdeVarT2.a = emn.az(aua.a);
-        Object objE2 = ((MethodHookWrapper) bjs.h(cdeVarT2)).e(new Object[0]);
+        methodResolverVarT2.returnType = StaticHelpers7.az(aua.a);
+        Object objE2 = ((MethodHookWrapper) bjs.h(methodResolverVarT2)).e(new Object[0]);
         throwIfVar1IsNull(objE2);
-        cde cdeVarT3 = dqc.bi(objE2).t();
+        MethodResolver methodResolverVarT3 = dqc.getWrapperConfiguration(objE2).getMethodResolverBasedOnPreviouslyProvidedConfig();
         atz.a.getClass();
-        cdeVarT3.a = emn.bb(aty.a).getDeclaringClass();
-        Object objE3 = ((MethodHookWrapper) dkz.n(new Object[] { dal.b(String.class) }, 1, cdeVarT3)).e(str);
+        methodResolverVarT3.returnType = StaticHelpers7.bb(aty.a).getDeclaringClass();
+        Object objE3 = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class) }, 1, methodResolverVarT3)).e(str);
         throwIfVar1IsNull(objE3);
         return objE3;
     }
@@ -35,6 +35,6 @@ public final class aub extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(aua.a, dexKitBridge, new atn(11));
+        StaticHelpers7.resolveDexAndCache(aua.a, dexKitBridge, new atn(11));
     }
 }

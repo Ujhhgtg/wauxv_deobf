@@ -32,8 +32,8 @@ import me.hd.wauxv.R;
 import me.hd.wauxv.obf.agr;
 import me.hd.wauxv.obf.agu;
 import me.hd.wauxv.obf.ajn;
-import me.hd.wauxv.obf.ap;
-import me.hd.wauxv.obf.aq;
+import me.hd.wauxv.obf.AccessibilityDelegateCompat$AccessibilityDelegateAdapter;
+import me.hd.wauxv.obf.AccessibilityDelegateCompat;
 import me.hd.wauxv.obf.ax;
 import me.hd.wauxv.obf.bpt;
 import me.hd.wauxv.obf.cau;
@@ -43,7 +43,7 @@ import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.dgm;
 import me.hd.wauxv.obf.ek;
 import me.hd.wauxv.obf.eqq;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.era;
 import me.hd.wauxv.obf.ewz;
 import me.hd.wauxv.obf.jh;
@@ -135,7 +135,7 @@ public class BottomSheetBehavior<V extends View> extends agr {
         if (view.getVisibility() != 0) {
             return null;
         }
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         if (eqq.dexFind(view)) {
             return view;
         }
@@ -322,7 +322,7 @@ public class BottomSheetBehavior<V extends View> extends agr {
         jh jhVar = new jh(this, view, i2);
         ViewParent parent = view.getParent();
         if (parent != null && parent.isLayoutRequested()) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             if (view.isAttachedToWindow()) {
                 view.post(jhVar);
                 return;
@@ -444,30 +444,30 @@ public class BottomSheetBehavior<V extends View> extends agr {
         if (weakReference == null || (view = (View) weakReference.get()) == null) {
             return;
         }
-        eqz.p(view, Opcodes.ASM8);
-        eqz.n(view, 0);
-        eqz.p(view, 262144);
-        eqz.n(view, 0);
-        eqz.p(view, 1048576);
-        eqz.n(view, 0);
+        ViewCompat.p(view, Opcodes.ASM8);
+        ViewCompat.notifyAccessibilityChange(view, 0);
+        ViewCompat.p(view, 262144);
+        ViewCompat.notifyAccessibilityChange(view, 0);
+        ViewCompat.p(view, 1048576);
+        ViewCompat.notifyAccessibilityChange(view, 0);
         SparseIntArray sparseIntArray = this.bq;
         int i = sparseIntArray.get(0, -1);
         if (i != -1) {
-            eqz.p(view, i);
-            eqz.n(view, 0);
+            ViewCompat.p(view, i);
+            ViewCompat.notifyAccessibilityChange(view, 0);
             sparseIntArray.delete(0);
         }
         if (!this.f && this.az != 6) {
             String string = view.getResources().getString(R.string.bottomsheet_action_expand_halfway);
             ek ekVar = new ek(this, i, 2);
-            ArrayList arrayListL = eqz.l(view);
+            ArrayList arrayListL = ViewCompat.l(view);
             int i2 = 0;
             while (true) {
                 if (i2 >= arrayListL.size()) {
                     int i3 = 0;
                     int i4 = -1;
                     while (true) {
-                        int[] iArr = eqz.d;
+                        int[] iArr = ViewCompat.d;
                         if (i3 >= 32 || i4 != -1) {
                             break;
                         }
@@ -493,41 +493,41 @@ public class BottomSheetBehavior<V extends View> extends agr {
             }
             if (iP != -1) {
                 ax axVar = new ax(null, iP, string, ekVar, null);
-                View.AccessibilityDelegate accessibilityDelegateJ = eqz.j(view);
-                aq aqVar = accessibilityDelegateJ == null ? null
-                        : accessibilityDelegateJ instanceof ap ? ((ap) accessibilityDelegateJ).a
-                                : new aq(accessibilityDelegateJ);
+                View.AccessibilityDelegate accessibilityDelegateJ = ViewCompat.getAccessibilityDelegate(view);
+                AccessibilityDelegateCompat aqVar = accessibilityDelegateJ == null ? null
+                        : accessibilityDelegateJ instanceof AccessibilityDelegateCompat$AccessibilityDelegateAdapter ? ((AccessibilityDelegateCompat$AccessibilityDelegateAdapter) accessibilityDelegateJ).a
+                                : new AccessibilityDelegateCompat(accessibilityDelegateJ);
                 if (aqVar == null) {
-                    aqVar = new aq();
+                    aqVar = new AccessibilityDelegateCompat();
                 }
-                eqz.s(view, aqVar);
-                eqz.p(view, axVar.p());
-                eqz.l(view).add(axVar);
-                eqz.n(view, 0);
+                ViewCompat.setAccessibilityDelegate(view, aqVar);
+                ViewCompat.p(view, axVar.p());
+                ViewCompat.l(view).add(axVar);
+                ViewCompat.notifyAccessibilityChange(view, 0);
             }
             sparseIntArray.put(0, iP);
         }
         if (this.aw) {
             int i7 = 5;
             if (this.az != 5) {
-                eqz.q(view, ax.f, new ek(this, i7, 2));
+                ViewCompat.q(view, ax.f, new ek(this, i7, 2));
             }
         }
         int i8 = this.az;
         int i9 = 4;
         int i10 = 3;
         if (i8 == 3) {
-            eqz.q(view, ax.e, new ek(this, this.f ? 4 : 6, 2));
+            ViewCompat.q(view, ax.e, new ek(this, this.f ? 4 : 6, 2));
             return;
         }
         if (i8 == 4) {
-            eqz.q(view, ax.d, new ek(this, this.f ? 3 : 6, 2));
+            ViewCompat.q(view, ax.d, new ek(this, this.f ? 3 : 6, 2));
         } else {
             if (i8 != 6) {
                 return;
             }
-            eqz.q(view, ax.e, new ek(this, i9, 2));
-            eqz.q(view, ax.d, new ek(this, i10, 2));
+            ViewCompat.q(view, ax.e, new ek(this, i9, 2));
+            ViewCompat.q(view, ax.d, new ek(this, i10, 2));
         }
     }
 
@@ -599,7 +599,7 @@ public class BottomSheetBehavior<V extends View> extends agr {
 
     @Override // me.hd.wauxv.obf.agr
     public final boolean i(CoordinatorLayout coordinatorLayout, View view, int i) {
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         if (coordinatorLayout.getFitsSystemWindows() && !view.getFitsSystemWindows()) {
             view.setFitsSystemWindows(true);
         }
@@ -610,7 +610,7 @@ public class BottomSheetBehavior<V extends View> extends agr {
             if (this.ac || this.ad || this.ae || this.ag || this.ah || this.ai || z) {
                 ewz.af(view, new cxc(this, z));
             }
-            eqz.u(view, new bpt(view));
+            ViewCompat.setWindowInsetsAnimation(view, new bpt(view));
             this.bi = new WeakReference(view);
             Context context = view.getContext();
             ajn.ae(context, R.attr.motionEasingStandardDecelerateInterpolator,
@@ -723,7 +723,7 @@ public class BottomSheetBehavior<V extends View> extends agr {
                 int iCb = top - cb();
                 iArr[1] = iCb;
                 int i5 = -iCb;
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 view.offsetTopAndBottom(i5);
                 cg(3);
             } else {
@@ -731,7 +731,7 @@ public class BottomSheetBehavior<V extends View> extends agr {
                     return;
                 }
                 iArr[1] = i2;
-                WeakHashMap weakHashMap2 = eqz.a;
+                WeakHashMap weakHashMap2 = ViewCompat.a;
                 view.offsetTopAndBottom(-i2);
                 cg(1);
             }
@@ -741,7 +741,7 @@ public class BottomSheetBehavior<V extends View> extends agr {
                 int i7 = top - i6;
                 iArr[1] = i7;
                 int i8 = -i7;
-                WeakHashMap weakHashMap3 = eqz.a;
+                WeakHashMap weakHashMap3 = ViewCompat.a;
                 view.offsetTopAndBottom(i8);
                 cg(4);
             } else {
@@ -749,7 +749,7 @@ public class BottomSheetBehavior<V extends View> extends agr {
                     return;
                 }
                 iArr[1] = i2;
-                WeakHashMap weakHashMap4 = eqz.a;
+                WeakHashMap weakHashMap4 = ViewCompat.a;
                 view.offsetTopAndBottom(-i2);
                 cg(1);
             }

@@ -2,21 +2,21 @@ package me.hd.wauxv.obf;
 
 import android.util.Log;
 import android.view.View;
-import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class cyv implements ano {
-    public final /* synthetic */ RecyclerView a;
+    public final /* synthetic */ androidx.recyclerview.widget.RecyclerView a;
 
-    public /* synthetic */ cyv(RecyclerView recyclerView) {
+    public /* synthetic */ cyv(androidx.recyclerview.widget.RecyclerView recyclerView) {
         this.a = recyclerView;
     }
 
     public void b(dz dzVar) {
         int i = dzVar.a;
-        RecyclerView recyclerView = this.a;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.a;
         if (i == 1) {
             recyclerView.x.z(dzVar.b, dzVar.c);
             return;
@@ -33,25 +33,25 @@ public final class cyv implements ano {
         }
     }
 
-    public czx c(int i) {
-        RecyclerView recyclerView = this.a;
+    public SomeView c(int i) {
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.a;
         int iAb = recyclerView.p.ab();
-        czx czxVar = null;
+        SomeView someViewVar = null;
         for (int i2 = 0; i2 < iAb; i2++) {
-            czx czxVarCs = RecyclerView.cs(recyclerView.p.aa(i2));
-            if (czxVarCs != null && !czxVarCs.af() && czxVarCs.f == i) {
-                if (!((ArrayList) recyclerView.p.e).contains(czxVarCs.d)) {
-                    czxVar = czxVarCs;
+            SomeView someViewVarCs = androidx.recyclerview.widget.RecyclerView.cs(recyclerView.p.aa(i2));
+            if (someViewVarCs != null && !someViewVarCs.af() && someViewVarCs.f == i) {
+                if (!((ArrayList) recyclerView.p.e).contains(someViewVarCs.d)) {
+                    someViewVar = someViewVarCs;
                     break;
                 }
-                czxVar = czxVarCs;
+                someViewVar = someViewVarCs;
             }
         }
-        if (czxVar != null) {
-            if (!((ArrayList) recyclerView.p.e).contains(czxVar.d)) {
-                return czxVar;
+        if (someViewVar != null) {
+            if (!((ArrayList) recyclerView.p.e).contains(someViewVar.d)) {
+                return someViewVar;
             }
-            if (RecyclerView.b) {
+            if (androidx.recyclerview.widget.RecyclerView.b) {
                 Log.d("RecyclerView", "assuming view holder cannot be find because it is hidden");
             }
         }
@@ -61,25 +61,25 @@ public final class cyv implements ano {
     public void d(int i, int i2) {
         int i3;
         int i4;
-        RecyclerView recyclerView = this.a;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.a;
         int iAb = recyclerView.p.ab();
         int i5 = i2 + i;
         for (int i6 = 0; i6 < iAb; i6++) {
             View viewAa = recyclerView.p.aa(i6);
-            czx czxVarCs = RecyclerView.cs(viewAa);
-            if (czxVarCs != null && !czxVarCs.am() && (i4 = czxVarCs.f) >= i && i4 < i5) {
-                czxVarCs.w(2);
-                czxVarCs.w(1024);
+            SomeView someViewVarCs = androidx.recyclerview.widget.RecyclerView.cs(viewAa);
+            if (someViewVarCs != null && !someViewVarCs.am() && (i4 = someViewVarCs.f) >= i && i4 < i5) {
+                someViewVarCs.w(2);
+                someViewVarCs.w(1024);
                 ((czh) viewAa.getLayoutParams()).e = true;
             }
         }
-        czo czoVar = recyclerView.m;
-        ArrayList arrayList = czoVar.c;
+        RecyclerView recyclerViewVar = recyclerView.m;
+        ArrayList arrayList = recyclerViewVar.c;
         for (int size = arrayList.size() - 1; size >= 0; size--) {
-            czx czxVar = (czx) arrayList.get(size);
-            if (czxVar != null && (i3 = czxVar.f) >= i && i3 < i5) {
-                czxVar.w(2);
-                czoVar.o(size);
+            SomeView someViewVar = (SomeView) arrayList.get(size);
+            if (someViewVar != null && (i3 = someViewVar.f) >= i && i3 < i5) {
+                someViewVar.w(2);
+                recyclerViewVar.o(size);
             }
         }
         recyclerView.bs = true;
@@ -89,7 +89,7 @@ public final class cyv implements ano {
     public boolean e(float f) {
         int i;
         int i2;
-        RecyclerView recyclerView = this.a;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.a;
         if (recyclerView.x.bv()) {
             i2 = (int) f;
             i = 0;
@@ -110,7 +110,7 @@ public final class cyv implements ano {
     @Override // me.hd.wauxv.obf.ano
     public float f() {
         float f;
-        RecyclerView recyclerView = this.a;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.a;
         if (recyclerView.x.bv()) {
             f = recyclerView.bj;
         } else {
@@ -128,27 +128,27 @@ public final class cyv implements ano {
     }
 
     public void h(int i, int i2) {
-        RecyclerView recyclerView = this.a;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.a;
         int iAb = recyclerView.p.ab();
         for (int i3 = 0; i3 < iAb; i3++) {
-            czx czxVarCs = RecyclerView.cs(recyclerView.p.aa(i3));
-            if (czxVarCs != null && !czxVarCs.am() && czxVarCs.f >= i) {
-                if (RecyclerView.b) {
-                    Log.d("RecyclerView", "offsetPositionRecordsForInsert attached child " + i3 + " holder " + czxVarCs + " now at position " + (czxVarCs.f + i2));
+            SomeView someViewVarCs = androidx.recyclerview.widget.RecyclerView.cs(recyclerView.p.aa(i3));
+            if (someViewVarCs != null && !someViewVarCs.am() && someViewVarCs.f >= i) {
+                if (androidx.recyclerview.widget.RecyclerView.b) {
+                    Log.d("RecyclerView", "offsetPositionRecordsForInsert attached child " + i3 + " holder " + someViewVarCs + " now at position " + (someViewVarCs.f + i2));
                 }
-                czxVarCs.aj(i2, false);
+                someViewVarCs.aj(i2, false);
                 recyclerView.bo.f = true;
             }
         }
         ArrayList arrayList = recyclerView.m.c;
         int size = arrayList.size();
         for (int i4 = 0; i4 < size; i4++) {
-            czx czxVar = (czx) arrayList.get(i4);
-            if (czxVar != null && czxVar.f >= i) {
-                if (RecyclerView.b) {
-                    Log.d("RecyclerView", "offsetPositionRecordsForInsert cached " + i4 + " holder " + czxVar + " now at position " + (czxVar.f + i2));
+            SomeView someViewVar = (SomeView) arrayList.get(i4);
+            if (someViewVar != null && someViewVar.f >= i) {
+                if (androidx.recyclerview.widget.RecyclerView.b) {
+                    Log.d("RecyclerView", "offsetPositionRecordsForInsert cached " + i4 + " holder " + someViewVar + " now at position " + (someViewVar.f + i2));
                 }
-                czxVar.aj(i2, false);
+                someViewVar.aj(i2, false);
             }
         }
         recyclerView.requestLayout();
@@ -164,7 +164,7 @@ public final class cyv implements ano {
         int i8;
         int i9;
         int i10;
-        RecyclerView recyclerView = this.a;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.a;
         int iAb = recyclerView.p.ab();
         if (i < i2) {
             i4 = i;
@@ -177,15 +177,15 @@ public final class cyv implements ano {
         }
         boolean z = false;
         for (int i11 = 0; i11 < iAb; i11++) {
-            czx czxVarCs = RecyclerView.cs(recyclerView.p.aa(i11));
-            if (czxVarCs != null && (i10 = czxVarCs.f) >= i4 && i10 <= i3) {
-                if (RecyclerView.b) {
-                    Log.d("RecyclerView", "offsetPositionRecordsForMove attached child " + i11 + " holder " + czxVarCs);
+            SomeView someViewVarCs = androidx.recyclerview.widget.RecyclerView.cs(recyclerView.p.aa(i11));
+            if (someViewVarCs != null && (i10 = someViewVarCs.f) >= i4 && i10 <= i3) {
+                if (androidx.recyclerview.widget.RecyclerView.b) {
+                    Log.d("RecyclerView", "offsetPositionRecordsForMove attached child " + i11 + " holder " + someViewVarCs);
                 }
-                if (czxVarCs.f == i) {
-                    czxVarCs.aj(i2 - i, false);
+                if (someViewVarCs.f == i) {
+                    someViewVarCs.aj(i2 - i, false);
                 } else {
-                    czxVarCs.aj(i5, false);
+                    someViewVarCs.aj(i5, false);
                 }
                 recyclerView.bo.f = true;
             }
@@ -203,15 +203,15 @@ public final class cyv implements ano {
         int size = arrayList.size();
         int i12 = 0;
         while (i12 < size) {
-            czx czxVar = (czx) arrayList.get(i12);
-            if (czxVar != null && (i9 = czxVar.f) >= i7 && i9 <= i6) {
+            SomeView someViewVar = (SomeView) arrayList.get(i12);
+            if (someViewVar != null && (i9 = someViewVar.f) >= i7 && i9 <= i6) {
                 if (i9 == i) {
-                    czxVar.aj(i2 - i, z);
+                    someViewVar.aj(i2 - i, z);
                 } else {
-                    czxVar.aj(i8, z);
+                    someViewVar.aj(i8, z);
                 }
-                if (RecyclerView.b) {
-                    Log.d("RecyclerView", "offsetPositionRecordsForMove cached child " + i12 + " holder " + czxVar);
+                if (androidx.recyclerview.widget.RecyclerView.b) {
+                    Log.d("RecyclerView", "offsetPositionRecordsForMove cached child " + i12 + " holder " + someViewVar);
                 }
             }
             i12++;
@@ -222,28 +222,28 @@ public final class cyv implements ano {
     }
 
     /* JADX WARN: Found duplicated region for block: B:9:0x0020 A[MOVE_INLINED] */
-    public void j(czx czxVar, cjn cjnVar, cjn cjnVar2) {
+    public void j(SomeView someViewVar, cjn cjnVar, cjn cjnVar2) {
         boolean zS;
-        RecyclerView recyclerView = this.a;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.a;
         recyclerView.getClass();
-        czxVar.al(false);
+        someViewVar.al(false);
         akx akxVar = (akx) recyclerView.aw;
         if (cjnVar != null) {
             akxVar.getClass();
             int i = cjnVar.a;
             int i2 = cjnVar2.a;
             if (i == i2 && cjnVar.b == cjnVar2.b) {
-                akxVar.w(czxVar);
-                czxVar.d.setAlpha(0.0f);
-                akxVar.d.add(czxVar);
+                akxVar.w(someViewVar);
+                someViewVar.d.setAlpha(0.0f);
+                akxVar.d.add(someViewVar);
                 zS = true;
             } else {
-                zS = akxVar.s(czxVar, i, cjnVar.b, i2, cjnVar2.b);
+                zS = akxVar.s(someViewVar, i, cjnVar.b, i2, cjnVar2.b);
             }
         } else {
-            akxVar.w(czxVar);
-            czxVar.d.setAlpha(0.0f);
-            akxVar.d.add(czxVar);
+            akxVar.w(someViewVar);
+            someViewVar.d.setAlpha(0.0f);
+            akxVar.d.add(someViewVar);
             zS = true;
         }
         if (zS) {
@@ -251,26 +251,26 @@ public final class cyv implements ano {
         }
     }
 
-    public void k(czx czxVar, cjn cjnVar, cjn cjnVar2) {
+    public void k(SomeView someViewVar, cjn cjnVar, cjn cjnVar2) {
         boolean zS;
-        RecyclerView recyclerView = this.a;
-        recyclerView.m.t(czxVar);
-        recyclerView.ct(czxVar);
-        czxVar.al(false);
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.a;
+        recyclerView.m.t(someViewVar);
+        recyclerView.ct(someViewVar);
+        someViewVar.al(false);
         akx akxVar = (akx) recyclerView.aw;
         akxVar.getClass();
         int i = cjnVar.a;
         int i2 = cjnVar.b;
-        View view = czxVar.d;
+        View view = someViewVar.d;
         int left = cjnVar2 == null ? view.getLeft() : cjnVar2.a;
         int top = cjnVar2 == null ? view.getTop() : cjnVar2.b;
-        if (czxVar.af() || (i == left && i2 == top)) {
-            akxVar.w(czxVar);
-            akxVar.c.add(czxVar);
+        if (someViewVar.af() || (i == left && i2 == top)) {
+            akxVar.w(someViewVar);
+            akxVar.c.add(someViewVar);
             zS = true;
         } else {
             view.layout(left, top, view.getWidth() + left, view.getHeight() + top);
-            zS = akxVar.s(czxVar, i, i2, left, top);
+            zS = akxVar.s(someViewVar, i, i2, left, top);
         }
         if (zS) {
             recyclerView.ef();
@@ -278,7 +278,7 @@ public final class cyv implements ano {
     }
 
     public void l(int i) {
-        RecyclerView recyclerView = this.a;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.a;
         View childAt = recyclerView.getChildAt(i);
         if (childAt != null) {
             recyclerView.db(childAt);

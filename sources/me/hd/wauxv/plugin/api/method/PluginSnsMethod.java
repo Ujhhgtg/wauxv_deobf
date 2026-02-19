@@ -86,7 +86,7 @@ public final class PluginSnsMethod {
             arrayList = 0;
         }
         if (arrayList == 0) {
-            arrayList = EmptyReadonlyList.a;
+            arrayList = EmptyReadonlyList.INSTANCE;
         }
         arj.aj(strOptString, arrayList, jSONObject.optString("sdkId" /* "sdkId" /* "sdkId" /* cnb.z(-401201485052714L)  */), jSONObject.optString("sdkAppName" /* "sdkAppName" /* "sdkAppName" /* cnb.z(-401158535379754L)  */));
     }

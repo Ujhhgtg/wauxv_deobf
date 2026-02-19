@@ -62,14 +62,14 @@ public final /* synthetic */ class dhg implements IInvokable {
                 Object objE = ((HookParam) obj).getThisObject();
                 Activity activity = (Activity) (!(objE instanceof Activity) ? null : objE);
                 if (activity == null) {
-                    Class<Activity> clsBf = cnf.bf(dal.b(cls2));
+                    Class<Activity> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf != null ? clsBf : Activity.class).getName()).toString());
                 }
                 int i8 = 0;
-                cde cdeVarT = dqc.bi(activity).t();
-                cdeVarT.ab = "getPreferenceScreen" /* "getPreferenceScreen" /* "getPreferenceScreen" /* "getPreferenceScreen" /* cnb.z(-594711236573994L)   */;
-                Object objJ = ((MethodHookWrapper) dkz.m(cdeVarT)).j(new Object[0]);
+                MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(activity).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT.name = "getPreferenceScreen" /* "getPreferenceScreen" /* "getPreferenceScreen" /* "getPreferenceScreen" /* cnb.z(-594711236573994L)   */;
+                Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT)).j(new Object[0]);
                 throwIfVar1IsNull(objJ);
                 BaseAdapter baseAdapter = (BaseAdapter) objJ;
                 String stringExtra = activity.getIntent().getStringExtra("Chat_User" /* "Chat_User" /* "Chat_User" /* "Chat_User" /* cnb.z(-594659696966442L)   */);
@@ -87,7 +87,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                 }
                 Activity activity2 = (Activity) objE2;
                 if (activity2 == null) {
-                    Class<Activity> clsBf2 = cnf.bf(dal.b(cls2));
+                    Class<Activity> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf2 != null ? clsBf2 : Activity.class).getName()).toString());
                 }
@@ -97,17 +97,17 @@ public final /* synthetic */ class dhg implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = bhu.x(th);
+                    objX = FastKV.x(th);
                 }
                 if (objX instanceof dcx) {
                     objX = null;
                 }
                 throwIfVar1IsNull(objX);
                 int i9 = 0;
-                azg azgVarR = dqc.bi(objX).r();
-                azgVarR.a = dal.b(cls);
-                azgVarR.ah();
-                Iterator it = azgVarR.c().iterator();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objX).r();
+                fieldResolverVarR.fieldType = dal.b(cls);
+                fieldResolverVarR.enableSuperclass();
+                Iterator it = fieldResolverVarR.resolve().iterator();
                 while (it.hasNext()) {
                     String str = (String) ((azk) it.next()).e();
                     if (str != null && str.equals("WAuxiliary_chatroom_info_pref" /* "WAuxiliary_chatroom_info_pref" /* "WAuxiliary_chatroom_info_pref" /* "WAuxiliary_chatroom_info_pref" /* cnb.z(-593903782722346L)   */)) {
@@ -131,16 +131,16 @@ public final /* synthetic */ class dhg implements IInvokable {
                 }
                 List list = (List) objF;
                 throwIfVar1IsNull(list);
-                dov dovVar = new dov(new cfh(23));
+                Kotlin$Lazy kotlin$LazyVar = new Kotlin$Lazy(new Function1$VarIsInt$2(23));
                 List list2 = dhm.j;
-                ArrayList arrayList = new ArrayList(abb.ak(list2, 10));
+                ArrayList arrayList = new ArrayList(StaticHelpers4.ak(list2, 10));
                 for (Object obj2 : list2) {
                     int i10 = i7 + 1;
                     if (i7 < 0) {
                         OtherStaticHelpers.aj();
                         throw null;
                     }
-                    Constructor constructor = ((ConstructorHookWrapper) dovVar.getValue()).a;
+                    Constructor constructor = ((ConstructorHookWrapper) kotlin$LazyVar.getValue()).a;
                     Object[] objArr = { Integer.valueOf(list.size() + i7), ((dhk) obj2).b };
                     Constructor constructor2 = constructor != null ? constructor : null;
                     if (constructor2 != null && !constructor2.isAccessible()) {
@@ -171,7 +171,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = bhu.x(th2);
+                    objX2 = FastKV.x(th2);
                 }
                 if (objX2 instanceof dcx) {
                     objX2 = null;
@@ -184,7 +184,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = bhu.x(th3);
+                    objX3 = FastKV.x(th3);
                 }
                 if (objX3 instanceof dcx) {
                     objX3 = null;
@@ -197,7 +197,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                         objX4 = null;
                     }
                 } catch (Throwable th4) {
-                    objX4 = bhu.x(th4);
+                    objX4 = FastKV.x(th4);
                 }
                 if (objX4 instanceof dcx) {
                     objX4 = null;
@@ -210,16 +210,16 @@ public final /* synthetic */ class dhg implements IInvokable {
                         objX5 = null;
                     }
                 } catch (Throwable th5) {
-                    objX5 = bhu.x(th5);
+                    objX5 = FastKV.x(th5);
                 }
                 if (objX5 instanceof dcx) {
                     objX5 = null;
                 }
                 throwIfVar1IsNull(objX5);
                 int i11 = 0;
-                azg azgVarR2 = dqc.bi(objX5).r();
-                azgVarR2.ab = "d" /* "d" /* "d" /* "d" /* cnb.z(-465591634754346L)   */;
-                azk azkVar = (azk) aaz.e(azgVarR2.c());
+                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objX5).r();
+                fieldResolverVarR2.name = "d" /* "d" /* "d" /* "d" /* cnb.z(-465591634754346L)   */;
+                azk azkVar = (azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve());
                 if (iIntValue == 4 && iIntValue2 == -2005) {
                     Object objE3 = azkVar.e();
                     throwIfVar1IsNull(objE3);
@@ -269,7 +269,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                 egVar.d = str3;
                 LinearLayout linearLayout = ceeVarE.b;
                 bzyVar.t("保存" /* "保存" /* "保存" /* "保存" /* cnb.z(-542158016740138L)   */, new amw(new aul(ceeVarE, 2), 0));
-                bzyVar.s("重置" /* "重置" /* "重置" /* "重置" /* cnb.z(-542110772099882L)   */, new amw(new cfh(24), 2));
+                bzyVar.s("重置" /* "重置" /* "重置" /* "重置" /* cnb.z(-542110772099882L)   */, new amw(new Function1$VarIsInt$2(24), 2));
                 bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, "取消" /* "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)   */);
                 if (linearLayout != null) {
                     egVar.r = linearLayout;
@@ -294,32 +294,32 @@ public final /* synthetic */ class dhg implements IInvokable {
                                     objX9 = null;
                                 }
                             } catch (Throwable th6) {
-                                objX9 = bhu.x(th6);
+                                objX9 = FastKV.x(th6);
                             }
                             if (objX9 instanceof dcx) {
                                 objX9 = null;
                             }
                             throwIfVar1IsNull(objX9);
                             int i12 = 0;
-                            azg azgVarR3 = dqc.bi(objX9).r();
-                            azgVarR3.ab = "field_userName" /* "field_userName" /* "field_userName" /* "field_userName" /* cnb.z(-542115067067178L)   */;
-                            Object objE5 = ((azk) yg.e(azgVarR3)).e();
+                            FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objX9).r();
+                            fieldResolverVarR3.name = "field_userName" /* "field_userName" /* "field_userName" /* "field_userName" /* cnb.z(-542115067067178L)   */;
+                            Object objE5 = ((azk) yg.e(fieldResolverVarR3)).e();
                             throwIfVar1IsNull(objE5);
                             String str4 = (String) objE5;
-                            azg azgVarR4 = dqc.bi(objX9).r();
-                            azgVarR4.ab = "field_type" /* "field_type" /* "field_type" /* "field_type" /* cnb.z(-542600398371626L)   */;
-                            Object objE6 = ((azk) yg.e(azgVarR4)).e();
+                            FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(objX9).r();
+                            fieldResolverVarR4.name = "field_type" /* "field_type" /* "field_type" /* "field_type" /* cnb.z(-542600398371626L)   */;
+                            Object objE6 = ((azk) yg.e(fieldResolverVarR4)).e();
                             throwIfVar1IsNull(objE6);
                             int iIntValue3 = ((Number) objE6).intValue();
-                            azg azgVarR5 = dqc.bi(objX9).r();
-                            azgVarR5.ab = "field_thumbUrl" /* "field_thumbUrl" /* "field_thumbUrl" /* "field_thumbUrl" /* cnb.z(-542570333600554L)   */;
-                            String str5 = (String) ((azk) yg.e(azgVarR5)).e();
-                            azg azgVarR6 = dqc.bi(objX9).r();
-                            azgVarR6.ab = "field_imageBgUrl" /* "field_imageBgUrl" /* "field_imageBgUrl" /* "field_imageBgUrl" /* cnb.z(-542505909091114L)   */;
-                            String str6 = (String) ((azk) yg.e(azgVarR6)).e();
-                            azg azgVarR7 = dqc.bi(objX9).r();
-                            azgVarR7.ab = "field_videoBgUrl" /* "field_videoBgUrl" /* "field_videoBgUrl" /* "field_videoBgUrl" /* cnb.z(-542432894647082L)   */;
-                            String str7 = (String) ((azk) yg.e(azgVarR7)).e();
+                            FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(objX9).r();
+                            fieldResolverVarR5.name = "field_thumbUrl" /* "field_thumbUrl" /* "field_thumbUrl" /* "field_thumbUrl" /* cnb.z(-542570333600554L)   */;
+                            String str5 = (String) ((azk) yg.e(fieldResolverVarR5)).e();
+                            FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(objX9).r();
+                            fieldResolverVarR6.name = "field_imageBgUrl" /* "field_imageBgUrl" /* "field_imageBgUrl" /* "field_imageBgUrl" /* cnb.z(-542505909091114L)   */;
+                            String str6 = (String) ((azk) yg.e(fieldResolverVarR6)).e();
+                            FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(objX9).r();
+                            fieldResolverVarR7.name = "field_videoBgUrl" /* "field_videoBgUrl" /* "field_videoBgUrl" /* "field_videoBgUrl" /* cnb.z(-542432894647082L)   */;
+                            String str7 = (String) ((azk) yg.e(fieldResolverVarR7)).e();
                             if (iIntValue3 == 1 || iIntValue3 == 2 || iIntValue3 == 3) {
                                 if (str5 != null) {
                                     String strConcat = str4.concat(".thumbUrl.png" /* ".thumbUrl.png" /* ".thumbUrl.png" /* ".thumbUrl.png" /* cnb.z(-530763468503850L)   */);
@@ -349,7 +349,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                     return kotlinUnitVar;
                 }
                 cls3 = ViewGroup.class;
-                Class<ViewGroup> clsBf3 = cnf.bf(dal.b(cls3));
+                Class<ViewGroup> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
                 throw new IllegalStateException("HookParam instance cannot cast to "
                         .concat((clsBf3 != null ? clsBf3 : ViewGroup.class).getName()).toString());
             case 12:
@@ -388,28 +388,28 @@ public final /* synthetic */ class dhg implements IInvokable {
                 return kotlinUnitVar;
             case 16:
                 View view2 = (View) obj;
-                View viewK = dkz.k(view2, R.layout.module_dialog_sns_info, null, false);
+                View viewK = StaticHelpers6.k(view2, R.layout.module_dialog_sns_info, null, false);
                 int i12 = R.id.moduleDialogCbSnsInfoHideGroupIcon;
-                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.aq(viewK,
+                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.recursivelyFindViewById(viewK,
                         R.id.moduleDialogCbSnsInfoHideGroupIcon);
                 if (materialCheckBox != null) {
                     i12 = R.id.moduleDialogEdtSnsInfoTextFormat;
-                    TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                    TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                             R.id.moduleDialogEdtSnsInfoTextFormat);
                     if (textInputEditText != null) {
                         i12 = R.id.moduleDialogEdtSnsInfoTextPlaceholders;
-                        MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.aq(viewK,
+                        MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewK,
                                 R.id.moduleDialogEdtSnsInfoTextPlaceholders);
                         if (materialTextView != null) {
                             i12 = R.id.moduleDialogEdtSnsInfoTimeFormat;
-                            TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                            TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                     R.id.moduleDialogEdtSnsInfoTimeFormat);
                             if (textInputEditText2 != null) {
                                 i12 = R.id.moduleDialogInputSnsInfoTextFormat;
-                                if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                         R.id.moduleDialogInputSnsInfoTextFormat)) != null) {
                                     i12 = R.id.moduleDialogInputSnsInfoTimeFormat;
-                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                             R.id.moduleDialogInputSnsInfoTimeFormat)) != null) {
                                         bqr bqrVar = new bqr((LinearLayout) viewK, materialCheckBox, textInputEditText,
                                                 materialTextView, textInputEditText2);
@@ -441,7 +441,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                                         djh.a.getClass();
                                         egVar2.d = djh.i;
                                         bzyVar2.t("保存" /* "保存" /* "保存" /* "保存" /* cnb.z(-532395556076330L)   */, new amw(new cfx(bqrVar, 15), 0));
-                                        bzyVar2.s("重置" /* "重置" /* "重置" /* "重置" /* cnb.z(-532399851043626L)   */, new amw(new cfh(25), 2));
+                                        bzyVar2.s("重置" /* "重置" /* "重置" /* "重置" /* cnb.z(-532399851043626L)   */, new amw(new Function1$VarIsInt$2(25), 2));
                                         bjs.x((3 & 2) != 0 ? new amd(i14) : obj4, bzyVar2, "取消" /*
                                                                                                  * cnb.z(-
                                                                                                  * 47455093652266L)
@@ -473,25 +473,25 @@ public final /* synthetic */ class dhg implements IInvokable {
                 return kotlinUnitVar;
             case 18:
                 int i15 = 0;
-                bmu bmuVarBi = dqc.bi(((HookParam) obj).getThisObject());
-                azg azgVarR3 = bmuVarBi.r();
+                SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(((HookParam) obj).getThisObject());
+                FieldResolver fieldResolverVarR3 = bmuVarBi.r();
                 djb djbVar = djb.a;
-                azgVarR3.a = emn.bb(djbVar).getDeclaringClass();
-                Object objD = ((azk) yg.e(azgVarR3)).d();
+                fieldResolverVarR3.fieldType = StaticHelpers7.bb(djbVar).getDeclaringClass();
+                Object objD = ((azk) yg.e(fieldResolverVarR3)).d();
                 throwIfVar1IsNull(objD);
-                Object objInvoke = emn.bb(djbVar).invoke(objD, null);
+                Object objInvoke = StaticHelpers7.bb(djbVar).invoke(objD, null);
                 throwIfVar1IsNull(objInvoke);
-                cde cdeVarT2 = bmuVarBi.t();
-                cdeVarT2.ab = "getPublishTimeText" /* "getPublishTimeText" /* "getPublishTimeText" /* "getPublishTimeText" /* cnb.z(-532193692613418L)   */;
-                Object objJ2 = ((MethodHookWrapper) dkz.m(cdeVarT2)).j(new Object[0]);
+                MethodResolver methodResolverVarT2 = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT2.name = "getPublishTimeText" /* "getPublishTimeText" /* "getPublishTimeText" /* "getPublishTimeText" /* cnb.z(-532193692613418L)   */;
+                Object objJ2 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).j(new Object[0]);
                 throwIfVar1IsNull(objJ2);
                 TextView textView = (TextView) objJ2;
                 djh.a.getClass();
                 textView.setText(dnr.bo(djh.n(objInvoke), "${originalText}" /* "${originalText}" /* "${originalText}" /* "${originalText}" /* cnb.z(-532627484310314L)   */,
                         textView.getText().toString()));
-                cde cdeVarT3 = bmuVarBi.t();
-                cdeVarT3.ab = "getGroupImageStub" /* "getGroupImageStub" /* "getGroupImageStub" /* "getGroupImageStub" /* cnb.z(-532558764833578L)   */;
-                View view3 = (View) ((MethodHookWrapper) dkz.m(cdeVarT3)).j(new Object[0]);
+                MethodResolver methodResolverVarT3 = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT3.name = "getGroupImageStub" /* "getGroupImageStub" /* "getGroupImageStub" /* "getGroupImageStub" /* cnb.z(-532558764833578L)   */;
+                View view3 = (View) ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT3)).j(new Object[0]);
                 if (view3 != null && (view3 instanceof ImageView)) {
                     ((ImageView) view3).setVisibility(dje.a.i() ? 8 : 0);
                 }
@@ -499,32 +499,32 @@ public final /* synthetic */ class dhg implements IInvokable {
             case 19:
                 HookParam hookParam4 = (HookParam) obj;
                 int i16 = 0;
-                bmu bmuVarBi2 = dqc.bi(hookParam4.getThisObject());
+                SyntheticPileOfMess bmuVarBi2 = dqc.getWrapperConfiguration(hookParam4.getThisObject());
                 try {
                     objX6 = hookParam4.getArgs()[0];
                     if (objX6 == null) {
                         objX6 = null;
                     }
                 } catch (Throwable th6) {
-                    objX6 = bhu.x(th6);
+                    objX6 = FastKV.x(th6);
                 }
                 obj = objX6 instanceof dcx ? null : objX6;
                 throwIfVar1IsNull(obj);
-                azg azgVarR4 = dqc.bi(obj).r();
-                azgVarR4.a = "com.tencent.mm.plugin.sns.storage.SnsInfo" /* "com.tencent.mm.plugin.sns.storage.SnsInfo" /* "com.tencent.mm.plugin.sns.storage.SnsInfo" /* "com.tencent.mm.plugin.sns.storage.SnsInfo" /* cnb.z(-532498635291434L)   */;
-                Object objD2 = ((azk) yg.e(azgVarR4)).d();
+                FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(obj).r();
+                fieldResolverVarR4.fieldType = "com.tencent.mm.plugin.sns.storage.SnsInfo" /* "com.tencent.mm.plugin.sns.storage.SnsInfo" /* "com.tencent.mm.plugin.sns.storage.SnsInfo" /* "com.tencent.mm.plugin.sns.storage.SnsInfo" /* cnb.z(-532498635291434L)   */;
+                Object objD2 = ((azk) yg.e(fieldResolverVarR4)).d();
                 throwIfVar1IsNull(objD2);
-                cde cdeVarT4 = bmuVarBi2.t();
-                cdeVarT4.ab = "getPublishTimeText" /* "getPublishTimeText" /* "getPublishTimeText" /* "getPublishTimeText" /* cnb.z(-533984693975850L)   */;
-                Object objJ3 = ((MethodHookWrapper) dkz.m(cdeVarT4)).j(new Object[0]);
+                MethodResolver methodResolverVarT4 = bmuVarBi2.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT4.name = "getPublishTimeText" /* "getPublishTimeText" /* "getPublishTimeText" /* "getPublishTimeText" /* cnb.z(-533984693975850L)   */;
+                Object objJ3 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT4)).j(new Object[0]);
                 throwIfVar1IsNull(objJ3);
                 TextView textView2 = (TextView) objJ3;
                 djh.a.getClass();
                 textView2.setText(dnr.bo(djh.n(objD2), "${originalText}" /* "${originalText}" /* "${originalText}" /* "${originalText}" /* cnb.z(-533851549989674L)   */,
                         textView2.getText().toString()));
-                cde cdeVarT5 = bmuVarBi2.t();
-                cdeVarT5.ab = "getGroupImageStub" /* "getGroupImageStub" /* "getGroupImageStub" /* "getGroupImageStub" /* cnb.z(-534332586326826L)   */;
-                View view4 = (View) ((MethodHookWrapper) dkz.m(cdeVarT5)).j(new Object[0]);
+                MethodResolver methodResolverVarT5 = bmuVarBi2.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT5.name = "getGroupImageStub" /* "getGroupImageStub" /* "getGroupImageStub" /* "getGroupImageStub" /* cnb.z(-534332586326826L)   */;
+                View view4 = (View) ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT5)).j(new Object[0]);
                 if (view4 != null && (view4 instanceof ImageView)) {
                     ((ImageView) view4).setVisibility(dje.a.i() ? 8 : 0);
                 }
@@ -560,7 +560,7 @@ public final /* synthetic */ class dhg implements IInvokable {
             case 26:
                 bah bahVar8 = (bah) obj;
                 cdj cdjVar8 = new cdj();
-                Class<String> clsBf4 = cnf.bf(dal.b(cls));
+                Class<String> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 cdjVar8.q(clsBf4 != null ? clsBf4 : String.class);
                 cdjVar8.t("getByLocalId" /* "getByLocalId" /* "getByLocalId" /* "getByLocalId" /* cnb.z(-376969279568682L)   */,
                         "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* cnb.z(-376947804732202L)   */);
@@ -576,7 +576,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                         objX7 = null;
                     }
                 } catch (Throwable th7) {
-                    objX7 = bhu.x(th7);
+                    objX7 = FastKV.x(th7);
                 }
                 obj = objX7 instanceof dcx ? null : objX7;
                 throwIfVar1IsNull(obj);
@@ -608,7 +608,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                         objX8 = null;
                     }
                 } catch (Throwable th8) {
-                    objX8 = bhu.x(th8);
+                    objX8 = FastKV.x(th8);
                 }
                 obj = objX8 instanceof dcx ? null : objX8;
                 throwIfVar1IsNull(obj);
@@ -616,21 +616,21 @@ public final /* synthetic */ class dhg implements IInvokable {
                 for (boa boaVar2 : djo.b) {
                     try {
                         int i17 = 0;
-                        azg azgVarR5 = dqc.bi(hookParam6.getThisObject()).r();
-                        azgVarR5.a = dal.b(cls2);
-                        Object objE5 = ((azk) aaz.e(azgVarR5.c())).e();
+                        FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(hookParam6.getThisObject()).r();
+                        fieldResolverVarR5.fieldType = dal.b(cls2);
+                        Object objE5 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR5.resolve())).e();
                         throwIfVar1IsNull(objE5);
                         Activity activity3 = (Activity) objE5;
-                        azg azgVarR6 = dqc.bi(hookParam6.getThisObject()).r();
-                        abf.ao(azgVarR6.ae, (cdy[]) Arrays.copyOf(new cdy[] { cdy.d }, 1));
-                        azgVarR6.a = dal.b(cls);
-                        Object objE6 = ((azk) aaz.e(azgVarR6.c())).e();
+                        FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(hookParam6.getThisObject()).r();
+                        StaticHelpers2.ao(fieldResolverVarR6.modifiersNot, (cdy[]) Arrays.copyOf(new cdy[] { cdy.d }, 1));
+                        fieldResolverVarR6.fieldType = dal.b(cls);
+                        Object objE6 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR6.resolve())).e();
                         throwIfVar1IsNull(objE6);
                         djj.a.getClass();
                         Object objB = djj.b((String) objE6);
-                        azg azgVarR7 = dqc.bi(hookParam6.getThisObject()).r();
-                        azgVarR7.a = "com.tencent.mm.protocal.protobuf.TimeLineObject" /* "com.tencent.mm.protocal.protobuf.TimeLineObject" /* "com.tencent.mm.protocal.protobuf.TimeLineObject" /* "com.tencent.mm.protocal.protobuf.TimeLineObject" /* cnb.z(-56770877717290L)   */;
-                        Object objD3 = ((azk) aaz.e(azgVarR7.c())).d();
+                        FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(hookParam6.getThisObject()).r();
+                        fieldResolverVarR7.fieldType = "com.tencent.mm.protocal.protobuf.TimeLineObject" /* "com.tencent.mm.protocal.protobuf.TimeLineObject" /* "com.tencent.mm.protocal.protobuf.TimeLineObject" /* "com.tencent.mm.protocal.protobuf.TimeLineObject" /* cnb.z(-56770877717290L)   */;
+                        Object objD3 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR7.resolve())).d();
                         throwIfVar1IsNull(objD3);
                         for (djl djlVar2 : boaVar2.a()) {
                             if (menuItem.getItemId() == djlVar2.a) {

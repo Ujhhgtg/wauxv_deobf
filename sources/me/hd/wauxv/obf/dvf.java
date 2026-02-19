@@ -10,7 +10,7 @@ public final class dvf {
 
     public /* synthetic */ dvf(int i, eei eeiVar, Long l, Long l2) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, dvd.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, dvd.b.getDescriptor());
             throw null;
         }
         this.a = eeiVar;
@@ -44,7 +44,7 @@ public final class dvf {
         sb.append("ab3Proto(gift=" /* "ab3Proto(gift=" /* "ab3Proto(gift=" /* cnb.z(-144748987808554L)  */);
         sb.append(this.a);
         sb.append(", product_target_count=" /* ", product_target_count=" /* ", product_target_count=" /* cnb.z(-144667383429930L)  */);
-        dkz.ad(sb, this.b, -145114060028714L);
+        StaticHelpers6.ad(sb, this.b, -145114060028714L);
         sb.append(this.c);
         sb.append(')');
         return sb.toString();

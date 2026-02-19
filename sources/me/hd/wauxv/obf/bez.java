@@ -56,7 +56,7 @@ public final class bez extends cyy {
                         RecyclerView recyclerView2 = (RecyclerView) obj;
                         if (recyclerView2.ad && recyclerView2.ac) {
                             cyu cyuVar = recyclerView2.s;
-                            WeakHashMap weakHashMap = eqz.a;
+                            WeakHashMap weakHashMap = ViewCompat.a;
                             recyclerView2.postOnAnimation(cyuVar);
                         } else {
                             recyclerView2.ak = true;

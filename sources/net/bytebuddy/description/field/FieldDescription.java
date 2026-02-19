@@ -6,7 +6,7 @@ import java.lang.reflect.Modifier;
 import java.util.Collections;
 import java.util.List;
 import javax.annotation.Nonnull;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.CachedReturnPlugin;
 import net.bytebuddy.description.ByteCodeElement;
 import net.bytebuddy.description.DeclaredByType;
@@ -378,7 +378,7 @@ public interface FieldDescription extends ModifierReviewable.ForFieldDescription
             if (this.hashCode != 0) {
                 iE = 0;
             } else {
-                iE = dkz.e(this.type, ((this.name.hashCode() * 31) + this.modifiers) * 31, 31) + this.annotations.hashCode();
+                iE = StaticHelpers6.e(this.type, ((this.name.hashCode() * 31) + this.modifiers) * 31, 31) + this.annotations.hashCode();
             }
             if (iE == 0) {
                 return this.hashCode;

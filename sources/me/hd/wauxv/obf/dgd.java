@@ -13,6 +13,6 @@ public final class dgd extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(dgc.a, dexKitBridge, new dbj(22));
+        StaticHelpers7.resolveDexAndCache(dgc.a, dexKitBridge, new dbj(22));
     }
 }

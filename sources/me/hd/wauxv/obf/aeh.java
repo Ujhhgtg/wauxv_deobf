@@ -69,7 +69,7 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                 Context contextDc = cuaVar.dc();
                 View viewInflate = LayoutInflater.from(contextDc).inflate(R.layout.module_dialog_plugin_readme,
                         (ViewGroup) null, false);
-                MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.aq(viewInflate,
+                MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewInflate,
                         R.id.moduleDialogTvPluginReadme);
                 if (materialTextView == null) {
                     throw new NullPointerException(
@@ -197,14 +197,14 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                         if (((dop) awcVar.c) == null) {
                             awcVar.c = new dop(5);
                         }
-                        if (((awp) awcVar.d) == null) {
-                            awcVar.d = new awp(23);
+                        if (((GifEncoder) awcVar.d) == null) {
+                            awcVar.d = new GifEncoder(23);
                         }
-                        if (((awp) awcVar.e) == null) {
-                            awcVar.e = new awp(16);
+                        if (((GifEncoder) awcVar.e) == null) {
+                            awcVar.e = new GifEncoder(16);
                         }
-                        if (((awp) awcVar.f) == null) {
-                            awcVar.f = new awp(17);
+                        if (((GifEncoder) awcVar.f) == null) {
+                            awcVar.f = new GifEncoder(17);
                         }
                         blq blqVar = new blq(awcVar);
                         LinkedHashSet linkedHashSet3 = aph.a;

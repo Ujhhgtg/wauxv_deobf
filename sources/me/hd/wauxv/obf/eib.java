@@ -10,7 +10,7 @@ public final class eib {
         if (1 == (i & 1)) {
             this.a = bool;
         } else {
-            bht.ah(i, 1, ehz.b.getDescriptor());
+            ResourcesCompat.ah(i, 1, ehz.b.getDescriptor());
             throw null;
         }
     }

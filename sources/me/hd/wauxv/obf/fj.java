@@ -40,7 +40,7 @@ public final class fj extends dqc {
                 throwIfVar1IsNull(bbbVar, "fbb");
                 List list = this.b;
                 if (list != null) {
-                    ArrayList arrayList = new ArrayList(abb.ak(list, 10));
+                    ArrayList arrayList = new ArrayList(StaticHelpers4.ak(list, 10));
                     Iterator it = list.iterator();
                     while (it.hasNext()) {
                         fl flVar = ((fk) it.next()).b;
@@ -58,7 +58,7 @@ public final class fj extends dqc {
                 }
                 List list2 = this.b;
                 if (list2 != null) {
-                    ArrayList arrayList2 = new ArrayList(abb.ak(list2, 10));
+                    ArrayList arrayList2 = new ArrayList(StaticHelpers4.ak(list2, 10));
                     Iterator it2 = list2.iterator();
                     while (it2.hasNext()) {
                         dqc dqcVar = ((fk) it2.next()).a;
@@ -66,7 +66,7 @@ public final class fj extends dqc {
                                 "null cannot be cast to non-null type org.luckypray.dexkit.query.base.BaseQuery");
                         arrayList2.add(Integer.valueOf(dqcVar.c(bbbVar)));
                     }
-                    int[] iArrY = aaz.y(arrayList2);
+                    int[] iArrY = StaticHelpers5.y(arrayList2);
                     bbbVar.ac(4, iArrY.length, 4);
                     for (int length2 = iArrY.length - 1; -1 < length2; length2--) {
                         bbbVar.p(iArrY[length2]);
@@ -88,12 +88,12 @@ public final class fj extends dqc {
                 throwIfVar1IsNull(bbbVar, "fbb");
                 List list3 = this.b;
                 if (list3 != null) {
-                    ArrayList arrayList3 = new ArrayList(abb.ak(list3, 10));
+                    ArrayList arrayList3 = new ArrayList(StaticHelpers4.ak(list3, 10));
                     Iterator it3 = list3.iterator();
                     while (it3.hasNext()) {
                         arrayList3.add(Integer.valueOf(((fm) it3.next()).c(bbbVar)));
                     }
-                    iT = bbbVar.t(aaz.y(arrayList3));
+                    iT = bbbVar.t(StaticHelpers5.y(arrayList3));
                 } else {
                     iT = 0;
                 }
@@ -109,12 +109,12 @@ public final class fj extends dqc {
                 throwIfVar1IsNull(bbbVar, "fbb");
                 List list4 = this.b;
                 if (list4 != null) {
-                    ArrayList arrayList4 = new ArrayList(abb.ak(list4, 10));
+                    ArrayList arrayList4 = new ArrayList(StaticHelpers4.ak(list4, 10));
                     Iterator it4 = list4.iterator();
                     while (it4.hasNext()) {
                         arrayList4.add(Integer.valueOf(((zb) it4.next()).c(bbbVar)));
                     }
-                    iT2 = bbbVar.t(aaz.y(arrayList4));
+                    iT2 = bbbVar.t(StaticHelpers5.y(arrayList4));
                 } else {
                     iT2 = 0;
                 }
@@ -130,12 +130,12 @@ public final class fj extends dqc {
                 throwIfVar1IsNull(bbbVar, "fbb");
                 List list5 = this.b;
                 if (list5 != null) {
-                    ArrayList arrayList5 = new ArrayList(abb.ak(list5, 10));
+                    ArrayList arrayList5 = new ArrayList(StaticHelpers4.ak(list5, 10));
                     Iterator it5 = list5.iterator();
                     while (it5.hasNext()) {
                         arrayList5.add(Integer.valueOf(((cdj) it5.next()).c(bbbVar)));
                     }
-                    iT3 = bbbVar.t(aaz.y(arrayList5));
+                    iT3 = bbbVar.t(StaticHelpers5.y(arrayList5));
                 } else {
                     iT3 = 0;
                 }
@@ -151,14 +151,14 @@ public final class fj extends dqc {
                 throwIfVar1IsNull(bbbVar, "fbb");
                 List<cst> list6 = this.b;
                 if (list6 != null) {
-                    ArrayList arrayList6 = new ArrayList(abb.ak(list6, 10));
+                    ArrayList arrayList6 = new ArrayList(StaticHelpers4.ak(list6, 10));
                     for (cst cstVar : list6) {
                         if (cstVar == null) {
                             cstVar = new cst();
                         }
                         arrayList6.add(Integer.valueOf(cstVar.c(bbbVar)));
                     }
-                    iT4 = bbbVar.t(aaz.y(arrayList6));
+                    iT4 = bbbVar.t(StaticHelpers5.y(arrayList6));
                 } else {
                     iT4 = 0;
                 }

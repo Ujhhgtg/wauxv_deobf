@@ -12,19 +12,19 @@ public final class azd extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(azb.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(azb.a));
         azd azdVar = a;
-        aki akiVarAb = csb.ab(azdVar, listBf);
+        aki akiVarAb = PackageParam.ab(azdVar, listBf);
         akiVarAb.n(new atn(29));
         akiVarAb.o();
-        aki akiVarAb2 = csb.ab(azdVar, dqc.toSingletonList(emn.bb(azc.a)));
+        aki akiVarAb2 = PackageParam.ab(azdVar, dqc.toSingletonList(StaticHelpers7.bb(azc.a)));
         akiVarAb2.n(new ayz(0));
         akiVarAb2.o();
     }
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(azb.a, dexKitBridge, new ayz(2));
-        emn.aj(azc.a, dexKitBridge, new ayz(3));
+        StaticHelpers7.resolveDexAndCache(azb.a, dexKitBridge, new ayz(2));
+        StaticHelpers7.resolveDexAndCache(azc.a, dexKitBridge, new ayz(3));
     }
 }

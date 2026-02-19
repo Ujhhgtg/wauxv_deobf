@@ -13,6 +13,6 @@ public final class atz extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(aty.a, dexKitBridge, new atn(9));
+        StaticHelpers7.resolveDexAndCache(aty.a, dexKitBridge, new atn(9));
     }
 }

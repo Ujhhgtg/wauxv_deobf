@@ -6,13 +6,13 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import java.util.Calendar;
 import me.hd.wauxv.R;
-import me.hd.wauxv.obf.bmu;
+import me.hd.wauxv.obf.SyntheticPileOfMess;
 import me.hd.wauxv.obf.cas;
 import me.hd.wauxv.obf.cet;
 import me.hd.wauxv.obf.ceu;
 import me.hd.wauxv.obf.cyw;
 import me.hd.wauxv.obf.czh;
-import me.hd.wauxv.obf.czx;
+import me.hd.wauxv.obf.SomeView;
 import me.hd.wauxv.obf.eoq;
 import me.hd.wauxv.obf.st;
 
@@ -20,10 +20,10 @@ import me.hd.wauxv.obf.st;
 /* JADX INFO: loaded from: classes.dex */
 public final class c extends cyw {
     public final st a;
-    public final bmu b;
+    public final SyntheticPileOfMess b;
     public final int c;
 
-    public c(ContextThemeWrapper contextThemeWrapper, st stVar, bmu bmuVar) {
+    public c(ContextThemeWrapper contextThemeWrapper, st stVar, SyntheticPileOfMess bmuVar) {
         cet cetVar = stVar.a;
         cet cetVar2 = stVar.b;
         cet cetVar3 = stVar.d;
@@ -59,8 +59,8 @@ public final class c extends cyw {
     }
 
     @Override // me.hd.wauxv.obf.cyw
-    public final void f(czx czxVar, int i) {
-        b bVar = (b) czxVar;
+    public final void f(SomeView someViewVar, int i) {
+        b bVar = (b) someViewVar;
         st stVar = this.a;
         Calendar calendarB = eoq.b(stVar.a.a);
         calendarB.add(2, i);
@@ -77,7 +77,7 @@ public final class c extends cyw {
     }
 
     @Override // me.hd.wauxv.obf.cyw
-    public final czx g(ViewGroup viewGroup, int i) {
+    public final SomeView g(ViewGroup viewGroup, int i) {
         LinearLayout linearLayout = (LinearLayout) LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.mtrl_calendar_month_labeled, viewGroup, false);
         if (!cas.ec(viewGroup.getContext(), android.R.attr.windowFullscreen)) {
             return new b(linearLayout, false);

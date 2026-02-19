@@ -426,9 +426,9 @@ public final class cjm {
                     }
                     cjd cjdVar = new cjd(strBo, strBo2, strBo3);
                     eaVar2.getClass();
-                    ArrayList arrayListAk = bhu.ak((LinkedHashMap) eaVar2.e, new cjh(cjdVar, 0));
+                    ArrayList arrayListAk = FastKV.ak((LinkedHashMap) eaVar2.e, new cjh(cjdVar, 0));
                     if (!arrayListAk.isEmpty()) {
-                        StringBuilder sbZ = dkz.z("Deep link ", strBo, " can't be used to open destination ");
+                        StringBuilder sbZ = StaticHelpers6.concatAndToSb("Deep link ", strBo, " can't be used to open destination ");
                         sbZ.append((cjg) eaVar2.b);
                         sbZ.append(".\nFollowing required arguments are missing: ");
                         sbZ.append(arrayListAk);
@@ -452,7 +452,7 @@ public final class cjm {
                                 typedArrayObtainStyledAttributes.getResourceId(3, -1),
                                 typedArrayObtainStyledAttributes.getResourceId(5, -1),
                                 typedArrayObtainStyledAttributes.getResourceId(6, -1));
-                        Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                        Bundle bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                         eaVar = eaVar2;
                         int i5 = 1;
                         int depth3 = xmlResourceParser.getDepth() + 1;

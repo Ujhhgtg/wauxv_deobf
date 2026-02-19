@@ -18,14 +18,14 @@ public final class bes {
         this.b = beqVar;
     }
 
-    public final void c(bdj bdjVar, boolean z) {
+    public final void c(SomeFragmentManager someFragmentManagerVar, boolean z) {
         Object obj;
         Object objPrevious;
         beq beqVar = this.b;
         ArrayList arrayList = beqVar.h;
-        throwIfVar1IsNull(bdjVar, "fragment");
+        throwIfVar1IsNull(someFragmentManagerVar, "fragment");
         cit citVar = this.a;
-        ArrayList arrayListO = aaz.o((Collection) ((dml) citVar.e.h).c(), (Iterable) ((dml) citVar.f.h).c());
+        ArrayList arrayListO = StaticHelpers5.o((Collection) ((dml) citVar.e.obj).c(), (Iterable) ((dml) citVar.f.obj).c());
         ListIterator listIterator = arrayListO.listIterator(arrayListO.size());
         do {
             obj = null;
@@ -34,11 +34,11 @@ public final class bes {
                 break;
             }
             objPrevious = listIterator.previous();
-        } while (!nullSafeIsEqual(((cio) objPrevious).f, bdjVar.bs));
+        } while (!nullSafeIsEqual(((cio) objPrevious).f, someFragmentManagerVar.bs));
         cio cioVar = (cio) objPrevious;
-        boolean z2 = z && arrayList.isEmpty() && bdjVar.bd;
+        boolean z2 = z && arrayList.isEmpty() && someFragmentManagerVar.bd;
         for (Object obj2 : arrayList) {
-            if (nullSafeIsEqual(((Pair) obj2).first, bdjVar.bs)) {
+            if (nullSafeIsEqual(((Pair) obj2).first, someFragmentManagerVar.bs)) {
                 obj = obj2;
                 break;
             }
@@ -49,19 +49,19 @@ public final class bes {
         }
         if (!z2 && beq.p()) {
             Log.v("FragmentNavigator",
-                    "OnBackStackChangedCommitted for fragment " + bdjVar + " associated with entry " + cioVar);
+                    "OnBackStackChangedCommitted for fragment " + someFragmentManagerVar + " associated with entry " + cioVar);
         }
         boolean z3 = pairVar != null && ((Boolean) pairVar.second).booleanValue();
         if (!z && !z3 && cioVar == null) {
-            throw new IllegalArgumentException(yg.l("The fragment ", bdjVar,
+            throw new IllegalArgumentException(yg.l("The fragment ", someFragmentManagerVar,
                     " is unknown to the FragmentNavigator. Please use the navigate() function to add fragments to the FragmentNavigator managed FragmentManager.")
                     .toString());
         }
         if (cioVar != null) {
-            beqVar.s(bdjVar, cioVar, citVar);
+            beqVar.s(someFragmentManagerVar, cioVar, citVar);
             if (z2) {
                 if (beq.p()) {
-                    Log.v("FragmentNavigator", "OnBackStackChangedCommitted for fragment " + bdjVar
+                    Log.v("FragmentNavigator", "OnBackStackChangedCommitted for fragment " + someFragmentManagerVar
                             + " popping associated entry " + cioVar + " via system back");
                 }
                 citVar.n(cioVar, false);
@@ -69,12 +69,12 @@ public final class bes {
         }
     }
 
-    public final void d(bdj bdjVar, boolean z) {
+    public final void d(SomeFragmentManager someFragmentManagerVar, boolean z) {
         Object objPrevious;
-        throwIfVar1IsNull(bdjVar, "fragment");
+        throwIfVar1IsNull(someFragmentManagerVar, "fragment");
         if (z) {
             cit citVar = this.a;
-            List list = (List) ((dml) citVar.e.h).c();
+            List list = (List) ((dml) citVar.e.obj).c();
             ListIterator listIterator = list.listIterator(list.size());
             do {
                 if (!listIterator.hasPrevious()) {
@@ -82,11 +82,11 @@ public final class bes {
                     break;
                 }
                 objPrevious = listIterator.previous();
-            } while (!nullSafeIsEqual(((cio) objPrevious).f, bdjVar.bs));
+            } while (!nullSafeIsEqual(((cio) objPrevious).f, someFragmentManagerVar.bs));
             cio cioVar = (cio) objPrevious;
             if (beq.p()) {
                 Log.v("FragmentNavigator",
-                        "OnBackStackChangedStarted for fragment " + bdjVar + " associated with entry " + cioVar);
+                        "OnBackStackChangedStarted for fragment " + someFragmentManagerVar + " associated with entry " + cioVar);
             }
             if (cioVar != null) {
                 dml dmlVar = citVar.c;

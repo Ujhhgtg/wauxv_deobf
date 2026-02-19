@@ -8,8 +8,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
@@ -214,7 +214,7 @@ public class MethodCallProxy implements AuxiliaryType {
             }
 
             public int hashCode() {
-                return MethodCall.this.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31);
+                return MethodCall.this.hashCode() + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31);
             }
 
             private Appender(TypeDescription typeDescription) {
@@ -244,7 +244,7 @@ public class MethodCallProxy implements AuxiliaryType {
         }
 
         public int hashCode() {
-            return this.assigner.hashCode() + dkz.c(this.accessorMethod, getClass().hashCode() * 31, 31);
+            return this.assigner.hashCode() + StaticHelpers6.c(this.accessorMethod, getClass().hashCode() * 31, 31);
         }
 
         @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable

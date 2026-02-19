@@ -11,7 +11,7 @@ import me.hd.wauxv.obf.cbv;
 import me.hd.wauxv.obf.cbw;
 import me.hd.wauxv.obf.cbz;
 import me.hd.wauxv.obf.cco;
-import me.hd.wauxv.obf.jx;
+import me.hd.wauxv.obf.FactoryPools;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -22,15 +22,15 @@ public final class ExpandedMenuView extends ListView implements cbv, cco, Adapte
     public ExpandedMenuView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         setOnItemClickListener(this);
-        jx jxVarK = jx.k(context, attributeSet, a, R.attr.listViewStyle);
-        TypedArray typedArray = (TypedArray) jxVarK.e;
+        FactoryPools factoryPoolsVarK = FactoryPools.k(context, attributeSet, a, R.attr.listViewStyle);
+        TypedArray typedArray = (TypedArray) factoryPoolsVarK.e;
         if (typedArray.hasValue(0)) {
-            setBackgroundDrawable(jxVarK.s(0));
+            setBackgroundDrawable(factoryPoolsVarK.s(0));
         }
         if (typedArray.hasValue(1)) {
-            setDivider(jxVarK.s(1));
+            setDivider(factoryPoolsVarK.s(1));
         }
-        jxVarK.ae();
+        factoryPoolsVarK.ae();
     }
 
     @Override // me.hd.wauxv.obf.cbv

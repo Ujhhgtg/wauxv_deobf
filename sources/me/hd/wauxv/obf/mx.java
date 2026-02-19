@@ -37,7 +37,7 @@ public final class mx extends Drawable implements dqj {
         dqh dqhVar;
         WeakReference weakReference = new WeakReference(context);
         this.a = weakReference;
-        bhu.r(context, bhu.m, "Theme.MaterialComponents");
+        FastKV.r(context, FastKV.m, "Theme.MaterialComponents");
         this.d = new Rect();
         dqk dqkVar = new dqk(this);
         this.c = dqkVar;
@@ -345,10 +345,10 @@ public final class mx extends Drawable implements dqj {
         int iIntValue5 = myVar.aa.intValue() + iIntValue4;
         int iIntValue6 = myVar2.s.intValue();
         if (iIntValue6 == 8388659 || iIntValue6 == 8388691) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             this.f = view.getLayoutDirection() == 0 ? (rect3.left - this.j) + iIntValue5 : (rect3.right + this.j) - iIntValue5;
         } else {
-            WeakHashMap weakHashMap2 = eqz.a;
+            WeakHashMap weakHashMap2 = ViewCompat.a;
             this.f = view.getLayoutDirection() == 0 ? (rect3.right + this.j) - iIntValue5 : (rect3.left - this.j) + iIntValue5;
         }
         if (myVar.ad.booleanValue()) {

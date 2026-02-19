@@ -69,7 +69,7 @@ import java.util.function.Supplier;
 import me.hd.wauxv.obf.cpl;
 import me.hd.wauxv.obf.cpt;
 import me.hd.wauxv.obf.cpu;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.implementation.auxiliary.TypeProxy;
@@ -5462,7 +5462,7 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                                                                                                                                                                                         : null;
                                     }
                                     if (string == null) {
-                                        StringBuilder sbZ = dkz.z("(", str4, ")");
+                                        StringBuilder sbZ = StaticHelpers6.concatAndToSb("(", str4, ")");
                                         sbZ.append(ASMUtils.desc(returnType));
                                         string = sbZ.toString();
                                     }
@@ -5672,7 +5672,7 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
                         }
                     }
                     if (string == null) {
-                        StringBuilder sbZ2 = dkz.z("(", str4, ")");
+                        StringBuilder sbZ2 = StaticHelpers6.concatAndToSb("(", str4, ")");
                         sbZ2.append(ASMUtils.desc(returnType));
                         string = sbZ2.toString();
                     }

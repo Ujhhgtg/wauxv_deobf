@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 /* JADX INFO: loaded from: classes.dex */
-public abstract class SomeStaticHelpers extends cnf {
+public abstract class SomeStaticHelpers extends HugeSyntheticPileOfHelpers {
     public static boolean _ai(Object[] objArr, Object[] objArr2) {
         if (objArr == objArr2) {
             return true;
@@ -149,7 +149,7 @@ public abstract class SomeStaticHelpers extends cnf {
 
     public static byte[] _ap(int i, int i2, byte[] bArr) {
         throwIfVar1IsNull(bArr, "<this>");
-        cnf.ax(i2, bArr.length);
+        HugeSyntheticPileOfHelpers.ax(i2, bArr.length);
         byte[] bArrCopyOfRange = Arrays.copyOfRange(bArr, i, i2);
         throwIfVar1IsNull(bArrCopyOfRange, "copyOfRange(...)");
         return bArrCopyOfRange;
@@ -166,7 +166,7 @@ public abstract class SomeStaticHelpers extends cnf {
         throwIfVar1IsNull(jArr, "<this>");
         int length = jArr.length;
         if (length == 0) {
-            return EmptyReadonlyList.a;
+            return EmptyReadonlyList.INSTANCE;
         }
         if (length == 1) {
             return dqc.toSingletonList(Long.valueOf(jArr[0]));
@@ -181,14 +181,14 @@ public abstract class SomeStaticHelpers extends cnf {
     public static List ab(Object[] objArr) {
         throwIfVar1IsNull(objArr, "<this>");
         int length = objArr.length;
-        return length != 0 ? length != 1 ? new ArrayList(new kk(objArr, false)) : dqc.toSingletonList(objArr[0]) : EmptyReadonlyList.a;
+        return length != 0 ? length != 1 ? new ArrayList(new kk(objArr, false)) : dqc.toSingletonList(objArr[0]) : EmptyReadonlyList.INSTANCE;
     }
 
     public static List ac(boolean[] zArr) {
         throwIfVar1IsNull(zArr, "<this>");
         int length = zArr.length;
         if (length == 0) {
-            return EmptyReadonlyList.a;
+            return EmptyReadonlyList.INSTANCE;
         }
         if (length == 1) {
             return dqc.toSingletonList(Boolean.valueOf(zArr[0]));
@@ -216,7 +216,7 @@ public abstract class SomeStaticHelpers extends cnf {
 
     public static Object[] k(Object[] objArr, int i, int i2) {
         throwIfVar1IsNull(objArr, "<this>");
-        cnf.ax(i2, objArr.length);
+        HugeSyntheticPileOfHelpers.ax(i2, objArr.length);
         Object[] objArrCopyOfRange = Arrays.copyOfRange(objArr, i, i2);
         throwIfVar1IsNull(objArrCopyOfRange, "copyOfRange(...)");
         return objArrCopyOfRange;
@@ -297,8 +297,8 @@ public abstract class SomeStaticHelpers extends cnf {
         return -1;
     }
 
-    public static final void t(Object[] objArr, StringBuilder sb, CharSequence charSequence, CharSequence charSequence2,
-            CharSequence charSequence3, CharSequence charSequence4, IInvokable bgfVar) {
+    public static final void appendJoinTo(Object[] objArr, StringBuilder sb, CharSequence charSequence, CharSequence charSequence2,
+                                          CharSequence charSequence3, CharSequence charSequence4, IInvokable bgfVar) {
         throwIfVar1IsNull(objArr, "<this>");
         sb.append(charSequence2);
         int i = 0;
@@ -307,26 +307,26 @@ public abstract class SomeStaticHelpers extends cnf {
             if (i > 1) {
                 sb.append(charSequence);
             }
-            aye.k(sb, obj, bgfVar);
+            aye.transformToAppend(sb, obj, bgfVar);
         }
         sb.append(charSequence3);
     }
 
-    public static String u(Object[] objArr, String str, String str2, String str3, IInvokable bgfVar, int i) {
+    public static String joinToString(Object[] objArr, String str, String str2, String str3, IInvokable bgfVar, int i) {
         if ((i & 1) != 0) {
             str = ", ";
         }
-        String str4 = str;
-        String str5 = (i & 2) != 0 ? "" : str2;
+        String separator = str;
+        String prefix = (i & 2) != 0 ? "" : str2;
         String str6 = (i & 4) != 0 ? "" : str3;
         if ((i & 32) != 0) {
             bgfVar = null;
         }
         throwIfVar1IsNull(objArr, "<this>");
-        throwIfVar1IsNull(str4, "separator");
-        throwIfVar1IsNull(str5, "prefix");
+        throwIfVar1IsNull(separator, "separator");
+        throwIfVar1IsNull(prefix, "prefix");
         StringBuilder sb = new StringBuilder();
-        t(objArr, sb, str4, str5, str6, "...", bgfVar);
+        appendJoinTo(objArr, sb, separator, prefix, str6, "...", bgfVar);
         return sb.toString();
     }
 
@@ -360,7 +360,7 @@ public abstract class SomeStaticHelpers extends cnf {
         throwIfVar1IsNull(fArr, "<this>");
         int length = fArr.length;
         if (length == 0) {
-            return EmptyReadonlyList.a;
+            return EmptyReadonlyList.INSTANCE;
         }
         if (length == 1) {
             return dqc.toSingletonList(Float.valueOf(fArr[0]));
@@ -375,6 +375,6 @@ public abstract class SomeStaticHelpers extends cnf {
     public static List z(int[] iArr) {
         throwIfVar1IsNull(iArr, "<this>");
         int length = iArr.length;
-        return length != 0 ? length != 1 ? ad(iArr) : dqc.toSingletonList(Integer.valueOf(iArr[0])) : EmptyReadonlyList.a;
+        return length != 0 ? length != 1 ? ad(iArr) : dqc.toSingletonList(Integer.valueOf(iArr[0])) : EmptyReadonlyList.INSTANCE;
     }
 }

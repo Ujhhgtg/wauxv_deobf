@@ -53,7 +53,7 @@ public final class enp extends enm {
             arrayList.add(enmVar);
             return;
         }
-        enm enmVar2 = (enm) dkz.l(1, arrayList);
+        enm enmVar2 = (enm) StaticHelpers6.getLastNElem(1, arrayList);
         if (enmVar2.b(enmVar)) {
             enmVar2.c(enmVar);
         } else {

@@ -4,7 +4,7 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class DexDescData {
     public final String b;
-    public final dov c = new dov(new bp(this, 16));
+    public final Kotlin$Lazy c = new Kotlin$Lazy(new bp(this, 16));
 
     public DexDescData(String str) {
         this.b = str;

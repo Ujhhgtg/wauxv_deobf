@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import me.hd.wauxv.obf.aaz;
+import me.hd.wauxv.obf.StaticHelpers5;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.dlc;
 import me.hd.wauxv.obf.emc;
@@ -198,7 +198,7 @@ public final class Hpack {
         }
 
         public final List<Header> getAndResetHeaderList() {
-            List<Header> listZ = aaz.z(this.headerList);
+            List<Header> listZ = StaticHelpers5.z(this.headerList);
             this.headerList.clear();
             return listZ;
         }

@@ -70,9 +70,9 @@ public final class hh {
         CompoundButton compoundButton = (CompoundButton) this.f;
         Context context = compoundButton.getContext();
         int[] iArr = cyf.m;
-        jx jxVarK = jx.k(context, attributeSet, iArr, i);
-        TypedArray typedArray = (TypedArray) jxVarK.e;
-        eqz.r(compoundButton, compoundButton.getContext(), iArr, attributeSet, (TypedArray) jxVarK.e, i, 0);
+        FactoryPools factoryPoolsVarK = FactoryPools.k(context, attributeSet, iArr, i);
+        TypedArray typedArray = (TypedArray) factoryPoolsVarK.e;
+        ViewCompat.r(compoundButton, compoundButton.getContext(), iArr, attributeSet, (TypedArray) factoryPoolsVarK.e, i, 0);
         try {
             if (typedArray.hasValue(1) && (resourceId2 = typedArray.getResourceId(1, 0)) != 0) {
                 try {
@@ -86,13 +86,13 @@ public final class hh {
                 compoundButton.setButtonDrawable(cmz.y(compoundButton.getContext(), resourceId));
             }
             if (typedArray.hasValue(2)) {
-                compoundButton.setButtonTintList(jxVarK.r(2));
+                compoundButton.setButtonTintList(factoryPoolsVarK.r(2));
             }
             if (typedArray.hasValue(3)) {
                 compoundButton.setButtonTintMode(apy.f(typedArray.getInt(3, -1), null));
             }
         } finally {
-            jxVarK.ae();
+            factoryPoolsVarK.ae();
         }
     }
 }

@@ -9,11 +9,11 @@ public final class bbq implements Comparator {
     public final Rect a = new Rect();
     public final Rect b = new Rect();
     public final boolean c;
-    public final awp d;
+    public final GifEncoder d;
 
-    public bbq(boolean z, awp awpVar) {
+    public bbq(boolean z, GifEncoder gifEncoderVar) {
         this.c = z;
-        this.d = awpVar;
+        this.d = gifEncoderVar;
     }
 
     @Override // java.util.Comparator

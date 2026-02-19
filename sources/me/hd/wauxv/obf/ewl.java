@@ -10,7 +10,7 @@ import java.util.List;
 public final class ewl extends cbm {
     @Override // me.hd.wauxv.obf.cbm
     public final List b(Class cls) {
-        dov dovVar = eu.a;
+        Kotlin$Lazy kotlin$LazyVar = eu.a;
         List listB = super.b(cls);
         if (!eu.b(28)) {
             return listB;
@@ -22,12 +22,12 @@ public final class ewl extends cbm {
                 arrayList.add(obj);
             }
         }
-        return aaz.z(arrayList);
+        return StaticHelpers5.z(arrayList);
     }
 
     @Override // me.hd.wauxv.obf.cbm
     public final List c(Class cls) {
-        dov dovVar = eu.a;
+        Kotlin$Lazy kotlin$LazyVar = eu.a;
         List listC = super.c(cls);
         if (!eu.b(28)) {
             return listC;
@@ -39,6 +39,6 @@ public final class ewl extends cbm {
                 arrayList.add(obj);
             }
         }
-        return aaz.z(arrayList);
+        return StaticHelpers5.z(arrayList);
     }
 }

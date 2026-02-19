@@ -98,14 +98,14 @@ public final class eut extends ajn implements ck {
         }
         if (z) {
             ekt ektVar = (ekt) this.at;
-            esgVarAc = eqz.g(ektVar.a);
+            esgVarAc = ViewCompat.getOrCreateAnimationHelper(ektVar.a);
             esgVarAc.b(0.0f);
             esgVarAc.d(100L);
             esgVarAc.e(new eks(ektVar, 4));
             esgVarAc2 = this.au.ac(0, 200L);
         } else {
             ekt ektVar2 = (ekt) this.at;
-            esg esgVarG = eqz.g(ektVar2.a);
+            esg esgVarG = ViewCompat.getOrCreateAnimationHelper(ektVar2.a);
             esgVarG.b(1.0f);
             esgVarG.d(200L);
             esgVarG.e(new eks(ektVar2, 0));
@@ -183,7 +183,7 @@ public final class eut extends ajn implements ck {
         int dimensionPixelSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(12, 0);
         if (dimensionPixelSize != 0) {
             ActionBarContainer actionBarContainer2 = this.as;
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             eqq.k(actionBarContainer2, dimensionPixelSize);
         }
         typedArrayObtainStyledAttributes.recycle();
@@ -239,7 +239,7 @@ public final class eut extends ajn implements ck {
                     this.as.getLocationInWindow(new int[]{0, 0});
                     f -= r12[1];
                 }
-                esg esgVarG = eqz.g(this.as);
+                esg esgVarG = ViewCompat.getOrCreateAnimationHelper(this.as);
                 esgVarG.f(f);
                 View view2 = (View) esgVarG.a.get();
                 if (view2 != null) {
@@ -251,7 +251,7 @@ public final class eut extends ajn implements ck {
                     arrayList.add(esgVarG);
                 }
                 if (this.bd && view != null) {
-                    esg esgVarG2 = eqz.g(view);
+                    esg esgVarG2 = ViewCompat.getOrCreateAnimationHelper(view);
                     esgVarG2.f(f);
                     if (!eshVar2.e) {
                         arrayList.add(esgVarG2);
@@ -293,7 +293,7 @@ public final class eut extends ajn implements ck {
             }
             this.as.setTranslationY(f2);
             esh eshVar4 = new esh();
-            esg esgVarG3 = eqz.g(this.as);
+            esg esgVarG3 = ViewCompat.getOrCreateAnimationHelper(this.as);
             esgVarG3.f(0.0f);
             View view3 = (View) esgVarG3.a.get();
             if (view3 != null) {
@@ -306,7 +306,7 @@ public final class eut extends ajn implements ck {
             }
             if (this.bd && view != null) {
                 view.setTranslationY(f2);
-                esg esgVarG4 = eqz.g(view);
+                esg esgVarG4 = ViewCompat.getOrCreateAnimationHelper(view);
                 esgVarG4.f(0.0f);
                 if (!eshVar4.e) {
                     arrayList2.add(esgVarG4);
@@ -334,7 +334,7 @@ public final class eut extends ajn implements ck {
         }
         ActionBarOverlayLayout actionBarOverlayLayout = this.ar;
         if (actionBarOverlayLayout != null) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             eqo.c(actionBarOverlayLayout);
         }
     }

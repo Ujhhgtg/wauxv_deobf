@@ -6,21 +6,21 @@ public abstract /* synthetic */ class anh {
     public static final /* synthetic */ int[] a;
 
     static {
-        int[] iArr = new int[bug.values().length];
+        int[] iArr = new int[LifeEventEnum.values().length];
         try {
-            iArr[bug.ON_CREATE.ordinal()] = 1;
+            iArr[LifeEventEnum.ON_CREATE.ordinal()] = 1;
         } catch (NoSuchFieldError unused) {
         }
         try {
-            iArr[bug.ON_RESUME.ordinal()] = 2;
+            iArr[LifeEventEnum.ON_RESUME.ordinal()] = 2;
         } catch (NoSuchFieldError unused2) {
         }
         try {
-            iArr[bug.ON_STOP.ordinal()] = 3;
+            iArr[LifeEventEnum.ON_STOP.ordinal()] = 3;
         } catch (NoSuchFieldError unused3) {
         }
         try {
-            iArr[bug.ON_DESTROY.ordinal()] = 4;
+            iArr[LifeEventEnum.ON_DESTROY.ordinal()] = 4;
         } catch (NoSuchFieldError unused4) {
         }
         a = iArr;

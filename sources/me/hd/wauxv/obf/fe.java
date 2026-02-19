@@ -131,7 +131,7 @@ public final class fe extends epc implements Animatable {
             if (eventType == 2) {
                 String name = xmlPullParser.getName();
                 if ("animated-vector".equals(name)) {
-                    TypedArray typedArrayAv = emc.av(resources, theme, attributeSet, bht.k);
+                    TypedArray typedArrayAv = emc.av(resources, theme, attributeSet, ResourcesCompat.k);
                     int resourceId = typedArrayAv.getResourceId(0, 0);
                     if (resourceId != 0) {
                         epl eplVar = new epl();
@@ -148,7 +148,7 @@ public final class fe extends epc implements Animatable {
                     }
                     typedArrayAv.recycle();
                 } else if ("target".equals(name)) {
-                    TypedArray typedArrayObtainAttributes = resources.obtainAttributes(attributeSet, bht.l);
+                    TypedArray typedArrayObtainAttributes = resources.obtainAttributes(attributeSet, ResourcesCompat.l);
                     String string = typedArrayObtainAttributes.getString(0);
                     int resourceId2 = typedArrayObtainAttributes.getResourceId(1, 0);
                     if (resourceId2 != 0) {

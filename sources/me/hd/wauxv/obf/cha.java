@@ -27,12 +27,12 @@ public final class cha extends SwitchHook implements bnn {
 
     @Override // me.hd.wauxv.obf.bnn
     public final List j() {
-        return !z() ? EmptyReadonlyList.a
+        return !z() ? EmptyReadonlyList.INSTANCE
                 : OtherStaticHelpers.argsToList(
                         new bly(R.id.MenuItem_Home_MsgListHide, "列表隐藏" /* "列表隐藏" /* "列表隐藏" /* cnb.z(-524656025008938L)  */,
-                                R.drawable.ic_menu_hide_24dp, new cfh(7)),
+                                R.drawable.ic_menu_hide_24dp, new Function1$VarIsInt$2(7)),
                         new bly(R.id.MenuItem_Home_MsgListShow, "列表显示" /* "列表显示" /* "列表显示" /* cnb.z(-524668909910826L)  */,
-                                R.drawable.ic_menu_show_24dp, new cfh(8)));
+                                R.drawable.ic_menu_show_24dp, new Function1$VarIsInt$2(8)));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

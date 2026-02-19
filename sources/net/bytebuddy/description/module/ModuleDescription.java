@@ -9,7 +9,7 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.AccessControllerPlugin;
 import net.bytebuddy.description.ModifierReviewable;
 import net.bytebuddy.description.NamedElement;
@@ -311,12 +311,12 @@ public interface ModuleDescription extends NamedElement, ModifierReviewable.ForM
         public static ModuleDescription of(Object obj) {
             Module module = MODULE;
             if (!module.isInstance(obj)) {
-                throw new IllegalArgumentException(dkz.r(obj, "Not a Java module: "));
+                throw new IllegalArgumentException(StaticHelpers6.concatVar2Var1(obj, "Not a Java module: "));
             }
             if (module.isNamed(obj)) {
                 return new ForLoadedModule((AnnotatedElement) obj);
             }
-            throw new IllegalArgumentException(dkz.r(obj, "Not a named module: "));
+            throw new IllegalArgumentException(StaticHelpers6.concatVar2Var1(obj, "Not a named module: "));
         }
 
         @Override // net.bytebuddy.description.NamedElement
@@ -664,7 +664,7 @@ public interface ModuleDescription extends NamedElement, ModifierReviewable.ForM
             public String toString() {
                 String version = getVersion();
                 StringBuilder sb = new StringBuilder("Requires{version=");
-                sb.append(version == null ? "" : dkz.o('\'', "\"", version));
+                sb.append(version == null ? "" : StaticHelpers6.o('\'', "\"", version));
                 sb.append(",modifiers=");
                 sb.append(getModifiers());
                 sb.append('}');

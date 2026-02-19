@@ -58,7 +58,7 @@ public abstract class ell implements Cloneable {
                 sparseArray.put(id, view);
             }
         }
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         String strF = eqq.f(view);
         if (strF != null) {
             if (kuVar2.containsKey(strF)) {

@@ -15,9 +15,9 @@ public final class ur extends bws {
     public final void initOnce() {
         int i = 0;
         adt adtVarM = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-50749333568298L)   */)).m();
-        adtVarM.z(Arrays.copyOf(new Object[] { dal.b(Context.class), dal.b(AttributeSet.class), dal.b(Integer.TYPE) },
+        adtVarM.setParams(Arrays.copyOf(new Object[] { dal.b(Context.class), dal.b(AttributeSet.class), dal.b(Integer.TYPE) },
                 3));
-        aki akiVarAd = ad((ConstructorHookWrapper) aaz.e(adtVarM.a()), exg.a);
+        aki akiVarAd = ad((ConstructorHookWrapper) StaticHelpers5.safeGetFirstInList(adtVarM.a()), HookPriorityEnum.ENUM_DEFAULT);
         akiVarAd.m(new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(27));
         akiVarAd.o();
     }

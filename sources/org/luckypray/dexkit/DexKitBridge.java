@@ -3,16 +3,15 @@ package org.luckypray.dexkit;
 import java.io.Closeable;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
-import me.hd.wauxv.obf.abe;
+import me.hd.wauxv.obf.StaticHelpers3;
 import me.hd.wauxv.obf.bag;
 import me.hd.wauxv.obf.bah;
 import me.hd.wauxv.obf.bbb;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.c;
 import me.hd.wauxv.obf.cdg;
 import me.hd.wauxv.obf.cna;
-import me.hd.wauxv.obf.emn;
+import me.hd.wauxv.obf.StaticHelpers7;
 import me.hd.wauxv.obf.ex;
 import me.hd.wauxv.obf.yw;
 
@@ -65,7 +64,7 @@ public final class DexKitBridge implements Closeable {
             ywVar.add(cna.t(this, cVarL));
         }
         if (ywVar.size() > 1) {
-            abe.am(ywVar, new ex(3));
+            StaticHelpers3.am(ywVar, new ex(3));
         }
         return ywVar;
     }
@@ -92,10 +91,10 @@ public final class DexKitBridge implements Closeable {
                 cVar2 = null;
             }
             throwIfVar1IsNull(cVar2);
-            cdgVar.add(emn.ak(this, cVar2));
+            cdgVar.add(StaticHelpers7.ak(this, cVar2));
         }
         if (cdgVar.size() > 1) {
-            abe.am(cdgVar, new ex(4));
+            StaticHelpers3.am(cdgVar, new ex(4));
         }
         return cdgVar;
     }

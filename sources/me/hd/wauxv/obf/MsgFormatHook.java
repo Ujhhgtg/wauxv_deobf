@@ -30,10 +30,10 @@ public final class MsgFormatHook extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() throws NoSuchMethodException {
-        Constructor constructorBa = emn.ba(ConstructorSendTextComponent.INSTANCE);
+        Constructor constructorBa = StaticHelpers7.ba(ConstructorSendTextComponent.INSTANCE);
         List listBf = dqc.toSingletonList(constructorBa);
         MsgFormatHook msgFormatHookVar = a;
-        aki akiVarAb = csb.ab(msgFormatHookVar, listBf);
+        aki akiVarAb = PackageParam.ab(msgFormatHookVar, listBf);
         msgFormatHookVar.y(akiVarAb, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(constructorBa, 7));
         akiVarAb.o();
     }
@@ -50,7 +50,7 @@ public final class MsgFormatHook extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(ConstructorSendTextComponent.INSTANCE, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(17));
+        StaticHelpers7.resolveDexAndCache(ConstructorSendTextComponent.INSTANCE, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(17));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -62,23 +62,23 @@ public final class MsgFormatHook extends SwitchHook implements IDexFind {
     public final IInvokable getOnClick() {
         return {
             View view4 = (View) obj;
-            View viewK3 = dkz.k(view4, R.layout.module_dialog_msg_format, null, false);
+            View viewK3 = StaticHelpers6.k(view4, R.layout.module_dialog_msg_format, null, false);
             int i12 = R.id.moduleDialogEdtMsgFormatTextFormat;
-            TextInputEditText textInputEditText13 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
+            TextInputEditText textInputEditText13 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK3,
                     R.id.moduleDialogEdtMsgFormatTextFormat);
             if (textInputEditText13 != null) {
                 i12 = R.id.moduleDialogEdtMsgFormatTextPlaceholders;
-                MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.aq(viewK3,
+                MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewK3,
                         R.id.moduleDialogEdtMsgFormatTextPlaceholders);
                 if (materialTextView != null) {
                     i12 = R.id.moduleDialogEdtMsgFormatTimeFormat;
-                    TextInputEditText textInputEditText14 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
+                    TextInputEditText textInputEditText14 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK3,
                             R.id.moduleDialogEdtMsgFormatTimeFormat);
                     if (textInputEditText14 != null) {
                         i12 = R.id.moduleDialogInputMsgFormatTextFormat;
-                        if (((TextInputLayout) KotlinHelpers2.aq(viewK3, R.id.moduleDialogInputMsgFormatTextFormat)) != null) {
+                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK3, R.id.moduleDialogInputMsgFormatTextFormat)) != null) {
                             i12 = R.id.moduleDialogInputMsgFormatTimeFormat;
-                            if (((TextInputLayout) KotlinHelpers2.aq(viewK3,
+                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK3,
                                     R.id.moduleDialogInputMsgFormatTimeFormat)) != null) {
                                 cem cemVar = new cem((LinearLayout) viewK3, textInputEditText13, materialTextView,
                                         textInputEditText14, 3);
@@ -99,7 +99,7 @@ public final class MsgFormatHook extends SwitchHook implements IDexFind {
                                 MsgFormatHook.a.getClass();
                                 egVar3.d = MsgFormatHook.i;
                                 bzyVar3.t("保存" /* "保存" /* "保存" /* cnb.z(-468666831338282L)  */, new amw(new cfx(cemVar, 0), 0));
-                                bzyVar3.s("重置" /* "重置" /* "重置" /* cnb.z(-468602406828842L)  */, new amw(new cfh(i2), 2));
+                                bzyVar3.s("重置" /* "重置" /* "重置" /* cnb.z(-468602406828842L)  */, new amw(new Function1$VarIsInt$2(i2), 2));
                                 bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar3,
                                         "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */);
                                 LinearLayout linearLayout3 = cemVar.b;

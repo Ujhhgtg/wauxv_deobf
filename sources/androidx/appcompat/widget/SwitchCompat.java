@@ -31,7 +31,7 @@ import java.util.WeakHashMap;
 import me.hd.wauxv.obf.apy;
 import me.hd.wauxv.obf.atf;
 import me.hd.wauxv.obf.aus;
-import me.hd.wauxv.obf.bht;
+import me.hd.wauxv.obf.ResourcesCompat;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.cyf;
@@ -39,10 +39,10 @@ import me.hd.wauxv.obf.drm;
 import me.hd.wauxv.obf.em;
 import me.hd.wauxv.obf.emc;
 import me.hd.wauxv.obf.eqm;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.ii;
 import me.hd.wauxv.obf.jl;
-import me.hd.wauxv.obf.jx;
+import me.hd.wauxv.obf.FactoryPools;
 import me.hd.wauxv.obf.tr;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -734,8 +734,8 @@ public class SwitchCompat extends CompoundButton {
                     string = getResources().getString(me.hd.wauxv.R.string.abc_capital_on);
                 }
                 Object obj = string;
-                WeakHashMap weakHashMap = eqz.a;
-                new eqm(me.hd.wauxv.R.id.tag_state_description, CharSequence.class, 64, 30, 2).k(this, obj);
+                WeakHashMap weakHashMap = ViewCompat.a;
+                new eqm(me.hd.wauxv.R.id.tag_state_description, CharSequence.class, 64, 30, 2).setAccessibilityProperty(this, obj);
             }
         } else if (Build.VERSION.SDK_INT >= 30) {
             Object string2 = this.s;
@@ -743,8 +743,8 @@ public class SwitchCompat extends CompoundButton {
                 string2 = getResources().getString(me.hd.wauxv.R.string.abc_capital_off);
             }
             Object obj2 = string2;
-            WeakHashMap weakHashMap2 = eqz.a;
-            new eqm(me.hd.wauxv.R.id.tag_state_description, CharSequence.class, 64, 30, 2).k(this, obj2);
+            WeakHashMap weakHashMap2 = ViewCompat.a;
+            new eqm(me.hd.wauxv.R.id.tag_state_description, CharSequence.class, 64, 30, 2).setAccessibilityProperty(this, obj2);
         }
         if (getWindowToken() == null || !isLaidOut()) {
             ObjectAnimator objectAnimator = this.ap;
@@ -828,8 +828,8 @@ public class SwitchCompat extends CompoundButton {
         if (string == null) {
             string = getResources().getString(me.hd.wauxv.R.string.abc_capital_off);
         }
-        WeakHashMap weakHashMap = eqz.a;
-        new eqm(me.hd.wauxv.R.id.tag_state_description, CharSequence.class, 64, 30, 2).k(this, string);
+        WeakHashMap weakHashMap = ViewCompat.a;
+        new eqm(me.hd.wauxv.R.id.tag_state_description, CharSequence.class, 64, 30, 2).setAccessibilityProperty(this, string);
     }
 
     public void setTextOn(CharSequence charSequence) {
@@ -842,8 +842,8 @@ public class SwitchCompat extends CompoundButton {
         if (string == null) {
             string = getResources().getString(me.hd.wauxv.R.string.abc_capital_on);
         }
-        WeakHashMap weakHashMap = eqz.a;
-        new eqm(me.hd.wauxv.R.id.tag_state_description, CharSequence.class, 64, 30, 2).k(this, string);
+        WeakHashMap weakHashMap = ViewCompat.a;
+        new eqm(me.hd.wauxv.R.id.tag_state_description, CharSequence.class, 64, 30, 2).setAccessibilityProperty(this, string);
     }
 
     public void setThumbDrawable(Drawable drawable) {
@@ -941,15 +941,15 @@ public class SwitchCompat extends CompoundButton {
         this.ak = textPaint;
         textPaint.density = getResources().getDisplayMetrics().density;
         int[] iArr = cyf.v;
-        jx jxVarK = jx.k(context, attributeSet, iArr, i);
-        TypedArray typedArray = (TypedArray) jxVarK.e;
-        eqz.r(this, context, iArr, attributeSet, typedArray, i, 0);
-        Drawable drawableS = jxVarK.s(2);
+        FactoryPools factoryPoolsVarK = FactoryPools.k(context, attributeSet, iArr, i);
+        TypedArray typedArray = (TypedArray) factoryPoolsVarK.e;
+        ViewCompat.r(this, context, iArr, attributeSet, typedArray, i, 0);
+        Drawable drawableS = factoryPoolsVarK.s(2);
         this.c = drawableS;
         if (drawableS != null) {
             drawableS.setCallback(this);
         }
-        Drawable drawableS2 = jxVarK.s(11);
+        Drawable drawableS2 = factoryPoolsVarK.s(11);
         this.h = drawableS2;
         if (drawableS2 != null) {
             drawableS2.setCallback(this);
@@ -961,7 +961,7 @@ public class SwitchCompat extends CompoundButton {
         this.n = typedArray.getDimensionPixelSize(5, 0);
         this.o = typedArray.getDimensionPixelSize(6, 0);
         this.p = typedArray.getBoolean(4, false);
-        ColorStateList colorStateListR = jxVarK.r(9);
+        ColorStateList colorStateListR = factoryPoolsVarK.r(9);
         if (colorStateListR != null) {
             this.d = colorStateListR;
             this.f = true;
@@ -974,7 +974,7 @@ public class SwitchCompat extends CompoundButton {
         if (this.f || this.g) {
             at();
         }
-        ColorStateList colorStateListR2 = jxVarK.r(12);
+        ColorStateList colorStateListR2 = factoryPoolsVarK.r(12);
         if (colorStateListR2 != null) {
             this.i = colorStateListR2;
             this.k = true;
@@ -990,7 +990,7 @@ public class SwitchCompat extends CompoundButton {
         int resourceId2 = typedArray.getResourceId(7, 0);
         if (resourceId2 != 0) {
             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(resourceId2, cyf.w);
-            ColorStateList colorStateList = (!typedArrayObtainStyledAttributes.hasValue(3) || (resourceId = typedArrayObtainStyledAttributes.getResourceId(3, 0)) == 0 || (colorStateList = bht.v(context, resourceId)) == null) ? typedArrayObtainStyledAttributes.getColorStateList(3) : colorStateList;
+            ColorStateList colorStateList = (!typedArrayObtainStyledAttributes.hasValue(3) || (resourceId = typedArrayObtainStyledAttributes.getResourceId(3, 0)) == 0 || (colorStateList = ResourcesCompat.v(context, resourceId)) == null) ? typedArrayObtainStyledAttributes.getColorStateList(3) : colorStateList;
             if (colorStateList != null) {
                 this.al = colorStateList;
             } else {
@@ -1031,7 +1031,7 @@ public class SwitchCompat extends CompoundButton {
             typedArrayObtainStyledAttributes.recycle();
         }
         new jl(this).t(attributeSet, i);
-        jxVarK.ae();
+        factoryPoolsVarK.ae();
         ViewConfiguration viewConfiguration = ViewConfiguration.get(context);
         this.w = viewConfiguration.getScaledTouchSlop();
         this.aa = viewConfiguration.getScaledMinimumFlingVelocity();

@@ -7,10 +7,10 @@ public final class bwq extends bwr implements bul {
     public final /* synthetic */ chv c;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public bwq(chv chvVar, bdj bdjVar, bet betVar) {
+    public bwq(chv chvVar, SomeFragmentManager someFragmentManagerVar, bet betVar) {
         super(chvVar, betVar);
         this.c = chvVar;
-        this.b = bdjVar;
+        this.b = someFragmentManagerVar;
     }
 
     @Override // me.hd.wauxv.obf.bwr
@@ -24,7 +24,7 @@ public final class bwq extends bwr implements bul {
     }
 
     @Override // me.hd.wauxv.obf.bul
-    public final void e(bup bupVar, bug bugVar) {
+    public final void e(bup bupVar, LifeEventEnum lifeEventEnumVar) {
         bup bupVar2 = this.b;
         buh buhVar = bupVar2.ap().c;
         if (buhVar != buh.a) {
@@ -48,7 +48,7 @@ public final class bwq extends bwr implements bul {
     }
 
     @Override // me.hd.wauxv.obf.bwr
-    public final boolean f(bdj bdjVar) {
-        return this.b == bdjVar;
+    public final boolean f(SomeFragmentManager someFragmentManagerVar) {
+        return this.b == someFragmentManagerVar;
     }
 }

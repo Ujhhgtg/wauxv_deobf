@@ -12,7 +12,7 @@ public final class atr {
     public static final atr e;
     public static final atr f;
     public static final /* synthetic */ atr[] g;
-    public static final /* synthetic */ awn h;
+    public static final /* synthetic */ KotlinEnumEntriesImpl h;
     public final int i;
     public final String j;
 
@@ -31,7 +31,7 @@ public final class atr {
         f = atrVar6;
         atr[] atrVarArr = {atrVar, atrVar2, atrVar3, atrVar4, atrVar5, atrVar6};
         g = atrVarArr;
-        h = new awn(atrVarArr);
+        h = new KotlinEnumEntriesImpl(atrVarArr);
     }
 
     public atr(String str, int i, int i2, String str2) {

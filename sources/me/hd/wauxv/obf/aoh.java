@@ -7,5 +7,5 @@ import java.io.File;
 public interface aoh {
     File w(btj btjVar);
 
-    void y(btj btjVar, jx jxVar);
+    void y(btj btjVar, FactoryPools factoryPoolsVar);
 }

@@ -14,14 +14,14 @@ public final class ddh extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        emn.bc(ddf.a, new dbj(8));
-        aki akiVarAb = csb.ab(this, dqc.toSingletonList(emn.ba(ddd.a)));
+        StaticHelpers7.bc(ddf.a, new dbj(8));
+        aki akiVarAb = PackageParam.ab(this, dqc.toSingletonList(StaticHelpers7.ba(ddd.a)));
         dbj dbjVar = new dbj(9);
         ddh ddhVar = a;
         ddhVar.y(akiVarAb, dbjVar);
         akiVarAb.o();
         if (cnb.ab(ewk.i) || cnb.ac(ewh.h)) {
-            aki akiVarAb2 = csb.ab(this, dqc.toSingletonList(emn.bb(dde.a)));
+            aki akiVarAb2 = PackageParam.ab(this, dqc.toSingletonList(StaticHelpers7.bb(dde.a)));
             ddhVar.y(akiVarAb2, new dbj(10));
             akiVarAb2.o();
         }
@@ -39,10 +39,10 @@ public final class ddh extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(ddf.a, dexKitBridge, new dbj(11));
-        emn.aj(ddd.a, dexKitBridge, new dbj(12));
+        StaticHelpers7.resolveDexAndCache(ddf.a, dexKitBridge, new dbj(11));
+        StaticHelpers7.resolveDexAndCache(ddd.a, dexKitBridge, new dbj(12));
         if (cnb.ab(ewk.i) || cnb.ac(ewh.h)) {
-            emn.aj(dde.a, dexKitBridge, new dbj(13));
+            StaticHelpers7.resolveDexAndCache(dde.a, dexKitBridge, new dbj(13));
         }
     }
 

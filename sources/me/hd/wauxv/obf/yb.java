@@ -11,7 +11,7 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class yb extends aq {
+public final class yb extends AccessibilityDelegateCompat {
     public final /* synthetic */ int a;
     public final /* synthetic */ Object b;
 
@@ -21,10 +21,10 @@ public final class yb extends aq {
     }
 
     @Override // me.hd.wauxv.obf.aq
-    public final void d(View view, bd bdVar) {
+    public final void onInitializeAccessibilityNodeInfo(View view, bd bdVar) {
         int i = this.a;
         Object obj = this.b;
-        View.AccessibilityDelegate accessibilityDelegate = this.g;
+        View.AccessibilityDelegate accessibilityDelegate = this.accessibilityDelegate;
         switch (i) {
             case 0:
                 AccessibilityNodeInfo accessibilityNodeInfo = bdVar.a;
@@ -67,14 +67,14 @@ public final class yb extends aq {
     }
 
     @Override // me.hd.wauxv.obf.aq
-    public void k(View view, AccessibilityEvent accessibilityEvent) {
+    public void initializeAccessibilityEvent(View view, AccessibilityEvent accessibilityEvent) {
         switch (this.a) {
             case 0:
-                super.k(view, accessibilityEvent);
+                super.initializeAccessibilityEvent(view, accessibilityEvent);
                 accessibilityEvent.setChecked(((CheckableImageButton) this.b).b);
                 break;
             default:
-                super.k(view, accessibilityEvent);
+                super.initializeAccessibilityEvent(view, accessibilityEvent);
                 break;
         }
     }

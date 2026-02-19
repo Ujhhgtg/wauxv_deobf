@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.ClassFileVersion;
@@ -20,7 +20,6 @@ import net.bytebuddy.implementation.FieldAccessor;
 import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.MethodAccessorFactory;
 import net.bytebuddy.implementation.MethodCall;
-import net.bytebuddy.implementation.auxiliary.TypeProxy;
 import net.bytebuddy.matcher.ElementMatchers;
 import net.bytebuddy.utility.CompoundList;
 import net.bytebuddy.utility.RandomString;
@@ -54,7 +53,7 @@ public enum PrivilegedMemberLookupAction implements AuxiliaryType {
         if (methodDescription.isMethod()) {
             return methodDescription.isPublic() ? FOR_PUBLIC_METHOD : FOR_DECLARED_METHOD;
         }
-        throw new IllegalStateException(dkz.t("Cannot load constant for type initializer: ", methodDescription));
+        throw new IllegalStateException(StaticHelpers6.concat("Cannot load constant for type initializer: ", methodDescription));
     }
 
     @Override // net.bytebuddy.implementation.auxiliary.AuxiliaryType

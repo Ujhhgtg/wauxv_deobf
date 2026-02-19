@@ -22,7 +22,7 @@ public final class dwg {
     public /* synthetic */ dwg(int i, String str, Long l, Long l2, String str2, String str3, Long l3, Boolean bool,
             Boolean bool2, Integer num, List list) {
         if (1023 != (i & 1023)) {
-            bht.ah(i, 1023, dwe.b.getDescriptor());
+            ResourcesCompat.ah(i, 1023, dwe.b.getDescriptor());
             throw null;
         }
         this.b = str;
@@ -79,11 +79,11 @@ public final class dwg {
         StringBuilder sb = new StringBuilder();
         sb.append("cp1Proto(live_ad_id=" /* "cp1Proto(live_ad_id=" /* "cp1Proto(live_ad_id=" /* cnb.z(-161726993529642L)  */);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -162169375161130L);
-        dkz.ad(sb, this.c, -162096360717098L);
-        dkz.ad(sb, this.d, -161988986534698L);
+        StaticHelpers6.ad(sb, this.c, -162096360717098L);
+        StaticHelpers6.ad(sb, this.d, -161988986534698L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.e, -161967511698218L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.f, -159141423217450L);
-        dkz.ad(sb, this.g, -159076998708010L);
+        StaticHelpers6.ad(sb, this.g, -159076998708010L);
         dts.g(sb, this.h, -158939559754538L);
         dts.g(sb, this.i, -159420596091690L);
         bjs.w(sb, this.j, -159356171582250L);

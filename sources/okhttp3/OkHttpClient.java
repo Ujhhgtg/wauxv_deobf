@@ -14,8 +14,8 @@ import javax.net.SocketFactory;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
-import me.hd.wauxv.obf.aaz;
-import me.hd.wauxv.obf.abf;
+import me.hd.wauxv.obf.StaticHelpers5;
+import me.hd.wauxv.obf.StaticHelpers2;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.IInvokable;
 import me.hd.wauxv.obf.dts;
@@ -414,7 +414,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
 
         public final Builder protocols(List<? extends Protocol> list) {
             throwIfVar1IsNull(list, "protocols");
-            ArrayList arrayListAb = aaz.ab(list);
+            ArrayList arrayListAb = StaticHelpers5.ab(list);
             Protocol protocol = Protocol.H2_PRIOR_KNOWLEDGE;
             if (!arrayListAb.contains(protocol) && !arrayListAb.contains(Protocol.HTTP_1_1)) {
                 throw new IllegalArgumentException(
@@ -692,8 +692,8 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
             throwIfVar1IsNull(okHttpClient, "okHttpClient");
             this.dispatcher = okHttpClient.dispatcher();
             this.connectionPool = okHttpClient.connectionPool();
-            abf.an(this.interceptors, okHttpClient.interceptors());
-            abf.an(this.networkInterceptors, okHttpClient.networkInterceptors());
+            StaticHelpers2.an(this.interceptors, okHttpClient.interceptors());
+            StaticHelpers2.an(this.networkInterceptors, okHttpClient.networkInterceptors());
             this.eventListenerFactory = okHttpClient.eventListenerFactory();
             this.retryOnConnectionFailure = okHttpClient.retryOnConnectionFailure();
             this.authenticator = okHttpClient.authenticator();

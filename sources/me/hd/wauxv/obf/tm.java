@@ -177,7 +177,7 @@ public final class tm extends cce implements View.OnKeyListener, PopupWindow.OnD
         if (arrayList.isEmpty()) {
             return null;
         }
-        return ((tl) dkz.l(1, arrayList)).a.w;
+        return ((tl) StaticHelpers6.getLastNElem(1, arrayList)).a.w;
     }
 
     @Override // me.hd.wauxv.obf.ccm
@@ -340,7 +340,7 @@ public final class tm extends cce implements View.OnKeyListener, PopupWindow.OnD
         cckVar.af = this.m;
         ArrayList arrayList = this.h;
         if (arrayList.size() > 0) {
-            tlVar = (tl) dkz.l(1, arrayList);
+            tlVar = (tl) StaticHelpers6.getLastNElem(1, arrayList);
             cbw cbwVar2 = tlVar.b;
             int size2 = cbwVar2.g.size();
             int i6 = 0;

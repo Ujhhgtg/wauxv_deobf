@@ -6,14 +6,14 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class cnw {
     public static final cns Companion = new cns();
-    public static final IHasGetValue[] a = { null, null, ewz.am(btx.a, new cfh(12)) };
+    public static final IHasGetValue[] a = { null, null, ewz.am(btx.a, new Function1$VarIsInt$2(12)) };
     public final nm b;
     public final int c;
     public final List d;
 
     public /* synthetic */ cnw(int i, nm nmVar, int i2, List list) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, cnr.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, cnr.b.getDescriptor());
             throw null;
         }
         this.b = nmVar;
@@ -41,7 +41,7 @@ public final class cnw {
         sb.append("NewSendMsgProto(baseResponse=" /* "NewSendMsgProto(baseResponse=" /* "NewSendMsgProto(baseResponse=" /* cnb.z(-128367982541610L)  */);
         sb.append(this.b);
         sb.append(", count=" /* ", count=" /* ", count=" /* cnb.z(-128221953653546L)  */);
-        dkz.ac(sb, this.c, -128183298947882L);
+        StaticHelpers6.ac(sb, this.c, -128183298947882L);
         sb.append(this.d);
         sb.append(')');
         return sb.toString();

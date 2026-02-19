@@ -47,7 +47,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
                 cgy.a.getClass();
-                cdjVar.o(emn.az(cgv.a));
+                cdjVar.o(StaticHelpers7.az(cgv.a));
                 cdjVar.t("MsgInfo processAddMsg insert db error" /* "MsgInfo processAddMsg insert db error" /* "MsgInfo processAddMsg insert db error" /* cnb.z(-371609160383274L)  */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
@@ -70,7 +70,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                 bah bahVar2 = (bah) obj;
                 cdj cdjVar2 = new cdj();
                 cgy.a.getClass();
-                cdjVar2.o(emn.az(cgv.a));
+                cdjVar2.o(StaticHelpers7.az(cgv.a));
                 cdjVar2.p(new IntRange(2, 3, 1));
                 cdjVar2.t("notifymessage" /* "notifymessage" /* "notifymessage" /* cnb.z(-371201138490154L)  */, "msgId=?" /* "msgId=?" /* "msgId=?" /* cnb.z(-371123829078826L)  */,
                         "update" /* "update" /* "update" /* cnb.z(-371089469340458L)  */);
@@ -123,34 +123,34 @@ public final /* synthetic */ class cgu implements IInvokable {
                 return kotlinUnitVar;
             case 5:
                 View view = (View) obj;
-                View viewK = dkz.k(view, R.layout.module_dialog_msg_tv_color, null, false);
+                View viewK = StaticHelpers6.k(view, R.layout.module_dialog_msg_tv_color, null, false);
                 int i5 = R.id.moduleDialogEdtMsgTvColorLeftDarkTextColor;
-                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                         R.id.moduleDialogEdtMsgTvColorLeftDarkTextColor);
                 if (textInputEditText != null) {
                     i5 = R.id.moduleDialogEdtMsgTvColorLeftLightTextColor;
-                    TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                    TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                             R.id.moduleDialogEdtMsgTvColorLeftLightTextColor);
                     if (textInputEditText2 != null) {
                         i5 = R.id.moduleDialogEdtMsgTvColorRightDarkTextColor;
-                        TextInputEditText textInputEditText3 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                        TextInputEditText textInputEditText3 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                 R.id.moduleDialogEdtMsgTvColorRightDarkTextColor);
                         if (textInputEditText3 != null) {
                             i5 = R.id.moduleDialogEdtMsgTvColorRightLightTextColor;
-                            TextInputEditText textInputEditText4 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                            TextInputEditText textInputEditText4 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                     R.id.moduleDialogEdtMsgTvColorRightLightTextColor);
                             if (textInputEditText4 != null) {
                                 i5 = R.id.moduleDialogInputMsgTvColorLeftDarkTextColor;
-                                if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                         R.id.moduleDialogInputMsgTvColorLeftDarkTextColor)) != null) {
                                     i5 = R.id.moduleDialogInputMsgTvColorLeftLightTextColor;
-                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                             R.id.moduleDialogInputMsgTvColorLeftLightTextColor)) != null) {
                                         i5 = R.id.moduleDialogInputMsgTvColorRightDarkTextColor;
-                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                 R.id.moduleDialogInputMsgTvColorRightDarkTextColor)) != null) {
                                             i5 = R.id.moduleDialogInputMsgTvColorRightLightTextColor;
-                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                     R.id.moduleDialogInputMsgTvColorRightLightTextColor)) != null) {
                                                 LinearLayout linearLayout = (LinearLayout) viewK;
                                                 ceo ceoVar = new ceo(linearLayout, textInputEditText,
@@ -165,7 +165,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                                                 egVar.d = chh.c;
                                                 bzyVar.t("保存" /* "保存" /* "保存" /* cnb.z(-450138342423338L)  */,
                                                         new amw(new cfx(ceoVar, i3), 0));
-                                                bzyVar.s("重置" /* "重置" /* "重置" /* cnb.z(-450142637390634L)  */, new amw(new cfh(9), 2));
+                                                bzyVar.s("重置" /* "重置" /* "重置" /* cnb.z(-450142637390634L)  */, new amw(new Function1$VarIsInt$2(9), 2));
                                                 bjs.x((3 & 2) != 0 ? new amd(i2) : null, bzyVar, "取消" /*
                                                                                                        * cnb.z(-
                                                                                                        * 47455093652266L)
@@ -194,7 +194,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th5) {
-                    objX = bhu.x(th5);
+                    objX = FastKV.x(th5);
                 }
                 if (objX instanceof dcx) {
                     objX = null;
@@ -210,7 +210,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                             objX2 = null;
                         }
                     } catch (Throwable th6) {
-                        objX2 = bhu.x(th6);
+                        objX2 = FastKV.x(th6);
                     }
                     Object obj2 = objX2 instanceof dcx ? null : objX2;
                     throwIfVar1IsNull(obj2);
@@ -235,18 +235,18 @@ public final /* synthetic */ class cgu implements IInvokable {
                 return kotlinUnitVar;
             case 9:
                 int i6 = 0;
-                azg azgVarR = dqc.bi(obj).r();
-                azgVarR.ab = "field_type" /* "field_type" /* "field_type" /* cnb.z(-478429292002090L)  */;
-                Object objE = ((azk) yg.e(azgVarR)).e();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
+                fieldResolverVarR.name = "field_type" /* "field_type" /* "field_type" /* cnb.z(-478429292002090L)  */;
+                Object objE = ((azk) yg.e(fieldResolverVarR)).e();
                 throwIfVar1IsNull(objE);
                 if (((Number) objE).intValue() == 3) {
-                    azg azgVarR2 = dqc.bi(obj).r();
-                    azgVarR2.ab = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-478416407100202L)  */;
-                    Object objD = ((azk) yg.e(azgVarR2)).d();
+                    FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj).r();
+                    fieldResolverVarR2.name = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-478416407100202L)  */;
+                    Object objD = ((azk) yg.e(fieldResolverVarR2)).d();
                     throwIfVar1IsNull(objD);
-                    cde cdeVarT = dqc.bi(objD).t();
-                    cdeVarT.ab = "getData" /* "getData" /* "getData" /* cnb.z(-478334802721578L)  */;
-                    Object objJ = ((MethodHookWrapper) dkz.m(cdeVarT)).j(new Object[0]);
+                    MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objD).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                    methodResolverVarT.name = "getData" /* "getData" /* "getData" /* cnb.z(-478334802721578L)  */;
+                    Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT)).j(new Object[0]);
                     throwIfVar1IsNull(objJ);
                     cwd cwdVar = cwd.a;
                     cwdVar.getClass();
@@ -257,7 +257,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                         String strZ3 = cmz.z();
                         String strValueOf = String
                                 .valueOf(str2.hashCode() & com.android.dx.io.Opcodes.CONST_METHOD_TYPE);
-                        StringBuilder sbY = dkz.y(strZ3);
+                        StringBuilder sbY = StaticHelpers6.toSb(strZ3);
                         sbY.append("/favorite/" /* "/favorite/" /* "/favorite/" /* cnb.z(-478300442983210L)  */);
                         sbY.append(strValueOf);
                         sbY.append('/');
@@ -277,17 +277,17 @@ public final /* synthetic */ class cgu implements IInvokable {
                 return kotlinUnitVar;
             case 10:
                 int i7 = 0;
-                azg azgVarR3 = dqc.bi(obj).r();
-                azgVarR3.ab = "field_type" /* "field_type" /* "field_type" /* cnb.z(-475856606591786L)  */;
-                Integer num = (Integer) ((azk) yg.e(azgVarR3)).e();
+                FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).r();
+                fieldResolverVarR3.name = "field_type" /* "field_type" /* "field_type" /* cnb.z(-475856606591786L)  */;
+                Integer num = (Integer) ((azk) yg.e(fieldResolverVarR3)).e();
                 if (num != null && num.intValue() == 3) {
-                    azg azgVarR4 = dqc.bi(obj).r();
-                    azgVarR4.ab = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-475826541820714L)  */;
-                    Object objD2 = ((azk) yg.e(azgVarR4)).d();
+                    FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(obj).r();
+                    fieldResolverVarR4.name = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-475826541820714L)  */;
+                    Object objD2 = ((azk) yg.e(fieldResolverVarR4)).d();
                     throwIfVar1IsNull(objD2);
-                    cde cdeVarT2 = dqc.bi(objD2).t();
-                    cdeVarT2.ab = "getData" /* "getData" /* "getData" /* cnb.z(-475212361497386L)  */;
-                    Object objJ2 = ((MethodHookWrapper) dkz.m(cdeVarT2)).j(new Object[0]);
+                    MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objD2).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                    methodResolverVarT2.name = "getData" /* "getData" /* "getData" /* cnb.z(-475212361497386L)  */;
+                    Object objJ2 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).j(new Object[0]);
                     throwIfVar1IsNull(objJ2);
                     cwd cwdVar2 = cwd.a;
                     cwdVar2.getClass();
@@ -298,7 +298,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                         String strZ4 = cmz.z();
                         String strValueOf2 = String
                                 .valueOf(str3.hashCode() & com.android.dx.io.Opcodes.CONST_METHOD_TYPE);
-                        StringBuilder sbY2 = dkz.y(strZ4);
+                        StringBuilder sbY2 = StaticHelpers6.toSb(strZ4);
                         sbY2.append("/favorite/" /* "/favorite/" /* "/favorite/" /* cnb.z(-475178001759018L)  */);
                         sbY2.append(strValueOf2);
                         sbY2.append('/');
@@ -412,17 +412,17 @@ public final /* synthetic */ class cgu implements IInvokable {
             case 25:
                 bah bahVar4 = (bah) obj;
                 cdj cdjVar4 = new cdj();
-                Class<String> clsBf = cnf.bf(dal.b(cls));
+                Class<String> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 if (clsBf == null) {
                     clsBf = cls;
                 }
                 cls2 = List.class;
-                Class<List> clsBf2 = cnf.bf(dal.b(cls2));
+                Class<List> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                 cls2 = clsBf2 != null ? clsBf2 : List.class;
-                Class<String> clsBf3 = cnf.bf(dal.b(cls));
+                Class<String> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 cls = clsBf3 != null ? clsBf3 : String.class;
                 cls3 = Object.class;
-                Class<Object> clsBf4 = cnf.bf(dal.b(cls3));
+                Class<Object> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
                 cdjVar4.q(clsBf, cls2, cls, clsBf4 != null ? clsBf4 : Object.class);
                 bahVar4.getClass();
                 bahVar4.d = cdjVar4;
@@ -445,11 +445,11 @@ public final /* synthetic */ class cgu implements IInvokable {
             case 28:
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar5 = new cdj();
-                Class<String> clsBf5 = cnf.bf(dal.b(cls));
+                Class<String> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 if (clsBf5 == null) {
                     clsBf5 = cls;
                 }
-                Class<String> clsBf6 = cnf.bf(dal.b(cls));
+                Class<String> clsBf6 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 cdjVar5.q(clsBf5, clsBf6 != null ? clsBf6 : String.class);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar5;

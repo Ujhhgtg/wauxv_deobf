@@ -434,7 +434,7 @@ public class jp extends TextView {
             typefaceCreate = null;
         } else {
             Context context = getContext();
-            emn emnVar = emf.a;
+            StaticHelpers7 emnVar = TypefaceCompat.a;
             if (context == null) {
                 throw new IllegalArgumentException("Context cannot be null");
             }

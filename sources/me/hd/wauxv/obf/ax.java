@@ -22,7 +22,7 @@ public final class ax {
     public final Object l;
     public final int m;
     public final Class n;
-    public final bm o;
+    public final IHandlesSwipeDismiss o;
 
     static {
         new ax(1);
@@ -114,7 +114,7 @@ public final class ax {
         this(null, i2, null, null, cls);
     }
 
-    public ax(Object obj, int i2, String str, bm bmVar, Class cls) {
+    public ax(Object obj, int i2, String str, IHandlesSwipeDismiss bmVar, Class cls) {
         this.m = i2;
         this.o = bmVar;
         if (obj == null) {

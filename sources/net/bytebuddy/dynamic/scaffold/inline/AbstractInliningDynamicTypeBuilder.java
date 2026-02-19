@@ -1,7 +1,7 @@
 package net.bytebuddy.dynamic.scaffold.inline;
 
 import java.util.List;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.asm.AsmVisitorWrapper;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
@@ -58,7 +58,7 @@ public abstract class AbstractInliningDynamicTypeBuilder<T> extends DynamicType.
 
     @Override // net.bytebuddy.dynamic.DynamicType.Builder.AbstractBase.Adapter
     public int hashCode() {
-        return this.classFileLocator.hashCode() + dkz.f(this.originalType, super.hashCode() * 31, 31);
+        return this.classFileLocator.hashCode() + StaticHelpers6.f(this.originalType, super.hashCode() * 31, 31);
     }
 
     @Override // net.bytebuddy.dynamic.DynamicType.Builder.AbstractBase.UsingTypeWriter

@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.List;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.annotation.AnnotationDescription;
 import net.bytebuddy.description.enumeration.EnumerationDescription;
@@ -20,7 +20,6 @@ import net.bytebuddy.dynamic.TargetType;
 import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.auxiliary.TypeProxy;
 import net.bytebuddy.implementation.bind.MethodDelegationBinder;
-import net.bytebuddy.implementation.bind.annotation.TargetMethodAnnotationDrivenBinder;
 import net.bytebuddy.implementation.bytecode.StackManipulation;
 import net.bytebuddy.implementation.bytecode.assign.Assigner;
 import net.bytebuddy.matcher.ElementMatchers;
@@ -81,7 +80,7 @@ public @interface Super {
                         return ForInstrumentedType.INSTANCE;
                     }
                     if (typeDescription.isPrimitive() || typeDescription.isArray()) {
-                        throw new IllegalStateException(dkz.u("Cannot assign proxy to ", typeDescription));
+                        throw new IllegalStateException(StaticHelpers6.concat("Cannot assign proxy to ", typeDescription));
                     }
                     return new ForType(typeDescription);
                 }
@@ -122,7 +121,7 @@ public @interface Super {
             }
             TypeDescription typeDescriptionResolve = TypeLocator.ForType.of((TypeDescription) loadable.getValue(PROXY_TYPE).resolve(TypeDescription.class)).resolve(target.getInstrumentedType(), parameterDescription.getType());
             if (typeDescriptionResolve.isFinal()) {
-                throw new IllegalStateException(dkz.u("Cannot extend final type as @Super proxy: ", typeDescriptionResolve));
+                throw new IllegalStateException(StaticHelpers6.concat("Cannot extend final type as @Super proxy: ", typeDescriptionResolve));
             }
             return (methodDescription.isStatic() || !target.getInstrumentedType().isAssignableTo(typeDescriptionResolve)) ? MethodDelegationBinder.ParameterBinding.Illegal.INSTANCE : new MethodDelegationBinder.ParameterBinding.Anonymous(((Instantiation) ((EnumerationDescription) loadable.getValue(STRATEGY).resolve(EnumerationDescription.class)).load(Instantiation.class)).proxyFor(typeDescriptionResolve, target, loadable));
         }

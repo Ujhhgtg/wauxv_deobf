@@ -1,7 +1,5 @@
 package com.alibaba.fastjson2;
 
-import com.alibaba.fastjson2.JSONReader;
-import com.alibaba.fastjson2.JSONWriter;
 import com.alibaba.fastjson2.annotation.JSONField;
 import com.alibaba.fastjson2.filter.NameFilter;
 import com.alibaba.fastjson2.filter.ValueFilter;
@@ -45,8 +43,8 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.function.Consumer;
 import java.util.function.Function;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -299,7 +297,7 @@ public class JSONObject extends LinkedHashMap<String, Object> implements Invocat
         if (obj instanceof String) {
             return Base64.getDecoder().decode((String) obj);
         }
-        throw new JSONException(dkz.r(obj, "can not cast to byte[], value : "));
+        throw new JSONException(StaticHelpers6.concatVar2Var1(obj, "can not cast to byte[], value : "));
     }
 
     public Date getDate(String str) {

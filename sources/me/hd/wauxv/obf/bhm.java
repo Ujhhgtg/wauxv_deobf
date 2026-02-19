@@ -34,7 +34,7 @@ public final class bhm implements Serializable {
         StringBuilder sb = new StringBuilder();
         sb.append("VersionInfo(version=" /* "VersionInfo(version=" /* "VersionInfo(version=" /* cnb.z(-45346264709930L)  */);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -45221710658346L);
-        dkz.ac(sb, this.b, -45217415691050L);
+        StaticHelpers6.ac(sb, this.b, -45217415691050L);
         return concat(sb, this.c, ')');
     }
 }

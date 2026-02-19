@@ -41,7 +41,7 @@ public final class etz {
         StringBuilder sb = new StringBuilder();
         sb.append("WatermarkConfig(text=" /* "WatermarkConfig(text=" /* "WatermarkConfig(text=" /* cnb.z(-51316269251370L)  */);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -51204600101674L);
-        dkz.ac(sb, this.b, -51183125265194L);
+        StaticHelpers6.ac(sb, this.b, -51183125265194L);
         sb.append(this.c);
         sb.append(", rotationAngle=" /* ", rotationAngle=" /* ", rotationAngle=" /* cnb.z(-51646981733162L)  */);
         sb.append(this.d);

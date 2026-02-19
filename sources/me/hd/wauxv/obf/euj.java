@@ -11,9 +11,9 @@ public final class euj extends bws {
     public final void initOnce() {
         if (cnb.ab(ewk.o) || cnb.ac(ewh.r)) {
             int i = 0;
-            cde cdeVarT = yg.s(-57896159148842L).t();
-            cdeVarT.ab = "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-58119497448234L)  */;
-            aki akiVarAd = a.ad((MethodHookWrapper) dkz.n(new Object[] { dal.b(Bundle.class) }, 1, cdeVarT), exg.b);
+            MethodResolver methodResolverVarT = yg.s(-57896159148842L).getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT.name = "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-58119497448234L)  */;
+            aki akiVarAd = a.ad((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(Bundle.class) }, 1, methodResolverVarT), HookPriorityEnum.ENUM_LOWEST);
             akiVarAd.m(new epy(15));
             akiVarAd.o();
         }

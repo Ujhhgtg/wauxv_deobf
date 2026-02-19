@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.logging.Logger;
-import me.hd.wauxv.obf.aaz;
+import me.hd.wauxv.obf.StaticHelpers5;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.aqg;
 import me.hd.wauxv.obf.aqh;
@@ -235,7 +235,7 @@ public final class PublicSuffixDatabase {
         if (strBinarySearch == null && strBinarySearch2 == null) {
             return PREVAILING_RULE;
         }
-        List<String> listAr = EmptyReadonlyList.a;
+        List<String> listAr = EmptyReadonlyList.INSTANCE;
         List<String> listAr2 = strBinarySearch != null ? dnj.ar(strBinarySearch,
                 new char[] { TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH }) : listAr;
         if (strBinarySearch2 != null) {
@@ -311,11 +311,11 @@ public final class PublicSuffixDatabase {
     private final List<String> splitDomain(String str) {
         List<String> listAr = dnj.ar(str,
                 new char[] { TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH });
-        if (!nullSafeIsEqual(aaz.l(listAr), "")) {
+        if (!nullSafeIsEqual(StaticHelpers5.l(listAr), "")) {
             return listAr;
         }
         int size = listAr.size() - 1;
-        return aaz.u(size >= 0 ? size : 0, listAr);
+        return StaticHelpers5.u(size >= 0 ? size : 0, listAr);
     }
 
     public final String getEffectiveTldPlusOne(String str) {
@@ -338,7 +338,7 @@ public final class PublicSuffixDatabase {
             size2 = listFindMatchingRule.size() + 1;
         }
         int i2 = size - size2;
-        dft dftVarA = aaz.a(splitDomain(str));
+        dft dftVarA = StaticHelpers5.a(splitDomain(str));
         if (i2 < 0) {
             throw new IllegalArgumentException(yg.f(i2, "Requested element count ", " is less than zero.").toString());
         }
@@ -352,7 +352,7 @@ public final class PublicSuffixDatabase {
             if (i > 1) {
                 sb.append((CharSequence) ".");
             }
-            aye.k(sb, obj, null);
+            aye.transformToAppend(sb, obj, null);
         }
         sb.append((CharSequence) "");
         return sb.toString();

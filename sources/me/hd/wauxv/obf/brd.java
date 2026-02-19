@@ -17,8 +17,8 @@ public final class brd implements btq {
     public static final aao i = chm.i("${1:${CLIPBOARD}}");
     public DefaultConfig j;
     public final brc k;
-    public final awp l = new awp(20);
-    public final awp[] m = { new awp(this) };
+    public final GifEncoder l = new GifEncoder(20);
+    public final GifEncoder[] m = { new GifEncoder(this) };
 
     public brd() {
         String[] strArr = bre.b;
@@ -48,7 +48,7 @@ public final class brd implements btq {
     }
 
     @Override // me.hd.wauxv.obf.btq
-    public final awp[] b() {
+    public final GifEncoder[] b() {
         return this.m;
     }
 
@@ -59,7 +59,7 @@ public final class brd implements btq {
     }
 
     @Override // me.hd.wauxv.obf.btq
-    public final awp d() {
+    public final GifEncoder d() {
         return this.l;
     }
 
@@ -210,7 +210,7 @@ public final class brd implements btq {
                 string = str4;
                 i4 = 0;
             }
-            if (!arrayList3.isEmpty() && ((dhr) aaz.d(arrayList3)).f != null && ((dhr) aaz.d(arrayList3)).f == null) {
+            if (!arrayList3.isEmpty() && ((dhr) StaticHelpers5.d(arrayList3)).f != null && ((dhr) StaticHelpers5.d(arrayList3)).f == null) {
                 throw new IllegalArgumentException(
                         "The completionItemList must run through the filterCompletionItems() method first");
             }
@@ -252,7 +252,7 @@ public final class brd implements btq {
     }
 
     @Override // me.hd.wauxv.obf.btq
-    public final jx g() {
+    public final FactoryPools g() {
         doq doqVar = new doq(19);
         doqVar.ad('{', new dor("{", "}"));
         doqVar.ad('(', new dor("(", ")"));

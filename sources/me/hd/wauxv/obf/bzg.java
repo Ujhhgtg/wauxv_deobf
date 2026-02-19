@@ -68,10 +68,10 @@ public final class bzg implements Map, Serializable, bsz {
                 }
             }
         }
-        bhu.az(this.b, 0, this.g);
+        FastKV.az(this.b, 0, this.g);
         Object[] objArr = this.c;
         if (objArr != null) {
-            bhu.az(objArr, 0, this.g);
+            FastKV.az(objArr, 0, this.g);
         }
         this.j = 0;
         this.g = 0;
@@ -293,9 +293,9 @@ public final class bzg implements Map, Serializable, bsz {
             }
             i2++;
         }
-        bhu.az(this.b, i3, i);
+        FastKV.az(this.b, i3, i);
         if (objArr != null) {
-            bhu.az(objArr, i3, this.g);
+            FastKV.az(objArr, i3, this.g);
         }
         this.g = i3;
     }

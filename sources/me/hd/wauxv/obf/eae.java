@@ -13,7 +13,7 @@ public final class eae {
 
     public /* synthetic */ eae(int i, Integer num, List list, String str) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, eac.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, eac.b.getDescriptor());
             throw null;
         }
         this.b = num;

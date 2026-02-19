@@ -52,12 +52,12 @@ public final /* synthetic */ class fq implements bgj {
             case 0:
                 List list = (List) obj;
                 fr frVar = fr.a;
-                ArrayList arrayList2 = new ArrayList(abb.ak(list, 10));
+                ArrayList arrayList2 = new ArrayList(StaticHelpers4.ak(list, 10));
                 Iterator it2 = list.iterator();
                 while (it2.hasNext()) {
                     arrayList2.add(((adx) it2.next()).a);
                 }
-                frVar.t(aaz.ad(arrayList2));
+                frVar.t(StaticHelpers5.ad(arrayList2));
                 dnc.g(null, 3, "已屏蔽" /* "已屏蔽" /* "已屏蔽" /* cnb.z(-491026431081258L)  */);
                 return Boolean.FALSE;
             case 1:
@@ -111,14 +111,14 @@ public final /* synthetic */ class fq implements bgj {
                 Object objB = aub.b(imgPath);
                 atp.a.getClass();
                 int i = 0;
-                cde cdeVarT = dqc.bh(emn.az(ato.a)).t();
-                cdeVarT.ak(cdy.c);
-                Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
+                MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(ato.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT.ak(cdy.c);
+                Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
                 throwIfVar1IsNull(objE);
-                cde cdeVarT2 = dqc.bi(objE).t();
-                cdeVarT2.a = dal.b(byte[].class);
-                Object objJ = ((MethodHookWrapper) dkz
-                        .n(new Object[] { "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-90430536416042L)  */ }, 1, cdeVarT2))
+                MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objE).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT2.returnType = dal.b(byte[].class);
+                Object objJ = ((MethodHookWrapper) StaticHelpers6
+                        .n(new Object[] { "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-90430536416042L)  */ }, 1, methodResolverVarT2))
                         .j(objB);
                 throwIfVar1IsNull(objJ);
                 byte[] bArr = (byte[]) objJ;
@@ -137,11 +137,11 @@ public final /* synthetic */ class fq implements bgj {
                     String string = sb.toString();
                     File file2 = new File(file, string);
                     if (cna.ac(bArr)) {
-                        cde cdeVarT3 = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.plugin.gif.MMWXGFJNI" /*
+                        MethodResolver methodResolverVarT3 = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.plugin.gif.MMWXGFJNI" /*
                                                                                             * "com.tencent.mm.plugin.gif.MMWXGFJNI" /* "com.tencent.mm.plugin.gif.MMWXGFJNI" /* cnb.z(-119803817753386L)  */
-                                                                                            */)).t();
-                        cdeVarT3.ab = "nativeWxamToGif" /* "nativeWxamToGif" /* "nativeWxamToGif" /* cnb.z(-119614839192362L)  */;
-                        Object objJ2 = ((MethodHookWrapper) aaz.e(cdeVarT3.aj())).j(bArr);
+                                                                                            */)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                        methodResolverVarT3.name = "nativeWxamToGif" /* "nativeWxamToGif" /* "nativeWxamToGif" /* cnb.z(-119614839192362L)  */;
+                        Object objJ2 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT3.findMethods())).j(bArr);
                         throwIfVar1IsNull(objJ2);
                         bArr = (byte[]) objJ2;
                     }
@@ -160,7 +160,7 @@ public final /* synthetic */ class fq implements bgj {
                         }
                     }
                 } catch (Throwable th3) {
-                    objX = bhu.x(th3);
+                    objX = FastKV.x(th3);
                 }
                 Throwable thB = dcy.b(objX);
                 if (thB != null) {
@@ -237,7 +237,7 @@ public final /* synthetic */ class fq implements bgj {
                     objX2.getClass();
                     break;
                 } catch (Throwable th4) {
-                    objX2 = bhu.x(th4);
+                    objX2 = FastKV.x(th4);
                 }
                 Object obj3 = Boolean.FALSE;
                 if (objX2 instanceof dcx) {
@@ -250,7 +250,7 @@ public final /* synthetic */ class fq implements bgj {
                     objX3.getClass();
                     break;
                 } catch (Throwable th5) {
-                    objX3 = bhu.x(th5);
+                    objX3 = FastKV.x(th5);
                 }
                 Object obj4 = Boolean.FALSE;
                 if (objX3 instanceof dcx) {
@@ -267,7 +267,7 @@ public final /* synthetic */ class fq implements bgj {
                     objX4.getClass();
                     break;
                 } catch (Throwable th6) {
-                    objX4 = bhu.x(th6);
+                    objX4 = FastKV.x(th6);
                 }
                 Object obj5 = Boolean.FALSE;
                 if (objX4 instanceof dcx) {
@@ -327,7 +327,7 @@ public final /* synthetic */ class fq implements bgj {
                     objX5.getClass();
                     break;
                 } catch (Throwable th7) {
-                    objX5 = bhu.x(th7);
+                    objX5 = FastKV.x(th7);
                 }
                 Object obj6 = Boolean.FALSE;
                 if (objX5 instanceof dcx) {
@@ -371,16 +371,16 @@ public final /* synthetic */ class fq implements bgj {
                     cbm cbmVar = cdy.a;
                     modifiers = member3.getModifiers();
                     cbmVar.getClass();
-                    awn awnVar = cdy.g;
+                    KotlinEnumEntriesImpl kotlinEnumEntriesImplVar = cdy.g;
                     arrayList = new ArrayList();
-                    it = awnVar.iterator();
+                    it = kotlinEnumEntriesImplVar.iterator();
                 } catch (Throwable th8) {
-                    objX6 = bhu.x(th8);
+                    objX6 = FastKV.x(th8);
                 }
                 while (true) {
                     z zVar = (z) it;
                     if (!zVar.hasNext()) {
-                        objX6 = (Boolean) bgfVar.invoke(aaz.ad(arrayList));
+                        objX6 = (Boolean) bgfVar.invoke(StaticHelpers5.ad(arrayList));
                         objX6.getClass();
                         break;
                     } else {

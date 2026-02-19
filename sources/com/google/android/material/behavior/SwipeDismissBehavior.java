@@ -6,9 +6,9 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import java.util.WeakHashMap;
 import me.hd.wauxv.obf.agr;
 import me.hd.wauxv.obf.ax;
-import me.hd.wauxv.obf.bmu;
+import me.hd.wauxv.obf.SyntheticPileOfMess;
 import me.hd.wauxv.obf.dol;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.era;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -24,13 +24,13 @@ public class SwipeDismissBehavior<V extends View> extends agr {
 
     @Override // me.hd.wauxv.obf.agr
     public final boolean i(CoordinatorLayout coordinatorLayout, View view, int i) {
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         if (view.getImportantForAccessibility() == 0) {
             view.setImportantForAccessibility(1);
-            eqz.p(view, 1048576);
-            eqz.n(view, 0);
+            ViewCompat.p(view, 1048576);
+            ViewCompat.notifyAccessibilityChange(view, 0);
             if (v(view)) {
-                eqz.q(view, ax.f, new bmu(this));
+                ViewCompat.q(view, ax.f, new SyntheticPileOfMess(this));
             }
         }
         return false;

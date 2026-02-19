@@ -49,12 +49,12 @@ public final class kh extends nh {
                     exfVar.n(application, str);
                     ki.c = true;
                 } catch (Throwable th) {
-                    bhu.x(th);
+                    FastKV.x(th);
                 }
                 objX = application;
             }
         } catch (Throwable th2) {
-            objX = bhu.x(th2);
+            objX = FastKV.x(th2);
         }
         Throwable thB = dcy.b(objX);
         if (thB != null) {

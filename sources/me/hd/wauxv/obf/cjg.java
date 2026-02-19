@@ -52,15 +52,15 @@ public abstract class cjg {
             }
             String strConcat = "android-app://androidx.navigation/".concat(string);
             throwIfVar1IsNull(strConcat, "uriPattern");
-            ArrayList arrayListAk = bhu.ak((LinkedHashMap) eaVar.e, new cjh(new cjd(strConcat, null, null), 1));
+            ArrayList arrayListAk = FastKV.ak((LinkedHashMap) eaVar.e, new cjh(new cjd(strConcat, null, null), 1));
             if (!arrayListAk.isEmpty()) {
-                StringBuilder sbZ = dkz.z("Cannot set route \"", string, "\" for destination ");
+                StringBuilder sbZ = StaticHelpers6.concatAndToSb("Cannot set route \"", string, "\" for destination ");
                 sbZ.append((cjg) eaVar.b);
                 sbZ.append(". Following required arguments are missing: ");
                 sbZ.append(arrayListAk);
                 throw new IllegalArgumentException(sbZ.toString().toString());
             }
-            new dov(new ake(strConcat, 1));
+            new Kotlin$Lazy(new ake(strConcat, 1));
             eaVar.a = strConcat.hashCode();
             eaVar.d = null;
         }
@@ -107,7 +107,7 @@ public abstract class cjg {
                     z2 = false;
                     break;
                 }
-                Iterator it2 = ((Iterable) aaz.a(n().entrySet()).b).iterator();
+                Iterator it2 = ((Iterable) StaticHelpers5.a(n().entrySet()).b).iterator();
                 while (true) {
                     if (!it2.hasNext()) {
                         z2 = true;
@@ -174,7 +174,7 @@ public abstract class cjg {
         if (bundle == null && linkedHashMap.isEmpty()) {
             return null;
         }
-        Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+        Bundle bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
         for (Map.Entry entry : linkedHashMap.entrySet()) {
             String str = (String) entry.getKey();
             cin cinVar = (cin) entry.getValue();
@@ -199,7 +199,7 @@ public abstract class cjg {
                     } catch (IllegalStateException unused) {
                     }
                 }
-                StringBuilder sbZ = dkz.z("Wrong argument type for '", str2, "' in argument savedState. ");
+                StringBuilder sbZ = StaticHelpers6.concatAndToSb("Wrong argument type for '", str2, "' in argument savedState. ");
                 sbZ.append(cjvVar.g());
                 sbZ.append(" expected.");
                 throw new IllegalArgumentException(sbZ.toString().toString());
@@ -243,13 +243,13 @@ public abstract class cjg {
                 cjgVar2 = cjiVar;
             }
         }
-        List listZ = aaz.z(kmVar);
-        ArrayList arrayList = new ArrayList(abb.ak(listZ, 10));
+        List listZ = StaticHelpers5.z(kmVar);
+        ArrayList arrayList = new ArrayList(StaticHelpers4.ak(listZ, 10));
         Iterator it = listZ.iterator();
         while (it.hasNext()) {
             arrayList.add(Integer.valueOf(((cjg) it.next()).g.a));
         }
-        return aaz.y(arrayList);
+        return StaticHelpers5.y(arrayList);
     }
 
     public final cim m(int i) {
@@ -309,12 +309,12 @@ public abstract class cjg {
      * JADX WARN: Type inference failed for: r15v12, types: [java.lang.Object,
      * me.hd.wauxv.obf.btt]
      */
-    public cjf o(jx jxVar) {
+    public cjf o(FactoryPools factoryPoolsVar) {
         boolean z;
         boolean zF;
         boolean z2;
         Iterator it;
-        dov dovVar;
+        Kotlin$Lazy kotlin$LazyVar;
         Bundle bundle;
         int size;
         int i;
@@ -342,9 +342,9 @@ public abstract class cjg {
         boolean zF2;
         ea eaVar = this.g;
         LinkedHashMap linkedHashMap = (LinkedHashMap) eaVar.e;
-        String str = (String) jxVar.h;
-        Object obj = (String) jxVar.f;
-        Uri uri = (Uri) jxVar.e;
+        String str = (String) factoryPoolsVar.h;
+        Object obj = (String) factoryPoolsVar.f;
+        Uri uri = (Uri) factoryPoolsVar.e;
         ArrayList arrayList = (ArrayList) eaVar.c;
         if (arrayList.isEmpty()) {
             return null;
@@ -354,17 +354,17 @@ public abstract class cjg {
         while (it2.hasNext()) {
             cjd cjdVar = (cjd) it2.next();
             cjdVar.getClass();
-            dov dovVar2 = cjdVar.u;
-            dov dovVar3 = cjdVar.l;
+            Kotlin$Lazy kotlin$LazyVar2 = cjdVar.u;
+            Kotlin$Lazy kotlin$LazyVar3 = cjdVar.l;
             String str2 = cjdVar.i;
             String str3 = cjdVar.h;
-            if (((dap) dovVar3.getValue()) == null) {
+            if (((dap) kotlin$LazyVar3.getValue()) == null) {
                 zF = true;
             } else {
                 if (uri == null) {
                     zF = false;
                 } else {
-                    dap dapVar4 = (dap) dovVar3.getValue();
+                    dap dapVar4 = (dap) kotlin$LazyVar3.getValue();
                     throwIfVar1IsNull(dapVar4);
                     z = true;
                     zF = dapVar4.f(uri.toString());
@@ -376,7 +376,7 @@ public abstract class cjg {
                         } else if (str == null) {
                             zF2 = false;
                         } else {
-                            dap dapVar5 = (dap) dovVar2.getValue();
+                            dap dapVar5 = (dap) kotlin$LazyVar2.getValue();
                             throwIfVar1IsNull(dapVar5);
                             zF2 = dapVar5.f(str);
                         }
@@ -394,9 +394,9 @@ public abstract class cjg {
                             bzxVarE2 = dapVar2.e(uri.toString());
                             if (bzxVarE2 == null) {
                                 it = it2;
-                                dovVar = dovVar2;
+                                kotlin$LazyVar = kotlin$LazyVar2;
                             } else {
-                                bundleR2 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                                bundleR2 = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                                 if (!cjdVar.aa(bzxVarE2, bundleR2, linkedHashMap)
                                         && (!((Boolean) cjdVar.m.getValue()).booleanValue()
                                                 || cjdVar.ab(uri, bundleR2, linkedHashMap))) {
@@ -407,7 +407,7 @@ public abstract class cjg {
                                     } else {
                                         List list = (List) cjdVar.q.getValue();
                                         it = it2;
-                                        ArrayList arrayList2 = new ArrayList(abb.ak(list, 10));
+                                        ArrayList arrayList2 = new ArrayList(StaticHelpers4.ak(list, 10));
                                         Iterator it3 = list.iterator();
                                         int i7 = 0;
                                         while (it3.hasNext()) {
@@ -419,7 +419,7 @@ public abstract class cjg {
                                                 throw null;
                                             }
                                             String str4 = (String) next;
-                                            dovVar = dovVar2;
+                                            kotlin$LazyVar = kotlin$LazyVar2;
                                             bzt bztVarC = bzxVarE3.c.c(i8);
                                             if (bztVarC != null) {
                                                 strDecode = Uri.decode(bztVarC.a);
@@ -435,16 +435,16 @@ public abstract class cjg {
                                             try {
                                                 cjd.x(bundleR2, str4, strDecode, (cin) linkedHashMap.get(str4));
                                                 arrayList2.add(KotlinUnit.INSTANCE);
-                                                dovVar2 = dovVar;
+                                                kotlin$LazyVar2 = kotlin$LazyVar;
                                                 it3 = it4;
                                                 i7 = i6;
                                             } catch (IllegalArgumentException unused) {
                                             }
                                         }
                                     }
-                                    dovVar = dovVar2;
+                                    kotlin$LazyVar = kotlin$LazyVar2;
                                     i5 = 0;
-                                    if (!bhu.ak(linkedHashMap, new IInvokable() { // from class: me.hd.wauxv.obf.cjb
+                                    if (!FastKV.ak(linkedHashMap, new IInvokable() { // from class: me.hd.wauxv.obf.cjb
                                         @Override // me.hd.wauxv.obf.bgf
                                         public final Object invoke(Object obj2) {
                                             boolean zContainsKey;
@@ -470,20 +470,20 @@ public abstract class cjg {
                                     }
                                 } else {
                                     it = it2;
-                                    dovVar = dovVar2;
+                                    kotlin$LazyVar = kotlin$LazyVar2;
                                 }
                             }
                             bundle = bundle3;
                         } else {
                             it = it2;
-                            dovVar = dovVar2;
+                            kotlin$LazyVar = kotlin$LazyVar2;
                             bundle2 = null;
                         }
                         bundle3 = bundle2;
                         bundle = bundle3;
                     } else {
                         it = it2;
-                        dovVar = dovVar2;
+                        kotlin$LazyVar = kotlin$LazyVar2;
                         bundle = null;
                     }
                     String str5 = cjdVar.g;
@@ -501,7 +501,7 @@ public abstract class cjg {
                     i = size;
                     z3 = (obj == null && obj.equals(str3)) ? z : false;
                     if (str == null && str2 != null) {
-                        dap dapVar6 = (dap) dovVar.getValue();
+                        dap dapVar6 = (dap) kotlin$LazyVar.getValue();
                         throwIfVar1IsNull(dapVar6);
                         if (dapVar6.f(str)) {
                             Pattern patternCompile = Pattern.compile("/");
@@ -520,7 +520,7 @@ public abstract class cjg {
                                 listBf = dqc.toSingletonList(str2.toString());
                             }
                             boolean zIsEmpty = listBf.isEmpty();
-                            List listU2 = EmptyReadonlyList.a;
+                            List listU2 = EmptyReadonlyList.INSTANCE;
                             if (!zIsEmpty) {
                                 ListIterator listIterator = listBf.listIterator(listBf.size());
                                 while (true) {
@@ -529,7 +529,7 @@ public abstract class cjg {
                                         break;
                                     }
                                     if (((String) listIterator.previous()).length() != 0) {
-                                        listU = aaz.u(listIterator.nextIndex() + 1, listBf);
+                                        listU = StaticHelpers5.u(listIterator.nextIndex() + 1, listBf);
                                         break;
                                     }
                                 }
@@ -563,7 +563,7 @@ public abstract class cjg {
                                     }
                                     if (((String) listIterator2.previous()).length() != 0) {
                                         i4 = 1;
-                                        listU2 = aaz.u(listIterator2.nextIndex() + 1, listBf2);
+                                        listU2 = StaticHelpers5.u(listIterator2.nextIndex() + 1, listBf2);
                                         break;
                                     }
                                 }
@@ -588,8 +588,8 @@ public abstract class cjg {
                         }
                     } else if (z3 || i2 > -1) {
                         throwIfVar1IsNull(linkedHashMap, "arguments");
-                        bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
-                        if (uri != null && (dapVar = (dap) dovVar3.getValue()) != null
+                        bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                        if (uri != null && (dapVar = (dap) kotlin$LazyVar3.getValue()) != null
                                 && (bzxVarE = dapVar.e(uri.toString())) != null) {
                             cjdVar.aa(bzxVarE, bundleR, linkedHashMap);
                             if (((Boolean) cjdVar.m.getValue()).booleanValue()) {
@@ -597,7 +597,7 @@ public abstract class cjg {
                             }
                         }
                         i3 = 1;
-                        if (bhu.ak(linkedHashMap, new IInvokable() { // from class: me.hd.wauxv.obf.cjb
+                        if (FastKV.ak(linkedHashMap, new IInvokable() { // from class: me.hd.wauxv.obf.cjb
                             @Override // me.hd.wauxv.obf.bgf
                             public final Object invoke(Object obj2) {
                                 boolean zContainsKey;
@@ -639,7 +639,7 @@ public abstract class cjg {
                     } else if (str == null) {
                         zF2 = false;
                     } else {
-                        dap dapVar52 = (dap) dovVar2.getValue();
+                        dap dapVar52 = (dap) kotlin$LazyVar2.getValue();
                         throwIfVar1IsNull(dapVar52);
                         zF2 = dapVar52.f(str);
                     }
@@ -658,24 +658,24 @@ public abstract class cjg {
                         bzxVarE2 = dapVar2.e(uri.toString());
                         if (bzxVarE2 == null) {
                             it = it2;
-                            dovVar = dovVar2;
+                            kotlin$LazyVar = kotlin$LazyVar2;
                         } else {
-                            bundleR2 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                            bundleR2 = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                             if (cjdVar.aa(bzxVarE2, bundleR2, linkedHashMap)) {
                                 it = it2;
-                                dovVar = dovVar2;
+                                kotlin$LazyVar = kotlin$LazyVar2;
                             } else {
                                 String fragment2 = uri.getFragment();
                                 dapVar3 = (dap) cjdVar.s.getValue();
                                 if (dapVar3 != null) {
                                     it = it2;
-                                    dovVar = dovVar2;
+                                    kotlin$LazyVar = kotlin$LazyVar2;
                                 } else {
                                     it = it2;
-                                    dovVar = dovVar2;
+                                    kotlin$LazyVar = kotlin$LazyVar2;
                                 }
                                 i5 = 0;
-                                if (!bhu.ak(linkedHashMap, new IInvokable() { // from class: me.hd.wauxv.obf.cjb
+                                if (!FastKV.ak(linkedHashMap, new IInvokable() { // from class: me.hd.wauxv.obf.cjb
                                     @Override // me.hd.wauxv.obf.bgf
                                     public final Object invoke(Object obj2) {
                                         boolean zContainsKey;
@@ -704,14 +704,14 @@ public abstract class cjg {
                         bundle = bundle3;
                     } else {
                         it = it2;
-                        dovVar = dovVar2;
+                        kotlin$LazyVar = kotlin$LazyVar2;
                         bundle2 = null;
                     }
                     bundle3 = bundle2;
                     bundle = bundle3;
                 } else {
                     it = it2;
-                    dovVar = dovVar2;
+                    kotlin$LazyVar = kotlin$LazyVar2;
                     bundle = null;
                 }
                 String str52 = cjdVar.g;
@@ -728,7 +728,7 @@ public abstract class cjg {
                     it2 = it;
                 } else if (z3) {
                     throwIfVar1IsNull(linkedHashMap, "arguments");
-                    bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                    bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                     if (uri != null) {
                         cjdVar.aa(bzxVarE, bundleR, linkedHashMap);
                         if (((Boolean) cjdVar.m.getValue()).booleanValue()) {
@@ -736,7 +736,7 @@ public abstract class cjg {
                         }
                     }
                     i3 = 1;
-                    if (bhu.ak(linkedHashMap, new IInvokable() { // from class: me.hd.wauxv.obf.cjb
+                    if (FastKV.ak(linkedHashMap, new IInvokable() { // from class: me.hd.wauxv.obf.cjb
                         @Override // me.hd.wauxv.obf.bgf
                         public final Object invoke(Object obj2) {
                             boolean zContainsKey;
@@ -766,7 +766,7 @@ public abstract class cjg {
                     }
                 } else {
                     throwIfVar1IsNull(linkedHashMap, "arguments");
-                    bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                    bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                     if (uri != null) {
                         cjdVar.aa(bzxVarE, bundleR, linkedHashMap);
                         if (((Boolean) cjdVar.m.getValue()).booleanValue()) {
@@ -774,7 +774,7 @@ public abstract class cjg {
                         }
                     }
                     i3 = 1;
-                    if (bhu.ak(linkedHashMap, new IInvokable() { // from class: me.hd.wauxv.obf.cjb
+                    if (FastKV.ak(linkedHashMap, new IInvokable() { // from class: me.hd.wauxv.obf.cjb
                         @Override // me.hd.wauxv.obf.bgf
                         public final Object invoke(Object obj2) {
                             boolean zContainsKey;

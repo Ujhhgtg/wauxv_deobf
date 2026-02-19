@@ -58,18 +58,18 @@ public final class cdj extends dqc {
         int iC5 = fjVar != null ? fjVar.c(bbbVar) : 0;
         List list = this.g;
         if (list != null) {
-            ArrayList arrayList = new ArrayList(abb.ak(list, 10));
+            ArrayList arrayList = new ArrayList(StaticHelpers4.ak(list, 10));
             Iterator it = list.iterator();
             while (it.hasNext()) {
                 arrayList.add(Integer.valueOf(((dnf) it.next()).c(bbbVar)));
             }
-            iT = bbbVar.t(aaz.y(arrayList));
+            iT = bbbVar.t(StaticHelpers5.y(arrayList));
         } else {
             iT = 0;
         }
         ArrayList arrayList2 = this.h;
         if (arrayList2 != null) {
-            ArrayList arrayList3 = new ArrayList(abb.ak(arrayList2, 10));
+            ArrayList arrayList3 = new ArrayList(StaticHelpers4.ak(arrayList2, 10));
             Iterator it2 = arrayList2.iterator();
             while (it2.hasNext()) {
                 cpg cpgVar = ((cpf) it2.next()).b;
@@ -88,7 +88,7 @@ public final class cdj extends dqc {
         ArrayList arrayList4 = this.h;
         if (arrayList4 != null) {
             i = 1;
-            ArrayList arrayList5 = new ArrayList(abb.ak(arrayList4, 10));
+            ArrayList arrayList5 = new ArrayList(StaticHelpers4.ak(arrayList4, 10));
             Iterator it3 = arrayList4.iterator();
             while (it3.hasNext()) {
                 avk avkVar = ((cpf) it3.next()).a;
@@ -96,7 +96,7 @@ public final class cdj extends dqc {
                         "null cannot be cast to non-null type org.luckypray.dexkit.query.base.BaseQuery");
                 arrayList5.add(Integer.valueOf(avkVar.c(bbbVar)));
             }
-            int[] iArrY = aaz.y(arrayList5);
+            int[] iArrY = StaticHelpers5.y(arrayList5);
             bbbVar.ac(4, iArrY.length, 4);
             for (int length2 = iArrY.length - 1; -1 < length2; length2--) {
                 bbbVar.p(iArrY[length2]);
@@ -161,7 +161,7 @@ public final class cdj extends dqc {
     public final void q(Class... clsArr) {
         cst cstVar;
         fj fjVar = new fj(4);
-        fjVar.b = aaz.ab(EmptyReadonlyList.a);
+        fjVar.b = StaticHelpers5.ab(EmptyReadonlyList.INSTANCE);
         for (Class cls : clsArr) {
             if (cls != null) {
                 cstVar = new cst();
@@ -197,7 +197,7 @@ public final class cdj extends dqc {
         for (String str : strArr) {
             arrayList.add(new dnf(str, dne.Equals, false));
         }
-        this.g = aaz.ab(arrayList);
+        this.g = StaticHelpers5.ab(arrayList);
     }
 
     public final void u(Number... numberArr) {
@@ -226,7 +226,7 @@ public final class cdj extends dqc {
             }
             arrayList.add(cpfVar);
         }
-        this.h = aaz.ab(arrayList);
+        this.h = StaticHelpers5.ab(arrayList);
     }
 
     public final void v(String... strArr) {
@@ -234,6 +234,6 @@ public final class cdj extends dqc {
         for (String str : strArr) {
             arrayList.add(new dnf(str, dne.Contains, false));
         }
-        this.g = aaz.ab(arrayList);
+        this.g = StaticHelpers5.ab(arrayList);
     }
 }

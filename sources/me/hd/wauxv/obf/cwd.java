@@ -8,6 +8,6 @@ public final class cwd {
 
     public final Object c(btd btdVar, byte[] bArr) {
         throwIfVar1IsNull(btdVar, "deserializer");
-        return new cwl(this, new cwo(new ru(bArr, bArr.length)), btdVar.getDescriptor()).ap(btdVar, null);
+        return new cwl(this, new ProtoReader(new SourceBuffer(bArr, bArr.length)), btdVar.getDescriptor()).ap(btdVar, null);
     }
 }

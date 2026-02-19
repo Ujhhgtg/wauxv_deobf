@@ -18,7 +18,7 @@ public final class duk {
     public /* synthetic */ duk(int i, String str, Integer num, String str2, String str3, String str4, String str5,
             String str6, String str7) {
         if (255 != (i & Opcodes.CONST_METHOD_TYPE)) {
-            bht.ah(i, Opcodes.CONST_METHOD_TYPE, dui.b.getDescriptor());
+            ResourcesCompat.ah(i, Opcodes.CONST_METHOD_TYPE, dui.b.getDescriptor());
             throw null;
         }
         this.a = str;

@@ -5,15 +5,15 @@ import de.robv.android.xposed.XposedBridge;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class kf extends nh {
-    public final exg a;
+    public final HookPriorityEnum a;
     public final /* synthetic */ int b;
 
     /* JADX WARN: Illegal instructions before constructor call */
     public kf(int i) {
         this.b = i;
-        exg exgVar = exg.a;
-        super(exgVar);
-        this.a = exgVar;
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
+        super(hookPriorityEnumVar);
+        this.a = hookPriorityEnumVar;
     }
 
     @Override // me.hd.wauxv.obf.nh
@@ -26,7 +26,7 @@ public final class kf extends nh {
     }
 
     @Override // me.hd.wauxv.obf.nh
-    public final exg e() {
+    public final HookPriorityEnum e() {
         return this.a;
     }
 
@@ -58,7 +58,7 @@ public final class kf extends nh {
                     try {
                         objX = Integer.valueOf(XposedBridge.getXposedVersion());
                     } catch (Throwable th) {
-                        objX = bhu.x(th);
+                        objX = FastKV.x(th);
                     }
                     if (objX instanceof dcx) {
                         objX = null;

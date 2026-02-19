@@ -23,7 +23,7 @@ public final class dzj {
             Integer num2, Integer num3, String str6, String str7, String str8, String str9, String str10,
             String str11) {
         if (16383 != (i & 16383)) {
-            bht.ah(i, 16383, dzh.b.getDescriptor());
+            ResourcesCompat.ah(i, 16383, dzh.b.getDescriptor());
             throw null;
         }
         this.a = str;

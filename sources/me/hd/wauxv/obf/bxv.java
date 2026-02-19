@@ -46,7 +46,7 @@ public abstract class bxv {
                 String str = "Attempting to load provider \"" + property
                         + "\" specified via \"slf4j.provider\" system property";
                 int i = dbr.a;
-                if (dkz.ae(2) >= dkz.ae(dbr.b)) {
+                if (StaticHelpers6.ae(2) >= StaticHelpers6.ae(dbr.b)) {
                     dbr.d().println("SLF4J(I): " + str);
                 }
                 cihVar = (cih) classLoader.loadClass(property).getConstructor(null).newInstance(null);
@@ -273,7 +273,7 @@ public abstract class bxv {
         if (arrayList.size() > 1) {
             String str = "Actual provider is of type [" + arrayList.get(0) + "]";
             int i = dbr.a;
-            if (dkz.ae(2) >= dkz.ae(dbr.b)) {
+            if (StaticHelpers6.ae(2) >= StaticHelpers6.ae(dbr.b)) {
                 dbr.d().println("SLF4J(I): " + str);
                 return;
             }
@@ -281,7 +281,7 @@ public abstract class bxv {
         }
         String str2 = "Connected with provider of type [" + ((cih) arrayList.get(0)).getClass().getName() + "]";
         int i2 = dbr.a;
-        if (dkz.ae(1) >= dkz.ae(dbr.b)) {
+        if (StaticHelpers6.ae(1) >= StaticHelpers6.ae(dbr.b)) {
             dbr.d().println("SLF4J(D): " + str2);
         }
     }

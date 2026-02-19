@@ -16,7 +16,7 @@ public final class ki {
     public static final /* synthetic */ btc[] b;
     public static boolean c;
     public static final LinkedHashMap d;
-    public static final jx e;
+    public static final FactoryPools e;
     public static Application f;
 
     static {
@@ -32,7 +32,7 @@ public final class ki {
     public static ClassLoader g() {
         Class cls;
         cls = ewz.class;
-        Class<ewz> clsBf = cnf.bf(dal.b(cls));
+        Class<ewz> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
         ClassLoader classLoader = (clsBf != null ? clsBf : ewz.class).getClassLoader();
         if (classLoader != null) {
             return classLoader;
@@ -45,7 +45,7 @@ public final class ki {
         try {
             objX = AndroidAppHelper.currentApplication();
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         if (objX instanceof dcx) {
             objX = null;
@@ -56,13 +56,13 @@ public final class ki {
         }
         int i = 0;
         btc btcVar = b[0];
-        bmu bmuVarBh = dqc.bh(e.w());
-        dov dovVar = ep.a;
-        ((cbg) bmuVarBh.h).c = bhu.aa();
-        bmuVarBh.v(true);
-        cde cdeVarT = bmuVarBh.t();
-        cdeVarT.ab = "currentApplication";
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+        SyntheticPileOfMess bmuVarBh = dqc.bh(e.w());
+        Kotlin$Lazy kotlin$LazyVar = ep.a;
+        ((Configuration) bmuVarBh.obj).processorResolver = FastKV.aa();
+        bmuVarBh.setHookOptional(true);
+        MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "currentApplication";
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
         if (methodHookWrapperVar != null) {
             return (Application) methodHookWrapperVar.j(new Object[0]);
         }
@@ -73,13 +73,13 @@ public final class ki {
     public static String i() {
         Object objX;
         String str;
-        bmu bmuVarBi;
+        SyntheticPileOfMess bmuVarBi;
         Object objD;
-        bmu bmuVarBi2;
+        SyntheticPileOfMess bmuVarBi2;
         try {
             objX = AndroidAppHelper.currentApplicationInfo();
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         ApplicationInfo applicationInfo = null;
         if (objX instanceof dcx) {
@@ -90,37 +90,37 @@ public final class ki {
             int i = 0;
             a.getClass();
             btc btcVar = b[0];
-            bmu bmuVarBh = dqc.bh(e.w());
-            dov dovVar = ep.a;
-            ((cbg) bmuVarBh.h).c = bhu.aa();
-            bmuVarBh.v(true);
-            cde cdeVarT = bmuVarBh.t();
-            cdeVarT.ab = "currentActivityThread";
-            cdeVarT.y();
-            MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+            SyntheticPileOfMess bmuVarBh = dqc.bh(e.w());
+            Kotlin$Lazy kotlin$LazyVar = ep.a;
+            ((Configuration) bmuVarBh.obj).processorResolver = FastKV.aa();
+            bmuVarBh.setHookOptional(true);
+            MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT.name = "currentActivityThread";
+            methodResolverVarT.y();
+            MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
             Object objE = methodHookWrapperVar != null ? methodHookWrapperVar.e(new Object[0]) : null;
             if (objE != null) {
-                bmuVarBi = dqc.bi(objE);
-                bmuVarBi.v(true);
+                bmuVarBi = dqc.getWrapperConfiguration(objE);
+                bmuVarBi.setHookOptional(true);
             } else {
                 bmuVarBi = null;
             }
             if (bmuVarBi != null) {
-                azg azgVarR = bmuVarBi.r();
-                azgVarR.ab = "mBoundApplication";
-                azk azkVar = (azk) aaz.g(azgVarR.c());
+                FieldResolver fieldResolverVarR = bmuVarBi.r();
+                fieldResolverVarR.name = "mBoundApplication";
+                azk azkVar = (azk) StaticHelpers5.g(fieldResolverVarR.resolve());
                 objD = azkVar != null ? azkVar.d() : null;
             }
             if (objD != null) {
-                bmuVarBi2 = dqc.bi(objD);
-                bmuVarBi2.v(true);
+                bmuVarBi2 = dqc.getWrapperConfiguration(objD);
+                bmuVarBi2.setHookOptional(true);
             } else {
                 bmuVarBi2 = null;
             }
             if (bmuVarBi2 != null) {
-                azg azgVarR2 = bmuVarBi2.r();
-                azgVarR2.ab = "appInfo";
-                azk azkVar2 = (azk) aaz.g(azgVarR2.c());
+                FieldResolver fieldResolverVarR2 = bmuVarBi2.r();
+                fieldResolverVarR2.name = "appInfo";
+                azk azkVar2 = (azk) StaticHelpers5.g(fieldResolverVarR2.resolve());
                 if (azkVar2 != null) {
                     applicationInfo = (ApplicationInfo) azkVar2.e();
                 }
@@ -139,34 +139,34 @@ public final class ki {
         Class clsF = ReflectionWrapper.f(str, 2, classLoader);
         if (clsF != null) {
             int i = 0;
-            bmu bmuVarBh = dqc.bh(clsF);
-            bmuVarBh.v(true);
+            SyntheticPileOfMess bmuVarBh = dqc.bh(clsF);
+            bmuVarBh.setHookOptional(true);
             if (bmkVar == bmk.c) {
-                cde cdeVarT = bmuVarBh.t();
-                cdeVarT.ab = "_--_";
-                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+                MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT.name = "_--_";
+                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
                 kf kfVar = new kf(1);
-                if (methodHookWrapperVar == null || (method = methodHookWrapperVar.a) == null) {
+                if (methodHookWrapperVar == null || (method = methodHookWrapperVar.method) == null) {
                     return;
                 }
                 cnh.z(method, kfVar);
                 return;
             }
-            cde cdeVarT2 = bmuVarBh.t();
-            cdeVarT2.ab = "__--";
-            cnh.y((MethodHookWrapper) aaz.g(cdeVarT2.aj()), new kf(2));
-            cde cdeVarT3 = bmuVarBh.t();
-            cdeVarT3.ab = "_-_-";
-            cnh.y((MethodHookWrapper) aaz.g(cdeVarT3.aj()), new kf(3));
-            cde cdeVarT4 = bmuVarBh.t();
-            cdeVarT4.ab = "-__-";
-            cnh.y((MethodHookWrapper) aaz.g(cdeVarT4.aj()), new kf(4));
-            cde cdeVarT5 = bmuVarBh.t();
-            cdeVarT5.ab = "-_-_";
-            cnh.y((MethodHookWrapper) aaz.g(cdeVarT5.aj()), new kf(5));
-            cde cdeVarT6 = bmuVarBh.t();
-            cdeVarT6.ab = "___-";
-            cnh.y((MethodHookWrapper) aaz.g(cdeVarT6.aj()), new kf(0));
+            MethodResolver methodResolverVarT2 = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT2.name = "__--";
+            cnh.y((MethodHookWrapper) StaticHelpers5.g(methodResolverVarT2.findMethods()), new kf(2));
+            MethodResolver methodResolverVarT3 = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT3.name = "_-_-";
+            cnh.y((MethodHookWrapper) StaticHelpers5.g(methodResolverVarT3.findMethods()), new kf(3));
+            MethodResolver methodResolverVarT4 = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT4.name = "-__-";
+            cnh.y((MethodHookWrapper) StaticHelpers5.g(methodResolverVarT4.findMethods()), new kf(4));
+            MethodResolver methodResolverVarT5 = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT5.name = "-_-_";
+            cnh.y((MethodHookWrapper) StaticHelpers5.g(methodResolverVarT5.findMethods()), new kf(5));
+            MethodResolver methodResolverVarT6 = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT6.name = "___-";
+            cnh.y((MethodHookWrapper) StaticHelpers5.g(methodResolverVarT6.findMethods()), new kf(0));
         }
     }
 
@@ -177,41 +177,41 @@ public final class ki {
             int i = 1;
             if (!linkedHashMap.isEmpty()) {
                 int i2 = 0;
-                bmu bmuVarBg = dqc.bg(dal.b(Application.class));
-                bmuVarBg.v(true);
-                cde cdeVarT = bmuVarBg.t();
-                cdeVarT.ab = "attach";
-                cdeVarT.z(Arrays.copyOf(new Object[]{dal.b(Context.class)}, 1));
-                cnh.y((MethodHookWrapper) aaz.e(cdeVarT.aj()), new kg(i));
-                cde cdeVarT2 = bmuVarBg.t();
-                cdeVarT2.ab = "onTerminate";
-                cnh.y((MethodHookWrapper) aaz.e(cdeVarT2.aj()), new kg(2));
-                cde cdeVarT3 = bmuVarBg.t();
-                cdeVarT3.ab = "onLowMemory";
-                cnh.y((MethodHookWrapper) aaz.e(cdeVarT3.aj()), new kg(3));
-                cde cdeVarT4 = bmuVarBg.t();
-                cdeVarT4.ab = "onTrimMemory";
-                cdeVarT4.z(Arrays.copyOf(new Object[]{dal.b(Integer.TYPE)}, 1));
-                cnh.y((MethodHookWrapper) aaz.e(cdeVarT4.aj()), new kg(4));
-                cde cdeVarT5 = bmuVarBg.t();
-                cdeVarT5.ab = "onConfigurationChanged";
-                cnh.y((MethodHookWrapper) aaz.e(cdeVarT5.aj()), new kg(0));
+                SyntheticPileOfMess bmuVarBg = dqc.bg(dal.b(Application.class));
+                bmuVarBg.setHookOptional(true);
+                MethodResolver methodResolverVarT = bmuVarBg.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT.name = "attach";
+                methodResolverVarT.setParams(Arrays.copyOf(new Object[]{dal.b(Context.class)}, 1));
+                cnh.y((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods()), new kg(i));
+                MethodResolver methodResolverVarT2 = bmuVarBg.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT2.name = "onTerminate";
+                cnh.y((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods()), new kg(2));
+                MethodResolver methodResolverVarT3 = bmuVarBg.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT3.name = "onLowMemory";
+                cnh.y((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT3.findMethods()), new kg(3));
+                MethodResolver methodResolverVarT4 = bmuVarBg.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT4.name = "onTrimMemory";
+                methodResolverVarT4.setParams(Arrays.copyOf(new Object[]{dal.b(Integer.TYPE)}, 1));
+                cnh.y((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT4.findMethods()), new kg(4));
+                MethodResolver methodResolverVarT5 = bmuVarBg.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT5.name = "onConfigurationChanged";
+                cnh.y((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT5.findMethods()), new kg(0));
             }
             if (cnb.k || !linkedHashMap.isEmpty()) {
                 int i3 = 0;
-                bmu bmuVarBg2 = dqc.bg(dal.b(Instrumentation.class));
-                bmuVarBg2.v(true);
-                cde cdeVarT6 = bmuVarBg2.t();
-                cdeVarT6.ab = "callApplicationOnCreate";
-                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT6.aj());
+                SyntheticPileOfMess bmuVarBg2 = dqc.bg(dal.b(Instrumentation.class));
+                bmuVarBg2.setHookOptional(true);
+                MethodResolver methodResolverVarT6 = bmuVarBg2.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT6.name = "callApplicationOnCreate";
+                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT6.findMethods());
                 kh khVar = new kh(this, str);
-                if (methodHookWrapperVar == null || (method = methodHookWrapperVar.a) == null) {
+                if (methodHookWrapperVar == null || (method = methodHookWrapperVar.method) == null) {
                     return;
                 }
                 cnh.z(method, khVar);
             }
         } catch (Throwable th) {
-            bhu.x(th);
+            FastKV.x(th);
         }
     }
 }

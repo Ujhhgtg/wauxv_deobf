@@ -34,7 +34,6 @@ import com.umeng.analytics.pro.bd;
 import com.umeng.analytics.pro.bt;
 import com.umeng.analytics.pro.bx;
 import com.umeng.analytics.pro.n;
-import com.umeng.ccg.c;
 import com.umeng.commonsdk.UMConfigure;
 import com.umeng.commonsdk.debug.UMRTLog;
 import com.umeng.commonsdk.framework.UMEnvelopeBuild;
@@ -55,7 +54,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -1023,7 +1022,7 @@ public class d implements c.a {
                     case 105:
                         for (String str2 : CcgAgent.getCollectItemList()) {
                             ArrayList<String> forbidSdkArray = CcgAgent.getForbidSdkArray(str2);
-                            StringBuilder sbZ = dkz.z("[forbid_sdk] 采集项: ", str2, "; 值: ");
+                            StringBuilder sbZ = StaticHelpers6.concatAndToSb("[forbid_sdk] 采集项: ", str2, "; 值: ");
                             sbZ.append(forbidSdkArray.toString());
                             UMRTLog.i(UMRTLog.RTLOG_TAG, sbZ.toString());
                         }

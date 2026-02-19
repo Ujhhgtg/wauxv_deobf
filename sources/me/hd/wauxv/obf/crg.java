@@ -15,8 +15,8 @@ public final class crg extends cwl {
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public crg(cwd cwdVar, cwo cwoVar, long j, dfx dfxVar) {
-        super(cwdVar, cwoVar, dfxVar);
+    public crg(cwd cwdVar, ProtoReader protoReaderVar, long j, dfx dfxVar) {
+        super(cwdVar, protoReaderVar, dfxVar);
         throwIfVar1IsNull(dfxVar, "descriptor");
         this.ac = j;
     }
@@ -54,7 +54,7 @@ public final class crg extends cwl {
         if (dfxVar2 != null && (strB = dfxVar2.b()) != null) {
             return strB;
         }
-        throw new dgb("Cannot find a subclass of " + dfxVar.b() + " annotated with @ProtoNumber(" + i + ").");
+        throw new SomeIllegalArgumentException("Cannot find a subclass of " + dfxVar.b() + " annotated with @ProtoNumber(" + i + ").");
     }
 
     @Override // me.hd.wauxv.obf.cwl, me.hd.wauxv.obf.acm
@@ -89,7 +89,7 @@ public final class crg extends cwl {
                 arrayList.add(obj);
             }
         }
-        if (((cwg) aaz.s(arrayList)) != null) {
+        if (((cwg) StaticHelpers5.s(arrayList)) != null) {
             return creVar;
         }
         throw new IllegalArgumentException(

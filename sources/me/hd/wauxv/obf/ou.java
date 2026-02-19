@@ -61,7 +61,7 @@ public final class ou implements dcj {
                 but butVar = new but(cypVar, 14, axbVar2);
                 try {
                     apq apqVar = (apq) this.b;
-                    pa paVarO = apqVar.o(new jx(bzpVar, apqVar.j, apqVar.i), i, i2, crwVar, butVar);
+                    pa paVarO = apqVar.o(new FactoryPools(bzpVar, apqVar.j, apqVar.i), i, i2, crwVar, butVar);
                     axbVar2.c = null;
                     axbVar2.b = null;
                     synchronized (arrayDeque) {

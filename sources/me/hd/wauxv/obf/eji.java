@@ -34,7 +34,7 @@ public final class eji {
             dxe dxeVar, Integer num9, efz efzVar, Integer num10, String str4, eah eahVar, eiz eizVar, dyo dyoVar,
             ede edeVar, dyx dyxVar) {
         if (16777215 != (i & 16777215)) {
-            bht.ah(i, 16777215, ejg.b.getDescriptor());
+            ResourcesCompat.ah(i, 16777215, ejg.b.getDescriptor());
             throw null;
         }
         this.a = str;
@@ -140,7 +140,7 @@ public final class eji {
         StringBuilder sb = new StringBuilder();
         sb.append("z52Proto(topic=" /* "z52Proto(topic=" /* "z52Proto(topic=" /* cnb.z(-345392680008490L)  */);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -345323960531754L);
-        dkz.ad(sb, this.b, -345293895760682L);
+        StaticHelpers6.ad(sb, this.b, -345293895760682L);
         bjs.w(sb, this.c, -345770637130538L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.d, -345701917653802L);
         bjs.w(sb, this.e, -345680442817322L);

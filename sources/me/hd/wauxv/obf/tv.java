@@ -99,7 +99,7 @@ public final class tv extends ell {
                         }
                         if (view.getParent() instanceof ViewGroup) {
                             ViewGroup viewGroup4 = (ViewGroup) view.getParent();
-                            dqc.bk(viewGroup4, true);
+                            dqc.tryGetClassByName(viewGroup4, true);
                             tvVar.bn().bh(new tt(viewGroup4));
                         }
                         return animatorA;

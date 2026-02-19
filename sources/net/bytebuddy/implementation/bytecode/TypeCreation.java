@@ -1,10 +1,9 @@
 package net.bytebuddy.implementation.bytecode;
 
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.implementation.Implementation;
-import net.bytebuddy.implementation.bytecode.StackManipulation;
 import net.bytebuddy.jar.asm.MethodVisitor;
 import net.bytebuddy.utility.nullability.MaybeNull;
 
@@ -20,7 +19,7 @@ public class TypeCreation extends StackManipulation.AbstractBase {
 
     public static StackManipulation of(TypeDescription typeDescription) {
         if (typeDescription.isArray() || typeDescription.isPrimitive() || typeDescription.isAbstract()) {
-            throw new IllegalArgumentException(dkz.x(typeDescription, " is not instantiable"));
+            throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " is not instantiable"));
         }
         return new TypeCreation(typeDescription);
     }

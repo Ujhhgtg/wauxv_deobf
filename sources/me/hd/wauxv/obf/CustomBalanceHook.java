@@ -12,12 +12,12 @@ public final class CustomBalanceHook extends SwitchHook {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i = 0;
-        cde cdeVarT = yg.s(-429552564173610L).t();
-        cdeVarT.d = new age(22);
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
-        exg exgVar = exg.a;
+        MethodResolver methodResolverVarT = yg.s(-429552564173610L).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.d = new age(22);
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         CustomBalanceHook aioVar = a;
-        aki akiVarAd = aioVar.ad(methodHookWrapperVar, exgVar);
+        aki akiVarAd = aioVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
         aioVar.y(akiVarAd, new age(23));
         akiVarAd.o();
     }

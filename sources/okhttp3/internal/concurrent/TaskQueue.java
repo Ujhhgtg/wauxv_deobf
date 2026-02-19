@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.RejectedExecutionException;
 import java.util.logging.Level;
-import me.hd.wauxv.obf.aaz;
+import me.hd.wauxv.obf.StaticHelpers5;
 import me.hd.wauxv.obf.bfu;
 import me.hd.wauxv.obf.yg;
 import okhttp3.internal.Util;
@@ -183,7 +183,7 @@ public final class TaskQueue {
     public final List<Task> getScheduledTasks() {
         List<Task> listZ;
         synchronized (this.taskRunner) {
-            listZ = aaz.z(this.futureTasks);
+            listZ = StaticHelpers5.z(this.futureTasks);
         }
         return listZ;
     }

@@ -31,13 +31,13 @@ public final class diz extends SwitchHook implements boa, IDatabaseOperationsLis
             sb.append('|');
         } while (!dnr.bp((String) next, sb.toString(), false));
         String str = (String) next;
-        return str != null ? aaz.ad(dnj.as(dnj.au(str, "|" /* "|" /* "|" /* cnb.z(-529547992759082L)  */, str),
+        return str != null ? StaticHelpers5.ad(dnj.as(dnj.au(str, "|" /* "|" /* "|" /* cnb.z(-529547992759082L)  */, str),
                 new String[] { ";" /* ";" /* ";" /* cnb.z(-529487863216938L)  */ })) : avh.a;
     }
 
     @Override // me.hd.wauxv.obf.boa
     public final List a() {
-        return !z() ? EmptyReadonlyList.a
+        return !z() ? EmptyReadonlyList.INSTANCE
                 : dqc.toSingletonList(new djl(R.id.MenuItem_Sns_Like, "伪点赞[WA]" /* "伪点赞[WA]" /* "伪点赞[WA]" /* cnb.z(-529496453151530L)  */, new wx(1)));
     }
 
@@ -89,41 +89,41 @@ public final class diz extends SwitchHook implements boa, IDatabaseOperationsLis
                                                                                              */);
             Object objC = ReflectionWrapper.createInstanceWithArgs(clsAg, new Object[0]);
             int i2 = 0;
-            cde cdeVarT = dqc.bi(objC).t();
-            cdeVarT.ab = "parseFrom" /* "parseFrom" /* "parseFrom" /* cnb.z(-529290294721322L)  */;
-            cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(byte[].class) }, 1));
-            cdeVarT.ah();
-            ((MethodHookWrapper) aaz.e(cdeVarT.aj())).e((byte[]) obj2);
-            bmu bmuVarBi = dqc.bi(objC);
+            MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objC).getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT.name = "parseFrom" /* "parseFrom" /* "parseFrom" /* cnb.z(-529290294721322L)  */;
+            methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.b(byte[].class) }, 1));
+            methodResolverVarT.enableSuperclass();
+            ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e((byte[]) obj2);
+            SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(objC);
             LinkedList linkedList = new LinkedList();
             for (String str2 : setM) {
                 dkn.a.getClass();
-                Object objC2 = ReflectionWrapper.createInstanceWithArgs(emn.az(dkm.a), new Object[0]);
+                Object objC2 = ReflectionWrapper.createInstanceWithArgs(StaticHelpers7.az(dkm.a), new Object[0]);
                 int i3 = 0;
-                azg azgVarR = dqc.bi(objC2).r();
-                azgVarR.ab = "d" /* "d" /* "d" /* cnb.z(-529264524917546L)  */;
-                ((azk) aaz.e(azgVarR.c())).f(str2);
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC2).r();
+                fieldResolverVarR.name = "d" /* "d" /* "d" /* cnb.z(-529264524917546L)  */;
+                ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).f(str2);
                 linkedList.push(objC2);
             }
             int size = linkedList.size();
             int i4 = !linkedList.isEmpty() ? 1 : 0;
-            azg azgVarR2 = bmuVarBi.r();
-            azgVarR2.ab = "LikeUserList" /* "LikeUserList" /* "LikeUserList" /* cnb.z(-529273114852138L)  */;
-            ((azk) aaz.e(azgVarR2.c())).f(linkedList);
-            azg azgVarR3 = bmuVarBi.r();
-            azgVarR3.ab = "LikeUserListCount" /* "LikeUserListCount" /* "LikeUserListCount" /* cnb.z(-529200100408106L)  */;
-            ((azk) aaz.e(azgVarR3.c())).f(Integer.valueOf(size));
-            azg azgVarR4 = bmuVarBi.r();
-            azgVarR4.ab = "LikeCount" /* "LikeCount" /* "LikeCount" /* cnb.z(-535187284818730L)  */;
-            ((azk) aaz.e(azgVarR4.c())).f(Integer.valueOf(size));
-            azg azgVarR5 = bmuVarBi.r();
-            azgVarR5.ab = "LikeFlag" /* "LikeFlag" /* "LikeFlag" /* cnb.z(-535092795538218L)  */;
-            ((azk) aaz.e(azgVarR5.c())).f(Integer.valueOf(i4));
+            FieldResolver fieldResolverVarR2 = bmuVarBi.r();
+            fieldResolverVarR2.name = "LikeUserList" /* "LikeUserList" /* "LikeUserList" /* cnb.z(-529273114852138L)  */;
+            ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).f(linkedList);
+            FieldResolver fieldResolverVarR3 = bmuVarBi.r();
+            fieldResolverVarR3.name = "LikeUserListCount" /* "LikeUserListCount" /* "LikeUserListCount" /* cnb.z(-529200100408106L)  */;
+            ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).f(Integer.valueOf(size));
+            FieldResolver fieldResolverVarR4 = bmuVarBi.r();
+            fieldResolverVarR4.name = "LikeCount" /* "LikeCount" /* "LikeCount" /* cnb.z(-535187284818730L)  */;
+            ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).f(Integer.valueOf(size));
+            FieldResolver fieldResolverVarR5 = bmuVarBi.r();
+            fieldResolverVarR5.name = "LikeFlag" /* "LikeFlag" /* "LikeFlag" /* cnb.z(-535092795538218L)  */;
+            ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR5.resolve())).f(Integer.valueOf(i4));
             int i5 = 0;
-            cde cdeVarT2 = dqc.bi(objC).t();
-            cdeVarT2.a = dal.b(byte[].class);
-            cdeVarT2.ab = "toByteArray" /* "toByteArray" /* "toByteArray" /* cnb.z(-535054140832554L)  */;
-            Object objJ = ((MethodHookWrapper) dkz.m(cdeVarT2)).j(new Object[0]);
+            MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objC).getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT2.returnType = dal.b(byte[].class);
+            methodResolverVarT2.name = "toByteArray" /* "toByteArray" /* "toByteArray" /* cnb.z(-535054140832554L)  */;
+            Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).j(new Object[0]);
             throwIfVar1IsNull(objJ);
             contentValues.put("attrBuf" /* "attrBuf" /* "attrBuf" /* cnb.z(-535036960963370L)  */, (byte[]) objJ);
         }

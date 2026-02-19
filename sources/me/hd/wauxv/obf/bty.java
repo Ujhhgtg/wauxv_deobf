@@ -56,22 +56,22 @@ public final /* synthetic */ class bty implements IInvokable {
                 return kotlinUnitVar;
             case 1:
                 View view = (View) obj;
-                View viewK = dkz.k(view, R.layout.module_dialog_location, null, false);
+                View viewK = StaticHelpers6.k(view, R.layout.module_dialog_location, null, false);
                 int i7 = R.id.moduleDialogBtnLocationSelect;
-                MaterialButton materialButton = (MaterialButton) KotlinHelpers2.aq(viewK, R.id.moduleDialogBtnLocationSelect);
+                MaterialButton materialButton = (MaterialButton) KotlinHelpers2.recursivelyFindViewById(viewK, R.id.moduleDialogBtnLocationSelect);
                 if (materialButton != null) {
                     i7 = R.id.moduleDialogEdtLocationLatitude;
-                    TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                    TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                             R.id.moduleDialogEdtLocationLatitude);
                     if (textInputEditText != null) {
                         i7 = R.id.moduleDialogEdtLocationLongitude;
-                        TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                        TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                 R.id.moduleDialogEdtLocationLongitude);
                         if (textInputEditText2 != null) {
                             i7 = R.id.moduleDialogInputLocationLatitude;
-                            if (((TextInputLayout) KotlinHelpers2.aq(viewK, R.id.moduleDialogInputLocationLatitude)) != null) {
+                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK, R.id.moduleDialogInputLocationLatitude)) != null) {
                                 i7 = R.id.moduleDialogInputLocationLongitude;
-                                if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                         R.id.moduleDialogInputLocationLongitude)) != null) {
                                     bxj.c = new cem((LinearLayout) viewK, materialButton, textInputEditText,
                                             textInputEditText2);
@@ -128,7 +128,7 @@ public final /* synthetic */ class bty implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = bhu.x(th);
+                    objX = FastKV.x(th);
                 }
                 if (objX instanceof dcx) {
                     objX = null;
@@ -206,7 +206,7 @@ public final /* synthetic */ class bty implements IInvokable {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = bhu.x(th2);
+                    objX2 = FastKV.x(th2);
                 }
                 if (objX2 instanceof dcx) {
                     objX2 = null;
@@ -219,7 +219,7 @@ public final /* synthetic */ class bty implements IInvokable {
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = bhu.x(th3);
+                    objX3 = FastKV.x(th3);
                 }
                 if (objX3 instanceof dcx) {
                     objX3 = null;
@@ -233,7 +233,7 @@ public final /* synthetic */ class bty implements IInvokable {
                             objX4 = null;
                         }
                     } catch (Throwable th4) {
-                        objX4 = bhu.x(th4);
+                        objX4 = FastKV.x(th4);
                     }
                     if (objX4 instanceof dcx) {
                         objX4 = null;
@@ -245,9 +245,9 @@ public final /* synthetic */ class bty implements IInvokable {
                                                                                                         */);
                     throwIfVar1IsNull(parcelableExtra);
                     int i8 = 0;
-                    cde cdeVarT = dqc.bi(parcelableExtra).t();
-                    cdeVarT.a = dal.b(String.class);
-                    Object objJ = ((MethodHookWrapper) aaz.e(cdeVarT.aj())).j(new Object[0]);
+                    MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(parcelableExtra).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                    methodResolverVarT.returnType = dal.b(String.class);
+                    Object objJ = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).j(new Object[0]);
                     throwIfVar1IsNull(objJ);
                     String str = (String) objJ;
                     Pattern patternCompile = Pattern.compile(
@@ -256,7 +256,7 @@ public final /* synthetic */ class bty implements IInvokable {
                     Matcher matcher = patternCompile.matcher(str);
                     throwIfVar1IsNull(matcher, "matcher(...)");
                     bzx bzxVarY = ewz.y(matcher, 0, str);
-                    if (bzxVarY == null || ((r) bzxVarY.e()).a() != 3) {
+                    if (bzxVarY == null || ((AbstractReadOnlyCollection) bzxVarY.e()).a() != 3) {
                         cem cemVar4 = bxj.c;
                         if (cemVar4 == null) {
                             throwLateinitPropNotInitYet("binding" /* "binding" /* "binding" /* cnb.z(-493590526556970L)  */);
@@ -291,13 +291,13 @@ public final /* synthetic */ class bty implements IInvokable {
                 return kotlinUnitVar;
             case 12:
                 bxj bxjVar = bxj.a;
-                aki akiVarAb = csb.ab(bxjVar, dqc.toSingletonList((Method) obj));
+                aki akiVarAb = PackageParam.ab(bxjVar, dqc.toSingletonList((Method) obj));
                 bxjVar.y(akiVarAb, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(akiVarAb, i2));
                 akiVarAb.o();
                 return kotlinUnitVar;
             case 13:
                 bxj bxjVar2 = bxj.a;
-                aki akiVarAb2 = csb.ab(bxjVar2, dqc.toSingletonList((Method) obj));
+                aki akiVarAb2 = PackageParam.ab(bxjVar2, dqc.toSingletonList((Method) obj));
                 bxjVar2.y(akiVarAb2, new bty(4));
                 akiVarAb2.o();
                 return kotlinUnitVar;
@@ -353,9 +353,9 @@ public final /* synthetic */ class bty implements IInvokable {
                 bah bahVar7 = (bah) obj;
                 cdj cdjVar7 = new cdj();
                 byr.a.getClass();
-                cdjVar7.o(emn.az(byp.a));
+                cdjVar7.o(StaticHelpers7.az(byp.a));
                 cls = Class.class;
-                Class<Class> clsBf = cnf.bf(dal.b(cls));
+                Class<Class> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 cdjVar7.q(clsBf != null ? clsBf : Class.class);
                 bahVar7.getClass();
                 bahVar7.d = cdjVar7;
@@ -378,7 +378,7 @@ public final /* synthetic */ class bty implements IInvokable {
                 cdj cdjVar8 = new cdj();
                 Class clsB = cvh.a.b();
                 cls2 = Integer.class;
-                Class<Integer> clsBf2 = cnf.bf(dal.b(cls2));
+                Class<Integer> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                 cdjVar8.q(clsB, clsBf2 != null ? clsBf2 : Integer.class);
                 fj fjVar = new fj();
                 cdj cdjVar9 = new cdj();
@@ -392,19 +392,19 @@ public final /* synthetic */ class bty implements IInvokable {
             case 27:
                 HookParam hookParam3 = (HookParam) obj;
                 int i9 = 0;
-                azg azgVarAa = dkz.aa(hookParam3);
-                azgVarAa.a = "com.tencent.mm.ui.MMFragmentActivity" /* "com.tencent.mm.ui.MMFragmentActivity" /* "com.tencent.mm.ui.MMFragmentActivity" /* cnb.z(-69200513071914L)  */;
-                Object objE = ((azk) aaz.e(azgVarAa.c())).e();
+                FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam3);
+                fieldResolverVarAa.fieldType = "com.tencent.mm.ui.MMFragmentActivity" /* "com.tencent.mm.ui.MMFragmentActivity" /* "com.tencent.mm.ui.MMFragmentActivity" /* cnb.z(-69200513071914L)  */;
+                Object objE = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).e();
                 throwIfVar1IsNull(objE);
                 Activity activity = (Activity) objE;
-                azg azgVarAa2 = dkz.aa(hookParam3);
-                azgVarAa2.ab = "mViewPager" /* "mViewPager" /* "mViewPager" /* cnb.z(-69007239543594L)  */;
-                Object objE2 = ((azk) aaz.e(azgVarAa2.c())).e();
+                FieldResolver fieldResolverVarAa2 = StaticHelpers6.aa(hookParam3);
+                fieldResolverVarAa2.name = "mViewPager" /* "mViewPager" /* "mViewPager" /* cnb.z(-69007239543594L)  */;
+                Object objE2 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).e();
                 throwIfVar1IsNull(objE2);
                 ViewGroup viewGroup = (ViewGroup) objE2;
-                azg azgVarAa3 = dkz.aa(hookParam3);
-                azgVarAa3.ab = "mTabsAdapter" /* "mTabsAdapter" /* "mTabsAdapter" /* cnb.z(-68444598827818L)  */;
-                Object objD = ((azk) aaz.e(azgVarAa3.c())).d();
+                FieldResolver fieldResolverVarAa3 = StaticHelpers6.aa(hookParam3);
+                fieldResolverVarAa3.name = "mTabsAdapter" /* "mTabsAdapter" /* "mTabsAdapter" /* cnb.z(-68444598827818L)  */;
+                Object objD = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa3.resolve())).d();
                 throwIfVar1IsNull(objD);
                 for (bnp bnpVar : bzc.b) {
                     try {

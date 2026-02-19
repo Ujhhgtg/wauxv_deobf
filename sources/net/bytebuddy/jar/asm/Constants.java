@@ -4,7 +4,7 @@ import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.regex.Pattern;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.dynamic.ClassFileLocator;
 import net.bytebuddy.pool.TypePool;
 
@@ -156,6 +156,6 @@ final class Constants {
     }
 
     private static /* synthetic */ String stringConcat$0(String str) {
-        return dkz.s(str, ClassFileLocator.CLASS_FILE_EXTENSION);
+        return StaticHelpers6.concat(str, ClassFileLocator.CLASS_FILE_EXTENSION);
     }
 }

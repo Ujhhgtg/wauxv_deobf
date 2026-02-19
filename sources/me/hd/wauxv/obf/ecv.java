@@ -12,7 +12,7 @@ public final class ecv {
 
     public /* synthetic */ ecv(int i, dvu dvuVar, Integer num, String str, Integer num2, Integer num3) {
         if (31 != (i & 31)) {
-            bht.ah(i, 31, ect.b.getDescriptor());
+            ResourcesCompat.ah(i, 31, ect.b.getDescriptor());
             throw null;
         }
         this.a = dvuVar;

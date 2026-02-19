@@ -35,7 +35,7 @@ public final class cvs extends auy {
             int i = cvtVar.b + 1;
             cvtVar.b = i;
             if (i == 1 && cvtVar.e) {
-                cvtVar.g.m(bug.ON_START);
+                cvtVar.g.m(LifeEventEnum.ON_START);
                 cvtVar.e = false;
             }
         }
@@ -84,7 +84,7 @@ public final class cvs extends auy {
         int i = cvtVar.b - 1;
         cvtVar.b = i;
         if (i == 0 && cvtVar.d) {
-            cvtVar.g.m(bug.ON_STOP);
+            cvtVar.g.m(LifeEventEnum.ON_STOP);
             cvtVar.e = true;
         }
     }

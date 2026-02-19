@@ -9,7 +9,7 @@ public final class dxw {
 
     public /* synthetic */ dxw(int i, Integer num, String str) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, dxu.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, dxu.b.getDescriptor());
             throw null;
         }
         this.a = num;

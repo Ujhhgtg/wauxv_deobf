@@ -16,17 +16,17 @@ public final class zg {
     public zg(HashMap map) {
         this.b = map;
         for (Map.Entry entry : map.entrySet()) {
-            bug bugVar = (bug) entry.getValue();
-            List arrayList = (List) this.a.get(bugVar);
+            LifeEventEnum lifeEventEnumVar = (LifeEventEnum) entry.getValue();
+            List arrayList = (List) this.a.get(lifeEventEnumVar);
             if (arrayList == null) {
                 arrayList = new ArrayList();
-                this.a.put(bugVar, arrayList);
+                this.a.put(lifeEventEnumVar, arrayList);
             }
             arrayList.add((zh) entry.getKey());
         }
     }
 
-    public static void c(List list, bup bupVar, bug bugVar, Object obj) {
+    public static void c(List list, bup bupVar, LifeEventEnum lifeEventEnumVar, Object obj) {
         if (list != null) {
             for (int size = list.size() - 1; size >= 0; size--) {
                 zh zhVar = (zh) list.get(size);
@@ -38,7 +38,7 @@ public final class zg {
                     } else if (i == 1) {
                         method.invoke(obj, bupVar);
                     } else if (i == 2) {
-                        method.invoke(obj, bupVar, bugVar);
+                        method.invoke(obj, bupVar, lifeEventEnumVar);
                     }
                 } catch (IllegalAccessException e) {
                     throw new RuntimeException(e);

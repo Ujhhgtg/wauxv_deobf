@@ -317,7 +317,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             throw new IllegalArgumentException(concatVar2Var1(i, "beginIndex < 0: ").toString());
         }
         if (i2 < i) {
-            throw new IllegalArgumentException(dkz.p(i2, "endIndex < beginIndex: ", " < ", i).toString());
+            throw new IllegalArgumentException(StaticHelpers6.p(i2, "endIndex < beginIndex: ", " < ", i).toString());
         }
         if (i2 > str.length()) {
             StringBuilder sbR = yg.concatVar213(i2, "endIndex > string.length: ", " > ");
@@ -347,7 +347,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             throw new IllegalArgumentException(concatVar2Var1(i, "beginIndex < 0: ").toString());
         }
         if (i2 < i) {
-            throw new IllegalArgumentException(dkz.p(i2, "endIndex < beginIndex: ", " < ", i).toString());
+            throw new IllegalArgumentException(StaticHelpers6.p(i2, "endIndex < beginIndex: ", " < ", i).toString());
         }
         if (i2 > str.length()) {
             StringBuilder sbR = yg.concatVar213(i2, "endIndex > string.length: ", " > ");

@@ -22,7 +22,7 @@ import java.util.stream.Stream;
 
 import me.hd.wauxv.obf.cpt;
 import me.hd.wauxv.obf.cpv;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.kx;
 import me.hd.wauxv.obf.ra;
 import me.hd.wauxv.obf.rb;
@@ -59,7 +59,7 @@ public final class Reflect {
             charArray[0] = Character.toUpperCase(charArray[0]);
             map.put(str2, new String(charArray));
         }
-        StringBuilder sbY = dkz.y(str);
+        StringBuilder sbY = StaticHelpers6.toSb(str);
         sbY.append(map.get(str2));
         return sbY.toString();
     }
@@ -755,14 +755,14 @@ public final class Reflect {
     public static Invocable resolveExpectedJavaField(Class<?> cls, String str, boolean z) throws UtilEvalError {
         Invocable invocableFindField = BshClassManager.memberCache.get(cls).findField(str);
         if (invocableFindField == null) {
-            StringBuilder sbZ = dkz.z("No such field: ", str, " for class: ");
+            StringBuilder sbZ = StaticHelpers6.concatAndToSb("No such field: ", str, " for class: ");
             sbZ.append(cls.getName());
             throw new ReflectError(sbZ.toString());
         }
         if (!z || invocableFindField.isStatic()) {
             return invocableFindField;
         }
-        StringBuilder sbZ2 = dkz.z("Can't reach instance field: ", str, " from static context: ");
+        StringBuilder sbZ2 = StaticHelpers6.concatAndToSb("Can't reach instance field: ", str, " from static context: ");
         sbZ2.append(cls.getName());
         throw new UtilEvalError(sbZ2.toString());
     }

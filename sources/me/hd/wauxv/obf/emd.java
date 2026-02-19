@@ -38,7 +38,7 @@ public final class emd implements Comparable {
             }
             i++;
         }
-        return bhu.t(sArr.length, emdVar.c.length);
+        return FastKV.t(sArr.length, emdVar.c.length);
     }
 
     public final String toString() {

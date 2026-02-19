@@ -6,7 +6,7 @@ import android.os.Parcelable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Checkable;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.ij;
 import me.hd.wauxv.obf.yb;
 import me.hd.wauxv.obf.yc;
@@ -23,7 +23,7 @@ public class CheckableImageButton extends ij implements Checkable {
         super(context, attributeSet, me.hd.wauxv.R.attr.imageButtonStyle);
         this.c = true;
         this.d = true;
-        eqz.s(this, new yb(this, 0));
+        ViewCompat.setAccessibilityDelegate(this, new yb(this, 0));
     }
 
     @Override // android.widget.Checkable

@@ -24,9 +24,9 @@ public final class cxl extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(cxi.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(cxi.a));
         cxl cxlVar = a;
-        aki akiVarAb = csb.ab(cxlVar, listBf);
+        aki akiVarAb = PackageParam.ab(cxlVar, listBf);
         cxlVar.y(akiVarAb, new cvc(12));
         akiVarAb.o();
     }
@@ -43,7 +43,7 @@ public final class cxl extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(cxi.a, dexKitBridge, new cvc(13));
+        StaticHelpers7.resolveDexAndCache(cxi.a, dexKitBridge, new cvc(13));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

@@ -31,7 +31,7 @@ public final class xf extends SwitchHook implements bmz, bng {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void getThisObject() {
-        aki akiVarAb = csb.ab(this, dqc.toSingletonList(emn.bb(xa.a)));
+        aki akiVarAb = PackageParam.ab(this, dqc.toSingletonList(StaticHelpers7.bb(xa.a)));
         ws wsVar = new ws(3);
         xf xfVar = a;
         xfVar.y(akiVarAb, wsVar);
@@ -51,7 +51,7 @@ public final class xf extends SwitchHook implements bmz, bng {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(xa.a, dexKitBridge, new ws(5));
+        StaticHelpers7.resolveDexAndCache(xa.a, dexKitBridge, new ws(5));
     }
 
     public final void n(FrameLayout frameLayout) throws cth {
@@ -153,32 +153,32 @@ public final class xf extends SwitchHook implements bmz, bng {
                     || linearLayout.findViewWithTag("ChatToolbar" /* "ChatToolbar" /* "ChatToolbar" /* "ChatToolbar" /* cnb.z(-545937587960618L)   */) != null) {
                 return;
             }
-            cnf.bh(linearLayout.getContext());
+            HugeSyntheticPileOfHelpers.bh(linearLayout.getContext());
             Context context = linearLayout.getContext();
             LinkedHashMap linkedHashMap = blu.a;
             cls = ViewGroup.LayoutParams.class;
-            Class<ViewGroup.LayoutParams> clsBf = cnf.bf(dal.b(cls));
+            Class<ViewGroup.LayoutParams> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
             if (clsBf == null) {
                 clsBf = cls;
             }
             ArrayList arrayList = new ArrayList();
             int i2 = 0;
             if (blu.c) {
-                arrayList.add(new blv(emn.an(context), i2));
+                arrayList.add(new blv(StaticHelpers7.an(context), i2));
             }
-            blu bluVar = new blu(aaz.z(arrayList));
+            blu bluVar = new blu(StaticHelpers5.z(arrayList));
             blr blrVarI = blu.i(bluVar, clsBf, null, false, context);
             blu bluVar2 = blrVarI.f;
             LinkedHashMap linkedHashMap2 = bluVar2.f;
-            blq blqVarD = awp.d(bluVar2, blrVarI.a, blrVarI.b, blr.g(blrVarI, 0, 0, null, 55));
+            blq blqVarD = GifEncoder.d(bluVar2, blrVarI.a, blrVarI.b, blr.g(blrVarI, 0, 0, null, 55));
             cls2 = RecyclerView.class;
-            Class<RecyclerView> clsBf2 = cnf.bf(dal.b(cls2));
+            Class<RecyclerView> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
             if (clsBf2 == null) {
                 clsBf2 = cls2;
             }
             View viewH = blu.dexFind(bluVar2, clsBf2, null, blrVarI.j());
             viewH.setLayoutParams(blqVarD.f());
-            Class<RecyclerView> clsBf3 = cnf.bf(dal.b(cls2));
+            Class<RecyclerView> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
             if (clsBf3 == null) {
                 clsBf3 = cls2;
             }
@@ -192,7 +192,7 @@ public final class xf extends SwitchHook implements bmz, bng {
             int i3 = 1;
             recyclerView.setHorizontalFadingEdgeEnabled(true);
             recyclerView.setHorizontalScrollBarEnabled(false);
-            int iIntValue2 = bhu.am(10, recyclerView.getContext()).intValue();
+            int iIntValue2 = FastKV.am(10, recyclerView.getContext()).intValue();
             LinearLayoutManager linearLayoutManager = new LinearLayoutManager(0);
             bve bveVar = new bve();
             bveVar.a = iIntValue2;
@@ -203,7 +203,7 @@ public final class xf extends SwitchHook implements bmz, bng {
             ws wsVar = new ws(6);
             wx wxVar = new wx(i2);
             bep bepVar = new bep(25);
-            Class<ViewGroup.LayoutParams> clsBf4 = cnf.bf(dal.b(cls));
+            Class<ViewGroup.LayoutParams> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
             ((LinkedHashSet) eaVar.c).add(
                     new daa(new erp(
                             new DefaultConfig(clsBf4 != null ? clsBf4 : ViewGroup.LayoutParams.class, bepVar, wsVar),
@@ -235,9 +235,9 @@ public final class xf extends SwitchHook implements bmz, bng {
                     for (int size2 = arrayList3.size() - 1; size2 >= 0; size2--) {
                         bqu bquVar = (bqu) arrayList3.get(0);
                         bquVar.g.cancel();
-                        czx czxVar = bquVar.e;
+                        SomeView someViewVar = bquVar.e;
                         bqxVar.n.getClass();
-                        xe.g(czxVar);
+                        xe.g(someViewVar);
                     }
                     arrayList3.clear();
                     bqxVar.x = null;
@@ -273,7 +273,7 @@ public final class xf extends SwitchHook implements bmz, bng {
             if (linkedHashMap2.size() != size) {
                 throw new cth(concat("Performers are not allowed to appear in ", name, " DSL creation process."));
             }
-            Class<RecyclerView> clsBf5 = cnf.bf(dal.b(cls2));
+            Class<RecyclerView> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
             blr.i(blrVarI, null, clsBf5 != null ? clsBf5 : RecyclerView.class);
             blr.h(blrVarI, viewH);
             linearLayout.addView(bluVar.k(), 0);

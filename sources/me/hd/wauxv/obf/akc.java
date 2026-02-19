@@ -21,25 +21,25 @@ public final class akc implements acz {
 
     @Override // me.hd.wauxv.obf.bun
     public final void m() {
-        dhx dhxVarF = dhx.f(this.a);
+        ConnectivityMonitor connectivityMonitorVarF = ConnectivityMonitor.f(this.a);
         dbz dbzVar = this.b;
-        synchronized (dhxVarF) {
-            ((HashSet) dhxVarF.e).remove(dbzVar);
-            if (dhxVarF.c && ((HashSet) dhxVarF.e).isEmpty()) {
-                aom aomVar = (aom) dhxVarF.d;
+        synchronized (connectivityMonitorVarF) {
+            ((HashSet) connectivityMonitorVarF.e).remove(dbzVar);
+            if (connectivityMonitorVarF.c && ((HashSet) connectivityMonitorVarF.e).isEmpty()) {
+                aom aomVar = (aom) connectivityMonitorVarF.d;
                 ((ConnectivityManager) ((afr) aomVar.c).get()).unregisterNetworkCallback((dhw) aomVar.d);
-                dhxVarF.c = false;
+                connectivityMonitorVarF.c = false;
             }
         }
     }
 
     @Override // me.hd.wauxv.obf.bun
     public final void q() {
-        dhx dhxVarF = dhx.f(this.a);
+        ConnectivityMonitor connectivityMonitorVarF = ConnectivityMonitor.f(this.a);
         dbz dbzVar = this.b;
-        synchronized (dhxVarF) {
-            ((HashSet) dhxVarF.e).add(dbzVar);
-            dhxVarF.h();
+        synchronized (connectivityMonitorVarF) {
+            ((HashSet) connectivityMonitorVarF.e).add(dbzVar);
+            connectivityMonitorVarF.h();
         }
     }
 }

@@ -134,7 +134,7 @@ public final class cao {
             int i7 = (i5 & 80) == 80 ? this.g : ((i2 - this.g) - this.h) - iCeil;
             int i8 = (i5 & 8388613) == 8388613 ? this.g : ((i - this.g) - this.h) - iCeil2;
             int i9 = (i5 & 80) == 80 ? ((i2 - this.g) - this.h) - iCeil : this.g;
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             if (materialCardView.getLayoutDirection() == 1) {
                 i4 = i8;
                 i3 = i6;

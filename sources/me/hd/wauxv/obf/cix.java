@@ -47,7 +47,7 @@ public final class cix {
     public cix(cjl cjlVar, cis cisVar) {
         this.a = cjlVar;
         this.b = cisVar;
-        EmptyReadonlyList emptyReadonlyListVar = EmptyReadonlyList.a;
+        EmptyReadonlyList emptyReadonlyListVar = EmptyReadonlyList.INSTANCE;
         this.g = new dml(emptyReadonlyListVar);
         this.h = new dml(emptyReadonlyListVar);
         this.i = new LinkedHashMap();
@@ -191,7 +191,7 @@ public final class cix {
         }
         kmVar.addAll(kmVar2);
         kmVar.addLast(cioVar);
-        for (cio cioVar4 : aaz.p(kmVar2, cioVar)) {
+        for (cio cioVar4 : StaticHelpers5.p(kmVar2, cioVar)) {
             cji cjiVar4 = cioVar4.b.h;
             if (cjiVar4 != null) {
                 aj(cioVar4, ae(cjiVar4.g.a));
@@ -215,10 +215,10 @@ public final class cix {
         int i = this.w - 1;
         this.w = i;
         if (i == 0) {
-            ArrayList<cio> arrayListAb = aaz.ab(arrayList);
+            ArrayList<cio> arrayListAb = StaticHelpers5.ab(arrayList);
             arrayList.clear();
             for (cio cioVar2 : arrayListAb) {
-                Iterator it = aaz.z(this.o).iterator();
+                Iterator it = StaticHelpers5.z(this.o).iterator();
                 if (it.hasNext()) {
                     if (it.next() != null) {
                         throw new ClassCastException();
@@ -262,7 +262,7 @@ public final class cix {
                     }
                 }
             }
-            this.g.g(aaz.ab(kmVar));
+            this.g.g(StaticHelpers5.ab(kmVar));
             this.h.g(an());
         }
         return cioVar != null;
@@ -425,7 +425,7 @@ public final class cix {
                     List listAk = dfv.ak(new dpu(dfv.ai((cji) cjgVar, new cgu(20)), new cgu(15), 1));
                     if (kmVar2.f - iNextIndex == listAk.size()) {
                         List listSubList = kmVar2.subList(iNextIndex, kmVar2.f);
-                        ArrayList arrayList = new ArrayList(abb.ak(listSubList, 10));
+                        ArrayList arrayList = new ArrayList(StaticHelpers4.ak(listSubList, 10));
                         Iterator it2 = listSubList.iterator();
                         while (it2.hasNext()) {
                             arrayList.add(Integer.valueOf(((cio) it2.next()).b.g.a));
@@ -433,7 +433,7 @@ public final class cix {
                         if (arrayList.equals(listAk)) {
                             kmVar = new km();
                             while (OtherStaticHelpers.af(kmVar2) >= iNextIndex) {
-                                cio cioVar2 = (cio) abf.ar(kmVar2);
+                                cio cioVar2 = (cio) StaticHelpers2.ar(kmVar2);
                                 aq(cioVar2);
                                 dag dagVar3 = dagVar2;
                                 cio cioVar3 = new cio(cioVar2.a, cioVar2.b, cioVar2.b.k(bundle), cioVar2.d, cioVar2.e,
@@ -472,7 +472,7 @@ public final class cix {
                 } else {
                     kmVar = new km();
                     while (OtherStaticHelpers.af(kmVar2) >= iNextIndex) {
-                        cio cioVar22 = (cio) abf.ar(kmVar2);
+                        cio cioVar22 = (cio) StaticHelpers2.ar(kmVar2);
                         aq(cioVar22);
                         dag dagVar32 = dagVar2;
                         cio cioVar32 = new cio(cioVar22.a, cioVar22.b, cioVar22.b.k(bundle), cioVar22.d, cioVar22.e,
@@ -564,7 +564,7 @@ public final class cix {
             return false;
         }
         ArrayList arrayList = new ArrayList();
-        Iterator it = aaz.r(kmVar).iterator();
+        Iterator it = StaticHelpers5.r(kmVar).iterator();
         do {
             if (!it.hasNext()) {
                 cjgVar = null;
@@ -687,7 +687,7 @@ public final class cix {
 
     public final void am(cio cioVar, boolean z, km kmVar) {
         ciy ciyVar;
-        bmu bmuVar;
+        SyntheticPileOfMess bmuVar;
         Set set;
         throwIfVar1IsNull(cioVar, "popUpTo");
         km kmVar2 = this.f;
@@ -697,10 +697,10 @@ public final class cix {
                     ("Attempted to pop " + cioVar.b + ", which is not the top of the back stack (" + cioVar2.b + ')')
                             .toString());
         }
-        abf.ar(kmVar2);
+        StaticHelpers2.ar(kmVar2);
         cit citVar = (cit) this.s.get(this.r.d(cioVar2.b.f));
         boolean z2 = true;
-        if ((citVar == null || (bmuVar = citVar.f) == null || (set = (Set) ((dml) bmuVar.h).c()) == null
+        if ((citVar == null || (bmuVar = citVar.f) == null || (set = (Set) ((dml) bmuVar.obj).c()) == null
                 || !set.contains(cioVar2)) && !this.j.containsKey(cioVar2)) {
             z2 = false;
         }
@@ -739,7 +739,7 @@ public final class cix {
             if (!zHasNext) {
                 break;
             }
-            Iterable iterable = (Iterable) ((dml) ((cit) it.next()).f.h).c();
+            Iterable iterable = (Iterable) ((dml) ((cit) it.next()).f.obj).c();
             ArrayList arrayList2 = new ArrayList();
             for (Object obj : iterable) {
                 cio cioVar = (cio) obj;
@@ -747,7 +747,7 @@ public final class cix {
                     arrayList2.add(obj);
                 }
             }
-            abf.an(arrayList, arrayList2);
+            StaticHelpers2.an(arrayList, arrayList2);
         }
         ArrayList arrayList3 = new ArrayList();
         for (Object obj2 : this.f) {
@@ -756,7 +756,7 @@ public final class cix {
                 arrayList3.add(obj2);
             }
         }
-        abf.an(arrayList, arrayList3);
+        StaticHelpers2.an(arrayList, arrayList3);
         ArrayList arrayList4 = new ArrayList();
         for (Object obj3 : arrayList) {
             if (!(((cio) obj3).b instanceof cji)) {
@@ -830,9 +830,9 @@ public final class cix {
             }
         }
         for (cio cioVar3 : arrayList3) {
-            List list = (List) aaz.m(arrayList2);
+            List list = (List) StaticHelpers5.m(arrayList2);
             if (nullSafeIsEqual(
-                    (list == null || (cioVar = (cio) aaz.l(list)) == null || (cjgVar = cioVar.b) == null) ? null
+                    (list == null || (cioVar = (cio) StaticHelpers5.l(list)) == null || (cjgVar = cioVar.b) == null) ? null
                             : cjgVar.f,
                     cioVar3.b.f)) {
                 list.add(cioVar3);
@@ -842,7 +842,7 @@ public final class cix {
         }
         final dag dagVar = new dag();
         for (List list2 : arrayList2) {
-            ckl cklVarD = this.r.d(((cio) aaz.e(list2)).b.f);
+            ckl cklVarD = this.r.d(((cio) StaticHelpers5.safeGetFirstInList(list2)).b.f);
             final dah dahVar = new dah();
             this.t = new bgf() { // from class: me.hd.wauxv.obf.ciw
                 @Override // me.hd.wauxv.obf.bgf
@@ -859,7 +859,7 @@ public final class cix {
                         listSubList = arrayList4.subList(dahVar2.a, i3);
                         dahVar2.a = i3;
                     } else {
-                        listSubList = EmptyReadonlyList.a;
+                        listSubList = EmptyReadonlyList.INSTANCE;
                     }
                     this.ab(cioVar4.b, bundle, cioVar4, listSubList);
                     return KotlinUnit.INSTANCE;
@@ -977,7 +977,7 @@ public final class cix {
                 throwIfVar1IsNull(cjiVar7);
                 dlo dloVar = (dlo) cjiVar7.b.e;
                 if (dloVar.a) {
-                    bht.q(dloVar);
+                    ResourcesCompat.q(dloVar);
                 }
                 int i12 = KotlinHelpers.i(dloVar.b, dloVar.d, iG);
                 if (i12 >= 0) {
@@ -1098,7 +1098,7 @@ public final class cix {
                 cjg cjgVarAd2 = ad(iV, cjgVar4);
                 if (cjgVarAd2 == null) {
                     int i17 = cjg.e;
-                    StringBuilder sbZ = dkz.z("Restoring the Navigation back stack failed: destination ", bmy.r(anrVar, iV), str4);
+                    StringBuilder sbZ = StaticHelpers6.concatAndToSb("Restoring the Navigation back stack failed: destination ", bmy.r(anrVar, iV), str4);
                     sbZ.append(af());
                     throw new IllegalStateException(sbZ.toString());
                 }
@@ -1177,7 +1177,7 @@ public final class cix {
                 intArray = null;
             }
             ArrayList parcelableArrayList = extras != null ? extras.getParcelableArrayList("android-support-nav:controller:deepLinkArgs") : null;
-            Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+            Bundle bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
             Bundle bundle10 = extras != null ? extras.getBundle("android-support-nav:controller:deepLinkExtras") : null;
             if (bundle10 != null) {
                 bundleR.putAll(bundle10);
@@ -1185,7 +1185,7 @@ public final class cix {
             if (intArray == null || intArray.length == 0) {
                 ?? Ai = cixVar.ai();
                 iArr = intArray;
-                cjf cjfVarQ = Ai.q(new jx(intent.getData(), intent.getAction(), intent.getType(), 17), Ai);
+                cjf cjfVarQ = Ai.q(new FactoryPools(intent.getData(), intent.getAction(), intent.getType(), 17), Ai);
                 if (cjfVarQ != null) {
                     cjg cjgVar6 = cjfVarQ.a;
                     int[] iArrL = cjgVar6.l(null);
@@ -1240,7 +1240,7 @@ public final class cix {
                         length2 = iArr2.length;
                         bundleArr = new Bundle[length2];
                         for (i2 = 0; i2 < length2; i2++) {
-                            Bundle bundleR2 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                            Bundle bundleR2 = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                             bundleR2.putAll(bundleR);
                             if (parcelableArrayList == null && (bundle4 = (Bundle) parcelableArrayList.get(i2)) != null) {
                                 bundleR2.putAll(bundle4);
@@ -1281,7 +1281,7 @@ public final class cix {
                                 cjgVarAd = cixVar.ad(i7, null);
                                 if (cjgVarAd != null) {
                                     int i20 = cjg.e;
-                                    StringBuilder sbZ2 = dkz.z("Deep Linking failed: destination ", bmy.r(anrVar, i7), str);
+                                    StringBuilder sbZ2 = StaticHelpers6.concatAndToSb("Deep Linking failed: destination ", bmy.r(anrVar, i7), str);
                                     sbZ2.append(cixVar.af());
                                     throw new IllegalStateException(sbZ2.toString());
                                 }
@@ -1370,7 +1370,7 @@ public final class cix {
                     length2 = iArr2.length;
                     bundleArr = new Bundle[length2];
                     while (i2 < length2) {
-                        Bundle bundleR22 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                        Bundle bundleR22 = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                         bundleR22.putAll(bundleR);
                         if (parcelableArrayList == null) {
                         }
@@ -1396,7 +1396,7 @@ public final class cix {
                             cjgVarAd = cixVar.ad(i7, null);
                             if (cjgVarAd != null) {
                                 int i202 = cjg.e;
-                                StringBuilder sbZ22 = dkz.z("Deep Linking failed: destination ", bmy.r(anrVar, i7), str);
+                                StringBuilder sbZ22 = StaticHelpers6.concatAndToSb("Deep Linking failed: destination ", bmy.r(anrVar, i7), str);
                                 sbZ22.append(cixVar.af());
                                 throw new IllegalStateException(sbZ22.toString());
                             }
@@ -1472,16 +1472,16 @@ public final class cix {
 
     public final void ar() {
         lp lpVar;
-        bmu bmuVar;
+        SyntheticPileOfMess bmuVar;
         Set set;
-        ArrayList<cio> arrayListAb = aaz.ab(this.f);
+        ArrayList<cio> arrayListAb = StaticHelpers5.ab(this.f);
         if (arrayListAb.isEmpty()) {
             return;
         }
-        ArrayList arrayListAh = OtherStaticHelpers.ah(((cio) aaz.l(arrayListAb)).b);
+        ArrayList arrayListAh = OtherStaticHelpers.ah(((cio) StaticHelpers5.l(arrayListAb)).b);
         ArrayList arrayList = new ArrayList();
-        if (aaz.l(arrayListAh) instanceof bbn) {
-            Iterator it = aaz.r(arrayListAb).iterator();
+        if (StaticHelpers5.l(arrayListAh) instanceof bbn) {
+            Iterator it = StaticHelpers5.r(arrayListAb).iterator();
             while (it.hasNext()) {
                 cjg cjgVar = ((cio) it.next()).b;
                 arrayList.add(cjgVar);
@@ -1491,17 +1491,17 @@ public final class cix {
             }
         }
         HashMap map = new HashMap();
-        for (cio cioVar : aaz.r(arrayListAb)) {
+        for (cio cioVar : StaticHelpers5.r(arrayListAb)) {
             buh buhVar = cioVar.h.k;
             cjg cjgVar2 = cioVar.b;
-            cjg cjgVar3 = (cjg) aaz.g(arrayListAh);
+            cjg cjgVar3 = (cjg) StaticHelpers5.g(arrayListAh);
             buh buhVar2 = buh.e;
             buh buhVar3 = buh.d;
             if (cjgVar3 != null && cjgVar3.g.a == cjgVar2.g.a) {
                 if (buhVar != buhVar2) {
                     cit citVar = (cit) this.s.get(this.r.d(cioVar.b.f));
                     if (nullSafeIsEqual((citVar == null || (bmuVar = citVar.f) == null
-                            || (set = (Set) ((dml) bmuVar.h).c()) == null) ? null
+                            || (set = (Set) ((dml) bmuVar.obj).c()) == null) ? null
                                     : Boolean.valueOf(set.contains(cioVar)),
                             Boolean.TRUE) || ((lpVar = (lp) this.j.get(cioVar)) != null && lpVar.a.get() == 0)) {
                         map.put(cioVar, buhVar3);
@@ -1509,19 +1509,19 @@ public final class cix {
                         map.put(cioVar, buhVar2);
                     }
                 }
-                cjg cjgVar4 = (cjg) aaz.g(arrayList);
+                cjg cjgVar4 = (cjg) StaticHelpers5.g(arrayList);
                 if (cjgVar4 != null && cjgVar4.g.a == cjgVar2.g.a) {
-                    abf.aq(arrayList);
+                    StaticHelpers2.aq(arrayList);
                 }
-                abf.aq(arrayListAh);
+                StaticHelpers2.aq(arrayListAh);
                 cji cjiVar = cjgVar2.h;
                 if (cjiVar != null) {
                     arrayListAh.add(cjiVar);
                 }
-            } else if (arrayList.isEmpty() || cjgVar2.g.a != ((cjg) aaz.e(arrayList)).g.a) {
+            } else if (arrayList.isEmpty() || cjgVar2.g.a != ((cjg) StaticHelpers5.safeGetFirstInList(arrayList)).g.a) {
                 cioVar.i(buh.c);
             } else {
-                cjg cjgVar5 = (cjg) abf.aq(arrayList);
+                cjg cjgVar5 = (cjg) StaticHelpers2.aq(arrayList);
                 if (buhVar == buhVar2) {
                     cioVar.i(buhVar3);
                 } else if (buhVar != buhVar3) {

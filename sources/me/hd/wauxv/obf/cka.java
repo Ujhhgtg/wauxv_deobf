@@ -74,7 +74,7 @@ public abstract class cka extends ViewGroup implements cco {
             miVar._ar(new drf());
         }
         this.l = new ch(this, 4);
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         setImportantForAccessibility(1);
     }
 
@@ -212,7 +212,7 @@ public abstract class cka extends ViewGroup implements cco {
         if (!getContext().getTheme().resolveAttribute(R.attr.textColorSecondary, typedValue, true)) {
             return null;
         }
-        ColorStateList colorStateListV = bht.v(getContext(), typedValue.resourceId);
+        ColorStateList colorStateListV = ResourcesCompat.v(getContext(), typedValue.resourceId);
         if (!getContext().getTheme().resolveAttribute(me.hd.wauxv.R.attr.colorPrimary, typedValue, true)) {
             return null;
         }

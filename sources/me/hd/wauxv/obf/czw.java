@@ -49,7 +49,7 @@ public final class czw implements Runnable {
         }
         RecyclerView recyclerView = this.g;
         recyclerView.removeCallbacks(this);
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         recyclerView.postOnAnimation(this);
     }
 
@@ -226,7 +226,7 @@ public final class czw implements Runnable {
             recyclerView.ex(1);
         } else {
             recyclerView.removeCallbacks(this);
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             recyclerView.postOnAnimation(this);
         }
     }

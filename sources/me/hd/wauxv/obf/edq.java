@@ -9,7 +9,7 @@ public final class edq {
 
     public /* synthetic */ edq(int i, Integer num, Integer num2) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, edo.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, edo.b.getDescriptor());
             throw null;
         }
         this.a = num;

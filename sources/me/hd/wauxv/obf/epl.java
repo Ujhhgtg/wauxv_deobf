@@ -431,7 +431,7 @@ public final class epl extends epc {
         }
         epj epjVar = this.b;
         epjVar.b = new epi();
-        TypedArray typedArrayAv = emc.av(resources, theme, attributeSet, bht.g);
+        TypedArray typedArrayAv = emc.av(resources, theme, attributeSet, ResourcesCompat.g);
         epj epjVar2 = this.b;
         epi epiVar = epjVar2.b;
         int i3 = !emc.aq(xmlPullParser, "tintMode") ? -1 : typedArrayAv.getInt(6, -1);
@@ -548,7 +548,7 @@ public final class epl extends epc {
                             Paint.Join join2 = Paint.Join.MITER;
                             epeVar.j = join2;
                             epeVar.k = 4.0f;
-                            TypedArray typedArrayAv2 = emc.av(resources, theme, attributeSet, bht.i);
+                            TypedArray typedArrayAv2 = emc.av(resources, theme, attributeSet, ResourcesCompat.i);
                             if (xmlPullParser.getAttributeValue("http://schemas.android.com/apk/res/android", "pathData") != null) {
                                 String string2 = typedArrayAv2.getString(0);
                                 if (string2 != null) {
@@ -634,7 +634,7 @@ public final class epl extends epc {
                             if ("clip-path".equals(name)) {
                                 epd epdVar = new epd();
                                 if (xmlPullParser.getAttributeValue("http://schemas.android.com/apk/res/android", "pathData") != null) {
-                                    TypedArray typedArrayAv3 = emc.av(resources, theme, attributeSet, bht.j);
+                                    TypedArray typedArrayAv3 = emc.av(resources, theme, attributeSet, ResourcesCompat.j);
                                     String string4 = typedArrayAv3.getString(0);
                                     if (string4 != null) {
                                         epdVar.o = string4;
@@ -653,7 +653,7 @@ public final class epl extends epc {
                                 epjVar3.a = epjVar3.a;
                             } else if ("group".equals(name)) {
                                 epf epfVar3 = new epf();
-                                TypedArray typedArrayAv4 = emc.av(resources, theme, attributeSet, bht.h);
+                                TypedArray typedArrayAv4 = emc.av(resources, theme, attributeSet, ResourcesCompat.h);
                                 float f10 = epfVar3.c;
                                 if (emc.aq(xmlPullParser, "rotation")) {
                                     f10 = typedArrayAv4.getFloat(5, f10);

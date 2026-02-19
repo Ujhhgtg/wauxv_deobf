@@ -20,7 +20,7 @@ import me.hd.wauxv.R;
 public final class cky extends et {
     @Override // me.hd.wauxv.obf.et
     public final void c(CancellationException cancellationException) {
-        cnf.ao(this.a);
+        HugeSyntheticPileOfHelpers.cancelNetworkCalls(this.a);
         super.c(null);
     }
 
@@ -66,7 +66,7 @@ public final class cky extends et {
                                                                                                                 : ckv.j()
                                                                                                                         .getString(
                                                                                                                                 R.string.net_other_error);
-        cnf.ay(th);
+        HugeSyntheticPileOfHelpers.ay(th);
         if (string == null) {
             return;
         }

@@ -18,7 +18,7 @@ import me.hd.wauxv.obf.aco;
 import me.hd.wauxv.obf.akz;
 import me.hd.wauxv.obf.bc;
 import me.hd.wauxv.obf.bdi;
-import me.hd.wauxv.obf.bdj;
+import me.hd.wauxv.obf.SomeFragmentManager;
 import me.hd.wauxv.obf.beg;
 import me.hd.wauxv.obf.byc;
 import me.hd.wauxv.obf.byu;
@@ -32,7 +32,7 @@ import me.hd.wauxv.obf.dc;
 import me.hd.wauxv.obf.dfc;
 import me.hd.wauxv.obf.dfd;
 import me.hd.wauxv.obf.dts;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.erp;
 import me.hd.wauxv.obf.erv;
 import me.hd.wauxv.obf.erw;
@@ -98,7 +98,7 @@ public final class ViewPager2 extends ViewGroup {
         this.j.setScrollingTouchSlop(1);
         int[] iArr = cxr.a;
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr);
-        eqz.r(this, context, iArr, attributeSet, typedArrayObtainStyledAttributes, 0, 0);
+        ViewCompat.r(this, context, iArr, attributeSet, typedArrayObtainStyledAttributes, 0, 0);
         try {
             setOrientation(typedArrayObtainStyledAttributes.getInt(0, 0));
             typedArrayObtainStyledAttributes.recycle();
@@ -308,16 +308,16 @@ public final class ViewPager2 extends ViewGroup {
             Bundle bundle = new Bundle(bycVar2.k() + iK);
             for (int i2 = 0; i2 < bycVar.k(); i2++) {
                 long jH = bycVar.h(i2);
-                bdj bdjVar = (bdj) bycVar.f(jH);
-                if (bdjVar != null && bdjVar.cv()) {
+                SomeFragmentManager someFragmentManagerVar = (SomeFragmentManager) bycVar.f(jH);
+                if (someFragmentManagerVar != null && someFragmentManagerVar.cv()) {
                     String strB = dts.b(jH, "f#");
                     beg begVar = byuVar.b;
                     begVar.getClass();
-                    if (bdjVar.bm != begVar) {
-                        begVar.cy(new IllegalStateException(yg.l("Fragment ", bdjVar, " is not currently in the FragmentManager")));
+                    if (someFragmentManagerVar.bm != begVar) {
+                        begVar.cy(new IllegalStateException(yg.l("Fragment ", someFragmentManagerVar, " is not currently in the FragmentManager")));
                         throw null;
                     }
-                    bundle.putString(strB, bdjVar.aw);
+                    bundle.putString(strB, someFragmentManagerVar.aw);
                 }
             }
             for (int i3 = 0; i3 < bycVar2.k(); i3++) {
@@ -431,7 +431,7 @@ public final class ViewPager2 extends ViewGroup {
 
     public final void u() {
         cyw adapter;
-        bdj bdjVarZ;
+        SomeFragmentManager someFragmentManagerVarZ;
         if (this.h == -1 || (adapter = getAdapter()) == null) {
             return;
         }
@@ -455,15 +455,15 @@ public final class ViewPager2 extends ViewGroup {
                         begVar.getClass();
                         String string = bundle.getString(str);
                         if (string == null) {
-                            bdjVarZ = null;
+                            someFragmentManagerVarZ = null;
                         } else {
-                            bdjVarZ = begVar.c.z(string);
-                            if (bdjVarZ == null) {
+                            someFragmentManagerVarZ = begVar.c.z(string);
+                            if (someFragmentManagerVarZ == null) {
                                 begVar.cy(new IllegalStateException("Fragment no longer exists for key " + str + ": unique id " + string));
                                 throw null;
                             }
                         }
-                        bycVar.i(bdjVarZ, j);
+                        bycVar.i(someFragmentManagerVarZ, j);
                     } else {
                         if (!str.startsWith("s#") || str.length() <= 2) {
                             throw new IllegalArgumentException("Unexpected key in savedState: ".concat(str));

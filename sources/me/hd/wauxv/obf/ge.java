@@ -15,11 +15,11 @@ public final class ge extends SwitchHook {
     public final void initOnce() {
         int i = 0;
         adt adtVarM = yg.s(-543880298625834L).m();
-        adtVarM.z(Arrays.copyOf(new Object[] { dal.b(String.class) }, 1));
-        ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) aaz.e(adtVarM.a());
-        exg exgVar = exg.a;
+        adtVarM.setParams(Arrays.copyOf(new Object[] { dal.b(String.class) }, 1));
+        ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) StaticHelpers5.safeGetFirstInList(adtVarM.a());
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         ge geVar = a;
-        aki akiVarAd = geVar.ad(constructorHookWrapperVar, exgVar);
+        aki akiVarAd = geVar.ad(constructorHookWrapperVar, hookPriorityEnumVar);
         geVar.y(akiVarAd, new bn(26));
         akiVarAd.o();
     }

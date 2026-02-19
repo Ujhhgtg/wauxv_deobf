@@ -13,7 +13,7 @@ public final class eiz {
 
     public /* synthetic */ eiz(int i, List list, Integer num, eju ejuVar) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, eix.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, eix.b.getDescriptor());
             throw null;
         }
         this.b = list;

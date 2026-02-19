@@ -11,14 +11,14 @@ import java.util.Iterator;
 import java.util.List;
 import javax.net.ssl.SSLPeerUnverifiedException;
 import javax.net.ssl.SSLSession;
-import me.hd.wauxv.obf.aaz;
-import me.hd.wauxv.obf.abb;
+import me.hd.wauxv.obf.StaticHelpers5;
+import me.hd.wauxv.obf.StaticHelpers4;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.bfu;
 import me.hd.wauxv.obf.btp;
 import me.hd.wauxv.obf.IHasGetValue;
-import me.hd.wauxv.obf.dov;
+import me.hd.wauxv.obf.Kotlin$Lazy;
 import okhttp3.internal.Util;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -41,7 +41,7 @@ public final class Handshake {
 
         private final List<Certificate> toImmutableList(Certificate[] certificateArr) {
             return certificateArr != null ? Util.immutableListOf(Arrays.copyOf(certificateArr, certificateArr.length))
-                    : EmptyReadonlyList.a;
+                    : EmptyReadonlyList.INSTANCE;
         }
 
         public final Handshake a(SSLSession sSLSession) {
@@ -71,7 +71,7 @@ public final class Handshake {
             try {
                 immutableList = toImmutableList(sSLSession.getPeerCertificates());
             } catch (SSLPeerUnverifiedException unused) {
-                immutableList = EmptyReadonlyList.a;
+                immutableList = EmptyReadonlyList.INSTANCE;
             }
             return new Handshake(tlsVersionForJavaName, cipherSuiteForJavaName,
                     toImmutableList(sSLSession.getLocalCertificates()),
@@ -117,7 +117,7 @@ public final class Handshake {
             try {
                 return (List) this.$peerCertificatesFn.invoke();
             } catch (SSLPeerUnverifiedException unused) {
-                return EmptyReadonlyList.a;
+                return EmptyReadonlyList.INSTANCE;
             }
         }
     }
@@ -131,7 +131,7 @@ public final class Handshake {
         this.tlsVersion = tlsVersion;
         this.cipherSuite = cipherSuite;
         this.localCertificates = list;
-        this.peerCertificates$delegate = new dov(new AnonymousClass2(bfuVar));
+        this.peerCertificates$delegate = new Kotlin$Lazy(new AnonymousClass2(bfuVar));
     }
 
     public static final Handshake get(SSLSession sSLSession) {
@@ -195,7 +195,7 @@ public final class Handshake {
     }
 
     public final Principal localPrincipal() {
-        Object objG = aaz.g(this.localCertificates);
+        Object objG = StaticHelpers5.g(this.localCertificates);
         X509Certificate x509Certificate = objG instanceof X509Certificate ? (X509Certificate) objG : null;
         if (x509Certificate != null) {
             return x509Certificate.getSubjectX500Principal();
@@ -208,7 +208,7 @@ public final class Handshake {
     }
 
     public final Principal peerPrincipal() {
-        Object objG = aaz.g(peerCertificates());
+        Object objG = StaticHelpers5.g(peerCertificates());
         X509Certificate x509Certificate = objG instanceof X509Certificate ? (X509Certificate) objG : null;
         if (x509Certificate != null) {
             return x509Certificate.getSubjectX500Principal();
@@ -222,7 +222,7 @@ public final class Handshake {
 
     public String toString() {
         List<Certificate> listPeerCertificates = peerCertificates();
-        ArrayList arrayList = new ArrayList(abb.ak(listPeerCertificates, 10));
+        ArrayList arrayList = new ArrayList(StaticHelpers4.ak(listPeerCertificates, 10));
         Iterator<T> it = listPeerCertificates.iterator();
         while (it.hasNext()) {
             arrayList.add(getName((Certificate) it.next()));
@@ -236,7 +236,7 @@ public final class Handshake {
         sb.append(string);
         sb.append(" localCertificates=");
         List<Certificate> list = this.localCertificates;
-        ArrayList arrayList2 = new ArrayList(abb.ak(list, 10));
+        ArrayList arrayList2 = new ArrayList(StaticHelpers4.ak(list, 10));
         Iterator<T> it2 = list.iterator();
         while (it2.hasNext()) {
             arrayList2.add(getName((Certificate) it2.next()));

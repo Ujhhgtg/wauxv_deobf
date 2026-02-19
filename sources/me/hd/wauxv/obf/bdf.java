@@ -49,19 +49,19 @@ public final class bdf extends bdh {
         final bhs bhsVar = this.d;
         bul bulVar = new bul() { // from class: me.hd.wauxv.obf.du
             @Override // me.hd.wauxv.obf.bul
-            public final void e(bup bupVar, bug bugVar) {
+            public final void e(bup bupVar, LifeEventEnum bugVar) {
                 acg acgVar2 = acgVar;
                 Bundle bundle = acgVar2.g;
                 LinkedHashMap linkedHashMap2 = acgVar2.e;
                 LinkedHashMap linkedHashMap3 = acgVar2.f;
-                bug bugVar2 = bug.ON_START;
+                LifeEventEnum lifeEventEnumVar2 = LifeEventEnum.ON_START;
                 String str = string;
-                if (bugVar2 != bugVar) {
-                    if (bug.ON_STOP == bugVar) {
+                if (lifeEventEnumVar2 != bugVar) {
+                    if (LifeEventEnum.ON_STOP == bugVar) {
                         linkedHashMap2.remove(str);
                         return;
                     } else {
-                        if (bug.ON_DESTROY == bugVar) {
+                        if (LifeEventEnum.ON_DESTROY == bugVar) {
                             acgVar2.m(str);
                             return;
                         }

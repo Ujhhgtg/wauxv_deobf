@@ -43,7 +43,7 @@ public final class amk {
 
     public static void k(int i, int i2) {
         if (i < 0 || i >= i2) {
-            throw new IndexOutOfBoundsException(dkz.p(i, "index:", ", length=", i2));
+            throw new IndexOutOfBoundsException(StaticHelpers6.p(i, "index:", ", length=", i2));
         }
     }
 

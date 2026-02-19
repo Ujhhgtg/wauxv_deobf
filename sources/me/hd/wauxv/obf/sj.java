@@ -416,7 +416,7 @@ public class sj implements Serializable, Comparable {
             throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
             String strBo = dnr.bo(dnr.bo(dnr.bo(strSubstring, "\\", "\\\\"), "\n", "\\n"), "\r", "\\r");
             if (i3 >= strN.length()) {
-                return dkz.o(']', "[text=", strBo);
+                return StaticHelpers6.o(']', "[text=", strBo);
             }
             return "[size=" + bArr.length + " text=" + strBo + "…]";
         }
@@ -428,7 +428,7 @@ public class sj implements Serializable, Comparable {
         sb.append(" hex=");
         if (64 > bArr.length) {
             throw new IllegalArgumentException(
-                    dkz.v(new StringBuilder("endIndex > length("), bArr.length, ')').toString());
+                    StaticHelpers6.concatFromSb(new StringBuilder("endIndex > length("), bArr.length, ')').toString());
         }
         sb.append((64 == bArr.length ? this : new sj(SomeStaticHelpers._ap(0, 64, bArr))).h());
         sb.append("…]");

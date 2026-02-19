@@ -119,10 +119,10 @@ public abstract class lj extends hz {
 
     public final void z(dnv dnvVar) {
         CodeEditor codeEditor;
-        jx jxVar = (jx) this.g;
-        if (jxVar == null || (codeEditor = (CodeEditor) ((WeakReference) jxVar.e).get()) == null || this != codeEditor.getEditorLanguage().e()) {
+        FactoryPools factoryPoolsVar = (FactoryPools) this.g;
+        if (factoryPoolsVar == null || (codeEditor = (CodeEditor) ((WeakReference) factoryPoolsVar.e).get()) == null || this != codeEditor.getEditorLanguage().e()) {
             return;
         }
-        jxVar.af(new hl(codeEditor, 3, dnvVar));
+        factoryPoolsVar.af(new hl(codeEditor, 3, dnvVar));
     }
 }

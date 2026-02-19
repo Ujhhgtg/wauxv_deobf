@@ -55,7 +55,7 @@ public final /* synthetic */ class apa implements bgx {
         }
         acmVarP._bp(dfxVar);
         if (15 != (i & 15)) {
-            bht.ah(i, 15, descriptor);
+            ResourcesCompat.ah(i, 15, descriptor);
             throw null;
         }
         apc apcVar = new apc();

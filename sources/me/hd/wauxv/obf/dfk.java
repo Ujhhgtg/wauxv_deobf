@@ -15,6 +15,6 @@ public final class dfk implements Comparable {
         StringBuilder sb = new StringBuilder("Segment{start=");
         sb.append(this.a);
         sb.append(", end=");
-        return dkz.v(sb, this.b, '}');
+        return StaticHelpers6.concatFromSb(sb, this.b, '}');
     }
 }

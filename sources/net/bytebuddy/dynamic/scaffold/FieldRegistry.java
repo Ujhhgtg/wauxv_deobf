@@ -4,12 +4,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.field.FieldDescription;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.Transformer;
-import net.bytebuddy.dynamic.scaffold.TypeWriter;
 import net.bytebuddy.implementation.attribute.FieldAttributeAppender;
 import net.bytebuddy.matcher.ElementMatcher;
 import net.bytebuddy.matcher.LatentMatcher;
@@ -127,7 +126,7 @@ public interface FieldRegistry {
                 }
 
                 public int hashCode() {
-                    int iHashCode = (this.fieldAttributeAppender.hashCode() + dkz.i(this.matcher, getClass().hashCode() * 31, 31)) * 31;
+                    int iHashCode = (this.fieldAttributeAppender.hashCode() + StaticHelpers6.i(this.matcher, getClass().hashCode() * 31, 31)) * 31;
                     Object obj = this.defaultValue;
                     if (obj != null) {
                         iHashCode += obj.hashCode();
@@ -158,7 +157,7 @@ public interface FieldRegistry {
             }
 
             public int hashCode() {
-                return this.entries.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31);
+                return this.entries.hashCode() + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31);
             }
 
             @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.FieldPool

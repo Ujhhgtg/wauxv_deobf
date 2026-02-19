@@ -12,7 +12,7 @@ public final class ewf {
     public static final ewf c;
     public static final ewf d;
     public static final /* synthetic */ ewf[] e;
-    public static final /* synthetic */ awn f;
+    public static final /* synthetic */ KotlinEnumEntriesImpl f;
     public final char g;
     public final char h;
 
@@ -27,7 +27,7 @@ public final class ewf {
         d = ewfVar4;
         ewf[] ewfVarArr = {ewfVar, ewfVar2, ewfVar3, ewfVar4};
         e = ewfVarArr;
-        f = new awn(ewfVarArr);
+        f = new KotlinEnumEntriesImpl(ewfVarArr);
     }
 
     public ewf(String str, int i, char c2, char c3) {

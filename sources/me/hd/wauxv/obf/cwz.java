@@ -33,7 +33,7 @@ public final /* synthetic */ class cwz implements IInvokable {
                 aelVar2.f = "搜索群聊" /* "搜索群聊" /* "搜索群聊" /* cnb.z(-527117041269546L)  */;
                 String strZ = "群聊" /* "群聊" /* "群聊" /* cnb.z(-527147106040618L)  */;
                 ArrayList<GroupInfo> arrayListT = bmy.t();
-                ArrayList arrayList = new ArrayList(abb.ak(arrayListT, 10));
+                ArrayList arrayList = new ArrayList(StaticHelpers4.ak(arrayListT, 10));
                 for (GroupInfo groupInfo : arrayListT) {
                     String roomId = groupInfo.getRoomId();
                     StringBuilder sb = new StringBuilder();

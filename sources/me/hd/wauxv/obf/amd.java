@@ -25,7 +25,7 @@ public final /* synthetic */ class amd implements bfu {
         KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         switch (i) {
             case 0:
-                dov dovVar = ajf.a;
+                Kotlin$Lazy kotlin$LazyVar = ajf.a;
                 return new eqi(ajf.b(Boolean.TRUE));
             case 2:
                 aum.a.u(aun.b);
@@ -57,7 +57,7 @@ public final /* synthetic */ class amd implements bfu {
                         arrayList.add(obj);
                     }
                 }
-                return aaz.t(arrayList, new ex(5));
+                return StaticHelpers5.t(arrayList, new ex(5));
             case 6:
                 bbg.a.u("#FFF7F7F7" /* "#FFF7F7F7" /* "#FFF7F7F7" /* cnb.z(-550352814340906L)  */);
                 bbi.a.u("#FF1E1E1E" /* "#FF1E1E1E" /* "#FF1E1E1E" /* cnb.z(-550327044537130L)  */);
@@ -90,7 +90,7 @@ public final /* synthetic */ class amd implements bfu {
                         arrayList2.add(obj2);
                     }
                 }
-                return aaz.t(arrayList2, new ex(7));
+                return StaticHelpers5.t(arrayList2, new ex(7));
             case 10:
                 zc zcVarB = dal.b(String.class);
                 dnh dnhVar = dnh.b;
@@ -141,13 +141,13 @@ public final /* synthetic */ class amd implements bfu {
                 return kotlinUnitVar;
             case 18:
                 int i2 = 0;
-                bmu bmuVarBg = dqc.bg(dal.b(Intent.class));
-                bmuVarBg.v(true);
-                azg azgVarR = bmuVarBg.r();
-                azgVarR.ab = "mExtras";
-                return (azk) aaz.g(azgVarR.c());
+                SyntheticPileOfMess bmuVarBg = dqc.bg(dal.b(Intent.class));
+                bmuVarBg.setHookOptional(true);
+                FieldResolver fieldResolverVarR = bmuVarBg.r();
+                fieldResolverVarR.name = "mExtras";
+                return (azk) StaticHelpers5.g(fieldResolverVarR.resolve());
             case 19:
-                dov dovVar2 = ajf.a;
+                Kotlin$Lazy kotlin$LazyVar2 = ajf.a;
                 return new eqi(ajf.b(Boolean.FALSE));
             case 20:
                 bld.a.t(ble.b);

@@ -6,7 +6,7 @@ import java.util.List;
 /* JADX INFO: loaded from: classes.dex */
 public final class dtb {
     public static final dta Companion = new dta();
-    public static final IHasGetValue[] a = { null, null, null, null, null, null, null, ewz.am(btx.a, new cfh(28)), null,
+    public static final IHasGetValue[] a = { null, null, null, null, null, null, null, ewz.am(btx.a, new Function1$VarIsInt$2(28)), null,
             null,
             null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
             null };
@@ -44,7 +44,7 @@ public final class dtb {
             String str10, String str11, String str12, String str13, Integer num4, String str14, Integer num5,
             String str15, String str16, String str17, String str18, Integer num6, String str19, dxt dxtVar) {
         if (268435455 != (i & 268435455)) {
-            bht.ah(i, 268435455, dsz.b.getDescriptor());
+            ResourcesCompat.ah(i, 268435455, dsz.b.getDescriptor());
             throw null;
         }
         this.b = str;
@@ -172,7 +172,7 @@ public final class dtb {
         bjs.w(sb, this.h, -179551107808042L);
         yg.v(sb, this.i, -176729314294570L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.j, -176656299850538L);
-        dkz.ad(sb, this.k, -176643414948650L);
+        StaticHelpers6.ad(sb, this.k, -176643414948650L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.l, -176561810570026L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.m, -177017077103402L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.n, -176952652593962L);

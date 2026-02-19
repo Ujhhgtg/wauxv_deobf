@@ -27,8 +27,8 @@ import com.android.dx.rop.type.Type;
 import com.android.dx.util.ByteArray;
 import com.android.dx.util.Hex;
 import java.io.IOException;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -85,7 +85,7 @@ public final class AnnotationParser {
     private Annotations parseAnnotations(AnnotationVisibility annotationVisibility) throws IOException {
         int unsignedShort = this.input.readUnsignedShort();
         if (this.observer != null) {
-            parsed(2, dkz.q(unsignedShort, new StringBuilder("num_annotations: ")));
+            parsed(2, StaticHelpers6.q(unsignedShort, new StringBuilder("num_annotations: ")));
         }
         Annotations annotations = new Annotations();
         for (int i = 0; i < unsignedShort; i++) {

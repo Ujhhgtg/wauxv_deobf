@@ -24,7 +24,7 @@ public interface CookieJar {
             @Override // okhttp3.CookieJar
             public List<Cookie> loadForRequest(HttpUrl httpUrl) {
                 throwIfVar1IsNull(httpUrl, "url");
-                return EmptyReadonlyList.a;
+                return EmptyReadonlyList.INSTANCE;
             }
 
             @Override // okhttp3.CookieJar

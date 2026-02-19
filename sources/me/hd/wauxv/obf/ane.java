@@ -57,7 +57,7 @@ public class ane extends anc {
     @Override // me.hd.wauxv.obf.anc
     public final void am(beg begVar, String str) {
         if (begVar == null) {
-            bht bhtVar = anj.a;
+            ResourcesCompat resourcesCompatVar = anj.a;
             Log.e(">>>", "DialogX.DialogFragment 模式无法支持非 AppCompatActivity 启动。");
         } else {
             mu muVar = new mu(begVar);

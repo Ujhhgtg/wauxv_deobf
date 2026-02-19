@@ -18,7 +18,7 @@ public final class duz {
     public /* synthetic */ duz(int i, String str, String str2, String str3, String str4, String str5, String str6,
             String str7, String str8) {
         if (255 != (i & Opcodes.CONST_METHOD_TYPE)) {
-            bht.ah(i, Opcodes.CONST_METHOD_TYPE, dux.b.getDescriptor());
+            ResourcesCompat.ah(i, Opcodes.CONST_METHOD_TYPE, dux.b.getDescriptor());
             throw null;
         }
         this.a = str;

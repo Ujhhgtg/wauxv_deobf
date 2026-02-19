@@ -3,7 +3,7 @@ package com.highcapable.betterandroid.ui.component.adapter.recycler.layoutmanage
 import android.content.Context;
 import android.util.AttributeSet;
 import androidx.recyclerview.widget.RecyclerView;
-import me.hd.wauxv.obf.bmu;
+import me.hd.wauxv.obf.SyntheticPileOfMess;
 import me.hd.wauxv.obf.cyt;
 import me.hd.wauxv.obf.cyw;
 import me.hd.wauxv.obf.czt;
@@ -22,9 +22,9 @@ public class LinearLayoutManager extends androidx.recyclerview.widget.LinearLayo
         cyw adapter;
         RecyclerView recyclerView = this.a;
         if (recyclerView != null && (adapter = recyclerView.getAdapter()) != null) {
-            bmu bmuVar = adapter instanceof cyt ? ((cyt) adapter).a : null;
+            SyntheticPileOfMess bmuVar = adapter instanceof cyt ? ((cyt) adapter).a : null;
             if (bmuVar != null) {
-                ((ea) bmuVar.h).p();
+                ((ea) bmuVar.obj).p();
             }
         }
         return i;
@@ -53,9 +53,9 @@ public class LinearLayoutManager extends androidx.recyclerview.widget.LinearLayo
         int iCt = super.ct();
         RecyclerView recyclerView = this.a;
         if (recyclerView != null && (adapter = recyclerView.getAdapter()) != null) {
-            bmu bmuVar = adapter instanceof cyt ? ((cyt) adapter).a : null;
+            SyntheticPileOfMess bmuVar = adapter instanceof cyt ? ((cyt) adapter).a : null;
             if (bmuVar != null) {
-                ((ea) bmuVar.h).p();
+                ((ea) bmuVar.obj).p();
             }
         }
         return iCt;
@@ -67,9 +67,9 @@ public class LinearLayoutManager extends androidx.recyclerview.widget.LinearLayo
         int iCu = super.cu();
         RecyclerView recyclerView = this.a;
         if (recyclerView != null && (adapter = recyclerView.getAdapter()) != null) {
-            bmu bmuVar = adapter instanceof cyt ? ((cyt) adapter).a : null;
+            SyntheticPileOfMess bmuVar = adapter instanceof cyt ? ((cyt) adapter).a : null;
             if (bmuVar != null) {
-                ((ea) bmuVar.h).p();
+                ((ea) bmuVar.obj).p();
             }
         }
         return iCu;

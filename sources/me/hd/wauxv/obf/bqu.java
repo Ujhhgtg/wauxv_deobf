@@ -11,7 +11,7 @@ public final class bqu implements Animator.AnimatorListener {
     public final float b;
     public final float c;
     public final float d;
-    public final czx e;
+    public final SomeView e;
     public final int f;
     public final ValueAnimator g;
     public boolean h;
@@ -21,15 +21,15 @@ public final class bqu implements Animator.AnimatorListener {
     public boolean l = false;
     public float m;
     public final /* synthetic */ int n;
-    public final /* synthetic */ czx o;
+    public final /* synthetic */ SomeView o;
     public final /* synthetic */ bqx p;
 
-    public bqu(bqx bqxVar, czx czxVar, int i, float f, float f2, float f3, float f4, int i2, czx czxVar2) {
+    public bqu(bqx bqxVar, SomeView someViewVar, int i, float f, float f2, float f3, float f4, int i2, SomeView someViewVar2) {
         this.p = bqxVar;
         this.n = i2;
-        this.o = czxVar2;
+        this.o = someViewVar2;
         this.f = i;
-        this.e = czxVar;
+        this.e = someViewVar;
         this.a = f;
         this.b = f2;
         this.c = f3;
@@ -37,7 +37,7 @@ public final class bqu implements Animator.AnimatorListener {
         ValueAnimator valueAnimatorOfFloat = ValueAnimator.ofFloat(0.0f, 1.0f);
         this.g = valueAnimatorOfFloat;
         valueAnimatorOfFloat.addUpdateListener(new no(this, 6));
-        valueAnimatorOfFloat.setTarget(czxVar.d);
+        valueAnimatorOfFloat.setTarget(someViewVar.d);
         valueAnimatorOfFloat.addListener(this);
         this.m = 0.0f;
     }
@@ -54,20 +54,20 @@ public final class bqu implements Animator.AnimatorListener {
             return;
         }
         int i = this.n;
-        czx czxVar = this.o;
+        SomeView someViewVar = this.o;
         bqx bqxVar = this.p;
         if (i <= 0) {
             bqxVar.n.getClass();
-            xe.g(czxVar);
+            xe.g(someViewVar);
         } else {
-            bqxVar.a.add(czxVar.d);
+            bqxVar.a.add(someViewVar.d);
             this.h = true;
             if (i > 0) {
                 bqxVar.s.post(new cs(bqxVar, this, i));
             }
         }
         View view = bqxVar.x;
-        View view2 = czxVar.d;
+        View view2 = someViewVar.d;
         if (view == view2) {
             bqxVar.ap(view2);
         }

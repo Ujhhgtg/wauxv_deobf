@@ -9,7 +9,7 @@ import android.widget.TextView;
 import java.util.WeakHashMap;
 import me.hd.wauxv.R;
 import me.hd.wauxv.obf.ajn;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.ff;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -36,7 +36,7 @@ public class SnackbarContentLayout extends LinearLayout {
             return z;
         }
         TextView textView = this.a;
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         if (textView.isPaddingRelative()) {
             textView.setPaddingRelative(textView.getPaddingStart(), i2, textView.getPaddingEnd(), i3);
             return true;

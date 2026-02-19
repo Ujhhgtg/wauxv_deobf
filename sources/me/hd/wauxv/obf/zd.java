@@ -27,13 +27,13 @@ public final class zd {
         zdVar.getClass();
         throwIfVar1IsNull(dfxVar, "descriptor");
         if (!zdVar.c.add(str)) {
-            StringBuilder sbZ = dkz.z("Element with name '", str, "' is already registered in ");
+            StringBuilder sbZ = StaticHelpers6.concatAndToSb("Element with name '", str, "' is already registered in ");
             sbZ.append(zdVar.a);
             throw new IllegalArgumentException(sbZ.toString().toString());
         }
         zdVar.b.add(str);
         zdVar.d.add(dfxVar);
-        zdVar.e.add(EmptyReadonlyList.a);
+        zdVar.e.add(EmptyReadonlyList.INSTANCE);
         zdVar.f.add(false);
     }
 }

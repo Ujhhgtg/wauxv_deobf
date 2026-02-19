@@ -1577,7 +1577,7 @@ public final class adp {
                                 String strK = !adcVar.a ? yg.k("set", str2) : str2;
                                 int i3 = i2;
                                 try {
-                                    int iAe = dkz.ae(adcVar.b);
+                                    int iAe = StaticHelpers6.ae(adcVar.b);
                                     Class cls2 = Float.TYPE;
                                     Class cls3 = Integer.TYPE;
                                     switch (iAe) {
@@ -1602,7 +1602,7 @@ public final class adp {
                                                 method.invoke(childAt, colorDrawable);
                                             } catch (IllegalAccessException e) {
                                                 e = e;
-                                                StringBuilder sbZ = dkz.z(" Custom Attribute \"", str2, "\" not found on ");
+                                                StringBuilder sbZ = StaticHelpers6.concatAndToSb(" Custom Attribute \"", str2, "\" not found on ");
                                                 sbZ.append(cls.getName());
                                                 Log.e("TransitionLayout", sbZ.toString(), e);
                                             } catch (NoSuchMethodException e2) {
@@ -1610,7 +1610,7 @@ public final class adp {
                                                 Log.e("TransitionLayout", cls.getName() + " must have a method " + strK, e);
                                             } catch (InvocationTargetException e3) {
                                                 e = e3;
-                                                StringBuilder sbZ2 = dkz.z(" Custom Attribute \"", str2, "\" not found on ");
+                                                StringBuilder sbZ2 = StaticHelpers6.concatAndToSb(" Custom Attribute \"", str2, "\" not found on ");
                                                 sbZ2.append(cls.getName());
                                                 Log.e("TransitionLayout", sbZ2.toString(), e);
                                             }
@@ -1800,13 +1800,13 @@ public final class adp {
                             map3.put(str, new adc(adcVar, cls.getMethod("getMap" + str, null).invoke(childAt, null)));
                         }
                     } catch (IllegalAccessException e) {
-                        StringBuilder sbZ = dkz.z(" Custom Attribute \"", str, "\" not found on ");
+                        StringBuilder sbZ = StaticHelpers6.concatAndToSb(" Custom Attribute \"", str, "\" not found on ");
                         sbZ.append(cls.getName());
                         Log.e("TransitionLayout", sbZ.toString(), e);
                     } catch (NoSuchMethodException e2) {
                         Log.e("TransitionLayout", cls.getName() + " must have a method " + str, e2);
                     } catch (InvocationTargetException e3) {
-                        StringBuilder sbZ2 = dkz.z(" Custom Attribute \"", str, "\" not found on ");
+                        StringBuilder sbZ2 = StaticHelpers6.concatAndToSb(" Custom Attribute \"", str, "\" not found on ");
                         sbZ2.append(cls.getName());
                         Log.e("TransitionLayout", sbZ2.toString(), e3);
                     }

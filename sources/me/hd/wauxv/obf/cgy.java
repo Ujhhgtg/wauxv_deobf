@@ -14,9 +14,9 @@ public final class cgy extends bws implements IDexFind {
         Object[] objArr = { Long.valueOf(j) };
         int i = 0;
         dlx.a.getClass();
-        cde cdeVarT = dqc.bi(dlx.b()).t();
-        cdeVarT.ab = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
-        Object objJ = ((MethodHookWrapper) dkz.n(new Object[] { dal.b(String.class), dal.b(Object[].class) }, 2, cdeVarT)).j(strZ,
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class), dal.b(Object[].class) }, 2, methodResolverVarT)).j(strZ,
                 objArr);
         throwIfVar1IsNull(objJ);
         Cursor cursor = (Cursor) objJ;
@@ -24,7 +24,7 @@ public final class cgy extends bws implements IDexFind {
             if (!cursor.moveToFirst()) {
                 cursor.close();
                 cge.a.getClass();
-                return ReflectionWrapper.createInstanceWithArgs(emn.az(cgd.a), new Object[0]);
+                return ReflectionWrapper.createInstanceWithArgs(StaticHelpers7.az(cgd.a), new Object[0]);
             }
             cge.a.getClass();
             Object objB = cge.b(cursor);
@@ -46,8 +46,8 @@ public final class cgy extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(cgv.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(27));
-        emn.aj(cgx.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(28));
-        emn.aj(cgw.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(29));
+        StaticHelpers7.resolveDexAndCache(cgv.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(27));
+        StaticHelpers7.resolveDexAndCache(cgx.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(28));
+        StaticHelpers7.resolveDexAndCache(cgw.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(29));
     }
 }

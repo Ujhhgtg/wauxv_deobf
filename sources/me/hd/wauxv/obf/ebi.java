@@ -13,7 +13,7 @@ public final class ebi {
         if (1 == (i & 1)) {
             this.b = list;
         } else {
-            bht.ah(i, 1, ebg.b.getDescriptor());
+            ResourcesCompat.ah(i, 1, ebg.b.getDescriptor());
             throw null;
         }
     }

@@ -41,7 +41,7 @@ public final class j extends bdo {
                                     .openOutputStream(uri);
                             if (outputStreamOpenOutputStream != null) {
                                 try {
-                                    cnf.ba(outputStreamOpenOutputStream);
+                                    HugeSyntheticPileOfHelpers.zipDirectory(outputStreamOpenOutputStream);
                                     dnc.g(null, 3, "导出成功" /* "导出成功" /* "导出成功" /* cnb.z(-415873093335850L)  */);
                                     outputStreamOpenOutputStream.close();
                                     return;
@@ -70,7 +70,7 @@ public final class j extends bdo {
                                     .openInputStream(uri2);
                             if (inputStreamOpenInputStream != null) {
                                 try {
-                                    cnf.bg(inputStreamOpenInputStream);
+                                    HugeSyntheticPileOfHelpers.unzipStream(inputStreamOpenInputStream);
                                     dnc.g(null, 3, "导入成功" /* "导入成功" /* "导入成功" /* cnb.z(-415847323532074L)  */);
                                     inputStreamOpenInputStream.close();
                                     return;
@@ -113,7 +113,7 @@ public final class j extends bdo {
                                     .openOutputStream(uri);
                             if (outputStreamOpenOutputStream != null) {
                                 try {
-                                    cnf.ba(outputStreamOpenOutputStream);
+                                    HugeSyntheticPileOfHelpers.zipDirectory(outputStreamOpenOutputStream);
                                     dnc.g(null, 3, "导出成功" /* "导出成功" /* "导出成功" /* cnb.z(-415873093335850L)  */);
                                     outputStreamOpenOutputStream.close();
                                     return;
@@ -142,7 +142,7 @@ public final class j extends bdo {
                                     .openInputStream(uri2);
                             if (inputStreamOpenInputStream != null) {
                                 try {
-                                    cnf.bg(inputStreamOpenInputStream);
+                                    HugeSyntheticPileOfHelpers.unzipStream(inputStreamOpenInputStream);
                                     dnc.g(null, 3, "导入成功" /* "导入成功" /* "导入成功" /* cnb.z(-415847323532074L)  */);
                                     inputStreamOpenInputStream.close();
                                     return;
@@ -185,7 +185,7 @@ public final class j extends bdo {
         eop.a.getClass();
         sb.append(eoo.a.k());
         sb.append((char) 22825);
-        ArrayList arrayListO = aaz.o(listAg, OtherStaticHelpers.argsToList(nzVar, new ny(strZ, sb.toString(), 0 == true ? 1 : 0, i2)));
+        ArrayList arrayListO = StaticHelpers5.o(listAg, OtherStaticHelpers.argsToList(nzVar, new ny(strZ, sb.toString(), 0 == true ? 1 : 0, i2)));
         nz nzVar2 = new nz("版本" /* "版本" /* "版本" /* cnb.z(-391701017393962L)  */);
         ny nyVar = new ny("模块版本" /* "模块版本" /* "模块版本" /* cnb.z(-391636592884522L)  */, "1.2.6.r1238.198c77c(1238)" /*
                                                                                               * "1.2.6.r1238.198c77c(1238)" /* "1.2.6.r1238.198c77c(1238)" /* cnb.z(-391666657655594L)  */
@@ -197,8 +197,8 @@ public final class j extends bdo {
         final int i6 = 10;
         final int i7 = 11;
         final int i8 = 12;
-        ArrayList arrayListO2 = aaz
-                .o(aaz.o(aaz.o(arrayListO, OtherStaticHelpers.argsToList(nzVar2, nyVar, nyVar2, new ny(strZ2, bmo.s(), new d(i3)))),
+        ArrayList arrayListO2 = StaticHelpers5
+                .o(StaticHelpers5.o(StaticHelpers5.o(arrayListO, OtherStaticHelpers.argsToList(nzVar2, nyVar, nyVar2, new ny(strZ2, bmo.s(), new d(i3)))),
                         OtherStaticHelpers.argsToList(new nz("隐私与协议" /* "隐私与协议" /* "隐私与协议" /* cnb.z(-391477679094570L)  */),
                                 new ny("用户协议" /* "用户协议" /* "用户协议" /* cnb.z(-391434729421610L)  */, 0 == true ? 1 : 0,
                                         new View.OnClickListener(this) { // from class: me.hd.wauxv.obf.e
@@ -287,7 +287,7 @@ public final class j extends bdo {
                                                         break;
                                                     case 10:
                                                         KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                                bht.r(new Pair(
+                                                                ResourcesCompat.r(new Pair(
                                                                         "showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                         Boolean.TRUE)));
                                                         break;
@@ -546,7 +546,7 @@ public final class j extends bdo {
                                                         break;
                                                     case 10:
                                                         KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                                bht.r(new Pair(
+                                                                ResourcesCompat.r(new Pair(
                                                                         "showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                         Boolean.TRUE)));
                                                         break;
@@ -720,7 +720,7 @@ public final class j extends bdo {
                                                         break;
                                                     case 10:
                                                         KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                                bht.r(new Pair(
+                                                                ResourcesCompat.r(new Pair(
                                                                         "showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                         Boolean.TRUE)));
                                                         break;
@@ -809,7 +809,7 @@ public final class j extends bdo {
                                         }, i3)));
         final int i9 = 13;
         final int i10 = 14;
-        ArrayList arrayListO3 = aaz.o(arrayListO2,
+        ArrayList arrayListO3 = StaticHelpers5.o(arrayListO2,
                 OtherStaticHelpers.argsToList(new nz("群组" /* "群组" /* "群组" /* cnb.z(-391851341249322L)  */),
                         new ny("Telegram Channel" /* "Telegram Channel" /* "Telegram Channel" /* cnb.z(-391872816085802L)  */,
                                 "Hd_WAuxiliary_CI" /* "Hd_WAuxiliary_CI" /* "Hd_WAuxiliary_CI" /* cnb.z(-391799801641770L)  */, new View.OnClickListener(this) { // from
@@ -888,7 +888,7 @@ public final class j extends bdo {
                                                 break;
                                             case 10:
                                                 KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                        bht.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
+                                                        ResourcesCompat.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                 Boolean.TRUE)));
                                                 break;
                                             case 11:
@@ -1043,7 +1043,7 @@ public final class j extends bdo {
                                                 break;
                                             case 10:
                                                 KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                        bht.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
+                                                        ResourcesCompat.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                 Boolean.TRUE)));
                                                 break;
                                             case 11:
@@ -1181,7 +1181,7 @@ public final class j extends bdo {
                                                                                                     */);
                                 break;
                             case 10:
-                                KotlinHelpers2.ar(this.b).j(R.id.policyFragment, bht.r(new Pair("showOnly" /*
+                                KotlinHelpers2.ar(this.b).j(R.id.policyFragment, ResourcesCompat.r(new Pair("showOnly" /*
                                                                                                  * cnb.z(-
                                                                                                  * 415645460069162L)
                                                                                                  */, Boolean.TRUE)));
@@ -1245,7 +1245,7 @@ public final class j extends bdo {
                     }
                 });
         final int i12 = 15;
-        ArrayList arrayListO4 = aaz.o(arrayListO3,
+        ArrayList arrayListO4 = StaticHelpers5.o(arrayListO3,
                 OtherStaticHelpers.argsToList(nzVar3, nyVar3, new ny("WAuxiliary_Plugin" /* "WAuxiliary_Plugin" /* "WAuxiliary_Plugin" /* cnb.z(-393092586797866L)  */,
                         "HdShare" /* "HdShare" /* "HdShare" /* cnb.z(-393582213069610L)  */, new View.OnClickListener(this) { // from class:
                                                                                                    // me.hd.wauxv.obf.e
@@ -1316,7 +1316,7 @@ public final class j extends bdo {
                                                                                                             */);
                                         break;
                                     case 10:
-                                        KotlinHelpers2.ar(this.b).j(R.id.policyFragment, bht
+                                        KotlinHelpers2.ar(this.b).j(R.id.policyFragment, ResourcesCompat
                                                 .r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */, Boolean.TRUE)));
                                         break;
                                     case 11:
@@ -1389,7 +1389,7 @@ public final class j extends bdo {
         final int i14 = 17;
         final int i15 = 18;
         final int i16 = 19;
-        ArrayList arrayListO5 = aaz.o(arrayListO4,
+        ArrayList arrayListO5 = StaticHelpers5.o(arrayListO4,
                 OtherStaticHelpers.argsToList(new nz("打赏" /* "打赏" /* "打赏" /* cnb.z(-393547853331242L)  */), new ny("微信-Hd" /* "微信-Hd" /* "微信-Hd" /* cnb.z(-393552148298538L)  */,
                         "Hd" /* "Hd" /* "Hd" /* cnb.z(-393509198625578L)  */, new View.OnClickListener(this) { // from class:
                                                                                               // me.hd.wauxv.obf.e
@@ -1460,7 +1460,7 @@ public final class j extends bdo {
                                                                                                             */);
                                         break;
                                     case 10:
-                                        KotlinHelpers2.ar(this.b).j(R.id.policyFragment, bht
+                                        KotlinHelpers2.ar(this.b).j(R.id.policyFragment, ResourcesCompat
                                                 .r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */, Boolean.TRUE)));
                                         break;
                                     case 11:
@@ -1605,7 +1605,7 @@ public final class j extends bdo {
                                                 break;
                                             case 10:
                                                 KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                        bht.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
+                                                        ResourcesCompat.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                 Boolean.TRUE)));
                                                 break;
                                             case 11:
@@ -1758,7 +1758,7 @@ public final class j extends bdo {
                                                 break;
                                             case 10:
                                                 KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                        bht.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
+                                                        ResourcesCompat.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                 Boolean.TRUE)));
                                                 break;
                                             case 11:
@@ -1911,7 +1911,7 @@ public final class j extends bdo {
                                                 break;
                                             case 10:
                                                 KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                        bht.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
+                                                        ResourcesCompat.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                 Boolean.TRUE)));
                                                 break;
                                             case 11:
@@ -1996,7 +1996,7 @@ public final class j extends bdo {
         final int i21 = 6;
         final int i22 = 7;
         final int i23 = 8;
-        recyclerView.setAdapter(new eqi(aaz.o(arrayListO5,
+        recyclerView.setAdapter(new eqi(StaticHelpers5.o(arrayListO5,
                 OtherStaticHelpers.argsToList(new nz("致谢" /* "致谢" /* "致谢" /* cnb.z(-392731809545002L)  */), new ny("YukiHookAPI" /* "YukiHookAPI" /* "YukiHookAPI" /* cnb.z(-392667385035562L)  */,
                         "HighCapable" /* "HighCapable" /* "HighCapable" /* cnb.z(-392650205166378L)  */, new View.OnClickListener(this) { // from class:
                                                                                                        // me.hd.wauxv.obf.e
@@ -2067,7 +2067,7 @@ public final class j extends bdo {
                                                                                                             */);
                                         break;
                                     case 10:
-                                        KotlinHelpers2.ar(this.b).j(R.id.policyFragment, bht
+                                        KotlinHelpers2.ar(this.b).j(R.id.policyFragment, ResourcesCompat
                                                 .r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */, Boolean.TRUE)));
                                         break;
                                     case 11:
@@ -2212,7 +2212,7 @@ public final class j extends bdo {
                                                 break;
                                             case 10:
                                                 KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                        bht.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
+                                                        ResourcesCompat.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                 Boolean.TRUE)));
                                                 break;
                                             case 11:
@@ -2367,7 +2367,7 @@ public final class j extends bdo {
                                                 break;
                                             case 10:
                                                 KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                        bht.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
+                                                        ResourcesCompat.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                 Boolean.TRUE)));
                                                 break;
                                             case 11:
@@ -2520,7 +2520,7 @@ public final class j extends bdo {
                                                 break;
                                             case 10:
                                                 KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                        bht.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
+                                                        ResourcesCompat.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                 Boolean.TRUE)));
                                                 break;
                                             case 11:
@@ -2673,7 +2673,7 @@ public final class j extends bdo {
                                                 break;
                                             case 10:
                                                 KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                        bht.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
+                                                        ResourcesCompat.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                 Boolean.TRUE)));
                                                 break;
                                             case 11:
@@ -2826,7 +2826,7 @@ public final class j extends bdo {
                                                 break;
                                             case 10:
                                                 KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                        bht.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
+                                                        ResourcesCompat.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                 Boolean.TRUE)));
                                                 break;
                                             case 11:
@@ -2979,7 +2979,7 @@ public final class j extends bdo {
                                                 break;
                                             case 10:
                                                 KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                        bht.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
+                                                        ResourcesCompat.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                 Boolean.TRUE)));
                                                 break;
                                             case 11:
@@ -3132,7 +3132,7 @@ public final class j extends bdo {
                                                 break;
                                             case 10:
                                                 KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                        bht.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
+                                                        ResourcesCompat.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                 Boolean.TRUE)));
                                                 break;
                                             case 11:
@@ -3285,7 +3285,7 @@ public final class j extends bdo {
                                                 break;
                                             case 10:
                                                 KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                        bht.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
+                                                        ResourcesCompat.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                 Boolean.TRUE)));
                                                 break;
                                             case 11:
@@ -3438,7 +3438,7 @@ public final class j extends bdo {
                                                 break;
                                             case 10:
                                                 KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                        bht.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
+                                                        ResourcesCompat.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                 Boolean.TRUE)));
                                                 break;
                                             case 11:
@@ -3591,7 +3591,7 @@ public final class j extends bdo {
                                                 break;
                                             case 10:
                                                 KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                        bht.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
+                                                        ResourcesCompat.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                 Boolean.TRUE)));
                                                 break;
                                             case 11:
@@ -3744,7 +3744,7 @@ public final class j extends bdo {
                                                 break;
                                             case 10:
                                                 KotlinHelpers2.ar(this.b).j(R.id.policyFragment,
-                                                        bht.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
+                                                        ResourcesCompat.r(new Pair("showOnly" /* "showOnly" /* "showOnly" /* cnb.z(-415645460069162L)  */,
                                                                 Boolean.TRUE)));
                                                 break;
                                             case 11:

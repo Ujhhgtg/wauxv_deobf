@@ -9,7 +9,7 @@ public final class ehp {
 
     public /* synthetic */ ehp(int i, String str, String str2) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, ehn.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, ehn.b.getDescriptor());
             throw null;
         }
         this.a = str;

@@ -1,7 +1,5 @@
 package com.umeng.analytics.pro;
 
-import com.umeng.analytics.pro.co;
-import com.umeng.analytics.pro.cr;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,7 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -161,7 +159,7 @@ public abstract class cr<T extends cr<?, ?>, F extends co> implements ch<T, F> {
     }
 
     public String toString() {
-        StringBuilder sbY = dkz.y("<");
+        StringBuilder sbY = StaticHelpers6.toSb("<");
         sbY.append(getClass().getSimpleName());
         sbY.append(" ");
         if (a() != null) {

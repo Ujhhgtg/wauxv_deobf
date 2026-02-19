@@ -8,8 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Map;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.AccessControllerPlugin;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.implementation.bytecode.StackSize;
@@ -386,7 +386,7 @@ public class StackAwareMethodVisitor extends MethodVisitor {
         }
         if (i2 != 0) {
             throw new IllegalStateException(
-                    dkz.p(i2, "Cannot specify non-zero offset ", " for non-incrementing value: ", i));
+                    StaticHelpers6.p(i2, "Cannot specify non-zero offset ", " for non-incrementing value: ", i));
         }
         while (i < 0) {
             if (this.current.isEmpty()) {

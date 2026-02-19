@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.asm.AsmVisitorWrapper;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
@@ -129,7 +129,7 @@ public class DecoratingDynamicTypeBuilder<T> extends DynamicType.Builder.Abstrac
     }
 
     public int hashCode() {
-        return this.classFileLocator.hashCode() + bjs.g(this.auxiliaryTypes, (this.ignoredMethods.hashCode() + ((this.classWriterFactory.hashCode() + ((this.classReaderFactory.hashCode() + ((this.typeValidation.hashCode() + ((this.methodGraphCompiler.hashCode() + ((this.implementationContextFactory.hashCode() + ((this.annotationRetention.hashCode() + ((this.annotationValueFilterFactory.hashCode() + ((this.auxiliaryTypeNamingStrategy.hashCode() + ((this.classFileVersion.hashCode() + ((this.asmVisitorWrapper.hashCode() + ((this.typeAttributeAppender.hashCode() + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31, 31);
+        return this.classFileLocator.hashCode() + bjs.g(this.auxiliaryTypes, (this.ignoredMethods.hashCode() + ((this.classWriterFactory.hashCode() + ((this.classReaderFactory.hashCode() + ((this.typeValidation.hashCode() + ((this.methodGraphCompiler.hashCode() + ((this.implementationContextFactory.hashCode() + ((this.annotationRetention.hashCode() + ((this.annotationValueFilterFactory.hashCode() + ((this.auxiliaryTypeNamingStrategy.hashCode() + ((this.classFileVersion.hashCode() + ((this.asmVisitorWrapper.hashCode() + ((this.typeAttributeAppender.hashCode() + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31)) * 31, 31);
     }
 
     @Override // net.bytebuddy.dynamic.DynamicType.Builder

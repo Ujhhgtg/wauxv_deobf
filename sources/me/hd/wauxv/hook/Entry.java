@@ -5,7 +5,7 @@ import android.content.res.XResources;
 import de.robv.android.xposed.IXposedHookLoadPackage;
 import de.robv.android.xposed.IXposedHookZygoteInit;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
-import me.hd.wauxv.obf.bhu;
+import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.bml;
 import me.hd.wauxv.obf.dcx;
 import me.hd.wauxv.obf.dcy;
@@ -44,7 +44,7 @@ public final class Entry implements IXposedHookZygoteInit, IXposedHookLoadPackag
                 int i = exk.a;
                 objX2 = new exk(XModuleResources.createInstance(exm.i, (XResources) null));
             } catch (Throwable th) {
-                objX2 = bhu.x(th);
+                objX2 = FastKV.x(th);
             }
             if (objX2 instanceof dcx) {
                 objX2 = null;
@@ -53,7 +53,7 @@ public final class Entry implements IXposedHookZygoteInit, IXposedHookLoadPackag
             bml.b = true;
             objX = KotlinUnit.INSTANCE;
         } catch (Throwable th2) {
-            objX = bhu.x(th2);
+            objX = FastKV.x(th2);
         }
         Throwable thB = dcy.b(objX);
         if (thB != null) {

@@ -13,7 +13,7 @@ public final class dwd {
         if (1 == (i & 1)) {
             this.b = list;
         } else {
-            bht.ah(i, 1, dwb.b.getDescriptor());
+            ResourcesCompat.ah(i, 1, dwb.b.getDescriptor());
             throw null;
         }
     }

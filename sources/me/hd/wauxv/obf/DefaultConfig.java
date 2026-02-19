@@ -59,7 +59,7 @@ import org.xmlpull.v1.XmlPullParserException;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public class DefaultConfig implements dln, dcm, aui, ccv {
+public class DefaultConfig implements dln, dcm, EmojiMatchCallback, ccv {
     public static final int[] a = { R.attr.indeterminateDrawable, R.attr.progressDrawable };
     public final /* synthetic */ int b;
     public Object c;
@@ -110,11 +110,11 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
         return btkVar.p(true) || asbVar.p(true);
     }
 
-    public void aa(bdj bdjVar, boolean z) {
-        throwIfVar1IsNull(bdjVar, "f");
-        bdj bdjVar2 = ((beg) this.c).y;
-        if (bdjVar2 != null) {
-            bdjVar2.cs().o.aa(bdjVar, true);
+    public void aa(SomeFragmentManager someFragmentManagerVar, boolean z) {
+        throwIfVar1IsNull(someFragmentManagerVar, "f");
+        SomeFragmentManager someFragmentManagerVar2 = ((beg) this.c).y;
+        if (someFragmentManagerVar2 != null) {
+            someFragmentManagerVar2.cs().o.aa(someFragmentManagerVar, true);
         }
         for (bdt bdtVar : (CopyOnWriteArrayList) this.d) {
             if (z) {
@@ -125,11 +125,11 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
         }
     }
 
-    public void ab(bdj bdjVar, Bundle bundle, boolean z) {
-        throwIfVar1IsNull(bdjVar, "f");
-        bdj bdjVar2 = ((beg) this.c).y;
-        if (bdjVar2 != null) {
-            bdjVar2.cs().o.ab(bdjVar, bundle, true);
+    public void ab(SomeFragmentManager someFragmentManagerVar, Bundle bundle, boolean z) {
+        throwIfVar1IsNull(someFragmentManagerVar, "f");
+        SomeFragmentManager someFragmentManagerVar2 = ((beg) this.c).y;
+        if (someFragmentManagerVar2 != null) {
+            someFragmentManagerVar2.cs().o.ab(someFragmentManagerVar, bundle, true);
         }
         for (bdt bdtVar : (CopyOnWriteArrayList) this.d) {
             if (z) {
@@ -140,11 +140,11 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
         }
     }
 
-    public void ac(bdj bdjVar, boolean z) {
-        throwIfVar1IsNull(bdjVar, "f");
-        bdj bdjVar2 = ((beg) this.c).y;
-        if (bdjVar2 != null) {
-            bdjVar2.cs().o.ac(bdjVar, true);
+    public void ac(SomeFragmentManager someFragmentManagerVar, boolean z) {
+        throwIfVar1IsNull(someFragmentManagerVar, "f");
+        SomeFragmentManager someFragmentManagerVar2 = ((beg) this.c).y;
+        if (someFragmentManagerVar2 != null) {
+            someFragmentManagerVar2.cs().o.ac(someFragmentManagerVar, true);
         }
         for (bdt bdtVar : (CopyOnWriteArrayList) this.d) {
             if (z) {
@@ -155,11 +155,11 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
         }
     }
 
-    public void ad(bdj bdjVar, boolean z) {
-        throwIfVar1IsNull(bdjVar, "f");
-        bdj bdjVar2 = ((beg) this.c).y;
-        if (bdjVar2 != null) {
-            bdjVar2.cs().o.ad(bdjVar, true);
+    public void ad(SomeFragmentManager someFragmentManagerVar, boolean z) {
+        throwIfVar1IsNull(someFragmentManagerVar, "f");
+        SomeFragmentManager someFragmentManagerVar2 = ((beg) this.c).y;
+        if (someFragmentManagerVar2 != null) {
+            someFragmentManagerVar2.cs().o.ad(someFragmentManagerVar, true);
         }
         for (bdt bdtVar : (CopyOnWriteArrayList) this.d) {
             if (z) {
@@ -170,12 +170,12 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
         }
     }
 
-    public void ae(bdj bdjVar, View view, boolean z) {
-        throwIfVar1IsNull(bdjVar, "f");
+    public void ae(SomeFragmentManager someFragmentManagerVar, View view, boolean z) {
+        throwIfVar1IsNull(someFragmentManagerVar, "f");
         throwIfVar1IsNull(view, "v");
-        bdj bdjVar2 = ((beg) this.c).y;
-        if (bdjVar2 != null) {
-            bdjVar2.cs().o.ae(bdjVar, view, true);
+        SomeFragmentManager someFragmentManagerVar2 = ((beg) this.c).y;
+        if (someFragmentManagerVar2 != null) {
+            someFragmentManagerVar2.cs().o.ae(someFragmentManagerVar, view, true);
         }
         for (bdt bdtVar : (CopyOnWriteArrayList) this.d) {
             if (z) {
@@ -183,7 +183,7 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
             } else {
                 DefaultConfig ioVar = bdtVar.a;
                 beg begVar = (beg) this.c;
-                if (bdjVar == ((bdj) ioVar.c)) {
+                if (someFragmentManagerVar == ((SomeFragmentManager) ioVar.c)) {
                     DefaultConfig ioVar2 = begVar.o;
                     ioVar2.getClass();
                     synchronized (((CopyOnWriteArrayList) ioVar2.d)) {
@@ -203,11 +203,11 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
         }
     }
 
-    public void af(bdj bdjVar, boolean z) {
-        throwIfVar1IsNull(bdjVar, "f");
-        bdj bdjVar2 = ((beg) this.c).y;
-        if (bdjVar2 != null) {
-            bdjVar2.cs().o.af(bdjVar, true);
+    public void af(SomeFragmentManager someFragmentManagerVar, boolean z) {
+        throwIfVar1IsNull(someFragmentManagerVar, "f");
+        SomeFragmentManager someFragmentManagerVar2 = ((beg) this.c).y;
+        if (someFragmentManagerVar2 != null) {
+            someFragmentManagerVar2.cs().o.af(someFragmentManagerVar, true);
         }
         for (bdt bdtVar : (CopyOnWriteArrayList) this.d) {
             if (z) {
@@ -263,7 +263,7 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
     }
 
     public ayd aj() {
-        return (ayd) ((dov) this.d).getValue();
+        return (ayd) ((Kotlin$Lazy) this.d).getValue();
     }
 
     public dle ak(int i) {
@@ -283,8 +283,8 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
         switch (this.b) {
             case 0:
                 AbsSeekBar absSeekBar = (AbsSeekBar) this.c;
-                jx jxVarK = jx.k(absSeekBar.getContext(), attributeSet, a, i);
-                Drawable drawableT = jxVarK.t(0);
+                FactoryPools factoryPoolsVarK = FactoryPools.k(absSeekBar.getContext(), attributeSet, a, i);
+                Drawable drawableT = factoryPoolsVarK.t(0);
                 if (drawableT != null) {
                     if (drawableT instanceof AnimationDrawable) {
                         AnimationDrawable animationDrawable = (AnimationDrawable) drawableT;
@@ -301,11 +301,11 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
                     }
                     absSeekBar.setIndeterminateDrawable(drawableT);
                 }
-                Drawable drawableT2 = jxVarK.t(1);
+                Drawable drawableT2 = factoryPoolsVarK.t(1);
                 if (drawableT2 != null) {
                     absSeekBar.setProgressDrawable(ba(drawableT2, false));
                 }
-                jxVarK.ae();
+                factoryPoolsVarK.ae();
                 return;
             default:
                 TypedArray typedArrayObtainStyledAttributes = ((EditText) this.c).getContext()
@@ -344,30 +344,30 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
     public void ao(da daVar) {
         chm chmVar = (chm) this.c;
         ((ActionMode.Callback) chmVar.d).onDestroyActionMode(chmVar.ab(daVar));
-        ic icVar = (ic) this.d;
-        if (icVar.aj != null) {
-            icVar.y.getDecorView().removeCallbacks(icVar.ak);
+        AppCompatDelegate appCompatDelegateVar = (AppCompatDelegate) this.d;
+        if (appCompatDelegateVar.aj != null) {
+            appCompatDelegateVar.y.getDecorView().removeCallbacks(appCompatDelegateVar.ak);
         }
-        if (icVar.ai != null) {
-            esg esgVar = icVar.al;
+        if (appCompatDelegateVar.ai != null) {
+            esg esgVar = appCompatDelegateVar.al;
             if (esgVar != null) {
                 esgVar.c();
             }
-            esg esgVarG = eqz.g(icVar.ai);
+            esg esgVarG = ViewCompat.getOrCreateAnimationHelper(appCompatDelegateVar.ai);
             esgVarG.b(0.0f);
-            icVar.al = esgVarG;
+            appCompatDelegateVar.al = esgVarG;
             esgVarG.e(new hr(this, 2));
         }
-        icVar.ah = null;
-        ViewGroup viewGroup = icVar.an;
-        WeakHashMap weakHashMap = eqz.a;
+        appCompatDelegateVar.ah = null;
+        ViewGroup viewGroup = appCompatDelegateVar.an;
+        WeakHashMap weakHashMap = ViewCompat.a;
         eqo.c(viewGroup);
-        icVar.cr();
+        appCompatDelegateVar.cr();
     }
 
     public boolean ap(da daVar, Menu menu) {
-        ViewGroup viewGroup = ((ic) this.d).an;
-        WeakHashMap weakHashMap = eqz.a;
+        ViewGroup viewGroup = ((AppCompatDelegate) this.d).an;
+        WeakHashMap weakHashMap = ViewCompat.a;
         eqo.c(viewGroup);
         chm chmVar = (chm) this.c;
         ActionMode.Callback callback = (ActionMode.Callback) chmVar.d;
@@ -383,7 +383,7 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
 
     public void aq(bby bbyVar) {
         dby dbyVar = (dby) this.d;
-        bmu bmuVar = (bmu) this.c;
+        SyntheticPileOfMess bmuVar = (SyntheticPileOfMess) this.c;
         int i = bbyVar.b;
         if (i == 0) {
             dbyVar.execute(new cs(bmuVar, bbyVar.a, 4, false));
@@ -814,8 +814,8 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
     }
 
     @Override // me.hd.wauxv.obf.avu
-    public boolean k(Object obj, File file, crw crwVar) {
-        return ((ow) this.d).k(new pa(((BitmapDrawable) ((dcg) obj).get()).getBitmap(), (oz) this.c), file, crwVar);
+    public boolean saveStreamToFile(Object obj, File file, crw crwVar) {
+        return ((ow) this.d).saveStreamToFile(new pa(((BitmapDrawable) ((dcg) obj).get()).getBitmap(), (oz) this.c), file, crwVar);
     }
 
     @Override // me.hd.wauxv.obf.dln
@@ -876,8 +876,8 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
     }
 
     @Override // me.hd.wauxv.obf.aui
-    public boolean p(CharSequence charSequence, int i, int i2, emk emkVar) {
-        if ((emkVar.d & 4) > 0) {
+    public boolean onMatch(CharSequence charSequence, int i, int i2, EmojiMetadata emojiMetadataVar) {
+        if ((emojiMetadataVar.d & 4) > 0) {
             return true;
         }
         if (((eny) this.c) == null) {
@@ -885,15 +885,15 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
                     charSequence instanceof Spannable ? (Spannable) charSequence : new SpannableString(charSequence));
         }
         ((nu) this.d).getClass();
-        ((eny) this.c).setSpan(new eml(emkVar), i, i2, 33);
+        ((eny) this.c).setSpan(new eml(emojiMetadataVar), i, i2, 33);
         return true;
     }
 
-    public void q(bdj bdjVar, boolean z) {
-        throwIfVar1IsNull(bdjVar, "f");
-        bdj bdjVar2 = ((beg) this.c).y;
-        if (bdjVar2 != null) {
-            bdjVar2.cs().o.ensureParameterNotNull(bdjVar, true);
+    public void q(SomeFragmentManager someFragmentManagerVar, boolean z) {
+        throwIfVar1IsNull(someFragmentManagerVar, "f");
+        SomeFragmentManager someFragmentManagerVar2 = ((beg) this.c).y;
+        if (someFragmentManagerVar2 != null) {
+            someFragmentManagerVar2.cs().o.ensureParameterNotNull(someFragmentManagerVar, true);
         }
         for (bdt bdtVar : (CopyOnWriteArrayList) this.d) {
             if (z) {
@@ -904,13 +904,13 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
         }
     }
 
-    public void r(bdj bdjVar, boolean z) {
-        throwIfVar1IsNull(bdjVar, "f");
+    public void r(SomeFragmentManager someFragmentManagerVar, boolean z) {
+        throwIfVar1IsNull(someFragmentManagerVar, "f");
         beg begVar = (beg) this.c;
         hb hbVar = begVar.w.e;
-        bdj bdjVar2 = begVar.y;
-        if (bdjVar2 != null) {
-            bdjVar2.cs().o.r(bdjVar, true);
+        SomeFragmentManager someFragmentManagerVar2 = begVar.y;
+        if (someFragmentManagerVar2 != null) {
+            someFragmentManagerVar2.cs().o.r(someFragmentManagerVar, true);
         }
         for (bdt bdtVar : (CopyOnWriteArrayList) this.d) {
             if (z) {
@@ -926,11 +926,11 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
         return cnh.aa(((ViewGroup) this.d).getContext()) ? Color.parseColor(bbh.a.o()) : Color.parseColor(bbi.a.o());
     }
 
-    public void t(bdj bdjVar, boolean z) {
-        throwIfVar1IsNull(bdjVar, "f");
-        bdj bdjVar2 = ((beg) this.c).y;
-        if (bdjVar2 != null) {
-            bdjVar2.cs().o.t(bdjVar, true);
+    public void t(SomeFragmentManager someFragmentManagerVar, boolean z) {
+        throwIfVar1IsNull(someFragmentManagerVar, "f");
+        SomeFragmentManager someFragmentManagerVar2 = ((beg) this.c).y;
+        if (someFragmentManagerVar2 != null) {
+            someFragmentManagerVar2.cs().o.t(someFragmentManagerVar, true);
         }
         for (bdt bdtVar : (CopyOnWriteArrayList) this.d) {
             if (z) {
@@ -968,11 +968,11 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
         }
     }
 
-    public void u(bdj bdjVar, boolean z) {
-        throwIfVar1IsNull(bdjVar, "f");
-        bdj bdjVar2 = ((beg) this.c).y;
-        if (bdjVar2 != null) {
-            bdjVar2.cs().o.u(bdjVar, true);
+    public void u(SomeFragmentManager someFragmentManagerVar, boolean z) {
+        throwIfVar1IsNull(someFragmentManagerVar, "f");
+        SomeFragmentManager someFragmentManagerVar2 = ((beg) this.c).y;
+        if (someFragmentManagerVar2 != null) {
+            someFragmentManagerVar2.cs().o.u(someFragmentManagerVar, true);
         }
         for (bdt bdtVar : (CopyOnWriteArrayList) this.d) {
             if (z) {
@@ -983,11 +983,11 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
         }
     }
 
-    public void v(bdj bdjVar, boolean z) {
-        throwIfVar1IsNull(bdjVar, "f");
-        bdj bdjVar2 = ((beg) this.c).y;
-        if (bdjVar2 != null) {
-            bdjVar2.cs().o.v(bdjVar, true);
+    public void v(SomeFragmentManager someFragmentManagerVar, boolean z) {
+        throwIfVar1IsNull(someFragmentManagerVar, "f");
+        SomeFragmentManager someFragmentManagerVar2 = ((beg) this.c).y;
+        if (someFragmentManagerVar2 != null) {
+            someFragmentManagerVar2.cs().o.v(someFragmentManagerVar, true);
         }
         for (bdt bdtVar : (CopyOnWriteArrayList) this.d) {
             if (z) {
@@ -998,11 +998,11 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
         }
     }
 
-    public void w(bdj bdjVar, boolean z) {
-        throwIfVar1IsNull(bdjVar, "f");
-        bdj bdjVar2 = ((beg) this.c).y;
-        if (bdjVar2 != null) {
-            bdjVar2.cs().o.w(bdjVar, true);
+    public void w(SomeFragmentManager someFragmentManagerVar, boolean z) {
+        throwIfVar1IsNull(someFragmentManagerVar, "f");
+        SomeFragmentManager someFragmentManagerVar2 = ((beg) this.c).y;
+        if (someFragmentManagerVar2 != null) {
+            someFragmentManagerVar2.cs().o.w(someFragmentManagerVar, true);
         }
         for (bdt bdtVar : (CopyOnWriteArrayList) this.d) {
             if (z) {
@@ -1018,13 +1018,13 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
         return 2;
     }
 
-    public void y(bdj bdjVar, boolean z) {
-        throwIfVar1IsNull(bdjVar, "f");
+    public void y(SomeFragmentManager someFragmentManagerVar, boolean z) {
+        throwIfVar1IsNull(someFragmentManagerVar, "f");
         beg begVar = (beg) this.c;
         hb hbVar = begVar.w.e;
-        bdj bdjVar2 = begVar.y;
-        if (bdjVar2 != null) {
-            bdjVar2.cs().o.y(bdjVar, true);
+        SomeFragmentManager someFragmentManagerVar2 = begVar.y;
+        if (someFragmentManagerVar2 != null) {
+            someFragmentManagerVar2.cs().o.y(someFragmentManagerVar, true);
         }
         for (bdt bdtVar : (CopyOnWriteArrayList) this.d) {
             if (z) {
@@ -1035,11 +1035,11 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
         }
     }
 
-    public void z(bdj bdjVar, boolean z) {
-        throwIfVar1IsNull(bdjVar, "f");
-        bdj bdjVar2 = ((beg) this.c).y;
-        if (bdjVar2 != null) {
-            bdjVar2.cs().o.z(bdjVar, true);
+    public void z(SomeFragmentManager someFragmentManagerVar, boolean z) {
+        throwIfVar1IsNull(someFragmentManagerVar, "f");
+        SomeFragmentManager someFragmentManagerVar2 = ((beg) this.c).y;
+        if (someFragmentManagerVar2 != null) {
+            someFragmentManagerVar2.cs().o.z(someFragmentManagerVar, true);
         }
         for (bdt bdtVar : (CopyOnWriteArrayList) this.d) {
             if (z) {
@@ -1069,8 +1069,8 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
 
     public DefaultConfig(Context context, String str) {
         this.b = 29;
-        this.c = new dov(new bp(context, 26));
-        this.d = new dov(new ls(this, 4, str));
+        this.c = new Kotlin$Lazy(new bp(context, 26));
+        this.d = new Kotlin$Lazy(new ls(this, 4, str));
     }
 
     public DefaultConfig(beg begVar) {
@@ -1187,9 +1187,9 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
         this.d = new float[] { 0.0f, 0.5f, 1.0f };
     }
 
-    public DefaultConfig(byu byuVar, bdj bdjVar, FrameLayout frameLayout) {
+    public DefaultConfig(byu byuVar, SomeFragmentManager someFragmentManagerVar, FrameLayout frameLayout) {
         this.b = 21;
-        this.c = bdjVar;
+        this.c = someFragmentManagerVar;
         this.d = frameLayout;
     }
 

@@ -60,11 +60,11 @@ public abstract class dqc {
         Class clsF = ReflectionWrapper.f(str2, 3, null);
         if (clsF != null) {
             int i = 0;
-            bmu bmuVarBh = bh(clsF);
-            bmuVarBh.v(true);
-            cde cdeVarT = bmuVarBh.t();
-            cdeVarT.ab = str;
-            methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+            SyntheticPileOfMess bmuVarBh = bh(clsF);
+            bmuVarBh.setHookOptional(true);
+            MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT.name = str;
+            methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
         }
         if (methodHookWrapperVar == null) {
             ewq.h("Failed to initialize YukiXposedModuleStatus");
@@ -84,21 +84,21 @@ public abstract class dqc {
 
     public static final Object ba(long j, doi doiVar) {
         if (j > 0) {
-            tc tcVar = new tc(cmz.ab(doiVar));
-            aox aoxVarU = tcVar.u();
-            if (aoxVarU != null && !(tc.d.get(tcVar) instanceof coo)) {
+            CancellableContinuation cancellableContinuationVar = new CancellableContinuation(cmz.ab(doiVar));
+            aox aoxVarU = cancellableContinuationVar.u();
+            if (aoxVarU != null && !(CancellableContinuation.d.get(cancellableContinuationVar) instanceof coo)) {
                 aoxVarU.e();
-                tc.e.set(tcVar, con.b);
+                CancellableContinuation.e.set(cancellableContinuationVar, con.b);
             }
             if (j < Long.MAX_VALUE) {
-                ahf ahfVar_w = tcVar.g._w(arj.a);
+                ahf ahfVar_w = cancellableContinuationVar.g._w(arj.a);
                 als alsVar = ahfVar_w instanceof als ? (als) ahfVar_w : null;
                 if (alsVar == null) {
                     alsVar = akl.a;
                 }
-                alsVar._av(j, tcVar);
+                alsVar._av(j, cancellableContinuationVar);
             }
-            Object objT = tcVar.t();
+            Object objT = cancellableContinuationVar.t();
             if (objT == ahq.a) {
                 return objT;
             }
@@ -205,7 +205,7 @@ public abstract class dqc {
         int i22 = aydVar.h + i;
         if (((byte[]) aydVar.l.d).length - i22 > 32768) {
             int i23 = ayd.c;
-            int iAc = bhu.ac(i23, i22 + i23);
+            int iAc = FastKV.ac(i23, i22 + i23);
             byte[] bArr3 = (byte[]) aydVar.l.d;
             if (iAc >= bArr3.length) {
                 i2 = 0;
@@ -220,19 +220,19 @@ public abstract class dqc {
                     MappedByteBuffer mappedByteBufferAw2 = null;
                     try {
                         fileChannel.truncate(j);
-                        mappedByteBufferAw = bhu.aw(fileChannel, iAc);
+                        mappedByteBufferAw = FastKV.aw(fileChannel, iAc);
                     } catch (IOException unused) {
                         mappedByteBufferAw = null;
                     }
                     FileChannel fileChannel2 = aydVar.w;
                     try {
                         fileChannel2.truncate(j);
-                        mappedByteBufferAw2 = bhu.aw(fileChannel2, iAc);
+                        mappedByteBufferAw2 = FastKV.aw(fileChannel2, iAc);
                     } catch (IOException unused2) {
                     }
                     if (mappedByteBufferAw == null || mappedByteBufferAw2 == null) {
                         Log.e("FastKV", aydVar.e, new Exception("map failed"));
-                        bhu.be(aydVar);
+                        FastKV.be(aydVar);
                     } else {
                         aydVar.x = mappedByteBufferAw;
                         aydVar.y = mappedByteBufferAw2;
@@ -305,17 +305,17 @@ public abstract class dqc {
         return listSingletonList;
     }
 
-    public static /* synthetic */ bmu bg(IEmpty5 bsvVar) {
-        return new bmu(awp.c(null, cnf.getJavaClass(bsvVar), 15));
+    public static /* synthetic */ SyntheticPileOfMess bg(IEmpty5 bsvVar) {
+        return new SyntheticPileOfMess(GifEncoder.initConfig(null, HugeSyntheticPileOfHelpers.getJavaClass(bsvVar), 15));
     }
 
-    public static bmu bh(Class cls) {
-        return new bmu(awp.c(null, cls, 15));
+    public static SyntheticPileOfMess bh(Class cls) {
+        return new SyntheticPileOfMess(GifEncoder.initConfig(null, cls, 15));
     }
 
-    public static bmu bi(Object obj) {
-        return obj instanceof IEmpty5 ? new bmu(awp.c(obj, cnf.getJavaClass((IEmpty5) obj), 14))
-                : obj instanceof Class ? new bmu(awp.c(obj, (Class) obj, 14)) : new bmu(awp.c(obj, obj.getClass(), 14));
+    public static SyntheticPileOfMess getWrapperConfiguration(Object obj) {
+        return obj instanceof IEmpty5 ? new SyntheticPileOfMess(GifEncoder.initConfig(obj, HugeSyntheticPileOfHelpers.getJavaClass((IEmpty5) obj), 14))
+                : obj instanceof Class ? new SyntheticPileOfMess(GifEncoder.initConfig(obj, (Class) obj, 14)) : new SyntheticPileOfMess(GifEncoder.initConfig(obj, obj.getClass(), 14));
     }
 
     public static KotlinIntProgression bj(IntRange intRangeVar, int i) {
@@ -334,7 +334,7 @@ public abstract class dqc {
         return new KotlinIntProgression(i2, i3, i);
     }
 
-    public static void bk(ViewGroup viewGroup, boolean z) {
+    public static void tryGetClassByName(ViewGroup viewGroup, boolean z) {
         if (Build.VERSION.SDK_INT >= 29) {
             erd.tryGetClassByName(viewGroup, z);
         } else if (av) {
@@ -346,11 +346,11 @@ public abstract class dqc {
         }
     }
 
-    public static final void bl(String str, zc zcVar) {
+    public static final void throwSomething(String str, zc zcVar) {
         String strO;
         String str2 = "in the polymorphic scope of '" + zcVar.d() + '\'';
         if (str == null) {
-            strO = dkz.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH,
+            strO = StaticHelpers6.o(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH,
                     "Class discriminator was missing and no default serializers were registered ", str2);
         } else {
             strO = "Serializer for subclass '" + str + "' is not found " + str2 + ".\nCheck if class with serial name '"
@@ -359,7 +359,7 @@ public abstract class dqc {
                     + str + "' has to be '@Serializable', and the base class '" + zcVar.d()
                     + "' has to be sealed and '@Serializable'.";
         }
-        throw new dgb(strO);
+        throw new SomeIllegalArgumentException(strO);
     }
 
     public static IntRange bm(int i, int i2) {

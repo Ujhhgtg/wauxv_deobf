@@ -37,28 +37,28 @@ public final class mh extends SwitchHook implements bnc {
                 return;
             }
             int i = 0;
-            azg azgVarR = dqc.bi(obj2).r();
+            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).r();
             gp.a.getClass();
-            azgVarR.a = emn.bb(go.a).getDeclaringClass();
-            Object objD = ((azk) aaz.e(azgVarR.c())).d();
+            fieldResolverVarR.fieldType = StaticHelpers7.bb(go.a).getDeclaringClass();
+            Object objD = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).d();
             throwIfVar1IsNull(objD);
             elb.a.getClass();
-            Object objB = gp.b((Class) SomeStaticHelpers.p(emn.az(ela.a).getInterfaces()), objD);
+            Object objB = gp.b((Class) SomeStaticHelpers.p(StaticHelpers7.az(ela.a).getInterfaces()), objD);
             long msgId = msgInfoBean.getMsgId();
-            cde cdeVarT = dqc.bi(objB).t();
-            cdeVarT.ai = new dos(4);
-            Object objJ = ((MethodHookWrapper) dkz.n(new Object[] { dal.b(Long.TYPE) }, 1, cdeVarT)).j(Long.valueOf(msgId));
+            MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objB).getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT.ai = new dos(4);
+            Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(Long.TYPE) }, 1, methodResolverVarT)).j(Long.valueOf(msgId));
             throwIfVar1IsNull(objJ);
             if (nullSafeIsEqual(objJ.toString(), "NoTransform" /* "NoTransform" /* "NoTransform" /* cnb.z(-440878392933162L)  */)) {
                 mgVar.put(Long.valueOf(msgInfoBean.getMsgId()), bool);
                 Object origin = msgInfoBean.getOrigin();
-                cde cdeVarT2 = dqc.bi(objB).t();
-                cdeVarT2.a = Void.TYPE;
+                MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objB).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT2.returnType = Void.TYPE;
                 cge.a.getClass();
-                Class clsAz = emn.az(cgd.a);
+                Class clsAz = StaticHelpers7.az(cgd.a);
                 zc zcVarB = dal.b(Boolean.TYPE);
                 Class cls = Integer.TYPE;
-                ((MethodHookWrapper) dkz.n(new Object[] { clsAz, zcVarB, dal.b(cls), dal.b(cls) }, 4, cdeVarT2)).e(origin,
+                ((MethodHookWrapper) StaticHelpers6.n(new Object[] { clsAz, zcVarB, dal.b(cls), dal.b(cls) }, 4, methodResolverVarT2)).e(origin,
                         Boolean.FALSE, -1, 0);
             }
         }

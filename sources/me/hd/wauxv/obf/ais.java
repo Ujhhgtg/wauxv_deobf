@@ -21,7 +21,7 @@ public final class ais extends awb {
                 awaVar.o = null;
                 CheckableImageButton checkableImageButton = awaVar.g;
                 checkableImageButton.setOnLongClickListener(null);
-                bhu.bb(checkableImageButton, null);
+                FastKV.bb(checkableImageButton, null);
                 break;
         }
     }

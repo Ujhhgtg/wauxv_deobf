@@ -11,7 +11,7 @@ public final class dvu {
 
     public /* synthetic */ dvu(int i, Integer num, Integer num2, Integer num3, Integer num4) {
         if (15 != (i & 15)) {
-            bht.ah(i, 15, dvs.b.getDescriptor());
+            ResourcesCompat.ah(i, 15, dvs.b.getDescriptor());
             throw null;
         }
         this.a = num;

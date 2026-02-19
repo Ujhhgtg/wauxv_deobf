@@ -12,14 +12,14 @@ import java.util.Calendar;
 /* JADX INFO: loaded from: classes.dex */
 public final class hx extends hz {
     public final /* synthetic */ int a = 0;
-    public final /* synthetic */ ic b;
+    public final /* synthetic */ AppCompatDelegate b;
     public final Object c;
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public hx(ic icVar, jx jxVar) {
-        super(icVar);
-        this.b = icVar;
-        this.c = jxVar;
+    public hx(AppCompatDelegate appCompatDelegateVar, FactoryPools factoryPoolsVar) {
+        super(appCompatDelegateVar);
+        this.b = appCompatDelegateVar;
+        this.c = factoryPoolsVar;
     }
 
     @Override // me.hd.wauxv.obf.hz
@@ -47,11 +47,11 @@ public final class hx extends hz {
             case 0:
                 return hs.a((PowerManager) this.c) ? 2 : 1;
             default:
-                jx jxVar = (jx) this.c;
-                emb embVar = (emb) jxVar.f;
-                LocationManager locationManager = (LocationManager) jxVar.e;
+                FactoryPools factoryPoolsVar = (FactoryPools) this.c;
+                emb embVar = (emb) factoryPoolsVar.f;
+                LocationManager locationManager = (LocationManager) factoryPoolsVar.e;
                 if (embVar.b <= System.currentTimeMillis()) {
-                    Context context = (Context) jxVar.h;
+                    Context context = (Context) factoryPoolsVar.h;
                     Location lastKnownLocation = null;
                     if (aye.o(context, "android.permission.ACCESS_COARSE_LOCATION") == 0) {
                         try {
@@ -128,9 +128,9 @@ public final class hx extends hz {
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public hx(ic icVar, Context context) {
-        super(icVar);
-        this.b = icVar;
+    public hx(AppCompatDelegate appCompatDelegateVar, Context context) {
+        super(appCompatDelegateVar);
+        this.b = appCompatDelegateVar;
         this.c = (PowerManager) context.getApplicationContext().getSystemService("power");
     }
 }

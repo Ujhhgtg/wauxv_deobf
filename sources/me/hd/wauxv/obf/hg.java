@@ -38,9 +38,9 @@ public final class hg extends CheckedTextView {
         this.a = new hh(this);
         Context context2 = getContext();
         int[] iArr = cyf.l;
-        jx jxVarK = jx.k(context2, attributeSet, iArr, R.attr.checkedTextViewStyle);
-        TypedArray typedArray = (TypedArray) jxVarK.e;
-        eqz.r(this, getContext(), iArr, attributeSet, (TypedArray) jxVarK.e, R.attr.checkedTextViewStyle, 0);
+        FactoryPools factoryPoolsVarK = FactoryPools.k(context2, attributeSet, iArr, R.attr.checkedTextViewStyle);
+        TypedArray typedArray = (TypedArray) factoryPoolsVarK.e;
+        ViewCompat.r(this, getContext(), iArr, attributeSet, (TypedArray) factoryPoolsVarK.e, R.attr.checkedTextViewStyle, 0);
         try {
             if (typedArray.hasValue(1) && (resourceId2 = typedArray.getResourceId(1, 0)) != 0) {
                 try {
@@ -54,15 +54,15 @@ public final class hg extends CheckedTextView {
                 setCheckMarkDrawable(cmz.y(getContext(), resourceId));
             }
             if (typedArray.hasValue(2)) {
-                setCheckMarkTintList(jxVarK.r(2));
+                setCheckMarkTintList(factoryPoolsVarK.r(2));
             }
             if (typedArray.hasValue(3)) {
                 setCheckMarkTintMode(apy.f(typedArray.getInt(3, -1), null));
             }
-            jxVarK.ae();
+            factoryPoolsVarK.ae();
             getEmojiTextViewHelper().d(attributeSet, R.attr.checkedTextViewStyle);
         } catch (Throwable th) {
-            jxVarK.ae();
+            factoryPoolsVarK.ae();
             throw th;
         }
     }

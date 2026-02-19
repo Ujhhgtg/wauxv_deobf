@@ -13,6 +13,6 @@ public final class dkn extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(dkm.a, dexKitBridge, new djk(22));
+        StaticHelpers7.resolveDexAndCache(dkm.a, dexKitBridge, new djk(22));
     }
 }

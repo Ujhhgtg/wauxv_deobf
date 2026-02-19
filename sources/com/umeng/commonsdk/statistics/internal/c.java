@@ -30,7 +30,7 @@ import java.security.SecureRandom;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLHandshakeException;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import org.apache.http.conn.ssl.SSLSocketFactory;
 
@@ -185,7 +185,7 @@ public class c {
             } else {
                 c();
             }
-            String strO = yg.concatToVar1(dkz.y(str2), File.separator, str);
+            String strO = yg.concatToVar1(StaticHelpers6.toSb(str2), File.separator, str);
             if (SdkVersion.SDK_TYPE != 0) {
                 bArrA = a(bArr, strO);
             } else if (i == 0) {

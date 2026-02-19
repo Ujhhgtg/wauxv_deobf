@@ -27,7 +27,7 @@ import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarOutputStream;
 import java.util.logging.Logger;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.loading.ClassLoadingStrategy;
 import net.bytebuddy.pool.TypePool;
@@ -281,7 +281,7 @@ public abstract class AndroidClassLoadingStrategy implements ClassLoadingStrateg
                     try {
                         return Class.forName(typeDescription.getName(), false, classLoader);
                     } catch (ClassNotFoundException e) {
-                        throw new IllegalStateException(dkz.u("Could not locate ", typeDescription), e);
+                        throw new IllegalStateException(StaticHelpers6.concat("Could not locate ", typeDescription), e);
                     }
                 }
 
@@ -404,7 +404,7 @@ public abstract class AndroidClassLoadingStrategy implements ClassLoadingStrateg
                 try {
                     map.put(typeDescription, Class.forName(typeDescription.getName(), false, dexClassLoader));
                 } catch (ClassNotFoundException e) {
-                    throw new IllegalStateException(dkz.u("Cannot load ", typeDescription), e);
+                    throw new IllegalStateException(StaticHelpers6.concat("Cannot load ", typeDescription), e);
                 }
             }
             return map;

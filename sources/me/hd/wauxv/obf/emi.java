@@ -17,7 +17,7 @@ import java.util.Objects;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public class emi extends emn {
+public class emi extends StaticHelpers7 {
     public static Font a(FontFamily fontFamily, int i) {
         FontStyle fontStyle = new FontStyle((i & 1) != 0 ? 700 : 400, (i & 2) != 0 ? 1 : 0);
         Font font = fontFamily.getFont(0);

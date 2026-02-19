@@ -90,7 +90,7 @@ public class acj extends Dialog implements bup, dep {
             burVar = new bur(this);
             this.i = burVar;
         }
-        burVar.m(bug.ON_CREATE);
+        burVar.m(LifeEventEnum.ON_CREATE);
     }
 
     @Override // android.app.Dialog
@@ -109,7 +109,7 @@ public class acj extends Dialog implements bup, dep {
             burVar = new bur(this);
             this.i = burVar;
         }
-        burVar.m(bug.ON_RESUME);
+        burVar.m(LifeEventEnum.ON_RESUME);
     }
 
     @Override // android.app.Dialog
@@ -119,7 +119,7 @@ public class acj extends Dialog implements bup, dep {
             burVar = new bur(this);
             this.i = burVar;
         }
-        burVar.m(bug.ON_DESTROY);
+        burVar.m(LifeEventEnum.ON_DESTROY);
         this.i = null;
         super.onStop();
     }

@@ -11,7 +11,7 @@ public final class dvr {
 
     public /* synthetic */ dvr(int i, String str, ehp ehpVar, Integer num, Integer num2) {
         if (15 != (i & 15)) {
-            bht.ah(i, 15, dvp.b.getDescriptor());
+            ResourcesCompat.ah(i, 15, dvp.b.getDescriptor());
             throw null;
         }
         this.a = str;

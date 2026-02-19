@@ -10,7 +10,7 @@ public final class eaz {
         if (1 == (i & 1)) {
             this.a = duhVar;
         } else {
-            bht.ah(i, 1, eax.b.getDescriptor());
+            ResourcesCompat.ah(i, 1, eax.b.getDescriptor());
             throw null;
         }
     }

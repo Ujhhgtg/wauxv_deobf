@@ -61,35 +61,35 @@ public final class blu {
                     Class cls2 = Boolean.TYPE;
                     if (zB) {
                         int i = 0;
-                        jx jxVar = ewm.c;
+                        FactoryPools factoryPoolsVar = ewm.c;
                         btc btcVar = ewm.b[0];
-                        bmu bmuVarBh = dqc.bh(jxVar.w());
-                        ((cbg) bmuVarBh.h).c = ewlVar;
-                        bmuVarBh.v(false);
-                        cde cdeVarT = bmuVarBh.t();
-                        cdeVarT.ab = "nativeLoad";
+                        SyntheticPileOfMess bmuVarBh = dqc.bh(factoryPoolsVar.w());
+                        ((Configuration) bmuVarBh.obj).processorResolver = ewlVar;
+                        bmuVarBh.setHookOptional(false);
+                        MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                        methodResolverVarT.name = "nativeLoad";
                         Class cls3 = Integer.TYPE;
-                        cdeVarT.z(Arrays.copyOf(
+                        methodResolverVarT.setParams(Arrays.copyOf(
                                 new Object[] { dal.b(cls3), dal.b(String.class), dal.b(cls3), dal.b(evt.b()) }, 4));
-                        cdeVarT.ak(cdyVar);
-                        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+                        methodResolverVarT.ak(cdyVar);
+                        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
                         objF = methodHookWrapperVar != null ? methodHookWrapperVar.f(0, str, 1, null) : null;
                     } else {
                         if (!eu.b(28)) {
                             throw new IllegalStateException("Unsupported Android version.");
                         }
                         int i2 = 0;
-                        jx jxVar2 = ewm.c;
+                        FactoryPools factoryPoolsVar2 = ewm.c;
                         btc btcVar2 = ewm.b[0];
-                        bmu bmuVarBh2 = dqc.bh(jxVar2.w());
-                        ((cbg) bmuVarBh2.h).c = ewlVar;
-                        bmuVarBh2.v(false);
-                        cde cdeVarT2 = bmuVarBh2.t();
-                        cdeVarT2.ab = "nativeLoad";
-                        cdeVarT2.z(Arrays.copyOf(
+                        SyntheticPileOfMess bmuVarBh2 = dqc.bh(factoryPoolsVar2.w());
+                        ((Configuration) bmuVarBh2.obj).processorResolver = ewlVar;
+                        bmuVarBh2.setHookOptional(false);
+                        MethodResolver methodResolverVarT2 = bmuVarBh2.getMethodResolverBasedOnPreviouslyProvidedConfig();
+                        methodResolverVarT2.name = "nativeLoad";
+                        methodResolverVarT2.setParams(Arrays.copyOf(
                                 new Object[] { dal.b(String.class), dal.b(cls2), dal.b(cls2), dal.b(cls2) }, 4));
-                        cdeVarT2.ak(cdyVar);
-                        MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) aaz.g(cdeVarT2.aj());
+                        methodResolverVarT2.ak(cdyVar);
+                        MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT2.findMethods());
                         if (methodHookWrapperVar2 != null) {
                             Boolean bool = Boolean.FALSE;
                             objF = methodHookWrapperVar2.f(str, bool, bool, bool);
@@ -100,21 +100,21 @@ public final class blu {
                         throw new IllegalStateException("Failed to create ApkAssets.");
                     }
                     ewm.e = l;
-                    jx jxVar3 = ewm.d;
+                    FactoryPools factoryPoolsVar3 = ewm.d;
                     btc btcVar3 = ewm.b[1];
-                    bmu bmuVarBh3 = dqc.bh(jxVar3.w());
-                    ((cbg) bmuVarBh3.h).c = ewlVar;
-                    bmuVarBh3.v(false);
+                    SyntheticPileOfMess bmuVarBh3 = dqc.bh(factoryPoolsVar3.w());
+                    ((Configuration) bmuVarBh3.obj).processorResolver = ewlVar;
+                    bmuVarBh3.setHookOptional(false);
                     adt adtVarM = bmuVarBh3.m();
                     boolean zB2 = eu.b(36);
                     Class cls4 = Long.TYPE;
                     if (zB2) {
-                        adtVarM.z(
+                        adtVarM.setParams(
                                 Arrays.copyOf(new Object[] { dal.b(AssetManager.class), dal.b(cls4), dal.b(cls2) }, 3));
                     } else {
-                        adtVarM.z(Arrays.copyOf(new Object[] { dal.b(AssetManager.class), dal.b(cls4) }, 2));
+                        adtVarM.setParams(Arrays.copyOf(new Object[] { dal.b(AssetManager.class), dal.b(cls4) }, 2));
                     }
-                    ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) aaz.g(adtVarM.a());
+                    ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) StaticHelpers5.g(adtVarM.a());
                     if (constructorHookWrapperVar != null) {
                         AutoCloseable autoCloseable = eu.b(36) ? (AutoCloseable) constructorHookWrapperVar.c(null, ewm.e, Boolean.FALSE)
                                 : (AutoCloseable) constructorHookWrapperVar.c(null, ewm.e);
@@ -140,7 +140,7 @@ public final class blu {
     }
 
     public final View k() throws cth {
-        View view = (View) aaz.f(this.f.values());
+        View view = (View) StaticHelpers5.f(this.f.values());
         if (view != null) {
             return view;
         }

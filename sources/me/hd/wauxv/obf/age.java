@@ -59,20 +59,20 @@ public final /* synthetic */ class age implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = bhu.x(th);
+                    objX = FastKV.x(th);
                 }
                 Object obj3 = objX instanceof dcx ? null : objX;
                 throwIfVar1IsNull(obj3);
                 MenuItem menuItem = (MenuItem) obj3;
                 int i8 = 0;
-                azg azgVarAa = dkz.aa(hookParam);
-                azgVarAa.a = emn.bb(agg.a).getDeclaringClass();
-                Object objD = ((azk) aaz.e(azgVarAa.c())).d();
+                FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam);
+                fieldResolverVarAa.fieldType = StaticHelpers7.bb(agg.a).getDeclaringClass();
+                Object objD = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).d();
                 throwIfVar1IsNull(objD);
-                azg azgVarR = dqc.bi(objD).r();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objD).r();
                 agc.a.getClass();
-                azgVarR.a = emn.bb(agb.a).getDeclaringClass();
-                Object objD2 = ((azk) aaz.e(azgVarR.c())).d();
+                fieldResolverVarR.fieldType = StaticHelpers7.bb(agb.a).getDeclaringClass();
+                Object objD2 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).d();
                 throwIfVar1IsNull(objD2);
                 ConversationBean conversationBean = new ConversationBean(objD2);
                 for (bnf bnfVar : agi.b) {
@@ -104,7 +104,7 @@ public final /* synthetic */ class age implements IInvokable {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = bhu.x(th2);
+                    objX2 = FastKV.x(th2);
                 }
                 if (objX2 instanceof dcx) {
                     objX2 = null;
@@ -117,16 +117,16 @@ public final /* synthetic */ class age implements IInvokable {
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = bhu.x(th3);
+                    objX3 = FastKV.x(th3);
                 }
                 Object obj4 = objX3 instanceof dcx ? null : objX3;
                 throwIfVar1IsNull(obj4);
                 AdapterView.AdapterContextMenuInfo adapterContextMenuInfo = (AdapterView.AdapterContextMenuInfo) obj4;
                 int i9 = 0;
-                azg azgVarAa2 = dkz.aa(hookParam2);
+                FieldResolver fieldResolverVarAa2 = StaticHelpers6.aa(hookParam2);
                 agc.a.getClass();
-                azgVarAa2.a = emn.bb(agb.a).getDeclaringClass();
-                Object objD3 = ((azk) aaz.e(azgVarAa2.c())).d();
+                fieldResolverVarAa2.fieldType = StaticHelpers7.bb(agb.a).getDeclaringClass();
+                Object objD3 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).d();
                 throwIfVar1IsNull(objD3);
                 ConversationBean conversationBean2 = new ConversationBean(objD3);
                 for (bnf bnfVar2 : agi.b) {
@@ -207,7 +207,7 @@ public final /* synthetic */ class age implements IInvokable {
                 bah bahVar4 = (bah) obj;
                 cdj cdjVar4 = new cdj();
                 agp.a.getClass();
-                cdjVar4.o(emn.az(agl.a));
+                cdjVar4.o(StaticHelpers7.az(agl.a));
                 cdjVar4.t("MicroMsg.ConversationStorage" /* "MicroMsg.ConversationStorage" /* "MicroMsg.ConversationStorage" /* cnb.z(-373460291287850L)  */, "get null with username:" /*
                                                                                                                     * cnb
                                                                                                                     * .z
@@ -221,7 +221,7 @@ public final /* synthetic */ class age implements IInvokable {
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar5 = new cdj();
                 agp.a.getClass();
-                cdjVar5.o(emn.az(agl.a));
+                cdjVar5.o(StaticHelpers7.az(agl.a));
                 cdjVar5.t("updateUnreadByTalker %s" /* "updateUnreadByTalker %s" /* "updateUnreadByTalker %s" /* cnb.z(-371677879860010L)  */);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar5;
@@ -230,7 +230,7 @@ public final /* synthetic */ class age implements IInvokable {
                 bah bahVar6 = (bah) obj;
                 cdj cdjVar6 = new cdj();
                 agp.a.getClass();
-                cdjVar6.o(emn.az(agl.a));
+                cdjVar6.o(StaticHelpers7.az(agl.a));
                 cdjVar6.p(new IntRange(2, 4, 1));
                 cdjVar6.v("Update " /* "Update " /* "Update " /* cnb.z(-372124556458794L)  */, "rconversation" /* "rconversation" /* "rconversation" /* cnb.z(-372090196720426L)  */,
                         " set " /* " set " /* " set " /* cnb.z(-372081606785834L)  */, "parentRef" /* "parentRef" /* "parentRef" /* cnb.z(-372038657112874L)  */, " = '" /*
@@ -266,8 +266,8 @@ public final /* synthetic */ class age implements IInvokable {
                 return kotlinUnitVar;
             case 18:
                 ahf ahfVar = (ahf) obj;
-                if (ahfVar instanceof ahj) {
-                    return (ahj) ahfVar;
+                if (ahfVar instanceof Dispatcher) {
+                    return (Dispatcher) ahfVar;
                 }
                 return null;
             case 19:
@@ -284,88 +284,88 @@ public final /* synthetic */ class age implements IInvokable {
                 return kotlinUnitVar;
             case 21:
                 View view = (View) obj;
-                View viewK = dkz.k(view, R.layout.module_dialog_custom_balance, null, false);
+                View viewK = StaticHelpers6.k(view, R.layout.module_dialog_custom_balance, null, false);
                 int i10 = R.id.moduleDialogEdtCustomBalanceMax1;
-                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                         R.id.moduleDialogEdtCustomBalanceMax1);
                 if (textInputEditText != null) {
                     i10 = R.id.moduleDialogEdtCustomBalanceMax2;
-                    TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                    TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                             R.id.moduleDialogEdtCustomBalanceMax2);
                     if (textInputEditText2 != null) {
                         i10 = R.id.moduleDialogEdtCustomBalanceMax3;
-                        TextInputEditText textInputEditText3 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                        TextInputEditText textInputEditText3 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                 R.id.moduleDialogEdtCustomBalanceMax3);
                         if (textInputEditText3 != null) {
                             i10 = R.id.moduleDialogEdtCustomBalanceMin1;
-                            TextInputEditText textInputEditText4 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                            TextInputEditText textInputEditText4 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                     R.id.moduleDialogEdtCustomBalanceMin1);
                             if (textInputEditText4 != null) {
                                 i10 = R.id.moduleDialogEdtCustomBalanceMin2;
-                                TextInputEditText textInputEditText5 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                                TextInputEditText textInputEditText5 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                         R.id.moduleDialogEdtCustomBalanceMin2);
                                 if (textInputEditText5 != null) {
                                     i10 = R.id.moduleDialogEdtCustomBalanceMin3;
-                                    TextInputEditText textInputEditText6 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                                    TextInputEditText textInputEditText6 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                             R.id.moduleDialogEdtCustomBalanceMin3);
                                     if (textInputEditText6 != null) {
                                         i10 = R.id.moduleDialogEdtCustomBalanceValue1;
-                                        TextInputEditText textInputEditText7 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                                        TextInputEditText textInputEditText7 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                 R.id.moduleDialogEdtCustomBalanceValue1);
                                         if (textInputEditText7 != null) {
                                             i10 = R.id.moduleDialogEdtCustomBalanceValue2;
-                                            TextInputEditText textInputEditText8 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                                            TextInputEditText textInputEditText8 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                     R.id.moduleDialogEdtCustomBalanceValue2);
                                             if (textInputEditText8 != null) {
                                                 i10 = R.id.moduleDialogEdtCustomBalanceValue3;
-                                                TextInputEditText textInputEditText9 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                                                TextInputEditText textInputEditText9 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                         R.id.moduleDialogEdtCustomBalanceValue3);
                                                 if (textInputEditText9 != null) {
                                                     i10 = R.id.moduleDialogInputCustomBalanceMax1;
-                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                             R.id.moduleDialogInputCustomBalanceMax1)) != null) {
                                                         i10 = R.id.moduleDialogInputCustomBalanceMax2;
-                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                 R.id.moduleDialogInputCustomBalanceMax2)) != null) {
                                                             i10 = R.id.moduleDialogInputCustomBalanceMax3;
-                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                     R.id.moduleDialogInputCustomBalanceMax3)) != null) {
                                                                 i10 = R.id.moduleDialogInputCustomBalanceMin1;
-                                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                         R.id.moduleDialogInputCustomBalanceMin1)) != null) {
                                                                     i10 = R.id.moduleDialogInputCustomBalanceMin2;
-                                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                             R.id.moduleDialogInputCustomBalanceMin2)) != null) {
                                                                         i10 = R.id.moduleDialogInputCustomBalanceMin3;
-                                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                                 R.id.moduleDialogInputCustomBalanceMin3)) != null) {
                                                                             i10 = R.id.moduleDialogInputCustomBalanceValue1;
-                                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                                     R.id.moduleDialogInputCustomBalanceValue1)) != null) {
                                                                                 i10 = R.id.moduleDialogInputCustomBalanceValue2;
-                                                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                                         R.id.moduleDialogInputCustomBalanceValue2)) != null) {
                                                                                     i10 = R.id.moduleDialogInputCustomBalanceValue3;
-                                                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                                                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                                             R.id.moduleDialogInputCustomBalanceValue3)) != null) {
                                                                                         i10 = R.id.moduleDialogRbCustomBalanceMathAdd;
                                                                                         MaterialRadioButton materialRadioButton = (MaterialRadioButton) KotlinHelpers2
-                                                                                                .aq(viewK,
+                                                                                                .recursivelyFindViewById(viewK,
                                                                                                         R.id.moduleDialogRbCustomBalanceMathAdd);
                                                                                         if (materialRadioButton != null) {
                                                                                             i10 = R.id.moduleDialogRbCustomBalanceMathDefault;
                                                                                             MaterialRadioButton materialRadioButton2 = (MaterialRadioButton) KotlinHelpers2
-                                                                                                    .aq(viewK,
+                                                                                                    .recursivelyFindViewById(viewK,
                                                                                                             R.id.moduleDialogRbCustomBalanceMathDefault);
                                                                                             if (materialRadioButton2 != null) {
                                                                                                 i10 = R.id.moduleDialogRbCustomBalanceMathSub;
                                                                                                 MaterialRadioButton materialRadioButton3 = (MaterialRadioButton) KotlinHelpers2
-                                                                                                        .aq(viewK,
+                                                                                                        .recursivelyFindViewById(viewK,
                                                                                                                 R.id.moduleDialogRbCustomBalanceMathSub);
                                                                                                 if (materialRadioButton3 != null) {
                                                                                                     i10 = R.id.moduleDialogRgCustomBalanceMath;
                                                                                                     RadioGroup radioGroup = (RadioGroup) KotlinHelpers2
-                                                                                                            .aq(viewK,
+                                                                                                            .recursivelyFindViewById(viewK,
                                                                                                                     R.id.moduleDialogRgCustomBalanceMath);
                                                                                                     if (radioGroup != null) {
                                                                                                         LinearLayout linearLayout = (LinearLayout) viewK;
@@ -510,17 +510,17 @@ public final /* synthetic */ class age implements IInvokable {
                 List list = (List) obj;
                 Object obj5 = list.get(0);
                 cls = String.class;
-                Class<String> clsBf = cnf.bf(dal.b(cls));
+                Class<String> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 if (nullSafeIsEqual(obj5, clsBf != null ? clsBf : String.class)) {
                     Object obj6 = list.get(1);
                     cls2 = Boolean.class;
-                    Class<Boolean> clsBf2 = cnf.bf(dal.b(cls2));
+                    Class<Boolean> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                     if (clsBf2 == null) {
                         clsBf2 = cls2;
                     }
                     if (nullSafeIsEqual(obj6, clsBf2)) {
                         Object obj7 = list.get(2);
-                        Class<Boolean> clsBf3 = cnf.bf(dal.b(cls2));
+                        Class<Boolean> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                         z = nullSafeIsEqual(obj7, clsBf3 != null ? clsBf3 : Boolean.class);
                     }
                 }
@@ -534,7 +534,7 @@ public final /* synthetic */ class age implements IInvokable {
                         objX4 = null;
                     }
                 } catch (Throwable th4) {
-                    objX4 = bhu.x(th4);
+                    objX4 = FastKV.x(th4);
                 }
                 String str = (String) (objX4 instanceof dcx ? null : objX4);
                 if (str == null) {
@@ -575,21 +575,21 @@ public final /* synthetic */ class age implements IInvokable {
                 return kotlinUnitVar;
             case 24:
                 View view2 = (View) obj;
-                View viewK2 = dkz.k(view2, R.layout.module_dialog_custom_contact_count, null, false);
+                View viewK2 = StaticHelpers6.k(view2, R.layout.module_dialog_custom_contact_count, null, false);
                 int i11 = R.id.moduleDialogEdtCustomFriendCount;
-                TextInputEditText textInputEditText10 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                TextInputEditText textInputEditText10 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                         R.id.moduleDialogEdtCustomFriendCount);
                 if (textInputEditText10 != null) {
                     i11 = R.id.moduleDialogEdtCustomGroupCount;
-                    TextInputEditText textInputEditText11 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
+                    TextInputEditText textInputEditText11 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK2,
                             R.id.moduleDialogEdtCustomGroupCount);
                     if (textInputEditText11 != null) {
                         i11 = R.id.moduleDialogEdtMsgInfoTextPlaceholders;
-                        if (((MaterialTextView) KotlinHelpers2.aq(viewK2, R.id.moduleDialogEdtMsgInfoTextPlaceholders)) != null) {
+                        if (((MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewK2, R.id.moduleDialogEdtMsgInfoTextPlaceholders)) != null) {
                             i11 = R.id.moduleDialogInputCustomFriendCount;
-                            if (((TextInputLayout) KotlinHelpers2.aq(viewK2, R.id.moduleDialogInputCustomFriendCount)) != null) {
+                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2, R.id.moduleDialogInputCustomFriendCount)) != null) {
                                 i11 = R.id.moduleDialogInputCustomGroupCount;
-                                if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
+                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK2,
                                         R.id.moduleDialogInputCustomGroupCount)) != null) {
                                     LinearLayout linearLayout2 = (LinearLayout) viewK2;
                                     cem cemVar = new cem(linearLayout2, textInputEditText10, textInputEditText11, i7);
@@ -619,9 +619,9 @@ public final /* synthetic */ class age implements IInvokable {
             case 25:
                 HookParam hookParam4 = (HookParam) obj;
                 int i12 = 0;
-                azg azgVarAa3 = dkz.aa(hookParam4);
-                azgVarAa3.a = dal.b(Integer.TYPE);
-                for (Object obj8 : azgVarAa3.c()) {
+                FieldResolver fieldResolverVarAa3 = StaticHelpers6.aa(hookParam4);
+                fieldResolverVarAa3.fieldType = dal.b(Integer.TYPE);
+                for (Object obj8 : fieldResolverVarAa3.resolve()) {
                     Object objE = ((azk) obj8).e();
                     throwIfVar1IsNull(objE);
                     int iIntValue = ((Number) objE).intValue();
@@ -645,20 +645,20 @@ public final /* synthetic */ class age implements IInvokable {
                 int iK2 = (((Number) objE2).intValue() == 1 ? aip.a : aiq.a).k();
                 if (iK2 != 0) {
                     int i13 = 0;
-                    cde cdeVarT = dqc.bi(hookParam4.getThisObject()).t();
-                    cdeVarT.ab = "setFixedContactCount" /* "setFixedContactCount" /* "setFixedContactCount" /* cnb.z(-430007830706986L)  */;
-                    ((MethodHookWrapper) aaz.e(cdeVarT.aj())).e(Integer.valueOf(iK2));
+                    MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(hookParam4.getThisObject()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                    methodResolverVarT.name = "setFixedContactCount" /* "setFixedContactCount" /* "setFixedContactCount" /* cnb.z(-430007830706986L)  */;
+                    ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(Integer.valueOf(iK2));
                 }
                 return kotlinUnitVar;
             case 26:
                 View view3 = (View) obj;
-                View viewK3 = dkz.k(view3, R.layout.module_dialog_custom_unread_count, null, false);
+                View viewK3 = StaticHelpers6.k(view3, R.layout.module_dialog_custom_unread_count, null, false);
                 int i14 = R.id.moduleDialogEdtCustomUnReadCount;
-                TextInputEditText textInputEditText12 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
+                TextInputEditText textInputEditText12 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK3,
                         R.id.moduleDialogEdtCustomUnReadCount);
                 if (textInputEditText12 != null) {
                     i14 = R.id.moduleDialogInputCustomUnReadCount;
-                    if (((TextInputLayout) KotlinHelpers2.aq(viewK3, R.id.moduleDialogInputCustomUnReadCount)) != null) {
+                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK3, R.id.moduleDialogInputCustomUnReadCount)) != null) {
                         LinearLayout linearLayout3 = (LinearLayout) viewK3;
                         cee ceeVar = new cee(linearLayout3, textInputEditText12, i6);
                         textInputEditText12.setText(String.valueOf(ait.a.k()));

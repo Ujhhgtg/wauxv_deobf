@@ -24,7 +24,7 @@ import com.android.dx.util.ByteArray;
 import com.android.dx.util.Hex;
 import com.android.dx.util.IntList;
 import java.io.PrintStream;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -69,7 +69,7 @@ public class BlockDumper extends BaseDumper {
             sb.append(": ");
             sb.append(Hex.u2(start));
             sb.append("..");
-            parsed(bytes, start, 0, dkz.q(end, sb));
+            parsed(bytes, start, 0, StaticHelpers6.q(end, sb));
             changeIndent(1);
             while (start < end) {
                 int instruction = code.parseInstruction(start, codeObserver);
@@ -82,7 +82,7 @@ public class BlockDumper extends BaseDumper {
                 parsed(bytes, end, 0, "returns");
             } else {
                 for (int i3 = 0; i3 < size2; i3++) {
-                    parsed(bytes, end, 0, dkz.q(successors.get(i3), new StringBuilder("next ")));
+                    parsed(bytes, end, 0, StaticHelpers6.q(successors.get(i3), new StringBuilder("next ")));
                 }
             }
             ByteCatchList catches = byteBlock.getCatches();

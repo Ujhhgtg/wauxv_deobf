@@ -1601,7 +1601,7 @@ public final /* synthetic */ class cdp implements bgx {
         ddz ddzVar11 = ddzVar3;
         acmVarP._bp(dfxVar);
         if ((-1 != i5) || (63 != (i3 & 63))) {
-            bht.ag(new int[]{i5, i3}, new int[]{-1, 63}, descriptor);
+            ResourcesCompat.ag(new int[]{i5, i3}, new int[]{-1, 63}, descriptor);
             throw null;
         }
         cdr cdrVar = new cdr();

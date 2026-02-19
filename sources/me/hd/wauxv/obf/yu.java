@@ -11,9 +11,9 @@ public final class yu extends nd {
     public final String f;
     public final Integer g;
     public final ArrayList h;
-    public final dov i;
-    public final dov j;
-    public final dov k;
+    public final Kotlin$Lazy i;
+    public final Kotlin$Lazy j;
+    public final Kotlin$Lazy k;
 
     public yu(DexKitBridge dexKitBridge, int i, int i2, int i3, String str, Integer num, ArrayList arrayList,
             ArrayList arrayList2, ArrayList arrayList3) {
@@ -22,9 +22,9 @@ public final class yu extends nd {
         this.f = str;
         this.g = num;
         this.h = arrayList;
-        this.i = new dov(new bp(this, 11));
-        this.j = new dov(new yr(this, dexKitBridge, i2));
-        this.k = new dov(new yr(dexKitBridge, this, i2));
+        this.i = new Kotlin$Lazy(new bp(this, 11));
+        this.j = new Kotlin$Lazy(new yr(this, dexKitBridge, i2));
+        this.k = new Kotlin$Lazy(new yr(dexKitBridge, this, i2));
     }
 
     public final boolean equals(Object obj) {
@@ -55,7 +55,7 @@ public final class yu extends nd {
         }
         if (this.h.size() > 0) {
             sb.append(" implements ");
-            sb.append(aaz.k((yw) this.k.getValue(), ", ", null, null, new ws(22), 30));
+            sb.append(StaticHelpers5.k((yw) this.k.getValue(), ", ", null, null, new ws(22), 30));
         }
         return sb.toString();
     }

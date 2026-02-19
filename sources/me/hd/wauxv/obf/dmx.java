@@ -72,7 +72,7 @@ public final class dmx extends KotlinHelpers2 implements ajt, acm {
             KotlinHelpers2.bo(yiVar, Float.valueOf(f));
             throw null;
         } catch (IllegalArgumentException unused) {
-            yi.g(yiVar, dkz.o('\'', "Failed to parse type 'float' for input '", strS), 0, null, 6);
+            yi.g(yiVar, StaticHelpers6.o('\'', "Failed to parse type 'float' for input '", strS), 0, null, 6);
             throw null;
         }
     }
@@ -90,7 +90,7 @@ public final class dmx extends KotlinHelpers2 implements ajt, acm {
             KotlinHelpers2.bo(yiVar, Double.valueOf(d));
             throw null;
         } catch (IllegalArgumentException unused) {
-            yi.g(yiVar, dkz.o('\'', "Failed to parse type 'double' for input '", strS), 0, null, 6);
+            yi.g(yiVar, StaticHelpers6.o('\'', "Failed to parse type 'double' for input '", strS), 0, null, 6);
             throw null;
         }
     }
@@ -168,15 +168,15 @@ public final class dmx extends KotlinHelpers2 implements ajt, acm {
                             if (bAe2 == 8 || bAe2 == 6) {
                                 arrayList.add(Byte.valueOf(bAe2));
                             } else if (bAe2 == 9) {
-                                if (((Number) aaz.l(arrayList)).byteValue() != 8) {
+                                if (((Number) StaticHelpers5.l(arrayList)).byteValue() != 8) {
                                     throw KotlinHelpers2.ak(yiVar.b, "found ] instead of } at path: " + ikVar, str);
                                 }
-                                abf.ar(arrayList);
+                                StaticHelpers2.ar(arrayList);
                             } else if (bAe2 == 7) {
-                                if (((Number) aaz.l(arrayList)).byteValue() != 6) {
+                                if (((Number) StaticHelpers5.l(arrayList)).byteValue() != 6) {
                                     throw KotlinHelpers2.ak(yiVar.b, "found } instead of ] at path: " + ikVar, str);
                                 }
-                                abf.ar(arrayList);
+                                StaticHelpers2.ar(arrayList);
                             } else if (bAe2 == 10) {
                                 yi.g(yiVar,
                                         "Unexpected end of input due to malformed JSON during ignoring unknown keys", 0,
@@ -360,7 +360,7 @@ public final class dmx extends KotlinHelpers2 implements ajt, acm {
         if (strS.length() == 1) {
             return strS.charAt(0);
         }
-        yi.g(yiVar, dkz.o('\'', "Expected single char, but got '", strS), 0, null, 6);
+        yi.g(yiVar, StaticHelpers6.o('\'', "Expected single char, but got '", strS), 0, null, 6);
         throw null;
     }
 
@@ -406,7 +406,7 @@ public final class dmx extends KotlinHelpers2 implements ajt, acm {
             try {
                 bmy.o((cus) btdVar, this, strAd);
                 throw null;
-            } catch (dgb e2) {
+            } catch (SomeIllegalArgumentException e2) {
                 String message2 = e2.getMessage();
                 throwIfVar1IsNull(message2);
                 String strAp = dnj.ap(dnj.aw(message2, '\n'), ".");
@@ -436,7 +436,7 @@ public final class dmx extends KotlinHelpers2 implements ajt, acm {
         try {
             bmy.o((cus) btdVar, this, strC);
             throw null;
-        } catch (dgb e3) {
+        } catch (SomeIllegalArgumentException e3) {
             String message4 = e3.getMessage();
             throwIfVar1IsNull(message4);
             throw KotlinHelpers2.ak(-1, message4, bslVar.toString());
@@ -480,7 +480,7 @@ public final class dmx extends KotlinHelpers2 implements ajt, acm {
                     if ("null".charAt(i) == str.charAt(iAg + i)) {
                     }
                 }
-                if (length <= 4 || cnf.ap(str.charAt(iAg + 4)) != 0) {
+                if (length <= 4 || HugeSyntheticPileOfHelpers.ap(str.charAt(iAg + 4)) != 0) {
                     z = true;
                     yiVar.b = iAg + 4;
                 }

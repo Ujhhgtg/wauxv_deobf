@@ -33,7 +33,7 @@ public class cuc implements dfx, sr {
         int i3 = this.o;
         this.r = new List[i3];
         this.s = new boolean[i3];
-        this.t = ave.a;
+        this.t = EmptyReadonlyMap.INSTANCE;
         final int i4 = 0;
         bfu bfuVar = new bfu(this) { // from class: me.hd.wauxv.obf.cub
             public final /* synthetic */ cuc b;
@@ -56,7 +56,7 @@ public class cuc implements dfx, sr {
                         return cnh.n(this.b.n != null ? new ArrayList(0) : null);
                     default:
                         cuc cucVar = this.b;
-                        return Integer.valueOf(bhu.af(cucVar, (dfx[]) cucVar.v.getValue()));
+                        return Integer.valueOf(FastKV.af(cucVar, (dfx[]) cucVar.v.getValue()));
                 }
             }
         };
@@ -84,7 +84,7 @@ public class cuc implements dfx, sr {
                         return cnh.n(this.b.n != null ? new ArrayList(0) : null);
                     default:
                         cuc cucVar = this.b;
-                        return Integer.valueOf(bhu.af(cucVar, (dfx[]) cucVar.v.getValue()));
+                        return Integer.valueOf(FastKV.af(cucVar, (dfx[]) cucVar.v.getValue()));
                 }
             }
         });
@@ -110,7 +110,7 @@ public class cuc implements dfx, sr {
                         return cnh.n(this.b.n != null ? new ArrayList(0) : null);
                     default:
                         cuc cucVar = this.b;
-                        return Integer.valueOf(bhu.af(cucVar, (dfx[]) cucVar.v.getValue()));
+                        return Integer.valueOf(FastKV.af(cucVar, (dfx[]) cucVar.v.getValue()));
                 }
             }
         });
@@ -187,7 +187,7 @@ public class cuc implements dfx, sr {
 
     @Override // me.hd.wauxv.obf.dfx
     public final List getAnnotations() {
-        return EmptyReadonlyList.a;
+        return EmptyReadonlyList.INSTANCE;
     }
 
     @Override // me.hd.wauxv.obf.dfx
@@ -216,7 +216,7 @@ public class cuc implements dfx, sr {
     @Override // me.hd.wauxv.obf.dfx
     public final List k(int i) {
         List list = this.r[i];
-        return list == null ? EmptyReadonlyList.a : list;
+        return list == null ? EmptyReadonlyList.INSTANCE : list;
     }
 
     /*
@@ -234,7 +234,7 @@ public class cuc implements dfx, sr {
     }
 
     public String toString() {
-        return bhu.bf(this);
+        return FastKV.bf(this);
     }
 
     public final void x(String str, boolean z) {

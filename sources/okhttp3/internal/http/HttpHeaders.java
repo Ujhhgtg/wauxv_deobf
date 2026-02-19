@@ -6,9 +6,8 @@ import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import me.hd.wauxv.obf.ave;
-import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.EmptyReadonlyMap;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.nu;
 import me.hd.wauxv.obf.rh;
@@ -96,7 +95,7 @@ public final class HttpHeaders {
                 String token2 = readToken(rhVar);
                 if (token2 == null) {
                     if (rhVar.i()) {
-                        list.add(new Challenge(token, ave.a));
+                        list.add(new Challenge(token, EmptyReadonlyMap.INSTANCE));
                         return;
                     }
                     return;
@@ -153,7 +152,7 @@ public final class HttpHeaders {
                     list.add(new Challenge(token, linkedHashMap));
                     token = token2;
                 } else {
-                    StringBuilder sbY = dkz.y(token2);
+                    StringBuilder sbY = StaticHelpers6.toSb(token2);
                     sbY.append(dnr.bm(iSkipAll, "="));
                     Map mapSingletonMap = Collections.singletonMap(null, sbY.toString());
                     throwIfVar1IsNull(mapSingletonMap, "singletonMap<String, Str…ek + \"=\".repeat(eqCount))");

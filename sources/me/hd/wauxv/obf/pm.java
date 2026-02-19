@@ -43,7 +43,7 @@ public final class pm implements LeadingMarginSpan {
                 Paint paint2 = this.d;
                 paint2.set(paint);
                 bzrVar.getClass();
-                int iAe = emn.ae(paint2.getColor(), 25);
+                int iAe = StaticHelpers7.ae(paint2.getColor(), 25);
                 paint2.setStyle(Paint.Style.FILL);
                 paint2.setColor(iAe);
                 int i9 = i2 * i8;
@@ -61,7 +61,7 @@ public final class pm implements LeadingMarginSpan {
                 paint3.set(paint);
                 bzr bzrVar2 = this.b;
                 bzrVar2.getClass();
-                paint3.setColor(emn.ae(paint3.getColor(), 25));
+                paint3.setColor(StaticHelpers7.ae(paint3.getColor(), 25));
                 paint3.setStyle(Paint.Style.FILL);
                 int i13 = bzrVar2.g;
                 if (i13 >= 0) {

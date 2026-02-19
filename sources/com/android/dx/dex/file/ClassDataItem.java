@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -77,7 +77,7 @@ public final class ClassDataItem extends OffsettedItem {
 
     private static void encodeSize(DexFile dexFile, AnnotatedOutput annotatedOutput, String str, int i) {
         if (annotatedOutput.annotates()) {
-            annotatedOutput.annotate(String.format("  %-21s %08x", dkz.s(str, "_size:"), Integer.valueOf(i)));
+            annotatedOutput.annotate(String.format("  %-21s %08x", StaticHelpers6.concat(str, "_size:"), Integer.valueOf(i)));
         }
         annotatedOutput.writeUleb128(i);
     }

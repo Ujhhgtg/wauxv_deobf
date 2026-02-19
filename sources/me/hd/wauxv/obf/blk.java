@@ -33,9 +33,9 @@ public final class blk extends SwitchHook implements bnc {
     public final void i(View view, Object obj, Object obj2, MsgInfoBean msgInfoBean) {
         if (getIsEnabled()) {
             int i = 0;
-            azg azgVarR = dqc.bi(obj).r();
-            azgVarR.ab = "avatarIV" /* "avatarIV" /* "avatarIV" /* cnb.z(-487160960514858L)  */;
-            ImageView imageView = (ImageView) ((azk) yg.e(azgVarR)).e();
+            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
+            fieldResolverVarR.name = "avatarIV" /* "avatarIV" /* "avatarIV" /* cnb.z(-487160960514858L)  */;
+            ImageView imageView = (ImageView) ((azk) yg.e(fieldResolverVarR)).e();
             if (imageView != null) {
                 boolean zIsSend = msgInfoBean.isSend();
                 boolean z = bli.a.i() && !zIsSend;

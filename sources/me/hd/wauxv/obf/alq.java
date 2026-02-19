@@ -17,9 +17,9 @@ public class alq extends t implements alp {
         } while (an(obj) < 0);
         brj brjVar = new brj(cmz.ab(afwVar), this);
         aox aoxVarU = brjVar.u();
-        if (aoxVarU != null && !(tc.d.get(brjVar) instanceof coo)) {
+        if (aoxVarU != null && !(CancellableContinuation.d.get(brjVar) instanceof coo)) {
             aoxVarU.e();
-            tc.e.set(brjVar, con.b);
+            CancellableContinuation.e.set(brjVar, con.b);
         }
         bhv.ad(brjVar, new sz(cna.aa(this, true, new yd(brjVar, 2)), 1));
         return brjVar.t();

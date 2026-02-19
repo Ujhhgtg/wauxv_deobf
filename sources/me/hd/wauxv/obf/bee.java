@@ -30,13 +30,13 @@ public final class bee implements bec {
             arrayList3 = arrayList;
             arrayList4 = arrayList2;
         } else {
-            mu muVar = (mu) dkz.l(1, begVar.d);
+            mu muVar = (mu) StaticHelpers6.getLastNElem(1, begVar.d);
             begVar.h = muVar;
             Iterator it = muVar.a.iterator();
             while (it.hasNext()) {
-                bdj bdjVar = ((bfe) it.next()).b;
-                if (bdjVar != null) {
-                    bdjVar.be = true;
+                SomeFragmentManager someFragmentManagerVar = ((bfe) it.next()).b;
+                if (someFragmentManagerVar != null) {
+                    someFragmentManagerVar.be = true;
                 }
             }
             arrayList3 = arrayList;
@@ -53,7 +53,7 @@ public final class bee implements bec {
             for (bes besVar : arrayList5) {
                 Iterator it3 = linkedHashSet.iterator();
                 while (it3.hasNext()) {
-                    besVar.d((bdj) it3.next(), zBooleanValue);
+                    besVar.d((SomeFragmentManager) it3.next(), zBooleanValue);
                 }
             }
         }

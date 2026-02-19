@@ -32,7 +32,7 @@ public final class egi {
     public /* synthetic */ egi(int i, String str, Long l, Integer num, Integer num2, List list, Integer num3, Long l2,
             Integer num4, Integer num5, List list2, Integer num6, eft eftVar, Integer num7, Boolean bool) {
         if (16383 != (i & 16383)) {
-            bht.ah(i, 16383, egg.b.getDescriptor());
+            ResourcesCompat.ah(i, 16383, egg.b.getDescriptor());
             throw null;
         }
         this.b = str;
@@ -103,12 +103,12 @@ public final class egi {
         StringBuilder sb = new StringBuilder();
         sb.append("v51Proto(battle_id=" /* "v51Proto(battle_id=" /* "v51Proto(battle_id=" /* cnb.z(-316637873961770L)  */);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -316586334354218L);
-        dkz.ad(sb, this.c, -316509024942890L);
+        StaticHelpers6.ad(sb, this.c, -316509024942890L);
         bjs.w(sb, this.d, -316483255139114L);
         bjs.w(sb, this.e, -316410240695082L);
         yg.v(sb, this.f, -315778880502570L);
         bjs.w(sb, this.g, -315753110698794L);
-        dkz.ad(sb, this.h, -315667211352874L);
+        StaticHelpers6.ad(sb, this.h, -315667211352874L);
         bjs.w(sb, this.i, -315602786843434L);
         bjs.w(sb, this.j, -315589901941546L);
         yg.v(sb, this.k, -316070938278698L);

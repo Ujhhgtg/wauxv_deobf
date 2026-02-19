@@ -9,7 +9,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import me.hd.wauxv.R;
 import me.hd.wauxv.obf.cay;
-import me.hd.wauxv.obf.cnf;
+import me.hd.wauxv.obf.HugeSyntheticPileOfHelpers;
 import me.hd.wauxv.obf.col;
 import me.hd.wauxv.obf.cta;
 import me.hd.wauxv.obf.dbi;
@@ -149,7 +149,7 @@ public class BearSceneView extends View {
     @Override // android.view.View
     public final void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        float fBn = cnf.bn();
+        float fBn = HugeSyntheticPileOfHelpers.bn();
         float f = this.d;
         this.d = ((this.c - f) * 4.0f * fBn) + f;
         for (dbi dbiVar : this.a) {
@@ -201,7 +201,7 @@ public class BearSceneView extends View {
             }
             return;
         }
-        cnf.bn();
+        HugeSyntheticPileOfHelpers.bn();
         invalidate();
         dbi[] dbiVarArr2 = this.a;
         int length2 = dbiVarArr2.length;

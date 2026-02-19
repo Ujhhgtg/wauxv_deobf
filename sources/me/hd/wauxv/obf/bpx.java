@@ -4,7 +4,7 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class bpx extends IllegalArgumentException {
     public bpx(int i, int i2) {
-        super(dkz.p(i, "Unpaired surrogate at index ", " of ", i2));
+        super(StaticHelpers6.p(i, "Unpaired surrogate at index ", " of ", i2));
     }
 
     /*

@@ -13,9 +13,9 @@ public final class dkt extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(dkr.a, dexKitBridge, new djk(24));
-        emn.aj(dkq.a, dexKitBridge, new djk(25));
-        emn.aj(dkp.a, dexKitBridge, new djk(26));
-        emn.aj(dks.a, dexKitBridge, new djk(27));
+        StaticHelpers7.resolveDexAndCache(dkr.a, dexKitBridge, new djk(24));
+        StaticHelpers7.resolveDexAndCache(dkq.a, dexKitBridge, new djk(25));
+        StaticHelpers7.resolveDexAndCache(dkp.a, dexKitBridge, new djk(26));
+        StaticHelpers7.resolveDexAndCache(dks.a, dexKitBridge, new djk(27));
     }
 }

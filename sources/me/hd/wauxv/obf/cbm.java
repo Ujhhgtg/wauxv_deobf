@@ -63,11 +63,11 @@ public class cbm implements bno, crt, cvv, axv, ahw, dff, cdw {
                 }
             }
         } catch (Throwable th) {
-            X = bhu.x(th);
+            X = FastKV.x(th);
         }
         Throwable thB = dcy.b(X);
         if (thB != null) {
-            dov dovVar = bth.a;
+            Kotlin$Lazy kotlin$LazyVar = bth.a;
             bth.e("Failed to get declared constructors in " + this + " because got an exception.", thB);
         }
         boolean z = X instanceof dcx;
@@ -76,7 +76,7 @@ public class cbm implements bno, crt, cvv, axv, ahw, dff, cdw {
             r0 = 0;
         }
         List list = (List) r0;
-        return list == null ? EmptyReadonlyList.a : list;
+        return list == null ? EmptyReadonlyList.INSTANCE : list;
     }
 
     public List c(Class cls) {
@@ -84,18 +84,18 @@ public class cbm implements bno, crt, cvv, axv, ahw, dff, cdw {
         try {
             objX = SomeStaticHelpers.ab(cls.getDeclaredMethods());
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         Throwable thB = dcy.b(objX);
         if (thB != null) {
-            dov dovVar = bth.a;
+            Kotlin$Lazy kotlin$LazyVar = bth.a;
             bth.e("Failed to get declared methods in " + this + " because got an exception.", thB);
         }
         if (objX instanceof dcx) {
             objX = null;
         }
         List list = (List) objX;
-        return list == null ? EmptyReadonlyList.a : list;
+        return list == null ? EmptyReadonlyList.INSTANCE : list;
     }
 
     @Override // me.hd.wauxv.obf.axv
@@ -128,7 +128,7 @@ public class cbm implements bno, crt, cvv, axv, ahw, dff, cdw {
     }
 
     @Override // me.hd.wauxv.obf.cvv
-    public void j(int i, Object obj) {
+    public void logProfileResult(int i, Object obj) {
         String str;
         switch (this.f) {
             case 11:

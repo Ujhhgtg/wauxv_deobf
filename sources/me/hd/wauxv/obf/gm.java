@@ -13,15 +13,15 @@ public final class gm extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(gj.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(gj.a));
         gm gmVar = a;
-        aki akiVarAb = csb.ab(gmVar, listBf);
+        aki akiVarAb = PackageParam.ab(gmVar, listBf);
         gmVar.y(akiVarAb, new gi(1));
         akiVarAb.o();
-        aki akiVarAb2 = csb.ab(gmVar, dqc.toSingletonList(emn.bb(gk.a)));
+        aki akiVarAb2 = PackageParam.ab(gmVar, dqc.toSingletonList(StaticHelpers7.bb(gk.a)));
         gmVar.y(akiVarAb2, new gi(0));
         akiVarAb2.o();
-        aki akiVarAb3 = csb.ab(gmVar, dqc.toSingletonList(emn.bb(gl.a)));
+        aki akiVarAb3 = PackageParam.ab(gmVar, dqc.toSingletonList(StaticHelpers7.bb(gl.a)));
         gmVar.y(akiVarAb3, new bn(29));
         akiVarAb3.o();
     }
@@ -38,9 +38,9 @@ public final class gm extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(gj.a, dexKitBridge, new gi(2));
-        emn.aj(gk.a, dexKitBridge, new gi(3));
-        emn.aj(gl.a, dexKitBridge, new gi(4));
+        StaticHelpers7.resolveDexAndCache(gj.a, dexKitBridge, new gi(2));
+        StaticHelpers7.resolveDexAndCache(gk.a, dexKitBridge, new gi(3));
+        StaticHelpers7.resolveDexAndCache(gl.a, dexKitBridge, new gi(4));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

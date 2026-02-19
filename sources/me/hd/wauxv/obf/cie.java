@@ -25,7 +25,7 @@ public final class cie extends SwitchHook implements bnk {
     }
 
     public final List i() {
-        return !z() ? EmptyReadonlyList.a : dqc.toSingletonList(new aza("转发[WA]" /* "转发[WA]" /* "转发[WA]" /* cnb.z(-478476536642346L)  */, new cgu(9)));
+        return !z() ? EmptyReadonlyList.INSTANCE : dqc.toSingletonList(new aza("转发[WA]" /* "转发[WA]" /* "转发[WA]" /* cnb.z(-478476536642346L)  */, new cgu(9)));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

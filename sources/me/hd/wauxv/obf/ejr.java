@@ -11,7 +11,7 @@ public final class ejr {
 
     public /* synthetic */ ejr(int i, Integer num, Long l, Long l2, String str) {
         if (15 != (i & 15)) {
-            bht.ah(i, 15, ejp.b.getDescriptor());
+            ResourcesCompat.ah(i, 15, ejp.b.getDescriptor());
             throw null;
         }
         this.a = num;
@@ -47,8 +47,8 @@ public final class ejr {
         StringBuilder sb = new StringBuilder();
         sb.append("zg4Proto(target_type=" /* "zg4Proto(target_type=" /* "zg4Proto(target_type=" /* cnb.z(-344520801647402L)  */);
         bjs.w(sb, this.a, -350456446450474L);
-        dkz.ad(sb, this.b, -350379137039146L);
-        dkz.ad(sb, this.c, -350314712529706L);
+        StaticHelpers6.ad(sb, this.b, -350379137039146L);
+        StaticHelpers6.ad(sb, this.c, -350314712529706L);
         return concat(sb, this.d, ')');
     }
 }

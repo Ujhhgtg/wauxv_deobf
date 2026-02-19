@@ -10,13 +10,13 @@ public final class cge extends bws implements IDexFind {
     public static final cge a = new cge();
 
     public static Object b(Cursor cursor) {
-        Object objC = ReflectionWrapper.createInstanceWithArgs(emn.az(cgd.a), new Object[0]);
+        Object objC = ReflectionWrapper.createInstanceWithArgs(StaticHelpers7.az(cgd.a), new Object[0]);
         int i = 0;
-        cde cdeVarT = dqc.bi(objC).t();
-        cdeVarT.ab = "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-75604309310250L)  */;
-        cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(Cursor.class) }, 1));
-        cdeVarT.ah();
-        ((MethodHookWrapper) aaz.e(cdeVarT.aj())).e(cursor);
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objC).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-75604309310250L)  */;
+        methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.b(Cursor.class) }, 1));
+        methodResolverVarT.enableSuperclass();
+        ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(cursor);
         return objC;
     }
 
@@ -26,6 +26,6 @@ public final class cge extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(cgd.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(20));
+        StaticHelpers7.resolveDexAndCache(cgd.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(20));
     }
 }

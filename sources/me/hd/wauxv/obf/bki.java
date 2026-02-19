@@ -160,7 +160,7 @@ public abstract class bki extends ers {
             if (this.x.computeScrollOffset()) {
                 bkh bkhVar = new bkh(this, coordinatorLayout, view);
                 this.w = bkhVar;
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 view.postOnAnimation(bkhVar);
             } else {
                 ((AppBarLayout.BaseBehavior) this).v(coordinatorLayout, appBarLayout2);

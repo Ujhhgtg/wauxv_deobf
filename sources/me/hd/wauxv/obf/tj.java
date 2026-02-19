@@ -36,7 +36,7 @@ public final class tj implements View.OnAttachStateChangeListener {
                 awa awaVar = (awa) obj;
                 AccessibilityManager accessibilityManager = awaVar.t;
                 if (awaVar.u != null && accessibilityManager != null) {
-                    WeakHashMap weakHashMap = eqz.a;
+                    WeakHashMap weakHashMap = ViewCompat.a;
                     if (awaVar.isAttachedToWindow()) {
                         accessibilityManager.addTouchExplorationStateChangeListener(new ar(awaVar.u));
                     }
@@ -46,7 +46,7 @@ public final class tj implements View.OnAttachStateChangeListener {
             case 2:
                 View view2 = (View) obj;
                 view2.removeOnAttachStateChangeListener(this);
-                WeakHashMap weakHashMap2 = eqz.a;
+                WeakHashMap weakHashMap2 = ViewCompat.a;
                 eqo.c(view2);
                 break;
             case 3:

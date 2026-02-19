@@ -6,7 +6,7 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.Log;
 import me.hd.wauxv.R;
-import me.hd.wauxv.obf.awp;
+import me.hd.wauxv.obf.GifEncoder;
 import me.hd.wauxv.obf.cvg;
 import me.hd.wauxv.obf.cye;
 import me.hd.wauxv.obf.emc;
@@ -26,10 +26,10 @@ public class ListPreference extends DialogPreference {
             typedArrayObtainStyledAttributes.getTextArray(1);
         }
         if (typedArrayObtainStyledAttributes.getBoolean(4, typedArrayObtainStyledAttributes.getBoolean(4, false))) {
-            if (awp.a == null) {
-                awp.a = new awp(24);
+            if (GifEncoder.a == null) {
+                GifEncoder.a = new GifEncoder(24);
             }
-            this.l = awp.a;
+            this.l = GifEncoder.a;
             b();
         }
         typedArrayObtainStyledAttributes.recycle();

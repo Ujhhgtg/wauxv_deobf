@@ -48,7 +48,7 @@ public final class bmn extends eun {
         float f3;
         float f4;
         int i2;
-        if (dkz.ae(this.t) == 3) {
+        if (StaticHelpers6.ae(this.t) == 3) {
             adq adqVar = this.l;
             z(adqVar.as, adqVar.au, 0);
             return;

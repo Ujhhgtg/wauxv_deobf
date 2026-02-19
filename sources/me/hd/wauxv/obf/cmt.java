@@ -13,6 +13,6 @@ public final class cmt extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(cms.a, dexKitBridge, new cml(9));
+        StaticHelpers7.resolveDexAndCache(cms.a, dexKitBridge, new cml(9));
     }
 }

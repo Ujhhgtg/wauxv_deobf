@@ -12,15 +12,15 @@ import java.nio.ByteBuffer;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class eml extends ReplacementSpan {
-    public final emk b;
+    public final EmojiMetadata b;
     public TextPaint e;
     public final Paint.FontMetricsInt a = new Paint.FontMetricsInt();
     public short c = -1;
     public float d = 1.0f;
 
-    public eml(emk emkVar) {
-        cna.j(emkVar, "rasterizer cannot be null");
-        this.b = emkVar;
+    public eml(EmojiMetadata emojiMetadataVar) {
+        cna.j(emojiMetadataVar, "rasterizer cannot be null");
+        this.b = emojiMetadataVar;
     }
 
     /* JADX WARN: Found duplicated region for block: B:19:0x0042  */
@@ -67,12 +67,12 @@ public final class eml extends ReplacementSpan {
         if (textPaint3 == null) {
             paint2 = paint;
         }
-        emk emkVar = this.b;
-        chm chmVar = emkVar.c;
+        EmojiMetadata emojiMetadataVar = this.b;
+        chm chmVar = emojiMetadataVar.c;
         Typeface typeface = (Typeface) chmVar.f;
         Typeface typeface2 = paint2.getTypeface();
         paint2.setTypeface(typeface);
-        canvas.drawText((char[]) chmVar.d, emkVar.b * 2, 2, f, f2, paint2);
+        canvas.drawText((char[]) chmVar.d, emojiMetadataVar.b * 2, 2, f, f2, paint2);
         paint2.setTypeface(typeface2);
     }
 
@@ -81,14 +81,14 @@ public final class eml extends ReplacementSpan {
         Paint.FontMetricsInt fontMetricsInt2 = this.a;
         paint.getFontMetricsInt(fontMetricsInt2);
         float fAbs = Math.abs(fontMetricsInt2.descent - fontMetricsInt2.ascent) * 1.0f;
-        emk emkVar = this.b;
-        this.d = fAbs / (emkVar.f().f(14) != 0 ? ((ByteBuffer) r8.e).getShort(r1 + r8.b) : (short) 0);
-        cdb cdbVarF = emkVar.f();
-        int iF = cdbVarF.f(14);
+        EmojiMetadata emojiMetadataVar = this.b;
+        this.d = fAbs / (emojiMetadataVar.f().getVTableOffset(14) != 0 ? ((ByteBuffer) r8.e).getShort(r1 + r8.b) : (short) 0);
+        FlatBufferTable cdbVarF = emojiMetadataVar.f();
+        int iF = cdbVarF.getVTableOffset(14);
         if (iF != 0) {
             ((ByteBuffer) cdbVarF.e).getShort(iF + cdbVarF.b);
         }
-        short s = (short) ((emkVar.f().f(12) != 0 ? ((ByteBuffer) r5.e).getShort(r7 + r5.b) : (short) 0) * this.d);
+        short s = (short) ((emojiMetadataVar.f().getVTableOffset(12) != 0 ? ((ByteBuffer) r5.e).getShort(r7 + r5.b) : (short) 0) * this.d);
         this.c = s;
         if (fontMetricsInt != null) {
             fontMetricsInt.ascent = fontMetricsInt2.ascent;

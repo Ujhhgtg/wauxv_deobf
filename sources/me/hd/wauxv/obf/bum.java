@@ -32,7 +32,7 @@ public final class bum implements bui, buo {
         this.a.remove(bunVar);
     }
 
-    @cqy(bug.ON_DESTROY)
+    @cqy(LifeEventEnum.ON_DESTROY)
     public void onDestroy(bup bupVar) {
         Iterator it = eot.h(this.a).iterator();
         while (it.hasNext()) {
@@ -41,7 +41,7 @@ public final class bum implements bui, buo {
         bupVar.ap().o(this);
     }
 
-    @cqy(bug.ON_START)
+    @cqy(LifeEventEnum.ON_START)
     public void onStart(bup bupVar) {
         Iterator it = eot.h(this.a).iterator();
         while (it.hasNext()) {
@@ -49,7 +49,7 @@ public final class bum implements bui, buo {
         }
     }
 
-    @cqy(bug.ON_STOP)
+    @cqy(LifeEventEnum.ON_STOP)
     public void onStop(bup bupVar) {
         Iterator it = eot.h(this.a).iterator();
         while (it.hasNext()) {

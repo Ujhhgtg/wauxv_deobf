@@ -208,7 +208,7 @@ public final class aph {
     }
 
     public final p y() {
-        return (p) dkz.l(1, this.p);
+        return (p) StaticHelpers6.getLastNElem(1, this.p);
     }
 
     /* JADX WARN: Failed to find 'out' block for switch in B:106:0x01b6. Please report as an issue. */

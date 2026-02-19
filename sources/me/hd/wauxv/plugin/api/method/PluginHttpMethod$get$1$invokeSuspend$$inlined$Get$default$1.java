@@ -10,14 +10,14 @@ import me.hd.wauxv.obf.ajm;
 import me.hd.wauxv.obf.arj;
 import me.hd.wauxv.obf.bgj;
 import me.hd.wauxv.obf.bhs;
-import me.hd.wauxv.obf.bhu;
+import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.ckv;
 import me.hd.wauxv.obf.cna;
 import me.hd.wauxv.obf.cug;
 import me.hd.wauxv.obf.dal;
 import me.hd.wauxv.obf.dbv;
 import me.hd.wauxv.obf.doi;
-import me.hd.wauxv.obf.emn;
+import me.hd.wauxv.obf.StaticHelpers7;
 import me.hd.wauxv.obf.KotlinUnit;
 import me.hd.wauxv.obf.eoj;
 import okhttp3.Response;
@@ -51,7 +51,7 @@ public final class PluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1 e
 
     @Override // me.hd.wauxv.obf.nc
     public final Object i(Object obj) throws Throwable {
-        bhu.bd(obj);
+        FastKV.bd(obj);
         ahp ahpVar = (ahp) this.a;
         cna.q(ahpVar.e());
         eoj eojVar = new eoj();
@@ -64,7 +64,7 @@ public final class PluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1 e
         dbv.a(eojVar.d, dal.c(Response.class));
         Response responseExecute = eojVar.e.newCall(eojVar.f()).execute();
         try {
-            Object objB = bhs.p(responseExecute.request()).b(emn.am(dal.c(Response.class)), responseExecute);
+            Object objB = bhs.p(responseExecute.request()).b(StaticHelpers7.am(dal.c(Response.class)), responseExecute);
             if (objB != null) {
                 return (Response) objB;
             }

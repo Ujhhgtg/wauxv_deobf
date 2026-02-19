@@ -13,54 +13,54 @@ public final class dly extends bws {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i = 0;
-        bmu bmuVarS = yg.s(-53674206296874L);
-        cde cdeVarT = bmuVarS.t();
-        cdeVarT.ab = "insertWithOnConflict" /* "insertWithOnConflict" /* "insertWithOnConflict" /* cnb.z(-52965536693034L)  */;
+        SyntheticPileOfMess bmuVarS = yg.s(-53674206296874L);
+        MethodResolver methodResolverVarT = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "insertWithOnConflict" /* "insertWithOnConflict" /* "insertWithOnConflict" /* cnb.z(-52965536693034L)  */;
         zc zcVarB = dal.b(String.class);
         zc zcVarB2 = dal.b(String.class);
         zc zcVarB3 = dal.b(ContentValues.class);
         Class cls = Integer.TYPE;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) dkz.n(new Object[] { zcVarB, zcVarB2, zcVarB3, dal.b(cls) }, 4, cdeVarT);
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { zcVarB, zcVarB2, zcVarB3, dal.b(cls) }, 4, methodResolverVarT);
         dly dlyVar = a;
-        exg exgVar = exg.a;
-        aki akiVarAd = dlyVar.ad(methodHookWrapperVar, exgVar);
-        akiVarAd.n(new dko(10));
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
+        aki akiVarAd = dlyVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
+        akiVarAd.n(new SyntheticMessOfLambdas(10));
         akiVarAd.o();
-        cde cdeVarT2 = bmuVarS.t();
-        cdeVarT2.ab = "updateWithOnConflict" /* "updateWithOnConflict" /* "updateWithOnConflict" /* cnb.z(-52909702118186L)  */;
-        aki akiVarAd2 = dlyVar.ad((MethodHookWrapper) dkz.n(
+        MethodResolver methodResolverVarT2 = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT2.name = "updateWithOnConflict" /* "updateWithOnConflict" /* "updateWithOnConflict" /* cnb.z(-52909702118186L)  */;
+        aki akiVarAd2 = dlyVar.ad((MethodHookWrapper) StaticHelpers6.n(
                 new Object[] { dal.b(String.class), dal.b(ContentValues.class), dal.b(String.class),
-                        Array.newInstance((Class<?>) cnf.getJavaClass(dal.b(String.class)), 0).getClass(), dal.b(cls) },
-                5, cdeVarT2), exgVar);
-        akiVarAd2.n(new dko(11));
+                        Array.newInstance((Class<?>) HugeSyntheticPileOfHelpers.getJavaClass(dal.b(String.class)), 0).getClass(), dal.b(cls) },
+                5, methodResolverVarT2), hookPriorityEnumVar);
+        akiVarAd2.n(new SyntheticMessOfLambdas(11));
         akiVarAd2.o();
-        cde cdeVarT3 = bmuVarS.t();
-        cdeVarT3.ab = "rawQueryWithFactory" /* "rawQueryWithFactory" /* "rawQueryWithFactory" /* cnb.z(-52802327935786L)  */;
+        MethodResolver methodResolverVarT3 = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT3.name = "rawQueryWithFactory" /* "rawQueryWithFactory" /* "rawQueryWithFactory" /* cnb.z(-52802327935786L)  */;
         aki akiVarAd3 = dlyVar
-                .ad((MethodHookWrapper) dkz.n(
+                .ad((MethodHookWrapper) StaticHelpers6.n(
                         new Object[] {
                                 "com.tencent.wcdb.database.SQLiteDatabase$CursorFactory" /* "com.tencent.wcdb.database.SQLiteDatabase$CursorFactory" /* "com.tencent.wcdb.database.SQLiteDatabase$CursorFactory" /* cnb.z(-53231824665386L)  */,
                                 dal.b(String.class),
-                                Array.newInstance((Class<?>) cnf.getJavaClass(dal.b(Object.class)), 0).getClass(), dal
+                                Array.newInstance((Class<?>) HugeSyntheticPileOfHelpers.getJavaClass(dal.b(Object.class)), 0).getClass(), dal
                                         .b(String.class),
                                 "com.tencent.wcdb.support.CancellationSignal" /* "com.tencent.wcdb.support.CancellationSignal" /* "com.tencent.wcdb.support.CancellationSignal" /* cnb.z(-54696408513322L)  */ },
-                        5, cdeVarT3), exgVar);
-        akiVarAd3.n(new dko(12));
+                        5, methodResolverVarT3), hookPriorityEnumVar);
+        akiVarAd3.n(new SyntheticMessOfLambdas(12));
         akiVarAd3.o();
         if (cnb.ab(ewk.d) || cnb.ac(ewh.d)) {
-            bmu bmuVarS2 = yg.s(-54473070213930L);
-            cde cdeVarT4 = bmuVarS2.t();
-            cdeVarT4.ab = "updateWithOnConflict" /* "updateWithOnConflict" /* "updateWithOnConflict" /* cnb.z(-54855322303274L)  */;
-            aki akiVarAd4 = dlyVar.ad((MethodHookWrapper) dkz.n(
+            SyntheticPileOfMess bmuVarS2 = yg.s(-54473070213930L);
+            MethodResolver methodResolverVarT4 = bmuVarS2.getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT4.name = "updateWithOnConflict" /* "updateWithOnConflict" /* "updateWithOnConflict" /* cnb.z(-54855322303274L)  */;
+            aki akiVarAd4 = dlyVar.ad((MethodHookWrapper) StaticHelpers6.n(
                     new Object[] { dal.b(String.class), dal.b(ContentValues.class), dal.b(String.class),
-                            Array.newInstance((Class<?>) cnf.getJavaClass(dal.b(String.class)), 0).getClass(), dal.b(cls) },
-                    5, cdeVarT4), exgVar);
-            akiVarAd4.n(new dko(13));
+                            Array.newInstance((Class<?>) HugeSyntheticPileOfHelpers.getJavaClass(dal.b(String.class)), 0).getClass(), dal.b(cls) },
+                    5, methodResolverVarT4), hookPriorityEnumVar);
+            akiVarAd4.n(new SyntheticMessOfLambdas(13));
             akiVarAd4.o();
-            cde cdeVarT5 = bmuVarS2.t();
-            cdeVarT5.ab = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-54799487728426L)  */;
-            aki akiVarAd5 = dlyVar.ad((MethodHookWrapper) aaz.e(cdeVarT5.aj()), exgVar);
-            akiVarAd5.n(new dko(14));
+            MethodResolver methodResolverVarT5 = bmuVarS2.getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT5.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-54799487728426L)  */;
+            aki akiVarAd5 = dlyVar.ad((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT5.findMethods()), hookPriorityEnumVar);
+            akiVarAd5.n(new SyntheticMessOfLambdas(14));
             akiVarAd5.o();
         }
     }

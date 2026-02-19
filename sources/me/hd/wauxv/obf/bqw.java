@@ -23,10 +23,10 @@ public final class bqw extends GestureDetector.SimpleOnGestureListener {
     @Override // android.view.GestureDetector.SimpleOnGestureListener, android.view.GestureDetector.OnGestureListener
     public final void onLongPress(MotionEvent motionEvent) {
         View viewAm;
-        czx czxVarDv;
+        SomeView someViewVarDv;
         bqx bqxVar = this.b;
         xe xeVar = bqxVar.n;
-        if (!this.a || (viewAm = bqxVar.am(motionEvent)) == null || (czxVarDv = bqxVar.s.dv(viewAm)) == null) {
+        if (!this.a || (viewAm = bqxVar.am(motionEvent)) == null || (someViewVarDv = bqxVar.s.dv(viewAm)) == null) {
             return;
         }
         RecyclerView recyclerView = bqxVar.s;
@@ -43,7 +43,7 @@ public final class bqw extends GestureDetector.SimpleOnGestureListener {
                 bqxVar.j = 0.0f;
                 bqxVar.i = 0.0f;
                 xeVar.getClass();
-                bqxVar.aq(czxVarDv, 2);
+                bqxVar.aq(someViewVarDv, 2);
             }
         }
     }

@@ -54,15 +54,15 @@ public final class MainActivity extends dg {
         bzy bzyVar = new bzy(this);
         View viewInflate = LayoutInflater.from(this).inflate(R.layout.dialog_about, (ViewGroup) null, false);
         int i = R.id.aboutImageViewIcon;
-        if (((ShapeableImageView) KotlinHelpers2.aq(viewInflate, R.id.aboutImageViewIcon)) != null) {
+        if (((ShapeableImageView) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.aboutImageViewIcon)) != null) {
             i = R.id.aboutTextViewDesc;
-            MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.aq(viewInflate, R.id.aboutTextViewDesc);
+            MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.aboutTextViewDesc);
             if (materialTextView != null) {
                 i = R.id.aboutTextViewTitle;
-                MaterialTextView materialTextView2 = (MaterialTextView) KotlinHelpers2.aq(viewInflate, R.id.aboutTextViewTitle);
+                MaterialTextView materialTextView2 = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.aboutTextViewTitle);
                 if (materialTextView2 != null) {
                     i = R.id.aboutTextViewVersion;
-                    MaterialTextView materialTextView3 = (MaterialTextView) KotlinHelpers2.aq(viewInflate,
+                    MaterialTextView materialTextView3 = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewInflate,
                             R.id.aboutTextViewVersion);
                     if (materialTextView3 != null) {
                         LinearLayout linearLayout = (LinearLayout) viewInflate;

@@ -190,7 +190,7 @@ public abstract class ReflectionWrapper {
         if (obj != null) {
             return obj;
         }
-        String strU = SomeStaticHelpers.u(objArr, null, null, null, null, 63);
+        String strU = SomeStaticHelpers.joinToString(objArr, null, null, null, null, 63);
         if (dnj.ak(strU)) {
             strU = "(empty)";
         }
@@ -203,7 +203,7 @@ public abstract class ReflectionWrapper {
         try {
             objX = createInstanceWithArgs(cls, Arrays.copyOf(objArr, objArr.length));
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         if (objX instanceof dcx) {
             return null;
@@ -219,7 +219,7 @@ public abstract class ReflectionWrapper {
         try {
             objX = tryGetClassByName(classLoader, str);
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         return (Class) (objX instanceof dcx ? null : objX);
     }
@@ -232,15 +232,15 @@ public abstract class ReflectionWrapper {
                 objX = null;
             }
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         return ((Class) (objX instanceof dcx ? null : objX)) != null;
     }
 
-    public static jx h(String str, amd amdVar, int i) {
+    public static FactoryPools h(String str, amd amdVar, int i) {
         if ((i & 4) != 0) {
             amdVar = null;
         }
-        return new jx(str, amdVar);
+        return new FactoryPools(str, amdVar);
     }
 }

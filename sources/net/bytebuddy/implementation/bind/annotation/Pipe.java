@@ -9,8 +9,8 @@ import java.lang.annotation.Target;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
@@ -32,7 +32,6 @@ import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.MethodAccessorFactory;
 import net.bytebuddy.implementation.auxiliary.AuxiliaryType;
 import net.bytebuddy.implementation.bind.MethodDelegationBinder;
-import net.bytebuddy.implementation.bind.annotation.TargetMethodAnnotationDrivenBinder;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
 import net.bytebuddy.implementation.bytecode.Duplication;
 import net.bytebuddy.implementation.bytecode.StackManipulation;
@@ -211,7 +210,7 @@ public @interface Pipe {
 
                     public int hashCode() {
                         return MethodCall.this.hashCode()
-                                + dkz.f(this.instrumentedType, getClass().hashCode() * 31, 31);
+                                + StaticHelpers6.f(this.instrumentedType, getClass().hashCode() * 31, 31);
                     }
 
                     private Appender(TypeDescription typeDescription) {
@@ -241,7 +240,7 @@ public @interface Pipe {
                 }
 
                 public int hashCode() {
-                    return this.assigner.hashCode() + dkz.c(this.redirectedMethod, getClass().hashCode() * 31, 31);
+                    return this.assigner.hashCode() + StaticHelpers6.c(this.redirectedMethod, getClass().hashCode() * 31, 31);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
@@ -313,8 +312,8 @@ public @interface Pipe {
             }
 
             public int hashCode() {
-                return dkz.h(this.assigner,
-                        dkz.c(this.sourceMethod, dkz.f(this.forwardingType, getClass().hashCode() * 31, 31), 31), 31)
+                return StaticHelpers6.h(this.assigner,
+                        StaticHelpers6.c(this.sourceMethod, StaticHelpers6.f(this.forwardingType, getClass().hashCode() * 31, 31), 31), 31)
                         + (this.serializableProxy ? 1 : 0);
             }
 
@@ -348,17 +347,17 @@ public @interface Pipe {
 
         private static MethodDescription onlyMethod(TypeDescription typeDescription) {
             if (!typeDescription.isInterface()) {
-                throw new IllegalArgumentException(dkz.x(typeDescription, " is not an interface"));
+                throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " is not an interface"));
             }
             if (!typeDescription.getInterfaces().isEmpty()) {
-                throw new IllegalArgumentException(dkz.x(typeDescription, " must not extend other interfaces"));
+                throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " must not extend other interfaces"));
             }
             if (!typeDescription.isPublic()) {
-                throw new IllegalArgumentException(dkz.x(typeDescription, " is mot public"));
+                throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " is mot public"));
             }
             MethodList methodListFilter = typeDescription.getDeclaredMethods().filter(ElementMatchers.isAbstract());
             if (methodListFilter.size() != 1) {
-                throw new IllegalArgumentException(dkz.x(typeDescription, " must declare exactly one abstract method"));
+                throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " must declare exactly one abstract method"));
             }
             MethodDescription methodDescription = (MethodDescription) methodListFilter.getOnly();
             if (!methodDescription.getReturnType().asErasure().represents(Object.class)) {

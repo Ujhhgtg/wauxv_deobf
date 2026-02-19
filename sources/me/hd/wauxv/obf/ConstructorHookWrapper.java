@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class ConstructorHookWrapper extends cbq {
+public final class ConstructorHookWrapper extends MemberWrapper {
     public final Constructor a;
 
     public ConstructorHookWrapper(Constructor constructor) {
@@ -14,7 +14,7 @@ public final class ConstructorHookWrapper extends cbq {
     }
 
     @Override // me.hd.wauxv.obf.cbq
-    public final Member b() {
+    public final Member getMember() {
         return this.a;
     }
 
@@ -29,7 +29,7 @@ public final class ConstructorHookWrapper extends cbq {
             }
             objX = constructor.newInstance(Arrays.copyOf(objArrCopyOf, objArrCopyOf.length));
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         if (objX instanceof dcx) {
             return null;

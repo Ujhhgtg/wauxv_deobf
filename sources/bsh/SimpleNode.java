@@ -2,7 +2,7 @@ package bsh;
 
 import java.io.Serializable;
 import java.util.NoSuchElementException;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -176,7 +176,7 @@ class SimpleNode implements Node, Serializable {
 
     @Override // bsh.Node
     public String toString(String str) {
-        StringBuilder sbY = dkz.y(str);
+        StringBuilder sbY = StaticHelpers6.toSb(str);
         sbY.append(toString());
         return sbY.toString();
     }

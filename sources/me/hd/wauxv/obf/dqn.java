@@ -10,7 +10,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class dqn extends aq {
+public final class dqn extends AccessibilityDelegateCompat {
     public final TextInputLayout a;
 
     public dqn(TextInputLayout textInputLayout) {
@@ -18,9 +18,9 @@ public final class dqn extends aq {
     }
 
     @Override // me.hd.wauxv.obf.aq
-    public final void d(View view, bd bdVar) {
+    public final void onInitializeAccessibilityNodeInfo(View view, bd bdVar) {
         AccessibilityNodeInfo accessibilityNodeInfo = bdVar.a;
-        this.g.onInitializeAccessibilityNodeInfo(view, accessibilityNodeInfo);
+        this.accessibilityDelegate.onInitializeAccessibilityNodeInfo(view, accessibilityNodeInfo);
         TextInputLayout textInputLayout = this.a;
         EditText editText = textInputLayout.getEditText();
         Editable text = editText != null ? editText.getText() : null;
@@ -75,8 +75,8 @@ public final class dqn extends aq {
     }
 
     @Override // me.hd.wauxv.obf.aq
-    public final void l(View view, AccessibilityEvent accessibilityEvent) {
-        super.l(view, accessibilityEvent);
+    public final void populateAccessibilityEvent(View view, AccessibilityEvent accessibilityEvent) {
+        super.populateAccessibilityEvent(view, accessibilityEvent);
         this.a.d.x().ac(accessibilityEvent);
     }
 }

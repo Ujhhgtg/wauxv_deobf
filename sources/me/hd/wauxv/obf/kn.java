@@ -6,7 +6,7 @@ import java.util.Arrays;
 /* JADX INFO: loaded from: classes.dex */
 public final class kn {
     public final kw b;
-    public final jx c;
+    public final FactoryPools c;
     public int a = 0;
     public int d = 8;
     public int[] e = new int[8];
@@ -16,9 +16,9 @@ public final class kn {
     public int i = -1;
     public boolean j = false;
 
-    public kn(kw kwVar, jx jxVar) {
+    public kn(kw kwVar, FactoryPools factoryPoolsVar) {
         this.b = kwVar;
-        this.c = jxVar;
+        this.c = factoryPoolsVar;
     }
 
     public final void k(dla dlaVar, float f, boolean z) {
@@ -335,10 +335,10 @@ public final class kn {
         int i = this.h;
         String string = "";
         for (int i2 = 0; i != -1 && i2 < this.a; i2++) {
-            StringBuilder sbY = dkz.y(dkz.s(string, " -> "));
+            StringBuilder sbY = StaticHelpers6.toSb(StaticHelpers6.concat(string, " -> "));
             sbY.append(this.g[i]);
             sbY.append(" : ");
-            StringBuilder sbY2 = dkz.y(sbY.toString());
+            StringBuilder sbY2 = StaticHelpers6.toSb(sbY.toString());
             sbY2.append(((dla[]) this.c.h)[this.e[i]]);
             string = sbY2.toString();
             i = this.f[i];

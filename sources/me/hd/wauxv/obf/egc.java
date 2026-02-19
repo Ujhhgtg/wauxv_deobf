@@ -12,7 +12,7 @@ public final class egc {
 
     public /* synthetic */ egc(int i, String str, String str2, String str3, String str4, String str5) {
         if (31 != (i & 31)) {
-            bht.ah(i, 31, ega.b.getDescriptor());
+            ResourcesCompat.ah(i, 31, ega.b.getDescriptor());
             throw null;
         }
         this.a = str;

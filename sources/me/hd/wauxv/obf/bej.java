@@ -52,11 +52,11 @@ public final class bej extends erk {
         k(str, z);
     }
 
-    public final void j(bdj bdjVar, boolean z) {
+    public final void j(SomeFragmentManager someFragmentManagerVar, boolean z) {
         if (beg.ar(3)) {
-            Log.d("FragmentManager", "Clearing non-config state for " + bdjVar);
+            Log.d("FragmentManager", "Clearing non-config state for " + someFragmentManagerVar);
         }
-        k(bdjVar.aw, z);
+        k(someFragmentManagerVar.aw, z);
     }
 
     public final void k(String str, boolean z) {
@@ -82,16 +82,16 @@ public final class bej extends erk {
         }
     }
 
-    public final void l(bdj bdjVar) {
+    public final void l(SomeFragmentManager someFragmentManagerVar) {
         if (this.g) {
             if (beg.ar(2)) {
                 Log.v("FragmentManager", "Ignoring removeRetainedFragment as the state is already saved");
             }
         } else {
-            if (this.b.remove(bdjVar.aw) == null || !beg.ar(2)) {
+            if (this.b.remove(someFragmentManagerVar.aw) == null || !beg.ar(2)) {
                 return;
             }
-            Log.v("FragmentManager", "Updating retained Fragments: Removed " + bdjVar);
+            Log.v("FragmentManager", "Updating retained Fragments: Removed " + someFragmentManagerVar);
         }
     }
 

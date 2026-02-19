@@ -43,7 +43,7 @@ public final /* synthetic */ class bin implements bgx {
         }
         acmVarP._bp(dfxVar);
         if (3 != (i & 3)) {
-            bht.ah(i, 3, descriptor);
+            ResourcesCompat.ah(i, 3, descriptor);
             throw null;
         }
         bip bipVar = new bip();

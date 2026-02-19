@@ -61,9 +61,9 @@ public final /* synthetic */ class ut implements cke, awz, aww, cqk, afd {
         }
         ux.a.u(String.valueOf(menuItem.getTitle()));
         aic.a.getClass();
-        emn.bb(aib.a).invoke(baseAdapter, Boolean.TRUE);
+        StaticHelpers7.bb(aib.a).invoke(baseAdapter, Boolean.TRUE);
         agk.a.getClass();
-        emn.bb(agj.a).invoke(listView, null);
+        StaticHelpers7.bb(agj.a).invoke(listView, null);
         baseAdapter.notifyDataSetChanged();
         return true;
     }

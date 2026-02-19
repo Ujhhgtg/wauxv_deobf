@@ -6,7 +6,7 @@ public abstract /* synthetic */ class dls {
     public static final /* synthetic */ int[] a;
 
     static {
-        int[] iArr = new int[dkz.af(3).length];
+        int[] iArr = new int[StaticHelpers6.af(3).length];
         try {
             iArr[0] = 1;
         } catch (NoSuchFieldError unused) {

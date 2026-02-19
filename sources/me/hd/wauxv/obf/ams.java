@@ -17,16 +17,16 @@ public abstract class ams {
                 new Pair("short", "S"),
                 new Pair("int", "I"), new Pair("float", "F"), new Pair("long", "J"), new Pair("double", "D"),
                 new Pair("void", "V") };
-        int iAh = KotlinHelpers.ah(9);
+        int iAh = KotlinHelpers.calcHashMapCapacity(9);
         LinkedHashMap linkedHashMap = new LinkedHashMap(iAh);
-        KotlinHelpers.am(linkedHashMap, pairVarArr);
+        KotlinHelpers.addVar2PairArrayToVar1Map(linkedHashMap, pairVarArr);
         a = linkedHashMap;
         Pair[] pairVarArr2 = { new Pair("Z", "boolean"), new Pair("B", "byte"), new Pair("C", "char"),
                 new Pair("S", "short"),
                 new Pair("I", "int"), new Pair("F", "float"), new Pair("J", "long"), new Pair("D", "double"),
                 new Pair("V", "void") };
         LinkedHashMap linkedHashMap2 = new LinkedHashMap(iAh);
-        KotlinHelpers.am(linkedHashMap2, pairVarArr2);
+        KotlinHelpers.addVar2PairArrayToVar1Map(linkedHashMap2, pairVarArr2);
         b = linkedHashMap2;
     }
 
@@ -34,14 +34,14 @@ public abstract class ams {
         StringBuilder sb = new StringBuilder("(");
         Class<?>[] parameterTypes = constructor.getParameterTypes();
         throwIfVar1IsNull(parameterTypes, "getParameterTypes(...)");
-        return yg.concatToVar1(sb, SomeStaticHelpers.u(parameterTypes, "", null, null, new amb(3), 30), ")V");
+        return yg.concatToVar1(sb, SomeStaticHelpers.joinToString(parameterTypes, "", null, null, new amb(3), 30), ")V");
     }
 
     public static final String d(Method method) {
         StringBuilder sb = new StringBuilder("(");
         Class<?>[] parameterTypes = method.getParameterTypes();
         throwIfVar1IsNull(parameterTypes, "getParameterTypes(...)");
-        sb.append(SomeStaticHelpers.u(parameterTypes, "", null, null, new amb(2), 30));
+        sb.append(SomeStaticHelpers.joinToString(parameterTypes, "", null, null, new amb(2), 30));
         sb.append(")");
         Class<?> returnType = method.getReturnType();
         throwIfVar1IsNull(returnType, "getReturnType(...)");
@@ -54,7 +54,7 @@ public abstract class ams {
         if (cls.isArray()) {
             Class<?> componentType = cls.getComponentType();
             throwIfVar1IsNull(componentType);
-            return dkz.s(e(componentType), HttpUrl.PATH_SEGMENT_ENCODE_SET_URI);
+            return StaticHelpers6.concat(e(componentType), HttpUrl.PATH_SEGMENT_ENCODE_SET_URI);
         }
         if (!cls.isPrimitive()) {
             return cls.getName();
@@ -94,7 +94,7 @@ public abstract class ams {
         if (str.charAt(0) == '[') {
             String strSubstring = str.substring(1);
             throwIfVar1IsNull(strSubstring, "substring(...)");
-            return dkz.s(f(strSubstring), HttpUrl.PATH_SEGMENT_ENCODE_SET_URI);
+            return StaticHelpers6.concat(f(strSubstring), HttpUrl.PATH_SEGMENT_ENCODE_SET_URI);
         }
         if (str.length() == 1) {
             String str2 = (String) b.get(str);

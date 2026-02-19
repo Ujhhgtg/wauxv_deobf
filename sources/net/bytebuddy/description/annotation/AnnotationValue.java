@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.CachedReturnPlugin;
@@ -689,7 +689,7 @@ public interface AnnotationValue<T, S> {
             if (obj instanceof String[]) {
                 return of((String[]) obj);
             }
-            throw new IllegalArgumentException(dkz.r(obj, "Not a constant annotation value: "));
+            throw new IllegalArgumentException(StaticHelpers6.concatVar2Var1(obj, "Not a constant annotation value: "));
         }
     }
 

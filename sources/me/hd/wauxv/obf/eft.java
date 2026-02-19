@@ -12,7 +12,7 @@ public final class eft {
 
     public /* synthetic */ eft(int i, Integer num, List list) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, efr.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, efr.b.getDescriptor());
             throw null;
         }
         this.b = num;

@@ -41,8 +41,8 @@ public final class ani extends ckl {
         while (it.hasNext()) {
             cio cioVar = (cio) it.next();
             m(cioVar).am(begVar, cioVar.f);
-            cio cioVar2 = (cio) aaz.m((List) ((dml) w().e.h).c());
-            boolean zB = aaz.b((Iterable) ((dml) w().f.h).c(), cioVar2);
+            cio cioVar2 = (cio) StaticHelpers5.m((List) ((dml) w().e.obj).c());
+            boolean zB = StaticHelpers5.b((Iterable) ((dml) w().f.obj).c(), cioVar2);
             w().p(cioVar);
             if (cioVar2 != null && !zB) {
                 w().k(cioVar2);
@@ -55,28 +55,28 @@ public final class ani extends ckl {
         bur burVar;
         this.u = citVar;
         this.v = true;
-        Iterator it = ((List) ((dml) citVar.e.h).c()).iterator();
+        Iterator it = ((List) ((dml) citVar.e.obj).c()).iterator();
         while (true) {
             boolean zHasNext = it.hasNext();
             beg begVar = this.b;
             if (!zHasNext) {
                 begVar.p.add(new beu() { // from class: me.hd.wauxv.obf.anf
                     @Override // me.hd.wauxv.obf.beu
-                    public final void b(beg begVar2, bdj bdjVar) {
+                    public final void b(beg begVar2, SomeFragmentManager someFragmentManagerVar) {
                         throwIfVar1IsNull(begVar2, "<unused var>");
-                        throwIfVar1IsNull(bdjVar, "childFragment");
+                        throwIfVar1IsNull(someFragmentManagerVar, "childFragment");
                         ani aniVar = this.a;
                         LinkedHashSet linkedHashSet = aniVar.f;
-                        String str = bdjVar.bs;
+                        String str = someFragmentManagerVar.bs;
                         if ((linkedHashSet instanceof IEmpty) && !(linkedHashSet instanceof IEmpty2)) {
                             emc.bb(linkedHashSet, "kotlin.collections.MutableCollection");
                             throw null;
                         }
                         if (linkedHashSet.remove(str)) {
-                            bdjVar.ch.j(aniVar.g);
+                            someFragmentManagerVar.ch.j(aniVar.g);
                         }
                         LinkedHashMap linkedHashMap = aniVar.h;
-                        String str2 = bdjVar.bs;
+                        String str2 = someFragmentManagerVar.bs;
                         emc.ae(linkedHashMap);
                         linkedHashMap.remove(str2);
                     }
@@ -104,8 +104,8 @@ public final class ani extends ckl {
         }
         anc ancVar = (anc) this.h.get(str);
         if (ancVar == null) {
-            bdj bdjVarCb = begVar.cb(str);
-            ancVar = bdjVarCb instanceof anc ? (anc) bdjVarCb : null;
+            SomeFragmentManager someFragmentManagerVarCb = begVar.cb(str);
+            ancVar = someFragmentManagerVarCb instanceof anc ? (anc) someFragmentManagerVarCb : null;
         }
         if (ancVar != null) {
             ancVar.ch.o(this.g);
@@ -113,7 +113,7 @@ public final class ani extends ckl {
         }
         m(cioVar).am(begVar, str);
         cit citVarW = w();
-        List list = (List) ((dml) citVarW.e.h).c();
+        List list = (List) ((dml) citVarW.e.obj).c();
         ListIterator listIterator = list.listIterator(list.size());
         while (listIterator.hasPrevious()) {
             cio cioVar2 = (cio) listIterator.previous();
@@ -135,13 +135,13 @@ public final class ani extends ckl {
                     "Ignoring popBackStack() call: FragmentManager has already saved its state");
             return;
         }
-        List list = (List) ((dml) w().e.h).c();
+        List list = (List) ((dml) w().e.obj).c();
         int iIndexOf = list.indexOf(cioVar);
-        Iterator it = aaz.r(list.subList(iIndexOf, list.size())).iterator();
+        Iterator it = StaticHelpers5.r(list.subList(iIndexOf, list.size())).iterator();
         while (it.hasNext()) {
-            bdj bdjVarCb = begVar.cb(((cio) it.next()).f);
-            if (bdjVarCb != null) {
-                ((anc) bdjVarCb).af();
+            SomeFragmentManager someFragmentManagerVarCb = begVar.cb(((cio) it.next()).f);
+            if (someFragmentManagerVarCb != null) {
+                ((anc) someFragmentManagerVarCb).af();
             }
         }
         n(iIndexOf, cioVar, z);
@@ -163,10 +163,10 @@ public final class ani extends ckl {
         }
         bdz bdzVarCe = this.b.ce();
         context.getClassLoader();
-        bdj bdjVarE = bdzVarCe.e(str);
-        throwIfVar1IsNull(bdjVarE, "instantiate(...)");
-        if (anc.class.isAssignableFrom(bdjVarE.getClass())) {
-            anc ancVar = (anc) bdjVarE;
+        SomeFragmentManager someFragmentManagerVarE = bdzVarCe.e(str);
+        throwIfVar1IsNull(someFragmentManagerVarE, "instantiate(...)");
+        if (anc.class.isAssignableFrom(someFragmentManagerVarE.getClass())) {
+            anc ancVar = (anc) someFragmentManagerVarE;
             ancVar.df(cioVar.h.l());
             ancVar.ch.j(this.g);
             this.h.put(cioVar.f, ancVar);
@@ -181,8 +181,8 @@ public final class ani extends ckl {
     }
 
     public final void n(int i, cio cioVar, boolean z) {
-        cio cioVar2 = (cio) aaz.h(i - 1, (List) ((dml) w().e.h).c());
-        boolean zB = aaz.b((Iterable) ((dml) w().f.h).c(), cioVar2);
+        cio cioVar2 = (cio) StaticHelpers5.h(i - 1, (List) ((dml) w().e.obj).c());
+        boolean zB = StaticHelpers5.b((Iterable) ((dml) w().f.obj).c(), cioVar2);
         w().n(cioVar, z);
         if (cioVar2 == null || zB) {
             return;

@@ -37,7 +37,7 @@ public final class dwv {
             List list, dxk dxkVar, egi egiVar, Boolean bool, dzs dzsVar, edh edhVar, dxb dxbVar, List list2, edt edtVar,
             ehj ehjVar, dwd dwdVar) {
         if (131071 != (i & 131071)) {
-            bht.ah(i, 131071, dwt.b.getDescriptor());
+            ResourcesCompat.ah(i, 131071, dwt.b.getDescriptor());
             throw null;
         }
         this.b = str;

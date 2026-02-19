@@ -23,7 +23,7 @@ public abstract class exl {
         try {
             objX = 1771232894858L;
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         if (objX instanceof dcx) {
             objX = null;

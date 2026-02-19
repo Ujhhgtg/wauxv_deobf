@@ -307,13 +307,13 @@ public final class ik {
 
     public void i(String str) {
         ArrayList arrayList = (ArrayList) this.d;
-        if (arrayList.isEmpty() || !(dkz.l(1, arrayList) instanceof ctt)) {
+        if (arrayList.isEmpty() || !(StaticHelpers6.getLastNElem(1, arrayList) instanceof ctt)) {
             int i = this.b;
             arrayList.add(new ctt(str, i, str.length() + i));
             this.b = str.length() + this.b;
             return;
         }
-        ctt cttVar = (ctt) dkz.l(1, arrayList);
+        ctt cttVar = (ctt) StaticHelpers6.getLastNElem(1, arrayList);
         cttVar.a = yg.concatToVar1(new StringBuilder(), cttVar.a, str);
         int i2 = cttVar.c;
         int length = str.length() + cttVar.d;
@@ -554,9 +554,9 @@ public final class ik {
         ImageView imageView = (ImageView) this.c;
         Context context = imageView.getContext();
         int[] iArr = cyf.f;
-        jx jxVarK = jx.k(context, attributeSet, iArr, i);
-        TypedArray typedArray = (TypedArray) jxVarK.e;
-        eqz.r(imageView, imageView.getContext(), iArr, attributeSet, (TypedArray) jxVarK.e, i, 0);
+        FactoryPools factoryPoolsVarK = FactoryPools.k(context, attributeSet, iArr, i);
+        TypedArray typedArray = (TypedArray) factoryPoolsVarK.e;
+        ViewCompat.r(imageView, imageView.getContext(), iArr, attributeSet, (TypedArray) factoryPoolsVarK.e, i, 0);
         try {
             Drawable drawable = imageView.getDrawable();
             if (drawable == null && (resourceId = typedArray.getResourceId(1, -1)) != -1
@@ -567,13 +567,13 @@ public final class ik {
                 apy.d(drawable);
             }
             if (typedArray.hasValue(2)) {
-                imageView.setImageTintList(jxVarK.r(2));
+                imageView.setImageTintList(factoryPoolsVarK.r(2));
             }
             if (typedArray.hasValue(3)) {
                 imageView.setImageTintMode(apy.f(typedArray.getInt(3, -1), null));
             }
         } finally {
-            jxVarK.ae();
+            factoryPoolsVarK.ae();
         }
     }
 

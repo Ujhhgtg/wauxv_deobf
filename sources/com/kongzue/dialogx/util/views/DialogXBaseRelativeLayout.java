@@ -28,12 +28,12 @@ import me.hd.wauxv.obf.baw;
 import me.hd.wauxv.obf.bax;
 import me.hd.wauxv.obf.bfm;
 import me.hd.wauxv.obf.bfp;
-import me.hd.wauxv.obf.bht;
+import me.hd.wauxv.obf.ResourcesCompat;
 import me.hd.wauxv.obf.crc;
 import me.hd.wauxv.obf.cxt;
 import me.hd.wauxv.obf.eqo;
 import me.hd.wauxv.obf.eqq;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.erp;
 import me.hd.wauxv.obf.ng;
 import me.hd.wauxv.obf.ut;
@@ -103,7 +103,7 @@ public class DialogXBaseRelativeLayout extends RelativeLayout {
         baxVar.c = erpVar;
         baxVar.d = getParentDialog();
         DialogXBaseRelativeLayout dialogXBaseRelativeLayout = baxVar.b;
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         int paddingStart = dialogXBaseRelativeLayout.getPaddingStart();
         int paddingTop = baxVar.b.getPaddingTop();
         int paddingEnd = baxVar.b.getPaddingEnd();
@@ -115,7 +115,7 @@ public class DialogXBaseRelativeLayout extends RelativeLayout {
         bawVar.d = paddingBottom;
         eqq.l(baxVar.b, new ut(baxVar, bawVar));
         if (i2 >= 30) {
-            eqz.u(baxVar.b, new bat(baxVar, bawVar));
+            ViewCompat.setWindowInsetsAnimation(baxVar.b, new bat(baxVar, bawVar));
         }
         if (baxVar.b.isAttachedToWindow()) {
             eqo.c(baxVar.b);
@@ -325,7 +325,7 @@ public class DialogXBaseRelativeLayout extends RelativeLayout {
     /* JADX WARN: Multi-variable type inference failed */
     public final void u(int i, int i2, int i3, int i4) {
         Objects.toString(getParentDialog());
-        bht bhtVar = anj.a;
+        ResourcesCompat resourcesCompatVar = anj.a;
         getParentDialog();
         if ((getParentDialog() instanceof bfp) || (findViewWithTag("DialogXSafetyArea") instanceof anm)) {
             View viewFindViewWithTag = findViewWithTag("DialogXSafetyArea");

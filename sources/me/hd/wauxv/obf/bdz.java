@@ -41,9 +41,9 @@ public final class bdz {
         }
     }
 
-    public final bdj e(String str) {
+    public final SomeFragmentManager e(String str) {
         try {
-            return (bdj) d(this.b.w.e.getClassLoader(), str).getConstructor(null).newInstance(null);
+            return (SomeFragmentManager) d(this.b.w.e.getClassLoader(), str).getConstructor(null).newInstance(null);
         } catch (IllegalAccessException e) {
             throw new QueryDidNotReturnUniqueResultRuntimeException(
                     concat("Unable to instantiate fragment ", str,

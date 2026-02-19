@@ -2,7 +2,7 @@ package com.android.dx.rop.cst;
 
 import com.android.dx.util.MutabilityControl;
 import me.hd.wauxv.obf.axc;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -18,7 +18,7 @@ public final class StdConstantPool extends MutabilityControl implements Constant
     }
 
     private static Constant throwInvalid(int i) {
-        throw new axc(dkz.q(i, new StringBuilder("invalid constant pool index ")), null);
+        throw new axc(StaticHelpers6.q(i, new StringBuilder("invalid constant pool index ")), null);
     }
 
     @Override // com.android.dx.rop.cst.ConstantPool

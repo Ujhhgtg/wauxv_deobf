@@ -19,7 +19,7 @@ public final class efa {
     public /* synthetic */ efa(int i, String str, Integer num, String str2, String str3, String str4, String str5,
             Integer num2, String str6, String str7, Integer num3, Integer num4) {
         if (2047 != (i & 2047)) {
-            bht.ah(i, 2047, eey.b.getDescriptor());
+            ResourcesCompat.ah(i, 2047, eey.b.getDescriptor());
             throw null;
         }
         this.a = str;

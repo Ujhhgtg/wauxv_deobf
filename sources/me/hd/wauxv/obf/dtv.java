@@ -51,7 +51,7 @@ public final class dtv {
     public final Long z;
 
     static {
-        cfh cfhVar = new cfh(29);
+        Function1$VarIsInt$2 cfhVar = new Function1$VarIsInt$2(29);
         btx btxVar = btx.a;
         a = new IHasGetValue[] { null, null, null, null, null, null, null, null, null, null, null, null, null, null,
                 null, null,
@@ -66,7 +66,7 @@ public final class dtv {
             String str17, Integer num12, String str18, String str19, Boolean bool, String str20, String str21, Float f,
             Integer num13, List list, String str22, List list2, dub dubVar) {
         if ((1023 != (i2 & 1023)) || (-1 != i)) {
-            bht.ag(new int[] { i, i2 }, new int[] { -1, 1023 }, dtt.b.getDescriptor());
+            ResourcesCompat.ag(new int[] { i, i2 }, new int[] { -1, 1023 }, dtt.b.getDescriptor());
             throw null;
         }
         this.b = str;
@@ -259,7 +259,7 @@ public final class dtv {
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.w, -232044198099754L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.x, -232542414306090L);
         bjs.w(sb, this.y, -232512349535018L);
-        dkz.ad(sb, this.z, -232413565287210L);
+        StaticHelpers6.ad(sb, this.z, -232413565287210L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.aa, -232400680385322L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.ab, -232310486072106L);
         bjs.w(sb, this.ac, -229497282493226L);

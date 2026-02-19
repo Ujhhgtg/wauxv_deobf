@@ -4,12 +4,11 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.type.TypeDefinition;
 import net.bytebuddy.description.type.TypeDescription;
-import net.bytebuddy.matcher.ElementMatcher;
 import net.bytebuddy.utility.nullability.MaybeNull;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -48,7 +47,7 @@ public class MethodOverrideMatcher<T extends MethodDescription> extends ElementM
     }
 
     public String toString() {
-        return dkz.w(new StringBuilder("isOverriddenFrom("), this.matcher, ")");
+        return StaticHelpers6.concatFromSb(new StringBuilder("isOverriddenFrom("), this.matcher, ")");
     }
 
     @Override // net.bytebuddy.matcher.ElementMatcher.Junction.ForNonNullValues

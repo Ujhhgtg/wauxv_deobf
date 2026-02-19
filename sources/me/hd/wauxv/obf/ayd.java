@@ -171,7 +171,7 @@ public final class ayd implements SharedPreferences, SharedPreferences.Editor {
             return true;
         }
         if (i == 2) {
-            return bhu.bj(this);
+            return FastKV.bj(this);
         }
         return true;
     }
@@ -183,7 +183,7 @@ public final class ayd implements SharedPreferences, SharedPreferences.Editor {
             if (!aezVar.l) {
                 return aezVar.i;
             }
-            LinkedHashSet linkedHashSetAd = bhu.ad(this, aezVar, this.g);
+            LinkedHashSet linkedHashSetAd = FastKV.ad(this, aezVar, this.g);
             if (linkedHashSetAd == null) {
                 remove(str);
                 return null;
@@ -223,13 +223,13 @@ public final class ayd implements SharedPreferences, SharedPreferences.Editor {
         if (i4 >= length) {
             int i5 = this.r;
             if (i5 <= i3 || i5 <= 8192) {
-                int iAc = bhu.ac(length, i4);
+                int iAc = FastKV.ac(length, i4);
                 byte[] bArr = new byte[iAc];
                 System.arraycopy((byte[]) this.l.d, 0, bArr, 0, this.h);
                 this.l.d = bArr;
                 if (this.aa == 0) {
-                    MappedByteBuffer mappedByteBufferAw = bhu.aw(this.v, iAc);
-                    MappedByteBuffer mappedByteBufferAw2 = bhu.aw(this.w, iAc);
+                    MappedByteBuffer mappedByteBufferAw = FastKV.aw(this.v, iAc);
+                    MappedByteBuffer mappedByteBufferAw2 = FastKV.aw(this.w, iAc);
                     if (mappedByteBufferAw == null || mappedByteBufferAw2 == null) {
                         Log.e("FastKV", this.e, new Exception("map failed"));
                         int i6 = this.h - 12;
@@ -238,7 +238,7 @@ public final class ayd implements SharedPreferences, SharedPreferences.Editor {
                         }
                         this.l.z(0, i6);
                         this.l.aa(4, this.i);
-                        bhu.be(this);
+                        FastKV.be(this);
                     } else {
                         this.x = mappedByteBufferAw;
                         this.y = mappedByteBufferAw2;
@@ -387,7 +387,7 @@ public final class ayd implements SharedPreferences, SharedPreferences.Editor {
     }
 
     public final void an(byte b2, int i) {
-        long jBc = this.i ^ bhu.bc(i, 1L);
+        long jBc = this.i ^ FastKV.bc(i, 1L);
         this.i = jBc;
         if (this.aa == 0) {
             this.x.putLong(4, jBc);
@@ -421,7 +421,7 @@ public final class ayd implements SharedPreferences, SharedPreferences.Editor {
     }
 
     public final void ap(int i, long j, int i2) {
-        long jBc = bhu.bc(i2, j) ^ this.i;
+        long jBc = FastKV.bc(i2, j) ^ this.i;
         this.i = jBc;
         if (this.aa == 0) {
             this.x.putLong(4, jBc);
@@ -441,7 +441,7 @@ public final class ayd implements SharedPreferences, SharedPreferences.Editor {
     }
 
     public final void aq(long j, long j2, int i) {
-        long jBc = bhu.bc(i, j2) ^ this.i;
+        long jBc = FastKV.bc(i, j2) ^ this.i;
         this.i = jBc;
         if (this.aa == 0) {
             this.x.putLong(4, jBc);
@@ -512,9 +512,9 @@ public final class ayd implements SharedPreferences, SharedPreferences.Editor {
     @Override // android.content.SharedPreferences.Editor
     public final synchronized SharedPreferences.Editor clear() {
         try {
-            bhu.s(this);
+            FastKV.s(this);
             if (this.aa != 0) {
-                bhu.y(this);
+                FastKV.y(this);
             }
             ah(null);
         } catch (Throwable th) {
@@ -568,15 +568,15 @@ public final class ayd implements SharedPreferences, SharedPreferences.Editor {
                     break;
                 case 6:
                     afa afaVar = (afa) aetVar;
-                    objValueOf = afaVar.l ? bhu.ae(this, afaVar, this.g) : afaVar.i;
+                    objValueOf = afaVar.l ? FastKV.ae(this, afaVar, this.g) : afaVar.i;
                     break;
                 case 7:
                     aes aesVar = (aes) aetVar;
-                    objValueOf = aesVar.l ? bhu.ab(this, aesVar, this.g) : aesVar.i;
+                    objValueOf = aesVar.l ? FastKV.ab(this, aesVar, this.g) : aesVar.i;
                     break;
                 case 8:
                     aez aezVar = (aez) aetVar;
-                    objValueOf = aezVar.l ? bhu.ad(this, aezVar, this.g) : ((aez) aetVar).i;
+                    objValueOf = aezVar.l ? FastKV.ad(this, aezVar, this.g) : ((aez) aetVar).i;
                     break;
                 default:
                     objValueOf = null;
@@ -634,7 +634,7 @@ public final class ayd implements SharedPreferences, SharedPreferences.Editor {
         if (aetVar.a() == 6) {
             afa afaVar = (afa) aetVar;
             if (afaVar.l) {
-                String strAe = bhu.ae(this, afaVar, this.g);
+                String strAe = FastKV.ae(this, afaVar, this.g);
                 if (strAe != null && !strAe.isEmpty()) {
                     afaVar.i = strAe;
                     afaVar.l = false;

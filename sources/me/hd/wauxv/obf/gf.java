@@ -11,13 +11,13 @@ public final class gf extends SwitchHook {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i = 0;
-        cde cdeVarT = yg.s(-544000557710122L).t();
-        cdeVarT.ab = "onScrollStateChangedInMain" /* "onScrollStateChangedInMain" /* "onScrollStateChangedInMain" /* cnb.z(-543167334054698L)  */;
-        cdeVarT.g = 3;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
-        exg exgVar = exg.a;
+        MethodResolver methodResolverVarT = yg.s(-544000557710122L).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "onScrollStateChangedInMain" /* "onScrollStateChangedInMain" /* "onScrollStateChangedInMain" /* cnb.z(-543167334054698L)  */;
+        methodResolverVarT.paramCount = 3;
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         gf gfVar = a;
-        aki akiVarAd = gfVar.ad(methodHookWrapperVar, exgVar);
+        aki akiVarAd = gfVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
         gfVar.y(akiVarAd, new bn(27));
         akiVarAd.o();
     }

@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Stack;
 import me.hd.wauxv.obf.cik;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.ky;
 import me.hd.wauxv.obf.rb;
 import me.hd.wauxv.obf.yg;
@@ -878,7 +878,7 @@ public class NameSpace implements Serializable, BshClassManager.Listener, NameSo
                 variableImpl.setValue(obj, 1);
                 return;
             } catch (UtilEvalError e) {
-                StringBuilder sbZ = dkz.z("Variable assignment: ", str, ": ");
+                StringBuilder sbZ = StaticHelpers6.concatAndToSb("Variable assignment: ", str, ": ");
                 sbZ.append(e.getMessage());
                 throw new UtilEvalError(sbZ.toString(), e);
             }
@@ -929,7 +929,7 @@ public class NameSpace implements Serializable, BshClassManager.Listener, NameSo
                 variableImpl.setValue(obj, 0);
                 return;
             } else {
-                StringBuilder sbZ = dkz.z("Typed variable: ", str, " was previously declared with type: ");
+                StringBuilder sbZ = StaticHelpers6.concatAndToSb("Typed variable: ", str, " was previously declared with type: ");
                 sbZ.append(variableImpl.getType());
                 throw new UtilEvalError(sbZ.toString());
             }

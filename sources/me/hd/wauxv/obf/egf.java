@@ -18,7 +18,7 @@ public final class egf {
     public /* synthetic */ egf(int i, Boolean bool, Integer num, Float f, String str, Boolean bool2, String str2,
             String str3, String str4) {
         if (255 != (i & Opcodes.CONST_METHOD_TYPE)) {
-            bht.ah(i, Opcodes.CONST_METHOD_TYPE, egd.b.getDescriptor());
+            ResourcesCompat.ah(i, Opcodes.CONST_METHOD_TYPE, egd.b.getDescriptor());
             throw null;
         }
         this.a = bool;

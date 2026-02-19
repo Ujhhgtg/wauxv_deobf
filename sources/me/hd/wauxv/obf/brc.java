@@ -353,14 +353,14 @@ public final class brc extends lj {
 
     @Override // me.hd.wauxv.obf.lj
     public final ArrayList v(aff affVar, ik ikVar) {
-        jx jxVar;
+        FactoryPools factoryPoolsVar;
         CodeEditor codeEditor;
         Stack stack;
         int i;
         Stack stack2 = new Stack();
         ArrayList arrayList = new ArrayList();
-        bmu bmuVar = new bmu(25);
-        SparseIntArray sparseIntArray = (SparseIntArray) bmuVar.h;
+        SyntheticPileOfMess bmuVar = new SyntheticPileOfMess(25);
+        SparseIntArray sparseIntArray = (SparseIntArray) bmuVar.obj;
         Stack stack3 = new Stack();
         int i2 = 0;
         int i3 = 0;
@@ -455,11 +455,11 @@ public final class brc extends lj {
             arrayList = arrayList;
         }
         ArrayList arrayList4 = arrayList;
-        if (ikVar.t() && (jxVar = (jx) this.g) != null
-                && (codeEditor = (CodeEditor) ((WeakReference) jxVar.e).get()) != null
-                && this == codeEditor.getEditorLanguage().e() && ((bmu) jxVar.h) != bmuVar) {
-            jxVar.h = bmuVar;
-            jxVar.af(new dh(jxVar, 10));
+        if (ikVar.t() && (factoryPoolsVar = (FactoryPools) this.g) != null
+                && (codeEditor = (CodeEditor) ((WeakReference) factoryPoolsVar.e).get()) != null
+                && this == codeEditor.getEditorLanguage().e() && ((SyntheticPileOfMess) factoryPoolsVar.h) != bmuVar) {
+            factoryPoolsVar.h = bmuVar;
+            factoryPoolsVar.af(new dh(factoryPoolsVar, 10));
         }
         return arrayList4;
     }

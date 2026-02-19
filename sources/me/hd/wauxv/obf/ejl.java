@@ -9,7 +9,7 @@ public final class ejl {
 
     public /* synthetic */ ejl(int i, String str, String str2) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, ejj.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, ejj.b.getDescriptor());
             throw null;
         }
         this.a = str;

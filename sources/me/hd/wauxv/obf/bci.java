@@ -99,7 +99,7 @@ public final class bci {
     public static List m(cyl cylVar) throws IOException {
         int iB = bch.b(cylVar);
         if (iB == -1) {
-            return EmptyReadonlyList.a;
+            return EmptyReadonlyList.INSTANCE;
         }
         try {
             CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");

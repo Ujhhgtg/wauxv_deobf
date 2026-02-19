@@ -49,15 +49,15 @@ public final class csv implements ParameterizedType, Type {
         Class cls = this.a;
         Type type = this.b;
         if (type != null) {
-            sb.append(emn.ad(type));
+            sb.append(StaticHelpers7.ad(type));
             sb.append("$");
             sb.append(cls.getSimpleName());
         } else {
-            sb.append(emn.ad(cls));
+            sb.append(StaticHelpers7.ad(cls));
         }
         Type[] typeArr = this.c;
         if (typeArr.length != 0) {
-            SomeStaticHelpers.t(typeArr, sb, ", ", "<", ">", "...", csu.a);
+            SomeStaticHelpers.appendJoinTo(typeArr, sb, ", ", "<", ">", "...", csu.a);
         }
         return sb.toString();
     }

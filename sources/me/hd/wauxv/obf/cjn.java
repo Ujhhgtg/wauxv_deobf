@@ -13,8 +13,8 @@ public final class cjn {
         this.b = i2;
     }
 
-    public void c(czx czxVar) {
-        View view = czxVar.d;
+    public void c(SomeView someViewVar) {
+        View view = someViewVar.d;
         this.a = view.getLeft();
         this.b = view.getTop();
         view.getRight();

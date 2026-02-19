@@ -10,7 +10,7 @@ public final class ecm {
 
     public /* synthetic */ ecm(int i, eie eieVar, Integer num, String str) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, eck.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, eck.b.getDescriptor());
             throw null;
         }
         this.a = eieVar;

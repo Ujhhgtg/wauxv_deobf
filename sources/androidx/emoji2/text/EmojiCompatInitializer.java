@@ -13,7 +13,7 @@ import me.hd.wauxv.obf.bbv;
 import me.hd.wauxv.obf.bpf;
 import me.hd.wauxv.obf.bup;
 import me.hd.wauxv.obf.bur;
-import me.hd.wauxv.obf.jx;
+import me.hd.wauxv.obf.FactoryPools;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -39,13 +39,13 @@ public class EmojiCompatInitializer implements bpf {
                 }
             }
         }
-        jx jxVarJ = jx.j(context);
-        jxVarJ.getClass();
-        synchronized (jx.b) {
+        FactoryPools factoryPoolsVarJ = FactoryPools.j(context);
+        factoryPoolsVarJ.getClass();
+        synchronized (FactoryPools.b) {
             try {
-                objQ = ((HashMap) jxVarJ.e).get(ProcessLifecycleInitializer.class);
+                objQ = ((HashMap) factoryPoolsVarJ.e).get(ProcessLifecycleInitializer.class);
                 if (objQ == null) {
-                    objQ = jxVarJ.q(ProcessLifecycleInitializer.class, new HashSet());
+                    objQ = factoryPoolsVarJ.q(ProcessLifecycleInitializer.class, new HashSet());
                 }
             } catch (Throwable th2) {
                 throw th2;

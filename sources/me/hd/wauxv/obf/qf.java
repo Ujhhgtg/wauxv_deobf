@@ -32,7 +32,7 @@ public final class qf {
                 if (weakReference != null && weakReference.get() != null) {
                     this.b = i;
                     if (!this.c) {
-                        WeakHashMap weakHashMap = eqz.a;
+                        WeakHashMap weakHashMap = ViewCompat.a;
                         ((View) bottomSheetBehavior.bi.get()).postOnAnimation((dc) runnable);
                         this.c = true;
                     }
@@ -45,7 +45,7 @@ public final class qf {
                 if (weakReference2 != null && weakReference2.get() != null) {
                     this.b = i;
                     if (!this.c) {
-                        WeakHashMap weakHashMap2 = eqz.a;
+                        WeakHashMap weakHashMap2 = ViewCompat.a;
                         ((View) sideSheetBehavior.ae.get()).postOnAnimation((dh) runnable);
                         this.c = true;
                     }

@@ -12,7 +12,7 @@ public final class dyo {
 
     public /* synthetic */ dyo(int i, Integer num, dsy dsyVar, Integer num2, String str, String str2) {
         if (31 != (i & 31)) {
-            bht.ah(i, 31, dym.b.getDescriptor());
+            ResourcesCompat.ah(i, 31, dym.b.getDescriptor());
             throw null;
         }
         this.a = num;

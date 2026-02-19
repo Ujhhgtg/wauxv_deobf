@@ -5,8 +5,8 @@ package me.hd.wauxv.obf;
 public final class aoq extends Exception {
     public final Throwable a;
 
-    public aoq(Throwable th, ahj ahjVar, ahh ahhVar) {
-        super("Coroutine dispatcher " + ahjVar + " threw an exception, context = " + ahhVar, th);
+    public aoq(Throwable th, Dispatcher dispatcherVar, ahh ahhVar) {
+        super("Coroutine dispatcher " + dispatcherVar + " threw an exception, context = " + ahhVar, th);
         this.a = th;
     }
 

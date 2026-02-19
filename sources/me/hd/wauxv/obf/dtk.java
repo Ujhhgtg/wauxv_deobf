@@ -13,7 +13,7 @@ public final class dtk {
 
     public /* synthetic */ dtk(int i, Integer num, Integer num2, Integer num3, String str, String str2, String str3) {
         if (63 != (i & 63)) {
-            bht.ah(i, 63, dti.b.getDescriptor());
+            ResourcesCompat.ah(i, 63, dti.b.getDescriptor());
             throw null;
         }
         this.a = str;

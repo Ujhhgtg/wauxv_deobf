@@ -20,10 +20,10 @@ public final class ry implements dcj {
         switch (this.a) {
             case 0:
                 apq apqVar = this.b;
-                return apqVar.o(new jx((ByteBuffer) obj, apqVar.j, apqVar.i, 11), i, i2, crwVar, apq.e);
+                return apqVar.o(new FactoryPools((ByteBuffer) obj, apqVar.j, apqVar.i, 11), i, i2, crwVar, apq.e);
             default:
                 apq apqVar2 = this.b;
-                return apqVar2.o(new jx((ParcelFileDescriptor) obj, apqVar2.j, apqVar2.i), i, i2, crwVar, apq.e);
+                return apqVar2.o(new FactoryPools((ParcelFileDescriptor) obj, apqVar2.j, apqVar2.i), i, i2, crwVar, apq.e);
         }
     }
 

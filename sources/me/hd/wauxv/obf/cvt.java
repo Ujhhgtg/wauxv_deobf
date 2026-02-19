@@ -13,7 +13,7 @@ public final class cvt implements bup {
     public boolean e = true;
     public final bur g = new bur(this);
     public final dh h = new dh(this, 15);
-    public final bmu i = new bmu(this);
+    public final SyntheticPileOfMess i = new SyntheticPileOfMess(this);
 
     @Override // me.hd.wauxv.obf.bup
     public final bur ap() {
@@ -25,7 +25,7 @@ public final class cvt implements bup {
         this.c = i;
         if (i == 1) {
             if (this.d) {
-                this.g.m(bug.ON_RESUME);
+                this.g.m(LifeEventEnum.ON_RESUME);
                 this.d = false;
             } else {
                 Handler handler = this.f;

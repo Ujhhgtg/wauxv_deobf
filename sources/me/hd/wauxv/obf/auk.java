@@ -24,8 +24,8 @@ public final class auk {
     }
 
     public final boolean h() {
-        cdb cdbVarF = this.c.b.f();
-        int iF = cdbVarF.f(6);
+        FlatBufferTable cdbVarF = this.c.b.f();
+        int iF = cdbVarF.getVTableOffset(6);
         return !(iF == 0 || ((ByteBuffer) cdbVarF.e).get(iF + cdbVarF.b) == 0) || this.e == 65039;
     }
 }

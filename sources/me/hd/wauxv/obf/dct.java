@@ -20,7 +20,7 @@ public final /* synthetic */ class dct implements Runnable {
     public final void run() {
         switch (this.a) {
             case 0:
-                ((bht) this.c).e(this.b);
+                ((ResourcesCompat) this.c).e(this.b);
                 break;
             default:
                 SideSheetBehavior sideSheetBehavior = (SideSheetBehavior) this.c;

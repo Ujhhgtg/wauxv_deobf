@@ -12,7 +12,7 @@ public final class ede {
 
     public /* synthetic */ ede(int i, Integer num, List list) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, edc.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, edc.b.getDescriptor());
             throw null;
         }
         this.b = num;

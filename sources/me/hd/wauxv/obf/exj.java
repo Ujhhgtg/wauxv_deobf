@@ -14,8 +14,8 @@ public final class exj extends nh {
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public exj(but butVar, aki akiVar, Member member, exg exgVar) {
-        super(exgVar);
+    public exj(but butVar, aki akiVar, Member member, HookPriorityEnum hookPriorityEnumVar) {
+        super(hookPriorityEnumVar);
         this.a = akiVar;
         this.b = member;
     }
@@ -42,7 +42,7 @@ public final class exj extends nh {
             }
             objX = KotlinUnit.INSTANCE;
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         Throwable thB = dcy.b(objX);
         if (thB != null) {
@@ -77,7 +77,7 @@ public final class exj extends nh {
             }
             objX = KotlinUnit.INSTANCE;
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         Throwable thB = dcy.b(objX);
         if (thB != null) {

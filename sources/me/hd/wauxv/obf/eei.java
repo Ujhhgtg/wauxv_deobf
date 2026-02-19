@@ -40,7 +40,7 @@ public final class eei {
             String str10, Integer num5, String str11, String str12, Integer num6, String str13, String str14, Long l,
             ehv ehvVar, String str15, dte dteVar, Boolean bool, Boolean bool2, ein einVar, dws dwsVar, efd efdVar) {
         if (1073741823 != (i & 1073741823)) {
-            bht.ah(i, 1073741823, eeg.b.getDescriptor());
+            ResourcesCompat.ah(i, 1073741823, eeg.b.getDescriptor());
             throw null;
         }
         this.a = str;
@@ -187,7 +187,7 @@ public final class eei {
         bjs.w(sb, this.s, -267494858160938L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.t, -264642999876394L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.u, -264539920661290L);
-        dkz.ad(sb, this.v, -264484086086442L);
+        StaticHelpers6.ad(sb, this.v, -264484086086442L);
         sb.append(this.w);
         sb.append(", description=" /* ", description=" /* ", description=" /* cnb.z(-264939352619818L)  */);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.x, -264857748241194L);

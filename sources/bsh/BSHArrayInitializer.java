@@ -1,13 +1,12 @@
 package bsh;
 
-import bsh.Types;
 import java.lang.reflect.Array;
 import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Iterator;
 import java.util.Map;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -146,7 +145,7 @@ class BSHArrayInitializer extends SimpleNode {
     }
 
     private void throwTypeError(Class<?> cls, Object obj, int i, CallStack callStack) throws EvalException {
-        StringBuilder sbZ = dkz.z("Incompatible type: ", StringUtil.typeString(obj), " in initializer of array type: ");
+        StringBuilder sbZ = StaticHelpers6.concatAndToSb("Incompatible type: ", StringUtil.typeString(obj), " in initializer of array type: ");
         sbZ.append(cls.getSimpleName());
         sbZ.append(" at position: ");
         sbZ.append(i);

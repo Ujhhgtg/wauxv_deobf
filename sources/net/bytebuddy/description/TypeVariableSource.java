@@ -1,7 +1,6 @@
 package net.bytebuddy.description;
 
-import me.hd.wauxv.obf.dkz;
-import net.bytebuddy.description.ModifierReviewable;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.description.type.TypeList;
@@ -24,7 +23,7 @@ public interface TypeVariableSource extends ModifierReviewable.OfAbstraction {
             if (genericFindVariable != null) {
                 return genericFindVariable;
             }
-            StringBuilder sbZ = dkz.z("Cannot resolve ", str, " from ");
+            StringBuilder sbZ = StaticHelpers6.concatAndToSb("Cannot resolve ", str, " from ");
             sbZ.append(toSafeString());
             throw new IllegalArgumentException(sbZ.toString());
         }

@@ -19,18 +19,18 @@ public final class dhh extends SwitchHook {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i = 0;
-        bmu bmuVarS = yg.s(-594475013372714L);
-        cde cdeVarT = bmuVarS.t();
-        cdeVarT.ab = "initView" /* "initView" /* "initView" /* "initView" /* cnb.z(-594311804615466L)   */;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
+        SyntheticPileOfMess bmuVarS = yg.s(-594475013372714L);
+        MethodResolver methodResolverVarT = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "initView" /* "initView" /* "initView" /* "initView" /* cnb.z(-594311804615466L)   */;
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
         dhh dhhVar = a;
-        exg exgVar = exg.a;
-        aki akiVarAd = dhhVar.ad(methodHookWrapperVar, exgVar);
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
+        aki akiVarAd = dhhVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
         dhhVar.x(akiVarAd, new dhg(0));
         akiVarAd.o();
-        cde cdeVarT2 = bmuVarS.t();
-        cdeVarT2.ab = "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* cnb.z(-594822905723690L)   */;
-        aki akiVarAd2 = dhhVar.ad((MethodHookWrapper) dkz.n(new Object[] { eoz.a, cvh.a.b() }, 2, cdeVarT2), exgVar);
+        MethodResolver methodResolverVarT2 = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT2.name = "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* cnb.z(-594822905723690L)   */;
+        aki akiVarAd2 = dhhVar.ad((MethodHookWrapper) StaticHelpers6.n(new Object[] { eoz.a, cvh.a.b() }, 2, methodResolverVarT2), hookPriorityEnumVar);
         dhhVar.y(akiVarAd2, new dhg(1));
         akiVarAd2.o();
     }

@@ -75,7 +75,7 @@ public final class etd extends doi implements bgj {
                 ahp ahpVar = (ahp) this.o;
                 int i2 = this.f;
                 if (i2 == 0) {
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                     dnc.g(null, 3, "开始下载视频" /* "开始下载视频" /* "开始下载视频" /* cnb.z(-587538641189674L)  */);
                     StringBuilder sb = new StringBuilder();
                     eta etaVar = eta.a;
@@ -116,7 +116,7 @@ public final class etd extends doi implements bgj {
                     }
                     String str9 = this.e;
                     str = this.d;
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                     strN = str9;
                     obj_be = obj;
                 }
@@ -128,7 +128,7 @@ public final class etd extends doi implements bgj {
                 ahp ahpVar2 = (ahp) this.o;
                 int i4 = this.f;
                 if (i4 == 0) {
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                     dnc.g(null, 3, "开始下载视频" /* "开始下载视频" /* "开始下载视频" /* cnb.z(-611010637462314L)  */);
                     StringBuilder sb3 = new StringBuilder();
                     etf etfVar = etf.a;
@@ -169,7 +169,7 @@ public final class etd extends doi implements bgj {
                     }
                     String str11 = this.e;
                     str2 = this.d;
-                    bhu.bd(obj);
+                    FastKV.bd(obj);
                     strN2 = str11;
                     obj_be2 = obj;
                 }

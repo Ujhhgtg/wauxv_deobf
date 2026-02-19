@@ -132,7 +132,7 @@ public abstract class abh {
                 float f4 = 100.0f;
                 boolean z = (f3 < 0.0f || f3 > 100.0f) ? false : r16 == true ? 1 : 0;
                 if (f2 != 1.0f || z) {
-                    int iAs = cnf.as((int) ((Color.alpha(color) * f2) + 0.5f), 0, Opcodes.CONST_METHOD_TYPE);
+                    int iAs = HugeSyntheticPileOfHelpers.as((int) ((Color.alpha(color) * f2) + 0.5f), 0, Opcodes.CONST_METHOD_TYPE);
                     if (z) {
                         sy syVarG = sy.g(color);
                         float f5 = syVarG.a;

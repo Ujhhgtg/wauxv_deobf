@@ -40,8 +40,8 @@ public final class mv implements Parcelable {
             int i3 = i + 1;
             this.a[i] = bfeVar.a;
             ArrayList arrayList = this.b;
-            bdj bdjVar = bfeVar.b;
-            arrayList.add(bdjVar != null ? bdjVar.aw : null);
+            SomeFragmentManager someFragmentManagerVar = bfeVar.b;
+            arrayList.add(someFragmentManagerVar != null ? someFragmentManagerVar.aw : null);
             int[] iArr = this.a;
             iArr[i3] = bfeVar.c ? 1 : 0;
             iArr[i + 2] = bfeVar.d;

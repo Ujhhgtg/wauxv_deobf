@@ -6,7 +6,7 @@ import java.net.InetAddress;
 import java.util.Arrays;
 import java.util.Locale;
 import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dnj;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.rh;
@@ -199,7 +199,7 @@ public final class HostnamesKt {
             if (address.length == 4) {
                 return inetAddressDecodeIpv6.getHostAddress();
             }
-            throw new AssertionError(dkz.o('\'', "Invalid IPv6 address: '", str));
+            throw new AssertionError(StaticHelpers6.o('\'', "Invalid IPv6 address: '", str));
         }
         try {
             String ascii = IDN.toASCII(str);

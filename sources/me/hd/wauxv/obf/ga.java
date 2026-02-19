@@ -21,15 +21,15 @@ public final class ga extends SwitchHook implements IDatabaseOperationsListener,
     public final void getThisObject() throws NoSuchMethodException {
         Iterator it = OtherStaticHelpers.argsToList(fw.a, fy.a, fx.a).iterator();
         while (it.hasNext()) {
-            Class clsAz = emn.az((DexDescData) it.next());
+            Class clsAz = StaticHelpers7.az((DexDescData) it.next());
             int i2 = 0;
-            cde cdeVarT = dqc.bi(clsAz).t();
-            cdeVarT.a = Void.TYPE;
-            cdeVarT.g = 1;
-            MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
-            exg exgVar = exg.a;
+            MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(clsAz).getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT.returnType = Void.TYPE;
+            methodResolverVarT.paramCount = 1;
+            MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
+            HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
             ga gaVar = a;
-            aki akiVarAd = gaVar.ad(methodHookWrapperVar, exgVar);
+            aki akiVarAd = gaVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
             gaVar.y(akiVarAd, new bn(18));
             akiVarAd.o();
         }
@@ -47,9 +47,9 @@ public final class ga extends SwitchHook implements IDatabaseOperationsListener,
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(fw.a, dexKitBridge, new bn(15));
-        emn.aj(fy.a, dexKitBridge, new bn(16));
-        emn.aj(fx.a, dexKitBridge, new bn(17));
+        StaticHelpers7.resolveDexAndCache(fw.a, dexKitBridge, new bn(15));
+        StaticHelpers7.resolveDexAndCache(fy.a, dexKitBridge, new bn(16));
+        StaticHelpers7.resolveDexAndCache(fx.a, dexKitBridge, new bn(17));
     }
 
     @Override // me.hd.wauxv.obf.IDatabaseOperationsListener
@@ -68,9 +68,9 @@ public final class ga extends SwitchHook implements IDatabaseOperationsListener,
                 Long asLong = contentValues.getAsLong("msgId" /* "msgId" /* "msgId" /* cnb.z(-453926503578410L)  */);
                 int i3 = 0;
                 dlx.a.getClass();
-                cde cdeVarT = dqc.bi(dlx.b()).t();
-                cdeVarT.ab = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
-                Object objJ = ((MethodHookWrapper) dkz.n(new Object[] { dal.b(String.class), dal.b(Object[].class) }, 2, cdeVarT)).j(
+                MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
+                Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class), dal.b(Object[].class) }, 2, methodResolverVarT)).j(
                         "SELECT createTime, talker FROM message WHERE msgId = ?" /* "SELECT createTime, talker FROM message WHERE msgId = ?" /* "SELECT createTime, talker FROM message WHERE msgId = ?" /* cnb.z(-453883553905450L)  */,
                         new Object[] { asLong });
                 throwIfVar1IsNull(objJ);

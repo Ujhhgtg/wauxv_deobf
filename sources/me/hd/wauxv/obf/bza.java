@@ -8,7 +8,7 @@ import java.util.ServiceConfigurationError;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public abstract class bza {
-    public static final bkb a;
+    public static final Dispatcher2 a;
 
     static {
         String property;
@@ -40,7 +40,7 @@ public abstract class bza {
             if (mainLooper == null) {
                 throw new IllegalStateException("The main looper is not available");
             }
-            a = new bkb(bkd.a(mainLooper), false);
+            a = new Dispatcher2(bkd.a(mainLooper), false);
         } catch (Throwable th) {
             throw new ServiceConfigurationError(th.getMessage(), th);
         }

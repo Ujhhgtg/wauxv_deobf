@@ -6,7 +6,7 @@ import java.io.EOFException;
 import java.util.List;
 import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.cyl;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.rh;
 import okhttp3.internal.connection.Exchange;
 import okhttp3.internal.http.HttpHeaders;
@@ -96,7 +96,7 @@ public final class Response implements Closeable {
             str = "WWW-Authenticate";
         } else {
             if (i != 407) {
-                return EmptyReadonlyList.a;
+                return EmptyReadonlyList.INSTANCE;
             }
             str = "Proxy-Authenticate";
         }
@@ -300,16 +300,16 @@ public final class Response implements Closeable {
         private final void checkSupportResponse(String str, Response response) {
             if (response != null) {
                 if (response.body() != null) {
-                    throw new IllegalArgumentException(dkz.s(str, ".body != null").toString());
+                    throw new IllegalArgumentException(StaticHelpers6.concat(str, ".body != null").toString());
                 }
                 if (response.networkResponse() != null) {
-                    throw new IllegalArgumentException(dkz.s(str, ".networkResponse != null").toString());
+                    throw new IllegalArgumentException(StaticHelpers6.concat(str, ".networkResponse != null").toString());
                 }
                 if (response.cacheResponse() != null) {
-                    throw new IllegalArgumentException(dkz.s(str, ".cacheResponse != null").toString());
+                    throw new IllegalArgumentException(StaticHelpers6.concat(str, ".cacheResponse != null").toString());
                 }
                 if (response.priorResponse() != null) {
-                    throw new IllegalArgumentException(dkz.s(str, ".priorResponse != null").toString());
+                    throw new IllegalArgumentException(StaticHelpers6.concat(str, ".priorResponse != null").toString());
                 }
             }
         }

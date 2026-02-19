@@ -9,7 +9,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.annotation.AnnotationDescription;
@@ -231,7 +231,7 @@ public class TargetMethodAnnotationDrivenBinder implements MethodDelegationBinde
                 Class cls = Void.TYPE;
                 if (!typeDescriptionDeclaringType.represents(cls)) {
                     if (declaringType(loadable).isPrimitive() || declaringType(loadable).isArray()) {
-                        throw new IllegalStateException(dkz.t("A primitive type or array type cannot declare a field: ", methodDescription));
+                        throw new IllegalStateException(StaticHelpers6.concat("A primitive type or array type cannot declare a field: ", methodDescription));
                     }
                     if (!target.getInstrumentedType().isAssignableTo(declaringType(loadable))) {
                         return MethodDelegationBinder.ParameterBinding.Illegal.INSTANCE;
@@ -374,7 +374,7 @@ public class TargetMethodAnnotationDrivenBinder implements MethodDelegationBinde
         }
 
         public int hashCode() {
-            return this.typing.hashCode() + bjs.g(this.handlers, dkz.c(this.candidate, getClass().hashCode() * 31, 31), 31);
+            return this.typing.hashCode() + bjs.g(this.handlers, StaticHelpers6.c(this.candidate, getClass().hashCode() * 31, 31), 31);
         }
 
         public String toString() {

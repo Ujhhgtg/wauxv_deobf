@@ -13,7 +13,7 @@ public class arh extends arg {
         throwIfVar1IsNull(doxVar2, "navigationBarStyle");
         throwIfVar1IsNull(window, "window");
         throwIfVar1IsNull(view, "view");
-        bht.ac(window, false);
+        ResourcesCompat.ac(window, false);
         window.setStatusBarColor(0);
         window.setNavigationBarColor(0);
         window.setStatusBarContrastEnforced(false);

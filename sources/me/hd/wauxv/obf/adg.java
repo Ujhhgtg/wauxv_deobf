@@ -64,7 +64,7 @@ public final class adg {
         int i6 = this.b + this.c;
         int i7 = this.d;
         View view = adqVar.bp;
-        int iAe = dkz.ae(i2);
+        int iAe = StaticHelpers6.ae(i2);
         if (iAe == 0) {
             iMakeMeasureSpec = View.MeasureSpec.makeMeasureSpec(i4, 1073741824);
         } else if (iAe == 1) {
@@ -89,7 +89,7 @@ public final class adg {
             }
             iMakeMeasureSpec = ViewGroup.getChildMeasureSpec(i9, i7 + i10, -1);
         }
-        int iAe2 = dkz.ae(i3);
+        int iAe2 = StaticHelpers6.ae(i3);
         if (iAe2 == 0) {
             iMakeMeasureSpec2 = View.MeasureSpec.makeMeasureSpec(i5, 1073741824);
         } else if (iAe2 == 1) {
@@ -116,7 +116,7 @@ public final class adg {
         }
         adr adrVar = (adr) adqVar.bd;
         ConstraintLayout constraintLayout = this.h;
-        if (adrVar != null && cnf.az(constraintLayout.j, 256) && view.getMeasuredWidth() == adqVar.cq() && view.getMeasuredWidth() < adrVar.cq() && view.getMeasuredHeight() == adqVar.cm() && view.getMeasuredHeight() < adrVar.cm() && view.getBaseline() == adqVar.bk && !adqVar.cz() && i(adqVar.aq, iMakeMeasureSpec, adqVar.cq()) && i(adqVar.ar, iMakeMeasureSpec2, adqVar.cm())) {
+        if (adrVar != null && HugeSyntheticPileOfHelpers.az(constraintLayout.j, 256) && view.getMeasuredWidth() == adqVar.cq() && view.getMeasuredWidth() < adrVar.cq() && view.getMeasuredHeight() == adqVar.cm() && view.getMeasuredHeight() < adrVar.cm() && view.getBaseline() == adqVar.bk && !adqVar.cz() && i(adqVar.aq, iMakeMeasureSpec, adqVar.cq()) && i(adqVar.ar, iMakeMeasureSpec2, adqVar.cm())) {
             ofVar.e = adqVar.cq();
             ofVar.f = adqVar.cm();
             ofVar.g = adqVar.bk;
@@ -164,7 +164,7 @@ public final class adg {
             if (i19 > 0) {
                 iMax = Math.min(i19, iMax);
             }
-            if (!cnf.az(constraintLayout.j, 1)) {
+            if (!HugeSyntheticPileOfHelpers.az(constraintLayout.j, 1)) {
                 if (z10 && z8) {
                     iMax2 = (int) ((iMax * adqVar.bg) + 0.5f);
                 } else if (z11 && z9) {

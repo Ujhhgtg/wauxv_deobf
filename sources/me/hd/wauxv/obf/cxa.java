@@ -41,7 +41,7 @@ public final /* synthetic */ class cxa implements bgj {
                     String str3 = ((adx) it.next()).a;
                     List listBf = dqc.toSingletonList(conversationBean.getUsername());
                     clu.a.getClass();
-                    cme.b(cme.a, emn.ba(clt.a).newInstance(str3, listBf, 0, null));
+                    cme.b(cme.a, StaticHelpers7.ba(clt.a).newInstance(str3, listBf, 0, null));
                 }
                 dnc.g(null, 3, "已邀请至" /* "已邀请至" /* "已邀请至" /* "已邀请至" /* cnb.z(-527104156367658L)   */ + list.size() + "个群聊" /*
                                                                                             * "个群聊" /* "个群聊" /* "个群聊" /* cnb.z(-527048321792810L)  */

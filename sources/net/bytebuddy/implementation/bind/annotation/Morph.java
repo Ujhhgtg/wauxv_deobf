@@ -8,7 +8,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.util.Collection;
 import java.util.Collections;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
@@ -28,7 +28,6 @@ import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.MethodAccessorFactory;
 import net.bytebuddy.implementation.auxiliary.AuxiliaryType;
 import net.bytebuddy.implementation.bind.MethodDelegationBinder;
-import net.bytebuddy.implementation.bind.annotation.TargetMethodAnnotationDrivenBinder;
 import net.bytebuddy.implementation.bytecode.ByteCodeAppender;
 import net.bytebuddy.implementation.bytecode.Duplication;
 import net.bytebuddy.implementation.bytecode.StackManipulation;
@@ -243,7 +242,7 @@ public @interface Morph {
                     }
 
                     public int hashCode() {
-                        return MethodCall.this.hashCode() + dkz.f(this.typeDescription, getClass().hashCode() * 31, 31);
+                        return MethodCall.this.hashCode() + StaticHelpers6.f(this.typeDescription, getClass().hashCode() * 31, 31);
                     }
                 }
 
@@ -269,7 +268,7 @@ public @interface Morph {
                 }
 
                 public int hashCode() {
-                    return this.assigner.hashCode() + dkz.c(this.accessorMethod, getClass().hashCode() * 31, 31);
+                    return this.assigner.hashCode() + StaticHelpers6.c(this.accessorMethod, getClass().hashCode() * 31, 31);
                 }
 
                 @Override // net.bytebuddy.dynamic.scaffold.InstrumentedType.Prepareable
@@ -332,7 +331,7 @@ public @interface Morph {
             }
 
             public int hashCode() {
-                return dkz.h(this.assigner, (this.specialMethodInvocation.hashCode() + dkz.f(this.instrumentedType, dkz.f(this.morphingType, getClass().hashCode() * 31, 31), 31)) * 31, 31) + (this.serializableProxy ? 1 : 0);
+                return StaticHelpers6.h(this.assigner, (this.specialMethodInvocation.hashCode() + StaticHelpers6.f(this.instrumentedType, StaticHelpers6.f(this.morphingType, getClass().hashCode() * 31, 31), 31)) * 31, 31) + (this.serializableProxy ? 1 : 0);
             }
 
             @Override // net.bytebuddy.implementation.auxiliary.AuxiliaryType
@@ -358,17 +357,17 @@ public @interface Morph {
 
         private static MethodDescription onlyMethod(TypeDescription typeDescription) {
             if (!typeDescription.isInterface()) {
-                throw new IllegalArgumentException(dkz.x(typeDescription, " is not an interface"));
+                throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " is not an interface"));
             }
             if (!typeDescription.getInterfaces().isEmpty()) {
-                throw new IllegalArgumentException(dkz.x(typeDescription, " must not extend other interfaces"));
+                throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " must not extend other interfaces"));
             }
             if (!typeDescription.isPublic()) {
-                throw new IllegalArgumentException(dkz.x(typeDescription, " is mot public"));
+                throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " is mot public"));
             }
             MethodList methodListFilter = typeDescription.getDeclaredMethods().filter(ElementMatchers.isAbstract());
             if (methodListFilter.size() != 1) {
-                throw new IllegalArgumentException(dkz.x(typeDescription, " must declare exactly one abstract method"));
+                throw new IllegalArgumentException(StaticHelpers6.concat(typeDescription, " must declare exactly one abstract method"));
             }
             MethodDescription methodDescription = (MethodDescription) methodListFilter.getOnly();
             if (!methodDescription.getReturnType().asErasure().represents(Object.class)) {

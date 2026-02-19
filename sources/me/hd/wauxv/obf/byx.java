@@ -64,7 +64,7 @@ public final /* synthetic */ class byx implements bgk {
                     byxVar.b(obj, obj2, ebVar2);
                     objX = kotlinUnitVar;
                 } catch (Throwable th) {
-                    objX = bhu.x(th);
+                    objX = FastKV.x(th);
                 }
                 Throwable thB = dcy.b(objX);
                 if (thB == null) {
@@ -109,7 +109,7 @@ public final /* synthetic */ class byx implements bgk {
                             objX2 = concurrentHashMap;
                         }
                     } catch (Throwable th2) {
-                        objX2 = bhu.x(th2);
+                        objX2 = FastKV.x(th2);
                     }
                     Throwable thB2 = dcy.b(objX2);
                     if (thB2 != null) {

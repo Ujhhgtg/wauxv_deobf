@@ -24,42 +24,42 @@ public final /* synthetic */ class byz extends bgr implements IInvokable {
     public final Object invoke(Object obj) {
         View viewInflate = ((LayoutInflater) obj).inflate(R.layout.activity_main, (ViewGroup) null, false);
         int i = R.id.mainAppBar;
-        if (((AppBarLayout) KotlinHelpers2.aq(viewInflate, R.id.mainAppBar)) != null) {
+        if (((AppBarLayout) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.mainAppBar)) != null) {
             i = R.id.mainBearSceneView;
-            BearSceneView bearSceneView = (BearSceneView) KotlinHelpers2.aq(viewInflate, R.id.mainBearSceneView);
+            BearSceneView bearSceneView = (BearSceneView) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.mainBearSceneView);
             if (bearSceneView != null) {
                 i = R.id.mainButtonUpdate;
-                MaterialButton materialButton = (MaterialButton) KotlinHelpers2.aq(viewInflate, R.id.mainButtonUpdate);
+                MaterialButton materialButton = (MaterialButton) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.mainButtonUpdate);
                 if (materialButton != null) {
                     i = R.id.mainCardViewStatus;
-                    MaterialCardView materialCardView = (MaterialCardView) KotlinHelpers2.aq(viewInflate, R.id.mainCardViewStatus);
+                    MaterialCardView materialCardView = (MaterialCardView) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.mainCardViewStatus);
                     if (materialCardView != null) {
                         i = R.id.mainClickView;
-                        View viewAq = KotlinHelpers2.aq(viewInflate, R.id.mainClickView);
+                        View viewAq = KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.mainClickView);
                         if (viewAq != null) {
                             i = R.id.mainImageViewStatus;
-                            ShapeableImageView shapeableImageView = (ShapeableImageView) KotlinHelpers2.aq(viewInflate, R.id.mainImageViewStatus);
+                            ShapeableImageView shapeableImageView = (ShapeableImageView) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.mainImageViewStatus);
                             if (shapeableImageView != null) {
                                 i = R.id.mainLinearLayoutUpdate;
-                                LinearLayout linearLayout = (LinearLayout) KotlinHelpers2.aq(viewInflate, R.id.mainLinearLayoutUpdate);
+                                LinearLayout linearLayout = (LinearLayout) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.mainLinearLayoutUpdate);
                                 if (linearLayout != null) {
                                     i = R.id.mainTextViewStatus;
-                                    MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.aq(viewInflate, R.id.mainTextViewStatus);
+                                    MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.mainTextViewStatus);
                                     if (materialTextView != null) {
                                         i = R.id.mainTextViewStatusVersion;
-                                        MaterialTextView materialTextView2 = (MaterialTextView) KotlinHelpers2.aq(viewInflate, R.id.mainTextViewStatusVersion);
+                                        MaterialTextView materialTextView2 = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.mainTextViewStatusVersion);
                                         if (materialTextView2 != null) {
                                             i = R.id.mainTextViewUpdateSummary;
-                                            MaterialTextView materialTextView3 = (MaterialTextView) KotlinHelpers2.aq(viewInflate, R.id.mainTextViewUpdateSummary);
+                                            MaterialTextView materialTextView3 = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.mainTextViewUpdateSummary);
                                             if (materialTextView3 != null) {
                                                 i = R.id.mainTextViewUpdateTitle;
-                                                MaterialTextView materialTextView4 = (MaterialTextView) KotlinHelpers2.aq(viewInflate, R.id.mainTextViewUpdateTitle);
+                                                MaterialTextView materialTextView4 = (MaterialTextView) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.mainTextViewUpdateTitle);
                                                 if (materialTextView4 != null) {
                                                     i = R.id.mainToolbar;
-                                                    MaterialToolbar materialToolbar = (MaterialToolbar) KotlinHelpers2.aq(viewInflate, R.id.mainToolbar);
+                                                    MaterialToolbar materialToolbar = (MaterialToolbar) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.mainToolbar);
                                                     if (materialToolbar != null) {
                                                         i = R.id.mainToolbarLayout;
-                                                        if (((CollapsingToolbarLayout) KotlinHelpers2.aq(viewInflate, R.id.mainToolbarLayout)) != null) {
+                                                        if (((CollapsingToolbarLayout) KotlinHelpers2.recursivelyFindViewById(viewInflate, R.id.mainToolbarLayout)) != null) {
                                                             return new dj((CoordinatorLayout) viewInflate, bearSceneView, materialButton, materialCardView, viewAq, shapeableImageView, linearLayout, materialTextView, materialTextView2, materialTextView3, materialTextView4, materialToolbar);
                                                         }
                                                     }

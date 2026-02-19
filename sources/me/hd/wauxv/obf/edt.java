@@ -10,7 +10,7 @@ public final class edt {
 
     public /* synthetic */ edt(int i, String str, String str2, Long l) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, edr.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, edr.b.getDescriptor());
             throw null;
         }
         this.a = str;

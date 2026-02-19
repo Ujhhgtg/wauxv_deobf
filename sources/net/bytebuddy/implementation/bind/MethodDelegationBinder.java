@@ -9,7 +9,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.description.method.MethodDescription;
@@ -355,7 +355,7 @@ public interface MethodDelegationBinder {
                 }
 
                 public int hashCode() {
-                    return this.terminatingStackManipulation.hashCode() + bjs.g(this.parameterStackManipulations, dkz.g(this.methodInvocation, yg.c(this.registeredTargetIndices, dkz.c(this.target, getClass().hashCode() * 31, 31), 31), 31), 31);
+                    return this.terminatingStackManipulation.hashCode() + bjs.g(this.parameterStackManipulations, StaticHelpers6.g(this.methodInvocation, yg.c(this.registeredTargetIndices, StaticHelpers6.c(this.target, getClass().hashCode() * 31, 31), 31), 31), 31);
                 }
 
                 @Override // net.bytebuddy.implementation.bytecode.StackManipulation

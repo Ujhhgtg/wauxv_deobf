@@ -11,7 +11,7 @@ public final class dso {
 
     public /* synthetic */ dso(String str, String str2, String str3, int i, String str4) {
         if (15 != (i & 15)) {
-            bht.ah(i, 15, dsm.b.getDescriptor());
+            ResourcesCompat.ah(i, 15, dsm.b.getDescriptor());
             throw null;
         }
         this.a = str;

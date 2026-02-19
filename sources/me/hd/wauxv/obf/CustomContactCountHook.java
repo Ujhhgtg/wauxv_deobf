@@ -15,12 +15,12 @@ public final class CustomContactCountHook extends SwitchHook {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i = 0;
-        cde cdeVarT = yg.s(-430690730507050L).t();
-        cdeVarT.ab = "onMeasure" /* "onMeasure" /* "onMeasure" /* "onMeasure" /* cnb.z(-430523226782506L)   */;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
-        exg exgVar = exg.a;
+        MethodResolver methodResolverVarT = yg.s(-430690730507050L).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "onMeasure" /* "onMeasure" /* "onMeasure" /* "onMeasure" /* cnb.z(-430523226782506L)   */;
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         CustomContactCountHook airVar = a;
-        aki akiVarAd = airVar.ad(methodHookWrapperVar, exgVar);
+        aki akiVarAd = airVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
         airVar.y(akiVarAd, new age(25));
         akiVarAd.o();
     }

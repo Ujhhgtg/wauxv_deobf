@@ -23,22 +23,22 @@ public final class bey implements Parcelable {
     public final int n;
     public final boolean o;
 
-    public bey(bdj bdjVar) {
-        this.a = bdjVar.getClass().getName();
-        this.b = bdjVar.aw;
-        this.c = bdjVar.bg;
-        this.d = bdjVar.bi;
-        this.e = bdjVar.bq;
-        this.f = bdjVar.br;
-        this.g = bdjVar.bs;
-        this.h = bdjVar.bv;
-        this.i = bdjVar.bd;
-        this.j = bdjVar.bu;
-        this.k = bdjVar.bt;
-        this.l = bdjVar.cg.ordinal();
-        this.m = bdjVar.az;
-        this.n = bdjVar.ba;
-        this.o = bdjVar.cb;
+    public bey(SomeFragmentManager someFragmentManagerVar) {
+        this.a = someFragmentManagerVar.getClass().getName();
+        this.b = someFragmentManagerVar.aw;
+        this.c = someFragmentManagerVar.bg;
+        this.d = someFragmentManagerVar.bi;
+        this.e = someFragmentManagerVar.bq;
+        this.f = someFragmentManagerVar.br;
+        this.g = someFragmentManagerVar.bs;
+        this.h = someFragmentManagerVar.bv;
+        this.i = someFragmentManagerVar.bd;
+        this.j = someFragmentManagerVar.bu;
+        this.k = someFragmentManagerVar.bt;
+        this.l = someFragmentManagerVar.cg.ordinal();
+        this.m = someFragmentManagerVar.az;
+        this.n = someFragmentManagerVar.ba;
+        this.o = someFragmentManagerVar.cb;
     }
 
     @Override // android.os.Parcelable
@@ -46,24 +46,24 @@ public final class bey implements Parcelable {
         return 0;
     }
 
-    public final bdj p(bdz bdzVar) {
-        bdj bdjVarE = bdzVar.e(this.a);
-        bdjVarE.aw = this.b;
-        bdjVarE.bg = this.c;
-        bdjVarE.bi = this.d;
-        bdjVarE.bj = true;
-        bdjVarE.bq = this.e;
-        bdjVarE.br = this.f;
-        bdjVarE.bs = this.g;
-        bdjVarE.bv = this.h;
-        bdjVarE.bd = this.i;
-        bdjVarE.bu = this.j;
-        bdjVarE.bt = this.k;
-        bdjVarE.cg = buh.values()[this.l];
-        bdjVarE.az = this.m;
-        bdjVarE.ba = this.n;
-        bdjVarE.cb = this.o;
-        return bdjVarE;
+    public final SomeFragmentManager p(bdz bdzVar) {
+        SomeFragmentManager someFragmentManagerVarE = bdzVar.e(this.a);
+        someFragmentManagerVarE.aw = this.b;
+        someFragmentManagerVarE.bg = this.c;
+        someFragmentManagerVarE.bi = this.d;
+        someFragmentManagerVarE.bj = true;
+        someFragmentManagerVarE.bq = this.e;
+        someFragmentManagerVarE.br = this.f;
+        someFragmentManagerVarE.bs = this.g;
+        someFragmentManagerVarE.bv = this.h;
+        someFragmentManagerVarE.bd = this.i;
+        someFragmentManagerVarE.bu = this.j;
+        someFragmentManagerVarE.bt = this.k;
+        someFragmentManagerVarE.cg = buh.values()[this.l];
+        someFragmentManagerVarE.az = this.m;
+        someFragmentManagerVarE.ba = this.n;
+        someFragmentManagerVarE.cb = this.o;
+        return someFragmentManagerVarE;
     }
 
     public final String toString() {

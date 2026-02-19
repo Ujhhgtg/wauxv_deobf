@@ -69,7 +69,7 @@ public final class ceb extends ClassLoader {
                                 continue;
                             }
                         } catch (Throwable th) {
-                            bhu.x(th);
+                            FastKV.x(th);
                         }
                     } else {
                         linkedHashSet = c;
@@ -88,19 +88,19 @@ public final class ceb extends ClassLoader {
                                             continue;
                                         }
                                     } catch (Throwable th2) {
-                                        bhu.x(th2);
+                                        FastKV.x(th2);
                                     }
                                 } else {
                                     try {
                                         ki.a.getClass();
                                         clsLoadClass = ki.g().loadClass(str);
                                     } catch (Throwable th3) {
-                                        bhu.x(th3);
+                                        FastKV.x(th3);
                                         try {
                                             ki.a.getClass();
                                             objX = ki.g().loadClass(str);
                                         } catch (Throwable th4) {
-                                            objX = bhu.x(th4);
+                                            objX = FastKV.x(th4);
                                         }
                                         Class<?> cls = (Class) (objX instanceof dcx ? null : objX);
                                         clsLoadClass = cls == null ? classLoader.loadClass(str) : cls;

@@ -15,14 +15,14 @@ public final class DevLogHook extends SwitchHook {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i = 0;
-        cde cdeVarT = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mars.xlog.Xlog" /* "com.tencent.mars.xlog.Xlog" /* "com.tencent.mars.xlog.Xlog" /* "com.tencent.mars.xlog.Xlog" /* cnb.z(-647870046796586L)   */)).t();
-        cdeVarT.ab = "logMonitor" /* "logMonitor" /* "logMonitor" /* "logMonitor" /* cnb.z(-647771262548778L)   */;
+        MethodResolver methodResolverVarT = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mars.xlog.Xlog" /* "com.tencent.mars.xlog.Xlog" /* "com.tencent.mars.xlog.Xlog" /* "com.tencent.mars.xlog.Xlog" /* cnb.z(-647870046796586L)   */)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "logMonitor" /* "logMonitor" /* "logMonitor" /* "logMonitor" /* cnb.z(-647771262548778L)   */;
         Class cls = Long.TYPE;
         zc zcVarB = dal.b(cls);
         Class cls2 = Integer.TYPE;
-        aki akiVarAd = ad((MethodHookWrapper) dkz.n(new Object[] { zcVarB, dal.b(cls2), dal.b(String.class), dal.b(String.class),
+        aki akiVarAd = ad((MethodHookWrapper) StaticHelpers6.n(new Object[] { zcVarB, dal.b(cls2), dal.b(String.class), dal.b(String.class),
                 dal.b(String.class), dal.b(cls2), dal.b(cls2), dal.b(cls), dal.b(cls), dal.b(String.class) }, 10,
-                cdeVarT), exg.a);
+                methodResolverVarT), HookPriorityEnum.ENUM_DEFAULT);
         a.y(akiVarAd, new amb(0));
         akiVarAd.o();
     }

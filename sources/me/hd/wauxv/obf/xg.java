@@ -31,21 +31,21 @@ public final class xg extends SwitchHook implements bnr {
         String strZ2;
         if (getIsEnabled()) {
             int i = 0;
-            bmu bmuVarBi = dqc.bi(obj);
-            azg azgVarR = bmuVarBi.r();
-            azgVarR.ab = "field_isSend" /* "field_isSend" /* "field_isSend" /* "field_isSend" /* cnb.z(-446672303815466L)   */;
-            Integer num = (Integer) ((azk) yg.e(azgVarR)).e();
+            SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(obj);
+            FieldResolver fieldResolverVarR = bmuVarBi.r();
+            fieldResolverVarR.name = "field_isSend" /* "field_isSend" /* "field_isSend" /* "field_isSend" /* cnb.z(-446672303815466L)   */;
+            Integer num = (Integer) ((azk) yg.e(fieldResolverVarR)).e();
             if (num != null && num.intValue() == 1) {
                 return;
             }
-            azg azgVarR2 = bmuVarBi.r();
-            azgVarR2.ab = "field_type" /* "field_type" /* "field_type" /* "field_type" /* cnb.z(-446599289371434L)   */;
-            Object objE = ((azk) yg.e(azgVarR2)).e();
+            FieldResolver fieldResolverVarR2 = bmuVarBi.r();
+            fieldResolverVarR2.name = "field_type" /* "field_type" /* "field_type" /* "field_type" /* cnb.z(-446599289371434L)   */;
+            Object objE = ((azk) yg.e(fieldResolverVarR2)).e();
             throwIfVar1IsNull(objE);
             if (((Number) objE).intValue() == ewg.a.w) {
-                azg azgVarR3 = bmuVarBi.r();
-                azgVarR3.ab = "field_content" /* "field_content" /* "field_content" /* "field_content" /* cnb.z(-446569224600362L)   */;
-                Object objE2 = ((azk) yg.e(azgVarR3)).e();
+                FieldResolver fieldResolverVarR3 = bmuVarBi.r();
+                fieldResolverVarR3.name = "field_content" /* "field_content" /* "field_content" /* "field_content" /* cnb.z(-446569224600362L)   */;
+                Object objE2 = ((azk) yg.e(fieldResolverVarR3)).e();
                 throwIfVar1IsNull(objE2);
                 String str = (String) objE2;
                 String strAx = dnj.ax(str, ":" /* ":" /* ":" /* ":" /* cnb.z(-446491915189034L)   */);
@@ -77,10 +77,10 @@ public final class xg extends SwitchHook implements bnr {
                     sb.append("<a href=\"" /* "<a href=\"" /* "<a href=\"" /* "<a href=\"" /* cnb.z(-116616952019754L)   */ + strZ + "\">" /* "\">" /* "\">" /* "\">" /* cnb.z(-117072218553130L)   */
                             + strZ2 + "</a>" /* "</a>" /* "</a>" /* "</a>" /* cnb.z(-117076513520426L)   */);
                     String string = sb.toString();
-                    azg azgVarR4 = bmuVarBi.r();
-                    azgVarR4.ab = "field_content" /* "field_content" /* "field_content" /* "field_content" /* cnb.z(-447174814989098L)   */;
-                    azk azkVar = (azk) yg.e(azgVarR4);
-                    StringBuilder sbY = dkz.y(strAx);
+                    FieldResolver fieldResolverVarR4 = bmuVarBi.r();
+                    fieldResolverVarR4.name = "field_content" /* "field_content" /* "field_content" /* "field_content" /* cnb.z(-447174814989098L)   */;
+                    azk azkVar = (azk) yg.e(fieldResolverVarR4);
+                    StringBuilder sbY = StaticHelpers6.toSb(strAx);
                     sbY.append(":\n" /* ":\n" /* ":\n" /* ":\n" /* cnb.z(-447097505577770L)   */);
                     sbY.append(string);
                     azkVar.f(sbY.toString());

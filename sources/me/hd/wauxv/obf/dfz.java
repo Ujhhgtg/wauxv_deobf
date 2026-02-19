@@ -21,7 +21,7 @@ public final class dfz implements dfx, sr {
     public final boolean[] s;
     public final Map t;
     public final dfx[] u;
-    public final dov v;
+    public final Kotlin$Lazy v;
 
     public dfz(String str, emc emcVar, int i, List list, zd zdVar) {
         throwIfVar1IsNull(str, "serialName");
@@ -30,24 +30,24 @@ public final class dfz implements dfx, sr {
         this.n = i;
         ArrayList arrayList = zdVar.b;
         throwIfVar1IsNull(arrayList, "<this>");
-        HashSet hashSet = new HashSet(KotlinHelpers.ah(abb.ak(arrayList, 12)));
-        aaz.x(arrayList, hashSet);
+        HashSet hashSet = new HashSet(KotlinHelpers.calcHashMapCapacity(StaticHelpers4.ak(arrayList, 12)));
+        StaticHelpers5.x(arrayList, hashSet);
         this.o = hashSet;
         String[] strArr = (String[]) arrayList.toArray(new String[0]);
         this.p = strArr;
         this.q = cnh.n(zdVar.d);
         this.r = (List[]) zdVar.e.toArray(new List[0]);
-        this.s = aaz.v(zdVar.f);
+        this.s = StaticHelpers5.v(zdVar.f);
         throwIfVar1IsNull(strArr, "<this>");
         boz bozVar = new boz(new bp(strArr, 3), 0);
-        ArrayList arrayList2 = new ArrayList(abb.ak(bozVar, 10));
+        ArrayList arrayList2 = new ArrayList(StaticHelpers4.ak(bozVar, 10));
         Iterator it = bozVar.iterator();
         while (true) {
             aqf aqfVar = (aqf) it;
             if (!aqfVar.b.hasNext()) {
                 this.t = KotlinHelpers.as(arrayList2);
                 this.u = cnh.n(list);
-                this.v = new dov(new cfx(this, 14));
+                this.v = new Kotlin$Lazy(new cfx(this, 14));
                 return;
             }
             boy boyVar = (boy) aqfVar.next();
@@ -110,7 +110,7 @@ public final class dfz implements dfx, sr {
 
     @Override // me.hd.wauxv.obf.dfx
     public final List getAnnotations() {
-        return EmptyReadonlyList.a;
+        return EmptyReadonlyList.INSTANCE;
     }
 
     @Override // me.hd.wauxv.obf.dfx
@@ -148,6 +148,6 @@ public final class dfz implements dfx, sr {
     }
 
     public final String toString() {
-        return bhu.bf(this);
+        return FastKV.bf(this);
     }
 }

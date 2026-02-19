@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import me.hd.wauxv.obf.anj;
 import me.hd.wauxv.obf.bfp;
-import me.hd.wauxv.obf.bht;
+import me.hd.wauxv.obf.ResourcesCompat;
 import me.hd.wauxv.obf.di;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -59,7 +59,7 @@ public class ActivityScreenShotImageView extends ImageView {
         try {
             viewGroup.draw(new Canvas(bitmapCreateBitmap));
         } catch (Exception e) {
-            bht bhtVar = anj.a;
+            ResourcesCompat resourcesCompatVar = anj.a;
             e.printStackTrace();
             if (a) {
                 a = false;

@@ -18,7 +18,7 @@ public final class dca implements ComponentCallbacks2, bun {
     public final com.bumptech.glide.a b;
     public final Context c;
     public final bui d;
-    public final dhx e;
+    public final ConnectivityMonitor e;
     public final dcc f;
     public final dpx g;
     public final dc h;
@@ -35,7 +35,7 @@ public final class dca implements ComponentCallbacks2, bun {
 
     public dca(com.bumptech.glide.a aVar, bui buiVar, dcc dccVar, Context context) {
         dcd dcdVar;
-        dhx dhxVar = new dhx(2);
+        ConnectivityMonitor connectivityMonitorVar = new ConnectivityMonitor(2);
         nu nuVar = aVar.h;
         this.g = new dpx();
         dc dcVar = new dc(this, 14);
@@ -43,12 +43,12 @@ public final class dca implements ComponentCallbacks2, bun {
         this.b = aVar;
         this.d = buiVar;
         this.f = dccVar;
-        this.e = dhxVar;
+        this.e = connectivityMonitorVar;
         this.c = context;
         Context applicationContext = context.getApplicationContext();
-        dbz dbzVar = new dbz(this, dhxVar);
+        dbz dbzVar = new dbz(this, connectivityMonitorVar);
         nuVar.getClass();
-        boolean z = bht.s(applicationContext, "android.permission.ACCESS_NETWORK_STATE") == 0;
+        boolean z = ResourcesCompat.s(applicationContext, "android.permission.ACCESS_NETWORK_STATE") == 0;
         if (Log.isLoggable("ConnectivityMonitor", 3)) {
             Log.d("ConnectivityMonitor", z ? "ACCESS_NETWORK_STATE permission granted, registering connectivity monitor" : "ACCESS_NETWORK_STATE permission missing, cannot register connectivity monitor");
         }
@@ -97,12 +97,12 @@ public final class dca implements ComponentCallbacks2, bun {
     public final synchronized void j() {
         this.g.j();
         o();
-        dhx dhxVar = this.e;
-        Iterator it = eot.h((Set) dhxVar.d).iterator();
+        ConnectivityMonitor connectivityMonitorVar = this.e;
+        Iterator it = eot.h((Set) connectivityMonitorVar.d).iterator();
         while (it.hasNext()) {
-            dhxVar.g((dbs) it.next());
+            connectivityMonitorVar.g((dbs) it.next());
         }
-        ((HashSet) dhxVar.e).clear();
+        ((HashSet) connectivityMonitorVar.e).clear();
         this.d.an(this);
         this.d.an(this.i);
         eot.i().removeCallbacks(this.h);
@@ -174,12 +174,12 @@ public final class dca implements ComponentCallbacks2, bun {
     }
 
     public final synchronized void p() {
-        dhx dhxVar = this.e;
-        dhxVar.c = true;
-        for (dbs dbsVar : eot.h((Set) dhxVar.d)) {
+        ConnectivityMonitor connectivityMonitorVar = this.e;
+        connectivityMonitorVar.c = true;
+        for (dbs dbsVar : eot.h((Set) connectivityMonitorVar.d)) {
             if (dbsVar.isRunning()) {
                 dbsVar.j();
-                ((HashSet) dhxVar.e).add(dbsVar);
+                ((HashSet) connectivityMonitorVar.e).add(dbsVar);
             }
         }
     }
@@ -191,14 +191,14 @@ public final class dca implements ComponentCallbacks2, bun {
     }
 
     public final synchronized void r() {
-        dhx dhxVar = this.e;
-        dhxVar.c = false;
-        for (dbs dbsVar : eot.h((Set) dhxVar.d)) {
+        ConnectivityMonitor connectivityMonitorVar = this.e;
+        connectivityMonitorVar.c = false;
+        for (dbs dbsVar : eot.h((Set) connectivityMonitorVar.d)) {
             if (!dbsVar.q() && !dbsVar.isRunning()) {
                 dbsVar.n();
             }
         }
-        ((HashSet) dhxVar.e).clear();
+        ((HashSet) connectivityMonitorVar.e).clear();
     }
 
     public final synchronized boolean s(dpw dpwVar) {

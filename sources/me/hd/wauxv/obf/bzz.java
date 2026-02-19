@@ -68,7 +68,7 @@ public final class bzz extends ArrayAdapter {
                     rippleDrawable = colorDrawable;
                 }
             }
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             textView.setBackground(rippleDrawable);
         }
         return view2;

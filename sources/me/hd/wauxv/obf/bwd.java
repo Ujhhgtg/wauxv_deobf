@@ -44,7 +44,7 @@ public abstract class bwd implements dfx {
 
     @Override // me.hd.wauxv.obf.dfx
     public final List getAnnotations() {
-        return EmptyReadonlyList.a;
+        return EmptyReadonlyList.INSTANCE;
     }
 
     @Override // me.hd.wauxv.obf.dfx
@@ -69,7 +69,7 @@ public abstract class bwd implements dfx {
     @Override // me.hd.wauxv.obf.dfx
     public final List k(int i) {
         if (i >= 0) {
-            return EmptyReadonlyList.a;
+            return EmptyReadonlyList.INSTANCE;
         }
         StringBuilder sbR = yg.concatVar213(i, "Illegal index ", ", ");
         sbR.append(b());

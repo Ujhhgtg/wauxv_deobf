@@ -25,7 +25,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.dynamic.ClassFileLocator;
 import net.bytebuddy.pool.TypePool;
@@ -5844,7 +5844,7 @@ public class ClassReader {
     }
 
     private static /* synthetic */ String stringConcat$1(String str) {
-        return dkz.s(str, ClassFileLocator.CLASS_FILE_EXTENSION);
+        return StaticHelpers6.concat(str, ClassFileLocator.CLASS_FILE_EXTENSION);
     }
 
     public void accept(ClassVisitor classVisitor, int i) {

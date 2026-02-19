@@ -123,7 +123,7 @@ public final class dib {
     }
 
     public final String toString() {
-        StringBuilder sbY = dkz.y("SizeConfigStrategy{groupedMap=");
+        StringBuilder sbY = StaticHelpers6.toSb("SizeConfigStrategy{groupedMap=");
         sbY.append(this.g);
         sbY.append(", sortedSizes=(");
         HashMap map = this.h;

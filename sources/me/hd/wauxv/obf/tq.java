@@ -44,7 +44,7 @@ public final class tq extends eun {
             }
         }
         if (this.p == 0 && ((adr) this.l.bd).j && arrayList.size() > 1) {
-            this.l = ((eun) dkz.l(1, arrayList)).l;
+            this.l = ((eun) StaticHelpers6.getLastNElem(1, arrayList)).l;
         }
         this.b = this.p == 0 ? this.l.bs : this.l.bt;
     }

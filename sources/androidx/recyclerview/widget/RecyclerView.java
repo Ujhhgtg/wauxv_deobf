@@ -74,7 +74,6 @@ import me.hd.wauxv.obf.czk;
 import me.hd.wauxv.obf.czl;
 import me.hd.wauxv.obf.czm;
 import me.hd.wauxv.obf.czn;
-import me.hd.wauxv.obf.czo;
 import me.hd.wauxv.obf.czp;
 import me.hd.wauxv.obf.czq;
 import me.hd.wauxv.obf.czs;
@@ -82,15 +81,15 @@ import me.hd.wauxv.obf.czt;
 import me.hd.wauxv.obf.czu;
 import me.hd.wauxv.obf.czv;
 import me.hd.wauxv.obf.czw;
-import me.hd.wauxv.obf.czx;
+import me.hd.wauxv.obf.SomeView;
 import me.hd.wauxv.obf.czz;
 import me.hd.wauxv.obf.dhq;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dz;
 import me.hd.wauxv.obf.ea;
 import me.hd.wauxv.obf.eqq;
 import me.hd.wauxv.obf.eqt;
-import me.hd.wauxv.obf.eqz;
+import me.hd.wauxv.obf.ViewCompat;
 import me.hd.wauxv.obf.erf;
 import me.hd.wauxv.obf.ewz;
 import me.hd.wauxv.obf.yg;
@@ -173,7 +172,7 @@ public class RecyclerView extends ViewGroup implements ckr {
     public final ann ci;
     public final float k;
     public final bez l;
-    public final czo m;
+    public final me.hd.wauxv.obf.RecyclerView m;
     public czq n;
     public final ea o;
     public final yi p;
@@ -199,18 +198,18 @@ public class RecyclerView extends ViewGroup implements ckr {
         this(context, attributeSet, me.hd.wauxv.R.attr.recyclerViewStyle);
     }
 
-    public static void cp(czx czxVar) {
-        WeakReference weakReference = czxVar.e;
+    public static void cp(SomeView someViewVar) {
+        WeakReference weakReference = someViewVar.e;
         if (weakReference != null) {
             View view = (View) weakReference.get();
             while (view != null) {
-                if (view == czxVar.d) {
+                if (view == someViewVar.d) {
                     return;
                 }
                 Object parent = view.getParent();
                 view = parent instanceof View ? (View) parent : null;
             }
-            czxVar.e = null;
+            someViewVar.e = null;
         }
     }
 
@@ -251,7 +250,7 @@ public class RecyclerView extends ViewGroup implements ckr {
         return null;
     }
 
-    public static czx cs(View view) {
+    public static SomeView cs(View view) {
         if (view == null) {
             return null;
         }
@@ -341,11 +340,11 @@ public class RecyclerView extends ViewGroup implements ckr {
         return 0;
     }
 
-    public final void ct(czx czxVar) {
-        View view = czxVar.d;
+    public final void ct(SomeView someViewVar) {
+        View view = someViewVar.d;
         boolean z = view.getParent() == this;
         this.m.t(dv(view));
-        if (czxVar.ah()) {
+        if (someViewVar.ah()) {
             this.p.j(view, -1, view.getLayoutParams(), true);
             return;
         }
@@ -402,34 +401,34 @@ public class RecyclerView extends ViewGroup implements ckr {
     public final void cx() {
         int iAb = this.p.ab();
         for (int i2 = 0; i2 < iAb; i2++) {
-            czx czxVarCs = cs(this.p.aa(i2));
-            if (!czxVarCs.am()) {
-                czxVarCs.g = -1;
-                czxVarCs.j = -1;
+            SomeView someViewVarCs = cs(this.p.aa(i2));
+            if (!someViewVarCs.am()) {
+                someViewVarCs.g = -1;
+                someViewVarCs.j = -1;
             }
         }
-        czo czoVar = this.m;
-        ArrayList arrayList = czoVar.a;
-        ArrayList arrayList2 = czoVar.c;
+        me.hd.wauxv.obf.RecyclerView recyclerViewVar = this.m;
+        ArrayList arrayList = recyclerViewVar.a;
+        ArrayList arrayList2 = recyclerViewVar.c;
         int size = arrayList2.size();
         for (int i3 = 0; i3 < size; i3++) {
-            czx czxVar = (czx) arrayList2.get(i3);
-            czxVar.g = -1;
-            czxVar.j = -1;
+            SomeView someViewVar = (SomeView) arrayList2.get(i3);
+            someViewVar.g = -1;
+            someViewVar.j = -1;
         }
         int size2 = arrayList.size();
         for (int i4 = 0; i4 < size2; i4++) {
-            czx czxVar2 = (czx) arrayList.get(i4);
-            czxVar2.g = -1;
-            czxVar2.j = -1;
+            SomeView someViewVar2 = (SomeView) arrayList.get(i4);
+            someViewVar2.g = -1;
+            someViewVar2.j = -1;
         }
-        ArrayList arrayList3 = czoVar.b;
+        ArrayList arrayList3 = recyclerViewVar.b;
         if (arrayList3 != null) {
             int size3 = arrayList3.size();
             for (int i5 = 0; i5 < size3; i5++) {
-                czx czxVar3 = (czx) czoVar.b.get(i5);
-                czxVar3.g = -1;
-                czxVar3.j = -1;
+                SomeView someViewVar3 = (SomeView) recyclerViewVar.b.get(i5);
+                someViewVar3.g = -1;
+                someViewVar3.j = -1;
             }
         }
     }
@@ -489,8 +488,8 @@ public class RecyclerView extends ViewGroup implements ckr {
             if (!this.ag) {
                 int iY = this.p.y();
                 for (int i3 = 0; i3 < iY; i3++) {
-                    czx czxVarCs = cs(this.p.x(i3));
-                    if (czxVarCs != null && !czxVarCs.am() && czxVarCs.ai()) {
+                    SomeView someViewVarCs = cs(this.p.x(i3));
+                    if (someViewVarCs != null && !someViewVarCs.am() && someViewVarCs.ai()) {
                         dc();
                     }
                 }
@@ -504,16 +503,16 @@ public class RecyclerView extends ViewGroup implements ckr {
 
     public final void da(int i2, int i3) {
         int paddingRight = getPaddingRight() + getPaddingLeft();
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         setMeasuredDimension(czg.ed(i2, paddingRight, getMinimumWidth()),
                 czg.ed(i3, getPaddingBottom() + getPaddingTop(), getMinimumHeight()));
     }
 
     public final void db(View view) {
-        czx czxVarCs = cs(view);
+        SomeView someViewVarCs = cs(view);
         cyw cywVar = this.w;
-        if (cywVar != null && czxVarCs != null) {
-            cywVar.n(czxVarCs);
+        if (cywVar != null && someViewVarCs != null) {
+            cywVar.n(someViewVarCs);
         }
         ArrayList arrayList = this.am;
         if (arrayList != null) {
@@ -563,14 +562,14 @@ public class RecyclerView extends ViewGroup implements ckr {
     public final void dc() {
         boolean z;
         long j2;
-        czx czxVar;
+        SomeView someViewVar;
         int i2;
         int iP;
         int i3;
         int iMin;
-        czx czxVarDr;
+        SomeView someViewVarDr;
         View view;
-        czx czxVarDr2;
+        SomeView someViewVarDr2;
         View view2;
         int i4;
         View viewFindViewById;
@@ -615,74 +614,74 @@ public class RecyclerView extends ViewGroup implements ckr {
         ec();
         cztVar.d = 1;
         boolean z7 = cztVar.j;
-        czo czoVar = this.m;
+        me.hd.wauxv.obf.RecyclerView recyclerViewVar = this.m;
         but butVar = this.q;
         if (z7) {
             int iY = this.p.y() - 1;
             while (iY >= 0) {
-                czx czxVarCs = cs(this.p.x(iY));
-                if (czxVarCs.am()) {
+                SomeView someViewVarCs = cs(this.p.x(iY));
+                if (someViewVarCs.am()) {
                     z3 = z5;
                 } else {
-                    long jDu = du(czxVarCs);
+                    long jDu = du(someViewVarCs);
                     this.aw.getClass();
                     cjn cjnVar2 = new cjn();
-                    cjnVar2.c(czxVarCs);
+                    cjnVar2.c(someViewVarCs);
                     byc bycVar = (byc) butVar.c;
                     dhq dhqVar = (dhq) butVar.b;
-                    czx czxVar2 = (czx) bycVar.f(jDu);
-                    if (czxVar2 == null || czxVar2.am()) {
+                    SomeView someViewVar2 = (SomeView) bycVar.f(jDu);
+                    if (someViewVar2 == null || someViewVar2.am()) {
                         z3 = z5;
-                        butVar.e(czxVarCs, cjnVar2);
+                        butVar.e(someViewVarCs, cjnVar2);
                     } else {
                         z3 = z5;
-                        erf erfVar = (erf) dhqVar.get(czxVar2);
+                        erf erfVar = (erf) dhqVar.get(someViewVar2);
                         boolean z8 = (erfVar == null || (erfVar.b & 1) == 0) ? false : z3;
-                        erf erfVar2 = (erf) dhqVar.get(czxVarCs);
+                        erf erfVar2 = (erf) dhqVar.get(someViewVarCs);
                         boolean z9 = (erfVar2 == null || (erfVar2.b & 1) == 0) ? false : z3;
-                        if (z8 && czxVar2 == czxVarCs) {
-                            butVar.e(czxVarCs, cjnVar2);
+                        if (z8 && someViewVar2 == someViewVarCs) {
+                            butVar.e(someViewVarCs, cjnVar2);
                         } else {
-                            cjn cjnVarAc = butVar.ac(czxVar2, 4);
-                            butVar.e(czxVarCs, cjnVar2);
-                            cjn cjnVarAc2 = butVar.ac(czxVarCs, 8);
+                            cjn cjnVarAc = butVar.ac(someViewVar2, 4);
+                            butVar.e(someViewVarCs, cjnVar2);
+                            cjn cjnVarAc2 = butVar.ac(someViewVarCs, 8);
                             if (cjnVarAc == null) {
                                 int iY2 = this.p.y();
                                 for (int i5 = 0; i5 < iY2; i5++) {
-                                    czx czxVarCs2 = cs(this.p.x(i5));
-                                    if (czxVarCs2 != czxVarCs && du(czxVarCs2) == jDu) {
+                                    SomeView someViewVarCs2 = cs(this.p.x(i5));
+                                    if (someViewVarCs2 != someViewVarCs && du(someViewVarCs2) == jDu) {
                                         cyw cywVar = this.w;
                                         if (cywVar == null || !cywVar.ad) {
                                             StringBuilder sb = new StringBuilder("Two different ViewHolders have the same change ID. This might happen due to inconsistent Adapter update events or if the LayoutManager lays out the same View multiple times.\n ViewHolder 1:");
-                                            sb.append(czxVarCs2);
+                                            sb.append(someViewVarCs2);
                                             sb.append(" \n View Holder 2:");
-                                            sb.append(czxVarCs);
+                                            sb.append(someViewVarCs);
                                             throw new IllegalStateException(yg.i(this, sb));
                                         }
                                         StringBuilder sb2 = new StringBuilder("Two different ViewHolders have the same stable ID. Stable IDs in your adapter MUST BE unique and SHOULD NOT change.\n ViewHolder 1:");
-                                        sb2.append(czxVarCs2);
+                                        sb2.append(someViewVarCs2);
                                         sb2.append(" \n View Holder 2:");
-                                        sb2.append(czxVarCs);
+                                        sb2.append(someViewVarCs);
                                         throw new IllegalStateException(yg.i(this, sb2));
                                     }
                                 }
-                                Log.e("RecyclerView", "Problem while matching changed view holders with the newones. The pre-layout information for the change holder " + czxVar2 + " cannot be found but it is necessary for " + czxVarCs + dm());
+                                Log.e("RecyclerView", "Problem while matching changed view holders with the newones. The pre-layout information for the change holder " + someViewVar2 + " cannot be found but it is necessary for " + someViewVarCs + dm());
                             } else {
-                                czxVar2.al(false);
+                                someViewVar2.al(false);
                                 if (z8) {
-                                    ct(czxVar2);
+                                    ct(someViewVar2);
                                 }
-                                if (czxVar2 != czxVarCs) {
+                                if (someViewVar2 != someViewVarCs) {
                                     if (z9) {
-                                        ct(czxVarCs);
+                                        ct(someViewVarCs);
                                     }
-                                    czxVar2.k = czxVarCs;
-                                    ct(czxVar2);
-                                    czoVar.t(czxVar2);
-                                    czxVarCs.al(false);
-                                    czxVarCs.l = czxVar2;
+                                    someViewVar2.k = someViewVarCs;
+                                    ct(someViewVar2);
+                                    recyclerViewVar.t(someViewVar2);
+                                    someViewVarCs.al(false);
+                                    someViewVarCs.l = someViewVar2;
                                 }
-                                if (this.aw.o(czxVar2, czxVarCs, cjnVarAc, cjnVarAc2)) {
+                                if (this.aw.o(someViewVar2, someViewVarCs, cjnVarAc, cjnVarAc2)) {
                                     ef();
                                 }
                             }
@@ -696,34 +695,34 @@ public class RecyclerView extends ViewGroup implements ckr {
             dhq dhqVar2 = (dhq) butVar.b;
             int i6 = dhqVar2.l - 1;
             while (i6 >= 0) {
-                czx czxVar3 = (czx) dhqVar2.r(i6);
+                SomeView someViewVar3 = (SomeView) dhqVar2.r(i6);
                 erf erfVar3 = (erf) dhqVar2.h(i6);
                 int i7 = erfVar3.b;
                 int i8 = i7 & 3;
                 cyv cyvVar = this.ch;
                 if (i8 == 3) {
                     RecyclerView recyclerView2 = cyvVar.a;
-                    recyclerView2.x.fd(czxVar3.d, recyclerView2.m);
+                    recyclerView2.x.fd(someViewVar3.d, recyclerView2.m);
                     r3 = z4;
                 } else if ((i7 & 1) != 0) {
                     cjn cjnVar3 = erfVar3.c;
                     if (cjnVar3 == null) {
                         RecyclerView recyclerView3 = cyvVar.a;
-                        recyclerView3.x.fd(czxVar3.d, recyclerView3.m);
+                        recyclerView3.x.fd(someViewVar3.d, recyclerView3.m);
                         r3 = z4;
                     } else {
-                        cyvVar.k(czxVar3, cjnVar3, erfVar3.d);
+                        cyvVar.k(someViewVar3, cjnVar3, erfVar3.d);
                         r3 = z4;
                     }
                 } else if ((i7 & 14) == 14) {
-                    cyvVar.j(czxVar3, erfVar3.c, erfVar3.d);
+                    cyvVar.j(someViewVar3, erfVar3.c, erfVar3.d);
                     r3 = z4;
                 } else {
                     if ((i7 & 12) == 12) {
                         cjn cjnVar4 = erfVar3.c;
                         cjn cjnVar5 = erfVar3.d;
                         cyvVar.getClass();
-                        czxVar3.al(z4);
+                        someViewVar3.al(z4);
                         RecyclerView recyclerView4 = cyvVar.a;
                         if (!recyclerView4.an) {
                             akx akxVar = (akx) recyclerView4.aw;
@@ -731,28 +730,28 @@ public class RecyclerView extends ViewGroup implements ckr {
                             int i9 = cjnVar4.a;
                             int i10 = cjnVar5.a;
                             if (i9 == i10 && cjnVar4.b == cjnVar5.b) {
-                                akxVar.ae(czxVar3);
+                                akxVar.ae(someViewVar3);
                                 recyclerView = recyclerView4;
                                 zS = false;
                             } else {
                                 recyclerView = recyclerView4;
-                                zS = akxVar.s(czxVar3, i9, cjnVar4.b, i10, cjnVar5.b);
+                                zS = akxVar.s(someViewVar3, i9, cjnVar4.b, i10, cjnVar5.b);
                             }
                             if (zS) {
                                 recyclerView.ef();
                             }
-                        } else if (recyclerView4.aw.o(czxVar3, czxVar3, cjnVar4, cjnVar5)) {
+                        } else if (recyclerView4.aw.o(someViewVar3, someViewVar3, cjnVar4, cjnVar5)) {
                             recyclerView4.ef();
                         }
                         r3 = 0;
                     } else {
                         if ((i7 & 4) != 0) {
                             cjnVar = null;
-                            cyvVar.k(czxVar3, erfVar3.c, null);
+                            cyvVar.k(someViewVar3, erfVar3.c, null);
                         } else {
                             cjnVar = null;
                             if ((i7 & 8) != 0) {
-                                cyvVar.j(czxVar3, erfVar3.c, erfVar3.d);
+                                cyvVar.j(someViewVar3, erfVar3.c, erfVar3.d);
                             }
                         }
                         r3 = 0;
@@ -776,14 +775,14 @@ public class RecyclerView extends ViewGroup implements ckr {
             z = true;
         }
         View view4 = null;
-        this.x.fc(czoVar);
+        this.x.fc(recyclerViewVar);
         cztVar.b = cztVar.e;
         this.an = false;
         this.ao = false;
         cztVar.j = false;
         cztVar.k = false;
         this.x.dt = false;
-        ArrayList arrayList = czoVar.b;
+        ArrayList arrayList = recyclerViewVar.b;
         if (arrayList != null) {
             arrayList.clear();
         }
@@ -791,7 +790,7 @@ public class RecyclerView extends ViewGroup implements ckr {
         if (czgVar.dy) {
             czgVar.dx = 0;
             czgVar.dy = false;
-            czoVar.u();
+            recyclerViewVar.u();
         }
         this.x.af(cztVar);
         boolean z10 = z;
@@ -809,9 +808,9 @@ public class RecyclerView extends ViewGroup implements ckr {
         if (this.bk && this.w != null && hasFocus() && getDescendantFocusability() != 393216 && (getDescendantFocusability() != 131072 || !isFocused())) {
             if (isFocused()) {
                 j2 = cztVar.m;
-                czxVar = j2 == -1 ? null : null;
-                if (czxVar != null) {
-                    view3 = czxVar.d;
+                someViewVar = j2 == -1 ? null : null;
+                if (someViewVar != null) {
+                    view3 = someViewVar.d;
                     if (!((ArrayList) this.p.e).contains(view3)) {
                         if (this.p.y() > 0) {
                             int i13 = cztVar.l;
@@ -821,9 +820,9 @@ public class RecyclerView extends ViewGroup implements ckr {
                             i3 = i2;
                             while (true) {
                                 if (i3 < iP) {
-                                    czxVarDr2 = dr(i3);
-                                    if (czxVarDr2 != null) {
-                                        view2 = czxVarDr2.d;
+                                    someViewVarDr2 = dr(i3);
+                                    if (someViewVarDr2 != null) {
+                                        view2 = someViewVarDr2.d;
                                         if (view2.hasFocusable()) {
                                             view4 = view2;
                                         } else {
@@ -832,12 +831,12 @@ public class RecyclerView extends ViewGroup implements ckr {
                                     }
                                 }
                                 for (iMin = Math.min(iP, i2) - 1; iMin >= 0; iMin--) {
-                                    czxVarDr = dr(iMin);
-                                    if (czxVarDr == null) {
+                                    someViewVarDr = dr(iMin);
+                                    if (someViewVarDr == null) {
                                         break;
                                         break;
                                     }
-                                    view = czxVarDr.d;
+                                    view = someViewVarDr.d;
                                     if (view.hasFocusable()) {
                                         view4 = view;
                                         break;
@@ -853,9 +852,9 @@ public class RecyclerView extends ViewGroup implements ckr {
                         i3 = i2;
                         while (true) {
                             if (i3 < iP) {
-                                czxVarDr2 = dr(i3);
-                                if (czxVarDr2 != null) {
-                                    view2 = czxVarDr2.d;
+                                someViewVarDr2 = dr(i3);
+                                if (someViewVarDr2 != null) {
+                                    view2 = someViewVarDr2.d;
                                     if (view2.hasFocusable()) {
                                         view4 = view2;
                                     } else {
@@ -864,12 +863,12 @@ public class RecyclerView extends ViewGroup implements ckr {
                                 }
                             }
                             while (iMin >= 0) {
-                                czxVarDr = dr(iMin);
-                                if (czxVarDr == null) {
+                                someViewVarDr = dr(iMin);
+                                if (someViewVarDr == null) {
                                     break;
                                     break;
                                 }
-                                view = czxVarDr.d;
+                                view = someViewVarDr.d;
                                 if (view.hasFocusable()) {
                                     view4 = view;
                                     break;
@@ -885,9 +884,9 @@ public class RecyclerView extends ViewGroup implements ckr {
                     i3 = i2;
                     while (true) {
                         if (i3 < iP) {
-                            czxVarDr2 = dr(i3);
-                            if (czxVarDr2 != null) {
-                                view2 = czxVarDr2.d;
+                            someViewVarDr2 = dr(i3);
+                            if (someViewVarDr2 != null) {
+                                view2 = someViewVarDr2.d;
                                 if (view2.hasFocusable()) {
                                     view4 = view2;
                                 } else {
@@ -896,12 +895,12 @@ public class RecyclerView extends ViewGroup implements ckr {
                             }
                         }
                         while (iMin >= 0) {
-                            czxVarDr = dr(iMin);
-                            if (czxVarDr == null) {
+                            someViewVarDr = dr(iMin);
+                            if (someViewVarDr == null) {
                                 break;
                                 break;
                             }
-                            view = czxVarDr.d;
+                            view = someViewVarDr.d;
                             if (view.hasFocusable()) {
                                 view4 = view;
                                 break;
@@ -920,20 +919,20 @@ public class RecyclerView extends ViewGroup implements ckr {
                 j2 = cztVar.m;
                 if (j2 == -1 && (z2 = this.w.ad) && z2) {
                     int iAb = this.p.ab();
-                    czxVar = null;
+                    someViewVar = null;
                     for (int i14 = 0; i14 < iAb; i14++) {
-                        czx czxVarCs3 = cs(this.p.aa(i14));
-                        if (czxVarCs3 != null && !czxVarCs3.af() && czxVarCs3.h == j2) {
-                            if (!((ArrayList) this.p.e).contains(czxVarCs3.d)) {
-                                czxVar = czxVarCs3;
+                        SomeView someViewVarCs3 = cs(this.p.aa(i14));
+                        if (someViewVarCs3 != null && !someViewVarCs3.af() && someViewVarCs3.h == j2) {
+                            if (!((ArrayList) this.p.e).contains(someViewVarCs3.d)) {
+                                someViewVar = someViewVarCs3;
                                 break;
                             }
-                            czxVar = czxVarCs3;
+                            someViewVar = someViewVarCs3;
                         }
                     }
                 }
-                if (czxVar != null) {
-                    view3 = czxVar.d;
+                if (someViewVar != null) {
+                    view3 = someViewVar.d;
                     if (!((ArrayList) this.p.e).contains(view3) && view3.hasFocusable()) {
                         view4 = view3;
                     } else if (this.p.y() > 0) {
@@ -943,9 +942,9 @@ public class RecyclerView extends ViewGroup implements ckr {
                         i3 = i2;
                         while (true) {
                             if (i3 < iP) {
-                                czxVarDr2 = dr(i3);
-                                if (czxVarDr2 != null) {
-                                    view2 = czxVarDr2.d;
+                                someViewVarDr2 = dr(i3);
+                                if (someViewVarDr2 != null) {
+                                    view2 = someViewVarDr2.d;
                                     if (view2.hasFocusable()) {
                                         view4 = view2;
                                     } else {
@@ -954,11 +953,11 @@ public class RecyclerView extends ViewGroup implements ckr {
                                 }
                             }
                             while (iMin >= 0) {
-                                czxVarDr = dr(iMin);
-                                if (czxVarDr == null) {
+                                someViewVarDr = dr(iMin);
+                                if (someViewVarDr == null) {
                                     break;
                                 }
-                                view = czxVarDr.d;
+                                view = someViewVarDr.d;
                                 if (view.hasFocusable()) {
                                     view4 = view;
                                     break;
@@ -974,9 +973,9 @@ public class RecyclerView extends ViewGroup implements ckr {
                     i3 = i2;
                     while (true) {
                         if (i3 < iP) {
-                            czxVarDr2 = dr(i3);
-                            if (czxVarDr2 != null) {
-                                view2 = czxVarDr2.d;
+                            someViewVarDr2 = dr(i3);
+                            if (someViewVarDr2 != null) {
+                                view2 = someViewVarDr2.d;
                                 if (view2.hasFocusable()) {
                                     view4 = view2;
                                 } else {
@@ -985,12 +984,12 @@ public class RecyclerView extends ViewGroup implements ckr {
                             }
                         }
                         while (iMin >= 0) {
-                            czxVarDr = dr(iMin);
-                            if (czxVarDr == null) {
+                            someViewVarDr = dr(iMin);
+                            if (someViewVarDr == null) {
                                 break;
                                 break;
                             }
-                            view = czxVarDr.d;
+                            view = someViewVarDr.d;
                             if (view.hasFocusable()) {
                                 view4 = view;
                                 break;
@@ -1028,19 +1027,19 @@ public class RecyclerView extends ViewGroup implements ckr {
         bycVar.e();
         ec();
         eg();
-        czx czxVarDv = null;
+        SomeView someViewVarDv = null;
         View focusedChild = (this.bk && hasFocus() && this.w != null) ? getFocusedChild() : null;
         if (focusedChild != null && (viewM0do = m0do(focusedChild)) != null) {
-            czxVarDv = dv(viewM0do);
+            someViewVarDv = dv(viewM0do);
         }
-        if (czxVarDv == null) {
+        if (someViewVarDv == null) {
             cztVar.m = -1L;
             cztVar.l = -1;
             cztVar.n = -1;
         } else {
-            cztVar.m = this.w.ad ? czxVarDv.h : -1L;
-            cztVar.l = this.an ? -1 : czxVarDv.af() ? czxVarDv.g : czxVarDv.x();
-            View focusedChild2 = czxVarDv.d;
+            cztVar.m = this.w.ad ? someViewVarDv.h : -1L;
+            cztVar.l = this.an ? -1 : someViewVarDv.af() ? someViewVarDv.g : someViewVarDv.x();
+            View focusedChild2 = someViewVarDv.d;
             int id = focusedChild2.getId();
             while (!focusedChild2.isFocused() && (focusedChild2 instanceof ViewGroup) && focusedChild2.hasFocus()) {
                 focusedChild2 = ((ViewGroup) focusedChild2).getFocusedChild();
@@ -1059,23 +1058,23 @@ public class RecyclerView extends ViewGroup implements ckr {
         if (cztVar.j) {
             int iY = this.p.y();
             for (int i2 = 0; i2 < iY; i2++) {
-                czx czxVarCs = cs(this.p.x(i2));
-                if (!czxVarCs.am() && (!czxVarCs.ad() || this.w.ad)) {
+                SomeView someViewVarCs = cs(this.p.x(i2));
+                if (!someViewVarCs.am() && (!someViewVarCs.ad() || this.w.ad)) {
                     czc czcVar = this.aw;
-                    czc.ad(czxVarCs);
-                    czxVarCs.aa();
+                    czc.ad(someViewVarCs);
+                    someViewVarCs.aa();
                     czcVar.getClass();
                     cjn cjnVar = new cjn();
-                    cjnVar.c(czxVarCs);
-                    erf erfVarE = (erf) dhqVar2.get(czxVarCs);
+                    cjnVar.c(someViewVarCs);
+                    erf erfVarE = (erf) dhqVar2.get(someViewVarCs);
                     if (erfVarE == null) {
                         erfVarE = erf.e();
-                        dhqVar2.put(czxVarCs, erfVarE);
+                        dhqVar2.put(someViewVarCs, erfVarE);
                     }
                     erfVarE.c = cjnVar;
                     erfVarE.b |= 4;
-                    if (cztVar.h && czxVarCs.ai() && !czxVarCs.af() && !czxVarCs.am() && !czxVarCs.ad()) {
-                        bycVar.i(czxVarCs, du(czxVarCs));
+                    if (cztVar.h && someViewVarCs.ai() && !someViewVarCs.af() && !someViewVarCs.am() && !someViewVarCs.ad()) {
+                        bycVar.i(someViewVarCs, du(someViewVarCs));
                     }
                 }
             }
@@ -1083,13 +1082,13 @@ public class RecyclerView extends ViewGroup implements ckr {
         if (cztVar.k) {
             int iAb = this.p.ab();
             for (int i3 = 0; i3 < iAb; i3++) {
-                czx czxVarCs2 = cs(this.p.aa(i3));
-                if (a && czxVarCs2.f == -1 && !czxVarCs2.af()) {
+                SomeView someViewVarCs2 = cs(this.p.aa(i3));
+                if (a && someViewVarCs2.f == -1 && !someViewVarCs2.af()) {
                     throw new IllegalStateException(
                             yg.i(this, new StringBuilder("view holder cannot have position -1 unless it is removed")));
                 }
-                if (!czxVarCs2.am() && czxVarCs2.g == -1) {
-                    czxVarCs2.g = czxVarCs2.f;
+                if (!someViewVarCs2.am() && someViewVarCs2.g == -1) {
+                    someViewVarCs2.g = someViewVarCs2.f;
                 }
             }
             boolean z = cztVar.f;
@@ -1097,22 +1096,22 @@ public class RecyclerView extends ViewGroup implements ckr {
             this.x.ae(this.m, cztVar);
             cztVar.f = z;
             for (int i4 = 0; i4 < this.p.y(); i4++) {
-                czx czxVarCs3 = cs(this.p.x(i4));
-                if (!czxVarCs3.am() && ((erfVar = (erf) dhqVar2.get(czxVarCs3)) == null || (erfVar.b & 4) == 0)) {
-                    czc.ad(czxVarCs3);
-                    boolean z2 = (czxVarCs3.m & 8192) != 0;
+                SomeView someViewVarCs3 = cs(this.p.x(i4));
+                if (!someViewVarCs3.am() && ((erfVar = (erf) dhqVar2.get(someViewVarCs3)) == null || (erfVar.b & 4) == 0)) {
+                    czc.ad(someViewVarCs3);
+                    boolean z2 = (someViewVarCs3.m & 8192) != 0;
                     czc czcVar2 = this.aw;
-                    czxVarCs3.aa();
+                    someViewVarCs3.aa();
                     czcVar2.getClass();
                     cjn cjnVar2 = new cjn();
-                    cjnVar2.c(czxVarCs3);
+                    cjnVar2.c(someViewVarCs3);
                     if (z2) {
-                        ei(czxVarCs3, cjnVar2);
+                        ei(someViewVarCs3, cjnVar2);
                     } else {
-                        erf erfVarE2 = (erf) dhqVar2.get(czxVarCs3);
+                        erf erfVarE2 = (erf) dhqVar2.get(someViewVarCs3);
                         if (erfVarE2 == null) {
                             erfVarE2 = erf.e();
-                            dhqVar2.put(czxVarCs3, erfVarE2);
+                            dhqVar2.put(someViewVarCs3, erfVarE2);
                         }
                         erfVarE2.b |= 2;
                         erfVarE2.c = cjnVar2;
@@ -1138,7 +1137,7 @@ public class RecyclerView extends ViewGroup implements ckr {
         cztVar.c = 0;
         if (this.n != null) {
             cyw cywVar = this.w;
-            int iAe = dkz.ae(cywVar.ae);
+            int iAe = StaticHelpers6.ae(cywVar.ae);
             if (iAe == 1 ? cywVar.d() > 0 : iAe != 2) {
                 Parcelable parcelable = this.n.a;
                 if (parcelable != null) {
@@ -1391,9 +1390,9 @@ public class RecyclerView extends ViewGroup implements ckr {
         int i2 = Integer.MAX_VALUE;
         int i3 = Integer.MIN_VALUE;
         for (int i4 = 0; i4 < iY; i4++) {
-            czx czxVarCs = cs(this.p.x(i4));
-            if (!czxVarCs.am()) {
-                int iZ = czxVarCs.z();
+            SomeView someViewVarCs = cs(this.p.x(i4));
+            if (!someViewVarCs.am()) {
+                int iZ = someViewVarCs.z();
                 if (iZ < i2) {
                     i2 = iZ;
                 }
@@ -1406,22 +1405,22 @@ public class RecyclerView extends ViewGroup implements ckr {
         iArr[1] = i3;
     }
 
-    public final czx dr(int i2) {
-        czx czxVar = null;
+    public final SomeView dr(int i2) {
+        SomeView someViewVar = null;
         if (this.an) {
             return null;
         }
         int iAb = this.p.ab();
         for (int i3 = 0; i3 < iAb; i3++) {
-            czx czxVarCs = cs(this.p.aa(i3));
-            if (czxVarCs != null && !czxVarCs.af() && dt(czxVarCs) == i2) {
-                if (!((ArrayList) this.p.e).contains(czxVarCs.d)) {
-                    return czxVarCs;
+            SomeView someViewVarCs = cs(this.p.aa(i3));
+            if (someViewVarCs != null && !someViewVarCs.af() && dt(someViewVarCs) == i2) {
+                if (!((ArrayList) this.p.e).contains(someViewVarCs.d)) {
+                    return someViewVarCs;
                 }
-                czxVar = czxVarCs;
+                someViewVar = someViewVarCs;
             }
         }
-        return czxVar;
+        return someViewVar;
     }
 
     @Override // android.view.View
@@ -1697,9 +1696,9 @@ public class RecyclerView extends ViewGroup implements ckr {
         return false;
     }
 
-    public final int dt(czx czxVar) {
-        if ((czxVar.m & 524) == 0 && czxVar.ac()) {
-            int i2 = czxVar.f;
+    public final int dt(SomeView someViewVar) {
+        if ((someViewVar.m & 524) == 0 && someViewVar.ac()) {
+            int i2 = someViewVar.f;
             ArrayList arrayList = (ArrayList) this.o.c;
             int size = arrayList.size();
             for (int i3 = 0; i3 < size; i3++) {
@@ -1738,11 +1737,11 @@ public class RecyclerView extends ViewGroup implements ckr {
         return -1;
     }
 
-    public final long du(czx czxVar) {
-        return this.w.ad ? czxVar.h : czxVar.f;
+    public final long du(SomeView someViewVar) {
+        return this.w.ad ? someViewVar.h : someViewVar.f;
     }
 
-    public final czx dv(View view) {
+    public final SomeView dv(View view) {
         ViewParent parent = view.getParent();
         if (parent == null || parent == this) {
             return cs(view);
@@ -1801,7 +1800,7 @@ public class RecyclerView extends ViewGroup implements ckr {
         ArrayList arrayList = this.m.c;
         int size = arrayList.size();
         for (int i3 = 0; i3 < size; i3++) {
-            czh czhVar = (czh) ((czx) arrayList.get(i3)).d.getLayoutParams();
+            czh czhVar = (czh) ((SomeView) arrayList.get(i3)).d.getLayoutParams();
             if (czhVar != null) {
                 czhVar.e = true;
             }
@@ -1812,44 +1811,44 @@ public class RecyclerView extends ViewGroup implements ckr {
         int i4 = i2 + i3;
         int iAb = this.p.ab();
         for (int i5 = 0; i5 < iAb; i5++) {
-            czx czxVarCs = cs(this.p.aa(i5));
-            if (czxVarCs != null && !czxVarCs.am()) {
-                int i6 = czxVarCs.f;
+            SomeView someViewVarCs = cs(this.p.aa(i5));
+            if (someViewVarCs != null && !someViewVarCs.am()) {
+                int i6 = someViewVarCs.f;
                 czt cztVar = this.bo;
                 if (i6 >= i4) {
                     if (b) {
                         Log.d("RecyclerView", "offsetPositionRecordsForRemove attached child " + i5 + " holder "
-                                + czxVarCs + " now at position " + (czxVarCs.f - i3));
+                                + someViewVarCs + " now at position " + (someViewVarCs.f - i3));
                     }
-                    czxVarCs.aj(-i3, z);
+                    someViewVarCs.aj(-i3, z);
                     cztVar.f = true;
                 } else if (i6 >= i2) {
                     if (b) {
                         Log.d("RecyclerView", "offsetPositionRecordsForRemove attached child " + i5 + " holder "
-                                + czxVarCs + " now REMOVED");
+                                + someViewVarCs + " now REMOVED");
                     }
-                    czxVarCs.w(8);
-                    czxVarCs.aj(-i3, z);
-                    czxVarCs.f = i2 - 1;
+                    someViewVarCs.w(8);
+                    someViewVarCs.aj(-i3, z);
+                    someViewVarCs.f = i2 - 1;
                     cztVar.f = true;
                 }
             }
         }
-        czo czoVar = this.m;
-        ArrayList arrayList = czoVar.c;
+        me.hd.wauxv.obf.RecyclerView recyclerViewVar = this.m;
+        ArrayList arrayList = recyclerViewVar.c;
         for (int size = arrayList.size() - 1; size >= 0; size--) {
-            czx czxVar = (czx) arrayList.get(size);
-            if (czxVar != null) {
-                int i7 = czxVar.f;
+            SomeView someViewVar = (SomeView) arrayList.get(size);
+            if (someViewVar != null) {
+                int i7 = someViewVar.f;
                 if (i7 >= i4) {
                     if (b) {
-                        Log.d("RecyclerView", "offsetPositionRecordsForRemove cached " + size + " holder " + czxVar
-                                + " now at position " + (czxVar.f - i3));
+                        Log.d("RecyclerView", "offsetPositionRecordsForRemove cached " + size + " holder " + someViewVar
+                                + " now at position " + (someViewVar.f - i3));
                     }
-                    czxVar.aj(-i3, z);
+                    someViewVar.aj(-i3, z);
                 } else if (i7 >= i2) {
-                    czxVar.w(8);
-                    czoVar.o(size);
+                    someViewVar.w(8);
+                    recyclerViewVar.o(size);
                 }
             }
         }
@@ -1882,10 +1881,10 @@ public class RecyclerView extends ViewGroup implements ckr {
                 }
                 ArrayList arrayList = this.cb;
                 for (int size = arrayList.size() - 1; size >= 0; size--) {
-                    czx czxVar = (czx) arrayList.get(size);
-                    if (czxVar.d.getParent() == this && !czxVar.am() && (i2 = czxVar.t) != -1) {
-                        czxVar.d.setImportantForAccessibility(i2);
-                        czxVar.t = -1;
+                    SomeView someViewVar = (SomeView) arrayList.get(size);
+                    if (someViewVar.d.getParent() == this && !someViewVar.am() && (i2 = someViewVar.t) != -1) {
+                        someViewVar.d.setImportantForAccessibility(i2);
+                        someViewVar.t = -1;
                     }
                 }
                 arrayList.clear();
@@ -1911,7 +1910,7 @@ public class RecyclerView extends ViewGroup implements ckr {
         if (this.bu || !this.ac) {
             return;
         }
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         postOnAnimation(this.cc);
         this.bu = true;
     }
@@ -1948,40 +1947,40 @@ public class RecyclerView extends ViewGroup implements ckr {
         this.an = true;
         int iAb = this.p.ab();
         for (int i2 = 0; i2 < iAb; i2++) {
-            czx czxVarCs = cs(this.p.aa(i2));
-            if (czxVarCs != null && !czxVarCs.am()) {
-                czxVarCs.w(6);
+            SomeView someViewVarCs = cs(this.p.aa(i2));
+            if (someViewVarCs != null && !someViewVarCs.am()) {
+                someViewVarCs.w(6);
             }
         }
         ea();
-        czo czoVar = this.m;
-        ArrayList arrayList = czoVar.c;
+        me.hd.wauxv.obf.RecyclerView recyclerViewVar = this.m;
+        ArrayList arrayList = recyclerViewVar.c;
         int size = arrayList.size();
         for (int i3 = 0; i3 < size; i3++) {
-            czx czxVar = (czx) arrayList.get(i3);
-            if (czxVar != null) {
-                czxVar.w(6);
-                czxVar.w(1024);
+            SomeView someViewVar = (SomeView) arrayList.get(i3);
+            if (someViewVar != null) {
+                someViewVar.w(6);
+                someViewVar.w(1024);
             }
         }
-        cyw cywVar = czoVar.h.w;
+        cyw cywVar = recyclerViewVar.h.w;
         if (cywVar == null || !cywVar.ad) {
-            czoVar.n();
+            recyclerViewVar.n();
         }
     }
 
-    public final void ei(czx czxVar, cjn cjnVar) {
-        czxVar.m &= -8193;
+    public final void ei(SomeView someViewVar, cjn cjnVar) {
+        someViewVar.m &= -8193;
         boolean z = this.bo.h;
         but butVar = this.q;
-        if (z && czxVar.ai() && !czxVar.af() && !czxVar.am()) {
-            ((byc) butVar.c).i(czxVar, du(czxVar));
+        if (z && someViewVar.ai() && !someViewVar.af() && !someViewVar.am()) {
+            ((byc) butVar.c).i(someViewVar, du(someViewVar));
         }
         dhq dhqVar = (dhq) butVar.b;
-        erf erfVarE = (erf) dhqVar.get(czxVar);
+        erf erfVarE = (erf) dhqVar.get(someViewVar);
         if (erfVarE == null) {
             erfVarE = erf.e();
-            dhqVar.put(czxVar, erfVarE);
+            dhqVar.put(someViewVar, erfVarE);
         }
         erfVarE.c = cjnVar;
         erfVarE.b |= 4;
@@ -2269,22 +2268,22 @@ public class RecyclerView extends ViewGroup implements ckr {
     }
 
     public final void ep(int[] iArr, int i2, int i3) {
-        czx czxVar;
+        SomeView someViewVar;
         eu();
         ec();
         Trace.beginSection("RV Scroll");
         czt cztVar = this.bo;
         dn(cztVar);
-        czo czoVar = this.m;
-        int iAh = i2 != 0 ? this.x.ah(i2, czoVar, cztVar) : 0;
-        int iAi = i3 != 0 ? this.x.ai(i3, czoVar, cztVar) : 0;
+        me.hd.wauxv.obf.RecyclerView recyclerViewVar = this.m;
+        int iAh = i2 != 0 ? this.x.ah(i2, recyclerViewVar, cztVar) : 0;
+        int iAi = i3 != 0 ? this.x.ai(i3, recyclerViewVar, cztVar) : 0;
         Trace.endSection();
         int iY = this.p.y();
         for (int i4 = 0; i4 < iY; i4++) {
             View viewX = this.p.x(i4);
-            czx czxVarDv = dv(viewX);
-            if (czxVarDv != null && (czxVar = czxVarDv.l) != null) {
-                View view = czxVar.d;
+            SomeView someViewVarDv = dv(viewX);
+            if (someViewVarDv != null && (someViewVar = someViewVarDv.l) != null) {
+                View view = someViewVar.d;
                 int left = viewX.getLeft();
                 int top = viewX.getTop();
                 if (left != view.getLeft() || top != view.getTop()) {
@@ -2442,7 +2441,7 @@ public class RecyclerView extends ViewGroup implements ckr {
         boolean z3 = (this.w == null || this.x == null || dy() || this.ah) ? false : true;
         FocusFinder focusFinder = FocusFinder.getInstance();
         czt cztVar = this.bo;
-        czo czoVar = this.m;
+        me.hd.wauxv.obf.RecyclerView recyclerViewVar = this.m;
         if (z3 && (i2 == 2 || i2 == 1)) {
             if (this.x.bv()) {
                 z = focusFinder.findNextFocus(this, view, i2 == 2 ? 130 : 33) == null;
@@ -2455,7 +2454,7 @@ public class RecyclerView extends ViewGroup implements ckr {
                 cz();
                 if (m0do(view) != null) {
                     eu();
-                    this.x.w(view, i2, czoVar, cztVar);
+                    this.x.w(view, i2, recyclerViewVar, cztVar);
                     ew(false);
                 }
                 return null;
@@ -2472,7 +2471,7 @@ public class RecyclerView extends ViewGroup implements ckr {
             cz();
             if (m0do(view) != null) {
                 eu();
-                viewW = this.x.w(view, i2, czoVar, cztVar);
+                viewW = this.x.w(view, i2, recyclerViewVar, cztVar);
                 ew(false);
             }
             return null;
@@ -2684,7 +2683,7 @@ public class RecyclerView extends ViewGroup implements ckr {
             this.bm = bgvVar;
             if (bgvVar == null) {
                 this.bm = new bgv();
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 Display display = getDisplay();
                 if (isInEditMode() || display == null) {
                     refreshRate = 60.0f;
@@ -2727,12 +2726,12 @@ public class RecyclerView extends ViewGroup implements ckr {
         this.q.getClass();
         while (erf.a.acquire() != null) {
         }
-        czo czoVar = this.m;
-        ArrayList arrayList = czoVar.c;
+        me.hd.wauxv.obf.RecyclerView recyclerViewVar = this.m;
+        ArrayList arrayList = recyclerViewVar.c;
         for (int i3 = 0; i3 < arrayList.size(); i3++) {
-            KotlinHelpers.k(((czx) arrayList.get(i3)).d);
+            KotlinHelpers.k(((SomeView) arrayList.get(i3)).d);
         }
-        czoVar.m(czoVar.h.w, false);
+        recyclerViewVar.m(recyclerViewVar.h.w, false);
         while (i2 < getChildCount()) {
             int i4 = i2 + 1;
             View childAt = getChildAt(i2);
@@ -3252,14 +3251,14 @@ public class RecyclerView extends ViewGroup implements ckr {
 
     @Override // android.view.ViewGroup
     public final void removeDetachedView(View view, boolean z) {
-        czx czxVarCs = cs(view);
-        if (czxVarCs != null) {
-            if (czxVarCs.ah()) {
-                czxVarCs.m &= -257;
-            } else if (!czxVarCs.am()) {
+        SomeView someViewVarCs = cs(view);
+        if (someViewVarCs != null) {
+            if (someViewVarCs.ah()) {
+                someViewVarCs.m &= -257;
+            } else if (!someViewVarCs.am()) {
                 StringBuilder sb = new StringBuilder(
                         "Called removeDetachedView with a view which is not flagged as tmp detached.");
-                sb.append(czxVarCs);
+                sb.append(someViewVarCs);
                 throw new IllegalArgumentException(yg.i(this, sb));
             }
         } else if (a) {
@@ -3347,7 +3346,7 @@ public class RecyclerView extends ViewGroup implements ckr {
 
     public void setAccessibilityDelegateCompat(czz czzVar) {
         this.bv = czzVar;
-        eqz.s(this, czzVar);
+        ViewCompat.setAccessibilityDelegate(this, czzVar);
     }
 
     public void setAdapter(cyw cywVar) {
@@ -3363,13 +3362,13 @@ public class RecyclerView extends ViewGroup implements ckr {
             czcVar.q();
         }
         czg czgVar = this.x;
-        czo czoVar = this.m;
+        me.hd.wauxv.obf.RecyclerView recyclerViewVar = this.m;
         if (czgVar != null) {
-            czgVar.fb(czoVar);
-            this.x.fc(czoVar);
+            czgVar.fb(recyclerViewVar);
+            this.x.fc(recyclerViewVar);
         }
-        czoVar.a.clear();
-        czoVar.n();
+        recyclerViewVar.a.clear();
+        recyclerViewVar.n();
         ea eaVar = this.o;
         eaVar.z((ArrayList) eaVar.c);
         eaVar.z((ArrayList) eaVar.d);
@@ -3385,10 +3384,10 @@ public class RecyclerView extends ViewGroup implements ckr {
             czgVar2.ba(this.w);
         }
         cyw cywVar4 = this.w;
-        czoVar.a.clear();
-        czoVar.n();
-        czoVar.m(cywVar3, true);
-        czn cznVarK = czoVar.k();
+        recyclerViewVar.a.clear();
+        recyclerViewVar.n();
+        recyclerViewVar.m(cywVar3, true);
+        czn cznVarK = recyclerViewVar.k();
         if (cywVar3 != null) {
             cznVarK.b--;
         }
@@ -3398,7 +3397,7 @@ public class RecyclerView extends ViewGroup implements ckr {
                 czm czmVar = (czm) sparseArray.valueAt(i2);
                 Iterator it = czmVar.a.iterator();
                 while (it.hasNext()) {
-                    KotlinHelpers.k(((czx) it.next()).d);
+                    KotlinHelpers.k(((SomeView) it.next()).d);
                 }
                 czmVar.a.clear();
             }
@@ -3406,7 +3405,7 @@ public class RecyclerView extends ViewGroup implements ckr {
         if (cywVar4 != null) {
             cznVarK.b++;
         }
-        czoVar.l();
+        recyclerViewVar.l();
         this.bo.f = true;
         eh(false);
         requestLayout();
@@ -3460,9 +3459,9 @@ public class RecyclerView extends ViewGroup implements ckr {
     }
 
     public void setItemViewCacheSize(int i2) {
-        czo czoVar = this.m;
-        czoVar.e = i2;
-        czoVar.u();
+        me.hd.wauxv.obf.RecyclerView recyclerViewVar = this.m;
+        recyclerViewVar.e = i2;
+        recyclerViewVar.u();
     }
 
     @Deprecated
@@ -3476,16 +3475,16 @@ public class RecyclerView extends ViewGroup implements ckr {
         }
         ey();
         czg czgVar2 = this.x;
-        czo czoVar = this.m;
+        me.hd.wauxv.obf.RecyclerView recyclerViewVar = this.m;
         if (czgVar2 != null) {
             czc czcVar = this.aw;
             if (czcVar != null) {
                 czcVar.q();
             }
-            this.x.fb(czoVar);
-            this.x.fc(czoVar);
-            czoVar.a.clear();
-            czoVar.n();
+            this.x.fb(recyclerViewVar);
+            this.x.fc(recyclerViewVar);
+            recyclerViewVar.a.clear();
+            recyclerViewVar.n();
             if (this.ac) {
                 czg czgVar3 = this.x;
                 czgVar3.du = false;
@@ -3494,24 +3493,24 @@ public class RecyclerView extends ViewGroup implements ckr {
             this.x.fj(null);
             this.x = null;
         } else {
-            czoVar.a.clear();
-            czoVar.n();
+            recyclerViewVar.a.clear();
+            recyclerViewVar.n();
         }
         yi yiVar = this.p;
         RecyclerView recyclerView = ((cyv) yiVar.c).a;
         ((yh) yiVar.d).i();
         ArrayList arrayList = (ArrayList) yiVar.e;
         for (int size = arrayList.size() - 1; size >= 0; size--) {
-            czx czxVarCs = cs((View) arrayList.get(size));
-            if (czxVarCs != null) {
-                int i2 = czxVarCs.s;
+            SomeView someViewVarCs = cs((View) arrayList.get(size));
+            if (someViewVarCs != null) {
+                int i2 = someViewVarCs.s;
                 if (recyclerView.dy()) {
-                    czxVarCs.t = i2;
-                    recyclerView.cb.add(czxVarCs);
+                    someViewVarCs.t = i2;
+                    recyclerView.cb.add(someViewVarCs);
                 } else {
-                    czxVarCs.d.setImportantForAccessibility(i2);
+                    someViewVarCs.d.setImportantForAccessibility(i2);
                 }
-                czxVarCs.s = 0;
+                someViewVarCs.s = 0;
             }
             arrayList.remove(size);
         }
@@ -3537,7 +3536,7 @@ public class RecyclerView extends ViewGroup implements ckr {
                 czgVar4.dm(this);
             }
         }
-        czoVar.u();
+        recyclerViewVar.u();
         requestLayout();
     }
 
@@ -3556,7 +3555,7 @@ public class RecyclerView extends ViewGroup implements ckr {
         cks scrollingChildHelper = getScrollingChildHelper();
         if (scrollingChildHelper.d) {
             ViewGroup viewGroup = scrollingChildHelper.c;
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             eqq.m(viewGroup);
         }
         scrollingChildHelper.d = z;
@@ -3576,17 +3575,17 @@ public class RecyclerView extends ViewGroup implements ckr {
     }
 
     public void setRecycledViewPool(czn cznVar) {
-        czo czoVar = this.m;
-        RecyclerView recyclerView = czoVar.h;
-        czoVar.m(recyclerView.w, false);
-        if (czoVar.g != null) {
+        me.hd.wauxv.obf.RecyclerView recyclerViewVar = this.m;
+        RecyclerView recyclerView = recyclerViewVar.h;
+        recyclerViewVar.m(recyclerView.w, false);
+        if (recyclerViewVar.g != null) {
             r2.b--;
         }
-        czoVar.g = cznVar;
+        recyclerViewVar.g = cznVar;
         if (cznVar != null && recyclerView.getAdapter() != null) {
-            czoVar.g.b++;
+            recyclerViewVar.g.b++;
         }
-        czoVar.l();
+        recyclerViewVar.l();
     }
 
     @Deprecated
@@ -3686,7 +3685,7 @@ public class RecyclerView extends ViewGroup implements ckr {
         super(context, attributeSet, i2);
         int i4 = 1;
         this.l = new bez(this, i4);
-        this.m = new czo(this);
+        this.m = new me.hd.wauxv.obf.RecyclerView(this);
         this.q = new but(19);
         this.s = new cyu(this, 0);
         this.t = new Rect();
@@ -3770,7 +3769,7 @@ public class RecyclerView extends ViewGroup implements ckr {
         this.aw.x = cyvVar;
         this.o = new ea(new cyv(this));
         this.p = new yi(new cyv(this));
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         if (eqt.a(this) == 0) {
             eqt.b(this, 8);
         }
@@ -3781,7 +3780,7 @@ public class RecyclerView extends ViewGroup implements ckr {
         setAccessibilityDelegateCompat(new czz(this));
         int[] iArr = cxq.a;
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, iArr, i2, 0);
-        eqz.r(this, context, iArr, attributeSet, typedArrayObtainStyledAttributes, i2, 0);
+        ViewCompat.r(this, context, iArr, attributeSet, typedArrayObtainStyledAttributes, i2, 0);
         String string = typedArrayObtainStyledAttributes.getString(8);
         if (typedArrayObtainStyledAttributes.getInt(2, -1) == -1) {
             setDescendantFocusability(262144);
@@ -3874,7 +3873,7 @@ public class RecyclerView extends ViewGroup implements ckr {
         }
         int[] iArr2 = c;
         TypedArray typedArrayObtainStyledAttributes2 = context.obtainStyledAttributes(attributeSet, iArr2, i2, 0);
-        eqz.r(this, context, iArr2, attributeSet, typedArrayObtainStyledAttributes2, i2, 0);
+        ViewCompat.r(this, context, iArr2, attributeSet, typedArrayObtainStyledAttributes2, i2, 0);
         boolean z = typedArrayObtainStyledAttributes2.getBoolean(0, true);
         typedArrayObtainStyledAttributes2.recycle();
         setNestedScrollingEnabled(z);

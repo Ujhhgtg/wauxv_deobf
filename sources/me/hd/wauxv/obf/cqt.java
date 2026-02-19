@@ -94,15 +94,15 @@ public final class cqt {
                         for (bes besVar : arrayList) {
                             Iterator it = linkedHashSet.iterator();
                             while (it.hasNext()) {
-                                besVar.c((bdj) it.next(), true);
+                                besVar.c((SomeFragmentManager) it.next(), true);
                             }
                         }
                     }
                     Iterator it2 = begVar.h.a.iterator();
                     while (it2.hasNext()) {
-                        bdj bdjVar = ((bfe) it2.next()).b;
-                        if (bdjVar != null) {
-                            bdjVar.be = false;
+                        SomeFragmentManager someFragmentManagerVar = ((bfe) it2.next()).b;
+                        if (someFragmentManagerVar != null) {
+                            someFragmentManagerVar.be = false;
                         }
                     }
                     for (aln alnVar : begVar.bb(new ArrayList(Collections.singletonList(begVar.h)), 0, 1)) {
@@ -115,9 +115,9 @@ public final class cqt {
                     }
                     Iterator it3 = begVar.h.a.iterator();
                     while (it3.hasNext()) {
-                        bdj bdjVar2 = ((bfe) it3.next()).b;
-                        if (bdjVar2 != null && bdjVar2.by == null) {
-                            begVar.bc(bdjVar2).p();
+                        SomeFragmentManager someFragmentManagerVar2 = ((bfe) it3.next()).b;
+                        if (someFragmentManagerVar2 != null && someFragmentManagerVar2.by == null) {
+                            begVar.bc(someFragmentManagerVar2).p();
                         }
                     }
                     begVar.h = null;

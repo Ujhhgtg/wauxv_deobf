@@ -366,7 +366,7 @@ public final /* synthetic */ class dfq implements bgj {
                     dnc.g(null, 3, "已保存到: " /* "已保存到: " /* "已保存到: " /* cnb.z(-520373942614826L)  */ + file.getAbsolutePath() + '/' + str7);
                     objX = kotlinUnitVar;
                 } catch (Throwable th) {
-                    objX = bhu.x(th);
+                    objX = FastKV.x(th);
                 }
                 Throwable thB = dcy.b(objX);
                 if (thB != null) {

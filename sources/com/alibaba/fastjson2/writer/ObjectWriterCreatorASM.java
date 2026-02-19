@@ -57,7 +57,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 
 import me.hd.wauxv.obf.cqb;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.pool.TypePool;
@@ -171,7 +171,7 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         METHOD_DESC_WRITE_ENUM = concat("(", str, "Ljava/lang/Enum;)V");
         METHOD_DESC_WRITE_LIST = concat("(", str, "Ljava/util/List;)V");
         METHOD_DESC_FIELD_WRITE_OBJECT = concat("(", str, "Ljava/lang/Object;)Z");
-        StringBuilder sbZ = dkz.z("(", str, "Ljava/lang/Class;)");
+        StringBuilder sbZ = StaticHelpers6.concatAndToSb("(", str, "Ljava/lang/Class;)");
         String str2 = ASMUtils.DESC_OBJECT_WRITER;
         sbZ.append(str2);
         METHOD_DESC_GET_OBJECT_WRITER = sbZ.toString();

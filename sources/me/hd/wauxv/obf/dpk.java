@@ -82,7 +82,7 @@ public final class dpk extends LinearLayout {
         } else {
             tabLayout.aj._bg(tabLayout, view, view2, f, tabLayout.p);
         }
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         postInvalidateOnAnimation();
     }
 

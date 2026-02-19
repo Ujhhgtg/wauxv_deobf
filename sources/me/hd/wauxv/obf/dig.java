@@ -32,7 +32,7 @@ public final class dig extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(dif.a, dexKitBridge, new dhg(8));
+        StaticHelpers7.resolveDexAndCache(dif.a, dexKitBridge, new dhg(8));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

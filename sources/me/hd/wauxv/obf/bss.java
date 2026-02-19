@@ -27,7 +27,7 @@ public final class bss extends dcw implements bgk {
         ajx ajxVar = this.d;
         int i = this.a;
         if (i == 0) {
-            bhu.bd(obj);
+            FastKV.bd(obj);
             byte bAe = yiVar.ae();
             if (bAe == 1) {
                 return ekVar.o(true);
@@ -53,7 +53,7 @@ public final class bss extends dcw implements bgk {
             if (i != 1) {
                 throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
-            bhu.bd(obj);
+            FastKV.bd(obj);
         }
         return (brx) obj;
     }

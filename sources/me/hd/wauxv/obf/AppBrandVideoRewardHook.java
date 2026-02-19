@@ -21,12 +21,12 @@ public final class AppBrandVideoRewardHook extends SwitchHook {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i2 = 0;
-        cde cdeVarT = yg.s(-433997855324970L).t();
-        cdeVarT.ab = "subscribeHandler" /* "subscribeHandler" /* "subscribeHandler" /* "subscribeHandler" /* cnb.z(-434246963428138L)   */;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
-        exg exgVar = exg.a;
+        MethodResolver methodResolverVarT = yg.s(-433997855324970L).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "subscribeHandler" /* "subscribeHandler" /* "subscribeHandler" /* "subscribeHandler" /* cnb.z(-434246963428138L)   */;
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         AppBrandVideoRewardHook gyVar = a;
-        aki akiVarAd = gyVar.ad(methodHookWrapperVar, exgVar);
+        aki akiVarAd = gyVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
         gyVar.y(akiVarAd, new gi(17));
         akiVarAd.o();
     }

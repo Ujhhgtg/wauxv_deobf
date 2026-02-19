@@ -24,14 +24,14 @@ public abstract class dqb {
             property = "DefaultDispatcher";
         }
         a = property;
-        b = bht.ae("kotlinx.coroutines.scheduler.resolution.ns", 100000L, 1L, Long.MAX_VALUE);
+        b = ResourcesCompat.ae("kotlinx.coroutines.scheduler.resolution.ns", 100000L, 1L, Long.MAX_VALUE);
         int i2 = dpg.a;
         if (i2 < 2) {
             i2 = 2;
         }
-        c = bht.af("kotlinx.coroutines.scheduler.core.pool.size", i2, 8);
-        d = bht.af("kotlinx.coroutines.scheduler.max.pool.size", 2097150, 4);
-        e = TimeUnit.SECONDS.toNanos(bht.ae("kotlinx.coroutines.scheduler.keep.alive.sec", 60L, 1L, Long.MAX_VALUE));
+        c = ResourcesCompat.af("kotlinx.coroutines.scheduler.core.pool.size", i2, 8);
+        d = ResourcesCompat.af("kotlinx.coroutines.scheduler.max.pool.size", 2097150, 4);
+        e = TimeUnit.SECONDS.toNanos(ResourcesCompat.ae("kotlinx.coroutines.scheduler.keep.alive.sec", 60L, 1L, Long.MAX_VALUE));
         f = arj.k;
     }
 }

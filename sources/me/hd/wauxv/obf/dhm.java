@@ -45,9 +45,9 @@ public final class dhm extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(emn.bb(dhl.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.bb(dhl.a));
         dhm dhmVar = a;
-        aki akiVarAb = csb.ab(dhmVar, listBf);
+        aki akiVarAb = PackageParam.ab(dhmVar, listBf);
         dhmVar.x(akiVarAb, new dhg(2));
         akiVarAb.o();
     }
@@ -64,7 +64,7 @@ public final class dhm extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(dhl.a, dexKitBridge, new dhg(3));
+        StaticHelpers7.resolveDexAndCache(dhl.a, dexKitBridge, new dhg(3));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

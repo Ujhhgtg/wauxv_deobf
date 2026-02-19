@@ -13,7 +13,7 @@ public abstract class OtherStaticHelpers extends dqc {
 
     public static List argsToList(Object... objArr) {
         throwIfVar1IsNull(objArr, "elements");
-        return objArr.length > 0 ? SomeStaticHelpers.toList(objArr) : EmptyReadonlyList.a;
+        return objArr.length > 0 ? SomeStaticHelpers.toList(objArr) : EmptyReadonlyList.INSTANCE;
     }
 
     public static ArrayList ah(Object... objArr) {
@@ -23,7 +23,7 @@ public abstract class OtherStaticHelpers extends dqc {
 
     public static final List ai(List list) {
         int size = list.size();
-        return size != 0 ? size != 1 ? list : dqc.toSingletonList(list.get(0)) : EmptyReadonlyList.a;
+        return size != 0 ? size != 1 ? list : dqc.toSingletonList(list.get(0)) : EmptyReadonlyList.INSTANCE;
     }
 
     public static void aj() {

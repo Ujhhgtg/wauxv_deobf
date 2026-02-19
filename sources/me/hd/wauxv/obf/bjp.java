@@ -23,7 +23,7 @@ public final class bjp extends adq {
 
     @Override // me.hd.wauxv.obf.adq
     public final adb ck(int i) {
-        int iAe = dkz.ae(i);
+        int iAe = StaticHelpers6.ae(i);
         if (iAe != 1) {
             if (iAe != 2) {
                 if (iAe != 3) {

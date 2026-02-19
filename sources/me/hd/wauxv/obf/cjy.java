@@ -95,7 +95,7 @@ public abstract class cjy extends FrameLayout implements ccn {
         this.h = viewGroup.getPaddingBottom();
         this.i = getResources()
                 .getDimensionPixelSize(me.hd.wauxv.R.dimen.m3_navigation_item_active_indicator_label_padding);
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         textView.setImportantForAccessibility(2);
         textView2.setImportantForAccessibility(2);
         setFocusable(true);
@@ -209,7 +209,7 @@ public abstract class cjy extends FrameLayout implements ccn {
             frameLayout.setPadding(0, 0, 0, 0);
             frameLayout.setForeground(rippleDrawable2);
         }
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         setBackground(rippleDrawable);
         setDefaultFocusHighlightEnabled(z);
     }
@@ -448,7 +448,7 @@ public abstract class cjy extends FrameLayout implements ccn {
         textView2.setPivotY(textView2.getBaseline());
         float f = z ? 1.0f : 0.0f;
         if (this.ae && this.d) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             if (isAttachedToWindow()) {
                 ValueAnimator valueAnimator = this.ab;
                 if (valueAnimator != null) {
@@ -537,11 +537,11 @@ public abstract class cjy extends FrameLayout implements ccn {
         this.u.setEnabled(z);
         this.r.setEnabled(z);
         if (!z) {
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             eqs.a(this, null);
         } else {
             PointerIcon systemIcon = PointerIcon.getSystemIcon(getContext(), 1002);
-            WeakHashMap weakHashMap2 = eqz.a;
+            WeakHashMap weakHashMap2 = ViewCompat.a;
             eqs.a(this, systemIcon);
         }
     }

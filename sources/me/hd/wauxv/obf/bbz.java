@@ -61,7 +61,7 @@ public abstract class bbz {
         int i2;
         Typeface typefaceT;
         byj byjVar = a;
-        cnf.an("getFontSync");
+        HugeSyntheticPileOfHelpers.beginTrace("getFontSync");
         try {
             Typeface typeface = (Typeface) byjVar.o(str);
             if (typeface != null) {
@@ -70,7 +70,7 @@ public abstract class bbz {
                 return bbyVar;
             }
             try {
-                ek ekVarC = bbs.createInstanceWithArgs(context, list);
+                ek ekVarC = FontsProvider.createInstanceWithArgs(context, list);
                 List list2 = (List) ekVarC.d;
                 int i3 = ekVarC.c;
                 if (i3 == 0) {
@@ -111,20 +111,20 @@ public abstract class bbz {
                 }
                 if (list2.size() <= 1 || Build.VERSION.SDK_INT < 29) {
                     bce[] bceVarArr2 = (bce[]) list2.get(0);
-                    emn emnVar = emf.a;
-                    cnf.an("TypefaceCompat.createFromFontInfo");
+                    StaticHelpers7 emnVar = TypefaceCompat.a;
+                    HugeSyntheticPileOfHelpers.beginTrace("TypefaceCompat.createFromFontInfo");
                     try {
-                        typefaceT = emf.a.t(context, bceVarArr2, i);
+                        typefaceT = TypefaceCompat.a.t(context, bceVarArr2, i);
                         Trace.endSection();
                     } catch (Throwable th) {
                         Trace.endSection();
                         throw th;
                     }
                 } else {
-                    emn emnVar2 = emf.a;
-                    cnf.an("TypefaceCompat.createFromFontInfoWithFallback");
+                    StaticHelpers7 emnVar2 = TypefaceCompat.a;
+                    HugeSyntheticPileOfHelpers.beginTrace("TypefaceCompat.createFromFontInfoWithFallback");
                     try {
-                        typefaceT = emf.a._ce(context, list2, i);
+                        typefaceT = TypefaceCompat.a._ce(context, list2, i);
                         Trace.endSection();
                     } catch (Throwable th2) {
                         Trace.endSection();

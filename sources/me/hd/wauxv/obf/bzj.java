@@ -9,8 +9,8 @@ public final class bzj extends cwl {
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public bzj(cwd cwdVar, cwo cwoVar, long j, dfx dfxVar) {
-        super(cwdVar, cwoVar, dfxVar);
+    public bzj(cwd cwdVar, ProtoReader protoReaderVar, long j, dfx dfxVar) {
+        super(cwdVar, protoReaderVar, dfxVar);
         throwIfVar1IsNull(dfxVar, "descriptor");
         this.ac = j;
     }
@@ -21,8 +21,8 @@ public final class bzj extends cwl {
         int i2 = i % 2;
         long j = this.ac;
         if (i2 == 0) {
-            return ajn.r(j).e | ((long) 1);
+            return ajn.r(j).value | ((long) 1);
         }
-        return ((long) 2) | ajn.r(j).e;
+        return ((long) 2) | ajn.r(j).value;
     }
 }

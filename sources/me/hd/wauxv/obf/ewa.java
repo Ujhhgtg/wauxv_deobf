@@ -306,10 +306,10 @@ public final class ewa extends y {
     }
 
     @Override // me.hd.wauxv.obf.btr
-    public final void p(bmu bmuVar) {
+    public final void p(SyntheticPileOfMess bmuVar) {
         int i;
         int i2;
-        int[] iArr = (int[]) bmuVar.h;
+        int[] iArr = (int[]) bmuVar.obj;
         int size = this.c.a.size() - 1;
         int i3 = 0;
         while (true) {

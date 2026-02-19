@@ -84,8 +84,8 @@ public final class lw extends doi implements bgj {
         KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         switch (i) {
             case 0:
-                bhu.bd(obj);
-                baa baaVar = new baa(new bae(aaz.a(zo.c()), true, new gi(23)));
+                FastKV.bd(obj);
+                baa baaVar = new baa(new bae(StaticHelpers5.a(zo.c()), true, new gi(23)));
                 while (baaVar.hasNext()) {
                     zn znVar = (zn) baaVar.next();
                     long jCurrentTimeMillis = System.currentTimeMillis();
@@ -125,22 +125,22 @@ public final class lw extends doi implements bgj {
                 }
                 return kotlinUnitVar;
             case 1:
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 agp.a.getClass();
                 agp.b();
                 return kotlinUnitVar;
             case 2:
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 agp.a.getClass();
                 agp.b();
                 return kotlinUnitVar;
             case 3:
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 agp.a.getClass();
                 agp.b();
                 return kotlinUnitVar;
             case 4:
-                bhu.bd(obj);
+                FastKV.bd(obj);
                 PanelEmojiHook panelEmojiHookVar = PanelEmojiHook.a;
                 String strZ = "emoji" /* "emoji" /* "emoji" /* "emoji" /* cnb.z(-474967548361514L)   */;
                 ArrayList arrayList2 = PanelEmojiHook.someArrayList;
@@ -170,20 +170,20 @@ public final class lw extends doi implements bgj {
                                 aub.a.getClass();
                                 Object objB = aub.b(strB);
                                 atz.a.getClass();
-                                emn.bb(aty.a).invoke(objB, null, Boolean.TRUE);
+                                StaticHelpers7.bb(aty.a).invoke(objB, null, Boolean.TRUE);
                                 arrayList2
-                                        .add(emn.ba(PanelEmojiHookConstructorGroupItemInfo.INSTANCE).newInstance(objB, 2, "" /* "" /* "" /* "" /* cnb.z(-474215929084714L)   */, 0));
+                                        .add(StaticHelpers7.ba(PanelEmojiHookConstructorGroupItemInfo.INSTANCE).newInstance(objB, 2, "" /* "" /* "" /* "" /* cnb.z(-474215929084714L)   */, 0));
                             }
                         }
                     }
                 }
                 return kotlinUnitVar;
             case 5:
-                bhu.bd(obj);
-                return aaz.t(cuk.d(), new ex(8));
+                FastKV.bd(obj);
+                return StaticHelpers5.t(cuk.d(), new ex(8));
             default:
-                bhu.bd(obj);
-                return aaz.t(cuk.d(), new ex(10));
+                FastKV.bd(obj);
+                return StaticHelpers5.t(cuk.d(), new ex(10));
         }
     }
 }

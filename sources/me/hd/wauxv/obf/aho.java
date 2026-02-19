@@ -20,7 +20,7 @@ public final class aho implements Executor, Closeable {
             "controlState$volatile");
     public static final /* synthetic */ AtomicIntegerFieldUpdater c = AtomicIntegerFieldUpdater.newUpdater(aho.class,
             "_isTerminated$volatile");
-    public static final auj d = new auj("NOT_IN_STACK", 1);
+    public static final SpecificEmojiMatcher d = new SpecificEmojiMatcher("NOT_IN_STACK", 1);
     private volatile /* synthetic */ int _isTerminated$volatile;
     private volatile /* synthetic */ long controlState$volatile;
     public final int e;
@@ -42,7 +42,7 @@ public final class aho implements Executor, Closeable {
         }
         if (i2 < i) {
             throw new IllegalArgumentException(
-                    dkz.p(i2, "Max pool size ", " should be greater than or equals to core pool size ", i).toString());
+                    StaticHelpers6.p(i2, "Max pool size ", " should be greater than or equals to core pool size ", i).toString());
         }
         if (i2 > 2097150) {
             throw new IllegalArgumentException(
@@ -299,7 +299,7 @@ public final class aho implements Executor, Closeable {
     }
 
     public final boolean p() {
-        auj aujVar;
+        SpecificEmojiMatcher specificEmojiMatcherVar;
         int iK;
         while (true) {
             long j = a.get(this);
@@ -310,8 +310,8 @@ public final class aho implements Executor, Closeable {
                 long j2 = (2097152 + j) & (-2097152);
                 Object objL = ahmVar.l();
                 while (true) {
-                    aujVar = d;
-                    if (objL == aujVar) {
+                    specificEmojiMatcherVar = d;
+                    if (objL == specificEmojiMatcherVar) {
                         iK = -1;
                         break;
                     }
@@ -328,7 +328,7 @@ public final class aho implements Executor, Closeable {
                 }
                 if (iK >= 0) {
                     if (a.compareAndSet(this, j, ((long) iK) | j2)) {
-                        ahmVar.p(aujVar);
+                        ahmVar.p(specificEmojiMatcherVar);
                     } else {
                         continue;
                     }
@@ -397,7 +397,7 @@ public final class aho implements Executor, Closeable {
         StringBuilder sb4 = new StringBuilder();
         sb4.append(this.h);
         sb4.append('@');
-        sb4.append(ajn.q(this));
+        sb4.append(ajn.toHexHashCode(this));
         sb4.append("[Pool Size {core = ");
         int i8 = this.e;
         sb4.append(i8);

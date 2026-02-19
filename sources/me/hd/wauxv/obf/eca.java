@@ -21,7 +21,7 @@ public final class eca {
     public /* synthetic */ eca(int i, String str, Integer num, Integer num2, efa efaVar, edk edkVar, eiw eiwVar,
             efg efgVar, Integer num3, Integer num4, Integer num5, eha ehaVar, ejl ejlVar, String str2) {
         if (8191 != (i & 8191)) {
-            bht.ah(i, 8191, eby.b.getDescriptor());
+            ResourcesCompat.ah(i, 8191, eby.b.getDescriptor());
             throw null;
         }
         this.a = str;

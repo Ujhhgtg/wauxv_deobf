@@ -26,11 +26,11 @@ import java.util.Map;
 import java.util.TimeZone;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
-import me.hd.wauxv.obf.aaz;
+import me.hd.wauxv.obf.StaticHelpers5;
 import me.hd.wauxv.obf.OtherStaticHelpers;
-import me.hd.wauxv.obf.abb;
+import me.hd.wauxv.obf.StaticHelpers4;
 import me.hd.wauxv.obf.EmptyReadonlyList;
-import me.hd.wauxv.obf.ave;
+import me.hd.wauxv.obf.EmptyReadonlyMap;
 import me.hd.wauxv.obf.aye;
 import me.hd.wauxv.obf.bfu;
 import me.hd.wauxv.obf.IInvokable;
@@ -46,7 +46,7 @@ import me.hd.wauxv.obf.dlc;
 import me.hd.wauxv.obf.dnj;
 import me.hd.wauxv.obf.dqc;
 import me.hd.wauxv.obf.emc;
-import me.hd.wauxv.obf.emn;
+import me.hd.wauxv.obf.StaticHelpers7;
 import me.hd.wauxv.obf.nu;
 import me.hd.wauxv.obf.qp;
 import me.hd.wauxv.obf.rh;
@@ -90,7 +90,7 @@ public final class Util {
         EMPTY_REQUEST = RequestBody.Companion.create$default(RequestBody.Companion, bArr, (MediaType) null, 0, 0, 7,
                 (Object) null);
         sj sjVar = sj.a;
-        UNICODE_BOMS = emn.ao(nu.f("efbbbf"), nu.f("feff"), nu.f("fffe"), nu.f("0000ffff"), nu.f("ffff0000"));
+        UNICODE_BOMS = StaticHelpers7.ao(nu.f("efbbbf"), nu.f("feff"), nu.f("fffe"), nu.f("0000ffff"), nu.f("ffff0000"));
         TimeZone timeZone = TimeZone.getTimeZone("GMT");
         throwIfVar1IsNull(timeZone);
         UTC = timeZone;
@@ -230,7 +230,7 @@ public final class Util {
     public static final <T> List<T> filterList(Iterable<? extends T> iterable, IInvokable bgfVar) {
         throwIfVar1IsNull(iterable, "<this>");
         throwIfVar1IsNull(bgfVar, "predicate");
-        ArrayList arrayList = EmptyReadonlyList.a;
+        ArrayList arrayList = EmptyReadonlyList.INSTANCE;
         for (T t : iterable) {
             if (((Boolean) bgfVar.invoke(t)).booleanValue()) {
                 if (arrayList.isEmpty()) {
@@ -639,7 +639,7 @@ public final class Util {
     public static final List<Header> toHeaderList(Headers headers) {
         throwIfVar1IsNull(headers, "<this>");
         IntRange intRangeVarBm = dqc.bm(0, headers.size());
-        ArrayList arrayList = new ArrayList(abb.ak(intRangeVarBm, 10));
+        ArrayList arrayList = new ArrayList(StaticHelpers4.ak(intRangeVarBm, 10));
         Iterator it = intRangeVarBm.iterator();
         while (it.hasNext()) {
             int iNextInt = ((bqe) it).nextInt();
@@ -686,7 +686,7 @@ public final class Util {
 
     public static final <T> List<T> toImmutableList(List<? extends T> list) {
         throwIfVar1IsNull(list, "<this>");
-        List<T> listUnmodifiableList = Collections.unmodifiableList(aaz.ab(list));
+        List<T> listUnmodifiableList = Collections.unmodifiableList(StaticHelpers5.ab(list));
         throwIfVar1IsNull(listUnmodifiableList, "unmodifiableList(toMutableList())");
         return listUnmodifiableList;
     }
@@ -694,7 +694,7 @@ public final class Util {
     public static final <K, V> Map<K, V> toImmutableMap(Map<K, ? extends V> map) {
         throwIfVar1IsNull(map, "<this>");
         if (map.isEmpty()) {
-            return ave.a;
+            return EmptyReadonlyMap.INSTANCE;
         }
         Map<K, V> mapUnmodifiableMap = Collections.unmodifiableMap(new LinkedHashMap(map));
         throwIfVar1IsNull(mapUnmodifiableMap, "{\n    Collections.unmodi…(LinkedHashMap(this))\n  }");

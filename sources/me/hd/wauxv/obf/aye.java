@@ -70,7 +70,7 @@ public abstract class aye {
         }
     }
 
-    public static void k(StringBuilder sb, Object obj, IInvokable bgfVar) {
+    public static void transformToAppend(StringBuilder sb, Object obj, IInvokable bgfVar) {
         if (bgfVar != null) {
             sb.append((CharSequence) bgfVar.invoke(obj));
             return;
@@ -217,10 +217,10 @@ public abstract class aye {
         dcl dclVar = new dcl(applicationContext);
         ow owVar = new ow(bvaVar);
         ek ekVar = new ek((byte) 0, 1);
-        awp awpVar = new awp(11);
+        GifEncoder gifEncoderVar = new GifEncoder(11);
         ContentResolver contentResolver2 = applicationContext.getContentResolver();
         dasVar.l(ByteBuffer.class, new nu(9));
-        dasVar.l(InputStream.class, new bmu(bvaVar));
+        dasVar.l(InputStream.class, new SyntheticPileOfMess(bvaVar));
         dasVar.n("Bitmap", ByteBuffer.class, Bitmap.class, rzVar);
         dasVar.n("Bitmap", InputStream.class, Bitmap.class, ouVar);
         String str = Build.FINGERPRINT;
@@ -245,16 +245,16 @@ public abstract class aye {
         dasVar.m(BitmapDrawable.class, new DefaultConfig(ozVar3, 8, owVar));
         dasVar.n("Animation", InputStream.class, bha.class, new dmv(arrayListO, scVar, bvaVar));
         dasVar.n("Animation", ByteBuffer.class, bha.class, scVar);
-        dasVar.m(bha.class, new awp(12));
+        dasVar.m(bha.class, new GifEncoder(12));
         dasVar.k(dmg.class, dmg.class, arjVar);
-        dasVar.n("Bitmap", dmg.class, Bitmap.class, new ox(ozVar3));
+        dasVar.n("Bitmap", dmg.class, Bitmap.class, new BitmapImageDecoder(ozVar3));
         dasVar.n("legacy_append", Uri.class, Drawable.class, dclVar);
         dasVar.n("legacy_append", Uri.class, Bitmap.class, new ou(dclVar, 1, ozVar3));
         dasVar.s(new sd(0));
         dasVar.k(File.class, ByteBuffer.class, new nu(10));
-        dasVar.k(File.class, InputStream.class, new azs(new awp(7)));
+        dasVar.k(File.class, InputStream.class, new azs(new GifEncoder(7)));
         dasVar.n("legacy_append", File.class, File.class, new azn(0));
-        dasVar.k(File.class, cls, new azs(new awp(6)));
+        dasVar.k(File.class, cls, new azs(new GifEncoder(6)));
         dasVar.k(File.class, File.class, arjVar);
         dasVar.s(new bpp(bvaVar));
         if (!"robolectric".equals(str)) {
@@ -302,7 +302,7 @@ public abstract class aye {
         dasVar.k(Uri.class, InputStream.class, new dop(12));
         dasVar.k(URL.class, InputStream.class, new dop(11));
         dasVar.k(Uri.class, File.class, new anr(applicationContext, 5));
-        dasVar.k(bid.class, InputStream.class, new bmu(0));
+        dasVar.k(bid.class, InputStream.class, new SyntheticPileOfMess(0));
         dasVar.k(byte[].class, ByteBuffer.class, new nu(6));
         dasVar.k(byte[].class, InputStream.class, new nu(8));
         dasVar.k(Uri.class, Uri.class, arjVar);
@@ -310,8 +310,8 @@ public abstract class aye {
         dasVar.n("legacy_append", Drawable.class, Drawable.class, new azn(2));
         dasVar.r(Bitmap.class, BitmapDrawable.class, new ov(resources, 0));
         dasVar.r(Bitmap.class, byte[].class, ekVar);
-        dasVar.r(Drawable.class, byte[].class, new jx(ozVar3, ekVar, awpVar, 6));
-        dasVar.r(bha.class, byte[].class, awpVar);
+        dasVar.r(Drawable.class, byte[].class, new FactoryPools(ozVar3, ekVar, gifEncoderVar, 6));
+        dasVar.r(bha.class, byte[].class, gifEncoderVar);
         epu epuVar2 = new epu(ozVar3, new dop(16));
         dasVar.n("legacy_append", ByteBuffer.class, Bitmap.class, epuVar2);
         dasVar.n("legacy_append", ByteBuffer.class, BitmapDrawable.class, new ou(resources, epuVar2));
@@ -354,7 +354,7 @@ public abstract class aye {
         if (bundle3 != null && bundle3.containsKey(str)) {
             Bundle bundle4 = bundle3.getBundle(str);
             if (bundle4 == null) {
-                bundle4 = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
+                bundle4 = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
             }
             bundle3.remove(str);
             if (bundle3.isEmpty()) {
@@ -411,27 +411,27 @@ public abstract class aye {
     public static Activity v() {
         try {
             int i = 0;
-            bmu bmuVarBh = dqc.bh(ajn.tryGetClassByClassName("android.app.ActivityThread" /* "android.app.ActivityThread" /* "android.app.ActivityThread" /* cnb.z(-73748883438378L)  */));
-            dov dovVar = ep.a;
-            ((cbg) bmuVarBh.h).c = bhu.aa();
-            cde cdeVarT = bmuVarBh.t();
-            cdeVarT.ab = "currentActivityThread" /* "currentActivityThread" /* "currentActivityThread" /* cnb.z(-74217034873642L)  */;
-            Object objE = ((MethodHookWrapper) aaz.e(cdeVarT.aj())).e(new Object[0]);
+            SyntheticPileOfMess bmuVarBh = dqc.bh(ajn.tryGetClassByClassName("android.app.ActivityThread" /* "android.app.ActivityThread" /* "android.app.ActivityThread" /* cnb.z(-73748883438378L)  */));
+            Kotlin$Lazy kotlin$LazyVar = ep.a;
+            ((Configuration) bmuVarBh.obj).processorResolver = FastKV.aa();
+            MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT.name = "currentActivityThread" /* "currentActivityThread" /* "currentActivityThread" /* cnb.z(-74217034873642L)  */;
+            Object objE = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(new Object[0]);
             throwIfVar1IsNull(objE);
-            azg azgVarR = dqc.bi(objE).r();
-            azgVarR.ab = "mActivities" /* "mActivities" /* "mActivities" /* cnb.z(-74105365723946L)  */;
-            Object objE2 = ((azk) aaz.e(azgVarR.c())).e();
+            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objE).r();
+            fieldResolverVarR.name = "mActivities" /* "mActivities" /* "mActivities" /* cnb.z(-74105365723946L)  */;
+            Object objE2 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).e();
             throwIfVar1IsNull(objE2);
             for (Object obj : ((Map) objE2).values()) {
                 int i2 = 0;
-                azg azgVarR2 = dqc.bi(obj).r();
-                azgVarR2.ab = "paused" /* "paused" /* "paused" /* cnb.z(-74019466378026L)  */;
-                Object objE3 = ((azk) aaz.e(azgVarR2.c())).e();
+                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj).r();
+                fieldResolverVarR2.name = "paused" /* "paused" /* "paused" /* cnb.z(-74019466378026L)  */;
+                Object objE3 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).e();
                 throwIfVar1IsNull(objE3);
                 if (!((Boolean) objE3).booleanValue()) {
-                    azg azgVarR3 = dqc.bi(obj).r();
-                    azgVarR3.ab = "activity" /* "activity" /* "activity" /* cnb.z(-74040941214506L)  */;
-                    return (Activity) ((azk) aaz.e(azgVarR3.c())).e();
+                    FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).r();
+                    fieldResolverVarR3.name = "activity" /* "activity" /* "activity" /* cnb.z(-74040941214506L)  */;
+                    return (Activity) ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).e();
                 }
             }
             return null;
@@ -454,22 +454,22 @@ public abstract class aye {
         contentValues.put("talker" /* "talker" /* "talker" /* cnb.z(-116088671042346L)  */, str);
         contentValues.put("content" /* "content" /* "content" /* cnb.z(-116058606271274L)  */, str2);
         cgeVar.getClass();
-        Object objC = ReflectionWrapper.createInstanceWithArgs(emn.az(cgd.a), new Object[0]);
+        Object objC = ReflectionWrapper.createInstanceWithArgs(StaticHelpers7.az(cgd.a), new Object[0]);
         int i2 = 0;
-        cde cdeVarT = dqc.bi(objC).t();
-        cdeVarT.ab = "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-75690208656170L)  */;
-        cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(ContentValues.class), dal.b(Boolean.TYPE) }, 2));
-        cdeVarT.ah();
-        ((MethodHookWrapper) aaz.e(cdeVarT.aj())).e(contentValues, Boolean.TRUE);
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objC).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-75690208656170L)  */;
+        methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.b(ContentValues.class), dal.b(Boolean.TYPE) }, 2));
+        methodResolverVarT.enableSuperclass();
+        ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(contentValues, Boolean.TRUE);
         cgy.a.getClass();
-        Method methodBb = emn.bb(cgw.a);
+        Method methodBb = StaticHelpers7.bb(cgw.a);
         dmu dmuVar = dmu.a;
         dmuVar.getClass();
         dgf.a.getClass();
         dmuVar.getClass();
-        cde cdeVarT2 = dqc.bi(dgf.b(emn.az(dmt.a))).t();
-        cdeVarT2.a = emn.az(cgv.a);
-        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT2)).e(new Object[0]);
+        MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(dgf.b(StaticHelpers7.az(dmt.a))).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT2.returnType = StaticHelpers7.az(cgv.a);
+        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT2)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         Object objInvoke = methodBb.invoke(objE, objC);
         throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.Long" /* "null cannot be cast to non-null type kotlin.Long" /* "null cannot be cast to non-null type kotlin.Long" /* cnb.z(-370294900390698L)  */);
@@ -477,7 +477,7 @@ public abstract class aye {
     }
 
     public static final Object x(Object obj) {
-        return obj instanceof abr ? bhu.x(((abr) obj).c) : obj;
+        return obj instanceof abr ? FastKV.x(((abr) obj).c) : obj;
     }
 
     public static byte[] y(ArrayList arrayList) {

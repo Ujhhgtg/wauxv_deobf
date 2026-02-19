@@ -55,16 +55,16 @@ public final /* synthetic */ class gi implements bgf {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = bhu.x(th);
+                    objX = FastKV.x(th);
                 }
                 if (objX instanceof dcx) {
                     objX = null;
                 }
                 if (objX != null) {
                     int i3 = 0;
-                    cde cdeVarT = dqc.bi(objX).t();
-                    cdeVarT.a = dal.b(Integer.TYPE);
-                    Object objJ = ((MethodHookWrapper) dkz.m(cdeVarT)).j(new Object[0]);
+                    MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objX).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                    methodResolverVarT.returnType = dal.b(Integer.TYPE);
+                    Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT)).j(new Object[0]);
                     throwIfVar1IsNull(objJ);
                     switch (((Number) objJ).intValue()) {
                         case 61:
@@ -138,7 +138,7 @@ public final /* synthetic */ class gi implements bgf {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = bhu.x(th2);
+                    objX2 = FastKV.x(th2);
                 }
                 if (objX2 instanceof dcx) {
                     objX2 = null;
@@ -149,7 +149,7 @@ public final /* synthetic */ class gi implements bgf {
                         objX3 = null;
                     }
                 } catch (Throwable th3) {
-                    objX3 = bhu.x(th3);
+                    objX3 = FastKV.x(th3);
                 }
                 String str = (String) (objX3 instanceof dcx ? null : objX3);
                 JSONObject jSONObject = new JSONObject(str != null ? str : "");
@@ -194,7 +194,7 @@ public final /* synthetic */ class gi implements bgf {
                         objX4 = null;
                     }
                 } catch (Throwable th4) {
-                    objX4 = bhu.x(th4);
+                    objX4 = FastKV.x(th4);
                 }
                 if (objX4 instanceof dcx) {
                     objX4 = null;
@@ -207,7 +207,7 @@ public final /* synthetic */ class gi implements bgf {
                         objX5 = null;
                     }
                 } catch (Throwable th5) {
-                    objX5 = bhu.x(th5);
+                    objX5 = FastKV.x(th5);
                 }
                 String str4 = (String) (objX5 instanceof dcx ? null : objX5);
                 String str5 = str4 != null ? str4 : "";
@@ -243,14 +243,14 @@ public final /* synthetic */ class gi implements bgf {
                 return kotlinUnitVar;
             case 22:
                 View view = (View) obj;
-                View viewK = dkz.k(view, R.layout.module_dialog_auto_clean, null, false);
+                View viewK = StaticHelpers6.k(view, R.layout.module_dialog_auto_clean, null, false);
                 int i4 = R.id.moduleDialogEdtAutoCleanCycle;
-                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK, R.id.moduleDialogEdtAutoCleanCycle);
+                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK, R.id.moduleDialogEdtAutoCleanCycle);
                 if (textInputEditText != null) {
                     i4 = R.id.moduleDialogInputAutoCleanCycle;
-                    if (((TextInputLayout) KotlinHelpers2.aq(viewK, R.id.moduleDialogInputAutoCleanCycle)) != null) {
+                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK, R.id.moduleDialogInputAutoCleanCycle)) != null) {
                         i4 = R.id.moduleDialogRvAutoCleanConfig;
-                        RecyclerView recyclerView = (RecyclerView) KotlinHelpers2.aq(viewK, R.id.moduleDialogRvAutoCleanConfig);
+                        RecyclerView recyclerView = (RecyclerView) KotlinHelpers2.recursivelyFindViewById(viewK, R.id.moduleDialogRvAutoCleanConfig);
                         if (recyclerView != null) {
                             LinearLayout linearLayout = (LinearLayout) viewK;
                             cee ceeVar = new cee(linearLayout, textInputEditText, recyclerView);
@@ -285,7 +285,7 @@ public final /* synthetic */ class gi implements bgf {
                         objX6 = null;
                     }
                 } catch (Throwable th6) {
-                    objX6 = bhu.x(th6);
+                    objX6 = FastKV.x(th6);
                 }
                 if (objX6 instanceof dcx) {
                     objX6 = null;
@@ -298,19 +298,19 @@ public final /* synthetic */ class gi implements bgf {
                             objX7 = null;
                         }
                     } catch (Throwable th7) {
-                        objX7 = bhu.x(th7);
+                        objX7 = FastKV.x(th7);
                     }
                     Object obj2 = objX7 instanceof dcx ? null : objX7;
                     throwIfVar1IsNull(obj2);
                     int i5 = 0;
-                    azg azgVarR = dqc.bi(obj2).r();
-                    azgVarR.ab = "field_UserName" /* "field_UserName" /* "field_UserName" /* "field_UserName" /* cnb.z(-443841920367402L)   */;
-                    Object objE = ((azk) yg.e(azgVarR)).e();
+                    FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).r();
+                    fieldResolverVarR.name = "field_UserName" /* "field_UserName" /* "field_UserName" /* "field_UserName" /* cnb.z(-443841920367402L)   */;
+                    Object objE = ((azk) yg.e(fieldResolverVarR)).e();
                     throwIfVar1IsNull(objE);
                     bcp.a.getClass();
-                    Method methodBb = emn.bb(bco.a);
+                    Method methodBb = StaticHelpers7.bb(bco.a);
                     dgf.a.getClass();
-                    methodBb.invoke(dgf.b(emn.bb(bcn.a).getDeclaringClass()), (String) objE);
+                    methodBb.invoke(dgf.b(StaticHelpers7.bb(bcn.a).getDeclaringClass()), (String) objE);
                 }
                 return kotlinUnitVar;
             case 25:
@@ -325,15 +325,15 @@ public final /* synthetic */ class gi implements bgf {
                 return kotlinUnitVar;
             case 27:
                 View view2 = (View) obj;
-                View viewK2 = dkz.k(view2, R.layout.module_dialog_auto_login_win, null, false);
+                View viewK2 = StaticHelpers6.k(view2, R.layout.module_dialog_auto_login_win, null, false);
                 int i6 = R.id.moduleDialogCbAutoLoginWinAutoLoginDevice;
-                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.aq(viewK2, R.id.moduleDialogCbAutoLoginWinAutoLoginDevice);
+                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.recursivelyFindViewById(viewK2, R.id.moduleDialogCbAutoLoginWinAutoLoginDevice);
                 if (materialCheckBox != null) {
                     i6 = R.id.moduleDialogCbAutoLoginWinAutoSyncMsg;
-                    MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) KotlinHelpers2.aq(viewK2, R.id.moduleDialogCbAutoLoginWinAutoSyncMsg);
+                    MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) KotlinHelpers2.recursivelyFindViewById(viewK2, R.id.moduleDialogCbAutoLoginWinAutoSyncMsg);
                     if (materialCheckBox2 != null) {
                         i6 = R.id.moduleDialogCbAutoLoginWinShowLoginDevice;
-                        MaterialCheckBox materialCheckBox3 = (MaterialCheckBox) KotlinHelpers2.aq(viewK2, R.id.moduleDialogCbAutoLoginWinShowLoginDevice);
+                        MaterialCheckBox materialCheckBox3 = (MaterialCheckBox) KotlinHelpers2.recursivelyFindViewById(viewK2, R.id.moduleDialogCbAutoLoginWinShowLoginDevice);
                         if (materialCheckBox3 != null) {
                             LinearLayout linearLayout2 = (LinearLayout) viewK2;
                             cef cefVar = new cef(linearLayout2, materialCheckBox, materialCheckBox2, materialCheckBox3, 0);
@@ -360,7 +360,7 @@ public final /* synthetic */ class gi implements bgf {
                 Activity activity = (Activity) (objE2 instanceof Activity ? objE2 : null);
                 if (activity == null) {
                     cls = Activity.class;
-                    Class<Activity> clsBf = cnf.bf(dal.b(cls));
+                    Class<Activity> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                     throw new IllegalStateException("HookParam instance cannot cast to ".concat((clsBf != null ? clsBf : Activity.class).getName()).toString());
                 }
                 boolean zI = mb.a.i();
@@ -377,9 +377,9 @@ public final /* synthetic */ class gi implements bgf {
                 return kotlinUnitVar;
             default:
                 int i8 = 0;
-                azg azgVarAa = dkz.aa((bmm) obj);
-                azgVarAa.a = dal.b(Button.class);
-                Object objE3 = ((azk) aaz.e(azgVarAa.c())).e();
+                FieldResolver fieldResolverVarAa = StaticHelpers6.aa((bmm) obj);
+                fieldResolverVarAa.fieldType = dal.b(Button.class);
+                Object objE3 = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).e();
                 throwIfVar1IsNull(objE3);
                 ((Button) objE3).callOnClick();
                 return kotlinUnitVar;

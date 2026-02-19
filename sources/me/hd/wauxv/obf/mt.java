@@ -30,6 +30,6 @@ public final class mt {
         sb.append(", progress=");
         sb.append(this.c);
         sb.append(", swipeEdge=");
-        return dkz.v(sb, this.d, '}');
+        return StaticHelpers6.concatFromSb(sb, this.d, '}');
     }
 }

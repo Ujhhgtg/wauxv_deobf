@@ -11,16 +11,16 @@ public final class zi {
     public final HashMap b = new HashMap();
     public final HashMap c = new HashMap();
 
-    public static void d(HashMap map, zh zhVar, bug bugVar, Class cls) {
-        bug bugVar2 = (bug) map.get(zhVar);
-        if (bugVar2 == null || bugVar == bugVar2) {
-            if (bugVar2 == null) {
-                map.put(zhVar, bugVar);
+    public static void d(HashMap map, zh zhVar, LifeEventEnum lifeEventEnumVar, Class cls) {
+        LifeEventEnum lifeEventEnumVar2 = (LifeEventEnum) map.get(zhVar);
+        if (lifeEventEnumVar2 == null || lifeEventEnumVar == lifeEventEnumVar2) {
+            if (lifeEventEnumVar2 == null) {
+                map.put(zhVar, lifeEventEnumVar);
                 return;
             }
             return;
         }
-        throw new IllegalArgumentException("Method " + zhVar.b.getName() + " in " + cls.getName() + " already declared with different @OnLifecycleEvent value: previous value " + bugVar2 + ", new value " + bugVar);
+        throw new IllegalArgumentException("Method " + zhVar.b.getName() + " in " + cls.getName() + " already declared with different @OnLifecycleEvent value: previous value " + lifeEventEnumVar2 + ", new value " + lifeEventEnumVar);
     }
 
     public final zg e(Class cls, Method[] methodArr) {
@@ -41,7 +41,7 @@ public final class zi {
                 zgVarE2 = e(cls2, null);
             }
             for (Map.Entry entry : zgVarE2.b.entrySet()) {
-                d(map, (zh) entry.getKey(), (bug) entry.getValue(), cls);
+                d(map, (zh) entry.getKey(), (LifeEventEnum) entry.getValue(), cls);
             }
         }
         if (methodArr == null) {
@@ -64,12 +64,12 @@ public final class zi {
                     }
                     i = 1;
                 }
-                bug bugVarValue = cqyVar.value();
+                LifeEventEnum lifeEventEnumVarValue = cqyVar.value();
                 if (parameterTypes.length > 1) {
-                    if (!bug.class.isAssignableFrom(parameterTypes[1])) {
+                    if (!LifeEventEnum.class.isAssignableFrom(parameterTypes[1])) {
                         throw new IllegalArgumentException("invalid parameter type. second arg must be an event");
                     }
-                    if (bugVarValue != bug.ON_ANY) {
+                    if (lifeEventEnumVarValue != LifeEventEnum.ON_ANY) {
                         throw new IllegalArgumentException("Second arg is supported only for ON_ANY value");
                     }
                     i = 2;
@@ -77,7 +77,7 @@ public final class zi {
                 if (parameterTypes.length > 2) {
                     throw new IllegalArgumentException("cannot have more than 2 params");
                 }
-                d(map, new zh(method, i), bugVarValue, cls);
+                d(map, new zh(method, i), lifeEventEnumVarValue, cls);
                 z = true;
             }
         }

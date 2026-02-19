@@ -12,9 +12,9 @@ import java.util.LinkedHashMap;
 /* JADX INFO: loaded from: classes.dex */
 public final class cf extends SwitchHook {
     public static final cf a;
-    public static final dov b;
-    public static final dov c;
-    public static final dov d;
+    public static final Kotlin$Lazy b;
+    public static final Kotlin$Lazy c;
+    public static final Kotlin$Lazy d;
     public static final String h;
     public static final String i;
     public static final String j;
@@ -26,11 +26,11 @@ public final class cf extends SwitchHook {
         "#FFFFFFFF" /* "#FFFFFFFF" /* "#FFFFFFFF" /* "#FFFFFFFF" /* cnb.z(-432709365136170L)   */;
         "#FF191919" /* "#FF191919" /* "#FF191919" /* "#FF191919" /* cnb.z(-432683595332394L)   */;
         a = new cf("AccountInfoCenterHook" /* "AccountInfoCenterHook" /* "AccountInfoCenterHook" /* "AccountInfoCenterHook" /* cnb.z(-431137407105834L)   */);
-        b = new dov(new h(2));
-        c = new dov(new h(3));
-        d = new dov(new h(4));
-        dov dovVar = ctf.a;
-        h = ctf.c("Resource" /* "Resource" /* "Resource" /* "Resource" /* cnb.z(-48064979008298L)   */, "Font" /* "Font" /* "Font" /* "Font" /* cnb.z(-47974784695082L)   */);
+        b = new Kotlin$Lazy(new h(2));
+        c = new Kotlin$Lazy(new h(3));
+        d = new Kotlin$Lazy(new h(4));
+        Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
+        h = PathUtils.getModuleSubDir("Resource" /* "Resource" /* "Resource" /* "Resource" /* cnb.z(-48064979008298L)   */, "Font" /* "Font" /* "Font" /* "Font" /* cnb.z(-47974784695082L)   */);
         i = "美化" /* "美化" /* "美化" /* "美化" /* cnb.z(-433207581342506L)   */;
         j = "资料卡居中" /* "资料卡居中" /* "资料卡居中" /* "资料卡居中" /* cnb.z(-433143156833066L)   */;
         k = "居中我界面资料卡，与隐藏微信号冲突" /* "居中我界面资料卡，与隐藏微信号冲突" /* "居中我界面资料卡，与隐藏微信号冲突" /* "居中我界面资料卡，与隐藏微信号冲突" /* cnb.z(-433168926636842L)   */;
@@ -47,7 +47,7 @@ public final class cf extends SwitchHook {
         int i7 = (i5 & 256) != 0 ? 0 : 1;
         File file2 = (i5 & 512) != 0 ? null : file;
         cfVar.getClass();
-        blq blqVarD = awp.d(bluVar, blrVar.a, blrVar.b, blr.g(blrVar, 0, 0, new bgf() { // from class:
+        blq blqVarD = GifEncoder.d(bluVar, blrVar.a, blrVar.b, blr.g(blrVar, 0, 0, new bgf() { // from class:
                                                                                         // me.hd.wauxv.obf.bo
             @Override // me.hd.wauxv.obf.bgf
             public final Object invoke(Object obj) {
@@ -59,14 +59,14 @@ public final class cf extends SwitchHook {
             }
         }, 31));
         cls = TextView.class;
-        Class<TextView> clsBf = cnf.bf(dal.b(cls));
+        Class<TextView> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
         if (clsBf == null) {
             clsBf = cls;
         }
         View viewH = blu.h(bluVar, clsBf, null, blrVar.j());
         LinkedHashMap linkedHashMap = bluVar.f;
         viewH.setLayoutParams(blqVarD.f());
-        Class<TextView> clsBf2 = cnf.bf(dal.b(cls));
+        Class<TextView> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
         if (clsBf2 == null) {
             clsBf2 = cls;
         }
@@ -90,7 +90,7 @@ public final class cf extends SwitchHook {
         if (linkedHashMap.size() != size) {
             throw new cth(concat("Performers are not allowed to appear in ", name, " DSL creation process."));
         }
-        Class<TextView> clsBf3 = cnf.bf(dal.b(cls));
+        Class<TextView> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
         blr.i(blrVar, null, clsBf3 != null ? clsBf3 : TextView.class);
         blr.h(blrVar, viewH);
     }
@@ -98,10 +98,10 @@ public final class cf extends SwitchHook {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i2 = 0;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) dkz.n(new Object[] { dal.b(View.class) }, 1, yg.s(-431025737956138L).t());
-        exg exgVar = exg.a;
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(View.class) }, 1, yg.s(-431025737956138L).getMethodResolverBasedOnPreviouslyProvidedConfig());
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         cf cfVar = a;
-        aki akiVarAd = cfVar.ad(methodHookWrapperVar, exgVar);
+        aki akiVarAd = cfVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
         cfVar.x(akiVarAd, new bn(2));
         akiVarAd.o();
     }

@@ -90,7 +90,7 @@ public final class bfo {
         iArr2[1] = i5;
         iArr2[2] = i6;
         iArr2[3] = i7;
-        bht bhtVar = anj.a;
+        ResourcesCompat resourcesCompatVar = anj.a;
         int i8 = bfpVar.s;
         i8 = i8 == 0 ? 0 : i8;
         if (i8 > 0) {
@@ -168,7 +168,7 @@ public final class bfo {
             if (j < 0) {
                 return;
             }
-            bht bhtVar = anj.a;
+            ResourcesCompat resourcesCompatVar = anj.a;
             ng.ac().postDelayed(bfnVar, j);
         }
     }

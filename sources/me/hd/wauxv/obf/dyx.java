@@ -11,7 +11,7 @@ public final class dyx {
 
     public /* synthetic */ dyx(int i, dsy dsyVar, eca ecaVar, String str, String str2) {
         if (15 != (i & 15)) {
-            bht.ah(i, 15, dyv.b.getDescriptor());
+            ResourcesCompat.ah(i, 15, dyv.b.getDescriptor());
             throw null;
         }
         this.a = dsyVar;

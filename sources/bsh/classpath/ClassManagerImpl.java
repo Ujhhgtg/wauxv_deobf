@@ -5,8 +5,7 @@ import bsh.ClassPathException;
 import bsh.Interpreter;
 import bsh.InterpreterError;
 import bsh.UtilEvalError;
-import bsh.classpath.BshClassPath;
-import bsh.classpath.DiscreteFilesClassLoader;
+
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.io.PrintWriter;
@@ -19,7 +18,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.yg;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -123,7 +122,7 @@ public class ClassManagerImpl extends BshClassManager {
             } catch (ClassNotFoundException unused5) {
             } catch (NoClassDefFoundError e2) {
                 PrintStream printStream = System.err;
-                StringBuilder sbZ = dkz.z("The class named '", str, "' could not be found, either because it no longer exists or it is not contained in the class file of the same name. Caused by: ");
+                StringBuilder sbZ = StaticHelpers6.concatAndToSb("The class named '", str, "' could not be found, either because it no longer exists or it is not contained in the class file of the same name. Caused by: ");
                 sbZ.append(e2.getMessage());
                 printStream.println(sbZ.toString());
             }

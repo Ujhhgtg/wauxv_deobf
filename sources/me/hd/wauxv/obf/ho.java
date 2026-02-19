@@ -38,7 +38,7 @@ public abstract class ho {
         return e.booleanValue();
     }
 
-    public static void k(ic icVar) {
+    public static void k(AppCompatDelegate appCompatDelegateVar) {
         synchronized (h) {
             try {
                 kz kzVar = g;
@@ -46,7 +46,7 @@ public abstract class ho {
                 kq kqVar = new kq(kzVar);
                 while (kqVar.hasNext()) {
                     ho hoVar = (ho) ((WeakReference) kqVar.next()).get();
-                    if (hoVar == icVar || hoVar == null) {
+                    if (hoVar == appCompatDelegateVar || hoVar == null) {
                         kqVar.remove();
                     }
                 }

@@ -8,22 +8,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.fragment.app.FragmentContainerView;
-import com.umeng.analytics.pro.f;
 import me.hd.wauxv.R;
-import me.hd.wauxv.obf.bdj;
-import me.hd.wauxv.obf.KotlinHelpers;
+import me.hd.wauxv.obf.SomeFragmentManager;
 import me.hd.wauxv.obf.cfx;
 import me.hd.wauxv.obf.cjl;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.cyb;
 import me.hd.wauxv.obf.cyd;
-import me.hd.wauxv.obf.dov;
+import me.hd.wauxv.obf.Kotlin$Lazy;
 import me.hd.wauxv.obf.mu;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public class NavHostFragment extends bdj {
-    public final dov a = new dov(new cfx(this, 3));
+public class NavHostFragment extends SomeFragmentManager {
+    public final Kotlin$Lazy a = new Kotlin$Lazy(new cfx(this, 3));
     public View b;
     public int c;
     public boolean d;

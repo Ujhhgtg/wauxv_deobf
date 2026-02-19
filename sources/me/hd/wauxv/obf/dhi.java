@@ -35,12 +35,12 @@ public final class dhi extends SwitchHook implements bnd {
                 String strZ2 = "WAuxiliary_chatting_record_pref" /* "WAuxiliary_chatting_record_pref" /* "WAuxiliary_chatting_record_pref" /* cnb.z(-595703374019370L)  */;
                 String strZ3 = "历史发言记录" /* "历史发言记录" /* "历史发言记录" /* cnb.z(-595016179252010L)  */;
                 Object objC = zf.c(cvh.a.b(), new Object[] { activity });
-                emn.bb(cvd.a).invoke(objC, strZ2);
-                emn.bb(cvf.a).invoke(objC, strZ3);
+                StaticHelpers7.bb(cvd.a).invoke(objC, strZ2);
+                StaticHelpers7.bb(cvf.a).invoke(objC, strZ3);
                 return dqc.toSingletonList(new aep(strZ, objC, 2, new ben(activity, stringExtra, stringExtra2, 1)));
             }
         }
-        return EmptyReadonlyList.a;
+        return EmptyReadonlyList.INSTANCE;
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

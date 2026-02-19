@@ -10,7 +10,7 @@ public final class dsl {
 
     public /* synthetic */ dsl(int i, String str, String str2, String str3) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, dsj.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, dsj.b.getDescriptor());
             throw null;
         }
         this.a = str;

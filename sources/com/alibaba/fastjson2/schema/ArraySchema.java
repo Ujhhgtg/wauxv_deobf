@@ -4,7 +4,6 @@ import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONArray;
 import com.alibaba.fastjson2.JSONException;
 import com.alibaba.fastjson2.JSONObject;
-import com.alibaba.fastjson2.schema.JSONSchema;
 import com.umeng.analytics.pro.f;
 import java.lang.reflect.Array;
 import java.math.BigDecimal;
@@ -16,7 +15,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.function.IntFunction;
 import java.util.function.Predicate;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.kx;
 import me.hd.wauxv.obf.ky;
 
@@ -90,7 +89,7 @@ public final class ArraySchema extends JSONSchema {
                 this.itemSchema = JSONSchema.of((JSONObject) obj, jSONSchema != null ? jSONSchema : this);
             } else {
                 if (jSONArray != null) {
-                    throw new JSONException(dkz.r(obj, "schema error, items : "));
+                    throw new JSONException(StaticHelpers6.concatVar2Var1(obj, "schema error, items : "));
                 }
                 jSONArray = (JSONArray) obj;
                 this.itemSchema = null;

@@ -75,7 +75,7 @@ public final class cal<S> extends cti {
                 + (resources.getDimensionPixelSize(me.hd.wauxv.R.dimen.mtrl_calendar_day_height) * i3)
                 + resources.getDimensionPixelOffset(me.hd.wauxv.R.dimen.mtrl_calendar_bottom_padding));
         GridView gridView = (GridView) viewInflate.findViewById(me.hd.wauxv.R.id.mtrl_calendar_days_of_week);
-        eqz.s(gridView, new cah(0));
+        ViewCompat.setAccessibilityDelegate(gridView, new cah(0));
         int i4 = this.b.e;
         gridView.setAdapter((ListAdapter) (i4 > 0 ? new ajl(i4) : new ajl()));
         gridView.setNumColumns(cetVar.d);
@@ -84,7 +84,7 @@ public final class cal<S> extends cti {
         this.n.setLayoutManager(new cai(this, i2, i2));
         this.n.setTag("MONTHS_VIEW_GROUP_TAG");
         com.google.android.material.datepicker.c cVar = new com.google.android.material.datepicker.c(
-                contextThemeWrapper, this.b, new bmu(this));
+                contextThemeWrapper, this.b, new SyntheticPileOfMess(this));
         this.n.setAdapter(cVar);
         int integer = contextThemeWrapper.getResources()
                 .getInteger(me.hd.wauxv.R.integer.mtrl_calendar_year_selector_span);
@@ -105,7 +105,7 @@ public final class cal<S> extends cti {
             MaterialButton materialButton = (MaterialButton) viewInflate
                     .findViewById(me.hd.wauxv.R.id.month_navigation_fragment_toggle);
             materialButton.setTag("SELECTOR_TOGGLE_TAG");
-            eqz.s(materialButton, new yb(this, 2));
+            ViewCompat.setAccessibilityDelegate(materialButton, new yb(this, 2));
             View viewFindViewById = viewInflate.findViewById(me.hd.wauxv.R.id.month_navigation_previous);
             this.o = viewFindViewById;
             viewFindViewById.setTag("NAVIGATION_PREV_TAG");
@@ -125,7 +125,7 @@ public final class cal<S> extends cti {
             new csj().g(this.n);
         }
         this.n.eq(cVar.cachedConstructors.cachedConstructors.k(this.c));
-        eqz.s(this.n, new cah(1));
+        ViewCompat.setAccessibilityDelegate(this.n, new cah(1));
         return viewInflate;
     }
 

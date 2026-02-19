@@ -42,7 +42,7 @@ import java.util.Optional;
 import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 import java.util.function.Function;
 import java.util.zip.GZIPOutputStream;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -665,10 +665,10 @@ public abstract class FieldWriter<T> implements Comparable {
                     j3 = 0;
                 }
                 long j6 = ((j2 * 400) + 591) / 146097;
-                long j7 = dkz.j(j6, 400L, ((j6 / 4) + (j6 * 365)) - (j6 / 100), j2);
+                long j7 = StaticHelpers6.j(j6, 400L, ((j6 / 4) + (j6 * 365)) - (j6 / 100), j2);
                 if (j7 < 0) {
                     j6--;
-                    j7 = dkz.j(j6, 400L, ((j6 / 4) + (365 * j6)) - (j6 / 100), j2);
+                    j7 = StaticHelpers6.j(j6, 400L, ((j6 / 4) + (365 * j6)) - (j6 / 100), j2);
                 }
                 long j8 = j6 + j3;
                 int i = (int) j7;

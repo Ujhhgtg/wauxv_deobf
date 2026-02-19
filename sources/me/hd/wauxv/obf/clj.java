@@ -11,16 +11,16 @@ public final class clj extends ResponseBody {
     public final ResponseBody a;
     public final ConcurrentLinkedQueue b;
     public final clc c;
-    public final dov d;
-    public final dov e;
+    public final Kotlin$Lazy d;
+    public final Kotlin$Lazy e;
 
     public clj(ResponseBody responseBody, ConcurrentLinkedQueue concurrentLinkedQueue, clc clcVar) {
         this.a = responseBody;
         this.b = concurrentLinkedQueue;
         this.c = clcVar;
         SystemClock.elapsedRealtime();
-        this.d = new dov(new clh(this, 0));
-        this.e = new dov(new clh(this, 1));
+        this.d = new Kotlin$Lazy(new clh(this, 0));
+        this.e = new Kotlin$Lazy(new clh(this, 1));
     }
 
     @Override // okhttp3.ResponseBody

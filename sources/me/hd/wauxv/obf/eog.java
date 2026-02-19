@@ -9,24 +9,24 @@ public final class eog extends bws implements IDexFind {
     public static final eog a = new eog();
 
     public static void b(Object obj) {
-        XposedBridge.invokeOriginalMethod(emn.bb(eob.a), obj, new Object[0]);
+        XposedBridge.invokeOriginalMethod(StaticHelpers7.bb(eob.a), obj, new Object[0]);
     }
 
     public static Object c(eog eogVar, int i) {
         eogVar.getClass();
-        return emn.ba(eoa.a).newInstance(Integer.valueOf(i), null);
+        return StaticHelpers7.ba(eoa.a).newInstance(Integer.valueOf(i), null);
     }
 
     public static void d(Object obj, String str) {
-        emn.bb(eoc.a).invoke(obj, str);
+        StaticHelpers7.bb(eoc.a).invoke(obj, str);
     }
 
     public static void g(Object obj, String str) {
-        emn.bb(eod.a).invoke(obj, str);
+        StaticHelpers7.bb(eod.a).invoke(obj, str);
     }
 
     public static void i(Object obj, String str) {
-        emn.bb(eoe.a).invoke(obj, str);
+        StaticHelpers7.bb(eoe.a).invoke(obj, str);
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -35,11 +35,11 @@ public final class eog extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(eoa.a, dexKitBridge, new dos(11));
-        emn.aj(eoc.a, dexKitBridge, new dos(14));
-        emn.aj(eof.a, dexKitBridge, new dos(15));
-        emn.aj(eoe.a, dexKitBridge, new dos(16));
-        emn.aj(eod.a, dexKitBridge, new dos(17));
-        emn.aj(eob.a, dexKitBridge, new dos(18));
+        StaticHelpers7.resolveDexAndCache(eoa.a, dexKitBridge, new dos(11));
+        StaticHelpers7.resolveDexAndCache(eoc.a, dexKitBridge, new dos(14));
+        StaticHelpers7.resolveDexAndCache(eof.a, dexKitBridge, new dos(15));
+        StaticHelpers7.resolveDexAndCache(eoe.a, dexKitBridge, new dos(16));
+        StaticHelpers7.resolveDexAndCache(eod.a, dexKitBridge, new dos(17));
+        StaticHelpers7.resolveDexAndCache(eob.a, dexKitBridge, new dos(18));
     }
 }

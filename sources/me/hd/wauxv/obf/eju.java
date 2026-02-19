@@ -20,7 +20,7 @@ public final class eju {
     public /* synthetic */ eju(int i, String str, String str2, String str3, String str4, String str5, Boolean bool,
             Boolean bool2, String str6, String str7, String str8, String str9, String str10) {
         if (4095 != (i & 4095)) {
-            bht.ah(i, 4095, ejs.b.getDescriptor());
+            ResourcesCompat.ah(i, 4095, ejs.b.getDescriptor());
             throw null;
         }
         this.a = str;

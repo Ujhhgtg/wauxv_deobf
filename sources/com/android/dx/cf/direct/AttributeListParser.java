@@ -5,7 +5,7 @@ import com.android.dx.cf.iface.ParseException;
 import com.android.dx.cf.iface.ParseObserver;
 import com.android.dx.cf.iface.StdAttributeList;
 import com.android.dx.util.ByteArray;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -40,7 +40,7 @@ final class AttributeListParser {
         ByteArray bytes = this.cf.getBytes();
         ParseObserver parseObserver = this.observer;
         if (parseObserver != null) {
-            parseObserver.parsed(bytes, this.offset, 2, dkz.q(size, new StringBuilder("attributes_count: ")));
+            parseObserver.parsed(bytes, this.offset, 2, StaticHelpers6.q(size, new StringBuilder("attributes_count: ")));
         }
         for (int i = 0; i < size; i++) {
             try {

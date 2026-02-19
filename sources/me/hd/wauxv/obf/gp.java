@@ -8,7 +8,7 @@ public final class gp extends bws implements IDexFind {
     public static final gp a = new gp();
 
     public static Object b(Class cls, Object obj) {
-        Object objInvoke = emn.bb(go.a).invoke(obj, cls);
+        Object objInvoke = StaticHelpers7.bb(go.a).invoke(obj, cls);
         throwIfVar1IsNull(objInvoke);
         return objInvoke;
     }
@@ -19,6 +19,6 @@ public final class gp extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(go.a, dexKitBridge, new gi(9));
+        StaticHelpers7.resolveDexAndCache(go.a, dexKitBridge, new gi(9));
     }
 }

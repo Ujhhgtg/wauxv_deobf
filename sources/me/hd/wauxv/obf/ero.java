@@ -4,7 +4,7 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public interface ero {
     default erk _bh(zc zcVar, chq chqVar) {
-        return l(cnf.getJavaClass(zcVar), chqVar);
+        return l(HugeSyntheticPileOfHelpers.getJavaClass(zcVar), chqVar);
     }
 
     default erk b(Class cls) {

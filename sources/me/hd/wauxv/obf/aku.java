@@ -32,9 +32,9 @@ public final class aku extends AnimatorListenerAdapter {
                 view.setTranslationX(0.0f);
                 view.setTranslationY(0.0f);
                 akv akvVar = this.b;
-                czx czxVar = akvVar.a;
+                SomeView someViewVar = akvVar.a;
                 akx akxVar = this.e;
-                akxVar.ae(czxVar);
+                akxVar.ae(someViewVar);
                 akxVar.m.remove(akvVar.a);
                 akxVar.t();
                 break;
@@ -45,9 +45,9 @@ public final class aku extends AnimatorListenerAdapter {
                 view2.setTranslationX(0.0f);
                 view2.setTranslationY(0.0f);
                 akv akvVar2 = this.b;
-                czx czxVar2 = akvVar2.b;
+                SomeView someViewVar2 = akvVar2.b;
                 akx akxVar2 = this.e;
-                akxVar2.ae(czxVar2);
+                akxVar2.ae(someViewVar2);
                 akxVar2.m.remove(akvVar2.b);
                 akxVar2.t();
                 break;
@@ -58,11 +58,11 @@ public final class aku extends AnimatorListenerAdapter {
     public final void onAnimationStart(Animator animator) {
         switch (this.a) {
             case 0:
-                czx czxVar = this.b.a;
+                SomeView someViewVar = this.b.a;
                 this.e.getClass();
                 break;
             default:
-                czx czxVar2 = this.b.b;
+                SomeView someViewVar2 = this.b.b;
                 this.e.getClass();
                 break;
         }

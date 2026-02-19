@@ -180,9 +180,9 @@ public abstract class ns extends View {
         this.w = resources.getDimensionPixelSize(R.dimen.mtrl_slider_tick_radius);
         this.x = resources.getDimensionPixelSize(R.dimen.mtrl_slider_tick_min_spacing);
         this.am = resources.getDimensionPixelSize(R.dimen.mtrl_slider_label_padding);
-        bhu.p(context2, attributeSet, R.attr.sliderStyle, R.style.Widget_MaterialComponents_Slider);
+        FastKV.p(context2, attributeSet, R.attr.sliderStyle, R.style.Widget_MaterialComponents_Slider);
         int[] iArr = cxs.al;
-        bhu.q(context2, attributeSet, iArr, R.attr.sliderStyle, R.style.Widget_MaterialComponents_Slider, new int[0]);
+        FastKV.q(context2, attributeSet, iArr, R.attr.sliderStyle, R.style.Widget_MaterialComponents_Slider, new int[0]);
         TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(attributeSet, iArr,
                 R.attr.sliderStyle, R.style.Widget_MaterialComponents_Slider);
         this.k = typedArrayObtainStyledAttributes.getResourceId(8, R.style.Widget_MaterialComponents_Tooltip);
@@ -196,10 +196,10 @@ public abstract class ns extends View {
         int i = zHasValue ? 24 : 26;
         int i2 = zHasValue ? 24 : 25;
         ColorStateList colorStateListV = cnb.v(context2, typedArrayObtainStyledAttributes, i);
-        setTrackInactiveTintList(colorStateListV == null ? bht.v(context2, R.color.material_slider_inactive_track_color)
+        setTrackInactiveTintList(colorStateListV == null ? ResourcesCompat.v(context2, R.color.material_slider_inactive_track_color)
                 : colorStateListV);
         ColorStateList colorStateListV2 = cnb.v(context2, typedArrayObtainStyledAttributes, i2);
-        setTrackActiveTintList(colorStateListV2 == null ? bht.v(context2, R.color.material_slider_active_track_color)
+        setTrackActiveTintList(colorStateListV2 == null ? ResourcesCompat.v(context2, R.color.material_slider_active_track_color)
                 : colorStateListV2);
         cauVar.dz(cnb.v(context2, typedArrayObtainStyledAttributes, 10));
         if (typedArrayObtainStyledAttributes.hasValue(14)) {
@@ -208,18 +208,18 @@ public abstract class ns extends View {
         setThumbStrokeWidth(typedArrayObtainStyledAttributes.getDimension(15, 0.0f));
         ColorStateList colorStateListV3 = cnb.v(context2, typedArrayObtainStyledAttributes, 5);
         setHaloTintList(
-                colorStateListV3 == null ? bht.v(context2, R.color.material_slider_halo_color) : colorStateListV3);
+                colorStateListV3 == null ? ResourcesCompat.v(context2, R.color.material_slider_halo_color) : colorStateListV3);
         this.ax = typedArrayObtainStyledAttributes.getBoolean(23, true);
         boolean zHasValue2 = typedArrayObtainStyledAttributes.hasValue(18);
         int i3 = zHasValue2 ? 18 : 20;
         int i4 = zHasValue2 ? 18 : 19;
         ColorStateList colorStateListV4 = cnb.v(context2, typedArrayObtainStyledAttributes, i3);
         setTickInactiveTintList(
-                colorStateListV4 == null ? bht.v(context2, R.color.material_slider_inactive_tick_marks_color)
+                colorStateListV4 == null ? ResourcesCompat.v(context2, R.color.material_slider_inactive_tick_marks_color)
                         : colorStateListV4);
         ColorStateList colorStateListV5 = cnb.v(context2, typedArrayObtainStyledAttributes, i4);
         setTickActiveTintList(
-                colorStateListV5 == null ? bht.v(context2, R.color.material_slider_active_tick_marks_color)
+                colorStateListV5 == null ? ResourcesCompat.v(context2, R.color.material_slider_active_tick_marks_color)
                         : colorStateListV5);
         setThumbTrackGapSize(typedArrayObtainStyledAttributes.getDimensionPixelSize(16, 0));
         setTrackStopIndicatorSize(typedArrayObtainStyledAttributes.getDimensionPixelSize(29, 0));
@@ -245,7 +245,7 @@ public abstract class ns extends View {
         this.r = ViewConfiguration.get(context2).getScaledTouchSlop();
         nq nqVar = new nq(slider);
         this.h = nqVar;
-        eqz.s(this, nqVar);
+        ViewCompat.setAccessibilityDelegate(this, nqVar);
         this.i = (AccessibilityManager) getContext().getSystemService("accessibility");
     }
 
@@ -332,7 +332,7 @@ public abstract class ns extends View {
 
     public final float[] bx() {
         float fFloatValue = ((Float) this.as.get(0)).floatValue();
-        float fFloatValue2 = ((Float) dkz.l(1, this.as)).floatValue();
+        float fFloatValue2 = ((Float) StaticHelpers6.getLastNElem(1, this.as)).floatValue();
         if (this.as.size() == 1) {
             fFloatValue = this.aq;
         }
@@ -365,7 +365,7 @@ public abstract class ns extends View {
     }
 
     public final boolean cb() {
-        WeakHashMap weakHashMap = eqz.a;
+        WeakHashMap weakHashMap = ViewCompat.a;
         return getLayoutDirection() == 1;
     }
 
@@ -464,7 +464,7 @@ public abstract class ns extends View {
         if (arrayList2.size() > this.as.size()) {
             List<ekv> listSubList = arrayList2.subList(this.as.size(), arrayList2.size());
             for (ekv ekvVar : listSubList) {
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 if (isAttachedToWindow()) {
                     ViewGroup viewGroupAh2 = ewz.ah(this);
                     eru eruVar = viewGroupAh2 == null ? null : new eru(viewGroupAh2);
@@ -485,7 +485,7 @@ public abstract class ns extends View {
             Context context = getContext();
             int i = this.k;
             ekv ekvVar2 = new ekv(context, i);
-            TypedArray typedArrayAn = bhu.an(ekvVar2.b, null, cxs.as, 0, i, new int[0]);
+            TypedArray typedArrayAn = FastKV.an(ekvVar2.b, null, cxs.as, 0, i, new int[0]);
             Context context2 = ekvVar2.b;
             ekvVar2.m = context2.getResources().getDimensionPixelSize(R.dimen.mtrl_tooltip_arrowSize);
             boolean z = typedArrayAn.getBoolean(8, true);
@@ -521,7 +521,7 @@ public abstract class ns extends View {
             ekvVar2.k = typedArrayAn.getDimensionPixelSize(3, 0);
             typedArrayAn.recycle();
             arrayList2.add(ekvVar2);
-            WeakHashMap weakHashMap2 = eqz.a;
+            WeakHashMap weakHashMap2 = ViewCompat.a;
             if (isAttachedToWindow() && (viewGroupAh = ewz.ah(this)) != null) {
                 int[] iArr = new int[2];
                 viewGroupAh.getLocationOnScreen(iArr);
@@ -569,7 +569,7 @@ public abstract class ns extends View {
         int i2 = i + 1;
         int i3 = i - 1;
         this.as.set(i,
-                Float.valueOf(cnf.ar(f, i3 < 0 ? this.aq : minSeparation + ((Float) this.as.get(i3)).floatValue(),
+                Float.valueOf(HugeSyntheticPileOfHelpers.ar(f, i3 < 0 ? this.aq : minSeparation + ((Float) this.as.get(i3)).floatValue(),
                         i2 >= this.as.size() ? this.ar : ((Float) this.as.get(i2)).floatValue() - minSeparation)));
         Iterator it = this.m.iterator();
         if (it.hasNext()) {
@@ -665,7 +665,7 @@ public abstract class ns extends View {
     public final void co(Canvas canvas, Paint paint, RectF rectF, int i) {
         float f;
         float f2 = this.ac / 2.0f;
-        int iAe = dkz.ae(i);
+        int iAe = StaticHelpers6.ae(i);
         if (iAe == 1) {
             f = this.al;
         } else if (iAe != 2) {
@@ -692,7 +692,7 @@ public abstract class ns extends View {
         canvas.save();
         path.addRoundRect(rectF, fMin, fMin, Path.Direction.CW);
         canvas.clipPath(path);
-        int iAe2 = dkz.ae(i);
+        int iAe2 = StaticHelpers6.ae(i);
         RectF rectF2 = this.bk;
         if (iAe2 == 1) {
             float f3 = rectF.left;
@@ -724,7 +724,7 @@ public abstract class ns extends View {
             z2 = false;
         } else {
             this.ad = iMax2;
-            WeakHashMap weakHashMap = eqz.a;
+            WeakHashMap weakHashMap = ViewCompat.a;
             if (isLaidOut()) {
                 this.ba = Math.max(getWidth() - (this.ad * 2), 0);
                 cc();
@@ -916,7 +916,7 @@ public abstract class ns extends View {
         super.onDraw(canvas);
         int iBs = nsVar.bs();
         float fFloatValue = ((Float) nsVar.as.get(0)).floatValue();
-        float fFloatValue2 = ((Float) dkz.l(1, nsVar.as)).floatValue();
+        float fFloatValue2 = ((Float) StaticHelpers6.getLastNElem(1, nsVar.as)).floatValue();
         float f3 = nsVar.ar;
         RectF rectF = nsVar.bj;
         if (fFloatValue2 < f3 || (nsVar.as.size() > 1 && fFloatValue > nsVar.aq)) {
@@ -992,7 +992,7 @@ public abstract class ns extends View {
                             fCs2 = fCs;
                         }
                     }
-                    int iAe = dkz.ae(i11);
+                    int iAe = StaticHelpers6.ae(i11);
                     if (iAe != 1) {
                         if (iAe == 2) {
                             fCs2 += nsVar.ah;
@@ -1049,7 +1049,7 @@ public abstract class ns extends View {
             int size = nsVar.as.size();
             Paint paint4 = nsVar.g;
             if (size >= 1) {
-                float fFloatValue3 = ((Float) dkz.l(1, nsVar.as)).floatValue();
+                float fFloatValue3 = ((Float) StaticHelpers6.getLastNElem(1, nsVar.as)).floatValue();
                 float f21 = nsVar.ar;
                 if (fFloatValue3 < f21) {
                     canvas2.drawPoint(nsVar.cs(f21), iBs, paint4);

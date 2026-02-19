@@ -11,13 +11,13 @@ public final class axu extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() throws NoSuchMethodException {
-        aki akiVarAb = csb.ab(a, dqc.toSingletonList(emn.bb(axt.a)));
+        aki akiVarAb = PackageParam.ab(a, dqc.toSingletonList(StaticHelpers7.bb(axt.a)));
         akiVarAb.m(new atn(19));
         akiVarAb.o();
     }
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(axt.a, dexKitBridge, new atn(20));
+        StaticHelpers7.resolveDexAndCache(axt.a, dexKitBridge, new atn(20));
     }
 }

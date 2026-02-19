@@ -1,12 +1,11 @@
 package me.hd.wauxv.plugin.api.method;
 
-import me.hd.wauxv.obf.aaz;
+import me.hd.wauxv.obf.StaticHelpers5;
 import me.hd.wauxv.obf.ajn;
 import me.hd.wauxv.obf.arj;
-import me.hd.wauxv.obf.azg;
+import me.hd.wauxv.obf.FieldResolver;
 import me.hd.wauxv.obf.azk;
-import me.hd.wauxv.obf.bmu;
-import me.hd.wauxv.obf.bte;
+import me.hd.wauxv.obf.SyntheticPileOfMess;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.cty;
 import me.hd.wauxv.obf.dqc;
@@ -25,9 +24,9 @@ public final class PluginMediaMsgMethod {
         Object objC = ReflectionWrapper.createInstanceWithArgs(
                 ajn.tryGetClassByClassName("com.tencent.mm.opensdk.modelmsg.WXFileObject" /* "com.tencent.mm.opensdk.modelmsg.WXFileObject" /* "com.tencent.mm.opensdk.modelmsg.WXFileObject" /* cnb.z(-92732638886698L)  */), new Object[0]);
         int i = 0;
-        azg azgVarR = dqc.bi(objC).r();
-        azgVarR.ab = "filePath" /* "filePath" /* "filePath" /* cnb.z(-94171452930858L)  */;
-        ((azk) aaz.e(azgVarR.c())).f(str3);
+        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC).r();
+        fieldResolverVarR.name = "filePath" /* "filePath" /* "filePath" /* cnb.z(-94171452930858L)  */;
+        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).f(str3);
         cnh.ae(str, arj.y(str2, null, objC, 6), str4);
     }
 
@@ -38,13 +37,13 @@ public final class PluginMediaMsgMethod {
                 ajn.tryGetClassByClassName("com.tencent.mm.opensdk.modelmsg.WXMiniProgramObject" /* "com.tencent.mm.opensdk.modelmsg.WXMiniProgramObject" /* "com.tencent.mm.opensdk.modelmsg.WXMiniProgramObject" /* cnb.z(-94132798225194L)  */),
                 new Object[0]);
         int i = 0;
-        bmu bmuVarBi = dqc.bi(objC);
-        azg azgVarR = bmuVarBi.r();
-        azgVarR.ab = "userName" /* "userName" /* "userName" /* cnb.z(-94424856001322L)  */;
-        ((azk) aaz.e(azgVarR.c())).f(str4);
-        azg azgVarR2 = bmuVarBi.r();
-        azgVarR2.ab = "path" /* "path" /* "path" /* cnb.z(-94403381164842L)  */;
-        ((azk) aaz.e(azgVarR2.c())).f(str5);
+        SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(objC);
+        FieldResolver fieldResolverVarR = bmuVarBi.r();
+        fieldResolverVarR.name = "userName" /* "userName" /* "userName" /* cnb.z(-94424856001322L)  */;
+        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).f(str4);
+        FieldResolver fieldResolverVarR2 = bmuVarBi.r();
+        fieldResolverVarR2.name = "path" /* "path" /* "path" /* cnb.z(-94403381164842L)  */;
+        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).f(str5);
         cnh.ae(str, arj.x(str2, str3, bArr, objC), str6);
     }
 
@@ -54,13 +53,13 @@ public final class PluginMediaMsgMethod {
         Object objC = ReflectionWrapper.createInstanceWithArgs(
                 ajn.tryGetClassByClassName("com.tencent.mm.opensdk.modelmsg.WXMusicObject" /* "com.tencent.mm.opensdk.modelmsg.WXMusicObject" /* "com.tencent.mm.opensdk.modelmsg.WXMusicObject" /* cnb.z(-94416266066730L)  */), new Object[0]);
         int i = 0;
-        bmu bmuVarBi = dqc.bi(objC);
-        azg azgVarR = bmuVarBi.r();
-        azgVarR.ab = "musicUrl" /* "musicUrl" /* "musicUrl" /* cnb.z(-93651761888042L)  */;
-        ((azk) aaz.e(azgVarR.c())).f(str4);
-        azg azgVarR2 = bmuVarBi.r();
-        azgVarR2.ab = "musicDataUrl" /* "musicDataUrl" /* "musicDataUrl" /* cnb.z(-93630287051562L)  */;
-        ((azk) aaz.e(azgVarR2.c())).f(str5);
+        SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(objC);
+        FieldResolver fieldResolverVarR = bmuVarBi.r();
+        fieldResolverVarR.name = "musicUrl" /* "musicUrl" /* "musicUrl" /* cnb.z(-93651761888042L)  */;
+        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).f(str4);
+        FieldResolver fieldResolverVarR2 = bmuVarBi.r();
+        fieldResolverVarR2.name = "musicDataUrl" /* "musicDataUrl" /* "musicDataUrl" /* cnb.z(-93630287051562L)  */;
+        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).f(str5);
         cnh.ae(str, arj.x(str2, str3, bArr, objC), str6);
     }
 
@@ -71,22 +70,22 @@ public final class PluginMediaMsgMethod {
                 ajn.tryGetClassByClassName("com.tencent.mm.opensdk.modelmsg.WXMusicVideoObject" /* "com.tencent.mm.opensdk.modelmsg.WXMusicVideoObject" /* "com.tencent.mm.opensdk.modelmsg.WXMusicVideoObject" /* cnb.z(-93540092738346L)  */),
                 new Object[0]);
         int i2 = 0;
-        bmu bmuVarBi = dqc.bi(objC);
-        azg azgVarR = bmuVarBi.r();
-        azgVarR.ab = "musicUrl" /* "musicUrl" /* "musicUrl" /* cnb.z(-93905164958506L)  */;
-        ((azk) aaz.e(azgVarR.c())).f(str4);
-        azg azgVarR2 = bmuVarBi.r();
-        azgVarR2.ab = "musicDataUrl" /* "musicDataUrl" /* "musicDataUrl" /* cnb.z(-93866510252842L)  */;
-        ((azk) aaz.e(azgVarR2.c())).f(str5);
-        azg azgVarR3 = bmuVarBi.r();
-        azgVarR3.ab = "singerName" /* "singerName" /* "singerName" /* cnb.z(-93793495808810L)  */;
-        ((azk) aaz.e(azgVarR3.c())).f(str6);
-        azg azgVarR4 = bmuVarBi.r();
-        azgVarR4.ab = "duration" /* "duration" /* "duration" /* cnb.z(-93763431037738L)  */;
-        ((azk) aaz.e(azgVarR4.c())).f(Integer.valueOf(i));
-        azg azgVarR5 = bmuVarBi.r();
-        azgVarR5.ab = "songLyric" /* "songLyric" /* "songLyric" /* cnb.z(-117312736721706L)  */;
-        ((azk) aaz.e(azgVarR5.c())).f(str7);
+        SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(objC);
+        FieldResolver fieldResolverVarR = bmuVarBi.r();
+        fieldResolverVarR.name = "musicUrl" /* "musicUrl" /* "musicUrl" /* cnb.z(-93905164958506L)  */;
+        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).f(str4);
+        FieldResolver fieldResolverVarR2 = bmuVarBi.r();
+        fieldResolverVarR2.name = "musicDataUrl" /* "musicDataUrl" /* "musicDataUrl" /* cnb.z(-93866510252842L)  */;
+        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).f(str5);
+        FieldResolver fieldResolverVarR3 = bmuVarBi.r();
+        fieldResolverVarR3.name = "singerName" /* "singerName" /* "singerName" /* cnb.z(-93793495808810L)  */;
+        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).f(str6);
+        FieldResolver fieldResolverVarR4 = bmuVarBi.r();
+        fieldResolverVarR4.name = "duration" /* "duration" /* "duration" /* cnb.z(-93763431037738L)  */;
+        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).f(Integer.valueOf(i));
+        FieldResolver fieldResolverVarR5 = bmuVarBi.r();
+        fieldResolverVarR5.name = "songLyric" /* "songLyric" /* "songLyric" /* cnb.z(-117312736721706L)  */;
+        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR5.resolve())).f(str7);
         cnh.ae(str, arj.x(str2, str3, bArr, objC), str8);
     }
 
@@ -95,9 +94,9 @@ public final class PluginMediaMsgMethod {
         Object objC = ReflectionWrapper.createInstanceWithArgs(
                 ajn.tryGetClassByClassName("com.tencent.mm.opensdk.modelmsg.WXTextObject" /* "com.tencent.mm.opensdk.modelmsg.WXTextObject" /* "com.tencent.mm.opensdk.modelmsg.WXTextObject" /* cnb.z(-117286966917930L)  */), new Object[0]);
         int i = 0;
-        azg azgVarR = dqc.bi(objC).r();
-        azgVarR.ab = "text" /* "text" /* "text" /* cnb.z(-117128053127978L)  */;
-        ((azk) aaz.e(azgVarR.c())).f(str2);
+        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC).r();
+        fieldResolverVarR.name = "text" /* "text" /* "text" /* cnb.z(-117128053127978L)  */;
+        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).f(str2);
         cnh.ae(str, arj.y(null, str2, objC, 5), str3);
     }
 
@@ -107,9 +106,9 @@ public final class PluginMediaMsgMethod {
         Object objC = ReflectionWrapper.createInstanceWithArgs(
                 ajn.tryGetClassByClassName("com.tencent.mm.opensdk.modelmsg.WXVideoObject" /* "com.tencent.mm.opensdk.modelmsg.WXVideoObject" /* "com.tencent.mm.opensdk.modelmsg.WXVideoObject" /* cnb.z(-117639154236202L)  */), new Object[0]);
         int i = 0;
-        azg azgVarR = dqc.bi(objC).r();
-        azgVarR.ab = "videoUrl" /* "videoUrl" /* "videoUrl" /* cnb.z(-117424405871402L)  */;
-        ((azk) aaz.e(azgVarR.c())).f(str4);
+        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC).r();
+        fieldResolverVarR.name = "videoUrl" /* "videoUrl" /* "videoUrl" /* cnb.z(-117424405871402L)  */;
+        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).f(str4);
         cnh.ae(str, arj.x(str2, str3, bArr, objC), str5);
     }
 
@@ -120,9 +119,9 @@ public final class PluginMediaMsgMethod {
                 ajn.tryGetClassByClassName("com.tencent.mm.opensdk.modelmsg.WXWebpageObject" /* "com.tencent.mm.opensdk.modelmsg.WXWebpageObject" /* "com.tencent.mm.opensdk.modelmsg.WXWebpageObject" /* cnb.z(-117385751165738L)  */),
                 new Object[0]);
         int i = 0;
-        azg azgVarR = dqc.bi(objC).r();
-        azgVarR.ab = "webpageUrl" /* "webpageUrl" /* "webpageUrl" /* cnb.z(-116629836921642L)  */;
-        ((azk) aaz.e(azgVarR.c())).f(str4);
+        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC).r();
+        fieldResolverVarR.name = "webpageUrl" /* "webpageUrl" /* "webpageUrl" /* cnb.z(-116629836921642L)  */;
+        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).f(str4);
         cnh.ae(str, arj.x(str2, str3, bArr, objC), str5);
     }
 }

@@ -3,7 +3,7 @@ package me.hd.wauxv.data.bean.info;
 import java.util.List;
 import java.util.Map;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dts;
 import me.hd.wauxv.obf.yg;
 
@@ -236,7 +236,7 @@ public final class GroupData {
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.roomId, -14431090113322L);
         yg.v(sb, this.memberIds, -14340895800106L);
         yg.v(sb, this.memberNames, -14826227104554L);
-        dkz.ac(sb, this.memberCount, -14744622725930L);
+        StaticHelpers6.ac(sb, this.memberCount, -14744622725930L);
         sb.append(this.membersHash);
         sb.append(", mineRoomName=" /* ", mineRoomName=" /* ", mineRoomName=" /* cnb.z(-14680198216490L)  */);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.mineRoomName, -14611478739754L);

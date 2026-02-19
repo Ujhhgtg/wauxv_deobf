@@ -13,6 +13,6 @@ public final class kb extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(ka.a, dexKitBridge, new gi(18));
+        StaticHelpers7.resolveDexAndCache(ka.a, dexKitBridge, new gi(18));
     }
 }

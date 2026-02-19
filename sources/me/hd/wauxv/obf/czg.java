@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
-import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 import java.util.WeakHashMap;
 
@@ -23,7 +23,7 @@ public abstract class czg {
 
     /* JADX INFO: renamed from: do, reason: not valid java name */
     public yi f4do;
-    public RecyclerView dp;
+    public androidx.recyclerview.widget.RecyclerView dp;
     public final but dq;
     public final but dr;
     public bvl ds;
@@ -151,7 +151,7 @@ public abstract class czg {
     /* JADX WARN: Found duplicated region for block: B:28:0x00b0  */
     /* JADX WARN: Found duplicated region for block: B:33:0x00b8  */
     /* JADX WARN: Found duplicated region for block: B:35:0x00bc  */
-    public boolean _g(RecyclerView recyclerView, View view, Rect rect, boolean z, boolean z2) {
+    public boolean _g(androidx.recyclerview.widget.RecyclerView recyclerView, View view, Rect rect, boolean z, boolean z2) {
         int iEv = ev();
         int iEx = ex();
         int iEw = this.eb - ew();
@@ -213,7 +213,7 @@ public abstract class czg {
     }
 
     public void _h(View view, Rect rect) {
-        boolean z = RecyclerView.a;
+        boolean z = androidx.recyclerview.widget.RecyclerView.a;
         czh czhVar = (czh) view.getLayoutParams();
         Rect rect2 = czhVar.d;
         rect.set((view.getLeft() - rect2.left) - ((ViewGroup.MarginLayoutParams) czhVar).leftMargin, (view.getTop() - rect2.top) - ((ViewGroup.MarginLayoutParams) czhVar).topMargin, view.getRight() + rect2.right + ((ViewGroup.MarginLayoutParams) czhVar).rightMargin, view.getBottom() + rect2.bottom + ((ViewGroup.MarginLayoutParams) czhVar).bottomMargin);
@@ -231,7 +231,7 @@ public abstract class czg {
     public void ad(int i, int i2) {
     }
 
-    public void ae(czo czoVar, czt cztVar) {
+    public void ae(RecyclerView recyclerViewVar, czt cztVar) {
         Log.e("RecyclerView", "You must override onLayoutChildren(Recycler recycler, State state) ");
     }
 
@@ -239,23 +239,23 @@ public abstract class czg {
     }
 
     public boolean ag(int i, Bundle bundle) {
-        RecyclerView recyclerView = this.dp;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
         return fa(recyclerView.m, recyclerView.bo, i, bundle);
     }
 
-    public int ah(int i, czo czoVar, czt cztVar) {
+    public int ah(int i, RecyclerView recyclerViewVar, czt cztVar) {
         return 0;
     }
 
-    public int ai(int i, czo czoVar, czt cztVar) {
+    public int ai(int i, RecyclerView recyclerViewVar, czt cztVar) {
         return 0;
     }
 
     public void aj(Rect rect, int i, int i2) {
         int iEw = ew() + ev() + rect.width();
         int iEu = eu() + ex() + rect.height();
-        RecyclerView recyclerView = this.dp;
-        WeakHashMap weakHashMap = eqz.a;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
+        WeakHashMap weakHashMap = ViewCompat.a;
         this.dp.setMeasuredDimension(ed(i, iEw, recyclerView.getMinimumWidth()), ed(i2, iEu, this.dp.getMinimumHeight()));
     }
 
@@ -264,7 +264,7 @@ public abstract class czg {
     }
 
     public void ay(int i) {
-        RecyclerView recyclerView = this.dp;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
         if (recyclerView != null) {
             int iY = recyclerView.p.y();
             for (int i2 = 0; i2 < iY; i2++) {
@@ -274,7 +274,7 @@ public abstract class czg {
     }
 
     public void az(int i) {
-        RecyclerView recyclerView = this.dp;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
         if (recyclerView != null) {
             int iY = recyclerView.p.y();
             for (int i2 = 0; i2 < iY; i2++) {
@@ -290,7 +290,7 @@ public abstract class czg {
     }
 
     public void bt(String str) {
-        RecyclerView recyclerView = this.dp;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
         if (recyclerView != null) {
             recyclerView.cw(str);
         }
@@ -322,8 +322,8 @@ public abstract class czg {
         int iEs = es();
         for (int i2 = 0; i2 < iEs; i2++) {
             View viewEr = er(i2);
-            czx czxVarCs = RecyclerView.cs(viewEr);
-            if (czxVarCs != null && czxVarCs.z() == i && !czxVarCs.am() && (this.dp.bo.g || !czxVarCs.af())) {
+            SomeView someViewVarCs = androidx.recyclerview.widget.RecyclerView.cs(viewEr);
+            if (someViewVarCs != null && someViewVarCs.z() == i && !someViewVarCs.am() && (this.dp.bo.g || !someViewVarCs.af())) {
                 return viewEr;
             }
         }
@@ -338,11 +338,11 @@ public abstract class czg {
         return false;
     }
 
-    public abstract void cd(RecyclerView recyclerView);
+    public abstract void cd(androidx.recyclerview.widget.RecyclerView recyclerView);
 
     public void ce(AccessibilityEvent accessibilityEvent) {
-        RecyclerView recyclerView = this.dp;
-        czo czoVar = recyclerView.m;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
+        RecyclerView recyclerViewVar = recyclerView.m;
         if (accessibilityEvent == null) {
             return;
         }
@@ -365,7 +365,7 @@ public abstract class czg {
     }
 
     public void ch(int i) {
-        if (RecyclerView.b) {
+        if (androidx.recyclerview.widget.RecyclerView.b) {
             Log.e("RecyclerView", "You MUST implement scrollToPosition. It will soon become abstract");
         }
     }
@@ -374,32 +374,32 @@ public abstract class czg {
         return false;
     }
 
-    public void cj(RecyclerView recyclerView, czt cztVar, int i) {
+    public void cj(androidx.recyclerview.widget.RecyclerView recyclerView, czt cztVar, int i) {
         Log.e("RecyclerView", "You must override smoothScrollToPosition to support smooth scrolling");
     }
 
-    public void dm(RecyclerView recyclerView) {
+    public void dm(androidx.recyclerview.widget.RecyclerView recyclerView) {
     }
 
     public final void ep(View view, int i, boolean z) {
-        czx czxVarCs = RecyclerView.cs(view);
-        if (z || czxVarCs.af()) {
+        SomeView someViewVarCs = androidx.recyclerview.widget.RecyclerView.cs(view);
+        if (z || someViewVarCs.af()) {
             dhq dhqVar = (dhq) this.dp.q.b;
-            erf erfVarE = (erf) dhqVar.get(czxVarCs);
+            erf erfVarE = (erf) dhqVar.get(someViewVarCs);
             if (erfVarE == null) {
                 erfVarE = erf.e();
-                dhqVar.put(czxVarCs, erfVarE);
+                dhqVar.put(someViewVarCs, erfVarE);
             }
             erfVarE.b |= 1;
         } else {
-            this.dp.q.ae(czxVarCs);
+            this.dp.q.ae(someViewVarCs);
         }
         czh czhVar = (czh) view.getLayoutParams();
-        if (czxVarCs.an() || czxVarCs.ag()) {
-            if (czxVarCs.ag()) {
-                czxVarCs.q.t(czxVarCs);
+        if (someViewVarCs.an() || someViewVarCs.ag()) {
+            if (someViewVarCs.ag()) {
+                someViewVarCs.q.t(someViewVarCs);
             } else {
-                czxVarCs.m &= -33;
+                someViewVarCs.m &= -33;
             }
             this.f4do.j(view, i, view.getLayoutParams(), false);
         } else {
@@ -425,19 +425,19 @@ public abstract class czg {
                     czgVar.er(iD);
                     czgVar.f4do.u(iD);
                     czh czhVar2 = (czh) viewEr.getLayoutParams();
-                    czx czxVarCs2 = RecyclerView.cs(viewEr);
-                    if (czxVarCs2.af()) {
+                    SomeView someViewVarCs2 = androidx.recyclerview.widget.RecyclerView.cs(viewEr);
+                    if (someViewVarCs2.af()) {
                         dhq dhqVar2 = (dhq) czgVar.dp.q.b;
-                        erf erfVarE2 = (erf) dhqVar2.get(czxVarCs2);
+                        erf erfVarE2 = (erf) dhqVar2.get(someViewVarCs2);
                         if (erfVarE2 == null) {
                             erfVarE2 = erf.e();
-                            dhqVar2.put(czxVarCs2, erfVarE2);
+                            dhqVar2.put(someViewVarCs2, erfVarE2);
                         }
                         erfVarE2.b = 1 | erfVarE2.b;
                     } else {
-                        czgVar.dp.q.ae(czxVarCs2);
+                        czgVar.dp.q.ae(someViewVarCs2);
                     }
-                    czgVar.f4do.j(viewEr, i, czhVar2, czxVarCs2.af());
+                    czgVar.f4do.j(viewEr, i, czhVar2, someViewVarCs2.af());
                 }
             } else {
                 this.f4do.h(view, i, false);
@@ -445,10 +445,10 @@ public abstract class czg {
                 bvl bvlVar = this.ds;
                 if (bvlVar != null && bvlVar.j) {
                     bvlVar.g.getClass();
-                    czx czxVarCs3 = RecyclerView.cs(view);
-                    if ((czxVarCs3 != null ? czxVarCs3.z() : -1) == bvlVar.f) {
+                    SomeView someViewVarCs3 = androidx.recyclerview.widget.RecyclerView.cs(view);
+                    if ((someViewVarCs3 != null ? someViewVarCs3.z() : -1) == bvlVar.f) {
                         bvlVar.k = view;
-                        if (RecyclerView.b) {
+                        if (androidx.recyclerview.widget.RecyclerView.b) {
                             Log.d("RecyclerView", "smooth scroll target view has been attached");
                         }
                     }
@@ -456,30 +456,30 @@ public abstract class czg {
             }
         }
         if (czhVar.f) {
-            if (RecyclerView.b) {
+            if (androidx.recyclerview.widget.RecyclerView.b) {
                 Log.d("RecyclerView", "consuming pending invalidate on child " + czhVar.c);
             }
-            czxVarCs.d.invalidate();
+            someViewVarCs.d.invalidate();
             czhVar.f = false;
         }
     }
 
-    public final void eq(czo czoVar) {
+    public final void eq(RecyclerView recyclerViewVar) {
         for (int iEs = es() - 1; iEs >= 0; iEs--) {
             View viewEr = er(iEs);
-            czx czxVarCs = RecyclerView.cs(viewEr);
-            if (czxVarCs.am()) {
-                if (RecyclerView.b) {
-                    Log.d("RecyclerView", "ignoring view " + czxVarCs);
+            SomeView someViewVarCs = androidx.recyclerview.widget.RecyclerView.cs(viewEr);
+            if (someViewVarCs.am()) {
+                if (androidx.recyclerview.widget.RecyclerView.b) {
+                    Log.d("RecyclerView", "ignoring view " + someViewVarCs);
                 }
-            } else if (!czxVarCs.ad() || czxVarCs.af() || this.dp.w.ad) {
+            } else if (!someViewVarCs.ad() || someViewVarCs.af() || this.dp.w.ad) {
                 er(iEs);
                 this.f4do.u(iEs);
-                czoVar.r(viewEr);
-                this.dp.q.ae(czxVarCs);
+                recyclerViewVar.r(viewEr);
+                this.dp.q.ae(someViewVarCs);
             } else {
                 fe(iEs);
-                czoVar.q(czxVarCs);
+                recyclerViewVar.q(someViewVarCs);
             }
         }
     }
@@ -501,7 +501,7 @@ public abstract class czg {
     }
 
     public final int et() {
-        RecyclerView recyclerView = this.dp;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
         cyw adapter = recyclerView != null ? recyclerView.getAdapter() : null;
         if (adapter != null) {
             return adapter.d();
@@ -510,7 +510,7 @@ public abstract class czg {
     }
 
     public final int eu() {
-        RecyclerView recyclerView = this.dp;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
         if (recyclerView != null) {
             return recyclerView.getPaddingBottom();
         }
@@ -518,7 +518,7 @@ public abstract class czg {
     }
 
     public final int ev() {
-        RecyclerView recyclerView = this.dp;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
         if (recyclerView != null) {
             return recyclerView.getPaddingLeft();
         }
@@ -526,7 +526,7 @@ public abstract class czg {
     }
 
     public final int ew() {
-        RecyclerView recyclerView = this.dp;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
         if (recyclerView != null) {
             return recyclerView.getPaddingRight();
         }
@@ -534,7 +534,7 @@ public abstract class czg {
     }
 
     public final int ex() {
-        RecyclerView recyclerView = this.dp;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
         if (recyclerView != null) {
             return recyclerView.getPaddingTop();
         }
@@ -555,21 +555,21 @@ public abstract class czg {
     }
 
     public final void ez(View view, bd bdVar) {
-        czx czxVarCs = RecyclerView.cs(view);
-        if (czxVarCs == null || czxVarCs.af()) {
+        SomeView someViewVarCs = androidx.recyclerview.widget.RecyclerView.cs(view);
+        if (someViewVarCs == null || someViewVarCs.af()) {
             return;
         }
         yi yiVar = this.f4do;
-        if (((ArrayList) yiVar.e).contains(czxVarCs.d)) {
+        if (((ArrayList) yiVar.e).contains(someViewVarCs.d)) {
             return;
         }
-        RecyclerView recyclerView = this.dp;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
         y(recyclerView.m, recyclerView.bo, view, bdVar);
     }
 
     /* JADX WARN: Found duplicated region for block: B:21:0x0062 A[PHI: r8
       0x0062: PHI (r8v8 int) = (r8v5 int), (r8v18 int) binds: [B:27:0x007e, B:19:0x0054] A[DONT_GENERATE, DONT_INLINE]] */
-    public boolean fa(czo czoVar, czt cztVar, int i, Bundle bundle) {
+    public boolean fa(RecyclerView recyclerViewVar, czt cztVar, int i, Bundle bundle) {
         int iEx;
         int iEv;
         float f;
@@ -597,7 +597,7 @@ public abstract class czg {
                 if (bundle != null) {
                     f = bundle.getFloat("androidx.core.view.accessibility.action.ARGUMENT_SCROLL_AMOUNT_FLOAT", 1.0f);
                     if (f < 0.0f) {
-                        if (RecyclerView.a) {
+                        if (androidx.recyclerview.widget.RecyclerView.a) {
                             throw new IllegalArgumentException("attempting to use ACTION_ARGUMENT_SCROLL_AMOUNT_FLOAT with a negative value (" + f + ")");
                         }
                     }
@@ -612,7 +612,7 @@ public abstract class czg {
                     this.dp.es(iEv, iEx, true);
                     return true;
                 }
-                RecyclerView recyclerView = this.dp;
+                androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
                 cyw cywVar = recyclerView.w;
                 if (cywVar != null) {
                     if (i == 4096) {
@@ -630,41 +630,41 @@ public abstract class czg {
         return false;
     }
 
-    public final void fb(czo czoVar) {
+    public final void fb(RecyclerView recyclerViewVar) {
         for (int iEs = es() - 1; iEs >= 0; iEs--) {
-            if (!RecyclerView.cs(er(iEs)).am()) {
+            if (!androidx.recyclerview.widget.RecyclerView.cs(er(iEs)).am()) {
                 View viewEr = er(iEs);
                 fe(iEs);
-                czoVar.p(viewEr);
+                recyclerViewVar.p(viewEr);
             }
         }
     }
 
-    public final void fc(czo czoVar) {
-        ArrayList arrayList = czoVar.a;
+    public final void fc(RecyclerView recyclerViewVar) {
+        ArrayList arrayList = recyclerViewVar.a;
         int size = arrayList.size();
         for (int i = size - 1; i >= 0; i--) {
-            View view = ((czx) arrayList.get(i)).d;
-            czx czxVarCs = RecyclerView.cs(view);
-            if (!czxVarCs.am()) {
-                czxVarCs.al(false);
-                if (czxVarCs.ah()) {
+            View view = ((SomeView) arrayList.get(i)).d;
+            SomeView someViewVarCs = androidx.recyclerview.widget.RecyclerView.cs(view);
+            if (!someViewVarCs.am()) {
+                someViewVarCs.al(false);
+                if (someViewVarCs.ah()) {
                     this.dp.removeDetachedView(view, false);
                 }
                 czc czcVar = this.dp.aw;
                 if (czcVar != null) {
-                    czcVar.p(czxVarCs);
+                    czcVar.p(someViewVarCs);
                 }
-                czxVarCs.al(true);
-                czx czxVarCs2 = RecyclerView.cs(view);
-                czxVarCs2.q = null;
-                czxVarCs2.r = false;
-                czxVarCs2.m &= -33;
-                czoVar.q(czxVarCs2);
+                someViewVarCs.al(true);
+                SomeView someViewVarCs2 = androidx.recyclerview.widget.RecyclerView.cs(view);
+                someViewVarCs2.q = null;
+                someViewVarCs2.r = false;
+                someViewVarCs2.m &= -33;
+                recyclerViewVar.q(someViewVarCs2);
             }
         }
         arrayList.clear();
-        ArrayList arrayList2 = czoVar.b;
+        ArrayList arrayList2 = recyclerViewVar.b;
         if (arrayList2 != null) {
             arrayList2.clear();
         }
@@ -673,7 +673,7 @@ public abstract class czg {
         }
     }
 
-    public final void fd(View view, czo czoVar) {
+    public final void fd(View view, RecyclerView recyclerViewVar) {
         yi yiVar = this.f4do;
         cyv cyvVar = (cyv) yiVar.c;
         int i = yiVar.b;
@@ -695,7 +695,7 @@ public abstract class czg {
             }
             yiVar.b = 0;
             yiVar.f = null;
-            czoVar.p(view);
+            recyclerViewVar.p(view);
         } catch (Throwable th) {
             yiVar.b = 0;
             yiVar.f = null;
@@ -733,13 +733,13 @@ public abstract class czg {
     }
 
     public final void ff() {
-        RecyclerView recyclerView = this.dp;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
         if (recyclerView != null) {
             recyclerView.requestLayout();
         }
     }
 
-    public final void fg(RecyclerView recyclerView) {
+    public final void fg(androidx.recyclerview.widget.RecyclerView recyclerView) {
         fh(View.MeasureSpec.makeMeasureSpec(recyclerView.getWidth(), 1073741824), View.MeasureSpec.makeMeasureSpec(recyclerView.getHeight(), 1073741824));
     }
 
@@ -747,13 +747,13 @@ public abstract class czg {
         this.eb = View.MeasureSpec.getSize(i);
         int mode = View.MeasureSpec.getMode(i);
         this.dz = mode;
-        if (mode == 0 && !RecyclerView.f) {
+        if (mode == 0 && !androidx.recyclerview.widget.RecyclerView.f) {
             this.eb = 0;
         }
         this.ec = View.MeasureSpec.getSize(i2);
         int mode2 = View.MeasureSpec.getMode(i2);
         this.ea = mode2;
-        if (mode2 != 0 || RecyclerView.f) {
+        if (mode2 != 0 || androidx.recyclerview.widget.RecyclerView.f) {
             return;
         }
         this.ec = 0;
@@ -794,7 +794,7 @@ public abstract class czg {
         aj(this.dp.t, i, i2);
     }
 
-    public final void fj(RecyclerView recyclerView) {
+    public final void fj(androidx.recyclerview.widget.RecyclerView recyclerView) {
         if (recyclerView == null) {
             this.dp = null;
             this.f4do = null;
@@ -824,7 +824,7 @@ public abstract class czg {
             bvlVar2.z();
         }
         this.ds = bvlVar;
-        RecyclerView recyclerView = this.dp;
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
         czw czwVar = recyclerView.bl;
         czwVar.g.removeCallbacks(czwVar);
         czwVar.c.abortAnimation();
@@ -875,27 +875,27 @@ public abstract class czg {
         return layoutParams instanceof czh ? new czh((czh) layoutParams) : layoutParams instanceof ViewGroup.MarginLayoutParams ? new czh((ViewGroup.MarginLayoutParams) layoutParams) : new czh(layoutParams);
     }
 
-    public int u(czo czoVar, czt cztVar) {
-        RecyclerView recyclerView = this.dp;
+    public int u(RecyclerView recyclerViewVar, czt cztVar) {
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
         if (recyclerView == null || recyclerView.w == null || !bu()) {
             return 1;
         }
         return this.dp.w.d();
     }
 
-    public int v(czo czoVar, czt cztVar) {
-        RecyclerView recyclerView = this.dp;
+    public int v(RecyclerView recyclerViewVar, czt cztVar) {
+        androidx.recyclerview.widget.RecyclerView recyclerView = this.dp;
         if (recyclerView == null || recyclerView.w == null || !bv()) {
             return 1;
         }
         return this.dp.w.d();
     }
 
-    public View w(View view, int i, czo czoVar, czt cztVar) {
+    public View w(View view, int i, RecyclerView recyclerViewVar, czt cztVar) {
         return null;
     }
 
-    public void x(czo czoVar, czt cztVar, bd bdVar) {
+    public void x(RecyclerView recyclerViewVar, czt cztVar, bd bdVar) {
         if (this.dp.canScrollVertically(-1) || this.dp.canScrollHorizontally(-1)) {
             bdVar.d(8192);
             bdVar.m(true);
@@ -906,10 +906,10 @@ public abstract class czg {
             bdVar.m(true);
             bdVar.j(67108864, true);
         }
-        bdVar.a.setCollectionInfo((AccessibilityNodeInfo.CollectionInfo) bc.f(v(czoVar, cztVar), u(czoVar, cztVar), 0).e);
+        bdVar.a.setCollectionInfo((AccessibilityNodeInfo.CollectionInfo) bc.f(v(recyclerViewVar, cztVar), u(recyclerViewVar, cztVar), 0).e);
     }
 
-    public void y(czo czoVar, czt cztVar, View view, bd bdVar) {
+    public void y(RecyclerView recyclerViewVar, czt cztVar, View view, bd bdVar) {
         bdVar.l(bc.g(bv() ? el(view) : 0, 1, bu() ? el(view) : 0, 1, false));
     }
 

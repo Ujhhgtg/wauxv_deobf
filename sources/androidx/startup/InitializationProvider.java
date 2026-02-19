@@ -9,8 +9,8 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Trace;
 import me.hd.wauxv.obf.QueryDidNotReturnUniqueResultRuntimeException;
-import me.hd.wauxv.obf.cnf;
-import me.hd.wauxv.obf.jx;
+import me.hd.wauxv.obf.HugeSyntheticPileOfHelpers;
+import me.hd.wauxv.obf.FactoryPools;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -39,12 +39,12 @@ public class InitializationProvider extends ContentProvider {
         if (context.getApplicationContext() == null) {
             return true;
         }
-        jx jxVarJ = jx.j(context);
-        Context context2 = (Context) jxVarJ.h;
+        FactoryPools factoryPoolsVarJ = FactoryPools.j(context);
+        Context context2 = (Context) factoryPoolsVarJ.h;
         try {
             try {
-                cnf.an("Startup");
-                jxVarJ.p(context2.getPackageManager().getProviderInfo(
+                HugeSyntheticPileOfHelpers.beginTrace("Startup");
+                factoryPoolsVarJ.p(context2.getPackageManager().getProviderInfo(
                         new ComponentName(context2.getPackageName(), InitializationProvider.class.getName()),
                         128).metaData);
                 Trace.endSection();

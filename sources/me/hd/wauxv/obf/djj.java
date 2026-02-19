@@ -10,14 +10,14 @@ public final class djj extends bws implements IDexFind {
 
     public static Object b(String str) {
         dji djiVar = dji.a;
-        Method methodBb = emn.bb(djiVar);
+        Method methodBb = StaticHelpers7.bb(djiVar);
         dis.a.getClass();
         int i = 0;
-        cde cdeVarT = dqc.bh(emn.az(dir.a)).t();
-        cdeVarT.ak(cdy.c);
+        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(dir.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.ak(cdy.c);
         a.getClass();
-        cdeVarT.a = emn.bb(djiVar).getDeclaringClass();
-        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
+        methodResolverVarT.returnType = StaticHelpers7.bb(djiVar).getDeclaringClass();
+        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         Object objInvoke = methodBb.invoke(objE, str);
         throwIfVar1IsNull(objInvoke);
@@ -30,6 +30,6 @@ public final class djj extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(dji.a, dexKitBridge, new dhg(25));
+        StaticHelpers7.resolveDexAndCache(dji.a, dexKitBridge, new dhg(25));
     }
 }

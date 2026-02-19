@@ -58,7 +58,7 @@ public final class di implements Application.ActivityLifecycleCallbacks {
         }
         Application application2 = (Application) context.getApplicationContext();
         if (application2 == null) {
-            bht bhtVar = anj.a;
+            ResourcesCompat resourcesCompatVar = anj.a;
             Log.e(">>>", "DialogX 未初始化(E1)。\n请检查是否在启动对话框前进行初始化操作，使用以下代码进行初始化：\nDialogX.init(context);\n\n另外建议您前往查看 DialogX 的文档进行使用：https://github.com/kongzue/DialogX");
             return;
         }
@@ -90,7 +90,7 @@ public final class di implements Application.ActivityLifecycleCallbacks {
                 weakReference.clear();
             }
             ng.b = null;
-            bht bhtVar = anj.a;
+            ResourcesCompat resourcesCompatVar = anj.a;
         }
         if (Build.VERSION.SDK_INT < 29) {
             ng.ai(activity);

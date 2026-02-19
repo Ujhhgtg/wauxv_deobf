@@ -16,12 +16,12 @@ public final class DisableBrightnessHook extends SwitchHook {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i = 0;
-        cde cdeVarT = yg.s(-511805482859306L).t();
-        cdeVarT.ab = "setAttributes" /* "setAttributes" /* "setAttributes" /* cnb.z(-511633684167466L)  */;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) dkz.n(new Object[] { dal.b(WindowManager.LayoutParams.class) }, 1, cdeVarT);
-        exg exgVar = exg.a;
+        MethodResolver methodResolverVarT = yg.s(-511805482859306L).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "setAttributes" /* "setAttributes" /* "setAttributes" /* cnb.z(-511633684167466L)  */;
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(WindowManager.LayoutParams.class) }, 1, methodResolverVarT);
+        HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         DisableBrightnessHook anvVar = a;
-        aki akiVarAd = anvVar.ad(methodHookWrapperVar, exgVar);
+        aki akiVarAd = anvVar.ad(methodHookWrapperVar, hookPriorityEnumVar);
         anvVar.y(akiVarAd, new amb(4));
         akiVarAd.o();
     }

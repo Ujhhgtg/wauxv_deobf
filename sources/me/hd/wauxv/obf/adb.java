@@ -52,7 +52,7 @@ public final class adb {
         if (hashSet != null) {
             Iterator it = hashSet.iterator();
             while (it.hasNext()) {
-                emn.ai(((adb) it.next()).d, i, arrayList, eumVar);
+                StaticHelpers7.ai(((adb) it.next()).d, i, arrayList, eumVar);
             }
         }
     }
@@ -75,7 +75,7 @@ public final class adb {
 
     public final adb o() {
         int i = this.e;
-        int iAe = dkz.ae(i);
+        int iAe = StaticHelpers6.ae(i);
         adq adqVar = this.d;
         switch (iAe) {
             case 0:
@@ -123,7 +123,7 @@ public final class adb {
             int i = adbVar.e;
             int i2 = this.e;
             if (i != i2) {
-                switch (dkz.ae(i2)) {
+                switch (StaticHelpers6.ae(i2)) {
                     case 0:
                     case 7:
                     case 8:

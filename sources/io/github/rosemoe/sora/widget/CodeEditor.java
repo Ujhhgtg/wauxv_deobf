@@ -61,8 +61,8 @@ import me.hd.wauxv.R;
 import me.hd.wauxv.obf.aah;
 import me.hd.wauxv.obf.aaj;
 import me.hd.wauxv.obf.aak;
-import me.hd.wauxv.obf.aaz;
-import me.hd.wauxv.obf.abf;
+import me.hd.wauxv.obf.StaticHelpers5;
+import me.hd.wauxv.obf.StaticHelpers2;
 import me.hd.wauxv.obf.afe;
 import me.hd.wauxv.obf.aff;
 import me.hd.wauxv.obf.afh;
@@ -91,12 +91,12 @@ import me.hd.wauxv.obf.asp;
 import me.hd.wauxv.obf.ass;
 import me.hd.wauxv.obf.asv;
 import me.hd.wauxv.obf.avc;
-import me.hd.wauxv.obf.awp;
+import me.hd.wauxv.obf.GifEncoder;
 import me.hd.wauxv.obf.awy;
 import me.hd.wauxv.obf.bhs;
 import me.hd.wauxv.obf.bjz;
 import me.hd.wauxv.obf.blp;
-import me.hd.wauxv.obf.bmu;
+import me.hd.wauxv.obf.SyntheticPileOfMess;
 import me.hd.wauxv.obf.bmx;
 import me.hd.wauxv.obf.bph;
 import me.hd.wauxv.obf.bpi;
@@ -120,7 +120,7 @@ import me.hd.wauxv.obf.chr;
 import me.hd.wauxv.obf.chs;
 import me.hd.wauxv.obf.chu;
 import me.hd.wauxv.obf.cna;
-import me.hd.wauxv.obf.cnf;
+import me.hd.wauxv.obf.HugeSyntheticPileOfHelpers;
 import me.hd.wauxv.obf.csk;
 import me.hd.wauxv.obf.cxc;
 import me.hd.wauxv.obf.cxu;
@@ -154,7 +154,7 @@ import me.hd.wauxv.obf.ewz;
 import me.hd.wauxv.obf.hz;
 import me.hd.wauxv.obf.ik;
 import me.hd.wauxv.obf.io;
-import me.hd.wauxv.obf.jx;
+import me.hd.wauxv.obf.FactoryPools;
 import me.hd.wauxv.obf.SomeStaticHelpers;
 import me.hd.wauxv.obf.pe;
 import me.hd.wauxv.obf.pf;
@@ -195,7 +195,7 @@ public class CodeEditor extends View implements afp, bph {
     public boolean ax;
     public boolean ay;
     public boolean az;
-    public jx b;
+    public FactoryPools b;
     public boolean ba;
     public boolean bb;
     public boolean bc;
@@ -248,7 +248,7 @@ public class CodeEditor extends View implements afp, bph {
     public final HashMap cw;
     public final arw d;
     public final ArrayList e;
-    public final jx f;
+    public final FactoryPools f;
     public ud g;
     public final asa h;
     public final awy i;
@@ -291,7 +291,7 @@ public class CodeEditor extends View implements afp, bph {
         this.bg = true;
         this.cn = new dbg(this);
         this.co = new asn(this);
-        this.f = new jx(this, 7);
+        this.f = new FactoryPools(this, 7);
         this.w = ViewConfiguration.get(getContext()).getScaledVerticalScrollFactor();
         this.cu = bvd.LF;
         this.bs = arj.e;
@@ -587,7 +587,7 @@ public class CodeEditor extends View implements afp, bph {
     @Override // me.hd.wauxv.obf.afp
     public final void cz(aff affVar, int i, int i2, int i3, int i4, CharSequence charSequence) {
         ArrayList arrayList;
-        jx jxVar;
+        FactoryPools factoryPoolsVar;
         int i5;
         dbg dbgVar = this.cn;
         ik ikVar = dbgVar.a;
@@ -634,8 +634,8 @@ public class CodeEditor extends View implements afp, bph {
                 }
             }
         }
-        if (Build.VERSION.SDK_INT >= 29 && (jxVar = dbgVar.b) != null) {
-            for (dbh dbhVar : (ArrayList) jxVar.f) {
+        if (Build.VERSION.SDK_INT >= 29 && (factoryPoolsVar = dbgVar.b) != null) {
+            for (dbh dbhVar : (ArrayList) factoryPoolsVar.f) {
                 int i11 = dbhVar.a;
                 if (i11 == i) {
                     dbhVar.c = true;
@@ -698,13 +698,13 @@ public class CodeEditor extends View implements afp, bph {
         int i5;
         int i6;
         ArrayList arrayList;
-        jx jxVar;
+        FactoryPools factoryPoolsVar;
         dbg dbgVar = this.cn;
         ik ikVar = dbgVar.a;
         ArrayList<cba> arrayList2 = (ArrayList) ikVar.d;
         if (i != i3) {
             ((chs) ikVar.c).e(i, i3);
-            abf.ap(arrayList2, new cbl(i, i3, 1));
+            StaticHelpers2.ap(arrayList2, new cbl(i, i3, 1));
             for (cba cbaVar : arrayList2) {
                 int i7 = cbaVar.a;
                 if (i7 > i3) {
@@ -712,9 +712,9 @@ public class CodeEditor extends View implements afp, bph {
                 }
             }
         }
-        if (Build.VERSION.SDK_INT >= 29 && (jxVar = dbgVar.b) != null) {
+        if (Build.VERSION.SDK_INT >= 29 && (factoryPoolsVar = dbgVar.b) != null) {
             ArrayList arrayList3 = new ArrayList();
-            ArrayList<dbh> arrayList4 = (ArrayList) jxVar.f;
+            ArrayList<dbh> arrayList4 = (ArrayList) factoryPoolsVar.f;
             for (dbh dbhVar : arrayList4) {
                 int i8 = dbhVar.a;
                 if (i8 == i) {
@@ -726,8 +726,8 @@ public class CodeEditor extends View implements afp, bph {
                     dbhVar.a = i8 - (i3 - i);
                 }
             }
-            arrayList4.removeAll(aaz.ad(arrayList3));
-            ((Stack) jxVar.h).addAll(arrayList3);
+            arrayList4.removeAll(StaticHelpers5.ad(arrayList3));
+            ((Stack) factoryPoolsVar.h).addAll(arrayList3);
         }
         this.co.bn();
         this.f.getClass();
@@ -806,7 +806,7 @@ public class CodeEditor extends View implements afp, bph {
 
     public final void de(CharSequence charSequence, boolean z) {
         dor dorVarZ;
-        awp awpVarD;
+        GifEncoder gifEncoderVarD;
         CharSequence charSequence2;
         char cCharAt;
         btq btqVar;
@@ -826,13 +826,13 @@ public class CodeEditor extends View implements afp, bph {
         }
         char cCharAt2 = charSequence.charAt(charSequence.length() - 1);
         char[] charArray = charSequence.length() > 1 ? charSequence.toString().toCharArray() : null;
-        jx jxVar = this.b;
+        FactoryPools factoryPoolsVar = this.b;
         ud udVarD = this.bo.c.d();
-        jxVar.getClass();
+        factoryPoolsVar.getClass();
         aff text = getText();
-        dorVarZ = charArray == null ? jxVar.z(cCharAt2) : null;
+        dorVarZ = charArray == null ? factoryPoolsVar.z(cCharAt2) : null;
         if (dorVarZ == null) {
-            Iterator it = jxVar.aa(cCharAt2).iterator();
+            Iterator it = factoryPoolsVar.aa(cCharAt2).iterator();
             while (true) {
                 if (!it.hasNext()) {
                     dorVarZ = null;
@@ -892,9 +892,9 @@ public class CodeEditor extends View implements afp, bph {
         ahy ahyVar = this.bo;
         aff affVar = this.bp;
         try {
-            awpVarD = this.bu.d();
+            gifEncoderVarD = this.bu.d();
         } catch (AbstractMethodError unused) {
-            awpVarD = null;
+            gifEncoderVarD = null;
         }
         if (dorVarZ != null) {
             String str2 = dorVarZ.b;
@@ -913,7 +913,7 @@ public class CodeEditor extends View implements afp, bph {
                 } else {
                     zH = false;
                 }
-                if (zH && awpVarD == null) {
+                if (zH && gifEncoderVarD == null) {
                     affVar.l();
                     ud udVar = ahyVar.c;
                     affVar.ab(udVar.b, udVar.c, str2);
@@ -927,7 +927,7 @@ public class CodeEditor extends View implements afp, bph {
                     er(i9, i10, udVar4.b, udVar4.c - str3.length());
                     return;
                 }
-                if (!ahyVar.h() || awpVarD == null) {
+                if (!ahyVar.h() || gifEncoderVarD == null) {
                     affVar.l();
                     ud udVarN = affVar.x().n(dorVarZ.f);
                     int i11 = udVarN.b;
@@ -1947,7 +1947,7 @@ public class CodeEditor extends View implements afp, bph {
         asa asaVar;
         try {
             if (!this.bm.hasPrimaryClip() || (primaryClip = this.bm.getPrimaryClip()) == null
-                    || (strAt = cnf.at(primaryClip)) == null || (asaVar = this.h) == null) {
+                    || (strAt = HugeSyntheticPileOfHelpers.at(primaryClip)) == null || (asaVar = this.h) == null) {
                 return;
             }
             asaVar.commitText(strAt, 1);
@@ -2692,7 +2692,7 @@ public class CodeEditor extends View implements afp, bph {
                 }
                 asvVar.ai = null;
                 ep(udVar.b, udVar.c);
-                String strAt = cnf.at(dragEvent.getClipData());
+                String strAt = HugeSyntheticPileOfHelpers.at(dragEvent.getClipData());
                 if (strAt != null && (asaVar = this.h) != null) {
                     asaVar.commitText(strAt, 1);
                     this.ck.getClass();
@@ -2965,19 +2965,19 @@ public class CodeEditor extends View implements afp, bph {
                     if (zE && !zD && !zIsCtrlPressed) {
                         boolValueOf = Boolean.valueOf(io.h(codeEditor2, cursor4, text3, asbVar, btkVar));
                     } else if (!zIsCtrlPressed || zE) {
-                        awp[] awpVarArrB = editorLanguage3.b();
-                        if (awpVarArrB == null || cursor4.h()) {
+                        GifEncoder[] gifEncoderVarArrB = editorLanguage3.b();
+                        if (gifEncoderVarArrB == null || cursor4.h()) {
                             z = true;
                             codeEditor2.de(str, true);
                         } else {
-                            int length = awpVarArrB.length;
+                            int length = gifEncoderVarArrB.length;
                             int i10 = 0;
                             while (true) {
                                 if (i10 >= length) {
                                     z = z8;
                                 } else {
-                                    awp awpVar = awpVarArrB[i10];
-                                    if (awpVar != null) {
+                                    GifEncoder gifEncoderVar = gifEncoderVarArrB[i10];
+                                    if (gifEncoderVar != null) {
                                         ud udVarD2 = cursor4.c.d();
                                         dnv styles = codeEditor2.getStyles();
                                         afo afoVarY = text3.y(udVarD2.b);
@@ -2998,7 +2998,7 @@ public class CodeEditor extends View implements afp, bph {
                                                     try {
                                                         ud udVarD3 = cursor4.c.d();
                                                         codeEditor2.getStyles();
-                                                        pe peVarF = awpVar.f(text3, udVarD3, codeEditor2.getTabWidth());
+                                                        pe peVarF = gifEncoderVar.f(text3, udVarD3, codeEditor2.getTabWidth());
                                                         codeEditor2.de(peVarF.a, false);
                                                         int i13 = peVarF.b;
                                                         if (i13 != 0) {
@@ -3925,9 +3925,9 @@ public class CodeEditor extends View implements afp, bph {
             btqVar2.e().k();
             btqVar2.destroy();
         }
-        jx jxVar = this.f;
-        jxVar.f = null;
-        jxVar.h = null;
+        FactoryPools factoryPoolsVar = this.f;
+        factoryPoolsVar.f = null;
+        factoryPoolsVar.h = null;
         this.bu = btqVar;
         this.cm = null;
         hz hzVarE = btqVar.e();
@@ -3936,16 +3936,16 @@ public class CodeEditor extends View implements afp, bph {
         if (affVar != null) {
             hzVarE.s(new afq(affVar), this.cl);
         }
-        jx jxVar2 = this.b;
-        if (jxVar2 != null) {
-            jxVar2.h = null;
+        FactoryPools factoryPoolsVar2 = this.b;
+        if (factoryPoolsVar2 != null) {
+            factoryPoolsVar2.h = null;
         }
-        jx jxVarG = this.bu.g();
-        this.b = jxVarG;
-        if (jxVarG == null) {
+        FactoryPools factoryPoolsVarG = this.bu.g();
+        this.b = factoryPoolsVarG;
+        if (factoryPoolsVarG == null) {
             Log.w("CodeEditor",
                     "Language(" + this.bu.toString() + ") returned null for symbol pairs. It is a mistake.");
-            this.b = new jx(19);
+            this.b = new FactoryPools(19);
         }
         this.b.h = this.ck.a;
         dik dikVar = this.cv;
@@ -3994,9 +3994,9 @@ public class CodeEditor extends View implements afp, bph {
     public void setHighlightBracketPair(boolean z) {
         this.bd = z;
         if (z) {
-            jx jxVar = this.f;
-            jxVar.getClass();
-            jxVar.af(new dh(jxVar, 10));
+            FactoryPools factoryPoolsVar = this.f;
+            factoryPoolsVar.getClass();
+            factoryPoolsVar.af(new dh(factoryPoolsVar, 10));
         } else {
             this.f.f = null;
         }
@@ -4061,8 +4061,8 @@ public class CodeEditor extends View implements afp, bph {
      */
     public void setInlayHints(bpi bpiVar) {
         chu chuVar = new chu();
-        bmu bmuVar = new bmu();
-        bmuVar.h = new int[0];
+        SyntheticPileOfMess bmuVar = new SyntheticPileOfMess();
+        bmuVar.obj = new int[0];
         int[] iArr = chuVar.b;
         long[] jArr = chuVar.a;
         int length = jArr.length - 2;
@@ -4081,7 +4081,7 @@ public class CodeEditor extends View implements afp, bph {
                     int i3 = 8 - ((~(i - length)) >>> 31);
                     for (int i4 = 0; i4 < i3; i4++) {
                         if ((255 & j) < 128) {
-                            ((int[]) bmuVar.h)[i2] = iArr[(i << 3) + i4];
+                            ((int[]) bmuVar.obj)[i2] = iArr[(i << 3) + i4];
                             i2++;
                         }
                         j >>= 8;
@@ -4317,9 +4317,9 @@ public class CodeEditor extends View implements afp, bph {
         } else {
             this.bp = new aff(charSequence, true);
         }
-        jx jxVar = this.f;
-        jxVar.f = null;
-        jxVar.h = null;
+        FactoryPools factoryPoolsVar = this.f;
+        factoryPoolsVar.f = null;
+        factoryPoolsVar.h = null;
         this.cm = null;
         ahy ahyVarW = this.bp.w();
         this.bo = ahyVarW;

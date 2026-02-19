@@ -124,7 +124,7 @@ public final class enr implements afp, Parcelable {
                     arrayList.add(enpVar);
                     this.g++;
                 } else {
-                    enm enmVar2 = (enm) dkz.l(1, arrayList);
+                    enm enmVar2 = (enm) StaticHelpers6.getLastNElem(1, arrayList);
                     if (!(enmVar2 instanceof enp) || this.i) {
                         enp enpVar2 = new enp();
                         enpVar2.g(enmVar);
@@ -139,7 +139,7 @@ public final class enr implements afp, Parcelable {
                 arrayList.add(enmVar);
                 this.g++;
             } else {
-                enm enmVar3 = (enm) dkz.l(1, arrayList);
+                enm enmVar3 = (enm) StaticHelpers6.getLastNElem(1, arrayList);
                 if (enmVar3.b(enmVar)) {
                     enmVar3.c(enmVar);
                 } else {

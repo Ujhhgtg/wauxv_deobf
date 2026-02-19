@@ -2,10 +2,8 @@ package me.hd.wauxv.plugin.api.method;
 
 import java.util.Set;
 import me.hd.wauxv.obf.bhs;
-import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.cty;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.DefaultConfig;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.pool.TypePool;
@@ -16,7 +14,7 @@ public final class PluginConfigMethod {
     public final String a;
 
     public PluginConfigMethod(String str) {
-        this.a = yg.h(-396983827168042L, dkz.y(str));
+        this.a = yg.h(-396983827168042L, StaticHelpers6.toSb(str));
     }
 
     @cty

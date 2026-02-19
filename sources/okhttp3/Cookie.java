@@ -406,7 +406,7 @@ public final class Cookie {
                 }
             }
             if (arrayList == null) {
-                return EmptyReadonlyList.a;
+                return EmptyReadonlyList.INSTANCE;
             }
             List<Cookie> listUnmodifiableList = Collections.unmodifiableList(arrayList);
             throwIfVar1IsNull(listUnmodifiableList, "{\n        Collections.un…ableList(cookies)\n      }");

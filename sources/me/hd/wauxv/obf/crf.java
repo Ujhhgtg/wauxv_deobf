@@ -7,13 +7,13 @@ import net.bytebuddy.pool.TypePool;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class crf extends cwn {
-    public final bmu af;
+    public final SyntheticPileOfMess af;
 
     /*
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public crf(cwd cwdVar, bmu bmuVar, dfx dfxVar) {
+    public crf(cwd cwdVar, SyntheticPileOfMess bmuVar, dfx dfxVar) {
         super(cwdVar, bmuVar, dfxVar);
         throwIfVar1IsNull(cwdVar, "proto");
         throwIfVar1IsNull(bmuVar, "parentWriter");
@@ -47,7 +47,7 @@ public final class crf extends cwn {
         StringBuilder sbR = yg.concatVar213(i, "Unsupported index: ", " in a oneOf type ");
         sbR.append(dfxVar.b());
         sbR.append(", which should be using generic polymorphic serializer");
-        throw new dgb(sbR.toString());
+        throw new SomeIllegalArgumentException(sbR.toString());
     }
 
     @Override // me.hd.wauxv.obf.cwn, me.hd.wauxv.obf.avt
@@ -58,7 +58,7 @@ public final class crf extends cwn {
         }
         cwd cwdVar = this.al;
         throwIfVar1IsNull(cwdVar, "proto");
-        bmu bmuVar = this.af;
+        SyntheticPileOfMess bmuVar = this.af;
         throwIfVar1IsNull(bmuVar, "parentWriter");
         crd crdVar = new crd(cwdVar, bmuVar, dfxVar);
         if (dfxVar.i() != 1) {
@@ -72,7 +72,7 @@ public final class crf extends cwn {
                 arrayList.add(obj);
             }
         }
-        if (((cwg) aaz.s(arrayList)) != null) {
+        if (((cwg) StaticHelpers5.s(arrayList)) != null) {
             return crdVar;
         }
         throw new IllegalArgumentException(

@@ -9,7 +9,7 @@ public final class dwp {
 
     public /* synthetic */ dwp(int i, Boolean bool, Integer num) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, dwn.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, dwn.b.getDescriptor());
             throw null;
         }
         this.a = bool;

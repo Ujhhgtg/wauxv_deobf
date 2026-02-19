@@ -13,7 +13,7 @@ public final class eex {
 
     public /* synthetic */ eex(int i, String str, String str2, String str3, String str4, String str5, Integer num) {
         if (63 != (i & 63)) {
-            bht.ah(i, 63, eev.b.getDescriptor());
+            ResourcesCompat.ah(i, 63, eev.b.getDescriptor());
             throw null;
         }
         this.a = str;

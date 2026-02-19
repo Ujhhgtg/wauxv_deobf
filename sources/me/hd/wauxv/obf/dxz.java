@@ -18,7 +18,7 @@ public final class dxz {
     public /* synthetic */ dxz(int i, Integer num, Boolean bool, Integer num2, Long l, Integer num3, Integer num4,
             String str, Integer num5) {
         if (255 != (i & Opcodes.CONST_METHOD_TYPE)) {
-            bht.ah(i, Opcodes.CONST_METHOD_TYPE, dxx.b.getDescriptor());
+            ResourcesCompat.ah(i, Opcodes.CONST_METHOD_TYPE, dxx.b.getDescriptor());
             throw null;
         }
         this.a = num;
@@ -71,7 +71,7 @@ public final class dxz {
         bjs.w(sb, this.a, -204835580279594L);
         dts.g(sb, this.b, -206416128244522L);
         bjs.w(sb, this.c, -206300164127530L);
-        dkz.ad(sb, this.d, -206244329552682L);
+        StaticHelpers6.ad(sb, this.d, -206244329552682L);
         bjs.w(sb, this.e, -206691006151466L);
         bjs.w(sb, this.f, -206596516870954L);
         yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.g, -206536387328810L);

@@ -14,15 +14,15 @@ public final /* synthetic */ class bel implements bul {
     }
 
     @Override // me.hd.wauxv.obf.bul
-    public final void e(bup bupVar, bug bugVar) {
+    public final void e(bup bupVar, LifeEventEnum lifeEventEnumVar) {
         switch (this.a) {
             case 0:
                 beq beqVar = (beq) this.b;
-                if (bugVar == bug.ON_DESTROY) {
-                    bdj bdjVar = (bdj) bupVar;
+                if (lifeEventEnumVar == LifeEventEnum.ON_DESTROY) {
+                    SomeFragmentManager someFragmentManagerVar = (SomeFragmentManager) bupVar;
                     Object obj = null;
-                    for (Object obj2 : (Iterable) ((dml) beqVar.w().f.h).c()) {
-                        if (nullSafeIsEqual(((cio) obj2).f, bdjVar.bs)) {
+                    for (Object obj2 : (Iterable) ((dml) beqVar.w().f.obj).c()) {
+                        if (nullSafeIsEqual(((cio) obj2).f, someFragmentManagerVar.bs)) {
                             obj = obj2;
                         }
                     }
@@ -38,23 +38,23 @@ public final /* synthetic */ class bel implements bul {
                 break;
             case 1:
                 cix cixVar = (cix) this.b;
-                cixVar.p = bugVar.a();
+                cixVar.p = lifeEventEnumVar.a();
                 if (cixVar.c != null) {
-                    for (cio cioVar2 : aaz.ab(cixVar.f)) {
+                    for (cio cioVar2 : StaticHelpers5.ab(cixVar.f)) {
                         cioVar2.getClass();
                         ciq ciqVar = cioVar2.h;
                         ciqVar.getClass();
-                        ciqVar.a.d = bugVar.a();
-                        ciqVar.d = bugVar.a();
+                        ciqVar.a.d = lifeEventEnumVar.a();
+                        ciqVar.d = lifeEventEnumVar.a();
                         ciqVar.m();
                     }
                 }
                 break;
             default:
                 deo deoVar = (deo) this.b;
-                if (bugVar == bug.ON_START) {
+                if (lifeEventEnumVar == LifeEventEnum.ON_START) {
                     deoVar.h = true;
-                } else if (bugVar == bug.ON_STOP) {
+                } else if (lifeEventEnumVar == LifeEventEnum.ON_STOP) {
                     deoVar.h = false;
                 }
                 break;

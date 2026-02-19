@@ -42,12 +42,12 @@ public final class ajr implements ajc, Runnable, Comparable, axw {
     public final ajp d = new ajp();
     public final ArrayList e = new ArrayList();
     public final dmn f = new dmn();
-    public final jx i = new jx(5, false);
+    public final FactoryPools i = new FactoryPools(5, false);
     public final ajq j = new ajq();
 
-    public ajr(afr afrVar, jx jxVar) {
+    public ajr(afr afrVar, FactoryPools factoryPoolsVar) {
         this.g = afrVar;
-        this.h = jxVar;
+        this.h = factoryPoolsVar;
     }
 
     @Override // me.hd.wauxv.obf.ajc
@@ -127,7 +127,7 @@ public final class ajr implements ajc, Runnable, Comparable, axw {
             aq("Retrieved data", this.u, "data: " + this.ab + ", cache key: " + this.z + ", fetcher: " + this.ac);
         }
         bxp bxpVar = null;
-        if (this.w.a.containsKey(bhu.class) && (supplier = this.x) != null && supplier.get() != null) {
+        if (this.w.a.containsKey(FastKV.class) && (supplier = this.x) != null && supplier.get() != null) {
             try {
                 Process.setThreadPriority(Process.myTid(), ((Integer) this.x.get()).intValue());
             } catch (IllegalArgumentException | SecurityException e) {
@@ -164,7 +164,7 @@ public final class ajr implements ajc, Runnable, Comparable, axw {
             bxpVar.f = dcgVarAk;
             dcgVarAk = bxpVar;
         }
-        if (this.w.a.containsKey(bhu.class)) {
+        if (this.w.a.containsKey(FastKV.class)) {
             au();
         }
         ax();
@@ -215,16 +215,16 @@ public final class ajr implements ajc, Runnable, Comparable, axw {
         }
         this.ah = 5;
         try {
-            jx jxVar = this.i;
-            if (((bxp) jxVar.h) != null) {
+            FactoryPools factoryPoolsVar = this.i;
+            if (((bxp) factoryPoolsVar.h) != null) {
                 afr afrVar = this.g;
                 crw crwVar = this.r;
-                jxVar.getClass();
+                factoryPoolsVar.getClass();
                 try {
-                    afrVar.c().y((btj) jxVar.e, new jx((dcm) jxVar.f, (bxp) jxVar.h, crwVar, 4));
-                    ((bxp) jxVar.h).i();
+                    afrVar.c().y((btj) factoryPoolsVar.e, new FactoryPools((dcm) factoryPoolsVar.f, (bxp) factoryPoolsVar.h, crwVar, 4));
+                    ((bxp) factoryPoolsVar.h).i();
                 } catch (Throwable th3) {
-                    ((bxp) jxVar.h).i();
+                    ((bxp) factoryPoolsVar.h).i();
                     throw th3;
                 }
             }
@@ -252,7 +252,7 @@ public final class ajr implements ajc, Runnable, Comparable, axw {
     }
 
     public final ajd ao() {
-        int iAe = dkz.ae(this.ah);
+        int iAe = StaticHelpers6.ae(this.ah);
         ajp ajpVar = this.d;
         if (iAe == 1) {
             return new dch(ajpVar, this);
@@ -272,7 +272,7 @@ public final class ajr implements ajc, Runnable, Comparable, axw {
     public final int ap(int i) {
         boolean z;
         boolean z2;
-        int iAe = dkz.ae(i);
+        int iAe = StaticHelpers6.ae(i);
         if (iAe == 0) {
             switch (this.q.d) {
                 case 0:
@@ -325,7 +325,7 @@ public final class ajr implements ajc, Runnable, Comparable, axw {
 
     public final void ar() {
         boolean zD;
-        if (this.w.a.containsKey(bhu.class)) {
+        if (this.w.a.containsKey(FastKV.class)) {
             au();
         }
         ax();
@@ -379,10 +379,10 @@ public final class ajr implements ajc, Runnable, Comparable, axw {
             ajqVar.a = false;
             ajqVar.c = false;
         }
-        jx jxVar = this.i;
-        jxVar.e = null;
-        jxVar.f = null;
-        jxVar.h = null;
+        FactoryPools factoryPoolsVar = this.i;
+        factoryPoolsVar.e = null;
+        factoryPoolsVar.f = null;
+        factoryPoolsVar.h = null;
         ajp ajpVar = this.d;
         ajpVar.c = null;
         ajpVar.d = null;
@@ -425,7 +425,7 @@ public final class ajr implements ajc, Runnable, Comparable, axw {
     }
 
     public final void au() {
-        if (!this.w.a.containsKey(bhu.class)) {
+        if (!this.w.a.containsKey(FastKV.class)) {
             throw new IllegalStateException("OverrideGlideThreadPriority experiment is not enabled.");
         }
         Supplier supplier = this.x;
@@ -461,7 +461,7 @@ public final class ajr implements ajc, Runnable, Comparable, axw {
     }
 
     public final void aw() {
-        int iAe = dkz.ae(this.ai);
+        int iAe = StaticHelpers6.ae(this.ai);
         if (iAe == 0) {
             this.ah = ap(1);
             this.ad = ao();
@@ -479,7 +479,7 @@ public final class ajr implements ajc, Runnable, Comparable, axw {
     public final void ax() {
         this.f.b();
         if (this.ae) {
-            throw new IllegalStateException("Already notified", this.e.isEmpty() ? null : (Throwable) dkz.l(1, this.e));
+            throw new IllegalStateException("Already notified", this.e.isEmpty() ? null : (Throwable) StaticHelpers6.getLastNElem(1, this.e));
         }
         this.ae = true;
     }

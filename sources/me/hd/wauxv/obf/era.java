@@ -31,14 +31,14 @@ public final class era {
     public final float o;
     public final int p;
     public final OverScroller q;
-    public final cnf r;
+    public final HugeSyntheticPileOfHelpers r;
     public View s;
     public boolean t;
     public final CoordinatorLayout u;
     public int d = -1;
     public final dc v = new dc(this, 19);
 
-    public era(Context context, CoordinatorLayout coordinatorLayout, cnf cnfVar) {
+    public era(Context context, CoordinatorLayout coordinatorLayout, HugeSyntheticPileOfHelpers cnfVar) {
         if (cnfVar == null) {
             throw new IllegalArgumentException("Callback may not be null");
         }
@@ -73,12 +73,12 @@ public final class era {
             int top = currY - this.s.getTop();
             if (left != 0) {
                 View view = this.s;
-                WeakHashMap weakHashMap = eqz.a;
+                WeakHashMap weakHashMap = ViewCompat.a;
                 view.offsetLeftAndRight(left);
             }
             if (top != 0) {
                 View view2 = this.s;
-                WeakHashMap weakHashMap2 = eqz.a;
+                WeakHashMap weakHashMap2 = ViewCompat.a;
                 view2.offsetTopAndBottom(top);
             }
             if (left != 0 || top != 0) {
@@ -160,7 +160,7 @@ public final class era {
             f4 = i10;
         }
         float f6 = f3 / f4;
-        cnf cnfVar = this.r;
+        HugeSyntheticPileOfHelpers cnfVar = this.r;
         overScroller.startScroll(left, top, i5, i6,
                 (int) ((aa(i6, i4, cnfVar.f()) * f6) + (aa(i5, i3, cnfVar.e(view)) * f5)));
         aj(2);
@@ -205,7 +205,7 @@ public final class era {
             w();
             return;
         }
-        cnf cnfVar = this.r;
+        HugeSyntheticPileOfHelpers cnfVar = this.r;
         if (actionMasked != 2) {
             if (actionMasked == 3) {
                 if (this.b == 1) {
@@ -286,12 +286,12 @@ public final class era {
                 int top2 = this.s.getTop();
                 if (i8 != 0) {
                     left = cnfVar.createInstanceWithArgs(this.s, left);
-                    WeakHashMap weakHashMap = eqz.a;
+                    WeakHashMap weakHashMap = ViewCompat.a;
                     this.s.offsetLeftAndRight(left - left2);
                 }
                 if (i9 != 0) {
                     top = cnfVar.d(this.s, top);
-                    WeakHashMap weakHashMap2 = eqz.a;
+                    WeakHashMap weakHashMap2 = ViewCompat.a;
                     this.s.offsetTopAndBottom(top - top2);
                 }
                 if (i8 != 0 || i9 != 0) {
@@ -527,7 +527,7 @@ public final class era {
                         }
                     } else {
                         int left = viewAc3.getLeft();
-                        cnf cnfVar = this.r;
+                        HugeSyntheticPileOfHelpers cnfVar = this.r;
                         int iC = cnfVar.createInstanceWithArgs(viewAc3, ((int) f) + left);
                         int top = viewAc3.getTop();
                         int iD = cnfVar.d(viewAc3, ((int) f2) + top);
@@ -608,7 +608,7 @@ public final class era {
     /* JADX WARN: Found duplicated region for block: B:25:0x0044 A[RETURN] */
     public final boolean y(View view, float f, float f2) {
         if (view != null) {
-            cnf cnfVar = this.r;
+            HugeSyntheticPileOfHelpers cnfVar = this.r;
             boolean z = cnfVar.e(view) > 0;
             boolean z2 = cnfVar.f() > 0;
             if (z && z2) {

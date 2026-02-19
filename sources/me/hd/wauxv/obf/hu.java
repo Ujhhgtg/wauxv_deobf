@@ -16,7 +16,7 @@ public final /* synthetic */ class hu implements OnBackInvokedCallback {
     public final void onBackInvoked() {
         switch (this.a) {
             case 0:
-                ((ic) this.b).cm();
+                ((AppCompatDelegate) this.b).cm();
                 break;
             case 1:
                 bfu bfuVar = (bfu) this.b;

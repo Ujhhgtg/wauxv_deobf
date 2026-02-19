@@ -16,7 +16,7 @@ public final class eoz {
         }
         cls = eoz.class;
         if (obj instanceof Class) {
-            Class<eoz> clsBf = cnf.bf(dal.b(cls));
+            Class<eoz> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
             return !obj.equals(clsBf != null ? clsBf : eoz.class) ? ((Class) obj).toString() : "VagueType";
         }
         if (obj instanceof IEmpty5) {
@@ -26,7 +26,7 @@ public final class eoz {
             return obj.toString();
         }
         Iterable iterable = (Iterable) obj;
-        ArrayList arrayList = new ArrayList(abb.ak(iterable, 10));
+        ArrayList arrayList = new ArrayList(StaticHelpers4.ak(iterable, 10));
         Iterator it = iterable.iterator();
         while (it.hasNext()) {
             Object next = it.next();

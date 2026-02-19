@@ -47,7 +47,7 @@ public final class zy implements bnz {
                         return Integer.toString(codeEditor.getCursor().c.b + 1);
                     case "TM_CURRENT_WORD":
                         aff text = codeEditor.getText();
-                        long jX = bht.x(text.y(text.w().c.b), text.w().c.c, true);
+                        long jX = ResourcesCompat.x(text.y(text.w().c.b), text.w().c.c, true);
                         return text.y(text.w().c.b).subSequence((int) (jX >> 32), (int) (jX & 4294967295L)).toString();
                     case "TM_SELECTED_TEXT":
                     case "SELECTION":

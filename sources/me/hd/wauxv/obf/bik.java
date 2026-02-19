@@ -49,7 +49,7 @@ public final /* synthetic */ class bik implements bgx {
         }
         acmVarP._bp(dfxVar);
         if (7 != (i & 7)) {
-            bht.ah(i, 7, descriptor);
+            ResourcesCompat.ah(i, 7, descriptor);
             throw null;
         }
         bim bimVar = new bim();

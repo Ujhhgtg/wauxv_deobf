@@ -25,12 +25,12 @@ public final class cqz extends bws implements IDatabaseOperationsListener {
             if (asString2 == null || dnj.ak(asString2)) {
                 return;
             }
-            Set setAd = aaz.ad(dnj.as(asString2, new String[] { ";" /* ";" /* ";" /* ";" /* cnb.z(-396640229784362L)   */ }));
+            Set setAd = StaticHelpers5.ad(dnj.as(asString2, new String[] { ";" /* ";" /* ";" /* ";" /* cnb.z(-396640229784362L)   */ }));
             int i2 = 0;
             dlx.a.getClass();
-            cde cdeVarT = dqc.bi(dlx.b()).t();
-            cdeVarT.ab = "rawQuery" /* "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)   */;
-            Object objJ = ((MethodHookWrapper) dkz.n(new Object[] { dal.b(String.class), dal.b(Object[].class) }, 2, cdeVarT)).j(
+            MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+            methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)   */;
+            Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class), dal.b(Object[].class) }, 2, methodResolverVarT)).j(
                     "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* cnb.z(-396648819718954L)   */,
                     new Object[] { asString });
             throwIfVar1IsNull(objJ);
@@ -45,7 +45,7 @@ public final class cqz extends bws implements IDatabaseOperationsListener {
                     String string = cursor
                             .getString(cursor.getColumnIndex("memberlist" /* "memberlist" /* "memberlist" /* "memberlist" /* cnb.z(-396854978149162L)   */));
                     if (string != null && !dnj.ak(string)) {
-                        Set setAd2 = aaz.ad(dnj.as(string, new String[] { ";" /* ";" /* ";" /* ";" /* cnb.z(-396756193901354L)   */ }));
+                        Set setAd2 = StaticHelpers5.ad(dnj.as(string, new String[] { ";" /* ";" /* ";" /* ";" /* cnb.z(-396756193901354L)   */ }));
                         if (asInteger.intValue() > i3) {
                             for (String str3 : dgg.a(setAd, setAd2)) {
                                 String strZ = "join" /* "join" /* "join" /* "join" /* cnb.z(-396764783835946L)   */;

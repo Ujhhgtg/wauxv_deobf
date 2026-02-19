@@ -73,7 +73,7 @@ public final class aln {
             ArrayList arrayList3 = new ArrayList();
             Iterator it3 = arrayList.iterator();
             while (it3.hasNext()) {
-                abf.an(arrayList3, ((dlr) it3.next()).k);
+                StaticHelpers2.an(arrayList3, ((dlr) it3.next()).k);
             }
             if (!arrayList3.isEmpty()) {
                 return true;
@@ -146,11 +146,11 @@ public final class aln {
         }
         ArrayList<alh> arrayList2 = new ArrayList();
         ArrayList arrayList3 = new ArrayList();
-        bdj bdjVar = ((dlr) aaz.l(arrayList)).c;
+        SomeFragmentManager someFragmentManagerVar = ((dlr) StaticHelpers5.l(arrayList)).c;
         Iterator it2 = arrayList.iterator();
         while (it2.hasNext()) {
             bdg bdgVar = ((dlr) it2.next()).c.cc;
-            bdg bdgVar2 = bdjVar.cc;
+            bdg bdgVar2 = someFragmentManagerVar.cc;
             bdgVar.b = bdgVar2.b;
             bdgVar.c = bdgVar2.c;
             bdgVar.d = bdgVar2.d;
@@ -167,31 +167,31 @@ public final class aln {
             if (!z ? dlrVar5 == dlrVar4 : dlrVar5 == dlrVar2) {
                 z2 = true;
             }
-            bdj bdjVar2 = dlrVar5.c;
+            SomeFragmentManager someFragmentManagerVar2 = dlrVar5.c;
             alm almVar = new alm(dlrVar5);
             if (dlrVar5.a == 2) {
                 if (z) {
-                    bdg bdgVar3 = bdjVar2.cc;
+                    bdg bdgVar3 = someFragmentManagerVar2.cc;
                 } else {
-                    bdjVar2.getClass();
+                    someFragmentManagerVar2.getClass();
                 }
             } else if (z) {
-                bdg bdgVar4 = bdjVar2.cc;
+                bdg bdgVar4 = someFragmentManagerVar2.cc;
             } else {
-                bdjVar2.getClass();
+                someFragmentManagerVar2.getClass();
             }
             if (dlrVar5.a == 2) {
                 if (z) {
-                    bdg bdgVar5 = bdjVar2.cc;
+                    bdg bdgVar5 = someFragmentManagerVar2.cc;
                 } else {
-                    bdg bdgVar6 = bdjVar2.cc;
+                    bdg bdgVar6 = someFragmentManagerVar2.cc;
                 }
             }
             if (z2) {
                 if (z) {
-                    bdg bdgVar7 = bdjVar2.cc;
+                    bdg bdgVar7 = someFragmentManagerVar2.cc;
                 } else {
-                    bdjVar2.getClass();
+                    someFragmentManagerVar2.getClass();
                 }
             }
             arrayList3.add(almVar);
@@ -216,7 +216,7 @@ public final class aln {
         ArrayList arrayList7 = new ArrayList();
         Iterator it6 = arrayList2.iterator();
         while (it6.hasNext()) {
-            abf.an(arrayList7, ((dlr) ((alh) it6.next()).g).k);
+            StaticHelpers2.an(arrayList7, ((dlr) ((alh) it6.next()).g).k);
         }
         boolean zIsEmpty = arrayList7.isEmpty();
         boolean z3 = false;
@@ -229,7 +229,7 @@ public final class aln {
                 if (((AnimatorSet) ioVarJ.d) == null) {
                     arrayList6.add(alhVar);
                 } else {
-                    bdj bdjVar3 = dlrVar6.c;
+                    SomeFragmentManager someFragmentManagerVar3 = dlrVar6.c;
                     if (dlrVar6.k.isEmpty()) {
                         if (dlrVar6.a == 3) {
                             dlrVar6.i = false;
@@ -237,7 +237,7 @@ public final class aln {
                         dlrVar6.j.add(new alj(alhVar));
                         z3 = true;
                     } else if (beg.ar(2)) {
-                        Log.v("FragmentManager", "Ignoring Animator set on " + bdjVar3
+                        Log.v("FragmentManager", "Ignoring Animator set on " + someFragmentManagerVar3
                                 + " as this Fragment was involved in a Transition.");
                     }
                 }
@@ -245,17 +245,17 @@ public final class aln {
         }
         for (alh alhVar2 : arrayList6) {
             dlr dlrVar7 = (dlr) alhVar2.g;
-            bdj bdjVar4 = dlrVar7.c;
+            SomeFragmentManager someFragmentManagerVar4 = dlrVar7.c;
             if (zIsEmpty) {
                 if (!z3) {
                     dlrVar7.j.add(new alg(alhVar2));
                 } else if (beg.ar(2)) {
                     Log.v("FragmentManager",
-                            "Ignoring Animation set on " + bdjVar4 + " as Animations cannot run alongside Animators.");
+                            "Ignoring Animation set on " + someFragmentManagerVar4 + " as Animations cannot run alongside Animators.");
                 }
             } else if (beg.ar(2)) {
                 Log.v("FragmentManager",
-                        "Ignoring Animation set on " + bdjVar4 + " as Animations cannot run alongside Transitions.");
+                        "Ignoring Animation set on " + someFragmentManagerVar4 + " as Animations cannot run alongside Transitions.");
             }
         }
     }
@@ -265,9 +265,9 @@ public final class aln {
         ArrayList arrayList = new ArrayList();
         Iterator it = list.iterator();
         while (it.hasNext()) {
-            abf.an(arrayList, ((dlr) it.next()).k);
+            StaticHelpers2.an(arrayList, ((dlr) it.next()).k);
         }
-        List listZ = aaz.z(aaz.ad(arrayList));
+        List listZ = StaticHelpers5.z(StaticHelpers5.ad(arrayList));
         int size = listZ.size();
         for (int i = 0; i < size; i++) {
             ((dlq) listZ.get(i)).c(this.a);
@@ -276,7 +276,7 @@ public final class aln {
         for (int i2 = 0; i2 < size2; i2++) {
             i((dlr) list.get(i2));
         }
-        List listZ2 = aaz.z(list);
+        List listZ2 = StaticHelpers5.z(list);
         int size3 = listZ2.size();
         for (int i3 = 0; i3 < size3; i3++) {
             dlr dlrVar = (dlr) listZ2.get(i3);
@@ -286,21 +286,21 @@ public final class aln {
         }
     }
 
-    public final void l(int i, int i2, bfb bfbVar) {
+    public final void l(int i, int i2, FragmentManager fragmentManagerVar) {
         synchronized (this.b) {
             try {
-                bdj bdjVar = bfbVar.c;
-                throwIfVar1IsNull(bdjVar, "fragmentStateManager.fragment");
-                dlr dlrVarN = n(bdjVar);
+                SomeFragmentManager someFragmentManagerVar = fragmentManagerVar.c;
+                throwIfVar1IsNull(someFragmentManagerVar, "fragmentStateManager.fragment");
+                dlr dlrVarN = n(someFragmentManagerVar);
                 if (dlrVarN == null) {
-                    bdj bdjVar2 = bfbVar.c;
-                    dlrVarN = (bdjVar2.be || bdjVar2.bd) ? o(bdjVar2) : null;
+                    SomeFragmentManager someFragmentManagerVar2 = fragmentManagerVar.c;
+                    dlrVarN = (someFragmentManagerVar2.be || someFragmentManagerVar2.bd) ? o(someFragmentManagerVar2) : null;
                 }
                 if (dlrVarN != null) {
                     dlrVarN.p(i, i2);
                     return;
                 }
-                dlr dlrVar = new dlr(i, i2, bfbVar);
+                dlr dlrVar = new dlr(i, i2, fragmentManagerVar);
                 this.b.add(dlrVar);
                 dlrVar.d.add(new ald(this, dlrVar, 1));
                 dlrVar.d.add(new ald(this, dlrVar, 2));
@@ -322,7 +322,7 @@ public final class aln {
         }
         synchronized (this.b) {
             try {
-                ArrayList<dlr> arrayListAb = aaz.ab(this.c);
+                ArrayList<dlr> arrayListAb = StaticHelpers5.ab(this.c);
                 this.c.clear();
                 Iterator it = arrayListAb.iterator();
                 while (true) {
@@ -356,7 +356,7 @@ public final class aln {
                 }
                 if (!this.b.isEmpty()) {
                     r();
-                    ArrayList arrayListAb2 = aaz.ab(this.b);
+                    ArrayList arrayListAb2 = StaticHelpers5.ab(this.b);
                     if (arrayListAb2.isEmpty()) {
                         return;
                     }
@@ -403,13 +403,13 @@ public final class aln {
         }
     }
 
-    public final dlr n(bdj bdjVar) {
+    public final dlr n(SomeFragmentManager someFragmentManagerVar) {
         Object next;
         Iterator it = this.b.iterator();
         while (it.hasNext()) {
             next = it.next();
             dlr dlrVar = (dlr) next;
-            if (nullSafeIsEqual(dlrVar.c, bdjVar) && !dlrVar.e) {
+            if (nullSafeIsEqual(dlrVar.c, someFragmentManagerVar) && !dlrVar.e) {
                 return (dlr) next;
             }
         }
@@ -417,13 +417,13 @@ public final class aln {
         return (dlr) next;
     }
 
-    public final dlr o(bdj bdjVar) {
+    public final dlr o(SomeFragmentManager someFragmentManagerVar) {
         Object next;
         Iterator it = this.c.iterator();
         while (it.hasNext()) {
             next = it.next();
             dlr dlrVar = (dlr) next;
-            if (nullSafeIsEqual(dlrVar.c, bdjVar) && !dlrVar.e) {
+            if (nullSafeIsEqual(dlrVar.c, someFragmentManagerVar) && !dlrVar.e) {
                 return (dlr) next;
             }
         }
@@ -440,7 +440,7 @@ public final class aln {
             try {
                 r();
                 q(this.b);
-                ArrayList<dlr> arrayListAb = aaz.ab(this.c);
+                ArrayList<dlr> arrayListAb = StaticHelpers5.ab(this.c);
                 Iterator it = arrayListAb.iterator();
                 while (it.hasNext()) {
                     ((dlr) it.next()).g = false;
@@ -453,7 +453,7 @@ public final class aln {
                     }
                     dlrVar.m(this.a);
                 }
-                ArrayList<dlr> arrayListAb2 = aaz.ab(this.b);
+                ArrayList<dlr> arrayListAb2 = StaticHelpers5.ab(this.b);
                 Iterator it2 = arrayListAb2.iterator();
                 while (it2.hasNext()) {
                     ((dlr) it2.next()).g = false;
@@ -476,28 +476,28 @@ public final class aln {
         int size = list.size();
         for (int i = 0; i < size; i++) {
             dlr dlrVar = (dlr) list.get(i);
-            bfb bfbVar = dlrVar.l;
+            FragmentManager fragmentManagerVar = dlrVar.l;
             if (!dlrVar.h) {
                 dlrVar.h = true;
                 int i2 = dlrVar.b;
                 if (i2 == 2) {
-                    bdj bdjVar = bfbVar.c;
-                    throwIfVar1IsNull(bdjVar, "fragmentStateManager.fragment");
-                    View viewFindFocus = bdjVar.bz.findFocus();
+                    SomeFragmentManager someFragmentManagerVar = fragmentManagerVar.c;
+                    throwIfVar1IsNull(someFragmentManagerVar, "fragmentStateManager.fragment");
+                    View viewFindFocus = someFragmentManagerVar.bz.findFocus();
                     if (viewFindFocus != null) {
-                        bdjVar.co().k = viewFindFocus;
+                        someFragmentManagerVar.co().k = viewFindFocus;
                         if (beg.ar(2)) {
                             Log.v("FragmentManager",
-                                    "requestFocus: Saved focused view " + viewFindFocus + " for Fragment " + bdjVar);
+                                    "requestFocus: Saved focused view " + viewFindFocus + " for Fragment " + someFragmentManagerVar);
                         }
                     }
                     View viewDd = dlrVar.c.dd();
                     if (viewDd.getParent() == null) {
                         if (beg.ar(2)) {
                             Log.v("FragmentManager",
-                                    "Adding fragment " + bdjVar + " view " + viewDd + " to container in onStart");
+                                    "Adding fragment " + someFragmentManagerVar + " view " + viewDd + " to container in onStart");
                         }
-                        bfbVar.g();
+                        fragmentManagerVar.g();
                         viewDd.setAlpha(0.0f);
                     }
                     if (viewDd.getAlpha() == 0.0f && viewDd.getVisibility() == 0) {
@@ -506,22 +506,22 @@ public final class aln {
                         }
                         viewDd.setVisibility(4);
                     }
-                    bdg bdgVar = bdjVar.cc;
+                    bdg bdgVar = someFragmentManagerVar.cc;
                     viewDd.setAlpha(bdgVar == null ? 1.0f : bdgVar.j);
                     if (beg.ar(2)) {
                         StringBuilder sb = new StringBuilder("Setting view alpha to ");
-                        bdg bdgVar2 = bdjVar.cc;
+                        bdg bdgVar2 = someFragmentManagerVar.cc;
                         sb.append(bdgVar2 != null ? bdgVar2.j : 1.0f);
                         sb.append(" in onStart");
                         Log.v("FragmentManager", sb.toString());
                     }
                 } else if (i2 == 3) {
-                    bdj bdjVar2 = bfbVar.c;
-                    throwIfVar1IsNull(bdjVar2, "fragmentStateManager.fragment");
-                    View viewDd2 = bdjVar2.dd();
+                    SomeFragmentManager someFragmentManagerVar2 = fragmentManagerVar.c;
+                    throwIfVar1IsNull(someFragmentManagerVar2, "fragmentStateManager.fragment");
+                    View viewDd2 = someFragmentManagerVar2.dd();
                     if (beg.ar(2)) {
                         Log.v("FragmentManager", "Clearing focus " + viewDd2.findFocus() + " on view " + viewDd2
-                                + " for Fragment " + bdjVar2);
+                                + " for Fragment " + someFragmentManagerVar2);
                     }
                     viewDd2.clearFocus();
                 }
@@ -530,9 +530,9 @@ public final class aln {
         ArrayList arrayList = new ArrayList();
         Iterator it = list.iterator();
         while (it.hasNext()) {
-            abf.an(arrayList, ((dlr) it.next()).k);
+            StaticHelpers2.an(arrayList, ((dlr) it.next()).k);
         }
-        List listZ = aaz.z(aaz.ad(arrayList));
+        List listZ = StaticHelpers5.z(StaticHelpers5.ad(arrayList));
         int size2 = listZ.size();
         for (int i3 = 0; i3 < size2; i3++) {
             dlq dlqVar = (dlq) listZ.get(i3);

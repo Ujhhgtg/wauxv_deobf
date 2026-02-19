@@ -25,7 +25,7 @@ public final class bvj {
         View view2 = null;
         int i = Integer.MAX_VALUE;
         for (int i2 = 0; i2 < size; i2++) {
-            View view3 = ((czx) this.k.get(i2)).d;
+            View view3 = ((SomeView) this.k.get(i2)).d;
             czh czhVar = (czh) view3.getLayoutParams();
             if (view3 != view && !czhVar.c.af() && (iZ = (czhVar.c.z() - this.d) * this.e) >= 0 && iZ < i) {
                 view2 = view3;
@@ -43,16 +43,16 @@ public final class bvj {
         }
     }
 
-    public final View n(czo czoVar) {
+    public final View n(RecyclerView recyclerViewVar) {
         List list = this.k;
         if (list == null) {
-            View view = czoVar.s(this.d, Long.MAX_VALUE).d;
+            View view = recyclerViewVar.s(this.d, Long.MAX_VALUE).d;
             this.d += this.e;
             return view;
         }
         int size = list.size();
         for (int i = 0; i < size; i++) {
-            View view2 = ((czx) this.k.get(i)).d;
+            View view2 = ((SomeView) this.k.get(i)).d;
             czh czhVar = (czh) view2.getLayoutParams();
             if (!czhVar.c.af() && this.d == czhVar.c.z()) {
                 m(view2);

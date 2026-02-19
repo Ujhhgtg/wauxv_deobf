@@ -8,7 +8,7 @@ import java.util.Map;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public abstract class ajf {
-    public static final dov a = new dov(new h(29));
+    public static final Kotlin$Lazy a = new Kotlin$Lazy(new h(29));
 
     public static List b(Boolean bool) {
         try {
@@ -22,7 +22,7 @@ public abstract class ajf {
             while (baaVar.hasNext()) {
                 arrayList.add(baaVar.next());
             }
-            abe.am(arrayList, aboVar);
+            StaticHelpers3.am(arrayList, aboVar);
             for (Object obj : arrayList) {
                 String strG = ((BaseHook) obj).g();
                 Object arrayList2 = linkedHashMap.get(strG);
@@ -37,18 +37,18 @@ public abstract class ajf {
                 String str = (String) entry.getKey();
                 List<BaseHook> list = (List) entry.getValue();
                 List listBf = dqc.toSingletonList(new nz(str));
-                ArrayList arrayList4 = new ArrayList(abb.ak(list, 10));
+                ArrayList arrayList4 = new ArrayList(StaticHelpers4.ak(list, 10));
                 for (doo dooVar : list) {
                     String strF = dooVar.f();
                     String strO = dooVar.o();
                     bgf bgfVarP = dooVar.p();
                     arrayList4.add(new ob(strF, strO, dooVar, bgfVarP != null ? new bq(bgfVarP, 4) : null));
                 }
-                abf.an(arrayList3, aaz.o(listBf, arrayList4));
+                StaticHelpers2.an(arrayList3, StaticHelpers5.o(listBf, arrayList4));
             }
-            return aaz.z(arrayList3);
+            return StaticHelpers5.z(arrayList3);
         } catch (Exception unused) {
-            return EmptyReadonlyList.a;
+            return EmptyReadonlyList.INSTANCE;
         }
     }
 }

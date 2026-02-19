@@ -70,7 +70,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 objX = null;
             }
         } catch (Throwable th) {
-            objX = bhu.x(th);
+            objX = FastKV.x(th);
         }
         if (objX instanceof dcx) {
             objX = null;
@@ -85,12 +85,12 @@ public final /* synthetic */ class bn implements IInvokable {
 
     private final Object e(Object obj) {
         View view = (View) obj;
-        View viewK = dkz.k(view, R.layout.module_dialog_anti_sns_delete, null, false);
+        View viewK = StaticHelpers6.k(view, R.layout.module_dialog_anti_sns_delete, null, false);
         int i = R.id.moduleDialogEdtAntiSnsDeleteTip;
-        TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK, R.id.moduleDialogEdtAntiSnsDeleteTip);
+        TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK, R.id.moduleDialogEdtAntiSnsDeleteTip);
         if (textInputEditText != null) {
             i = R.id.moduleDialogInputAntiSnsDeleteTip;
-            if (((TextInputLayout) KotlinHelpers2.aq(viewK, R.id.moduleDialogInputAntiSnsDeleteTip)) != null) {
+            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK, R.id.moduleDialogInputAntiSnsDeleteTip)) != null) {
                 LinearLayout linearLayout = (LinearLayout) viewK;
                 cee ceeVar = new cee(linearLayout, textInputEditText, 1);
                 textInputEditText.setText(gg.a.o());
@@ -143,105 +143,105 @@ public final /* synthetic */ class bn implements IInvokable {
                 return kotlinUnitVar;
             case 1:
                 View view = (View) obj;
-                View viewK = dkz.k(view, R.layout.module_dialog_account_info_center, null, false);
+                View viewK = StaticHelpers6.k(view, R.layout.module_dialog_account_info_center, null, false);
                 int i9 = R.id.moduleDialogCbAccountInfoCenterAliasShow;
-                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.aq(viewK,
+                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.recursivelyFindViewById(viewK,
                         R.id.moduleDialogCbAccountInfoCenterAliasShow);
                 if (materialCheckBox != null) {
                     i9 = R.id.moduleDialogCbAccountInfoCenterNameShow;
-                    MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) KotlinHelpers2.aq(viewK,
+                    MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) KotlinHelpers2.recursivelyFindViewById(viewK,
                             R.id.moduleDialogCbAccountInfoCenterNameShow);
                     if (materialCheckBox2 != null) {
                         i9 = R.id.moduleDialogCbAccountInfoCenterSignShow;
-                        MaterialCheckBox materialCheckBox3 = (MaterialCheckBox) KotlinHelpers2.aq(viewK,
+                        MaterialCheckBox materialCheckBox3 = (MaterialCheckBox) KotlinHelpers2.recursivelyFindViewById(viewK,
                                 R.id.moduleDialogCbAccountInfoCenterSignShow);
                         if (materialCheckBox3 != null) {
                             i9 = R.id.moduleDialogEdtAccountInfoCenterAlias;
-                            TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                            TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                     R.id.moduleDialogEdtAccountInfoCenterAlias);
                             if (textInputEditText != null) {
                                 i9 = R.id.moduleDialogEdtAccountInfoCenterAliasTopMargin;
-                                TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                                TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                         R.id.moduleDialogEdtAccountInfoCenterAliasTopMargin);
                                 if (textInputEditText2 != null) {
                                     i9 = R.id.moduleDialogEdtAccountInfoCenterAvatarRadian;
-                                    TextInputEditText textInputEditText3 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                                    TextInputEditText textInputEditText3 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                             R.id.moduleDialogEdtAccountInfoCenterAvatarRadian);
                                     if (textInputEditText3 != null) {
                                         i9 = R.id.moduleDialogEdtAccountInfoCenterAvatarSize;
-                                        TextInputEditText textInputEditText4 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                                        TextInputEditText textInputEditText4 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                 R.id.moduleDialogEdtAccountInfoCenterAvatarSize);
                                         if (textInputEditText4 != null) {
                                             i9 = R.id.moduleDialogEdtAccountInfoCenterAvatarTopMargin;
-                                            TextInputEditText textInputEditText5 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                                            TextInputEditText textInputEditText5 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                     R.id.moduleDialogEdtAccountInfoCenterAvatarTopMargin);
                                             if (textInputEditText5 != null) {
                                                 i9 = R.id.moduleDialogEdtAccountInfoCenterBgDarkColor;
-                                                TextInputEditText textInputEditText6 = (TextInputEditText) KotlinHelpers2.aq(viewK,
+                                                TextInputEditText textInputEditText6 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                         R.id.moduleDialogEdtAccountInfoCenterBgDarkColor);
                                                 if (textInputEditText6 != null) {
                                                     i9 = R.id.moduleDialogEdtAccountInfoCenterBgLightColor;
-                                                    TextInputEditText textInputEditText7 = (TextInputEditText) KotlinHelpers2.aq(
+                                                    TextInputEditText textInputEditText7 = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(
                                                             viewK, R.id.moduleDialogEdtAccountInfoCenterBgLightColor);
                                                     if (textInputEditText7 != null) {
                                                         i9 = R.id.moduleDialogEdtAccountInfoCenterName;
                                                         TextInputEditText textInputEditText8 = (TextInputEditText) KotlinHelpers2
-                                                                .aq(viewK, R.id.moduleDialogEdtAccountInfoCenterName);
+                                                                .recursivelyFindViewById(viewK, R.id.moduleDialogEdtAccountInfoCenterName);
                                                         if (textInputEditText8 != null) {
                                                             i9 = R.id.moduleDialogEdtAccountInfoCenterNameTopMargin;
                                                             TextInputEditText textInputEditText9 = (TextInputEditText) KotlinHelpers2
-                                                                    .aq(viewK,
+                                                                    .recursivelyFindViewById(viewK,
                                                                             R.id.moduleDialogEdtAccountInfoCenterNameTopMargin);
                                                             if (textInputEditText9 != null) {
                                                                 i9 = R.id.moduleDialogEdtAccountInfoCenterSign;
                                                                 TextInputEditText textInputEditText10 = (TextInputEditText) KotlinHelpers2
-                                                                        .aq(viewK,
+                                                                        .recursivelyFindViewById(viewK,
                                                                                 R.id.moduleDialogEdtAccountInfoCenterSign);
                                                                 if (textInputEditText10 != null) {
                                                                     i9 = R.id.moduleDialogEdtAccountInfoCenterSignTopMargin;
                                                                     TextInputEditText textInputEditText11 = (TextInputEditText) KotlinHelpers2
-                                                                            .aq(viewK,
+                                                                            .recursivelyFindViewById(viewK,
                                                                                     R.id.moduleDialogEdtAccountInfoCenterSignTopMargin);
                                                                     if (textInputEditText11 != null) {
                                                                         i9 = R.id.moduleDialogInputAccountInfoCenterAlias;
-                                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                                 R.id.moduleDialogInputAccountInfoCenterAlias)) != null) {
                                                                             i9 = R.id.moduleDialogInputAccountInfoCenterAliasTopMargin;
-                                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                                            if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                                     R.id.moduleDialogInputAccountInfoCenterAliasTopMargin)) != null) {
                                                                                 i9 = R.id.moduleDialogInputAccountInfoCenterAvatarRadian;
-                                                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                                                if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                                         R.id.moduleDialogInputAccountInfoCenterAvatarRadian)) != null) {
                                                                                     i9 = R.id.moduleDialogInputAccountInfoCenterAvatarSize;
-                                                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK,
+                                                                                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                                                                             R.id.moduleDialogInputAccountInfoCenterAvatarSize)) != null) {
                                                                                         i9 = R.id.moduleDialogInputAccountInfoCenterAvatarTopMargin;
-                                                                                        if (((TextInputLayout) KotlinHelpers2.aq(
+                                                                                        if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(
                                                                                                 viewK,
                                                                                                 R.id.moduleDialogInputAccountInfoCenterAvatarTopMargin)) != null) {
                                                                                             i9 = R.id.moduleDialogInputAccountInfoCenterBgDarkColor;
                                                                                             if (((TextInputLayout) KotlinHelpers2
-                                                                                                    .aq(viewK,
+                                                                                                    .recursivelyFindViewById(viewK,
                                                                                                             R.id.moduleDialogInputAccountInfoCenterBgDarkColor)) != null) {
                                                                                                 i9 = R.id.moduleDialogInputAccountInfoCenterBgLightColor;
                                                                                                 if (((TextInputLayout) KotlinHelpers2
-                                                                                                        .aq(viewK,
+                                                                                                        .recursivelyFindViewById(viewK,
                                                                                                                 R.id.moduleDialogInputAccountInfoCenterBgLightColor)) != null) {
                                                                                                     i9 = R.id.moduleDialogInputAccountInfoCenterName;
                                                                                                     if (((TextInputLayout) KotlinHelpers2
-                                                                                                            .aq(viewK,
+                                                                                                            .recursivelyFindViewById(viewK,
                                                                                                                     R.id.moduleDialogInputAccountInfoCenterName)) != null) {
                                                                                                         i9 = R.id.moduleDialogInputAccountInfoCenterNameTopMargin;
                                                                                                         if (((TextInputLayout) KotlinHelpers2
-                                                                                                                .aq(viewK,
+                                                                                                                .recursivelyFindViewById(viewK,
                                                                                                                         R.id.moduleDialogInputAccountInfoCenterNameTopMargin)) != null) {
                                                                                                             i9 = R.id.moduleDialogInputAccountInfoCenterSign;
                                                                                                             if (((TextInputLayout) KotlinHelpers2
-                                                                                                                    .aq(viewK,
+                                                                                                                    .recursivelyFindViewById(viewK,
                                                                                                                             R.id.moduleDialogInputAccountInfoCenterSign)) != null) {
                                                                                                                 i9 = R.id.moduleDialogInputAccountInfoCenterSignTopMargin;
                                                                                                                 if (((TextInputLayout) KotlinHelpers2
-                                                                                                                        .aq(viewK,
+                                                                                                                        .recursivelyFindViewById(viewK,
                                                                                                                                 R.id.moduleDialogInputAccountInfoCenterSignTopMargin)) != null) {
                                                                                                                     LinearLayout linearLayout = (LinearLayout) viewK;
                                                                                                                     ced cedVar = new ced(
@@ -393,7 +393,7 @@ public final /* synthetic */ class bn implements IInvokable {
                         objX = null;
                     }
                 } catch (Throwable th) {
-                    objX = bhu.x(th);
+                    objX = FastKV.x(th);
                 }
                 if (objX instanceof dcx) {
                     objX = null;
@@ -408,8 +408,8 @@ public final /* synthetic */ class bn implements IInvokable {
                     z zVar2 = viewGroup != null ? new z(viewGroup, 8) : null;
                     if (zVar2 == null || !zVar2.hasNext()) {
                         while (!zVar.hasNext() && !arrayList.isEmpty()) {
-                            zVar = (Iterator) aaz.l(arrayList);
-                            abf.ar(arrayList);
+                            zVar = (Iterator) StaticHelpers5.l(arrayList);
+                            StaticHelpers2.ar(arrayList);
                         }
                     } else {
                         arrayList.add(zVar);
@@ -423,18 +423,18 @@ public final /* synthetic */ class bn implements IInvokable {
                 cfVar.getClass();
                 LinkedHashMap linkedHashMap = blu.a;
                 cls = ViewGroup.LayoutParams.class;
-                Class<ViewGroup.LayoutParams> clsBf = cnf.bf(dal.b(cls));
+                Class<ViewGroup.LayoutParams> clsBf = HugeSyntheticPileOfHelpers.bf(dal.b(cls));
                 cls = clsBf != null ? clsBf : ViewGroup.LayoutParams.class;
                 ArrayList arrayList2 = new ArrayList();
                 if (blu.c) {
-                    arrayList2.add(new blv(emn.an(context), 0));
+                    arrayList2.add(new blv(StaticHelpers7.an(context), 0));
                 }
-                blu bluVar = new blu(aaz.z(arrayList2));
+                blu bluVar = new blu(StaticHelpers5.z(arrayList2));
                 blr blrVarI = blu.i(bluVar, cls, null, false, context);
                 blu bluVar2 = blrVarI.f;
-                blq blqVarD = awp.d(bluVar2, blrVarI.a, blrVarI.b, blr.g(blrVarI, 0, 0, null, 55));
+                blq blqVarD = GifEncoder.d(bluVar2, blrVarI.a, blrVarI.b, blr.g(blrVarI, 0, 0, null, 55));
                 cls2 = RelativeLayout.class;
-                Class<RelativeLayout> clsBf2 = cnf.bf(dal.b(cls2));
+                Class<RelativeLayout> clsBf2 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                 if (clsBf2 == null) {
                     clsBf2 = cls2;
                 }
@@ -442,7 +442,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 LinkedHashMap linkedHashMap2 = bluVar2.f;
                 ViewGroup viewGroup2 = (ViewGroup) viewH;
                 viewGroup2.setLayoutParams(blqVarD.f());
-                Class<RelativeLayout> clsBf3 = cnf.bf(dal.b(cls2));
+                Class<RelativeLayout> clsBf3 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                 if (clsBf3 == null) {
                     clsBf3 = cls2;
                 }
@@ -465,17 +465,17 @@ public final /* synthetic */ class bn implements IInvokable {
                 if (linkedHashMap2.size() != size) {
                     throw new cth(concat("Performers are not allowed to appear in ", name, " DSL creation process."));
                 }
-                Class<RelativeLayout> clsBf4 = cnf.bf(dal.b(cls2));
+                Class<RelativeLayout> clsBf4 = HugeSyntheticPileOfHelpers.bf(dal.b(cls2));
                 blr.i(blrVarI, null, clsBf4 != null ? clsBf4 : RelativeLayout.class);
                 blr.h(blrVarI, viewGroup2);
                 cls3 = RelativeLayout.LayoutParams.class;
-                Class<RelativeLayout.LayoutParams> clsBf5 = cnf.bf(dal.b(cls3));
+                Class<RelativeLayout.LayoutParams> clsBf5 = HugeSyntheticPileOfHelpers.bf(dal.b(cls3));
                 blr blrVarI2 = blu.i(bluVar2, clsBf5 != null ? clsBf5 : RelativeLayout.LayoutParams.class, viewGroup2,
                         true, null);
                 blu bluVar3 = blrVarI2.f;
-                blq blqVarD2 = awp.d(bluVar3, blrVarI2.a, blrVarI2.b, blr.g(blrVarI2, 0, 0, new bn(i8), 31));
+                blq blqVarD2 = GifEncoder.d(bluVar3, blrVarI2.a, blrVarI2.b, blr.g(blrVarI2, 0, 0, new bn(i8), 31));
                 cls4 = FrameLayout.class;
-                Class<FrameLayout> clsBf6 = cnf.bf(dal.b(cls4));
+                Class<FrameLayout> clsBf6 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
                 if (clsBf6 == null) {
                     clsBf6 = cls4;
                 }
@@ -483,7 +483,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 LinkedHashMap linkedHashMap3 = bluVar3.f;
                 ViewGroup viewGroup3 = (ViewGroup) viewH2;
                 viewGroup3.setLayoutParams(blqVarD2.f());
-                Class<FrameLayout> clsBf7 = cnf.bf(dal.b(cls4));
+                Class<FrameLayout> clsBf7 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
                 if (clsBf7 == null) {
                     clsBf7 = cls4;
                 }
@@ -495,27 +495,27 @@ public final /* synthetic */ class bn implements IInvokable {
                 if (linkedHashMap3.size() != size2) {
                     throw new cth(concat("Performers are not allowed to appear in ", name2, " DSL creation process."));
                 }
-                Class<FrameLayout> clsBf8 = cnf.bf(dal.b(cls4));
+                Class<FrameLayout> clsBf8 = HugeSyntheticPileOfHelpers.bf(dal.b(cls4));
                 blr.i(blrVarI2, null, clsBf8 != null ? clsBf8 : FrameLayout.class);
                 blr.h(blrVarI2, viewGroup3);
                 cls5 = FrameLayout.LayoutParams.class;
-                Class<FrameLayout.LayoutParams> clsBf9 = cnf.bf(dal.b(cls5));
+                Class<FrameLayout.LayoutParams> clsBf9 = HugeSyntheticPileOfHelpers.bf(dal.b(cls5));
                 blr blrVarI3 = blu.i(bluVar3, clsBf9 != null ? clsBf9 : FrameLayout.LayoutParams.class, viewGroup3,
                         true, null);
                 blu bluVar4 = blrVarI3.f;
                 bv bvVar = bv.a;
-                blq blqVarD3 = awp.d(bluVar4, blrVarI3.a, blrVarI3.b,
+                blq blqVarD3 = GifEncoder.d(bluVar4, blrVarI3.a, blrVarI3.b,
                         blr.g(blrVarI3, blrVarI3.k(Integer.valueOf(bvVar.k())).intValue(),
                                 blrVarI3.k(Integer.valueOf(bvVar.k())).intValue(), null, 60));
                 cls6 = ImageView.class;
-                Class<ImageView> clsBf10 = cnf.bf(dal.b(cls6));
+                Class<ImageView> clsBf10 = HugeSyntheticPileOfHelpers.bf(dal.b(cls6));
                 if (clsBf10 == null) {
                     clsBf10 = cls6;
                 }
                 View viewH3 = blu.dexFind(bluVar4, clsBf10, null, blrVarI3.j());
                 LinkedHashMap linkedHashMap4 = bluVar4.f;
                 viewH3.setLayoutParams(blqVarD3.f());
-                Class<ImageView> clsBf11 = cnf.bf(dal.b(cls6));
+                Class<ImageView> clsBf11 = HugeSyntheticPileOfHelpers.bf(dal.b(cls6));
                 if (clsBf11 == null) {
                     clsBf11 = cls6;
                 }
@@ -588,7 +588,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 if (linkedHashMap4.size() != size3) {
                     throw new cth(concat("Performers are not allowed to appear in ", name3, " DSL creation process."));
                 }
-                Class<ImageView> clsBf12 = cnf.bf(dal.b(cls6));
+                Class<ImageView> clsBf12 = HugeSyntheticPileOfHelpers.bf(dal.b(cls6));
                 blr.i(blrVarI3, null, clsBf12 != null ? clsBf12 : ImageView.class);
                 blr.h(blrVarI3, viewH3);
                 cf.n(cfVar, blrVarI2, R.id.AccountInfoCenter_tvName, R.id.AccountInfoCenter_flAvatar, cb.a.k(), 18.0f,
@@ -659,16 +659,16 @@ public final /* synthetic */ class bn implements IInvokable {
                         "你的账号可能有安全风险，为了你的账号安全，暂时无法在新设备登录，你可以在常用手机登录微信，或者轻触「了解详情」查看更多信息。" /* "你的账号可能有安全风险，为了你的账号安全，暂时无法在新设备登录，你可以在常用手机登录微信，或者轻触「了解详情」查看更多信息。" /* "你的账号可能有安全风险，为了你的账号安全，暂时无法在新设备登录，你可以在常用手机登录微信，或者轻触「了解详情」查看更多信息。" /* cnb.z(-90104118901546L)  */,
                         "账号状态异常，本次登录已失效。请尝试重新登录，并根据弹窗提示操作。" /* "账号状态异常，本次登录已失效。请尝试重新登录，并根据弹窗提示操作。" /* "账号状态异常，本次登录已失效。请尝试重新登录，并根据弹窗提示操作。" /* cnb.z(-89283780148010L)  */);
                 ae aeVar = cyj.f;
-                String str = (String) aaz.q(listAg);
+                String str = (String) StaticHelpers5.q(listAg);
                 String strZ10 = "确定" /* "确定" /* "确定" /* cnb.z(-89154931129130L)  */;
                 String strZ11 = "取消" /* "取消" /* "取消" /* cnb.z(-89159226096426L)  */;
                 aqx aqxVar = new aqx();
                 aqx aqxVar2 = new aqx();
                 byoVar.getClass();
                 int i11 = 0;
-                ((MethodHookWrapper) dkz.n(new Object[] { dal.b(Context.class), dal.b(String.class), dal.b(String.class),
+                ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(Context.class), dal.b(String.class), dal.b(String.class),
                         dal.b(String.class), dal.b(String.class), dal.b(DialogInterface.OnClickListener.class),
-                        dal.b(DialogInterface.OnClickListener.class) }, 7, dqc.bh(emn.az(byn.a)).t()))
+                        dal.b(DialogInterface.OnClickListener.class) }, 7, dqc.bh(StaticHelpers7.az(byn.a)).getMethodResolverBasedOnPreviouslyProvidedConfig()))
                         .e(context4, str, strZ9, strZ10, strZ11, aqxVar, aqxVar2);
                 return kotlinUnitVar;
             case 5:
@@ -680,29 +680,29 @@ public final /* synthetic */ class bn implements IInvokable {
                         objX2 = null;
                     }
                 } catch (Throwable th2) {
-                    objX2 = bhu.x(th2);
+                    objX2 = FastKV.x(th2);
                 }
                 Object obj2 = objX2 instanceof dcx ? null : objX2;
                 throwIfVar1IsNull(obj2);
                 int i12 = 0;
-                azg azgVarR = dqc.bi(obj2).r();
-                azgVarR.ab = "f" /* "f" /* "f" /* cnb.z(-477029132663594L)  */;
-                Object objD = ((azk) aaz.e(azgVarR.c())).d();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).r();
+                fieldResolverVarR.name = "f" /* "f" /* "f" /* cnb.z(-477029132663594L)  */;
+                Object objD = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).d();
                 throwIfVar1IsNull(objD);
-                azg azgVarR2 = dqc.bi(objD).r();
-                azgVarR2.ab = "f" /* "f" /* "f" /* cnb.z(-477037722598186L)  */;
-                Object objE = ((azk) aaz.e(azgVarR2.c())).e();
+                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objD).r();
+                fieldResolverVarR2.name = "f" /* "f" /* "f" /* cnb.z(-477037722598186L)  */;
+                Object objE = ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).e();
                 throwIfVar1IsNull(objE);
                 try {
                     if (new JSONObject((String) objE)
                             .optJSONArray("ad_slot_data" /* "ad_slot_data" /* "ad_slot_data" /* cnb.z(-477046312532778L)  */) != null) {
-                        azg azgVarR3 = dqc.bi(objD).r();
-                        azgVarR3.ab = "f" /* "f" /* "f" /* cnb.z(-476973298088746L)  */;
-                        ((azk) aaz.e(azgVarR3.c())).f("{}" /* "{}" /* "{}" /* cnb.z(-476981888023338L)  */);
+                        FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objD).r();
+                        fieldResolverVarR3.name = "f" /* "f" /* "f" /* cnb.z(-476973298088746L)  */;
+                        ((azk) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).f("{}" /* "{}" /* "{}" /* cnb.z(-476981888023338L)  */);
                     }
                     break;
                 } catch (Throwable th3) {
-                    bhu.x(th3);
+                    FastKV.x(th3);
                 }
                 return kotlinUnitVar;
             case 6:
@@ -716,7 +716,7 @@ public final /* synthetic */ class bn implements IInvokable {
                                                                                                  * 476917463513898L)
                                                                                                  */ };
                 fj fjVar = new fj(i3);
-                fjVar.b = aaz.ab(EmptyReadonlyList.a);
+                fjVar.b = StaticHelpers5.ab(EmptyReadonlyList.INSTANCE);
                 String str2 = strArr[0];
                 if (str2 != null) {
                     cstVar = new cst();
@@ -751,7 +751,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 aelVar2.f = "搜索群聊" /* "搜索群聊" /* "搜索群聊" /* cnb.z(-491039315983146L)  */;
                 String strZ12 = "群聊" /* "群聊" /* "群聊" /* cnb.z(-491069380754218L)  */;
                 ArrayList<GroupInfo> arrayListT = bmy.t();
-                ArrayList arrayList4 = new ArrayList(abb.ak(arrayListT, 10));
+                ArrayList arrayList4 = new ArrayList(StaticHelpers4.ak(arrayListT, 10));
                 for (GroupInfo groupInfo : arrayListT) {
                     String roomId = groupInfo.getRoomId();
                     StringBuilder sb = new StringBuilder();
@@ -892,7 +892,7 @@ public final /* synthetic */ class bn implements IInvokable {
                         objX3 = null;
                     }
                 } catch (Throwable th4) {
-                    objX3 = bhu.x(th4);
+                    objX3 = FastKV.x(th4);
                 }
                 if (objX3 instanceof dcx) {
                     objX3 = null;
@@ -905,7 +905,7 @@ public final /* synthetic */ class bn implements IInvokable {
                         objX4 = null;
                     }
                 } catch (Throwable th5) {
-                    objX4 = bhu.x(th5);
+                    objX4 = FastKV.x(th5);
                 }
                 if (objX4 instanceof dcx) {
                     objX4 = null;
@@ -937,10 +937,10 @@ public final /* synthetic */ class bn implements IInvokable {
                                 hookParam3.setResult(map);
                                 int i13 = 0;
                                 dlx.a.getClass();
-                                cde cdeVarT = dqc.bi(dlx.b()).t();
-                                cdeVarT.ab = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
-                                Object objJ = ((MethodHookWrapper) dkz.n(new Object[] { dal.b(String.class), dal.b(Object[].class) },
-                                        2, cdeVarT)).j("SELECT createTime FROM message WHERE msgSvrId = ?" /*
+                                MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                                methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
+                                Object objJ = ((MethodHookWrapper) StaticHelpers6.n(new Object[] { dal.b(String.class), dal.b(Object[].class) },
+                                        2, methodResolverVarT)).j("SELECT createTime FROM message WHERE msgSvrId = ?" /*
                                                                                                             * cnb.z(-
                                                                                                             * 442695164099370L)
                                                                                                             */,

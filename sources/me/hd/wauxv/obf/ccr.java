@@ -30,7 +30,7 @@ public final class ccr implements View.OnClickListener {
                 }
                 ccuVar.getClass();
                 if (view != null) {
-                    bht bhtVar = anj.a;
+                    ResourcesCompat resourcesCompatVar = anj.a;
                     view.performHapticFeedback(3);
                 }
                 if (ccuVar.bk == null) {
@@ -71,7 +71,7 @@ public final class ccr implements View.OnClickListener {
                 }
                 ccuVar3.getClass();
                 if (view != null) {
-                    bht bhtVar2 = anj.a;
+                    ResourcesCompat resourcesCompatVar2 = anj.a;
                     view.performHapticFeedback(3);
                 }
                 ccuVar3.getClass();
@@ -86,7 +86,7 @@ public final class ccr implements View.OnClickListener {
                 }
                 ccuVar4.getClass();
                 if (view != null) {
-                    bht bhtVar3 = anj.a;
+                    ResourcesCompat resourcesCompatVar3 = anj.a;
                     view.performHapticFeedback(3);
                 }
                 ccuVar4.getClass();

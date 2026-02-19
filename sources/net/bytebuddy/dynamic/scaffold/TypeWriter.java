@@ -18,7 +18,7 @@ import java.util.Map;
 import java.util.Set;
 import javax.annotation.Nonnull;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.asm.AsmVisitorWrapper;
 import net.bytebuddy.build.AccessControllerPlugin;
@@ -43,8 +43,6 @@ import net.bytebuddy.description.type.TypeList;
 import net.bytebuddy.dynamic.ClassFileLocator;
 import net.bytebuddy.dynamic.DynamicType;
 import net.bytebuddy.dynamic.TypeResolutionStrategy;
-import net.bytebuddy.dynamic.scaffold.MethodRegistry;
-import net.bytebuddy.dynamic.scaffold.TypeInitializer;
 import net.bytebuddy.dynamic.scaffold.inline.MethodRebaseResolver;
 import net.bytebuddy.dynamic.scaffold.inline.RebaseImplementationTarget;
 import net.bytebuddy.dynamic.scaffold.subclass.SubclassImplementationTarget;
@@ -234,7 +232,7 @@ public interface TypeWriter<T> {
             }
 
             public int hashCode() {
-                int iF = (dkz.f(this.instrumentedType, bjs.e(this.target, getClass().hashCode() * 31, 31), 31)
+                int iF = (StaticHelpers6.f(this.instrumentedType, bjs.e(this.target, getClass().hashCode() * 31, 31), 31)
                         + (this.original ? 1 : 0)) * 31;
                 long j = this.suffix;
                 return Arrays.hashCode(this.binaryRepresentation) + ((iF + ((int) (j ^ (j >>> 32)))) * 31);
@@ -1230,7 +1228,7 @@ public interface TypeWriter<T> {
                         if (!z4 || this.classFileVersion.isAtLeast(ClassFileVersion.JAVA_V4)) {
                             return;
                         }
-                        StringBuilder sbZ = dkz.z("Cannot define generic field '", str, "' for class file version ");
+                        StringBuilder sbZ = StaticHelpers6.concatAndToSb("Cannot define generic field '", str, "' for class file version ");
                         sbZ.append(this.classFileVersion);
                         throw new IllegalStateException(sbZ.toString());
                     }
@@ -1257,7 +1255,7 @@ public interface TypeWriter<T> {
                     public void assertMethod(String str, boolean z, boolean z2, boolean z3, boolean z4, boolean z5,
                             boolean z6, boolean z7, boolean z8) {
                         if (z8 && !this.classFileVersion.isAtLeast(ClassFileVersion.JAVA_V4)) {
-                            StringBuilder sbZ = dkz.z("Cannot define generic method '", str,
+                            StringBuilder sbZ = StaticHelpers6.concatAndToSb("Cannot define generic method '", str,
                                     "' for class file version ");
                             sbZ.append(this.classFileVersion);
                             throw new IllegalStateException(sbZ.toString());
@@ -2185,7 +2183,7 @@ public interface TypeWriter<T> {
                                                                                     + ((this.fieldPool.hashCode()
                                                                                             + ((this.classFileVersion
                                                                                                     .hashCode()
-                                                                                                    + dkz.f(this.instrumentedType,
+                                                                                                    + StaticHelpers6.f(this.instrumentedType,
                                                                                                             getClass()
                                                                                                                     .hashCode()
                                                                                                                     * 31,
@@ -2490,7 +2488,7 @@ public interface TypeWriter<T> {
 
             @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.Default
             public int hashCode() {
-                return this.classFileLocator.hashCode() + dkz.f(this.originalType, super.hashCode() * 31, 31);
+                return this.classFileLocator.hashCode() + StaticHelpers6.f(this.originalType, super.hashCode() * 31, 31);
             }
 
             @Override // net.bytebuddy.dynamic.scaffold.TypeWriter
@@ -3996,8 +3994,8 @@ public interface TypeWriter<T> {
 
                 public int hashCode() {
                     return this.attributeAppender.hashCode()
-                            + ((this.bridgeTypes.hashCode() + dkz.c(this.bridgeTarget,
-                                    dkz.f(this.instrumentedType,
+                            + ((this.bridgeTypes.hashCode() + StaticHelpers6.c(this.bridgeTarget,
+                                    StaticHelpers6.f(this.instrumentedType,
                                             (this.delegate.hashCode() + (getClass().hashCode() * 31)) * 31, 31),
                                     31)) * 31);
                 }
@@ -4186,8 +4184,8 @@ public interface TypeWriter<T> {
                     }
 
                     public int hashCode() {
-                        return this.attributeAppender.hashCode() + dkz.f(this.bridgeType, dkz.c(this.bridgeTarget,
-                                dkz.c(this.visibilityBridge, getClass().hashCode() * 31, 31), 31), 31);
+                        return this.attributeAppender.hashCode() + StaticHelpers6.f(this.bridgeType, StaticHelpers6.c(this.bridgeTarget,
+                                StaticHelpers6.c(this.visibilityBridge, getClass().hashCode() * 31, 31), 31), 31);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
@@ -4282,7 +4280,7 @@ public interface TypeWriter<T> {
 
                     public int hashCode() {
                         return this.methodAttributeAppender.hashCode() + ((this.annotationValue.hashCode()
-                                + dkz.c(this.methodDescription, getClass().hashCode() * 31, 31)) * 31);
+                                + StaticHelpers6.c(this.methodDescription, getClass().hashCode() * 31, 31)) * 31);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
@@ -4367,7 +4365,7 @@ public interface TypeWriter<T> {
                     public int hashCode() {
                         return this.visibility.hashCode()
                                 + ((this.methodAttributeAppender.hashCode() + ((this.byteCodeAppender.hashCode()
-                                        + dkz.c(this.methodDescription, getClass().hashCode() * 31, 31)) * 31)) * 31);
+                                        + StaticHelpers6.c(this.methodDescription, getClass().hashCode() * 31, 31)) * 31)) * 31);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record
@@ -4457,7 +4455,7 @@ public interface TypeWriter<T> {
 
                     public int hashCode() {
                         return this.visibility.hashCode() + ((this.methodAttributeAppender.hashCode()
-                                + dkz.c(this.methodDescription, getClass().hashCode() * 31, 31)) * 31);
+                                + StaticHelpers6.c(this.methodDescription, getClass().hashCode() * 31, 31)) * 31);
                     }
 
                     @Override // net.bytebuddy.dynamic.scaffold.TypeWriter.MethodPool.Record

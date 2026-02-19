@@ -9,13 +9,13 @@ public class et implements ahp, Closeable {
     public final es a;
     public final ahh b;
 
-    public et(bug bugVar, ahj ahjVar) {
-        throwIfVar1IsNull(bugVar, "lifeEvent");
-        throwIfVar1IsNull(ahjVar, "dispatcher");
-        doh.b(new dx(bugVar, this));
+    public et(LifeEventEnum lifeEventEnumVar, Dispatcher dispatcherVar) {
+        throwIfVar1IsNull(lifeEventEnumVar, "lifeEvent");
+        throwIfVar1IsNull(dispatcherVar, "dispatcher");
+        doh.b(new dx(lifeEventEnumVar, this));
         es esVar = new es(this);
         this.a = esVar;
-        this.b = bmy.aa(ahjVar, esVar)._v(new dob());
+        this.b = bmy.aa(dispatcherVar, esVar)._v(new dob());
     }
 
     public void c(CancellationException cancellationException) {
@@ -45,6 +45,6 @@ public class et implements ahp, Closeable {
 
     public void f(Throwable th) {
         throwIfVar1IsNull(th, "e");
-        cnf.ay(th);
+        HugeSyntheticPileOfHelpers.ay(th);
     }
 }

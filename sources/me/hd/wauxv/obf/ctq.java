@@ -9,15 +9,15 @@ public final class ctq {
     public final int a;
     public List b;
     public final List c;
-    public dhx d;
+    public ConnectivityMonitor d;
     public String e;
 
-    public ctq(int i, List list, List list2, dhx dhxVar) {
+    public ctq(int i, List list, List list2, ConnectivityMonitor connectivityMonitorVar) {
         throwIfVar1IsNull(list2, "elements");
         this.a = i;
         this.b = list;
         this.c = list2;
-        this.d = dhxVar;
+        this.d = connectivityMonitorVar;
     }
 
     public final boolean equals(Object obj) {
@@ -36,8 +36,8 @@ public final class ctq {
         int iHashCode = Integer.hashCode(this.a) * 31;
         List list = this.b;
         int iG = bjs.g(this.c, (iHashCode + (list == null ? 0 : list.hashCode())) * 31, 31);
-        dhx dhxVar = this.d;
-        return iG + (dhxVar != null ? dhxVar.hashCode() : 0);
+        ConnectivityMonitor connectivityMonitorVar = this.d;
+        return iG + (connectivityMonitorVar != null ? connectivityMonitorVar.hashCode() : 0);
     }
 
     public final String toString() {

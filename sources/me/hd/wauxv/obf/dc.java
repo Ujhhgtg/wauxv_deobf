@@ -47,11 +47,11 @@ public final class dc implements Runnable {
                 ((Runnable) obj).run();
                 return;
             case 1:
-                jx jxVar = (jx) obj;
-                jxVar.getClass();
+                FactoryPools factoryPoolsVar = (FactoryPools) obj;
+                factoryPoolsVar.getClass();
                 while (true) {
                     try {
-                        jxVar.n((de) ((ReferenceQueue) jxVar.f).remove());
+                        factoryPoolsVar.n((de) ((ReferenceQueue) factoryPoolsVar.f).remove());
                     } catch (InterruptedException unused) {
                         Thread.currentThread().interrupt();
                     }
@@ -91,7 +91,7 @@ public final class dc implements Runnable {
                     long j = jCurrentAnimationTimeMillis2 - meVar.f;
                     meVar.f = jCurrentAnimationTimeMillis2;
                     bwoVar.r.scrollListBy((int) (j * ((fJ * 4.0f) + ((-4.0f) * fJ * fJ)) * meVar.d));
-                    WeakHashMap weakHashMap = eqz.a;
+                    WeakHashMap weakHashMap = ViewCompat.a;
                     aqeVar.postOnAnimation(this);
                     return;
                 }
@@ -135,9 +135,9 @@ public final class dc implements Runnable {
                 valueAnimator.start();
                 return;
             case 7:
-                bdj bdjVar = (bdj) obj;
-                if (bdjVar.cc != null) {
-                    bdjVar.co().getClass();
+                SomeFragmentManager someFragmentManagerVar = (SomeFragmentManager) obj;
+                if (someFragmentManagerVar.cc != null) {
+                    someFragmentManagerVar.co().getClass();
                     return;
                 }
                 return;
@@ -215,13 +215,13 @@ public final class dc implements Runnable {
                         bqxVar.ac = jCurrentTimeMillis;
                     }
                     bqxVar.s.scrollBy(i5, iL2);
-                    czx czxVar = bqxVar.d;
-                    if (czxVar != null) {
-                        bqxVar.ao(czxVar);
+                    SomeView someViewVar = bqxVar.d;
+                    if (someViewVar != null) {
+                        bqxVar.ao(someViewVar);
                     }
                     bqxVar.s.removeCallbacks(bqxVar.t);
                     RecyclerView recyclerView4 = bqxVar.s;
-                    WeakHashMap weakHashMap2 = eqz.a;
+                    WeakHashMap weakHashMap2 = ViewCompat.a;
                     recyclerView4.postOnAnimation(this);
                     return;
                 }

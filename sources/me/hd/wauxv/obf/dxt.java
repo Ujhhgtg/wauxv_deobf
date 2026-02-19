@@ -13,7 +13,7 @@ public final class dxt {
 
     public /* synthetic */ dxt(int i, Integer num, dvl dvlVar, ejx ejxVar, eer eerVar, Integer num2, Integer num3) {
         if (63 != (i & 63)) {
-            bht.ah(i, 63, dxr.b.getDescriptor());
+            ResourcesCompat.ah(i, 63, dxr.b.getDescriptor());
             throw null;
         }
         this.a = num;

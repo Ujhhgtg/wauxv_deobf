@@ -6,7 +6,7 @@ import com.android.dx.util.AnnotatedOutput;
 import com.android.dx.util.Hex;
 import java.util.Collection;
 import java.util.TreeMap;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -75,7 +75,7 @@ public final class FieldIdsSection extends MemberIdsSection {
         int fileOffset = size == 0 ? 0 : getFileOffset();
         if (annotatedOutput.annotates()) {
             annotatedOutput.annotate(4, "field_ids_size:  " + Hex.u4(size));
-            dkz.ab(fileOffset, new StringBuilder("field_ids_off:   "), annotatedOutput, 4);
+            StaticHelpers6.ab(fileOffset, new StringBuilder("field_ids_off:   "), annotatedOutput, 4);
         }
         annotatedOutput.writeInt(size);
         annotatedOutput.writeInt(fileOffset);

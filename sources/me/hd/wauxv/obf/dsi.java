@@ -9,7 +9,7 @@ public final class dsi {
 
     public /* synthetic */ dsi(int i, String str, String str2) {
         if (3 != (i & 3)) {
-            bht.ah(i, 3, dsg.b.getDescriptor());
+            ResourcesCompat.ah(i, 3, dsg.b.getDescriptor());
             throw null;
         }
         this.a = str;

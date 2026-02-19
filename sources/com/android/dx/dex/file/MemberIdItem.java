@@ -4,7 +4,7 @@ import com.android.dx.rop.cst.CstMemberRef;
 import com.android.dx.rop.cst.CstNat;
 import com.android.dx.util.AnnotatedOutput;
 import com.android.dx.util.Hex;
-import me.hd.wauxv.obf.dkz;
+import me.hd.wauxv.obf.StaticHelpers6;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -49,7 +49,7 @@ public abstract class MemberIdItem extends IdItem {
             sb.append(Hex.u2(iIndexOf));
             annotatedOutput.annotate(2, sb.toString());
             annotatedOutput.annotate(2, String.format("  %-10s %s", getTypoidName() + ':', Hex.u2(typoidIdx)));
-            dkz.ab(iIndexOf2, new StringBuilder("  name_idx:  "), annotatedOutput, 4);
+            StaticHelpers6.ab(iIndexOf2, new StringBuilder("  name_idx:  "), annotatedOutput, 4);
         }
         annotatedOutput.writeShort(iIndexOf);
         annotatedOutput.writeShort(typoidIdx);

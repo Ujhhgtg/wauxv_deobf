@@ -10,7 +10,7 @@ public final class ego {
 
     public /* synthetic */ ego(int i, Integer num, Integer num2, String str) {
         if (7 != (i & 7)) {
-            bht.ah(i, 7, egm.b.getDescriptor());
+            ResourcesCompat.ah(i, 7, egm.b.getDescriptor());
             throw null;
         }
         this.a = num;
