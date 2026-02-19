@@ -97,9 +97,9 @@ public final class asv implements GestureDetector.OnGestureListener, GestureDete
         dle dleVarU = bhs.u(styles, udVar, 0);
         dle dleVarU2 = bhs.u(styles, udVar, 1);
         if (dleVarU != null) {
-            ud udVarO2 = text.x().o(udVar.b, cnd.an(dleVarU.i(), text.y(udVar.b).b));
+            ud udVarO2 = text.x().o(udVar.b, KotlinHelpers2.an(dleVarU.i(), text.y(udVar.b).b));
             if (dleVarU2 != null) {
-                udVarO = text.x().o(udVar.b, cnd.an(dleVarU2.i(), text.y(udVar.b).b));
+                udVarO = text.x().o(udVar.b, KotlinHelpers2.an(dleVarU2.i(), text.y(udVar.b).b));
             } else {
                 sq sqVarX = text.x();
                 int i3 = udVar.b;
@@ -174,7 +174,7 @@ public final class asv implements GestureDetector.OnGestureListener, GestureDete
                         return true;
                     }
                 } else {
-                    int iAn = cnd.an(iV <= this.al ? this.an : this.am, text.d);
+                    int iAn = KotlinHelpers2.an(iV <= this.al ? this.an : this.am, text.d);
                     iMin = Math.min(iAn, iV);
                     iMax = Math.max(iAn, iV);
                     sqVarX = text.x();
@@ -201,7 +201,7 @@ public final class asv implements GestureDetector.OnGestureListener, GestureDete
                         return true;
                     }
                 } else {
-                    int iAn2 = cnd.an(iV <= this.al ? this.an : this.am, text.d);
+                    int iAn2 = KotlinHelpers2.an(iV <= this.al ? this.an : this.am, text.d);
                     iMin = Math.min(iAn2, iV);
                     iMax = Math.max(iAn2, iV);
                     sqVarX = text.x();

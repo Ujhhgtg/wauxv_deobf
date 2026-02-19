@@ -32,7 +32,7 @@ public abstract class cjg {
 
     public cjg(ckl cklVar) {
         LinkedHashMap linkedHashMap = ckm.a;
-        this.f = cnd.au(cklVar.getClass());
+        this.f = KotlinHelpers2.au(cklVar.getClass());
         this.g = new ea(this);
         this.j = new dlo(0);
     }
@@ -415,7 +415,7 @@ public abstract class cjg {
                                             Iterator it4 = it3;
                                             int i8 = i7 + 1;
                                             if (i7 < 0) {
-                                                aba.aj();
+                                                OtherStaticHelpers.aj();
                                                 throw null;
                                             }
                                             String str4 = (String) next;
@@ -434,7 +434,7 @@ public abstract class cjg {
                                             }
                                             try {
                                                 cjd.x(bundleR2, str4, strDecode, (cin) linkedHashMap.get(str4));
-                                                arrayList2.add(ens.a);
+                                                arrayList2.add(KotlinUnit.INSTANCE);
                                                 dovVar2 = dovVar;
                                                 it3 = it4;
                                                 i7 = i6;
@@ -444,7 +444,7 @@ public abstract class cjg {
                                     }
                                     dovVar = dovVar2;
                                     i5 = 0;
-                                    if (!bhu.ak(linkedHashMap, new IHasInvokeMethod() { // from class: me.hd.wauxv.obf.cjb
+                                    if (!bhu.ak(linkedHashMap, new IInvokable() { // from class: me.hd.wauxv.obf.cjb
                                         @Override // me.hd.wauxv.obf.bgf
                                         public final Object invoke(Object obj2) {
                                             boolean zContainsKey;
@@ -517,10 +517,10 @@ public abstract class cjg {
                                 arrayList3.add(str2.subSequence(iEnd, str2.length()).toString());
                                 listBf = arrayList3;
                             } else {
-                                listBf = dqc.bf(str2.toString());
+                                listBf = dqc.toSingletonList(str2.toString());
                             }
                             boolean zIsEmpty = listBf.isEmpty();
-                            List listU2 = avd.a;
+                            List listU2 = EmptyReadonlyList.a;
                             if (!zIsEmpty) {
                                 ListIterator listIterator = listBf.listIterator(listBf.size());
                                 while (true) {
@@ -552,7 +552,7 @@ public abstract class cjg {
                                 arrayList4.add(str.subSequence(iEnd2, str.length()).toString());
                                 listBf2 = arrayList4;
                             } else {
-                                listBf2 = dqc.bf(str.toString());
+                                listBf2 = dqc.toSingletonList(str.toString());
                             }
                             if (!listBf2.isEmpty()) {
                                 ListIterator listIterator2 = listBf2.listIterator(listBf2.size());
@@ -597,7 +597,7 @@ public abstract class cjg {
                             }
                         }
                         i3 = 1;
-                        if (bhu.ak(linkedHashMap, new IHasInvokeMethod() { // from class: me.hd.wauxv.obf.cjb
+                        if (bhu.ak(linkedHashMap, new IInvokable() { // from class: me.hd.wauxv.obf.cjb
                             @Override // me.hd.wauxv.obf.bgf
                             public final Object invoke(Object obj2) {
                                 boolean zContainsKey;
@@ -675,7 +675,7 @@ public abstract class cjg {
                                     dovVar = dovVar2;
                                 }
                                 i5 = 0;
-                                if (!bhu.ak(linkedHashMap, new IHasInvokeMethod() { // from class: me.hd.wauxv.obf.cjb
+                                if (!bhu.ak(linkedHashMap, new IInvokable() { // from class: me.hd.wauxv.obf.cjb
                                     @Override // me.hd.wauxv.obf.bgf
                                     public final Object invoke(Object obj2) {
                                         boolean zContainsKey;
@@ -736,7 +736,7 @@ public abstract class cjg {
                         }
                     }
                     i3 = 1;
-                    if (bhu.ak(linkedHashMap, new IHasInvokeMethod() { // from class: me.hd.wauxv.obf.cjb
+                    if (bhu.ak(linkedHashMap, new IInvokable() { // from class: me.hd.wauxv.obf.cjb
                         @Override // me.hd.wauxv.obf.bgf
                         public final Object invoke(Object obj2) {
                             boolean zContainsKey;
@@ -774,7 +774,7 @@ public abstract class cjg {
                         }
                     }
                     i3 = 1;
-                    if (bhu.ak(linkedHashMap, new IHasInvokeMethod() { // from class: me.hd.wauxv.obf.cjb
+                    if (bhu.ak(linkedHashMap, new IInvokable() { // from class: me.hd.wauxv.obf.cjb
                         @Override // me.hd.wauxv.obf.bgf
                         public final Object invoke(Object obj2) {
                             boolean zContainsKey;

@@ -20,7 +20,7 @@ public class beq extends ckl {
     public final LinkedHashSet g = new LinkedHashSet();
     public final ArrayList h = new ArrayList();
     public final bel m = new bel(this, 0);
-    public final q n = new q(this, 4);
+    public final StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg n = new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(this, 4);
 
     /*
      * JADX INFO: compiled from:
@@ -211,7 +211,7 @@ public class beq extends ckl {
         mu muVarT = t(cioVar, null);
         List list = (List) ((dml) w().e.h).c();
         if (list.size() > 1) {
-            cio cioVar2 = (cio) aaz.h(aba.af(list) - 1, list);
+            cio cioVar2 = (cio) aaz.h(OtherStaticHelpers.af(list) - 1, list);
             if (cioVar2 != null) {
                 o(this, cioVar2.f, 6);
             }
@@ -288,7 +288,7 @@ public class beq extends ckl {
                 throwIfVar1IsNull(pairVar, "it");
                 String str2 = (String) pairVar.a;
                 if (i2 < 0) {
-                    aba.aj();
+                    OtherStaticHelpers.aj();
                     throw null;
                 }
                 if (nullSafeIsEqual(str, str2)) {

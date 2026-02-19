@@ -37,7 +37,7 @@ class FieldReaderObjectField<T> extends FieldReaderObject<T> {
         try {
             this.field.setBoolean(t, z);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 
@@ -99,7 +99,7 @@ class FieldReaderObjectField<T> extends FieldReaderObject<T> {
         try {
             this.field.setByte(t, b);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 
@@ -117,7 +117,7 @@ class FieldReaderObjectField<T> extends FieldReaderObject<T> {
         try {
             this.field.setShort(t, s);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 
@@ -135,7 +135,7 @@ class FieldReaderObjectField<T> extends FieldReaderObject<T> {
         try {
             this.field.setInt(t, i);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 
@@ -153,7 +153,7 @@ class FieldReaderObjectField<T> extends FieldReaderObject<T> {
         try {
             this.field.setLong(t, j);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 
@@ -171,7 +171,7 @@ class FieldReaderObjectField<T> extends FieldReaderObject<T> {
         try {
             this.field.setFloat(t, f);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 
@@ -189,7 +189,7 @@ class FieldReaderObjectField<T> extends FieldReaderObject<T> {
         try {
             this.field.setDouble(t, d);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 
@@ -207,7 +207,7 @@ class FieldReaderObjectField<T> extends FieldReaderObject<T> {
         try {
             this.field.setChar(t, c);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 
@@ -263,7 +263,7 @@ class FieldReaderObjectField<T> extends FieldReaderObject<T> {
         try {
             this.field.set(t, obj);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 }

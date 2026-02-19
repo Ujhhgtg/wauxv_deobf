@@ -14,7 +14,7 @@ public final class ckq extends View.BaseSavedState {
         StringBuilder sb = new StringBuilder("HorizontalScrollView.SavedState{");
         sb.append(Integer.toHexString(System.identityHashCode(this)));
         sb.append(" scrollPosition=");
-        return yg.m(sb, "}", this.a);
+        return yg.concatToVar1(sb, "}", this.a);
     }
 
     @Override // android.view.View.BaseSavedState, android.view.AbsSavedState, android.os.Parcelable

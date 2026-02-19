@@ -9,7 +9,7 @@ public final /* synthetic */ class edr implements bgx {
     static {
         edr edrVar = new edr();
         b = edrVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.qh1Proto" /* cnb.z(-274882201910058L) */, edrVar, 3);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.qh1Proto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.qh1Proto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.qh1Proto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.qh1Proto" /* cnb.z(-274882201910058L)   */, edrVar, 3);
         bjs.y(-276741922749226L, cucVar, false, 1);
         bjs.y(-276711857978154L, cucVar, false, 2);
         bjs.y(-276690383141674L, cucVar, false, 3);

@@ -76,7 +76,7 @@ public abstract class CSVReader<T> extends StreamReader<T> implements Closeable 
         if ((this.features & StreamReader.Feature.ErrorAsNull.mask) != 0) {
             return null;
         }
-        String strM = yg.m(new StringBuilder("read csv error, line "), ", column ", this.rowCount);
+        String strM = yg.concatToVar1(new StringBuilder("read csv error, line "), ", column ", this.rowCount);
         List<String> list = this.columns;
         if (list != null && i < list.size()) {
             str = this.columns.get(i);

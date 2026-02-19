@@ -1,7 +1,5 @@
 package bsh;
 
-import bsh.BshClassManager;
-import bsh.This;
 import bsh.util.ReferenceCache;
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
@@ -21,7 +19,7 @@ import java.util.WeakHashMap;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import me.hd.wauxv.obf.bjs;
+
 import me.hd.wauxv.obf.cpt;
 import me.hd.wauxv.obf.cpv;
 import me.hd.wauxv.obf.dkz;
@@ -98,7 +96,7 @@ public final class Reflect {
 
     public static int findMostSpecificBshMethodIndex(Class<?>[] clsArr, List<BshMethod> list) {
         for (int i = 0; i < list.size(); i++) {
-            StringBuilder sbR = yg.r(i, "  ", ":");
+            StringBuilder sbR = yg.concatVar213(i, "  ", ":");
             sbR.append(list.get(i).toString());
             sbR.append(" ");
             sbR.append(list.get(i).getClass().getName());
@@ -161,7 +159,7 @@ public final class Reflect {
 
     public static int findMostSpecificInvocableIndex(Class<?>[] clsArr, List<Invocable> list) {
         for (int i = 0; i < list.size(); i++) {
-            StringBuilder sbR = yg.r(i, "  ", "=");
+            StringBuilder sbR = yg.concatVar213(i, "  ", "=");
             sbR.append(list.get(i).toString());
             Interpreter.debug(sbR.toString());
         }

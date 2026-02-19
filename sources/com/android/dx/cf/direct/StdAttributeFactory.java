@@ -308,7 +308,7 @@ public class StdAttributeFactory extends AttributeFactory {
             while (i8 < unsignedShort2) {
                 int unsignedShort3 = byteArray.getUnsignedShort(i4);
                 if (parseObserver != null) {
-                    parseObserver.parsed(byteArray, i4, 2, dkz.q(unsignedShort3, yg.r(i8, "bootstrap_arguments[", "]")));
+                    parseObserver.parsed(byteArray, i4, 2, dkz.q(unsignedShort3, yg.concatVar213(i8, "bootstrap_arguments[", "]")));
                 }
                 bootstrapMethodArgumentsList.set(i8, constantPool.get(unsignedShort3));
                 i8++;

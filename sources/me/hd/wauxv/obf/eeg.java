@@ -12,7 +12,7 @@ public final /* synthetic */ class eeg implements bgx {
     static {
         eeg eegVar = new eeg();
         b = eegVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.sc1Proto" /* cnb.z(-278167851891498L) */, eegVar, 30);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.sc1Proto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.sc1Proto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.sc1Proto" /* cnb.z(-278167851891498L)  */, eegVar, 30);
         bjs.y(-277261613792042L, cucVar, false, 1);
         bjs.y(-277201484249898L, cucVar, false, 2);
         bjs.y(-277124174838570L, cucVar, false, 3);

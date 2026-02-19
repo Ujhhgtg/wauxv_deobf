@@ -9,8 +9,8 @@ import java.util.List;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public abstract class der {
-    public static final List a = aba.ag(Application.class, deh.class);
-    public static final List b = dqc.bf(deh.class);
+    public static final List a = OtherStaticHelpers.argsToList(Application.class, deh.class);
+    public static final List b = dqc.toSingletonList(deh.class);
 
     public static final Constructor c(Class cls, List list) {
         throwIfVar1IsNull(list, com.umeng.ccg.a.A);
@@ -19,7 +19,7 @@ public abstract class der {
             Constructor constructor = (Constructor) zVarAe.next();
             Class<?>[] parameterTypes = constructor.getParameterTypes();
             throwIfVar1IsNull(parameterTypes, "getParameterTypes(...)");
-            List listAb = la.ab(parameterTypes);
+            List listAb = SomeStaticHelpers.ab(parameterTypes);
             if (list.equals(listAb)) {
                 return constructor;
             }

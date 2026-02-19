@@ -22,7 +22,7 @@ public final class awn extends ac implements awm, Serializable {
             return false;
         }
         Enum r4 = (Enum) obj;
-        return ((Enum) la.q(this.b, r4.ordinal())) == r4;
+        return ((Enum) SomeStaticHelpers.q(this.b, r4.ordinal())) == r4;
     }
 
     @Override // java.util.List
@@ -42,7 +42,7 @@ public final class awn extends ac implements awm, Serializable {
         }
         Enum r4 = (Enum) obj;
         int iOrdinal = r4.ordinal();
-        if (((Enum) la.q(this.b, iOrdinal)) == r4) {
+        if (((Enum) SomeStaticHelpers.q(this.b, iOrdinal)) == r4) {
             return iOrdinal;
         }
         return -1;
@@ -55,7 +55,7 @@ public final class awn extends ac implements awm, Serializable {
         }
         Enum r4 = (Enum) obj;
         int iOrdinal = r4.ordinal();
-        if (((Enum) la.q(this.b, iOrdinal)) == r4) {
+        if (((Enum) SomeStaticHelpers.q(this.b, iOrdinal)) == r4) {
             return iOrdinal;
         }
         return -1;

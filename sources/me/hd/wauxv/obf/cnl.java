@@ -6,10 +6,10 @@ import android.content.Intent;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class cnl extends SwitchHook implements IStartActivity {
-    public static final cnl a = new cnl("NewBizListHook" /* cnb.z(-476453607045930L) */);
-    public static final String b = "订阅号" /* cnb.z(-481598977866538L) */;
-    public static final String c = "订阅消息列表" /* cnb.z(-481616157735722L) */;
-    public static final String i = "订阅号消息从瀑布流模式改为列表模式" /* cnb.z(-482135848778538L) */;
+    public static final cnl a = new cnl("NewBizListHook" /* "NewBizListHook" /* "NewBizListHook" /* cnb.z(-476453607045930L)  */);
+    public static final String b = "订阅号" /* "订阅号" /* "订阅号" /* cnb.z(-481598977866538L)  */;
+    public static final String c = "订阅消息列表" /* "订阅消息列表" /* "订阅消息列表" /* cnb.z(-481616157735722L)  */;
+    public static final String i = "订阅号消息从瀑布流模式改为列表模式" /* "订阅号消息从瀑布流模式改为列表模式" /* "订阅号消息从瀑布流模式改为列表模式" /* cnb.z(-482135848778538L)  */;
     public static final boolean j;
 
     /* JADX WARN: Found duplicated region for block: B:11:0x005a */
@@ -54,7 +54,7 @@ public final class cnl extends SwitchHook implements IStartActivity {
                 }
                 bmo.a.getClass();
                 intent.setComponent(new ComponentName(bmo.p(),
-                        "com.tencent.mm.ui.conversation.NewBizConversationUI" /* cnb.z(-481856675904298L) */));
+                        "com.tencent.mm.ui.conversation.NewBizConversationUI" /* "com.tencent.mm.ui.conversation.NewBizConversationUI" /* "com.tencent.mm.ui.conversation.NewBizConversationUI" /* cnb.z(-481856675904298L)  */));
             }
         }
     }

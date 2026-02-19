@@ -48,8 +48,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EdgeEffect;
 import android.widget.OverScroller;
 import android.widget.Toast;
-import com.umeng.analytics.pro.bt;
-import com.umeng.analytics.pro.q;
+
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -156,7 +155,7 @@ import me.hd.wauxv.obf.hz;
 import me.hd.wauxv.obf.ik;
 import me.hd.wauxv.obf.io;
 import me.hd.wauxv.obf.jx;
-import me.hd.wauxv.obf.la;
+import me.hd.wauxv.obf.SomeStaticHelpers;
 import me.hd.wauxv.obf.pe;
 import me.hd.wauxv.obf.pf;
 import me.hd.wauxv.obf.pg;
@@ -603,7 +602,7 @@ public class CodeEditor extends View implements afp, bph {
                         int[] iArr = chsVar.a;
                         int i8 = chsVar.b;
                         if (i != i8) {
-                            la._al(iArr, i + 1, i, i8, iArr);
+                            SomeStaticHelpers._al(iArr, i + 1, i, i8, iArr);
                         }
                         iArr[i] = 0;
                         chsVar.b++;
@@ -623,9 +622,9 @@ public class CodeEditor extends View implements afp, bph {
                 int[] iArr3 = chsVar.a;
                 int i9 = chsVar.b;
                 if (i != i9) {
-                    la._al(iArr3, i + i6, i, i9, iArr3);
+                    SomeStaticHelpers._al(iArr3, i + i6, i, i9, iArr3);
                 }
-                la._ao(iArr2, i, 0, 12, iArr3);
+                SomeStaticHelpers._ao(iArr2, i, 0, 12, iArr3);
                 chsVar.b += i6;
             }
             for (cba cbaVar : (ArrayList) ikVar.d) {
@@ -2076,7 +2075,7 @@ public class CodeEditor extends View implements afp, bph {
         }
         if (iV > iV2) {
             es(i3, z, i4, i, i2, i5);
-            StringBuilder sbQ = yg.q(iV, iV2, "setSelectionRegion() error: start > end:start = ", " end = ",
+            StringBuilder sbQ = yg.concatVar31425(iV, iV2, "setSelectionRegion() error: start > end:start = ", " end = ",
                     " lineLeft = ");
             sbQ.append(i);
             sbQ.append(" columnLeft = ");

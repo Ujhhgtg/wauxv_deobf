@@ -9,7 +9,7 @@ public final /* synthetic */ class ebj implements bgx {
     static {
         ebj ebjVar = new ebj();
         b = ebjVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.n84Proto" /* cnb.z(-234810157038378L) */, ebjVar, 9);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.n84Proto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.n84Proto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.n84Proto" /* cnb.z(-234810157038378L)  */, ebjVar, 9);
         bjs.y(-234470854621994L, cucVar, false, 1);
         bjs.y(-234402135145258L, cucVar, false, 2);
         bjs.y(-234324825733930L, cucVar, false, 3);

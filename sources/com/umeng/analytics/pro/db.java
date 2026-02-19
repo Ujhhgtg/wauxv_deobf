@@ -23,7 +23,7 @@ public class db {
         sb.append("' type:");
         sb.append((int) this.b);
         sb.append(" field-id:");
-        return yg.m(sb, ">", this.c);
+        return yg.concatToVar1(sb, ">", this.c);
     }
 
     public db(String str, byte b, short s) {

@@ -8,7 +8,7 @@ public final class cvh extends bws implements IDexFind {
     public static final cvh a = new cvh();
 
     public final Class b() {
-        return ajn.ag("com.tencent.mm.ui.base.preference.Preference" /* cnb.z(-101992588376874L) */);
+        return ajn.tryGetClassByClassName("com.tencent.mm.ui.base.preference.Preference" /* "com.tencent.mm.ui.base.preference.Preference" /* "com.tencent.mm.ui.base.preference.Preference" /* "com.tencent.mm.ui.base.preference.Preference" /* cnb.z(-101992588376874L)   */);
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -17,8 +17,8 @@ public final class cvh extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(cvd.a, dexKitBridge, new crl(24));
-        emn.aj(cvf.a, dexKitBridge, new crl(25));
-        emn.aj(cve.a, dexKitBridge, new crl(26));
+        emn.aj(cvd.a, dexKitBridge, new AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(24));
+        emn.aj(cvf.a, dexKitBridge, new AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(25));
+        emn.aj(cve.a, dexKitBridge, new AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(26));
     }
 }

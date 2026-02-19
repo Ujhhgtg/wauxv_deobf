@@ -7,9 +7,9 @@ import java.util.Iterator;
 public final class dpu implements dft {
     public final /* synthetic */ int a;
     public final dft b;
-    public final IHasInvokeMethod c;
+    public final IInvokable c;
 
-    public /* synthetic */ dpu(dft dftVar, IHasInvokeMethod bgfVar, int i) {
+    public /* synthetic */ dpu(dft dftVar, IInvokable bgfVar, int i) {
         this.a = i;
         this.b = dftVar;
         this.c = bgfVar;

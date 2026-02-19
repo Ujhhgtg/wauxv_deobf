@@ -8,7 +8,7 @@ import java.util.Iterator;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class act implements IHasInvokeMethod {
+public final /* synthetic */ class act implements IInvokable {
     public final /* synthetic */ int a;
 
     public /* synthetic */ act(int i) {
@@ -38,41 +38,41 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
         cls2 = Boolean.class;
         cls3 = String.class;
         int i5 = 1;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         switch (i) {
             case 0:
-                ((amm) obj).b = new act(i5);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new act(i5);
+                return kotlinUnitVar;
             case 1:
                 bag bagVar = (bag) obj;
-                String[] strArr = { "com.tencent.mm.storage" /* cnb.z(-385584983964458L) */ };
+                String[] strArr = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-385584983964458L)  */ };
                 bagVar.getClass();
-                bagVar.a = la.ab(strArr);
+                bagVar.a = SomeStaticHelpers.ab(strArr);
                 zb zbVar = new zb();
-                zbVar.k("MicroMsg.ConfigStorage" /* cnb.z(-385469019847466L) */,
-                        "shouldProcessEvent db is close :%s" /* cnb.z(-385919991413546L) */);
+                zbVar.k("MicroMsg.ConfigStorage" /* "MicroMsg.ConfigStorage" /* "MicroMsg.ConfigStorage" /* cnb.z(-385469019847466L)  */,
+                        "shouldProcessEvent db is close :%s" /* "shouldProcessEvent db is close :%s" /* "shouldProcessEvent db is close :%s" /* cnb.z(-385919991413546L)  */);
                 bagVar.b = zbVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 2:
-                ((amm) obj).c = new act(i4);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new act(i4);
+                return kotlinUnitVar;
             case 3:
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
-                cdjVar.t("login_weixin_username" /* cnb.z(-109113644153642L) */,
-                        "login_user_name" /* cnb.z(-109001975003946L) */,
-                        "last_login_nick_name" /* cnb.z(-108933255527210L) */,
-                        "last_login_bind_mobile" /* cnb.z(-109375637158698L) */, "last_login_bind_email" /*
+                cdjVar.t("login_weixin_username" /* "login_weixin_username" /* "login_weixin_username" /* cnb.z(-109113644153642L)  */,
+                        "login_user_name" /* "login_user_name" /* "login_user_name" /* cnb.z(-109001975003946L)  */,
+                        "last_login_nick_name" /* "last_login_nick_name" /* "last_login_nick_name" /* cnb.z(-108933255527210L)  */,
+                        "last_login_bind_mobile" /* "last_login_bind_mobile" /* "last_login_bind_mobile" /* cnb.z(-109375637158698L)  */, "last_login_bind_email" /*
                                                                                                           * cnb.z(-
                                                                                                           * 109328392518442L)
                                                                                                           */,
-                        "last_login_bind_qq" /* cnb.z(-109216723368746L) */);
+                        "last_login_bind_qq" /* "last_login_bind_qq" /* "last_login_bind_qq" /* cnb.z(-109216723368746L)  */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 4:
-                ((amm) obj).b = new act(5);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new act(5);
+                return kotlinUnitVar;
             case 5:
                 bag bagVar2 = (bag) obj;
                 zb zbVar2 = new zb();
@@ -88,45 +88,45 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
                 zbVar2.e = azlVar;
                 fj fjVar = new fj();
                 cdj cdjVar2 = new cdj();
-                cdjVar2.s("compareContent" /* cnb.z(-103521596734250L) */);
+                cdjVar2.s("compareContent" /* "compareContent" /* "compareContent" /* cnb.z(-103521596734250L)  */);
                 fjVar.f(cdjVar2);
                 cdj cdjVar3 = new cdj();
-                cdjVar3.s("op" /* cnb.z(-103457172224810L) */);
+                cdjVar3.s("op" /* "op" /* "op" /* cnb.z(-103457172224810L)  */);
                 fjVar.f(cdjVar3);
                 cdj cdjVar4 = new cdj();
                 fj fjVar2 = new fj();
                 cdj cdjVar5 = new cdj();
-                cdjVar5.t("MicroMsg.Label.ContactLabelUI" /* cnb.z(-103392747715370L) */, "cpan[saveContact]" /*
+                cdjVar5.t("MicroMsg.Label.ContactLabelUI" /* "MicroMsg.Label.ContactLabelUI" /* "MicroMsg.Label.ContactLabelUI" /* cnb.z(-103392747715370L)  */, "cpan[saveContact]" /*
                                                                                                                * cnb.z(-
                                                                                                                * 103865194117930L)
                                                                                                                */);
                 fjVar2.f(cdjVar5);
                 cdj cdjVar6 = new cdj();
-                cdjVar6.t("MicroMsg.Label.ContactLabelManagerImpl" /* cnb.z(-103736345099050L) */,
-                        "add contact label faild." /* cnb.z(-105218108816170L) */);
+                cdjVar6.t("MicroMsg.Label.ContactLabelManagerImpl" /* "MicroMsg.Label.ContactLabelManagerImpl" /* "MicroMsg.Label.ContactLabelManagerImpl" /* cnb.z(-103736345099050L)  */,
+                        "add contact label faild." /* "add contact label faild." /* "add contact label faild." /* cnb.z(-105218108816170L)  */);
                 fjVar2.f(cdjVar6);
                 cdjVar4.j = fjVar2;
                 fjVar.f(cdjVar4);
                 zbVar2.f = fjVar;
                 bagVar2.getClass();
                 bagVar2.b = zbVar2;
-                return ensVar;
+                return kotlinUnitVar;
             case 6:
-                ((amm) obj).c = new act(i2);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new act(i2);
+                return kotlinUnitVar;
             case 7:
-                ((amm) obj).b = new act(9);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new act(9);
+                return kotlinUnitVar;
             case 8:
                 bah bahVar2 = (bah) obj;
-                String[] strArr2 = { "com.tencent.mm.storage" /* cnb.z(-360983411292970L) */ };
+                String[] strArr2 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-360983411292970L)  */ };
                 bahVar2.getClass();
-                bahVar2.a = la.ab(strArr2);
+                bahVar2.a = SomeStaticHelpers.ab(strArr2);
                 cdj cdjVar7 = new cdj();
-                cdjVar7.t("MicroMsg.Label.ContactLabelStorage" /* cnb.z(-362516714617642L) */,
-                        "cpan[getLabelIdByStr] label id is %s" /* cnb.z(-362332031023914L) */);
+                cdjVar7.t("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-362516714617642L)  */,
+                        "cpan[getLabelIdByStr] label id is %s" /* "cpan[getLabelIdByStr] label id is %s" /* "cpan[getLabelIdByStr] label id is %s" /* cnb.z(-362332031023914L)  */);
                 bahVar2.d = cdjVar7;
-                return ensVar;
+                return kotlinUnitVar;
             case 9:
                 bag bagVar3 = (bag) obj;
                 zb zbVar3 = new zb();
@@ -140,64 +140,64 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
                 cdj.m(cdjVar8, 8);
                 cdjVar8.r(emn.bb(aeeVar).getDeclaringClass());
                 fj fjVar4 = new fj(i3);
-                fjVar4.b = aaz.ab(avd.a);
+                fjVar4.b = aaz.ab(EmptyReadonlyList.a);
                 cdjVar8.f = fjVar4;
                 fjVar3.f(cdjVar8);
                 zbVar3.f = fjVar3;
                 bagVar3.getClass();
                 bagVar3.b = zbVar3;
-                return ensVar;
+                return kotlinUnitVar;
             case 10:
-                ((amm) obj).c = new act(14);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new act(14);
+                return kotlinUnitVar;
             case 11:
-                ((amm) obj).c = new act(13);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new act(13);
+                return kotlinUnitVar;
             case 12:
-                ((amm) obj).c = new act(15);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new act(15);
+                return kotlinUnitVar;
             case 13:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar9 = new cdj();
                 aeg.a.getClass();
                 cdjVar9.o(emn.bb(aee.a).getDeclaringClass());
-                cdjVar9.t("MicroMsg.Label.ContactLabelStorage" /* cnb.z(-386474042194730L) */,
-                        "getAllContactLable time:%s count:%s stack:%s" /* cnb.z(-386289358601002L) */,
+                cdjVar9.t("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-386474042194730L)  */,
+                        "getAllContactLable time:%s count:%s stack:%s" /* "getAllContactLable time:%s count:%s stack:%s" /* "getAllContactLable time:%s count:%s stack:%s" /* cnb.z(-386289358601002L)  */,
                         "select * from ContactLabel where isTemporary = 0  order by createTime ASC " /*
                                                                                                       * cnb.z(-
                                                                                                       * 383381665741610L)
                                                                                                       */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar9;
-                return ensVar;
+                return kotlinUnitVar;
             case 14:
                 bah bahVar4 = (bah) obj;
-                String[] strArr3 = { "com.tencent.mm.storage" /* cnb.z(-386830524480298L) */ };
+                String[] strArr3 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-386830524480298L)  */ };
                 bahVar4.getClass();
-                bahVar4.a = la.ab(strArr3);
+                bahVar4.a = SomeStaticHelpers.ab(strArr3);
                 cdj cdjVar10 = new cdj();
-                cdjVar10.t("MicroMsg.Label.ContactLabelStorage" /* cnb.z(-386783279840042L) */,
-                        "cpan[getLabelIdByStr] label id is %s" /* cnb.z(-386048840432426L) */);
+                cdjVar10.t("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-386783279840042L)  */,
+                        "cpan[getLabelIdByStr] label id is %s" /* "cpan[getLabelIdByStr] label id is %s" /* "cpan[getLabelIdByStr] label id is %s" /* cnb.z(-386048840432426L)  */);
                 bahVar4.d = cdjVar10;
-                return ensVar;
+                return kotlinUnitVar;
             case 15:
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar11 = new cdj();
                 aeg.a.getClass();
                 cdjVar11.o(emn.bb(aee.a).getDeclaringClass());
-                cdjVar11.t("MicroMsg.Label.ContactLabelStorage" /* cnb.z(-383574939269930L) */,
-                        "getUserNameListById time:%s id:%s count:%s stack:%s" /* cnb.z(-382892039469866L) */);
+                cdjVar11.t("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-383574939269930L)  */,
+                        "getUserNameListById time:%s id:%s count:%s stack:%s" /* "getUserNameListById time:%s id:%s count:%s stack:%s" /* "getUserNameListById time:%s id:%s count:%s stack:%s" /* cnb.z(-382892039469866L)  */);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar11;
-                return ensVar;
+                return kotlinUnitVar;
             case 16:
                 return Boolean.FALSE;
             case 17:
-                ((amm) obj).b = new act(20);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new act(20);
+                return kotlinUnitVar;
             case 18:
-                ((amm) obj).c = new act(19);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new act(19);
+                return kotlinUnitVar;
             case 19:
                 bah bahVar6 = (bah) obj;
                 cdj cdjVar12 = new cdj();
@@ -207,19 +207,19 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
                 cls3 = clsBf3 != null ? clsBf3 : String.class;
                 Class<Boolean> clsBf4 = cnf.bf(dal.b(cls2));
                 cdjVar12.q(cls3, clsBf4 != null ? clsBf4 : Boolean.class);
-                cdjVar12.t("[get]username = %s" /* cnb.z(-384309378677546L) */);
+                cdjVar12.t("[get]username = %s" /* "[get]username = %s" /* "[get]username = %s" /* cnb.z(-384309378677546L)  */);
                 bahVar6.getClass();
                 bahVar6.d = cdjVar12;
-                return ensVar;
+                return kotlinUnitVar;
             case 20:
                 bag bagVar4 = (bag) obj;
-                String[] strArr4 = { "com.tencent.mm.storage" /* cnb.z(-384549896846122L) */ };
+                String[] strArr4 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-384549896846122L)  */ };
                 bagVar4.getClass();
-                bagVar4.a = la.ab(strArr4);
+                bagVar4.a = SomeStaticHelpers.ab(strArr4);
                 zb zbVar4 = new zb();
-                zbVar4.k("PRAGMA table_info( contact_ext )" /* cnb.z(-384451112598314L) */);
+                zbVar4.k("PRAGMA table_info( contact_ext )" /* "PRAGMA table_info( contact_ext )" /* "PRAGMA table_info( contact_ext )" /* cnb.z(-384451112598314L)  */);
                 bagVar4.b = zbVar4;
-                return ensVar;
+                return kotlinUnitVar;
             case 21:
                 Object objE = ((HookParam) obj).getThisObject();
                 Activity activity = (Activity) (objE instanceof Activity ? objE : null);
@@ -228,10 +228,10 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf5 != null ? clsBf5 : Activity.class).getName()).toString());
                 }
-                int i6 = bte.a;
+                int i6 = 0;
                 cde cdeVarT = dqc.bi(activity).t();
-                cdeVarT.ab = "getPreferenceScreen" /* cnb.z(-37649683315498L) */;
-                Object objJ = ((cdk) dkz.m(cdeVarT)).j(new Object[0]);
+                cdeVarT.ab = "getPreferenceScreen" /* "getPreferenceScreen" /* "getPreferenceScreen" /* cnb.z(-37649683315498L)  */;
+                Object objJ = ((MethodHookWrapper) dkz.m(cdeVarT)).j(new Object[0]);
                 throwIfVar1IsNull(objJ);
                 BaseAdapter baseAdapter = (BaseAdapter) objJ;
                 for (bnd bndVar : aeq.b) {
@@ -242,8 +242,8 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
                     } catch (Exception e) {
                         ArrayList arrayList = ewq.a;
                         StringBuilder sb = new StringBuilder();
-                        sb.append("onAddItems " /* cnb.z(-37529424231210L) */);
-                        ewq.e(yg.n(sb,
+                        sb.append("onAddItems " /* "onAddItems " /* "onAddItems " /* cnb.z(-37529424231210L)  */);
+                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
                                 bndVar instanceof SwitchHook ? ((SwitchHook) bndVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 37512244362026L)
@@ -251,7 +251,7 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
                                 -37473589656362L), e, 12);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 22:
                 HookParam hookParam = (HookParam) obj;
                 Object objE2 = hookParam.getThisObject();
@@ -274,7 +274,7 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
                 }
                 Object obj2 = objX instanceof dcx ? null : objX;
                 throwIfVar1IsNull(obj2);
-                int i7 = bte.a;
+                int i7 = 0;
                 azg azgVarR = dqc.bi(obj2).r();
                 azgVarR.a = dal.b(cls3);
                 azgVarR.ah();
@@ -293,14 +293,14 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
                             } catch (Exception e2) {
                                 ArrayList arrayList2 = ewq.a;
                                 StringBuilder sb2 = new StringBuilder();
-                                sb2.append("onAddItems " /* cnb.z(-37439229917994L) */);
-                                ewq.e(yg.n(sb2, bndVar2 instanceof SwitchHook ? ((SwitchHook) bndVar2).getResult()
-                                        : "LoadHook" /* cnb.z(-37903086385962L) */, -37881611549482L), e2, 12);
+                                sb2.append("onAddItems " /* "onAddItems " /* "onAddItems " /* cnb.z(-37439229917994L)  */);
+                                ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2, bndVar2 instanceof SwitchHook ? ((SwitchHook) bndVar2).getResult()
+                                        : "LoadHook" /* "LoadHook" /* "LoadHook" /* cnb.z(-37903086385962L)  */, -37881611549482L), e2, 12);
                             }
                         }
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 23:
                 HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
@@ -366,8 +366,8 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
                     } catch (Exception e3) {
                         ArrayList arrayList3 = ewq.a;
                         StringBuilder sb3 = new StringBuilder();
-                        sb3.append("onCreateBottomSheetDialogMenu " /* cnb.z(-39286065855274L) */);
-                        ewq.e(yg.n(sb3,
+                        sb3.append("onCreateBottomSheetDialogMenu " /* "onCreateBottomSheetDialogMenu " /* "onCreateBottomSheetDialogMenu " /* cnb.z(-39286065855274L)  */);
+                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb3,
                                 obj3 instanceof SwitchHook ? ((SwitchHook) obj3).getResult() : "LoadHook" /*
                                                                                                            * cnb.z(-
                                                                                                            * 39152921869098L)
@@ -375,10 +375,10 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
                                 -39114267163434L), e3, 12);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 24:
-                ((amm) obj).c = new act(25);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new act(25);
+                return kotlinUnitVar;
             case 25:
                 bah bahVar7 = (bah) obj;
                 cdj cdjVar13 = new cdj();
@@ -403,37 +403,37 @@ public final /* synthetic */ class act implements IHasInvokeMethod {
                 cdjVar13.q(clsBf8, cls6, clsBf10, cls5, clsBf12 != null ? clsBf12 : Boolean.class);
                 bahVar7.getClass();
                 bahVar7.d = cdjVar13;
-                return ensVar;
+                return kotlinUnitVar;
             case 26:
-                ((amm) obj).c = new act(27);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new act(27);
+                return kotlinUnitVar;
             case 27:
                 bah bahVar8 = (bah) obj;
-                String[] strArr5 = { "com.tencent.mm.ui.conversation" /* cnb.z(-106210246261546L) */ };
+                String[] strArr5 = { "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* cnb.z(-106210246261546L)  */ };
                 bahVar8.getClass();
-                bahVar8.a = la.ab(strArr5);
+                bahVar8.a = SomeStaticHelpers.ab(strArr5);
                 cdj cdjVar14 = new cdj();
-                cdjVar14.t("MicroMsg.ConvDelLogic" /* cnb.z(-106626858089258L) */, "del all notify message" /*
+                cdjVar14.t("MicroMsg.ConvDelLogic" /* "MicroMsg.ConvDelLogic" /* "MicroMsg.ConvDelLogic" /* cnb.z(-106626858089258L)  */, "del all notify message" /*
                                                                                                              * cnb.z(-
                                                                                                              * 106583908416298L)
                                                                                                              */);
                 bahVar8.d = cdjVar14;
-                return ensVar;
+                return kotlinUnitVar;
             case 28:
-                ((amm) obj).c = new act(29);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new act(29);
+                return kotlinUnitVar;
             default:
                 bah bahVar9 = (bah) obj;
-                String[] strArr6 = { "com.tencent.mm.storage" /* cnb.z(-78988743539498L) */ };
+                String[] strArr6 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-78988743539498L)  */ };
                 bahVar9.getClass();
-                bahVar9.a = la.ab(strArr6);
+                bahVar9.a = SomeStaticHelpers.ab(strArr6);
                 cdj cdjVar15 = new cdj();
-                cdjVar15.t("hidden_conv_parent" /* cnb.z(-78340203477802L) */, "message_fold" /*
-                                                                                               * cnb.z(-78207059491626L)
+                cdjVar15.t("hidden_conv_parent" /* "hidden_conv_parent" /* "hidden_conv_parent" /* cnb.z(-78340203477802L)  */, "message_fold" /*
+                                                                                               * "message_fold" /* "message_fold" /* cnb.z(-78207059491626L)  */
                                                                                                */,
-                        "appbrandcustomerservicemsg" /* cnb.z(-78202764524330L) */);
+                        "appbrandcustomerservicemsg" /* "appbrandcustomerservicemsg" /* "appbrandcustomerservicemsg" /* cnb.z(-78202764524330L)  */);
                 bahVar9.d = cdjVar15;
-                return ensVar;
+                return kotlinUnitVar;
         }
     }
 }

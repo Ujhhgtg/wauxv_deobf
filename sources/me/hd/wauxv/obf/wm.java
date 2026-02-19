@@ -12,12 +12,12 @@ public final class wm extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.bf(emn.bb(wk.a));
+        List listBf = dqc.toSingletonList(emn.bb(wk.a));
         wm wmVar = a;
         aki akiVarAb = csb.ab(wmVar, listBf);
         akiVarAb.n(new us(11));
         akiVarAb.o();
-        aki akiVarAb2 = csb.ab(wmVar, dqc.bf(emn.bb(wl.a)));
+        aki akiVarAb2 = csb.ab(wmVar, dqc.toSingletonList(emn.bb(wl.a)));
         akiVarAb2.n(new us(12));
         akiVarAb2.o();
     }

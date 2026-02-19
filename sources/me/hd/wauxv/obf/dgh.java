@@ -28,7 +28,7 @@ public final class dgh extends doi implements bgj {
             case 0:
                 break;
         }
-        return ((dgh) h(ahpVar, afwVar)).i(ens.a);
+        return ((dgh) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
     }
 
     @Override // me.hd.wauxv.obf.nc
@@ -44,7 +44,7 @@ public final class dgh extends doi implements bgj {
     @Override // me.hd.wauxv.obf.nc
     public final Object i(Object obj) throws Throwable {
         int i = this.a;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         View view = this.e;
         ahq ahqVar = ahq.a;
         switch (i) {
@@ -62,7 +62,7 @@ public final class dgh extends doi implements bgj {
                     }
                 } else {
                     if (i2 != 1) {
-                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-60498909330218L) */);
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* cnb.z(-60498909330218L)  */);
                     }
                     bhu.bd(obj);
                 }
@@ -80,31 +80,31 @@ public final class dgh extends doi implements bgj {
                     linearLayout2.addView(r5);
                     TextView textView = new TextView(linearLayout2.getContext());
                     StringBuilder sb = new StringBuilder();
-                    sb.append("版本: " /* cnb.z(-60576218741546L) */);
-                    yg.u(sb, (String) ctxVar.i.getValue(), -60520384166698L);
+                    sb.append("版本: " /* "版本: " /* "版本: " /* cnb.z(-60576218741546L)  */);
+                    yg.decryptVar2UsingCnbZAndConcatToVar1(sb, (String) ctxVar.i.getValue(), -60520384166698L);
                     sb.append((String) ctxVar.j.getValue());
                     textView.setText(sb.toString());
                     linearLayout2.addView(textView);
                     linearLayout.addView(linearLayout2);
                 }
-                return ensVar;
+                return kotlinUnitVar;
             default:
                 int i3 = this.d;
                 if (i3 == 0) {
                     bhu.bd(obj);
-                    ((TextView) view).setText("加载完成, 准备重启中..." /* cnb.z(-58488864635690L) */);
+                    ((TextView) view).setText("加载完成, 准备重启中..." /* "加载完成, 准备重启中..." /* "加载完成, 准备重启中..." /* cnb.z(-58488864635690L)  */);
                     this.d = 1;
                     if (dqc.ba(1000L, this) == ahqVar) {
                         return ahqVar;
                     }
                 } else {
                     if (i3 != 1) {
-                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-58475979733802L) */);
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* cnb.z(-58475979733802L)  */);
                     }
                     bhu.bd(obj);
                 }
                 Process.killProcess(Process.myPid());
-                return ensVar;
+                return kotlinUnitVar;
         }
     }
 }

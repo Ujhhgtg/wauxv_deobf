@@ -10,13 +10,13 @@ public final class cgy extends bws implements IDexFind {
     public static final cgy a = new cgy();
 
     public static Object b(long j) throws IOException {
-        String strZ = "SELECT * FROM message WHERE msgId = ?" /* cnb.z(-369534691179306L) */;
+        String strZ = "SELECT * FROM message WHERE msgId = ?" /* "SELECT * FROM message WHERE msgId = ?" /* "SELECT * FROM message WHERE msgId = ?" /* cnb.z(-369534691179306L)  */;
         Object[] objArr = { Long.valueOf(j) };
-        int i = bte.a;
+        int i = 0;
         dlx.a.getClass();
         cde cdeVarT = dqc.bi(dlx.b()).t();
-        cdeVarT.ab = "rawQuery" /* cnb.z(-103246718827306L) */;
-        Object objJ = ((cdk) dkz.n(new Object[] { dal.b(String.class), dal.b(Object[].class) }, 2, cdeVarT)).j(strZ,
+        cdeVarT.ab = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
+        Object objJ = ((MethodHookWrapper) dkz.n(new Object[] { dal.b(String.class), dal.b(Object[].class) }, 2, cdeVarT)).j(strZ,
                 objArr);
         throwIfVar1IsNull(objJ);
         Cursor cursor = (Cursor) objJ;
@@ -46,8 +46,8 @@ public final class cgy extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(cgv.a, dexKitBridge, new bzk(27));
-        emn.aj(cgx.a, dexKitBridge, new bzk(28));
-        emn.aj(cgw.a, dexKitBridge, new bzk(29));
+        emn.aj(cgv.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(27));
+        emn.aj(cgx.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(28));
+        emn.aj(cgw.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(29));
     }
 }

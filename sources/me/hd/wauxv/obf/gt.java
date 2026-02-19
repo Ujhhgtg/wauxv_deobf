@@ -4,5 +4,5 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class gt extends DexDescData {
     public static final gt a = new gt(
-            "AppBrandAntiGlobalAdHook.ConstructorOperateWxData" /* cnb.z(-413326177729322L) */);
+            "AppBrandAntiGlobalAdHook.ConstructorOperateWxData" /* "AppBrandAntiGlobalAdHook.ConstructorOperateWxData" /* "AppBrandAntiGlobalAdHook.ConstructorOperateWxData" /* "AppBrandAntiGlobalAdHook.ConstructorOperateWxData" /* cnb.z(-413326177729322L)   */);
 }

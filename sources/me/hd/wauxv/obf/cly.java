@@ -12,11 +12,11 @@ public final class cly extends bws implements IDexFind {
     public static Object b(String str, String str2, int i, boolean z, List list) {
         HashMap map;
         if (z) {
-            String strZ = "atuserlist" /* cnb.z(-111759344007978L) */;
+            String strZ = "atuserlist" /* "atuserlist" /* "atuserlist" /* "atuserlist" /* cnb.z(-111759344007978L)   */;
             StringBuilder sb = new StringBuilder();
-            sb.append("<![CDATA[" /* cnb.z(-111677739629354L) */);
-            Pair[] pairVarArr = { new Pair(strZ, yg.n(sb,
-                    aaz.k(list, "," /* cnb.z(-111651969825578L) */, null, null, null, 62), -111660559760170L)) };
+            sb.append("<![CDATA[" /* "<![CDATA[" /* "<![CDATA[" /* "<![CDATA[" /* cnb.z(-111677739629354L)   */);
+            Pair[] pairVarArr = { new Pair(strZ, yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                    aaz.k(list, "," /* "," /* "," /* "," /* cnb.z(-111651969825578L)   */, null, null, null, 62), -111660559760170L)) };
             map = new HashMap(KotlinHelpers.ah(1));
             KotlinHelpers.am(map, pairVarArr);
         } else {
@@ -27,7 +27,7 @@ public final class cly extends bws implements IDexFind {
 
     public static Object c(cly clyVar, String str, String str2, int i, int i2) {
         clyVar.getClass();
-        return b(str, str2, i, false, avd.a);
+        return b(str, str2, i, false, EmptyReadonlyList.a);
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

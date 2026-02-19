@@ -9,7 +9,7 @@ import me.hd.wauxv.data.bean.info.GroupInfo;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class cfb implements IHasInvokeMethod {
+public final /* synthetic */ class cfb implements IInvokable {
     public final /* synthetic */ int a;
     public final /* synthetic */ ArrayList b;
     public final /* synthetic */ ArrayList c;
@@ -35,7 +35,7 @@ public final /* synthetic */ class cfb implements IHasInvokeMethod {
                 break;
             default:
                 ael aelVar2 = (ael) obj;
-                aelVar2.f = "搜索好友/群聊" /* cnb.z(-514120470231850L) */;
+                aelVar2.f = "搜索好友/群聊" /* "搜索好友/群聊" /* "搜索好友/群聊" /* cnb.z(-514120470231850L)  */;
                 ArrayList arrayList = new ArrayList();
                 ArrayList arrayList2 = new ArrayList();
                 ArrayList arrayList3 = new ArrayList();
@@ -44,7 +44,7 @@ public final /* synthetic */ class cfb implements IHasInvokeMethod {
                     while (cursorAb.moveToNext()) {
                         try {
                             if (dnr.bi(cursorAb.getString(cursorAb.getColumnIndex("username" /*
-                                                                                              * cnb.z(-514086110493482L)
+                                                                                              * "username" /* "username" /* cnb.z(-514086110493482L)  */
                                                                                               */)), "@chatroom" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -72,18 +72,18 @@ public final /* synthetic */ class cfb implements IHasInvokeMethod {
                                 String wxid = friendInfoS.getWxid();
                                 StringBuilder sb4 = new StringBuilder();
                                 String nickname = friendInfoS.getNickname();
-                                if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* cnb.z(-514519902190378L) */), nickname)) > 3
+                                if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* "\r\n|\r|\n" /* "\r\n|\r|\n" /* cnb.z(-514519902190378L)  */), nickname)) > 3
                                         ? nickname
                                         : null) != null) {
-                                    sb4.append("已过滤此昵称..." /* cnb.z(-514472657550122L) */);
+                                    sb4.append("已过滤此昵称..." /* "已过滤此昵称..." /* "已过滤此昵称..." /* cnb.z(-514472657550122L)  */);
                                 } else {
                                     String str2 = nickname.length() > 8 ? nickname : null;
                                     if (str2 != null) {
                                         String strSubstring = str2.substring(0, 8);
                                         throwIfVar1IsNull(strSubstring,
-                                                "substring(...)" /* cnb.z(-514446887746346L) */);
+                                                "substring(...)" /* "substring(...)" /* "substring(...)" /* cnb.z(-514446887746346L)  */);
                                         sb4.append(strSubstring);
-                                        sb4.append("..." /* cnb.z(-514382463236906L) */);
+                                        sb4.append("..." /* "..." /* "..." /* cnb.z(-514382463236906L)  */);
                                         sb = sb4;
                                     } else {
                                         sb = null;
@@ -115,15 +115,15 @@ public final /* synthetic */ class cfb implements IHasInvokeMethod {
                 }
                 aelVar2.b = true;
                 aelVar2.c.addAll(arrayList3);
-                aelVar2.m("好友" /* cnb.z(-514399643106090L) */, arrayList);
-                aelVar2.m("群聊" /* cnb.z(-514335218596650L) */, arrayList2);
+                aelVar2.m("好友" /* "好友" /* "好友" /* cnb.z(-514399643106090L)  */, arrayList);
+                aelVar2.m("群聊" /* "群聊" /* "群聊" /* cnb.z(-514335218596650L)  */, arrayList2);
                 aelVar2.g = R.drawable.ic_contact_send_24dp;
-                String strZ = "转发" /* cnb.z(-514356693433130L) */;
+                String strZ = "转发" /* "转发" /* "转发" /* cnb.z(-514356693433130L)  */;
                 cic cicVar = new cic(this.b, this.c, 2);
                 aelVar2.j = strZ;
                 aelVar2.l = cicVar;
                 break;
         }
-        return ens.a;
+        return KotlinUnit.INSTANCE;
     }
 }

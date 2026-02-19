@@ -17,13 +17,8 @@ import javax.net.ssl.X509TrustManager;
 import me.hd.wauxv.obf.aaz;
 import me.hd.wauxv.obf.abf;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.IHasInvokeMethod;
-import me.hd.wauxv.obf.KotlinHelpers;
+import me.hd.wauxv.obf.IInvokable;
 import me.hd.wauxv.obf.dts;
-import okhttp3.Call;
-import okhttp3.EventListener;
-import okhttp3.Interceptor;
-import okhttp3.WebSocket;
 import okhttp3.internal.Util;
 import okhttp3.internal.concurrent.TaskRunner;
 import okhttp3.internal.connection.RealCall;
@@ -136,7 +131,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
             this.minWebSocketMessageToCompress = RealWebSocket.DEFAULT_MINIMUM_DEFLATE_SIZE;
         }
 
-        public final Builder a(final IHasInvokeMethod bgfVar) {
+        public final Builder a(final IInvokable bgfVar) {
             throwIfVar1IsNull(bgfVar, "block");
             return addInterceptor(new Interceptor() { // from class: okhttp3.OkHttpClient$Builder$addInterceptor$2
                 @Override // okhttp3.Interceptor
@@ -165,7 +160,7 @@ public class OkHttpClient implements Cloneable, Call.Factory, WebSocket.Factory 
             return this;
         }
 
-        public final Builder b(final IHasInvokeMethod bgfVar) {
+        public final Builder b(final IInvokable bgfVar) {
             throwIfVar1IsNull(bgfVar, "block");
             return addNetworkInterceptor(new Interceptor() { // from class:
                                                              // okhttp3.OkHttpClient$Builder$addNetworkInterceptor$2

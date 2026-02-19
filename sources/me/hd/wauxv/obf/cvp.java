@@ -28,7 +28,7 @@ public abstract class cvp {
         bzgVar.put(dal.b(emp.class), emt.b);
         bzgVar.put(dal.b(Boolean.TYPE), pv.b);
         bzgVar.put(dal.b(boolean[].class), pu.j);
-        bzgVar.put(dal.b(ens.class), enu.b);
+        bzgVar.put(dal.b(KotlinUnit.class), enu.b);
         bzgVar.put(dal.b(Void.class), coq.b);
         try {
             zc zcVarB = dal.b(aqm.class);

@@ -19,7 +19,7 @@ class e extends ContextWrapper {
 
     @Override // android.content.ContextWrapper, android.content.Context
     public File getDatabasePath(String str) {
-        File file = new File(yg.o(new StringBuilder(), this.a, str));
+        File file = new File(yg.concatToVar1(new StringBuilder(), this.a, str));
         if (!file.getParentFile().exists() && !file.getParentFile().isDirectory()) {
             file.getParentFile().mkdirs();
         }

@@ -3,15 +3,14 @@ package androidx.lifecycle;
 import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
-import com.umeng.analytics.pro.f;
+
 import java.util.HashSet;
 import java.util.List;
-import me.hd.wauxv.obf.avd;
+import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.bpf;
 import me.hd.wauxv.obf.bug;
 import me.hd.wauxv.obf.buj;
 import me.hd.wauxv.obf.buk;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cvs;
 import me.hd.wauxv.obf.cvt;
 import me.hd.wauxv.obf.jx;
@@ -21,7 +20,7 @@ import me.hd.wauxv.obf.jx;
 public final class ProcessLifecycleInitializer implements bpf {
     @Override // me.hd.wauxv.obf.bpf
     public final List a() {
-        return avd.a;
+        return EmptyReadonlyList.a;
     }
 
     @Override // me.hd.wauxv.obf.bpf

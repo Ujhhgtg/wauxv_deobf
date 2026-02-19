@@ -172,9 +172,9 @@ public abstract class ajn {
         return KotlinHelpers.al(i2, i3);
     }
 
-    public static final Class ag(String str) {
+    public static final Class tryGetClassByClassName(String str) {
         bmo.a.getClass();
-        return ReflectionWrapper.tryGetClassByName(bmo.m(), str);
+        return ReflectionWrapper.tryGetClassByName(bmo.getClassLoader(), str);
     }
 
     public static final String ah(afw afwVar) {
@@ -271,7 +271,7 @@ public abstract class ajn {
         }
         aos aosVar = new aos(ahhVar_v, doiVar);
         try {
-            cnf.bk(ens.a, cmz.ab(((nc) bgjVar).h(aosVar, aosVar)));
+            cnf.bk(KotlinUnit.INSTANCE, cmz.ab(((nc) bgjVar).h(aosVar, aosVar)));
             AtomicIntegerFieldUpdater atomicIntegerFieldUpdater = aos.i;
             do {
                 int i = atomicIntegerFieldUpdater.get(aosVar);
@@ -596,8 +596,8 @@ public abstract class ajn {
         throwIfVar1IsNull(cbmVar, "serializersModule");
         emc emcVarH = dfxVar.h();
         if (nullSafeIsEqual(emcVarH, cuq.a)) {
-            bsv bsvVarQ = bhs.q(dfxVar);
-            listZ = avd.a;
+            IEmpty5 bsvVarQ = bhs.q(dfxVar);
+            listZ = EmptyReadonlyList.a;
             if (bsvVarQ != null) {
                 listZ = new ArrayList(abb.ak(listZ, 10));
             }

@@ -7,7 +7,6 @@ import com.alibaba.fastjson2.JSONReader;
 import com.alibaba.fastjson2.JSONSchemaValidException;
 import com.alibaba.fastjson2.JSONWriter;
 import com.alibaba.fastjson2.PropertyNamingStrategy;
-import com.alibaba.fastjson2.reader.FieldReaderObject;
 import com.alibaba.fastjson2.schema.JSONSchema;
 import com.alibaba.fastjson2.util.BeanUtils;
 import com.alibaba.fastjson2.util.JDKUtils;
@@ -203,7 +202,7 @@ public class FieldReaderObject<T> extends FieldReader<T> {
                 if (member != null) {
                     strO = "read field '" + member.getDeclaringClass().getName() + "." + member.getName();
                 } else {
-                    strO = yg.o(new StringBuilder("read field "), this.fieldName, " error");
+                    strO = yg.concatToVar1(new StringBuilder("read field "), this.fieldName, " error");
                 }
                 throw new JSONException(jSONReader.info(strO), e);
             }
@@ -217,7 +216,7 @@ public class FieldReaderObject<T> extends FieldReader<T> {
                 if (member != null) {
                     strO = "read field '" + member.getDeclaringClass().getName() + "." + member.getName();
                 } else {
-                    strO = yg.o(new StringBuilder("read field "), this.fieldName, " error");
+                    strO = yg.concatToVar1(new StringBuilder("read field "), this.fieldName, " error");
                 }
                 throw new JSONException(jSONReader.info(strO), e);
             }
@@ -356,7 +355,7 @@ public class FieldReaderObject<T> extends FieldReader<T> {
                     JDKUtils.UNSAFE.putObject(t, this.fieldOffset, obj);
                 }
             } catch (Exception e) {
-                throw new JSONException(yg.o(new StringBuilder("set "), this.function != null ? super.toString() : this.fieldName, " error"), e);
+                throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.function != null ? super.toString() : this.fieldName, " error"), e);
             }
         }
     }

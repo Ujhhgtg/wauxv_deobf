@@ -27,7 +27,7 @@ import me.hd.wauxv.MainApp;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public abstract class cnd implements ajt, acm {
+public abstract class KotlinHelpers2 implements ajt, acm {
     public static final of ae = new of();
     public static final char[] af = { '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '1', '1', '1', '1', '1',
             '1', '1', '1', '1', '2', '2', '2', '2', '2', '2', '2', '2', '2', '2', '3', '3', '3', '3', '3', '3', '3',
@@ -207,7 +207,7 @@ public abstract class cnd implements ajt, acm {
         return strValue;
     }
 
-    public static final int av(int i, int i2, int i3) {
+    public static final int getProgressionLastElement(int i, int i2, int i3) {
         if (i3 > 0) {
             if (i < i2) {
                 int i4 = i2 % i3;

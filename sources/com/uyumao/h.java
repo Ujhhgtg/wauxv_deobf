@@ -33,7 +33,7 @@ public class h extends BroadcastReceiver {
         public void run() {
             StringBuilder sb = new StringBuilder();
             sb.append(this.a.getCacheDir().getPath());
-            e.a(new File(yg.o(sb, File.separator, "net_change")), (this.b.toString() + "\n").getBytes(), true);
+            e.a(new File(yg.concatToVar1(sb, File.separator, "net_change")), (this.b.toString() + "\n").getBytes(), true);
         }
     }
 

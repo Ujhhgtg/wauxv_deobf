@@ -11,7 +11,7 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class dko implements IHasInvokeMethod {
+public final /* synthetic */ class dko implements IInvokable {
     public final /* synthetic */ int a;
 
     public /* synthetic */ dko(int i) {
@@ -50,50 +50,50 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
         int i3 = 3;
         boolean z = true;
         z = true;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         switch (i) {
             case 0:
                 bah bahVar = (bah) obj;
-                String[] strArr = { "com.tencent.mm.plugin.sns.model" /* cnb.z(-359729280842538L) */ };
+                String[] strArr = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-359729280842538L)   */ };
                 bahVar.getClass();
-                bahVar.a = la.ab(strArr);
+                bahVar.a = SomeStaticHelpers.ab(strArr);
                 cdj cdjVar = new cdj();
-                cdjVar.t("getSnsVideoPath" /* cnb.z(-359591841889066L) */,
-                        "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-360072878226218L) */);
+                cdjVar.t("getSnsVideoPath" /* "getSnsVideoPath" /* "getSnsVideoPath" /* "getSnsVideoPath" /* cnb.z(-359591841889066L)   */,
+                        "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-360072878226218L)   */);
                 bahVar.d = cdjVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 1:
                 bah bahVar2 = (bah) obj;
-                String[] strArr2 = { "com.tencent.mm.plugin.sns.model" /* cnb.z(-356297601973034L) */ };
+                String[] strArr2 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-356297601973034L)   */ };
                 bahVar2.getClass();
-                bahVar2.a = la.ab(strArr2);
+                bahVar2.a = SomeStaticHelpers.ab(strArr2);
                 cdj cdjVar2 = new cdj();
-                cdjVar2.t("getSnsVideoThumbImagePath" /* cnb.z(-356709918833450L) */,
-                        "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-356615429552938L) */);
+                cdjVar2.t("getSnsVideoThumbImagePath" /* "getSnsVideoThumbImagePath" /* "getSnsVideoThumbImagePath" /* "getSnsVideoThumbImagePath" /* cnb.z(-356709918833450L)   */,
+                        "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-356615429552938L)   */);
                 bahVar2.d = cdjVar2;
-                return ensVar;
+                return kotlinUnitVar;
             case 2:
-                ((amm) obj).c = new dko(i3);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new dko(i3);
+                return kotlinUnitVar;
             case 3:
                 bah bahVar3 = (bah) obj;
-                String[] strArr3 = { "com.tencent.mm.plugin.sns.model" /* cnb.z(-358230337256234L) */ };
+                String[] strArr3 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-358230337256234L)   */ };
                 bahVar3.getClass();
-                bahVar3.a = la.ab(strArr3);
+                bahVar3.a = SomeStaticHelpers.ab(strArr3);
                 cdj cdjVar3 = new cdj();
-                cdjVar3.t("MicroMsg.SnsVideoService" /* cnb.z(-357543142488874L) */,
-                        "add video task, but url is weixin, do nothing" /* cnb.z(-357384228698922L) */);
+                cdjVar3.t("MicroMsg.SnsVideoService" /* "MicroMsg.SnsVideoService" /* "MicroMsg.SnsVideoService" /* "MicroMsg.SnsVideoService" /* cnb.z(-357543142488874L)   */,
+                        "add video task, but url is weixin, do nothing" /* "add video task, but url is weixin, do nothing" /* "add video task, but url is weixin, do nothing" /* "add video task, but url is weixin, do nothing" /* cnb.z(-357384228698922L)   */);
                 bahVar3.d = cdjVar3;
-                return ensVar;
+                return kotlinUnitVar;
             case 4:
                 View view = (View) obj;
                 View viewK = dkz.k(view, R.layout.module_dialog_sport_step, null, false);
                 int i4 = R.id.moduleDialogEdtSportModifyStep;
-                TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK,
+                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK,
                         R.id.moduleDialogEdtSportModifyStep);
                 if (textInputEditText != null) {
                     i4 = R.id.moduleDialogInputSportModifyStep;
-                    if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputSportModifyStep)) != null) {
+                    if (((TextInputLayout) KotlinHelpers2.aq(viewK, R.id.moduleDialogInputSportModifyStep)) != null) {
                         LinearLayout linearLayout = (LinearLayout) viewK;
                         cee ceeVar = new cee(linearLayout, textInputEditText, i2);
                         textInputEditText.setText(String.valueOf(dlu.a.l()));
@@ -101,47 +101,47 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                         eg egVar = (eg) bzyVar.d;
                         dlv.a.getClass();
                         egVar.d = dlv.c;
-                        bzyVar.t("保存" /* cnb.z(-501025114946346L) */, new amw(new cfx(ceeVar, 18), 0));
-                        bjs.x((3 & 2) != 0 ? new amd(z ? 1 : 0) : null, bzyVar, "取消" /* cnb.z(-47455093652266L) */);
+                        bzyVar.t("保存" /* "保存" /* "保存" /* "保存" /* cnb.z(-501025114946346L)   */, new amw(new cfx(ceeVar, 18), 0));
+                        bjs.x((3 & 2) != 0 ? new amd(z ? 1 : 0) : null, bzyVar, "取消" /* "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)   */);
                         if (linearLayout != null) {
                             egVar.r = linearLayout;
                         }
                         bzyVar.i().show();
-                        return ensVar;
+                        return kotlinUnitVar;
                     }
                 }
                 throw new NullPointerException("Missing required view with ID: "
-                        /* cnb.z(-659741336402730L) */.concat(viewK.getResources().getResourceName(i4)));
+                        /* "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-659741336402730L)   */.concat(viewK.getResources().getResourceName(i4)));
             case 5:
                 ((HookParam) obj).setResult(Long.valueOf(Math.min(dlu.a.l(), 98800L)));
-                return ensVar;
+                return kotlinUnitVar;
             case 6:
-                ((amm) obj).c = new dko(i2);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new dko(i2);
+                return kotlinUnitVar;
             case 7:
                 bah bahVar4 = (bah) obj;
-                String[] strArr4 = { "com.tencent.mm.plugin.sport.model" /* cnb.z(-501029409913642L) */ };
+                String[] strArr4 = { "com.tencent.mm.plugin.sport.model" /* "com.tencent.mm.plugin.sport.model" /* "com.tencent.mm.plugin.sport.model" /* "com.tencent.mm.plugin.sport.model" /* cnb.z(-501029409913642L)   */ };
                 bahVar4.getClass();
-                bahVar4.a = la.ab(strArr4);
+                bahVar4.a = SomeStaticHelpers.ab(strArr4);
                 cdj cdjVar4 = new cdj();
-                cdjVar4.t("MicroMsg.Sport.DeviceStepManager" /* cnb.z(-500831841418026L) */,
-                        "get today step from %s todayStep %d" /* cnb.z(-501257043180330L) */);
+                cdjVar4.t("MicroMsg.Sport.DeviceStepManager" /* "MicroMsg.Sport.DeviceStepManager" /* "MicroMsg.Sport.DeviceStepManager" /* "MicroMsg.Sport.DeviceStepManager" /* cnb.z(-500831841418026L)   */,
+                        "get today step from %s todayStep %d" /* "get today step from %s todayStep %d" /* "get today step from %s todayStep %d" /* "get today step from %s todayStep %d" /* cnb.z(-501257043180330L)   */);
                 bahVar4.d = cdjVar4;
-                return ensVar;
+                return kotlinUnitVar;
             case 8:
-                ((amm) obj).b = new dko(9);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new dko(9);
+                return kotlinUnitVar;
             case 9:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k("MicroMsg.DBInit" /* cnb.z(-90838558309162L) */, "initSysDB checkini:%b exist:%b db:%s " /*
+                zbVar.k("MicroMsg.DBInit" /* "MicroMsg.DBInit" /* "MicroMsg.DBInit" /* "MicroMsg.DBInit" /* cnb.z(-90838558309162L)   */, "initSysDB checkini:%b exist:%b db:%s " /*
                                                                                                                   * cnb.
                                                                                                                   * z(-
                                                                                                                   * 90769838832426L)
                                                                                                                   */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 10:
                 HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
@@ -196,8 +196,8 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                     } catch (Exception e) {
                         ArrayList arrayList = ewq.a;
                         StringBuilder sb = new StringBuilder();
-                        sb.append("onDatabaseInsertBefore " /* cnb.z(-54709293415210L) */);
-                        ewq.e(yg.n(sb,
+                        sb.append("onDatabaseInsertBefore " /* "onDatabaseInsertBefore " /* "onDatabaseInsertBefore " /* "onDatabaseInsertBefore " /* cnb.z(-54709293415210L)   */);
+                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
                                 bobVar instanceof SwitchHook ? ((SwitchHook) bobVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 54056458386218L)
@@ -205,7 +205,7 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                                 -54017803680554L), e, 12);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 11:
                 HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
@@ -276,8 +276,8 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                     } catch (Exception e2) {
                         ArrayList arrayList2 = ewq.a;
                         StringBuilder sb2 = new StringBuilder();
-                        sb2.append("onDatabaseUpdateBefore " /* cnb.z(-53983443942186L) */);
-                        ewq.e(yg.n(sb2,
+                        sb2.append("onDatabaseUpdateBefore " /* "onDatabaseUpdateBefore " /* "onDatabaseUpdateBefore " /* "onDatabaseUpdateBefore " /* cnb.z(-53983443942186L)   */);
+                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
                                 bobVar2 instanceof SwitchHook ? ((SwitchHook) bobVar2).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -286,7 +286,7 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                                 -54408645704490L), e2, 12);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 12:
                 HookParam hookParam3 = (HookParam) obj;
                 hookParam3.getClass();
@@ -340,8 +340,8 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                     } catch (Exception e3) {
                         ArrayList arrayList3 = ewq.a;
                         StringBuilder sb3 = new StringBuilder();
-                        sb3.append("onDatabaseQueryBefore " /* cnb.z(-54374285966122L) */);
-                        ewq.e(yg.n(sb3,
+                        sb3.append("onDatabaseQueryBefore " /* "onDatabaseQueryBefore " /* "onDatabaseQueryBefore " /* "onDatabaseQueryBefore " /* cnb.z(-54374285966122L)   */);
+                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb3,
                                 bobVar3 instanceof SwitchHook ? ((SwitchHook) bobVar3).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -350,7 +350,7 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                                 -54236847012650L), e3, 12);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 13:
                 HookParam hookParam4 = (HookParam) obj;
                 hookParam4.getClass();
@@ -421,8 +421,8 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                     } catch (Exception e4) {
                         ArrayList arrayList4 = ewq.a;
                         StringBuilder sb4 = new StringBuilder();
-                        sb4.append("onCompatUpdateBefore " /* cnb.z(-54202487274282L) */);
-                        ewq.e(yg.n(sb4,
+                        sb4.append("onCompatUpdateBefore " /* "onCompatUpdateBefore " /* "onCompatUpdateBefore " /* "onCompatUpdateBefore " /* cnb.z(-54202487274282L)   */);
+                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb4,
                                 bobVar4 instanceof SwitchHook ? ((SwitchHook) bobVar4).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -431,7 +431,7 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                                 -60099477371690L), e4, 12);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 14:
                 HookParam hookParam5 = (HookParam) obj;
                 hookParam5.getClass();
@@ -468,8 +468,8 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                     } catch (Exception e5) {
                         ArrayList arrayList5 = ewq.a;
                         StringBuilder sb5 = new StringBuilder();
-                        sb5.append("onCompatQueryBefore " /* cnb.z(-60065117633322L) */);
-                        ewq.e(yg.n(sb5,
+                        sb5.append("onCompatQueryBefore " /* "onCompatQueryBefore " /* "onCompatQueryBefore " /* "onCompatQueryBefore " /* cnb.z(-60065117633322L)   */);
+                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb5,
                                 bobVar5 instanceof SwitchHook ? ((SwitchHook) bobVar5).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -478,11 +478,11 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                                 -59987808221994L), e5, 12);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 15:
                 String str13 = (String) obj;
-                if (!nullSafeIsEqual(str13, "startActivity" /* cnb.z(-59953448483626L) */)
-                        && !nullSafeIsEqual(str13, "startActivityForResult" /* cnb.z(-60425894886186L) */)) {
+                if (!nullSafeIsEqual(str13, "startActivity" /* "startActivity" /* "startActivity" /* "startActivity" /* cnb.z(-59953448483626L)   */)
+                        && !nullSafeIsEqual(str13, "startActivityForResult" /* "startActivityForResult" /* "startActivityForResult" /* "startActivityForResult" /* cnb.z(-60425894886186L)   */)) {
                     z = false;
                 }
                 return Boolean.valueOf(z);
@@ -512,12 +512,12 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                 throwIfVar1IsNull(intent);
                 for (IStartActivity bocVar : dmi.b) {
                     try {
-                        bocVar._cc(hookParam6, intent);
+                        bocVar.onStartActivityIntent(hookParam6, intent);
                     } catch (Exception e6) {
                         ArrayList arrayList6 = ewq.a;
                         StringBuilder sb6 = new StringBuilder();
-                        sb6.append("onStartActivityIntent " /* cnb.z(-60327110638378L) */);
-                        ewq.e(yg.n(sb6,
+                        sb6.append("onStartActivityIntent " /* "onStartActivityIntent " /* "onStartActivityIntent " /* "onStartActivityIntent " /* cnb.z(-60327110638378L)   */);
+                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb6,
                                 bocVar instanceof SwitchHook ? ((SwitchHook) bocVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 60211146521386L)
@@ -525,52 +525,52 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                                 -59639915871018L), e6, 12);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 17:
-                ((amm) obj).b = new dko(21);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new dko(21);
+                return kotlinUnitVar;
             case 18:
-                ((amm) obj).b = new dko(23);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new dko(23);
+                return kotlinUnitVar;
             case 19:
-                ((amm) obj).b = new dko(22);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new dko(22);
+                return kotlinUnitVar;
             case 20:
-                ((amm) obj).b = new dko(24);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new dko(24);
+                return kotlinUnitVar;
             case 21:
                 bag bagVar2 = (bag) obj;
-                String[] strArr7 = { "com.tencent.mm.storage" /* cnb.z(-366897581259562L) */ };
+                String[] strArr7 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-366897581259562L)   */ };
                 bagVar2.getClass();
-                bagVar2.a = la.ab(strArr7);
+                bagVar2.a = SomeStaticHelpers.ab(strArr7);
                 zb zbVar2 = new zb();
-                zbVar2.k("PRAGMA table_info( contact_ext )" /* cnb.z(-366798797011754L) */);
+                zbVar2.k("PRAGMA table_info( contact_ext )" /* "PRAGMA table_info( contact_ext )" /* "PRAGMA table_info( contact_ext )" /* "PRAGMA table_info( contact_ext )" /* cnb.z(-366798797011754L)   */);
                 bagVar2.b = zbVar2;
-                return ensVar;
+                return kotlinUnitVar;
             case 22:
                 bag bagVar3 = (bag) obj;
-                String[] strArr8 = { "com.tencent.mm.storage" /* cnb.z(-366373595249450L) */ };
+                String[] strArr8 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-366373595249450L)   */ };
                 bagVar3.getClass();
-                bagVar3.a = la.ab(strArr8);
+                bagVar3.a = SomeStaticHelpers.ab(strArr8);
                 zb zbVar3 = new zb();
-                zbVar3.k("PRAGMA table_info( rconversation)" /* cnb.z(-366274811001642L) */);
+                zbVar3.k("PRAGMA table_info( rconversation)" /* "PRAGMA table_info( rconversation)" /* "PRAGMA table_info( rconversation)" /* "PRAGMA table_info( rconversation)" /* cnb.z(-366274811001642L)   */);
                 bagVar3.b = zbVar3;
-                return ensVar;
+                return kotlinUnitVar;
             case 23:
                 bag bagVar4 = (bag) obj;
-                String[] strArr9 = { "com.tencent.mm.storage" /* cnb.z(-367206818904874L) */ };
+                String[] strArr9 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-367206818904874L)   */ };
                 bagVar4.getClass();
-                bagVar4.a = la.ab(strArr9);
+                bagVar4.a = SomeStaticHelpers.ab(strArr9);
                 zb zbVar4 = new zb();
-                zbVar4.k("MicroMsg.MsgInfoStorage" /* cnb.z(-367108034657066L) */,
-                        "deleted dirty msg ,count is %d" /* cnb.z(-367004955441962L) */);
+                zbVar4.k("MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* cnb.z(-367108034657066L)   */,
+                        "deleted dirty msg ,count is %d" /* "deleted dirty msg ,count is %d" /* "deleted dirty msg ,count is %d" /* "deleted dirty msg ,count is %d" /* cnb.z(-367004955441962L)   */);
                 bagVar4.b = zbVar4;
-                return ensVar;
+                return kotlinUnitVar;
             case 24:
                 bag bagVar5 = (bag) obj;
-                String[] strArr10 = { "com.tencent.mm.plugin.messenger.foundation" /* cnb.z(-366626998319914L) */ };
+                String[] strArr10 = { "com.tencent.mm.plugin.messenger.foundation" /* "com.tencent.mm.plugin.messenger.foundation" /* "com.tencent.mm.plugin.messenger.foundation" /* "com.tencent.mm.plugin.messenger.foundation" /* cnb.z(-366626998319914L)   */ };
                 bagVar5.getClass();
-                bagVar5.a = la.ab(strArr10);
+                bagVar5.a = SomeStaticHelpers.ab(strArr10);
                 zb zbVar5 = new zb();
                 azl azlVar = new azl();
                 azlVar.f(emn.az(dmq.a));
@@ -578,7 +578,7 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                 azlVar.f(emn.az(dmr.a));
                 zbVar5.e = azlVar;
                 bagVar5.b = zbVar5;
-                return ensVar;
+                return kotlinUnitVar;
             case 25:
                 return Boolean.valueOf(((View) obj).getVisibility() == 0);
             case 26:
@@ -611,8 +611,8 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                     } catch (Exception e7) {
                         ArrayList arrayList7 = ewq.a;
                         StringBuilder sb7 = new StringBuilder();
-                        sb7.append("onGetSyncConfig " /* cnb.z(-59502476917546L) */);
-                        ewq.e(yg.n(sb7,
+                        sb7.append("onGetSyncConfig " /* "onGetSyncConfig " /* "onGetSyncConfig " /* "onGetSyncConfig " /* cnb.z(-59502476917546L)   */);
+                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb7,
                                 bodVar instanceof SwitchHook ? ((SwitchHook) bodVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 59429462473514L)
@@ -620,12 +620,12 @@ public final /* synthetic */ class dko implements IHasInvokeMethod {
                                 -59407987637034L), e7, 12);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             default:
-                amm ammVar = (amm) obj;
-                ammVar.b = new dos(i);
-                ammVar.c = new dos(z ? 1 : 0);
-                return ensVar;
+                FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar = (FindDexClassMethodDslWrapper) obj;
+                findDexClassMethodDslWrapperVar.onClassCallback = new dos(i);
+                findDexClassMethodDslWrapperVar.onMethodCallback = new dos(z ? 1 : 0);
+                return kotlinUnitVar;
         }
     }
 }

@@ -12,17 +12,17 @@ public final class eui extends ewy {
     public static final dov b;
 
     static {
-        "initDexObfKey" /* cnb.z(-82905753713450L) */;
+        "initDexObfKey" /* "initDexObfKey" /* "initDexObfKey" /* "initDexObfKey" /* cnb.z(-82905753713450L)   */;
         a = new eui();
         b = new dov(new efq(18));
     }
 
     public static boolean c() {
-        String strZ = "initDexObfKey" /* cnb.z(-81814832020266L) */;
-        String strZ2 = "" /* cnb.z(-5841155521322L) */;
+        String strZ = "initDexObfKey" /* "initDexObfKey" /* "initDexObfKey" /* "initDexObfKey" /* cnb.z(-81814832020266L)   */;
+        String strZ2 = "" /* "" /* "" /* "" /* cnb.z(-5841155521322L)   */;
         io ioVar = emc.w;
         if (ioVar == null) {
-            throw new IllegalArgumentException("DexDescConfig must be init" /* cnb.z(-6021544147754L) */.toString());
+            throw new IllegalArgumentException("DexDescConfig must be init" /* "DexDescConfig must be init" /* "DexDescConfig must be init" /* "DexDescConfig must be init" /* cnb.z(-6021544147754L)   */.toString());
         }
         String string = ioVar.aj().getString(strZ, strZ2);
         throwIfVar1IsNull(string);
@@ -150,10 +150,10 @@ public final class eui extends ewy {
 
     @Override // me.hd.wauxv.obf.ewy
     public final void w() {
-        int i = bte.a;
+        int i = 0;
         cde cdeVarT = dqc.bg(dal.b(Instrumentation.class)).t();
-        cdeVarT.ab = "callApplicationOnCreate" /* cnb.z(-82549271427882L) */;
-        aki akiVarAd = a.ad((cdk) dkz.n(new Object[] { dal.b(Application.class) }, 1, cdeVarT), exg.a);
+        cdeVarT.ab = "callApplicationOnCreate" /* "callApplicationOnCreate" /* "callApplicationOnCreate" /* "callApplicationOnCreate" /* cnb.z(-82549271427882L)   */;
+        aki akiVarAd = a.ad((MethodHookWrapper) dkz.n(new Object[] { dal.b(Application.class) }, 1, cdeVarT), exg.a);
         akiVarAd.m(new epy(14));
         akiVarAd.o();
     }

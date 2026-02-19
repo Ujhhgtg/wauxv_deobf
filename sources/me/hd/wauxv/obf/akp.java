@@ -186,7 +186,7 @@ public final class akp implements bog {
             return -1;
         } while (jSkip == j);
         if (Log.isLoggable("DfltImageHeaderParser", 3)) {
-            StringBuilder sbQ = yg.q(sH, iF, "Unable to skip enough data, type: ", ", wanted to skip: ", ", but actually skipped: ");
+            StringBuilder sbQ = yg.concatVar31425(sH, iF, "Unable to skip enough data, type: ", ", wanted to skip: ", ", but actually skipped: ");
             sbQ.append(jSkip);
             Log.d("DfltImageHeaderParser", sbQ.toString());
         }
@@ -227,7 +227,7 @@ public final class akp implements bog {
                         int i9 = byteBuffer.remaining() - i8 >= 4 ? byteBuffer.getInt(i8) : -1;
                         if (i9 >= 0) {
                             if (Log.isLoggable("DfltImageHeaderParser", 3)) {
-                                StringBuilder sbQ = yg.q(i5, s3, "Got tagIndex=", " tagType=", " formatCode=");
+                                StringBuilder sbQ = yg.concatVar31425(i5, s3, "Got tagIndex=", " tagType=", " formatCode=");
                                 sbQ.append((int) s4);
                                 sbQ.append(" componentCount=");
                                 sbQ.append(i9);

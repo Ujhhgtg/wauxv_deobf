@@ -15,7 +15,7 @@ public final class po {
         this.d = pVarArr;
     }
 
-    public po(int i, int i2, boolean z, IHasInvokeMethod bgfVar) {
+    public po(int i, int i2, boolean z, IInvokable bgfVar) {
         this.a = i;
         this.b = i2;
         this.c = z;

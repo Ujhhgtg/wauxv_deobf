@@ -28,10 +28,10 @@ public final class bhl implements Serializable {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("GithubReleaseBean(name=" /* cnb.z(-46145128626986L) */);
-        yg.u(sb, this.a, -46042049411882L);
-        yg.u(sb, this.b, -45943265164074L);
-        yg.u(sb, this.c, -45930380262186L);
+        sb.append("GithubReleaseBean(name=" /* "GithubReleaseBean(name=" /* "GithubReleaseBean(name=" /* cnb.z(-46145128626986L)  */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -46042049411882L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -45943265164074L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.c, -45930380262186L);
         return concat(sb, this.d, ')');
     }
 }

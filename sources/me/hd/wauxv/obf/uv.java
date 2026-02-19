@@ -3,5 +3,5 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class uv extends akf {
-    public static final uv a = new uv("ChatGroupNavHook.ValActiveDarkColor" /* cnb.z(-574009494207274L) */, "#FF324B48" /* cnb.z(-574370271460138L) */, null, false, 0, 0.0f, 0, 124);
+    public static final uv a = new uv("ChatGroupNavHook.ValActiveDarkColor" /* "ChatGroupNavHook.ValActiveDarkColor" /* "ChatGroupNavHook.ValActiveDarkColor" /* cnb.z(-574009494207274L)  */, "#FF324B48" /* "#FF324B48" /* "#FF324B48" /* cnb.z(-574370271460138L)  */, null, false, 0, 0.0f, 0, 124);
 }

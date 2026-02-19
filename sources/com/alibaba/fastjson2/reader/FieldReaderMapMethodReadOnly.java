@@ -24,7 +24,7 @@ class FieldReaderMapMethodReadOnly<T> extends FieldReaderMapMethod<T> {
         try {
             return (Map) this.method.invoke(obj, null);
         } catch (Exception unused) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"));
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"));
         }
     }
 

@@ -23,7 +23,7 @@ import android.widget.EdgeEffect;
 import android.widget.FrameLayout;
 import android.widget.OverScroller;
 import com.android.dx.io.Opcodes;
-import com.umeng.analytics.pro.q;
+
 import java.util.ArrayList;
 import java.util.WeakHashMap;
 import me.hd.wauxv.obf.ann;
@@ -37,7 +37,7 @@ import me.hd.wauxv.obf.ckq;
 import me.hd.wauxv.obf.ckr;
 import me.hd.wauxv.obf.cks;
 import me.hd.wauxv.obf.cku;
-import me.hd.wauxv.obf.cnd;
+import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.dfg;
 import me.hd.wauxv.obf.eqq;
 import me.hd.wauxv.obf.eqz;
@@ -521,7 +521,7 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         EdgeEffect edgeEffect2 = this.h;
         if (i9 >= 0) {
             if (i9 > scrollRange && z4) {
-                cnd.bb(edgeEffect, i8 / getHeight(), 1.0f - (i3 / getWidth()));
+                KotlinHelpers2.bb(edgeEffect, i8 / getHeight(), 1.0f - (i3 / getWidth()));
                 if (motionEvent != null) {
                     z2 = false;
                     getScrollFeedbackProvider().a.onScrollLimit(motionEvent.getDeviceId(), motionEvent.getSource(), i2,
@@ -550,7 +550,7 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
             return i7;
         }
         if (z4) {
-            cnd.bb(edgeEffect2, (-i8) / getHeight(), i3 / getWidth());
+            KotlinHelpers2.bb(edgeEffect2, (-i8) / getHeight(), i3 / getWidth());
             if (motionEvent != null) {
                 getScrollFeedbackProvider().a.onScrollLimit(motionEvent.getDeviceId(), motionEvent.getSource(), i2,
                         true);
@@ -582,7 +582,7 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         if (i > 0) {
             return true;
         }
-        float fAt = cnd.at(edgeEffect) * getHeight();
+        float fAt = KotlinHelpers2.at(edgeEffect) * getHeight();
         float fAbs = Math.abs(-i) * 0.35f;
         float f = this.d * 0.015f;
         double dLog = Math.log(fAbs / f);
@@ -622,17 +622,17 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
     public final boolean ba(MotionEvent motionEvent) {
         boolean z;
         EdgeEffect edgeEffect = this.h;
-        if (cnd.at(edgeEffect) != 0.0f) {
-            cnd.bb(edgeEffect, 0.0f, motionEvent.getX() / getWidth());
+        if (KotlinHelpers2.at(edgeEffect) != 0.0f) {
+            KotlinHelpers2.bb(edgeEffect, 0.0f, motionEvent.getX() / getWidth());
             z = true;
         } else {
             z = false;
         }
         EdgeEffect edgeEffect2 = this.i;
-        if (cnd.at(edgeEffect2) == 0.0f) {
+        if (KotlinHelpers2.at(edgeEffect2) == 0.0f) {
             return z;
         }
-        cnd.bb(edgeEffect2, 0.0f, 1.0f - (motionEvent.getX() / getWidth()));
+        KotlinHelpers2.bb(edgeEffect2, 0.0f, 1.0f - (motionEvent.getX() / getWidth()));
         return true;
     }
 
@@ -681,10 +681,10 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
         int height = getHeight();
         EdgeEffect edgeEffect = this.h;
         EdgeEffect edgeEffect2 = this.i;
-        if (i2 <= 0 || cnd.at(edgeEffect) == 0.0f) {
-            if (i2 < 0 && cnd.at(edgeEffect2) != 0.0f) {
+        if (i2 <= 0 || KotlinHelpers2.at(edgeEffect) == 0.0f) {
+            if (i2 < 0 && KotlinHelpers2.at(edgeEffect2) != 0.0f) {
                 float f = height;
-                iRound = Math.round(cnd.bb(edgeEffect2, (i2 * 4.0f) / f, 0.5f) * (f / 4.0f));
+                iRound = Math.round(KotlinHelpers2.bb(edgeEffect2, (i2 * 4.0f) / f, 0.5f) * (f / 4.0f));
                 if (iRound != i2) {
                     edgeEffect2.finish();
                 }
@@ -728,7 +728,7 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
                 postInvalidateOnAnimation();
             }
         }
-        iRound = Math.round(cnd.bb(edgeEffect, ((-i2) * 4.0f) / height, 0.5f) * ((-height) / 4.0f));
+        iRound = Math.round(KotlinHelpers2.bb(edgeEffect, ((-i2) * 4.0f) / height, 0.5f) * ((-height) / 4.0f));
         if (iRound != i2) {
             edgeEffect.finish();
         }
@@ -1321,13 +1321,13 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
                 velocityTracker.computeCurrentVelocity(1000, this.u);
                 int yVelocity = (int) velocityTracker.getYVelocity(this.v);
                 if (Math.abs(yVelocity) >= this.t) {
-                    if (cnd.at(edgeEffect) != 0.0f) {
+                    if (KotlinHelpers2.at(edgeEffect) != 0.0f) {
                         if (ay(edgeEffect, yVelocity)) {
                             edgeEffect.onAbsorb(yVelocity);
                         } else {
                             ap(-yVelocity);
                         }
-                    } else if (cnd.at(edgeEffect2) != 0.0f) {
+                    } else if (KotlinHelpers2.at(edgeEffect2) != 0.0f) {
                         int i2 = -yVelocity;
                         if (ay(edgeEffect2, i2)) {
                             edgeEffect2.onAbsorb(i2);
@@ -1364,14 +1364,14 @@ public class NestedScrollView extends FrameLayout implements cku, ckr {
                     int i4 = this.k - y;
                     float x = motionEvent.getX(iFindPointerIndex) / getWidth();
                     float height = i4 / getHeight();
-                    if (cnd.at(edgeEffect) != 0.0f) {
-                        fBb = -cnd.bb(edgeEffect, -height, x);
-                        if (cnd.at(edgeEffect) == 0.0f) {
+                    if (KotlinHelpers2.at(edgeEffect) != 0.0f) {
+                        fBb = -KotlinHelpers2.bb(edgeEffect, -height, x);
+                        if (KotlinHelpers2.at(edgeEffect) == 0.0f) {
                             edgeEffect.onRelease();
                         }
-                    } else if (cnd.at(edgeEffect2) != 0.0f) {
-                        fBb = cnd.bb(edgeEffect2, height, 1.0f - x);
-                        if (cnd.at(edgeEffect2) == 0.0f) {
+                    } else if (KotlinHelpers2.at(edgeEffect2) != 0.0f) {
+                        fBb = KotlinHelpers2.bb(edgeEffect2, height, 1.0f - x);
+                        if (KotlinHelpers2.at(edgeEffect2) == 0.0f) {
                             edgeEffect2.onRelease();
                         }
                     } else {

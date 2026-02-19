@@ -5,7 +5,7 @@ import java.util.List;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class clo implements IHasInvokeMethod {
+public final /* synthetic */ class clo implements IInvokable {
     public final /* synthetic */ int a;
 
     public /* synthetic */ clo(int i) {
@@ -32,10 +32,10 @@ public final /* synthetic */ class clo implements IHasInvokeMethod {
             case 0:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k("MicroMsg.ChatroomMembersLogic" /* cnb.z(-113838108179242L) */, "/cgi-bin/micromsg-bin/delchatroommember" /* cnb.z(-114310554581802L) */);
+                zbVar.k("MicroMsg.ChatroomMembersLogic" /* "MicroMsg.ChatroomMembersLogic" /* "MicroMsg.ChatroomMembersLogic" /* "MicroMsg.ChatroomMembersLogic" /* cnb.z(-113838108179242L)   */, "/cgi-bin/micromsg-bin/delchatroommember" /* "/cgi-bin/micromsg-bin/delchatroommember" /* "/cgi-bin/micromsg-bin/delchatroommember" /* "/cgi-bin/micromsg-bin/delchatroommember" /* cnb.z(-114310554581802L)   */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 1:
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
@@ -50,21 +50,21 @@ public final /* synthetic */ class clo implements IHasInvokeMethod {
                 cdjVar.q(cls, cls2, clsBf3 != null ? clsBf3 : Integer.class);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 2:
-                amm ammVar = (amm) obj;
-                ammVar.b = new clo(3);
-                ammVar.c = new clo(4);
-                return ens.a;
+                FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar = (FindDexClassMethodDslWrapper) obj;
+                findDexClassMethodDslWrapperVar.onClassCallback = new clo(3);
+                findDexClassMethodDslWrapperVar.onMethodCallback = new clo(4);
+                return KotlinUnit.INSTANCE;
             case 3:
                 bag bagVar2 = (bag) obj;
-                String[] strArr = {"com.tencent.mm.plugin.luckymoney.model" /* cnb.z(-113335597005610L) */};
+                String[] strArr = {"com.tencent.mm.plugin.luckymoney.model" /* "com.tencent.mm.plugin.luckymoney.model" /* "com.tencent.mm.plugin.luckymoney.model" /* "com.tencent.mm.plugin.luckymoney.model" /* cnb.z(-113335597005610L)   */};
                 bagVar2.getClass();
-                bagVar2.a = la.ab(strArr);
+                bagVar2.a = SomeStaticHelpers.ab(strArr);
                 zb zbVar2 = new zb();
-                zbVar2.k("MicroMsg.NetSceneLuckyMoneyDetail" /* cnb.z(-113700669225770L) */, "/cgi-bin/mmpay-bin/qrydetailwxhb" /* cnb.z(-113571820206890L) */);
+                zbVar2.k("MicroMsg.NetSceneLuckyMoneyDetail" /* "MicroMsg.NetSceneLuckyMoneyDetail" /* "MicroMsg.NetSceneLuckyMoneyDetail" /* "MicroMsg.NetSceneLuckyMoneyDetail" /* cnb.z(-113700669225770L)   */, "/cgi-bin/mmpay-bin/qrydetailwxhb" /* "/cgi-bin/mmpay-bin/qrydetailwxhb" /* "/cgi-bin/mmpay-bin/qrydetailwxhb" /* "/cgi-bin/mmpay-bin/qrydetailwxhb" /* cnb.z(-113571820206890L)   */);
                 bagVar2.b = zbVar2;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 4:
                 bah bahVar2 = (bah) obj;
                 cdj cdjVar2 = new cdj();
@@ -88,21 +88,21 @@ public final /* synthetic */ class clo implements IHasInvokeMethod {
                 cdjVar2.q(clsBf4, clsBf5, cls5, clsBf7, clsBf8 != null ? clsBf8 : String.class);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 5:
                 return (String) ((bzv) ((bzx) obj).e()).get(1);
             case 6:
-                amm ammVar2 = (amm) obj;
-                ammVar2.b = new clo(7);
-                ammVar2.c = new clo(8);
-                return ens.a;
+                FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar2 = (FindDexClassMethodDslWrapper) obj;
+                findDexClassMethodDslWrapperVar2.onClassCallback = new clo(7);
+                findDexClassMethodDslWrapperVar2.onMethodCallback = new clo(8);
+                return KotlinUnit.INSTANCE;
             case 7:
                 bag bagVar3 = (bag) obj;
                 zb zbVar3 = new zb();
-                zbVar3.k("MicroMsg.NetSceneInviteChatRoomMember" /* cnb.z(-111037789502250L) */, "/cgi-bin/micromsg-bin/invitechatroommember" /* cnb.z(-110857400875818L) */);
+                zbVar3.k("MicroMsg.NetSceneInviteChatRoomMember" /* "MicroMsg.NetSceneInviteChatRoomMember" /* "MicroMsg.NetSceneInviteChatRoomMember" /* "MicroMsg.NetSceneInviteChatRoomMember" /* cnb.z(-111037789502250L)   */, "/cgi-bin/micromsg-bin/invitechatroommember" /* "/cgi-bin/micromsg-bin/invitechatroommember" /* "/cgi-bin/micromsg-bin/invitechatroommember" /* "/cgi-bin/micromsg-bin/invitechatroommember" /* cnb.z(-110857400875818L)   */);
                 bagVar3.getClass();
                 bagVar3.b = zbVar3;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 8:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
@@ -120,32 +120,32 @@ public final /* synthetic */ class clo implements IHasInvokeMethod {
                 cdjVar3.q(cls6, cls7, cls8, clsBf12 != null ? clsBf12 : Object.class);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 9:
-                ((amm) obj).c = new clo(10);
-                return ens.a;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new clo(10);
+                return KotlinUnit.INSTANCE;
             case 10:
                 bah bahVar4 = (bah) obj;
                 cdj cdjVar4 = new cdj();
-                cdjVar4.t("/cgi-bin/micromsg-bin/modifycontactlabellist" /* cnb.z(-110436494080810L) */);
+                cdjVar4.t("/cgi-bin/micromsg-bin/modifycontactlabellist" /* "/cgi-bin/micromsg-bin/modifycontactlabellist" /* "/cgi-bin/micromsg-bin/modifycontactlabellist" /* "/cgi-bin/micromsg-bin/modifycontactlabellist" /* cnb.z(-110436494080810L)   */);
                 cls10 = LinkedList.class;
                 Class<LinkedList> clsBf13 = cnf.bf(dal.b(cls10));
                 cdjVar4.q(clsBf13 != null ? clsBf13 : LinkedList.class);
                 bahVar4.getClass();
                 bahVar4.d = cdjVar4;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 11:
-                amm ammVar3 = (amm) obj;
-                ammVar3.b = new clo(12);
-                ammVar3.c = new clo(13);
-                return ens.a;
+                FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar3 = (FindDexClassMethodDslWrapper) obj;
+                findDexClassMethodDslWrapperVar3.onClassCallback = new clo(12);
+                findDexClassMethodDslWrapperVar3.onMethodCallback = new clo(13);
+                return KotlinUnit.INSTANCE;
             case 12:
                 bag bagVar4 = (bag) obj;
                 zb zbVar4 = new zb();
-                zbVar4.k("MicroMsg.NetSceneSendMsg" /* cnb.z(-111609020152618L) */, "/cgi-bin/micromsg-bin/newsendmsg" /* cnb.z(-112051401784106L) */, "NetSceneSendMsg:MsgSource:%s" /* cnb.z(-111926847732522L) */);
+                zbVar4.k("MicroMsg.NetSceneSendMsg" /* "MicroMsg.NetSceneSendMsg" /* "MicroMsg.NetSceneSendMsg" /* "MicroMsg.NetSceneSendMsg" /* cnb.z(-111609020152618L)   */, "/cgi-bin/micromsg-bin/newsendmsg" /* "/cgi-bin/micromsg-bin/newsendmsg" /* "/cgi-bin/micromsg-bin/newsendmsg" /* "/cgi-bin/micromsg-bin/newsendmsg" /* cnb.z(-112051401784106L)   */, "NetSceneSendMsg:MsgSource:%s" /* "NetSceneSendMsg:MsgSource:%s" /* "NetSceneSendMsg:MsgSource:%s" /* "NetSceneSendMsg:MsgSource:%s" /* cnb.z(-111926847732522L)   */);
                 bagVar4.getClass();
                 bagVar4.b = zbVar4;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 13:
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar5 = new cdj();
@@ -168,21 +168,21 @@ public final /* synthetic */ class clo implements IHasInvokeMethod {
                 cdjVar5.q(clsBf14, cls11, clsBf16, cls12, clsBf18 != null ? clsBf18 : Object.class);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar5;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 14:
-                amm ammVar4 = (amm) obj;
-                ammVar4.b = new clo(15);
-                ammVar4.c = new clo(16);
-                return ens.a;
+                FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar4 = (FindDexClassMethodDslWrapper) obj;
+                findDexClassMethodDslWrapperVar4.onClassCallback = new clo(15);
+                findDexClassMethodDslWrapperVar4.onMethodCallback = new clo(16);
+                return KotlinUnit.INSTANCE;
             case 15:
                 bag bagVar5 = (bag) obj;
-                String[] strArr2 = {"com.tencent.mm.plugin.luckymoney.model" /* cnb.z(-111583250348842L) */};
+                String[] strArr2 = {"com.tencent.mm.plugin.luckymoney.model" /* "com.tencent.mm.plugin.luckymoney.model" /* "com.tencent.mm.plugin.luckymoney.model" /* "com.tencent.mm.plugin.luckymoney.model" /* cnb.z(-111583250348842L)   */};
                 bagVar5.getClass();
-                bagVar5.a = la.ab(strArr2);
+                bagVar5.a = SomeStaticHelpers.ab(strArr2);
                 zb zbVar5 = new zb();
-                zbVar5.k("MicroMsg.NetSceneOpenLuckyMoney" /* cnb.z(-111398566755114L) */, "/cgi-bin/mmpay-bin/openwxhb" /* cnb.z(-134900627798826L) */);
+                zbVar5.k("MicroMsg.NetSceneOpenLuckyMoney" /* "MicroMsg.NetSceneOpenLuckyMoney" /* "MicroMsg.NetSceneOpenLuckyMoney" /* "MicroMsg.NetSceneOpenLuckyMoney" /* cnb.z(-111398566755114L)   */, "/cgi-bin/mmpay-bin/openwxhb" /* "/cgi-bin/mmpay-bin/openwxhb" /* "/cgi-bin/mmpay-bin/openwxhb" /* "/cgi-bin/mmpay-bin/openwxhb" /* cnb.z(-134900627798826L)   */);
                 bagVar5.b = zbVar5;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 16:
                 bah bahVar6 = (bah) obj;
                 cdj cdjVar6 = new cdj();
@@ -206,20 +206,20 @@ public final /* synthetic */ class clo implements IHasInvokeMethod {
                 cdjVar6.q(cls15, cls16, cls17, cls18, cls19, cls20, cls21, cls22, clsBf27 == null ? String.class : clsBf27);
                 bahVar6.getClass();
                 bahVar6.d = cdjVar6;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 17:
-                ((amm) obj).c = new clo(19);
-                return ens.a;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new clo(19);
+                return KotlinUnit.INSTANCE;
             case 18:
-                ((amm) obj).c = new clo(20);
-                return ens.a;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new clo(20);
+                return KotlinUnit.INSTANCE;
             case 19:
                 bah bahVar7 = (bah) obj;
                 cdj cdjVar7 = new cdj();
-                cdjVar7.t("MicroMsg.NetSceneQueue" /* cnb.z(-136305082104618L) */, "forbid in waiting: type=" /* cnb.z(-136189117987626L) */, "forbid in running: type=" /* cnb.z(-136098923674410L) */);
+                cdjVar7.t("MicroMsg.NetSceneQueue" /* "MicroMsg.NetSceneQueue" /* "MicroMsg.NetSceneQueue" /* "MicroMsg.NetSceneQueue" /* cnb.z(-136305082104618L)   */, "forbid in waiting: type=" /* "forbid in waiting: type=" /* "forbid in waiting: type=" /* "forbid in waiting: type=" /* cnb.z(-136189117987626L)   */, "forbid in running: type=" /* "forbid in running: type=" /* "forbid in running: type=" /* "forbid in running: type=" /* cnb.z(-136098923674410L)   */);
                 bahVar7.getClass();
                 bahVar7.d = cdjVar7;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 20:
                 bah bahVar8 = (bah) obj;
                 cdj cdjVar8 = new cdj();
@@ -227,29 +227,29 @@ public final /* synthetic */ class clo implements IHasInvokeMethod {
                 cdjVar8.o(emn.bb(cmc.a).getDeclaringClass());
                 fj fjVar = new fj();
                 cdj cdjVar9 = new cdj();
-                cdjVar9.t("MicroMsg.BigBallSysCmdMsgConsumer" /* cnb.z(-135441793678122L) */, "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* cnb.z(-135244225182506L) */);
+                cdjVar9.t("MicroMsg.BigBallSysCmdMsgConsumer" /* "MicroMsg.BigBallSysCmdMsgConsumer" /* "MicroMsg.BigBallSysCmdMsgConsumer" /* "MicroMsg.BigBallSysCmdMsgConsumer" /* cnb.z(-135441793678122L)   */, "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* cnb.z(-135244225182506L)   */);
                 fjVar.f(cdjVar9);
                 cdj cdjVar10 = new cdj();
-                cdjVar10.t("MicroMsg.CommandProcessor" /* cnb.z(-135562052762410L) */, "summer processed log level[%s], need open debug ret false" /* cnb.z(-132718784412458L) */);
+                cdjVar10.t("MicroMsg.CommandProcessor" /* "MicroMsg.CommandProcessor" /* "MicroMsg.CommandProcessor" /* "MicroMsg.CommandProcessor" /* cnb.z(-135562052762410L)   */, "summer processed log level[%s], need open debug ret false" /* "summer processed log level[%s], need open debug ret false" /* "summer processed log level[%s], need open debug ret false" /* "summer processed log level[%s], need open debug ret false" /* cnb.z(-132718784412458L)   */);
                 fjVar.f(cdjVar10);
                 cdjVar8.j = fjVar;
                 bahVar8.getClass();
                 bahVar8.d = cdjVar8;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 21:
-                amm ammVar5 = (amm) obj;
-                ammVar5.b = new clo(22);
-                ammVar5.c = new clo(23);
-                return ens.a;
+                FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar5 = (FindDexClassMethodDslWrapper) obj;
+                findDexClassMethodDslWrapperVar5.onClassCallback = new clo(22);
+                findDexClassMethodDslWrapperVar5.onMethodCallback = new clo(23);
+                return KotlinUnit.INSTANCE;
             case 22:
                 bag bagVar6 = (bag) obj;
-                String[] strArr3 = {"com.tencent.mm.plugin.luckymoney.model" /* cnb.z(-132778913954602L) */};
+                String[] strArr3 = {"com.tencent.mm.plugin.luckymoney.model" /* "com.tencent.mm.plugin.luckymoney.model" /* "com.tencent.mm.plugin.luckymoney.model" /* "com.tencent.mm.plugin.luckymoney.model" /* cnb.z(-132778913954602L)   */};
                 bagVar6.getClass();
-                bagVar6.a = la.ab(strArr3);
+                bagVar6.a = SomeStaticHelpers.ab(strArr3);
                 zb zbVar6 = new zb();
-                zbVar6.k("MicroMsg.NetSceneReceiveLuckyMoney" /* cnb.z(-132061654416170L) */, "/cgi-bin/mmpay-bin/receivewxhb" /* cnb.z(-132478266243882L) */);
+                zbVar6.k("MicroMsg.NetSceneReceiveLuckyMoney" /* "MicroMsg.NetSceneReceiveLuckyMoney" /* "MicroMsg.NetSceneReceiveLuckyMoney" /* "MicroMsg.NetSceneReceiveLuckyMoney" /* cnb.z(-132061654416170L)   */, "/cgi-bin/mmpay-bin/receivewxhb" /* "/cgi-bin/mmpay-bin/receivewxhb" /* "/cgi-bin/mmpay-bin/receivewxhb" /* "/cgi-bin/mmpay-bin/receivewxhb" /* cnb.z(-132478266243882L)   */);
                 bagVar6.b = zbVar6;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 23:
                 bah bahVar9 = (bah) obj;
                 cdj cdjVar11 = new cdj();
@@ -275,42 +275,42 @@ public final /* synthetic */ class clo implements IHasInvokeMethod {
                 cdjVar11.q(cls23, cls24, clsBf30, clsBf31, clsBf32, cls25, clsBf34 == null ? String.class : clsBf34);
                 bahVar9.getClass();
                 bahVar9.d = cdjVar11;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 24:
-                amm ammVar6 = (amm) obj;
-                ammVar6.b = new clo(25);
-                ammVar6.c = new clo(26);
-                return ens.a;
+                FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar6 = (FindDexClassMethodDslWrapper) obj;
+                findDexClassMethodDslWrapperVar6.onClassCallback = new clo(25);
+                findDexClassMethodDslWrapperVar6.onMethodCallback = new clo(26);
+                return KotlinUnit.INSTANCE;
             case 25:
                 bag bagVar7 = (bag) obj;
-                String[] strArr4 = {"com.tencent.mm.plugin.remittance.model" /* cnb.z(-133659382250282L) */};
+                String[] strArr4 = {"com.tencent.mm.plugin.remittance.model" /* "com.tencent.mm.plugin.remittance.model" /* "com.tencent.mm.plugin.remittance.model" /* "com.tencent.mm.plugin.remittance.model" /* cnb.z(-133659382250282L)   */};
                 bagVar7.getClass();
-                bagVar7.a = la.ab(strArr4);
+                bagVar7.a = SomeStaticHelpers.ab(strArr4);
                 zb zbVar7 = new zb();
-                zbVar7.k("Micromsg.NetSceneTenpayRemittanceGen" /* cnb.z(-134024454470442L) */, "/cgi-bin/mmpay-bin/f2fplaceorder" /* cnb.z(-133298604997418L) */, "/cgi-bin/mmpay-bin/transferplaceorder" /* cnb.z(-133156871076650L) */);
+                zbVar7.k("Micromsg.NetSceneTenpayRemittanceGen" /* "Micromsg.NetSceneTenpayRemittanceGen" /* "Micromsg.NetSceneTenpayRemittanceGen" /* "Micromsg.NetSceneTenpayRemittanceGen" /* cnb.z(-134024454470442L)   */, "/cgi-bin/mmpay-bin/f2fplaceorder" /* "/cgi-bin/mmpay-bin/f2fplaceorder" /* "/cgi-bin/mmpay-bin/f2fplaceorder" /* "/cgi-bin/mmpay-bin/f2fplaceorder" /* cnb.z(-133298604997418L)   */, "/cgi-bin/mmpay-bin/transferplaceorder" /* "/cgi-bin/mmpay-bin/transferplaceorder" /* "/cgi-bin/mmpay-bin/transferplaceorder" /* "/cgi-bin/mmpay-bin/transferplaceorder" /* cnb.z(-133156871076650L)   */);
                 bagVar7.b = zbVar7;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 26:
                 bah bahVar10 = (bah) obj;
                 cdj cdjVar12 = new cdj();
-                cdjVar12.p(new bqi(29, 30, 1));
+                cdjVar12.p(new IntRange(29, 30, 1));
                 bahVar10.getClass();
                 bahVar10.d = cdjVar12;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 27:
-                amm ammVar7 = (amm) obj;
-                ammVar7.b = new clo(28);
-                ammVar7.c = new clo(29);
-                return ens.a;
+                FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar7 = (FindDexClassMethodDslWrapper) obj;
+                findDexClassMethodDslWrapperVar7.onClassCallback = new clo(28);
+                findDexClassMethodDslWrapperVar7.onMethodCallback = new clo(29);
+                return KotlinUnit.INSTANCE;
             case 28:
                 bag bagVar8 = (bag) obj;
-                String[] strArr5 = {"com.tencent.mm.modelsimple" /* cnb.z(-133320079833898L) */};
+                String[] strArr5 = {"com.tencent.mm.modelsimple" /* "com.tencent.mm.modelsimple" /* "com.tencent.mm.modelsimple" /* "com.tencent.mm.modelsimple" /* cnb.z(-133320079833898L)   */};
                 bagVar8.getClass();
-                bagVar8.a = la.ab(strArr5);
+                bagVar8.a = SomeStaticHelpers.ab(strArr5);
                 zb zbVar8 = new zb();
-                zbVar8.k("MicroMsg.NetSceneRevokeMsg" /* cnb.z(-139285789408042L) */, "/cgi-bin/micromsg-bin/revokemsg" /* cnb.z(-139187005160234L) */);
+                zbVar8.k("MicroMsg.NetSceneRevokeMsg" /* "MicroMsg.NetSceneRevokeMsg" /* "MicroMsg.NetSceneRevokeMsg" /* "MicroMsg.NetSceneRevokeMsg" /* cnb.z(-139285789408042L)   */, "/cgi-bin/micromsg-bin/revokemsg" /* "/cgi-bin/micromsg-bin/revokemsg" /* "/cgi-bin/micromsg-bin/revokemsg" /* "/cgi-bin/micromsg-bin/revokemsg" /* cnb.z(-139187005160234L)   */);
                 bagVar8.b = zbVar8;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             default:
                 bah bahVar11 = (bah) obj;
                 cdj cdjVar13 = new cdj();
@@ -323,7 +323,7 @@ public final /* synthetic */ class clo implements IHasInvokeMethod {
                 cdjVar13.q(null, clsBf35, clsBf36 != null ? clsBf36 : String.class);
                 bahVar11.getClass();
                 bahVar11.d = cdjVar13;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
         }
     }
 }

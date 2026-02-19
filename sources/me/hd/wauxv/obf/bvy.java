@@ -301,7 +301,7 @@ public final class bvy extends ad implements RandomAccess, Serializable {
             throwIfVar1IsNull(objArrCopyOfRange, "copyOfRange(...)");
             return objArrCopyOfRange;
         }
-        la._aj(0, i2, this.c, i + i2, objArr);
+        SomeStaticHelpers._aj(0, i2, this.c, i + i2, objArr);
         int i3 = this.e;
         if (i3 < objArr.length) {
             objArr[i3] = null;
@@ -357,6 +357,6 @@ public final class bvy extends ad implements RandomAccess, Serializable {
         Object[] objArr = this.c;
         int i = this.e;
         int i2 = this.d;
-        return la.k(objArr, i2, i + i2);
+        return SomeStaticHelpers.k(objArr, i2, i + i2);
     }
 }

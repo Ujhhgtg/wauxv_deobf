@@ -10,9 +10,9 @@ public final class AppBrandAntiSplashAdHook extends SwitchHook implements IDexFi
                                                                                                               * cnb.z(-
                                                                                                               * 409065570171690L)
                                                                                                               */);
-    public static final String b = "小程序" /* cnb.z(-411032665193258L) */;
-    public static final String c = "禁止开屏广告" /* cnb.z(-410981125585706L) */;
-    public static final String d = "阻止小程序启动时加载的五秒全屏广告" /* cnb.z(-410951060814634L) */;
+    public static final String b = "小程序" /* "小程序" /* "小程序" /* "小程序" /* cnb.z(-411032665193258L)   */;
+    public static final String c = "禁止开屏广告" /* "禁止开屏广告" /* "禁止开屏广告" /* "禁止开屏广告" /* cnb.z(-410981125585706L)   */;
+    public static final String d = "阻止小程序启动时加载的五秒全屏广告" /* "阻止小程序启动时加载的五秒全屏广告" /* "阻止小程序启动时加载的五秒全屏广告" /* "阻止小程序启动时加载的五秒全屏广告" /* cnb.z(-410951060814634L)   */;
     public static final String[] i = { ewi.b.e, ewi.c.e };
     public static final boolean j = true;
 
@@ -23,7 +23,7 @@ public final class AppBrandAntiSplashAdHook extends SwitchHook implements IDexFi
 
     @Override // me.hd.wauxv.obf.bmf
     public final void initOnce() {
-        List listBf = dqc.bf(emn.bb(gv.a));
+        List listBf = dqc.toSingletonList(emn.bb(gv.a));
         AppBrandAntiSplashAdHook gwVar = a;
         aki akiVarAb = csb.ab(gwVar, listBf);
         gwVar.y(akiVarAb, new gi(14));

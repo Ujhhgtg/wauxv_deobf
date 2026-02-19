@@ -3,13 +3,13 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes2.dex */
 public final class elu extends SwitchHook implements IHandlesHookParam {
-    public static final elu a = new elu("TransmitImg" /* cnb.z(-600346233666346L) */);
-    public static final String b = "测试-配置修复-v53-msgSend" /* cnb.z(-600745665624874L) */;
-    public static final String c = "转发图片使用新架构" /* cnb.z(-600625406540586L) */;
+    public static final elu a = new elu("TransmitImg" /* "TransmitImg" /* "TransmitImg" /* "TransmitImg" /* cnb.z(-600346233666346L)   */);
+    public static final String b = "测试-配置修复-v53-msgSend" /* "测试-配置修复-v53-msgSend" /* "测试-配置修复-v53-msgSend" /* "测试-配置修复-v53-msgSend" /* cnb.z(-600745665624874L)   */;
+    public static final String c = "转发图片使用新架构" /* "转发图片使用新架构" /* "转发图片使用新架构" /* "转发图片使用新架构" /* cnb.z(-600625406540586L)   */;
 
     @Override // me.hd.wauxv.obf.IHandlesHookParam
     public final void handleHookParam(HookParam hookParam, String str) {
-        if (getIsEnabled() && str.equals("RepairerConfig_TransmitImg_Int" /* cnb.z(-600878809611050L) */)) {
+        if (getIsEnabled() && str.equals("RepairerConfig_TransmitImg_Int" /* "RepairerConfig_TransmitImg_Int" /* "RepairerConfig_TransmitImg_Int" /* "RepairerConfig_TransmitImg_Int" /* cnb.z(-600878809611050L)   */)) {
             hookParam.setResult(1);
         }
     }

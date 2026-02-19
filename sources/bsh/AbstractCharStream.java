@@ -144,7 +144,7 @@ public abstract class AbstractCharStream implements CharStream {
     public void backup(int i) {
         int i2 = this.bufsize;
         if (i > i2) {
-            throw new IllegalStateException(yg.m(yg.r(i, "Cannot back ", " chars which is larger than the internal buffer size ("), ")", this.bufsize));
+            throw new IllegalStateException(yg.concatToVar1(yg.concatVar213(i, "Cannot back ", " chars which is larger than the internal buffer size ("), ")", this.bufsize));
         }
         this.inBuf += i;
         int i3 = this.bufpos - i;

@@ -83,12 +83,12 @@ public abstract class baf {
         int[][] iArr3 = deyVar.e;
         int[][] iArr4 = deyVar.d;
         int[][] iArr5 = deyVar.c;
-        la.m(iArr2);
-        la.m(iArr);
+        SomeStaticHelpers.m(iArr2);
+        SomeStaticHelpers.m(iArr);
         for (int i14 = 0; i14 < 32; i14++) {
-            la.m(iArr5[i14]);
-            la.m(iArr4[i14]);
-            la.m(iArr3[i14]);
+            SomeStaticHelpers.m(iArr5[i14]);
+            SomeStaticHelpers.m(iArr4[i14]);
+            SomeStaticHelpers.m(iArr3[i14]);
         }
         int i15 = i13;
         for (int i16 = 0; i15 < length && i16 < length2; i16++) {

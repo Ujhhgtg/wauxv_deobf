@@ -41,9 +41,9 @@ public final class dtn {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("LiteappInfoProto(appId=" /* cnb.z(-224227357621034L) */);
-        yg.u(sb, this.a, -224124278405930L);
-        yg.u(sb, this.b, -224089918667562L);
+        sb.append("LiteappInfoProto(appId=" /* "LiteappInfoProto(appId=" /* "LiteappInfoProto(appId=" /* cnb.z(-224227357621034L)  */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -224124278405930L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -224089918667562L);
         return concat(sb, this.c, ')');
     }
 }

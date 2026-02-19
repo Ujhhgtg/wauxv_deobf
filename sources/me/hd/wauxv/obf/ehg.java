@@ -41,8 +41,8 @@ public final class ehg {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("w12Proto(poiClassifyId=" /* cnb.z(-306716499508010L) */);
-        yg.u(sb, this.a, -306613420292906L);
+        sb.append("w12Proto(poiClassifyId=" /* "w12Proto(poiClassifyId=" /* "w12Proto(poiClassifyId=" /* "w12Proto(poiClassifyId=" /* cnb.z(-306716499508010L)   */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -306613420292906L);
         bjs.v(sb, this.b, -306540405848874L);
         sb.append(this.c);
         sb.append(')');

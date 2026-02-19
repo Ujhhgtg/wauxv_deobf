@@ -9,15 +9,14 @@ import javax.net.ssl.SSLPeerUnverifiedException;
 import me.hd.wauxv.obf.aaz;
 import me.hd.wauxv.obf.abb;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.avd;
+import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.bfu;
 import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.btp;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dnj;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.emc;
-import me.hd.wauxv.obf.la;
+import me.hd.wauxv.obf.SomeStaticHelpers;
 import me.hd.wauxv.obf.nu;
 import me.hd.wauxv.obf.sj;
 import net.bytebuddy.pool.TypePool;
@@ -337,7 +336,7 @@ public final class CertificatePinner {
 
     public final List<Pin> findMatchingPins(String str) {
         throwIfVar1IsNull(str, "hostname");
-        List arrayList = avd.a;
+        List arrayList = EmptyReadonlyList.a;
         for (Object obj : this.pins) {
             if (((Pin) obj).matchesHostname(str)) {
                 if (arrayList.isEmpty()) {
@@ -372,7 +371,7 @@ public final class CertificatePinner {
     public final void check(String str, Certificate... certificateArr) {
         throwIfVar1IsNull(str, "hostname");
         throwIfVar1IsNull(certificateArr, "peerCertificates");
-        check(str, la.ab(certificateArr));
+        check(str, SomeStaticHelpers.ab(certificateArr));
     }
 
     public /* synthetic */ CertificatePinner(Set set, CertificateChainCleaner certificateChainCleaner, int i,

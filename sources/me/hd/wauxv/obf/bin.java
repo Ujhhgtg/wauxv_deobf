@@ -9,10 +9,10 @@ public final /* synthetic */ class bin implements bgx {
     static {
         bin binVar = new bin();
         b = binVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.proto.GmailList" /* cnb.z(-335746183461674L) */, binVar, 2);
-        cucVar.x("Count" /* cnb.z(-341552979245866L) */, false);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.proto.GmailList" /* "me.hd.wauxv.hook.micromsg.core.protobuf.proto.GmailList" /* "me.hd.wauxv.hook.micromsg.core.protobuf.proto.GmailList" /* cnb.z(-335746183461674L)  */, binVar, 2);
+        cucVar.x("Count" /* "Count" /* "Count" /* cnb.z(-341552979245866L)  */, false);
         cucVar.y(new aoz(1, 4));
-        cucVar.x("List" /* cnb.z(-341510029572906L) */, false);
+        cucVar.x("List" /* "List" /* "List" /* cnb.z(-341510029572906L)  */, false);
         cucVar.y(new aoz(2, 4));
         descriptor = cucVar;
     }

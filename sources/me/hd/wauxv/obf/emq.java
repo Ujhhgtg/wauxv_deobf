@@ -27,7 +27,7 @@ public final class emq implements Collection, IEmpty {
     @Override // java.util.Collection
     public final boolean contains(Object obj) {
         if (obj instanceof emp) {
-            return la.r(this.a, ((emp) obj).a) >= 0;
+            return SomeStaticHelpers.r(this.a, ((emp) obj).a) >= 0;
         }
         return false;
     }
@@ -42,7 +42,7 @@ public final class emq implements Collection, IEmpty {
             if (!(obj instanceof emp)) {
                 return false;
             }
-            if (la.r(this.a, ((emp) obj).a) < 0) {
+            if (SomeStaticHelpers.r(this.a, ((emp) obj).a) < 0) {
                 return false;
             }
         }

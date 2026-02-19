@@ -176,9 +176,9 @@ public abstract class bad extends bmy {
                                 } else {
                                     size = ((Collection) r2).size() - i;
                                     if (size <= 0) {
-                                        listBf = avd.a;
+                                        listBf = EmptyReadonlyList.a;
                                     } else if (size == 1) {
-                                        listBf = dqc.bf(aaz.l((List) r2));
+                                        listBf = dqc.toSingletonList(aaz.l((List) r2));
                                     } else {
                                         arrayList = new ArrayList(size);
                                         if (r2 instanceof RandomAccess) {
@@ -218,9 +218,9 @@ public abstract class bad extends bmy {
                     } else {
                         size = ((Collection) r2).size() - i;
                         if (size <= 0) {
-                            listBf = avd.a;
+                            listBf = EmptyReadonlyList.a;
                         } else if (size == 1) {
-                            listBf = dqc.bf(aaz.l((List) r2));
+                            listBf = dqc.toSingletonList(aaz.l((List) r2));
                         } else {
                             arrayList = new ArrayList(size);
                             if (r2 instanceof RandomAccess) {

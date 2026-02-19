@@ -27,7 +27,7 @@ public final /* synthetic */ class dfq implements bgj {
         long jAl2;
         Object objX;
         int i = this.a;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         int i2 = 0;
         switch (i) {
             case 0:
@@ -180,48 +180,48 @@ public final /* synthetic */ class dfq implements bgj {
                     for (Object obj3 : list) {
                         int i16 = i2 + 1;
                         if (i2 < 0) {
-                            aba.aj();
+                            OtherStaticHelpers.aj();
                             throw null;
                         }
                         JSONObject jSONObject = (JSONObject) obj3;
                         sb.append("第" + i16 + (char) 24352);
                         sb.append('\n');
-                        sb.append("链接: " /* cnb.z(-588406224583466L) */ + jSONObject.getString("url" /* cnb.z(-588414814518058L) */) + jSONObject.getString("url_token" /* cnb.z(-588431994387242L) */));
+                        sb.append("链接: " /* "链接: " /* "链接: " /* cnb.z(-588406224583466L)  */ + jSONObject.getString("url" /* "url" /* "url" /* cnb.z(-588414814518058L)  */) + jSONObject.getString("url_token" /* "url_token" /* "url_token" /* cnb.z(-588431994387242L)  */));
                         sb.append('\n');
                         i2 = i16;
                     }
                     dnc.c(sb.toString());
-                    dnc.g(null, 3, "复制图片成功" /* cnb.z(-588367569877802L) */);
+                    dnc.g(null, 3, "复制图片成功" /* "复制图片成功" /* "复制图片成功" /* cnb.z(-588367569877802L)  */);
                 } else if (iIntValue3 == 4) {
                     JSONObject jSONObject2 = (JSONObject) list.get(0);
-                    int i17 = jSONObject2.getInt("videoDuration" /* cnb.z(-588320325237546L) */);
+                    int i17 = jSONObject2.getInt("videoDuration" /* "videoDuration" /* "videoDuration" /* cnb.z(-588320325237546L)  */);
                     Locale locale = Locale.CHINA;
-                    String str = String.format(locale, "%02d:%02d:%02d" /* cnb.z(-588243015826218L) */, Arrays.copyOf(new Object[]{Integer.valueOf(i17 / 3600), Integer.valueOf((i17 % 3600) / 60), Integer.valueOf(i17 % 60)}, 3));
-                    "format(...)" /* cnb.z(-588728347130666L) */;
-                    String str2 = String.format(locale, "%.2f MB" /* cnb.z(-588672512555818L) */, Arrays.copyOf(new Object[]{Double.valueOf((((double) jSONObject2.getInt("fileSize" /* cnb.z(-588711167261482L) */)) / 1024.0d) / 1024.0d)}, 1));
-                    "format(...)" /* cnb.z(-588638152817450L) */;
+                    String str = String.format(locale, "%02d:%02d:%02d" /* "%02d:%02d:%02d" /* "%02d:%02d:%02d" /* cnb.z(-588243015826218L)  */, Arrays.copyOf(new Object[]{Integer.valueOf(i17 / 3600), Integer.valueOf((i17 % 3600) / 60), Integer.valueOf(i17 % 60)}, 3));
+                    "format(...)" /* "format(...)" /* "format(...)" /* cnb.z(-588728347130666L)  */;
+                    String str2 = String.format(locale, "%.2f MB" /* "%.2f MB" /* "%.2f MB" /* cnb.z(-588672512555818L)  */, Arrays.copyOf(new Object[]{Double.valueOf((((double) jSONObject2.getInt("fileSize" /* "fileSize" /* "fileSize" /* cnb.z(-588711167261482L)  */)) / 1024.0d) / 1024.0d)}, 1));
+                    "format(...)" /* "format(...)" /* "format(...)" /* cnb.z(-588638152817450L)  */;
                     StringBuilder sb2 = new StringBuilder();
-                    sb2.append("时长: " /* cnb.z(-588552253471530L) */.concat(str));
+                    sb2.append("时长: " /* "时长: " /* "时长: " /* cnb.z(-588552253471530L)  */.concat(str));
                     sb2.append('\n');
-                    sb2.append("大小: " /* cnb.z(-588582318242602L) */.concat(str2));
+                    sb2.append("大小: " /* "大小: " /* "大小: " /* cnb.z(-588582318242602L)  */.concat(str2));
                     sb2.append('\n');
-                    JSONObject jSONObjectOptJSONObject = jSONObject2.optJSONObject("media_cdn_info" /* cnb.z(-588526483667754L) */);
-                    if (jSONObjectOptJSONObject == null || !jSONObjectOptJSONObject.has("pcdn_url" /* cnb.z(-585713280088874L) */)) {
-                        String string = jSONObject2.getString("url" /* cnb.z(-585597315971882L) */);
-                        String string2 = jSONObject2.getString("url_token" /* cnb.z(-585614495841066L) */);
-                        String string3 = jSONObject2.getString("decodeKey" /* cnb.z(-585588726037290L) */);
-                        sb2.append("密链: " /* cnb.z(-585494236756778L) */ + string + string2);
+                    JSONObject jSONObjectOptJSONObject = jSONObject2.optJSONObject("media_cdn_info" /* "media_cdn_info" /* "media_cdn_info" /* cnb.z(-588526483667754L)  */);
+                    if (jSONObjectOptJSONObject == null || !jSONObjectOptJSONObject.has("pcdn_url" /* "pcdn_url" /* "pcdn_url" /* cnb.z(-585713280088874L)  */)) {
+                        String string = jSONObject2.getString("url" /* "url" /* "url" /* cnb.z(-585597315971882L)  */);
+                        String string2 = jSONObject2.getString("url_token" /* "url_token" /* "url_token" /* cnb.z(-585614495841066L)  */);
+                        String string3 = jSONObject2.getString("decodeKey" /* "decodeKey" /* "decodeKey" /* cnb.z(-585588726037290L)  */);
+                        sb2.append("密链: " /* "密链: " /* "密链: " /* cnb.z(-585494236756778L)  */ + string + string2);
                         sb2.append('\n');
-                        sb2.append("密钥: " /* cnb.z(-585524301527850L) */ + string3);
+                        sb2.append("密钥: " /* "密钥: " /* "密钥: " /* cnb.z(-585524301527850L)  */ + string3);
                         sb2.append('\n');
                     } else {
-                        sb2.append("直链: " /* cnb.z(-585674625383210L) */ + jSONObjectOptJSONObject.getString("pcdn_url" /* cnb.z(-585635970677546L) */));
+                        sb2.append("直链: " /* "直链: " /* "直链: " /* cnb.z(-585674625383210L)  */ + jSONObjectOptJSONObject.getString("pcdn_url" /* "pcdn_url" /* "pcdn_url" /* cnb.z(-585635970677546L)  */));
                         sb2.append('\n');
                     }
                     dnc.c(sb2.toString());
-                    dnc.g(null, 3, "复制视频成功" /* cnb.z(-586018222766890L) */);
+                    dnc.g(null, 3, "复制视频成功" /* "复制视频成功" /* "复制视频成功" /* cnb.z(-586018222766890L)  */);
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 14:
                 int iIntValue4 = ((Integer) obj).intValue();
                 List list2 = (List) obj2;
@@ -230,35 +230,35 @@ public final /* synthetic */ class dfq implements bgj {
                     for (Object obj4 : list2) {
                         int i18 = i2 + 1;
                         if (i2 < 0) {
-                            aba.aj();
+                            OtherStaticHelpers.aj();
                             throw null;
                         }
                         JSONObject jSONObject3 = (JSONObject) obj4;
-                        String string4 = jSONObject3.getString("md5sum" /* cnb.z(-585988157995818L) */);
-                        String string5 = jSONObject3.getString("url" /* cnb.z(-585940913355562L) */);
-                        String string6 = jSONObject3.getString("url_token" /* cnb.z(-585958093224746L) */);
+                        String string4 = jSONObject3.getString("md5sum" /* "md5sum" /* "md5sum" /* cnb.z(-585988157995818L)  */);
+                        String string5 = jSONObject3.getString("url" /* "url" /* "url" /* cnb.z(-585940913355562L)  */);
+                        String string6 = jSONObject3.getString("url_token" /* "url_token" /* "url_token" /* cnb.z(-585958093224746L)  */);
                         alc alcVar = aou.a;
-                        cnd.bf(akq.f, new etb("第" + i18 + (char) 24352, string4, string5, string6, null, 0));
+                        KotlinHelpers2.bf(akq.f, new etb("第" + i18 + (char) 24352, string4, string5, string6, null, 0));
                         i2 = i18;
                     }
                 } else if (iIntValue4 == 4) {
                     JSONObject jSONObject4 = (JSONObject) list2.get(0);
-                    String string7 = jSONObject4.getString("md5sum" /* cnb.z(-585932323420970L) */);
-                    String str3 = String.format(Locale.CHINA, "%.2fMB" /* cnb.z(-585863603944234L) */, Arrays.copyOf(new Object[]{Double.valueOf((((double) jSONObject4.getInt("fileSize" /* cnb.z(-585902258649898L) */)) / 1024.0d) / 1024.0d)}, 1));
-                    "format(...)" /* cnb.z(-585833539173162L) */;
-                    JSONObject jSONObjectOptJSONObject2 = jSONObject4.optJSONObject("media_cdn_info" /* cnb.z(-585197884013354L) */);
-                    if (jSONObjectOptJSONObject2 == null || !jSONObjectOptJSONObject2.has("pcdn_url" /* cnb.z(-585116279634730L) */)) {
-                        String string8 = jSONObject4.getString("url" /* cnb.z(-585094804798250L) */);
-                        String string9 = jSONObject4.getString("url_token" /* cnb.z(-585111984667434L) */);
-                        String string10 = jSONObject4.getString("decodeKey" /* cnb.z(-585017495386922L) */);
+                    String string7 = jSONObject4.getString("md5sum" /* "md5sum" /* "md5sum" /* cnb.z(-585932323420970L)  */);
+                    String str3 = String.format(Locale.CHINA, "%.2fMB" /* "%.2fMB" /* "%.2fMB" /* cnb.z(-585863603944234L)  */, Arrays.copyOf(new Object[]{Double.valueOf((((double) jSONObject4.getInt("fileSize" /* "fileSize" /* "fileSize" /* cnb.z(-585902258649898L)  */)) / 1024.0d) / 1024.0d)}, 1));
+                    "format(...)" /* "format(...)" /* "format(...)" /* cnb.z(-585833539173162L)  */;
+                    JSONObject jSONObjectOptJSONObject2 = jSONObject4.optJSONObject("media_cdn_info" /* "media_cdn_info" /* "media_cdn_info" /* cnb.z(-585197884013354L)  */);
+                    if (jSONObjectOptJSONObject2 == null || !jSONObjectOptJSONObject2.has("pcdn_url" /* "pcdn_url" /* "pcdn_url" /* cnb.z(-585116279634730L)  */)) {
+                        String string8 = jSONObject4.getString("url" /* "url" /* "url" /* cnb.z(-585094804798250L)  */);
+                        String string9 = jSONObject4.getString("url_token" /* "url_token" /* "url_token" /* cnb.z(-585111984667434L)  */);
+                        String string10 = jSONObject4.getString("decodeKey" /* "decodeKey" /* "decodeKey" /* cnb.z(-585017495386922L)  */);
                         alc alcVar2 = aou.a;
-                        cnd.bf(akq.f, new etd(str3, string7, string10, string8, string9, null, 0));
+                        KotlinHelpers2.bf(akq.f, new etd(str3, string7, string10, string8, string9, null, 0));
                     } else {
                         alc alcVar3 = aou.a;
-                        cnd.bf(akq.f, new etc(str3, string7, jSONObjectOptJSONObject2, afwVar, 0));
+                        KotlinHelpers2.bf(akq.f, new etc(str3, string7, jSONObjectOptJSONObject2, afwVar, 0));
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 15:
                 int iIntValue5 = ((Integer) obj).intValue();
                 List list3 = (List) obj2;
@@ -267,48 +267,48 @@ public final /* synthetic */ class dfq implements bgj {
                     for (Object obj5 : list3) {
                         int i19 = i2 + 1;
                         if (i2 < 0) {
-                            aba.aj();
+                            OtherStaticHelpers.aj();
                             throw null;
                         }
                         JSONObject jSONObject5 = (JSONObject) obj5;
                         sb3.append("第" + i19 + (char) 24352);
                         sb3.append('\n');
-                        sb3.append("链接: " /* cnb.z(-610735759555370L) */ + jSONObject5.getString("url" /* cnb.z(-610263313152810L) */) + jSONObject5.getString("url_token" /* cnb.z(-610761529359146L) */));
+                        sb3.append("链接: " /* "链接: " /* "链接: " /* cnb.z(-610735759555370L)  */ + jSONObject5.getString("url" /* "url" /* "url" /* cnb.z(-610263313152810L)  */) + jSONObject5.getString("url_token" /* "url_token" /* "url_token" /* cnb.z(-610761529359146L)  */));
                         sb3.append('\n');
                         i2 = i19;
                     }
                     dnc.c(sb3.toString());
-                    dnc.g(null, 3, "复制图片成功" /* cnb.z(-610679924980522L) */);
+                    dnc.g(null, 3, "复制图片成功" /* "复制图片成功" /* "复制图片成功" /* cnb.z(-610679924980522L)  */);
                 } else if (iIntValue5 == 4) {
                     JSONObject jSONObject6 = (JSONObject) list3.get(0);
-                    int i20 = jSONObject6.getInt("videoDuration" /* cnb.z(-610649860209450L) */);
+                    int i20 = jSONObject6.getInt("videoDuration" /* "videoDuration" /* "videoDuration" /* cnb.z(-610649860209450L)  */);
                     Locale locale2 = Locale.CHINA;
-                    String str4 = String.format(locale2, "%02d:%02d:%02d" /* cnb.z(-610641270274858L) */, Arrays.copyOf(new Object[]{Integer.valueOf(i20 / 3600), Integer.valueOf((i20 % 3600) / 60), Integer.valueOf(i20 % 60)}, 3));
-                    "format(...)" /* cnb.z(-610559665896234L) */;
-                    String str5 = String.format(locale2, "%.2f MB" /* cnb.z(-607703512644394L) */, Arrays.copyOf(new Object[]{Double.valueOf((((double) jSONObject6.getInt("fileSize" /* cnb.z(-607724987480874L) */)) / 1024.0d) / 1024.0d)}, 1));
-                    "format(...)" /* cnb.z(-607669152906026L) */;
+                    String str4 = String.format(locale2, "%02d:%02d:%02d" /* "%02d:%02d:%02d" /* "%02d:%02d:%02d" /* cnb.z(-610641270274858L)  */, Arrays.copyOf(new Object[]{Integer.valueOf(i20 / 3600), Integer.valueOf((i20 % 3600) / 60), Integer.valueOf(i20 % 60)}, 3));
+                    "format(...)" /* "format(...)" /* "format(...)" /* cnb.z(-610559665896234L)  */;
+                    String str5 = String.format(locale2, "%.2f MB" /* "%.2f MB" /* "%.2f MB" /* cnb.z(-607703512644394L)  */, Arrays.copyOf(new Object[]{Double.valueOf((((double) jSONObject6.getInt("fileSize" /* "fileSize" /* "fileSize" /* cnb.z(-607724987480874L)  */)) / 1024.0d) / 1024.0d)}, 1));
+                    "format(...)" /* "format(...)" /* "format(...)" /* cnb.z(-607669152906026L)  */;
                     StringBuilder sb4 = new StringBuilder();
-                    sb4.append("时长: " /* cnb.z(-607651973036842L) */.concat(str4));
+                    sb4.append("时长: " /* "时长: " /* "时长: " /* cnb.z(-607651973036842L)  */.concat(str4));
                     sb4.append('\n');
-                    sb4.append("大小: " /* cnb.z(-607596138461994L) */.concat(str5));
+                    sb4.append("大小: " /* "大小: " /* "大小: " /* cnb.z(-607596138461994L)  */.concat(str5));
                     sb4.append('\n');
-                    JSONObject jSONObjectOptJSONObject3 = jSONObject6.optJSONObject("media_cdn_info" /* cnb.z(-607557483756330L) */);
-                    if (jSONObjectOptJSONObject3 == null || !jSONObjectOptJSONObject3.has("pcdn_url" /* cnb.z(-607544598854442L) */)) {
-                        String string11 = jSONObject6.getString("url" /* cnb.z(-607995570420522L) */);
-                        String string12 = jSONObject6.getString("url_token" /* cnb.z(-607944030812970L) */);
-                        String string13 = jSONObject6.getString("decodeKey" /* cnb.z(-607918261009194L) */);
-                        sb4.append("密链: " /* cnb.z(-607892491205418L) */ + string11 + string12);
+                    JSONObject jSONObjectOptJSONObject3 = jSONObject6.optJSONObject("media_cdn_info" /* "media_cdn_info" /* "media_cdn_info" /* cnb.z(-607557483756330L)  */);
+                    if (jSONObjectOptJSONObject3 == null || !jSONObjectOptJSONObject3.has("pcdn_url" /* "pcdn_url" /* "pcdn_url" /* cnb.z(-607544598854442L)  */)) {
+                        String string11 = jSONObject6.getString("url" /* "url" /* "url" /* cnb.z(-607995570420522L)  */);
+                        String string12 = jSONObject6.getString("url_token" /* "url_token" /* "url_token" /* cnb.z(-607944030812970L)  */);
+                        String string13 = jSONObject6.getString("decodeKey" /* "decodeKey" /* "decodeKey" /* cnb.z(-607918261009194L)  */);
+                        sb4.append("密链: " /* "密链: " /* "密链: " /* cnb.z(-607892491205418L)  */ + string11 + string12);
                         sb4.append('\n');
-                        sb4.append("密钥: " /* cnb.z(-607836656630570L) */ + string13);
+                        sb4.append("密钥: " /* "密钥: " /* "密钥: " /* cnb.z(-607836656630570L)  */ + string13);
                         sb4.append('\n');
                     } else {
-                        sb4.append("直链: " /* cnb.z(-608004160355114L) */ + jSONObjectOptJSONObject3.getString("pcdn_url" /* cnb.z(-608017045257002L) */));
+                        sb4.append("直链: " /* "直链: " /* "直链: " /* cnb.z(-608004160355114L)  */ + jSONObjectOptJSONObject3.getString("pcdn_url" /* "pcdn_url" /* "pcdn_url" /* cnb.z(-608017045257002L)  */));
                         sb4.append('\n');
                     }
                     dnc.c(sb4.toString());
-                    dnc.g(null, 3, "复制视频成功" /* cnb.z(-607798001924906L) */);
+                    dnc.g(null, 3, "复制视频成功" /* "复制视频成功" /* "复制视频成功" /* cnb.z(-607798001924906L)  */);
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 16:
                 int iIntValue6 = ((Integer) obj).intValue();
                 List list4 = (List) obj2;
@@ -317,41 +317,41 @@ public final /* synthetic */ class dfq implements bgj {
                     for (Object obj6 : list4) {
                         int i21 = i2 + 1;
                         if (i2 < 0) {
-                            aba.aj();
+                            OtherStaticHelpers.aj();
                             throw null;
                         }
                         JSONObject jSONObject7 = (JSONObject) obj6;
-                        String string14 = jSONObject7.getString("md5sum" /* cnb.z(-607819476761386L) */);
-                        String string15 = jSONObject7.getString("url" /* cnb.z(-607789411990314L) */);
-                        String string16 = jSONObject7.getString("url_token" /* cnb.z(-607188116568874L) */);
+                        String string14 = jSONObject7.getString("md5sum" /* "md5sum" /* "md5sum" /* cnb.z(-607819476761386L)  */);
+                        String string15 = jSONObject7.getString("url" /* "url" /* "url" /* cnb.z(-607789411990314L)  */);
+                        String string16 = jSONObject7.getString("url_token" /* "url_token" /* "url_token" /* cnb.z(-607188116568874L)  */);
                         alc alcVar4 = aou.a;
-                        cnd.bf(akq.f, new etb("第" + i21 + (char) 24352, string14, string15, string16, null, 1));
+                        KotlinHelpers2.bf(akq.f, new etb("第" + i21 + (char) 24352, string14, string15, string16, null, 1));
                         i2 = i21;
                     }
                 } else if (iIntValue6 == 4) {
                     JSONObject jSONObject8 = (JSONObject) list4.get(0);
-                    String string17 = jSONObject8.getString("md5sum" /* cnb.z(-607162346765098L) */);
-                    String str6 = String.format(Locale.CHINA, "%.2fMB" /* cnb.z(-607093627288362L) */, Arrays.copyOf(new Object[]{Double.valueOf((((double) jSONObject8.getInt("fileSize" /* cnb.z(-607115102124842L) */)) / 1024.0d) / 1024.0d)}, 1));
-                    "format(...)" /* cnb.z(-607046382648106L) */;
-                    JSONObject jSONObjectOptJSONObject4 = jSONObject8.optJSONObject("media_cdn_info" /* cnb.z(-607029202778922L) */);
-                    if (jSONObjectOptJSONObject4 == null || !jSONObjectOptJSONObject4.has("pcdn_url" /* cnb.z(-606964778269482L) */)) {
-                        String string18 = jSONObject8.getString("url" /* cnb.z(-607475879377706L) */);
-                        String string19 = jSONObject8.getString("url_token" /* cnb.z(-607424339770154L) */);
-                        String string20 = jSONObject8.getString("decodeKey" /* cnb.z(-607398569966378L) */);
+                    String string17 = jSONObject8.getString("md5sum" /* "md5sum" /* "md5sum" /* cnb.z(-607162346765098L)  */);
+                    String str6 = String.format(Locale.CHINA, "%.2fMB" /* "%.2fMB" /* "%.2fMB" /* cnb.z(-607093627288362L)  */, Arrays.copyOf(new Object[]{Double.valueOf((((double) jSONObject8.getInt("fileSize" /* "fileSize" /* "fileSize" /* cnb.z(-607115102124842L)  */)) / 1024.0d) / 1024.0d)}, 1));
+                    "format(...)" /* "format(...)" /* "format(...)" /* cnb.z(-607046382648106L)  */;
+                    JSONObject jSONObjectOptJSONObject4 = jSONObject8.optJSONObject("media_cdn_info" /* "media_cdn_info" /* "media_cdn_info" /* cnb.z(-607029202778922L)  */);
+                    if (jSONObjectOptJSONObject4 == null || !jSONObjectOptJSONObject4.has("pcdn_url" /* "pcdn_url" /* "pcdn_url" /* cnb.z(-606964778269482L)  */)) {
+                        String string18 = jSONObject8.getString("url" /* "url" /* "url" /* cnb.z(-607475879377706L)  */);
+                        String string19 = jSONObject8.getString("url_token" /* "url_token" /* "url_token" /* cnb.z(-607424339770154L)  */);
+                        String string20 = jSONObject8.getString("decodeKey" /* "decodeKey" /* "decodeKey" /* cnb.z(-607398569966378L)  */);
                         alc alcVar5 = aou.a;
-                        cnd.bf(akq.f, new etd(str6, string17, string20, string18, string19, null, 1));
+                        KotlinHelpers2.bf(akq.f, new etd(str6, string17, string20, string18, string19, null, 1));
                     } else {
                         alc alcVar6 = aou.a;
-                        cnd.bf(akq.f, new etc(str6, string17, jSONObjectOptJSONObject4, afwVar2, 1));
+                        KotlinHelpers2.bf(akq.f, new etc(str6, string17, jSONObjectOptJSONObject4, afwVar2, 1));
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 17:
                 MsgInfoBean msgInfoBean = (MsgInfoBean) obj2;
                 String imgPath = msgInfoBean.getImgPath();
                 throwIfVar1IsNull(imgPath);
                 ewz.aq(etl.a, new etk(etu.b(etu.a, imgPath), Integer.parseInt(msgInfoBean.getContent()), i2));
-                return ensVar;
+                return kotlinUnitVar;
             default:
                 MsgInfoBean msgInfoBean2 = (MsgInfoBean) obj2;
                 long msgId = msgInfoBean2.getMsgId();
@@ -361,20 +361,20 @@ public final /* synthetic */ class dfq implements bgj {
                 try {
                     File file = new File(etv.a.o());
                     file.mkdirs();
-                    String str7 = msgId + SignatureVisitor.SUPER + imgPath2 + SignatureVisitor.SUPER + System.currentTimeMillis() + ".mp3" /* cnb.z(-520361057712938L) */;
+                    String str7 = msgId + SignatureVisitor.SUPER + imgPath2 + SignatureVisitor.SUPER + System.currentTimeMillis() + ".mp3" /* ".mp3" /* ".mp3" /* cnb.z(-520361057712938L)  */;
                     bad.a(cnh.af(new File(strB)), new File(file, str7));
-                    dnc.g(null, 3, "已保存到: " /* cnb.z(-520373942614826L) */ + file.getAbsolutePath() + '/' + str7);
-                    objX = ensVar;
+                    dnc.g(null, 3, "已保存到: " /* "已保存到: " /* "已保存到: " /* cnb.z(-520373942614826L)  */ + file.getAbsolutePath() + '/' + str7);
+                    objX = kotlinUnitVar;
                 } catch (Throwable th) {
                     objX = bhu.x(th);
                 }
                 Throwable thB = dcy.b(objX);
                 if (thB != null) {
-                    String strZ = "保存失败: " /* cnb.z(-526391191796522L) */;
+                    String strZ = "保存失败: " /* "保存失败: " /* "保存失败: " /* cnb.z(-526391191796522L)  */;
                     String message = thB.getMessage();
-                    dnc.g(null, 3, strZ.concat(message != null ? dnj.az(50, message) : "未知错误" /* cnb.z(-526343947156266L) */));
+                    dnc.g(null, 3, strZ.concat(message != null ? dnj.az(50, message) : "未知错误" /* "未知错误" /* "未知错误" /* cnb.z(-526343947156266L)  */));
                 }
-                return ensVar;
+                return kotlinUnitVar;
         }
     }
 }

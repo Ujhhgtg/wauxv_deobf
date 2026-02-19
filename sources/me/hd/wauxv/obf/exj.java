@@ -29,18 +29,18 @@ public final class exj extends nh {
         hookParam.b = blqVar;
         Member member = this.b;
         try {
-            IHasInvokeMethod bgfVar = (IHasInvokeMethod) akiVar.g;
+            IInvokable bgfVar = (IInvokable) akiVar.g;
             if (bgfVar != null) {
                 bgfVar.invoke(hookParam);
             }
-            if (((IHasInvokeMethod) akiVar.g) != null) {
+            if (((IInvokable) akiVar.g) != null) {
                 ArrayList arrayList = ewq.a;
                 StringBuilder sb = new StringBuilder("After Hook Member [");
                 sb.append(member);
                 sb.append("] done");
                 ewq.f();
             }
-            objX = ens.a;
+            objX = KotlinUnit.INSTANCE;
         } catch (Throwable th) {
             objX = bhu.x(th);
         }
@@ -59,7 +59,7 @@ public final class exj extends nh {
         hookParam.b = blqVar;
         Member member = this.b;
         try {
-            IHasInvokeMethod bgfVar = (IHasInvokeMethod) akiVar.f;
+            IInvokable bgfVar = (IInvokable) akiVar.f;
             if (bgfVar != null) {
                 bgfVar.invoke(hookParam);
             }
@@ -68,14 +68,14 @@ public final class exj extends nh {
             Class<?> returnType = method != null ? method.getReturnType() : null;
             Object objG = ((bmi) blqVar.d).g(null, Boolean.FALSE);
             aki.k(akiVar, returnType, objG != null ? objG.getClass() : null);
-            if (((IHasInvokeMethod) akiVar.f) != null) {
+            if (((IInvokable) akiVar.f) != null) {
                 ArrayList arrayList = ewq.a;
                 StringBuilder sb = new StringBuilder("Before Hook Member [");
                 sb.append(member);
                 sb.append("] done");
                 ewq.f();
             }
-            objX = ens.a;
+            objX = KotlinUnit.INSTANCE;
         } catch (Throwable th) {
             objX = bhu.x(th);
         }

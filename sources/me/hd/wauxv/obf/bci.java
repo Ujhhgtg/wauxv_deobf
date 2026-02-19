@@ -99,7 +99,7 @@ public final class bci {
     public static List m(cyl cylVar) throws IOException {
         int iB = bch.b(cylVar);
         if (iB == -1) {
-            return avd.a;
+            return EmptyReadonlyList.a;
         }
         try {
             CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
@@ -138,7 +138,7 @@ public final class bci {
     }
 
     public final void o(DiskLruCache.Editor editor) {
-        ens ensVar;
+        KotlinUnit kotlinUnitVar;
         String str = this.c;
         Handshake handshake = this.j;
         Headers headers = this.i;
@@ -188,10 +188,10 @@ public final class bci {
                 cykVarAg.q(handshake.tlsVersion().javaName());
                 cykVarAg.writeByte(10);
             }
-            ensVar = ens.a;
+            kotlinUnitVar = KotlinUnit.INSTANCE;
         } catch (Throwable th2) {
             th = th2;
-            ensVar = null;
+            kotlinUnitVar = null;
         }
         try {
             cykVarAg.close();
@@ -205,7 +205,7 @@ public final class bci {
         if (th != null) {
             throw th;
         }
-        throwIfVar1IsNull(ensVar);
+        throwIfVar1IsNull(kotlinUnitVar);
     }
 
     public bci(Response response) {

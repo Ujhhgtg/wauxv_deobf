@@ -32,7 +32,7 @@ public final class afo implements CharSequence, GetChars, Cloneable {
 
     public final void e(int i) {
         if (i < 0 || i > this.b) {
-            StringBuilder sbR = yg.r(i, "index = ", ", length = ");
+            StringBuilder sbR = yg.concatVar213(i, "index = ", ", length = ");
             sbR.append(this.b);
             throw new StringIndexOutOfBoundsException(sbR.toString());
         }
@@ -89,7 +89,7 @@ public final class afo implements CharSequence, GetChars, Cloneable {
             throw new IndexOutOfBoundsException(concatVar2Var1(i, "dstOffset "));
         }
         if (i2 < 0 || i3 < 0 || i2 > i3 || i3 > charSequence.length()) {
-            StringBuilder sbQ = yg.q(i2, i3, "start ", ", end ", ", s.length() ");
+            StringBuilder sbQ = yg.concatVar31425(i2, i3, "start ", ", end ", ", s.length() ");
             sbQ.append(charSequence.length());
             throw new IndexOutOfBoundsException(sbQ.toString());
         }

@@ -7,20 +7,20 @@ public final class CustomContactCountHook extends SwitchHook {
                                                                                                         * cnb.z(-
                                                                                                         * 429140247313194L)
                                                                                                         */);
-    public static final String b = "美化" /* cnb.z(-430450212338474L) */;
-    public static final String c = "自定义数量" /* cnb.z(-430454507305770L) */;
-    public static final String d = "自定义好友和群聊列表底部的显示数量" /* cnb.z(-430411557632810L) */;
+    public static final String b = "美化" /* "美化" /* "美化" /* "美化" /* cnb.z(-430450212338474L)   */;
+    public static final String c = "自定义数量" /* "自定义数量" /* "自定义数量" /* "自定义数量" /* cnb.z(-430454507305770L)   */;
+    public static final String d = "自定义好友和群聊列表底部的显示数量" /* "自定义好友和群聊列表底部的显示数量" /* "自定义好友和群聊列表底部的显示数量" /* "自定义好友和群聊列表底部的显示数量" /* cnb.z(-430411557632810L)   */;
     public static final age h = new age(24);
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        int i = bte.a;
+        int i = 0;
         cde cdeVarT = yg.s(-430690730507050L).t();
-        cdeVarT.ab = "onMeasure" /* cnb.z(-430523226782506L) */;
-        cdk cdkVar = (cdk) aaz.e(cdeVarT.aj());
+        cdeVarT.ab = "onMeasure" /* "onMeasure" /* "onMeasure" /* "onMeasure" /* cnb.z(-430523226782506L)   */;
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
         exg exgVar = exg.a;
         CustomContactCountHook airVar = a;
-        aki akiVarAd = airVar.ad(cdkVar, exgVar);
+        aki akiVarAd = airVar.ad(methodHookWrapperVar, exgVar);
         airVar.y(akiVarAd, new age(25));
         akiVarAd.o();
     }
@@ -41,7 +41,7 @@ public final class CustomContactCountHook extends SwitchHook {
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final IHasInvokeMethod p() {
+    public final IInvokable getOnClick() {
         return h;
     }
 }

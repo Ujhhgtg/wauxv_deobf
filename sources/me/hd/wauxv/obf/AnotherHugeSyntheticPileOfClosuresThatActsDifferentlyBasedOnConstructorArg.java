@@ -18,10 +18,10 @@ import me.hd.wauxv.data.bean.ConversationBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class crl implements IHasInvokeMethod {
+public final /* synthetic */ class AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg implements IInvokable {
     public final /* synthetic */ int a;
 
-    public /* synthetic */ crl(int i) {
+    public /* synthetic */ AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(int i) {
         this.a = i;
     }
 
@@ -45,58 +45,58 @@ public final /* synthetic */ class crl implements IHasInvokeMethod {
         obj = null;
         Object obj2 = null;
         int i5 = 0;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         switch (i) {
             case 0:
                 View view = (View) obj;
                 View viewK = dkz.k(view, R.layout.module_dialog_open_info, null, false);
                 int i6 = R.id.moduleDialogEdtOpenInfoId;
-                TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK, R.id.moduleDialogEdtOpenInfoId);
+                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK, R.id.moduleDialogEdtOpenInfoId);
                 if (textInputEditText != null) {
                     i6 = R.id.moduleDialogInputOpenInfoId;
-                    if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputOpenInfoId)) != null) {
+                    if (((TextInputLayout) KotlinHelpers2.aq(viewK, R.id.moduleDialogInputOpenInfoId)) != null) {
                         LinearLayout linearLayout = (LinearLayout) viewK;
                         cee ceeVar = new cee(linearLayout, textInputEditText, 6);
                         bzy bzyVar = new bzy(view.getContext());
                         eg egVar = (eg) bzyVar.d;
                         crm.a.getClass();
                         egVar.d = crm.c;
-                        bzyVar.t("确定" /* cnb.z(-513016663636778L) */, new amw(new ls(ceeVar, 6, view), 0));
-                        bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, "取消" /* cnb.z(-47455093652266L) */);
+                        bzyVar.t("确定" /* "确定" /* "确定" /* "确定" /* cnb.z(-513016663636778L)   */, new amw(new ls(ceeVar, 6, view), 0));
+                        bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, "取消" /* "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)   */);
                         if (linearLayout != null) {
                             egVar.r = linearLayout;
                         }
                         bzyVar.i().show();
-                        return ensVar;
+                        return kotlinUnitVar;
                     }
                 }
                 throw new NullPointerException("Missing required view with ID: "
-                        /* cnb.z(-664001943960362L) */.concat(viewK.getResources().getResourceName(i6)));
+                        /* "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-664001943960362L)   */.concat(viewK.getResources().getResourceName(i6)));
             case 1:
                 View view2 = (View) obj;
                 View viewK2 = dkz.k(view2, R.layout.module_dialog_panel_emoji, null, false);
                 int i7 = R.id.moduleDialogBtnPanelEmojiClearGroup;
-                MaterialButton materialButton = (MaterialButton) cnd.aq(viewK2,
+                MaterialButton materialButton = (MaterialButton) KotlinHelpers2.aq(viewK2,
                         R.id.moduleDialogBtnPanelEmojiClearGroup);
                 if (materialButton != null) {
                     i7 = R.id.moduleDialogBtnPanelEmojiCopyPath;
-                    MaterialButton materialButton2 = (MaterialButton) cnd.aq(viewK2,
+                    MaterialButton materialButton2 = (MaterialButton) KotlinHelpers2.aq(viewK2,
                             R.id.moduleDialogBtnPanelEmojiCopyPath);
                     if (materialButton2 != null) {
                         materialButton2.setOnClickListener(new d(i4));
                         materialButton.setOnClickListener(new d(4));
                         DefaultConfig ioVar = new DefaultConfig(view2.getContext(), 13);
-                        csq.a.getClass();
-                        ioVar.ay(csq.i);
+                        PanelEmojiHook.a.getClass();
+                        ioVar.ay(PanelEmojiHook.i);
                         ioVar.d = (LinearLayout) viewK2;
                         DefaultConfig.g(ioVar, null, 3);
                         DefaultConfig.f(ioVar, null, 3);
                         ioVar.az();
-                        return ensVar;
+                        return kotlinUnitVar;
                     }
                 }
                 throw new NullPointerException("Missing required view with ID: "
-                        /* cnb.z(-663864505006890L) */.concat(viewK2.getResources().getResourceName(i7)));
+                        /* "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-663864505006890L)   */.concat(viewK2.getResources().getResourceName(i7)));
             case 2:
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
@@ -105,24 +105,24 @@ public final /* synthetic */ class crl implements IHasInvokeMethod {
                 cdjVar.r(clsBf != null ? clsBf : ArrayList.class);
                 Class<Integer> clsBf2 = cnf.bf(dal.b(cls));
                 cdjVar.q(clsBf2 != null ? clsBf2 : Integer.class);
-                cdjVar.t("MicroMsg.emoji.EmojiGroupInfoStorage" /* cnb.z(-472287488768810L) */,
-                        "get Panel EmojiGroupInfo." /* cnb.z(-472661150923562L) */);
+                cdjVar.t("MicroMsg.emoji.EmojiGroupInfoStorage" /* "MicroMsg.emoji.EmojiGroupInfoStorage" /* "MicroMsg.emoji.EmojiGroupInfoStorage" /* "MicroMsg.emoji.EmojiGroupInfoStorage" /* cnb.z(-472287488768810L)   */,
+                        "get Panel EmojiGroupInfo." /* "get Panel EmojiGroupInfo." /* "get Panel EmojiGroupInfo." /* "get Panel EmojiGroupInfo." /* cnb.z(-472661150923562L)   */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 3:
                 bah bahVar2 = (bah) obj;
                 cdj cdjVar2 = new cdj();
-                cdjVar2.t("data" /* cnb.z(-472566661643050L) */);
+                cdjVar2.t("data" /* "data" /* "data" /* "data" /* cnb.z(-472566661643050L)   */);
                 fj fjVar = new fj();
                 cdj cdjVar3 = new cdj();
-                cdjVar3.t("checkScrollToPosition: " /* cnb.z(-472579546544938L) */);
+                cdjVar3.t("checkScrollToPosition: " /* "checkScrollToPosition: " /* "checkScrollToPosition: " /* "checkScrollToPosition: " /* cnb.z(-472579546544938L)   */);
                 fjVar.f(cdjVar3);
                 fjVar.d = bzu.Contains;
                 cdjVar2.i = fjVar;
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
-                return ensVar;
+                return kotlinUnitVar;
             case 4:
                 Object objF = ((HookParam) obj).getResult();
                 if ((objF instanceof List) && (!(objF instanceof IEmpty) || (objF instanceof IEmpty3))) {
@@ -131,29 +131,29 @@ public final /* synthetic */ class crl implements IHasInvokeMethod {
                 List list = (List) obj2;
                 throwIfVar1IsNull(list);
                 ContentValues contentValues = new ContentValues();
-                contentValues.put("packGrayIconUrl" /* cnb.z(-471239516748586L) */,
-                        "https://avatars.githubusercontent.com/u/49312623" /* cnb.z(-471170797271850L) */);
-                contentValues.put("packIconUrl" /* cnb.z(-471458560080682L) */,
-                        "https://avatars.githubusercontent.com/u/49312623" /* cnb.z(-471441380211498L) */);
-                contentValues.put("packName" /* cnb.z(-470681171000106L) */, "面板表情" /* cnb.z(-470659696163626L) */);
-                contentValues.put("packStatus" /* cnb.z(-470603861588778L) */, (Integer) 1);
-                contentValues.put("productID" /* cnb.z(-471140732500778L) */, "wauxv.panel.emoji" /*
+                contentValues.put("packGrayIconUrl" /* "packGrayIconUrl" /* "packGrayIconUrl" /* "packGrayIconUrl" /* cnb.z(-471239516748586L)   */,
+                        "https://avatars.githubusercontent.com/u/49312623" /* "https://avatars.githubusercontent.com/u/49312623" /* "https://avatars.githubusercontent.com/u/49312623" /* "https://avatars.githubusercontent.com/u/49312623" /* cnb.z(-471170797271850L)   */);
+                contentValues.put("packIconUrl" /* "packIconUrl" /* "packIconUrl" /* "packIconUrl" /* cnb.z(-471458560080682L)   */,
+                        "https://avatars.githubusercontent.com/u/49312623" /* "https://avatars.githubusercontent.com/u/49312623" /* "https://avatars.githubusercontent.com/u/49312623" /* "https://avatars.githubusercontent.com/u/49312623" /* cnb.z(-471441380211498L)   */);
+                contentValues.put("packName" /* "packName" /* "packName" /* "packName" /* cnb.z(-470681171000106L)   */, "面板表情" /* "面板表情" /* "面板表情" /* "面板表情" /* cnb.z(-470659696163626L)   */);
+                contentValues.put("packStatus" /* "packStatus" /* "packStatus" /* "packStatus" /* cnb.z(-470603861588778L)   */, (Integer) 1);
+                contentValues.put("productID" /* "productID" /* "productID" /* "productID" /* cnb.z(-471140732500778L)   */, "wauxv.panel.emoji" /*
                                                                                                    * cnb.z(-
                                                                                                    * 471046243220266L)
                                                                                                    */);
-                contentValues.put("status" /* cnb.z(-470986113678122L) */, (Integer) 7);
-                contentValues.put("sync" /* cnb.z(-470938869037866L) */, (Integer) 2);
+                contentValues.put("status" /* "status" /* "status" /* "status" /* cnb.z(-470986113678122L)   */, (Integer) 7);
+                contentValues.put("sync" /* "sync" /* "sync" /* "sync" /* cnb.z(-470938869037866L)   */, (Integer) 2);
                 Object objC = ReflectionWrapper.createInstanceWithArgs(
-                        ajn.ag("com.tencent.mm.storage.emotion.EmojiGroupInfo" /* cnb.z(-78585016613674L) */),
+                        ajn.tryGetClassByClassName("com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* cnb.z(-78585016613674L)   */),
                         new Object[0]);
-                int i8 = bte.a;
+                int i8 = 0;
                 cde cdeVarT = dqc.bi(objC).t();
-                cdeVarT.ab = "convertFrom" /* cnb.z(-78438987725610L) */;
+                cdeVarT.ab = "convertFrom" /* "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-78438987725610L)   */;
                 cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(ContentValues.class), dal.b(Boolean.TYPE) }, 2));
                 cdeVarT.ah();
-                ((cdk) aaz.e(cdeVarT.aj())).e(contentValues, Boolean.TRUE);
+                ((MethodHookWrapper) aaz.e(cdeVarT.aj())).e(contentValues, Boolean.TRUE);
                 list.add(0, objC);
-                return ensVar;
+                return kotlinUnitVar;
             case 5:
                 HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
@@ -167,38 +167,38 @@ public final /* synthetic */ class crl implements IHasInvokeMethod {
                 }
                 Object obj3 = objX instanceof dcx ? null : objX;
                 throwIfVar1IsNull(obj3);
-                int i9 = bte.a;
+                int i9 = 0;
                 bmu bmuVarBi = dqc.bi(obj3);
                 cde cdeVarT2 = bmuVarBi.t();
                 cdeVarT2.ak(cdy.d);
-                cdeVarT2.ai = new crl(9);
-                Object objE = ((cdk) dkz.m(cdeVarT2)).e(new Object[0]);
+                cdeVarT2.ai = new AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(9);
+                Object objE = ((MethodHookWrapper) dkz.m(cdeVarT2)).e(new Object[0]);
                 throwIfVar1IsNull(objE);
                 azg azgVarR = dqc.bi(objE).r();
-                azgVarR.a = ajn.ag("com.tencent.mm.storage.emotion.EmojiGroupInfo" /* cnb.z(-78585016613674L) */);
+                azgVarR.a = ajn.tryGetClassByClassName("com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* cnb.z(-78585016613674L)   */);
                 Object objD = ((azk) aaz.e(azgVarR.c())).d();
                 throwIfVar1IsNull(objD);
                 azg azgVarR2 = dqc.bi(objD).r();
-                azgVarR2.ab = "field_packName" /* cnb.z(-470968933808938L) */;
+                azgVarR2.ab = "field_packName" /* "field_packName" /* "field_packName" /* "field_packName" /* cnb.z(-470968933808938L)   */;
                 String str = (String) ((azk) yg.e(azgVarR2)).e();
                 cde cdeVarT3 = bmuVarBi.t();
                 cdeVarT3.a = dal.b(List.class);
-                Object objJ = ((cdk) dkz.m(cdeVarT3)).j(new Object[0]);
+                Object objJ = ((MethodHookWrapper) dkz.m(cdeVarT3)).j(new Object[0]);
                 throwIfVar1IsNull(objJ);
                 List list2 = (List) objJ;
-                if (nullSafeIsEqual(str, "面板表情" /* cnb.z(-470887329430314L) */)) {
-                    list2.addAll(csq.r);
+                if (nullSafeIsEqual(str, "面板表情" /* "面板表情" /* "面板表情" /* "面板表情" /* cnb.z(-470887329430314L)   */)) {
+                    list2.addAll(PanelEmojiHook.someArrayList);
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 6:
-                ((amm) obj).c = new crl(10);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(10);
+                return kotlinUnitVar;
             case 7:
-                ((amm) obj).c = new crl(i3);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(i3);
+                return kotlinUnitVar;
             case 8:
-                ((amm) obj).c = new crl(i4);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(i4);
+                return kotlinUnitVar;
             case 9:
                 Class cls6 = (Class) obj;
                 cls4 = Boolean.class;
@@ -208,7 +208,7 @@ public final /* synthetic */ class crl implements IHasInvokeMethod {
             case 10:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar4 = new cdj();
-                Class clsAg = ajn.ag("com.tencent.mm.api.IEmojiInfo" /* cnb.z(-472497942166314L) */);
+                Class clsAg = ajn.tryGetClassByClassName("com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-472497942166314L)   */);
                 Class<Integer> clsBf4 = cnf.bf(dal.b(cls));
                 if (clsBf4 == null) {
                     clsBf4 = cls;
@@ -218,36 +218,36 @@ public final /* synthetic */ class crl implements IHasInvokeMethod {
                 cls5 = clsBf5 != null ? clsBf5 : String.class;
                 Class<Integer> clsBf6 = cnf.bf(dal.b(cls));
                 cdjVar4.q(clsAg, clsBf4, cls5, clsBf6 != null ? clsBf6 : Integer.class);
-                cdjVar4.t("emojiInfo" /* cnb.z(-472351913278250L) */, "sosDocId" /* cnb.z(-472326143474474L) */);
+                cdjVar4.t("emojiInfo" /* "emojiInfo" /* "emojiInfo" /* "emojiInfo" /* cnb.z(-472351913278250L)   */, "sosDocId" /* "sosDocId" /* "sosDocId" /* "sosDocId" /* cnb.z(-472326143474474L)   */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar4;
-                return ensVar;
+                return kotlinUnitVar;
             case 11:
-                ((amm) obj).b = new crl(12);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(12);
+                return kotlinUnitVar;
             case 12:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k("MicroMsg.PatMsgExtension" /* cnb.z(-368452359420714L) */, "insert pat msg %d %s %s" /*
+                zbVar.k("MicroMsg.PatMsgExtension" /* "MicroMsg.PatMsgExtension" /* "MicroMsg.PatMsgExtension" /* "MicroMsg.PatMsgExtension" /* cnb.z(-368452359420714L)   */, "insert pat msg %d %s %s" /*
                                                                                                               * cnb.z(-
                                                                                                               * 368362165107498L)
                                                                                                               */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 13:
                 View view3 = (View) obj;
                 View viewK3 = dkz.k(view3, R.layout.module_dialog_placed_sort_pro, null, false);
                 int i10 = R.id.moduleDialogCbPlacedSortProShowBottom;
-                MaterialCheckBox materialCheckBox = (MaterialCheckBox) cnd.aq(viewK3,
+                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.aq(viewK3,
                         R.id.moduleDialogCbPlacedSortProShowBottom);
                 if (materialCheckBox != null) {
                     i10 = R.id.moduleDialogCbPlacedSortProShowReset;
-                    MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) cnd.aq(viewK3,
+                    MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) KotlinHelpers2.aq(viewK3,
                             R.id.moduleDialogCbPlacedSortProShowReset);
                     if (materialCheckBox2 != null) {
                         i10 = R.id.moduleDialogCbPlacedSortProShowTop;
-                        MaterialCheckBox materialCheckBox3 = (MaterialCheckBox) cnd.aq(viewK3,
+                        MaterialCheckBox materialCheckBox3 = (MaterialCheckBox) KotlinHelpers2.aq(viewK3,
                                 R.id.moduleDialogCbPlacedSortProShowTop);
                         if (materialCheckBox3 != null) {
                             LinearLayout linearLayout2 = (LinearLayout) viewK3;
@@ -260,18 +260,18 @@ public final /* synthetic */ class crl implements IHasInvokeMethod {
                             eg egVar2 = (eg) bzyVar2.d;
                             ctp.b.getClass();
                             egVar2.d = ctp.i;
-                            bzyVar2.t("保存" /* cnb.z(-526013234674474L) */, new amw(new cfx(cefVar, i2), 0));
-                            bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, "取消" /* cnb.z(-47455093652266L) */);
+                            bzyVar2.t("保存" /* "保存" /* "保存" /* "保存" /* cnb.z(-526013234674474L)   */, new amw(new cfx(cefVar, i2), 0));
+                            bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, "取消" /* "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)   */);
                             if (linearLayout2 != null) {
                                 egVar2.r = linearLayout2;
                             }
                             bzyVar2.i().show();
-                            return ensVar;
+                            return kotlinUnitVar;
                         }
                     }
                 }
                 throw new NullPointerException("Missing required view with ID: "
-                        /* cnb.z(-663177310239530L) */.concat(viewK3.getResources().getResourceName(i10)));
+                        /* "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-663177310239530L)   */.concat(viewK3.getResources().getResourceName(i10)));
             case 14:
                 HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
@@ -288,10 +288,10 @@ public final /* synthetic */ class crl implements IHasInvokeMethod {
                 }
                 Integer num = (Integer) objX2;
                 int iIntValue = num != null ? num.intValue() : 0;
-                int i11 = bte.a;
+                int i11 = 0;
                 cde cdeVarT4 = dqc.bi(hookParam2.getThisObject()).t();
-                cdeVarT4.ab = "getItem" /* cnb.z(-525858615851818L) */;
-                Object objE2 = ((cdk) dkz.m(cdeVarT4)).e(Integer.valueOf(iIntValue));
+                cdeVarT4.ab = "getItem" /* "getItem" /* "getItem" /* "getItem" /* cnb.z(-525858615851818L)   */;
+                Object objE2 = ((MethodHookWrapper) dkz.m(cdeVarT4)).e(Integer.valueOf(iIntValue));
                 throwIfVar1IsNull(objE2);
                 ConversationBean conversationBean = new ConversationBean(objE2);
                 Object objF2 = hookParam2.getResult();
@@ -308,68 +308,68 @@ public final /* synthetic */ class crl implements IHasInvokeMethod {
                     childAt.setBackgroundColor(Color
                             .parseColor(cnb.z(cnh.aa(childAt.getContext()) ? -527421983947562L : -527327494667050L)));
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 15:
                 ConversationBean conversationBean2 = (ConversationBean) obj;
                 agc agcVar = agc.a;
                 ContentValues contentValues2 = new ContentValues();
-                contentValues2.put("flag" /* cnb.z(-525948810165034L) */,
+                contentValues2.put("flag" /* "flag" /* "flag" /* "flag" /* cnb.z(-525948810165034L)   */,
                         Long.valueOf(arj.z(conversationBean2.getFlag(), agd.f)));
                 agp.c(agp.a, agcVar.b(contentValues2), conversationBean2.getUsername());
-                return ensVar;
+                return kotlinUnitVar;
             case 16:
                 ConversationBean conversationBean3 = (ConversationBean) obj;
                 agc agcVar2 = agc.a;
                 ContentValues contentValues3 = new ContentValues();
-                contentValues3.put("flag" /* cnb.z(-525978874936106L) */,
+                contentValues3.put("flag" /* "flag" /* "flag" /* "flag" /* cnb.z(-525978874936106L)   */,
                         Long.valueOf(arj.z(conversationBean3.getFlag(), agd.d)));
                 agp.c(agp.a, agcVar2.b(contentValues3), conversationBean3.getUsername());
-                return ensVar;
+                return kotlinUnitVar;
             case 17:
                 ConversationBean conversationBean4 = (ConversationBean) obj;
                 agc agcVar3 = agc.a;
                 ContentValues contentValues4 = new ContentValues();
-                contentValues4.put("flag" /* cnb.z(-525923040361258L) */,
+                contentValues4.put("flag" /* "flag" /* "flag" /* "flag" /* cnb.z(-525923040361258L)   */,
                         Long.valueOf(conversationBean4.getConversationTime()));
                 agp.c(agp.a, agcVar3.b(contentValues4), conversationBean4.getUsername());
-                return ensVar;
+                return kotlinUnitVar;
             case 18:
                 ConversationBean conversationBean5 = (ConversationBean) obj;
                 agc agcVar4 = agc.a;
                 ContentValues contentValues5 = new ContentValues();
-                contentValues5.put("flag" /* cnb.z(-525884385655594L) */,
+                contentValues5.put("flag" /* "flag" /* "flag" /* "flag" /* cnb.z(-525884385655594L)   */,
                         Long.valueOf(arj.z(conversationBean5.getFlag(), agd.e)));
                 agp.c(agp.a, agcVar4.b(contentValues5), conversationBean5.getUsername());
-                return ensVar;
+                return kotlinUnitVar;
             case 19:
                 ConversationBean conversationBean6 = (ConversationBean) obj;
                 agc agcVar5 = agc.a;
                 ContentValues contentValues6 = new ContentValues();
-                contentValues6.put("flag" /* cnb.z(-525897270557482L) */,
+                contentValues6.put("flag" /* "flag" /* "flag" /* "flag" /* cnb.z(-525897270557482L)   */,
                         Long.valueOf(arj.z(conversationBean6.getFlag(), agd.c)));
                 agp.c(agp.a, agcVar5.b(contentValues6), conversationBean6.getUsername());
-                return ensVar;
+                return kotlinUnitVar;
             case 20:
-                ((amm) obj).c = new crl(21);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(21);
+                return kotlinUnitVar;
             case 21:
                 bah bahVar4 = (bah) obj;
-                String[] strArr = { "com.tencent.mm.ui.conversation" /* cnb.z(-527301724863274L) */ };
+                String[] strArr = { "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* cnb.z(-527301724863274L)   */ };
                 bahVar4.getClass();
-                bahVar4.a = la.ab(strArr);
+                bahVar4.a = SomeStaticHelpers.ab(strArr);
                 cdj cdjVar5 = new cdj();
-                cdjVar5.t("MicroMsg.ConversationWithCacheAdapter" /* cnb.z(-527701156821802L) */,
-                        "handle show tip count, but talker is null" /* cnb.z(-527589487672106L) */);
+                cdjVar5.t("MicroMsg.ConversationWithCacheAdapter" /* "MicroMsg.ConversationWithCacheAdapter" /* "MicroMsg.ConversationWithCacheAdapter" /* "MicroMsg.ConversationWithCacheAdapter" /* cnb.z(-527701156821802L)   */,
+                        "handle show tip count, but talker is null" /* "handle show tip count, but talker is null" /* "handle show tip count, but talker is null" /* "handle show tip count, but talker is null" /* cnb.z(-527589487672106L)   */);
                 bahVar4.d = cdjVar5;
-                return ensVar;
+                return kotlinUnitVar;
             case 22:
                 View view4 = (View) obj;
                 View viewK4 = dkz.k(view4, R.layout.module_dialog_plugin, null, false);
                 int i12 = R.id.moduleDialogBtnPluginCopyPath;
-                MaterialButton materialButton3 = (MaterialButton) cnd.aq(viewK4, R.id.moduleDialogBtnPluginCopyPath);
+                MaterialButton materialButton3 = (MaterialButton) KotlinHelpers2.aq(viewK4, R.id.moduleDialogBtnPluginCopyPath);
                 if (materialButton3 != null) {
                     i12 = R.id.moduleDialogBtnPluginOpenDemo;
-                    MaterialButton materialButton4 = (MaterialButton) cnd.aq(viewK4,
+                    MaterialButton materialButton4 = (MaterialButton) KotlinHelpers2.aq(viewK4,
                             R.id.moduleDialogBtnPluginOpenDemo);
                     if (materialButton4 != null) {
                         materialButton3.setOnClickListener(new d(5));
@@ -381,24 +381,24 @@ public final /* synthetic */ class crl implements IHasInvokeMethod {
                         DefaultConfig.g(ioVar2, null, 3);
                         DefaultConfig.f(ioVar2, null, 3);
                         ioVar2.az();
-                        return ensVar;
+                        return kotlinUnitVar;
                     }
                 }
                 throw new NullPointerException("Missing required view with ID: "
-                        /* cnb.z(-663039871286058L) */.concat(viewK4.getResources().getResourceName(i12)));
+                        /* "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-663039871286058L)   */.concat(viewK4.getResources().getResourceName(i12)));
             case 23:
                 return Boolean.valueOf(((Method) obj).getAnnotation(cty.class) != null);
             case 24:
-                ((amm) obj).c = new cvc(i5);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new cvc(i5);
+                return kotlinUnitVar;
             case 25:
-                ((amm) obj).c = new crl(27);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(27);
+                return kotlinUnitVar;
             case 26:
-                amm ammVar = (amm) obj;
-                ammVar.c = new crl(28);
-                ammVar.d = new crl(29);
-                return ensVar;
+                FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar = (FindDexClassMethodDslWrapper) obj;
+                findDexClassMethodDslWrapperVar.onMethodCallback = new AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(28);
+                findDexClassMethodDslWrapperVar.onResultCallback = new AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(29);
+                return kotlinUnitVar;
             case 27:
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar6 = new cdj();
@@ -408,7 +408,7 @@ public final /* synthetic */ class crl implements IHasInvokeMethod {
                 cdjVar6.u(0);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar6;
-                return ensVar;
+                return kotlinUnitVar;
             case 28:
                 bah bahVar6 = (bah) obj;
                 cdj cdjVar7 = new cdj();
@@ -417,7 +417,7 @@ public final /* synthetic */ class crl implements IHasInvokeMethod {
                 cdjVar7.q(clsBf8 != null ? clsBf8 : CharSequence.class);
                 bahVar6.getClass();
                 bahVar6.d = cdjVar7;
-                return ensVar;
+                return kotlinUnitVar;
             default:
                 zF = nullSafeIsEqual(((cdf) obj).f, cvf.a.d());
                 break;

@@ -26,12 +26,12 @@ public final class zl extends doi implements bgj {
         afw afwVar = (afw) obj2;
         switch (this.a) {
             case 0:
-                return ((zl) h(ahpVar, afwVar)).i(ens.a);
+                return ((zl) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
             default:
                 zl zlVar = (zl) h(ahpVar, afwVar);
-                ens ensVar = ens.a;
-                zlVar.i(ensVar);
-                return ensVar;
+                KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+                zlVar.i(kotlinUnitVar);
+                return kotlinUnitVar;
         }
     }
 
@@ -67,7 +67,7 @@ public final class zl extends doi implements bgj {
                         if (fileArrListFiles != null) {
                             long jAs = 0;
                             for (File file2 : fileArrListFiles) {
-                                jAs += cnd.as(file2);
+                                jAs += KotlinHelpers2.as(file2);
                             }
                             length = jAs;
                         } else {
@@ -77,27 +77,27 @@ public final class zl extends doi implements bgj {
                     j += length;
                 }
                 if (j < RealWebSocket.DEFAULT_MINIMUM_DEFLATE_SIZE) {
-                    String str = String.format(Locale.CHINA, "%.2f B" /* cnb.z(-12206297053994L) */, Arrays.copyOf(new Object[]{Double.valueOf(j)}, 1));
-                    "format(...)" /* cnb.z(-12227771890474L) */;
+                    String str = String.format(Locale.CHINA, "%.2f B" /* "%.2f B" /* "%.2f B" /* cnb.z(-12206297053994L)  */, Arrays.copyOf(new Object[]{Double.valueOf(j)}, 1));
+                    "format(...)" /* "format(...)" /* "format(...)" /* cnb.z(-12227771890474L)  */;
                     return str;
                 }
                 if (j < 1048576) {
-                    String str2 = String.format(Locale.CHINA, "%.2f KB" /* cnb.z(-12141872544554L) */, Arrays.copyOf(new Object[]{Double.valueOf(j / 1024.0d)}, 1));
-                    "format(...)" /* cnb.z(-12107512806186L) */;
+                    String str2 = String.format(Locale.CHINA, "%.2f KB" /* "%.2f KB" /* "%.2f KB" /* cnb.z(-12141872544554L)  */, Arrays.copyOf(new Object[]{Double.valueOf(j / 1024.0d)}, 1));
+                    "format(...)" /* "format(...)" /* "format(...)" /* cnb.z(-12107512806186L)  */;
                     return str2;
                 }
                 if (j < 1073741824) {
-                    String str3 = String.format(Locale.CHINA, "%.2f MB" /* cnb.z(-12640088750890L) */, Arrays.copyOf(new Object[]{Double.valueOf((j / 1024.0d) / 1024.0d)}, 1));
-                    "format(...)" /* cnb.z(-12605729012522L) */;
+                    String str3 = String.format(Locale.CHINA, "%.2f MB" /* "%.2f MB" /* "%.2f MB" /* cnb.z(-12640088750890L)  */, Arrays.copyOf(new Object[]{Double.valueOf((j / 1024.0d) / 1024.0d)}, 1));
+                    "format(...)" /* "format(...)" /* "format(...)" /* cnb.z(-12605729012522L)  */;
                     return str3;
                 }
-                String str4 = String.format(Locale.CHINA, "%.2f GB" /* cnb.z(-12519829666602L) */, Arrays.copyOf(new Object[]{Double.valueOf(((j / 1024.0d) / 1024.0d) / 1024.0d)}, 1));
-                "format(...)" /* cnb.z(-12485469928234L) */;
+                String str4 = String.format(Locale.CHINA, "%.2f GB" /* "%.2f GB" /* "%.2f GB" /* cnb.z(-12519829666602L)  */, Arrays.copyOf(new Object[]{Double.valueOf(((j / 1024.0d) / 1024.0d) / 1024.0d)}, 1));
+                "format(...)" /* "format(...)" /* "format(...)" /* cnb.z(-12485469928234L)  */;
                 return str4;
             default:
                 bhu.bd(obj);
                 ((AlertDialog) obj2).dismiss();
-                return ens.a;
+                return KotlinUnit.INSTANCE;
         }
     }
 }

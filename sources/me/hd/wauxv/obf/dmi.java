@@ -15,15 +15,15 @@ public final class dmi extends bws {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        for (bsv bsvVar : aba.ag(dal.b(ContextWrapper.class), dal.b(Activity.class))) {
-            int i = bte.a;
+        for (IEmpty5 bsvVar : OtherStaticHelpers.argsToList(dal.b(ContextWrapper.class), dal.b(Activity.class))) {
+            int i = 0;
             cde cdeVarT = dqc.bg(bsvVar).t();
             cdeVarT.ac = new dko(15);
             List<cbq> listAj = cdeVarT.aj();
             dmi dmiVar = a;
             dmiVar.getClass();
             for (cbq cbqVar : listAj) {
-                if (!(cbqVar instanceof adu) && !(cbqVar instanceof cdk)) {
+                if (!(cbqVar instanceof ConstructorHookWrapper) && !(cbqVar instanceof MethodHookWrapper)) {
                     throw new IllegalStateException(
                             ("This type [" + cbqVar + "] not support to hook, supported are Constructors and Methods")
                                     .toString());

@@ -8,7 +8,7 @@ import okhttp3.Request;
 public abstract class bch {
     public static String a(Request request) {
         throwIfVar1IsNull(request, "request");
-        yg.t(request.tag(cmz.class));
+        yg.throwIfVarNotNull(request.tag(cmz.class));
         String str = request.method() + request.url();
         sj sjVar = sj.a;
         return nu.g(str).f("SHA-1").h();

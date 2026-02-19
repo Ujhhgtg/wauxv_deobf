@@ -4,6 +4,6 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class cwv extends DexDescData {
     public static final cwv a = new cwv("QuickClearQuoteHook.MethodSupportAutoCompleteOnKey" /*
-                                                                                              * cnb.z(-471772092693290L)
+                                                                                              * "QuickClearQuoteHook.MethodSupportAutoCompleteOnKey" /* "QuickClearQuoteHook.MethodSupportAutoCompleteOnKey" /* cnb.z(-471772092693290L)  */
                                                                                               */);
 }

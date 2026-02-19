@@ -23,10 +23,10 @@ public enum bz {
     }
 
     private String b() {
-        return yg.m(new StringBuilder("错误码："), " 错误信息：", this.k);
+        return yg.concatToVar1(new StringBuilder("错误码："), " 错误信息：", this.k);
     }
 
     public String a() {
-        return this == UnKnownCode ? yg.o(new StringBuilder(), b(), "--未知错误--") : this == Timeout ? yg.o(new StringBuilder(), b(), "--连接超时--") : this == NetworkUnavailable ? yg.o(new StringBuilder(), b(), "--网络不可用--") : this == SSLException ? yg.o(new StringBuilder(), b(), "--SSL证书认证失败--") : this == IOException ? yg.o(new StringBuilder(), b(), "--IO异常--") : this == HttpError ? yg.o(new StringBuilder(), b(), "--服务端返回HTTP错误--") : this == EmptyResponse ? yg.o(new StringBuilder(), b(), "--服务端返回数据为空--") : this == ErrorResponse ? yg.o(new StringBuilder(), b(), "--服务端返回错误数据--") : this == ErrorMakeRequestBody ? yg.o(new StringBuilder(), b(), "--请求报文构建错误--") : "unknown";
+        return this == UnKnownCode ? yg.concatToVar1(new StringBuilder(), b(), "--未知错误--") : this == Timeout ? yg.concatToVar1(new StringBuilder(), b(), "--连接超时--") : this == NetworkUnavailable ? yg.concatToVar1(new StringBuilder(), b(), "--网络不可用--") : this == SSLException ? yg.concatToVar1(new StringBuilder(), b(), "--SSL证书认证失败--") : this == IOException ? yg.concatToVar1(new StringBuilder(), b(), "--IO异常--") : this == HttpError ? yg.concatToVar1(new StringBuilder(), b(), "--服务端返回HTTP错误--") : this == EmptyResponse ? yg.concatToVar1(new StringBuilder(), b(), "--服务端返回数据为空--") : this == ErrorResponse ? yg.concatToVar1(new StringBuilder(), b(), "--服务端返回错误数据--") : this == ErrorMakeRequestBody ? yg.concatToVar1(new StringBuilder(), b(), "--请求报文构建错误--") : "unknown";
     }
 }

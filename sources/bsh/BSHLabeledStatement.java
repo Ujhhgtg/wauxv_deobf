@@ -214,6 +214,6 @@ public class BSHLabeledStatement extends SimpleNode implements ParserConstants {
         StringBuilder sb = new StringBuilder();
         sb.append(super.toString());
         sb.append(": ");
-        return yg.o(sb, this.label, ":");
+        return yg.concatToVar1(sb, this.label, ":");
     }
 }

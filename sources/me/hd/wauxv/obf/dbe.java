@@ -7,16 +7,16 @@ import org.luckypray.dexkit.DexKitBridge;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class dbe extends SwitchHook implements IDexFind {
-    public static final dbe a = new dbe("RemoveVoipLimitHook" /* cnb.z(-522134879206186L) */);
-    public static final String b = "限制" /* cnb.z(-519935855950634L) */;
-    public static final String c = "移除通话限制" /* cnb.z(-519957330787114L) */;
-    public static final String i = "将通话中无法使用部分功能的限制移除" /* cnb.z(-519910086146858L) */;
+    public static final dbe a = new dbe("RemoveVoipLimitHook" /* "RemoveVoipLimitHook" /* "RemoveVoipLimitHook" /* cnb.z(-522134879206186L)  */);
+    public static final String b = "限制" /* "限制" /* "限制" /* cnb.z(-519935855950634L)  */;
+    public static final String c = "移除通话限制" /* "移除通话限制" /* "移除通话限制" /* cnb.z(-519957330787114L)  */;
+    public static final String i = "将通话中无法使用部分功能的限制移除" /* "将通话中无法使用部分功能的限制移除" /* "将通话中无法使用部分功能的限制移除" /* cnb.z(-519910086146858L)  */;
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        Iterator it = aba.ag(dbc.a, dbd.a, dbb.a, dba.a).iterator();
+        Iterator it = OtherStaticHelpers.argsToList(dbc.a, dbd.a, dbb.a, dba.a).iterator();
         while (it.hasNext()) {
-            List listBf = dqc.bf(emn.bb((DexDescData) it.next()));
+            List listBf = dqc.toSingletonList(emn.bb((DexDescData) it.next()));
             dbe dbeVar = a;
             aki akiVarAb = csb.ab(dbeVar, listBf);
             dbeVar.y(akiVarAb, new cvc(27));
@@ -36,19 +36,19 @@ public final class dbe extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(dbc.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.multitalk.model" /* cnb.z(-522083339598634L) */,
-                "Lcom/tencent/mm/autogen/events/MultiTalkActionEvent;" /* cnb.z(-521353195158314L) */));
-        emn.aj(dbd.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.voip.model" /* cnb.z(-521658137836330L) */,
-                "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* cnb.z(-521516403915562L) */));
-        emn.aj(dbb.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.ipcall" /* cnb.z(-522942333057834L) */,
-                "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* cnb.z(-523350354950954L) */));
+        emn.aj(dbc.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.multitalk.model" /* "com.tencent.mm.plugin.multitalk.model" /* "com.tencent.mm.plugin.multitalk.model" /* cnb.z(-522083339598634L)  */,
+                "Lcom/tencent/mm/autogen/events/MultiTalkActionEvent;" /* "Lcom/tencent/mm/autogen/events/MultiTalkActionEvent;" /* "Lcom/tencent/mm/autogen/events/MultiTalkActionEvent;" /* cnb.z(-521353195158314L)  */));
+        emn.aj(dbd.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.voip.model" /* "com.tencent.mm.plugin.voip.model" /* "com.tencent.mm.plugin.voip.model" /* cnb.z(-521658137836330L)  */,
+                "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* cnb.z(-521516403915562L)  */));
+        emn.aj(dbb.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.ipcall" /* "com.tencent.mm.plugin.ipcall" /* "com.tencent.mm.plugin.ipcall" /* cnb.z(-522942333057834L)  */,
+                "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* cnb.z(-523350354950954L)  */));
         emn.aj(dba.a, dexKitBridge,
                 new daz(0, (cnb.ab(ewk.f) || cnb.ac(ewh.f)) ? "com.tencent.mm.voipmp.helper"
-                        /* cnb.z(-523127016651562L) */ : "com.tencent.mm.plugin_flutter_ilinkvoip.helper" /*
+                        /* "com.tencent.mm.voipmp.helper" /* "com.tencent.mm.voipmp.helper" /* cnb.z(-523127016651562L)  */ : "com.tencent.mm.plugin_flutter_ilinkvoip.helper" /*
                                                                                                            * cnb.z(-
                                                                                                            * 522418347047722L)
                                                                                                            */,
-                        "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* cnb.z(-522766239398698L) */));
+                        "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* cnb.z(-522766239398698L)  */));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

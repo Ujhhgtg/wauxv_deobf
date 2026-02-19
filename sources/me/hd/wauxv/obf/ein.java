@@ -41,8 +41,8 @@ public final class ein {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("xo3Proto(animation_id=" /* cnb.z(-320786812369706L) */);
-        yg.u(sb, this.a, -320138272308010L);
+        sb.append("xo3Proto(animation_id=" /* "xo3Proto(animation_id=" /* "xo3Proto(animation_id=" /* cnb.z(-320786812369706L)  */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -320138272308010L);
         dts.h(sb, this.b, -320116797471530L);
         sb.append(this.c);
         sb.append(')');

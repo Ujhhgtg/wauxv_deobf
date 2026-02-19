@@ -9,18 +9,18 @@ public final /* synthetic */ class ayq implements bgx {
     static {
         ayq ayqVar = new ayq();
         b = ayqVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.FavInfoProto.VoiceInfoProto" /* cnb.z(-125275606088490L) */, ayqVar, 6);
-        cucVar.x("duration" /* cnb.z(-124373662956330L) */, false);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.FavInfoProto.VoiceInfoProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.FavInfoProto.VoiceInfoProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.FavInfoProto.VoiceInfoProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.FavInfoProto.VoiceInfoProto" /* cnb.z(-125275606088490L)   */, ayqVar, 6);
+        cucVar.x("duration" /* "duration" /* "duration" /* "duration" /* cnb.z(-124373662956330L)   */, false);
         cucVar.y(new aoz(10, 2));
-        cucVar.x("fileCacheType" /* cnb.z(-124335008250666L) */, false);
+        cucVar.x("fileCacheType" /* "fileCacheType" /* "fileCacheType" /* "fileCacheType" /* cnb.z(-124335008250666L)   */, false);
         cucVar.y(new aoz(16, 2));
-        cucVar.x("md5Checksum" /* cnb.z(-124257698839338L) */, false);
+        cucVar.x("md5Checksum" /* "md5Checksum" /* "md5Checksum" /* "md5Checksum" /* cnb.z(-124257698839338L)   */, false);
         cucVar.y(new aoz(17, 2));
-        cucVar.x("fileSize" /* cnb.z(-124790274784042L) */, false);
+        cucVar.x("fileSize" /* "fileSize" /* "fileSize" /* "fileSize" /* cnb.z(-124790274784042L)   */, false);
         cucVar.y(new aoz(19, 2));
-        cucVar.x("fileCacheName" /* cnb.z(-124700080470826L) */, false);
+        cucVar.x("fileCacheName" /* "fileCacheName" /* "fileCacheName" /* "fileCacheName" /* cnb.z(-124700080470826L)   */, false);
         cucVar.y(new aoz(20, 2));
-        cucVar.x("filePath" /* cnb.z(-124691490536234L) */, true);
+        cucVar.x("filePath" /* "filePath" /* "filePath" /* "filePath" /* cnb.z(-124691490536234L)   */, true);
         cucVar.y(new aoz(21, 2));
         descriptor = cucVar;
     }

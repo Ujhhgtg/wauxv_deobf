@@ -24,7 +24,7 @@ public final class pi {
         int[] iArr;
         pg pgVar;
         if (i < 0 || i > this.e) {
-            StringBuilder sbR = yg.r(i, "index = ", ", length = ");
+            StringBuilder sbR = yg.concatVar213(i, "index = ", ", length = ");
             sbR.append(this.e);
             throw new ArrayIndexOutOfBoundsException(sbR.toString());
         }
@@ -125,7 +125,7 @@ public final class pi {
 
     public final int n(int i) {
         if (i < 0 || i >= this.e) {
-            StringBuilder sbR = yg.r(i, "index = ", ", length = ");
+            StringBuilder sbR = yg.concatVar213(i, "index = ", ", length = ");
             sbR.append(this.e);
             throw new ArrayIndexOutOfBoundsException(sbR.toString());
         }
@@ -182,7 +182,7 @@ public final class pi {
 
     public final void p(int i, int i2) {
         if (i < 0 || i >= this.e) {
-            StringBuilder sbR = yg.r(i, "index = ", ", length = ");
+            StringBuilder sbR = yg.concatVar213(i, "index = ", ", length = ");
             sbR.append(this.e);
             throw new ArrayIndexOutOfBoundsException(sbR.toString());
         }

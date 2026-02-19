@@ -11,7 +11,7 @@ public final class dbl extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() throws NoSuchMethodException {
-        aki akiVarAb = csb.ab(a, dqc.bf(emn.bb(dbk.a)));
+        aki akiVarAb = csb.ab(a, dqc.toSingletonList(emn.bb(dbk.a)));
         akiVarAb.m(new cvc(29));
         akiVarAb.o();
     }

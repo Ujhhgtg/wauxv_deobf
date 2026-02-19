@@ -152,7 +152,7 @@ public final class ckw {
                 if (file.exists()) {
                     Request request4 = response.request();
                     throwIfVar1IsNull(request4, "<this>");
-                    if (request4.tag(cnd.class) != null) {
+                    if (request4.tag(KotlinHelpers2.class) != null) {
                         throw new ClassCastException();
                     }
                     Request request5 = response.request();

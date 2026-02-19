@@ -39,7 +39,7 @@ public final class ede {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("p72Proto(relation_singer_flag=" /* cnb.z(-253802502421290L) */);
+        sb.append("p72Proto(relation_singer_flag=" /* "p72Proto(relation_singer_flag=" /* "p72Proto(relation_singer_flag=" /* cnb.z(-253802502421290L)  */);
         bjs.w(sb, this.b, -253119602621226L);
         sb.append(this.c);
         sb.append(')');

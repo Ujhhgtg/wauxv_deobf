@@ -27,10 +27,10 @@ import net.bytebuddy.pool.TypePool;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class mj implements IHasInvokeMethod {
+public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg implements IInvokable {
     public final /* synthetic */ int a;
 
-    public /* synthetic */ mj(int i) {
+    public /* synthetic */ SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(int i) {
         this.a = i;
     }
 
@@ -57,19 +57,19 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
         cls = Boolean.class;
         int i5 = 1;
         final int i6 = 0;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         switch (i) {
             case 0:
-                int i7 = bte.a;
+                int i7 = 0;
                 azg azgVarAa = dkz.aa((HookParam) obj);
                 azgVarAa.a = dal.b(Button.class);
                 Iterator it = azgVarAa.c().iterator();
                 while (it.hasNext()) {
                     Button button = (Button) ((azk) it.next()).e();
                     if (button != null && button.getVisibility() == 0) {
-                        List listAg = aba.ag("查看原图" /* cnb.z(-440083823983402L) */,
-                                "Full Image" /* cnb.z(-440113888754474L) */, "查看原视频" /* cnb.z(-441664371948330L) */,
-                                "Original quality" /* cnb.z(-441690141752106L) */);
+                        List listAg = OtherStaticHelpers.argsToList("查看原图" /* "查看原图" /* "查看原图" /* cnb.z(-440083823983402L)  */,
+                                "Full Image" /* "Full Image" /* "Full Image" /* cnb.z(-440113888754474L)  */, "查看原视频" /* "查看原视频" /* "查看原视频" /* cnb.z(-441664371948330L)  */,
+                                "Original quality" /* "Original quality" /* "Original quality" /* cnb.z(-441690141752106L)  */);
                         if (!listAg.isEmpty()) {
                             Iterator it2 = listAg.iterator();
                             while (true) {
@@ -83,36 +83,36 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                         }
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 1:
-                ((amm) obj).c = new mj(3);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(3);
+                return kotlinUnitVar;
             case 2:
-                ((amm) obj).c = new mj(i3);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(i3);
+                return kotlinUnitVar;
             case 3:
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
-                cdj.l(cdjVar, "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* cnb.z(-441565587700522L) */);
+                cdj.l(cdjVar, "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* cnb.z(-441565587700522L)  */);
                 if (cnb.ab(ewk.h) || cnb.ac(ewh.g)) {
-                    cdjVar.t("setHdImageActionDownloadable" /* cnb.z(-441917775018794L) */);
+                    cdjVar.t("setHdImageActionDownloadable" /* "setHdImageActionDownloadable" /* "setHdImageActionDownloadable" /* cnb.z(-441917775018794L)  */);
                 } else {
-                    cdjVar.t("setImageHdImgBtnVisibility" /* cnb.z(-441827580705578L) */);
+                    cdjVar.t("setImageHdImgBtnVisibility" /* "setImageHdImgBtnVisibility" /* "setImageHdImgBtnVisibility" /* cnb.z(-441827580705578L)  */);
                 }
                 bahVar.getClass();
                 bahVar.d = cdjVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 4:
                 bah bahVar2 = (bah) obj;
                 cdj cdjVar2 = new cdj();
-                cdj.l(cdjVar2, "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* cnb.z(-441127501036330L) */);
-                cdjVar2.t("checkNeedShowOriginVideoBtn" /* cnb.z(-440929932540714L) */);
+                cdj.l(cdjVar2, "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* cnb.z(-441127501036330L)  */);
+                cdjVar2.t("checkNeedShowOriginVideoBtn" /* "checkNeedShowOriginVideoBtn" /* "checkNeedShowOriginVideoBtn" /* cnb.z(-440929932540714L)  */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
-                return ensVar;
+                return kotlinUnitVar;
             case 5:
-                ((amm) obj).c = new mj(i4);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(i4);
+                return kotlinUnitVar;
             case 6:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
@@ -127,22 +127,22 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                 cls4 = clsBf3 != null ? clsBf3 : Float.class;
                 Class<Boolean> clsBf4 = cnf.bf(dal.b(cls));
                 cdjVar3.q(cls2, cls3, cls4, clsBf4 != null ? clsBf4 : Boolean.class);
-                cdjVar3.t("MicroMsg.AvatarDrawable" /* cnb.z(-118858924948266L) */);
+                cdjVar3.t("MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* cnb.z(-118858924948266L)  */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
-                return ensVar;
+                return kotlinUnitVar;
             case 7:
-                ((amm) obj).b = new mj(i2);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(i2);
+                return kotlinUnitVar;
             case 8:
                 bag bagVar = (bag) obj;
-                String[] strArr = { "com.tencent.mm.modelavatar" /* cnb.z(-361683490962218L) */ };
+                String[] strArr = { "com.tencent.mm.modelavatar" /* "com.tencent.mm.modelavatar" /* "com.tencent.mm.modelavatar" /* cnb.z(-361683490962218L)  */ };
                 bagVar.getClass();
-                bagVar.a = la.ab(strArr);
+                bagVar.a = SomeStaticHelpers.ab(strArr);
                 zb zbVar = new zb();
                 cdj cdjVar4 = new cdj();
-                cdjVar4.s("onAccountInitialized" /* cnb.z(-361601886583594L) */);
-                cdjVar4.t("//avatar" /* cnb.z(-361477332532010L) */);
+                cdjVar4.s("onAccountInitialized" /* "onAccountInitialized" /* "onAccountInitialized" /* cnb.z(-361601886583594L)  */);
+                cdjVar4.t("//avatar" /* "//avatar" /* "//avatar" /* cnb.z(-361477332532010L)  */);
                 fj fjVar = zbVar.f;
                 if (fjVar == null) {
                     fjVar = new fj();
@@ -150,8 +150,8 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                 zbVar.f = fjVar;
                 fjVar.f(cdjVar4);
                 cdj cdjVar5 = new cdj();
-                cdjVar5.s("onAccountReleased" /* cnb.z(-360906101881642L) */);
-                cdjVar5.t("//avatar" /* cnb.z(-360845972339498L) */);
+                cdjVar5.s("onAccountReleased" /* "onAccountReleased" /* "onAccountReleased" /* cnb.z(-360906101881642L)  */);
+                cdjVar5.t("//avatar" /* "//avatar" /* "//avatar" /* cnb.z(-360845972339498L)  */);
                 fj fjVar2 = zbVar.f;
                 if (fjVar2 == null) {
                     fjVar2 = new fj();
@@ -159,68 +159,68 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                 zbVar.f = fjVar2;
                 fjVar2.f(cdjVar5);
                 bagVar.b = zbVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 9:
-                ((amm) obj).b = new mj(10);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(10);
+                return kotlinUnitVar;
             case 10:
                 bag bagVar2 = (bag) obj;
-                String[] strArr2 = { "com.tencent.mm.modelavatar" /* cnb.z(-380091720792874L) */ };
+                String[] strArr2 = { "com.tencent.mm.modelavatar" /* "com.tencent.mm.modelavatar" /* "com.tencent.mm.modelavatar" /* cnb.z(-380091720792874L)  */ };
                 bagVar2.getClass();
-                bagVar2.a = la.ab(strArr2);
+                bagVar2.a = SomeStaticHelpers.ab(strArr2);
                 zb zbVar2 = new zb();
-                zbVar2.k("MicroMsg.AvatarStorage" /* cnb.z(-380010116414250L) */, "Failed to save avatar: %s" /*
+                zbVar2.k("MicroMsg.AvatarStorage" /* "MicroMsg.AvatarStorage" /* "MicroMsg.AvatarStorage" /* cnb.z(-380010116414250L)  */, "Failed to save avatar: %s" /*
                                                                                                                * cnb.z(-
                                                                                                                * 379894152297258L)
                                                                                                                */);
                 bagVar2.b = zbVar2;
-                return ensVar;
+                return kotlinUnitVar;
             case 11:
                 View view = (View) obj;
                 View viewK = dkz.k(view, R.layout.module_dialog_bottom_tab_custom, null, false);
                 int i8 = R.id.moduleDialogCbBottomTabViewHideTab;
-                MaterialCheckBox materialCheckBox = (MaterialCheckBox) cnd.aq(viewK,
+                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.aq(viewK,
                         R.id.moduleDialogCbBottomTabViewHideTab);
                 if (materialCheckBox != null) {
                     i8 = R.id.moduleDialogCbBottomTabViewHideTitle;
-                    MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) cnd.aq(viewK,
+                    MaterialCheckBox materialCheckBox2 = (MaterialCheckBox) KotlinHelpers2.aq(viewK,
                             R.id.moduleDialogCbBottomTabViewHideTitle);
                     if (materialCheckBox2 != null) {
                         i8 = R.id.moduleDialogCbBottomTabViewModIcon;
-                        MaterialCheckBox materialCheckBox3 = (MaterialCheckBox) cnd.aq(viewK,
+                        MaterialCheckBox materialCheckBox3 = (MaterialCheckBox) KotlinHelpers2.aq(viewK,
                                 R.id.moduleDialogCbBottomTabViewModIcon);
                         if (materialCheckBox3 != null) {
                             i8 = R.id.moduleDialogCbBottomTabViewModTitle;
-                            MaterialCheckBox materialCheckBox4 = (MaterialCheckBox) cnd.aq(viewK,
+                            MaterialCheckBox materialCheckBox4 = (MaterialCheckBox) KotlinHelpers2.aq(viewK,
                                     R.id.moduleDialogCbBottomTabViewModTitle);
                             if (materialCheckBox4 != null) {
                                 i8 = R.id.moduleDialogEdtBottomTabViewChats;
-                                TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK,
+                                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK,
                                         R.id.moduleDialogEdtBottomTabViewChats);
                                 if (textInputEditText != null) {
                                     i8 = R.id.moduleDialogEdtBottomTabViewContacts;
-                                    TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK,
+                                    TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.aq(viewK,
                                             R.id.moduleDialogEdtBottomTabViewContacts);
                                     if (textInputEditText2 != null) {
                                         i8 = R.id.moduleDialogEdtBottomTabViewDiscover;
-                                        TextInputEditText textInputEditText3 = (TextInputEditText) cnd.aq(viewK,
+                                        TextInputEditText textInputEditText3 = (TextInputEditText) KotlinHelpers2.aq(viewK,
                                                 R.id.moduleDialogEdtBottomTabViewDiscover);
                                         if (textInputEditText3 != null) {
                                             i8 = R.id.moduleDialogEdtBottomTabViewMe;
-                                            TextInputEditText textInputEditText4 = (TextInputEditText) cnd.aq(viewK,
+                                            TextInputEditText textInputEditText4 = (TextInputEditText) KotlinHelpers2.aq(viewK,
                                                     R.id.moduleDialogEdtBottomTabViewMe);
                                             if (textInputEditText4 != null) {
                                                 i8 = R.id.moduleDialogInputBottomTabViewChats;
-                                                if (((TextInputLayout) cnd.aq(viewK,
+                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                                         R.id.moduleDialogInputBottomTabViewChats)) != null) {
                                                     i8 = R.id.moduleDialogInputBottomTabViewContacts;
-                                                    if (((TextInputLayout) cnd.aq(viewK,
+                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                                             R.id.moduleDialogInputBottomTabViewContacts)) != null) {
                                                         i8 = R.id.moduleDialogInputBottomTabViewDiscover;
-                                                        if (((TextInputLayout) cnd.aq(viewK,
+                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                                                 R.id.moduleDialogInputBottomTabViewDiscover)) != null) {
                                                             i8 = R.id.moduleDialogInputBottomTabViewMe;
-                                                            if (((TextInputLayout) cnd.aq(viewK,
+                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                                                     R.id.moduleDialogInputBottomTabViewMe)) != null) {
                                                                 LinearLayout linearLayout = (LinearLayout) viewK;
                                                                 ceg cegVar = new ceg(linearLayout, materialCheckBox,
@@ -238,19 +238,19 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                                                                 materialCheckBox.setChecked(qj.a.i());
                                                                 bzy bzyVar = new bzy(view.getContext());
                                                                 eg egVar = (eg) bzyVar.d;
-                                                                qo.a.getClass();
-                                                                egVar.d = qo.m;
-                                                                bzyVar.t("保存" /* cnb.z(-437992174910250L) */,
+                                                                BottomTabCustomHook.INSTANCE.getClass();
+                                                                egVar.d = BottomTabCustomHook.m;
+                                                                bzyVar.t("保存" /* "保存" /* "保存" /* cnb.z(-437992174910250L)  */,
                                                                         new amw(new bp(cegVar, 5), 0));
-                                                                bzyVar.s("重置" /* cnb.z(-437996469877546L) */,
+                                                                bzyVar.s("重置" /* "重置" /* "重置" /* cnb.z(-437996469877546L)  */,
                                                                         new amw(new h(13), 2));
                                                                 bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar,
-                                                                        "取消" /* cnb.z(-47455093652266L) */);
+                                                                        "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */);
                                                                 if (linearLayout != null) {
                                                                     egVar.r = linearLayout;
                                                                 }
                                                                 bzyVar.i().show();
-                                                                return ensVar;
+                                                                return kotlinUnitVar;
                                                             }
                                                         }
                                                     }
@@ -264,9 +264,9 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                     }
                 }
                 throw new NullPointerException("Missing required view with ID: "
-                        /* cnb.z(-638438298614570L) */.concat(viewK.getResources().getResourceName(i8)));
+                        /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-638438298614570L)  */.concat(viewK.getResources().getResourceName(i8)));
             case 12:
-                qo qoVar = qo.a;
+                BottomTabCustomHook bottomTabCustomHookVar = BottomTabCustomHook.INSTANCE;
                 Object objE = ((HookParam) obj).getThisObject();
                 RelativeLayout relativeLayout = (RelativeLayout) (!(objE instanceof RelativeLayout) ? null : objE);
                 if (relativeLayout == null) {
@@ -284,7 +284,7 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                 } else {
                     int i9 = 0;
                     while (i9 < 4) {
-                        if (qm.a.i() && (imageView = (ImageView) erb.b(relativeLayout, "" /* cnb.z(-86539296045866L) */,
+                        if (qm.a.i() && (imageView = (ImageView) erb.b(relativeLayout, "" /* "" /* "" /* cnb.z(-86539296045866L)  */,
                                 0, i9, 0, 0, 0)) != null) {
                             imageView.setVisibility(4);
                             ViewParent parent = imageView.getParent();
@@ -297,83 +297,83 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                             ImageView imageView2 = new ImageView(relativeLayout2.getContext());
                             imageView2.setLayoutParams(imageView.getLayoutParams());
                             if (i9 == 0) {
-                                qoVar.getClass();
-                                bitmap = (Bitmap) qo.d.getValue();
+                                bottomTabCustomHookVar.getClass();
+                                bitmap = (Bitmap) BottomTabCustomHook.d.getValue();
                             } else if (i9 == 1) {
-                                qoVar.getClass();
-                                bitmap = (Bitmap) qo.h.getValue();
+                                bottomTabCustomHookVar.getClass();
+                                bitmap = (Bitmap) BottomTabCustomHook.h.getValue();
                             } else if (i9 == 2) {
-                                qoVar.getClass();
-                                bitmap = (Bitmap) qo.i.getValue();
+                                bottomTabCustomHookVar.getClass();
+                                bitmap = (Bitmap) BottomTabCustomHook.i.getValue();
                             } else if (i9 != 3) {
-                                qoVar.getClass();
-                                bitmap = (Bitmap) qo.c.getValue();
+                                bottomTabCustomHookVar.getClass();
+                                bitmap = (Bitmap) BottomTabCustomHook.c.getValue();
                             } else {
-                                qoVar.getClass();
-                                bitmap = (Bitmap) qo.j.getValue();
+                                bottomTabCustomHookVar.getClass();
+                                bitmap = (Bitmap) BottomTabCustomHook.j.getValue();
                             }
                             imageView2.setImageBitmap(bitmap);
                             relativeLayout2.addView(imageView2, 0);
                         }
-                        TextView textView = (TextView) erb.b(relativeLayout, "" /* cnb.z(-86539296045866L) */, 0, i9, 0,
+                        TextView textView = (TextView) erb.b(relativeLayout, "" /* "" /* "" /* cnb.z(-86539296045866L)  */, 0, i9, 0,
                                 1);
                         if (textView != null) {
                             if (qk.a.i()) {
                                 textView.setVisibility(8);
                             } else if (qn.a.i()) {
                                 textView.setText(i9 != 0 ? i9 != 1
-                                        ? i9 != 2 ? i9 != 3 ? "" /* cnb.z(-439310729870122L) */ : ql.a.o() : qi.a.o()
+                                        ? i9 != 2 ? i9 != 3 ? "" /* "" /* "" /* cnb.z(-439310729870122L)  */ : ql.a.o() : qi.a.o()
                                         : qh.a.o() : qg.a.o());
                             }
                         }
                         i9++;
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 13:
                 View view2 = (View) obj;
                 View viewK2 = dkz.k(view2, R.layout.module_dialog_bottom_tab_material, null, false);
                 int i10 = R.id.moduleDialogEdtBottomTabViewBottomDarkColor;
-                TextInputEditText textInputEditText5 = (TextInputEditText) cnd.aq(viewK2,
+                TextInputEditText textInputEditText5 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
                         R.id.moduleDialogEdtBottomTabViewBottomDarkColor);
                 if (textInputEditText5 != null) {
                     i10 = R.id.moduleDialogEdtBottomTabViewBottomLightColor;
-                    TextInputEditText textInputEditText6 = (TextInputEditText) cnd.aq(viewK2,
+                    TextInputEditText textInputEditText6 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
                             R.id.moduleDialogEdtBottomTabViewBottomLightColor);
                     if (textInputEditText6 != null) {
                         i10 = R.id.moduleDialogEdtBottomTabViewIconDarkColor;
-                        TextInputEditText textInputEditText7 = (TextInputEditText) cnd.aq(viewK2,
+                        TextInputEditText textInputEditText7 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
                                 R.id.moduleDialogEdtBottomTabViewIconDarkColor);
                         if (textInputEditText7 != null) {
                             i10 = R.id.moduleDialogEdtBottomTabViewIconLightColor;
-                            TextInputEditText textInputEditText8 = (TextInputEditText) cnd.aq(viewK2,
+                            TextInputEditText textInputEditText8 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
                                     R.id.moduleDialogEdtBottomTabViewIconLightColor);
                             if (textInputEditText8 != null) {
                                 i10 = R.id.moduleDialogEdtBottomTabViewSelectDarkColor;
-                                TextInputEditText textInputEditText9 = (TextInputEditText) cnd.aq(viewK2,
+                                TextInputEditText textInputEditText9 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
                                         R.id.moduleDialogEdtBottomTabViewSelectDarkColor);
                                 if (textInputEditText9 != null) {
                                     i10 = R.id.moduleDialogEdtBottomTabViewSelectLightColor;
-                                    TextInputEditText textInputEditText10 = (TextInputEditText) cnd.aq(viewK2,
+                                    TextInputEditText textInputEditText10 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
                                             R.id.moduleDialogEdtBottomTabViewSelectLightColor);
                                     if (textInputEditText10 != null) {
                                         i10 = R.id.moduleDialogInputBottomTabViewBottomDarkColor;
-                                        if (((TextInputLayout) cnd.aq(viewK2,
+                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
                                                 R.id.moduleDialogInputBottomTabViewBottomDarkColor)) != null) {
                                             i10 = R.id.moduleDialogInputBottomTabViewBottomLightColor;
-                                            if (((TextInputLayout) cnd.aq(viewK2,
+                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
                                                     R.id.moduleDialogInputBottomTabViewBottomLightColor)) != null) {
                                                 i10 = R.id.moduleDialogInputBottomTabViewIconDarkColor;
-                                                if (((TextInputLayout) cnd.aq(viewK2,
+                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
                                                         R.id.moduleDialogInputBottomTabViewIconDarkColor)) != null) {
                                                     i10 = R.id.moduleDialogInputBottomTabViewIconLightColor;
-                                                    if (((TextInputLayout) cnd.aq(viewK2,
+                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
                                                             R.id.moduleDialogInputBottomTabViewIconLightColor)) != null) {
                                                         i10 = R.id.moduleDialogInputBottomTabViewSelectDarkColor;
-                                                        if (((TextInputLayout) cnd.aq(viewK2,
+                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
                                                                 R.id.moduleDialogInputBottomTabViewSelectDarkColor)) != null) {
                                                             i10 = R.id.moduleDialogInputBottomTabViewSelectLightColor;
-                                                            if (((TextInputLayout) cnd.aq(viewK2,
+                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
                                                                     R.id.moduleDialogInputBottomTabViewSelectLightColor)) != null) {
                                                                 LinearLayout linearLayout2 = (LinearLayout) viewK2;
                                                                 ceh cehVar = new ceh(linearLayout2, textInputEditText5,
@@ -390,17 +390,17 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                                                                 eg egVar2 = (eg) bzyVar2.d;
                                                                 BottomTabMaterialHook.a.getClass();
                                                                 egVar2.d = BottomTabMaterialHook.m;
-                                                                bzyVar2.t("保存" /* cnb.z(-437451009030954L) */,
+                                                                bzyVar2.t("保存" /* "保存" /* "保存" /* cnb.z(-437451009030954L)  */,
                                                                         new amw(new bp(cehVar, i4), 0));
-                                                                bzyVar2.s("重置" /* cnb.z(-437455303998250L) */,
+                                                                bzyVar2.s("重置" /* "重置" /* "重置" /* cnb.z(-437455303998250L)  */,
                                                                         new amw(new h(19), 2));
                                                                 bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2,
-                                                                        "取消" /* cnb.z(-47455093652266L) */);
+                                                                        "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */);
                                                                 if (linearLayout2 != null) {
                                                                     egVar2.r = linearLayout2;
                                                                 }
                                                                 bzyVar2.i().show();
-                                                                return ensVar;
+                                                                return kotlinUnitVar;
                                                             }
                                                         }
                                                     }
@@ -414,16 +414,16 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                     }
                 }
                 throw new NullPointerException("Missing required view with ID: "
-                        /* cnb.z(-638300859661098L) */.concat(viewK2.getResources().getResourceName(i10)));
+                        /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-638300859661098L)  */.concat(viewK2.getResources().getResourceName(i10)));
             case 14:
                 Object objE2 = ((HookParam) obj).getThisObject();
                 Activity activity = (Activity) (!(objE2 instanceof Activity) ? null : objE2);
                 if (activity != null) {
-                    activity.getIntent().putExtra("key_fav_item_id" /* cnb.z(-489892559715114L) */, "" /*
+                    activity.getIntent().putExtra("key_fav_item_id" /* "key_fav_item_id" /* "key_fav_item_id" /* cnb.z(-489892559715114L)  */, "" /*
                                                                                                         * cnb.z(-
                                                                                                         * 490373596052266L)
                                                                                                         */);
-                    return ensVar;
+                    return kotlinUnitVar;
                 }
                 cls6 = Activity.class;
                 Class<Activity> clsBf6 = cnf.bf(dal.b(cls6));
@@ -431,19 +431,19 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                         .concat((clsBf6 != null ? clsBf6 : Activity.class).getName()).toString());
             case 15:
                 un unVar = un.a;
-                aki akiVarAb = csb.ab(unVar, dqc.bf((Method) obj));
-                unVar.y(akiVarAb, new mj(17));
+                aki akiVarAb = csb.ab(unVar, dqc.toSingletonList((Method) obj));
+                unVar.y(akiVarAb, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(17));
                 akiVarAb.o();
-                return ensVar;
+                return kotlinUnitVar;
             case 16:
                 un unVar2 = un.a;
-                aki akiVarAb2 = csb.ab(unVar2, dqc.bf((Method) obj));
-                unVar2.y(akiVarAb2, new mj(18));
+                aki akiVarAb2 = csb.ab(unVar2, dqc.toSingletonList((Method) obj));
+                unVar2.y(akiVarAb2, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(18));
                 akiVarAb2.o();
-                return ensVar;
+                return kotlinUnitVar;
             case 17:
                 ((HookParam) obj).setResult(Boolean.FALSE);
-                return ensVar;
+                return kotlinUnitVar;
             case 18:
                 HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
@@ -461,41 +461,41 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                 throwIfVar1IsNull(objX);
                 View view3 = (View) objX;
                 Object tag = view3.getTag();
-                int i11 = bte.a;
+                int i11 = 0;
                 azg azgVarR = dqc.bi(tag).r();
-                azgVarR.ab = "a" /* cnb.z(-490369301084970L) */;
+                azgVarR.ab = "a" /* "a" /* "a" /* cnb.z(-490369301084970L)  */;
                 Object objD = ((azk) yg.e(azgVarR)).d();
                 throwIfVar1IsNull(objD);
                 azg azgVarR2 = dqc.bi(hookParam.getThisObject()).r();
-                azgVarR2.ab = "d" /* cnb.z(-490377891019562L) */;
+                azgVarR2.ab = "d" /* "d" /* "d" /* cnb.z(-490377891019562L)  */;
                 Object objD2 = ((azk) aaz.e(azgVarR2.c())).d();
                 throwIfVar1IsNull(objD2);
                 if (cnb.ab(ewk.a) || cnb.ac(ewh.c)) {
                     azg azgVarR3 = dqc.bi(objD2).r();
-                    azgVarR3.ab = "w" /* cnb.z(-490317761477418L) */;
+                    azgVarR3.ab = "w" /* "w" /* "w" /* cnb.z(-490317761477418L)  */;
                     Object objE3 = ((azk) aaz.e(azgVarR3.c())).e();
                     throwIfVar1IsNull(objE3);
                     zBooleanValue = ((Boolean) objE3).booleanValue();
                 } else {
                     azg azgVarR4 = dqc.bi(objD2).r();
-                    azgVarR4.ab = "d" /* cnb.z(-490326351412010L) */;
+                    azgVarR4.ab = "d" /* "d" /* "d" /* cnb.z(-490326351412010L)  */;
                     Object objE4 = ((azk) aaz.e(azgVarR4.c())).e();
                     throwIfVar1IsNull(objE4);
                     zBooleanValue = ((Number) objE4).intValue() == 1;
                 }
                 if (zBooleanValue) {
                     azg azgVarR5 = dqc.bi(objD).r();
-                    azgVarR5.ab = "field_type" /* cnb.z(-490334941346602L) */;
+                    azgVarR5.ab = "field_type" /* "field_type" /* "field_type" /* cnb.z(-490334941346602L)  */;
                     Object objE5 = ((azk) yg.e(azgVarR5)).e();
                     throwIfVar1IsNull(objE5);
                     if (((Number) objE5).intValue() == 3) {
                         azg azgVarR6 = dqc.bi(objD).r();
-                        azgVarR6.ab = "field_favProto" /* cnb.z(-490253336967978L) */;
+                        azgVarR6.ab = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-490253336967978L)  */;
                         Object objD3 = ((azk) yg.e(azgVarR6)).d();
                         throwIfVar1IsNull(objD3);
                         cde cdeVarT = dqc.bi(objD3).t();
-                        cdeVarT.ab = "getData" /* cnb.z(-490240452066090L) */;
-                        Object objJ = ((cdk) dkz.m(cdeVarT)).j(new Object[0]);
+                        cdeVarT.ab = "getData" /* "getData" /* "getData" /* cnb.z(-490240452066090L)  */;
+                        Object objJ = ((MethodHookWrapper) dkz.m(cdeVarT)).j(new Object[0]);
                         throwIfVar1IsNull(objJ);
                         cwd cwdVar = cwd.a;
                         cwdVar.getClass();
@@ -506,7 +506,7 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                             String strZ = cmz.z();
                             String strValueOf = String.valueOf(str.hashCode() & Opcodes.CONST_METHOD_TYPE);
                             StringBuilder sbY = dkz.y(strZ);
-                            sbY.append("/favorite/" /* cnb.z(-490206092327722L) */);
+                            sbY.append("/favorite/" /* "/favorite/" /* "/favorite/" /* cnb.z(-490206092327722L)  */);
                             sbY.append(strValueOf);
                             sbY.append('/');
                             sbY.append(str);
@@ -516,9 +516,9 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                         }
                         if (new File(string).exists()) {
                             AlertDialog.Builder builder = new AlertDialog.Builder(view3.getContext());
-                            builder.setTitle("提示" /* cnb.z(-490124487949098L) */);
-                            builder.setMessage("是否发送收藏语音" /* cnb.z(-490128782916394L) */);
-                            builder.setPositiveButton("发送" /* cnb.z(-489557552266026L) */,
+                            builder.setTitle("提示" /* "提示" /* "提示" /* cnb.z(-490124487949098L)  */);
+                            builder.setMessage("是否发送收藏语音" /* "是否发送收藏语音" /* "是否发送收藏语音" /* cnb.z(-490128782916394L)  */);
+                            builder.setPositiveButton("发送" /* "发送" /* "发送" /* cnb.z(-489557552266026L)  */,
                                     new DialogInterface.OnClickListener() { // from class: me.hd.wauxv.obf.uk
                                         @Override // android.content.DialogInterface.OnClickListener
                                         public final void onClick(DialogInterface dialogInterface, int i12)
@@ -528,57 +528,57 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                                                 case 0:
                                                     dpv.a.getClass();
                                                     arj.ah(dpv.b, string, aysVar.a);
-                                                    dnc.g(null, 3, "已发送" /* cnb.z(-489450178083626L) */);
+                                                    dnc.g(null, 3, "已发送" /* "已发送" /* "已发送" /* cnb.z(-489450178083626L)  */);
                                                     break;
                                                 default:
                                                     dpv.a.getClass();
                                                     arj.ah(dpv.b, string, aysVar.a);
-                                                    dnc.g(null, 3, "已发送" /* cnb.z(-479305465330474L) */);
+                                                    dnc.g(null, 3, "已发送" /* "已发送" /* "已发送" /* cnb.z(-479305465330474L)  */);
                                                     break;
                                             }
                                         }
                                     });
                             obj2 = null;
-                            builder.setNegativeButton("取消" /* cnb.z(-489493127756586L) */,
+                            builder.setNegativeButton("取消" /* "取消" /* "取消" /* cnb.z(-489493127756586L)  */,
                                     (DialogInterface.OnClickListener) null);
                             builder.show();
                         } else {
                             obj2 = null;
-                            dnc.g(null, 3, "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-489514602593066L) */);
+                            dnc.g(null, 3, "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-489514602593066L)  */);
                         }
                         hookParam.setResult(obj2);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 19:
-                ((amm) obj).c = new mj(21);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(21);
+                return kotlinUnitVar;
             case 20:
-                ((amm) obj).c = new mj(22);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(22);
+                return kotlinUnitVar;
             case 21:
                 bah bahVar4 = (bah) obj;
                 cdj cdjVar6 = new cdj();
-                cdjVar6.t("MicroMsg.FavSendFilter" /* cnb.z(-489398638476074L) */,
-                        "[FAV_ITEM_TYPE_VOICE] canFilterVoice = true, back" /* cnb.z(-489299854228266L) */);
+                cdjVar6.t("MicroMsg.FavSendFilter" /* "MicroMsg.FavSendFilter" /* "MicroMsg.FavSendFilter" /* cnb.z(-489398638476074L)  */,
+                        "[FAV_ITEM_TYPE_VOICE] canFilterVoice = true, back" /* "[FAV_ITEM_TYPE_VOICE] canFilterVoice = true, back" /* "[FAV_ITEM_TYPE_VOICE] canFilterVoice = true, back" /* cnb.z(-489299854228266L)  */);
                 bahVar4.getClass();
                 bahVar4.d = cdjVar6;
-                return ensVar;
+                return kotlinUnitVar;
             case 22:
                 bah bahVar5 = (bah) obj;
-                String[] strArr3 = { "com.tencent.mm.plugin.fav.ui" /* cnb.z(-489652041546538L) */ };
+                String[] strArr3 = { "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* cnb.z(-489652041546538L)  */ };
                 bahVar5.getClass();
-                bahVar5.a = la.ab(strArr3);
+                bahVar5.a = SomeStaticHelpers.ab(strArr3);
                 cdj cdjVar7 = new cdj();
-                cdjVar7.s("onItemClick" /* cnb.z(-477948255664938L) */);
-                cdjVar7.t("onItemClick" /* cnb.z(-477931075795754L) */, (cnb.ab(ewk.a) || cnb.ac(ewh.c))
+                cdjVar7.s("onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477948255664938L)  */);
+                cdjVar7.t("onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477931075795754L)  */, (cnb.ab(ewk.a) || cnb.ac(ewh.c))
                         ? "com/tencent/mm/plugin/fav/ui/FavTopSearchUIC$initOnItemClickListener$1"
-                        /* cnb.z(-477845176449834L) */ : "com/tencent/mm/plugin/fav/ui/FavSearchUI$10" /*
+                        /* "com/tencent/mm/plugin/fav/ui/FavTopSearchUIC$initOnItemClickListener$1" /* "com/tencent/mm/plugin/fav/ui/FavTopSearchUIC$initOnItemClickListener$1" /* cnb.z(-477845176449834L)  */ : "com/tencent/mm/plugin/fav/ui/FavSearchUI$10" /*
                                                                                                         * cnb.z(-
                                                                                                         * 478089989585706L)
                                                                                                         */);
                 bahVar5.d = cdjVar7;
-                return ensVar;
+                return kotlinUnitVar;
             case 23:
                 HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
@@ -596,23 +596,23 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                 throwIfVar1IsNull(objX2);
                 View view4 = (View) objX2;
                 Object tag2 = view4.getTag();
-                int i12 = bte.a;
+                int i12 = 0;
                 azg azgVarR7 = dqc.bi(tag2).r();
-                azgVarR7.ab = "a" /* cnb.z(-479082127031082L) */;
+                azgVarR7.ab = "a" /* "a" /* "a" /* cnb.z(-479082127031082L)  */;
                 Object objD4 = ((azk) yg.e(azgVarR7)).d();
                 throwIfVar1IsNull(objD4);
                 azg azgVarR8 = dqc.bi(objD4).r();
-                azgVarR8.ab = "field_type" /* cnb.z(-479090716965674L) */;
+                azgVarR8.ab = "field_type" /* "field_type" /* "field_type" /* cnb.z(-479090716965674L)  */;
                 Object objE6 = ((azk) yg.e(azgVarR8)).e();
                 throwIfVar1IsNull(objE6);
                 if (((Number) objE6).intValue() == 3) {
                     azg azgVarR9 = dqc.bi(objD4).r();
-                    azgVarR9.ab = "field_favProto" /* cnb.z(-479077832063786L) */;
+                    azgVarR9.ab = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-479077832063786L)  */;
                     Object objD5 = ((azk) yg.e(azgVarR9)).d();
                     throwIfVar1IsNull(objD5);
                     cde cdeVarT2 = dqc.bi(objD5).t();
-                    cdeVarT2.ab = "getData" /* cnb.z(-478996227685162L) */;
-                    Object objJ2 = ((cdk) dkz.m(cdeVarT2)).j(new Object[0]);
+                    cdeVarT2.ab = "getData" /* "getData" /* "getData" /* cnb.z(-478996227685162L)  */;
+                    Object objJ2 = ((MethodHookWrapper) dkz.m(cdeVarT2)).j(new Object[0]);
                     throwIfVar1IsNull(objJ2);
                     cwd cwdVar2 = cwd.a;
                     cwdVar2.getClass();
@@ -623,7 +623,7 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                         String strZ2 = cmz.z();
                         String strValueOf2 = String.valueOf(str2.hashCode() & Opcodes.CONST_METHOD_TYPE);
                         StringBuilder sbY2 = dkz.y(strZ2);
-                        sbY2.append("/favorite/" /* cnb.z(-478961867946794L) */);
+                        sbY2.append("/favorite/" /* "/favorite/" /* "/favorite/" /* cnb.z(-478961867946794L)  */);
                         sbY2.append(strValueOf2);
                         sbY2.append('/');
                         sbY2.append(str2);
@@ -633,10 +633,10 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                     }
                     if (new File(string2).exists()) {
                         AlertDialog.Builder builder2 = new AlertDialog.Builder(view4.getContext());
-                        builder2.setTitle("提示" /* cnb.z(-478880263568170L) */);
-                        builder2.setMessage("是否发送收藏语音" /* cnb.z(-478884558535466L) */);
+                        builder2.setTitle("提示" /* "提示" /* "提示" /* cnb.z(-478880263568170L)  */);
+                        builder2.setMessage("是否发送收藏语音" /* "是否发送收藏语音" /* "是否发送收藏语音" /* cnb.z(-478884558535466L)  */);
                         final int i13 = 1;
-                        builder2.setPositiveButton("发送" /* cnb.z(-478863083698986L) */,
+                        builder2.setPositiveButton("发送" /* "发送" /* "发送" /* cnb.z(-478863083698986L)  */,
                                 new DialogInterface.OnClickListener() { // from class: me.hd.wauxv.obf.uk
                                     @Override // android.content.DialogInterface.OnClickListener
                                     public final void onClick(DialogInterface dialogInterface, int i122)
@@ -646,35 +646,35 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                                             case 0:
                                                 dpv.a.getClass();
                                                 arj.ah(dpv.b, string2, aysVar2.a);
-                                                dnc.g(null, 3, "已发送" /* cnb.z(-489450178083626L) */);
+                                                dnc.g(null, 3, "已发送" /* "已发送" /* "已发送" /* cnb.z(-489450178083626L)  */);
                                                 break;
                                             default:
                                                 dpv.a.getClass();
                                                 arj.ah(dpv.b, string2, aysVar2.a);
-                                                dnc.g(null, 3, "已发送" /* cnb.z(-479305465330474L) */);
+                                                dnc.g(null, 3, "已发送" /* "已发送" /* "已发送" /* cnb.z(-479305465330474L)  */);
                                                 break;
                                         }
                                     }
                                 });
                         obj3 = null;
-                        builder2.setNegativeButton("取消" /* cnb.z(-478867378666282L) */,
+                        builder2.setNegativeButton("取消" /* "取消" /* "取消" /* cnb.z(-478867378666282L)  */,
                                 (DialogInterface.OnClickListener) null);
                         builder2.show();
                     } else {
                         obj3 = null;
-                        dnc.g(null, 3, "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-479369889839914L) */);
+                        dnc.g(null, 3, "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-479369889839914L)  */);
                     }
                     hookParam2.setResult(obj3);
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 24:
-                ((amm) obj).c = new mj(25);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(25);
+                return kotlinUnitVar;
             case 25:
                 bah bahVar6 = (bah) obj;
                 cdj cdjVar8 = new cdj();
                 uq.a.getClass();
-                cdjVar8.o(ajn.ag("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L) */));
+                cdjVar8.o(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */));
                 cdjVar8.r(Void.TYPE);
                 Class<Boolean> clsBf7 = cnf.bf(dal.b(cls));
                 if (clsBf7 == null) {
@@ -684,7 +684,7 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                 cdjVar8.q(clsBf7, clsBf8 != null ? clsBf8 : Boolean.class);
                 fj fjVar3 = new fj();
                 cdj cdjVar9 = new cdj();
-                cdjVar9.t("MicroMsg.ChatFooter" /* cnb.z(-76476187671338L) */, "this is a quote msg" /*
+                cdjVar9.t("MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* cnb.z(-76476187671338L)  */, "this is a quote msg" /*
                                                                                                       * cnb.z(-
                                                                                                       * 76905684400938L)
                                                                                                       */);
@@ -692,7 +692,7 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                 cdjVar8.j = fjVar3;
                 bahVar6.getClass();
                 bahVar6.d = cdjVar8;
-                return ensVar;
+                return kotlinUnitVar;
             case 26:
                 Object obj4 = ((List) obj).get(0);
                 cge.a.getClass();
@@ -712,8 +712,8 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                     } catch (Exception e) {
                         ArrayList arrayList = ewq.a;
                         StringBuilder sb = new StringBuilder();
-                        sb.append("onInit " /* cnb.z(-51075751082794L) */);
-                        ewq.e(yg.n(sb,
+                        sb.append("onInit " /* "onInit " /* "onInit " /* cnb.z(-51075751082794L)  */);
+                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
                                 obj5 instanceof SwitchHook ? ((SwitchHook) obj5).getResult() : "LoadHook" /*
                                                                                                            * cnb.z(-
                                                                                                            * 51041391344426L)
@@ -721,81 +721,81 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                                 -51002736638762L), e, 12);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 28:
                 View view5 = (View) obj;
                 View viewK3 = dkz.k(view5, R.layout.module_dialog_chat_group_nav, null, false);
                 int i14 = R.id.moduleDialogEdtChatGroupNavActiveDarkColor;
-                TextInputEditText textInputEditText11 = (TextInputEditText) cnd.aq(viewK3,
+                TextInputEditText textInputEditText11 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
                         R.id.moduleDialogEdtChatGroupNavActiveDarkColor);
                 if (textInputEditText11 != null) {
                     i14 = R.id.moduleDialogEdtChatGroupNavActiveLightColor;
-                    TextInputEditText textInputEditText12 = (TextInputEditText) cnd.aq(viewK3,
+                    TextInputEditText textInputEditText12 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
                             R.id.moduleDialogEdtChatGroupNavActiveLightColor);
                     if (textInputEditText12 != null) {
                         i14 = R.id.moduleDialogEdtChatGroupNavIconDarkColor;
-                        TextInputEditText textInputEditText13 = (TextInputEditText) cnd.aq(viewK3,
+                        TextInputEditText textInputEditText13 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
                                 R.id.moduleDialogEdtChatGroupNavIconDarkColor);
                         if (textInputEditText13 != null) {
                             i14 = R.id.moduleDialogEdtChatGroupNavIconLightColor;
-                            TextInputEditText textInputEditText14 = (TextInputEditText) cnd.aq(viewK3,
+                            TextInputEditText textInputEditText14 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
                                     R.id.moduleDialogEdtChatGroupNavIconLightColor);
                             if (textInputEditText14 != null) {
                                 i14 = R.id.moduleDialogEdtChatGroupNavNavDarkColor;
-                                TextInputEditText textInputEditText15 = (TextInputEditText) cnd.aq(viewK3,
+                                TextInputEditText textInputEditText15 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
                                         R.id.moduleDialogEdtChatGroupNavNavDarkColor);
                                 if (textInputEditText15 != null) {
                                     i14 = R.id.moduleDialogEdtChatGroupNavNavLightColor;
-                                    TextInputEditText textInputEditText16 = (TextInputEditText) cnd.aq(viewK3,
+                                    TextInputEditText textInputEditText16 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
                                             R.id.moduleDialogEdtChatGroupNavNavLightColor);
                                     if (textInputEditText16 != null) {
                                         i14 = R.id.moduleDialogEdtChatGroupNavTextDarkColor;
-                                        TextInputEditText textInputEditText17 = (TextInputEditText) cnd.aq(viewK3,
+                                        TextInputEditText textInputEditText17 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
                                                 R.id.moduleDialogEdtChatGroupNavTextDarkColor);
                                         if (textInputEditText17 != null) {
                                             i14 = R.id.moduleDialogEdtChatGroupNavTextLightColor;
-                                            TextInputEditText textInputEditText18 = (TextInputEditText) cnd.aq(viewK3,
+                                            TextInputEditText textInputEditText18 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
                                                     R.id.moduleDialogEdtChatGroupNavTextLightColor);
                                             if (textInputEditText18 != null) {
                                                 i14 = R.id.moduleDialogEdtChatGroupNavWidth;
-                                                TextInputEditText textInputEditText19 = (TextInputEditText) cnd
+                                                TextInputEditText textInputEditText19 = (TextInputEditText) KotlinHelpers2
                                                         .aq(viewK3, R.id.moduleDialogEdtChatGroupNavWidth);
                                                 if (textInputEditText19 != null) {
                                                     i14 = R.id.moduleDialogEdtChatGroupTopPadding;
-                                                    TextInputEditText textInputEditText20 = (TextInputEditText) cnd
+                                                    TextInputEditText textInputEditText20 = (TextInputEditText) KotlinHelpers2
                                                             .aq(viewK3, R.id.moduleDialogEdtChatGroupTopPadding);
                                                     if (textInputEditText20 != null) {
                                                         i14 = R.id.moduleDialogInputChatGroupNavActiveDarkColor;
-                                                        if (((TextInputLayout) cnd.aq(viewK3,
+                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK3,
                                                                 R.id.moduleDialogInputChatGroupNavActiveDarkColor)) != null) {
                                                             i14 = R.id.moduleDialogInputChatGroupNavActiveLightColor;
-                                                            if (((TextInputLayout) cnd.aq(viewK3,
+                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK3,
                                                                     R.id.moduleDialogInputChatGroupNavActiveLightColor)) != null) {
                                                                 i14 = R.id.moduleDialogInputChatGroupNavIconDarkColor;
-                                                                if (((TextInputLayout) cnd.aq(viewK3,
+                                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK3,
                                                                         R.id.moduleDialogInputChatGroupNavIconDarkColor)) != null) {
                                                                     i14 = R.id.moduleDialogInputChatGroupNavIconLightColor;
-                                                                    if (((TextInputLayout) cnd.aq(viewK3,
+                                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK3,
                                                                             R.id.moduleDialogInputChatGroupNavIconLightColor)) != null) {
                                                                         i14 = R.id.moduleDialogInputChatGroupNavNavDarkColor;
-                                                                        if (((TextInputLayout) cnd.aq(viewK3,
+                                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK3,
                                                                                 R.id.moduleDialogInputChatGroupNavNavDarkColor)) != null) {
                                                                             i14 = R.id.moduleDialogInputChatGroupNavNavLightColor;
-                                                                            if (((TextInputLayout) cnd.aq(viewK3,
+                                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK3,
                                                                                     R.id.moduleDialogInputChatGroupNavNavLightColor)) != null) {
                                                                                 i14 = R.id.moduleDialogInputChatGroupNavTextDarkColor;
-                                                                                if (((TextInputLayout) cnd.aq(viewK3,
+                                                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK3,
                                                                                         R.id.moduleDialogInputChatGroupNavTextDarkColor)) != null) {
                                                                                     i14 = R.id.moduleDialogInputChatGroupNavTextLightColor;
-                                                                                    if (((TextInputLayout) cnd.aq(
+                                                                                    if (((TextInputLayout) KotlinHelpers2.aq(
                                                                                             viewK3,
                                                                                             R.id.moduleDialogInputChatGroupNavTextLightColor)) != null) {
                                                                                         i14 = R.id.moduleDialogInputChatGroupNavWidth;
-                                                                                        if (((TextInputLayout) cnd.aq(
+                                                                                        if (((TextInputLayout) KotlinHelpers2.aq(
                                                                                                 viewK3,
                                                                                                 R.id.moduleDialogInputChatGroupNavWidth)) != null) {
                                                                                             i14 = R.id.moduleDialogInputChatGroupTopPadding;
-                                                                                            if (((TextInputLayout) cnd
+                                                                                            if (((TextInputLayout) KotlinHelpers2
                                                                                                     .aq(viewK3,
                                                                                                             R.id.moduleDialogInputChatGroupTopPadding)) != null) {
                                                                                                 LinearLayout linearLayout3 = (LinearLayout) viewK3;
@@ -875,7 +875,7 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                                                                                                     egVar3.r = linearLayout3;
                                                                                                 }
                                                                                                 bzyVar3.i().show();
-                                                                                                return ensVar;
+                                                                                                return kotlinUnitVar;
                                                                                             }
                                                                                         }
                                                                                     }
@@ -897,10 +897,10 @@ public final /* synthetic */ class mj implements IHasInvokeMethod {
                     }
                 }
                 throw new NullPointerException("Missing required view with ID: "
-                        /* cnb.z(-638713176521514L) */.concat(viewK3.getResources().getResourceName(i14)));
+                        /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-638713176521514L)  */.concat(viewK3.getResources().getResourceName(i14)));
             default:
-                ((amm) obj).c = new us(i5);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new us(i5);
+                return kotlinUnitVar;
         }
     }
 }

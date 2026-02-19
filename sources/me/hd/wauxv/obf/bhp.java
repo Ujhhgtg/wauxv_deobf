@@ -41,7 +41,7 @@ public final class bhp extends doi implements bgj {
             case 1:
                 break;
         }
-        return ((bhp) h(ahpVar, afwVar)).i(ens.a);
+        return ((bhp) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
     }
 
     @Override // me.hd.wauxv.obf.nc
@@ -66,7 +66,7 @@ public final class bhp extends doi implements bgj {
         cua cuaVar;
         bvz bvzVar2;
         int i = this.a;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         afw afwVar = null;
         View.OnCreateContextMenuListener onCreateContextMenuListener = this.p;
         ahq ahqVar = ahq.a;
@@ -101,7 +101,7 @@ public final class bhp extends doi implements bgj {
                                                                                                            */);
                     }
                     bhu.bd(obj);
-                    return ensVar;
+                    return kotlinUnitVar;
                 }
                 bhu.bd(obj);
                 obj_be = obj;
@@ -109,11 +109,11 @@ public final class bhp extends doi implements bgj {
                 String str = (String) this.f;
                 byx byxVar = (byx) this.o;
                 MainActivity mainActivity = (MainActivity) onCreateContextMenuListener;
-                String string = jSONObject.getString("name" /* cnb.z(-44289702755114L) */);
-                String string2 = jSONObject.getString("html_url" /* cnb.z(-45883135621930L) */);
-                String string3 = jSONObject.getString("body" /* cnb.z(-45861660785450L) */);
+                String string = jSONObject.getString("name" /* "name" /* "name" /* cnb.z(-44289702755114L)  */);
+                String string2 = jSONObject.getString("html_url" /* "html_url" /* "html_url" /* cnb.z(-45883135621930L)  */);
+                String string3 = jSONObject.getString("body" /* "body" /* "body" /* cnb.z(-45861660785450L)  */);
                 bhq bhqVar = bhq.a;
-                String string4 = jSONObject.getString("published_at" /* cnb.z(-45805826210602L) */);
+                String string4 = jSONObject.getString("published_at" /* "published_at" /* "published_at" /* cnb.z(-45805826210602L)  */);
                 bhqVar.getClass();
                 String strAg = cnh.ag(Instant.parse(string4).toEpochMilli(), null, null, 3);
                 bhl bhlVar = new bhl();
@@ -122,7 +122,7 @@ public final class bhp extends doi implements bgj {
                 bhlVar.c = string3;
                 bhlVar.d = strAg;
                 if (bhq.b(bhqVar, string).b <= bhq.b(bhqVar, str).b) {
-                    return ensVar;
+                    return kotlinUnitVar;
                 }
                 bhn bhnVar = new bhn(byxVar, bhlVar, mainActivity, (afw) null);
                 this.e = null;
@@ -130,7 +130,7 @@ public final class bhp extends doi implements bgj {
                 dov dovVar = doh.a;
                 alc alcVar2 = aou.a;
                 if (ajn.ak(bza.a, bhnVar, this) != ahqVar) {
-                    return ensVar;
+                    return kotlinUnitVar;
                 }
                 return ahqVar;
             case 1:
@@ -170,7 +170,7 @@ public final class bhp extends doi implements bgj {
                 }
                 List<ctx> list = (List) objAk;
                 StringBuilder sb = new StringBuilder();
-                sb.append("插件(" /* cnb.z(-418896750312234L) */);
+                sb.append("插件(" /* "插件(" /* "插件(" /* cnb.z(-418896750312234L)  */);
                 sb.append(list.size());
                 char c = ')';
                 sb.append(')');
@@ -181,8 +181,8 @@ public final class bhp extends doi implements bgj {
                     sb2.append('(');
                     String strQ = concat(sb2, ctxVar.f, c);
                     StringBuilder sb3 = new StringBuilder();
-                    sb3.append("版本: " /* cnb.z(-418913930181418L) */);
-                    yg.u(sb3, (String) ctxVar.i.getValue(), -418858095606570L);
+                    sb3.append("版本: " /* "版本: " /* "版本: " /* cnb.z(-418913930181418L)  */);
+                    yg.decryptVar2UsingCnbZAndConcatToVar1(sb3, (String) ctxVar.i.getValue(), -418858095606570L);
                     sb3.append((String) ctxVar.j.getValue());
                     bvzVar.add(new oa(strQ, sb3.toString(), ctxVar, new aeh(cuaVar, i2, ctxVar)));
                     c = ')';
@@ -194,12 +194,12 @@ public final class bhp extends doi implements bgj {
                     bvzVar2 = bvz.c;
                 }
                 if (nullSafeIsEqual(arrayList, bvzVar2)) {
-                    return ensVar;
+                    return kotlinUnitVar;
                 }
                 arrayList.clear();
                 arrayList.addAll(bvzVar2);
                 ((eqi) cuaVar2.b.getValue()).af();
-                return ensVar;
+                return kotlinUnitVar;
             default:
                 int i5 = this.d;
                 if (i5 == 0) {
@@ -220,7 +220,7 @@ public final class bhp extends doi implements bgj {
                                                                                                            */);
                     }
                     bhu.bd(obj);
-                    return ensVar;
+                    return kotlinUnitVar;
                 }
                 bhu.bd(obj);
                 alc alcVar4 = aou.a;
@@ -228,7 +228,7 @@ public final class bhp extends doi implements bgj {
                 zl zlVar = new zl((AlertDialog) onCreateContextMenuListener, null, 1);
                 this.d = 2;
                 if (ajn.ak(bkbVar, zlVar, this) != ahqVar) {
-                    return ensVar;
+                    return kotlinUnitVar;
                 }
                 return ahqVar;
         }

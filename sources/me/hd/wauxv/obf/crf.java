@@ -44,7 +44,7 @@ public final class crf extends cwn {
         if (i == 1) {
             return ajn.n(dfxVar, i);
         }
-        StringBuilder sbR = yg.r(i, "Unsupported index: ", " in a oneOf type ");
+        StringBuilder sbR = yg.concatVar213(i, "Unsupported index: ", " in a oneOf type ");
         sbR.append(dfxVar.b());
         sbR.append(", which should be using generic polymorphic serializer");
         throw new dgb(sbR.toString());

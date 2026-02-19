@@ -83,7 +83,7 @@ public final class acg {
             HashSet hashSet = new HashSet();
             for (int i3 = 0; i3 < stringArrayExtra.length; i3++) {
                 if (TextUtils.isEmpty(stringArrayExtra[i3])) {
-                    throw new IllegalArgumentException(yg.o(new StringBuilder("Permission request for permissions "),
+                    throw new IllegalArgumentException(yg.concatToVar1(new StringBuilder("Permission request for permissions "),
                             Arrays.toString(stringArrayExtra), " must not contain null or empty values"));
                 }
                 if (Build.VERSION.SDK_INT < 33

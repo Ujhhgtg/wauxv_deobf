@@ -26,7 +26,7 @@ final class FieldReaderInt16Method<T> extends FieldReaderObject<T> {
         try {
             this.method.invoke(t, sh);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 

@@ -356,7 +356,7 @@ public final class axh {
         StringBuilder sb = new StringBuilder("(");
         sb.append(axl.s[this.a]);
         sb.append(", data length:");
-        return yg.m(sb, ")", this.d.length);
+        return yg.concatToVar1(sb, ")", this.d.length);
     }
 
     public axh(long j, byte[] bArr, int i, int i2) {

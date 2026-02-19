@@ -283,12 +283,12 @@ public abstract class cnf {
         if (ioVar != null) {
             return ioVar;
         }
-        throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
+        throw new IllegalArgumentException("DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)   */.toString());
     }
 
-    public static final Class bd(bsv bsvVar) {
+    public static final Class getJavaClass(IEmpty5 bsvVar) {
         throwIfVar1IsNull(bsvVar, "<this>");
-        Class clsA = ((yq) bsvVar).a();
+        Class clsA = ((KClassContainer) bsvVar).getJClass();
         throwIfVar1IsNull(clsA,
                 "null cannot be cast to non-null type java.lang.Class<T of kotlin.jvm.JvmClassMappingKt.<get-java>>");
         return clsA;
@@ -301,9 +301,9 @@ public abstract class cnf {
      * JADX WARN: Failed to restore switch over string. Please report as a
      * decompilation issue
      */
-    public static final Class be(bsv bsvVar) {
+    public static final Class be(IEmpty5 bsvVar) {
         throwIfVar1IsNull(bsvVar, "<this>");
-        Class clsA = ((yq) bsvVar).a();
+        Class clsA = ((KClassContainer) bsvVar).getJClass();
         if (clsA.isPrimitive()) {
             String name = clsA.getName();
             switch (name.hashCode()) {
@@ -362,7 +362,7 @@ public abstract class cnf {
      * decompilation issue
      */
     public static final Class bf(zc zcVar) {
-        Class clsA = zcVar.a();
+        Class clsA = zcVar.getJClass();
         if (clsA.isPrimitive()) {
             return clsA;
         }
@@ -481,7 +481,7 @@ public abstract class cnf {
             ewq.g(6, "You cannot inject module resources into yourself", null);
             return;
         }
-        int i = bte.a;
+        int i = 0;
         bmu bmuVarBi = dqc.bi(resources.getAssets());
         dov dovVar = ep.a;
         ((cbg) bmuVarBi.h).c = bhu.aa();
@@ -489,9 +489,9 @@ public abstract class cnf {
         cde cdeVarT = bmuVarBi.t();
         cdeVarT.ab = "addAssetPath";
         cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(String.class) }, 1));
-        cdk cdkVar = (cdk) aaz.g(cdeVarT.aj());
-        if (cdkVar != null) {
-            objX = cdkVar.e(exm.i);
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+        if (methodHookWrapperVar != null) {
+            objX = methodHookWrapperVar.e(exm.i);
         }
         Throwable thB = dcy.b(objX);
         if (thB != null) {

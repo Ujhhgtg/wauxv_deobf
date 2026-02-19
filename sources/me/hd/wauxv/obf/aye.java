@@ -70,7 +70,7 @@ public abstract class aye {
         }
     }
 
-    public static void k(StringBuilder sb, Object obj, IHasInvokeMethod bgfVar) {
+    public static void k(StringBuilder sb, Object obj, IInvokable bgfVar) {
         if (bgfVar != null) {
             sb.append((CharSequence) bgfVar.invoke(obj));
             return;
@@ -410,34 +410,34 @@ public abstract class aye {
 
     public static Activity v() {
         try {
-            int i = bte.a;
-            bmu bmuVarBh = dqc.bh(ajn.ag("android.app.ActivityThread" /* cnb.z(-73748883438378L) */));
+            int i = 0;
+            bmu bmuVarBh = dqc.bh(ajn.tryGetClassByClassName("android.app.ActivityThread" /* "android.app.ActivityThread" /* "android.app.ActivityThread" /* cnb.z(-73748883438378L)  */));
             dov dovVar = ep.a;
             ((cbg) bmuVarBh.h).c = bhu.aa();
             cde cdeVarT = bmuVarBh.t();
-            cdeVarT.ab = "currentActivityThread" /* cnb.z(-74217034873642L) */;
-            Object objE = ((cdk) aaz.e(cdeVarT.aj())).e(new Object[0]);
+            cdeVarT.ab = "currentActivityThread" /* "currentActivityThread" /* "currentActivityThread" /* cnb.z(-74217034873642L)  */;
+            Object objE = ((MethodHookWrapper) aaz.e(cdeVarT.aj())).e(new Object[0]);
             throwIfVar1IsNull(objE);
             azg azgVarR = dqc.bi(objE).r();
-            azgVarR.ab = "mActivities" /* cnb.z(-74105365723946L) */;
+            azgVarR.ab = "mActivities" /* "mActivities" /* "mActivities" /* cnb.z(-74105365723946L)  */;
             Object objE2 = ((azk) aaz.e(azgVarR.c())).e();
             throwIfVar1IsNull(objE2);
             for (Object obj : ((Map) objE2).values()) {
-                int i2 = bte.a;
+                int i2 = 0;
                 azg azgVarR2 = dqc.bi(obj).r();
-                azgVarR2.ab = "paused" /* cnb.z(-74019466378026L) */;
+                azgVarR2.ab = "paused" /* "paused" /* "paused" /* cnb.z(-74019466378026L)  */;
                 Object objE3 = ((azk) aaz.e(azgVarR2.c())).e();
                 throwIfVar1IsNull(objE3);
                 if (!((Boolean) objE3).booleanValue()) {
                     azg azgVarR3 = dqc.bi(obj).r();
-                    azgVarR3.ab = "activity" /* cnb.z(-74040941214506L) */;
+                    azgVarR3.ab = "activity" /* "activity" /* "activity" /* cnb.z(-74040941214506L)  */;
                     return (Activity) ((azk) aaz.e(azgVarR3.c())).e();
                 }
             }
             return null;
         } catch (Exception e2) {
             ArrayList arrayList = ewq.a;
-            ewq.e("getCurrentActivity Failed" /* cnb.z(-73950746901290L) */, e2, 12);
+            ewq.e("getCurrentActivity Failed" /* "getCurrentActivity Failed" /* "getCurrentActivity Failed" /* cnb.z(-73950746901290L)  */, e2, 12);
             return null;
         }
     }
@@ -446,21 +446,21 @@ public abstract class aye {
             throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         cge cgeVar = cge.a;
         ContentValues contentValues = new ContentValues();
-        contentValues.put("msgid" /* cnb.z(-116269059668778L) */, (Integer) 0);
-        contentValues.put("msgSvrId" /* cnb.z(-116226109995818L) */, Long.valueOf(((long) cyj.f.b()) + j));
-        contentValues.put("type" /* cnb.z(-116204635159338L) */, Integer.valueOf(i));
-        contentValues.put("status" /* cnb.z(-116148800584490L) */, (Integer) 3);
-        contentValues.put("createTime" /* cnb.z(-116118735813418L) */, Long.valueOf(j));
-        contentValues.put("talker" /* cnb.z(-116088671042346L) */, str);
-        contentValues.put("content" /* cnb.z(-116058606271274L) */, str2);
+        contentValues.put("msgid" /* "msgid" /* "msgid" /* cnb.z(-116269059668778L)  */, (Integer) 0);
+        contentValues.put("msgSvrId" /* "msgSvrId" /* "msgSvrId" /* cnb.z(-116226109995818L)  */, Long.valueOf(((long) cyj.f.b()) + j));
+        contentValues.put("type" /* "type" /* "type" /* cnb.z(-116204635159338L)  */, Integer.valueOf(i));
+        contentValues.put("status" /* "status" /* "status" /* cnb.z(-116148800584490L)  */, (Integer) 3);
+        contentValues.put("createTime" /* "createTime" /* "createTime" /* cnb.z(-116118735813418L)  */, Long.valueOf(j));
+        contentValues.put("talker" /* "talker" /* "talker" /* cnb.z(-116088671042346L)  */, str);
+        contentValues.put("content" /* "content" /* "content" /* cnb.z(-116058606271274L)  */, str2);
         cgeVar.getClass();
         Object objC = ReflectionWrapper.createInstanceWithArgs(emn.az(cgd.a), new Object[0]);
-        int i2 = bte.a;
+        int i2 = 0;
         cde cdeVarT = dqc.bi(objC).t();
-        cdeVarT.ab = "convertFrom" /* cnb.z(-75690208656170L) */;
+        cdeVarT.ab = "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-75690208656170L)  */;
         cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(ContentValues.class), dal.b(Boolean.TYPE) }, 2));
         cdeVarT.ah();
-        ((cdk) aaz.e(cdeVarT.aj())).e(contentValues, Boolean.TRUE);
+        ((MethodHookWrapper) aaz.e(cdeVarT.aj())).e(contentValues, Boolean.TRUE);
         cgy.a.getClass();
         Method methodBb = emn.bb(cgw.a);
         dmu dmuVar = dmu.a;
@@ -469,10 +469,10 @@ public abstract class aye {
         dmuVar.getClass();
         cde cdeVarT2 = dqc.bi(dgf.b(emn.az(dmt.a))).t();
         cdeVarT2.a = emn.az(cgv.a);
-        Object objE = ((cdk) bjs.h(cdeVarT2)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT2)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         Object objInvoke = methodBb.invoke(objE, objC);
-        throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.Long" /* cnb.z(-370294900390698L) */);
+        throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.Long" /* "null cannot be cast to non-null type kotlin.Long" /* "null cannot be cast to non-null type kotlin.Long" /* cnb.z(-370294900390698L)  */);
         return ((Long) objInvoke).longValue();
     }
 

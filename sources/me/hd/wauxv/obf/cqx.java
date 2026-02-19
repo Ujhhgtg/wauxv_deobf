@@ -16,7 +16,7 @@ public final class cqx extends bws implements bns {
     public final void m(MsgInfoBean msgInfoBean) throws IOException {
         for (ctx ctxVar : cuk.a) {
             ctxVar.getClass();
-            ctxVar.n("onHandleMsg" /* cnb.z(-401987464067882L) */, msgInfoBean);
+            ctxVar.n("onHandleMsg" /* "onHandleMsg" /* "onHandleMsg" /* cnb.z(-401987464067882L)  */, msgInfoBean);
         }
     }
 }

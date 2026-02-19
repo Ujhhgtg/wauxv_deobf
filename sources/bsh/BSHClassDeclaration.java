@@ -1,6 +1,5 @@
 package bsh;
 
-import bsh.ClassGenerator;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.stream.Collectors;
@@ -54,7 +53,7 @@ class BSHClassDeclaration extends SimpleNode {
             Class<?> cls3 = bSHAmbiguousName.toClass(callStack, interpreter);
             clsArr[i2] = cls3;
             if (!cls3.isInterface()) {
-                throw new EvalException(yg.o(new StringBuilder("Type: "), bSHAmbiguousName.text, " is not an interface!"), this, callStack);
+                throw new EvalException(yg.concatToVar1(new StringBuilder("Type: "), bSHAmbiguousName.text, " is not an interface!"), this, callStack);
             }
             try {
                 Interpreter.mainSecurityGuard.canImplements(clsArr[i2]);

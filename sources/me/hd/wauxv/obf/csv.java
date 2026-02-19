@@ -57,7 +57,7 @@ public final class csv implements ParameterizedType, Type {
         }
         Type[] typeArr = this.c;
         if (typeArr.length != 0) {
-            la.t(typeArr, sb, ", ", "<", ">", "...", csu.a);
+            SomeStaticHelpers.t(typeArr, sb, ", ", "<", ">", "...", csu.a);
         }
         return sb.toString();
     }

@@ -7,9 +7,9 @@ public final class AppBrandVideoRewardHook extends SwitchHook {
                                                                                                            * cnb.z(-
                                                                                                            * 410461434542890L)
                                                                                                            */);
-    public static final String b = "小程序" /* cnb.z(-434053689899818L) */;
-    public static final String c = "程序视频奖励" /* cnb.z(-433452394478378L) */;
-    public static final String d = "跳过小程序视频广告等待时长领取奖励" /* cnb.z(-433422329707306L) */;
+    public static final String b = "小程序" /* "小程序" /* "小程序" /* "小程序" /* cnb.z(-434053689899818L)   */;
+    public static final String c = "程序视频奖励" /* "程序视频奖励" /* "程序视频奖励" /* "程序视频奖励" /* cnb.z(-433452394478378L)   */;
+    public static final String d = "跳过小程序视频广告等待时长领取奖励" /* "跳过小程序视频广告等待时长领取奖励" /* "跳过小程序视频广告等待时长领取奖励" /* "跳过小程序视频广告等待时长领取奖励" /* cnb.z(-433422329707306L)   */;
     public static final String[] h = { ewi.b.e, ewi.c.e };
     public static final boolean i = true;
 
@@ -20,13 +20,13 @@ public final class AppBrandVideoRewardHook extends SwitchHook {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        int i2 = bte.a;
+        int i2 = 0;
         cde cdeVarT = yg.s(-433997855324970L).t();
-        cdeVarT.ab = "subscribeHandler" /* cnb.z(-434246963428138L) */;
-        cdk cdkVar = (cdk) aaz.e(cdeVarT.aj());
+        cdeVarT.ab = "subscribeHandler" /* "subscribeHandler" /* "subscribeHandler" /* "subscribeHandler" /* cnb.z(-434246963428138L)   */;
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
         exg exgVar = exg.a;
         AppBrandVideoRewardHook gyVar = a;
-        aki akiVarAd = gyVar.ad(cdkVar, exgVar);
+        aki akiVarAd = gyVar.ad(methodHookWrapperVar, exgVar);
         gyVar.y(akiVarAd, new gi(17));
         akiVarAd.o();
     }

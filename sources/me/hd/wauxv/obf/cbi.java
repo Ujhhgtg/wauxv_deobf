@@ -30,7 +30,7 @@ public final /* synthetic */ class cbi implements bgj {
                 zF = nullSafeIsEqual(((Method) obj2).getReturnType(), cbp.t(obj, this.b, "Method: returnType"));
                 return Boolean.valueOf(zF);
             case 1:
-                zF = cbp.e((List) obj, la.ab(((Executable) obj2).getParameterTypes()), this.b);
+                zF = cbp.e((List) obj, SomeStaticHelpers.ab(((Executable) obj2).getParameterTypes()), this.b);
                 return Boolean.valueOf(zF);
             case 2:
                 List list = (List) obj;
@@ -40,7 +40,7 @@ public final /* synthetic */ class cbi implements bgj {
                 for (Annotation[] annotationArr : parameterAnnotations) {
                     ArrayList arrayList2 = new ArrayList(annotationArr.length);
                     for (Annotation annotation : annotationArr) {
-                        arrayList2.add(cnf.bd(cnf.bb(annotation)));
+                        arrayList2.add(cnf.getJavaClass(cnf.bb(annotation)));
                     }
                     arrayList.add(arrayList2);
                 }
@@ -50,7 +50,7 @@ public final /* synthetic */ class cbi implements bgj {
                     for (Object obj3 : list) {
                         int i2 = i + 1;
                         if (i < 0) {
-                            aba.aj();
+                            OtherStaticHelpers.aj();
                             throw null;
                         }
                         if (cbp.e((Collection) obj3, (List) arrayList.get(i), this.b)) {
@@ -71,7 +71,7 @@ public final /* synthetic */ class cbi implements bgj {
                 for (Annotation[] annotationArr2 : parameterAnnotations2) {
                     ArrayList arrayList5 = new ArrayList(annotationArr2.length);
                     for (Annotation annotation2 : annotationArr2) {
-                        arrayList5.add(cnf.bd(cnf.bb(annotation2)));
+                        arrayList5.add(cnf.getJavaClass(cnf.bb(annotation2)));
                     }
                     arrayList4.add(arrayList5);
                 }
@@ -81,7 +81,7 @@ public final /* synthetic */ class cbi implements bgj {
                     for (Object obj4 : list2) {
                         int i4 = i3 + 1;
                         if (i3 < 0) {
-                            aba.aj();
+                            OtherStaticHelpers.aj();
                             throw null;
                         }
                         if (cbp.e((Collection) obj4, (List) arrayList4.get(i3), this.b)) {
@@ -105,7 +105,7 @@ public final /* synthetic */ class cbi implements bgj {
                 zF = cbp.i(this.b, (Set) obj, (Executable) obj2);
                 return Boolean.valueOf(zF);
             case 7:
-                zE = cbp.e((List) obj, la.ab(((Executable) obj2).getParameterTypes()), this.b);
+                zE = cbp.e((List) obj, SomeStaticHelpers.ab(((Executable) obj2).getParameterTypes()), this.b);
                 break;
             case 8:
                 zF = cbp.j(this.b, (Set) obj, (Executable) obj2);
@@ -123,17 +123,17 @@ public final /* synthetic */ class cbi implements bgj {
                 zF = cbp.n(this.b, (Set) obj, (Executable) obj2);
                 return Boolean.valueOf(zF);
             case 13:
-                zF = cbp.e((Set) obj, la.ab(((Executable) obj2).getExceptionTypes()), this.b);
+                zF = cbp.e((Set) obj, SomeStaticHelpers.ab(((Executable) obj2).getExceptionTypes()), this.b);
                 return Boolean.valueOf(zF);
             case 14:
-                zE = cbp.e((Set) obj, la.ab(((Executable) obj2).getExceptionTypes()), this.b);
+                zE = cbp.e((Set) obj, SomeStaticHelpers.ab(((Executable) obj2).getExceptionTypes()), this.b);
                 break;
             case 15:
                 Set set = (Set) obj;
                 Annotation[] annotationArrP = cbp.p((Member) obj2);
                 ArrayList arrayList7 = new ArrayList(annotationArrP.length);
                 for (Annotation annotation3 : annotationArrP) {
-                    arrayList7.add(cnf.bd(cnf.bb(annotation3)));
+                    arrayList7.add(cnf.getJavaClass(cnf.bb(annotation3)));
                 }
                 zF = cbp.e(set, arrayList7, this.b);
                 return Boolean.valueOf(zF);
@@ -142,7 +142,7 @@ public final /* synthetic */ class cbi implements bgj {
                 Annotation[] annotationArrP2 = cbp.p((Member) obj2);
                 ArrayList arrayList8 = new ArrayList(annotationArrP2.length);
                 for (Annotation annotation4 : annotationArrP2) {
-                    arrayList8.add(cnf.bd(cnf.bb(annotation4)));
+                    arrayList8.add(cnf.getJavaClass(cnf.bb(annotation4)));
                 }
                 zE = cbp.e(set2, arrayList8, this.b);
                 break;

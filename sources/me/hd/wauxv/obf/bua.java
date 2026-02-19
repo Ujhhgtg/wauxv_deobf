@@ -4,5 +4,5 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class bua extends DexDescData {
     public static final bua a = new bua(
-            "LazyerImageLoader2.MethodGetSnsDirectThumbPath" /* cnb.z(-354266082442026L) */);
+            "LazyerImageLoader2.MethodGetSnsDirectThumbPath" /* "LazyerImageLoader2.MethodGetSnsDirectThumbPath" /* "LazyerImageLoader2.MethodGetSnsDirectThumbPath" /* "LazyerImageLoader2.MethodGetSnsDirectThumbPath" /* cnb.z(-354266082442026L)   */);
 }

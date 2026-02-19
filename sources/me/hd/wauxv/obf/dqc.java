@@ -22,7 +22,7 @@ public abstract class dqc {
     public static final btd[] au = new btd[0];
     public static boolean av = true;
 
-    public static final dfz aw(String str, emc emcVar, dfx[] dfxVarArr, IHasInvokeMethod bgfVar) {
+    public static final dfz aw(String str, emc emcVar, dfx[] dfxVarArr, IInvokable bgfVar) {
         throwIfVar1IsNull(str, "serialName");
         if (dnj.ak(str)) {
             throw new IllegalArgumentException("Blank serial names are prohibited");
@@ -33,7 +33,7 @@ public abstract class dqc {
         }
         zd zdVar = new zd(str);
         bgfVar.invoke(zdVar);
-        return new dfz(str, emcVar, zdVar.b.size(), la.ab(dfxVarArr), zdVar);
+        return new dfz(str, emcVar, zdVar.b.size(), SomeStaticHelpers.ab(dfxVarArr), zdVar);
     }
 
     public static dfz ax(String str, emc emcVar, dfx[] dfxVarArr) {
@@ -46,11 +46,11 @@ public abstract class dqc {
                     "For StructureKind.CLASS please use 'buildClassSerialDescriptor' instead");
         }
         zd zdVar = new zd(str);
-        return new dfz(str, emcVar, zdVar.b.size(), la.ab(dfxVarArr), zdVar);
+        return new dfz(str, emcVar, zdVar.b.size(), SomeStaticHelpers.ab(dfxVarArr), zdVar);
     }
 
-    public static cdk ay(String str) {
-        cdk cdkVar = null;
+    public static MethodHookWrapper ay(String str) {
+        MethodHookWrapper methodHookWrapperVar = null;
         String str2 = "com.highcapable.yukihookapi.hook.xposed.bridge.status.YukiXposedModuleStatus_Impl_Impl_me_hd_wauxv" instanceof dcx
                 ? null
                 : "com.highcapable.yukihookapi.hook.xposed.bridge.status.YukiXposedModuleStatus_Impl_Impl_me_hd_wauxv";
@@ -59,17 +59,17 @@ public abstract class dqc {
         }
         Class clsF = ReflectionWrapper.f(str2, 3, null);
         if (clsF != null) {
-            int i = bte.a;
+            int i = 0;
             bmu bmuVarBh = bh(clsF);
             bmuVarBh.v(true);
             cde cdeVarT = bmuVarBh.t();
             cdeVarT.ab = str;
-            cdkVar = (cdk) aaz.g(cdeVarT.aj());
+            methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
         }
-        if (cdkVar == null) {
+        if (methodHookWrapperVar == null) {
             ewq.h("Failed to initialize YukiXposedModuleStatus");
         }
-        return cdkVar;
+        return methodHookWrapperVar;
     }
 
     public static long az(long j) {
@@ -103,7 +103,7 @@ public abstract class dqc {
                 return objT;
             }
         }
-        return ens.a;
+        return KotlinUnit.INSTANCE;
     }
 
     /* JADX WARN: Found duplicated region for block: B:49:0x0167 */
@@ -295,18 +295,18 @@ public abstract class dqc {
         return uri != null && "content".equals(uri.getScheme()) && "media".equals(uri.getAuthority());
     }
 
-    public static CharSequence be(CharSequence charSequence) {
+    public static CharSequence coerceIn5120Chars(CharSequence charSequence) {
         return charSequence.length() > 5120 ? charSequence.subSequence(0, 5120) : charSequence;
     }
 
-    public static List bf(Object obj) {
+    public static List toSingletonList(Object obj) {
         List listSingletonList = Collections.singletonList(obj);
         throwIfVar1IsNull(listSingletonList, "singletonList(...)");
         return listSingletonList;
     }
 
-    public static /* synthetic */ bmu bg(bsv bsvVar) {
-        return new bmu(awp.c(null, cnf.bd(bsvVar), 15));
+    public static /* synthetic */ bmu bg(IEmpty5 bsvVar) {
+        return new bmu(awp.c(null, cnf.getJavaClass(bsvVar), 15));
     }
 
     public static bmu bh(Class cls) {
@@ -314,24 +314,24 @@ public abstract class dqc {
     }
 
     public static bmu bi(Object obj) {
-        return obj instanceof bsv ? new bmu(awp.c(obj, cnf.bd((bsv) obj), 14))
+        return obj instanceof IEmpty5 ? new bmu(awp.c(obj, cnf.getJavaClass((IEmpty5) obj), 14))
                 : obj instanceof Class ? new bmu(awp.c(obj, (Class) obj, 14)) : new bmu(awp.c(obj, obj.getClass(), 14));
     }
 
-    public static bqf bj(bqi bqiVar, int i) {
-        throwIfVar1IsNull(bqiVar, "<this>");
+    public static KotlinIntProgression bj(IntRange intRangeVar, int i) {
+        throwIfVar1IsNull(intRangeVar, "<this>");
         boolean z = i > 0;
         Integer numValueOf = Integer.valueOf(i);
         if (!z) {
             throw new IllegalArgumentException("Step must be positive, was: " + numValueOf
                     + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
         }
-        int i2 = bqiVar.a;
-        int i3 = bqiVar.b;
-        if (bqiVar.c <= 0) {
+        int i2 = intRangeVar.first;
+        int i3 = intRangeVar.last;
+        if (intRangeVar.step <= 0) {
             i = -i;
         }
-        return new bqf(i2, i3, i);
+        return new KotlinIntProgression(i2, i3, i);
     }
 
     public static void bk(ViewGroup viewGroup, boolean z) {
@@ -362,12 +362,12 @@ public abstract class dqc {
         throw new dgb(strO);
     }
 
-    public static bqi bm(int i, int i2) {
+    public static IntRange bm(int i, int i2) {
         if (i2 > Integer.MIN_VALUE) {
-            return new bqi(i, i2 - 1, 1);
+            return new IntRange(i, i2 - 1, 1);
         }
-        bqi bqiVar = bqi.d;
-        return bqi.d;
+        IntRange intRangeVar = IntRange.EMPTY_RANGE_INSTANCE;
+        return IntRange.EMPTY_RANGE_INSTANCE;
     }
 
     public abstract int c(bbb bbbVar);

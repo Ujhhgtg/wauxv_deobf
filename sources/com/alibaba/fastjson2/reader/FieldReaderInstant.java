@@ -104,7 +104,7 @@ public final class FieldReaderInstant<T> extends FieldReaderDateTimeCodec<T> {
             jSONSchema.assertValidate(instant);
         }
         if (t == null) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error, object is null"));
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error, object is null"));
         }
         if (instant != null || (this.features & JSONReader.Feature.IgnoreSetNullValue.mask) == 0) {
             BiConsumer<T, Instant> biConsumer = this.function;
@@ -118,7 +118,7 @@ public final class FieldReaderInstant<T> extends FieldReaderDateTimeCodec<T> {
                     method.invoke(t, instant);
                     return;
                 } catch (Exception e) {
-                    throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+                    throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
                 }
             }
             long j = this.fieldOffset;
@@ -129,7 +129,7 @@ public final class FieldReaderInstant<T> extends FieldReaderDateTimeCodec<T> {
             try {
                 this.field.set(t, instant);
             } catch (Exception e2) {
-                throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e2);
+                throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e2);
             }
         }
     }

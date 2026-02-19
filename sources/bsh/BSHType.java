@@ -1,6 +1,5 @@
 package bsh;
 
-import bsh.BshClassManager;
 import java.lang.reflect.Array;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.pool.TypePool;
@@ -111,7 +110,7 @@ class BSHType extends SimpleNode implements BshClassManager.Listener {
                 StringBuilder sb = new StringBuilder("L");
                 sb.append(str.replace(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, '/'));
                 sb.append("/");
-                strO = yg.o(sb, strReplace, ";");
+                strO = yg.concatToVar1(sb, strReplace, ";");
             }
         }
         for (int i = 0; i < this.arrayDims; i++) {

@@ -79,7 +79,7 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
     }
 
     public static void f(DefaultConfig ioVar, eqh eqhVar, int i) {
-        String strZ = "取消" /* cnb.z(-47455093652266L) */;
+        String strZ = "取消" /* "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)   */;
         bfu amdVar = eqhVar;
         if ((i & 2) != 0) {
             amdVar = new amd(1);
@@ -91,7 +91,7 @@ public class DefaultConfig implements dln, dcm, aui, ccv {
     }
 
     public static void g(DefaultConfig ioVar, cfx cfxVar, int i) {
-        String strZ = "确定" /* cnb.z(-47519518161706L) */;
+        String strZ = "确定" /* "确定" /* "确定" /* "确定" /* cnb.z(-47519518161706L)   */;
         bfu amdVar = cfxVar;
         if ((i & 2) != 0) {
             amdVar = new amd(1);

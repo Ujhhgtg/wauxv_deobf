@@ -9,7 +9,7 @@ public final /* synthetic */ class dto implements bgx {
     static {
         dto dtoVar = new dto();
         b = dtoVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.LocationProto" /* cnb.z(-222062694103850L) */, dtoVar, 15);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.LocationProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.LocationProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.LocationProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.LocationProto" /* cnb.z(-222062694103850L)   */, dtoVar, 15);
         bjs.y(-221117801298730L, cucVar, false, 1);
         bjs.y(-221092031494954L, cucVar, false, 2);
         bjs.y(-221070556658474L, cucVar, false, 3);

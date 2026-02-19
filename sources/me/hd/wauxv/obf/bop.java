@@ -8,18 +8,18 @@ public final class bop extends bws implements IDexFind {
     public static final bop a = new bop();
 
     public static String b(Object obj) {
-        int i = bte.a;
+        int i = 0;
         bol.a.getClass();
         cde cdeVarT = dqc.bh(emn.az(boj.a)).t();
         cdeVarT.ak(cdy.c);
         a.getClass();
         cdeVarT.a = emn.az(boo.a);
-        Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         cde cdeVarT2 = dqc.bi(objE).t();
         cdeVarT2.a = dal.b(String.class);
         cge.a.getClass();
-        Object objJ = ((cdk) dkz.n(new Object[] { emn.az(cgd.a) }, 1, cdeVarT2)).j(obj);
+        Object objJ = ((MethodHookWrapper) dkz.n(new Object[] { emn.az(cgd.a) }, 1, cdeVarT2)).j(obj);
         throwIfVar1IsNull(objJ);
         return (String) objJ;
     }

@@ -55,7 +55,7 @@ public abstract class ReflectionWrapper {
         final int i3 = 0;
         final int i4 = 1;
         Constructor constructor2 = (Constructor) dfv
-                .ah(new bae(new bae(new bae(la.b(cls.getDeclaredConstructors()), true, new ws(23)), true, new IHasInvokeMethod() { // from
+                .ah(new bae(new bae(new bae(SomeStaticHelpers.b(cls.getDeclaredConstructors()), true, new ws(23)), true, new IInvokable() { // from
                                                                                                                       // class:
                                                                                                                       // me.hd.wauxv.obf.ze
                     @Override // me.hd.wauxv.obf.bgf
@@ -113,7 +113,7 @@ public abstract class ReflectionWrapper {
                                 return Boolean.valueOf(z);
                         }
                     }
-                }), true, new IHasInvokeMethod() { // from class: me.hd.wauxv.obf.ze
+                }), true, new IInvokable() { // from class: me.hd.wauxv.obf.ze
                     @Override // me.hd.wauxv.obf.bgf
                     public final Object invoke(Object obj2) {
                         Constructor constructor3 = (Constructor) obj2;
@@ -190,7 +190,7 @@ public abstract class ReflectionWrapper {
         if (obj != null) {
             return obj;
         }
-        String strU = la.u(objArr, null, null, null, null, 63);
+        String strU = SomeStaticHelpers.u(objArr, null, null, null, null, 63);
         if (dnj.ak(strU)) {
             strU = "(empty)";
         }

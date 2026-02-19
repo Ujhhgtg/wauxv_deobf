@@ -3,5 +3,5 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class cmo extends DexDescData {
-    public static final cmo a = new cmo("NetSceneTransferOperation.ConstructorNetScene" /* cnb.z(-138624364444458L) */);
+    public static final cmo a = new cmo("NetSceneTransferOperation.ConstructorNetScene" /* "NetSceneTransferOperation.ConstructorNetScene" /* "NetSceneTransferOperation.ConstructorNetScene" /* "NetSceneTransferOperation.ConstructorNetScene" /* cnb.z(-138624364444458L)   */);
 }

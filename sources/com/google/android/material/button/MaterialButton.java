@@ -31,7 +31,7 @@ import me.hd.wauxv.obf.cac;
 import me.hd.wauxv.obf.cad;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cnb;
-import me.hd.wauxv.obf.cnd;
+import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.ddb;
 import me.hd.wauxv.obf.dgl;
@@ -254,7 +254,7 @@ public class MaterialButton extends hd implements Checkable, dgx {
     public final void onAttachedToWindow() {
         super.onAttachedToWindow();
         if (q()) {
-            cnd.bi(this, this.c.v(false));
+            KotlinHelpers2.bi(this, this.c.v(false));
         }
     }
 

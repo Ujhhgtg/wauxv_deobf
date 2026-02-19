@@ -9,11 +9,8 @@ import me.hd.wauxv.obf.azg;
 import me.hd.wauxv.obf.azk;
 import me.hd.wauxv.obf.bfu;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bte;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cde;
-import me.hd.wauxv.obf.cdk;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.MethodHookWrapper;
 import me.hd.wauxv.obf.cty;
 import me.hd.wauxv.obf.dgf;
 import me.hd.wauxv.obf.dmt;
@@ -27,26 +24,26 @@ import me.hd.wauxv.obf.yg;
 public final class PluginVipMethod {
     public static void a(bfu bfuVar) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         aeo aeoVar = aeo.a;
-        String strZ = "gh_6f586343034c" /* cnb.z(-401128470608682L) */;
+        String strZ = "gh_6f586343034c" /* "gh_6f586343034c" /* "gh_6f586343034c" /* cnb.z(-401128470608682L)  */;
         aeoVar.getClass();
         Method methodBb = emn.bb(aen.a);
         dmu dmuVar = dmu.a;
         dmuVar.getClass();
-        int i = bte.a;
+        int i = 0;
         dgf.a.getClass();
         dmuVar.getClass();
         cde cdeVarT = dqc.bi(dgf.b(emn.az(dmt.a))).t();
         cdeVarT.a = emn.az(aem.a);
-        Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         Object objInvoke = methodBb.invoke(objE, strZ, Boolean.FALSE);
         throwIfVar1IsNull(objInvoke);
         azg azgVarR = dqc.bi(objInvoke).r();
-        azgVarR.ab = "field_type" /* cnb.z(-382930694175530L) */;
+        azgVarR.ab = "field_type" /* "field_type" /* "field_type" /* cnb.z(-382930694175530L)  */;
         Object objE2 = ((azk) yg.e(azgVarR)).e();
         throwIfVar1IsNull(objE2);
         if ((((Number) objE2).intValue() & 1) == 0) {
-            throw new RuntimeException("no permission to invoke method" /* cnb.z(-401059751131946L) */);
+            throw new RuntimeException("no permission to invoke method" /* "no permission to invoke method" /* "no permission to invoke method" /* cnb.z(-401059751131946L)  */);
         }
         bfuVar.invoke();
     }

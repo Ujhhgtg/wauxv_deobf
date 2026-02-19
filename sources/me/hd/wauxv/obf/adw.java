@@ -15,7 +15,7 @@ import me.hd.wauxv.R;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class adw extends cyw {
-    public List a = avd.a;
+    public List a = EmptyReadonlyList.a;
     public final aek b;
 
     public adw(aek aekVar) {
@@ -31,7 +31,7 @@ public final class adw extends cyw {
     public static void h(adw adwVar, List list) {
         adwVar.getClass();
         if (list == null) {
-            list = avd.a;
+            list = EmptyReadonlyList.a;
         }
         c(adwVar);
         List list2 = adwVar.a;

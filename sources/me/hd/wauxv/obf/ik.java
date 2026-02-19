@@ -274,7 +274,7 @@ public final class ik {
         for (int i2 = 0; i2 < i; i2++) {
             iArr[i2] = -1;
         }
-        la._ao((int[]) this.d, 0, 0, 14, iArr);
+        SomeStaticHelpers._ao((int[]) this.d, 0, 0, 14, iArr);
         this.d = iArr;
     }
 
@@ -314,7 +314,7 @@ public final class ik {
             return;
         }
         ctt cttVar = (ctt) dkz.l(1, arrayList);
-        cttVar.a = yg.o(new StringBuilder(), cttVar.a, str);
+        cttVar.a = yg.concatToVar1(new StringBuilder(), cttVar.a, str);
         int i2 = cttVar.c;
         int length = str.length() + cttVar.d;
         cttVar.c = i2;

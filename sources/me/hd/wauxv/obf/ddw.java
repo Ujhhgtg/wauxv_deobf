@@ -15,7 +15,7 @@ public final /* synthetic */ class ddw implements cwg {
 
     @Override // java.lang.annotation.Annotation
     public final int hashCode() {
-        return ("number" /* cnb.z(-364187456895786L) */.hashCode() * 127) ^ Integer.hashCode(1);
+        return ("number" /* "number" /* "number" /* cnb.z(-364187456895786L)  */.hashCode() * 127) ^ Integer.hashCode(1);
     }
 
     @Override // me.hd.wauxv.obf.cwg
@@ -25,6 +25,6 @@ public final /* synthetic */ class ddw implements cwg {
 
     @Override // java.lang.annotation.Annotation
     public final String toString() {
-        return "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-364208931732266L) */.concat("1)");
+        return "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-364208931732266L)  */.concat("1)");
     }
 }

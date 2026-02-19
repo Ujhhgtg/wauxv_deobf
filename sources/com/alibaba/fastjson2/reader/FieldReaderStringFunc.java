@@ -85,7 +85,7 @@ final class FieldReaderStringFunc<T, V> extends FieldReader<T> {
         try {
             this.function.accept(t, upperCase);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), super.toString(), " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), super.toString(), " error"), e);
         }
     }
 

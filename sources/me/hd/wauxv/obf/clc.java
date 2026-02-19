@@ -32,6 +32,6 @@ public final class clc extends btp implements bfu {
                 break;
             }
         }
-        return ens.a;
+        return KotlinUnit.INSTANCE;
     }
 }

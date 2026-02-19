@@ -9,7 +9,6 @@ import java.lang.annotation.ElementType;
 import java.lang.annotation.Repeatable;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -29,7 +28,6 @@ import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.ClassFileVersion;
-import net.bytebuddy.asm.AsmVisitorWrapper;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.build.RepeatedAnnotationPlugin;
 import net.bytebuddy.description.annotation.AnnotationDescription;
@@ -1862,7 +1860,7 @@ public class Advice implements AsmVisitorWrapper.ForDeclaredMethods.MethodVisito
                         StringBuilder sb = new StringBuilder();
                         sb.append(methodDescription);
                         sb.append(" declares less then ");
-                        throw new IllegalStateException(yg.m(sb, " parameters", this.value));
+                        throw new IllegalStateException(yg.concatToVar1(sb, " parameters", this.value));
                     }
                     StackManipulation stackManipulationAssign = assigner.assign(typeDescription2.asGenericType(),
                             ((ParameterDescription) methodDescription.getParameters().get(this.value)).getType(),
@@ -4401,7 +4399,7 @@ public class Advice implements AsmVisitorWrapper.ForDeclaredMethods.MethodVisito
                             typeDefinition = typeDefinition2;
                         }
                         if (!typeDefinition.equals(entry.getValue())) {
-                            throw new IllegalStateException(yg.o(new StringBuilder("Local variable for "),
+                            throw new IllegalStateException(yg.concatToVar1(new StringBuilder("Local variable for "),
                                     entry.getKey(), " is defined with inconsistent types"));
                         }
                     }

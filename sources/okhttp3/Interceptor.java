@@ -1,9 +1,7 @@
 package okhttp3;
 
 import java.util.concurrent.TimeUnit;
-import me.hd.wauxv.obf.IHasInvokeMethod;
-import me.hd.wauxv.obf.KotlinHelpers;
-import okhttp3.Interceptor;
+import me.hd.wauxv.obf.IInvokable;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -46,7 +44,7 @@ public interface Interceptor {
         private Companion() {
         }
 
-        public final Interceptor invoke(final IHasInvokeMethod bgfVar) {
+        public final Interceptor invoke(final IInvokable bgfVar) {
             throwIfVar1IsNull(bgfVar, "block");
             return new Interceptor() { // from class: okhttp3.Interceptor$Companion$invoke$1
                 @Override // okhttp3.Interceptor

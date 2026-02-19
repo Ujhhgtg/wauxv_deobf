@@ -1,7 +1,5 @@
 package bsh;
 
-import bsh.BshClassManager;
-import bsh.NameSource;
 import bsh.classpath.BshLoaderManager;
 import java.io.IOException;
 import java.io.InputStream;
@@ -361,7 +359,7 @@ public class NameSpace implements Serializable, BshClassManager.Listener, NameSo
             } else {
                 StringBuilder sb = new StringBuilder();
                 sb.append(str3.substring(1).replace('/', TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH));
-                strO = yg.o(sb, ".", str2);
+                strO = yg.concatToVar1(sb, ".", str2);
             }
             Interpreter.debug(yg.k("searching for class: ", strO));
             Class<?> clsClassForName = classManager.classForName(strO);
@@ -756,7 +754,7 @@ public class NameSpace implements Serializable, BshClassManager.Listener, NameSo
             StringBuilder sb2 = new StringBuilder();
             sb2.append(this.nsName);
             sb2.append(" (");
-            strO = yg.o(sb2, super.toString(), ")");
+            strO = yg.concatToVar1(sb2, super.toString(), ")");
         }
         sb.append(strO);
         sb.append(this.isClass ? " (class) " : "");

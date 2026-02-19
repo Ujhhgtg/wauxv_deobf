@@ -38,14 +38,14 @@ public final class zm extends cyw {
             case 0:
                 bqq bqqVar = ((zk) czxVar).a;
                 zn znVar = (zn) this.b.get(i);
-                ((MaterialCheckBox) bqqVar.c).setText(znVar.a.concat(" (计算中...)" /* cnb.z(-11935714114346L) */));
+                ((MaterialCheckBox) bqqVar.c).setText(znVar.a.concat(" (计算中...)" /* " (计算中...)" /* " (计算中...)" /* cnb.z(-11935714114346L)  */));
                 MaterialCheckBox materialCheckBox = (MaterialCheckBox) bqqVar.c;
                 materialCheckBox.setOnCheckedChangeListener(null);
                 materialCheckBox.setChecked(((Set) this.c).contains(znVar.a));
                 materialCheckBox.setOnCheckedChangeListener(new zj(this, 0, znVar));
                 eq eqVar = new eq(bqqVar, znVar, null);
                 alc alcVar = aou.a;
-                cnd.bf(bza.a, eqVar);
+                KotlinHelpers2.bf(bza.a, eqVar);
                 break;
             default:
                 dpb dpbVar = (dpb) czxVar;
@@ -71,18 +71,18 @@ public final class zm extends cyw {
         switch (this.a) {
             case 0:
                 View viewInflate = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_rv_auto_clean, viewGroup, false);
-                MaterialCheckBox materialCheckBox = (MaterialCheckBox) cnd.aq(viewInflate, R.id.itemAutoCleanCheckBox);
+                MaterialCheckBox materialCheckBox = (MaterialCheckBox) KotlinHelpers2.aq(viewInflate, R.id.itemAutoCleanCheckBox);
                 if (materialCheckBox != null) {
                     return new zk(new bqq((LinearLayout) viewInflate, materialCheckBox, 2));
                 }
-                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-640109040892714L) */.concat(viewInflate.getResources().getResourceName(R.id.itemAutoCleanCheckBox)));
+                throw new NullPointerException("Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-640109040892714L)  */.concat(viewInflate.getResources().getResourceName(R.id.itemAutoCleanCheckBox)));
             default:
                 View viewInflate2 = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_rv_system_browser, viewGroup, false);
-                MaterialTextView materialTextView = (MaterialTextView) cnd.aq(viewInflate2, R.id.itemSystemBrowserTvHost);
+                MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.aq(viewInflate2, R.id.itemSystemBrowserTvHost);
                 if (materialTextView != null) {
                     return new dpb(new bqq((LinearLayout) viewInflate2, materialTextView, 0));
                 }
-                throw new NullPointerException("Missing required view with ID: " /* cnb.z(-640246479846186L) */.concat(viewInflate2.getResources().getResourceName(R.id.itemSystemBrowserTvHost)));
+                throw new NullPointerException("Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-640246479846186L)  */.concat(viewInflate2.getResources().getResourceName(R.id.itemSystemBrowserTvHost)));
         }
     }
 

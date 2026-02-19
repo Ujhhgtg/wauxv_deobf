@@ -77,7 +77,7 @@ public abstract class buu {
             }
             HashMap map2 = b;
             if (declaredConstructor != null) {
-                map2.put(cls, dqc.bf(declaredConstructor));
+                map2.put(cls, dqc.toSingletonList(declaredConstructor));
             } else {
                 zi ziVar = zi.a;
                 HashMap map3 = ziVar.c;

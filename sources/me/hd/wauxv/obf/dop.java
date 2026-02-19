@@ -62,7 +62,7 @@ public class dop implements cdw, ahw, ero, btg {
 
     @Override // me.hd.wauxv.obf.ero
     public erk _bh(zc zcVar, chq chqVar) {
-        return l(cnf.bd(zcVar), chqVar);
+        return l(cnf.getJavaClass(zcVar), chqVar);
     }
 
     @Override // me.hd.wauxv.obf.ero

@@ -9,7 +9,7 @@ public final /* synthetic */ class dyg implements bgx {
     static {
         dyg dygVar = new dyg();
         b = dygVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.gt1Proto" /* cnb.z(-204247169760042L) */, dygVar, 18);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.gt1Proto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.gt1Proto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.gt1Proto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.gt1Proto" /* cnb.z(-204247169760042L)   */, dygVar, 18);
         bjs.y(-203907867343658L, cucVar, false, 1);
         bjs.y(-203864917670698L, cucVar, false, 2);
         bjs.y(-203856327736106L, cucVar, false, 3);

@@ -31,14 +31,14 @@ import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityManager;
 import android.widget.EdgeEffect;
 import android.widget.OverScroller;
-import com.umeng.analytics.pro.q;
+
 import java.lang.ref.WeakReference;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.WeakHashMap;
-import me.hd.wauxv.obf.aba;
+import me.hd.wauxv.obf.OtherStaticHelpers;
 import me.hd.wauxv.obf.akx;
 import me.hd.wauxv.obf.ann;
 import me.hd.wauxv.obf.atb;
@@ -54,7 +54,7 @@ import me.hd.wauxv.obf.bzo;
 import me.hd.wauxv.obf.cjn;
 import me.hd.wauxv.obf.ckr;
 import me.hd.wauxv.obf.cks;
-import me.hd.wauxv.obf.cnd;
+import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.csi;
 import me.hd.wauxv.obf.csj;
 import me.hd.wauxv.obf.cuu;
@@ -215,18 +215,18 @@ public class RecyclerView extends ViewGroup implements ckr {
     }
 
     public static int cq(int i2, EdgeEffect edgeEffect, EdgeEffect edgeEffect2, int i3) {
-        if (i2 > 0 && edgeEffect != null && cnd.at(edgeEffect) != 0.0f) {
-            int iRound = Math.round(cnd.bb(edgeEffect, ((-i2) * 4.0f) / i3, 0.5f) * ((-i3) / 4.0f));
+        if (i2 > 0 && edgeEffect != null && KotlinHelpers2.at(edgeEffect) != 0.0f) {
+            int iRound = Math.round(KotlinHelpers2.bb(edgeEffect, ((-i2) * 4.0f) / i3, 0.5f) * ((-i3) / 4.0f));
             if (iRound != i2) {
                 edgeEffect.finish();
             }
             return i2 - iRound;
         }
-        if (i2 >= 0 || edgeEffect2 == null || cnd.at(edgeEffect2) == 0.0f) {
+        if (i2 >= 0 || edgeEffect2 == null || KotlinHelpers2.at(edgeEffect2) == 0.0f) {
             return i2;
         }
         float f2 = i3;
-        int iRound2 = Math.round(cnd.bb(edgeEffect2, (i2 * 4.0f) / f2, 0.5f) * (f2 / 4.0f));
+        int iRound2 = Math.round(KotlinHelpers2.bb(edgeEffect2, (i2 * 4.0f) / f2, 0.5f) * (f2 / 4.0f));
         if (iRound2 != i2) {
             edgeEffect2.finish();
         }
@@ -1525,9 +1525,9 @@ public class RecyclerView extends ViewGroup implements ckr {
                     iMax = 0;
                 } else {
                     EdgeEffect edgeEffect = this.as;
-                    if (edgeEffect == null || cnd.at(edgeEffect) == 0.0f) {
+                    if (edgeEffect == null || KotlinHelpers2.at(edgeEffect) == 0.0f) {
                         EdgeEffect edgeEffect2 = this.au;
-                        if (edgeEffect2 == null || cnd.at(edgeEffect2) == 0.0f) {
+                        if (edgeEffect2 == null || KotlinHelpers2.at(edgeEffect2) == 0.0f) {
                             iMax = 0;
                         } else if (er(this.au, i8, getWidth())) {
                             this.au.onAbsorb(i8);
@@ -1548,9 +1548,9 @@ public class RecyclerView extends ViewGroup implements ckr {
                     iMax2 = 0;
                 } else {
                     EdgeEffect edgeEffect3 = this.at;
-                    if (edgeEffect3 == null || cnd.at(edgeEffect3) == 0.0f) {
+                    if (edgeEffect3 == null || KotlinHelpers2.at(edgeEffect3) == 0.0f) {
                         EdgeEffect edgeEffect4 = this.av;
-                        if (edgeEffect4 == null || cnd.at(edgeEffect4) == 0.0f) {
+                        if (edgeEffect4 == null || KotlinHelpers2.at(edgeEffect4) == 0.0f) {
                             i6 = iMax2;
                             iMax2 = 0;
                         } else if (er(this.av, iMax2, getHeight())) {
@@ -2021,14 +2021,14 @@ public class RecyclerView extends ViewGroup implements ckr {
         float width = i2 / getWidth();
         EdgeEffect edgeEffect = this.as;
         float f3 = 0.0f;
-        if (edgeEffect == null || cnd.at(edgeEffect) == 0.0f) {
+        if (edgeEffect == null || KotlinHelpers2.at(edgeEffect) == 0.0f) {
             EdgeEffect edgeEffect2 = this.au;
-            if (edgeEffect2 != null && cnd.at(edgeEffect2) != 0.0f) {
+            if (edgeEffect2 != null && KotlinHelpers2.at(edgeEffect2) != 0.0f) {
                 if (canScrollHorizontally(1)) {
                     this.au.onRelease();
                 } else {
-                    float fBb = cnd.bb(this.au, width, height);
-                    if (cnd.at(this.au) == 0.0f) {
+                    float fBb = KotlinHelpers2.bb(this.au, width, height);
+                    if (KotlinHelpers2.at(this.au) == 0.0f) {
                         this.au.onRelease();
                     }
                     f3 = fBb;
@@ -2039,8 +2039,8 @@ public class RecyclerView extends ViewGroup implements ckr {
             if (canScrollHorizontally(-1)) {
                 this.as.onRelease();
             } else {
-                float f4 = -cnd.bb(this.as, -width, 1.0f - height);
-                if (cnd.at(this.as) == 0.0f) {
+                float f4 = -KotlinHelpers2.bb(this.as, -width, 1.0f - height);
+                if (KotlinHelpers2.at(this.as) == 0.0f) {
                     this.as.onRelease();
                 }
                 f3 = f4;
@@ -2055,14 +2055,14 @@ public class RecyclerView extends ViewGroup implements ckr {
         float height = i2 / getHeight();
         EdgeEffect edgeEffect = this.at;
         float f3 = 0.0f;
-        if (edgeEffect == null || cnd.at(edgeEffect) == 0.0f) {
+        if (edgeEffect == null || KotlinHelpers2.at(edgeEffect) == 0.0f) {
             EdgeEffect edgeEffect2 = this.av;
-            if (edgeEffect2 != null && cnd.at(edgeEffect2) != 0.0f) {
+            if (edgeEffect2 != null && KotlinHelpers2.at(edgeEffect2) != 0.0f) {
                 if (canScrollVertically(1)) {
                     this.av.onRelease();
                 } else {
-                    float fBb = cnd.bb(this.av, height, 1.0f - width);
-                    if (cnd.at(this.av) == 0.0f) {
+                    float fBb = KotlinHelpers2.bb(this.av, height, 1.0f - width);
+                    if (KotlinHelpers2.at(this.av) == 0.0f) {
                         this.av.onRelease();
                     }
                     f3 = fBb;
@@ -2073,8 +2073,8 @@ public class RecyclerView extends ViewGroup implements ckr {
             if (canScrollVertically(-1)) {
                 this.at.onRelease();
             } else {
-                float f4 = -cnd.bb(this.at, -height, width);
-                if (cnd.at(this.at) == 0.0f) {
+                float f4 = -KotlinHelpers2.bb(this.at, -height, width);
+                if (KotlinHelpers2.at(this.at) == 0.0f) {
                     this.at.onRelease();
                 }
                 f3 = f4;
@@ -2193,22 +2193,22 @@ public class RecyclerView extends ViewGroup implements ckr {
                     dj();
                     z = true;
                     z2 = false;
-                    cnd.bb(this.as, (-f2) / getWidth(), 1.0f - (y / getHeight()));
+                    KotlinHelpers2.bb(this.as, (-f2) / getWidth(), 1.0f - (y / getHeight()));
                 } else {
                     z = true;
                     z2 = false;
                     if (f2 > 0.0f) {
                         dk();
-                        cnd.bb(this.au, f2 / getWidth(), y / getHeight());
+                        KotlinHelpers2.bb(this.au, f2 / getWidth(), y / getHeight());
                     } else {
                         z3 = false;
                     }
                     if (f3 < 0.0f) {
                         dl();
-                        cnd.bb(this.at, (-f3) / getHeight(), x / getWidth());
+                        KotlinHelpers2.bb(this.at, (-f3) / getHeight(), x / getWidth());
                     } else if (f3 > 0.0f) {
                         di();
-                        cnd.bb(this.av, f3 / getHeight(), 1.0f - (x / getWidth()));
+                        KotlinHelpers2.bb(this.av, f3 / getHeight(), 1.0f - (x / getWidth()));
                     } else {
                         if (z3 || f2 != 0.0f || f3 != 0.0f) {
                             postInvalidateOnAnimation();
@@ -2230,10 +2230,10 @@ public class RecyclerView extends ViewGroup implements ckr {
                 z3 = z;
                 if (f3 < 0.0f) {
                     dl();
-                    cnd.bb(this.at, (-f3) / getHeight(), x / getWidth());
+                    KotlinHelpers2.bb(this.at, (-f3) / getHeight(), x / getWidth());
                 } else if (f3 > 0.0f) {
                     di();
-                    cnd.bb(this.av, f3 / getHeight(), 1.0f - (x / getWidth()));
+                    KotlinHelpers2.bb(this.av, f3 / getHeight(), 1.0f - (x / getWidth()));
                 } else {
                     if (z3) {
                         postInvalidateOnAnimation();
@@ -2319,7 +2319,7 @@ public class RecyclerView extends ViewGroup implements ckr {
         if (i2 > 0) {
             return true;
         }
-        float fAt = cnd.at(edgeEffect) * i3;
+        float fAt = KotlinHelpers2.at(edgeEffect) * i3;
         float fAbs = Math.abs(-i2) * 0.35f;
         float f2 = this.k * 0.015f;
         double dLog = Math.log(fAbs / f2);
@@ -2745,7 +2745,7 @@ public class RecyclerView extends ViewGroup implements ckr {
                 childAt.setTag(me.hd.wauxv.R.id.pooling_container_listener_holder_tag, cuuVar);
             }
             ArrayList arrayList2 = cuuVar.a;
-            int iAf = aba.af(arrayList2);
+            int iAf = OtherStaticHelpers.af(arrayList2);
             if (-1 < iAf) {
                 arrayList2.get(iAf).getClass();
                 throw new ClassCastException();
@@ -2880,25 +2880,25 @@ public class RecyclerView extends ViewGroup implements ckr {
                     this.bd = y;
                     this.bb = y;
                     EdgeEffect edgeEffect = this.as;
-                    if (edgeEffect == null || cnd.at(edgeEffect) == 0.0f || canScrollHorizontally(-1)) {
+                    if (edgeEffect == null || KotlinHelpers2.at(edgeEffect) == 0.0f || canScrollHorizontally(-1)) {
                         z = false;
                     } else {
-                        cnd.bb(this.as, 0.0f, 1.0f - (motionEvent.getY() / getHeight()));
+                        KotlinHelpers2.bb(this.as, 0.0f, 1.0f - (motionEvent.getY() / getHeight()));
                         z = true;
                     }
                     EdgeEffect edgeEffect2 = this.au;
-                    if (edgeEffect2 != null && cnd.at(edgeEffect2) != 0.0f && !canScrollHorizontally(1)) {
-                        cnd.bb(this.au, 0.0f, motionEvent.getY() / getHeight());
+                    if (edgeEffect2 != null && KotlinHelpers2.at(edgeEffect2) != 0.0f && !canScrollHorizontally(1)) {
+                        KotlinHelpers2.bb(this.au, 0.0f, motionEvent.getY() / getHeight());
                         z = true;
                     }
                     EdgeEffect edgeEffect3 = this.at;
-                    if (edgeEffect3 != null && cnd.at(edgeEffect3) != 0.0f && !canScrollVertically(-1)) {
-                        cnd.bb(this.at, 0.0f, motionEvent.getX() / getWidth());
+                    if (edgeEffect3 != null && KotlinHelpers2.at(edgeEffect3) != 0.0f && !canScrollVertically(-1)) {
+                        KotlinHelpers2.bb(this.at, 0.0f, motionEvent.getX() / getWidth());
                         z = true;
                     }
                     EdgeEffect edgeEffect4 = this.av;
-                    if (edgeEffect4 != null && cnd.at(edgeEffect4) != 0.0f && !canScrollVertically(1)) {
-                        cnd.bb(this.av, 0.0f, 1.0f - (motionEvent.getX() / getWidth()));
+                    if (edgeEffect4 != null && KotlinHelpers2.at(edgeEffect4) != 0.0f && !canScrollVertically(1)) {
+                        KotlinHelpers2.bb(this.av, 0.0f, 1.0f - (motionEvent.getX() / getWidth()));
                         z = true;
                     }
                     if (z || this.ax == 2) {
@@ -3599,7 +3599,7 @@ public class RecyclerView extends ViewGroup implements ckr {
             return;
         }
         if (b) {
-            StringBuilder sbR = yg.r(i2, "setting scroll state to ", " from ");
+            StringBuilder sbR = yg.concatVar213(i2, "setting scroll state to ", " from ");
             sbR.append(this.ax);
             Log.d("RecyclerView", sbR.toString(), new Exception());
         }

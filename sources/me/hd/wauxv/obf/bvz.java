@@ -175,7 +175,7 @@ public final class bvz extends ad implements RandomAccess, Serializable {
             this.d = objArrCopyOf;
         }
         Object[] objArr2 = this.d;
-        la._aj(i + i2, i, objArr2, this.e, objArr2);
+        SomeStaticHelpers._aj(i + i2, i, objArr2, this.e, objArr2);
         this.e += i2;
     }
 
@@ -183,7 +183,7 @@ public final class bvz extends ad implements RandomAccess, Serializable {
         ((AbstractList) this).modCount++;
         Object[] objArr = this.d;
         Object obj = objArr[i];
-        la._aj(i, i + 1, objArr, this.e, objArr);
+        SomeStaticHelpers._aj(i, i + 1, objArr, this.e, objArr);
         Object[] objArr2 = this.d;
         int i2 = this.e - 1;
         throwIfVar1IsNull(objArr2, "<this>");
@@ -212,7 +212,7 @@ public final class bvz extends ad implements RandomAccess, Serializable {
             ((AbstractList) this).modCount++;
         }
         Object[] objArr = this.d;
-        la._aj(i, i + i2, objArr, this.e, objArr);
+        SomeStaticHelpers._aj(i, i + i2, objArr, this.e, objArr);
         Object[] objArr2 = this.d;
         int i3 = this.e;
         bhu.az(objArr2, i3 - i2, i3);
@@ -235,7 +235,7 @@ public final class bvz extends ad implements RandomAccess, Serializable {
         }
         int i6 = i2 - i4;
         Object[] objArr2 = this.d;
-        la._aj(i + i4, i2 + i, objArr2, this.e, objArr2);
+        SomeStaticHelpers._aj(i + i4, i2 + i, objArr2, this.e, objArr2);
         Object[] objArr3 = this.d;
         int i7 = this.e;
         bhu.az(objArr3, i7 - i6, i7);
@@ -299,7 +299,7 @@ public final class bvz extends ad implements RandomAccess, Serializable {
             throwIfVar1IsNull(objArrCopyOfRange, "copyOfRange(...)");
             return objArrCopyOfRange;
         }
-        la._aj(0, 0, this.d, i, objArr);
+        SomeStaticHelpers._aj(0, 0, this.d, i, objArr);
         int i2 = this.e;
         if (i2 < objArr.length) {
             objArr[i2] = null;
@@ -349,6 +349,6 @@ public final class bvz extends ad implements RandomAccess, Serializable {
 
     @Override // java.util.AbstractCollection, java.util.Collection, java.util.List
     public final Object[] toArray() {
-        return la.k(this.d, 0, this.e);
+        return SomeStaticHelpers.k(this.d, 0, this.e);
     }
 }

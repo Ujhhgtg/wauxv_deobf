@@ -54,7 +54,7 @@ public final class blq {
             LinkedHashMap linkedHashMap = ((blu) this.a).f;
             String name = layoutParams.getClass().getName();
             int size = linkedHashMap.size();
-            ((IHasInvokeMethod) poVar.d).invoke(layoutParams);
+            ((IInvokable) poVar.d).invoke(layoutParams);
             if (linkedHashMap.size() == size) {
                 return layoutParams;
             }
@@ -70,16 +70,16 @@ public final class blq {
         if (layoutParamsF != null) {
             ViewGroup viewGroup = (ViewGroup) this.c;
             if (viewGroup != null) {
-                int i3 = bte.a;
+                int i3 = 0;
                 bmu bmuVarBi = dqc.bi(viewGroup);
                 bmuVarBi.v(true);
                 cde cdeVarT = bmuVarBi.t();
                 cdeVarT.ab = "generateLayoutParams";
                 cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(ViewGroup.LayoutParams.class) }, 1));
                 cdeVarT.ah();
-                cdk cdkVar = (cdk) aaz.g(cdeVarT.aj());
-                if (cdkVar != null) {
-                    layoutParams2 = (ViewGroup.LayoutParams) cdkVar.i(layoutParamsF);
+                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+                if (methodHookWrapperVar != null) {
+                    layoutParams2 = (ViewGroup.LayoutParams) methodHookWrapperVar.i(layoutParamsF);
                 }
             }
             if (layoutParams2 != null) {

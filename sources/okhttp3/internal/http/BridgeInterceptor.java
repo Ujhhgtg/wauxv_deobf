@@ -1,9 +1,8 @@
 package okhttp3.internal.http;
 
 import java.util.List;
-import me.hd.wauxv.obf.aba;
+import me.hd.wauxv.obf.OtherStaticHelpers;
 import me.hd.wauxv.obf.bjr;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.emc;
 import net.bytebuddy.jar.asm.signature.SignatureVisitor;
 import okhttp3.Cookie;
@@ -32,7 +31,7 @@ public final class BridgeInterceptor implements Interceptor {
         for (Object obj : list) {
             int i2 = i + 1;
             if (i < 0) {
-                aba.aj();
+                OtherStaticHelpers.aj();
                 throw null;
             }
             Cookie cookie = (Cookie) obj;

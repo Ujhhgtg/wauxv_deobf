@@ -37,6 +37,6 @@ public final class cjz extends cbw {
         sb.append(" is ");
         sb.append(i4);
         sb.append(". Limit can be checked with ");
-        throw new IllegalArgumentException(yg.o(sb, simpleName, "#getMaxItemCount()"));
+        throw new IllegalArgumentException(yg.concatToVar1(sb, simpleName, "#getMaxItemCount()"));
     }
 }

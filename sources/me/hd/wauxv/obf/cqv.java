@@ -9,7 +9,7 @@ public final class cqv extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() throws NoSuchMethodException {
-        aki akiVarAb = csb.ab(a, dqc.bf(emn.bb(cqu.a)));
+        aki akiVarAb = csb.ab(a, dqc.toSingletonList(emn.bb(cqu.a)));
         akiVarAb.n(new cml(23));
         akiVarAb.o();
     }

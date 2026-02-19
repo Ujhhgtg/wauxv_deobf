@@ -21,7 +21,7 @@ public final /* synthetic */ class ccw implements View.OnClickListener {
     public final void onClick(View view) {
         switch (this.a) {
             case 0:
-                IHasInvokeMethod bgfVar = ((ccz) this.c).q;
+                IInvokable bgfVar = ((ccz) this.c).q;
                 if (bgfVar != null) {
                     bgfVar.invoke(Integer.valueOf(this.b));
                 }

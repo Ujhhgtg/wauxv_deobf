@@ -172,9 +172,29 @@ def find_cnb_z_calls(java_content):
     return matches
 
 
+def find_yg_g_calls(java_content):
+    """
+    Find all yg.g(long, cursor) calls in Java content, supporting decimal and hex
+    """
+    pattern = r"yg\.g\((-?(?:0x[0-9a-fA-F]+|\d+))[Ll]?\s*,\s*(\w+)\)"
+
+    matches = []
+    for match in re.finditer(pattern, java_content):
+        long_str = match.group(1)
+        cursor_var = match.group(2)
+
+        try:
+            long_val = int(long_str, 0)
+            matches.append((match, long_val, cursor_var))
+        except ValueError:
+            print(f"  Warning: Could not parse integer value: {long_str}")
+
+    return matches
+
+
 def deobfuscate_file(java_path, string_array):
     """
-    Deobfuscate a single Java file by replacing cnb.z() calls
+    Deobfuscate a single Java file by replacing cnb.z() and yg.g() calls
 
     Args:
         java_path: Path to Java file
@@ -186,17 +206,37 @@ def deobfuscate_file(java_path, string_array):
     with open(java_path, "r", encoding="utf-8", errors="surrogateescape") as f:
         content = f.read()
 
-    # original_content = content
-    matches = find_cnb_z_calls(content)
+    # Find both types of calls
+    cnb_matches = find_cnb_z_calls(content)
+    yg_matches = find_yg_g_calls(content)
 
-    if not matches:
+    # Also find standalone z() calls (for cnb.java itself)
+    z_pattern = r"(?<!cnb\.)(?<!yg\.)z\((-?(?:0x[0-9a-fA-F]+|\d+))[Ll]?\)"
+    z_matches = []
+    for match in re.finditer(z_pattern, content):
+        long_str = match.group(1)
+        try:
+            long_val = int(long_str, 0)
+            z_matches.append((match, long_val))
+        except ValueError:
+            print(f"  Warning: Could not parse integer value: {long_str}")
+
+    if not cnb_matches and not yg_matches and not z_matches:
         return 0
 
-    # Replace in reverse order to maintain positions
-    matches.reverse()
+    # Combine and sort by position (reverse order for replacement)
+    all_matches = []
+    for match, long_val in cnb_matches:
+        all_matches.append((match, long_val, 'cnb', None))
+    for match, long_val, cursor_var in yg_matches:
+        all_matches.append((match, long_val, 'yg', cursor_var))
+    for match, long_val in z_matches:
+        all_matches.append((match, long_val, 'z', None))
+
+    all_matches.sort(key=lambda x: x[0].start(), reverse=True)
 
     replacements = 0
-    for match, long_val in matches:
+    for match, long_val, call_type, cursor_var in all_matches:
         try:
             decrypted = z(long_val, string_array)
 
@@ -209,9 +249,13 @@ def deobfuscate_file(java_path, string_array):
                 .replace("\t", "\\t")
             )
 
-            # Create replacement with comment
             original_call = match.group(0)
-            replacement = f'"{decrypted_escaped}" /* {original_call} */'
+
+            # Different replacement based on call type
+            if call_type == 'yg':
+                replacement = f'{cursor_var}.getString({cursor_var}.getColumnIndex("{decrypted_escaped}")) /* {original_call} */'
+            else:  # cnb or z
+                replacement = f'"{decrypted_escaped}" /* {original_call} */'
 
             # Replace in content
             start, end = match.span()
@@ -233,11 +277,50 @@ def deobfuscate_file(java_path, string_array):
 
 def main():
     if len(sys.argv) < 2:
-        print("Usage: python deobfuscate.py <directory>")
+        print("Usage:")
+        print("  python deobfuscate.py <directory>           # Deobfuscate all files")
+        print("  python deobfuscate.py --decrypt <long> <cnb.java>  # Decrypt single value")
         print("\nExpects:")
         print("  - <directory>/cnb.java with string array on line 37")
         print("  - Other .java files in the directory with cnb.z() calls")
         sys.exit(1)
+
+    # Check if single value decryption mode
+    if sys.argv[1] == "--decrypt":
+        if len(sys.argv) < 4:
+            print("Error: --decrypt requires <long_value> and <cnb.java_path>")
+            print("Usage: python deobfuscate.py --decrypt <long> <cnb.java>")
+            sys.exit(1)
+
+        long_str = sys.argv[2]
+        cnb_path = Path(sys.argv[3])
+
+        if not cnb_path.exists():
+            print(f"Error: {cnb_path} not found")
+            sys.exit(1)
+
+        try:
+            long_val = int(long_str, 0)
+        except ValueError:
+            print(f"Error: Invalid long value: {long_str}")
+            sys.exit(1)
+
+        print(f"Loading string array from: {cnb_path}")
+        try:
+            string_array = parse_string_array(cnb_path)
+            print(f"Loaded {len(string_array)} encrypted strings")
+        except Exception as e:
+            print(f"Error parsing string array: {e}")
+            sys.exit(1)
+
+        try:
+            decrypted = z(long_val, string_array)
+            print(f"\nDecrypted value: {decrypted}")
+        except Exception as e:
+            print(f"Error decrypting: {e}")
+            sys.exit(1)
+
+        return
 
     directory = Path(sys.argv[1])
     cnb_path = Path(sys.argv[2])
@@ -272,8 +355,8 @@ def main():
     files_modified = 0
 
     for java_file in java_files:
-        if java_file.name == "cnb.java":
-            continue  # Skip the string array file itself
+#         if java_file.name == "cnb.java":
+#             continue  # Skip the string array file itself
 
         # Show relative path for better readability
         rel_path = java_file.relative_to(directory)

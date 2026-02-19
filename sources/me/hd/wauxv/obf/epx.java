@@ -8,12 +8,12 @@ public final class epx extends bws implements IDexFind {
     public static final epx a = new epx();
 
     public static Object b() {
-        int i = bte.a;
+        int i = 0;
         cde cdeVarT = dqc.bh(emn.az(epw.a)).t();
         cdeVarT.ak(cdy.c);
         eqb.a.getClass();
         cdeVarT.a = emn.bb(eqa.a).getDeclaringClass();
-        Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }

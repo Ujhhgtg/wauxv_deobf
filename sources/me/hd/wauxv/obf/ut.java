@@ -115,7 +115,7 @@ public final /* synthetic */ class ut implements cke, awz, aww, cqk, afd {
     @Override // me.hd.wauxv.obf.awz
     public void g(ua uaVar, afc afcVar) {
         aro aroVar = (aro) this.a;
-        IHasInvokeMethod bgfVar = (IHasInvokeMethod) this.b;
+        IInvokable bgfVar = (IInvokable) this.b;
         if (bgfVar != null) {
             aroVar.getClass();
             if (!((Boolean) bgfVar.invoke(uaVar)).booleanValue()) {

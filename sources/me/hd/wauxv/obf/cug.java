@@ -11,7 +11,7 @@ import me.hd.wauxv.data.bean.info.FriendInfo;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class cug implements IHasInvokeMethod {
+public final /* synthetic */ class cug implements IInvokable {
     public final /* synthetic */ int a;
     public final /* synthetic */ long b;
     public final /* synthetic */ Object c;
@@ -43,8 +43,8 @@ public final /* synthetic */ class cug implements IHasInvokeMethod {
             default:
                 diz dizVar = (diz) this.c;
                 ael aelVar = (ael) obj;
-                aelVar.f = "搜索好友" /* cnb.z(-534916701879082L) */;
-                String strZ = "好友" /* cnb.z(-534946766650154L) */;
+                aelVar.f = "搜索好友" /* "搜索好友" /* "搜索好友" /* "搜索好友" /* cnb.z(-534916701879082L)   */;
+                String strZ = "好友" /* "好友" /* "好友" /* "好友" /* cnb.z(-534946766650154L)   */;
                 ArrayList arrayListS = bmy.s();
                 ArrayList arrayList = new ArrayList(abb.ak(arrayListS, 10));
                 Iterator it = arrayListS.iterator();
@@ -54,7 +54,7 @@ public final /* synthetic */ class cug implements IHasInvokeMethod {
                     if (!zHasNext) {
                         aelVar.m(strZ, arrayList);
                         aelVar.g = R.drawable.ic_contact_confirm_24dp;
-                        String strZ2 = "点赞" /* cnb.z(-535311838870314L) */;
+                        String strZ2 = "点赞" /* "点赞" /* "点赞" /* "点赞" /* cnb.z(-535311838870314L)   */;
                         bgj bgjVar = new bgj() { // from class: me.hd.wauxv.obf.dix
                             @Override // me.hd.wauxv.obf.bgj
                             public final Object g(Object obj2, Object obj3) {
@@ -87,10 +87,10 @@ public final /* synthetic */ class cug implements IHasInvokeMethod {
                                 LinkedHashSet linkedHashSet = new LinkedHashSet(arrayList3);
                                 if (!setAd.isEmpty()) {
                                     linkedHashSet.add(j2 + '|'
-                                            + aaz.k(setAd, ";" /* cnb.z(-535264594230058L) */, null, null, null, 62));
+                                            + aaz.k(setAd, ";" /* ";" /* ";" /* ";" /* cnb.z(-535264594230058L)   */, null, null, null, 62));
                                 }
                                 diyVar.t(linkedHashSet);
-                                dnc.g(null, 3, "已点赞" /* cnb.z(-535273184164650L) */);
+                                dnc.g(null, 3, "已点赞" /* "已点赞" /* "已点赞" /* "已点赞" /* cnb.z(-535273184164650L)   */);
                                 return Boolean.FALSE;
                             }
                         };
@@ -101,16 +101,16 @@ public final /* synthetic */ class cug implements IHasInvokeMethod {
                         String wxid = friendInfo.getWxid();
                         StringBuilder sb2 = new StringBuilder();
                         String nickname = friendInfo.getNickname();
-                        if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* cnb.z(-535432097954602L) */), nickname)) > 3 ? nickname
+                        if ((dfv.d(dap.b(new dap("\r\n|\r|\n" /* "\r\n|\r|\n" /* "\r\n|\r|\n" /* "\r\n|\r|\n" /* cnb.z(-535432097954602L)   */), nickname)) > 3 ? nickname
                                 : null) != null) {
-                            sb2.append("已过滤此昵称..." /* cnb.z(-535402033183530L) */);
+                            sb2.append("已过滤此昵称..." /* "已过滤此昵称..." /* "已过滤此昵称..." /* "已过滤此昵称..." /* cnb.z(-535402033183530L)   */);
                         } else {
                             String str3 = nickname.length() > 8 ? nickname : null;
                             if (str3 != null) {
                                 String strSubstring = str3.substring(0, 8);
-                                throwIfVar1IsNull(strSubstring, "substring(...)" /* cnb.z(-535376263379754L) */);
+                                throwIfVar1IsNull(strSubstring, "substring(...)" /* "substring(...)" /* "substring(...)" /* "substring(...)" /* cnb.z(-535376263379754L)   */);
                                 sb2.append(strSubstring);
-                                sb2.append("..." /* cnb.z(-535294659001130L) */);
+                                sb2.append("..." /* "..." /* "..." /* "..." /* cnb.z(-535294659001130L)   */);
                                 sb = sb2;
                             } else {
                                 sb = null;
@@ -133,6 +133,6 @@ public final /* synthetic */ class cug implements IHasInvokeMethod {
                 }
                 break;
         }
-        return ens.a;
+        return KotlinUnit.INSTANCE;
     }
 }

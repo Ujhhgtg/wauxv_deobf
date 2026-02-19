@@ -27,7 +27,7 @@ public final class bzx {
         return bzvVar;
     }
 
-    public final bqi f() {
+    public final IntRange f() {
         Matcher matcher = this.a;
         return dqc.bm(matcher.start(), matcher.end());
     }

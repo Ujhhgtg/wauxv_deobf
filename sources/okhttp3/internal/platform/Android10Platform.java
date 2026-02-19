@@ -9,8 +9,7 @@ import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.la;
+import me.hd.wauxv.obf.SomeStaticHelpers;
 import okhttp3.Protocol;
 import okhttp3.internal.platform.android.Android10SocketAdapter;
 import okhttp3.internal.platform.android.AndroidCertificateChainCleaner;
@@ -57,7 +56,7 @@ public final class Android10Platform extends Platform {
     }
 
     public Android10Platform() {
-        ArrayList arrayListO = la.o(new SocketAdapter[] { Android10SocketAdapter.Companion.buildIfSupported(),
+        ArrayList arrayListO = SomeStaticHelpers.o(new SocketAdapter[] { Android10SocketAdapter.Companion.buildIfSupported(),
                 new DeferredSocketAdapter(AndroidSocketAdapter.Companion.getPlayProviderFactory()),
                 new DeferredSocketAdapter(ConscryptSocketAdapter.Companion.getFactory()),
                 new DeferredSocketAdapter(BouncyCastleSocketAdapter.Companion.getFactory()) });

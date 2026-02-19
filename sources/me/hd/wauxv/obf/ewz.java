@@ -386,7 +386,7 @@ public abstract class ewz {
         }
     }
 
-    public static final void aq(Object obj, IHasInvokeMethod bgfVar) {
+    public static final void aq(Object obj, IInvokable bgfVar) {
         ((Handler) bij.a.getValue()).post(new bjt(bgfVar, obj, 0));
     }
 

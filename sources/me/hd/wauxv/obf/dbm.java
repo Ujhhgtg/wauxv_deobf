@@ -47,7 +47,7 @@ public final class dbm extends cwl {
                 return i;
             }
             cwoVar.d = true;
-            int i2 = (cwoVar.b << 3) | cwoVar.c.j;
+            int i2 = (cwoVar.b << 3) | cwoVar.c.value;
             cwoVar.v(cwoVar.e);
             cwoVar.e = i2;
             return -1;

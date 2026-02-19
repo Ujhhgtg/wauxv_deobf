@@ -4,5 +4,5 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class cxf extends DexDescData {
     public static final cxf a = new cxf(
-            "QuoteClickToPosHook.MethodClickToPositionEvent" /* cnb.z(-459729004395306L) */);
+            "QuoteClickToPosHook.MethodClickToPositionEvent" /* "QuoteClickToPosHook.MethodClickToPositionEvent" /* "QuoteClickToPosHook.MethodClickToPositionEvent" /* cnb.z(-459729004395306L)  */);
 }

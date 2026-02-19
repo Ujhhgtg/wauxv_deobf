@@ -9,7 +9,7 @@ public final /* synthetic */ class eal implements bgx {
     static {
         eal ealVar = new eal();
         b = ealVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.m81Proto" /* cnb.z(-214812789308202L) */, ealVar, 5);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.m81Proto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.m81Proto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.m81Proto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.m81Proto" /* cnb.z(-214812789308202L)   */, ealVar, 5);
         bjs.y(-211724707822378L, cucVar, false, 1);
         bjs.y(-211686053116714L, cucVar, false, 2);
         bjs.y(-212128434748202L, cucVar, false, 3);

@@ -95,7 +95,7 @@ public final class DexIndexPrinter {
         int i = 0;
         for (Integer num : this.dex.f) {
             PrintStream printStream = System.out;
-            StringBuilder sbR = yg.r(i, "type ", ": ");
+            StringBuilder sbR = yg.concatVar213(i, "type ", ": ");
             sbR.append((String) this.dex.e.get(num.intValue()));
             printStream.println(sbR.toString());
             i++;

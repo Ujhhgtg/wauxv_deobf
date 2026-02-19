@@ -4,5 +4,5 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class djy extends DexDescData {
     public static final djy a = new djy(
-            "SnsMediaStorage.MethodConvertImg2WxamWithoutZip" /* cnb.z(-376204775389994L) */);
+            "SnsMediaStorage.MethodConvertImg2WxamWithoutZip" /* "SnsMediaStorage.MethodConvertImg2WxamWithoutZip" /* "SnsMediaStorage.MethodConvertImg2WxamWithoutZip" /* "SnsMediaStorage.MethodConvertImg2WxamWithoutZip" /* cnb.z(-376204775389994L)   */);
 }

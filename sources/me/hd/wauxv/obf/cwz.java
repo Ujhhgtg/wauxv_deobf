@@ -8,7 +8,7 @@ import me.hd.wauxv.data.bean.info.GroupInfo;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class cwz implements IHasInvokeMethod {
+public final /* synthetic */ class cwz implements IInvokable {
     public final /* synthetic */ int a;
     public final /* synthetic */ ConversationBean b;
 
@@ -30,8 +30,8 @@ public final /* synthetic */ class cwz implements IHasInvokeMethod {
                 break;
             default:
                 ael aelVar2 = (ael) obj;
-                aelVar2.f = "搜索群聊" /* cnb.z(-527117041269546L) */;
-                String strZ = "群聊" /* cnb.z(-527147106040618L) */;
+                aelVar2.f = "搜索群聊" /* "搜索群聊" /* "搜索群聊" /* cnb.z(-527117041269546L)  */;
+                String strZ = "群聊" /* "群聊" /* "群聊" /* cnb.z(-527147106040618L)  */;
                 ArrayList<GroupInfo> arrayListT = bmy.t();
                 ArrayList arrayList = new ArrayList(abb.ak(arrayListT, 10));
                 for (GroupInfo groupInfo : arrayListT) {
@@ -50,12 +50,12 @@ public final /* synthetic */ class cwz implements IHasInvokeMethod {
                 }
                 aelVar2.m(strZ, arrayList);
                 aelVar2.g = R.drawable.ic_contact_confirm_24dp;
-                String strZ2 = "邀请" /* cnb.z(-527082681531178L) */;
+                String strZ2 = "邀请" /* "邀请" /* "邀请" /* cnb.z(-527082681531178L)  */;
                 cxa cxaVar = new cxa(this.b, 0);
                 aelVar2.j = strZ2;
                 aelVar2.l = cxaVar;
                 break;
         }
-        return ens.a;
+        return KotlinUnit.INSTANCE;
     }
 }

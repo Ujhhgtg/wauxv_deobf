@@ -3,14 +3,14 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes2.dex */
 public final class cob extends SwitchHook implements IHandlesHookParam {
-    public static final cob a = new cob("NewSetting" /* cnb.z(-648733335223082L) */);
-    public static final String b = "测试-配置修复-v66-global" /* cnb.z(-649124177247018L) */;
-    public static final String c = "新设置页开关" /* cnb.z(-648991033260842L) */;
-    public static final String h = "模块入口暂未适配 目前暂不推荐开启" /* cnb.z(-650610235931434L) */;
+    public static final cob a = new cob("NewSetting" /* "NewSetting" /* "NewSetting" /* "NewSetting" /* cnb.z(-648733335223082L)   */);
+    public static final String b = "测试-配置修复-v66-global" /* "测试-配置修复-v66-global" /* "测试-配置修复-v66-global" /* "测试-配置修复-v66-global" /* cnb.z(-649124177247018L)   */;
+    public static final String c = "新设置页开关" /* "新设置页开关" /* "新设置页开关" /* "新设置页开关" /* cnb.z(-648991033260842L)   */;
+    public static final String h = "模块入口暂未适配 目前暂不推荐开启" /* "模块入口暂未适配 目前暂不推荐开启" /* "模块入口暂未适配 目前暂不推荐开启" /* "模块入口暂未适配 目前暂不推荐开启" /* cnb.z(-650610235931434L)   */;
 
     @Override // me.hd.wauxv.obf.IHandlesHookParam
     public final void handleHookParam(HookParam hookParam, String str) {
-        if (getIsEnabled() && str.equals("RepairerConfig_NewSetting_Int" /* cnb.z(-649201486658346L) */)) {
+        if (getIsEnabled() && str.equals("RepairerConfig_NewSetting_Int" /* "RepairerConfig_NewSetting_Int" /* "RepairerConfig_NewSetting_Int" /* "RepairerConfig_NewSetting_Int" /* cnb.z(-649201486658346L)   */)) {
             hookParam.setResult(1);
         }
     }

@@ -41,9 +41,9 @@ public final class eeu {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("suProto(chatroom_username=" /* cnb.z(-295528109701930L) */);
-        yg.u(sb, this.a, -294810850163498L);
-        yg.u(sb, this.b, -294755015588650L);
+        sb.append("suProto(chatroom_username=" /* "suProto(chatroom_username=" /* "suProto(chatroom_username=" /* cnb.z(-295528109701930L)  */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -294810850163498L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -294755015588650L);
         return concat(sb, this.c, ')');
     }
 }

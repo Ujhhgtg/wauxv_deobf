@@ -7,7 +7,7 @@ import java.util.Collection;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class cbj implements IHasInvokeMethod {
+public final /* synthetic */ class cbj implements IInvokable {
     public final /* synthetic */ int a;
     public final /* synthetic */ Object b;
     public final /* synthetic */ Object c;
@@ -26,7 +26,7 @@ public final /* synthetic */ class cbj implements IHasInvokeMethod {
     public final Object invoke(Object obj) {
         int i = this.a;
         boolean zBooleanValue = true;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         Object obj2 = this.d;
         Object obj3 = this.c;
         Object obj4 = this.e;
@@ -60,18 +60,18 @@ public final /* synthetic */ class cbj implements IHasInvokeMethod {
                 cio cioVar = (cio) obj;
                 throwIfVar1IsNull(cioVar, "it");
                 ((dag) obj5).a = true;
-                ((cix) obj3).ab((cjg) obj2, (Bundle) obj4, cioVar, avd.a);
-                return ensVar;
+                ((cix) obj3).ab((cjg) obj2, (Bundle) obj4, cioVar, EmptyReadonlyList.a);
+                return kotlinUnitVar;
             default:
                 Activity activity = (Activity) obj5;
                 Intent intent = new Intent();
-                intent.setClassName(activity, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-96675418864426L) */);
-                intent.putExtra("Ksnsupload_type" /* cnb.z(-96516505074474L) */, 14);
-                intent.putExtra("KSightPath" /* cnb.z(-95898029783850L) */, (String) obj4);
-                intent.putExtra("KSightThumbPath" /* cnb.z(-95799245536042L) */, (String) obj3);
-                intent.putExtra("Kdescription" /* cnb.z(-95730526059306L) */, (String) obj2);
+                intent.setClassName(activity, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-96675418864426L)  */);
+                intent.putExtra("Ksnsupload_type" /* "Ksnsupload_type" /* "Ksnsupload_type" /* cnb.z(-96516505074474L)  */, 14);
+                intent.putExtra("KSightPath" /* "KSightPath" /* "KSightPath" /* cnb.z(-95898029783850L)  */, (String) obj4);
+                intent.putExtra("KSightThumbPath" /* "KSightThumbPath" /* "KSightThumbPath" /* cnb.z(-95799245536042L)  */, (String) obj3);
+                intent.putExtra("Kdescription" /* "Kdescription" /* "Kdescription" /* cnb.z(-95730526059306L)  */, (String) obj2);
                 activity.startActivity(intent);
-                return ensVar;
+                return kotlinUnitVar;
         }
     }
 

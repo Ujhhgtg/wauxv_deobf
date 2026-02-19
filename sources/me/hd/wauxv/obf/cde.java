@@ -9,7 +9,7 @@ import java.util.Map;
 /* JADX INFO: loaded from: classes.dex */
 public final class cde extends axd {
     public Object a;
-    public IHasInvokeMethod ai;
+    public IInvokable ai;
 
     public final List aj() {
         cbg cbgVar = this.aa;

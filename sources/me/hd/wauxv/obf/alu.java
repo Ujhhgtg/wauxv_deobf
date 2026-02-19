@@ -28,7 +28,7 @@ public final class alu implements dft {
         }
     }
 
-    public alu(bfu bfuVar, IHasInvokeMethod bgfVar) {
+    public alu(bfu bfuVar, IInvokable bgfVar) {
         this.a = 2;
         this.b = bfuVar;
         this.c = bgfVar;

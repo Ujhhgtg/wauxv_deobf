@@ -14,11 +14,10 @@ import javax.net.ssl.SSLSession;
 import me.hd.wauxv.obf.aaz;
 import me.hd.wauxv.obf.abb;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.avd;
+import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.bfu;
 import me.hd.wauxv.obf.btp;
 import me.hd.wauxv.obf.IHasGetValue;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dov;
 import okhttp3.internal.Util;
 
@@ -42,7 +41,7 @@ public final class Handshake {
 
         private final List<Certificate> toImmutableList(Certificate[] certificateArr) {
             return certificateArr != null ? Util.immutableListOf(Arrays.copyOf(certificateArr, certificateArr.length))
-                    : avd.a;
+                    : EmptyReadonlyList.a;
         }
 
         public final Handshake a(SSLSession sSLSession) {
@@ -72,7 +71,7 @@ public final class Handshake {
             try {
                 immutableList = toImmutableList(sSLSession.getPeerCertificates());
             } catch (SSLPeerUnverifiedException unused) {
-                immutableList = avd.a;
+                immutableList = EmptyReadonlyList.a;
             }
             return new Handshake(tlsVersionForJavaName, cipherSuiteForJavaName,
                     toImmutableList(sSLSession.getLocalCertificates()),
@@ -118,7 +117,7 @@ public final class Handshake {
             try {
                 return (List) this.$peerCertificatesFn.invoke();
             } catch (SSLPeerUnverifiedException unused) {
-                return avd.a;
+                return EmptyReadonlyList.a;
             }
         }
     }

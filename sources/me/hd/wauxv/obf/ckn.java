@@ -40,7 +40,7 @@ public class ckn extends cwn {
                 bmuVar.getClass();
                 rw rwVar = this.ai;
                 throwIfVar1IsNull(rwVar, "output");
-                bmuVar.n((rw) bmuVar.h, cwk.f.k(i), cwf.DEFAULT);
+                bmuVar.n((rw) bmuVar.h, ProtoWireType.ENUM_LENGTH_DELIMITED.makeTag(i), cwf.DEFAULT);
                 bmuVar.x(rwVar);
                 break;
             default:
@@ -53,7 +53,7 @@ public class ckn extends cwn {
                 } else {
                     bmuVar2.getClass();
                     throwIfVar1IsNull(rwVar2, "output");
-                    bmuVar2.n((rw) bmuVar2.h, cwk.f.k((int) (j & 2147483647L)), cwf.DEFAULT);
+                    bmuVar2.n((rw) bmuVar2.h, ProtoWireType.ENUM_LENGTH_DELIMITED.makeTag((int) (j & 2147483647L)), cwf.DEFAULT);
                     bmuVar2.x(rwVar2);
                 }
                 break;

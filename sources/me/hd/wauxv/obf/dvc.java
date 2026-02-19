@@ -45,8 +45,8 @@ public final class dvc {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("a23Proto(gift_id=" /* cnb.z(-143889994349354L) */);
-        yg.u(sb, this.a, -143829864807210L);
+        sb.append("a23Proto(gift_id=" /* "a23Proto(gift_id=" /* "a23Proto(gift_id=" /* "a23Proto(gift_id=" /* cnb.z(-143889994349354L)   */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -143829864807210L);
         bjs.w(sb, this.b, -143194209647402L);
         bjs.w(sb, this.c, -143172734810922L);
         return concat(sb, this.d, ')');

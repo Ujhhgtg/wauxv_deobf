@@ -29,7 +29,7 @@ public final class ach extends btp implements bfu {
                         hbVar.getIntent() != null ? hbVar.getIntent().getExtras() : null);
             case 1:
                 this.b.reportFullyDrawn();
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 2:
                 hb hbVar2 = this.b;
                 return new bft(hbVar2.v, new ach(hbVar2, 1));

@@ -30,7 +30,7 @@ import okhttp3.internal.cache.DiskLruCache;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class epy implements IHasInvokeMethod {
+public final /* synthetic */ class epy implements IInvokable {
     public final /* synthetic */ int a;
 
     public /* synthetic */ epy(int i) {
@@ -61,30 +61,30 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
         z = false;
         z = false;
         boolean z = false;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         switch (i) {
             case 0:
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
                 cdjVar.t((cnb.ab(ewk.l) || cnb.ac(ewh.m)) ? "MicroMsg.C2CVideoPathFeatureService"
-                        /* cnb.z(-374581277752106L) */ : "MicroMsg.VideoInfoStorage" /* cnb.z(-374392299191082L) */,
-                        ".mp4" /* cnb.z(-374847565724458L) */, "success restore file, from " /*
-                                                                                              * cnb.z(-374860450626346L)
+                        /* "MicroMsg.C2CVideoPathFeatureService" /* "MicroMsg.C2CVideoPathFeatureService" /* cnb.z(-374581277752106L)  */ : "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* cnb.z(-374392299191082L)  */,
+                        ".mp4" /* ".mp4" /* ".mp4" /* cnb.z(-374847565724458L)  */, "success restore file, from " /*
+                                                                                              * "success restore file, from " /* "success restore file, from " /* cnb.z(-374860450626346L)  */
                                                                                               */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 1:
                 bah bahVar2 = (bah) obj;
                 cdj cdjVar2 = new cdj();
                 cdjVar2.t((cnb.ab(ewk.l) || cnb.ac(ewh.m)) ? "MicroMsg.C2CVideoPathFeatureService"
-                        /* cnb.z(-374705831803690L) */ : "MicroMsg.VideoInfoStorage" /* cnb.z(-374035816905514L) */,
-                        ".jpg" /* cnb.z(-373872608148266L) */, "success restore file, from " /*
-                                                                                              * cnb.z(-373902672919338L)
+                        /* "MicroMsg.C2CVideoPathFeatureService" /* "MicroMsg.C2CVideoPathFeatureService" /* cnb.z(-374705831803690L)  */ : "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* cnb.z(-374035816905514L)  */,
+                        ".jpg" /* ".jpg" /* ".jpg" /* cnb.z(-373872608148266L)  */, "success restore file, from " /*
+                                                                                              * "success restore file, from " /* "success restore file, from " /* cnb.z(-373902672919338L)  */
                                                                                               */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
-                return ensVar;
+                return kotlinUnitVar;
             case 2:
                 View view = (View) obj;
                 cee ceeVarE = cee.e(LayoutInflater.from(view.getContext()));
@@ -95,14 +95,14 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                 eg egVar = (eg) bzyVar.d;
                 egVar.d = str;
                 LinearLayout linearLayout = ceeVarE.b;
-                bzyVar.t("保存" /* cnb.z(-588457764191018L) */, new amw(new aul(ceeVarE, 3), 0));
-                bzyVar.s("重置" /* cnb.z(-588479239027498L) */, new amw(new efq(15), 2));
-                bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, "取消" /* cnb.z(-47455093652266L) */);
+                bzyVar.t("保存" /* "保存" /* "保存" /* cnb.z(-588457764191018L)  */, new amw(new aul(ceeVarE, 3), 0));
+                bzyVar.s("重置" /* "重置" /* "重置" /* cnb.z(-588479239027498L)  */, new amw(new efq(15), 2));
+                bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */);
                 if (linearLayout != null) {
                     egVar.r = linearLayout;
                 }
                 bzyVar.i().show();
-                return ensVar;
+                return kotlinUnitVar;
             case 3:
                 View view2 = (View) obj;
                 cee ceeVarE2 = cee.e(LayoutInflater.from(view2.getContext()));
@@ -113,21 +113,21 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                 eg egVar2 = (eg) bzyVar2.d;
                 egVar2.d = str2;
                 LinearLayout linearLayout2 = ceeVarE2.b;
-                bzyVar2.t("保存" /* cnb.z(-610237543349034L) */, new amw(new aul(ceeVarE2, 4), 0));
-                bzyVar2.s("重置" /* cnb.z(-610241838316330L) */, new amw(new efq(16), 2));
-                bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, "取消" /* cnb.z(-47455093652266L) */);
+                bzyVar2.t("保存" /* "保存" /* "保存" /* cnb.z(-610237543349034L)  */, new amw(new aul(ceeVarE2, 4), 0));
+                bzyVar2.s("重置" /* "重置" /* "重置" /* cnb.z(-610241838316330L)  */, new amw(new efq(16), 2));
+                bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */);
                 if (linearLayout2 != null) {
                     egVar2.r = linearLayout2;
                 }
                 bzyVar2.i().show();
-                return ensVar;
+                return kotlinUnitVar;
             case 4:
                 View view3 = (View) obj;
                 View viewK = dkz.k(view3, R.layout.module_dialog_voice_length, null, false);
-                Slider slider = (Slider) cnd.aq(viewK, R.id.moduleDialogSliderVoiceLength);
+                Slider slider = (Slider) KotlinHelpers2.aq(viewK, R.id.moduleDialogSliderVoiceLength);
                 if (slider == null) {
                     throw new NullPointerException(
-                            "Missing required view with ID: " /* cnb.z(-660016214309674L) */.concat(
+                            "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-660016214309674L)  */.concat(
                                     viewK.getResources().getResourceName(R.id.moduleDialogSliderVoiceLength)));
                 }
                 LinearLayout linearLayout3 = (LinearLayout) viewK;
@@ -137,16 +137,16 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                 eg egVar3 = (eg) bzyVar3.d;
                 etr.a.getClass();
                 egVar3.d = etr.c;
-                bzyVar3.t("保存" /* cnb.z(-500054452337450L) */, new amw(new cfx(ceqVar, 20), 0));
-                bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar3, "取消" /* cnb.z(-47455093652266L) */);
+                bzyVar3.t("保存" /* "保存" /* "保存" /* cnb.z(-500054452337450L)  */, new amw(new cfx(ceqVar, 20), 0));
+                bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar3, "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */);
                 if (linearLayout3 != null) {
                     egVar3.r = linearLayout3;
                 }
                 bzyVar3.i().show();
-                return ensVar;
+                return kotlinUnitVar;
             case 5:
-                ((amm) obj).c = new epy(i2);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new epy(i2);
+                return kotlinUnitVar;
             case 6:
                 HookParam hookParam = (HookParam) obj;
                 if (hookParam.getArgs().length == 1) {
@@ -157,9 +157,9 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                     if (objX instanceof dcx) {
                     }
                     throwIfVar1IsNull(obj);
-                    int i4 = bte.a;
+                    int i4 = 0;
                     azg azgVarR = dqc.bi(obj).r();
-                    azgVarR.ab = "l" /* cnb.z(-500058747304746L) */;
+                    azgVarR.ab = "l" /* "l" /* "l" /* cnb.z(-500058747304746L)  */;
                     azgVarR.a = dal.b(cls5);
                     ((azk) aaz.e(azgVarR.c())).f(Integer.valueOf(etq.a.k() * 1000));
                 } else if (hookParam.getArgs().length == 2 && (hookParam.getArgs()[0] instanceof String)) {
@@ -174,24 +174,24 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                     }
                     Object obj2 = objX instanceof dcx ? null : objX;
                     throwIfVar1IsNull(obj2);
-                    int i42 = bte.a;
+                    int i42 = 0;
                     azg azgVarR2 = dqc.bi(obj2).r();
-                    azgVarR2.ab = "l" /* cnb.z(-500058747304746L) */;
+                    azgVarR2.ab = "l" /* "l" /* "l" /* cnb.z(-500058747304746L)  */;
                     azgVarR2.a = dal.b(cls5);
                     ((azk) aaz.e(azgVarR2.c())).f(Integer.valueOf(etq.a.k() * 1000));
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 7:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
-                cdjVar3.t("MicroMsg.VoiceStorage" /* cnb.z(-500067337239338L) */, "update failed, no values set" /*
+                cdjVar3.t("MicroMsg.VoiceStorage" /* "MicroMsg.VoiceStorage" /* "MicroMsg.VoiceStorage" /* cnb.z(-500067337239338L)  */, "update failed, no values set" /*
                                                                                                                   * cnb.
                                                                                                                   * z(-
                                                                                                                   * 499405912275754L)
                                                                                                                   */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
-                return ensVar;
+                return kotlinUnitVar;
             case 8:
                 List list = (List) obj;
                 Object obj3 = list.get(0);
@@ -213,26 +213,26 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                 }
                 return Boolean.valueOf(z);
             case 9:
-                ((amm) obj).b = new epy(12);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new epy(12);
+                return kotlinUnitVar;
             case 10:
-                ((amm) obj).c = new epy(11);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new epy(11);
+                return kotlinUnitVar;
             case 11:
                 bah bahVar4 = (bah) obj;
                 cdj cdjVar4 = new cdj();
-                cdjVar4.t("getAmrFullPath cost: " /* cnb.z(-107348412594986L) */);
+                cdjVar4.t("getAmrFullPath cost: " /* "getAmrFullPath cost: " /* "getAmrFullPath cost: " /* cnb.z(-107348412594986L)  */);
                 bahVar4.getClass();
                 bahVar4.d = cdjVar4;
-                return ensVar;
+                return kotlinUnitVar;
             case 12:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k("MicroMsg.VoiceLogic" /* cnb.z(-105939663321898L) */,
-                        "startRecord insert voicestg success" /* cnb.z(-105888123714346L) */);
+                zbVar.k("MicroMsg.VoiceLogic" /* "MicroMsg.VoiceLogic" /* "MicroMsg.VoiceLogic" /* cnb.z(-105939663321898L)  */,
+                        "startRecord insert voicestg success" /* "startRecord insert voicestg success" /* "startRecord insert voicestg success" /* cnb.z(-105888123714346L)  */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 13:
                 View view4 = (View) obj;
                 cee ceeVarE3 = cee.e(LayoutInflater.from(view4.getContext()));
@@ -243,14 +243,14 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                 eg egVar4 = (eg) bzyVar4.d;
                 egVar4.d = str3;
                 LinearLayout linearLayout4 = ceeVarE3.b;
-                bzyVar4.t("保存" /* cnb.z(-520404007385898L) */, new amw(new aul(ceeVarE3, 5), 0));
-                bzyVar4.s("重置" /* cnb.z(-520408302353194L) */, new amw(new efq(17), 2));
-                bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar4, "取消" /* cnb.z(-47455093652266L) */);
+                bzyVar4.t("保存" /* "保存" /* "保存" /* cnb.z(-520404007385898L)  */, new amw(new aul(ceeVarE3, 5), 0));
+                bzyVar4.s("重置" /* "重置" /* "重置" /* cnb.z(-520408302353194L)  */, new amw(new efq(17), 2));
+                bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar4, "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */);
                 if (linearLayout4 != null) {
                     egVar4.r = linearLayout4;
                 }
                 bzyVar4.i().show();
-                return ensVar;
+                return kotlinUnitVar;
             case 14:
                 HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
@@ -282,31 +282,31 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                 bmo.g.i(btcVarArr[4], baseContext.getApplicationInfo().sourceDir);
                 bmo.h.i(btcVarArr[5], baseContext.getPackageManager()
                         .getApplicationLabel(baseContext.getApplicationInfo()).toString());
-                int i5 = bte.a;
+                int i5 = 0;
                 bmu bmuVarS = yg.s(-28930899704618L);
                 azg azgVarR3 = bmuVarS.r();
-                azgVarR3.ab = "VERSION_NAME" /* cnb.z(-30442728192810L) */;
+                azgVarR3.ab = "VERSION_NAME" /* "VERSION_NAME" /* "VERSION_NAME" /* cnb.z(-30442728192810L)  */;
                 Object objE = ((azk) aaz.e(azgVarR3.c())).e();
                 throwIfVar1IsNull(objE);
                 bc bcVar2 = bmo.i;
                 bcVar2.i(btcVarArr[6], (String) objE);
                 azg azgVarR4 = bmuVarS.r();
-                azgVarR4.ab = "VERSION_CODE" /* cnb.z(-30352533879594L) */;
+                azgVarR4.ab = "VERSION_CODE" /* "VERSION_CODE" /* "VERSION_CODE" /* cnb.z(-30352533879594L)  */;
                 Object objE2 = ((azk) aaz.e(azgVarR4.c())).e();
                 throwIfVar1IsNull(objE2);
                 bmo.j.i(btcVarArr[7], Integer.valueOf(((Number) objE2).intValue()));
                 azg azgVarR5 = bmuVarS.r();
-                azgVarR5.ab = "CLIENT_VERSION_ARM64" /* cnb.z(-30279519435562L) */;
+                azgVarR5.ab = "CLIENT_VERSION_ARM64" /* "CLIENT_VERSION_ARM64" /* "CLIENT_VERSION_ARM64" /* cnb.z(-30279519435562L)  */;
                 Object objE3 = ((azk) aaz.e(azgVarR5.c())).e();
                 throwIfVar1IsNull(objE3);
                 bc bcVar3 = bmo.k;
                 bcVar3.i(btcVarArr[8], (String) objE3);
                 azg azgVarR6 = bmuVarS.r();
-                azgVarR6.ab = "BUILD_TAG" /* cnb.z(-30773440674602L) */;
+                azgVarR6.ab = "BUILD_TAG" /* "BUILD_TAG" /* "BUILD_TAG" /* cnb.z(-30773440674602L)  */;
                 Object objE4 = ((azk) aaz.e(azgVarR6.c())).e();
                 throwIfVar1IsNull(objE4);
                 bmo.l.i(btcVarArr[9],
-                        Boolean.valueOf(dnj.ab((CharSequence) objE4, "_GP_" /* cnb.z(-30747670870826L) */, false)));
+                        Boolean.valueOf(dnj.ab((CharSequence) objE4, "_GP_" /* "_GP_" /* "_GP_" /* cnb.z(-30747670870826L)  */, false)));
                 bht bhtVar = anj.a;
                 ng.af(baseContext);
                 anj.g = 3;
@@ -337,9 +337,9 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                     bcmVar = null;
                 }
                 ckv.d = bcmVar;
-                cnf.ah = new DefaultConfig(baseContext, "WAuxiliary_config_default" /* cnb.z(-5665061862186L) */);
-                emc.w = new DefaultConfig(baseContext, "WAuxiliary_config_dex_desc" /* cnb.z(-5922759899946L) */);
-                bhs.h = new DefaultConfig(baseContext, "WAuxiliary_config_plugin" /* cnb.z(-29274497088298L) */);
+                cnf.ah = new DefaultConfig(baseContext, "WAuxiliary_config_default" /* "WAuxiliary_config_default" /* "WAuxiliary_config_default" /* cnb.z(-5665061862186L)  */);
+                emc.w = new DefaultConfig(baseContext, "WAuxiliary_config_dex_desc" /* "WAuxiliary_config_dex_desc" /* "WAuxiliary_config_dex_desc" /* cnb.z(-5922759899946L)  */);
+                bhs.h = new DefaultConfig(baseContext, "WAuxiliary_config_plugin" /* "WAuxiliary_config_plugin" /* "WAuxiliary_config_plugin" /* cnb.z(-29274497088298L)  */);
                 csc cscVar = euiVar.aa;
                 if (cscVar != null) {
                     strI = cscVar.b;
@@ -348,38 +348,38 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                     strI = ki.i();
                 }
                 if (euiVar.ac().equals(dnj.ba(strI).toString())) {
-                    UMConfigure.preInit(baseContext, "68393b1dbc47b67d83776862" /* cnb.z(-72438918413098L) */, bmo.o());
+                    UMConfigure.preInit(baseContext, "68393b1dbc47b67d83776862" /* "68393b1dbc47b67d83776862" /* "68393b1dbc47b67d83776862" /* cnb.z(-72438918413098L)  */, bmo.o());
                     ArrayList arrayList = ewq.a;
-                    ewq.d(14, "running on: Android" /* cnb.z(-81728932674346L) */ + Build.VERSION.RELEASE
+                    ewq.d(14, "running on: Android" /* "running on: Android" /* "running on: Android" /* cnb.z(-81728932674346L)  */ + Build.VERSION.RELEASE
                             + SignatureVisitor.SUPER + bmo.s());
-                    ewq.d(14, "loading module: WAuxiliary1.2.6.r1238.198c77c" /* cnb.z(-83257941031722L) */);
+                    ewq.d(14, "loading module: WAuxiliary1.2.6.r1238.198c77c" /* "loading module: WAuxiliary1.2.6.r1238.198c77c" /* "loading module: WAuxiliary1.2.6.r1238.198c77c" /* cnb.z(-83257941031722L)  */);
                     StringBuilder sb = new StringBuilder();
-                    sb.append("compile timestamp: " /* cnb.z(-83111912143658L) */);
+                    sb.append("compile timestamp: " /* "compile timestamp: " /* "compile timestamp: " /* cnb.z(-83111912143658L)  */);
                     sb.append(exl.c);
                     ewq.d(14, sb.toString());
-                    System.loadLibrary("wauxv-core" /* cnb.z(-83541408873258L) */);
+                    System.loadLibrary("wauxv-core" /* "wauxv-core" /* "wauxv-core" /* cnb.z(-83541408873258L)  */);
                     LoaderNative.a.loaderInit((String) bcVar.h(btcVarArr[0]),
                             baseContext.getDataDir().getAbsolutePath(), bmo.r(), (String) bcVar2.h(btcVarArr[6]),
                             bmo.q(), (String) bcVar3.h(btcVarArr[8]));
                     dov dovVar = ctf.a;
-                    cnh.g = ctf.c("Cache" /* cnb.z(-47098611366698L) */);
+                    cnh.g = ctf.c("Cache" /* "Cache" /* "Cache" /* cnb.z(-47098611366698L)  */);
                     String str5 = cnh.g;
                     if (str5 == null) {
                         throw new IllegalArgumentException(
-                                "AudioUtil must be init" /* cnb.z(-375221227879210L) */.toString());
+                                "AudioUtil must be init" /* "AudioUtil must be init" /* "AudioUtil must be init" /* cnb.z(-375221227879210L)  */.toString());
                     }
                     File file = new File(str5);
                     if (!file.exists() && !file.mkdirs()) {
-                        throw new IOException("init: 缓存目录创建失败" /* cnb.z(-398761943628586L) */);
+                        throw new IOException("init: 缓存目录创建失败" /* "init: 缓存目录创建失败" /* "init: 缓存目录创建失败" /* cnb.z(-398761943628586L)  */);
                     }
                     if (!file.canWrite()) {
-                        throw new IOException("init: 缓存目录无写入权限" /* cnb.z(-398680339249962L) */);
+                        throw new IOException("init: 缓存目录无写入权限" /* "init: 缓存目录无写入权限" /* "init: 缓存目录无写入权限" /* cnb.z(-398680339249962L)  */);
                     }
                     if (!eui.c()) {
                         euh euhVar = new euh(3, null);
-                        cde cdeVarT = dqc.bh(ajn.ag("com.tencent.mm.ui.LauncherUI" /* cnb.z(-83528523971370L) */)).t();
-                        cdeVarT.ab = "onCreate" /* cnb.z(-83369610181418L) */;
-                        aki akiVarAd = euiVar.ad((cdk) aaz.e(cdeVarT.aj()), exg.a);
+                        cde cdeVarT = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.ui.LauncherUI" /* "com.tencent.mm.ui.LauncherUI" /* "com.tencent.mm.ui.LauncherUI" /* cnb.z(-83528523971370L)  */)).t();
+                        cdeVarT.ab = "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-83369610181418L)  */;
+                        aki akiVarAd = euiVar.ad((MethodHookWrapper) aaz.e(cdeVarT.aj()), exg.a);
                         akiVarAd.m(new bka(akiVarAd, i3, euhVar));
                         akiVarAd.o();
                     }
@@ -387,12 +387,12 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                 if (eui.c()) {
                     eui.d();
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 15:
                 HookParam hookParam3 = (HookParam) obj;
                 Object obj6 = ((bmh) hookParam3.b.b).b.thisObject;
-                if (nullSafeIsEqual(obj6 != null ? obj6.getClass() : null, ajn.ag(
-                        "com.tencent.mm.plugin.setting.ui.setting_new.MainSettingsUI" /* cnb.z(-58080842742570L) */))) {
+                if (nullSafeIsEqual(obj6 != null ? obj6.getClass() : null, ajn.tryGetClassByClassName(
+                        "com.tencent.mm.plugin.setting.ui.setting_new.MainSettingsUI" /* "com.tencent.mm.plugin.setting.ui.setting_new.MainSettingsUI" /* "com.tencent.mm.plugin.setting.ui.setting_new.MainSettingsUI" /* cnb.z(-58080842742570L)  */))) {
                     Object objE5 = hookParam3.getThisObject();
                     Activity activity = (Activity) (objE5 instanceof Activity ? objE5 : null);
                     if (activity == null) {
@@ -402,22 +402,22 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                                 .concat((clsBf4 != null ? clsBf4 : Activity.class).getName()).toString());
                     }
                     euj eujVar = euj.a;
-                    String strZ = "WA" /* cnb.z(-57307748629290L) */;
+                    String strZ = "WA" /* "WA" /* "WA" /* cnb.z(-57307748629290L)  */;
                     ars arsVar = new ars(activity, 2);
                     eujVar.getClass();
-                    int i6 = bte.a;
+                    int i6 = 0;
                     cde cdeVarT2 = dqc.bi(activity).t();
-                    cdeVarT2.ab = "addTextOptionMenu" /* cnb.z(-57956288690986L) */;
+                    cdeVarT2.ab = "addTextOptionMenu" /* "addTextOptionMenu" /* "addTextOptionMenu" /* cnb.z(-57956288690986L)  */;
                     cdeVarT2.z(Arrays.copyOf(
                             new Object[] { dal.b(cls5), dal.b(cls2), dal.b(MenuItem.OnMenuItemClickListener.class) },
                             3));
                     cdeVarT2.ah();
-                    ((cdk) aaz.e(cdeVarT2.aj())).e(Integer.valueOf(R.id.Wauxv_Entry_Item), strZ, arsVar);
+                    ((MethodHookWrapper) aaz.e(cdeVarT2.aj())).e(Integer.valueOf(R.id.Wauxv_Entry_Item), strZ, arsVar);
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 16:
                 emn.ax((Context) obj);
-                return ensVar;
+                return kotlinUnitVar;
             case 17:
                 Object objE6 = ((HookParam) obj).getThisObject();
                 Context context = (Context) (objE6 instanceof Context ? objE6 : null);
@@ -426,16 +426,16 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf5 != null ? clsBf5 : Context.class).getName()).toString());
                 }
-                int i7 = bte.a;
+                int i7 = 0;
                 azg azgVarR7 = dqc.bi(context).r();
-                azgVarR7.ab = "adapter" /* cnb.z(-58918361365290L) */;
+                azgVarR7.ab = "adapter" /* "adapter" /* "adapter" /* cnb.z(-58918361365290L)  */;
                 Object objE7 = ((azk) yg.e(azgVarR7)).e();
                 throwIfVar1IsNull(objE7);
                 BaseAdapter baseAdapter = (BaseAdapter) objE7;
                 for (euk eukVar : eul.b) {
                     cnb.m(baseAdapter, cnb.y(context, eukVar.a, eukVar.b), 0);
                 }
-                return ensVar;
+                return kotlinUnitVar;
             default:
                 HookParam hookParam4 = (HookParam) obj;
                 Object objE8 = hookParam4.getThisObject();
@@ -458,7 +458,7 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                 }
                 Object obj7 = objX3 instanceof dcx ? null : objX3;
                 throwIfVar1IsNull(obj7);
-                int i8 = bte.a;
+                int i8 = 0;
                 azg azgVarR8 = dqc.bi(obj7).r();
                 azgVarR8.a = dal.b(cls2);
                 azgVarR8.ah();
@@ -474,7 +474,7 @@ public final /* synthetic */ class epy implements IHasInvokeMethod {
                         }
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
         }
     }
 }

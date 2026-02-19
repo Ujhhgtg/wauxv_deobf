@@ -74,10 +74,10 @@ public abstract class cna {
     }
 
     public static boolean ac(byte[] bArr) {
-        byte[] bytes = "wxgf" /* cnb.z(-119301306579754L) */.getBytes(uj.a);
-        throwIfVar1IsNull(bytes, "getBytes(...)" /* cnb.z(-119331371350826L) */);
+        byte[] bytes = "wxgf" /* "wxgf" /* "wxgf" /* cnb.z(-119301306579754L)  */.getBytes(uj.a);
+        throwIfVar1IsNull(bytes, "getBytes(...)" /* "getBytes(...)" /* "getBytes(...)" /* cnb.z(-119331371350826L)  */);
         if (bArr.length >= bytes.length) {
-            Iterable bqiVar = new bqi(0, bytes.length - 1, 1);
+            Iterable bqiVar = new IntRange(0, bytes.length - 1, 1);
             if (!(bqiVar instanceof Collection) || !((Collection) bqiVar).isEmpty()) {
                 Iterator it = bqiVar.iterator();
                 while (((bqg) it).c) {
@@ -305,7 +305,7 @@ public abstract class cna {
         if (str.charAt(i) == '-') {
             return;
         }
-        StringBuilder sbR = yg.r(i, "Expected '-' (hyphen) at index ", ", but was '");
+        StringBuilder sbR = yg.concatVar213(i, "Expected '-' (hyphen) at index ", ", but was '");
         sbR.append(str.charAt(i));
         sbR.append('\'');
         throw new IllegalArgumentException(sbR.toString().toString());
@@ -334,7 +334,7 @@ public abstract class cna {
                             return false;
                         }
                     } else if ((obj instanceof Object[]) && (obj2 instanceof Object[])) {
-                        if (!la._ai((Object[]) obj, (Object[]) obj2)) {
+                        if (!SomeStaticHelpers._ai((Object[]) obj, (Object[]) obj2)) {
                             return false;
                         }
                     } else if ((obj instanceof byte[]) && (obj2 instanceof byte[])) {

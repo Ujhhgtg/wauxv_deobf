@@ -85,13 +85,13 @@ class Operators implements ParserConstants {
             throw new UtilEvalError("Use of non + operator with String");
         }
         if (obj.getClass().isArray() || obj2.getClass().isArray() || (obj instanceof List) || (obj2 instanceof List)) {
-            throw new UtilEvalError(yg.o(new StringBuilder("Use of invalid operator "), ParserConstants.tokenImage[i], " with array or List type"));
+            throw new UtilEvalError(yg.concatToVar1(new StringBuilder("Use of invalid operator "), ParserConstants.tokenImage[i], " with array or List type"));
         }
         Primitive primitive2 = Primitive.NULL;
         if (obj == primitive2 || obj2 == primitive2) {
             throw new UtilEvalError("illegal use of null value or 'null' literal");
         }
-        throw new UtilEvalError(yg.o(new StringBuilder("Operator: "), ParserConstants.tokenImage[i], " inappropriate for objects"));
+        throw new UtilEvalError(yg.concatToVar1(new StringBuilder("Operator: "), ParserConstants.tokenImage[i], " inappropriate for objects"));
     }
 
     public static Object bigDecimalBinaryOperation(BigDecimal bigDecimal, BigDecimal bigDecimal2, int i) throws UtilEvalError {

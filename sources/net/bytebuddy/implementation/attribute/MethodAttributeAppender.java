@@ -11,7 +11,6 @@ import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.method.ParameterDescription;
 import net.bytebuddy.description.method.ParameterList;
 import net.bytebuddy.description.type.TypeDescription;
-import net.bytebuddy.implementation.attribute.AnnotationAppender;
 import net.bytebuddy.jar.asm.MethodVisitor;
 import net.bytebuddy.matcher.ElementMatchers;
 import net.bytebuddy.utility.nullability.MaybeNull;
@@ -107,7 +106,7 @@ public interface MethodAttributeAppender {
                     StringBuilder sb = new StringBuilder("Method ");
                     sb.append(methodDescription);
                     sb.append(" has less then ");
-                    throw new IllegalArgumentException(yg.m(sb, " parameters", this.parameterIndex));
+                    throw new IllegalArgumentException(yg.concatToVar1(sb, " parameters", this.parameterIndex));
                 }
             }
 

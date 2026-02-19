@@ -174,7 +174,7 @@ public class brm implements brf, csx {
         atomicReferenceFieldUpdater.set(this, conVar);
     }
 
-    public final aox af(IHasInvokeMethod bgfVar) {
+    public final aox af(IInvokable bgfVar) {
         return ag(true, new yd(bgfVar, 1));
     }
 

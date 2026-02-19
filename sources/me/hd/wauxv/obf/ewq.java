@@ -23,7 +23,7 @@ public final class ewq {
     }
 
     public static void f() {
-        int i = bte.a;
+        int i = 0;
         dov dovVar = bth.a;
         if (!((Boolean) bth.b.getValue()).booleanValue()) {
             System.setProperty("org.slf4j.simpleLogger.defaultLogLevel", "info");

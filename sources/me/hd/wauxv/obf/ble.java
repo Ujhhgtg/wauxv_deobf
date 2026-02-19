@@ -7,16 +7,16 @@ import org.luckypray.dexkit.DexKitBridge;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class ble extends SwitchHook implements IDexFind {
-    public static final ble a = new ble("HideChatItemMenuHook" /* cnb.z(-463143503395626L) */);
-    public static final Set b = dgg._cd("提醒" /* cnb.z(-463396906466090L) */, "搜一搜" /* cnb.z(-463349661825834L) */);
-    public static final String c = "净化" /* cnb.z(-463366841695018L) */;
-    public static final String i = "隐藏聊天菜单" /* cnb.z(-463371136662314L) */;
-    public static final String j = "自定义隐藏聊天长按消息中的菜单项目" /* cnb.z(-463341071891242L) */;
+    public static final ble a = new ble("HideChatItemMenuHook" /* "HideChatItemMenuHook" /* "HideChatItemMenuHook" /* cnb.z(-463143503395626L)  */);
+    public static final Set b = dgg._cd("提醒" /* "提醒" /* "提醒" /* cnb.z(-463396906466090L)  */, "搜一搜" /* "搜一搜" /* "搜一搜" /* cnb.z(-463349661825834L)  */);
+    public static final String c = "净化" /* "净化" /* "净化" /* cnb.z(-463366841695018L)  */;
+    public static final String i = "隐藏聊天菜单" /* "隐藏聊天菜单" /* "隐藏聊天菜单" /* cnb.z(-463371136662314L)  */;
+    public static final String j = "自定义隐藏聊天长按消息中的菜单项目" /* "自定义隐藏聊天长按消息中的菜单项目" /* "自定义隐藏聊天长按消息中的菜单项目" /* cnb.z(-463341071891242L)  */;
     public static final bep l = new bep(8);
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.bf(emn.bb(blc.a));
+        List listBf = dqc.toSingletonList(emn.bb(blc.a));
         ble bleVar = a;
         aki akiVarAb = csb.ab(bleVar, listBf);
         bleVar.y(akiVarAb, new bep(10));
@@ -44,7 +44,7 @@ public final class ble extends SwitchHook implements IDexFind {
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final IHasInvokeMethod p() {
+    public final IInvokable getOnClick() {
         return l;
     }
 }

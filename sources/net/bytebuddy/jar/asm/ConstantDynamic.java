@@ -25,7 +25,7 @@ public final class ConstantDynamic {
         sb.append(str2);
         sb.append(" ");
         sb.append(str3);
-        return yg.o(sb, " ", str4);
+        return yg.concatToVar1(sb, " ", str4);
     }
 
     public boolean equals(Object obj) {

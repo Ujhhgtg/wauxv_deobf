@@ -7,7 +7,7 @@ import org.json.JSONObject;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class cue implements IHasInvokeMethod {
+public final /* synthetic */ class cue implements IInvokable {
     public final /* synthetic */ int a;
     public final /* synthetic */ Map b;
     public final /* synthetic */ long c;
@@ -55,8 +55,8 @@ public final /* synthetic */ class cue implements IHasInvokeMethod {
                     }
                 }
                 boolean z = false;
-                if (map3 != null && (str = (String) map3.get("Content-Type" /* cnb.z(-404031868500778L) */)) != null
-                        && dnj.ab(str, "application/json" /* cnb.z(-403958854056746L) */, true)) {
+                if (map3 != null && (str = (String) map3.get("Content-Type" /* "Content-Type" /* "Content-Type" /* "Content-Type" /* cnb.z(-404031868500778L)   */)) != null
+                        && dnj.ab(str, "application/json" /* "application/json" /* "application/json" /* "application/json" /* cnb.z(-403958854056746L)   */, true)) {
                     z = true;
                 }
                 if (map2 != null) {
@@ -79,6 +79,6 @@ public final /* synthetic */ class cue implements IHasInvokeMethod {
                 }
                 break;
         }
-        return ens.a;
+        return KotlinUnit.INSTANCE;
     }
 }

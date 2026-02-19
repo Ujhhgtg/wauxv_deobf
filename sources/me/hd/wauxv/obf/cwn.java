@@ -69,7 +69,7 @@ public class cwn extends ua implements avt, acn {
         }
         bmuVar.getClass();
         byte[] bArrBh = dnr.bh(str);
-        bmuVar.n((rw) bmuVar.h, cwk.f.k((int) (j & 2147483647L)), cwf.DEFAULT);
+        bmuVar.n((rw) bmuVar.h, ProtoWireType.ENUM_LENGTH_DELIMITED.makeTag((int) (j & 2147483647L)), cwf.DEFAULT);
         bmuVar.w(bArrBh);
     }
 
@@ -113,7 +113,7 @@ public class cwn extends ua implements avt, acn {
             ((rw) bmuVar.h).g(Long.reverseBytes(Double.doubleToRawLongBits(d)));
             return;
         }
-        bmuVar.n((rw) bmuVar.h, cwk.e.k((int) (j & 2147483647L)), cwf.DEFAULT);
+        bmuVar.n((rw) bmuVar.h, ProtoWireType.ENUM_FIXED64.makeTag((int) (j & 2147483647L)), cwf.DEFAULT);
         ((rw) bmuVar.h).g(Long.reverseBytes(Double.doubleToRawLongBits(d)));
     }
 
@@ -123,7 +123,7 @@ public class cwn extends ua implements avt, acn {
             ((rw) bmuVar.h).f(Integer.reverseBytes(Float.floatToRawIntBits(f)));
             return;
         }
-        bmuVar.n((rw) bmuVar.h, cwk.g.k((int) (j & 2147483647L)), cwf.DEFAULT);
+        bmuVar.n((rw) bmuVar.h, ProtoWireType.ENUM_FIXED32.makeTag((int) (j & 2147483647L)), cwf.DEFAULT);
         ((rw) bmuVar.h).f(Integer.reverseBytes(Float.floatToRawIntBits(f)));
     }
 
@@ -136,7 +136,7 @@ public class cwn extends ua implements avt, acn {
         int i2 = (int) (2147483647L & j);
         cwf cwfVarR = ajn.r(j);
         rw rwVar = (rw) bmuVar.h;
-        bmuVar.n(rwVar, (cwfVarR == cwf.FIXED ? cwk.g : cwk.d).k(i2), cwf.DEFAULT);
+        bmuVar.n(rwVar, (cwfVarR == cwf.FIXED ? ProtoWireType.ENUM_FIXED32 : ProtoWireType.ENUM_VARINT).makeTag(i2), cwf.DEFAULT);
         bmuVar.n(rwVar, i, cwfVarR);
     }
 
@@ -151,7 +151,7 @@ public class cwn extends ua implements avt, acn {
         cwf cwfVarR = ajn.r(j);
         bmuVar.getClass();
         rw rwVar = (rw) bmuVar.h;
-        bmuVar.n(rwVar, (cwfVarR == cwf.FIXED ? cwk.e : cwk.d).k(i), cwfVar);
+        bmuVar.n(rwVar, (cwfVarR == cwf.FIXED ? ProtoWireType.ENUM_FIXED64 : ProtoWireType.ENUM_VARINT).makeTag(i), cwfVar);
         bmuVar.o(rwVar, j2, cwfVarR);
     }
 
@@ -349,7 +349,7 @@ public class cwn extends ua implements avt, acn {
                 return;
             }
             bmuVar.getClass();
-            bmuVar.n((rw) bmuVar.h, cwk.f.k((int) (j_bx & 2147483647L)), cwf.DEFAULT);
+            bmuVar.n((rw) bmuVar.h, ProtoWireType.ENUM_LENGTH_DELIMITED.makeTag((int) (j_bx & 2147483647L)), cwf.DEFAULT);
             bmuVar.w(bArr);
             return;
         }

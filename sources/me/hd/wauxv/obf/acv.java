@@ -9,17 +9,17 @@ public final class acv extends bws implements IDexFind {
 
     public static Object b(acv acvVar, int i) {
         acvVar.getClass();
-        int i2 = bte.a;
+        int i2 = 0;
         ahd.a.getClass();
         byr.a.getClass();
         cde cdeVarT = dqc.bi(byr.b()).t();
         a.getClass();
         cdeVarT.a = emn.az(acu.a);
-        Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         cde cdeVarT2 = dqc.bi(objE).t();
         cdeVarT2.a = dal.b(Object.class);
-        return ((cdk) dkz.n(new Object[] { dal.b(Integer.TYPE), dal.b(Object.class) }, 2, cdeVarT2))
+        return ((MethodHookWrapper) dkz.n(new Object[] { dal.b(Integer.TYPE), dal.b(Object.class) }, 2, cdeVarT2))
                 .e(Integer.valueOf(i), null);
     }
 

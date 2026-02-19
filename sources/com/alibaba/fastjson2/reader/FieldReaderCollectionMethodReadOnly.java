@@ -67,7 +67,7 @@ class FieldReaderCollectionMethodReadOnly<T> extends FieldReaderObject<T> {
                 jSONSchema2.assertValidate(collection);
             }
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 

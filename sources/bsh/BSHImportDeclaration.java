@@ -72,7 +72,7 @@ class BSHImportDeclaration extends SimpleNode {
                             return Primitive.VOID;
                         }
                     }
-                    throw new EvalException(yg.o(new StringBuilder(), bSHAmbiguousName.text, " is not a static member of a class"), this, callStack);
+                    throw new EvalException(yg.concatToVar1(new StringBuilder(), bSHAmbiguousName.text, " is not a static member of a class"), this, callStack);
                 }
                 pVar.importStatic(bSHAmbiguousName.toClass(callStack, interpreter));
             }

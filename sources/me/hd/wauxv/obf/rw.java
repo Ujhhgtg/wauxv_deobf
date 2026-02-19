@@ -32,7 +32,7 @@ public final class rw {
             return;
         }
         byte[] bArr = new byte[Integer.highestOneBit(i2) << 1];
-        la._an(this.b, 0, 0, bArr, 14);
+        SomeStaticHelpers._an(this.b, 0, 0, bArr, 14);
         this.b = bArr;
     }
 

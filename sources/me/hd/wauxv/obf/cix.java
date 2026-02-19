@@ -47,9 +47,9 @@ public final class cix {
     public cix(cjl cjlVar, cis cisVar) {
         this.a = cjlVar;
         this.b = cisVar;
-        avd avdVar = avd.a;
-        this.g = new dml(avdVar);
-        this.h = new dml(avdVar);
+        EmptyReadonlyList emptyReadonlyListVar = EmptyReadonlyList.a;
+        this.g = new dml(emptyReadonlyListVar);
+        this.h = new dml(emptyReadonlyListVar);
         this.i = new LinkedHashMap();
         this.j = new LinkedHashMap();
         this.k = new LinkedHashMap();
@@ -184,7 +184,7 @@ public final class cix {
             Object obj2 = this.s.get(this.r.d(cioVar3.b.f));
             if (obj2 == null) {
                 throw new IllegalStateException(
-                        yg.o(new StringBuilder("NavigatorBackStack for "), cjgVar.f, " should already be created")
+                        yg.concatToVar1(new StringBuilder("NavigatorBackStack for "), cjgVar.f, " should already be created")
                                 .toString());
             }
             ((cit) obj2).i(cioVar3);
@@ -258,7 +258,7 @@ public final class cix {
                 }
                 for (afw afwVar : afwVarArr) {
                     if (afwVar != null) {
-                        afwVar._bn(ens.a);
+                        afwVar._bn(KotlinUnit.INSTANCE);
                     }
                 }
             }
@@ -305,7 +305,7 @@ public final class cix {
         if (cioVar != null) {
             return cioVar;
         }
-        StringBuilder sbR = yg.r(i, "No destination with ID ",
+        StringBuilder sbR = yg.concatVar213(i, "No destination with ID ",
                 " is on the NavController's back stack. The current destination is ");
         sbR.append(af());
         throw new IllegalArgumentException(sbR.toString().toString());
@@ -432,7 +432,7 @@ public final class cix {
                         }
                         if (arrayList.equals(listAk)) {
                             kmVar = new km();
-                            while (aba.af(kmVar2) >= iNextIndex) {
+                            while (OtherStaticHelpers.af(kmVar2) >= iNextIndex) {
                                 cio cioVar2 = (cio) abf.ar(kmVar2);
                                 aq(cioVar2);
                                 dag dagVar3 = dagVar2;
@@ -471,7 +471,7 @@ public final class cix {
                     z = false;
                 } else {
                     kmVar = new km();
-                    while (aba.af(kmVar2) >= iNextIndex) {
+                    while (OtherStaticHelpers.af(kmVar2) >= iNextIndex) {
                         cio cioVar22 = (cio) abf.ar(kmVar2);
                         aq(cioVar22);
                         dag dagVar32 = dagVar2;
@@ -511,7 +511,7 @@ public final class cix {
             } else {
                 cio cioVarH = cbm.h(this.a.c, cjgVar, bundleK, ah(), this.n);
                 ckl cklVarD = ckmVar.d(cjgVar.f);
-                List listBf = dqc.bf(cioVarH);
+                List listBf = dqc.toSingletonList(cioVarH);
                 dagVar2 = dagVar;
                 this.t = new cbj(dagVar2, this, cjgVar, bundleK, 1);
                 cklVarD.i(listBf, cjoVar);
@@ -532,7 +532,7 @@ public final class cix {
             if (z) {
                 cio cioVarH2 = cbm.h(this.a.c, cjgVar, bundleK, ah(), this.n);
                 ckl cklVarD2 = ckmVar.d(cjgVar.f);
-                List listBf2 = dqc.bf(cioVarH2);
+                List listBf2 = dqc.toSingletonList(cioVarH2);
                 dagVar2 = dagVar;
                 this.t = new cbj(dagVar2, this, cjgVar, bundleK, 1);
                 cklVarD2.i(listBf2, cjoVar);
@@ -837,7 +837,7 @@ public final class cix {
                     cioVar3.b.f)) {
                 list.add(cioVar3);
             } else {
-                arrayList2.add(aba.ah(cioVar3));
+                arrayList2.add(OtherStaticHelpers.ah(cioVar3));
             }
         }
         final dag dagVar = new dag();
@@ -859,10 +859,10 @@ public final class cix {
                         listSubList = arrayList4.subList(dahVar2.a, i3);
                         dahVar2.a = i3;
                     } else {
-                        listSubList = avd.a;
+                        listSubList = EmptyReadonlyList.a;
                     }
                     this.ab(cioVar4.b, bundle, cioVar4, listSubList);
-                    return ens.a;
+                    return KotlinUnit.INSTANCE;
                 }
             };
             cklVarD.i(list2, cjoVar);
@@ -1478,7 +1478,7 @@ public final class cix {
         if (arrayListAb.isEmpty()) {
             return;
         }
-        ArrayList arrayListAh = aba.ah(((cio) aaz.l(arrayListAb)).b);
+        ArrayList arrayListAh = OtherStaticHelpers.ah(((cio) aaz.l(arrayListAb)).b);
         ArrayList arrayList = new ArrayList();
         if (aaz.l(arrayListAh) instanceof bbn) {
             Iterator it = aaz.r(arrayListAb).iterator();

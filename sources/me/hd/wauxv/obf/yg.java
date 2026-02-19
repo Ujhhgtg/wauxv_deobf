@@ -62,19 +62,19 @@ public abstract /* synthetic */ class yg {
         return str + bdjVar + str2;
     }
 
-    public static String m(StringBuilder sb, String str, int i) {
+    public static String concatToVar1(StringBuilder sb, String str, int i) {
         sb.append(i);
         sb.append(str);
         return sb.toString();
     }
 
-    public static String n(StringBuilder sb, String str, long j) {
+    public static String decryptVar3UsingCnbZAndConcatToVar1(StringBuilder sb, String str, long j) {
         sb.append(str);
         sb.append(cnb.z(j));
         return sb.toString();
     }
 
-    public static String o(StringBuilder sb, String str, String str2) {
+    public static String concatToVar1(StringBuilder sb, String str, String str2) {
         sb.append(str);
         sb.append(str2);
         return sb.toString();
@@ -86,7 +86,7 @@ public abstract /* synthetic */ class yg {
         return jSONReader.info(sb.toString());
     }
 
-    public static StringBuilder q(int i, int i2, String str, String str2, String str3) {
+    public static StringBuilder concatVar31425(int i, int i2, String str, String str2, String str3) {
         StringBuilder sb = new StringBuilder(str);
         sb.append(i);
         sb.append(str2);
@@ -95,7 +95,7 @@ public abstract /* synthetic */ class yg {
         return sb;
     }
 
-    public static StringBuilder r(int i, String str, String str2) {
+    public static StringBuilder concatVar213(int i, String str, String str2) {
         StringBuilder sb = new StringBuilder(str);
         sb.append(i);
         sb.append(str2);
@@ -103,16 +103,16 @@ public abstract /* synthetic */ class yg {
     }
 
     public static bmu s(long j) {
-        return dqc.bh(ajn.ag(cnb.z(j)));
+        return dqc.bh(ajn.tryGetClassByClassName(cnb.z(j)));
     }
 
-    public static /* synthetic */ void t(Object obj) {
+    public static /* synthetic */ void throwIfVarNotNull(Object obj) {
         if (obj != null) {
             throw new ClassCastException();
         }
     }
 
-    public static void u(StringBuilder sb, String str, long j) {
+    public static void decryptVar2UsingCnbZAndConcatToVar1(StringBuilder sb, String str, long j) {
         sb.append(str);
         sb.append(cnb.z(j));
     }

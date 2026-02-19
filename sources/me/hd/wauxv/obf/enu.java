@@ -9,14 +9,14 @@ public final class enu implements btd {
     @Override // me.hd.wauxv.obf.btd
     public final Object a(ajt ajtVar) {
         this.d.a(ajtVar);
-        return ens.a;
+        return KotlinUnit.INSTANCE;
     }
 
     @Override // me.hd.wauxv.obf.btd
     public final void c(avt avtVar, Object obj) {
-        ens ensVar = (ens) obj;
-        throwIfVar1IsNull(ensVar, "value");
-        this.d.c(avtVar, ensVar);
+        KotlinUnit kotlinUnitVar = (KotlinUnit) obj;
+        throwIfVar1IsNull(kotlinUnitVar, "value");
+        this.d.c(avtVar, kotlinUnitVar);
     }
 
     @Override // me.hd.wauxv.obf.btd

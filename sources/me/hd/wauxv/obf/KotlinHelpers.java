@@ -215,7 +215,7 @@ public abstract class KotlinHelpers {
             return ewf.c;
         }
         brnVar.b.getClass();
-        throw cnd.aj(dfxVarL);
+        throw KotlinHelpers2.aj(dfxVarL);
     }
 
     // public static void aq() {
@@ -492,7 +492,7 @@ public abstract class KotlinHelpers {
                 view2.setTag(R.id.pooling_container_listener_holder_tag, cuuVar);
             }
             ArrayList arrayList = cuuVar.a;
-            int iAf = aba.af(arrayList);
+            int iAf = OtherStaticHelpers.af(arrayList);
             if (-1 < iAf) {
                 arrayList.get(iAf).getClass();
                 throw new ClassCastException();
@@ -655,7 +655,7 @@ public abstract class KotlinHelpers {
 
     public static final ArrayList w(String str, Bundle bundle) {
         throwIfVar1IsNull(str, "key");
-        ArrayList arrayListC = Build.VERSION.SDK_INT >= 34 ? az.c(bundle, str, cnf.bd(dal.b(Bundle.class)))
+        ArrayList arrayListC = Build.VERSION.SDK_INT >= 34 ? az.c(bundle, str, cnf.getJavaClass(dal.b(Bundle.class)))
                 : bundle.getParcelableArrayList(str);
         if (arrayListC != null) {
             return arrayListC;

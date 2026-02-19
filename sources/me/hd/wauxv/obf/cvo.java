@@ -26,7 +26,7 @@ public final class cvo implements dfx {
 
     public final void e() {
         throw new IllegalStateException(
-                yg.o(new StringBuilder("Primitive descriptor "), this.a, " does not have elements"));
+                yg.concatToVar1(new StringBuilder("Primitive descriptor "), this.a, " does not have elements"));
     }
 
     public final boolean equals(Object obj) {
@@ -54,7 +54,7 @@ public final class cvo implements dfx {
 
     @Override // me.hd.wauxv.obf.dfx
     public final List getAnnotations() {
-        return avd.a;
+        return EmptyReadonlyList.a;
     }
 
     @Override // me.hd.wauxv.obf.dfx

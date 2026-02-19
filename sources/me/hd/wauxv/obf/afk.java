@@ -78,7 +78,7 @@ public final class afk implements afj, afl {
                     str = ", hasLinkUri(" + uri.toString().length() + ")";
                 }
                 sb.append(str);
-                return yg.o(sb, this.f != null ? ", hasExtras" : "", "}");
+                return yg.concatToVar1(sb, this.f != null ? ", hasExtras" : "", "}");
             default:
                 return super.toString();
         }

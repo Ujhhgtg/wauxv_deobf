@@ -33,7 +33,7 @@ public final class zd {
         }
         zdVar.b.add(str);
         zdVar.d.add(dfxVar);
-        zdVar.e.add(avd.a);
+        zdVar.e.add(EmptyReadonlyList.a);
         zdVar.f.add(false);
     }
 }

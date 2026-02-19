@@ -54,10 +54,10 @@ public abstract class t extends brm implements afw, ahp {
     /* JADX WARN: Multi-variable type inference failed */
     public final void h(ahs ahsVar, t tVar, bgj bgjVar) {
         int iOrdinal = ahsVar.ordinal();
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         if (iOrdinal == 0) {
             try {
-                cnf.bk(ensVar, cmz.ab(((nc) bgjVar).h(tVar, this)));
+                cnf.bk(kotlinUnitVar, cmz.ab(((nc) bgjVar).h(tVar, this)));
                 return;
             } catch (Throwable th) {
                 th = th;
@@ -70,7 +70,7 @@ public abstract class t extends brm implements afw, ahp {
         }
         if (iOrdinal != 1) {
             if (iOrdinal == 2) {
-                cmz.ab(((nc) bgjVar).h(tVar, this))._bn(ensVar);
+                cmz.ab(((nc) bgjVar).h(tVar, this))._bn(kotlinUnitVar);
                 return;
             }
             if (iOrdinal != 3) {

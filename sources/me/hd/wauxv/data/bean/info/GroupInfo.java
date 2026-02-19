@@ -1,8 +1,6 @@
 package me.hd.wauxv.data.bean.info;
 
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.yg;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -107,10 +105,10 @@ public final class GroupInfo {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("GroupInfo(roomId=" /* cnb.z(-2856153250602L) */);
-        yg.u(sb, this.roomId, -2796023708458L);
-        yg.u(sb, this.remark, -2770253904682L);
-        yg.u(sb, this.name, -3285649980202L);
+        sb.append("GroupInfo(roomId=" /* "GroupInfo(roomId=" /* "GroupInfo(roomId=" /* cnb.z(-2856153250602L)  */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.roomId, -2796023708458L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.remark, -2770253904682L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.name, -3285649980202L);
         sb.append(this.groupData);
         sb.append(')');
         return sb.toString();

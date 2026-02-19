@@ -16,8 +16,8 @@ public final class dcz implements ListIterator, IEmpty {
             this.a = list.listIterator(bzvVar.a() - i);
             return;
         }
-        StringBuilder sbR = yg.r(i, "Position index ", " must be in range [");
-        sbR.append(new bqi(0, bzvVar.a(), 1));
+        StringBuilder sbR = yg.concatVar213(i, "Position index ", " must be in range [");
+        sbR.append(new IntRange(0, bzvVar.a(), 1));
         sbR.append("].");
         throw new IndexOutOfBoundsException(sbR.toString());
     }
@@ -44,7 +44,7 @@ public final class dcz implements ListIterator, IEmpty {
 
     @Override // java.util.ListIterator
     public final int nextIndex() {
-        return aba.af(this.b) - this.a.previousIndex();
+        return OtherStaticHelpers.af(this.b) - this.a.previousIndex();
     }
 
     @Override // java.util.ListIterator
@@ -54,7 +54,7 @@ public final class dcz implements ListIterator, IEmpty {
 
     @Override // java.util.ListIterator
     public final int previousIndex() {
-        return aba.af(this.b) - this.a.nextIndex();
+        return OtherStaticHelpers.af(this.b) - this.a.nextIndex();
     }
 
     @Override // java.util.ListIterator, java.util.Iterator

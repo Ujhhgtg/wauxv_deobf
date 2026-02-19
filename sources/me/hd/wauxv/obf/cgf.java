@@ -12,14 +12,14 @@ public final class cgf extends bws {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        int i = bte.a;
+        int i = 0;
         cge.a.getClass();
         cde cdeVarT = dqc.bh(emn.az(cgd.a)).t();
-        cdeVarT.ab = "convertFrom" /* cnb.z(-66662187399978L) */;
+        cdeVarT.ab = "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-66662187399978L)  */;
         cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(Cursor.class) }, 1));
         cdeVarT.ah();
-        aki akiVarAd = ad((cdk) aaz.e(cdeVarT.aj()), exg.a);
-        akiVarAd.m(new bzk(22));
+        aki akiVarAd = ad((MethodHookWrapper) aaz.e(cdeVarT.aj()), exg.a);
+        akiVarAd.m(new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(22));
         akiVarAd.o();
     }
 }

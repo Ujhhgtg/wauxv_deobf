@@ -56,7 +56,7 @@ public class csb {
         if (str3 != null) {
             return str3;
         }
-        int i = bte.a;
+        int i = 0;
         jx jxVar = ki.e;
         btc btcVar = ki.b[0];
         bmu bmuVarBh = dqc.bh(jxVar.w());
@@ -65,18 +65,18 @@ public class csb {
         bmuVarBh.v(true);
         cde cdeVarT = bmuVarBh.t();
         cdeVarT.ab = "currentPackageName";
-        cdk cdkVar = (cdk) aaz.g(cdeVarT.aj());
-        if (cdkVar != null && (str = (String) cdkVar.j(new Object[0])) != null && !dnj.ak(str)) {
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+        if (methodHookWrapperVar != null && (str = (String) methodHookWrapperVar.j(new Object[0])) != null && !dnj.ak(str)) {
             str2 = str;
         }
         return str2 == null ? "android" : str2;
     }
 
     public final aki ad(cbq cbqVar, exg exgVar) {
-        if (!(cbqVar instanceof adu) && !(cbqVar instanceof cdk)) {
+        if (!(cbqVar instanceof ConstructorHookWrapper) && !(cbqVar instanceof MethodHookWrapper)) {
             throw new IllegalStateException(("This type [" + cbqVar + "] not support to hook, supported are Constructors and Methods").toString());
         }
-        List listBf = dqc.bf(cbqVar.b());
+        List listBf = dqc.toSingletonList(cbqVar.b());
         Throwable th = new Throwable("There is no hook class instance");
         erp erpVar = new erp(29, false);
         erpVar.v = th;

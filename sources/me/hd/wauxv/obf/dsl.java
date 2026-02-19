@@ -41,9 +41,9 @@ public final class dsl {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("AppJumpWordingProto(en=" /* cnb.z(-145221434211114L) */);
-        yg.u(sb, this.a, -145668110809898L);
-        yg.u(sb, this.b, -145629456104234L);
+        sb.append("AppJumpWordingProto(en=" /* "AppJumpWordingProto(en=" /* "AppJumpWordingProto(en=" /* cnb.z(-145221434211114L)  */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -145668110809898L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -145629456104234L);
         return concat(sb, this.c, ')');
     }
 }

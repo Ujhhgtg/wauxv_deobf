@@ -15,7 +15,7 @@ public final class aeg extends bws implements IDexFind {
         aec.a.getClass();
         Object objInvoke = methodBb.invoke(aec.b(), str);
         List list = objInvoke instanceof List ? (List) objInvoke : null;
-        return list == null ? avd.a : list;
+        return list == null ? EmptyReadonlyList.a : list;
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

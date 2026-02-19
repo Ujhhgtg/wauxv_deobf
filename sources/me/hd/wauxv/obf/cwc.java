@@ -49,6 +49,6 @@ public abstract class cwc extends sw implements btc {
     public final String toString() {
         bsu bsuVarJ = j();
         return bsuVarJ != this ? bsuVarJ.toString()
-                : yg.o(new StringBuilder("property "), this.f, " (Kotlin reflection is not available)");
+                : yg.concatToVar1(new StringBuilder("property "), this.f, " (Kotlin reflection is not available)");
     }
 }

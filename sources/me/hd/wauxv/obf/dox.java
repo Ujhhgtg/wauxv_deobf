@@ -6,7 +6,7 @@ public final class dox {
     public final int a;
     public final int b;
 
-    public dox(int i, int i2, IHasInvokeMethod bgfVar) {
+    public dox(int i, int i2, IInvokable bgfVar) {
         this.a = i;
         this.b = i2;
     }

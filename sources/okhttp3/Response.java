@@ -4,12 +4,10 @@ import com.umeng.ccg.c;
 import java.io.Closeable;
 import java.io.EOFException;
 import java.util.List;
-import me.hd.wauxv.obf.avd;
-import me.hd.wauxv.obf.KotlinHelpers;
+import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.cyl;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.rh;
-import okhttp3.Headers;
 import okhttp3.internal.connection.Exchange;
 import okhttp3.internal.http.HttpHeaders;
 
@@ -98,7 +96,7 @@ public final class Response implements Closeable {
             str = "WWW-Authenticate";
         } else {
             if (i != 407) {
-                return avd.a;
+                return EmptyReadonlyList.a;
             }
             str = "Proxy-Authenticate";
         }

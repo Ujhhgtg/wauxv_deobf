@@ -1,8 +1,7 @@
 package okhttp3.internal.http2;
 
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.la;
+import me.hd.wauxv.obf.SomeStaticHelpers;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -34,7 +33,7 @@ public final class Settings {
 
     public final void clear() {
         this.set = 0;
-        la.m(this.values);
+        SomeStaticHelpers.m(this.values);
     }
 
     public final int get(int i) {

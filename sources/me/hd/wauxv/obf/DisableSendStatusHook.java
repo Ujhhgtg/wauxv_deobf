@@ -10,13 +10,13 @@ public final class DisableSendStatusHook extends SwitchHook implements IDexFind 
                                                                                                      * cnb.z(-
                                                                                                      * 445950749309738L)
                                                                                                      */);
-    public static final String b = "聊天" /* cnb.z(-445345158921002L) */;
-    public static final String c = "禁止发送状态" /* cnb.z(-445349453888298L) */;
-    public static final String i = "禁止聊天框文本改变时发送正在输入中" /* cnb.z(-445319389117226L) */;
+    public static final String b = "聊天" /* "聊天" /* "聊天" /* cnb.z(-445345158921002L)  */;
+    public static final String c = "禁止发送状态" /* "禁止发送状态" /* "禁止发送状态" /* cnb.z(-445349453888298L)  */;
+    public static final String i = "禁止聊天框文本改变时发送正在输入中" /* "禁止聊天框文本改变时发送正在输入中" /* "禁止聊天框文本改变时发送正在输入中" /* cnb.z(-445319389117226L)  */;
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.bf(emn.bb(aof.a));
+        List listBf = dqc.toSingletonList(emn.bb(aof.a));
         DisableSendStatusHook aogVar = a;
         aki akiVarAb = csb.ab(aogVar, listBf);
         aogVar.y(akiVarAb, new amb(16));

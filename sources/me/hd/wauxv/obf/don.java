@@ -49,7 +49,7 @@ public final class don extends ViewGroup {
         Object obj;
         Object objE;
         Object origin;
-        cdk cdkVar;
+        MethodHookWrapper methodHookWrapperVar;
         Vibrator defaultVibrator;
         int action = motionEvent.getAction();
         PointF pointF = this.e;
@@ -64,15 +64,15 @@ public final class don extends ViewGroup {
                     domVar = this.h;
                     if (domVar != null) {
                         chmVar = (chm) domVar;
-                        int i2 = bte.a;
+                        int i2 = 0;
                         obj = chmVar.d;
                         azg azgVarR = dqc.bi(obj).r();
-                        azgVarR.ab = "checkBox" /* cnb.z(-473640403467050L) */;
+                        azgVarR.ab = "checkBox" /* "checkBox" /* "checkBox" /* "checkBox" /* cnb.z(-473640403467050L)   */;
                         objE = ((azk) yg.e(azgVarR)).e();
                         throwIfVar1IsNull(objE);
                         if (((View) objE).getVisibility() == 0) {
                             azg azgVarR2 = dqc.bi(obj).r();
-                            azgVarR2.ab = "maskView" /* cnb.z(-473051992947498L) */;
+                            azgVarR2.ab = "maskView" /* "maskView" /* "maskView" /* "maskView" /* cnb.z(-473051992947498L)   */;
                             Object objE2 = ((azk) yg.e(azgVarR2)).e();
                             throwIfVar1IsNull(objE2);
                             ((View) objE2).performClick();
@@ -84,12 +84,12 @@ public final class don extends ViewGroup {
                             uqVar.getClass();
                             cde cdeVarT = dqc.bi(frameLayout).t();
                             cdeVarT.a = dal.b(Boolean.TYPE);
-                            cdeVarT.d = new mj(26);
-                            cdkVar = (cdk) aaz.e(cdeVarT.aj());
-                            if (cdkVar.a.getParameterCount() == 2) {
-                                cdkVar.e(origin, null);
+                            cdeVarT.d = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(26);
+                            methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
+                            if (methodHookWrapperVar.a.getParameterCount() == 2) {
+                                methodHookWrapperVar.e(origin, null);
                             } else {
-                                cdkVar.e(origin);
+                                methodHookWrapperVar.e(origin);
                             }
                         }
                     }
@@ -133,7 +133,7 @@ public final class don extends ViewGroup {
                                 defaultVibrator = qc.m(systemService).getDefaultVibrator();
                             } else {
                                 Object systemService2 = context.getSystemService("vibrator" /*
-                                                                                             * cnb.z(-70862665415466L)
+                                                                                             * "vibrator" /* "vibrator" /* "vibrator" /* cnb.z(-70862665415466L)  */
                                                                                              */);
                                 throwIfVar1IsNull(systemService2,
                                         "null cannot be cast to non-null type android.os.Vibrator" /*
@@ -157,15 +157,15 @@ public final class don extends ViewGroup {
                     domVar = this.h;
                     if (domVar != null) {
                         chmVar = (chm) domVar;
-                        int i22 = bte.a;
+                        int i22 = 0;
                         obj = chmVar.d;
                         azg azgVarR3 = dqc.bi(obj).r();
-                        azgVarR3.ab = "checkBox" /* cnb.z(-473640403467050L) */;
+                        azgVarR3.ab = "checkBox" /* "checkBox" /* "checkBox" /* "checkBox" /* cnb.z(-473640403467050L)   */;
                         objE = ((azk) yg.e(azgVarR3)).e();
                         throwIfVar1IsNull(objE);
                         if (((View) objE).getVisibility() == 0) {
                             azg azgVarR22 = dqc.bi(obj).r();
-                            azgVarR22.ab = "maskView" /* cnb.z(-473051992947498L) */;
+                            azgVarR22.ab = "maskView" /* "maskView" /* "maskView" /* "maskView" /* cnb.z(-473051992947498L)   */;
                             Object objE22 = ((azk) yg.e(azgVarR22)).e();
                             throwIfVar1IsNull(objE22);
                             ((View) objE22).performClick();
@@ -177,12 +177,12 @@ public final class don extends ViewGroup {
                             uqVar2.getClass();
                             cde cdeVarT2 = dqc.bi(frameLayout2).t();
                             cdeVarT2.a = dal.b(Boolean.TYPE);
-                            cdeVarT2.d = new mj(26);
-                            cdkVar = (cdk) aaz.e(cdeVarT2.aj());
-                            if (cdkVar.a.getParameterCount() == 2) {
-                                cdkVar.e(origin, null);
+                            cdeVarT2.d = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(26);
+                            methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT2.aj());
+                            if (methodHookWrapperVar.a.getParameterCount() == 2) {
+                                methodHookWrapperVar.e(origin, null);
                             } else {
-                                cdkVar.e(origin);
+                                methodHookWrapperVar.e(origin);
                             }
                         }
                     }
@@ -249,7 +249,7 @@ public final class don extends ViewGroup {
             Object next = baaVar.next();
             int i4 = i3 + 1;
             if (i3 < 0) {
-                aba.aj();
+                OtherStaticHelpers.aj();
                 throw null;
             }
             View view = (View) next;

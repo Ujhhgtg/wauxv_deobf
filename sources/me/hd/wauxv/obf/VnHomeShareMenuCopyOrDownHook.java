@@ -7,7 +7,7 @@ import me.hd.wauxv.R;
 /* JADX INFO: loaded from: classes.dex */
 public final class VnHomeShareMenuCopyOrDownHook extends SwitchHook implements bnm {
     public static final VnHomeShareMenuCopyOrDownHook a = new VnHomeShareMenuCopyOrDownHook(
-            "VnHomeShareMenuCopyOrDownHook" /* cnb.z(-589179318696746L) */);
+            "VnHomeShareMenuCopyOrDownHook" /* "VnHomeShareMenuCopyOrDownHook" /* "VnHomeShareMenuCopyOrDownHook" /* cnb.z(-589179318696746L)  */);
     public static final String b;
     public static final String c;
     public static final String h;
@@ -16,10 +16,10 @@ public final class VnHomeShareMenuCopyOrDownHook extends SwitchHook implements b
 
     static {
         dov dovVar = ctf.a;
-        b = ctf.c("Download" /* cnb.z(-46699179408170L) */, "VideoNumber" /* cnb.z(-46677704571690L) */);
-        c = "视频号" /* cnb.z(-584991725583146L) */;
-        h = "主页分享菜单复制下载" /* cnb.z(-585008905452330L) */;
-        i = "为视频号菜单添加复制链接或下载视频" /* cnb.z(-585459877018410L) */;
+        b = ctf.c("Download" /* "Download" /* "Download" /* cnb.z(-46699179408170L)  */, "VideoNumber" /* "VideoNumber" /* "VideoNumber" /* cnb.z(-46677704571690L)  */);
+        c = "视频号" /* "视频号" /* "视频号" /* cnb.z(-584991725583146L)  */;
+        h = "主页分享菜单复制下载" /* "主页分享菜单复制下载" /* "主页分享菜单复制下载" /* cnb.z(-585008905452330L)  */;
+        i = "为视频号菜单添加复制链接或下载视频" /* "为视频号菜单添加复制链接或下载视频" /* "为视频号菜单添加复制链接或下载视频" /* cnb.z(-585459877018410L)  */;
         j = new epy(2);
     }
 
@@ -38,11 +38,11 @@ public final class VnHomeShareMenuCopyOrDownHook extends SwitchHook implements b
     }
 
     public final List m() {
-        return !z() ? avd.a
-                : aba.ag(
-                        new bam(R.id.MenuItem_VideoNumber_CopyLink, "复制链接" /* cnb.z(-588483533994794L) */,
+        return !z() ? EmptyReadonlyList.a
+                : OtherStaticHelpers.argsToList(
+                        new bam(R.id.MenuItem_VideoNumber_CopyLink, "复制链接" /* "复制链接" /* "复制链接" /* cnb.z(-588483533994794L)  */,
                                 R.drawable.ic_menu_copy_24dp, new dfq(13)),
-                        new bam(R.id.MenuItem_VideoNumber_Download, "下载视频" /* cnb.z(-588513598765866L) */,
+                        new bam(R.id.MenuItem_VideoNumber_Download, "下载视频" /* "下载视频" /* "下载视频" /* cnb.z(-588513598765866L)  */,
                                 R.drawable.ic_menu_save_24dp, new dfq(14)));
     }
 
@@ -52,7 +52,7 @@ public final class VnHomeShareMenuCopyOrDownHook extends SwitchHook implements b
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final IHasInvokeMethod p() {
+    public final IInvokable getOnClick() {
         return j;
     }
 }

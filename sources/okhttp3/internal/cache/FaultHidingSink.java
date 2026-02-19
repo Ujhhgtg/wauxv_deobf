@@ -3,8 +3,7 @@ package okhttp3.internal.cache;
 import java.io.EOFException;
 import java.io.IOException;
 import me.hd.wauxv.obf.bcz;
-import me.hd.wauxv.obf.IHasInvokeMethod;
-import me.hd.wauxv.obf.KotlinHelpers;
+import me.hd.wauxv.obf.IInvokable;
 import me.hd.wauxv.obf.dhy;
 import me.hd.wauxv.obf.rh;
 import net.bytebuddy.implementation.MethodDelegation;
@@ -13,13 +12,13 @@ import net.bytebuddy.implementation.MethodDelegation;
 /* JADX INFO: loaded from: classes.dex */
 public class FaultHidingSink extends bcz {
     private boolean hasErrors;
-    private final IHasInvokeMethod onException;
+    private final IInvokable onException;
 
     /*
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public FaultHidingSink(dhy dhyVar, IHasInvokeMethod bgfVar) {
+    public FaultHidingSink(dhy dhyVar, IInvokable bgfVar) {
         super(dhyVar);
         throwIfVar1IsNull(dhyVar, MethodDelegation.ImplementationDelegate.FIELD_NAME_PREFIX);
         throwIfVar1IsNull(bgfVar, "onException");
@@ -53,7 +52,7 @@ public class FaultHidingSink extends bcz {
         }
     }
 
-    public final IHasInvokeMethod getOnException() {
+    public final IInvokable getOnException() {
         return this.onException;
     }
 

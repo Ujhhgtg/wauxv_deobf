@@ -24,7 +24,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import com.google.android.material.appbar.AppBarLayout;
+
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -46,7 +46,7 @@ import me.hd.wauxv.obf.cau;
 import me.hd.wauxv.obf.ckr;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cnb;
-import me.hd.wauxv.obf.cnd;
+import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.cnf;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.dhq;
@@ -58,7 +58,6 @@ import me.hd.wauxv.obf.evr;
 import me.hd.wauxv.obf.ff;
 import me.hd.wauxv.obf.gs;
 import me.hd.wauxv.obf.DefaultConfig;
-import me.hd.wauxv.obf.n;
 import me.hd.wauxv.obf.yg;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -688,7 +687,7 @@ public class AppBarLayout extends LinearLayout implements agq {
     @Override // android.view.ViewGroup, android.view.View
     public final void onAttachedToWindow() {
         super.onAttachedToWindow();
-        cnd.bj(this);
+        KotlinHelpers2.bj(this);
     }
 
     @Override // android.view.ViewGroup, android.view.View
@@ -793,7 +792,7 @@ public class AppBarLayout extends LinearLayout implements agq {
     @Override // android.view.View
     public void setElevation(float f) {
         super.setElevation(f);
-        cnd.bh(this, f);
+        KotlinHelpers2.bh(this, f);
     }
 
     public void setExpanded(boolean z) {

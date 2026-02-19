@@ -15,7 +15,7 @@ public final class caq extends View.BaseSavedState {
         sb.append(Integer.toHexString(System.identityHashCode(this)));
         sb.append(" CheckedState=");
         int i = this.a;
-        return yg.o(sb, i != 1 ? i != 2 ? "unchecked" : "indeterminate" : "checked", "}");
+        return yg.concatToVar1(sb, i != 1 ? i != 2 ? "unchecked" : "indeterminate" : "checked", "}");
     }
 
     @Override // android.view.View.BaseSavedState, android.view.AbsSavedState, android.os.Parcelable

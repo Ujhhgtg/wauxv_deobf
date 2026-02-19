@@ -32,7 +32,7 @@ public abstract class sw implements bsu, Serializable {
 
     public abstract bsu k();
 
-    public final yq l() {
+    public final KClassContainer l() {
         boolean z = this.i;
         Class cls = this.e;
         if (!z) {

@@ -32,23 +32,23 @@ public final class bqs implements eqj {
     public static bqs g(LayoutInflater layoutInflater, ViewGroup viewGroup) {
         View viewInflate = layoutInflater.inflate(R.layout.item_rv_view_switch, viewGroup, false);
         int i = R.id.itemSwitchViewCanClick;
-        LinearLayout linearLayout = (LinearLayout) cnd.aq(viewInflate, R.id.itemSwitchViewCanClick);
+        LinearLayout linearLayout = (LinearLayout) KotlinHelpers2.aq(viewInflate, R.id.itemSwitchViewCanClick);
         if (linearLayout != null) {
             i = R.id.itemSwitchViewSwitchFunc;
-            MaterialSwitch materialSwitch = (MaterialSwitch) cnd.aq(viewInflate, R.id.itemSwitchViewSwitchFunc);
+            MaterialSwitch materialSwitch = (MaterialSwitch) KotlinHelpers2.aq(viewInflate, R.id.itemSwitchViewSwitchFunc);
             if (materialSwitch != null) {
                 i = R.id.itemSwitchViewTextViewDesc;
-                MaterialTextView materialTextView = (MaterialTextView) cnd.aq(viewInflate, R.id.itemSwitchViewTextViewDesc);
+                MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.aq(viewInflate, R.id.itemSwitchViewTextViewDesc);
                 if (materialTextView != null) {
                     i = R.id.itemSwitchViewTextViewTitle;
-                    MaterialTextView materialTextView2 = (MaterialTextView) cnd.aq(viewInflate, R.id.itemSwitchViewTextViewTitle);
+                    MaterialTextView materialTextView2 = (MaterialTextView) KotlinHelpers2.aq(viewInflate, R.id.itemSwitchViewTextViewTitle);
                     if (materialTextView2 != null) {
                         return new bqs((LinearLayout) viewInflate, linearLayout, materialSwitch, materialTextView, materialTextView2, 0);
                     }
                 }
             }
         }
-        throw new NullPointerException("Missing required view with ID: " /* cnb.z(-642033186241322L) */.concat(viewInflate.getResources().getResourceName(i)));
+        throw new NullPointerException("Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-642033186241322L)  */.concat(viewInflate.getResources().getResourceName(i)));
     }
 
     @Override // me.hd.wauxv.obf.eqj

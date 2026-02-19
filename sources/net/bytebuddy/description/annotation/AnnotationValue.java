@@ -15,7 +15,6 @@ import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.ClassFileVersion;
 import net.bytebuddy.build.CachedReturnPlugin;
-import net.bytebuddy.description.annotation.AnnotationDescription;
 import net.bytebuddy.description.enumeration.EnumerationDescription;
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.description.type.TypeDefinition;
@@ -781,7 +780,7 @@ public interface AnnotationValue<T, S> {
                 }
 
                 public String toString() {
-                    return yg.o(new StringBuilder(), this.value, " /* Warning: constant not present! */");
+                    return yg.concatToVar1(new StringBuilder(), this.value, " /* Warning: constant not present! */");
                 }
 
                 @Override // net.bytebuddy.description.annotation.AnnotationValue.Loaded
@@ -820,7 +819,7 @@ public interface AnnotationValue<T, S> {
             }
 
             public String toString() {
-                return yg.o(new StringBuilder(), this.value, " /* Warning: constant not present! */");
+                return yg.concatToVar1(new StringBuilder(), this.value, " /* Warning: constant not present! */");
             }
 
             @Override // net.bytebuddy.description.annotation.AnnotationValue
@@ -973,7 +972,7 @@ public interface AnnotationValue<T, S> {
             }
 
             public String toString() {
-                return yg.o(new StringBuilder("/* Warning type mismatch! \""), this.value, "\" */");
+                return yg.concatToVar1(new StringBuilder("/* Warning type mismatch! \""), this.value, "\" */");
             }
         }
 
@@ -1017,7 +1016,7 @@ public interface AnnotationValue<T, S> {
         }
 
         public String toString() {
-            return yg.o(new StringBuilder("/* Warning type mismatch! \""), this.value, "\" */");
+            return yg.concatToVar1(new StringBuilder("/* Warning type mismatch! \""), this.value, "\" */");
         }
     }
 
@@ -1041,7 +1040,7 @@ public interface AnnotationValue<T, S> {
             }
 
             public String toString() {
-                return yg.o(new StringBuilder(), this.typeName, ".class /* Warning: type not present! */");
+                return yg.concatToVar1(new StringBuilder(), this.typeName, ".class /* Warning: type not present! */");
             }
         }
 
@@ -1075,7 +1074,7 @@ public interface AnnotationValue<T, S> {
         }
 
         public String toString() {
-            return yg.o(new StringBuilder(), this.typeName, ".class /* Warning: type not present! */");
+            return yg.concatToVar1(new StringBuilder(), this.typeName, ".class /* Warning: type not present! */");
         }
     }
 
@@ -1399,7 +1398,7 @@ public interface AnnotationValue<T, S> {
                     if (str.indexOf(34) != -1) {
                         str = str.replace("\"", "\\\"");
                     }
-                    return yg.o(sb, str, "\"");
+                    return yg.concatToVar1(sb, str, "\"");
                 }
 
                 @Override // net.bytebuddy.description.annotation.AnnotationValue.RenderingDispatcher
@@ -1453,7 +1452,7 @@ public interface AnnotationValue<T, S> {
                     if (str.indexOf(34) != -1) {
                         str = str.replace("\"", "\\\"");
                     }
-                    return yg.o(sb, str, "\"");
+                    return yg.concatToVar1(sb, str, "\"");
                 }
 
                 @Override // net.bytebuddy.description.annotation.AnnotationValue.RenderingDispatcher
@@ -1512,7 +1511,7 @@ public interface AnnotationValue<T, S> {
                     if (str.indexOf(34) != -1) {
                         str = str.replace("\"", "\\\"");
                     }
-                    return yg.o(sb, str, "\"");
+                    return yg.concatToVar1(sb, str, "\"");
                 }
 
                 @Override // net.bytebuddy.description.annotation.AnnotationValue.RenderingDispatcher
@@ -1574,7 +1573,7 @@ public interface AnnotationValue<T, S> {
                     if (str.indexOf(34) != -1) {
                         str = str.replace("\"", "\\\"");
                     }
-                    return yg.o(sb, str, "\"");
+                    return yg.concatToVar1(sb, str, "\"");
                 }
 
                 @Override // net.bytebuddy.description.annotation.AnnotationValue.RenderingDispatcher

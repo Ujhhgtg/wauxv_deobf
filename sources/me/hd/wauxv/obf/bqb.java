@@ -128,7 +128,7 @@ public final class bqb implements btd {
                                                 break;
                                             }
                                             if (strV.charAt(i14) != ':') {
-                                                StringBuilder sbR = yg.r(i14, "Expected ':' at index ", ", got '");
+                                                StringBuilder sbR = yg.concatVar213(i14, "Expected ':' at index ", ", got '");
                                                 sbR.append(strV.charAt(i14));
                                                 sbR.append('\'');
                                                 bqaVarAq = bhu.aq(strV, sbR.toString());
@@ -142,7 +142,7 @@ public final class bqb implements btd {
                                             char cCharAt5 = strV.charAt(i3);
                                             int[] iArr4 = iArr3;
                                             if ('0' > cCharAt5 || cCharAt5 >= ':') {
-                                                StringBuilder sbR2 = yg.r(i3, "Expected an ASCII digit at index ",
+                                                StringBuilder sbR2 = yg.concatVar213(i3, "Expected an ASCII digit at index ",
                                                         ", got '");
                                                 sbR2.append(strV.charAt(i3));
                                                 sbR2.append('\'');
@@ -165,7 +165,7 @@ public final class bqb implements btd {
                                             iC = bjs.c(iAr7, 60, iAr6 * 3600, iAr8) * (cCharAt4 == '-' ? -1 : 1);
                                             if (1 > iAr && iAr < 13) {
                                                 if (1 > iAr2) {
-                                                    StringBuilder sbQ = yg.q(iAr, iCharAt,
+                                                    StringBuilder sbQ = yg.concatVar31425(iAr, iCharAt,
                                                             "Expected a valid day-of-month for month ", " of year ",
                                                             ", got ");
                                                     sbQ.append(iAr2);
@@ -177,7 +177,7 @@ public final class bqb implements btd {
                                                             : i16 == 0 && (iCharAt % 100 != 0 || iCharAt % 400 == 0)
                                                                     ? 29
                                                                     : 28)) {
-                                                        StringBuilder sbQ2 = yg.q(iAr, iCharAt,
+                                                        StringBuilder sbQ2 = yg.concatVar31425(iAr, iCharAt,
                                                                 "Expected a valid day-of-month for month ", " of year ",
                                                                 ", got ");
                                                         sbQ2.append(iAr2);

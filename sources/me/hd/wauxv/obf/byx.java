@@ -25,7 +25,7 @@ public final /* synthetic */ class byx implements bgk {
         Object objX;
         Object objX2;
         int i = this.a;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         Object obj4 = this.c;
         switch (i) {
             case 0:
@@ -46,7 +46,7 @@ public final /* synthetic */ class byx implements bgk {
                 eqj eqjVar5 = mainActivity._ac;
                 throwIfVar1IsNull(eqjVar5);
                 ((dj) eqjVar5).c.setOnClickListener(new bq((bfu) obj3, 8));
-                return ensVar;
+                return kotlinUnitVar;
             case 1:
                 wx wxVar = (wx) obj4;
                 eb ebVar = (eb) obj3;
@@ -54,7 +54,7 @@ public final /* synthetic */ class byx implements bgk {
                     throw new IllegalStateException("An existing binding object cannot be passed into a null entity.");
                 }
                 wxVar.b(obj, obj2, ebVar);
-                return ensVar;
+                return kotlinUnitVar;
             case 2:
                 byx byxVar = (byx) obj4;
                 eb ebVar2 = (eb) obj3;
@@ -62,13 +62,13 @@ public final /* synthetic */ class byx implements bgk {
                     throwIfVar1IsNull(obj,
                             "null cannot be cast to non-null type VD of com.highcapable.betterandroid.ui.component.adapter.RecyclerAdapterBuilder.onBindNullableItemView");
                     byxVar.b(obj, obj2, ebVar2);
-                    objX = ensVar;
+                    objX = kotlinUnitVar;
                 } catch (Throwable th) {
                     objX = bhu.x(th);
                 }
                 Throwable thB = dcy.b(objX);
                 if (thB == null) {
-                    return ensVar;
+                    return kotlinUnitVar;
                 }
                 if (thB instanceof ClassCastException) {
                     throw new IllegalStateException(
@@ -118,7 +118,7 @@ public final /* synthetic */ class byx implements bgk {
                     }
                     break;
                 }
-                return ensVar;
+                return kotlinUnitVar;
         }
     }
 

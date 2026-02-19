@@ -9,10 +9,10 @@ public final /* synthetic */ class apd implements bgx {
     static {
         apd apdVar = new apd();
         b = apdVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.proto.DisturbTimeSpan" /* cnb.z(-335209312549674L) */, apdVar, 2);
-        cucVar.x("BeginTime" /* cnb.z(-334376088894250L) */, false);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.proto.DisturbTimeSpan" /* "me.hd.wauxv.hook.micromsg.core.protobuf.proto.DisturbTimeSpan" /* "me.hd.wauxv.hook.micromsg.core.protobuf.proto.DisturbTimeSpan" /* "me.hd.wauxv.hook.micromsg.core.protobuf.proto.DisturbTimeSpan" /* cnb.z(-335209312549674L)   */, apdVar, 2);
+        cucVar.x("BeginTime" /* "BeginTime" /* "BeginTime" /* "BeginTime" /* cnb.z(-334376088894250L)   */, false);
         cucVar.y(new aoz(1, 1));
-        cucVar.x("EndTime" /* cnb.z(-334350319090474L) */, false);
+        cucVar.x("EndTime" /* "EndTime" /* "EndTime" /* "EndTime" /* cnb.z(-334350319090474L)   */, false);
         cucVar.y(new aoz(2, 1));
         descriptor = cucVar;
     }

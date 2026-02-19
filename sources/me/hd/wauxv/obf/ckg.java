@@ -212,7 +212,7 @@ public abstract class ckg extends FrameLayout {
     @Override // android.view.ViewGroup, android.view.View
     public final void onAttachedToWindow() {
         super.onAttachedToWindow();
-        cnd.bj(this);
+        KotlinHelpers2.bj(this);
     }
 
     @Override // android.view.View
@@ -276,7 +276,7 @@ public abstract class ckg extends FrameLayout {
     @Override // android.view.View
     public void setElevation(float f) {
         super.setElevation(f);
-        cnd.bh(this, f);
+        KotlinHelpers2.bh(this, f);
     }
 
     public void setItemActiveIndicatorColor(ColorStateList colorStateList) {

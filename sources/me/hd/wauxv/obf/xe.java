@@ -169,7 +169,7 @@ public final class xe {
         if (cjiVar2 != null && z && !cjiVar2.equals(cjgVar)) {
             cjfVarQ = cjiVar2.q(jxVar, cjiVar);
         }
-        return (cjf) aaz.n(la.o(new cjf[] { cjfVar, cjfVar2, cjfVarQ }));
+        return (cjf) aaz.n(SomeStaticHelpers.o(new cjf[] { cjfVar, cjfVar2, cjfVarQ }));
     }
 
     public xe(cji cjiVar) {

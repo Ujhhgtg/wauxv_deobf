@@ -1,9 +1,5 @@
 package com.alibaba.fastjson2;
 
-import com.alibaba.fastjson2.JSONB;
-import com.alibaba.fastjson2.JSONFactory;
-import com.alibaba.fastjson2.JSONReader;
-import com.alibaba.fastjson2.JSONWriter;
 import com.alibaba.fastjson2.reader.ObjectReader;
 import com.alibaba.fastjson2.reader.ObjectReaderImplInt32Array;
 import com.alibaba.fastjson2.reader.ObjectReaderImplInt32ValueArray;
@@ -41,7 +37,7 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.function.BiFunction;
 import java.util.function.Supplier;
-import me.hd.wauxv.obf.bjs;
+
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.yg;
 import okhttp3.internal.ws.WebSocketProtocol;
@@ -1097,7 +1093,7 @@ final class JSONReaderJSONB extends JSONReader {
                     if (this.bytes[this.offset + stringLength] == 90) {
                         return readZonedDateTime().toInstant().atZone(this.context.getZoneId()).toLocalDate();
                     }
-                    StringBuilder sbR = yg.r(stringLength, "TODO : ", ", ");
+                    StringBuilder sbR = yg.concatVar213(stringLength, "TODO : ", ", ");
                     sbR.append(readString());
                     throw new JSONException(sbR.toString());
             }
@@ -1196,7 +1192,7 @@ final class JSONReaderJSONB extends JSONReader {
                 }
                 break;
         }
-        StringBuilder sbR = yg.r(stringLength, "TODO : ", ", ");
+        StringBuilder sbR = yg.concatVar213(stringLength, "TODO : ", ", ");
         sbR.append(readString());
         throw new JSONException(sbR.toString());
     }

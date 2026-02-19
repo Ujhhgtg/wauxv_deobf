@@ -33,7 +33,7 @@ import me.hd.wauxv.obf.car;
 import me.hd.wauxv.obf.cfe;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cnb;
-import me.hd.wauxv.obf.cnd;
+import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.cxc;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.ddb;
@@ -760,7 +760,7 @@ public class Chip extends hf implements yn, dgx, Checkable {
     @Override // android.widget.TextView, android.view.View
     public final void onAttachedToWindow() {
         super.onAttachedToWindow();
-        cnd.bi(this, this.d);
+        KotlinHelpers2.bi(this, this.d);
     }
 
     @Override // android.widget.CompoundButton, android.widget.TextView, android.view.View

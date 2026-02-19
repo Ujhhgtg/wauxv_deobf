@@ -54,7 +54,7 @@ public class cjk extends ckl {
                 throw new IllegalArgumentException(
                         concat("navigation destination ", str, " is not a direct child of this NavGraph"));
             }
-            this.a.d(cjgVar2.f).i(dqc.bf(w().j(cjgVar2, cjgVar2.k(bundleL))), cjoVar);
+            this.a.d(cjgVar2.f).i(dqc.toSingletonList(w().j(cjgVar2, cjgVar2.k(bundleL))), cjoVar);
         }
     }
 }

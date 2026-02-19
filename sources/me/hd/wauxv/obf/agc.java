@@ -11,12 +11,12 @@ public final class agc extends bws implements IDexFind {
 
     public final Object b(ContentValues contentValues) {
         Object objC = ReflectionWrapper.createInstanceWithArgs(emn.bb(agb.a).getDeclaringClass(), new Object[0]);
-        int i = bte.a;
+        int i = 0;
         cde cdeVarT = dqc.bi(objC).t();
-        cdeVarT.ab = "convertFrom" /* cnb.z(-79005923408682L) */;
+        cdeVarT.ab = "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-79005923408682L)  */;
         cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(ContentValues.class), dal.b(Boolean.TYPE) }, 2));
         cdeVarT.ah();
-        ((cdk) aaz.e(cdeVarT.aj())).e(contentValues, Boolean.TRUE);
+        ((MethodHookWrapper) aaz.e(cdeVarT.aj())).e(contentValues, Boolean.TRUE);
         return objC;
     }
 

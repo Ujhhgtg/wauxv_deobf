@@ -41,13 +41,13 @@ public final class dgm {
             ahe aheVarO4 = o(typedArrayObtainStyledAttributes, 7, aheVarO);
             ahe aheVarO5 = o(typedArrayObtainStyledAttributes, 6, aheVarO);
             dgl dglVar = new dgl();
-            dglVar.a = cnd.ao(i4);
+            dglVar.a = KotlinHelpers2.ao(i4);
             dglVar.e = aheVarO2;
-            dglVar.b = cnd.ao(i5);
+            dglVar.b = KotlinHelpers2.ao(i5);
             dglVar.f = aheVarO3;
-            dglVar.c = cnd.ao(i6);
+            dglVar.c = KotlinHelpers2.ao(i6);
             dglVar.g = aheVarO4;
-            dglVar.d = cnd.ao(i7);
+            dglVar.d = KotlinHelpers2.ao(i7);
             dglVar.h = aheVarO5;
             return dglVar;
         } finally {

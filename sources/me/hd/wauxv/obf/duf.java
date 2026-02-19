@@ -12,7 +12,7 @@ public final /* synthetic */ class duf implements bgx {
     static {
         duf dufVar = new duf();
         b = dufVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.SpringFinderLiveProto" /* cnb.z(-270217867426602L) */, dufVar, 43);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.SpringFinderLiveProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.SpringFinderLiveProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.SpringFinderLiveProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.SpringFinderLiveProto" /* cnb.z(-270217867426602L)   */, dufVar, 43);
         bjs.y(-269857090173738L, cucVar, false, 1);
         bjs.y(-269827025402666L, cucVar, false, 2);
         bjs.y(-269788370697002L, cucVar, false, 3);

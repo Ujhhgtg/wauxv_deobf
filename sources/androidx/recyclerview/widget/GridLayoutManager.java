@@ -22,7 +22,6 @@ import me.hd.wauxv.obf.bc;
 import me.hd.wauxv.obf.bd;
 import me.hd.wauxv.obf.biq;
 import me.hd.wauxv.obf.bir;
-import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.bpq;
 import me.hd.wauxv.obf.bvh;
 import me.hd.wauxv.obf.bvi;
@@ -934,7 +933,7 @@ public class GridLayoutManager extends LinearLayoutManager {
             int i7 = bvjVar.d;
             int i_d = _d(i7, czoVar, cztVar);
             if (i_d > this.c) {
-                throw new IllegalArgumentException(yg.m(yg.q(i7, i_d, "Item at position ", " requires ", " spans but GridLayoutManager has only "), " spans.", this.c));
+                throw new IllegalArgumentException(yg.concatToVar1(yg.concatVar31425(i7, i_d, "Item at position ", " requires ", " spans but GridLayoutManager has only "), " spans.", this.c));
             }
             i_c -= i_d;
             if (i_c < 0 || (viewN = bvjVar.n(czoVar)) == null) {

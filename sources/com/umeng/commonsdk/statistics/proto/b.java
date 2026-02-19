@@ -262,7 +262,7 @@ public class b implements ch<b, e>, Serializable, Cloneable {
         sb.append(this.b);
         sb.append(", ");
         sb.append("version:");
-        return yg.m(sb, ")", this.c);
+        return yg.concatToVar1(sb, ")", this.c);
     }
 
     @Override // com.umeng.analytics.pro.ch

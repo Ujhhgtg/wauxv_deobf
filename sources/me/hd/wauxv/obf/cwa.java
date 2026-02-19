@@ -43,6 +43,6 @@ public final class cwa {
     }
 
     public final String toString() {
-        return yg.o(new StringBuilder("Prop{name='"), this.a, "'}");
+        return yg.concatToVar1(new StringBuilder("Prop{name='"), this.a, "'}");
     }
 }

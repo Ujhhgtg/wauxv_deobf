@@ -277,7 +277,7 @@ public class nu implements oz, esn, cdw, avu, aoh, bfh, app, cvg, ccv, dcc {
         sj sjVar = sj.a;
         int length = bArr.length;
         aye.n(bArr.length, 0, length);
-        return new sj(la._ap(0, length, bArr));
+        return new sj(SomeStaticHelpers._ap(0, length, bArr));
     }
 
     @Override // me.hd.wauxv.obf.oz

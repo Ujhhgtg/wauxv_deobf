@@ -52,7 +52,7 @@ public abstract class dnj extends dnr {
 
     public static final int ag(CharSequence charSequence, CharSequence charSequence2, int i, int i2, boolean z,
             boolean z2) {
-        bqf bqfVar;
+        KotlinIntProgression intRangeVar;
         if (z2) {
             int iAe = ae(charSequence);
             if (i > iAe) {
@@ -61,7 +61,7 @@ public abstract class dnj extends dnr {
             if (i2 < 0) {
                 i2 = 0;
             }
-            bqfVar = new bqf(i, i2, -1);
+            intRangeVar = new KotlinIntProgression(i, i2, -1);
         } else {
             if (i < 0) {
                 i = 0;
@@ -70,12 +70,12 @@ public abstract class dnj extends dnr {
             if (i2 > length) {
                 i2 = length;
             }
-            bqfVar = new bqi(i, i2, 1);
+            intRangeVar = new IntRange(i, i2, 1);
         }
         boolean z3 = charSequence instanceof String;
-        int i3 = bqfVar.c;
-        int i4 = bqfVar.b;
-        int i5 = bqfVar.a;
+        int i3 = intRangeVar.step;
+        int i4 = intRangeVar.last;
+        int i5 = intRangeVar.first;
         if (!z3 || !(charSequence2 instanceof String)) {
             boolean z4 = z;
             if ((i3 > 0 && i5 <= i4) || (i3 < 0 && i4 <= i5)) {
@@ -133,7 +133,7 @@ public abstract class dnj extends dnr {
     public static final int aj(CharSequence charSequence, char[] cArr, int i, boolean z) {
         throwIfVar1IsNull(charSequence, "<this>");
         if (!z && cArr.length == 1 && (charSequence instanceof String)) {
-            return ((String) charSequence).indexOf(la.w(cArr), i);
+            return ((String) charSequence).indexOf(SomeStaticHelpers.w(cArr), i);
         }
         if (i < 0) {
             i = 0;
@@ -217,7 +217,7 @@ public abstract class dnj extends dnr {
     public static final List aq(CharSequence charSequence, String str) {
         int iAf = af(charSequence, str, 0, false);
         if (iAf == -1) {
-            return dqc.bf(charSequence.toString());
+            return dqc.toSingletonList(charSequence.toString());
         }
         ArrayList arrayList = new ArrayList(10);
         int length = 0;
@@ -243,9 +243,9 @@ public abstract class dnj extends dnr {
             if (!altVar.hasNext()) {
                 return arrayList;
             }
-            bqi bqiVar = (bqi) altVar.next();
-            throwIfVar1IsNull(bqiVar, "range");
-            arrayList.add(charSequence.subSequence(bqiVar.a, bqiVar.b + 1).toString());
+            IntRange intRangeVar = (IntRange) altVar.next();
+            throwIfVar1IsNull(intRangeVar, "range");
+            arrayList.add(charSequence.subSequence(intRangeVar.first, intRangeVar.last + 1).toString());
         }
     }
 
@@ -257,7 +257,7 @@ public abstract class dnj extends dnr {
                 return aq(str, str2);
             }
         }
-        boz bozVar = new boz(new alu(str, new cxa(la.a(strArr), 2)), 1);
+        boz bozVar = new boz(new alu(str, new cxa(SomeStaticHelpers.toList(strArr), 2)), 1);
         ArrayList arrayList = new ArrayList(abb.ak(bozVar, 10));
         Iterator it = bozVar.iterator();
         while (true) {
@@ -265,9 +265,9 @@ public abstract class dnj extends dnr {
             if (!altVar.hasNext()) {
                 return arrayList;
             }
-            bqi bqiVar = (bqi) altVar.next();
-            throwIfVar1IsNull(bqiVar, "range");
-            arrayList.add(str.subSequence(bqiVar.a, bqiVar.b + 1).toString());
+            IntRange intRangeVar = (IntRange) altVar.next();
+            throwIfVar1IsNull(intRangeVar, "range");
+            arrayList.add(str.subSequence(intRangeVar.first, intRangeVar.last + 1).toString());
         }
     }
 

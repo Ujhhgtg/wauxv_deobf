@@ -177,14 +177,14 @@ public final class chw {
         this.e = 0;
         long[] jArr = this.a;
         if (jArr != dev.a) {
-            la.n(jArr);
+            SomeStaticHelpers.n(jArr);
             long[] jArr2 = this.a;
             int i = this.d;
             int i2 = i >> 3;
             long j = 255 << ((i & 7) << 3);
             jArr2[i2] = (jArr2[i2] & (~j)) | j;
         }
-        la.l(this.c, 0, this.d);
+        SomeStaticHelpers.l(this.c, 0, this.d);
         dev.b(this.d);
     }
 

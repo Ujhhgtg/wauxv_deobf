@@ -9,7 +9,7 @@ public final /* synthetic */ class dur implements bgx {
     static {
         dur durVar = new dur();
         b = durVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.WeappInfoProto" /* cnb.z(-304616260500266L) */, durVar, 9);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.WeappInfoProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.WeappInfoProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.WeappInfoProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.WeappInfoProto" /* cnb.z(-304616260500266L)   */, durVar, 9);
         bjs.y(-328474803829546L, cucVar, false, 1);
         bjs.y(-328388904483626L, cucVar, false, 2);
         bjs.y(-328367429647146L, cucVar, false, 3);

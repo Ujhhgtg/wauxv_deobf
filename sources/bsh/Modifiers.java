@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
-import me.hd.wauxv.obf.bjs;
+
 import me.hd.wauxv.obf.yg;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -140,7 +140,7 @@ public class Modifiers implements Serializable, Cloneable {
             StringBuilder sb = new StringBuilder();
             sb.append(this.type);
             sb.append(" cannot be declared '");
-            throw new IllegalStateException(yg.o(sb, toModifier(i), "'"));
+            throw new IllegalStateException(yg.concatToVar1(sb, toModifier(i), "'"));
         }
         if (i < 7) {
             int i2 = this.modifiers;

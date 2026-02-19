@@ -16,8 +16,8 @@ public abstract class exl {
         Boolean bool;
         boolean z2 = exm.a;
         if (!exm.l()) {
-            cdk cdkVarAy = dqc.ay("__--");
-            z = ((cdkVarAy == null || (bool = (Boolean) cdkVarAy.j(new Object[0])) == null) ? false : bool.booleanValue()) || cnd.az();
+            MethodHookWrapper methodHookWrapperVarAy = dqc.ay("__--");
+            z = ((methodHookWrapperVarAy == null || (bool = (Boolean) methodHookWrapperVarAy.j(new Object[0])) == null) ? false : bool.booleanValue()) || KotlinHelpers2.az();
         }
         a = z;
         try {
@@ -31,6 +31,6 @@ public abstract class exl {
         Long l = (Long) objX;
         long jLongValue = l != null ? l.longValue() : 0L;
         b = jLongValue;
-        c = cnh.ag(jLongValue, null, ZoneId.of("Asia/Shanghai" /* cnb.z(-48137993452330L) */), 1);
+        c = cnh.ag(jLongValue, null, ZoneId.of("Asia/Shanghai" /* "Asia/Shanghai" /* "Asia/Shanghai" /* "Asia/Shanghai" /* cnb.z(-48137993452330L)   */), 1);
     }
 }

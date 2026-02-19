@@ -20,7 +20,7 @@ public abstract class ne extends ArrayList {
         return e;
     }
 
-    public final Object b(IHasInvokeMethod bgfVar) {
+    public final Object b(IInvokable bgfVar) {
         throwIfVar1IsNull(bgfVar, "predicate");
         if (super.size() == 0) {
             throw new QueryDidNotReturnUniqueResultRuntimeException("No result found for query");

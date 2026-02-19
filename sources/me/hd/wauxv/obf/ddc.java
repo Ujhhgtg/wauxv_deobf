@@ -3,13 +3,13 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes2.dex */
 public final class ddc extends SwitchHook implements IHandlesHookParam {
-    public static final ddc a = new ddc("RoamNewContactSelectUI" /* cnb.z(-605757892459306L) */);
-    public static final String b = "测试-配置修复-v55-roamBackup" /* cnb.z(-604877424163626L) */;
-    public static final String c = "使用新的联系人选择UI" /* cnb.z(-604830179523370L) */;
+    public static final ddc a = new ddc("RoamNewContactSelectUI" /* "RoamNewContactSelectUI" /* "RoamNewContactSelectUI" /* cnb.z(-605757892459306L)  */);
+    public static final String b = "测试-配置修复-v55-roamBackup" /* "测试-配置修复-v55-roamBackup" /* "测试-配置修复-v55-roamBackup" /* cnb.z(-604877424163626L)  */;
+    public static final String c = "使用新的联系人选择UI" /* "使用新的联系人选择UI" /* "使用新的联系人选择UI" /* cnb.z(-604830179523370L)  */;
 
     @Override // me.hd.wauxv.obf.IHandlesHookParam
     public final void handleHookParam(HookParam hookParam, String str) {
-        if (getIsEnabled() && str.equals("RepairerConfig_RoamNewContactSelectUI_Int" /* cnb.z(-605659108211498L) */)) {
+        if (getIsEnabled() && str.equals("RepairerConfig_RoamNewContactSelectUI_Int" /* "RepairerConfig_RoamNewContactSelectUI_Int" /* "RepairerConfig_RoamNewContactSelectUI_Int" /* cnb.z(-605659108211498L)  */)) {
             hookParam.setResult(1);
         }
     }

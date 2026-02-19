@@ -39,7 +39,7 @@ public final class eft {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("u51Proto(current_extra_times_multi_100=" /* cnb.z(-290223825091370L) */);
+        sb.append("u51Proto(current_extra_times_multi_100=" /* "u51Proto(current_extra_times_multi_100=" /* "u51Proto(current_extra_times_multi_100=" /* cnb.z(-290223825091370L)  */);
         bjs.w(sb, this.b, -290052026399530L);
         sb.append(this.c);
         sb.append(')');

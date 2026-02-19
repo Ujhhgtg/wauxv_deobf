@@ -194,7 +194,7 @@ public abstract class bhu {
         String str = aydVar.d;
         StringBuilder sb = new StringBuilder();
         String str2 = aydVar.e;
-        File file = new File(str, yg.o(sb, str2, ".kva"));
+        File file = new File(str, yg.concatToVar1(sb, str2, ".kva"));
         File file2 = new File(str, dkz.s(str2, ".kvb"));
         try {
             if (cmz.ae(file) && cmz.ae(file2)) {
@@ -249,7 +249,7 @@ public abstract class bhu {
         String str = aydVar.d;
         StringBuilder sb = new StringBuilder();
         String str2 = aydVar.e;
-        File file = new File(str, yg.o(sb, str2, ".kvc"));
+        File file = new File(str, yg.concatToVar1(sb, str2, ".kvc"));
         File file2 = new File(str, dkz.s(str2, ".tmp"));
         boolean z = false;
         try {
@@ -311,7 +311,7 @@ public abstract class bhu {
                 long jO = ikVar.o(ikVar.b);
                 ikVar.b += 8;
                 aydVar.h = i3 + 12;
-                if (i3 >= 0 && i3 <= i2 - 12 && jO == ikVar.l(12, i3) && cnd.be(aydVar, z)) {
+                if (i3 >= 0 && i3 <= i2 - 12 && jO == ikVar.l(12, i3) && KotlinHelpers2.be(aydVar, z)) {
                     aydVar.i = jO;
                     return true;
                 }
@@ -320,7 +320,7 @@ public abstract class bhu {
         return false;
     }
 
-    public static final ArrayList ak(Map map, IHasInvokeMethod bgfVar) {
+    public static final ArrayList ak(Map map, IInvokable bgfVar) {
         throwIfVar1IsNull(map, "<this>");
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         for (Map.Entry entry : map.entrySet()) {
@@ -371,7 +371,7 @@ public abstract class bhu {
         return new jx(context, context.obtainStyledAttributes(attributeSet, iArr, i2, i3));
     }
 
-    public static final bpy ap(String str, String str2, int i2, IHasInvokeMethod bgfVar) {
+    public static final bpy ap(String str, String str2, int i2, IInvokable bgfVar) {
         char cCharAt = str.charAt(i2);
         if (((Boolean) bgfVar.invoke(Character.valueOf(cCharAt))).booleanValue()) {
             return null;
@@ -460,7 +460,7 @@ public abstract class bhu {
             aydVar.x.rewind();
             j4 = 12;
             aydVar.x.get((byte[]) aydVar.l.d, 0, aydVar.h);
-            if (j5 == aydVar.l.l(12, i3) && cnd.be(aydVar, z)) {
+            if (j5 == aydVar.l.l(12, i3) && KotlinHelpers2.be(aydVar, z)) {
                 aydVar.i = j5;
                 if (j2 == j3) {
                     byte[] bArr = new byte[aydVar.h];
@@ -490,7 +490,7 @@ public abstract class bhu {
             }
             aydVar.y.rewind();
             aydVar.y.get((byte[]) aydVar.l.d, 0, aydVar.h);
-            if (j6 == aydVar.l.l(12, i5) && cnd.be(aydVar, z2)) {
+            if (j6 == aydVar.l.l(12, i5) && KotlinHelpers2.be(aydVar, z2)) {
                 Log.w("FastKV", str, new Exception("A file error"));
                 v(aydVar, aydVar.y, aydVar.x, aydVar.h);
                 aydVar.i = j6;
@@ -709,7 +709,7 @@ public abstract class bhu {
     }
 
     public static final String bf(dfx dfxVar) {
-        return aaz.k(dqc.bm(0, dfxVar.i()), ", ", dfxVar.b() + '(', ")", new q(dfxVar, 8), 24);
+        return aaz.k(dqc.bm(0, dfxVar.i()), ", ", dfxVar.b() + '(', ")", new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(dfxVar, 8), 24);
     }
 
     public static final String bg(int i2, String str) {

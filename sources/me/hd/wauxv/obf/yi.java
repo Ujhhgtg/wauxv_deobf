@@ -671,7 +671,7 @@ public class yi {
         StringBuilder sbR = concat(str, " at path: ");
         sbR.append(((ik) this.c).p());
         sbR.append(strConcat);
-        throw cnd.ak(i, sbR.toString(), (String) this.f);
+        throw KotlinHelpers2.ak(i, sbR.toString(), (String) this.f);
     }
 
     public int w(int i, CharSequence charSequence) {

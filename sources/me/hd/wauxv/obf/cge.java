@@ -11,12 +11,12 @@ public final class cge extends bws implements IDexFind {
 
     public static Object b(Cursor cursor) {
         Object objC = ReflectionWrapper.createInstanceWithArgs(emn.az(cgd.a), new Object[0]);
-        int i = bte.a;
+        int i = 0;
         cde cdeVarT = dqc.bi(objC).t();
-        cdeVarT.ab = "convertFrom" /* cnb.z(-75604309310250L) */;
+        cdeVarT.ab = "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-75604309310250L)  */;
         cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(Cursor.class) }, 1));
         cdeVarT.ah();
-        ((cdk) aaz.e(cdeVarT.aj())).e(cursor);
+        ((MethodHookWrapper) aaz.e(cdeVarT.aj())).e(cursor);
         return objC;
     }
 
@@ -26,6 +26,6 @@ public final class cge extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(cgd.a, dexKitBridge, new bzk(20));
+        emn.aj(cgd.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(20));
     }
 }

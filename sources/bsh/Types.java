@@ -303,7 +303,7 @@ public class Types {
         if (!cls.isArray()) {
             return cls.getName();
         }
-        return yg.o(new StringBuilder(), prettyName(cls.getComponentType()), HttpUrl.PATH_SEGMENT_ENCODE_SET_URI);
+        return yg.concatToVar1(new StringBuilder(), prettyName(cls.getComponentType()), HttpUrl.PATH_SEGMENT_ENCODE_SET_URI);
     }
 
     public static Class<?> getType(boolean z) {

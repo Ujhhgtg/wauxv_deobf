@@ -37,7 +37,7 @@ public final class agp extends bws implements IDexFind {
 
     public static void c(agp agpVar, Object obj, String str) {
         agpVar.getClass();
-        int i = bte.a;
+        int i = 0;
         dmu.a.getClass();
         cde cdeVarT = dqc.bi(dmu.b()).t();
         cdeVarT.a = dal.b(Integer.TYPE);
@@ -45,7 +45,7 @@ public final class agp extends bws implements IDexFind {
         Class<?> declaringClass = emn.bb(agb.a).getDeclaringClass();
         zc zcVarB = dal.b(String.class);
         Class cls = Boolean.TYPE;
-        Object objJ = ((cdk) dkz.n(new Object[] { declaringClass, zcVarB, dal.b(cls), dal.b(cls) }, 4, cdeVarT)).j(obj,
+        Object objJ = ((MethodHookWrapper) dkz.n(new Object[] { declaringClass, zcVarB, dal.b(cls), dal.b(cls) }, 4, cdeVarT)).j(obj,
                 str, false, true);
         throwIfVar1IsNull(objJ);
         ((Number) objJ).intValue();

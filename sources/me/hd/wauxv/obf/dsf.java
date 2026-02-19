@@ -60,12 +60,12 @@ public final class dsf {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("AppInfoProto(id=" /* cnb.z(-149147034319658L) */);
-        yg.u(sb, this.a, -149074019875626L);
-        yg.u(sb, this.b, -148992415497002L);
-        yg.u(sb, this.c, -149512106539818L);
-        yg.u(sb, this.d, -149434797128490L);
-        yg.u(sb, this.e, -149421912226602L);
+        sb.append("AppInfoProto(id=" /* "AppInfoProto(id=" /* "AppInfoProto(id=" /* "AppInfoProto(id=" /* cnb.z(-149147034319658L)   */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -149074019875626L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -148992415497002L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.c, -149512106539818L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.d, -149434797128490L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.e, -149421912226602L);
         bjs.w(sb, this.f, -149331717913386L);
         return concat(sb, this.g, ')');
     }

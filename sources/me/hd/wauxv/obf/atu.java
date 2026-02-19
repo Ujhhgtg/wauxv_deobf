@@ -14,11 +14,11 @@ public final class atu {
     public final String g;
 
     static {
-        atu atuVar = new atu("SCISSORS" /* cnb.z(-506209140472618L) */, 0, 0, "剪刀" /* cnb.z(-506187665636138L) */);
+        atu atuVar = new atu("SCISSORS" /* "SCISSORS" /* "SCISSORS" /* cnb.z(-506209140472618L)  */, 0, 0, "剪刀" /* "剪刀" /* "剪刀" /* cnb.z(-506187665636138L)  */);
         a = atuVar;
-        atu atuVar2 = new atu("STONE" /* cnb.z(-506123241126698L) */, 1, 1, "石头" /* cnb.z(-506149010930474L) */);
+        atu atuVar2 = new atu("STONE" /* "STONE" /* "STONE" /* cnb.z(-506123241126698L)  */, 1, 1, "石头" /* "石头" /* "石头" /* cnb.z(-506149010930474L)  */);
         b = atuVar2;
-        atu atuVar3 = new atu("PAPER" /* cnb.z(-506101766290218L) */, 2, 2, "布" /* cnb.z(-506058816617258L) */);
+        atu atuVar3 = new atu("PAPER" /* "PAPER" /* "PAPER" /* cnb.z(-506101766290218L)  */, 2, 2, "布" /* "布" /* "布" /* cnb.z(-506058816617258L)  */);
         c = atuVar3;
         atu[] atuVarArr = {atuVar, atuVar2, atuVar3};
         d = atuVarArr;

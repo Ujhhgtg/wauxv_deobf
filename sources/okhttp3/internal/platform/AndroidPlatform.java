@@ -16,8 +16,7 @@ import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.la;
+import me.hd.wauxv.obf.SomeStaticHelpers;
 import okhttp3.Protocol;
 import okhttp3.internal.platform.android.AndroidCertificateChainCleaner;
 import okhttp3.internal.platform.android.AndroidSocketAdapter;
@@ -148,7 +147,7 @@ public final class AndroidPlatform extends Platform {
     }
 
     public AndroidPlatform() {
-        ArrayList arrayListO = la.o(new SocketAdapter[] {
+        ArrayList arrayListO = SomeStaticHelpers.o(new SocketAdapter[] {
                 StandardAndroidSocketAdapter.Companion.buildIfSupported$default(StandardAndroidSocketAdapter.Companion,
                         null, 1, null),
                 new DeferredSocketAdapter(AndroidSocketAdapter.Companion.getPlayProviderFactory()),

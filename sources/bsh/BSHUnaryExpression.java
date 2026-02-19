@@ -31,7 +31,7 @@ class BSHUnaryExpression extends SimpleNode implements ParserConstants {
         if (obj instanceof Primitive) {
             return Operators.unaryOperation((Primitive) obj, i);
         }
-        throw new UtilEvalError(yg.o(new StringBuilder("Unary operation "), ParserConstants.tokenImage[i], " inappropriate for object"));
+        throw new UtilEvalError(yg.concatToVar1(new StringBuilder("Unary operation "), ParserConstants.tokenImage[i], " inappropriate for object"));
     }
 
     @Override // bsh.SimpleNode, bsh.Node

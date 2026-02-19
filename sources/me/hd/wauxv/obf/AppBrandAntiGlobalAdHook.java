@@ -10,14 +10,14 @@ public final class AppBrandAntiGlobalAdHook extends SwitchHook implements IDexFi
                                                                                                               * cnb.z(-
                                                                                                               * 412578853419818L)
                                                                                                               */);
-    public static final String b = "小程序" /* cnb.z(-409920268663594L) */;
-    public static final String c = "禁止全局广告" /* cnb.z(-409937448532778L) */;
-    public static final String d = "可能导致部分需要广告的功能无法运行" /* cnb.z(-409890203892522L) */;
+    public static final String b = "小程序" /* "小程序" /* "小程序" /* cnb.z(-409920268663594L)  */;
+    public static final String c = "禁止全局广告" /* "禁止全局广告" /* "禁止全局广告" /* cnb.z(-409937448532778L)  */;
+    public static final String d = "可能导致部分需要广告的功能无法运行" /* "可能导致部分需要广告的功能无法运行" /* "可能导致部分需要广告的功能无法运行" /* cnb.z(-409890203892522L)  */;
     public static final boolean i = true;
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.bf(emn.ba(gt.a));
+        List listBf = dqc.toSingletonList(emn.ba(gt.a));
         AppBrandAntiGlobalAdHook guVar = a;
         aki akiVarAb = csb.ab(guVar, listBf);
         guVar.y(akiVarAb, new gi(11));

@@ -37,7 +37,7 @@ public final class eme {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        Class clsBd = cnf.bd(this.a);
+        Class clsBd = cnf.getJavaClass(this.a);
         String name = clsBd.isArray()
                 ? clsBd.equals(boolean[].class) ? "kotlin.BooleanArray"
                         : clsBd.equals(char[].class) ? "kotlin.CharArray"

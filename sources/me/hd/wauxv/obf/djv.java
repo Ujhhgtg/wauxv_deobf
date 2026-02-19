@@ -8,10 +8,10 @@ import org.luckypray.dexkit.DexKitBridge;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class djv extends SwitchHook implements IDexFind, IDatabaseOperationsListener {
-    public static final djv a = new djv("SnsLabelFilterHook" /* cnb.z(-558045100768042L) */);
-    public static final String b = "朋友圈" /* cnb.z(-556112365484842L) */;
-    public static final String c = "朋友圈标签过滤" /* cnb.z(-555511070063402L) */;
-    public static final String i = "可通过顶栏菜单过滤指定标签的朋友圈" /* cnb.z(-555476710325034L) */;
+    public static final djv a = new djv("SnsLabelFilterHook" /* "SnsLabelFilterHook" /* "SnsLabelFilterHook" /* cnb.z(-558045100768042L)  */);
+    public static final String b = "朋友圈" /* "朋友圈" /* "朋友圈" /* cnb.z(-556112365484842L)  */;
+    public static final String c = "朋友圈标签过滤" /* "朋友圈标签过滤" /* "朋友圈标签过滤" /* cnb.z(-555511070063402L)  */;
+    public static final String i = "可通过顶栏菜单过滤指定标签的朋友圈" /* "可通过顶栏菜单过滤指定标签的朋友圈" /* "可通过顶栏菜单过滤指定标签的朋友圈" /* cnb.z(-555476710325034L)  */;
 
     public static String m(String str) {
         if (str.equals(
@@ -27,14 +27,14 @@ public final class djv extends SwitchHook implements IDexFind, IDatabaseOperatio
             if (setN.isEmpty()) {
                 setN = null;
             }
-            if (setN != null && !setN.contains("default" /* cnb.z(-555068688431914L) */)) {
+            if (setN != null && !setN.contains("default" /* "default" /* "default" /* cnb.z(-555068688431914L)  */)) {
                 ArrayList arrayList = new ArrayList();
                 for (String str2 : setN) {
                     aeg.a.getClass();
                     abf.an(arrayList, aeg.b(str2));
                 }
-                String strK = aaz.k(new LinkedHashSet(arrayList), null, "(" /* cnb.z(-555034328693546L) */,
-                        ")" /* cnb.z(-555042918628138L) */, new djk(4), 25);
+                String strK = aaz.k(new LinkedHashSet(arrayList), null, "(" /* "(" /* "(" /* cnb.z(-555034328693546L)  */,
+                        ")" /* ")" /* ")" /* cnb.z(-555042918628138L)  */, new djk(4), 25);
                 StringBuilder sb = new StringBuilder();
                 sb.append(
                         "SELECT rowid, * FROM SnsInfo WHERE ((SnsInfo.sourceType & 2) <> 0) AND (SnsInfo.userName IN " /*
@@ -54,13 +54,13 @@ public final class djv extends SwitchHook implements IDexFind, IDatabaseOperatio
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        int i2 = bte.a;
+        int i2 = 0;
         cde cdeVarT = yg.s(-557521114757930L).t();
-        cdeVarT.ab = "onCreate" /* cnb.z(-557770222861098L) */;
-        cdk cdkVar = (cdk) aaz.e(cdeVarT.aj());
+        cdeVarT.ab = "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-557770222861098L)  */;
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
         exg exgVar = exg.a;
         djv djvVar = a;
-        aki akiVarAd = djvVar.ad(cdkVar, exgVar);
+        aki akiVarAd = djvVar.ad(methodHookWrapperVar, exgVar);
         djvVar.x(akiVarAd, new djk(3));
         akiVarAd.o();
     }

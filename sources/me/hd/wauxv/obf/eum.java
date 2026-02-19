@@ -98,7 +98,7 @@ public final class eum {
         int i = this.d;
         sb.append(i == 0 ? "Horizontal" : i == 1 ? "Vertical" : i == 2 ? "Both" : "Unknown");
         sb.append(" [");
-        String strM = yg.m(sb, "] <", this.c);
+        String strM = yg.concatToVar1(sb, "] <", this.c);
         for (adq adqVar : this.b) {
             StringBuilder sbR = concat(strM, " ");
             sbR.append(adqVar.br);

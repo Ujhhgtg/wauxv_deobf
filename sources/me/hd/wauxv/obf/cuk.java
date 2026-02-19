@@ -18,13 +18,13 @@ public abstract class cuk {
 
     public static List d() {
         dov dovVar = ctf.a;
-        File[] fileArrListFiles = new File(ctf.c("Plugin" /* cnb.z(-47055661693738L) */)).listFiles(new cui());
+        File[] fileArrListFiles = new File(ctf.c("Plugin" /* "Plugin" /* "Plugin" /* cnb.z(-47055661693738L)  */)).listFiles(new cui());
         if (fileArrListFiles == null) {
-            return avd.a;
+            return EmptyReadonlyList.a;
         }
         ArrayList arrayList = new ArrayList();
         for (File file : fileArrListFiles) {
-            File file2 = new File(file, "main.java" /* cnb.z(-390270793284394L) */);
+            File file2 = new File(file, "main.java" /* "main.java" /* "main.java" /* cnb.z(-390270793284394L)  */);
             ctx ctxVar = (file2.exists() && file2.isFile()) ? new ctx(file) : null;
             if (ctxVar != null) {
                 arrayList.add(ctxVar);
@@ -38,7 +38,7 @@ public abstract class cuk {
         ctxVar.getClass();
         try {
             ctxVar.o();
-            ctxVar.n("onLoad" /* cnb.z(-402056183544618L) */, new Object[0]);
+            ctxVar.n("onLoad" /* "onLoad" /* "onLoad" /* cnb.z(-402056183544618L)  */, new Object[0]);
             objX = Boolean.TRUE;
         } catch (Throwable th) {
             objX = bhu.x(th);
@@ -46,10 +46,10 @@ public abstract class cuk {
         Throwable thB = dcy.b(objX);
         if (thB != null) {
             ArrayList arrayList = ewq.a;
-            ewq.e("Plugin[" /* cnb.z(-400741923552042L) */ + ctxVar.f + "]: load Failed: " /* cnb.z(-400707563813674L) */ + thB.getMessage(), null, 14);
+            ewq.e("Plugin[" /* "Plugin[" /* "Plugin[" /* cnb.z(-400741923552042L)  */ + ctxVar.f + "]: load Failed: " /* "]: load Failed: " /* "]: load Failed: " /* cnb.z(-400707563813674L)  */ + thB.getMessage(), null, 14);
             bmu bmuVar = ctxVar.m;
             StringBuilder sb = new StringBuilder();
-            sb.append("load Failed: " /* cnb.z(-400651729238826L) */);
+            sb.append("load Failed: " /* "load Failed: " /* "load Failed: " /* cnb.z(-400651729238826L)  */);
             sb.append(thB.getMessage());
             bmuVar.p(sb.toString());
             objX = Boolean.FALSE;
@@ -62,7 +62,7 @@ public abstract class cuk {
     }
 
     public static void f(Interpreter interpreter, Object obj) {
-        baa baaVar = new baa(new bae(la.b(obj.getClass().getDeclaredMethods()), true, new crl(23)));
+        baa baaVar = new baa(new bae(SomeStaticHelpers.b(obj.getClass().getDeclaredMethods()), true, new AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(23)));
         while (baaVar.hasNext()) {
             interpreter.getNameSpace().setMethod(new BshMethod((Method) baaVar.next(), obj));
         }
@@ -72,7 +72,7 @@ public abstract class cuk {
         Object objX;
         String str = ctxVar.f;
         try {
-            ctxVar.n("onUnLoad" /* cnb.z(-402026118773546L) */, new Object[0]);
+            ctxVar.n("onUnLoad" /* "onUnLoad" /* "onUnLoad" /* cnb.z(-402026118773546L)  */, new Object[0]);
             ctxVar.o().getNameSpace().clear();
             objX = Boolean.TRUE;
         } catch (Throwable th) {
@@ -81,10 +81,10 @@ public abstract class cuk {
         Throwable thB = dcy.b(objX);
         if (thB != null) {
             ArrayList arrayList = ewq.a;
-            ewq.e("Plugin[" /* cnb.z(-400574419827498L) */ + str + "]: unLoad Failed: " /* cnb.z(-400540060089130L) */ + thB.getMessage(), null, 14);
+            ewq.e("Plugin[" /* "Plugin[" /* "Plugin[" /* cnb.z(-400574419827498L)  */ + str + "]: unLoad Failed: " /* "]: unLoad Failed: " /* "]: unLoad Failed: " /* cnb.z(-400540060089130L)  */ + thB.getMessage(), null, 14);
             bmu bmuVar = ctxVar.m;
             StringBuilder sb = new StringBuilder();
-            sb.append("unLoad Failed: " /* cnb.z(-402124903021354L) */);
+            sb.append("unLoad Failed: " /* "unLoad Failed: " /* "unLoad Failed: " /* cnb.z(-402124903021354L)  */);
             sb.append(thB.getMessage());
             bmuVar.p(sb.toString());
             objX = Boolean.FALSE;

@@ -21,7 +21,7 @@ public final class bgy implements Iterator, IEmpty {
         if (i == -2) {
             objInvoke = ((bfu) aluVar.b).invoke();
         } else {
-            IHasInvokeMethod bgfVar = (IHasInvokeMethod) aluVar.c;
+            IInvokable bgfVar = (IInvokable) aluVar.c;
             Object obj = this.a;
             throwIfVar1IsNull(obj);
             objInvoke = bgfVar.invoke(obj);

@@ -16,10 +16,9 @@ import me.hd.wauxv.obf.bhu;
 import me.hd.wauxv.obf.bkc;
 import me.hd.wauxv.obf.bmu;
 import me.hd.wauxv.obf.btc;
-import me.hd.wauxv.obf.bte;
 import me.hd.wauxv.obf.cbg;
 import me.hd.wauxv.obf.cde;
-import me.hd.wauxv.obf.cdk;
+import me.hd.wauxv.obf.MethodHookWrapper;
 import me.hd.wauxv.obf.dal;
 import me.hd.wauxv.obf.dcx;
 import me.hd.wauxv.obf.dnj;
@@ -55,7 +54,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
         btc[] btcVarArr = bkc.b;
         int i = message.what;
         if (i == 100) {
-            int i2 = bte.a;
+            int i2 = 0;
             bmu bmuVarBi = dqc.bi(message.obj);
             dov dovVar = ep.a;
             ((cbg) bmuVarBi.h).c = bhu.aa();
@@ -89,7 +88,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                 azkVar.f(intent.getParcelableExtra(""));
             }
         } else if (i == 159) {
-            int i3 = bte.a;
+            int i3 = 0;
             jx jxVar = bkc.d;
             btc btcVar = btcVarArr[1];
             bmu bmuVarBh = dqc.bh(jxVar.w());
@@ -98,10 +97,10 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
             bmuVarBh.v(true);
             cde cdeVarT = bmuVarBh.t();
             cdeVarT.ab = "getCallbacks";
-            cdk cdkVar = (cdk) aaz.g(cdeVarT.aj());
-            if (cdkVar != null) {
-                cdkVar.dexFind(message.obj);
-                list = (List) cdkVar.i(new Object[0]);
+            MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+            if (methodHookWrapperVar != null) {
+                methodHookWrapperVar.dexFind(message.obj);
+                list = (List) methodHookWrapperVar.i(new Object[0]);
                 if (list == null || list.isEmpty()) {
                     list = null;
                 }
@@ -116,7 +115,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                     }
                 }
                 for (Object obj2 : arrayList) {
-                    int i4 = bte.a;
+                    int i4 = 0;
                     bmu bmuVarBi2 = dqc.bi(obj2);
                     bmuVarBi2.v(true);
                     azg azgVarR2 = bmuVarBi2.r();
@@ -156,15 +155,15 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                             bmuVarBh2.v(true);
                             cde cdeVarT2 = bmuVarBh2.t();
                             cdeVarT2.ab = "currentActivityThread";
-                            cdk cdkVar2 = (cdk) aaz.g(cdeVarT2.aj());
-                            Object objE = cdkVar2 != null ? cdkVar2.e(new Object[0]) : null;
+                            MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) aaz.g(cdeVarT2.aj());
+                            Object objE = methodHookWrapperVar2 != null ? methodHookWrapperVar2.e(new Object[0]) : null;
                             bmu bmuVarBi3 = dqc.bi(message.obj);
                             ((cbg) bmuVarBi3.h).c = bhu.aa();
                             bmuVarBi3.v(true);
                             cde cdeVarT3 = bmuVarBi3.t();
                             cdeVarT3.ab = "getActivityToken";
-                            cdk cdkVar3 = (cdk) aaz.g(cdeVarT3.aj());
-                            Object objF2 = cdkVar3 != null ? cdkVar3.f(new Object[0]) : null;
+                            MethodHookWrapper methodHookWrapperVar3 = (MethodHookWrapper) aaz.g(cdeVarT3.aj());
+                            Object objF2 = methodHookWrapperVar3 != null ? methodHookWrapperVar3.f(new Object[0]) : null;
                             if (objE != null) {
                                 bmu bmuVarBi4 = dqc.bi(objE);
                                 ((cbg) bmuVarBi4.h).c = bhu.aa();
@@ -172,8 +171,8 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                                 cde cdeVarT4 = bmuVarBi4.t();
                                 cdeVarT4.ab = "getLaunchingActivity";
                                 cdeVarT4.z(Arrays.copyOf(new Object[] { dal.b(IBinder.class) }, 1));
-                                cdk cdkVar4 = (cdk) aaz.g(cdeVarT4.aj());
-                                objF = cdkVar4 != null ? cdkVar4.f(objF2) : null;
+                                MethodHookWrapper methodHookWrapperVar4 = (MethodHookWrapper) aaz.g(cdeVarT4.aj());
+                                objF = methodHookWrapperVar4 != null ? methodHookWrapperVar4.f(objF2) : null;
                             }
                             if (objF != null) {
                                 bmu bmuVarBi5 = dqc.bi(objF);

@@ -6,7 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.fragment.app.FragmentContainerView;
-import com.umeng.analytics.pro.q;
+
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.ArrayDeque;
@@ -411,7 +411,7 @@ public final class beg {
         bdm bdmVar3 = this.w;
         if (bdmVar3 != null) {
             acg acgVar = bdmVar3.h.x;
-            String strK = yg.k("FragmentManager:", bdjVar != null ? yg.o(new StringBuilder(), bdjVar.aw, ":") : "");
+            String strK = yg.k("FragmentManager:", bdjVar != null ? yg.concatToVar1(new StringBuilder(), bdjVar.aw, ":") : "");
             this.ac = acgVar.k(dkz.s(strK, "StartActivityForResult"), new ds(2), new bdw(this, 1));
             this.ad = acgVar.k(dkz.s(strK, "StartIntentSenderForResult"), new ds(3), new bdw(this, 2));
             this.ae = acgVar.k(dkz.s(strK, "RequestPermissions"), new ds(1), new bdw(this, 0));
@@ -2129,7 +2129,7 @@ public final class beg {
                 }
                 muVar.x(1);
                 if (ar(2)) {
-                    StringBuilder sbR = yg.r(i, "restoreAllState: back stack #", " (index ");
+                    StringBuilder sbR = yg.concatVar213(i, "restoreAllState: back stack #", " (index ");
                     sbR.append(muVar.t);
                     sbR.append("): ");
                     sbR.append(muVar);
@@ -2210,7 +2210,7 @@ public final class beg {
                 for (int i = 0; i < size; i++) {
                     mvVarArr[i] = new mv((mu) this.d.get(i));
                     if (ar(2)) {
-                        StringBuilder sbR = yg.r(i, "saveAllState: adding back stack #", ": ");
+                        StringBuilder sbR = yg.concatVar213(i, "saveAllState: adding back stack #", ": ");
                         sbR.append(this.d.get(i));
                         Log.v("FragmentManager", sbR.toString());
                     }

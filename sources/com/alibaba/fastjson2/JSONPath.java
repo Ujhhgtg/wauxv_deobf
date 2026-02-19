@@ -1,10 +1,5 @@
 package com.alibaba.fastjson2;
 
-import com.alibaba.fastjson2.JSONPathFilter;
-import com.alibaba.fastjson2.JSONPathFunction;
-import com.alibaba.fastjson2.JSONPathSegment;
-import com.alibaba.fastjson2.JSONReader;
-import com.alibaba.fastjson2.JSONWriter;
 import com.alibaba.fastjson2.reader.ValueConsumer;
 import com.alibaba.fastjson2.writer.ObjectWriter;
 import com.alibaba.fastjson2.writer.ObjectWriterAdapter;
@@ -25,7 +20,7 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.function.BiFunction;
 import java.util.function.Function;
-import me.hd.wauxv.obf.bjs;
+
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.ky;
 import me.hd.wauxv.obf.yg;
@@ -996,7 +991,7 @@ public abstract class JSONPath {
                             } else if (jSONPathSegment4 instanceof JSONPathSegmentIndex) {
                                 JSONPathSegmentIndex jSONPathSegmentIndex3 = (JSONPathSegmentIndex) jSONPathSegment4;
                                 jSONPathSingleIndex = new JSONPathSingleIndex(
-                                        yg.m(new StringBuilder("$["), "]", jSONPathSegmentIndex3.index),
+                                        yg.concatToVar1(new StringBuilder("$["), "]", jSONPathSegmentIndex3.index),
                                         jSONPathSegmentIndex3, new Feature[0]);
                             } else {
                                 jSONPathSingleIndex = null;

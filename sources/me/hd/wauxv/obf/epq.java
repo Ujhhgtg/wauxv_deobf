@@ -27,7 +27,7 @@ public final class epq extends epp {
         if (i == this.o) {
             i = this.p;
         }
-        return new epq(parcel, iDataPosition, i, yg.o(new StringBuilder(), this.q, "  "), this.a, this.b, this.c);
+        return new epq(parcel, iDataPosition, i, yg.concatToVar1(new StringBuilder(), this.q, "  "), this.a, this.b, this.c);
     }
 
     @Override // me.hd.wauxv.obf.epp

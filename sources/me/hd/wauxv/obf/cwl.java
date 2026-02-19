@@ -201,7 +201,7 @@ public class cwl extends ua implements ajt, acm {
             }
             j_br = bArrK;
             j_br = bArrL;
-            return la.v(bArr, j_br);
+            return SomeStaticHelpers.v(bArr, j_br);
         } catch (cwm e) {
             throw new cwm("Error while decoding proto number " + ((int) (j_br & 2147483647L)) + " of " + this.aj.b(),
                     e);
@@ -400,7 +400,7 @@ public class cwl extends ua implements ajt, acm {
                 if (zF) {
                     long j_br = _br();
                     if (!nullSafeIsEqual(dfxVar3.h(), dntVar) || j_br == 19500 || dfxVar3.equals(dfxVar)) {
-                        return (cwoVar.c == cwk.f && ajn.x(dfxVar.l(0))) ? new cse(cwdVar, new cwo(cwoVar.i()), dfxVar)
+                        return (cwoVar.c == ProtoWireType.ENUM_LENGTH_DELIMITED && ajn.x(dfxVar.l(0))) ? new cse(cwdVar, new cwo(cwoVar.i()), dfxVar)
                                 : new dbm(cwdVar, cwoVar, j_br, dfxVar);
                     }
                     cwo cwoVarAl = cnf.al(cwoVar, j_br);

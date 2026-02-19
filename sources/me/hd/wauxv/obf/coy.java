@@ -44,6 +44,6 @@ public final class coy {
         StringBuilder sb = new StringBuilder("NotifyTask[packageName:");
         sb.append(this.a);
         sb.append(", id:0, tag:");
-        return yg.o(sb, this.b, "]");
+        return yg.concatToVar1(sb, this.b, "]");
     }
 }

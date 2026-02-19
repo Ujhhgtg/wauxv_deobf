@@ -22,7 +22,7 @@ public final class cua extends bdo {
         this.bx = true;
         bhp bhpVar = new bhp(this, null);
         alc alcVar = aou.a;
-        cnd.bf(bza.a, bhpVar);
+        KotlinHelpers2.bf(bza.a, bhpVar);
     }
 
     @Override // me.hd.wauxv.obf.bdj

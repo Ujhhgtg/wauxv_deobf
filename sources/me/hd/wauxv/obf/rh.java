@@ -320,7 +320,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             throw new IllegalArgumentException(dkz.p(i2, "endIndex < beginIndex: ", " < ", i).toString());
         }
         if (i2 > str.length()) {
-            StringBuilder sbR = yg.r(i2, "endIndex > string.length: ", " > ");
+            StringBuilder sbR = yg.concatVar213(i2, "endIndex > string.length: ", " > ");
             sbR.append(str.length());
             throw new IllegalArgumentException(sbR.toString().toString());
         }
@@ -350,7 +350,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             throw new IllegalArgumentException(dkz.p(i2, "endIndex < beginIndex: ", " < ", i).toString());
         }
         if (i2 > str.length()) {
-            StringBuilder sbR = yg.r(i2, "endIndex > string.length: ", " > ");
+            StringBuilder sbR = yg.concatVar213(i2, "endIndex > string.length: ", " > ");
             sbR.append(str.length());
             throw new IllegalArgumentException(sbR.toString().toString());
         }
@@ -1369,7 +1369,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
                     byte[] bArr = dfjVar6.a;
                     byte[] bArr2 = dfjVarE.a;
                     int i4 = dfjVar6.b;
-                    la._an(bArr, i4, i4 + i3, bArr2, 2);
+                    SomeStaticHelpers._an(bArr, i4, i4 + i3, bArr2, 2);
                 }
                 dfjVarE.c = dfjVarE.b + i3;
                 dfjVar6.b += i3;
@@ -1452,7 +1452,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
         int iMin = Math.min(i2, dfjVar.c - dfjVar.b);
         byte[] bArr2 = dfjVar.a;
         int i3 = dfjVar.b;
-        la._ak(bArr2, i, i3, bArr, i3 + iMin);
+        SomeStaticHelpers._ak(bArr2, i, i3, bArr, i3 + iMin);
         int i4 = dfjVar.b + iMin;
         dfjVar.b = i4;
         this.b -= (long) iMin;
@@ -1496,7 +1496,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             dfj dfjVarAg = ag(1);
             int iMin = Math.min(i3 - i, 8192 - dfjVarAg.c);
             int i4 = i + iMin;
-            la._ak(bArr, dfjVarAg.c, i, dfjVarAg.a, i4);
+            SomeStaticHelpers._ak(bArr, dfjVarAg.c, i, dfjVarAg.a, i4);
             dfjVarAg.c += iMin;
             i = i4;
         }

@@ -47,7 +47,7 @@ public final class amq {
                 }
                 char cCharAt = strSubstring3.charAt(iAh);
                 if (cCharAt == 'L') {
-                    iAh = dnj.ah(TypePool.Default.LazyTypeDescription.GenericTypeToken.INDEXED_TYPE_DELIMITER, iAh, 4,
+                    iAh = dnj.ah(';', iAh, 4,
                             strSubstring3);
                     break;
                 } else if (cCharAt != '[') {

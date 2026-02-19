@@ -63,11 +63,11 @@ public class o {
         }
 
         public void b(String str, long j) {
-            a(yg.o(new StringBuilder(), this.a, str), String.valueOf(j));
+            a(yg.concatToVar1(new StringBuilder(), this.a, str), String.valueOf(j));
         }
 
         public long a(String str, long j) {
-            String strO = yg.o(new StringBuilder(), this.a, str);
+            String strO = yg.concatToVar1(new StringBuilder(), this.a, str);
             String strValueOf = String.valueOf(j);
             try {
                 if (n.c(e.a)) {

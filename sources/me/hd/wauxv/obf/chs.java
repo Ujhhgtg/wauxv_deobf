@@ -36,7 +36,7 @@ public final class chs {
         if (i2 != i) {
             if (i2 < i3) {
                 int[] iArr = this.a;
-                la._al(iArr, i, i2, i3, iArr);
+                SomeStaticHelpers._al(iArr, i, i2, i3, iArr);
             }
             this.b -= i2 - i;
         }
@@ -50,9 +50,9 @@ public final class chs {
             if (i == i2) {
                 int[] iArr = this.a;
                 int[] iArr2 = chsVar.a;
-                bqi bqiVarBm = dqc.bm(0, i2);
-                int i3 = bqiVarBm.a;
-                int i4 = bqiVarBm.b;
+                IntRange intRangeVarBm = dqc.bm(0, i2);
+                int i3 = intRangeVarBm.first;
+                int i4 = intRangeVarBm.last;
                 if (i3 > i4) {
                     return true;
                 }

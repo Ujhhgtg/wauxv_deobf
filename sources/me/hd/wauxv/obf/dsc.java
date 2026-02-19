@@ -36,7 +36,7 @@ public final class dsc {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("AppActionSceneProto(installedActionScene=" /* cnb.z(-148391120075562L) */);
+        sb.append("AppActionSceneProto(installedActionScene=" /* "AppActionSceneProto(installedActionScene=" /* "AppActionSceneProto(installedActionScene=" /* cnb.z(-148391120075562L)  */);
         bjs.w(sb, this.a, -148227911318314L);
         return concat(sb, this.b, ')');
     }

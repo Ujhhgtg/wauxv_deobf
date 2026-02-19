@@ -34,7 +34,7 @@ final class FieldReaderDate<T> extends FieldReaderDateTimeCodec<T> {
             return;
         }
         if (t == null) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error, object is null"));
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error, object is null"));
         }
         Method method = this.method;
         if (method != null) {
@@ -42,7 +42,7 @@ final class FieldReaderDate<T> extends FieldReaderDateTimeCodec<T> {
                 method.invoke(t, date);
                 return;
             } catch (Exception e) {
-                throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+                throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
             }
         }
         long j = this.fieldOffset;
@@ -53,7 +53,7 @@ final class FieldReaderDate<T> extends FieldReaderDateTimeCodec<T> {
         try {
             this.field.set(t, date);
         } catch (Exception e2) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e2);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e2);
         }
     }
 

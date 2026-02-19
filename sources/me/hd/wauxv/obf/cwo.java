@@ -7,7 +7,7 @@ import com.android.dx.io.Opcodes;
 public final class cwo {
     public final ru a;
     public int b = -1;
-    public cwk c = cwk.c;
+    public ProtoWireType c = ProtoWireType.ENUM_INVALID;
     public boolean d;
     public int e;
 
@@ -100,11 +100,11 @@ public final class cwo {
     }
 
     public final ru i() {
-        cwk cwkVar = cwk.f;
-        if (this.c == cwkVar) {
+        ProtoWireType protoWireTypeVar = ProtoWireType.ENUM_LENGTH_DELIMITED;
+        if (this.c == protoWireTypeVar) {
             return j();
         }
-        throw new cwm("Expected wire type " + cwkVar + ", but found " + this.c, null);
+        throw new cwm("Expected wire type " + protoWireTypeVar + ", but found " + this.c, null);
     }
 
     public final ru j() {
@@ -119,11 +119,11 @@ public final class cwo {
     }
 
     public final byte[] k() {
-        cwk cwkVar = cwk.f;
-        if (this.c == cwkVar) {
+        ProtoWireType protoWireTypeVar = ProtoWireType.ENUM_LENGTH_DELIMITED;
+        if (this.c == protoWireTypeVar) {
             return l();
         }
-        throw new cwm("Expected wire type " + cwkVar + ", but found " + this.c, null);
+        throw new cwm("Expected wire type " + protoWireTypeVar + ", but found " + this.c, null);
     }
 
     public final byte[] l() {
@@ -138,33 +138,33 @@ public final class cwo {
         if (i3 < iG) {
             iG = i3;
         }
-        la._ak(ruVar.c, 0, i2, bArr, i2 + iG);
+        SomeStaticHelpers._ak(ruVar.c, 0, i2, bArr, i2 + iG);
         ruVar.b += iG;
         return bArr;
     }
 
     public final double m() {
-        cwk cwkVar = cwk.e;
-        if (this.c == cwkVar) {
+        ProtoWireType protoWireTypeVar = ProtoWireType.ENUM_FIXED64;
+        if (this.c == protoWireTypeVar) {
             return Double.longBitsToDouble(r());
         }
-        throw new cwm("Expected wire type " + cwkVar + ", but found " + this.c, null);
+        throw new cwm("Expected wire type " + protoWireTypeVar + ", but found " + this.c, null);
     }
 
     public final float n() {
-        cwk cwkVar = cwk.g;
-        if (this.c == cwkVar) {
+        ProtoWireType protoWireTypeVar = ProtoWireType.ENUM_FIXED32;
+        if (this.c == protoWireTypeVar) {
             return Float.intBitsToFloat(p());
         }
-        throw new cwm("Expected wire type " + cwkVar + ", but found " + this.c, null);
+        throw new cwm("Expected wire type " + protoWireTypeVar + ", but found " + this.c, null);
     }
 
     public final int o(cwf cwfVar) {
-        cwk cwkVar = cwfVar == cwf.FIXED ? cwk.g : cwk.d;
-        if (this.c == cwkVar) {
+        ProtoWireType protoWireTypeVar = cwfVar == cwf.FIXED ? ProtoWireType.ENUM_FIXED32 : ProtoWireType.ENUM_VARINT;
+        if (this.c == protoWireTypeVar) {
             return g(cwfVar);
         }
-        throw new cwm("Expected wire type " + cwkVar + ", but found " + this.c, null);
+        throw new cwm("Expected wire type " + protoWireTypeVar + ", but found " + this.c, null);
     }
 
     public final int p() {
@@ -176,11 +176,11 @@ public final class cwo {
     }
 
     public final long q(cwf cwfVar) {
-        cwk cwkVar = cwfVar == cwf.FIXED ? cwk.e : cwk.d;
-        if (this.c == cwkVar) {
+        ProtoWireType protoWireTypeVar = cwfVar == cwf.FIXED ? ProtoWireType.ENUM_FIXED64 : ProtoWireType.ENUM_VARINT;
+        if (this.c == protoWireTypeVar) {
             return h(cwfVar);
         }
-        throw new cwm("Expected wire type " + cwkVar + ", but found " + this.c, null);
+        throw new cwm("Expected wire type " + protoWireTypeVar + ", but found " + this.c, null);
     }
 
     public final long r() {
@@ -192,22 +192,22 @@ public final class cwo {
     }
 
     public final String s() {
-        cwk cwkVar = cwk.f;
-        if (this.c == cwkVar) {
+        ProtoWireType protoWireTypeVar = ProtoWireType.ENUM_LENGTH_DELIMITED;
+        if (this.c == protoWireTypeVar) {
             int iG = g(cwf.DEFAULT);
             f(iG);
             return this.a.f(iG);
         }
-        throw new cwm("Expected wire type " + cwkVar + ", but found " + this.c, null);
+        throw new cwm("Expected wire type " + protoWireTypeVar + ", but found " + this.c, null);
     }
 
     public final int t() {
         if (!this.d) {
-            this.e = (this.b << 3) | this.c.j;
+            this.e = (this.b << 3) | this.c.value;
             return v((int) this.a.g(true));
         }
         this.d = false;
-        int i = (this.b << 3) | this.c.j;
+        int i = (this.b << 3) | this.c.value;
         int iV = v(this.e);
         this.e = i;
         return iV;
@@ -233,9 +233,9 @@ public final class cwo {
                 throw new cwm("Unsupported start group or end group wire type: " + this.c, null);
             }
         }
-        cwk cwkVar = cwk.f;
-        if (this.c != cwkVar) {
-            throw new cwm("Expected wire type " + cwkVar + ", but found " + this.c, null);
+        ProtoWireType protoWireTypeVar = ProtoWireType.ENUM_LENGTH_DELIMITED;
+        if (this.c != protoWireTypeVar) {
+            throw new cwm("Expected wire type " + protoWireTypeVar + ", but found " + this.c, null);
         }
         int iG = g(cwfVar);
         f(iG);
@@ -247,12 +247,12 @@ public final class cwo {
     public final int v(int i) {
         if (i == -1) {
             this.b = -1;
-            this.c = cwk.c;
+            this.c = ProtoWireType.ENUM_INVALID;
             return -1;
         }
         this.b = i >>> 3;
-        cwk.a.getClass();
-        this.c = cwk.b[i & 7];
+        ProtoWireType.a.getClass();
+        this.c = ProtoWireType.b[i & 7];
         return this.b;
     }
 }

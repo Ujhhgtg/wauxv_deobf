@@ -105,7 +105,7 @@ public class bd {
         }
         String str2 = E.get(str);
         if (!b.equalsIgnoreCase(str) && !c.equalsIgnoreCase(str) && !y.equalsIgnoreCase(str)) {
-            return yg.o(new StringBuilder(), F, str2);
+            return yg.concatToVar1(new StringBuilder(), F, str2);
         }
         return "." + F + str2.substring(1);
     }

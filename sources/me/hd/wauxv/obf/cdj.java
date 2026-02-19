@@ -146,22 +146,22 @@ public final class cdj extends dqc {
         this.d = zbVar;
     }
 
-    public final void p(bqi bqiVar) {
+    public final void p(IntRange intRangeVar) {
         if (this.f == null) {
             this.f = new fj(4);
         }
         fj fjVar = this.f;
         throwIfVar1IsNull(fjVar);
         bqh bqhVar = new bqh();
-        bqhVar.a = bqiVar.a;
-        bqhVar.b = bqiVar.b;
+        bqhVar.a = intRangeVar.first;
+        bqhVar.b = intRangeVar.last;
         fjVar.d = bqhVar;
     }
 
     public final void q(Class... clsArr) {
         cst cstVar;
         fj fjVar = new fj(4);
-        fjVar.b = aaz.ab(avd.a);
+        fjVar.b = aaz.ab(EmptyReadonlyList.a);
         for (Class cls : clsArr) {
             if (cls != null) {
                 cstVar = new cst();

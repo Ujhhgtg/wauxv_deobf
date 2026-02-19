@@ -10,7 +10,6 @@ import android.os.Process;
 import android.text.TextUtils;
 import com.umeng.analytics.pro.bd;
 import com.umeng.analytics.pro.bt;
-import com.umeng.commonsdk.framework.UMLogDataProtocol;
 import com.umeng.commonsdk.internal.crash.UMCrashManager;
 import com.umeng.commonsdk.statistics.common.ULog;
 import com.umeng.commonsdk.statistics.internal.PreferenceWrapper;
@@ -396,7 +395,7 @@ public class UMFrUtils {
         }
         StringBuilder sb = new StringBuilder();
         sb.append(getEnvelopeDirPath(context));
-        File file = new File(yg.o(sb, File.separator, str));
+        File file = new File(yg.concatToVar1(sb, File.separator, str));
         synchronized (mEnvelopeFileLock) {
             FileOutputStream fileOutputStream2 = null;
             try {

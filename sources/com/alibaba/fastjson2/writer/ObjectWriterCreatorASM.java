@@ -19,8 +19,6 @@ import com.alibaba.fastjson2.util.DynamicClassLoader;
 import com.alibaba.fastjson2.util.IOUtils;
 import com.alibaba.fastjson2.util.JDKUtils;
 import com.alibaba.fastjson2.util.TypeUtils;
-import com.alibaba.fastjson2.writer.ObjectWriterBaseModule;
-import com.alibaba.fastjson2.writer.ObjectWriterCreatorASM;
 import com.umeng.analytics.pro.f;
 import java.io.Serializable;
 import java.lang.reflect.Constructor;
@@ -57,7 +55,7 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.concurrent.atomic.AtomicLongArray;
 import java.util.function.Consumer;
 import java.util.function.Function;
-import me.hd.wauxv.obf.bjs;
+
 import me.hd.wauxv.obf.cqb;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.yg;
@@ -154,7 +152,7 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         DESC_SYMBOL = strDesc;
         StringBuilder sb = new StringBuilder("(");
         String str = ASMUtils.DESC_JSON_WRITER;
-        METHOD_DESC_WRITE_VALUE = yg.o(sb, str, "Ljava/lang/Object;)V");
+        METHOD_DESC_WRITE_VALUE = yg.concatToVar1(sb, str, "Ljava/lang/Object;)V");
         METHOD_DESC_WRITE = concat("(", str, "Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/reflect/Type;J)V");
         METHOD_DESC_WRITE_FIELD_NAME = concat("(", str, ")V");
         METHOD_DESC_WRITE_OBJECT = concat("(", str, "Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/reflect/Type;J)V");
@@ -180,7 +178,7 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
         METHOD_DESC_GET_ITEM_WRITER = "(" + str + "Ljava/lang/reflect/Type;)" + str2;
         METHOD_DESC_WRITE_TYPE_INFO = concat("(", str, ")Z");
         METHOD_DESC_HAS_FILTER = concat("(", str, ")Z");
-        METHOD_DESC_SET_PATH2 = yg.o(new StringBuilder("("), ASMUtils.DESC_FIELD_WRITER,
+        METHOD_DESC_SET_PATH2 = yg.concatToVar1(new StringBuilder("("), ASMUtils.DESC_FIELD_WRITER,
                 "Ljava/lang/Object;)Ljava/lang/String;");
         METHOD_DESC_IO_WRITE_REFERENCE = concat("([BILjava/lang/String;", str, ")I");
         METHOD_DESC_WRITE_CLASS_INFO = concat("(", str, ")V");
@@ -5955,7 +5953,7 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             methodWriter.aload(1);
             cls4 = cls;
             methodWriter.invokestatic(ASMUtils.TYPE_JSONB_IO, "checkAndWriteTypeName",
-                    yg.o(new StringBuilder("([BILjava/lang/Object;Ljava/lang/Class;"), ASMUtils.DESC_JSON_WRITER, ")I"),
+                    yg.concatToVar1(new StringBuilder("([BILjava/lang/Object;Ljava/lang/Class;"), ASMUtils.DESC_JSON_WRITER, ")I"),
                     true);
             methodWriter.istore(i8);
         } else {
@@ -5979,7 +5977,7 @@ public class ObjectWriterCreatorASM extends ObjectWriterCreator {
             i10 = i5;
             methodWriter.lload(i10);
             methodWriter.invokevirtual(ASMUtils.TYPE_FIELD_WRITER, "writeEnumValueJSONB",
-                    yg.o(new StringBuilder("([BILjava/lang/Enum;"), DESC_SYMBOL, "J)I"));
+                    yg.concatToVar1(new StringBuilder("([BILjava/lang/Enum;"), DESC_SYMBOL, "J)I"));
             methodWriter.istore(i8);
             methodWriter.goto_(label2);
             methodWriter.visitLabel(label7);

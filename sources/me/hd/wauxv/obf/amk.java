@@ -79,7 +79,7 @@ public final class amk {
 
     public final amj n(int i) {
         if (i < 0 || i >= this.b.capacity()) {
-            StringBuilder sbR = yg.r(i, "position=", " length=");
+            StringBuilder sbR = yg.concatVar213(i, "position=", " length=");
             sbR.append(this.b.capacity());
             throw new IllegalArgumentException(sbR.toString());
         }

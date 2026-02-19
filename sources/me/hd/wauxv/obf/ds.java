@@ -104,7 +104,7 @@ public final class ds extends bhs {
                         for (int i2 : intArrayExtra) {
                             arrayList.add(Boolean.valueOf(i2 == 0));
                         }
-                        return KotlinHelpers.as(aaz.ae(la.o(stringArrayExtra), arrayList));
+                        return KotlinHelpers.as(aaz.ae(SomeStaticHelpers.o(stringArrayExtra), arrayList));
                     }
                 }
                 return ave.a;

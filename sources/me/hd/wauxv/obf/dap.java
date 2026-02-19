@@ -21,7 +21,7 @@ public final class dap implements Serializable {
         if (str.length() >= 0) {
             return new alu(new ls(dapVar, 8, str), dao.a);
         }
-        StringBuilder sbR = yg.r(0, "Start index out of bounds: ", ", input length: ");
+        StringBuilder sbR = yg.concatVar213(0, "Start index out of bounds: ", ", input length: ");
         sbR.append(str.length());
         throw new IndexOutOfBoundsException(sbR.toString());
     }

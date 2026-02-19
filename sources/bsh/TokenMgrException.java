@@ -18,7 +18,7 @@ public class TokenMgrException extends RuntimeException {
     public static String LexicalErr(boolean z, int i, int i2, int i3, String str, int i4) {
         String str2;
         char c = (char) i4;
-        StringBuilder sbQ = yg.q(i2, i3, "Lexical error at line ", ", column ", ".  Encountered: ");
+        StringBuilder sbQ = yg.concatVar31425(i2, i3, "Lexical error at line ", ", column ", ".  Encountered: ");
         if (z) {
             str2 = "<EOF> ";
         } else {

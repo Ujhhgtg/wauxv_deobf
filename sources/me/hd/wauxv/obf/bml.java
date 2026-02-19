@@ -15,7 +15,7 @@ public final class bml {
     public static final HookEntry c;
 
     static {
-        "me.hd.wauxv" /* cnb.z(-77412490541866L) */;
+        "me.hd.wauxv" /* "me.hd.wauxv" /* "me.hd.wauxv" /* cnb.z(-77412490541866L)  */;
         a = new bml();
         c = HookEntry.a;
     }
@@ -33,11 +33,11 @@ public final class bml {
         XC_LoadPackage.LoadPackageParam loadPackageParam2 = (i & 2) != 0 ? null : loadPackageParam;
         bmlVar.getClass();
         boolean z2 = b;
-        Object objX3 = ens.a;
+        Object objX3 = KotlinUnit.INSTANCE;
         if (!z2) {
             try {
                 c.getClass();
-                cna.d = "WAuxiliary" /* cnb.z(-71829033057066L) */;
+                cna.d = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-71829033057066L)  */;
                 cnb.k = false;
             } catch (Throwable th) {
                 objX = bhu.x(th);
@@ -60,7 +60,7 @@ public final class bml {
             objX = objX3;
             Throwable thB = dcy.b(objX);
             if (thB != null) {
-                ewq.g(4, "YukiHookAPI try to load hook entry class failed" /* cnb.z(-77915001715498L) */, thB);
+                ewq.g(4, "YukiHookAPI try to load hook entry class failed" /* "YukiHookAPI try to load hook entry class failed" /* "YukiHookAPI try to load hook entry class failed" /* cnb.z(-77915001715498L)  */, thB);
             }
         }
         bmk bmkVar2 = bmk.b;

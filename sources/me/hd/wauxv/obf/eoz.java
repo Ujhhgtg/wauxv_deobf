@@ -19,7 +19,7 @@ public final class eoz {
             Class<eoz> clsBf = cnf.bf(dal.b(cls));
             return !obj.equals(clsBf != null ? clsBf : eoz.class) ? ((Class) obj).toString() : "VagueType";
         }
-        if (obj instanceof bsv) {
+        if (obj instanceof IEmpty5) {
             return !obj.equals(dal.b(cls)) ? obj.toString() : "VagueType";
         }
         if (!(obj instanceof Collection)) {

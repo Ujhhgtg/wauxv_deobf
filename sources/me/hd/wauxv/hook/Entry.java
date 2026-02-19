@@ -7,10 +7,9 @@ import de.robv.android.xposed.IXposedHookZygoteInit;
 import de.robv.android.xposed.callbacks.XC_LoadPackage;
 import me.hd.wauxv.obf.bhu;
 import me.hd.wauxv.obf.bml;
-import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.dcx;
 import me.hd.wauxv.obf.dcy;
-import me.hd.wauxv.obf.ens;
+import me.hd.wauxv.obf.KotlinUnit;
 import me.hd.wauxv.obf.ewq;
 import me.hd.wauxv.obf.exk;
 import me.hd.wauxv.obf.exm;
@@ -36,7 +35,7 @@ public final class Entry implements IXposedHookZygoteInit, IXposedHookLoadPackag
             return;
         }
         try {
-            String strZ = "me.hd.wauxv" /* cnb.z(-77159087471402L) */;
+            String strZ = "me.hd.wauxv" /* "me.hd.wauxv" /* "me.hd.wauxv" /* cnb.z(-77159087471402L)  */;
             String str = startupParam.modulePath;
             exm.a = true;
             exm.h = strZ;
@@ -52,13 +51,13 @@ public final class Entry implements IXposedHookZygoteInit, IXposedHookLoadPackag
             }
             bml.d(bmlVar, null, 6);
             bml.b = true;
-            objX = ens.a;
+            objX = KotlinUnit.INSTANCE;
         } catch (Throwable th2) {
             objX = bhu.x(th2);
         }
         Throwable thB = dcy.b(objX);
         if (thB != null) {
-            ewq.g(4, "An exception occurred when YukiHookAPI loading Xposed Module" /* cnb.z(-77073188125482L) */, thB);
+            ewq.g(4, "An exception occurred when YukiHookAPI loading Xposed Module" /* "An exception occurred when YukiHookAPI loading Xposed Module" /* "An exception occurred when YukiHookAPI loading Xposed Module" /* cnb.z(-77073188125482L)  */, thB);
         }
     }
 }

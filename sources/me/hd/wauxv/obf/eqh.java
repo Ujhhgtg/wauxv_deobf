@@ -23,6 +23,6 @@ public final /* synthetic */ class eqh implements bfu {
                 this.b.setChecked(false);
                 break;
         }
-        return ens.a;
+        return KotlinUnit.INSTANCE;
     }
 }

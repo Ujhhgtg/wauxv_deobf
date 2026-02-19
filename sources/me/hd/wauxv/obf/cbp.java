@@ -56,7 +56,7 @@ public abstract class cbp {
             for (Object obj : arrayList) {
                 int i2 = i + 1;
                 if (i < 0) {
-                    aba.aj();
+                    OtherStaticHelpers.aj();
                     throw null;
                 }
                 Class cls2 = (Class) obj;
@@ -108,7 +108,7 @@ public abstract class cbp {
         Annotation[] annotations = executable.getAnnotatedReturnType().getAnnotations();
         ArrayList arrayList = new ArrayList(annotations.length);
         for (Annotation annotation : annotations) {
-            arrayList.add(cnf.bd(cnf.bb(annotation)));
+            arrayList.add(cnf.getJavaClass(cnf.bb(annotation)));
         }
         return e(set, arrayList, cbgVar);
     }
@@ -117,7 +117,7 @@ public abstract class cbp {
         Annotation[] annotations = executable.getAnnotatedReturnType().getAnnotations();
         ArrayList arrayList = new ArrayList(annotations.length);
         for (Annotation annotation : annotations) {
-            arrayList.add(cnf.bd(cnf.bb(annotation)));
+            arrayList.add(cnf.getJavaClass(cnf.bb(annotation)));
         }
         return !e(set, arrayList, cbgVar);
     }
@@ -126,7 +126,7 @@ public abstract class cbp {
         Annotation[] annotations = executable.getAnnotatedReceiverType().getAnnotations();
         ArrayList arrayList = new ArrayList(annotations.length);
         for (Annotation annotation : annotations) {
-            arrayList.add(cnf.bd(cnf.bb(annotation)));
+            arrayList.add(cnf.getJavaClass(cnf.bb(annotation)));
         }
         return e(set, arrayList, cbgVar);
     }
@@ -135,7 +135,7 @@ public abstract class cbp {
         Annotation[] annotations = executable.getAnnotatedReceiverType().getAnnotations();
         ArrayList arrayList = new ArrayList(annotations.length);
         for (Annotation annotation : annotations) {
-            arrayList.add(cnf.bd(cnf.bb(annotation)));
+            arrayList.add(cnf.getJavaClass(cnf.bb(annotation)));
         }
         return !e(set, arrayList, cbgVar);
     }
@@ -147,7 +147,7 @@ public abstract class cbp {
             Annotation[] annotations = annotatedType.getAnnotations();
             ArrayList arrayList2 = new ArrayList(annotations.length);
             for (Annotation annotation : annotations) {
-                arrayList2.add(cnf.bd(cnf.bb(annotation)));
+                arrayList2.add(cnf.getJavaClass(cnf.bb(annotation)));
             }
             arrayList.add(arrayList2);
         }
@@ -161,7 +161,7 @@ public abstract class cbp {
             Annotation[] annotations = annotatedType.getAnnotations();
             ArrayList arrayList2 = new ArrayList(annotations.length);
             for (Annotation annotation : annotations) {
-                arrayList2.add(cnf.bd(cnf.bb(annotation)));
+                arrayList2.add(cnf.getJavaClass(cnf.bb(annotation)));
             }
             arrayList.add(arrayList2);
         }
@@ -175,7 +175,7 @@ public abstract class cbp {
             Annotation[] annotations = annotatedType.getAnnotations();
             ArrayList arrayList2 = new ArrayList(annotations.length);
             for (Annotation annotation : annotations) {
-                arrayList2.add(cnf.bd(cnf.bb(annotation)));
+                arrayList2.add(cnf.getJavaClass(cnf.bb(annotation)));
             }
             arrayList.add(arrayList2);
         }
@@ -189,7 +189,7 @@ public abstract class cbp {
             Annotation[] annotations = annotatedType.getAnnotations();
             ArrayList arrayList2 = new ArrayList(annotations.length);
             for (Annotation annotation : annotations) {
-                arrayList2.add(cnf.bd(cnf.bb(annotation)));
+                arrayList2.add(cnf.getJavaClass(cnf.bb(annotation)));
             }
             arrayList.add(arrayList2);
         }
@@ -207,9 +207,9 @@ public abstract class cbp {
         throw new IllegalStateException(("Unsupported member type: " + member).toString());
     }
 
-    public static List q(cbh cbhVar, cbg cbgVar, Class cls, IHasInvokeMethod bgfVar) {
+    public static List q(cbh cbhVar, cbg cbgVar, Class cls, IInvokable bgfVar) {
         Class cls2;
-        List listQ = avd.a;
+        List listQ = EmptyReadonlyList.a;
         if (cls != null) {
             cls2 = Object.class;
             Class<Object> clsBf = cnf.bf(dal.b(cls2));
@@ -324,7 +324,7 @@ public abstract class cbp {
                 String str4 = "+-" + dnr.bm(iC, "-") + "-+-" + dnr.bm(i, "-") + "-+";
                 int i2 = iC + i + 3;
                 strConcat = aaz.k(
-                        aba.ag("+-" + dnr.bm(i2, "-") + "-+", "| " + d(i2, strBo2) + " |", str4,
+                        OtherStaticHelpers.argsToList("+-" + dnr.bm(i2, "-") + "-+", "| " + d(i2, strBo2) + " |", str4,
                                 aaz.k(arrayList, "\n", null, null, new cbl(iC, i, 0), 30), str4),
                         "\n", null, null, null, 62);
             }
@@ -345,8 +345,8 @@ public abstract class cbp {
         Class cls;
         if (obj instanceof Class) {
             clsF = (Class) obj;
-        } else if (obj instanceof bsv) {
-            clsF = cnf.bd((bsv) obj);
+        } else if (obj instanceof IEmpty5) {
+            clsF = cnf.getJavaClass((IEmpty5) obj);
         } else if (obj instanceof String) {
             cbf cbfVar = cbgVar.e;
             Class cls2 = cbgVar.a;

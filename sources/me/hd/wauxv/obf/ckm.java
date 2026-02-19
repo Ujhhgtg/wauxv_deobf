@@ -9,7 +9,7 @@ public final class ckm {
     public final LinkedHashMap b = new LinkedHashMap();
 
     public final void c(ckl cklVar) {
-        String strAu = cnd.au(cklVar.getClass());
+        String strAu = KotlinHelpers2.au(cklVar.getClass());
         if (strAu.length() <= 0) {
             throw new IllegalArgumentException("navigator name cannot be an empty string");
         }

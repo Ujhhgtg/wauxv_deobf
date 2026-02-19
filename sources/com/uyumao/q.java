@@ -8,7 +8,7 @@ import com.umeng.analytics.pro.bt;
 import com.umeng.analytics.pro.dn;
 import com.umeng.commonsdk.statistics.common.DeviceConfig;
 import com.umeng.commonsdk.utils.UMUtils;
-import com.uyumao.o;
+
 import java.io.ByteArrayOutputStream;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -225,7 +225,7 @@ public final class q implements Runnable {
         if (n.c(oVar.b)) {
             oVar.c.b("smart_lc", oVar.a() + 1);
         }
-        String strO = yg.o(new StringBuilder(), oVar.c.a, "smart_lt");
+        String strO = yg.concatToVar1(new StringBuilder(), oVar.c.a, "smart_lt");
         String strValueOf = String.valueOf(0);
         try {
             if (n.c(e.a)) {

@@ -12,9 +12,9 @@ public abstract class ajf {
 
     public static List b(Boolean bool) {
         try {
-            bae baeVar = new bae(la.b(bmy.q()), true, aje.a);
-            "null cannot be cast to non-null type kotlin.sequences.Sequence<R of kotlin.sequences.SequencesKt___SequencesKt.filterIsInstance>" /* cnb.z(-25430501358378L) */;
-            bae baeVar2 = new bae(new bae(baeVar, true, new age(27)), true, new q(bool, 3));
+            bae baeVar = new bae(SomeStaticHelpers.b(bmy.q()), true, aje.a);
+            "null cannot be cast to non-null type kotlin.sequences.Sequence<R of kotlin.sequences.SequencesKt___SequencesKt.filterIsInstance>" /* "null cannot be cast to non-null type kotlin.sequences.Sequence<R of kotlin.sequences.SequencesKt___SequencesKt.filterIsInstance>" /* "null cannot be cast to non-null type kotlin.sequences.Sequence<R of kotlin.sequences.SequencesKt___SequencesKt.filterIsInstance>" /* "null cannot be cast to non-null type kotlin.sequences.Sequence<R of kotlin.sequences.SequencesKt___SequencesKt.filterIsInstance>" /* cnb.z(-25430501358378L)   */;
+            bae baeVar2 = new bae(new bae(baeVar, true, new age(27)), true, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(bool, 3));
             abo aboVar = new abo(new bgf[]{new age(28), new age(29)}, 0);
             LinkedHashMap linkedHashMap = new LinkedHashMap();
             ArrayList arrayList = new ArrayList();
@@ -36,7 +36,7 @@ public abstract class ajf {
             for (Map.Entry entry : linkedHashMap.entrySet()) {
                 String str = (String) entry.getKey();
                 List<BaseHook> list = (List) entry.getValue();
-                List listBf = dqc.bf(new nz(str));
+                List listBf = dqc.toSingletonList(new nz(str));
                 ArrayList arrayList4 = new ArrayList(abb.ak(list, 10));
                 for (doo dooVar : list) {
                     String strF = dooVar.f();
@@ -48,7 +48,7 @@ public abstract class ajf {
             }
             return aaz.z(arrayList3);
         } catch (Exception unused) {
-            return avd.a;
+            return EmptyReadonlyList.a;
         }
     }
 }

@@ -34,14 +34,14 @@ public abstract class ams {
         StringBuilder sb = new StringBuilder("(");
         Class<?>[] parameterTypes = constructor.getParameterTypes();
         throwIfVar1IsNull(parameterTypes, "getParameterTypes(...)");
-        return yg.o(sb, la.u(parameterTypes, "", null, null, new amb(3), 30), ")V");
+        return yg.concatToVar1(sb, SomeStaticHelpers.u(parameterTypes, "", null, null, new amb(3), 30), ")V");
     }
 
     public static final String d(Method method) {
         StringBuilder sb = new StringBuilder("(");
         Class<?>[] parameterTypes = method.getParameterTypes();
         throwIfVar1IsNull(parameterTypes, "getParameterTypes(...)");
-        sb.append(la.u(parameterTypes, "", null, null, new amb(2), 30));
+        sb.append(SomeStaticHelpers.u(parameterTypes, "", null, null, new amb(2), 30));
         sb.append(")");
         Class<?> returnType = method.getReturnType();
         throwIfVar1IsNull(returnType, "getReturnType(...)");

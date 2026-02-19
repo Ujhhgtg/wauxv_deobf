@@ -8,23 +8,23 @@ public final class aub extends bws implements IDexFind {
     public static final aub a = new aub();
 
     public static Object b(String str) {
-        int i = bte.a;
+        int i = 0;
         aup.a.getClass();
         auo auoVar = auo.a;
         cde cdeVarT = dqc.bh(emn.az(auoVar)).t();
         cdeVarT.ak(cdy.c);
         cdeVarT.a = emn.az(auoVar);
-        Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         cde cdeVarT2 = dqc.bi(objE).t();
         a.getClass();
         cdeVarT2.a = emn.az(aua.a);
-        Object objE2 = ((cdk) bjs.h(cdeVarT2)).e(new Object[0]);
+        Object objE2 = ((MethodHookWrapper) bjs.h(cdeVarT2)).e(new Object[0]);
         throwIfVar1IsNull(objE2);
         cde cdeVarT3 = dqc.bi(objE2).t();
         atz.a.getClass();
         cdeVarT3.a = emn.bb(aty.a).getDeclaringClass();
-        Object objE3 = ((cdk) dkz.n(new Object[] { dal.b(String.class) }, 1, cdeVarT3)).e(str);
+        Object objE3 = ((MethodHookWrapper) dkz.n(new Object[] { dal.b(String.class) }, 1, cdeVarT3)).e(str);
         throwIfVar1IsNull(objE3);
         return objE3;
     }

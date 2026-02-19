@@ -12,12 +12,12 @@ public final class djj extends bws implements IDexFind {
         dji djiVar = dji.a;
         Method methodBb = emn.bb(djiVar);
         dis.a.getClass();
-        int i = bte.a;
+        int i = 0;
         cde cdeVarT = dqc.bh(emn.az(dir.a)).t();
         cdeVarT.ak(cdy.c);
         a.getClass();
         cdeVarT.a = emn.bb(djiVar).getDeclaringClass();
-        Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         Object objInvoke = methodBb.invoke(objE, str);
         throwIfVar1IsNull(objInvoke);

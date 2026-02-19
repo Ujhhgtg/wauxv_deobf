@@ -30,7 +30,7 @@ public final class ByteBlock implements LabeledItem {
         int size = intList.size();
         for (int i4 = 0; i4 < size; i4++) {
             if (intList.get(i4) < 0) {
-                StringBuilder sbR = yg.r(i4, "successors[", "] == ");
+                StringBuilder sbR = yg.concatVar213(i4, "successors[", "] == ");
                 sbR.append(intList.get(i4));
                 throw new IllegalArgumentException(sbR.toString());
             }

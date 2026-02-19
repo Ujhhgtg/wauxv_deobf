@@ -46,7 +46,7 @@ public final class aqf implements Iterator, IEmpty {
                 if (i >= 0) {
                     return new boy(i, this.b.next());
                 }
-                aba.aj();
+                OtherStaticHelpers.aj();
                 throw null;
         }
         while (true) {

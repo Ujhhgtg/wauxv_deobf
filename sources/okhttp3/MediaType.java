@@ -6,9 +6,7 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.cnd;
+import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.dnr;
 
@@ -149,7 +147,7 @@ public final class MediaType {
     public final String parameter(String str) {
         throwIfVar1IsNull(str, "name");
         int i = 0;
-        int iAv = cnd.av(0, this.parameterNamesAndValues.length - 1, 2);
+        int iAv = KotlinHelpers2.getProgressionLastElement(0, this.parameterNamesAndValues.length - 1, 2);
         if (iAv < 0) {
             return null;
         }

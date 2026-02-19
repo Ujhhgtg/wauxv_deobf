@@ -8,12 +8,12 @@ public final class DisableDetailNotification extends SwitchHook implements IHand
                                                                                                                  * (-
                                                                                                                  * 627198369200938L)
                                                                                                                  */);
-    public static final String b = "测试-配置修复-v58-notification" /* cnb.z(-628534104029994L) */;
-    public static final String c = "通知关闭详情@我提示优化" /* cnb.z(-628426729847594L) */;
+    public static final String b = "测试-配置修复-v58-notification" /* "测试-配置修复-v58-notification" /* "测试-配置修复-v58-notification" /* cnb.z(-628534104029994L)  */;
+    public static final String c = "通知关闭详情@我提示优化" /* "通知关闭详情@我提示优化" /* "通知关闭详情@我提示优化" /* cnb.z(-628426729847594L)  */;
 
     @Override // me.hd.wauxv.obf.IHandlesHookParam
     public final void handleHookParam(HookParam hookParam, String str) {
-        if (getIsEnabled() && str.equals("RepairerConfig_NOTIFICATION_AT_ME_TIPS_Int" /* cnb.z(-627035160443690L) */)) {
+        if (getIsEnabled() && str.equals("RepairerConfig_NOTIFICATION_AT_ME_TIPS_Int" /* "RepairerConfig_NOTIFICATION_AT_ME_TIPS_Int" /* "RepairerConfig_NOTIFICATION_AT_ME_TIPS_Int" /* cnb.z(-627035160443690L)  */)) {
             hookParam.setResult(1);
         }
     }

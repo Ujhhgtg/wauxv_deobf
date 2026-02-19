@@ -111,15 +111,15 @@ public final class cjd {
                                     throwIfVar1IsNull(bztVarC);
                                     int i4 = i2;
                                     cjcVar.b.add(bztVarC.a);
-                                    if (bzxVarD.f().a > i3) {
-                                        String strSubstring = str8.substring(i3, bzxVarD.f().a);
+                                    if (bzxVarD.f().first > i3) {
+                                        String strSubstring = str8.substring(i3, bzxVarD.f().first);
                                         throwIfVar1IsNull(strSubstring, "substring(...)");
                                         String strQuote = Pattern.quote(strSubstring);
                                         throwIfVar1IsNull(strQuote, "quote(...)");
                                         sb.append(strQuote);
                                     }
                                     sb.append("([\\s\\S]+?)?");
-                                    i3 = bzxVarD.f().b + 1;
+                                    i3 = bzxVarD.f().last + 1;
                                     bzxVarD = bzxVarD.g();
                                     i2 = i4;
                                 }
@@ -243,15 +243,15 @@ public final class cjd {
                                     throwIfVar1IsNull(bztVarC);
                                     int i4 = i22;
                                     cjcVar.b.add(bztVarC.a);
-                                    if (bzxVarD.f().a > i3) {
-                                        String strSubstring = str8.substring(i3, bzxVarD.f().a);
+                                    if (bzxVarD.f().first > i3) {
+                                        String strSubstring = str8.substring(i3, bzxVarD.f().first);
                                         throwIfVar1IsNull(strSubstring, "substring(...)");
                                         String strQuote = Pattern.quote(strSubstring);
                                         throwIfVar1IsNull(strQuote, "quote(...)");
                                         sb.append(strQuote);
                                     }
                                     sb.append("([\\s\\S]+?)?");
-                                    i3 = bzxVarD.f().b + 1;
+                                    i3 = bzxVarD.f().last + 1;
                                     bzxVarD = bzxVarD.g();
                                     i22 = i4;
                                 }
@@ -375,15 +375,15 @@ public final class cjd {
                                     throwIfVar1IsNull(bztVarC);
                                     int i4 = i22;
                                     cjcVar.b.add(bztVarC.a);
-                                    if (bzxVarD.f().a > i32) {
-                                        String strSubstring = str8.substring(i32, bzxVarD.f().a);
+                                    if (bzxVarD.f().first > i32) {
+                                        String strSubstring = str8.substring(i32, bzxVarD.f().first);
                                         throwIfVar1IsNull(strSubstring, "substring(...)");
                                         String strQuote = Pattern.quote(strSubstring);
                                         throwIfVar1IsNull(strQuote, "quote(...)");
                                         sb.append(strQuote);
                                     }
                                     sb.append("([\\s\\S]+?)?");
-                                    i32 = bzxVarD.f().b + 1;
+                                    i32 = bzxVarD.f().last + 1;
                                     bzxVarD = bzxVarD.g();
                                     i22 = i4;
                                 }
@@ -509,15 +509,15 @@ public final class cjd {
                                     throwIfVar1IsNull(bztVarC);
                                     int i42 = i22;
                                     cjcVar.b.add(bztVarC.a);
-                                    if (bzxVarD.f().a > i32) {
-                                        String strSubstring = str8.substring(i32, bzxVarD.f().a);
+                                    if (bzxVarD.f().first > i32) {
+                                        String strSubstring = str8.substring(i32, bzxVarD.f().first);
                                         throwIfVar1IsNull(strSubstring, "substring(...)");
                                         String strQuote = Pattern.quote(strSubstring);
                                         throwIfVar1IsNull(strQuote, "quote(...)");
                                         sb.append(strQuote);
                                     }
                                     sb.append("([\\s\\S]+?)?");
-                                    i32 = bzxVarD.f().b + 1;
+                                    i32 = bzxVarD.f().last + 1;
                                     bzxVarD = bzxVarD.g();
                                     i22 = i42;
                                 }
@@ -641,15 +641,15 @@ public final class cjd {
                                     throwIfVar1IsNull(bztVarC);
                                     int i42 = i22;
                                     cjcVar.b.add(bztVarC.a);
-                                    if (bzxVarD.f().a > i32) {
-                                        String strSubstring = str8.substring(i32, bzxVarD.f().a);
+                                    if (bzxVarD.f().first > i32) {
+                                        String strSubstring = str8.substring(i32, bzxVarD.f().first);
                                         throwIfVar1IsNull(strSubstring, "substring(...)");
                                         String strQuote = Pattern.quote(strSubstring);
                                         throwIfVar1IsNull(strQuote, "quote(...)");
                                         sb.append(strQuote);
                                     }
                                     sb.append("([\\s\\S]+?)?");
-                                    i32 = bzxVarD.f().b + 1;
+                                    i32 = bzxVarD.f().last + 1;
                                     bzxVarD = bzxVarD.g();
                                     i22 = i42;
                                 }
@@ -773,15 +773,15 @@ public final class cjd {
                                     throwIfVar1IsNull(bztVarC);
                                     int i42 = i22;
                                     cjcVar.b.add(bztVarC.a);
-                                    if (bzxVarD.f().a > i32) {
-                                        String strSubstring = str8.substring(i32, bzxVarD.f().a);
+                                    if (bzxVarD.f().first > i32) {
+                                        String strSubstring = str8.substring(i32, bzxVarD.f().first);
                                         throwIfVar1IsNull(strSubstring, "substring(...)");
                                         String strQuote = Pattern.quote(strSubstring);
                                         throwIfVar1IsNull(strQuote, "quote(...)");
                                         sb.append(strQuote);
                                     }
                                     sb.append("([\\s\\S]+?)?");
-                                    i32 = bzxVarD.f().b + 1;
+                                    i32 = bzxVarD.f().last + 1;
                                     bzxVarD = bzxVarD.g();
                                     i22 = i42;
                                 }
@@ -905,15 +905,15 @@ public final class cjd {
                                     throwIfVar1IsNull(bztVarC);
                                     int i42 = i22;
                                     cjcVar.b.add(bztVarC.a);
-                                    if (bzxVarD.f().a > i32) {
-                                        String strSubstring = str8.substring(i32, bzxVarD.f().a);
+                                    if (bzxVarD.f().first > i32) {
+                                        String strSubstring = str8.substring(i32, bzxVarD.f().first);
                                         throwIfVar1IsNull(strSubstring, "substring(...)");
                                         String strQuote = Pattern.quote(strSubstring);
                                         throwIfVar1IsNull(strQuote, "quote(...)");
                                         sb.append(strQuote);
                                     }
                                     sb.append("([\\s\\S]+?)?");
-                                    i32 = bzxVarD.f().b + 1;
+                                    i32 = bzxVarD.f().last + 1;
                                     bzxVarD = bzxVarD.g();
                                     i22 = i42;
                                 }
@@ -1037,15 +1037,15 @@ public final class cjd {
                                     throwIfVar1IsNull(bztVarC);
                                     int i42 = i22;
                                     cjcVar.b.add(bztVarC.a);
-                                    if (bzxVarD.f().a > i32) {
-                                        String strSubstring = str8.substring(i32, bzxVarD.f().a);
+                                    if (bzxVarD.f().first > i32) {
+                                        String strSubstring = str8.substring(i32, bzxVarD.f().first);
                                         throwIfVar1IsNull(strSubstring, "substring(...)");
                                         String strQuote = Pattern.quote(strSubstring);
                                         throwIfVar1IsNull(strQuote, "quote(...)");
                                         sb.append(strQuote);
                                     }
                                     sb.append("([\\s\\S]+?)?");
-                                    i32 = bzxVarD.f().b + 1;
+                                    i32 = bzxVarD.f().last + 1;
                                     bzxVarD = bzxVarD.g();
                                     i22 = i42;
                                 }
@@ -1118,7 +1118,7 @@ public final class cjd {
             throwIfVar1IsNull(matcher, "matcher(...)");
             bzx bzxVarY = ewz.y(matcher, 0, str);
             if (bzxVarY != null) {
-                String strSubstring = str.substring(0, bzxVarY.f().a);
+                String strSubstring = str.substring(0, bzxVarY.f().first);
                 throwIfVar1IsNull(strSubstring, "substring(...)");
                 w(strSubstring, arrayList, sb);
                 this.v = (d.c(sb) || e.c(sb)) ? false : true;
@@ -1151,10 +1151,10 @@ public final class cjd {
             arrayList2.add(str3.subSequence(iEnd, str3.length()).toString());
             listBf = arrayList2;
         } else {
-            listBf = dqc.bf(str3.toString());
+            listBf = dqc.toSingletonList(str3.toString());
         }
         if (listBf.isEmpty()) {
-            listU = avd.a;
+            listU = EmptyReadonlyList.a;
         } else {
             ListIterator listIterator = listBf.listIterator(listBf.size());
             while (listIterator.hasPrevious()) {
@@ -1162,7 +1162,7 @@ public final class cjd {
                     listU = aaz.u(listIterator.nextIndex() + 1, listBf);
                 }
             }
-            listU = avd.a;
+            listU = EmptyReadonlyList.a;
         }
         this.t = dnr.bo("^(" + ((String) listU.get(0)) + "|[*]+)/(" + ((String) listU.get(1)) + "|[*]+)$", "*|[*]",
                 "[\\s\\S]");
@@ -1174,8 +1174,8 @@ public final class cjd {
             bzt bztVarC = bzxVarD.c.c(1);
             throwIfVar1IsNull(bztVarC);
             arrayList.add(bztVarC.a);
-            if (bzxVarD.f().a > i) {
-                String strSubstring = str.substring(i, bzxVarD.f().a);
+            if (bzxVarD.f().first > i) {
+                String strSubstring = str.substring(i, bzxVarD.f().first);
                 throwIfVar1IsNull(strSubstring, "substring(...)");
                 String strQuote = Pattern.quote(strSubstring);
                 throwIfVar1IsNull(strQuote, "quote(...)");
@@ -1184,7 +1184,7 @@ public final class cjd {
             String strPattern = e.a.pattern();
             throwIfVar1IsNull(strPattern, "pattern(...)");
             sb.append(strPattern);
-            i = bzxVarD.f().b + 1;
+            i = bzxVarD.f().last + 1;
         }
         if (i < str.length()) {
             String strSubstring2 = str.substring(i);
@@ -1218,7 +1218,7 @@ public final class cjd {
             int i2 = i + 1;
             String strDecode = null;
             if (i < 0) {
-                aba.aj();
+                OtherStaticHelpers.aj();
                 throw null;
             }
             String str = (String) obj;
@@ -1232,7 +1232,7 @@ public final class cjd {
             }
             try {
                 x(bundle, str, strDecode, (cin) map.get(str));
-                arrayList2.add(ens.a);
+                arrayList2.add(KotlinUnit.INSTANCE);
                 i = i2;
             } catch (IllegalArgumentException unused) {
                 return false;
@@ -1262,9 +1262,9 @@ public final class cjd {
             cjc cjcVar = (cjc) entry.getValue();
             List<String> queryParameters = uri.getQueryParameters(str);
             if (this.o && (query = uri.getQuery()) != null && !query.equals(uri.toString())) {
-                queryParameters = dqc.bf(query);
+                queryParameters = dqc.toSingletonList(query);
             }
-            ens ensVar = ens.a;
+            KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
             boolean z2 = false;
             Bundle bundleR = bht.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
             for (String str2 : cjcVar.b) {
@@ -1281,7 +1281,7 @@ public final class cjd {
                         case 5:
                         case 7:
                         default:
-                            obj = avd.a;
+                            obj = EmptyReadonlyList.a;
                             break;
                         case 2:
                             obj = new float[0];
@@ -1318,7 +1318,7 @@ public final class cjd {
                 for (Object obj2 : arrayList) {
                     int i = r14 + 1;
                     if (r14 < 0) {
-                        aba.aj();
+                        OtherStaticHelpers.aj();
                         throw null;
                     }
                     String str5 = (String) obj2;
@@ -1341,7 +1341,7 @@ public final class cjd {
                                     throw new IllegalArgumentException("There is no previous value in this savedState.");
                                 }
                                 cjvVar2.j(bundleR, str5, cjvVar2.h(objF, str6));
-                                objValueOf = ensVar;
+                                objValueOf = kotlinUnitVar;
                             }
                             z = false;
                         } else {
@@ -1350,7 +1350,7 @@ public final class cjd {
                         objValueOf = Boolean.valueOf(z);
                     } else {
                         x(bundleR, str5, str6, cinVar2);
-                        objValueOf = ensVar;
+                        objValueOf = kotlinUnitVar;
                     }
                     arrayList2.add(objValueOf);
                     r14 = i;

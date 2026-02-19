@@ -27,7 +27,7 @@ public final class cit {
         throwIfVar1IsNull(cklVar, "navigator");
         this.h = cjlVar;
         this.a = new dop(2);
-        dml dmlVar = new dml(avd.a);
+        dml dmlVar = new dml(EmptyReadonlyList.a);
         this.b = dmlVar;
         dml dmlVar2 = new dml(avh.a);
         this.c = dmlVar2;
@@ -231,13 +231,13 @@ public final class cit {
             Object obj = cixVar.s.get(cklVarD);
             if (obj == null) {
                 throw new IllegalStateException(
-                        yg.o(new StringBuilder("NavigatorBackStack for "), cioVar.b.f, " should already be created")
+                        yg.concatToVar1(new StringBuilder("NavigatorBackStack for "), cioVar.b.f, " should already be created")
                                 .toString());
             }
             ((cit) obj).o(cioVar);
             return;
         }
-        IHasInvokeMethod bgfVar = cixVar.t;
+        IInvokable bgfVar = cixVar.t;
         if (bgfVar != null) {
             bgfVar.invoke(cioVar);
             i(cioVar);

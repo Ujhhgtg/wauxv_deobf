@@ -1,7 +1,5 @@
 package bsh;
 
-import bsh.ClassGenerator;
-import bsh.Types;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
@@ -8648,7 +8646,7 @@ public class Parser implements ParserTreeConstants, ParserConstants {
         if (token.kind == 0) {
             String str2 = ParserConstants.tokenImage[0];
         }
-        StringBuilder sbQ = yg.q(i, i2, "Parse error at line ", ", column ", " : ");
+        StringBuilder sbQ = yg.concatVar31425(i, i2, "Parse error at line ", ", column ", " : ");
         sbQ.append(str);
         return new ParseException(sbQ.toString(), exc);
     }

@@ -61,13 +61,13 @@ public final class km extends ad {
             if (i4 >= i6) {
                 Object[] objArr3 = this.e;
                 objArr3[length] = objArr3[i6];
-                la._aj(i6, i6 + 1, objArr3, i4 + 1, objArr3);
+                SomeStaticHelpers._aj(i6, i6 + 1, objArr3, i4 + 1, objArr3);
             } else {
                 Object[] objArr4 = this.e;
-                la._aj(i6 - 1, i6, objArr4, objArr4.length, objArr4);
+                SomeStaticHelpers._aj(i6 - 1, i6, objArr4, objArr4.length, objArr4);
                 Object[] objArr5 = this.e;
                 objArr5[objArr5.length - 1] = objArr5[0];
-                la._aj(0, 1, objArr5, i4 + 1, objArr5);
+                SomeStaticHelpers._aj(0, 1, objArr5, i4 + 1, objArr5);
             }
             this.e[i4] = obj;
             this.d = length;
@@ -75,13 +75,13 @@ public final class km extends ad {
             int iM2 = m(i3 + this.d);
             if (iM < iM2) {
                 Object[] objArr6 = this.e;
-                la._aj(iM + 1, iM, objArr6, iM2, objArr6);
+                SomeStaticHelpers._aj(iM + 1, iM, objArr6, iM2, objArr6);
             } else {
                 Object[] objArr7 = this.e;
-                la._aj(1, 0, objArr7, iM2, objArr7);
+                SomeStaticHelpers._aj(1, 0, objArr7, iM2, objArr7);
                 Object[] objArr8 = this.e;
                 objArr8[0] = objArr8[objArr8.length - 1];
-                la._aj(iM + 1, iM, objArr8, objArr8.length - 1, objArr8);
+                SomeStaticHelpers._aj(iM + 1, iM, objArr8, objArr8.length - 1, objArr8);
             }
             this.e[iM] = obj;
         }
@@ -112,25 +112,25 @@ public final class km extends ad {
                 int i4 = size + iM;
                 Object[] objArr = this.e;
                 if (i4 <= objArr.length) {
-                    la._aj(i3, iM2, objArr, iM, objArr);
+                    SomeStaticHelpers._aj(i3, iM2, objArr, iM, objArr);
                 } else if (i3 >= objArr.length) {
-                    la._aj(i3 - objArr.length, iM2, objArr, iM, objArr);
+                    SomeStaticHelpers._aj(i3 - objArr.length, iM2, objArr, iM, objArr);
                 } else {
                     int length = iM - (i4 - objArr.length);
-                    la._aj(0, length, objArr, iM, objArr);
+                    SomeStaticHelpers._aj(0, length, objArr, iM, objArr);
                     Object[] objArr2 = this.e;
-                    la._aj(i3, iM2, objArr2, length, objArr2);
+                    SomeStaticHelpers._aj(i3, iM2, objArr2, length, objArr2);
                 }
             } else {
                 Object[] objArr3 = this.e;
-                la._aj(size, 0, objArr3, iM, objArr3);
+                SomeStaticHelpers._aj(size, 0, objArr3, iM, objArr3);
                 Object[] objArr4 = this.e;
                 if (i3 >= objArr4.length) {
-                    la._aj(i3 - objArr4.length, iM2, objArr4, objArr4.length, objArr4);
+                    SomeStaticHelpers._aj(i3 - objArr4.length, iM2, objArr4, objArr4.length, objArr4);
                 } else {
-                    la._aj(0, objArr4.length - size, objArr4, objArr4.length, objArr4);
+                    SomeStaticHelpers._aj(0, objArr4.length - size, objArr4, objArr4.length, objArr4);
                     Object[] objArr5 = this.e;
-                    la._aj(i3, iM2, objArr5, objArr5.length - size, objArr5);
+                    SomeStaticHelpers._aj(i3, iM2, objArr5, objArr5.length - size, objArr5);
                 }
             }
             g(iM2, collection);
@@ -140,30 +140,30 @@ public final class km extends ad {
         int length2 = i5 - size;
         if (iM2 < i5) {
             Object[] objArr6 = this.e;
-            la._aj(length2, i5, objArr6, objArr6.length, objArr6);
+            SomeStaticHelpers._aj(length2, i5, objArr6, objArr6.length, objArr6);
             if (size >= iM2) {
                 Object[] objArr7 = this.e;
-                la._aj(objArr7.length - size, 0, objArr7, iM2, objArr7);
+                SomeStaticHelpers._aj(objArr7.length - size, 0, objArr7, iM2, objArr7);
             } else {
                 Object[] objArr8 = this.e;
-                la._aj(objArr8.length - size, 0, objArr8, size, objArr8);
+                SomeStaticHelpers._aj(objArr8.length - size, 0, objArr8, size, objArr8);
                 Object[] objArr9 = this.e;
-                la._aj(0, size, objArr9, iM2, objArr9);
+                SomeStaticHelpers._aj(0, size, objArr9, iM2, objArr9);
             }
         } else if (length2 >= 0) {
             Object[] objArr10 = this.e;
-            la._aj(length2, i5, objArr10, iM2, objArr10);
+            SomeStaticHelpers._aj(length2, i5, objArr10, iM2, objArr10);
         } else {
             Object[] objArr11 = this.e;
             length2 += objArr11.length;
             int i6 = iM2 - i5;
             int length3 = objArr11.length - length2;
             if (length3 >= i6) {
-                la._aj(length2, i5, objArr11, iM2, objArr11);
+                SomeStaticHelpers._aj(length2, i5, objArr11, iM2, objArr11);
             } else {
-                la._aj(length2, i5, objArr11, i5 + length3, objArr11);
+                SomeStaticHelpers._aj(length2, i5, objArr11, i5 + length3, objArr11);
                 Object[] objArr12 = this.e;
-                la._aj(0, this.d + length3, objArr12, iM2, objArr12);
+                SomeStaticHelpers._aj(0, this.d + length3, objArr12, iM2, objArr12);
             }
         }
         this.d = length2;
@@ -199,7 +199,7 @@ public final class km extends ad {
         if (i < 0 || i >= i2) {
             throw new IndexOutOfBoundsException(dkz.p(i, "index: ", ", size: ", i2));
         }
-        if (i == aba.af(this)) {
+        if (i == OtherStaticHelpers.af(this)) {
             return removeLast();
         }
         if (i == 0) {
@@ -212,29 +212,29 @@ public final class km extends ad {
         if (i < (this.f >> 1)) {
             int i3 = this.d;
             if (iM >= i3) {
-                la._aj(i3 + 1, i3, objArr, iM, objArr);
+                SomeStaticHelpers._aj(i3 + 1, i3, objArr, iM, objArr);
             } else {
-                la._aj(1, 0, objArr, iM, objArr);
+                SomeStaticHelpers._aj(1, 0, objArr, iM, objArr);
                 Object[] objArr2 = this.e;
                 objArr2[0] = objArr2[objArr2.length - 1];
                 int i4 = this.d;
-                la._aj(i4 + 1, i4, objArr2, objArr2.length - 1, objArr2);
+                SomeStaticHelpers._aj(i4 + 1, i4, objArr2, objArr2.length - 1, objArr2);
             }
             Object[] objArr3 = this.e;
             int i5 = this.d;
             objArr3[i5] = null;
             this.d = i(i5);
         } else {
-            int iM2 = m(aba.af(this) + this.d);
+            int iM2 = m(OtherStaticHelpers.af(this) + this.d);
             if (iM <= iM2) {
                 Object[] objArr4 = this.e;
-                la._aj(iM, iM + 1, objArr4, iM2 + 1, objArr4);
+                SomeStaticHelpers._aj(iM, iM + 1, objArr4, iM2 + 1, objArr4);
             } else {
                 Object[] objArr5 = this.e;
-                la._aj(iM, iM + 1, objArr5, objArr5.length, objArr5);
+                SomeStaticHelpers._aj(iM, iM + 1, objArr5, objArr5.length, objArr5);
                 Object[] objArr6 = this.e;
                 objArr6[objArr6.length - 1] = objArr6[0];
-                la._aj(0, 1, objArr6, iM2 + 1, objArr6);
+                SomeStaticHelpers._aj(0, 1, objArr6, iM2 + 1, objArr6);
             }
             this.e[iM2] = null;
         }
@@ -312,11 +312,11 @@ public final class km extends ad {
             i2 = i > 2147483639 ? Integer.MAX_VALUE : 2147483639;
         }
         Object[] objArr2 = new Object[i2];
-        la._aj(0, this.d, objArr, objArr.length, objArr2);
+        SomeStaticHelpers._aj(0, this.d, objArr, objArr.length, objArr2);
         Object[] objArr3 = this.e;
         int length2 = objArr3.length;
         int i3 = this.d;
-        la._aj(length2 - i3, 0, objArr3, i3, objArr2);
+        SomeStaticHelpers._aj(length2 - i3, 0, objArr3, i3, objArr2);
         this.d = 0;
         this.e = objArr2;
     }
@@ -374,7 +374,7 @@ public final class km extends ad {
         if (isEmpty()) {
             return null;
         }
-        return this.e[m(aba.af(this) + this.d)];
+        return this.e[m(OtherStaticHelpers.af(this) + this.d)];
     }
 
     public final int k(int i) {
@@ -383,19 +383,19 @@ public final class km extends ad {
 
     public final void l(int i, int i2) {
         if (i < i2) {
-            la.l(this.e, i, i2);
+            SomeStaticHelpers.l(this.e, i, i2);
             return;
         }
         Object[] objArr = this.e;
-        la.l(objArr, i, objArr.length);
-        la.l(this.e, 0, i2);
+        SomeStaticHelpers.l(objArr, i, objArr.length);
+        SomeStaticHelpers.l(this.e, 0, i2);
     }
 
     public final Object last() {
         if (isEmpty()) {
             throw new NoSuchElementException("ArrayDeque is empty.");
         }
-        return this.e[m(aba.af(this) + this.d)];
+        return this.e[m(OtherStaticHelpers.af(this) + this.d)];
     }
 
     @Override // java.util.AbstractList, java.util.List
@@ -483,7 +483,7 @@ public final class km extends ad {
                     }
                     i++;
                 }
-                la.l(this.e, iM, iM2);
+                SomeStaticHelpers.l(this.e, iM, iM2);
             } else {
                 int length = this.e.length;
                 boolean z2 = false;
@@ -541,7 +541,7 @@ public final class km extends ad {
             throw new NoSuchElementException("ArrayDeque is empty.");
         }
         n();
-        int iM = m(aba.af(this) + this.d);
+        int iM = m(OtherStaticHelpers.af(this) + this.d);
         Object[] objArr = this.e;
         Object obj = objArr[iM];
         objArr[iM] = null;
@@ -574,7 +574,7 @@ public final class km extends ad {
                 Object[] objArr = this.e;
                 int i5 = iM2 - iMin;
                 int i6 = iM - iMin;
-                la._aj(i5 + 1, i6 + 1, objArr, i4, objArr);
+                SomeStaticHelpers._aj(i5 + 1, i6 + 1, objArr, i4, objArr);
                 iM = k(i6);
                 iM2 = k(i5);
                 i -= iMin;
@@ -595,7 +595,7 @@ public final class km extends ad {
                 i2 = Math.min(i7, Math.min(objArr2.length - iM4, objArr2.length - iM5));
                 Object[] objArr3 = this.e;
                 int i8 = iM4 + i2;
-                la._aj(iM5, iM4, objArr3, i8, objArr3);
+                SomeStaticHelpers._aj(iM5, iM4, objArr3, i8, objArr3);
                 iM4 = m(i8);
                 iM5 = m(iM5 + i2);
             }
@@ -627,7 +627,7 @@ public final class km extends ad {
                     }
                     i++;
                 }
-                la.l(this.e, iM, iM2);
+                SomeStaticHelpers.l(this.e, iM, iM2);
             } else {
                 int length = this.e.length;
                 boolean z2 = false;
@@ -710,12 +710,12 @@ public final class km extends ad {
         int iM = m(this.f + this.d);
         int i2 = this.d;
         if (i2 < iM) {
-            la._am(i2, iM, this.e, 2, objArr);
+            SomeStaticHelpers._am(i2, iM, this.e, 2, objArr);
         } else if (!isEmpty()) {
             Object[] objArr2 = this.e;
-            la._aj(0, this.d, objArr2, objArr2.length, objArr);
+            SomeStaticHelpers._aj(0, this.d, objArr2, objArr2.length, objArr);
             Object[] objArr3 = this.e;
-            la._aj(objArr3.length - this.d, 0, objArr3, iM, objArr);
+            SomeStaticHelpers._aj(objArr3.length - this.d, 0, objArr3, iM, objArr);
         }
         int i3 = this.f;
         if (i3 < objArr.length) {

@@ -65,7 +65,7 @@ import java.util.function.ObjDoubleConsumer;
 import java.util.function.ObjIntConsumer;
 import java.util.function.ObjLongConsumer;
 import java.util.function.Supplier;
-import me.hd.wauxv.obf.bjs;
+
 import me.hd.wauxv.obf.cpl;
 import me.hd.wauxv.obf.cpt;
 import me.hd.wauxv.obf.cpu;
@@ -230,7 +230,7 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
         METHOD_DESC_GET_OBJECT_READER_1 = "(" + str + ")" + str2;
         StringBuilder sb2 = new StringBuilder("(Ljava/lang/Class;Ljava/util/function/Supplier;");
         String str3 = ASMUtils.DESC_FIELD_READER_ARRAY;
-        METHOD_DESC_INIT = yg.o(sb2, str3, ")V");
+        METHOD_DESC_INIT = yg.concatToVar1(sb2, str3, ")V");
         METHOD_DESC_ADAPTER_INIT = "(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/String;J" + ASMUtils.DESC_JSONSCHEMA
                 + "Ljava/util/function/Supplier;Ljava/util/function/Function;" + str3 + ")V";
         METHOD_DESC_READ_OBJECT = concat("(", str, "Ljava/lang/reflect/Type;Ljava/lang/Object;J)Ljava/lang/Object;");
@@ -1189,7 +1189,7 @@ public class ObjectReaderCreatorASM extends ObjectReaderCreator {
             methodWriterVisitMethod.aload(1);
             i5 = i8;
             methodWriterVisitMethod.invokevirtual(str2, "autoType",
-                    yg.o(new StringBuilder("("), ASMUtils.DESC_JSON_READER, ")Ljava/lang/Object;"));
+                    yg.concatToVar1(new StringBuilder("("), ASMUtils.DESC_JSON_READER, ")Ljava/lang/Object;"));
             methodWriterVisitMethod.astore(i3);
             methodWriterVisitMethod.goto_(label11);
             methodWriterVisitMethod.visitLabel(label14);

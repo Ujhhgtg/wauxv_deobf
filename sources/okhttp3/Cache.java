@@ -15,12 +15,11 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.TreeSet;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.avd;
+import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.avh;
 import me.hd.wauxv.obf.bcz;
 import me.hd.wauxv.obf.bda;
 import me.hd.wauxv.obf.IEmpty;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.cyk;
 import me.hd.wauxv.obf.cyl;
@@ -35,9 +34,6 @@ import me.hd.wauxv.obf.rh;
 import me.hd.wauxv.obf.rl;
 import me.hd.wauxv.obf.rm;
 import me.hd.wauxv.obf.sj;
-import okhttp3.Headers;
-import okhttp3.Request;
-import okhttp3.Response;
 import okhttp3.internal.Util;
 import okhttp3.internal.cache.CacheRequest;
 import okhttp3.internal.cache.CacheStrategy;
@@ -674,7 +670,7 @@ public final class Cache implements Closeable, Flushable {
         private final List<Certificate> readCertificateList(rm rmVar) throws IOException {
             int int$okhttp = Cache.Companion.readInt$okhttp(rmVar);
             if (int$okhttp == -1) {
-                return avd.a;
+                return EmptyReadonlyList.a;
             }
             try {
                 CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");

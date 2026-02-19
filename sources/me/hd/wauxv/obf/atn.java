@@ -23,7 +23,7 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class atn implements IHasInvokeMethod {
+public final /* synthetic */ class atn implements IInvokable {
     public final /* synthetic */ int a;
 
     public /* synthetic */ atn(int i) {
@@ -52,64 +52,64 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
         final int i3 = 3;
         int i4 = 12;
         final int i5 = 2;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         switch (i) {
             case 0:
-                ((amm) obj).b = new atn(1 == true ? 1 : 0);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new atn(1 == true ? 1 : 0);
+                return kotlinUnitVar;
             case 1:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k("MicroMsg.emoji.EmojiFileEncryptMgr" /* cnb.z(-90284507527978L) */,
-                        "decode emoji file failed. path is no exist :%s " /* cnb.z(-90649579748138L) */);
+                zbVar.k("MicroMsg.emoji.EmojiFileEncryptMgr" /* "MicroMsg.emoji.EmojiFileEncryptMgr" /* "MicroMsg.emoji.EmojiFileEncryptMgr" /* cnb.z(-90284507527978L)  */,
+                        "decode emoji file failed. path is no exist :%s " /* "decode emoji file failed. path is no exist :%s " /* "decode emoji file failed. path is no exist :%s " /* cnb.z(-90649579748138L)  */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 2:
                 View view = (View) obj;
                 View viewK = dkz.k(view, R.layout.module_dialog_emoji_game, null, false);
                 int i6 = R.id.moduleDialogRbEmojiGameDice1;
-                MaterialRadioButton materialRadioButton = (MaterialRadioButton) cnd.aq(viewK,
+                MaterialRadioButton materialRadioButton = (MaterialRadioButton) KotlinHelpers2.aq(viewK,
                         R.id.moduleDialogRbEmojiGameDice1);
                 if (materialRadioButton != null) {
                     i6 = R.id.moduleDialogRbEmojiGameDice2;
-                    MaterialRadioButton materialRadioButton2 = (MaterialRadioButton) cnd.aq(viewK,
+                    MaterialRadioButton materialRadioButton2 = (MaterialRadioButton) KotlinHelpers2.aq(viewK,
                             R.id.moduleDialogRbEmojiGameDice2);
                     if (materialRadioButton2 != null) {
                         i6 = R.id.moduleDialogRbEmojiGameDice3;
-                        MaterialRadioButton materialRadioButton3 = (MaterialRadioButton) cnd.aq(viewK,
+                        MaterialRadioButton materialRadioButton3 = (MaterialRadioButton) KotlinHelpers2.aq(viewK,
                                 R.id.moduleDialogRbEmojiGameDice3);
                         if (materialRadioButton3 != null) {
                             i6 = R.id.moduleDialogRbEmojiGameDice4;
-                            MaterialRadioButton materialRadioButton4 = (MaterialRadioButton) cnd.aq(viewK,
+                            MaterialRadioButton materialRadioButton4 = (MaterialRadioButton) KotlinHelpers2.aq(viewK,
                                     R.id.moduleDialogRbEmojiGameDice4);
                             if (materialRadioButton4 != null) {
                                 i6 = R.id.moduleDialogRbEmojiGameDice5;
-                                MaterialRadioButton materialRadioButton5 = (MaterialRadioButton) cnd.aq(viewK,
+                                MaterialRadioButton materialRadioButton5 = (MaterialRadioButton) KotlinHelpers2.aq(viewK,
                                         R.id.moduleDialogRbEmojiGameDice5);
                                 if (materialRadioButton5 != null) {
                                     i6 = R.id.moduleDialogRbEmojiGameDice6;
-                                    MaterialRadioButton materialRadioButton6 = (MaterialRadioButton) cnd.aq(viewK,
+                                    MaterialRadioButton materialRadioButton6 = (MaterialRadioButton) KotlinHelpers2.aq(viewK,
                                             R.id.moduleDialogRbEmojiGameDice6);
                                     if (materialRadioButton6 != null) {
                                         i6 = R.id.moduleDialogRbEmojiGameMorra0;
-                                        MaterialRadioButton materialRadioButton7 = (MaterialRadioButton) cnd.aq(viewK,
+                                        MaterialRadioButton materialRadioButton7 = (MaterialRadioButton) KotlinHelpers2.aq(viewK,
                                                 R.id.moduleDialogRbEmojiGameMorra0);
                                         if (materialRadioButton7 != null) {
                                             i6 = R.id.moduleDialogRbEmojiGameMorra1;
-                                            MaterialRadioButton materialRadioButton8 = (MaterialRadioButton) cnd
+                                            MaterialRadioButton materialRadioButton8 = (MaterialRadioButton) KotlinHelpers2
                                                     .aq(viewK, R.id.moduleDialogRbEmojiGameMorra1);
                                             if (materialRadioButton8 != null) {
                                                 i6 = R.id.moduleDialogRbEmojiGameMorra2;
-                                                MaterialRadioButton materialRadioButton9 = (MaterialRadioButton) cnd
+                                                MaterialRadioButton materialRadioButton9 = (MaterialRadioButton) KotlinHelpers2
                                                         .aq(viewK, R.id.moduleDialogRbEmojiGameMorra2);
                                                 if (materialRadioButton9 != null) {
                                                     i6 = R.id.moduleDialogRgEmojiGameDice;
-                                                    RadioGroup radioGroup = (RadioGroup) cnd.aq(viewK,
+                                                    RadioGroup radioGroup = (RadioGroup) KotlinHelpers2.aq(viewK,
                                                             R.id.moduleDialogRgEmojiGameDice);
                                                     if (radioGroup != null) {
                                                         i6 = R.id.moduleDialogRgEmojiGameMorra;
-                                                        RadioGroup radioGroup2 = (RadioGroup) cnd.aq(viewK,
+                                                        RadioGroup radioGroup2 = (RadioGroup) KotlinHelpers2.aq(viewK,
                                                                 R.id.moduleDialogRgEmojiGameMorra);
                                                         if (radioGroup2 != null) {
                                                             LinearLayout linearLayout = (LinearLayout) viewK;
@@ -145,7 +145,7 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                                                             eg egVar = (eg) bzyVar.d;
                                                             atx.a.getClass();
                                                             egVar.d = atx.c;
-                                                            bzyVar.t("保存" /* cnb.z(-507875587783466L) */,
+                                                            bzyVar.t("保存" /* "保存" /* "保存" /* cnb.z(-507875587783466L)  */,
                                                                     new amw(new bp(cenVar, 19), 0));
                                                             bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, "取消" /*
                                                                                                                   * cnb.
@@ -156,7 +156,7 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                                                                 egVar.r = linearLayout;
                                                             }
                                                             bzyVar.i().show();
-                                                            return ensVar;
+                                                            return kotlinUnitVar;
                                                         }
                                                     }
                                                 }
@@ -169,12 +169,12 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                     }
                 }
                 throw new NullPointerException("Missing required view with ID: "
-                        /* cnb.z(-638988054428458L) */.concat(viewK.getResources().getResourceName(i6)));
+                        /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-638988054428458L)  */.concat(viewK.getResources().getResourceName(i6)));
             case 3:
                 bah bahVar = (bah) obj;
-                String[] strArr = { "com.tencent.mm.sdk.platformtools" /* cnb.z(-506887745305386L) */ };
+                String[] strArr = { "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* cnb.z(-506887745305386L)  */ };
                 bahVar.getClass();
-                bahVar.a = la.ab(strArr);
+                bahVar.a = SomeStaticHelpers.ab(strArr);
                 cdj cdjVar = new cdj();
                 cls2 = Integer.class;
                 Class<Integer> clsBf = cnf.bf(dal.b(cls2));
@@ -190,23 +190,23 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                 cdjVar.q(clsBf2, clsBf3 != null ? clsBf3 : Integer.class);
                 fj fjVar = new fj();
                 cdj cdjVar2 = new cdj();
-                cdjVar2.s("currentTimeMillis" /* cnb.z(-507312947067690L) */);
+                cdjVar2.s("currentTimeMillis" /* "currentTimeMillis" /* "currentTimeMillis" /* cnb.z(-507312947067690L)  */);
                 fjVar.f(cdjVar2);
                 cdj cdjVar3 = new cdj();
-                cdjVar3.s("nextInt" /* cnb.z(-507252817525546L) */);
+                cdjVar3.s("nextInt" /* "nextInt" /* "nextInt" /* cnb.z(-507252817525546L)  */);
                 fjVar.f(cdjVar3);
                 fjVar.d = bzu.Contains;
                 cdjVar.i = fjVar;
                 bahVar.d = cdjVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 4:
                 bah bahVar2 = (bah) obj;
                 cdj cdjVar4 = new cdj();
-                cdjVar4.t("MicroMsg.EmojiPanelClickListener" /* cnb.z(-507218457787178L) */,
-                        "penn send capture emoji click emoji: %s status: %d." /* cnb.z(-495531851774762L) */);
+                cdjVar4.t("MicroMsg.EmojiPanelClickListener" /* "MicroMsg.EmojiPanelClickListener" /* "MicroMsg.EmojiPanelClickListener" /* cnb.z(-507218457787178L)  */,
+                        "penn send capture emoji click emoji: %s status: %d." /* "penn send capture emoji click emoji: %s status: %d." /* "penn send capture emoji click emoji: %s status: %d." /* cnb.z(-495531851774762L)  */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar4;
-                return ensVar;
+                return kotlinUnitVar;
             case 5:
                 final HookParam hookParam = (HookParam) obj;
                 atx atxVar = atx.a;
@@ -223,7 +223,7 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                     objX = null;
                 }
                 throwIfVar1IsNull(objX);
-                int i7 = bte.a;
+                int i7 = 0;
                 azg azgVarR = dqc.bi(objX).r();
                 abf.ao(azgVarR.ad, (cdy[]) Arrays.copyOf(new cdy[] { cdy.d }, 1));
                 azgVarR.a = dal.b(cls4);
@@ -231,19 +231,19 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                 throwIfVar1IsNull(objE);
                 if (((Number) objE).intValue() == 0) {
                     azg azgVarR2 = dqc.bi(objX).r();
-                    azgVarR2.a = "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-507897062619946L) */;
+                    azgVarR2.a = "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-507897062619946L)  */;
                     Object objD = ((azk) aaz.e(azgVarR2.c())).d();
                     throwIfVar1IsNull(objD);
                     cde cdeVarT = dqc.bi(objD).t();
-                    cdeVarT.ab = "getMd5" /* cnb.z(-507751033731882L) */;
-                    Object objJ = ((cdk) aaz.e(cdeVarT.aj())).j(new Object[0]);
+                    cdeVarT.ab = "getMd5" /* "getMd5" /* "getMd5" /* cnb.z(-507751033731882L)  */;
+                    Object objJ = ((MethodHookWrapper) aaz.e(cdeVarT.aj())).j(new Object[0]);
                     throwIfVar1IsNull(objJ);
                     String str = (String) objJ;
-                    if (str.equals("9bd1281af3a31710a45b84d736363691" /* cnb.z(-507703789091626L) */)) {
+                    if (str.equals("9bd1281af3a31710a45b84d736363691" /* "9bd1281af3a31710a45b84d736363691" /* "9bd1281af3a31710a45b84d736363691" /* cnb.z(-507703789091626L)  */)) {
                         atxVar.getClass();
                         hookParam.setResult(null);
                         AlertDialog.Builder builder = new AlertDialog.Builder(aye.v());
-                        builder.setTitle("选择猜拳" /* cnb.z(-507480450792234L) */);
+                        builder.setTitle("选择猜拳" /* "选择猜拳" /* "选择猜拳" /* cnb.z(-507480450792234L)  */);
                         RadioGroup radioGroup3 = new RadioGroup(builder.getContext());
                         radioGroup3.setGravity(17);
                         radioGroup3.setOrientation(0);
@@ -259,7 +259,7 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                                 radioGroup3.addView(radioButton);
                             } else {
                                 builder.setView(radioGroup3);
-                                builder.setPositiveButton("发送" /* cnb.z(-507441796086570L) */,
+                                builder.setPositiveButton("发送" /* "发送" /* "发送" /* cnb.z(-507441796086570L)  */,
                                         new DialogInterface.OnClickListener() { // from class: me.hd.wauxv.obf.atq
                                             @Override // android.content.DialogInterface.OnClickListener
                                             public final void onClick(DialogInterface dialogInterface, int i8) {
@@ -281,7 +281,7 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                                                 }
                                             }
                                         });
-                                CharSequence charSequenceZ = "随机" /* cnb.z(-507446091053866L) */;
+                                CharSequence charSequenceZ = "随机" /* "随机" /* "随机" /* cnb.z(-507446091053866L)  */;
                                 final char c = 1 == true ? 1 : 0;
                                 builder.setNeutralButton(charSequenceZ, new DialogInterface.OnClickListener() { // from
                                                                                                                 // class:
@@ -306,16 +306,16 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                                         }
                                     }
                                 });
-                                builder.setNegativeButton("取消" /* cnb.z(-507948602227498L) */,
+                                builder.setNegativeButton("取消" /* "取消" /* "取消" /* cnb.z(-507948602227498L)  */,
                                         (DialogInterface.OnClickListener) null);
                                 builder.show();
                             }
                         }
-                    } else if (str.equals("08f223fa83f1ca34e143d1e580252c7c" /* cnb.z(-507029479226154L) */)) {
+                    } else if (str.equals("08f223fa83f1ca34e143d1e580252c7c" /* "08f223fa83f1ca34e143d1e580252c7c" /* "08f223fa83f1ca34e143d1e580252c7c" /* cnb.z(-507029479226154L)  */)) {
                         atxVar.getClass();
                         hookParam.setResult(null);
                         AlertDialog.Builder builder2 = new AlertDialog.Builder(aye.v());
-                        builder2.setTitle("选择骰子" /* cnb.z(-507952897194794L) */);
+                        builder2.setTitle("选择骰子" /* "选择骰子" /* "选择骰子" /* cnb.z(-507952897194794L)  */);
                         RadioGroup radioGroup4 = new RadioGroup(builder2.getContext());
                         radioGroup4.setGravity(17);
                         radioGroup4.setOrientation(0);
@@ -331,7 +331,7 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                                 radioGroup4.addView(radioButton2);
                             } else {
                                 builder2.setView(radioGroup4);
-                                builder2.setPositiveButton("发送" /* cnb.z(-507914242489130L) */,
+                                builder2.setPositiveButton("发送" /* "发送" /* "发送" /* cnb.z(-507914242489130L)  */,
                                         new DialogInterface.OnClickListener() { // from class: me.hd.wauxv.obf.atq
                                             @Override // android.content.DialogInterface.OnClickListener
                                             public final void onClick(DialogInterface dialogInterface, int i8) {
@@ -353,7 +353,7 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                                                 }
                                             }
                                         });
-                                builder2.setNeutralButton("随机" /* cnb.z(-507918537456426L) */,
+                                builder2.setNeutralButton("随机" /* "随机" /* "随机" /* cnb.z(-507918537456426L)  */,
                                         new DialogInterface.OnClickListener() { // from class: me.hd.wauxv.obf.atq
                                             @Override // android.content.DialogInterface.OnClickListener
                                             public final void onClick(DialogInterface dialogInterface, int i8) {
@@ -375,20 +375,20 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                                                 }
                                             }
                                         });
-                                builder2.setNegativeButton("取消" /* cnb.z(-507940012292906L) */,
+                                builder2.setNegativeButton("取消" /* "取消" /* "取消" /* cnb.z(-507940012292906L)  */,
                                         (DialogInterface.OnClickListener) null);
                                 builder2.show();
                             }
                         }
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 6:
-                ((amm) obj).c = new atn(i3);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new atn(i3);
+                return kotlinUnitVar;
             case 7:
-                ((amm) obj).c = new atn(4);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new atn(4);
+                return kotlinUnitVar;
             case 8:
                 HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
@@ -413,29 +413,29 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                     numValueOf = Integer.valueOf(atv.a.k());
                 }
                 hookParam2.setResult(numValueOf);
-                return ensVar;
+                return kotlinUnitVar;
             case 9:
-                ((amm) obj).c = new atn(10);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new atn(10);
+                return kotlinUnitVar;
             case 10:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar5 = new cdj();
-                cdj.l(cdjVar5, "com.tencent.mm.storage.emotion.EmojiInfo" /* cnb.z(-75471165324074L) */);
-                cdjVar5.t("save emoji thumb error" /* cnb.z(-75844827478826L) */);
+                cdj.l(cdjVar5, "com.tencent.mm.storage.emotion.EmojiInfo" /* "com.tencent.mm.storage.emotion.EmojiInfo" /* "com.tencent.mm.storage.emotion.EmojiInfo" /* cnb.z(-75471165324074L)  */);
+                cdjVar5.t("save emoji thumb error" /* "save emoji thumb error" /* "save emoji thumb error" /* cnb.z(-75844827478826L)  */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar5;
-                return ensVar;
+                return kotlinUnitVar;
             case 11:
-                ((amm) obj).b = new atn(i4);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new atn(i4);
+                return kotlinUnitVar;
             case 12:
                 bag bagVar2 = (bag) obj;
                 zb zbVar2 = new zb();
-                zbVar2.k("MicroMsg.emoji.EmojiInfoStorage" /* cnb.z(-91976724642602L) */,
-                        "md5 is null or invalue. md5:%s" /* cnb.z(-91839285689130L) */);
+                zbVar2.k("MicroMsg.emoji.EmojiInfoStorage" /* "MicroMsg.emoji.EmojiInfoStorage" /* "MicroMsg.emoji.EmojiInfoStorage" /* cnb.z(-91976724642602L)  */,
+                        "md5 is null or invalue. md5:%s" /* "md5 is null or invalue. md5:%s" /* "md5 is null or invalue. md5:%s" /* cnb.z(-91839285689130L)  */);
                 bagVar2.getClass();
                 bagVar2.b = zbVar2;
-                return ensVar;
+                return kotlinUnitVar;
             case 13:
                 List list = (List) obj;
                 Object obj2 = list.get(0);
@@ -451,12 +451,12 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                 }
                 return Boolean.valueOf(z);
             case 14:
-                ((amm) obj).b = new atn(15);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new atn(15);
+                return kotlinUnitVar;
             case 15:
                 bag bagVar3 = (bag) obj;
                 zb zbVar3 = new zb();
-                zbVar3.k("MicroMsg.emoji.EmojiMgrImpl" /* cnb.z(-92105573661482L) */, "sendEmoji: context is null" /*
+                zbVar3.k("MicroMsg.emoji.EmojiMgrImpl" /* "MicroMsg.emoji.EmojiMgrImpl" /* "MicroMsg.emoji.EmojiMgrImpl" /* cnb.z(-92105573661482L)  */, "sendEmoji: context is null" /*
                                                                                                                     * cnb
                                                                                                                     * .z
                                                                                                                     * (-
@@ -464,7 +464,7 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                                                                                                                     */);
                 bagVar3.getClass();
                 bagVar3.b = zbVar3;
-                return ensVar;
+                return kotlinUnitVar;
             case 16:
                 View view2 = (View) obj;
                 cee ceeVarE = cee.e(LayoutInflater.from(view2.getContext()));
@@ -475,30 +475,30 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                 eg egVar2 = (eg) bzyVar2.d;
                 egVar2.d = str2;
                 LinearLayout linearLayout2 = ceeVarE.b;
-                bzyVar2.t("保存" /* cnb.z(-519081157458730L) */, new amw(new aul(ceeVarE, 0), 0));
-                bzyVar2.s("重置" /* cnb.z(-519085452426026L) */, new amw(new amd(2), 2));
-                bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, "取消" /* cnb.z(-47455093652266L) */);
+                bzyVar2.t("保存" /* "保存" /* "保存" /* cnb.z(-519081157458730L)  */, new amw(new aul(ceeVarE, 0), 0));
+                bzyVar2.s("重置" /* "重置" /* "重置" /* cnb.z(-519085452426026L)  */, new amw(new amd(2), 2));
+                bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */);
                 if (linearLayout2 != null) {
                     egVar2.r = linearLayout2;
                 }
                 bzyVar2.i().show();
-                return ensVar;
+                return kotlinUnitVar;
             case 17:
-                ((amm) obj).b = new atn(18);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new atn(18);
+                return kotlinUnitVar;
             case 18:
                 bag bagVar4 = (bag) obj;
-                String[] strArr2 = { "com.tencent.mm.storage" /* cnb.z(-91676076931882L) */ };
+                String[] strArr2 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-91676076931882L)  */ };
                 bagVar4.getClass();
-                bagVar4.a = la.ab(strArr2);
+                bagVar4.a = SomeStaticHelpers.ab(strArr2);
                 zb zbVar4 = new zb();
-                zbVar4.k("MicroMsg.emoji.EmojiStorageMgr" /* cnb.z(-91577292684074L) */, "EmojiStorageMgr: %s" /*
+                zbVar4.k("MicroMsg.emoji.EmojiStorageMgr" /* "MicroMsg.emoji.EmojiStorageMgr" /* "MicroMsg.emoji.EmojiStorageMgr" /* cnb.z(-91577292684074L)  */, "EmojiStorageMgr: %s" /*
                                                                                                                 * cnb.z(
                                                                                                                 * -
                                                                                                                 * 88746909236010L)
                                                                                                                 */);
                 bagVar4.b = zbVar4;
-                return ensVar;
+                return kotlinUnitVar;
             case 19:
                 HookParam hookParam3 = (HookParam) obj;
                 hookParam3.getClass();
@@ -529,13 +529,13 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                                                                                                           * cnb.z(-
                                                                                                           * 608734304795434L)
                                                                                                           */)) {
-                            hookParam3.setResult("1" /* cnb.z(-609107966950186L) */);
+                            hookParam3.setResult("1" /* "1" /* "1" /* cnb.z(-609107966950186L)  */);
                         }
                     } catch (Exception e) {
                         ArrayList arrayList = ewq.a;
                         StringBuilder sb = new StringBuilder();
-                        sb.append("onGetExptConfig " /* cnb.z(-36717675412266L) */);
-                        ewq.e(yg.n(sb,
+                        sb.append("onGetExptConfig " /* "onGetExptConfig " /* "onGetExptConfig " /* cnb.z(-36717675412266L)  */);
+                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
                                 bniVar instanceof SwitchHook ? ((SwitchHook) bniVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 36661840837418L)
@@ -543,10 +543,10 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                                 -36623186131754L), e, 12);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 20:
-                ((amm) obj).c = new atn(21);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new atn(21);
+                return kotlinUnitVar;
             case 21:
                 bah bahVar4 = (bah) obj;
                 cdj cdjVar6 = new cdj();
@@ -564,11 +564,11 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                 cls3 = Boolean.class;
                 Class<Boolean> clsBf8 = cnf.bf(dal.b(cls3));
                 cdjVar6.q(clsBf6, cls, clsBf8 != null ? clsBf8 : Boolean.class);
-                cdjVar6.t("MicroMsg.ExptService" /* cnb.z(-36588826393386L) */,
-                        "Fail to query value, return default value '%s' instead." /* cnb.z(-42528766163754L) */);
+                cdjVar6.t("MicroMsg.ExptService" /* "MicroMsg.ExptService" /* "MicroMsg.ExptService" /* cnb.z(-36588826393386L)  */,
+                        "Fail to query value, return default value '%s' instead." /* "Fail to query value, return default value '%s' instead." /* "Fail to query value, return default value '%s' instead." /* cnb.z(-42528766163754L)  */);
                 bahVar4.getClass();
                 bahVar4.d = cdjVar6;
-                return ensVar;
+                return kotlinUnitVar;
             case 22:
                 HookParam hookParam4 = (HookParam) obj;
                 LinkedHashSet<bnj> linkedHashSet = ayy.b;
@@ -585,7 +585,7 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                 throwIfVar1IsNull(obj5);
                 ContextMenu contextMenu = (ContextMenu) obj5;
                 if (cnb.ab(ewk.b) || cnb.ac(ewh.c)) {
-                    int i8 = bte.a;
+                    int i8 = 0;
                     azg azgVarR3 = dqc.bi(contextMenu).r();
                     azgVarR3.a = dal.b(Context.class);
                     Object objE2 = ((azk) aaz.e(azgVarR3.c())).e();
@@ -598,21 +598,21 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                     for (bnj bnjVar : linkedHashSet) {
                         try {
                             for (ayv ayvVar : ((cif) bnjVar).i()) {
-                                cdk cdkVarD = ((cdk) dovVar.getValue()).d();
-                                cdkVarD.dexFind(contextMenu);
+                                MethodHookWrapper methodHookWrapperVarD = ((MethodHookWrapper) dovVar.getValue()).d();
+                                methodHookWrapperVarD.dexFind(contextMenu);
                                 try {
                                     Integer numValueOf2 = Integer.valueOf(R.id.MenuItem_Group);
                                     ayvVar.getClass();
-                                    cdkVarD.e(numValueOf2, Integer.valueOf(R.id.MenuItem_Fav_Forward), 0, ayvVar.a,
+                                    methodHookWrapperVarD.e(numValueOf2, Integer.valueOf(R.id.MenuItem_Fav_Forward), 0, ayvVar.a,
                                             Integer.valueOf(R.drawable.ic_menu_forward_24dp));
                                 } catch (Exception e2) {
                                     e = e2;
                                     ArrayList arrayList2 = ewq.a;
                                     StringBuilder sb2 = new StringBuilder();
-                                    sb2.append("onCreateMenuItems " /* cnb.z(-42013370088234L) */);
-                                    ewq.e(yg.n(sb2,
+                                    sb2.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-42013370088234L)  */);
+                                    ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
                                             bnjVar instanceof SwitchHook ? ((SwitchHook) bnjVar).getResult()
-                                                    : "LoadHook" /* cnb.z(-41948945578794L) */,
+                                                    : "LoadHook" /* "LoadHook" /* "LoadHook" /* cnb.z(-41948945578794L)  */,
                                             -41858751265578L), e, 12);
                                 }
                             }
@@ -630,13 +630,13 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                         } catch (Exception e4) {
                             ArrayList arrayList3 = ewq.a;
                             StringBuilder sb3 = new StringBuilder();
-                            sb3.append("onCreateMenuItems " /* cnb.z(-41824391527210L) */);
-                            ewq.e(yg.n(sb3, bnjVar2 instanceof SwitchHook ? ((SwitchHook) bnjVar2).getResult()
-                                    : "LoadHook" /* cnb.z(-42309722831658L) */, -42288247995178L), e4, 12);
+                            sb3.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-41824391527210L)  */);
+                            ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb3, bnjVar2 instanceof SwitchHook ? ((SwitchHook) bnjVar2).getResult()
+                                    : "LoadHook" /* "LoadHook" /* "LoadHook" /* cnb.z(-42309722831658L)  */, -42288247995178L), e4, 12);
                         }
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 23:
                 HookParam hookParam5 = (HookParam) obj;
                 hookParam5.getClass();
@@ -651,14 +651,14 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                 Object obj6 = objX6 instanceof dcx ? null : objX6;
                 throwIfVar1IsNull(obj6);
                 MenuItem menuItem = (MenuItem) obj6;
-                int i9 = bte.a;
+                int i9 = 0;
                 azg azgVarAa = dkz.aa(hookParam5);
                 azgVarAa.a = dal.b(cls4);
                 Object objE3 = ((azk) aaz.e(azgVarAa.c())).e();
                 throwIfVar1IsNull(objE3);
                 int iIntValue = ((Number) objE3).intValue();
                 azg azgVarAa2 = dkz.aa(hookParam5);
-                azgVarAa2.a = "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* cnb.z(-42253888256810L) */;
+                azgVarAa2.a = "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* cnb.z(-42253888256810L)  */;
                 Object objE4 = ((azk) aaz.e(azgVarAa2.c())).e();
                 throwIfVar1IsNull(objE4);
                 azg azgVarR4 = dqc.bi((Activity) objE4).r();
@@ -678,8 +678,8 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                     } catch (Exception e5) {
                         ArrayList arrayList4 = ewq.a;
                         StringBuilder sb4 = new StringBuilder();
-                        sb4.append("onCreateMenuItems " /* cnb.z(-43675522431786L) */);
-                        ewq.e(yg.n(sb4,
+                        sb4.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-43675522431786L)  */);
+                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb4,
                                 bnjVar3 instanceof SwitchHook ? ((SwitchHook) bnjVar3).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -688,42 +688,42 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                                 -43589623085866L), e5, 12);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 24:
-                ((amm) obj).c = new atn(28);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new atn(28);
+                return kotlinUnitVar;
             case 25:
-                ((amm) obj).c = new atn(27);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new atn(27);
+                return kotlinUnitVar;
             case 26:
                 return Boolean.valueOf(dnr.bp(((Class) obj).getName(),
-                        "com.tencent.mm.plugin.fav.ui.adapter." /* cnb.z(-43555263347498L) */, false));
+                        "com.tencent.mm.plugin.fav.ui.adapter." /* "com.tencent.mm.plugin.fav.ui.adapter." /* "com.tencent.mm.plugin.fav.ui.adapter." /* cnb.z(-43555263347498L)  */, false));
             case 27:
                 bah bahVar5 = (bah) obj;
-                String[] strArr3 = { "com.tencent.mm.plugin.fav.ui" /* cnb.z(-43383464655658L) */ };
+                String[] strArr3 = { "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* cnb.z(-43383464655658L)  */ };
                 bahVar5.getClass();
-                bahVar5.a = la.ab(strArr3);
+                bahVar5.a = SomeStaticHelpers.ab(strArr3);
                 cdj cdjVar7 = new cdj();
-                cdjVar7.t("MicroMsg.FavoriteIndexUI" /* cnb.z(-43241730734890L) */, "onMMMenuItemSelected" /*
+                cdjVar7.t("MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* cnb.z(-43241730734890L)  */, "onMMMenuItemSelected" /*
                                                                                                             * cnb.z(-
                                                                                                             * 40385577483050L)
                                                                                                             */);
                 bahVar5.d = cdjVar7;
-                return ensVar;
+                return kotlinUnitVar;
             case 28:
                 bah bahVar6 = (bah) obj;
-                String[] strArr4 = { "com.tencent.mm.plugin.fav.ui" /* cnb.z(-43924630534954L) */ };
+                String[] strArr4 = { "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* cnb.z(-43924630534954L)  */ };
                 bahVar6.getClass();
-                bahVar6.a = la.ab(strArr4);
+                bahVar6.a = SomeStaticHelpers.ab(strArr4);
                 cdj cdjVar8 = new cdj();
-                cdjVar8.t("MicroMsg.FavoriteIndexUI" /* cnb.z(-43782896614186L) */, (cnb.ab(ewk.b) || cnb.ac(ewh.c))
+                cdjVar8.t("MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* cnb.z(-43782896614186L)  */, (cnb.ab(ewk.b) || cnb.ac(ewh.c))
                         ? "[OnCreateContextMMMenu] pos = "
-                        /* cnb.z(-43125766617898L) */ : "onCreateContextMenu() pos:%s id:%s fav_id:%s" /*
+                        /* "[OnCreateContextMMMenu] pos = " /* "[OnCreateContextMMMenu] pos = " /* cnb.z(-43125766617898L)  */ : "onCreateContextMenu() pos:%s id:%s fav_id:%s" /*
                                                                                                         * cnb.z(-
                                                                                                         * 42992622631722L)
                                                                                                         */);
                 bahVar6.d = cdjVar8;
-                return ensVar;
+                return kotlinUnitVar;
             default:
                 HookParam hookParam6 = (HookParam) obj;
                 hookParam6.getClass();
@@ -738,7 +738,7 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                 Object obj7 = objX7 instanceof dcx ? null : objX7;
                 throwIfVar1IsNull(obj7);
                 ContextMenu contextMenu2 = (ContextMenu) obj7;
-                int i10 = bte.a;
+                int i10 = 0;
                 azg azgVarR5 = dqc.bi(contextMenu2).r();
                 azgVarR5.a = dal.b(Context.class);
                 Object objE6 = ((azk) aaz.e(azgVarR5.c())).e();
@@ -751,20 +751,20 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                 for (bnk bnkVar : azd.b) {
                     try {
                         for (aza azaVar : ((cie) bnkVar).i()) {
-                            cdk cdkVarD2 = ((cdk) dovVar2.getValue()).d();
-                            cdkVarD2.dexFind(contextMenu2);
+                            MethodHookWrapper methodHookWrapperVarD2 = ((MethodHookWrapper) dovVar2.getValue()).d();
+                            methodHookWrapperVarD2.dexFind(contextMenu2);
                             Integer numValueOf3 = Integer.valueOf(i2);
                             azaVar.getClass();
                             try {
-                                cdkVarD2.e(numValueOf3, Integer.valueOf(R.id.MenuItem_Fav_Forward), 0, azaVar.a,
+                                methodHookWrapperVarD2.e(numValueOf3, Integer.valueOf(R.id.MenuItem_Fav_Forward), 0, azaVar.a,
                                         Integer.valueOf(R.drawable.ic_menu_forward_24dp));
                             } catch (Exception e6) {
                                 e = e6;
                                 ArrayList arrayList5 = ewq.a;
                                 StringBuilder sb5 = new StringBuilder();
-                                sb5.append("onCreateMenuItems " /* cnb.z(-40535901338410L) */);
-                                ewq.e(yg.n(sb5, bnkVar instanceof SwitchHook ? ((SwitchHook) bnkVar).getResult()
-                                        : "LoadHook" /* cnb.z(-40471476828970L) */, -39831526701866L), e, 12);
+                                sb5.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-40535901338410L)  */);
+                                ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb5, bnkVar instanceof SwitchHook ? ((SwitchHook) bnkVar).getResult()
+                                        : "LoadHook" /* "LoadHook" /* "LoadHook" /* cnb.z(-40471476828970L)  */, -39831526701866L), e, 12);
                                 i2 = R.id.MenuItem_Group;
                             }
                         }
@@ -773,7 +773,7 @@ public final /* synthetic */ class atn implements IHasInvokeMethod {
                     }
                     i2 = R.id.MenuItem_Group;
                 }
-                return ensVar;
+                return kotlinUnitVar;
         }
     }
 }

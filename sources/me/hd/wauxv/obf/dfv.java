@@ -20,7 +20,7 @@ public abstract class dfv extends dfw {
         return null;
     }
 
-    public static dft ai(Object obj, IHasInvokeMethod bgfVar) {
+    public static dft ai(Object obj, IInvokable bgfVar) {
         return obj == null ? avg.a : new alu(new wi(obj, 2), bgfVar);
     }
 
@@ -39,11 +39,11 @@ public abstract class dfv extends dfw {
     public static List ak(dft dftVar) {
         Iterator it = dftVar.iterator();
         if (!it.hasNext()) {
-            return avd.a;
+            return EmptyReadonlyList.a;
         }
         Object next = it.next();
         if (!it.hasNext()) {
-            return dqc.bf(next);
+            return dqc.toSingletonList(next);
         }
         ArrayList arrayList = new ArrayList();
         arrayList.add(next);

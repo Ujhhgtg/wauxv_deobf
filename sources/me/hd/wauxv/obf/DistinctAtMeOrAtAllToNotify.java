@@ -4,14 +4,14 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes2.dex */
 public final class DistinctAtMeOrAtAllToNotify extends SwitchHook implements IHandlesHookParam {
     public static final DistinctAtMeOrAtAllToNotify a = new DistinctAtMeOrAtAllToNotify(
-            "DistinctAtMeOrAtAllToNotify" /* cnb.z(-599637564062506L) */);
-    public static final String b = "测试-配置修复-v55-msgSync" /* cnb.z(-605379935337258L) */;
-    public static final String c = "聊天摘要是否区分[@我]与[@all]" /* cnb.z(-605809432066858L) */;
+            "DistinctAtMeOrAtAllToNotify" /* "DistinctAtMeOrAtAllToNotify" /* "DistinctAtMeOrAtAllToNotify" /* "DistinctAtMeOrAtAllToNotify" /* cnb.z(-599637564062506L)   */);
+    public static final String b = "测试-配置修复-v55-msgSync" /* "测试-配置修复-v55-msgSync" /* "测试-配置修复-v55-msgSync" /* "测试-配置修复-v55-msgSync" /* cnb.z(-605379935337258L)   */;
+    public static final String c = "聊天摘要是否区分[@我]与[@all]" /* "聊天摘要是否区分[@我]与[@all]" /* "聊天摘要是否区分[@我]与[@all]" /* "聊天摘要是否区分[@我]与[@all]" /* cnb.z(-605809432066858L)   */;
 
     @Override // me.hd.wauxv.obf.IHandlesHookParam
     public final void handleHookParam(HookParam hookParam, String str) {
         if (getIsEnabled()
-                && str.equals("RepairerConfig_DistinctAtMeOrAtAllToNotify_Int" /* cnb.z(-605530259192618L) */)) {
+                && str.equals("RepairerConfig_DistinctAtMeOrAtAllToNotify_Int" /* "RepairerConfig_DistinctAtMeOrAtAllToNotify_Int" /* "RepairerConfig_DistinctAtMeOrAtAllToNotify_Int" /* "RepairerConfig_DistinctAtMeOrAtAllToNotify_Int" /* cnb.z(-605530259192618L)   */)) {
             hookParam.setResult(1);
         }
     }

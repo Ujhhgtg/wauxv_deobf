@@ -8,7 +8,7 @@ public final class dlx extends bws implements IDexFind {
     public static final dlx a = new dlx();
 
     public static Object b() {
-        int i = bte.a;
+        int i = 0;
         ahd.a.getClass();
         byr.a.getClass();
         azg azgVarR = dqc.bi(byr.b()).r();
@@ -17,8 +17,8 @@ public final class dlx extends bws implements IDexFind {
         Object objD = ((azk) aaz.e(azgVarR.c())).d();
         throwIfVar1IsNull(objD);
         cde cdeVarT = dqc.bi(objD).t();
-        cdeVarT.a = "com.tencent.wcdb.database.SQLiteDatabase" /* cnb.z(-102542344190762L) */;
-        Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
+        cdeVarT.a = "com.tencent.wcdb.database.SQLiteDatabase" /* "com.tencent.wcdb.database.SQLiteDatabase" /* "com.tencent.wcdb.database.SQLiteDatabase" /* "com.tencent.wcdb.database.SQLiteDatabase" /* cnb.z(-102542344190762L)   */;
+        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }

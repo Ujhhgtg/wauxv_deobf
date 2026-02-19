@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 /* JADX INFO: loaded from: classes.dex */
-public abstract class la extends cnf {
+public abstract class SomeStaticHelpers extends cnf {
     public static boolean _ai(Object[] objArr, Object[] objArr2) {
         if (objArr == objArr2) {
             return true;
@@ -155,7 +155,7 @@ public abstract class la extends cnf {
         return bArrCopyOfRange;
     }
 
-    public static List a(Object[] objArr) {
+    public static List toList(Object[] objArr) {
         throwIfVar1IsNull(objArr, "<this>");
         List listAsList = Arrays.asList(objArr);
         throwIfVar1IsNull(listAsList, "asList(...)");
@@ -166,10 +166,10 @@ public abstract class la extends cnf {
         throwIfVar1IsNull(jArr, "<this>");
         int length = jArr.length;
         if (length == 0) {
-            return avd.a;
+            return EmptyReadonlyList.a;
         }
         if (length == 1) {
-            return dqc.bf(Long.valueOf(jArr[0]));
+            return dqc.toSingletonList(Long.valueOf(jArr[0]));
         }
         ArrayList arrayList = new ArrayList(jArr.length);
         for (long j : jArr) {
@@ -181,17 +181,17 @@ public abstract class la extends cnf {
     public static List ab(Object[] objArr) {
         throwIfVar1IsNull(objArr, "<this>");
         int length = objArr.length;
-        return length != 0 ? length != 1 ? new ArrayList(new kk(objArr, false)) : dqc.bf(objArr[0]) : avd.a;
+        return length != 0 ? length != 1 ? new ArrayList(new kk(objArr, false)) : dqc.toSingletonList(objArr[0]) : EmptyReadonlyList.a;
     }
 
     public static List ac(boolean[] zArr) {
         throwIfVar1IsNull(zArr, "<this>");
         int length = zArr.length;
         if (length == 0) {
-            return avd.a;
+            return EmptyReadonlyList.a;
         }
         if (length == 1) {
-            return dqc.bf(Boolean.valueOf(zArr[0]));
+            return dqc.toSingletonList(Boolean.valueOf(zArr[0]));
         }
         ArrayList arrayList = new ArrayList(zArr.length);
         for (boolean z : zArr) {
@@ -298,7 +298,7 @@ public abstract class la extends cnf {
     }
 
     public static final void t(Object[] objArr, StringBuilder sb, CharSequence charSequence, CharSequence charSequence2,
-            CharSequence charSequence3, CharSequence charSequence4, IHasInvokeMethod bgfVar) {
+            CharSequence charSequence3, CharSequence charSequence4, IInvokable bgfVar) {
         throwIfVar1IsNull(objArr, "<this>");
         sb.append(charSequence2);
         int i = 0;
@@ -312,7 +312,7 @@ public abstract class la extends cnf {
         sb.append(charSequence3);
     }
 
-    public static String u(Object[] objArr, String str, String str2, String str3, IHasInvokeMethod bgfVar, int i) {
+    public static String u(Object[] objArr, String str, String str2, String str3, IInvokable bgfVar, int i) {
         if ((i & 1) != 0) {
             str = ", ";
         }
@@ -351,19 +351,19 @@ public abstract class la extends cnf {
         throw new IllegalArgumentException("Array has more than one element.");
     }
 
-    public static byte[] x(byte[] bArr, bqi bqiVar) {
-        throwIfVar1IsNull(bqiVar, "indices");
-        return bqiVar.isEmpty() ? new byte[0] : _ap(bqiVar.a, bqiVar.b + 1, bArr);
+    public static byte[] x(byte[] bArr, IntRange intRangeVar) {
+        throwIfVar1IsNull(intRangeVar, "indices");
+        return intRangeVar.isEmpty() ? new byte[0] : _ap(intRangeVar.first, intRangeVar.last + 1, bArr);
     }
 
     public static List y(float[] fArr) {
         throwIfVar1IsNull(fArr, "<this>");
         int length = fArr.length;
         if (length == 0) {
-            return avd.a;
+            return EmptyReadonlyList.a;
         }
         if (length == 1) {
-            return dqc.bf(Float.valueOf(fArr[0]));
+            return dqc.toSingletonList(Float.valueOf(fArr[0]));
         }
         ArrayList arrayList = new ArrayList(fArr.length);
         for (float f : fArr) {
@@ -375,6 +375,6 @@ public abstract class la extends cnf {
     public static List z(int[] iArr) {
         throwIfVar1IsNull(iArr, "<this>");
         int length = iArr.length;
-        return length != 0 ? length != 1 ? ad(iArr) : dqc.bf(Integer.valueOf(iArr[0])) : avd.a;
+        return length != 0 ? length != 1 ? ad(iArr) : dqc.toSingletonList(Integer.valueOf(iArr[0])) : EmptyReadonlyList.a;
     }
 }

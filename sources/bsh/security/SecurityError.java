@@ -55,7 +55,7 @@ public class SecurityError extends UtilEvalError {
         sb.append(".");
         sb.append(str);
         sb.append("(");
-        return new SecurityError(yg.o(sb, strArgsTypesString, ")"));
+        return new SecurityError(yg.concatToVar1(sb, strArgsTypesString, ")"));
     }
 
     public static SecurityError cantInvokeStaticMethod(Class<?> cls, String str, Object[] objArr) {
@@ -66,7 +66,7 @@ public class SecurityError extends UtilEvalError {
         sb.append(".");
         sb.append(str);
         sb.append("(");
-        return new SecurityError(yg.o(sb, strArgsTypesString, ")"));
+        return new SecurityError(yg.concatToVar1(sb, strArgsTypesString, ")"));
     }
 
     public static SecurityError reflectCantConstruct(Class<?> cls, Object[] objArr) {
@@ -89,7 +89,7 @@ public class SecurityError extends UtilEvalError {
         sb.append(".");
         sb.append(str);
         sb.append("(");
-        return new SecurityError(yg.o(sb, strArgsTypesString, ")"));
+        return new SecurityError(yg.concatToVar1(sb, strArgsTypesString, ")"));
     }
 
     public static SecurityError reflectCantInvokeStaticMethod(Class<?> cls, String str, Object[] objArr) {
@@ -100,7 +100,7 @@ public class SecurityError extends UtilEvalError {
         sb.append(".");
         sb.append(str);
         sb.append("(");
-        return new SecurityError(yg.o(sb, strArgsTypesString, ")"));
+        return new SecurityError(yg.concatToVar1(sb, strArgsTypesString, ")"));
     }
 
     @Override // bsh.UtilEvalError

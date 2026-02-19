@@ -5,13 +5,9 @@ import java.net.URL;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import me.hd.wauxv.obf.aba;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.KotlinHelpers;
+import me.hd.wauxv.obf.OtherStaticHelpers;
 import me.hd.wauxv.obf.Pair;
 import me.hd.wauxv.obf.dnr;
-import okhttp3.Headers;
-import okhttp3.HttpUrl;
 import okhttp3.internal.Util;
 import okhttp3.internal.http.HttpMethod;
 
@@ -340,7 +336,7 @@ public final class Request {
             for (Pair pairVar : this.headers) {
                 int i2 = i + 1;
                 if (i < 0) {
-                    aba.aj();
+                    OtherStaticHelpers.aj();
                     throw null;
                 }
                 Pair pairVar2 = pairVar;

@@ -41,7 +41,7 @@ public final class bc implements ajh {
             return obj;
         }
         throw new IllegalStateException(
-                yg.o(new StringBuilder("Property "), ((sw) btcVar).f, " should be initialized before get."));
+                yg.concatToVar1(new StringBuilder("Property "), ((sw) btcVar).f, " should be initialized before get."));
     }
 
     public void i(btc btcVar, Object obj) {

@@ -16,7 +16,7 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class dos implements IHasInvokeMethod {
+public final /* synthetic */ class dos implements IInvokable {
     public final /* synthetic */ int a;
 
     public /* synthetic */ dos(int i) {
@@ -38,11 +38,11 @@ public final /* synthetic */ class dos implements IHasInvokeMethod {
             case 0:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k("MicroMsg.ConfigStorage" /* cnb.z(-59923383712554L) */,
-                        "checkType failed, input type and value[%s, %s] are not match" /* cnb.z(-59807419595562L) */);
+                zbVar.k("MicroMsg.ConfigStorage" /* "MicroMsg.ConfigStorage" /* "MicroMsg.ConfigStorage" /* cnb.z(-59923383712554L)  */,
+                        "checkType failed, input type and value[%s, %s] are not match" /* "checkType failed, input type and value[%s, %s] are not match" /* "checkType failed, input type and value[%s, %s] are not match" /* cnb.z(-59807419595562L)  */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 1:
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
@@ -59,33 +59,33 @@ public final /* synthetic */ class dos implements IHasInvokeMethod {
                 cdjVar.q(cls2, clsBf3 != null ? clsBf3 : Object.class);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 2:
                 View view = (View) obj;
                 View viewK = dkz.k(view, R.layout.module_dialog_system_browser, null, false);
                 int i = R.id.moduleDialogBtnSystemBrowserAdd;
-                MaterialButton materialButton = (MaterialButton) cnd.aq(viewK, R.id.moduleDialogBtnSystemBrowserAdd);
+                MaterialButton materialButton = (MaterialButton) KotlinHelpers2.aq(viewK, R.id.moduleDialogBtnSystemBrowserAdd);
                 if (materialButton != null) {
                     i = R.id.moduleDialogEdtSystemBrowserHost;
-                    TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK,
+                    TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK,
                             R.id.moduleDialogEdtSystemBrowserHost);
                     if (textInputEditText != null) {
                         i = R.id.moduleDialogInputSystemBrowserHost;
-                        if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputSystemBrowserHost)) != null) {
+                        if (((TextInputLayout) KotlinHelpers2.aq(viewK, R.id.moduleDialogInputSystemBrowserHost)) != null) {
                             i = R.id.moduleDialogRbSystemBrowserBlack;
-                            MaterialRadioButton materialRadioButton = (MaterialRadioButton) cnd.aq(viewK,
+                            MaterialRadioButton materialRadioButton = (MaterialRadioButton) KotlinHelpers2.aq(viewK,
                                     R.id.moduleDialogRbSystemBrowserBlack);
                             if (materialRadioButton != null) {
                                 i = R.id.moduleDialogRbSystemBrowserWhite;
-                                MaterialRadioButton materialRadioButton2 = (MaterialRadioButton) cnd.aq(viewK,
+                                MaterialRadioButton materialRadioButton2 = (MaterialRadioButton) KotlinHelpers2.aq(viewK,
                                         R.id.moduleDialogRbSystemBrowserWhite);
                                 if (materialRadioButton2 != null) {
                                     i = R.id.moduleDialogRgSystemBrowserMode;
-                                    RadioGroup radioGroup = (RadioGroup) cnd.aq(viewK,
+                                    RadioGroup radioGroup = (RadioGroup) KotlinHelpers2.aq(viewK,
                                             R.id.moduleDialogRgSystemBrowserMode);
                                     if (radioGroup != null) {
                                         i = R.id.moduleDialogRvSystemBrowserList;
-                                        RecyclerView recyclerView = (RecyclerView) cnd.aq(viewK,
+                                        RecyclerView recyclerView = (RecyclerView) KotlinHelpers2.aq(viewK,
                                                 R.id.moduleDialogRvSystemBrowserList);
                                         if (recyclerView != null) {
                                             LinearLayout linearLayout = (LinearLayout) viewK;
@@ -134,7 +134,7 @@ public final /* synthetic */ class dos implements IHasInvokeMethod {
                                             eg egVar = (eg) bzyVar.d;
                                             dpf.a.getClass();
                                             egVar.d = dpf.j;
-                                            bzyVar.t("保存" /* cnb.z(-539520906820394L) */,
+                                            bzyVar.t("保存" /* "保存" /* "保存" /* cnb.z(-539520906820394L)  */,
                                                     new amw(new ls(bqrVar, 9, arrayListAb), 0));
                                             bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, "取消" /*
                                                                                                   * cnb.z(-
@@ -144,7 +144,7 @@ public final /* synthetic */ class dos implements IHasInvokeMethod {
                                                 egVar.r = linearLayout;
                                             }
                                             bzyVar.i().show();
-                                            return ens.a;
+                                            return KotlinUnit.INSTANCE;
                                         }
                                     }
                                 }
@@ -153,7 +153,7 @@ public final /* synthetic */ class dos implements IHasInvokeMethod {
                     }
                 }
                 throw new NullPointerException("Missing required view with ID: "
-                        /* cnb.z(-660153653263146L) */.concat(viewK.getResources().getResourceName(i)));
+                        /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-660153653263146L)  */.concat(viewK.getResources().getResourceName(i)));
             case 3:
                 HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
@@ -170,25 +170,25 @@ public final /* synthetic */ class dos implements IHasInvokeMethod {
                     str = "";
                 }
                 dpv.b = str;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 4:
                 return Boolean.valueOf(dnr.bp(((Class) obj).getName(),
-                        "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-104170136795946L) */, false));
+                        "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-104170136795946L)  */, false));
             case 5:
-                ((amm) obj).b = new dos(6);
-                return ens.a;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new dos(6);
+                return KotlinUnit.INSTANCE;
             case 6:
                 bag bagVar2 = (bag) obj;
-                String[] strArr = { "com.tencent.mm.ui.chatting.component" /* cnb.z(-103976863267626L) */ };
+                String[] strArr = { "com.tencent.mm.ui.chatting.component" /* "com.tencent.mm.ui.chatting.component" /* "com.tencent.mm.ui.chatting.component" /* cnb.z(-103976863267626L)  */ };
                 bagVar2.getClass();
-                bagVar2.a = la.ab(strArr);
+                bagVar2.a = SomeStaticHelpers.ab(strArr);
                 zb zbVar2 = new zb();
-                zbVar2.k("MicroMsg.TransformComponent" /* cnb.z(-104419244899114L) */, "[onChattingPause]" /*
+                zbVar2.k("MicroMsg.TransformComponent" /* "MicroMsg.TransformComponent" /* "MicroMsg.TransformComponent" /* cnb.z(-104419244899114L)  */, "[onChattingPause]" /*
                                                                                                             * cnb.z(-
                                                                                                             * 104264626076458L)
                                                                                                             */);
                 bagVar2.b = zbVar2;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 7:
                 HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
@@ -216,34 +216,34 @@ public final /* synthetic */ class dos implements IHasInvokeMethod {
                     if (str2 == null) {
                         str2 = "";
                     }
-                    if (dnj.ab(str2, "avatar" /* cnb.z(-491967028919082L) */, false)
-                            || dnj.ab(str2, "user_hd_" /* cnb.z(-491936964148010L) */, false)) {
+                    if (dnj.ab(str2, "avatar" /* "avatar" /* "avatar" /* cnb.z(-491967028919082L)  */, false)
+                            || dnj.ab(str2, "user_hd_" /* "user_hd_" /* "user_hd_" /* cnb.z(-491936964148010L)  */, false)) {
                         new ek(hookParam2, 2, 8).q(Bitmap.CompressFormat.PNG);
                     }
                 }
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 8:
-                ((amm) obj).c = new dos(9);
-                return ens.a;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new dos(9);
+                return KotlinUnit.INSTANCE;
             case 9:
                 bah bahVar2 = (bah) obj;
-                String[] strArr2 = { "com.tencent.mm.sdk.platformtools" /* cnb.z(-491898309442346L) */ };
+                String[] strArr2 = { "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* cnb.z(-491898309442346L)  */ };
                 bahVar2.getClass();
-                bahVar2.a = la.ab(strArr2);
+                bahVar2.a = SomeStaticHelpers.ab(strArr2);
                 cdj cdjVar2 = new cdj();
                 if (cnb.ab(ewk.e) || cnb.ac(ewh.d)) {
-                    cdjVar2.t("MicroMsg.BitmapUtil" /* cnb.z(-491773755390762L) */, "saveBitmapToImage failed: %s" /*
+                    cdjVar2.t("MicroMsg.BitmapUtil" /* "MicroMsg.BitmapUtil" /* "MicroMsg.BitmapUtil" /* cnb.z(-491773755390762L)  */, "saveBitmapToImage failed: %s" /*
                                                                                                                     * cnb
                                                                                                                     * .z
                                                                                                                     * (-
                                                                                                                     * 488973436713770L)
                                                                                                                     */);
                 } else {
-                    cdj.l(cdjVar2, "com.tencent.mm.sdk.platformtools.BitmapUtil" /* cnb.z(-488814522923818L) */);
-                    cdjVar2.s("saveBitmapToImage" /* cnb.z(-489209659915050L) */);
+                    cdj.l(cdjVar2, "com.tencent.mm.sdk.platformtools.BitmapUtil" /* "com.tencent.mm.sdk.platformtools.BitmapUtil" /* "com.tencent.mm.sdk.platformtools.BitmapUtil" /* cnb.z(-488814522923818L)  */);
+                    cdjVar2.s("saveBitmapToImage" /* "saveBitmapToImage" /* "saveBitmapToImage" /* cnb.z(-489209659915050L)  */);
                 }
                 bahVar2.d = cdjVar2;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 10:
                 if (obj != null) {
                     throw new ClassCastException();
@@ -251,58 +251,58 @@ public final /* synthetic */ class dos implements IHasInvokeMethod {
                 throwIfVar1IsNull(null, "it");
                 throw null;
             case 11:
-                ((amm) obj).c = new dos(20);
-                return ens.a;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new dos(20);
+                return KotlinUnit.INSTANCE;
             case 12:
                 bah bahVar3 = (bah) obj;
-                String[] strArr3 = { "com.tencent.mm.plugin.sns.model" /* cnb.z(-382067405749034L) */ };
+                String[] strArr3 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-382067405749034L)  */ };
                 bahVar3.getClass();
-                bahVar3.a = la.ab(strArr3);
+                bahVar3.a = SomeStaticHelpers.ab(strArr3);
                 cdj cdjVar3 = new cdj();
-                cdjVar3.t("setSdkId" /* cnb.z(-381929966795562L) */,
-                        "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-381908491959082L) */);
+                cdjVar3.t("setSdkId" /* "setSdkId" /* "setSdkId" /* cnb.z(-381929966795562L)  */,
+                        "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-381908491959082L)  */);
                 bahVar3.d = cdjVar3;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 13:
                 bah bahVar4 = (bah) obj;
-                String[] strArr4 = { "com.tencent.mm.plugin.sns.model" /* cnb.z(-382350873590570L) */ };
+                String[] strArr4 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-382350873590570L)  */ };
                 bahVar4.getClass();
-                bahVar4.a = la.ab(strArr4);
+                bahVar4.a = SomeStaticHelpers.ab(strArr4);
                 cdj cdjVar4 = new cdj();
-                cdjVar4.t("setContentDes" /* cnb.z(-382213434637098L) */,
-                        "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-382136125225770L) */);
+                cdjVar4.t("setContentDes" /* "setContentDes" /* "setContentDes" /* cnb.z(-382213434637098L)  */,
+                        "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-382136125225770L)  */);
                 bahVar4.d = cdjVar4;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 14:
-                ((amm) obj).c = new dos(13);
-                return ens.a;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new dos(13);
+                return KotlinUnit.INSTANCE;
             case 15:
-                ((amm) obj).c = new dos(22);
-                return ens.a;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new dos(22);
+                return KotlinUnit.INSTANCE;
             case 16:
-                ((amm) obj).c = new dos(12);
-                return ens.a;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new dos(12);
+                return KotlinUnit.INSTANCE;
             case 17:
-                ((amm) obj).c = new dos(21);
-                return ens.a;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new dos(21);
+                return KotlinUnit.INSTANCE;
             case 18:
-                ((amm) obj).c = new dos(19);
-                return ens.a;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new dos(19);
+                return KotlinUnit.INSTANCE;
             case 19:
                 bah bahVar5 = (bah) obj;
-                String[] strArr5 = { "com.tencent.mm.plugin.sns.model" /* cnb.z(-379090993412906L) */ };
+                String[] strArr5 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-379090993412906L)  */ };
                 bahVar5.getClass();
-                bahVar5.a = la.ab(strArr5);
+                bahVar5.a = SomeStaticHelpers.ab(strArr5);
                 cdj cdjVar5 = new cdj();
-                cdjVar5.t("MicroMsg.UploadPackHelper" /* cnb.z(-378403798645546L) */,
-                        "commit sns info ret %d, typeFlag %d sightMd5 %s" /* cnb.z(-378240589888298L) */);
+                cdjVar5.t("MicroMsg.UploadPackHelper" /* "MicroMsg.UploadPackHelper" /* "MicroMsg.UploadPackHelper" /* cnb.z(-378403798645546L)  */,
+                        "commit sns info ret %d, typeFlag %d sightMd5 %s" /* "commit sns info ret %d, typeFlag %d sightMd5 %s" /* "commit sns info ret %d, typeFlag %d sightMd5 %s" /* cnb.z(-378240589888298L)  */);
                 bahVar5.d = cdjVar5;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 20:
                 bah bahVar6 = (bah) obj;
-                String[] strArr6 = { "com.tencent.mm.plugin.sns.model" /* cnb.z(-380512627587882L) */ };
+                String[] strArr6 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-380512627587882L)  */ };
                 bahVar6.getClass();
-                bahVar6.a = la.ab(strArr6);
+                bahVar6.a = SomeStaticHelpers.ab(strArr6);
                 cdj cdjVar6 = new cdj();
                 cls3 = Integer.class;
                 Class<Integer> clsBf4 = cnf.bf(dal.b(cls3));
@@ -310,47 +310,47 @@ public final /* synthetic */ class dos implements IHasInvokeMethod {
                 cls4 = Context.class;
                 Class<Context> clsBf5 = cnf.bf(dal.b(cls4));
                 cdjVar6.ensureParameterNotNull(cls3, clsBf5 != null ? clsBf5 : Context.class);
-                cdjVar6.t("initSnsObj" /* cnb.z(-380924944448298L) */,
-                        "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-380912059546410L) */);
+                cdjVar6.t("initSnsObj" /* "initSnsObj" /* "initSnsObj" /* cnb.z(-380924944448298L)  */,
+                        "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-380912059546410L)  */);
                 bahVar6.d = cdjVar6;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 21:
                 bah bahVar7 = (bah) obj;
-                String[] strArr7 = { "com.tencent.mm.plugin.sns.model" /* cnb.z(-378949259492138L) */ };
+                String[] strArr7 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-378949259492138L)  */ };
                 bahVar7.getClass();
-                bahVar7.a = la.ab(strArr7);
+                bahVar7.a = SomeStaticHelpers.ab(strArr7);
                 cdj cdjVar7 = new cdj();
-                cdjVar7.t("setSdkAppName" /* cnb.z(-378811820538666L) */,
-                        "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-379284266941226L) */);
+                cdjVar7.t("setSdkAppName" /* "setSdkAppName" /* "setSdkAppName" /* cnb.z(-378811820538666L)  */,
+                        "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-379284266941226L)  */);
                 bahVar7.d = cdjVar7;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 22:
                 bah bahVar8 = (bah) obj;
-                String[] strArr8 = { "com.tencent.mm.plugin.sns.model" /* cnb.z(-382492607511338L) */ };
+                String[] strArr8 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-382492607511338L)  */ };
                 bahVar8.getClass();
-                bahVar8.a = la.ab(strArr8);
+                bahVar8.a = SomeStaticHelpers.ab(strArr8);
                 cdj cdjVar8 = new cdj();
-                cdjVar8.t("setUploadList" /* cnb.z(-381805412743978L) */,
-                        "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-381728103332650L) */);
+                cdjVar8.t("setUploadList" /* "setUploadList" /* "setUploadList" /* cnb.z(-381805412743978L)  */,
+                        "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-381728103332650L)  */);
                 bahVar8.d = cdjVar8;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 23:
-                amm ammVar = (amm) obj;
-                ammVar.b = new dos(24);
-                ammVar.c = new dos(25);
-                return ens.a;
+                FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar = (FindDexClassMethodDslWrapper) obj;
+                findDexClassMethodDslWrapperVar.onClassCallback = new dos(24);
+                findDexClassMethodDslWrapperVar.onMethodCallback = new dos(25);
+                return KotlinUnit.INSTANCE;
             case 24:
                 bag bagVar3 = (bag) obj;
-                String[] strArr9 = { "com.tencent.mm.vfs" /* cnb.z(-107511621352234L) */ };
+                String[] strArr9 = { "com.tencent.mm.vfs" /* "com.tencent.mm.vfs" /* "com.tencent.mm.vfs" /* cnb.z(-107511621352234L)  */ };
                 bagVar3.getClass();
-                bagVar3.a = la.ab(strArr9);
+                bagVar3.a = SomeStaticHelpers.ab(strArr9);
                 zb zbVar3 = new zb();
-                zbVar3.k("MicroMsg.VFSFileOp" /* cnb.z(-106828721552170L) */, "Cannot move dir: " /*
+                zbVar3.k("MicroMsg.VFSFileOp" /* "MicroMsg.VFSFileOp" /* "MicroMsg.VFSFileOp" /* cnb.z(-106828721552170L)  */, "Cannot move dir: " /*
                                                                                                    * cnb.z(-
                                                                                                    * 106781476911914L)
                                                                                                    */);
                 bagVar3.b = zbVar3;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 25:
                 bah bahVar9 = (bah) obj;
                 cdj cdjVar9 = new cdj();
@@ -367,27 +367,27 @@ public final /* synthetic */ class dos implements IHasInvokeMethod {
                 cdjVar9.q(cls5, clsBf8 != null ? clsBf8 : Boolean.class);
                 bahVar9.getClass();
                 bahVar9.d = cdjVar9;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 26:
-                ((amm) obj).b = new dos(27);
-                return ens.a;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new dos(27);
+                return KotlinUnit.INSTANCE;
             case 27:
                 bag bagVar4 = (bag) obj;
                 zb zbVar4 = new zb();
-                zbVar4.k("MicroMsg.VideoService" /* cnb.z(-354704169106218L) */, "MicroMsg.SubCoreVideo" /*
+                zbVar4.k("MicroMsg.VideoService" /* "MicroMsg.VideoService" /* "MicroMsg.VideoService" /* cnb.z(-354704169106218L)  */, "MicroMsg.SubCoreVideo" /*
                                                                                                           * cnb.z(-
                                                                                                           * 354661219433258L)
                                                                                                           */,
-                        "quitVideoSendThread" /* cnb.z(-355099306097450L) */);
+                        "quitVideoSendThread" /* "quitVideoSendThread" /* "quitVideoSendThread" /* cnb.z(-355099306097450L)  */);
                 bagVar4.getClass();
                 bagVar4.b = zbVar4;
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 28:
-                ((amm) obj).c = new epy(0);
-                return ens.a;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new epy(0);
+                return KotlinUnit.INSTANCE;
             default:
-                ((amm) obj).c = new epy(1);
-                return ens.a;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new epy(1);
+                return KotlinUnit.INSTANCE;
         }
     }
 }

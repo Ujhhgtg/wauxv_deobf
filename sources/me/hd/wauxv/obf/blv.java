@@ -40,7 +40,7 @@ public final /* synthetic */ class blv implements IEmpty4 {
                 }
                 return factory2.onCreateView(viewGroup, name, context, blsVar.b);
             default:
-                q qVar = (q) this.b;
+                StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg qVar = (StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg) this.b;
                 ((Integer) obj).getClass();
                 ((Integer) obj2).getClass();
                 cwd cwdVar = cwd.a;
@@ -49,7 +49,7 @@ public final /* synthetic */ class blv implements IEmpty4 {
                 while (it.hasNext()) {
                     qVar.invoke(((cnv) it.next()).h);
                 }
-                return ens.a;
+                return KotlinUnit.INSTANCE;
         }
     }
 }

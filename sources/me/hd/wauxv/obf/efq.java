@@ -14,7 +14,7 @@ public final /* synthetic */ class efq implements bfu {
     @Override // me.hd.wauxv.obf.bfu
     public final Object invoke() {
         int i = this.a;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         switch (i) {
             case 0:
                 return new ko(eej.b);
@@ -48,22 +48,22 @@ public final /* synthetic */ class efq implements bfu {
                 return new ko(eac.b);
             case 15:
                 eta.a.u(VnHomeShareMenuCopyOrDownHook.b);
-                return ensVar;
+                return kotlinUnitVar;
             case 16:
                 etf.a.u(VnPreviewShareMenuCopyOrDownHook.b);
-                return ensVar;
+                return kotlinUnitVar;
             case 17:
                 etv.a.u(etw.b);
-                return ensVar;
+                return kotlinUnitVar;
             case 18:
                 StringBuilder sb = new StringBuilder();
                 bmo.a.getClass();
                 sb.append(bmo.s());
-                sb.append(".1238." /* cnb.z(-82995948026666L) */);
+                sb.append(".1238." /* ".1238." /* ".1238." /* cnb.z(-82995948026666L)  */);
                 sb.append(exl.b);
                 return sb.toString();
             default:
-                int i2 = bte.a;
+                int i2 = 0;
                 ewm.a.getClass();
                 jx jxVar = ewm.d;
                 btc btcVar = ewm.b[1];
@@ -73,7 +73,7 @@ public final /* synthetic */ class efq implements bfu {
                 cde cdeVarT = bmuVarBh.t();
                 cdeVarT.ab = "newParser";
                 cdeVarT.z(Arrays.copyOf(new Object[] { dal.b(Integer.TYPE) }, 1));
-                return (cdk) aaz.g(cdeVarT.aj());
+                return (MethodHookWrapper) aaz.g(cdeVarT.aj());
         }
     }
 }

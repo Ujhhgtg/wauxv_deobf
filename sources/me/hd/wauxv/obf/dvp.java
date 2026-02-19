@@ -9,7 +9,7 @@ public final /* synthetic */ class dvp implements bgx {
     static {
         dvp dvpVar = new dvp();
         b = dvpVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.bb3Proto" /* cnb.z(-168074955193130L) */, dvpVar, 4);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.bb3Proto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.bb3Proto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.bb3Proto" /* cnb.z(-168074955193130L)  */, dvpVar, 4);
         bjs.y(-167185896962858L, cucVar, false, 1);
         bjs.y(-167654048398122L, cucVar, false, 2);
         bjs.y(-167555264150314L, cucVar, false, 3);

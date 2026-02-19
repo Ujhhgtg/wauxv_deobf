@@ -36,8 +36,8 @@ public final class ehp {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("w90Proto(dynamic_voice_live_img_url=" /* cnb.z(-304440166841130L) */);
-        yg.u(sb, this.a, -303714317368106L);
+        sb.append("w90Proto(dynamic_voice_live_img_url=" /* "w90Proto(dynamic_voice_live_img_url=" /* "w90Proto(dynamic_voice_live_img_url=" /* cnb.z(-304440166841130L)  */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -303714317368106L);
         return concat(sb, this.b, ')');
     }
 }

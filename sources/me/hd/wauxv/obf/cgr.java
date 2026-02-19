@@ -14,27 +14,27 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cgr extends BaseHook implements bnb {
+public final class cgr extends SwitchHook implements bnb {
     public static final cgr c;
     public static final List h;
     public static final String i;
     public static final String j;
     public static final String l;
-    public static final bzk m;
+    public static final EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg m;
 
     static {
-        "#11000000" /* cnb.z(-467653219056426L) */;
-        "#FFFFFFFF" /* cnb.z(-467627449252650L) */;
-        "#11FFFFFF" /* cnb.z(-467601679448874L) */;
-        "#FFFFFFFF" /* cnb.z(-473554504121130L) */;
-        "${time} | ${type}" /* cnb.z(-473528734317354L) */;
-        "HH:mm:ss" /* cnb.z(-473468604775210L) */;
-        c = new cgr("MsgInfoHook" /* cnb.z(-466643901741866L) */);
-        h = aba.ag("${time}" /* cnb.z(-473429950069546L) */, "${type}" /* cnb.z(-473395590331178L) */, "${msgId}" /* cnb.z(-473361230592810L) */, "${msgSvrId}" /* cnb.z(-473889511570218L) */, "${atUserList}" /* cnb.z(-473803612224298L) */);
-        i = "聊天" /* cnb.z(-473726302812970L) */;
-        j = "消息底部详情" /* cnb.z(-473730597780266L) */;
-        l = "为聊天列表项目的底部添加自定义文本" /* cnb.z(-473700533009194L) */;
-        m = new bzk(23);
+        "#11000000" /* "#11000000" /* "#11000000" /* cnb.z(-467653219056426L)  */;
+        "#FFFFFFFF" /* "#FFFFFFFF" /* "#FFFFFFFF" /* cnb.z(-467627449252650L)  */;
+        "#11FFFFFF" /* "#11FFFFFF" /* "#11FFFFFF" /* cnb.z(-467601679448874L)  */;
+        "#FFFFFFFF" /* "#FFFFFFFF" /* "#FFFFFFFF" /* cnb.z(-473554504121130L)  */;
+        "${time} | ${type}" /* "${time} | ${type}" /* "${time} | ${type}" /* cnb.z(-473528734317354L)  */;
+        "HH:mm:ss" /* "HH:mm:ss" /* "HH:mm:ss" /* cnb.z(-473468604775210L)  */;
+        c = new cgr("MsgInfoHook" /* "MsgInfoHook" /* "MsgInfoHook" /* cnb.z(-466643901741866L)  */);
+        h = OtherStaticHelpers.argsToList("${time}" /* "${time}" /* "${time}" /* cnb.z(-473429950069546L)  */, "${type}" /* "${type}" /* "${type}" /* cnb.z(-473395590331178L)  */, "${msgId}" /* "${msgId}" /* "${msgId}" /* cnb.z(-473361230592810L)  */, "${msgSvrId}" /* "${msgSvrId}" /* "${msgSvrId}" /* cnb.z(-473889511570218L)  */, "${atUserList}" /* "${atUserList}" /* "${atUserList}" /* cnb.z(-473803612224298L)  */);
+        i = "聊天" /* "聊天" /* "聊天" /* cnb.z(-473726302812970L)  */;
+        j = "消息底部详情" /* "消息底部详情" /* "消息底部详情" /* cnb.z(-473730597780266L)  */;
+        l = "为聊天列表项目的底部添加自定义文本" /* "为聊天列表项目的底部添加自定义文本" /* "为聊天列表项目的底部添加自定义文本" /* cnb.z(-473700533009194L)  */;
+        m = new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(23);
     }
 
     @Override // me.hd.wauxv.obf.bnb
@@ -74,15 +74,15 @@ public final class cgr extends BaseHook implements bnb {
             } else {
                 cgrVar.getClass();
                 View viewV = cnh.v(viewGroup, cnb.ac(ewh.r) ? "c0g"
-                        /* cnb.z(-467872262388522L) */ : cnb.ac(ewh.q) ? "bzy"
-                                /* cnb.z(-468370478594858L) */ : cnb.ac(ewh.o) ? "byw"
-                                        /* cnb.z(-468387658464042L) */ : cnb.ac(ewh.n) ? "bxy"
-                                                /* cnb.z(-468336118856490L) */ : cnb.ac(ewh.m) ? "bx_"
-                                                        /* cnb.z(-468353298725674L) */ : cnb.ac(ewh.l) ? "bw0"
-                                                                /* cnb.z(-468301759118122L) */ : cnb.ac(ewh.k) ? "bvg"
-                                                                        /* cnb.z(-468318938987306L) */ : cnb.ac(ewh.j)
+                        /* "c0g" /* "c0g" /* cnb.z(-467872262388522L)  */ : cnb.ac(ewh.q) ? "bzy"
+                                /* "bzy" /* "bzy" /* cnb.z(-468370478594858L)  */ : cnb.ac(ewh.o) ? "byw"
+                                        /* "byw" /* "byw" /* cnb.z(-468387658464042L)  */ : cnb.ac(ewh.n) ? "bxy"
+                                                /* "bxy" /* "bxy" /* cnb.z(-468336118856490L)  */ : cnb.ac(ewh.m) ? "bx_"
+                                                        /* "bx_" /* "bx_" /* cnb.z(-468353298725674L)  */ : cnb.ac(ewh.l) ? "bw0"
+                                                                /* "bw0" /* "bw0" /* cnb.z(-468301759118122L)  */ : cnb.ac(ewh.k) ? "bvg"
+                                                                        /* "bvg" /* "bvg" /* cnb.z(-468318938987306L)  */ : cnb.ac(ewh.j)
                                                                                 ? "buz"
-                                                                                /* cnb.z(-468267399379754L) */ : cnb
+                                                                                /* "buz" /* "buz" /* cnb.z(-468267399379754L)  */ : cnb
                                                                                         .ac(ewh.i)
                                                                                                 ? "bu9"
                                                                                                 /*
@@ -200,29 +200,29 @@ public final class cgr extends BaseHook implements bnb {
             int iR = (int) cnh.r(5, textView.getContext());
             textView.setPadding(iR, iR, iR, iR);
             cgrVar.getClass();
-            String strBo = dnr.bo(cgp.a.o(), "${time}" /* cnb.z(-466626721872682L) */,
+            String strBo = dnr.bo(cgp.a.o(), "${time}" /* "${time}" /* "${time}" /* cnb.z(-466626721872682L)  */,
                     cnh.ag(msgInfoBean.getCreateTime(), cgq.a.o(), null, 2));
-            String strZ2 = "${type}" /* cnb.z(-466592362134314L) */;
-            String strZ3 = "0x" /* cnb.z(-466558002395946L) */;
+            String strZ2 = "${type}" /* "${type}" /* "${type}" /* cnb.z(-466592362134314L)  */;
+            String strZ3 = "0x" /* "0x" /* "0x" /* cnb.z(-466558002395946L)  */;
             int type = msgInfoBean.getType();
             cmz.o(16);
             String string = Integer.toString(type, 16);
-            throwIfVar1IsNull(string, "toString(...)" /* cnb.z(-466510757755690L) */);
+            throwIfVar1IsNull(string, "toString(...)" /* "toString(...)" /* "toString(...)" /* cnb.z(-466510757755690L)  */);
             String upperCase = string.toUpperCase(Locale.ROOT);
-            throwIfVar1IsNull(upperCase, "toUpperCase(...)" /* cnb.z(-466502167821098L) */);
+            throwIfVar1IsNull(upperCase, "toUpperCase(...)" /* "toUpperCase(...)" /* "toUpperCase(...)" /* cnb.z(-466502167821098L)  */);
             String strBo2 = dnr.bo(
-                    dnr.bo(dnr.bo(strBo, strZ2, strZ3.concat(upperCase)), "${msgId}" /* cnb.z(-468078420818730L) */,
+                    dnr.bo(dnr.bo(strBo, strZ2, strZ3.concat(upperCase)), "${msgId}" /* "${msgId}" /* "${msgId}" /* cnb.z(-468078420818730L)  */,
                             String.valueOf(msgInfoBean.getMsgId())),
-                    "${msgSvrId}" /* cnb.z(-467988226505514L) */, String.valueOf(msgInfoBean.getMsgSvrId()));
-            String strZ4 = "${atUserList}" /* cnb.z(-467971046636330L) */;
+                    "${msgSvrId}" /* "${msgSvrId}" /* "${msgSvrId}" /* cnb.z(-467988226505514L)  */, String.valueOf(msgInfoBean.getMsgSvrId()));
+            String strZ4 = "${atUserList}" /* "${atUserList}" /* "${atUserList}" /* cnb.z(-467971046636330L)  */;
             if (msgInfoBean.getAtUserList().isEmpty()) {
-                strZ = "" /* cnb.z(-467876557355818L) */;
+                strZ = "" /* "" /* "" /* cnb.z(-467876557355818L)  */;
             } else if (msgInfoBean.isAnnounceAll()) {
-                strZ = "@群公告" /* cnb.z(-467893737225002L) */;
+                strZ = "@群公告" /* "@群公告" /* "@群公告" /* cnb.z(-467893737225002L)  */;
             } else if (msgInfoBean.isNotifyAll()) {
-                strZ = "@全体" /* cnb.z(-467906622126890L) */;
+                strZ = "@全体" /* "@全体" /* "@全体" /* cnb.z(-467906622126890L)  */;
             } else if (msgInfoBean.isAtMe()) {
-                strZ = "@我" /* cnb.z(-467855082519338L) */;
+                strZ = "@我" /* "@我" /* "@我" /* cnb.z(-467855082519338L)  */;
             } else {
                 strZ = "@" + msgInfoBean.getAtUserList().size() + (char) 20154;
             }
@@ -255,7 +255,7 @@ public final class cgr extends BaseHook implements bnb {
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final bgf p() {
+    public final bgf getOnClick() {
         return m;
     }
 }

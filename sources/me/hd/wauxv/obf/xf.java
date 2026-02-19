@@ -20,10 +20,10 @@ import org.luckypray.dexkit.DexKitBridge;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class xf extends SwitchHook implements bmz, bng {
-    public static final xf a = new xf("ChatToolbarHook" /* cnb.z(-549064324152106L) */);
-    public static final String b = "界面" /* cnb.z(-552998514195242L) */;
-    public static final String c = "聊天工具栏" /* cnb.z(-553019989031722L) */;
-    public static final String d = "聊天输入框顶部显示工具栏，可能串台" /* cnb.z(-552977039358762L) */;
+    public static final xf a = new xf("ChatToolbarHook" /* "ChatToolbarHook" /* "ChatToolbarHook" /* "ChatToolbarHook" /* cnb.z(-549064324152106L)   */);
+    public static final String b = "界面" /* "界面" /* "界面" /* "界面" /* cnb.z(-552998514195242L)   */;
+    public static final String c = "聊天工具栏" /* "聊天工具栏" /* "聊天工具栏" /* "聊天工具栏" /* cnb.z(-553019989031722L)   */;
+    public static final String d = "聊天输入框顶部显示工具栏，可能串台" /* "聊天输入框顶部显示工具栏，可能串台" /* "聊天输入框顶部显示工具栏，可能串台" /* "聊天输入框顶部显示工具栏，可能串台" /* cnb.z(-552977039358762L)   */;
     public static final ws i = new ws(1);
     public static final boolean j = true;
     public static final ArrayList l = new ArrayList();
@@ -31,7 +31,7 @@ public final class xf extends SwitchHook implements bmz, bng {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void getThisObject() {
-        aki akiVarAb = csb.ab(this, dqc.bf(emn.bb(xa.a)));
+        aki akiVarAb = csb.ab(this, dqc.toSingletonList(emn.bb(xa.a)));
         ws wsVar = new ws(3);
         xf xfVar = a;
         xfVar.y(akiVarAb, wsVar);
@@ -59,19 +59,19 @@ public final class xf extends SwitchHook implements bmz, bng {
         Class cls2;
         if (getIsEnabled()) {
             LinearLayout linearLayout = (LinearLayout) cnh.v(frameLayout, cnb.ac(ewh.q) ? "c0p"
-                    /* cnb.z(-548995604675370L) */ : cnb.ac(ewh.o) ? "bzn"
-                            /* cnb.z(-548944065067818L) */ : cnb.ac(ewh.n) ? "byp"
-                                    /* cnb.z(-548961244937002L) */ : cnb.ac(ewh.m) ? "by1"
-                                            /* cnb.z(-546160926260010L) */ : cnb.ac(ewh.l) ? "bwr"
-                                                    /* cnb.z(-546178106129194L) */ : cnb.ac(ewh.k) ? "bw_"
-                                                            /* cnb.z(-546126566521642L) */ : cnb.ac(ewh.j) ? "bvs"
-                                                                    /* cnb.z(-546143746390826L) */ : cnb.ac(ewh.i)
+                    /* "c0p" /* "c0p" /* "c0p" /* cnb.z(-548995604675370L)   */ : cnb.ac(ewh.o) ? "bzn"
+                            /* "bzn" /* "bzn" /* "bzn" /* cnb.z(-548944065067818L)   */ : cnb.ac(ewh.n) ? "byp"
+                                    /* "byp" /* "byp" /* "byp" /* cnb.z(-548961244937002L)   */ : cnb.ac(ewh.m) ? "by1"
+                                            /* "by1" /* "by1" /* "by1" /* cnb.z(-546160926260010L)   */ : cnb.ac(ewh.l) ? "bwr"
+                                                    /* "bwr" /* "bwr" /* "bwr" /* cnb.z(-546178106129194L)   */ : cnb.ac(ewh.k) ? "bw_"
+                                                            /* "bw_" /* "bw_" /* "bw_" /* cnb.z(-546126566521642L)   */ : cnb.ac(ewh.j) ? "bvs"
+                                                                    /* "bvs" /* "bvs" /* "bvs" /* cnb.z(-546143746390826L)   */ : cnb.ac(ewh.i)
                                                                             ? "bv0"
-                                                                            /* cnb.z(-546092206783274L) */ : cnb
+                                                                            /* "bv0" /* "bv0" /* "bv0" /* cnb.z(-546092206783274L)   */ : cnb
                                                                                     .ac(ewh.h)
                                                                                             ? "bui"
                                                                                             /*
-                                                                                             * cnb.z(-546109386652458L)
+                                                                                             * "bui" /* "bui" /* "bui" /* cnb.z(-546109386652458L)  */
                                                                                              */ : cnb.ac(ewh.g) ? "bwa"
                                                                                                     /*
                                                                                                      * cnb.z(-
@@ -150,7 +150,7 @@ public final class xf extends SwitchHook implements bmz, bng {
                                                                                                                                                                                                                          * 545920408091434L)
                                                                                                                                                                                                                          */);
             if (linearLayout == null
-                    || linearLayout.findViewWithTag("ChatToolbar" /* cnb.z(-545937587960618L) */) != null) {
+                    || linearLayout.findViewWithTag("ChatToolbar" /* "ChatToolbar" /* "ChatToolbar" /* "ChatToolbar" /* cnb.z(-545937587960618L)   */) != null) {
                 return;
             }
             cnf.bh(linearLayout.getContext());
@@ -185,7 +185,7 @@ public final class xf extends SwitchHook implements bmz, bng {
             String name = clsBf3.getName();
             int size = linkedHashMap2.size();
             RecyclerView recyclerView = (RecyclerView) viewH;
-            recyclerView.setTag("ChatToolbar" /* cnb.z(-546401444428586L) */);
+            recyclerView.setTag("ChatToolbar" /* "ChatToolbar" /* "ChatToolbar" /* "ChatToolbar" /* cnb.z(-546401444428586L)   */);
             int iIntValue = blrVarI.k(8).intValue();
             recyclerView.setPadding(iIntValue, iIntValue, iIntValue, iIntValue);
             recyclerView.setFadingEdgeLength(blrVarI.k(10).intValue());
@@ -286,7 +286,7 @@ public final class xf extends SwitchHook implements bmz, bng {
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final IHasInvokeMethod p() {
+    public final IInvokable getOnClick() {
         return i;
     }
 

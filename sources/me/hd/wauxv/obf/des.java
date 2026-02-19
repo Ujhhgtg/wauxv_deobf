@@ -3,5 +3,5 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class des extends akf {
-    public static final des a = new des("SayHiAutoRemarkNameHook.ValTextFormat" /* cnb.z(-518853524192042L) */, "${time} ${nick}" /* cnb.z(-518123379751722L) */, null, false, 0, 0.0f, 0, 124);
+    public static final des a = new des("SayHiAutoRemarkNameHook.ValTextFormat" /* "SayHiAutoRemarkNameHook.ValTextFormat" /* "SayHiAutoRemarkNameHook.ValTextFormat" /* cnb.z(-518853524192042L)  */, "${time} ${nick}" /* "${time} ${nick}" /* "${time} ${nick}" /* cnb.z(-518123379751722L)  */, null, false, 0, 0.0f, 0, 124);
 }

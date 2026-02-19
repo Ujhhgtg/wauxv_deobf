@@ -10,7 +10,7 @@ import java.util.LinkedHashMap;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cf extends BaseHook {
+public final class cf extends SwitchHook {
     public static final cf a;
     public static final dov b;
     public static final dov c;
@@ -23,17 +23,17 @@ public final class cf extends BaseHook {
     public static final boolean m;
 
     static {
-        "#FFFFFFFF" /* cnb.z(-432709365136170L) */;
-        "#FF191919" /* cnb.z(-432683595332394L) */;
-        a = new cf("AccountInfoCenterHook" /* cnb.z(-431137407105834L) */);
+        "#FFFFFFFF" /* "#FFFFFFFF" /* "#FFFFFFFF" /* "#FFFFFFFF" /* cnb.z(-432709365136170L)   */;
+        "#FF191919" /* "#FF191919" /* "#FF191919" /* "#FF191919" /* cnb.z(-432683595332394L)   */;
+        a = new cf("AccountInfoCenterHook" /* "AccountInfoCenterHook" /* "AccountInfoCenterHook" /* "AccountInfoCenterHook" /* cnb.z(-431137407105834L)   */);
         b = new dov(new h(2));
         c = new dov(new h(3));
         d = new dov(new h(4));
         dov dovVar = ctf.a;
-        h = ctf.c("Resource" /* cnb.z(-48064979008298L) */, "Font" /* cnb.z(-47974784695082L) */);
-        i = "美化" /* cnb.z(-433207581342506L) */;
-        j = "资料卡居中" /* cnb.z(-433143156833066L) */;
-        k = "居中我界面资料卡，与隐藏微信号冲突" /* cnb.z(-433168926636842L) */;
+        h = ctf.c("Resource" /* "Resource" /* "Resource" /* "Resource" /* cnb.z(-48064979008298L)   */, "Font" /* "Font" /* "Font" /* "Font" /* cnb.z(-47974784695082L)   */);
+        i = "美化" /* "美化" /* "美化" /* "美化" /* cnb.z(-433207581342506L)   */;
+        j = "资料卡居中" /* "资料卡居中" /* "资料卡居中" /* "资料卡居中" /* cnb.z(-433143156833066L)   */;
+        k = "居中我界面资料卡，与隐藏微信号冲突" /* "居中我界面资料卡，与隐藏微信号冲突" /* "居中我界面资料卡，与隐藏微信号冲突" /* "居中我界面资料卡，与隐藏微信号冲突" /* cnb.z(-433168926636842L)   */;
         l = new bn(1);
         m = true;
     }
@@ -55,7 +55,7 @@ public final class cf extends BaseHook {
                 layoutParams.addRule(14);
                 layoutParams.addRule(3, i3);
                 layoutParams.topMargin = blrVar.k(Integer.valueOf(i4)).intValue();
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             }
         }, 31));
         cls = TextView.class;
@@ -97,11 +97,11 @@ public final class cf extends BaseHook {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        int i2 = bte.a;
-        cdk cdkVar = (cdk) dkz.n(new Object[] { dal.b(View.class) }, 1, yg.s(-431025737956138L).t());
+        int i2 = 0;
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) dkz.n(new Object[] { dal.b(View.class) }, 1, yg.s(-431025737956138L).t());
         exg exgVar = exg.a;
         cf cfVar = a;
-        aki akiVarAd = cfVar.ad(cdkVar, exgVar);
+        aki akiVarAd = cfVar.ad(methodHookWrapperVar, exgVar);
         cfVar.x(akiVarAd, new bn(2));
         akiVarAd.o();
     }
@@ -122,7 +122,7 @@ public final class cf extends BaseHook {
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final bgf p() {
+    public final bgf getOnClick() {
         return l;
     }
 

@@ -69,14 +69,14 @@ public final class dut {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("WeappInfoProto(appUserName=" /* cnb.z(-328569293110058L) */);
-        yg.u(sb, this.a, -327864918473514L);
-        yg.u(sb, this.b, -327847738604330L);
+        sb.append("WeappInfoProto(appUserName=" /* "WeappInfoProto(appUserName=" /* "WeappInfoProto(appUserName=" /* cnb.z(-328569293110058L)  */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -327864918473514L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -327847738604330L);
         bjs.w(sb, this.c, -327766134225706L);
         bjs.w(sb, this.d, -327744659389226L);
-        yg.u(sb, this.e, -327688824814378L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.e, -327688824814378L);
         bjs.w(sb, this.f, -328144091347754L);
-        yg.u(sb, this.g, -328092551740202L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.g, -328092551740202L);
         bjs.w(sb, this.h, -328062486969130L);
         return concat(sb, this.i, ')');
     }

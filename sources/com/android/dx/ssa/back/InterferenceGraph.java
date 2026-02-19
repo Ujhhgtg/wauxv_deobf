@@ -34,7 +34,7 @@ public class InterferenceGraph {
         int size = this.interference.size();
         for (int i = 0; i < size; i++) {
             StringBuilder sb = new StringBuilder();
-            StringBuilder sbR = yg.r(i, "Reg ", ":");
+            StringBuilder sbR = yg.concatVar213(i, "Reg ", ":");
             sbR.append(this.interference.get(i).toString());
             sb.append(sbR.toString());
             System.out.println(sb.toString());

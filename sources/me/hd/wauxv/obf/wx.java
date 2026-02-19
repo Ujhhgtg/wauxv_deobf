@@ -44,14 +44,14 @@ public final /* synthetic */ class wx implements bgk {
         Object r3;
         int i = this.a;
         Object obj4 = null;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         // ?? r6 = 1;
         Object r6 = 1;
         switch (i) {
             case 0:
                 blu bluVar = (blu) obj;
                 wz wzVar = (wz) obj2;
-                String strZ = "layout" /* cnb.z(-546800876387114L) */;
+                String strZ = "layout" /* "layout" /* "layout" /* cnb.z(-546800876387114L)  */;
                 View viewJ = bluVar.j(strZ);
                 if (!(viewJ instanceof LinearLayout)) {
                     viewJ = null;
@@ -64,7 +64,7 @@ public final /* synthetic */ class wx implements bgk {
                             + (clsBf != null ? clsBf : LinearLayout.class).getName() + ".");
                 }
                 linearLayout.setOnClickListener(new bq(wzVar, 1));
-                String strZ2 = "icon" /* cnb.z(-546753631746858L) */;
+                String strZ2 = "icon" /* "icon" /* "icon" /* cnb.z(-546753631746858L)  */;
                 View viewJ2 = bluVar.j(strZ2);
                 if (!(viewJ2 instanceof ImageView)) {
                     viewJ2 = null;
@@ -77,7 +77,7 @@ public final /* synthetic */ class wx implements bgk {
                             + (clsBf2 != null ? clsBf2 : ImageView.class).getName() + ".");
                 }
                 imageView.setImageResource(wzVar.a);
-                String strZ3 = "icon" /* cnb.z(-552762290993962L) */;
+                String strZ3 = "icon" /* "icon" /* "icon" /* cnb.z(-552762290993962L)  */;
                 View viewJ3 = bluVar.j(strZ3);
                 if (!(viewJ3 instanceof ImageView)) {
                     viewJ3 = null;
@@ -90,7 +90,7 @@ public final /* synthetic */ class wx implements bgk {
                 }
                 xb xbVar = xb.a;
                 imageView2.setVisibility(xbVar.k() != wy.a.e ? 0 : 8);
-                String strZ4 = "title" /* cnb.z(-552775175895850L) */;
+                String strZ4 = "title" /* "title" /* "title" /* cnb.z(-552775175895850L)  */;
                 View viewJ4 = bluVar.j(strZ4);
                 if (!(viewJ4 instanceof TextView)) {
                     viewJ4 = null;
@@ -103,47 +103,47 @@ public final /* synthetic */ class wx implements bgk {
                             + (clsBf4 != null ? clsBf4 : TextView.class).getName() + ".");
                 }
                 textView.setText(wzVar.b);
-                String strZ5 = "title" /* cnb.z(-552732226222890L) */;
+                String strZ5 = "title" /* "title" /* "title" /* cnb.z(-552732226222890L)  */;
                 View viewJ5 = bluVar.j(strZ5);
                 TextView textView2 = (TextView) (viewJ5 instanceof TextView ? viewJ5 : null);
                 if (textView2 != null) {
                     textView2.setVisibility(xbVar.k() == wy.c.e ? 8 : 0);
-                    return ensVar;
+                    return kotlinUnitVar;
                 }
                 Class<TextView> clsBf5 = cnf.bf(dal.b(cls2));
                 throw new cth("View with id \"" + strZ5 + "\" is not a "
                         + (clsBf5 != null ? clsBf5 : TextView.class).getName() + ".");
             case 1:
-                int i2 = bte.a;
+                int i2 = 0;
                 azg azgVarR = dqc.bi(obj2).r();
-                azgVarR.ab = "field_snsId" /* cnb.z(-535002601225002L) */;
+                azgVarR.ab = "field_snsId" /* "field_snsId" /* "field_snsId" /* cnb.z(-535002601225002L)  */;
                 Object objE = ((azk) yg.e(azgVarR)).e();
                 throwIfVar1IsNull(objE);
                 ewz.aq(diz.b, new cuf(((Number) objE).longValue(), 3));
-                return ensVar;
+                return kotlinUnitVar;
             default:
                 Activity activity = (Activity) obj;
                 dja djaVar = dja.b;
-                int i3 = bte.a;
+                int i3 = 0;
                 cde cdeVarT = dqc.bi(obj2).t();
-                cdeVarT.ab = "getLocalid" /* cnb.z(-534470025280298L) */;
-                Object objJ = ((cdk) dkz.m(cdeVarT)).j(new Object[0]);
+                cdeVarT.ab = "getLocalid" /* "getLocalid" /* "getLocalid" /* cnb.z(-534470025280298L)  */;
+                Object objJ = ((MethodHookWrapper) dkz.m(cdeVarT)).j(new Object[0]);
                 throwIfVar1IsNull(objJ);
                 String str = (String) objJ;
                 cde cdeVarT2 = dqc.bi(obj2).t();
-                cdeVarT2.ab = "getTypeFlag" /* cnb.z(-534457140378410L) */;
-                Object objJ2 = ((cdk) dkz.m(cdeVarT2)).j(new Object[0]);
+                cdeVarT2.ab = "getTypeFlag" /* "getTypeFlag" /* "getTypeFlag" /* cnb.z(-534457140378410L)  */;
+                Object objJ2 = ((MethodHookWrapper) dkz.m(cdeVarT2)).j(new Object[0]);
                 throwIfVar1IsNull(objJ2);
                 int iIntValue = ((Number) objJ2).intValue();
                 cde cdeVarT3 = dqc.bi(obj3).t();
-                cdeVarT3.ab = "toByteArray" /* cnb.z(-534371241032490L) */;
-                Object objJ3 = ((cdk) dkz.m(cdeVarT3)).j(new Object[0]);
+                cdeVarT3.ab = "toByteArray" /* "toByteArray" /* "toByteArray" /* cnb.z(-534371241032490L)  */;
+                Object objJ3 = ((MethodHookWrapper) dkz.m(cdeVarT3)).j(new Object[0]);
                 throwIfVar1IsNull(objJ3);
                 cwd cwdVar = cwd.a;
                 cwdVar.getClass();
                 ejy ejyVar = (ejy) cwdVar.c(ejy.Companion.serializer(), (byte[]) objJ3);
                 azg azgVarR2 = dqc.bi(obj3).r();
-                azgVarR2.ab = "ContentObj" /* cnb.z(-534903816977194L) */;
+                azgVarR2.ab = "ContentObj" /* "ContentObj" /* "ContentObj" /* cnb.z(-534903816977194L)  */;
                 Object objD = ((azk) yg.e(azgVarR2)).d();
                 throwIfVar1IsNull(objD);
                 azg azgVarR3 = dqc.bi(objD).r();
@@ -156,10 +156,10 @@ public final /* synthetic */ class wx implements bgk {
                     throwIfVar1IsNull(str2);
                     Intent intent = new Intent();
                     intent.setClassName(activity, "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /*
-                                                                                              * cnb.z(-95086280964906L)
+                                                                                              * "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-95086280964906L)  */
                                                                                               */);
-                    intent.putExtra("Ksnsupload_type" /* cnb.z(-94927367174954L) */, 9);
-                    intent.putExtra("Kdescription" /* cnb.z(-94858647698218L) */, str2);
+                    intent.putExtra("Ksnsupload_type" /* "Ksnsupload_type" /* "Ksnsupload_type" /* cnb.z(-94927367174954L)  */, 9);
+                    intent.putExtra("Kdescription" /* "Kdescription" /* "Kdescription" /* cnb.z(-94858647698218L)  */, str2);
                     activity.startActivity(intent);
                 } else {
                     int i4 = ewj.a.h;
@@ -178,12 +178,12 @@ public final /* synthetic */ class wx implements bgk {
                             String str4 = (String) objInvoke;
                             diu diuVar = diu.a;
                             dkc.a.getClass();
-                            int i5 = bte.a;
+                            int i5 = 0;
                             adt adtVarM = dqc.bh(emn.az(dkb.a)).m();
                             adtVarM.z(Arrays.copyOf(new Object[] { dal.b(String.class) }, (int) r6));
-                            adu aduVar = (adu) aaz.e(adtVarM.a());
-                            Object[] objArr = { "timeline" /* cnb.z(-353901010221866L) */ };
-                            Constructor constructor = aduVar.a;
+                            ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) aaz.e(adtVarM.a());
+                            Object[] objArr = { "timeline" /* "timeline" /* "timeline" /* cnb.z(-353901010221866L)  */ };
+                            Constructor constructor = constructorHookWrapperVar.a;
                             if (constructor != null) {
                                 r3 = obj4;
                                 r3 = constructor;
@@ -199,7 +199,7 @@ public final /* synthetic */ class wx implements bgk {
                             cde cdeVarT4 = dqc.bh(emn.az(dir.a)).t();
                             cdeVarT4.ak(cdyVar);
                             cdeVarT4.a = emn.bb(ditVar).getDeclaringClass();
-                            Object objE3 = ((cdk) bjs.h(cdeVarT4)).e(new Object[0]);
+                            Object objE3 = ((MethodHookWrapper) bjs.h(cdeVarT4)).e(new Object[0]);
                             throwIfVar1IsNull(objE3);
                             Object objInvoke2 = methodBb.invoke(objE3, obj5, 2, null, objNewInstance);
                             throwIfVar1IsNull(objInvoke2, "null cannot be cast to non-null type kotlin.Boolean" /*
@@ -238,11 +238,11 @@ public final /* synthetic */ class wx implements bgk {
                                                                                                    * cnb.z(-
                                                                                                    * 95721936124714L)
                                                                                                    */);
-                        intent2.putExtra("Ksnsupload_type" /* cnb.z(-96044058671914L) */, 1);
-                        intent2.putExtra("Ksnsupload_title" /* cnb.z(-95975339195178L) */, str6);
-                        intent2.putExtra("Ksnsupload_link" /* cnb.z(-93153545681706L) */, str7);
-                        intent2.putExtra("Ksnsupload_imgurl" /* cnb.z(-93084826204970L) */, str8);
-                        intent2.putExtra("Kdescription" /* cnb.z(-93024696662826L) */, str5);
+                        intent2.putExtra("Ksnsupload_type" /* "Ksnsupload_type" /* "Ksnsupload_type" /* cnb.z(-96044058671914L)  */, 1);
+                        intent2.putExtra("Ksnsupload_title" /* "Ksnsupload_title" /* "Ksnsupload_title" /* cnb.z(-95975339195178L)  */, str6);
+                        intent2.putExtra("Ksnsupload_link" /* "Ksnsupload_link" /* "Ksnsupload_link" /* cnb.z(-93153545681706L)  */, str7);
+                        intent2.putExtra("Ksnsupload_imgurl" /* "Ksnsupload_imgurl" /* "Ksnsupload_imgurl" /* cnb.z(-93084826204970L)  */, str8);
+                        intent2.putExtra("Kdescription" /* "Kdescription" /* "Kdescription" /* cnb.z(-93024696662826L)  */, str5);
                         activity.startActivity(intent2);
                     } else if (iIntValue == ewj.d.h) {
                         String str9 = ejyVar.e;
@@ -259,7 +259,7 @@ public final /* synthetic */ class wx implements bgk {
                         String str11 = (String) objInvoke4;
                         int iCurrentTimeMillis = (int) (System.currentTimeMillis() / ((long) 1000));
                         dkv dkvVar = dkv.a;
-                        String strZ6 = "" /* cnb.z(-534873752206122L) */;
+                        String strZ6 = "" /* "" /* "" /* cnb.z(-534873752206122L)  */;
                         dkvVar.getClass();
                         dku dkuVar = dku.a;
                         Method methodBb2 = emn.bb(dkuVar);
@@ -267,7 +267,7 @@ public final /* synthetic */ class wx implements bgk {
                         cde cdeVarT5 = dqc.bh(emn.az(dir.a)).t();
                         cdeVarT5.ak(cdyVar);
                         cdeVarT5.a = emn.bb(dkuVar).getDeclaringClass();
-                        Object objE5 = ((cdk) bjs.h(cdeVarT5)).e(new Object[0]);
+                        Object objE5 = ((MethodHookWrapper) bjs.h(cdeVarT5)).e(new Object[0]);
                         throwIfVar1IsNull(objE5);
                         Object objInvoke5 = methodBb2.invoke(objE5, objE4, Integer.valueOf(iCurrentTimeMillis), str,
                                 Boolean.FALSE, Boolean.TRUE, 30, strZ6);
@@ -279,17 +279,17 @@ public final /* synthetic */ class wx implements bgk {
                             ((Handler) bij.a.getValue())
                                     .postDelayed(new bjt(new cbj(activity, str10, str11, str9), djaVar, 1), 500L);
                         } else {
-                            dnc.g(null, 3, "视频暂未缓存或者获取路径失败" /* cnb.z(-534817917631274L) */);
+                            dnc.g(null, 3, "视频暂未缓存或者获取路径失败" /* "视频暂未缓存或者获取路径失败" /* "视频暂未缓存或者获取路径失败" /* cnb.z(-534817917631274L)  */);
                         }
                     } else if (iIntValue == ewj.e.h) {
-                        dnc.g(null, 3, "暂不支持 视频号" /* cnb.z(-534805032729386L) */);
+                        dnc.g(null, 3, "暂不支持 视频号" /* "暂不支持 视频号" /* "暂不支持 视频号" /* cnb.z(-534805032729386L)  */);
                     } else if (iIntValue == ewj.f.h) {
-                        dnc.g(null, 3, "暂不支持 实况" /* cnb.z(-534714838416170L) */);
+                        dnc.g(null, 3, "暂不支持 实况" /* "暂不支持 实况" /* "暂不支持 实况" /* cnb.z(-534714838416170L)  */);
                     } else {
-                        dnc.g(null, 3, "暂不支持的转圈类型: " /* cnb.z(-534680478677802L) */ + iIntValue);
+                        dnc.g(null, 3, "暂不支持的转圈类型: " /* "暂不支持的转圈类型: " /* "暂不支持的转圈类型: " /* cnb.z(-534680478677802L)  */ + iIntValue);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
         }
     }
 }

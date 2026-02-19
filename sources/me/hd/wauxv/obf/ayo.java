@@ -28,7 +28,7 @@ public final class ayo {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("ChatInfoProto(senderId=" /* cnb.z(-124828929489706L) */);
+        sb.append("ChatInfoProto(senderId=" /* "ChatInfoProto(senderId=" /* "ChatInfoProto(senderId=" /* "ChatInfoProto(senderId=" /* cnb.z(-124828929489706L)   */);
         return concat(sb, this.a, ')');
     }
 }

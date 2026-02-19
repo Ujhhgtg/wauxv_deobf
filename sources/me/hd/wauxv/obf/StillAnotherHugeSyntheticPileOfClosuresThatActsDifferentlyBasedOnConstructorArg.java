@@ -12,11 +12,11 @@ import me.hd.wauxv.plugin.api.callback.PluginCallBack;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class q implements bgf {
+public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg implements IInvokable {
     public final /* synthetic */ int a;
     public final /* synthetic */ Object b;
 
-    public /* synthetic */ q(Object obj, int i) {
+    public /* synthetic */ StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(Object obj, int i) {
         this.a = i;
         this.b = obj;
     }
@@ -37,7 +37,7 @@ public final /* synthetic */ class q implements bgf {
         boolean zAb = true;
         boolean z = true;
         int i2 = 8;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         ?? r7 = this.b;
         switch (i) {
             case 0:
@@ -56,7 +56,7 @@ public final /* synthetic */ class q implements bgf {
                 }
                 Integer num = (Integer) (objX instanceof dcx ? null : objX);
                 qbVar.setSelectedItemId(num != null ? num.intValue() : 0);
-                return ensVar;
+                return kotlinUnitVar;
             case 2:
                 CompoundButton compoundButton = (CompoundButton) r7;
                 aek aekVar = (aek) obj;
@@ -64,10 +64,10 @@ public final /* synthetic */ class q implements bgf {
                     String string = compoundButton.getText().toString();
                     ael aelVar = aekVar.a;
                     if (aelVar == null) {
-                        throwLateinitPropNotInitYet("info" /* cnb.z(-395489178549034L) */);
+                        throwLateinitPropNotInitYet("info" /* "info" /* "info" /* cnb.z(-395489178549034L)  */);
                         throw null;
                     }
-                    if (nullSafeIsEqual(string, "全部" /* cnb.z(-395471998679850L) */)) {
+                    if (nullSafeIsEqual(string, "全部" /* "全部" /* "全部" /* cnb.z(-395471998679850L)  */)) {
                         arrayList = aelVar.c;
                         if (!aelVar.b || arrayList.isEmpty()) {
                             list2 = arrayList;
@@ -77,7 +77,7 @@ public final /* synthetic */ class q implements bgf {
                         list = (List) aelVar.d.get(string);
                         if (list == null) {
                             list2 = list;
-                            list2 = avd.a;
+                            list2 = EmptyReadonlyList.a;
                         }
                     }
                     list2 = list;
@@ -89,17 +89,17 @@ public final /* synthetic */ class q implements bgf {
                     aekVar.p(((EditText) aekVar.f.getValue()).getText().toString());
                 }
                 aekVar.o();
-                return ensVar;
+                return kotlinUnitVar;
             case 3:
                 Boolean bool = (Boolean) r7;
                 doo dooVar = (BaseHook) obj;
                 if (bool.equals(Boolean.TRUE)) {
-                    zAb = dnj.ab(dooVar.g(), "测试" /* cnb.z(-22578643073834L) */, false);
+                    zAb = dnj.ab(dooVar.g(), "测试" /* "测试" /* "测试" /* cnb.z(-22578643073834L)  */, false);
                 } else {
                     if (!bool.equals(Boolean.FALSE)) {
                         throw new abt();
                     }
-                    if (dnj.ab(dooVar.g(), "测试" /* cnb.z(-22600117910314L) */, false)) {
+                    if (dnj.ab(dooVar.g(), "测试" /* "测试" /* "测试" /* cnb.z(-22600117910314L)  */, false)) {
                         zAb = false;
                     }
                 }
@@ -122,24 +122,24 @@ public final /* synthetic */ class q implements bgf {
                 }
                 Object obj2 = objX2 instanceof dcx ? null : objX2;
                 if (obj2 != null) {
-                    int i3 = bte.a;
+                    int i3 = 0;
                     bmu bmuVarBi = dqc.bi(obj2);
                     bxj bxjVar = bxj.a;
                     cde cdeVarT = bmuVarBi.t();
-                    cdeVarT.ab = "getLatitude" /* cnb.z(-493470267472682L) */;
-                    cdk cdkVar = (cdk) aaz.e(cdeVarT.aj());
+                    cdeVarT.ab = "getLatitude" /* "getLatitude" /* "getLatitude" /* cnb.z(-493470267472682L)  */;
+                    MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
                     exg exgVar = exg.a;
-                    aki akiVarAd = bxjVar.ad(cdkVar, exgVar);
+                    aki akiVarAd = bxjVar.ad(methodHookWrapperVar, exgVar);
                     bxjVar.y(akiVarAd, new bty(i));
                     akiVarAd.o();
                     cde cdeVarT2 = bmuVarBi.t();
-                    cdeVarT2.ab = "getLongitude" /* cnb.z(-492834612312874L) */;
-                    aki akiVarAd2 = bxjVar.ad((cdk) aaz.e(cdeVarT2.aj()), exgVar);
+                    cdeVarT2.ab = "getLongitude" /* "getLongitude" /* "getLongitude" /* cnb.z(-492834612312874L)  */;
+                    aki akiVarAd2 = bxjVar.ad((MethodHookWrapper) aaz.e(cdeVarT2.aj()), exgVar);
                     bxjVar.y(akiVarAd2, new bty(i2));
                     akiVarAd2.o();
                 }
                 aki.l(akiVar);
-                return ensVar;
+                return kotlinUnitVar;
             case 6:
                 return ((bzw) r7).c(((Integer) obj).intValue());
             case 7:
@@ -163,18 +163,18 @@ public final /* synthetic */ class q implements bgf {
                     str = "";
                 }
                 ek ekVar = new ek(hookParam3, i, i2);
-                cgb.a.getClass();
-                ekVar.q(dnr.bo(dnr.bo(dnr.bo(cfz.a.o(), "${sendText}" /* cnb.z(-469414155647786L) */, str), "${line}" /* cnb.z(-469328256301866L) */, "\n" /* cnb.z(-469293896563498L) */), "${sendTime}" /* cnb.z(-469302486498090L) */, cnh.ag(System.currentTimeMillis(), cga.a.o(), null, 2)));
-                return ensVar;
+                MsgFormatHook.a.getClass();
+                ekVar.q(dnr.bo(dnr.bo(dnr.bo(cfz.a.o(), "${sendText}" /* "${sendText}" /* "${sendText}" /* cnb.z(-469414155647786L)  */, str), "${line}" /* "${line}" /* "${line}" /* cnb.z(-469328256301866L)  */, "\n" /* "\n" /* "\n" /* cnb.z(-469293896563498L)  */), "${sendTime}" /* "${sendTime}" /* "${sendTime}" /* cnb.z(-469302486498090L)  */, cnh.ag(System.currentTimeMillis(), cga.a.o(), null, 2)));
+                return kotlinUnitVar;
             case 8:
                 int iIntValue = ((Integer) obj).intValue();
                 return r7.j(iIntValue) + ": " + r7.l(iIntValue).b();
             case 9:
                 ((PluginCallBack.SendTextCallback) r7).onSvrId((Long) obj);
-                return ensVar;
+                return kotlinUnitVar;
             default:
                 Toast.makeText((Context) r7, (String) obj, 0).show();
-                return ensVar;
+                return kotlinUnitVar;
         }
     }
 }

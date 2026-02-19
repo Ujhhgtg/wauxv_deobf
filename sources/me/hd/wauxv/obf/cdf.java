@@ -45,6 +45,6 @@ public final class cdf extends nd {
         sb.append(".");
         sb.append(h().b);
         sb.append("(");
-        return yg.o(sb, aaz.k(h().c, ", ", null, null, null, 62), ")");
+        return yg.concatToVar1(sb, aaz.k(h().c, ", ", null, null, null, 62), ")");
     }
 }

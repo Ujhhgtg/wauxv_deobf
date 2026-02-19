@@ -43,7 +43,7 @@ public final class bsm implements dfx {
     @Override // me.hd.wauxv.obf.dfx
     public final List getAnnotations() {
         this.e.getClass();
-        return avd.a;
+        return EmptyReadonlyList.a;
     }
 
     @Override // me.hd.wauxv.obf.dfx
@@ -67,7 +67,7 @@ public final class bsm implements dfx {
     @Override // me.hd.wauxv.obf.dfx
     public final List k(int i) {
         this.e.k(i);
-        return avd.a;
+        return EmptyReadonlyList.a;
     }
 
     @Override // me.hd.wauxv.obf.dfx

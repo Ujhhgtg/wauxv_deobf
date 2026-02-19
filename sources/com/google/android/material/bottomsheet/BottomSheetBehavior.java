@@ -35,7 +35,6 @@ import me.hd.wauxv.obf.ajn;
 import me.hd.wauxv.obf.ap;
 import me.hd.wauxv.obf.aq;
 import me.hd.wauxv.obf.ax;
-import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.bpt;
 import me.hd.wauxv.obf.cau;
 import me.hd.wauxv.obf.cnb;
@@ -306,7 +305,7 @@ public class BottomSheetBehavior<V extends View> extends agr {
 
     public final void cf(int i) {
         if (i == 1 || i == 2) {
-            throw new IllegalArgumentException(yg.o(new StringBuilder("STATE_"), i == 1 ? "DRAGGING" : "SETTLING",
+            throw new IllegalArgumentException(yg.concatToVar1(new StringBuilder("STATE_"), i == 1 ? "DRAGGING" : "SETTLING",
                     " should not be set externally."));
         }
         if (!this.aw && i == 5) {

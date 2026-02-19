@@ -36,6 +36,6 @@ public final class cru {
     }
 
     public final String toString() {
-        return yg.o(new StringBuilder("Option{key='"), this.d, "'}");
+        return yg.concatToVar1(new StringBuilder("Option{key='"), this.d, "'}");
     }
 }

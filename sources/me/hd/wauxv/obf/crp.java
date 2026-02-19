@@ -3,13 +3,13 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes2.dex */
 public final class crp extends SwitchHook implements IHandlesHookParam {
-    public static final crp a = new crp("OpenWayEnhanceVideo" /* cnb.z(-619729421073194L) */);
-    public static final String b = "测试-配置修复-v62-openWay" /* cnb.z(-620042953685802L) */;
-    public static final String c = "视频菜单加入打开方式" /* cnb.z(-619922694601514L) */;
+    public static final crp a = new crp("OpenWayEnhanceVideo" /* "OpenWayEnhanceVideo" /* "OpenWayEnhanceVideo" /* cnb.z(-619729421073194L)  */);
+    public static final String b = "测试-配置修复-v62-openWay" /* "测试-配置修复-v62-openWay" /* "测试-配置修复-v62-openWay" /* cnb.z(-620042953685802L)  */;
+    public static final String c = "视频菜单加入打开方式" /* "视频菜单加入打开方式" /* "视频菜单加入打开方式" /* cnb.z(-619922694601514L)  */;
 
     @Override // me.hd.wauxv.obf.IHandlesHookParam
     public final void handleHookParam(HookParam hookParam, String str) {
-        if (getIsEnabled() && str.equals("RepairerConfig_OpenWayEnhanceVideo_Int" /* cnb.z(-619677881465642L) */)) {
+        if (getIsEnabled() && str.equals("RepairerConfig_OpenWayEnhanceVideo_Int" /* "RepairerConfig_OpenWayEnhanceVideo_Int" /* "RepairerConfig_OpenWayEnhanceVideo_Int" /* cnb.z(-619677881465642L)  */)) {
             hookParam.setResult(1);
         }
     }

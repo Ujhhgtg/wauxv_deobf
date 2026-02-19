@@ -101,8 +101,8 @@ public final class egi {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("v51Proto(battle_id=" /* cnb.z(-316637873961770L) */);
-        yg.u(sb, this.b, -316586334354218L);
+        sb.append("v51Proto(battle_id=" /* "v51Proto(battle_id=" /* "v51Proto(battle_id=" /* cnb.z(-316637873961770L)  */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -316586334354218L);
         dkz.ad(sb, this.c, -316509024942890L);
         bjs.w(sb, this.d, -316483255139114L);
         bjs.w(sb, this.e, -316410240695082L);
@@ -114,7 +114,7 @@ public final class egi {
         yg.v(sb, this.k, -316070938278698L);
         bjs.w(sb, this.l, -315942089259818L);
         sb.append(this.m);
-        sb.append(", battle_scope=" /* cnb.z(-315933499325226L) */);
+        sb.append(", battle_scope=" /* ", battle_scope=" /* ", battle_scope=" /* cnb.z(-315933499325226L)  */);
         bjs.w(sb, this.n, -315864779848490L);
         sb.append(this.o);
         sb.append(')');

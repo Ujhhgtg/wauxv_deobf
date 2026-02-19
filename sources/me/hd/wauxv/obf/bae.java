@@ -7,9 +7,9 @@ import java.util.Iterator;
 public final class bae implements dft {
     public final dft a;
     public final boolean b;
-    public final IHasInvokeMethod c;
+    public final IInvokable c;
 
-    public bae(dft dftVar, boolean z, IHasInvokeMethod bgfVar) {
+    public bae(dft dftVar, boolean z, IInvokable bgfVar) {
         this.a = dftVar;
         this.b = z;
         this.c = bgfVar;

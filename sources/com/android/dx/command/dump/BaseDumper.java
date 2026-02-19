@@ -64,7 +64,7 @@ public abstract class BaseDumper implements ParseObserver {
         this.indent += i;
         this.separator = this.rawBytes ? "|" : "";
         for (int i2 = 0; i2 < this.indent; i2++) {
-            this.separator = yg.o(new StringBuilder(), this.separator, "  ");
+            this.separator = yg.concatToVar1(new StringBuilder(), this.separator, "  ");
         }
     }
 

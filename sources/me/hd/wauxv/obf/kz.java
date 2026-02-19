@@ -15,7 +15,7 @@ public final class kz implements Collection, Set, IEmpty2 {
 
     public kz(int i) {
         if (i > 0) {
-            cnd.al(this, i);
+            KotlinHelpers2.al(this, i);
         }
     }
 
@@ -25,12 +25,12 @@ public final class kz implements Collection, Set, IEmpty2 {
         int iAx;
         int i2 = this.c;
         if (obj == null) {
-            iAx = cnd.ax(this, null, 0);
+            iAx = KotlinHelpers2.ax(this, null, 0);
             i = 0;
         } else {
             int iHashCode = obj.hashCode();
             i = iHashCode;
-            iAx = cnd.ax(this, obj, iHashCode);
+            iAx = KotlinHelpers2.ax(this, obj, iHashCode);
         }
         if (iAx >= 0) {
             return false;
@@ -52,16 +52,16 @@ public final class kz implements Collection, Set, IEmpty2 {
                 throw new ConcurrentModificationException();
             }
             if (iArr2.length != 0) {
-                la._ao(iArr, 0, iArr.length, 6, iArr2);
-                la._am(0, objArr.length, objArr, 6, this.b);
+                SomeStaticHelpers._ao(iArr, 0, iArr.length, 6, iArr2);
+                SomeStaticHelpers._am(0, objArr.length, objArr, 6, this.b);
             }
         }
         if (i3 < i2) {
             int[] iArr3 = this.a;
             int i5 = i3 + 1;
-            la._al(iArr3, i5, i3, i2, iArr3);
+            SomeStaticHelpers._al(iArr3, i5, i3, i2, iArr3);
             Object[] objArr2 = this.b;
-            la._aj(i5, i3, objArr2, i2, objArr2);
+            SomeStaticHelpers._aj(i5, i3, objArr2, i2, objArr2);
         }
         int i6 = this.c;
         if (i2 == i6) {
@@ -89,8 +89,8 @@ public final class kz implements Collection, Set, IEmpty2 {
             this.a = iArr2;
             this.b = new Object[size];
             if (i > 0) {
-                la._ao(iArr, 0, i, 6, iArr2);
-                la._am(0, this.c, objArr, 6, this.b);
+                SomeStaticHelpers._ao(iArr, 0, i, 6, iArr2);
+                SomeStaticHelpers._am(0, this.c, objArr, 6, this.b);
             }
         }
         if (this.c != i) {
@@ -117,7 +117,7 @@ public final class kz implements Collection, Set, IEmpty2 {
 
     @Override // java.util.Collection, java.util.Set
     public final boolean contains(Object obj) {
-        return (obj == null ? cnd.ax(this, null, 0) : cnd.ax(this, obj, obj.hashCode())) >= 0;
+        return (obj == null ? KotlinHelpers2.ax(this, null, 0) : KotlinHelpers2.ax(this, obj, obj.hashCode())) >= 0;
     }
 
     @Override // java.util.Collection, java.util.Set
@@ -145,9 +145,9 @@ public final class kz implements Collection, Set, IEmpty2 {
         if (iArr.length <= 8 || i2 >= iArr.length / 3) {
             if (i < i3) {
                 int i4 = i + 1;
-                la._al(iArr, i, i4, i2, iArr);
+                SomeStaticHelpers._al(iArr, i, i4, i2, iArr);
                 Object[] objArr2 = this.b;
-                la._aj(i, i4, objArr2, i2, objArr2);
+                SomeStaticHelpers._aj(i, i4, objArr2, i2, objArr2);
             }
             this.b[i3] = null;
         } else {
@@ -156,13 +156,13 @@ public final class kz implements Collection, Set, IEmpty2 {
             this.a = iArr2;
             this.b = new Object[i5];
             if (i > 0) {
-                la._ao(iArr, 0, i, 6, iArr2);
-                la._am(0, i, objArr, 6, this.b);
+                SomeStaticHelpers._ao(iArr, 0, i, 6, iArr2);
+                SomeStaticHelpers._am(0, i, objArr, 6, this.b);
             }
             if (i < i3) {
                 int i6 = i + 1;
-                la._al(iArr, i, i6, i2, this.a);
-                la._aj(i, i6, objArr, i2, this.b);
+                SomeStaticHelpers._al(iArr, i, i6, i2, this.a);
+                SomeStaticHelpers._aj(i, i6, objArr, i2, this.b);
             }
         }
         if (i2 != this.c) {
@@ -216,7 +216,7 @@ public final class kz implements Collection, Set, IEmpty2 {
 
     @Override // java.util.Collection, java.util.Set
     public final boolean remove(Object obj) {
-        int iAx = obj == null ? cnd.ax(this, null, 0) : cnd.ax(this, obj, obj.hashCode());
+        int iAx = obj == null ? KotlinHelpers2.ax(this, null, 0) : KotlinHelpers2.ax(this, obj, obj.hashCode());
         if (iAx < 0) {
             return false;
         }
@@ -255,7 +255,7 @@ public final class kz implements Collection, Set, IEmpty2 {
 
     @Override // java.util.Collection, java.util.Set
     public final Object[] toArray() {
-        return la.k(this.b, 0, this.c);
+        return SomeStaticHelpers.k(this.b, 0, this.c);
     }
 
     public final String toString() {
@@ -291,7 +291,7 @@ public final class kz implements Collection, Set, IEmpty2 {
         } else if (objArr.length > i) {
             objArr[i] = null;
         }
-        la._aj(0, 0, this.b, this.c, objArr);
+        SomeStaticHelpers._aj(0, 0, this.b, this.c, objArr);
         return objArr;
     }
 }

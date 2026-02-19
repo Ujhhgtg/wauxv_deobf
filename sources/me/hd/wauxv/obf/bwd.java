@@ -44,7 +44,7 @@ public abstract class bwd implements dfx {
 
     @Override // me.hd.wauxv.obf.dfx
     public final List getAnnotations() {
-        return avd.a;
+        return EmptyReadonlyList.a;
     }
 
     @Override // me.hd.wauxv.obf.dfx
@@ -69,9 +69,9 @@ public abstract class bwd implements dfx {
     @Override // me.hd.wauxv.obf.dfx
     public final List k(int i) {
         if (i >= 0) {
-            return avd.a;
+            return EmptyReadonlyList.a;
         }
-        StringBuilder sbR = yg.r(i, "Illegal index ", ", ");
+        StringBuilder sbR = yg.concatVar213(i, "Illegal index ", ", ");
         sbR.append(b());
         sbR.append(" expects only non-negative indices");
         throw new IllegalArgumentException(sbR.toString().toString());
@@ -82,7 +82,7 @@ public abstract class bwd implements dfx {
         if (i >= 0) {
             return this.c;
         }
-        StringBuilder sbR = yg.r(i, "Illegal index ", ", ");
+        StringBuilder sbR = yg.concatVar213(i, "Illegal index ", ", ");
         sbR.append(b());
         sbR.append(" expects only non-negative indices");
         throw new IllegalArgumentException(sbR.toString().toString());
@@ -93,7 +93,7 @@ public abstract class bwd implements dfx {
         if (i >= 0) {
             return false;
         }
-        StringBuilder sbR = yg.r(i, "Illegal index ", ", ");
+        StringBuilder sbR = yg.concatVar213(i, "Illegal index ", ", ");
         sbR.append(b());
         sbR.append(" expects only non-negative indices");
         throw new IllegalArgumentException(sbR.toString().toString());

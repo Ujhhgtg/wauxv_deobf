@@ -20,29 +20,6 @@ import net.bytebuddy.description.type.TypeDescription;
 import net.bytebuddy.dynamic.scaffold.FieldLocator;
 import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.implementation.bind.MethodDelegationBinder;
-import net.bytebuddy.implementation.bind.annotation.AllArguments;
-import net.bytebuddy.implementation.bind.annotation.Argument;
-import net.bytebuddy.implementation.bind.annotation.Default;
-import net.bytebuddy.implementation.bind.annotation.DefaultCall;
-import net.bytebuddy.implementation.bind.annotation.DefaultCallHandle;
-import net.bytebuddy.implementation.bind.annotation.DefaultMethod;
-import net.bytebuddy.implementation.bind.annotation.DefaultMethodHandle;
-import net.bytebuddy.implementation.bind.annotation.DynamicConstant;
-import net.bytebuddy.implementation.bind.annotation.Empty;
-import net.bytebuddy.implementation.bind.annotation.FieldGetterHandle;
-import net.bytebuddy.implementation.bind.annotation.FieldSetterHandle;
-import net.bytebuddy.implementation.bind.annotation.FieldValue;
-import net.bytebuddy.implementation.bind.annotation.Handle;
-import net.bytebuddy.implementation.bind.annotation.IgnoreForBinding;
-import net.bytebuddy.implementation.bind.annotation.Origin;
-import net.bytebuddy.implementation.bind.annotation.RuntimeType;
-import net.bytebuddy.implementation.bind.annotation.StubValue;
-import net.bytebuddy.implementation.bind.annotation.Super;
-import net.bytebuddy.implementation.bind.annotation.SuperCall;
-import net.bytebuddy.implementation.bind.annotation.SuperCallHandle;
-import net.bytebuddy.implementation.bind.annotation.SuperMethod;
-import net.bytebuddy.implementation.bind.annotation.SuperMethodHandle;
-import net.bytebuddy.implementation.bind.annotation.This;
 import net.bytebuddy.implementation.bytecode.StackManipulation;
 import net.bytebuddy.implementation.bytecode.assign.Assigner;
 import net.bytebuddy.implementation.bytecode.constant.DefaultValue;
@@ -154,7 +131,7 @@ public class TargetMethodAnnotationDrivenBinder implements MethodDelegationBinde
                         sb.append("(bindingMechanic=");
                         sb.append(Argument.BindingMechanic.UNIQUE);
                         sb.append(", value=");
-                        return yg.m(sb, ")", this.parameterIndex);
+                        return yg.concatToVar1(sb, ")", this.parameterIndex);
                     }
 
                     @Override // net.bytebuddy.implementation.bind.annotation.Argument

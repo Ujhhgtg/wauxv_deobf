@@ -22,7 +22,7 @@ final class FieldReaderAtomicLongReadOnly<T> extends FieldReader<T> {
         try {
             ((AtomicLong) this.method.invoke(t, null)).set(((Number) obj).longValue());
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 

@@ -32,7 +32,7 @@ public final class dte {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("FinderJumpInfoProto(jumpinfo_type=" /* cnb.z(-177541063113514L) */);
+        sb.append("FinderJumpInfoProto(jumpinfo_type=" /* "FinderJumpInfoProto(jumpinfo_type=" /* "FinderJumpInfoProto(jumpinfo_type=" /* "FinderJumpInfoProto(jumpinfo_type=" /* cnb.z(-177541063113514L)   */);
         return concat(sb, this.a, ')');
     }
 }

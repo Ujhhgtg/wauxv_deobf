@@ -12,7 +12,7 @@ public final /* synthetic */ class drw implements bgx {
     static {
         drw drwVar = new drw();
         b = drwVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto" /* cnb.z(-157951717276458L) */, drwVar, 28);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto" /* cnb.z(-157951717276458L)   */, drwVar, 28);
         bjs.y(-158183645510442L, cucVar, false, 1);
         bjs.y(-158187940477738L, cucVar, false, 2);
         bjs.y(-158097746164522L, cucVar, false, 3);

@@ -11,25 +11,25 @@ import org.luckypray.dexkit.DexKitBridge;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class ga extends SwitchHook implements IDatabaseOperationsListener, bng {
-    public static final ga a = new ga("AntiRevoke2Hook" /* cnb.z(-454085417368362L) */);
-    public static final String b = "聊天" /* cnb.z(-454776907103018L) */;
-    public static final String c = "阻止消息撤回2" /* cnb.z(-454781202070314L) */;
-    public static final String d = "消息有撤回提示，通用款，三款选一款" /* cnb.z(-454746842331946L) */;
+    public static final ga a = new ga("AntiRevoke2Hook" /* "AntiRevoke2Hook" /* "AntiRevoke2Hook" /* cnb.z(-454085417368362L)  */);
+    public static final String b = "聊天" /* "聊天" /* "聊天" /* cnb.z(-454776907103018L)  */;
+    public static final String c = "阻止消息撤回2" /* "阻止消息撤回2" /* "阻止消息撤回2" /* cnb.z(-454781202070314L)  */;
+    public static final String d = "消息有撤回提示，通用款，三款选一款" /* "消息有撤回提示，通用款，三款选一款" /* "消息有撤回提示，通用款，三款选一款" /* cnb.z(-454746842331946L)  */;
     public static final bn i = new bn(14);
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void getThisObject() throws NoSuchMethodException {
-        Iterator it = aba.ag(fw.a, fy.a, fx.a).iterator();
+        Iterator it = OtherStaticHelpers.argsToList(fw.a, fy.a, fx.a).iterator();
         while (it.hasNext()) {
             Class clsAz = emn.az((DexDescData) it.next());
-            int i2 = bte.a;
+            int i2 = 0;
             cde cdeVarT = dqc.bi(clsAz).t();
             cdeVarT.a = Void.TYPE;
             cdeVarT.g = 1;
-            cdk cdkVar = (cdk) aaz.e(cdeVarT.aj());
+            MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
             exg exgVar = exg.a;
             ga gaVar = a;
-            aki akiVarAd = gaVar.ad(cdkVar, exgVar);
+            aki akiVarAd = gaVar.ad(methodHookWrapperVar, exgVar);
             gaVar.y(akiVarAd, new bn(18));
             akiVarAd.o();
         }
@@ -57,36 +57,36 @@ public final class ga extends SwitchHook implements IDatabaseOperationsListener,
             String[] strArr,
             int i2)
             throws IOException {
-        if (getIsEnabled() && str.equals("message" /* cnb.z(-454016697891626L) */)
-                && nullSafeIsEqual(contentValues.get("type" /* cnb.z(-453982338153258L) */),
+        if (getIsEnabled() && str.equals("message" /* "message" /* "message" /* cnb.z(-454016697891626L)  */)
+                && nullSafeIsEqual(contentValues.get("type" /* "type" /* "type" /* cnb.z(-453982338153258L)  */),
                         Integer.valueOf(ewg.l.w))) {
-            String asString = contentValues.getAsString("content" /* cnb.z(-453943683447594L) */);
-            if (dnr.bp(asString, "\"" /* cnb.z(-453909323709226L) */, false) || dnr.bp(asString, "「" /*
+            String asString = contentValues.getAsString("content" /* "content" /* "content" /* cnb.z(-453943683447594L)  */);
+            if (dnr.bp(asString, "\"" /* "\"" /* "\"" /* cnb.z(-453909323709226L)  */, false) || dnr.bp(asString, "「" /*
                                                                                                       * cnb.z(-
                                                                                                       * 453917913643818L)
                                                                                                       */, false)) {
-                Long asLong = contentValues.getAsLong("msgId" /* cnb.z(-453926503578410L) */);
-                int i3 = bte.a;
+                Long asLong = contentValues.getAsLong("msgId" /* "msgId" /* "msgId" /* cnb.z(-453926503578410L)  */);
+                int i3 = 0;
                 dlx.a.getClass();
                 cde cdeVarT = dqc.bi(dlx.b()).t();
-                cdeVarT.ab = "rawQuery" /* cnb.z(-103246718827306L) */;
-                Object objJ = ((cdk) dkz.n(new Object[] { dal.b(String.class), dal.b(Object[].class) }, 2, cdeVarT)).j(
-                        "SELECT createTime, talker FROM message WHERE msgId = ?" /* cnb.z(-453883553905450L) */,
+                cdeVarT.ab = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
+                Object objJ = ((MethodHookWrapper) dkz.n(new Object[] { dal.b(String.class), dal.b(Object[].class) }, 2, cdeVarT)).j(
+                        "SELECT createTime, talker FROM message WHERE msgId = ?" /* "SELECT createTime, talker FROM message WHERE msgId = ?" /* "SELECT createTime, talker FROM message WHERE msgId = ?" /* cnb.z(-453883553905450L)  */,
                         new Object[] { asLong });
                 throwIfVar1IsNull(objJ);
                 Cursor cursor = (Cursor) objJ;
                 try {
                     if (cursor.moveToFirst()) {
-                        long j = cursor.getLong(cursor.getColumnIndex("createTime" /* cnb.z(-453080395021098L) */));
+                        long j = cursor.getLong(cursor.getColumnIndex("createTime" /* "createTime" /* "createTime" /* cnb.z(-453080395021098L)  */));
                         String string = cursor
-                                .getString(cursor.getColumnIndex("talker" /* cnb.z(-453067510119210L) */));
-                        Pattern patternCompile = Pattern.compile("([\"「])(.*?)([」\"])" /* cnb.z(-453020265478954L) */);
+                                .getString(cursor.getColumnIndex("talker" /* "talker" /* "talker" /* cnb.z(-453067510119210L)  */));
+                        Pattern patternCompile = Pattern.compile("([\"「])(.*?)([」\"])" /* "([\"「])(.*?)([」\"])" /* "([\"「])(.*?)([」\"])" /* cnb.z(-453020265478954L)  */);
                         throwIfVar1IsNull(patternCompile, "compile(...)");
                         Matcher matcher = patternCompile.matcher(asString);
                         throwIfVar1IsNull(matcher, "matcher(...)");
                         bzx bzxVarY = ewz.y(matcher, 0, asString);
                         aye.w(ewg.j.w, string, "\"" + (bzxVarY != null ? (String) ((bzv) bzxVarY.e()).get(2) : null)
-                                + "\" " /* cnb.z(-453509891750698L) */ + fz.a.o(), j + 1);
+                                + "\" " /* "\" " /* "\" " /* cnb.z(-453509891750698L)  */ + fz.a.o(), j + 1);
                         hookParam.setResult(1);
                     }
                     cursor.close();
@@ -108,7 +108,7 @@ public final class ga extends SwitchHook implements IDatabaseOperationsListener,
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final IHasInvokeMethod p() {
+    public final IInvokable getOnClick() {
         return i;
     }
 }

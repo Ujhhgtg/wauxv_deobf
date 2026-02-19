@@ -11,7 +11,7 @@ public abstract class byb {
         int iMax = iD > 0 ? Math.max(7, dev.c(iD)) : 0;
         if (iMax != 0) {
             jArr = new long[((iMax + 15) & (-8)) >> 3];
-            la.n(jArr);
+            SomeStaticHelpers.n(jArr);
         }
         int i = iMax >> 3;
         long j = 255 << ((iMax & 7) << 3);

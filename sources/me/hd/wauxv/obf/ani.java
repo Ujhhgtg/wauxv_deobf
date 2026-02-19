@@ -175,7 +175,7 @@ public final class ani extends ckl {
         StringBuilder sb = new StringBuilder("Dialog destination ");
         String str2 = angVar.a;
         if (str2 != null) {
-            throw new IllegalArgumentException(yg.o(sb, str2, " is not an instance of DialogFragment").toString());
+            throw new IllegalArgumentException(yg.concatToVar1(sb, str2, " is not an instance of DialogFragment").toString());
         }
         throw new IllegalStateException("DialogFragment class was not set");
     }

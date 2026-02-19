@@ -9,9 +9,8 @@ import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.avd;
+import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dnj;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.yg;
@@ -407,7 +406,7 @@ public final class Cookie {
                 }
             }
             if (arrayList == null) {
-                return avd.a;
+                return EmptyReadonlyList.a;
             }
             List<Cookie> listUnmodifiableList = Collections.unmodifiableList(arrayList);
             throwIfVar1IsNull(listUnmodifiableList, "{\n        Collections.un…ableList(cookies)\n      }");

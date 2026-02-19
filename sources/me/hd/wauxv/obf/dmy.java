@@ -290,7 +290,7 @@ public final class dmy implements avt, acn {
         }
         this.aj.getClass();
         if (Math.abs(d) > Double.MAX_VALUE) {
-            throw cnd.ai(Double.valueOf(d), ((ek) cxcVar.i).toString());
+            throw KotlinHelpers2.ai(Double.valueOf(d), ((ek) cxcVar.i).toString());
         }
     }
 
@@ -380,7 +380,7 @@ public final class dmy implements avt, acn {
         }
         this.aj.getClass();
         if (Math.abs(f) > Float.MAX_VALUE) {
-            throw cnd.ai(Float.valueOf(f), ((ek) cxcVar.i).toString());
+            throw KotlinHelpers2.ai(Float.valueOf(f), ((ek) cxcVar.i).toString());
         }
     }
 

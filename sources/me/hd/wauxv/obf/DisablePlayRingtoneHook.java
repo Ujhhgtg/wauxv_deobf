@@ -10,14 +10,14 @@ public final class DisablePlayRingtoneHook extends SwitchHook implements IDexFin
                                                                                                            * cnb.z(-
                                                                                                            * 445057396112170L)
                                                                                                            */);
-    public static final String b = "聊天" /* cnb.z(-444563474873130L) */;
-    public static final String c = "屏蔽通话铃声" /* cnb.z(-444567769840426L) */;
-    public static final String i = "屏蔽视频及语音通话时呼出呼入的铃声" /* cnb.z(-444537705069354L) */;
+    public static final String b = "聊天" /* "聊天" /* "聊天" /* cnb.z(-444563474873130L)  */;
+    public static final String c = "屏蔽通话铃声" /* "屏蔽通话铃声" /* "屏蔽通话铃声" /* cnb.z(-444567769840426L)  */;
+    public static final String i = "屏蔽视频及语音通话时呼出呼入的铃声" /* "屏蔽视频及语音通话时呼出呼入的铃声" /* "屏蔽视频及语音通话时呼出呼入的铃声" /* cnb.z(-444537705069354L)  */;
     public static final amb j = new amb(12);
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.bf(emn.bb(aob.a));
+        List listBf = dqc.toSingletonList(emn.bb(aob.a));
         DisablePlayRingtoneHook aoeVar = a;
         aki akiVarAb = csb.ab(aoeVar, listBf);
         aoeVar.y(akiVarAb, new amb(13));
@@ -45,7 +45,7 @@ public final class DisablePlayRingtoneHook extends SwitchHook implements IDexFin
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final IHasInvokeMethod p() {
+    public final IInvokable getOnClick() {
         return j;
     }
 }

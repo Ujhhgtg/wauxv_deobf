@@ -1,6 +1,5 @@
 package okhttp3.internal.http2;
 
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.nu;
 import me.hd.wauxv.obf.sj;
@@ -54,7 +53,7 @@ public final class Http2 {
         int[] iArr = { 1 };
         strArr2[8] = "PADDED";
         int i2 = iArr[0];
-        strArr2[i2 | 8] = yg.o(new StringBuilder(), strArr2[i2], "|PADDED");
+        strArr2[i2 | 8] = yg.concatToVar1(new StringBuilder(), strArr2[i2], "|PADDED");
         strArr2[4] = "END_HEADERS";
         strArr2[32] = "PRIORITY";
         strArr2[36] = "END_HEADERS|PRIORITY";
@@ -68,7 +67,7 @@ public final class Http2 {
             StringBuilder sb = new StringBuilder();
             sb.append(strArr3[i5]);
             sb.append('|');
-            strArr3[i6 | 8] = yg.o(sb, strArr3[i4], "|PADDED");
+            strArr3[i6 | 8] = yg.concatToVar1(sb, strArr3[i4], "|PADDED");
         }
         int length = FLAGS.length;
         for (int i7 = 0; i7 < length; i7++) {

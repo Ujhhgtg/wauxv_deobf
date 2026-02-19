@@ -16,7 +16,7 @@ import java.util.Set;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class dpf extends SwitchHook implements IStartActivity {
-    public static final dpf a = new dpf("SystemBrowserHook" /* cnb.z(-516173464599338L) */);
+    public static final dpf a = new dpf("SystemBrowserHook" /* "SystemBrowserHook" /* "SystemBrowserHook" /* "SystemBrowserHook" /* cnb.z(-516173464599338L)   */);
     public static final Set b;
     public static final Set c;
     public static final String i;
@@ -25,21 +25,21 @@ public final class dpf extends SwitchHook implements IStartActivity {
     public static final dos n;
 
     static {
-        String[] strArr = { "weixin.com" /* cnb.z(-539542381656874L) */, "qq.com" /* cnb.z(-539512316885802L) */,
-                "weixin.qq.com.cn" /* cnb.z(-539482252114730L) */, "wechatpay.cn" /* cnb.z(-539409237670698L) */,
-                "tenpay.com" /* cnb.z(-539336223226666L) */, "weixinbridge.com" /* cnb.z(-539855914269482L) */ };
+        String[] strArr = { "weixin.com" /* "weixin.com" /* "weixin.com" /* "weixin.com" /* cnb.z(-539542381656874L)   */, "qq.com" /* "qq.com" /* "qq.com" /* "qq.com" /* cnb.z(-539512316885802L)   */,
+                "weixin.qq.com.cn" /* "weixin.qq.com.cn" /* "weixin.qq.com.cn" /* "weixin.qq.com.cn" /* cnb.z(-539482252114730L)   */, "wechatpay.cn" /* "wechatpay.cn" /* "wechatpay.cn" /* "wechatpay.cn" /* cnb.z(-539409237670698L)   */,
+                "tenpay.com" /* "tenpay.com" /* "tenpay.com" /* "tenpay.com" /* cnb.z(-539336223226666L)   */, "weixinbridge.com" /* "weixinbridge.com" /* "weixinbridge.com" /* "weixinbridge.com" /* cnb.z(-539855914269482L)   */ };
         LinkedHashSet linkedHashSet = new LinkedHashSet(KotlinHelpers.ah(6));
         for (int i2 = 0; i2 < 6; i2++) {
             linkedHashSet.add(strArr[i2]);
         }
         b = linkedHashSet;
-        String[] strArr2 = { "test.com" /* cnb.z(-539731360217898L) */ };
+        String[] strArr2 = { "test.com" /* "test.com" /* "test.com" /* "test.com" /* cnb.z(-539731360217898L)   */ };
         LinkedHashSet linkedHashSet2 = new LinkedHashSet(KotlinHelpers.ah(1));
         linkedHashSet2.add(strArr2[0]);
         c = linkedHashSet2;
-        i = "杂项" /* cnb.z(-539692705512234L) */;
-        j = "系统浏览器" /* cnb.z(-539714180348714L) */;
-        m = "致敬经典模块 '去你大爷的内置浏览器' " /* cnb.z(-539671230675754L) */;
+        i = "杂项" /* "杂项" /* "杂项" /* "杂项" /* cnb.z(-539692705512234L)   */;
+        j = "系统浏览器" /* "系统浏览器" /* "系统浏览器" /* "系统浏览器" /* cnb.z(-539714180348714L)   */;
+        m = "致敬经典模块 '去你大爷的内置浏览器' " /* "致敬经典模块 '去你大爷的内置浏览器' " /* "致敬经典模块 '去你大爷的内置浏览器' " /* "致敬经典模块 '去你大爷的内置浏览器' " /* cnb.z(-539671230675754L)   */;
         n = new dos(2);
     }
 
@@ -48,13 +48,13 @@ public final class dpf extends SwitchHook implements IStartActivity {
         String stringExtra;
         String shortClassName;
         ActivityOptions activityOptionsMakeBasic;
-        if (!z() || (stringExtra = intent.getStringExtra("rawUrl" /* cnb.z(-516070385384234L) */)) == null
+        if (!z() || (stringExtra = intent.getStringExtra("rawUrl" /* "rawUrl" /* "rawUrl" /* "rawUrl" /* cnb.z(-516070385384234L)   */)) == null
                 || dnj.ak(stringExtra)) {
             return;
         }
-        if (dnr.bp(stringExtra, "http://" /* cnb.z(-516040320613162L) */, false)
-                || dnr.bp(stringExtra, "https://" /* cnb.z(-516005960874794L) */, false)) {
-            String strAx = dnj.ax(dnj.au(stringExtra, "://" /* cnb.z(-516113335057194L) */, stringExtra), "/" /*
+        if (dnr.bp(stringExtra, "http://" /* "http://" /* "http://" /* "http://" /* cnb.z(-516040320613162L)   */, false)
+                || dnr.bp(stringExtra, "https://" /* "https://" /* "https://" /* "https://" /* cnb.z(-516005960874794L)   */, false)) {
+            String strAx = dnj.ax(dnj.au(stringExtra, "://" /* "://" /* "://" /* "://" /* cnb.z(-516113335057194L)   */, stringExtra), "/" /*
                                                                                                                * cnb.z(-
                                                                                                                * 516061795449642L)
                                                                                                                */);
@@ -83,7 +83,7 @@ public final class dpf extends SwitchHook implements IStartActivity {
             }
             ComponentName component = intent.getComponent();
             if (component == null || (shortClassName = component.getShortClassName()) == null
-                    || !dnj.ab(shortClassName, "MMWebViewUI" /* cnb.z(-515967306169130L) */, false)) {
+                    || !dnj.ab(shortClassName, "MMWebViewUI" /* "MMWebViewUI" /* "MMWebViewUI" /* "MMWebViewUI" /* cnb.z(-515967306169130L)   */, false)) {
                 return;
             }
             Intent intent2 = new Intent("android.intent.action.VIEW");
@@ -150,7 +150,7 @@ public final class dpf extends SwitchHook implements IStartActivity {
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final IHasInvokeMethod p() {
+    public final IInvokable getOnClick() {
         return n;
     }
 }

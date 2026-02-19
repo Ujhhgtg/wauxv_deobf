@@ -7,9 +7,9 @@ public final class AppBrandForceShareHook extends SwitchHook implements bne {
                                                                                                         * cnb.z(-
                                                                                                         * 410341175458602L)
                                                                                                         */);
-    public static final String b = "小程序" /* cnb.z(-410534448986922L) */;
-    public static final String c = "程序强制分享" /* cnb.z(-410551628856106L) */;
-    public static final String d = "程序强制可转发给朋友或分享到朋友圈" /* cnb.z(-410521564085034L) */;
+    public static final String b = "小程序" /* "小程序" /* "小程序" /* cnb.z(-410534448986922L)  */;
+    public static final String c = "程序强制分享" /* "程序强制分享" /* "程序强制分享" /* cnb.z(-410551628856106L)  */;
+    public static final String d = "程序强制可转发给朋友或分享到朋友圈" /* "程序强制可转发给朋友或分享到朋友圈" /* "程序强制可转发给朋友或分享到朋友圈" /* cnb.z(-410521564085034L)  */;
     public static final boolean h = true;
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -29,12 +29,12 @@ public final class AppBrandForceShareHook extends SwitchHook implements bne {
     public final void i(HookParam hookParam, CharSequence charSequence, boolean z) {
         if (getIsEnabled() && z) {
             boolean z2 = true;
-            boolean z3 = charSequence.equals("转发给朋友" /* cnb.z(-410225211341610L) */)
-                    || charSequence.equals("分享到朋友圈" /* cnb.z(-410250981145386L) */);
-            boolean z4 = charSequence.equals("轉發給朋友" /* cnb.z(-410220916374314L) */)
-                    || charSequence.equals("分享到朋友圈" /* cnb.z(-410177966701354L) */);
-            if (!charSequence.equals("Send to Chat" /* cnb.z(-410130722061098L) */)
-                    && !charSequence.equals("Share on Moments" /* cnb.z(-410607463430954L) */)) {
+            boolean z3 = charSequence.equals("转发给朋友" /* "转发给朋友" /* "转发给朋友" /* cnb.z(-410225211341610L)  */)
+                    || charSequence.equals("分享到朋友圈" /* "分享到朋友圈" /* "分享到朋友圈" /* cnb.z(-410250981145386L)  */);
+            boolean z4 = charSequence.equals("轉發給朋友" /* "轉發給朋友" /* "轉發給朋友" /* cnb.z(-410220916374314L)  */)
+                    || charSequence.equals("分享到朋友圈" /* "分享到朋友圈" /* "分享到朋友圈" /* cnb.z(-410177966701354L)  */);
+            if (!charSequence.equals("Send to Chat" /* "Send to Chat" /* "Send to Chat" /* cnb.z(-410130722061098L)  */)
+                    && !charSequence.equals("Share on Moments" /* "Share on Moments" /* "Share on Moments" /* cnb.z(-410607463430954L)  */)) {
                 z2 = false;
             }
             if (z3 || z4 || z2) {

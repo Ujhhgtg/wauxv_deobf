@@ -1,6 +1,5 @@
 package bsh;
 
-import bsh.BshClassManager;
 import bsh.security.MainSecurityGuard;
 import java.io.BufferedReader;
 import java.io.File;
@@ -437,7 +436,7 @@ public class Interpreter implements Runnable, Serializable, BshClassManager.List
         String str2 = (String) getu("bsh.cwd");
         File file = new File(str);
         if (!file.isAbsolute()) {
-            file = new File(yg.o(dkz.y(str2), File.separator, str));
+            file = new File(yg.concatToVar1(dkz.y(str2), File.separator, str));
         }
         return new File(file.getCanonicalPath());
     }

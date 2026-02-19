@@ -23,7 +23,7 @@ public final class NullProxySelector extends ProxySelector {
     @Override // java.net.ProxySelector
     public List<Proxy> select(URI uri) {
         if (uri != null) {
-            return dqc.bf(Proxy.NO_PROXY);
+            return dqc.toSingletonList(Proxy.NO_PROXY);
         }
         throw new IllegalArgumentException("uri must not be null");
     }

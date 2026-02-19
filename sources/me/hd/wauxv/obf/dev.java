@@ -10,7 +10,7 @@ public abstract class dev {
         int iMax = iD > 0 ? Math.max(7, c(iD)) : 0;
         if (iMax != 0) {
             long[] jArr = new long[((iMax + 15) & (-8)) >> 3];
-            la.n(jArr);
+            SomeStaticHelpers.n(jArr);
             int i = iMax >> 3;
             long j = 255 << ((iMax & 7) << 3);
             jArr[i] = (jArr[i] & (~j)) | j;

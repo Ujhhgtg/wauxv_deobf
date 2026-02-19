@@ -8,13 +8,13 @@ public final class dmu extends bws implements IDexFind {
     public static final dmu a = new dmu();
 
     public static Object b() {
-        int i = bte.a;
+        int i = 0;
         dgf.a.getClass();
         a.getClass();
         cde cdeVarT = dqc.bi(dgf.b(emn.az(dmt.a))).t();
         agp.a.getClass();
         cdeVarT.a = emn.az(agl.a);
-        Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }

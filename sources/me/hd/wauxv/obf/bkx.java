@@ -67,7 +67,7 @@ public abstract class bkx {
             int i4 = (i3 + i) - 16;
             while (i < i4) {
                 if (str.charAt(i) != '0') {
-                    StringBuilder sbR = yg.r(i, "Expected the hexadecimal digit '0' at index ", ", but was '");
+                    StringBuilder sbR = yg.concatVar213(i, "Expected the hexadecimal digit '0' at index ", ", but was '");
                     sbR.append(str.charAt(i));
                     sbR.append("'.\nThe result won't fit the type being parsed.");
                     throw new NumberFormatException(sbR.toString());
@@ -107,7 +107,7 @@ public abstract class bkx {
                     i++;
                 }
             }
-            StringBuilder sbR = yg.r(i, "Expected a hexadecimal digit at index ", ", but was ");
+            StringBuilder sbR = yg.concatVar213(i, "Expected a hexadecimal digit at index ", ", but was ");
             sbR.append(str.charAt(i));
             throw new NumberFormatException(sbR.toString());
         }

@@ -81,7 +81,7 @@ public class ek implements dcq, bm, sg {
             if (bN == 6) {
                 yiVar.o((byte) 7);
             } else if (bN == 4) {
-                cnd.ay(yiVar, "object");
+                KotlinHelpers2.ay(yiVar, "object");
                 throw null;
             }
             return new bsl(linkedHashMap);
@@ -102,7 +102,7 @@ public class ek implements dcq, bm, sg {
             if (bN == 6) {
                 yiVar.o((byte) 7);
             } else if (bN == 4) {
-                cnd.ay(yiVar, "object");
+                KotlinHelpers2.ay(yiVar, "object");
                 throw null;
             }
             return new bsl(linkedHashMap);
@@ -427,7 +427,7 @@ public class ek implements dcq, bm, sg {
                         emc.af(3, bssVar2);
                         bss bssVar3 = new bss(bssVar2.e, afwVar);
                         bssVar3.d = ajxVar;
-                        Object objI = bssVar3.i(ens.a);
+                        Object objI = bssVar3.i(KotlinUnit.INSTANCE);
                         if (objI != ahq.a) {
                             afwVar._bn(objI);
                         }
@@ -464,7 +464,7 @@ public class ek implements dcq, bm, sg {
             if (bO == 6) {
                 yiVar.o((byte) 7);
             } else if (bO == 4) {
-                cnd.ay(yiVar, "object");
+                KotlinHelpers2.ay(yiVar, "object");
                 throw null;
             }
             bslVar = new bsl(linkedHashMap);
@@ -496,7 +496,7 @@ public class ek implements dcq, bm, sg {
         if (bN == 8) {
             yiVar.o((byte) 9);
         } else if (bN == 4) {
-            cnd.ay(yiVar, "array");
+            KotlinHelpers2.ay(yiVar, "array");
             throw null;
         }
         return new brp(arrayList);

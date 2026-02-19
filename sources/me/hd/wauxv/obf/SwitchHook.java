@@ -9,7 +9,7 @@ public abstract class SwitchHook extends BaseBaseHook {
     public final String[] ai = { ewi.a.e };
 
     public SwitchHook(String str) {
-        this.af = str.concat(".enabled" /* cnb.z(-50770808404778L) */);
+        this.af = str.concat(".enabled" /* ".enabled" /* ".enabled" /* cnb.z(-50770808404778L)  */);
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -28,20 +28,23 @@ public abstract class SwitchHook extends BaseBaseHook {
     public final void aj(boolean z) {
         DefaultConfig defaultConfig = cnf.ah;
         if (defaultConfig == null) {
-            throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
+            throw new IllegalArgumentException("DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)  */.toString());
         }
         defaultConfig.at(this.af, z);
     }
 
+    // funcName
     public abstract String getName();
 
+    // location
     public abstract String getCategory();
 
+    // funcDesc
     public String getDescription() {
         return null;
     }
 
-    public IHasInvokeMethod p() {
+    public IInvokable getOnClick() {
         return null;
     }
 
@@ -55,6 +58,6 @@ public abstract class SwitchHook extends BaseBaseHook {
         if (ioVar != null) {
             return ioVar.ah(this.af, false);
         }
-        throw new IllegalArgumentException("DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
+        throw new IllegalArgumentException("DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)  */.toString());
     }
 }

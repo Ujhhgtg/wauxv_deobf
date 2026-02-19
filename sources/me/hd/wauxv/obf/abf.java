@@ -25,13 +25,13 @@ public abstract class abf extends abe {
     public static void ao(Collection collection, Object[] objArr) {
         throwIfVar1IsNull(collection, "<this>");
         throwIfVar1IsNull(objArr, "elements");
-        collection.addAll(la.a(objArr));
+        collection.addAll(SomeStaticHelpers.toList(objArr));
     }
 
-    public static void ap(ArrayList arrayList, IHasInvokeMethod bgfVar) {
+    public static void ap(ArrayList arrayList, IInvokable bgfVar) {
         int iAf;
         throwIfVar1IsNull(arrayList, "<this>");
-        int iAf2 = aba.af(arrayList);
+        int iAf2 = OtherStaticHelpers.af(arrayList);
         int i = 0;
         if (iAf2 >= 0) {
             int i2 = 0;
@@ -51,7 +51,7 @@ public abstract class abf extends abe {
             }
             i = i2;
         }
-        if (i >= arrayList.size() || i > (iAf = aba.af(arrayList))) {
+        if (i >= arrayList.size() || i > (iAf = OtherStaticHelpers.af(arrayList))) {
             return;
         }
         while (true) {
@@ -76,6 +76,6 @@ public abstract class abf extends abe {
         if (list.isEmpty()) {
             throw new NoSuchElementException("List is empty.");
         }
-        return list.remove(aba.af(list));
+        return list.remove(OtherStaticHelpers.af(list));
     }
 }

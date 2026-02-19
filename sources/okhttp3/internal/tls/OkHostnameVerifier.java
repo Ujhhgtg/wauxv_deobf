@@ -13,8 +13,7 @@ import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLException;
 import javax.net.ssl.SSLSession;
 import me.hd.wauxv.obf.aaz;
-import me.hd.wauxv.obf.avd;
-import me.hd.wauxv.obf.KotlinHelpers;
+import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.dnj;
 import me.hd.wauxv.obf.dnr;
@@ -46,11 +45,11 @@ public final class OkHostnameVerifier implements HostnameVerifier {
 
     private final List<String> getSubjectAltNames(X509Certificate x509Certificate, int i) {
         Object obj;
-        avd avdVar = avd.a;
+        EmptyReadonlyList emptyReadonlyListVar = EmptyReadonlyList.a;
         try {
             Collection<List<?>> subjectAlternativeNames = x509Certificate.getSubjectAlternativeNames();
             if (subjectAlternativeNames == null) {
-                return avdVar;
+                return emptyReadonlyListVar;
             }
             ArrayList arrayList = new ArrayList();
             for (List<?> list : subjectAlternativeNames) {
@@ -61,7 +60,7 @@ public final class OkHostnameVerifier implements HostnameVerifier {
             }
             return arrayList;
         } catch (CertificateParsingException unused) {
-            return avdVar;
+            return emptyReadonlyListVar;
         }
     }
 
@@ -73,7 +72,7 @@ public final class OkHostnameVerifier implements HostnameVerifier {
             throw new IllegalArgumentException(dkz.p(length2, "endIndex < beginIndex: ", " < ", 0).toString());
         }
         if (length2 > str.length()) {
-            StringBuilder sbR = yg.r(length2, "endIndex > string.length: ", " > ");
+            StringBuilder sbR = yg.concatVar213(length2, "endIndex > string.length: ", " > ");
             sbR.append(str.length());
             throw new IllegalArgumentException(sbR.toString().toString());
         }

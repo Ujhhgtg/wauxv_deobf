@@ -13,12 +13,12 @@ public final class ur extends bws {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        int i = bte.a;
-        adt adtVarM = dqc.bh(ajn.ag("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-50749333568298L) */)).m();
+        int i = 0;
+        adt adtVarM = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-50749333568298L)   */)).m();
         adtVarM.z(Arrays.copyOf(new Object[] { dal.b(Context.class), dal.b(AttributeSet.class), dal.b(Integer.TYPE) },
                 3));
-        aki akiVarAd = ad((adu) aaz.e(adtVarM.a()), exg.a);
-        akiVarAd.m(new mj(27));
+        aki akiVarAd = ad((ConstructorHookWrapper) aaz.e(adtVarM.a()), exg.a);
+        akiVarAd.m(new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(27));
         akiVarAd.o();
     }
 }

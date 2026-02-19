@@ -26,7 +26,7 @@ final class FieldReaderAtomicBooleanMethodReadOnly<T> extends FieldReader<T> {
             }
             atomicBoolean.set(((Boolean) obj).booleanValue());
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 

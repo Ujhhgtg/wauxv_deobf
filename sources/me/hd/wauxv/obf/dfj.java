@@ -64,13 +64,13 @@ public final class dfj {
             if (i3 - i4 > 8192) {
                 throw new IllegalArgumentException();
             }
-            la._an(bArr, i4, i2, bArr, 2);
+            SomeStaticHelpers._an(bArr, i4, i2, bArr, 2);
             dfjVar.c -= dfjVar.b;
             dfjVar.b = 0;
         }
         int i5 = dfjVar.c;
         int i6 = this.b;
-        la._ak(this.a, i5, i6, bArr, i6 + i);
+        SomeStaticHelpers._ak(this.a, i5, i6, bArr, i6 + i);
         dfjVar.c += i;
         this.b += i;
     }

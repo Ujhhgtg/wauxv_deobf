@@ -187,7 +187,7 @@ public class cuc implements dfx, sr {
 
     @Override // me.hd.wauxv.obf.dfx
     public final List getAnnotations() {
-        return avd.a;
+        return EmptyReadonlyList.a;
     }
 
     @Override // me.hd.wauxv.obf.dfx
@@ -216,7 +216,7 @@ public class cuc implements dfx, sr {
     @Override // me.hd.wauxv.obf.dfx
     public final List k(int i) {
         List list = this.r[i];
-        return list == null ? avd.a : list;
+        return list == null ? EmptyReadonlyList.a : list;
     }
 
     /*

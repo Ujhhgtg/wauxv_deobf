@@ -9,7 +9,7 @@ public final /* synthetic */ class dsw implements bgx {
     static {
         dsw dswVar = new dsw();
         b = dswVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.FinderContactProto" /* cnb.z(-191160404409130L) */, dswVar, 1);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.FinderContactProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.FinderContactProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.FinderContactProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.FinderContactProto" /* cnb.z(-191160404409130L)   */, dswVar, 1);
         bjs.y(-190228396505898L, cucVar, false, 1);
         descriptor = cucVar;
     }

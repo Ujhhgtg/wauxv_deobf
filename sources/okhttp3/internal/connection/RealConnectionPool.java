@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dts;
 import me.hd.wauxv.obf.yg;
 import okhttp3.Address;
@@ -17,7 +16,6 @@ import okhttp3.internal.Util;
 import okhttp3.internal.concurrent.Task;
 import okhttp3.internal.concurrent.TaskQueue;
 import okhttp3.internal.concurrent.TaskRunner;
-import okhttp3.internal.connection.RealCall;
 import okhttp3.internal.platform.Platform;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -58,7 +56,7 @@ public final class RealConnectionPool {
         this.maxIdleConnections = i;
         this.keepAliveDurationNs = timeUnit.toNanos(j);
         this.cleanupQueue = taskRunner.newQueue();
-        final String strO = yg.o(new StringBuilder(), Util.okHttpName, " ConnectionPool");
+        final String strO = yg.concatToVar1(new StringBuilder(), Util.okHttpName, " ConnectionPool");
         this.cleanupTask = new Task(strO) { // from class: okhttp3.internal.connection.RealConnectionPool$cleanupTask$1
             @Override // okhttp3.internal.concurrent.Task
             public long runOnce() {

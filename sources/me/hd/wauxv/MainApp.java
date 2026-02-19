@@ -17,7 +17,7 @@ public final class MainApp extends Application {
         a = this;
         try {
             HookEntry.a.getClass();
-            cna.d = "WAuxiliary" /* cnb.z(-71829033057066L) */;
+            cna.d = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-71829033057066L)   */;
             cnb.k = false;
         } catch (Throwable unused) {
         }
@@ -36,7 +36,7 @@ public final class MainApp extends Application {
     @Override // android.app.Application
     public final void onCreate() {
         b();
-        UMConfigure.init(this, "68393b1dbc47b67d83776862" /* cnb.z(-398087633763114L) */, "WAuxiliary" /* cnb.z(-398478475787050L) */, 1, "" /* cnb.z(-398448411015978L) */);
-        System.loadLibrary("wauxv-core" /* cnb.z(-398461295917866L) */);
+        UMConfigure.init(this, "68393b1dbc47b67d83776862" /* "68393b1dbc47b67d83776862" /* "68393b1dbc47b67d83776862" /* "68393b1dbc47b67d83776862" /* cnb.z(-398087633763114L)   */, "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-398478475787050L)   */, 1, "" /* "" /* "" /* "" /* cnb.z(-398448411015978L)   */);
+        System.loadLibrary("wauxv-core" /* "wauxv-core" /* "wauxv-core" /* "wauxv-core" /* cnb.z(-398461295917866L)   */);
     }
 }

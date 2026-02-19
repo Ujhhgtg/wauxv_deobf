@@ -9,11 +9,11 @@ public final class auh extends bws implements IDexFind {
     public static final auh a = new auh();
 
     public static String b(String str) {
-        int i = bte.a;
+        int i = 0;
         atm.a.getClass();
         cde cdeVarT = dqc.bi(atm.b()).t();
         cdeVarT.a = dal.b(String.class);
-        Object objJ = ((cdk) dkz.n(new Object[] { dal.b(Context.class), dal.b(String.class) }, 2, cdeVarT)).j(null,
+        Object objJ = ((MethodHookWrapper) dkz.n(new Object[] { dal.b(Context.class), dal.b(String.class) }, 2, cdeVarT)).j(null,
                 str);
         throwIfVar1IsNull(objJ);
         return (String) objJ;
@@ -21,19 +21,19 @@ public final class auh extends bws implements IDexFind {
 
     public static void c(auh auhVar, String str, Object obj) {
         auhVar.getClass();
-        int i = bte.a;
+        int i = 0;
         atm.a.getClass();
         cde cdeVarT = dqc.bi(atm.b()).t();
         cdeVarT.a = Void.TYPE;
         cdeVarT.d = new atn(13);
-        cdk cdkVar = (cdk) aaz.e(cdeVarT.aj());
-        int parameterCount = cdkVar.a.getParameterCount();
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.e(cdeVarT.aj());
+        int parameterCount = methodHookWrapperVar.a.getParameterCount();
         if (parameterCount == 4) {
-            cdkVar.e(str, obj, null, null);
+            methodHookWrapperVar.e(str, obj, null, null);
         } else if (parameterCount != 5) {
-            cdkVar.e(str, obj, null);
+            methodHookWrapperVar.e(str, obj, null);
         } else {
-            cdkVar.e(str, obj, null, null, 0);
+            methodHookWrapperVar.e(str, obj, null, null, 0);
         }
     }
 

@@ -1,15 +1,14 @@
 package okhttp3.internal.cache;
 
 import java.io.IOException;
-import me.hd.wauxv.obf.IHasInvokeMethod;
+import me.hd.wauxv.obf.IInvokable;
 import me.hd.wauxv.obf.btp;
-import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.ens;
+import me.hd.wauxv.obf.KotlinUnit;
 import okhttp3.internal.Util;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class DiskLruCache$newJournalWriter$faultHidingSink$1 extends btp implements IHasInvokeMethod {
+public final class DiskLruCache$newJournalWriter$faultHidingSink$1 extends btp implements IInvokable {
     final /* synthetic */ DiskLruCache this$0;
 
     /*
@@ -24,7 +23,7 @@ public final class DiskLruCache$newJournalWriter$faultHidingSink$1 extends btp i
     @Override // me.hd.wauxv.obf.bgf
     public /* bridge */ /* synthetic */ Object invoke(Object obj) {
         invoke((IOException) obj);
-        return ens.a;
+        return KotlinUnit.INSTANCE;
     }
 
     public final void invoke(IOException iOException) {

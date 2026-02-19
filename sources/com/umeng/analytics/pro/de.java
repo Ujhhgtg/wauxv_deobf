@@ -30,7 +30,7 @@ public final class de {
         sb.append("' type: ");
         sb.append((int) this.b);
         sb.append(" seqid:");
-        return yg.m(sb, ">", this.c);
+        return yg.concatToVar1(sb, ">", this.c);
     }
 
     public de(String str, byte b, int i) {

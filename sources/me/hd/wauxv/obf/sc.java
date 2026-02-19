@@ -29,7 +29,7 @@ public final class sc implements dcj {
         int iMin = Math.min(bhiVar.g / i2, bhiVar.f / i);
         int iMax = Math.max(1, iMin == 0 ? 0 : Integer.highestOneBit(iMin));
         if (Log.isLoggable("BufferGifDecoder", 2) && iMax > 1) {
-            StringBuilder sbQ = yg.q(iMax, i, "Downsampling GIF, sampleSize: ", ", target dimens: [", "x");
+            StringBuilder sbQ = yg.concatVar31425(iMax, i, "Downsampling GIF, sampleSize: ", ", target dimens: [", "x");
             sbQ.append(i2);
             sbQ.append("], actual dimens: [");
             sbQ.append(bhiVar.f);

@@ -9,7 +9,7 @@ public final /* synthetic */ class dtf implements bgx {
     static {
         dtf dtfVar = new dtf();
         b = dtfVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.FinderMediaProto" /* cnb.z(-177425098996522L) */, dtfVar, 1);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.FinderMediaProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.FinderMediaProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.FinderMediaProto" /* cnb.z(-177425098996522L)  */, dtfVar, 1);
         bjs.y(-183081570925354L, cucVar, false, 1);
         descriptor = cucVar;
     }

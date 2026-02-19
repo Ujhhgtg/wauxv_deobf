@@ -28,33 +28,33 @@ public final class lw extends doi implements bgj {
         switch (this.a) {
             case 0:
                 lw lwVar = (lw) h(ahpVar, afwVar);
-                ens ensVar = ens.a;
-                lwVar.i(ensVar);
-                return ensVar;
+                KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+                lwVar.i(kotlinUnitVar);
+                return kotlinUnitVar;
             case 1:
                 lw lwVar2 = (lw) h(ahpVar, afwVar);
-                ens ensVar2 = ens.a;
-                lwVar2.i(ensVar2);
-                return ensVar2;
+                KotlinUnit kotlinUnitVar2 = KotlinUnit.INSTANCE;
+                lwVar2.i(kotlinUnitVar2);
+                return kotlinUnitVar2;
             case 2:
                 lw lwVar3 = (lw) h(ahpVar, afwVar);
-                ens ensVar3 = ens.a;
-                lwVar3.i(ensVar3);
-                return ensVar3;
+                KotlinUnit kotlinUnitVar3 = KotlinUnit.INSTANCE;
+                lwVar3.i(kotlinUnitVar3);
+                return kotlinUnitVar3;
             case 3:
                 lw lwVar4 = (lw) h(ahpVar, afwVar);
-                ens ensVar4 = ens.a;
-                lwVar4.i(ensVar4);
-                return ensVar4;
+                KotlinUnit kotlinUnitVar4 = KotlinUnit.INSTANCE;
+                lwVar4.i(kotlinUnitVar4);
+                return kotlinUnitVar4;
             case 4:
                 lw lwVar5 = (lw) h(ahpVar, afwVar);
-                ens ensVar5 = ens.a;
-                lwVar5.i(ensVar5);
-                return ensVar5;
+                KotlinUnit kotlinUnitVar5 = KotlinUnit.INSTANCE;
+                lwVar5.i(kotlinUnitVar5);
+                return kotlinUnitVar5;
             case 5:
-                return ((lw) h(ahpVar, afwVar)).i(ens.a);
+                return ((lw) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
             default:
-                return ((lw) h(ahpVar, afwVar)).i(ens.a);
+                return ((lw) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
         }
     }
 
@@ -81,7 +81,7 @@ public final class lw extends doi implements bgj {
     @Override // me.hd.wauxv.obf.nc
     public final Object i(Object obj) throws Throwable {
         int i = this.a;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         switch (i) {
             case 0:
                 bhu.bd(obj);
@@ -100,7 +100,7 @@ public final class lw extends doi implements bgj {
                                     int i2 = 0;
                                     while (true) {
                                         if (i2 < length) {
-                                            if (!cnd.ap(fileArrListFiles[i2])) {
+                                            if (!KotlinHelpers2.ap(fileArrListFiles[i2])) {
                                             }
                                             i2++;
                                             break;
@@ -117,40 +117,40 @@ public final class lw extends doi implements bgj {
                     long jCurrentTimeMillis2 = System.currentTimeMillis() - jCurrentTimeMillis;
                     ArrayList arrayList = ewq.a;
                     StringBuilder sb = new StringBuilder();
-                    sb.append("auto clean: name(" /* cnb.z(-513583599319850L) */);
-                    yg.u(sb, znVar.a, -513523469777706L);
+                    sb.append("auto clean: name(" /* "auto clean: name(" /* "auto clean: name(" /* "auto clean: name(" /* cnb.z(-513583599319850L)   */);
+                    yg.decryptVar2UsingCnbZAndConcatToVar1(sb, znVar.a, -513523469777706L);
                     sb.append(jCurrentTimeMillis2);
-                    sb.append("ms)" /* cnb.z(-513506289908522L) */);
+                    sb.append("ms)" /* "ms)" /* "ms)" /* "ms)" /* cnb.z(-513506289908522L)   */);
                     ewq.d(14, sb.toString());
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 1:
                 bhu.bd(obj);
                 agp.a.getClass();
                 agp.b();
-                return ensVar;
+                return kotlinUnitVar;
             case 2:
                 bhu.bd(obj);
                 agp.a.getClass();
                 agp.b();
-                return ensVar;
+                return kotlinUnitVar;
             case 3:
                 bhu.bd(obj);
                 agp.a.getClass();
                 agp.b();
-                return ensVar;
+                return kotlinUnitVar;
             case 4:
                 bhu.bd(obj);
-                csq csqVar = csq.a;
-                String strZ = "emoji" /* cnb.z(-474967548361514L) */;
-                ArrayList arrayList2 = csq.r;
-                csqVar.getClass();
-                File[] fileArrListFiles2 = new File(csq.b, strZ).listFiles();
+                PanelEmojiHook panelEmojiHookVar = PanelEmojiHook.a;
+                String strZ = "emoji" /* "emoji" /* "emoji" /* "emoji" /* cnb.z(-474967548361514L)   */;
+                ArrayList arrayList2 = PanelEmojiHook.someArrayList;
+                panelEmojiHookVar.getClass();
+                File[] fileArrListFiles2 = new File(PanelEmojiHook.b, strZ).listFiles();
                 if (fileArrListFiles2 != null) {
                     for (File file2 : fileArrListFiles2) {
                         if (file2.isFile()) {
-                            List listAg = aba.ag("png" /* cnb.z(-474357663005482L) */, "jpg" /*
-                                                                                              * cnb.z(-474306123397930L)
+                            List listAg = OtherStaticHelpers.argsToList("png" /* "png" /* "png" /* "png" /* cnb.z(-474357663005482L)   */, "jpg" /*
+                                                                                              * "jpg" /* "jpg" /* "jpg" /* cnb.z(-474306123397930L)  */
                                                                                               */, "gif" /*
                                                                                                          * cnb.z(-
                                                                                                          * 474323303267114L)
@@ -161,7 +161,7 @@ public final class lw extends doi implements bgj {
                                     .av(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, name,
                                             "")
                                     .toLowerCase(Locale.ROOT);
-                            throwIfVar1IsNull(lowerCase, "toLowerCase(...)" /* cnb.z(-474271763659562L) */);
+                            throwIfVar1IsNull(lowerCase, "toLowerCase(...)" /* "toLowerCase(...)" /* "toLowerCase(...)" /* "toLowerCase(...)" /* cnb.z(-474271763659562L)   */);
                             if (listAg.contains(lowerCase)) {
                                 auh auhVar = auh.a;
                                 String absolutePath = file2.getAbsolutePath();
@@ -172,12 +172,12 @@ public final class lw extends doi implements bgj {
                                 atz.a.getClass();
                                 emn.bb(aty.a).invoke(objB, null, Boolean.TRUE);
                                 arrayList2
-                                        .add(emn.ba(csn.a).newInstance(objB, 2, "" /* cnb.z(-474215929084714L) */, 0));
+                                        .add(emn.ba(PanelEmojiHookConstructorGroupItemInfo.INSTANCE).newInstance(objB, 2, "" /* "" /* "" /* "" /* cnb.z(-474215929084714L)   */, 0));
                             }
                         }
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 5:
                 bhu.bd(obj);
                 return aaz.t(cuk.d(), new ex(8));

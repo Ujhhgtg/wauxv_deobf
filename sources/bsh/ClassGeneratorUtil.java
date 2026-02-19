@@ -1,7 +1,5 @@
 package bsh;
 
-import bsh.ClassGenerator;
-import bsh.This;
 import bsh.org.objectweb.asm.ClassWriter;
 import bsh.org.objectweb.asm.Label;
 import bsh.org.objectweb.asm.MethodVisitor;
@@ -291,7 +289,7 @@ public class ClassGeneratorUtil implements Opcodes {
                 methodVisitor.visitTypeInsn(187, "bsh/Primitive");
                 methodVisitor.visitInsn(89);
                 methodVisitor.visitVarInsn(i2, r9);
-                methodVisitor.visitMethodInsn(183, "bsh/Primitive", MethodDescription.CONSTRUCTOR_INTERNAL_NAME, yg.o(new StringBuilder("("), str, ")V"), false);
+                methodVisitor.visitMethodInsn(183, "bsh/Primitive", MethodDescription.CONSTRUCTOR_INTERNAL_NAME, yg.concatToVar1(new StringBuilder("("), str, ")V"), false);
                 methodVisitor.visitInsn(83);
             } else {
                 methodVisitor.visitVarInsn(25, r9);
@@ -587,7 +585,7 @@ public class ClassGeneratorUtil implements Opcodes {
         }
         strArr[clsArr.length] = Type.getInternalName(GeneratedClass.class);
         ClassWriter classWriter = new ClassWriter(2);
-        classWriter.visit(52, i2, classGeneratorUtil.fqClassName, classGeneratorUtil.type == ClassGenerator.Type.ENUM ? yg.o(new StringBuilder("Ljava/lang/Enum<"), classGeneratorUtil.classDescript, ">;") : null, classGeneratorUtil.superClassName, strArr);
+        classWriter.visit(52, i2, classGeneratorUtil.fqClassName, classGeneratorUtil.type == ClassGenerator.Type.ENUM ? yg.concatToVar1(new StringBuilder("Ljava/lang/Enum<"), classGeneratorUtil.classDescript, ">;") : null, classGeneratorUtil.superClassName, strArr);
         if (classGeneratorUtil.type != ClassGenerator.Type.INTERFACE) {
             generateField(This.Keys.BSHTHIS + classGeneratorUtil.className, "Lbsh/This;", 1, classWriter);
         }

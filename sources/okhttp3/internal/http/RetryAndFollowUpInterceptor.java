@@ -14,8 +14,7 @@ import javax.net.ssl.SSLHandshakeException;
 import javax.net.ssl.SSLPeerUnverifiedException;
 import me.hd.wauxv.obf.aaz;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.avd;
-import me.hd.wauxv.obf.KotlinHelpers;
+import me.hd.wauxv.obf.EmptyReadonlyList;
 import okhttp3.HttpUrl;
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -198,7 +197,7 @@ public final class RetryAndFollowUpInterceptor implements Interceptor {
         RealInterceptorChain realInterceptorChain = (RealInterceptorChain) chain;
         Request request$okhttp = realInterceptorChain.getRequest$okhttp();
         RealCall call$okhttp = realInterceptorChain.getCall$okhttp();
-        List listP = avd.a;
+        List listP = EmptyReadonlyList.a;
         int i = 0;
         Response response = null;
         while (true) {

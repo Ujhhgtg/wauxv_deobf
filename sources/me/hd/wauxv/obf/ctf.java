@@ -11,7 +11,7 @@ public abstract class ctf {
     public static String c(String... strArr) {
         String str = (String) b.getValue();
         String str2 = File.separator;
-        File file = new File(str, la.u(strArr, str2, "WAuxiliary" /* cnb.z(-47111496268586L) */ + str2, null, null, 60));
+        File file = new File(str, SomeStaticHelpers.u(strArr, str2, "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-47111496268586L)  */ + str2, null, null, 60));
         file.mkdirs();
         return file.getPath();
     }

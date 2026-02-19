@@ -205,7 +205,7 @@ public abstract class StreamReader<T> {
                 }
                 if (i2 == this.integers + i) {
                     int i3 = this.precision;
-                    return i3 < 10 ? "INT" : i3 < 20 ? "BIGINT" : yg.m(new StringBuilder("DECIMAL("), ", 0)", this.precision);
+                    return i3 < 10 ? "INT" : i3 < 20 ? "BIGINT" : yg.concatToVar1(new StringBuilder("DECIMAL("), ", 0)", this.precision);
                 }
                 if (i2 == this.numbers + i) {
                     if (this.doubles > 0 || this.scale > 5) {
@@ -215,7 +215,7 @@ public abstract class StreamReader<T> {
                     if (i4 < 19) {
                         i4 = 19;
                     }
-                    return yg.m(yg.r(i4, "DECIMAL(", ", "), ")", this.scale);
+                    return yg.concatToVar1(yg.concatVar213(i4, "DECIMAL(", ", "), ")", this.scale);
                 }
             }
             return "STRING";

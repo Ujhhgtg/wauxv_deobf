@@ -37,6 +37,6 @@ public final class aah {
         sb.append(", endLine=");
         sb.append(this.e);
         sb.append(", endColumn=");
-        return yg.m(sb, ", toBottomOfEndLine=false}", this.f);
+        return yg.concatToVar1(sb, ", toBottomOfEndLine=false}", this.f);
     }
 }

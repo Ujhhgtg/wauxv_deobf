@@ -41,7 +41,7 @@ public final class due {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("SizeProto(width=" /* cnb.z(-270613004417834L) */);
+        sb.append("SizeProto(width=" /* "SizeProto(width=" /* "SizeProto(width=" /* cnb.z(-270613004417834L)  */);
         bjs.v(sb, this.a, -270488450366250L);
         bjs.v(sb, this.b, -271012436376362L);
         sb.append(this.c);

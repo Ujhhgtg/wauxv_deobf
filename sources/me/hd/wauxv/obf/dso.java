@@ -45,10 +45,10 @@ public final class dso {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("AppMsgProto(appid=" /* cnb.z(-147248658774826L) */);
-        yg.u(sb, this.a, -147184234265386L);
-        yg.u(sb, this.b, -147115514788650L);
-        yg.u(sb, this.c, -146488449563434L);
+        sb.append("AppMsgProto(appid=" /* "AppMsgProto(appid=" /* "AppMsgProto(appid=" /* cnb.z(-147248658774826L)  */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -147184234265386L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -147115514788650L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.c, -146488449563434L);
         return concat(sb, this.d, ')');
     }
 }

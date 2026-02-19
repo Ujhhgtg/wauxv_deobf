@@ -126,7 +126,7 @@ public final class exf {
             if (z) {
                 chm chmVarM = m(application, str);
                 final int i = 0;
-                chm.n(chmVarM, "module_generated_version_get", new IHasInvokeMethod(this) { // from class: me.hd.wauxv.obf.exc
+                chm.n(chmVarM, "module_generated_version_get", new IInvokable(this) { // from class: me.hd.wauxv.obf.exc
                     public final /* synthetic */ exf b;
 
                     {
@@ -146,11 +146,11 @@ public final class exf {
                                 chmVarM2.ao(chm.l(new tw(twVar.a, ewq.a), arj.s(), -1, -1));
                                 break;
                         }
-                        return ens.a;
+                        return KotlinUnit.INSTANCE;
                     }
                 });
                 final int i2 = 1;
-                chm.n(chmVarM, "yuki_logger_inmemory_data_get", new IHasInvokeMethod(this) { // from class: me.hd.wauxv.obf.exc
+                chm.n(chmVarM, "yuki_logger_inmemory_data_get", new IInvokable(this) { // from class: me.hd.wauxv.obf.exc
                     public final /* synthetic */ exf b;
 
                     {
@@ -170,7 +170,7 @@ public final class exf {
                                 chmVarM2.ao(chm.l(new tw(twVar.a, ewq.a), arj.s(), -1, -1));
                                 break;
                         }
-                        return ens.a;
+                        return KotlinUnit.INSTANCE;
                     }
                 });
             }

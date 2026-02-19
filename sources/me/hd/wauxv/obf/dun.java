@@ -36,8 +36,8 @@ public final class dun {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("VideoColdDLRuleProto(type=" /* cnb.z(-302357107702570L) */);
-        yg.u(sb, this.a, -302258323454762L);
+        sb.append("VideoColdDLRuleProto(type=" /* "VideoColdDLRuleProto(type=" /* "VideoColdDLRuleProto(type=" /* cnb.z(-302357107702570L)  */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -302258323454762L);
         return concat(sb, this.b, ')');
     }
 }

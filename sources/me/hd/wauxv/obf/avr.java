@@ -32,6 +32,6 @@ public final class avr implements Comparable {
         byte[] bArr = this.a;
         sb.append(Integer.toHexString(bArr[0] & 255));
         sb.append("...(");
-        return yg.m(sb, ")", bArr.length);
+        return yg.concatToVar1(sb, ")", bArr.length);
     }
 }

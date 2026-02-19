@@ -23,7 +23,7 @@ final class FieldReaderInt8ValueField<T> extends FieldReaderObjectField<T> {
         try {
             this.field.setByte(t, (byte) i);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 
@@ -50,7 +50,7 @@ final class FieldReaderInt8ValueField<T> extends FieldReaderObjectField<T> {
         try {
             this.field.setByte(t, (byte) j);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 
@@ -68,7 +68,7 @@ final class FieldReaderInt8ValueField<T> extends FieldReaderObjectField<T> {
         try {
             this.field.setByte(t, TypeUtils.toByteValue(obj));
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 }

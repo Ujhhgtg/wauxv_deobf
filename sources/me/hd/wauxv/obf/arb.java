@@ -3,13 +3,13 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes2.dex */
 public final class arb extends SwitchHook implements IHandlesHookParam {
-    public static final arb a = new arb("Edge2EdgeSNSNavBar" /* cnb.z(-602571026725674L) */);
-    public static final String b = "测试-配置修复-v58-edge2edge" /* cnb.z(-602901739207466L) */;
-    public static final String c = "Edge2Edge-朋友圈-导航栏" /* cnb.z(-604439337499434L) */;
+    public static final arb a = new arb("Edge2EdgeSNSNavBar" /* "Edge2EdgeSNSNavBar" /* "Edge2EdgeSNSNavBar" /* cnb.z(-602571026725674L)  */);
+    public static final String b = "测试-配置修复-v58-edge2edge" /* "测试-配置修复-v58-edge2edge" /* "测试-配置修复-v58-edge2edge" /* cnb.z(-602901739207466L)  */;
+    public static final String c = "Edge2Edge-朋友圈-导航栏" /* "Edge2Edge-朋友圈-导航栏" /* "Edge2Edge-朋友圈-导航栏" /* cnb.z(-604439337499434L)  */;
 
     @Override // me.hd.wauxv.obf.IHandlesHookParam
     public final void handleHookParam(HookParam hookParam, String str) {
-        if (getIsEnabled() && str.equals("RepairerConfig_Edge2Edge_SNS_NavBar_Int" /* cnb.z(-603073537899306L) */)) {
+        if (getIsEnabled() && str.equals("RepairerConfig_Edge2Edge_SNS_NavBar_Int" /* "RepairerConfig_Edge2Edge_SNS_NavBar_Int" /* "RepairerConfig_Edge2Edge_SNS_NavBar_Int" /* cnb.z(-603073537899306L)  */)) {
             hookParam.setResult(1);
         }
     }

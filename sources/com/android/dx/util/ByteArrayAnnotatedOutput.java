@@ -73,7 +73,7 @@ public final class ByteArrayAnnotatedOutput implements AnnotatedOutput, sh {
         if (this.cursor == i) {
             return;
         }
-        StringBuilder sbR = yg.r(i, "expected cursor ", "; actual value: ");
+        StringBuilder sbR = yg.concatVar213(i, "expected cursor ", "; actual value: ");
         sbR.append(this.cursor);
         throw new axc(sbR.toString(), null);
     }

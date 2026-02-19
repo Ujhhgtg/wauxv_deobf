@@ -20,24 +20,24 @@ public final /* synthetic */ class wi implements bfu {
         Object obj = this.b;
         switch (i) {
             case 0:
-                int i2 = bte.a;
+                int i2 = 0;
                 cde cdeVarT = dqc.bi(obj).t();
                 cdeVarT.a = dal.b(MenuItem.class);
                 Class cls = Integer.TYPE;
-                return (cdk) dkz.n(
+                return (MethodHookWrapper) dkz.n(
                         new Object[] { dal.b(cls), dal.b(cls), dal.b(cls), dal.b(CharSequence.class), dal.b(cls) }, 5,
                         cdeVarT);
             case 1:
-                int i3 = bte.a;
+                int i3 = 0;
                 azg azgVarR = dqc.bi(obj).r();
                 gp.a.getClass();
                 azgVarR.a = emn.bb(go.a).getDeclaringClass();
                 Object objD = ((azk) aaz.e(azgVarR.c())).d();
                 throwIfVar1IsNull(objD);
                 xx.a.getClass();
-                azg azgVarR2 = dqc.bi(gp.b((Class) la.p(emn.az(xw.a).getInterfaces()), objD)).r();
+                azg azgVarR2 = dqc.bi(gp.b((Class) SomeStaticHelpers.p(emn.az(xw.a).getInterfaces()), objD)).r();
                 uq.a.getClass();
-                azgVarR2.a = ajn.ag("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L) */);
+                azgVarR2.a = ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */);
                 Object objE = ((azk) aaz.e(azgVarR2.c())).e();
                 throwIfVar1IsNull(objE);
                 return (FrameLayout) objE;

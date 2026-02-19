@@ -29,7 +29,7 @@ public final /* synthetic */ class cun implements View.OnClickListener {
         switch (i) {
             case 0:
                 cbm cbmVar = PolicyFragment.a;
-                cjl cjlVarAr = cnd.ar(policyFragment);
+                cjl cjlVarAr = KotlinHelpers2.ar(policyFragment);
                 cix cixVar = cjlVarAr.b;
                 Activity activity = cjlVarAr.d;
                 if (cjlVarAr.i() != 1) {
@@ -99,7 +99,7 @@ public final /* synthetic */ class cun implements View.OnClickListener {
                     throwIfVar1IsNull(extras2);
                     int[] intArray = extras2.getIntArray("android-support-nav:controller:deepLinkIds");
                     throwIfVar1IsNull(intArray);
-                    ArrayList arrayListAd = la.ad(intArray);
+                    ArrayList arrayListAd = SomeStaticHelpers.ad(intArray);
                     ArrayList parcelableArrayList = extras2
                             .getParcelableArrayList("android-support-nav:controller:deepLinkArgs");
                     if (arrayListAd.size() < 2) {
@@ -128,7 +128,7 @@ public final /* synthetic */ class cun implements View.OnClickListener {
                     for (Object obj : arrayListAd) {
                         int i6 = i2 + 1;
                         if (i2 < 0) {
-                            aba.aj();
+                            OtherStaticHelpers.aj();
                             throw null;
                         }
                         ((ArrayList) blqVar2.e).add(new cje(((Number) obj).intValue(),
@@ -145,20 +145,20 @@ public final /* synthetic */ class cun implements View.OnClickListener {
                 return;
             default:
                 PolicyFragment.a.getClass();
-                String strZ = "policyAcceptKey" /* cnb.z(-419583945079594L) */;
+                String strZ = "policyAcceptKey" /* "policyAcceptKey" /* "policyAcceptKey" /* cnb.z(-419583945079594L)  */;
                 int iHashCode = ((String) PolicyFragment.b.getValue()).hashCode();
                 DefaultConfig ioVar = cnf.ah;
                 if (ioVar == null) {
                     throw new IllegalArgumentException(
-                            "DefaultConfig must be init" /* cnb.z(-5763846109994L) */.toString());
+                            "DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)  */.toString());
                 }
                 ioVar.aj().putInt(strZ, iHashCode);
                 bzy bzyVar = new bzy(policyFragment.dc());
                 eg egVar = (eg) bzyVar.d;
-                egVar.d = "提示" /* cnb.z(-420000556907306L) */;
-                egVar.f = "核心模块就绪, 是否重启加载?" /* cnb.z(-419953312267050L) */;
-                bzyVar.t("确定" /* cnb.z(-419884592790314L) */, new amw(new cfh(19), 0));
-                bjs.x((2 & 3) != 0 ? new amd(1) : null, bzyVar, "取消" /* cnb.z(-47455093652266L) */);
+                egVar.d = "提示" /* "提示" /* "提示" /* cnb.z(-420000556907306L)  */;
+                egVar.f = "核心模块就绪, 是否重启加载?" /* "核心模块就绪, 是否重启加载?" /* "核心模块就绪, 是否重启加载?" /* cnb.z(-419953312267050L)  */;
+                bzyVar.t("确定" /* "确定" /* "确定" /* cnb.z(-419884592790314L)  */, new amw(new cfh(19), 0));
+                bjs.x((2 & 3) != 0 ? new amd(1) : null, bzyVar, "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */);
                 egVar.m = false;
                 bzyVar.i().show();
                 return;

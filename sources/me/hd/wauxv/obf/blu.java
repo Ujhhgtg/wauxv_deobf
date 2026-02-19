@@ -60,7 +60,7 @@ public final class blu {
                     cdy cdyVar = cdy.e;
                     Class cls2 = Boolean.TYPE;
                     if (zB) {
-                        int i = bte.a;
+                        int i = 0;
                         jx jxVar = ewm.c;
                         btc btcVar = ewm.b[0];
                         bmu bmuVarBh = dqc.bh(jxVar.w());
@@ -72,13 +72,13 @@ public final class blu {
                         cdeVarT.z(Arrays.copyOf(
                                 new Object[] { dal.b(cls3), dal.b(String.class), dal.b(cls3), dal.b(evt.b()) }, 4));
                         cdeVarT.ak(cdyVar);
-                        cdk cdkVar = (cdk) aaz.g(cdeVarT.aj());
-                        objF = cdkVar != null ? cdkVar.f(0, str, 1, null) : null;
+                        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+                        objF = methodHookWrapperVar != null ? methodHookWrapperVar.f(0, str, 1, null) : null;
                     } else {
                         if (!eu.b(28)) {
                             throw new IllegalStateException("Unsupported Android version.");
                         }
-                        int i2 = bte.a;
+                        int i2 = 0;
                         jx jxVar2 = ewm.c;
                         btc btcVar2 = ewm.b[0];
                         bmu bmuVarBh2 = dqc.bh(jxVar2.w());
@@ -89,10 +89,10 @@ public final class blu {
                         cdeVarT2.z(Arrays.copyOf(
                                 new Object[] { dal.b(String.class), dal.b(cls2), dal.b(cls2), dal.b(cls2) }, 4));
                         cdeVarT2.ak(cdyVar);
-                        cdk cdkVar2 = (cdk) aaz.g(cdeVarT2.aj());
-                        if (cdkVar2 != null) {
+                        MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) aaz.g(cdeVarT2.aj());
+                        if (methodHookWrapperVar2 != null) {
                             Boolean bool = Boolean.FALSE;
-                            objF = cdkVar2.f(str, bool, bool, bool);
+                            objF = methodHookWrapperVar2.f(str, bool, bool, bool);
                         }
                     }
                     Long l = objF instanceof Long ? (Long) objF : null;
@@ -114,10 +114,10 @@ public final class blu {
                     } else {
                         adtVarM.z(Arrays.copyOf(new Object[] { dal.b(AssetManager.class), dal.b(cls4) }, 2));
                     }
-                    adu aduVar = (adu) aaz.g(adtVarM.a());
-                    if (aduVar != null) {
-                        AutoCloseable autoCloseable = eu.b(36) ? (AutoCloseable) aduVar.c(null, ewm.e, Boolean.FALSE)
-                                : (AutoCloseable) aduVar.c(null, ewm.e);
+                    ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) aaz.g(adtVarM.a());
+                    if (constructorHookWrapperVar != null) {
+                        AutoCloseable autoCloseable = eu.b(36) ? (AutoCloseable) constructorHookWrapperVar.c(null, ewm.e, Boolean.FALSE)
+                                : (AutoCloseable) constructorHookWrapperVar.c(null, ewm.e);
                         if (autoCloseable != null) {
                             ewm.f = autoCloseable;
                             ewm.g = true;

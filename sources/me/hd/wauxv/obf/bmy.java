@@ -70,16 +70,16 @@ public abstract class bmy {
                 int i7 = i6 + 1;
                 sb.append(strArr[i5]);
                 if (i6 != r5.d.length - 1) {
-                    sb.append("\nAND " /* cnb.z(-72980084292394L) */);
+                    sb.append("\nAND " /* "\nAND " /* "\nAND " /* cnb.z(-72980084292394L)  */);
                 }
                 i5++;
                 i6 = i7;
             }
             if (i3 != aerVarArr.length - 1) {
-                sb.append("\nOR " /* cnb.z(-72937134619434L) */);
+                sb.append("\nOR " /* "\nOR " /* "\nOR " /* cnb.z(-72937134619434L)  */);
             }
             if (i3 == aerVarArr.length - 1) {
-                sb.append("\n" /* cnb.z(-72881300044586L) */);
+                sb.append("\n" /* "\n" /* "\n" /* cnb.z(-72881300044586L)  */);
             }
             i2++;
             i3 = i4;
@@ -244,7 +244,7 @@ public abstract class bmy {
         String strSubstring2 = path.substring(length);
         throwIfVar1IsNull(strSubstring2, "substring(...)");
         if (strSubstring2.length() == 0) {
-            list = avd.a;
+            list = EmptyReadonlyList.a;
         } else {
             List listAr = dnj.ar(strSubstring2, new char[] { c });
             ArrayList arrayList = new ArrayList(abb.ak(listAr, 10));
@@ -1095,7 +1095,7 @@ public abstract class bmy {
     public static final SwitchHook[] getAllSwitchHookInstances() {
         return new SwitchHook[] { AppBrandAntiGlobalAdHook.a, AppBrandAntiSplashAdHook.a, AppBrandForceShareHook.a,
                 AppBrandVideoRewardHook.a,
-                cf.a, qo.a, BottomTabMaterialHook.a,
+                cf.a, BottomTabCustomHook.INSTANCE, BottomTabMaterialHook.a,
                 wh.a,
                 CustomBalanceHook.a,
                 CustomContactCountHook.a, cfm.a, cfv.a,
@@ -1104,8 +1104,8 @@ public abstract class bmy {
                 xg.a,
                 DisableMsgClipHook.a, DisablePatHook.a,
                 DisablePlayRingtoneHook.a, DisableSendStatusHook.a,
-                cgb.a, cgr.c,
-                cgz.c, csq.a,
+                MsgFormatHook.a, cgr.c,
+                cgz.c, PanelEmojiHook.a,
                 cww.a, cxg.a, cxl.a, dhm.a, die.a, bcu.a, ble.a, blg.a, blh.a, blk.a, blm.a, blo.a, cud.a, fs.a,
                 CustomUnReadCountHook.a,
                 azr.a, elx.a, un.a, uo.a, cie.a, cif.a, fp.a, cnl.a, bjm.a, bjx.a, atx.a, bxj.a, etr.a, dlv.a,
@@ -1157,7 +1157,7 @@ public abstract class bmy {
                 FriendInfo friendInfoS = cnb.s(cursorAb);
                 Object objB = acv.b(acv.a, eom.a.f);
                 throwIfVar1IsNull(objB, "null cannot be cast to non-null type kotlin.String" /*
-                                                                                              * cnb.z(-121955596368682L)
+                                                                                              * "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121955596368682L)  */
                                                                                               */);
                 if (!((String) objB).equals(friendInfoS.getWxid())) {
                     arrayList.add(friendInfoS);

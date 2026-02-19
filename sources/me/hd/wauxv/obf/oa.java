@@ -35,11 +35,11 @@ public final class oa extends oc {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("PluginSwitch(title=" /* cnb.z(-388359532837674L) */);
-        yg.u(sb, this.a, -388239273753386L);
-        yg.u(sb, this.b, -388204914015018L);
+        sb.append("PluginSwitch(title=" /* "PluginSwitch(title=" /* "PluginSwitch(title=" /* cnb.z(-388359532837674L)  */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -388239273753386L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -388204914015018L);
         sb.append(this.c);
-        sb.append(", onClick=" /* cnb.z(-388179144211242L) */);
+        sb.append(", onClick=" /* ", onClick=" /* ", onClick=" /* cnb.z(-388179144211242L)  */);
         sb.append(this.d);
         sb.append(')');
         return sb.toString();

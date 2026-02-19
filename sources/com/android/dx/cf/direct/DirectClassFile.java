@@ -185,7 +185,7 @@ public class DirectClassFile implements ClassFile {
         if (this.strictParse) {
             String className = this.thisClass.getClassType().getClassName();
             if (!this.filePath.endsWith(ClassFileLocator.CLASS_FILE_EXTENSION) || !this.filePath.startsWith(className) || this.filePath.length() != className.length() + 6) {
-                throw new ParseException(yg.o(dkz.z("class name (", className, ") does not match path ("), this.filePath, ")"));
+                throw new ParseException(yg.concatToVar1(dkz.z("class name (", className, ") does not match path ("), this.filePath, ")"));
             }
         }
         this.accessFlags = unsignedShort;

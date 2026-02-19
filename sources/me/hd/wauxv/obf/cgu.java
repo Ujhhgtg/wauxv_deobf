@@ -21,7 +21,7 @@ import net.bytebuddy.pool.TypePool;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class cgu implements IHasInvokeMethod {
+public final /* synthetic */ class cgu implements IInvokable {
     public final /* synthetic */ int a;
 
     public /* synthetic */ cgu(int i) {
@@ -41,45 +41,45 @@ public final /* synthetic */ class cgu implements IHasInvokeMethod {
         int i2 = 1;
         int i3 = 2;
         int i4 = 0;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         switch (i) {
             case 0:
                 bah bahVar = (bah) obj;
                 cdj cdjVar = new cdj();
                 cgy.a.getClass();
                 cdjVar.o(emn.az(cgv.a));
-                cdjVar.t("MsgInfo processAddMsg insert db error" /* cnb.z(-371609160383274L) */);
+                cdjVar.t("MsgInfo processAddMsg insert db error" /* "MsgInfo processAddMsg insert db error" /* "MsgInfo processAddMsg insert db error" /* cnb.z(-371609160383274L)  */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 1:
                 bag bagVar = (bag) obj;
-                String[] strArr = { "com.tencent.mm.storage" /* cnb.z(-369904058366762L) */ };
+                String[] strArr = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-369904058366762L)  */ };
                 bagVar.getClass();
-                bagVar.a = la.ab(strArr);
+                bagVar.a = SomeStaticHelpers.ab(strArr);
                 zb zbVar = new zb();
-                zbVar.k("MicroMsg.MsgInfoStorage" /* cnb.z(-369805274118954L) */, "deleted dirty msg ,count is %d" /*
+                zbVar.k("MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* cnb.z(-369805274118954L)  */, "deleted dirty msg ,count is %d" /*
                                                                                                                     * cnb
                                                                                                                     * .z
                                                                                                                     * (-
                                                                                                                     * 371351462345514L)
                                                                                                                     */);
                 bagVar.b = zbVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 2:
                 bah bahVar2 = (bah) obj;
                 cdj cdjVar2 = new cdj();
                 cgy.a.getClass();
                 cdjVar2.o(emn.az(cgv.a));
-                cdjVar2.p(new bqi(2, 3, 1));
-                cdjVar2.t("notifymessage" /* cnb.z(-371201138490154L) */, "msgId=?" /* cnb.z(-371123829078826L) */,
-                        "update" /* cnb.z(-371089469340458L) */);
+                cdjVar2.p(new IntRange(2, 3, 1));
+                cdjVar2.t("notifymessage" /* "notifymessage" /* "notifymessage" /* cnb.z(-371201138490154L)  */, "msgId=?" /* "msgId=?" /* "msgId=?" /* cnb.z(-371123829078826L)  */,
+                        "update" /* "update" /* "update" /* cnb.z(-371089469340458L)  */);
                 bahVar2.getClass();
                 bahVar2.d = cdjVar2;
-                return ensVar;
+                return kotlinUnitVar;
             case 3:
                 ArrayList arrayList = new ArrayList();
-                Cursor cursorAc = arj.ac("SELECT username FROM rconversation" /* cnb.z(-524896543177514L) */);
+                Cursor cursorAc = arj.ac("SELECT username FROM rconversation" /* "SELECT username FROM rconversation" /* "SELECT username FROM rconversation" /* cnb.z(-524896543177514L)  */);
                 while (cursorAc.moveToNext()) {
                     try {
                         arrayList.add(cursorAc.getString(0));
@@ -95,13 +95,13 @@ public final /* synthetic */ class cgu implements IHasInvokeMethod {
                 cursorAc.close();
                 agp agpVar = agp.a;
                 String[] strArr2 = (String[]) arrayList.toArray(new String[0]);
-                String strZ = "" /* cnb.z(-524763399191338L) */;
+                String strZ = "" /* "" /* "" /* cnb.z(-524763399191338L)  */;
                 agpVar.getClass();
                 agp.d(strZ, strArr2);
-                return ensVar;
+                return kotlinUnitVar;
             case 4:
                 ArrayList arrayList2 = new ArrayList();
-                Cursor cursorAc2 = arj.ac("SELECT username FROM rconversation" /* cnb.z(-524578715597610L) */);
+                Cursor cursorAc2 = arj.ac("SELECT username FROM rconversation" /* "SELECT username FROM rconversation" /* "SELECT username FROM rconversation" /* cnb.z(-524578715597610L)  */);
                 while (cursorAc2.moveToNext()) {
                     try {
                         arrayList2.add(cursorAc2.getString(0));
@@ -117,40 +117,40 @@ public final /* synthetic */ class cgu implements IHasInvokeMethod {
                 cursorAc2.close();
                 agp agpVar2 = agp.a;
                 String[] strArr3 = (String[]) arrayList2.toArray(new String[0]);
-                String strZ2 = "hidden_conv_parent" /* cnb.z(-524995327425322L) */;
+                String strZ2 = "hidden_conv_parent" /* "hidden_conv_parent" /* "hidden_conv_parent" /* cnb.z(-524995327425322L)  */;
                 agpVar2.getClass();
                 agp.d(strZ2, strArr3);
-                return ensVar;
+                return kotlinUnitVar;
             case 5:
                 View view = (View) obj;
                 View viewK = dkz.k(view, R.layout.module_dialog_msg_tv_color, null, false);
                 int i5 = R.id.moduleDialogEdtMsgTvColorLeftDarkTextColor;
-                TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK,
+                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK,
                         R.id.moduleDialogEdtMsgTvColorLeftDarkTextColor);
                 if (textInputEditText != null) {
                     i5 = R.id.moduleDialogEdtMsgTvColorLeftLightTextColor;
-                    TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK,
+                    TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.aq(viewK,
                             R.id.moduleDialogEdtMsgTvColorLeftLightTextColor);
                     if (textInputEditText2 != null) {
                         i5 = R.id.moduleDialogEdtMsgTvColorRightDarkTextColor;
-                        TextInputEditText textInputEditText3 = (TextInputEditText) cnd.aq(viewK,
+                        TextInputEditText textInputEditText3 = (TextInputEditText) KotlinHelpers2.aq(viewK,
                                 R.id.moduleDialogEdtMsgTvColorRightDarkTextColor);
                         if (textInputEditText3 != null) {
                             i5 = R.id.moduleDialogEdtMsgTvColorRightLightTextColor;
-                            TextInputEditText textInputEditText4 = (TextInputEditText) cnd.aq(viewK,
+                            TextInputEditText textInputEditText4 = (TextInputEditText) KotlinHelpers2.aq(viewK,
                                     R.id.moduleDialogEdtMsgTvColorRightLightTextColor);
                             if (textInputEditText4 != null) {
                                 i5 = R.id.moduleDialogInputMsgTvColorLeftDarkTextColor;
-                                if (((TextInputLayout) cnd.aq(viewK,
+                                if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                         R.id.moduleDialogInputMsgTvColorLeftDarkTextColor)) != null) {
                                     i5 = R.id.moduleDialogInputMsgTvColorLeftLightTextColor;
-                                    if (((TextInputLayout) cnd.aq(viewK,
+                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                             R.id.moduleDialogInputMsgTvColorLeftLightTextColor)) != null) {
                                         i5 = R.id.moduleDialogInputMsgTvColorRightDarkTextColor;
-                                        if (((TextInputLayout) cnd.aq(viewK,
+                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                                 R.id.moduleDialogInputMsgTvColorRightDarkTextColor)) != null) {
                                             i5 = R.id.moduleDialogInputMsgTvColorRightLightTextColor;
-                                            if (((TextInputLayout) cnd.aq(viewK,
+                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                                     R.id.moduleDialogInputMsgTvColorRightLightTextColor)) != null) {
                                                 LinearLayout linearLayout = (LinearLayout) viewK;
                                                 ceo ceoVar = new ceo(linearLayout, textInputEditText,
@@ -163,9 +163,9 @@ public final /* synthetic */ class cgu implements IHasInvokeMethod {
                                                 eg egVar = (eg) bzyVar.d;
                                                 chh.a.getClass();
                                                 egVar.d = chh.c;
-                                                bzyVar.t("保存" /* cnb.z(-450138342423338L) */,
+                                                bzyVar.t("保存" /* "保存" /* "保存" /* cnb.z(-450138342423338L)  */,
                                                         new amw(new cfx(ceoVar, i3), 0));
-                                                bzyVar.s("重置" /* cnb.z(-450142637390634L) */, new amw(new cfh(9), 2));
+                                                bzyVar.s("重置" /* "重置" /* "重置" /* cnb.z(-450142637390634L)  */, new amw(new cfh(9), 2));
                                                 bjs.x((3 & 2) != 0 ? new amd(i2) : null, bzyVar, "取消" /*
                                                                                                        * cnb.z(-
                                                                                                        * 47455093652266L)
@@ -174,7 +174,7 @@ public final /* synthetic */ class cgu implements IHasInvokeMethod {
                                                     egVar.r = linearLayout;
                                                 }
                                                 bzyVar.i().show();
-                                                return ensVar;
+                                                return kotlinUnitVar;
                                             }
                                         }
                                     }
@@ -184,7 +184,7 @@ public final /* synthetic */ class cgu implements IHasInvokeMethod {
                     }
                 }
                 throw new NullPointerException("Missing required view with ID: "
-                        /* cnb.z(-663589627099946L) */.concat(viewK.getResources().getResourceName(i5)));
+                        /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-663589627099946L)  */.concat(viewK.getResources().getResourceName(i5)));
             case 6:
                 HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
@@ -203,7 +203,7 @@ public final /* synthetic */ class cgu implements IHasInvokeMethod {
                 if (str == null) {
                     str = "";
                 }
-                if (str.equals(".ui.timeline.preload.ui.TmplWebViewMMUI" /* cnb.z(-517182781913898L) */)) {
+                if (str.equals(".ui.timeline.preload.ui.TmplWebViewMMUI" /* ".ui.timeline.preload.ui.TmplWebViewMMUI" /* ".ui.timeline.preload.ui.TmplWebViewMMUI" /* cnb.z(-517182781913898L)  */)) {
                     try {
                         objX2 = hookParam.getArgs()[3];
                         if (objX2 == null) {
@@ -218,35 +218,35 @@ public final /* synthetic */ class cgu implements IHasInvokeMethod {
                     intent.addFlags(Opcodes.ASM8);
                     intent.addFlags(134217728);
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 7:
-                ((amm) obj).c = new cgu(8);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new cgu(8);
+                return kotlinUnitVar;
             case 8:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
-                cdjVar3.t("MicroMsg.PluginHelper" /* cnb.z(-518660250663722L) */, "start multi webview!!!!!!!!!" /*
+                cdjVar3.t("MicroMsg.PluginHelper" /* "MicroMsg.PluginHelper" /* "MicroMsg.PluginHelper" /* cnb.z(-518660250663722L)  */, "start multi webview!!!!!!!!!" /*
                                                                                                                   * cnb.
                                                                                                                   * z(-
                                                                                                                   * 518548581514026L)
                                                                                                                   */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
-                return ensVar;
+                return kotlinUnitVar;
             case 9:
-                int i6 = bte.a;
+                int i6 = 0;
                 azg azgVarR = dqc.bi(obj).r();
-                azgVarR.ab = "field_type" /* cnb.z(-478429292002090L) */;
+                azgVarR.ab = "field_type" /* "field_type" /* "field_type" /* cnb.z(-478429292002090L)  */;
                 Object objE = ((azk) yg.e(azgVarR)).e();
                 throwIfVar1IsNull(objE);
                 if (((Number) objE).intValue() == 3) {
                     azg azgVarR2 = dqc.bi(obj).r();
-                    azgVarR2.ab = "field_favProto" /* cnb.z(-478416407100202L) */;
+                    azgVarR2.ab = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-478416407100202L)  */;
                     Object objD = ((azk) yg.e(azgVarR2)).d();
                     throwIfVar1IsNull(objD);
                     cde cdeVarT = dqc.bi(objD).t();
-                    cdeVarT.ab = "getData" /* cnb.z(-478334802721578L) */;
-                    Object objJ = ((cdk) dkz.m(cdeVarT)).j(new Object[0]);
+                    cdeVarT.ab = "getData" /* "getData" /* "getData" /* cnb.z(-478334802721578L)  */;
+                    Object objJ = ((MethodHookWrapper) dkz.m(cdeVarT)).j(new Object[0]);
                     throwIfVar1IsNull(objJ);
                     cwd cwdVar = cwd.a;
                     cwdVar.getClass();
@@ -258,7 +258,7 @@ public final /* synthetic */ class cgu implements IHasInvokeMethod {
                         String strValueOf = String
                                 .valueOf(str2.hashCode() & com.android.dx.io.Opcodes.CONST_METHOD_TYPE);
                         StringBuilder sbY = dkz.y(strZ3);
-                        sbY.append("/favorite/" /* cnb.z(-478300442983210L) */);
+                        sbY.append("/favorite/" /* "/favorite/" /* "/favorite/" /* cnb.z(-478300442983210L)  */);
                         sbY.append(strValueOf);
                         sbY.append('/');
                         sbY.append(str2);
@@ -269,25 +269,25 @@ public final /* synthetic */ class cgu implements IHasInvokeMethod {
                     if (new File(string).exists()) {
                         ewz.aq(cie.a, new cid(string, aysVar, i4));
                     } else {
-                        dnc.g(null, 3, "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-478837313895210L) */);
+                        dnc.g(null, 3, "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-478837313895210L)  */);
                     }
                 } else {
-                    dnc.g(null, 3, "暂不支持的转发类型" /* cnb.z(-478704169909034L) */);
+                    dnc.g(null, 3, "暂不支持的转发类型" /* "暂不支持的转发类型" /* "暂不支持的转发类型" /* cnb.z(-478704169909034L)  */);
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 10:
-                int i7 = bte.a;
+                int i7 = 0;
                 azg azgVarR3 = dqc.bi(obj).r();
-                azgVarR3.ab = "field_type" /* cnb.z(-475856606591786L) */;
+                azgVarR3.ab = "field_type" /* "field_type" /* "field_type" /* cnb.z(-475856606591786L)  */;
                 Integer num = (Integer) ((azk) yg.e(azgVarR3)).e();
                 if (num != null && num.intValue() == 3) {
                     azg azgVarR4 = dqc.bi(obj).r();
-                    azgVarR4.ab = "field_favProto" /* cnb.z(-475826541820714L) */;
+                    azgVarR4.ab = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-475826541820714L)  */;
                     Object objD2 = ((azk) yg.e(azgVarR4)).d();
                     throwIfVar1IsNull(objD2);
                     cde cdeVarT2 = dqc.bi(objD2).t();
-                    cdeVarT2.ab = "getData" /* cnb.z(-475212361497386L) */;
-                    Object objJ2 = ((cdk) dkz.m(cdeVarT2)).j(new Object[0]);
+                    cdeVarT2.ab = "getData" /* "getData" /* "getData" /* cnb.z(-475212361497386L)  */;
+                    Object objJ2 = ((MethodHookWrapper) dkz.m(cdeVarT2)).j(new Object[0]);
                     throwIfVar1IsNull(objJ2);
                     cwd cwdVar2 = cwd.a;
                     cwdVar2.getClass();
@@ -299,7 +299,7 @@ public final /* synthetic */ class cgu implements IHasInvokeMethod {
                         String strValueOf2 = String
                                 .valueOf(str3.hashCode() & com.android.dx.io.Opcodes.CONST_METHOD_TYPE);
                         StringBuilder sbY2 = dkz.y(strZ4);
-                        sbY2.append("/favorite/" /* cnb.z(-475178001759018L) */);
+                        sbY2.append("/favorite/" /* "/favorite/" /* "/favorite/" /* cnb.z(-475178001759018L)  */);
                         sbY2.append(strValueOf2);
                         sbY2.append('/');
                         sbY2.append(str3);
@@ -310,12 +310,12 @@ public final /* synthetic */ class cgu implements IHasInvokeMethod {
                     if (new File(string2).exists()) {
                         ewz.aq(cif.a, new cid(string2, aysVar2, i3));
                     } else {
-                        dnc.g(null, 3, "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-475147936987946L) */);
+                        dnc.g(null, 3, "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* "获取语音路径失败, 请尝试播放后重发" /* cnb.z(-475147936987946L)  */);
                     }
                 } else {
-                    dnc.g(null, 3, "暂不支持的转发类型" /* cnb.z(-475031972870954L) */);
+                    dnc.g(null, 3, "暂不支持的转发类型" /* "暂不支持的转发类型" /* "暂不支持的转发类型" /* cnb.z(-475031972870954L)  */);
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 11:
                 ahx ahxVar = (ahx) obj;
                 throwIfVar1IsNull(ahxVar, "$this$initializer");
@@ -397,18 +397,18 @@ public final /* synthetic */ class cgu implements IHasInvokeMethod {
                 }
                 return null;
             case 23:
-                amm ammVar = (amm) obj;
-                ammVar.b = new cgu(24);
-                ammVar.c = new cgu(25);
-                return ensVar;
+                FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar = (FindDexClassMethodDslWrapper) obj;
+                findDexClassMethodDslWrapperVar.onClassCallback = new cgu(24);
+                findDexClassMethodDslWrapperVar.onMethodCallback = new cgu(25);
+                return kotlinUnitVar;
             case 24:
                 bag bagVar2 = (bag) obj;
                 zb zbVar2 = new zb();
-                zbVar2.k("MicroMsg.NetSceneAddChatRoomMember" /* cnb.z(-112828790864682L) */,
-                        "/cgi-bin/micromsg-bin/addchatroommember" /* cnb.z(-113245402692394L) */);
+                zbVar2.k("MicroMsg.NetSceneAddChatRoomMember" /* "MicroMsg.NetSceneAddChatRoomMember" /* "MicroMsg.NetSceneAddChatRoomMember" /* cnb.z(-112828790864682L)  */,
+                        "/cgi-bin/micromsg-bin/addchatroommember" /* "/cgi-bin/micromsg-bin/addchatroommember" /* "/cgi-bin/micromsg-bin/addchatroommember" /* cnb.z(-113245402692394L)  */);
                 bagVar2.getClass();
                 bagVar2.b = zbVar2;
-                return ensVar;
+                return kotlinUnitVar;
             case 25:
                 bah bahVar4 = (bah) obj;
                 cdj cdjVar4 = new cdj();
@@ -426,22 +426,22 @@ public final /* synthetic */ class cgu implements IHasInvokeMethod {
                 cdjVar4.q(clsBf, cls2, cls, clsBf4 != null ? clsBf4 : Object.class);
                 bahVar4.getClass();
                 bahVar4.d = cdjVar4;
-                return ensVar;
+                return kotlinUnitVar;
             case 26:
-                amm ammVar2 = (amm) obj;
-                ammVar2.b = new cgu(27);
-                ammVar2.c = new cgu(28);
-                return ensVar;
+                FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar2 = (FindDexClassMethodDslWrapper) obj;
+                findDexClassMethodDslWrapperVar2.onClassCallback = new cgu(27);
+                findDexClassMethodDslWrapperVar2.onMethodCallback = new cgu(28);
+                return kotlinUnitVar;
             case 27:
                 bag bagVar3 = (bag) obj;
-                String[] strArr4 = { "com.tencent.mm.plugin.remittance.model" /* cnb.z(-112304804854570L) */ };
+                String[] strArr4 = { "com.tencent.mm.plugin.remittance.model" /* "com.tencent.mm.plugin.remittance.model" /* "com.tencent.mm.plugin.remittance.model" /* cnb.z(-112304804854570L)  */ };
                 bagVar3.getClass();
-                bagVar3.a = la.ab(strArr4);
+                bagVar3.a = SomeStaticHelpers.ab(strArr4);
                 zb zbVar3 = new zb();
-                zbVar3.k("MicroMsg.NetSceneBeforeTransfer" /* cnb.z(-112669877074730L) */,
-                        "/cgi-bin/mmpay-bin/beforetransfer" /* cnb.z(-112532438121258L) */);
+                zbVar3.k("MicroMsg.NetSceneBeforeTransfer" /* "MicroMsg.NetSceneBeforeTransfer" /* "MicroMsg.NetSceneBeforeTransfer" /* cnb.z(-112669877074730L)  */,
+                        "/cgi-bin/mmpay-bin/beforetransfer" /* "/cgi-bin/mmpay-bin/beforetransfer" /* "/cgi-bin/mmpay-bin/beforetransfer" /* cnb.z(-112532438121258L)  */);
                 bagVar3.b = zbVar3;
-                return ensVar;
+                return kotlinUnitVar;
             case 28:
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar5 = new cdj();
@@ -453,12 +453,12 @@ public final /* synthetic */ class cgu implements IHasInvokeMethod {
                 cdjVar5.q(clsBf5, clsBf6 != null ? clsBf6 : String.class);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar5;
-                return ensVar;
+                return kotlinUnitVar;
             default:
-                amm ammVar3 = (amm) obj;
-                ammVar3.b = new clo(i4);
-                ammVar3.c = new clo(i2);
-                return ensVar;
+                FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar3 = (FindDexClassMethodDslWrapper) obj;
+                findDexClassMethodDslWrapperVar3.onClassCallback = new clo(i4);
+                findDexClassMethodDslWrapperVar3.onMethodCallback = new clo(i2);
+                return kotlinUnitVar;
         }
     }
 }

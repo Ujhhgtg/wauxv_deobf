@@ -87,7 +87,7 @@ public final class czo {
         if (i >= 0 && i < recyclerView.bo.p()) {
             return !recyclerView.bo.g ? i : recyclerView.o.n(i, 0);
         }
-        StringBuilder sbR = yg.r(i, "invalid position ", ". State item count is ");
+        StringBuilder sbR = yg.concatVar213(i, "invalid position ", ". State item count is ");
         sbR.append(recyclerView.bo.p());
         sbR.append(recyclerView.dm());
         throw new IndexOutOfBoundsException(sbR.toString());
@@ -409,7 +409,7 @@ public final class czo {
         RecyclerView recyclerView = this.h;
         czt cztVar = recyclerView.bo;
         if (i < 0 || i >= cztVar.p()) {
-            StringBuilder sbQ = yg.q(i, i, "Invalid item position ", "(", "). Item count:");
+            StringBuilder sbQ = yg.concatVar31425(i, i, "Invalid item position ", "(", "). Item count:");
             sbQ.append(cztVar.p());
             sbQ.append(recyclerView.dm());
             throw new IndexOutOfBoundsException(sbQ.toString());
@@ -709,7 +709,7 @@ public final class czo {
                     }
                 }
             }
-            StringBuilder sbQ2 = yg.q(i, iN2, "Inconsistency detected. Invalid item position ", "(offset:", ").state:");
+            StringBuilder sbQ2 = yg.concatVar31425(i, iN2, "Inconsistency detected. Invalid item position ", "(offset:", ").state:");
             sbQ2.append(cztVar.p());
             sbQ2.append(recyclerView.dm());
             throw new IndexOutOfBoundsException(sbQ2.toString());

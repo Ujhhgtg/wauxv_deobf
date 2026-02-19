@@ -4,6 +4,6 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class dmt extends DexDescData {
     public static final dmt a = new dmt("StorageFeatureService.ClassStorageFeatureService" /*
-                                                                                            * cnb.z(-365458767215402L)
+                                                                                            * "StorageFeatureService.ClassStorageFeatureService" /* "StorageFeatureService.ClassStorageFeatureService" /* "StorageFeatureService.ClassStorageFeatureService" /* cnb.z(-365458767215402L)  */
                                                                                             */);
 }

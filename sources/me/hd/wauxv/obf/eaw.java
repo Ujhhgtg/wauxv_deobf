@@ -41,8 +41,8 @@ public final class eaw {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("mg5Proto(name=" /* cnb.z(-230412110527274L) */);
-        yg.u(sb, this.a, -230897441831722L);
+        sb.append("mg5Proto(name=" /* "mg5Proto(name=" /* "mg5Proto(name=" /* "mg5Proto(name=" /* cnb.z(-230412110527274L)   */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -230897441831722L);
         bjs.w(sb, this.b, -230828722354986L);
         sb.append(this.c);
         sb.append(')');

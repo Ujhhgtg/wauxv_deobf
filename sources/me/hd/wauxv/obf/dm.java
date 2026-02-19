@@ -41,7 +41,7 @@ public class dm extends ckl {
         ea eaVar = dlVar.g;
         if (dlVar.a == null) {
             throw new IllegalStateException(
-                    yg.m(new StringBuilder("Destination "), " does not have an Intent set.", eaVar.a).toString());
+                    yg.concatToVar1(new StringBuilder("Destination "), " does not have an Intent set.", eaVar.a).toString());
         }
         Intent intent2 = new Intent(dlVar.a);
         if (bundle != null) {

@@ -173,7 +173,7 @@ public final class byc implements Cloneable {
             throwIfVar1IsNull(jArr2, "<this>");
             System.arraycopy(jArr2, i, jArr2, i11, i10);
             Object[] objArr3 = this.c;
-            la._aj(i11, i, objArr3, this.d, objArr3);
+            SomeStaticHelpers._aj(i11, i, objArr3, this.d, objArr3);
         }
         this.b[i] = j;
         this.c[i] = obj;

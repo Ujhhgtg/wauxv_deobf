@@ -313,34 +313,34 @@ public abstract class emn implements esi {
         return eumVar;
     }
 
-    public static final void aj(DexDescData amnVar, DexKitBridge dexKitBridge, IHasInvokeMethod bgfVar) {
+    public static final void aj(DexDescData amnVar, DexKitBridge dexKitBridge, IInvokable bgfVar) {
         Object objX;
         String str;
         String str2;
         DefaultConfig ioVar;
-        amm ammVar = new amm(dexKitBridge, amnVar);
-        bgfVar.invoke(ammVar);
+        FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar = new FindDexClassMethodDslWrapper(dexKitBridge, amnVar);
+        bgfVar.invoke(findDexClassMethodDslWrapperVar);
         try {
-            IHasInvokeMethod bgfVar2 = ammVar.b;
-            if (bgfVar2 != null && ammVar.c != null) {
+            IInvokable bgfVar2 = findDexClassMethodDslWrapperVar.onClassCallback;
+            if (bgfVar2 != null && findDexClassMethodDslWrapperVar.onMethodCallback != null) {
                 bag bagVar = new bag();
                 bgfVar2.invoke(bagVar);
                 yu yuVar = (yu) dexKitBridge.e(bagVar).a();
-                IHasInvokeMethod bgfVar3 = ammVar.c;
+                IInvokable bgfVar3 = findDexClassMethodDslWrapperVar.onMethodCallback;
                 throwIfVar1IsNull(bgfVar3);
                 bah bahVar = new bah();
                 bgfVar3.invoke(bahVar);
                 yuVar.getClass();
-                bahVar.b = dqc.bf(yuVar);
+                bahVar.b = dqc.toSingletonList(yuVar);
                 cdg cdgVarF = yuVar.a.f(bahVar);
-                IHasInvokeMethod bgfVar4 = ammVar.d;
+                IInvokable bgfVar4 = findDexClassMethodDslWrapperVar.onResultCallback;
                 str = ((cdf) (bgfVar4 != null ? cdgVarF.b(bgfVar4) : cdgVarF.a())).f;
             } else if (bgfVar2 != null) {
                 bag bagVar2 = new bag();
                 bgfVar2.invoke(bagVar2);
                 str = ((yu) dexKitBridge.e(bagVar2).a()).f;
             } else {
-                IHasInvokeMethod bgfVar5 = ammVar.c;
+                IInvokable bgfVar5 = findDexClassMethodDslWrapperVar.onMethodCallback;
                 if (bgfVar5 == null) {
                     throw new IllegalArgumentException(amnVar.b.concat(" FindDexClassMethod Config Failed" /*
                                                                                                             * cnb.z(-
@@ -350,7 +350,7 @@ public abstract class emn implements esi {
                 bah bahVar2 = new bah();
                 bgfVar5.invoke(bahVar2);
                 cdg cdgVarF2 = dexKitBridge.f(bahVar2);
-                IHasInvokeMethod bgfVar6 = ammVar.d;
+                IInvokable bgfVar6 = findDexClassMethodDslWrapperVar.onResultCallback;
                 str = ((cdf) (bgfVar6 != null ? cdgVarF2.b(bgfVar6) : cdgVarF2.a())).f;
             }
             str2 = (String) amnVar.c.getValue();
@@ -359,13 +359,13 @@ public abstract class emn implements esi {
             objX = bhu.x(th);
         }
         if (ioVar == null) {
-            throw new IllegalArgumentException("DexDescConfig must be init" /* cnb.z(-6021544147754L) */.toString());
+            throw new IllegalArgumentException("DexDescConfig must be init" /* "DexDescConfig must be init" /* "DexDescConfig must be init" /* "DexDescConfig must be init" /* cnb.z(-6021544147754L)   */.toString());
         }
         ioVar.aj().putString(str2, str);
-        objX = ens.a;
+        objX = KotlinUnit.INSTANCE;
         if (dcy.b(objX) != null) {
             ArrayList arrayList = ewq.a;
-            String strConcat = amnVar.b.concat(" FindDexClassMethod Failed" /* cnb.z(-79821967194922L) */);
+            String strConcat = amnVar.b.concat(" FindDexClassMethod Failed" /* " FindDexClassMethod Failed" /* " FindDexClassMethod Failed" /* " FindDexClassMethod Failed" /* cnb.z(-79821967194922L)   */);
             ro.a.getClass();
             ewq.e(strConcat, null, 12);
         }
@@ -426,14 +426,14 @@ public abstract class emn implements esi {
                     return str2.replace("!", ":");
                 }
             } else if (!str2.endsWith(".apk")) {
-                return yg.o(dkz.y(str), (Arrays.equals(bArr, bArr3) || Arrays.equals(bArr, bArr2)) ? ":" : "!", str2);
+                return yg.concatToVar1(dkz.y(str), (Arrays.equals(bArr, bArr3) || Arrays.equals(bArr, bArr2)) ? ":" : "!", str2);
             }
         }
         return str2;
     }
 
     public static final Type am(eme emeVar) {
-        Class clsBd = cnf.bd(emeVar.a);
+        Class clsBd = cnf.getJavaClass(emeVar.a);
         List list = Collections.EMPTY_LIST;
         if (!list.isEmpty()) {
             if (!clsBd.isArray()) {
@@ -473,7 +473,7 @@ public abstract class emn implements esi {
             arrayList2.add(-1);
         }
         Integer[] numArr = (Integer[]) arrayList2.toArray(new Integer[0]);
-        ArrayList arrayListAh = aba.ah(Arrays.copyOf(numArr, numArr.length));
+        ArrayList arrayListAh = OtherStaticHelpers.ah(Arrays.copyOf(numArr, numArr.length));
         int length = sjVarArr.length;
         int i3 = 0;
         int i4 = 0;
@@ -859,7 +859,7 @@ public abstract class emn implements esi {
         try {
             String strF = ams.f(amnVar.d());
             bmo.a.getClass();
-            objX = bpv.c(bmo.m(), strF);
+            objX = bpv.c(bmo.getClassLoader(), strF);
         } catch (Throwable th) {
             objX = bhu.x(th);
         }
@@ -867,10 +867,10 @@ public abstract class emn implements esi {
             return (Class) objX;
         }
         ArrayList arrayList = ewq.a;
-        String strConcat = amnVar.b.concat(" toDexClass Failed" /* cnb.z(-79740362816298L) */);
+        String strConcat = amnVar.b.concat(" toDexClass Failed" /* " toDexClass Failed" /* " toDexClass Failed" /* " toDexClass Failed" /* cnb.z(-79740362816298L)   */);
         ro.a.getClass();
         ewq.e(strConcat, null, 12);
-        throw new NoSuchMethodException(amnVar.b.concat(" toDexClass Failed" /* cnb.z(-80225694120746L) */));
+        throw new NoSuchMethodException(amnVar.b.concat(" toDexClass Failed" /* " toDexClass Failed" /* " toDexClass Failed" /* " toDexClass Failed" /* cnb.z(-80225694120746L)   */));
     }
 
     public static final Constructor ba(DexDescData amnVar) throws NoSuchMethodException {
@@ -878,7 +878,7 @@ public abstract class emn implements esi {
         try {
             amq amqVar = new amq(amnVar.d());
             bmo.a.getClass();
-            objX = amqVar.g(bmo.m());
+            objX = amqVar.g(bmo.getClassLoader());
         } catch (Throwable th) {
             objX = bhu.x(th);
         }
@@ -886,10 +886,10 @@ public abstract class emn implements esi {
             return (Constructor) objX;
         }
         ArrayList arrayList = ewq.a;
-        String strConcat = amnVar.b.concat(" toDexConstructor Failed" /* cnb.z(-79388175498026L) */);
+        String strConcat = amnVar.b.concat(" toDexConstructor Failed" /* " toDexConstructor Failed" /* " toDexConstructor Failed" /* " toDexConstructor Failed" /* cnb.z(-79388175498026L)   */);
         ro.a.getClass();
         ewq.e(strConcat, null, 12);
-        throw new NoSuchMethodException(amnVar.b.concat(" toDexConstructor Failed" /* cnb.z(-79280801315626L) */));
+        throw new NoSuchMethodException(amnVar.b.concat(" toDexConstructor Failed" /* " toDexConstructor Failed" /* " toDexConstructor Failed" /* " toDexConstructor Failed" /* cnb.z(-79280801315626L)   */));
     }
 
     public static final Method bb(DexDescData amnVar) throws NoSuchMethodException {
@@ -897,7 +897,7 @@ public abstract class emn implements esi {
         try {
             amq amqVar = new amq(amnVar.d());
             bmo.a.getClass();
-            objX = amq.f(amqVar, bmo.m());
+            objX = amq.f(amqVar, bmo.getClassLoader());
         } catch (Throwable th) {
             objX = bhu.x(th);
         }
@@ -905,18 +905,18 @@ public abstract class emn implements esi {
             return (Method) objX;
         }
         ArrayList arrayList = ewq.a;
-        String strConcat = amnVar.b.concat(" toDexMethod Failed" /* cnb.z(-80109730003754L) */);
+        String strConcat = amnVar.b.concat(" toDexMethod Failed" /* " toDexMethod Failed" /* " toDexMethod Failed" /* " toDexMethod Failed" /* cnb.z(-80109730003754L)   */);
         ro.a.getClass();
         ewq.e(strConcat, null, 12);
-        throw new NoSuchMethodException(amnVar.b.concat(" toDexMethod Failed" /* cnb.z(-80058190396202L) */));
+        throw new NoSuchMethodException(amnVar.b.concat(" toDexMethod Failed" /* " toDexMethod Failed" /* " toDexMethod Failed" /* " toDexMethod Failed" /* cnb.z(-80058190396202L)   */));
     }
 
-    public static final void bc(DexDescData amnVar, IHasInvokeMethod bgfVar) {
+    public static final void bc(DexDescData amnVar, IInvokable bgfVar) {
         bgfVar.invoke(bb(amnVar));
     }
 
     public static final Class bd(Class cls) {
-        boolean zF = nullSafeIsEqual(cls, ens.class);
+        boolean zF = nullSafeIsEqual(cls, KotlinUnit.class);
         Class cls2 = Void.TYPE;
         if (!zF && !nullSafeIsEqual(cls, Void.class)) {
             if (!nullSafeIsEqual(cls, cls2 == null ? ay("void") : cls2)) {

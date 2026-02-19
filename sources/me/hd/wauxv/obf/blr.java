@@ -22,7 +22,7 @@ public final class blr {
         this.d = context;
     }
 
-    public static blq g(blr blrVar, int i, int i2, IHasInvokeMethod bgfVar, int i3) {
+    public static blq g(blr blrVar, int i, int i2, IInvokable bgfVar, int i3) {
         if ((i3 & 1) != 0) {
             i = -3;
         }
@@ -64,7 +64,7 @@ public final class blr {
                 sb.append("(");
                 sb.append(strO);
                 sb.append(") failed. ");
-                throw new cth(yg.o(sb, str2, ", you can only provide one view for the root view."));
+                throw new cth(yg.concatToVar1(sb, str2, ", you can only provide one view for the root view."));
             }
         }
     }

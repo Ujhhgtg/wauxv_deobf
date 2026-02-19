@@ -52,7 +52,7 @@ public final /* synthetic */ class bq implements View.OnClickListener {
                 ((CheckBox) ((cxd) obj).b(R.id.itemContactCheckBoxSelect)).performClick();
                 return;
             case 4:
-                ((IHasInvokeMethod) obj).invoke(view);
+                ((IInvokable) obj).invoke(view);
                 return;
             case 5:
                 ((aql) obj).ae();
@@ -88,8 +88,8 @@ public final /* synthetic */ class bq implements View.OnClickListener {
                         originContent = msgInfoBean.getOriginContent();
                     }
                     builder.setMessage(originContent);
-                    builder.setPositiveButton("确定" /* cnb.z(-467696168729386L) */, (DialogInterface.OnClickListener) null);
-                    builder.setNegativeButton("取消" /* cnb.z(-467700463696682L) */, (DialogInterface.OnClickListener) null);
+                    builder.setPositiveButton("确定" /* "确定" /* "确定" /* "确定" /* cnb.z(-467696168729386L)   */, (DialogInterface.OnClickListener) null);
+                    builder.setNegativeButton("取消" /* "取消" /* "取消" /* "取消" /* cnb.z(-467700463696682L)   */, (DialogInterface.OnClickListener) null);
                     TextView textView = (TextView) builder.show().findViewById(android.R.id.message);
                     textView.setTextIsSelectable(true);
                     if (cgoVar.i()) {

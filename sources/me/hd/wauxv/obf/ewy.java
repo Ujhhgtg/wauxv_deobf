@@ -10,7 +10,7 @@ public abstract class ewy extends csb {
         this.aa = csbVar.aa;
         try {
             w();
-            objX = ens.a;
+            objX = KotlinUnit.INSTANCE;
         } catch (Throwable th) {
             objX = bhu.x(th);
         }

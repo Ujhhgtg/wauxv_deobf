@@ -8,7 +8,6 @@ import java.util.concurrent.RejectedExecutionException;
 import java.util.logging.Level;
 import me.hd.wauxv.obf.aaz;
 import me.hd.wauxv.obf.bfu;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.yg;
 import okhttp3.internal.Util;
 
@@ -30,7 +29,7 @@ public final class TaskQueue {
         private final CountDownLatch latch;
 
         public AwaitIdleTask() {
-            super(yg.o(new StringBuilder(), Util.okHttpName, " awaitIdle"), false);
+            super(yg.concatToVar1(new StringBuilder(), Util.okHttpName, " awaitIdle"), false);
             this.latch = new CountDownLatch(1);
         }
 

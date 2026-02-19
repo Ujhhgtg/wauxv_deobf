@@ -15,9 +15,9 @@ import me.hd.wauxv.R;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class dg extends hb implements cea {
     public eqj _ac;
-    public final IHasInvokeMethod a;
+    public final IInvokable a;
 
-    public dg(IHasInvokeMethod bgfVar) {
+    public dg(IInvokable bgfVar) {
         ((but) this.t.c).ad("androidx:appcompat", new gz(this));
         am(new ha(this));
         this.a = bgfVar;

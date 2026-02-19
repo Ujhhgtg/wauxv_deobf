@@ -113,7 +113,7 @@ public final class FieldReaderLocalDateTime<T> extends FieldReaderDateTimeCodec<
             jSONSchema.assertValidate(localDateTime);
         }
         if (obj == null) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error, object is null"));
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error, object is null"));
         }
         if (localDateTime != null || (this.features & JSONReader.Feature.IgnoreSetNullValue.mask) == 0) {
             long j = this.fieldOffset;
@@ -124,7 +124,7 @@ public final class FieldReaderLocalDateTime<T> extends FieldReaderDateTimeCodec<
             try {
                 this.field.set(obj, localDateTime);
             } catch (Exception e) {
-                throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+                throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
             }
         }
     }

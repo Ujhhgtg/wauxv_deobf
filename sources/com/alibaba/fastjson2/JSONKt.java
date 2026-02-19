@@ -1,7 +1,5 @@
 package com.alibaba.fastjson2;
 
-import com.alibaba.fastjson2.JSONReader;
-import com.alibaba.fastjson2.JSONWriter;
 import com.alibaba.fastjson2.filter.Filter;
 import java.io.InputStream;
 import java.io.Reader;
@@ -9,8 +7,7 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.List;
-import me.hd.wauxv.obf.IHasInvokeMethod;
-import me.hd.wauxv.obf.KotlinHelpers;
+import me.hd.wauxv.obf.IInvokable;
 import me.hd.wauxv.obf.uj;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -185,7 +182,7 @@ public final class JSONKt {
         throw null;
     }
 
-    public static void parseObject$default(Reader reader, char c, IHasInvokeMethod bgfVar, int i, Object obj) {
+    public static void parseObject$default(Reader reader, char c, IInvokable bgfVar, int i, Object obj) {
         throwIfVar1IsNull(reader, "<this>");
         throwIfVar1IsNull(bgfVar, "consumer");
         throwFuncHasReifiedTypeParamNotCallable();
@@ -222,7 +219,7 @@ public final class JSONKt {
     }
 
     public static void parseObject$default(InputStream inputStream, Charset charset, char c,
-            JSONReader.Feature[] featureArr, IHasInvokeMethod bgfVar, int i, Object obj) {
+                                           JSONReader.Feature[] featureArr, IInvokable bgfVar, int i, Object obj) {
         throwIfVar1IsNull(inputStream, "<this>");
         throwIfVar1IsNull(charset, "charset");
         throwIfVar1IsNull(featureArr, "features");
@@ -232,7 +229,7 @@ public final class JSONKt {
     }
 
     public static final <T> void parseObject(InputStream inputStream, Charset charset, char c,
-            JSONReader.Feature[] featureArr, IHasInvokeMethod bgfVar) {
+            JSONReader.Feature[] featureArr, IInvokable bgfVar) {
         throwIfVar1IsNull(inputStream, "<this>");
         throwIfVar1IsNull(charset, "charset");
         throwIfVar1IsNull(featureArr, "features");
@@ -247,7 +244,7 @@ public final class JSONKt {
         return JSON.toJSONString(obj, filterArr, (JSONWriter.Feature[]) Arrays.copyOf(featureArr, featureArr.length));
     }
 
-    public static final <T> void parseObject(InputStream inputStream, JSONReader.Feature[] featureArr, IHasInvokeMethod bgfVar) {
+    public static final <T> void parseObject(InputStream inputStream, JSONReader.Feature[] featureArr, IInvokable bgfVar) {
         throwIfVar1IsNull(inputStream, "<this>");
         throwIfVar1IsNull(featureArr, "features");
         throwIfVar1IsNull(bgfVar, "consumer");
@@ -255,7 +252,7 @@ public final class JSONKt {
         throw null;
     }
 
-    public static final <T> void parseObject(Reader reader, char c, IHasInvokeMethod bgfVar) {
+    public static final <T> void parseObject(Reader reader, char c, IInvokable bgfVar) {
         throwIfVar1IsNull(reader, "<this>");
         throwIfVar1IsNull(bgfVar, "consumer");
         throwFuncHasReifiedTypeParamNotCallable();

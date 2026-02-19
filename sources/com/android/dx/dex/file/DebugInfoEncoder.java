@@ -55,7 +55,7 @@ public final class DebugInfoEncoder {
 
     private void annotate(int i, String str) {
         if (this.prefix != null) {
-            str = yg.o(new StringBuilder(), this.prefix, str);
+            str = yg.concatToVar1(new StringBuilder(), this.prefix, str);
         }
         AnnotatedOutput annotatedOutput = this.annotateTo;
         if (annotatedOutput != null) {

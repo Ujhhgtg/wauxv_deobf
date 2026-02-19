@@ -21,6 +21,6 @@ public final class btv {
     }
 
     public final String toString() {
-        return yg.o(new StringBuilder("StringHeaderFactory{value='"), this.a, "'}");
+        return yg.concatToVar1(new StringBuilder("StringHeaderFactory{value='"), this.a, "'}");
     }
 }

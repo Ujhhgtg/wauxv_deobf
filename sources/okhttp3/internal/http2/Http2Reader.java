@@ -8,9 +8,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bqf;
-import me.hd.wauxv.obf.KotlinHelpers;
+import me.hd.wauxv.obf.KotlinIntProgression;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.dlc;
 import me.hd.wauxv.obf.dqc;
@@ -20,7 +18,6 @@ import me.hd.wauxv.obf.rm;
 import me.hd.wauxv.obf.sj;
 import me.hd.wauxv.obf.yg;
 import okhttp3.internal.Util;
-import okhttp3.internal.http2.Hpack;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -330,10 +327,10 @@ public final class Http2Reader implements Closeable {
             throw new IOException(concatVar2Var1(i, "TYPE_SETTINGS length % 6 != 0: "));
         }
         Settings settings = new Settings();
-        bqf bqfVarBj = dqc.bj(dqc.bm(0, i), 6);
-        int i4 = bqfVarBj.a;
-        int i5 = bqfVarBj.b;
-        int i6 = bqfVarBj.c;
+        KotlinIntProgression intRangeVarBj = dqc.bj(dqc.bm(0, i), 6);
+        int i4 = intRangeVarBj.first;
+        int i5 = intRangeVarBj.last;
+        int i6 = intRangeVarBj.step;
         if ((i6 > 0 && i4 <= i5) || (i6 < 0 && i5 <= i4)) {
             while (true) {
                 int iAnd = Util.and(this.source.readShort(), 65535);

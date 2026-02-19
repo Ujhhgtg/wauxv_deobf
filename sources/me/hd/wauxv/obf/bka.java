@@ -13,7 +13,7 @@ import java.util.List;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class bka implements IHasInvokeMethod {
+public final /* synthetic */ class bka implements IInvokable {
     public final /* synthetic */ int a;
     public final /* synthetic */ Object b;
     public final /* synthetic */ Object c;
@@ -31,13 +31,13 @@ public final /* synthetic */ class bka implements IHasInvokeMethod {
         int i = this.a;
         int i2 = 2;
         afw afwVar = null;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         Object obj2 = this.c;
         Object obj3 = this.b;
         switch (i) {
             case 0:
                 ((bkb) obj3).f.removeCallbacks((hl) obj2);
-                return ensVar;
+                return kotlinUnitVar;
             case 1:
                 ant antVar = (ant) obj3;
                 int iIntValue = ((Integer) obj).intValue();
@@ -45,20 +45,20 @@ public final /* synthetic */ class bka implements IHasInvokeMethod {
                 bbe bbeVar = (bbe) ((List) ((DefaultConfig) obj2).c).get(iIntValue);
                 String str = bbeVar.d;
                 String str2 = bbeVar.e;
-                if (nullSafeIsEqual(str, "activity" /* cnb.z(-550730771462954L) */)) {
+                if (nullSafeIsEqual(str, "activity" /* "activity" /* "activity" /* "activity" /* cnb.z(-550730771462954L)   */)) {
                     Intent intent = new Intent();
                     intent.setClassName(antVar.getContext(), str2);
                     antVar.getContext().startActivity(intent);
-                } else if (nullSafeIsEqual(str, "wauxv" /* cnb.z(-550709296626474L) */)) {
+                } else if (nullSafeIsEqual(str, "wauxv" /* "wauxv" /* "wauxv" /* "wauxv" /* cnb.z(-550709296626474L)   */)) {
                     bbj.a.getClass();
-                    if (nullSafeIsEqual(str2, "clearUnreadCount" /* cnb.z(-553591219682090L) */)) {
+                    if (nullSafeIsEqual(str2, "clearUnreadCount" /* "clearUnreadCount" /* "clearUnreadCount" /* "clearUnreadCount" /* cnb.z(-553591219682090L)   */)) {
                         alc alcVar = aou.a;
-                        cnd.bf(akq.f, new lw(i2, afwVar, 3));
-                    } else if (nullSafeIsEqual(str2, "killProcess" /* cnb.z(-553535385107242L) */)) {
+                        KotlinHelpers2.bf(akq.f, new lw(i2, afwVar, 3));
+                    } else if (nullSafeIsEqual(str2, "killProcess" /* "killProcess" /* "killProcess" /* "killProcess" /* cnb.z(-553535385107242L)   */)) {
                         Process.killProcess(Process.myPid());
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 2:
                 cjg cjgVar = (cjg) obj3;
                 cix cixVar = ((cjl) obj2).b;
@@ -78,7 +78,7 @@ public final /* synthetic */ class bka implements IHasInvokeMethod {
                     cjpVar.d = ((cjg) dfv.aj(dfv.ai(cixVar.ag(), new cgu(20)))).g.a;
                     cjpVar.e = true;
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 3:
                 ckl cklVar = (ckl) obj3;
                 cjo cjoVar = (cjo) obj2;
@@ -96,8 +96,8 @@ public final /* synthetic */ class bka implements IHasInvokeMethod {
             case 4:
                 Activity activity = (Activity) obj2;
                 dnc.tryGetClassByName(activity, (String) obj3);
-                dnc.g(activity, 2, "复制成功" /* cnb.z(-583308098403114L) */);
-                return ensVar;
+                dnc.g(activity, 2, "复制成功" /* "复制成功" /* "复制成功" /* "复制成功" /* cnb.z(-583308098403114L)   */);
+                return kotlinUnitVar;
             default:
                 euh euhVar = (euh) obj2;
                 aki.l((aki) obj3);
@@ -114,7 +114,7 @@ public final /* synthetic */ class bka implements IHasInvokeMethod {
                 }
                 TextView textView = new TextView(context);
                 textView.setTextSize(16.0f);
-                textView.setText("正在加载核心中..." /* cnb.z(-82948703386410L) */);
+                textView.setText("正在加载核心中..." /* "正在加载核心中..." /* "正在加载核心中..." /* "正在加载核心中..." /* cnb.z(-82948703386410L)   */);
                 textView.setLayoutParams(new LinearLayout.LayoutParams(-2, -2));
                 ProgressBar progressBar = new ProgressBar(context, null, R.attr.progressBarStyleHorizontal);
                 LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(-1, -2);
@@ -141,7 +141,7 @@ public final /* synthetic */ class bka implements IHasInvokeMethod {
                 }
                 t dmfVar = new dmf(ahhVarT, true);
                 dmfVar.h(ahs.a, dmfVar, bhpVar);
-                return ensVar;
+                return kotlinUnitVar;
         }
     }
 }

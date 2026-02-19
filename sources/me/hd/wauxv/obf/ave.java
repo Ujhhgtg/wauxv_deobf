@@ -81,7 +81,7 @@ public final class ave implements Map, Serializable, IEmpty {
 
     @Override // java.util.Map
     public final /* bridge */ Collection values() {
-        return avd.a;
+        return EmptyReadonlyList.a;
     }
 
     @Override // java.util.Map

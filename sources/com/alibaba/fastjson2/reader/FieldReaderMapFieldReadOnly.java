@@ -31,7 +31,7 @@ class FieldReaderMapFieldReadOnly<T> extends FieldReaderMapField<T> {
             }
             map.putAll((Map) obj);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 
@@ -44,7 +44,7 @@ class FieldReaderMapFieldReadOnly<T> extends FieldReaderMapField<T> {
         try {
             FieldReaderObject.arrayToMap((Map) this.field.get(t), (Collection) obj, this.arrayToMapKey, this.namingStrategy, JSONFactory.getObjectReader(this.valueType, this.features | j), this.arrayToMapDuplicateHandler);
         } catch (Exception unused) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"));
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"));
         }
     }
 
@@ -53,7 +53,7 @@ class FieldReaderMapFieldReadOnly<T> extends FieldReaderMapField<T> {
         try {
             ((Map) this.field.get(obj)).put(str, obj2);
         } catch (Exception unused) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"));
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"));
         }
     }
 
@@ -98,7 +98,7 @@ class FieldReaderMapFieldReadOnly<T> extends FieldReaderMapField<T> {
             try {
                 FieldReaderObject.arrayToMap((Map) this.field.get(t), jSONReader.readArray(this.valueType), this.arrayToMapKey, this.namingStrategy, JSONFactory.getObjectReader(this.valueType, this.features), this.arrayToMapDuplicateHandler);
             } catch (Exception unused) {
-                throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"));
+                throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"));
             }
         } else {
             if (this.initReader == null) {

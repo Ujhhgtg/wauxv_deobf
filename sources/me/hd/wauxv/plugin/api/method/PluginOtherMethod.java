@@ -76,29 +76,29 @@ public final class PluginOtherMethod {
     public final void log(Object obj) throws IOException {
         ArrayList arrayList = ewq.a;
         StringBuilder sb = new StringBuilder();
-        sb.append("Plugin[" /* cnb.z(-401033981328170L) */);
+        sb.append("Plugin[" /* "Plugin[" /* "Plugin[" /* cnb.z(-401033981328170L)  */);
         ctx ctxVar = this.a;
         sb.append(ctxVar.f);
-        sb.append("]: " /* cnb.z(-400999621589802L) */);
+        sb.append("]: " /* "]: " /* "]: " /* cnb.z(-400999621589802L)  */);
         sb.append(obj);
         ewq.d(14, sb.toString());
         bmu bmuVar = ctxVar.m;
-        bmuVar.s(new cuh(((ctx) bmuVar.h).f, "D" /* cnb.z(-390322332891946L) */, String.valueOf(obj)));
+        bmuVar.s(new cuh(((ctx) bmuVar.h).f, "D" /* "D" /* "D" /* cnb.z(-390322332891946L)  */, String.valueOf(obj)));
     }
 
     @cty
     public final void notify(String str, String str2) {
         bmo.a.getClass();
         Context contextN = bmo.n();
-        bpy bpyVar = new bpy("WAuxiliary" /* cnb.z(-400969556818730L) */);
-        bpyVar.b = "WAuxiliary" /* cnb.z(-400939492047658L) */;
+        bpy bpyVar = new bpy("WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-400969556818730L)  */);
+        bpyVar.b = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-400939492047658L)  */;
         but butVar = new but(bpyVar);
         chm chmVar = new chm();
         chmVar.c = contextN;
         chmVar.d = butVar;
         chmVar.e = "";
         chmVar.f = "";
-        chmVar.e = this.a.f + ": " /* cnb.z(-400857887669034L) */ + str;
+        chmVar.e = this.a.f + ": " /* ": " /* ": " /* cnb.z(-400857887669034L)  */ + str;
         chmVar.f = str2;
         but butVar2 = new but(chmVar);
         dov dovVar = (dov) new but(butVar2).c;
@@ -126,7 +126,7 @@ public final class PluginOtherMethod {
 
     @cty
     public final void toast(String str) {
-        dnc.g(null, 3, this.a.f + ": " /* cnb.z(-400948081982250L) */ + str);
+        dnc.g(null, 3, this.a.f + ": " /* ": " /* ": " /* cnb.z(-400948081982250L)  */ + str);
     }
 
     @cty
@@ -134,8 +134,8 @@ public final class PluginOtherMethod {
             throws IllegalAccessException, NoSuchMethodException, InstantiationException, InvocationTargetException {
         cmr.a.getClass();
         Constructor constructorBa = emn.ba(cmq.a);
-        String strZ = "" /* cnb.z(-140136192932650L) */;
-        String strZ2 = "gh_43f2581f6fd6" /* cnb.z(-140131897965354L) */;
+        String strZ = "" /* "" /* "" /* cnb.z(-140136192932650L)  */;
+        String strZ2 = "gh_43f2581f6fd6" /* "gh_43f2581f6fd6" /* "gh_43f2581f6fd6" /* cnb.z(-140131897965354L)  */;
         Calendar calendar = Calendar.getInstance();
         calendar.set(11, 0);
         calendar.set(12, 0);

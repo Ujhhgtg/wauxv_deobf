@@ -3,13 +3,13 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes2.dex */
 public final class crn extends SwitchHook implements IHandlesHookParam {
-    public static final crn a = new crn("OpenWayEnhanceAppAttach" /* cnb.z(-618956326959914L) */);
-    public static final String b = "测试-配置修复-v62-openWay" /* cnb.z(-618067268729642L) */;
-    public static final String c = "文件(不支持打开) 菜单加入打开方式" /* cnb.z(-618015729122090L) */;
+    public static final crn a = new crn("OpenWayEnhanceAppAttach" /* "OpenWayEnhanceAppAttach" /* "OpenWayEnhanceAppAttach" /* "OpenWayEnhanceAppAttach" /* cnb.z(-618956326959914L)   */);
+    public static final String b = "测试-配置修复-v62-openWay" /* "测试-配置修复-v62-openWay" /* "测试-配置修复-v62-openWay" /* "测试-配置修复-v62-openWay" /* cnb.z(-618067268729642L)   */;
+    public static final String c = "文件(不支持打开) 菜单加入打开方式" /* "文件(不支持打开) 菜单加入打开方式" /* "文件(不支持打开) 菜单加入打开方式" /* "文件(不支持打开) 菜单加入打开方式" /* cnb.z(-618015729122090L)   */;
 
     @Override // me.hd.wauxv.obf.IHandlesHookParam
     public final void handleHookParam(HookParam hookParam, String str) {
-        if (getIsEnabled() && str.equals("RepairerConfig_OpenWayEnhanceAppAttach_Int" /* cnb.z(-618853247744810L) */)) {
+        if (getIsEnabled() && str.equals("RepairerConfig_OpenWayEnhanceAppAttach_Int" /* "RepairerConfig_OpenWayEnhanceAppAttach_Int" /* "RepairerConfig_OpenWayEnhanceAppAttach_Int" /* "RepairerConfig_OpenWayEnhanceAppAttach_Int" /* cnb.z(-618853247744810L)   */)) {
             hookParam.setResult(1);
         }
     }

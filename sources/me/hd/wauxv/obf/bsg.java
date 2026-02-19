@@ -37,10 +37,10 @@ public final class bsg implements btd {
                         }
                         listBf = arrayList;
                     } else {
-                        listBf = dqc.bf(next);
+                        listBf = dqc.toSingletonList(next);
                     }
                 } else {
-                    listBf = avd.a;
+                    listBf = EmptyReadonlyList.a;
                 }
                 ArrayList arrayList2 = new ArrayList();
                 for (Object obj : listBf) {
@@ -88,12 +88,12 @@ public final class bsg implements btd {
                 int iIntValue = num != null ? num.intValue() : 0;
                 int length3 = str.length();
                 listBf.size();
-                int iAf = aba.af(listBf);
+                int iAf = OtherStaticHelpers.af(listBf);
                 ArrayList arrayList4 = new ArrayList();
                 for (Object obj2 : listBf) {
                     int i = length + 1;
                     if (length < 0) {
-                        aba.aj();
+                        OtherStaticHelpers.aj();
                         throw null;
                     }
                     String str3 = (String) obj2;
@@ -117,7 +117,7 @@ public final class bsg implements btd {
         if (brxVarBw instanceof bsf) {
             return (bsf) brxVarBw;
         }
-        throw cnd.ak(-1, "Unexpected JSON element, expected JsonLiteral, had " + dal.b(brxVarBw.getClass()),
+        throw KotlinHelpers2.ak(-1, "Unexpected JSON element, expected JsonLiteral, had " + dal.b(brxVarBw.getClass()),
                 brxVarBw.toString());
     }
 

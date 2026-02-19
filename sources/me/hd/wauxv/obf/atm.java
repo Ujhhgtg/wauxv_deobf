@@ -8,13 +8,13 @@ public final class atm extends bws implements IDexFind {
     public static final atm a = new atm();
 
     public static Object b() {
-        int i = bte.a;
+        int i = 0;
         dgf.a.getClass();
         a.getClass();
         cde cdeVarT = dqc.bi(dgf.b(emn.az(atl.a))).t();
         auh.a.getClass();
         cdeVarT.a = emn.az(aug.a);
-        Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }

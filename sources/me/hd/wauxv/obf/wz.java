@@ -30,9 +30,9 @@ public final class wz {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("MenuBean(iconId=" /* cnb.z(-549291957418794L) */);
+        sb.append("MenuBean(iconId=" /* "MenuBean(iconId=" /* "MenuBean(iconId=" /* cnb.z(-549291957418794L)  */);
         dkz.ac(sb, this.a, -549218942974762L);
-        yg.u(sb, this.b, -549747223952170L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -549747223952170L);
         sb.append(this.c);
         sb.append(')');
         return sb.toString();

@@ -19,13 +19,13 @@ public final class bzw extends r {
 
     public final bzt c(int i) {
         Matcher matcher = this.b.a;
-        bqi bqiVarBm = dqc.bm(matcher.start(i), matcher.end(i));
-        if (bqiVarBm.a < 0) {
+        IntRange intRangeVarBm = dqc.bm(matcher.start(i), matcher.end(i));
+        if (intRangeVarBm.first < 0) {
             return null;
         }
         String strGroup = matcher.group(i);
         throwIfVar1IsNull(strGroup, "group(...)");
-        return new bzt(strGroup, bqiVarBm);
+        return new bzt(strGroup, intRangeVarBm);
     }
 
     @Override // me.hd.wauxv.obf.r, java.util.Collection, java.util.List
@@ -43,6 +43,6 @@ public final class bzw extends r {
 
     @Override // java.util.Collection, java.lang.Iterable
     public final Iterator iterator() {
-        return new elf(new dpu(aaz.a(new bqi(0, a() - 1, 1)), new q(this, 6), 1));
+        return new elf(new dpu(aaz.a(new IntRange(0, a() - 1, 1)), new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(this, 6), 1));
     }
 }

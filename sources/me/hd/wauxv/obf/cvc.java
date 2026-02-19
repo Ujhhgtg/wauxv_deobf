@@ -28,7 +28,7 @@ import org.json.JSONObject;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class cvc implements IHasInvokeMethod {
+public final /* synthetic */ class cvc implements IInvokable {
     public final /* synthetic */ int a;
 
     public /* synthetic */ cvc(int i) {
@@ -76,7 +76,7 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
         Class cls4 = Integer.TYPE;
         int i4 = 4;
         int i5 = 0;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         switch (i) {
             case 0:
                 bah bahVar = (bah) obj;
@@ -84,10 +84,10 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                 cdjVar.o(cvh.a.b());
                 Class<String> clsBf = cnf.bf(dal.b(cls));
                 cdjVar.q(clsBf != null ? clsBf : String.class);
-                cdjVar.t("Preference does not have a key assigned." /* cnb.z(-101232379165482L) */);
+                cdjVar.t("Preference does not have a key assigned." /* "Preference does not have a key assigned." /* "Preference does not have a key assigned." /* cnb.z(-101232379165482L)  */);
                 bahVar.getClass();
                 bahVar.d = cdjVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 1:
                 HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
@@ -103,34 +103,34 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                 throwIfVar1IsNull(obj2);
                 KeyEvent keyEvent = (KeyEvent) obj2;
                 if (keyEvent.getKeyCode() == 67 && keyEvent.getAction() == 0) {
-                    int i6 = bte.a;
+                    int i6 = 0;
                     azg azgVarAa = dkz.aa(hookParam);
                     azgVarAa.b = new cvc(i2);
                     Object objD = ((azk) aaz.e(azgVarAa.c())).d();
                     throwIfVar1IsNull(objD);
                     azg azgVarR = dqc.bi(objD).r();
                     uq.a.getClass();
-                    azgVarR.a = ajn.ag("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L) */);
+                    azgVarR.a = ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */);
                     Object objE = ((azk) aaz.e(azgVarR.c())).e();
                     throwIfVar1IsNull(objE);
                     FrameLayout frameLayout = (FrameLayout) objE;
                     cde cdeVarT = dqc.bi(frameLayout).t();
-                    cdeVarT.ab = "getLastText" /* cnb.z(-76622216559402L) */;
-                    Object objJ = ((cdk) aaz.e(cdeVarT.aj())).j(new Object[0]);
+                    cdeVarT.ab = "getLastText" /* "getLastText" /* "getLastText" /* cnb.z(-76622216559402L)  */;
+                    Object objJ = ((MethodHookWrapper) aaz.e(cdeVarT.aj())).j(new Object[0]);
                     throwIfVar1IsNull(objJ);
                     cde cdeVarT2 = dqc.bi(frameLayout).t();
-                    cdeVarT2.ab = "getLastQuoteMsgId" /* cnb.z(-76536317213482L) */;
-                    Object objJ2 = ((cdk) aaz.e(cdeVarT2.aj())).j(new Object[0]);
+                    cdeVarT2.ab = "getLastQuoteMsgId" /* "getLastQuoteMsgId" /* "getLastQuoteMsgId" /* cnb.z(-76536317213482L)  */;
+                    Object objJ2 = ((MethodHookWrapper) aaz.e(cdeVarT2.aj())).j(new Object[0]);
                     throwIfVar1IsNull(objJ2);
                     long jLongValue = ((Number) objJ2).longValue();
                     if (((String) objJ).length() == 0 && jLongValue != 0) {
                         emn.bb(up.a).invoke(frameLayout, Boolean.FALSE, Boolean.TRUE);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 2:
-                ((amm) obj).c = new cvc(i4);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new cvc(i4);
+                return kotlinUnitVar;
             case 3:
                 return Boolean.valueOf(dnr.bp(((Class) obj).getName(), "com.tencent.mm.pluginsdk.ui.chat." /*
                                                                                                             * cnb.z(-
@@ -138,20 +138,20 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                                                                                                             */, false));
             case 4:
                 bah bahVar2 = (bah) obj;
-                String[] strArr = { "com.tencent.mm.pluginsdk.ui.chat" /* cnb.z(-460343184718634L) */ };
+                String[] strArr = { "com.tencent.mm.pluginsdk.ui.chat" /* "com.tencent.mm.pluginsdk.ui.chat" /* "com.tencent.mm.pluginsdk.ui.chat" /* cnb.z(-460343184718634L)  */ };
                 bahVar2.getClass();
-                bahVar2.a = la.ab(strArr);
+                bahVar2.a = SomeStaticHelpers.ab(strArr);
                 cdj cdjVar2 = new cdj();
-                cdjVar2.s("onKey" /* cnb.z(-460201450797866L) */);
-                cdjVar2.t("ChatFooterKtHelper" /* cnb.z(-460158501124906L) */, "supportAutoComplete err" /*
+                cdjVar2.s("onKey" /* "onKey" /* "onKey" /* cnb.z(-460201450797866L)  */);
+                cdjVar2.t("ChatFooterKtHelper" /* "ChatFooterKtHelper" /* "ChatFooterKtHelper" /* cnb.z(-460158501124906L)  */, "supportAutoComplete err" /*
                                                                                                           * cnb.z(-
                                                                                                           * 460661012298538L)
                                                                                                           */);
                 bahVar2.d = cdjVar2;
-                return ensVar;
+                return kotlinUnitVar;
             case 5:
                 ewz.aq(cxb.b, new cwz((ConversationBean) obj, i5));
-                return ensVar;
+                return kotlinUnitVar;
             case 6:
                 HookParam hookParam2 = (HookParam) obj;
                 if (cnb.ab(ewk.j) || cnb.ac(ewh.j)) {
@@ -382,48 +382,48 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                             (Boolean) objX20);
                     hookParam2.setResult(null);
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 7:
-                ((amm) obj).c = new cvc(10);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new cvc(10);
+                return kotlinUnitVar;
             case 8:
-                ((amm) obj).c = new cvc(i3);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new cvc(i3);
+                return kotlinUnitVar;
             case 9:
                 bah bahVar3 = (bah) obj;
-                String[] strArr2 = { "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-461640264842026L) */ };
+                String[] strArr2 = { "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-461640264842026L)  */ };
                 bahVar3.getClass();
-                bahVar3.a = la.ab(strArr2);
+                bahVar3.a = SomeStaticHelpers.ab(strArr2);
                 cdj cdjVar3 = new cdj();
-                cdjVar3.t("MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* cnb.z(-460965954976554L) */,
-                        "handleItemClickToPositionEvent,quotedMsg is null!" /* cnb.z(-460746911644458L) */);
+                cdjVar3.t("MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* "MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* "MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* cnb.z(-460965954976554L)  */,
+                        "handleItemClickToPositionEvent,quotedMsg is null!" /* "handleItemClickToPositionEvent,quotedMsg is null!" /* "handleItemClickToPositionEvent,quotedMsg is null!" /* cnb.z(-460746911644458L)  */);
                 bahVar3.d = cdjVar3;
-                return ensVar;
+                return kotlinUnitVar;
             case 10:
                 bah bahVar4 = (bah) obj;
-                String[] strArr3 = { "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-459956637661994L) */ };
+                String[] strArr3 = { "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-459956637661994L)  */ };
                 bahVar4.getClass();
-                bahVar4.a = la.ab(strArr3);
+                bahVar4.a = SomeStaticHelpers.ab(strArr3);
                 cdj cdjVar4 = new cdj();
-                cdjVar4.t("MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* cnb.z(-461481351052074L) */,
-                        "handleItemClickEvent,quotedMsg is null!" /* cnb.z(-461262307719978L) */);
+                cdjVar4.t("MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* "MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* "MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* cnb.z(-461481351052074L)  */,
+                        "handleItemClickEvent,quotedMsg is null!" /* "handleItemClickEvent,quotedMsg is null!" /* "handleItemClickEvent,quotedMsg is null!" /* cnb.z(-461262307719978L)  */);
                 bahVar4.d = cdjVar4;
-                return ensVar;
+                return kotlinUnitVar;
             case 11:
                 View view4 = (View) obj;
                 View viewK = dkz.k(view4, R.layout.module_dialog_quote_remind_msg, null, false);
                 int i7 = R.id.moduleDialogEdtQuoteRemindMsgColor;
-                TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK,
+                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK,
                         R.id.moduleDialogEdtQuoteRemindMsgColor);
                 if (textInputEditText != null) {
                     i7 = R.id.moduleDialogEdtQuoteRemindMsgText;
-                    TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK,
+                    TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.aq(viewK,
                             R.id.moduleDialogEdtQuoteRemindMsgText);
                     if (textInputEditText2 != null) {
                         i7 = R.id.moduleDialogInputQuoteRemindMsgColor;
-                        if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputQuoteRemindMsgColor)) != null) {
+                        if (((TextInputLayout) KotlinHelpers2.aq(viewK, R.id.moduleDialogInputQuoteRemindMsgColor)) != null) {
                             i7 = R.id.moduleDialogInputQuoteRemindMsgText;
-                            if (((TextInputLayout) cnd.aq(viewK, R.id.moduleDialogInputQuoteRemindMsgText)) != null) {
+                            if (((TextInputLayout) KotlinHelpers2.aq(viewK, R.id.moduleDialogInputQuoteRemindMsgText)) != null) {
                                 LinearLayout linearLayout = (LinearLayout) viewK;
                                 cem cemVar = new cem(linearLayout, textInputEditText, textInputEditText2, 4);
                                 textInputEditText2.setText(cxk.a.o());
@@ -432,19 +432,19 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                                 eg egVar = (eg) bzyVar.d;
                                 cxl.a.getClass();
                                 egVar.d = cxl.c;
-                                bzyVar.t("保存" /* cnb.z(-457641650289450L) */, new amw(new cfx(cemVar, 9), 0));
-                                bzyVar.s("重置" /* cnb.z(-457663125125930L) */, new amw(new cfh(21), 2));
+                                bzyVar.t("保存" /* "保存" /* "保存" /* cnb.z(-457641650289450L)  */, new amw(new cfx(cemVar, 9), 0));
+                                bzyVar.s("重置" /* "重置" /* "重置" /* cnb.z(-457663125125930L)  */, new amw(new cfh(21), 2));
                                 if (linearLayout != null) {
                                     egVar.r = linearLayout;
                                 }
                                 bzyVar.i().show();
-                                return ensVar;
+                                return kotlinUnitVar;
                             }
                         }
                     }
                 }
                 throw new NullPointerException("Missing required view with ID: "
-                        /* cnb.z(-663314749193002L) */.concat(viewK.getResources().getResourceName(i7)));
+                        /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-663314749193002L)  */.concat(viewK.getResources().getResourceName(i7)));
             case 12:
                 HookParam hookParam3 = (HookParam) obj;
                 Pair pairVar = (cnb.ab(ewk.n) || cnb.ac(ewh.q)) ? new Pair(1, 5) : new Pair(0, 4);
@@ -463,22 +463,22 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                     objX21 = null;
                 }
                 throwIfVar1IsNull(objX21);
-                int i8 = bte.a;
+                int i8 = 0;
                 azg azgVarR2 = dqc.bi(objX21).r();
-                azgVarR2.ab = "field_unReadCount" /* cnb.z(-457542866041642L) */;
+                azgVarR2.ab = "field_unReadCount" /* "field_unReadCount" /* "field_unReadCount" /* cnb.z(-457542866041642L)  */;
                 Object objE2 = ((azk) yg.e(azgVarR2)).e();
                 throwIfVar1IsNull(objE2);
                 int iIntValue3 = ((Number) objE2).intValue();
                 azg azgVarR3 = dqc.bi(objX21).r();
-                azgVarR3.ab = "field_unReadMuteCount" /* cnb.z(-457482736499498L) */;
+                azgVarR3.ab = "field_unReadMuteCount" /* "field_unReadMuteCount" /* "field_unReadMuteCount" /* cnb.z(-457482736499498L)  */;
                 Object objE3 = ((azk) yg.e(azgVarR3)).e();
                 throwIfVar1IsNull(objE3);
                 int iIntValue4 = ((Number) objE3).intValue();
                 azg azgVarR4 = dqc.bi(objX21).r();
-                azgVarR4.ab = "field_msgType" /* cnb.z(-457920823163690L) */;
+                azgVarR4.ab = "field_msgType" /* "field_msgType" /* "field_msgType" /* cnb.z(-457920823163690L)  */;
                 String str3 = (String) ((azk) yg.e(azgVarR4)).e();
                 azg azgVarR5 = dqc.bi(objX21).r();
-                azgVarR5.ab = "field_content" /* cnb.z(-457912233229098L) */;
+                azgVarR5.ab = "field_content" /* "field_content" /* "field_content" /* cnb.z(-457912233229098L)  */;
                 Object objE4 = ((azk) yg.e(azgVarR5)).e();
                 throwIfVar1IsNull(objE4);
                 String str4 = (String) objE4;
@@ -498,35 +498,35 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(cxk.a.o());
                         spannableStringBuilder.setSpan(new ForegroundColorSpan(Color.parseColor(cxj.a.o())), 0,
                                 spannableStringBuilder.length(), 33);
-                        spannableStringBuilder.append((CharSequence) " " /* cnb.z(-457834923817770L) */);
+                        spannableStringBuilder.append((CharSequence) " " /* " " /* " " /* cnb.z(-457834923817770L)  */);
                         spannableStringBuilder.append((CharSequence) obj2);
                         hookParam3.dexFind(spannableStringBuilder);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 13:
-                amm ammVar = (amm) obj;
-                ammVar.b = new cvc(14);
-                ammVar.c = new cvc(15);
-                return ensVar;
+                FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar = (FindDexClassMethodDslWrapper) obj;
+                findDexClassMethodDslWrapperVar.onClassCallback = new cvc(14);
+                findDexClassMethodDslWrapperVar.onMethodCallback = new cvc(15);
+                return kotlinUnitVar;
             case 14:
                 bag bagVar = (bag) obj;
                 zb zbVar = new zb();
-                zbVar.k("MicroMsg.ConversationWithCacheAdapter" /* cnb.z(-457843513752362L) */,
-                        "is transfer remind msg " /* cnb.z(-459312392567594L) */);
+                zbVar.k("MicroMsg.ConversationWithCacheAdapter" /* "MicroMsg.ConversationWithCacheAdapter" /* "MicroMsg.ConversationWithCacheAdapter" /* cnb.z(-457843513752362L)  */,
+                        "is transfer remind msg " /* "is transfer remind msg " /* "is transfer remind msg " /* cnb.z(-459312392567594L)  */);
                 bagVar.getClass();
                 bagVar.b = zbVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 15:
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar5 = new cdj();
                 cls2 = CharSequence.class;
                 Class<CharSequence> clsBf2 = cnf.bf(dal.b(cls2));
                 cdjVar5.r(clsBf2 != null ? clsBf2 : CharSequence.class);
-                cdjVar5.p(new bqi(7, 8, 1));
+                cdjVar5.p(new IntRange(7, 8, 1));
                 bahVar5.getClass();
                 bahVar5.d = cdjVar5;
-                return ensVar;
+                return kotlinUnitVar;
             case 16:
                 HookParam hookParam4 = (HookParam) obj;
                 hookParam4.getClass();
@@ -552,12 +552,12 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                     objX24 = null;
                 }
                 throwIfVar1IsNull(objX24);
-                int i9 = bte.a;
+                int i9 = 0;
                 azg azgVarR6 = dqc.bi(obj12).r();
                 azgVarR6.a = dal.b(View.class);
                 Object objE5 = ((azk) yg.e(azgVarR6)).e();
                 throwIfVar1IsNull(objE5);
-                View viewB = erb.b((ViewGroup) objE5, "" /* cnb.z(-86539296045866L) */, 0, 1, 1, 1, 1);
+                View viewB = erb.b((ViewGroup) objE5, "" /* "" /* "" /* cnb.z(-86539296045866L)  */, 0, 1, 1, 1, 1);
                 throwIfVar1IsNull(viewB);
                 TextView textView = (TextView) viewB;
                 Field[] declaredFields = objX24.getClass().getDeclaredFields();
@@ -585,7 +585,7 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                 }
                 Object obj13 = field.get(objX24);
                 throwIfVar1IsNull(obj13);
-                int i11 = bte.a;
+                int i11 = 0;
                 azg azgVarR7 = dqc.bi(obj13).r();
                 azgVarR7.a = dal.b(cls);
                 Object obj14 = null;
@@ -629,15 +629,15 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                         nullSafeIsEqual(Instant.ofEpochMilli(j).atZone(ZoneId.systemDefault()).toLocalDate(),
                                 LocalDate.now())
                                         ? "HH:mm:ss"
-                                        /* cnb.z(-538786467412778L) */ : Instant.ofEpochMilli(j)
+                                        /* "HH:mm:ss" /* "HH:mm:ss" /* cnb.z(-538786467412778L)  */ : Instant.ofEpochMilli(j)
                                                 .atZone(ZoneId.systemDefault())
                                                 .toLocalDate().getYear() == LocalDate.now().getYear() ? "M月d日 HH:mm:ss"
-                                                        /* cnb.z(-539297568521002L) */ : "yyyy年M月d日 HH:mm:ss" /*
+                                                        /* "M月d日 HH:mm:ss" /* "M月d日 HH:mm:ss" /* cnb.z(-539297568521002L)  */ : "yyyy年M月d日 HH:mm:ss" /*
                                                                                                                * cnb.z(-
                                                                                                                * 539220259109674L)
                                                                                                                */,
                         null, 2));
-                return ensVar;
+                return kotlinUnitVar;
             case 17:
                 HookParam hookParam5 = (HookParam) obj;
                 hookParam5.getClass();
@@ -653,72 +653,72 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                 if (jSONObject != null) {
                     dad.a.getClass();
                     if (Math.random() > 0.65d) {
-                        List listAg = aba.ag("Hd" /* cnb.z(-539173014469418L) */, "久雾" /* cnb.z(-539108589959978L) */,
-                                "豆子" /* cnb.z(-539130064796458L) */, "拖鞋" /* cnb.z(-539134359763754L) */);
+                        List listAg = OtherStaticHelpers.argsToList("Hd" /* "Hd" /* "Hd" /* cnb.z(-539173014469418L)  */, "久雾" /* "久雾" /* "久雾" /* cnb.z(-539108589959978L)  */,
+                                "豆子" /* "豆子" /* "豆子" /* cnb.z(-539130064796458L)  */, "拖鞋" /* "拖鞋" /* "拖鞋" /* cnb.z(-539134359763754L)  */);
                         ae aeVar = cyj.f;
                         String str6 = (String) aaz.q(listAg);
-                        jSONObject.put("changeWording" /* cnb.z(-539087115123498L) */,
-                                "已存入" /* cnb.z(-540659073153834L) */ + str6 + "的余额(WA)" /* cnb.z(-540676253023018L) */);
+                        jSONObject.put("changeWording" /* "changeWording" /* "changeWording" /* cnb.z(-539087115123498L)  */,
+                                "已存入" /* "已存入" /* "已存入" /* cnb.z(-540659073153834L)  */ + str6 + "的余额(WA)" /* "的余额(WA)" /* "的余额(WA)" /* cnb.z(-540676253023018L)  */);
                     }
-                    double d = jSONObject.getInt("totalAmount" /* cnb.z(-540641893284650L) */);
-                    int i14 = jSONObject.getInt("totalNum" /* cnb.z(-540555993938730L) */);
-                    int i15 = jSONObject.getInt("recNum" /* cnb.z(-540517339233066L) */);
-                    double d2 = jSONObject.getInt("recAmount" /* cnb.z(-540487274461994L) */);
-                    jSONObject.getInt("amount" /* cnb.z(-540461504658218L) */);
-                    jSONObject.getJSONArray("record" /* cnb.z(-540414260017962L) */);
+                    double d = jSONObject.getInt("totalAmount" /* "totalAmount" /* "totalAmount" /* cnb.z(-540641893284650L)  */);
+                    int i14 = jSONObject.getInt("totalNum" /* "totalNum" /* "totalNum" /* cnb.z(-540555993938730L)  */);
+                    int i15 = jSONObject.getInt("recNum" /* "recNum" /* "recNum" /* cnb.z(-540517339233066L)  */);
+                    double d2 = jSONObject.getInt("recAmount" /* "recAmount" /* "recAmount" /* cnb.z(-540487274461994L)  */);
+                    jSONObject.getInt("amount" /* "amount" /* "amount" /* cnb.z(-540461504658218L)  */);
+                    jSONObject.getJSONArray("record" /* "record" /* "record" /* cnb.z(-540414260017962L)  */);
                     StringBuilder sb = new StringBuilder();
                     StringBuilder sb2 = new StringBuilder();
-                    sb2.append("金额:" /* cnb.z(-540933951060778L) */);
+                    sb2.append("金额:" /* "金额:" /* "金额:" /* cnb.z(-540933951060778L)  */);
                     double d3 = 100;
                     sb2.append(d2 / d3);
                     sb2.append('/');
                     sb2.append(d / d3);
-                    sb2.append("元\n" /* cnb.z(-540951130929962L) */);
+                    sb2.append("元\n" /* "元\n" /* "元\n" /* cnb.z(-540951130929962L)  */);
                     sb.append(sb2.toString());
-                    sb.append("数量:" /* cnb.z(-540955425897258L) */ + i15 + '/' + i14 + '\n');
+                    sb.append("数量:" /* "数量:" /* "数量:" /* cnb.z(-540955425897258L)  */ + i15 + '/' + i14 + '\n');
                     double d4 = (d - d2) / d3;
                     if (d4 > 0.0d) {
-                        sb.append("剩余:" /* cnb.z(-540903886289706L) */ + d4 + "元\n" /* cnb.z(-540921066158890L) */);
+                        sb.append("剩余:" /* "剩余:" /* "剩余:" /* cnb.z(-540903886289706L)  */ + d4 + "元\n" /* "元\n" /* "元\n" /* cnb.z(-540921066158890L)  */);
                     }
-                    jSONObject.put("headTitle" /* cnb.z(-540873821518634L) */, sb.toString());
+                    jSONObject.put("headTitle" /* "headTitle" /* "headTitle" /* cnb.z(-540873821518634L)  */, sb.toString());
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 18:
-                ((amm) obj).c = new cvc(19);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new cvc(19);
+                return kotlinUnitVar;
             case 19:
                 bah bahVar6 = (bah) obj;
-                String[] strArr4 = { "com.tencent.mm.plugin.luckymoney.ui" /* cnb.z(-537158674807594L) */ };
+                String[] strArr4 = { "com.tencent.mm.plugin.luckymoney.ui" /* "com.tencent.mm.plugin.luckymoney.ui" /* "com.tencent.mm.plugin.luckymoney.ui" /* cnb.z(-537158674807594L)  */ };
                 bahVar6.getClass();
-                bahVar6.a = la.ab(strArr4);
+                bahVar6.a = SomeStaticHelpers.ab(strArr4);
                 cdj cdjVar6 = new cdj();
-                cdjVar6.t("MicroMsg.LuckyMoneyDetailUI" /* cnb.z(-537588171537194L) */, "try get user contact: %s" /*
+                cdjVar6.t("MicroMsg.LuckyMoneyDetailUI" /* "MicroMsg.LuckyMoneyDetailUI" /* "MicroMsg.LuckyMoneyDetailUI" /* cnb.z(-537588171537194L)  */, "try get user contact: %s" /*
                                                                                                                     * cnb
                                                                                                                     * .z
                                                                                                                     * (-
                                                                                                                     * 537433552714538L)
                                                                                                                     */);
                 bahVar6.d = cdjVar6;
-                return ensVar;
+                return kotlinUnitVar;
             case 20:
                 ((HookParam) obj).setResult(Boolean.FALSE);
-                return ensVar;
+                return kotlinUnitVar;
             case 21:
-                ((amm) obj).c = new cvc(22);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new cvc(22);
+                return kotlinUnitVar;
             case 22:
                 bah bahVar7 = (bah) obj;
                 cdj cdjVar7 = new cdj();
-                cdj.l(cdjVar7, "com.tencent.mm.ui.transmit.SelectConversationUI" /* cnb.z(-497559076338474L) */);
+                cdj.l(cdjVar7, "com.tencent.mm.ui.transmit.SelectConversationUI" /* "com.tencent.mm.ui.transmit.SelectConversationUI" /* "com.tencent.mm.ui.transmit.SelectConversationUI" /* cnb.z(-497559076338474L)  */);
                 cls3 = Boolean.class;
                 Class<Boolean> clsBf3 = cnf.bf(dal.b(cls3));
                 cdjVar7.r(clsBf3 != null ? clsBf3 : Boolean.class);
-                cdjVar7.t("max_limit_num" /* cnb.z(-497902673722154L) */);
+                cdjVar7.t("max_limit_num" /* "max_limit_num" /* "max_limit_num" /* cnb.z(-497902673722154L)  */);
                 bahVar7.getClass();
                 bahVar7.d = cdjVar7;
-                return ensVar;
+                return kotlinUnitVar;
             case 23:
-                int i16 = bte.a;
+                int i16 = 0;
                 azg azgVarAa2 = dkz.aa((HookParam) obj);
                 azgVarAa2.a = dal.b(cls4);
                 for (azk azkVar : azgVarAa2.c()) {
@@ -727,20 +727,20 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                         azkVar.f(Integer.MAX_VALUE);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 24:
-                ((amm) obj).c = new cvc(25);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new cvc(25);
+                return kotlinUnitVar;
             case 25:
                 bah bahVar8 = (bah) obj;
                 cdj cdjVar8 = new cdj();
-                cdjVar8.t("MicroMsg.InputTextBoundaryCheck" /* cnb.z(-497365802810154L) */,
-                        "edit text view is null" /* cnb.z(-498877631298346L) */);
+                cdjVar8.t("MicroMsg.InputTextBoundaryCheck" /* "MicroMsg.InputTextBoundaryCheck" /* "MicroMsg.InputTextBoundaryCheck" /* cnb.z(-497365802810154L)  */,
+                        "edit text view is null" /* "edit text view is null" /* "edit text view is null" /* cnb.z(-498877631298346L)  */);
                 bahVar8.getClass();
                 bahVar8.d = cdjVar8;
-                return ensVar;
+                return kotlinUnitVar;
             case 26:
-                int i17 = bte.a;
+                int i17 = 0;
                 azg azgVarAa3 = dkz.aa((HookParam) obj);
                 abf.ao(azgVarAa3.ad, (cdy[]) Arrays.copyOf(new cdy[] { cdy.b, cdy.d }, 2));
                 azgVarAa3.a = dal.b(cls4);
@@ -750,17 +750,17 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                         azkVar2.f(Integer.MAX_VALUE);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 27:
                 ((HookParam) obj).setResult(Boolean.FALSE);
-                return ensVar;
+                return kotlinUnitVar;
             case 28:
                 bah bahVar9 = (bah) obj;
                 cdj cdjVar9 = new cdj();
-                cdjVar9.s("callback" /* cnb.z(-519974510656298L) */);
+                cdjVar9.s("callback" /* "callback" /* "callback" /* cnb.z(-519974510656298L)  */);
                 bahVar9.getClass();
                 bahVar9.d = cdjVar9;
-                return ensVar;
+                return kotlinUnitVar;
             default:
                 HookParam hookParam6 = (HookParam) obj;
                 hookParam6.getClass();
@@ -792,8 +792,8 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                     } catch (Exception e) {
                         ArrayList arrayList = ewq.a;
                         StringBuilder sb3 = new StringBuilder();
-                        sb3.append("onGetRepairerConfig " /* cnb.z(-55997783604010L) */);
-                        ewq.e(yg.n(sb3,
+                        sb3.append("onGetRepairerConfig " /* "onGetRepairerConfig " /* "onGetRepairerConfig " /* cnb.z(-55997783604010L)  */);
+                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb3,
                                 bnyVar instanceof SwitchHook ? ((SwitchHook) bnyVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 55873229552426L)
@@ -801,7 +801,7 @@ public final /* synthetic */ class cvc implements IHasInvokeMethod {
                                 -55851754715946L), e, 12);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
         }
     }
 }

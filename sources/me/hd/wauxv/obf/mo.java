@@ -13,6 +13,6 @@ public final class mo extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(mn.a, dexKitBridge, new mj(5));
+        emn.aj(mn.a, dexKitBridge, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(5));
     }
 }

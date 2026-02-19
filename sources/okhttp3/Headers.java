@@ -14,11 +14,10 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 import me.hd.wauxv.obf.abf;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.avd;
+import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.IEmpty;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnb;
-import me.hd.wauxv.obf.cnd;
+import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.Pair;
 import me.hd.wauxv.obf.dnj;
 import me.hd.wauxv.obf.dnr;
@@ -98,7 +97,7 @@ public final class Headers implements Iterable<Pair>, IEmpty {
         public final String get(String str) {
             throwIfVar1IsNull(str, "name");
             int size = this.namesAndValues.size() - 2;
-            int iAv = cnd.av(size, 0, -2);
+            int iAv = KotlinHelpers2.getProgressionLastElement(size, 0, -2);
             if (iAv > size) {
                 return null;
             }
@@ -228,7 +227,7 @@ public final class Headers implements Iterable<Pair>, IEmpty {
         /* JADX INFO: Access modifiers changed from: private */
         public final String get(String[] strArr, String str) {
             int length = strArr.length - 2;
-            int iAv = cnd.av(length, 0, -2);
+            int iAv = KotlinHelpers2.getProgressionLastElement(length, 0, -2);
             if (iAv > length) {
                 return null;
             }
@@ -261,7 +260,7 @@ public final class Headers implements Iterable<Pair>, IEmpty {
                 }
                 strArr2[i2] = dnj.ba(str).toString();
             }
-            int iAv = cnd.av(0, strArr2.length - 1, 2);
+            int iAv = KotlinHelpers2.getProgressionLastElement(0, strArr2.length - 1, 2);
             if (iAv >= 0) {
                 while (true) {
                     String str2 = strArr2[i];
@@ -449,7 +448,7 @@ public final class Headers implements Iterable<Pair>, IEmpty {
             }
         }
         if (arrayList == null) {
-            return avd.a;
+            return EmptyReadonlyList.a;
         }
         List<String> listUnmodifiableList = Collections.unmodifiableList(arrayList);
         throwIfVar1IsNull(listUnmodifiableList, "{\n      Collections.unmodifiableList(result)\n    }");

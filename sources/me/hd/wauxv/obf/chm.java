@@ -484,7 +484,7 @@ public final class chm implements dom {
         return new tx(str, i > 0, i, i2, twVar);
     }
 
-    public static void n(final chm chmVar, final String str, final IHasInvokeMethod bgfVar) {
+    public static void n(final chm chmVar, final String str, final IInvokable bgfVar) {
         Context context = (Context) chmVar.c;
         final exf exfVar = (exf) chmVar.f;
         exfVar.g.put(
@@ -494,7 +494,7 @@ public final class chm implements dom {
                 new Pair(context, new bgj(exfVar, chmVar, str, bgfVar) { // from class: me.hd.wauxv.obf.exd
                     public final /* synthetic */ chm a;
                     public final /* synthetic */ String b;
-                    public final /* synthetic */ IHasInvokeMethod c;
+                    public final /* synthetic */ IInvokable c;
 
                     {
                         this.a = chmVar;
@@ -531,7 +531,7 @@ public final class chm implements dom {
                         boolean z = exf.a;
                         chm chmVar2 = this.a;
                         boolean zF = nullSafeIsEqual(str3, z ? exf.j((String) chmVar2.d) : exf.k((Context) chmVar2.c));
-                        ens ensVar = ens.a;
+                        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
                         if (zF) {
                             try {
                                 Bundle extras = intent.getExtras();
@@ -554,7 +554,7 @@ public final class chm implements dom {
                                 String str5 = txVar.a;
                                 int i2 = txVar.d;
                                 boolean z2 = txVar.b;
-                                IHasInvokeMethod bgfVar2 = this.c;
+                                IInvokable bgfVar2 = this.c;
                                 if (z2) {
                                     try {
                                         exe exeVar = (exe) concurrentHashMap.get(str5);
@@ -661,7 +661,7 @@ public final class chm implements dom {
                                         } else {
                                             ArrayList arrayList11 = ewq.a;
                                             ewq.g(6, "Unsupported segments data key of \"" + str4 + "\"'s type", null);
-                                            objX2 = ensVar;
+                                            objX2 = kotlinUnitVar;
                                         }
                                         thB = dcy.b(objX2);
                                         if (thB != null) {
@@ -675,7 +675,7 @@ public final class chm implements dom {
                                 }
                             }
                         }
-                        return ensVar;
+                        return kotlinUnitVar;
                     }
                 }));
     }
@@ -822,10 +822,10 @@ public final class chm implements dom {
                         try {
                             erkVarB = eroVar2._bh(zcVar, chqVar);
                         } catch (AbstractMethodError unused) {
-                            erkVarB = eroVar2.b(cnf.bd(zcVar));
+                            erkVarB = eroVar2.b(cnf.getJavaClass(zcVar));
                         }
                     } catch (AbstractMethodError unused2) {
-                        erkVarB = eroVar2.l(cnf.bd(zcVar), chqVar);
+                        erkVarB = eroVar2.l(cnf.getJavaClass(zcVar), chqVar);
                     }
                     erkVar = erkVarB;
                     erq erqVar2 = (erq) this.c;
@@ -941,7 +941,7 @@ public final class chm implements dom {
                 for (Object obj2 : arrayList4) {
                     int i3 = i2 + 1;
                     if (i2 < 0) {
-                        aba.aj();
+                        OtherStaticHelpers.aj();
                         throw null;
                     }
                     ar(l(new tw(str, (List) obj2), strS, arrayList2.size(), i2));
@@ -971,7 +971,7 @@ public final class chm implements dom {
                 for (Object obj3 : arrayList6) {
                     int i4 = i2 + 1;
                     if (i2 < 0) {
-                        aba.aj();
+                        OtherStaticHelpers.aj();
                         throw null;
                     }
                     ar(l(new tw(str, (Map) obj3), strS, arrayList5.size(), i2));
@@ -1002,7 +1002,7 @@ public final class chm implements dom {
                 for (Object obj4 : arrayList8) {
                     int i5 = i2 + 1;
                     if (i2 < 0) {
-                        aba.aj();
+                        OtherStaticHelpers.aj();
                         throw null;
                     }
                     ar(l(new tw(str, (Set) obj4), strS, arrayList7.size(), i2));
@@ -1029,7 +1029,7 @@ public final class chm implements dom {
             if (i6 <= 0) {
                 throw new IllegalArgumentException(yg.f(i6, "Step must be positive, was: ", "."));
             }
-            int iAv = cnd.av(0, length, i6);
+            int iAv = KotlinHelpers2.getProgressionLastElement(0, length, i6);
             if (iAv >= 0) {
                 int i7 = 0;
                 while (true) {
@@ -1063,7 +1063,7 @@ public final class chm implements dom {
             for (Object obj5 : arrayList10) {
                 int i9 = i2 + 1;
                 if (i2 < 0) {
-                    aba.aj();
+                    OtherStaticHelpers.aj();
                     throw null;
                 }
                 ar(l(new tw(str, (String) obj5), strS, arrayList9.size(), i2));

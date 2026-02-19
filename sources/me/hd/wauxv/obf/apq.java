@@ -515,7 +515,7 @@ public final class apq {
                                             options.inScaled = true;
                                         }
                                         if (Log.isLoggable("Downsampler", 2)) {
-                                            StringBuilder sbQ = yg.q(i15, i16, "Calculate scaling, source: [", "x",
+                                            StringBuilder sbQ = yg.concatVar31425(i15, i16, "Calculate scaling, source: [", "x",
                                                     "], degreesToRotate: ");
                                             sbQ.append(i19);
                                             sbQ.append(", target: [");
@@ -593,7 +593,7 @@ public final class apq {
                                         iRound = Math.round(iCeil * f2);
                                         iRound2 = Math.round(iCeil2 * f2);
                                         if (Log.isLoggable("Downsampler", 2)) {
-                                            StringBuilder sbQ2 = yg.q(iRound, iRound2, "Calculated target [", "x",
+                                            StringBuilder sbQ2 = yg.concatVar31425(iRound, iRound2, "Calculated target [", "x",
                                                     "] for source [");
                                             sbQ2.append(i15);
                                             sbQ2.append("x");
@@ -808,7 +808,7 @@ public final class apq {
                     iRound = Math.round(iCeil3 * f2);
                     iRound2 = Math.round(iCeil22 * f2);
                     if (Log.isLoggable("Downsampler", 2)) {
-                        StringBuilder sbQ22 = yg.q(iRound, iRound2, "Calculated target [", "x", "] for source [");
+                        StringBuilder sbQ22 = yg.concatVar31425(iRound, iRound2, "Calculated target [", "x", "] for source [");
                         sbQ22.append(i15);
                         sbQ22.append("x");
                         sbQ22.append(i16);
@@ -834,7 +834,7 @@ public final class apq {
                     iRound = Math.round(iCeil32 * f2);
                     iRound2 = Math.round(iCeil222 * f2);
                     if (Log.isLoggable("Downsampler", 2)) {
-                        StringBuilder sbQ222 = yg.q(iRound, iRound2, "Calculated target [", "x", "] for source [");
+                        StringBuilder sbQ222 = yg.concatVar31425(iRound, iRound2, "Calculated target [", "x", "] for source [");
                         sbQ222.append(i15);
                         sbQ222.append("x");
                         sbQ222.append(i16);
@@ -1034,7 +1034,7 @@ public final class apq {
                     iRound = Math.round(iCeil322 * f2);
                     iRound2 = Math.round(iCeil2222 * f2);
                     if (Log.isLoggable("Downsampler", 2)) {
-                        StringBuilder sbQ2222 = yg.q(iRound, iRound2, "Calculated target [", "x", "] for source [");
+                        StringBuilder sbQ2222 = yg.concatVar31425(iRound, iRound2, "Calculated target [", "x", "] for source [");
                         sbQ2222.append(i15);
                         sbQ2222.append("x");
                         sbQ2222.append(i16);
@@ -1060,7 +1060,7 @@ public final class apq {
                     iRound = Math.round(iCeil3222 * f2);
                     iRound2 = Math.round(iCeil22222 * f2);
                     if (Log.isLoggable("Downsampler", 2)) {
-                        StringBuilder sbQ22222 = yg.q(iRound, iRound2, "Calculated target [", "x", "] for source [");
+                        StringBuilder sbQ22222 = yg.concatVar31425(iRound, iRound2, "Calculated target [", "x", "] for source [");
                         sbQ22222.append(i15);
                         sbQ22222.append("x");
                         sbQ22222.append(i16);
@@ -1299,7 +1299,7 @@ public final class apq {
                     iRound = Math.round(iCeil32222 * f2);
                     iRound2 = Math.round(iCeil222222 * f2);
                     if (Log.isLoggable("Downsampler", 2)) {
-                        StringBuilder sbQ222222 = yg.q(iRound, iRound2, "Calculated target [", "x", "] for source [");
+                        StringBuilder sbQ222222 = yg.concatVar31425(iRound, iRound2, "Calculated target [", "x", "] for source [");
                         sbQ222222.append(i15);
                         sbQ222222.append("x");
                         sbQ222222.append(i16);
@@ -1325,7 +1325,7 @@ public final class apq {
                     iRound = Math.round(iCeil322222 * f2);
                     iRound2 = Math.round(iCeil2222222 * f2);
                     if (Log.isLoggable("Downsampler", 2)) {
-                        StringBuilder sbQ2222222 = yg.q(iRound, iRound2, "Calculated target [", "x", "] for source [");
+                        StringBuilder sbQ2222222 = yg.concatVar31425(iRound, iRound2, "Calculated target [", "x", "] for source [");
                         sbQ2222222.append(i15);
                         sbQ2222222.append("x");
                         sbQ2222222.append(i16);

@@ -91,7 +91,7 @@ public final class MultiCstInsn extends FixedSizeInsn {
         if (hasIndex(i)) {
             return this.index[i];
         }
-        StringBuilder sbR = yg.r(i, "index not yet set for constant ", " value = ");
+        StringBuilder sbR = yg.concatVar213(i, "index not yet set for constant ", " value = ");
         sbR.append(this.constants[i]);
         throw new IllegalStateException(sbR.toString());
     }

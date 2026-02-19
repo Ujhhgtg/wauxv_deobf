@@ -9,7 +9,7 @@ public final class alt implements Iterator, IEmpty {
     public int a = -1;
     public int b;
     public int c;
-    public bqi d;
+    public IntRange d;
     public final /* synthetic */ alu e;
 
     public alt(alu aluVar) {
@@ -43,7 +43,7 @@ public final class alt implements Iterator, IEmpty {
             this.b = i2;
             this.c = i2 + (iIntValue2 == 0 ? 1 : 0);
         } else {
-            this.d = new bqi(this.b, dnj.ae(charSequence), 1);
+            this.d = new IntRange(this.b, dnj.ae(charSequence), 1);
             this.c = -1;
         }
         this.a = 1;
@@ -65,11 +65,11 @@ public final class alt implements Iterator, IEmpty {
         if (this.a == 0) {
             throw new NoSuchElementException();
         }
-        bqi bqiVar = this.d;
-        throwIfVar1IsNull(bqiVar, "null cannot be cast to non-null type kotlin.ranges.IntRange");
+        IntRange intRangeVar = this.d;
+        throwIfVar1IsNull(intRangeVar, "null cannot be cast to non-null type kotlin.ranges.IntRange");
         this.d = null;
         this.a = -1;
-        return bqiVar;
+        return intRangeVar;
     }
 
     @Override // java.util.Iterator

@@ -8,11 +8,11 @@ public final class aec extends bws implements IDexFind {
     public static final aec a = new aec();
 
     public static Object b() {
-        int i = bte.a;
+        int i = 0;
         cde cdeVarT = dqc.bh(emn.az(aea.a)).t();
         aeg.a.getClass();
         cdeVarT.a = emn.bb(aee.a).getDeclaringClass();
-        Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }

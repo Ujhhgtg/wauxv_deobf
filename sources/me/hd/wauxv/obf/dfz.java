@@ -110,7 +110,7 @@ public final class dfz implements dfx, sr {
 
     @Override // me.hd.wauxv.obf.dfx
     public final List getAnnotations() {
-        return avd.a;
+        return EmptyReadonlyList.a;
     }
 
     @Override // me.hd.wauxv.obf.dfx

@@ -6,10 +6,10 @@ import android.content.Intent;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class dae extends SwitchHook implements IStartActivity {
-    public static final dae a = new dae("RedPacketPrivateReceiveHook" /* cnb.z(-536638983764778L) */);
-    public static final String b = "红包" /* cnb.z(-538734927805226L) */;
-    public static final String c = "红包私聊领取" /* cnb.z(-538739222772522L) */;
-    public static final String i = "可在私聊发送自己可领取的拼手气红包" /* cnb.z(-538709158001450L) */;
+    public static final dae a = new dae("RedPacketPrivateReceiveHook" /* "RedPacketPrivateReceiveHook" /* "RedPacketPrivateReceiveHook" /* cnb.z(-536638983764778L)  */);
+    public static final String b = "红包" /* "红包" /* "红包" /* cnb.z(-538734927805226L)  */;
+    public static final String c = "红包私聊领取" /* "红包私聊领取" /* "红包私聊领取" /* cnb.z(-538739222772522L)  */;
+    public static final String i = "可在私聊发送自己可领取的拼手气红包" /* "可在私聊发送自己可领取的拼手气红包" /* "可在私聊发送自己可领取的拼手气红包" /* cnb.z(-538709158001450L)  */;
 
     @Override // me.hd.wauxv.obf.IStartActivity
     public final void onStartActivityIntent(HookParam hookParam, Intent intent) {
@@ -20,7 +20,7 @@ public final class dae extends SwitchHook implements IStartActivity {
                 int iHashCode = className.hashCode();
                 if (iHashCode != -1765744774) {
                     if (iHashCode != 1306075868 || !className.equals(
-                            "com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyPrepareUI" /* cnb.z(-537102840232746L) */)) {
+                            "com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyPrepareUI" /* "com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyPrepareUI" /* "com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyPrepareUI" /* cnb.z(-537102840232746L)  */)) {
                         return;
                     }
                 } else if (!className.equals("com.tencent.mm.plugin.luckymoney.ui.LuckyMoneyNewPrepareUI" /*
@@ -29,7 +29,7 @@ public final class dae extends SwitchHook implements IStartActivity {
                                                                                                            */)) {
                     return;
                 }
-                intent.putExtra("key_type" /* cnb.z(-538275366304554L) */, 1);
+                intent.putExtra("key_type" /* "key_type" /* "key_type" /* cnb.z(-538275366304554L)  */, 1);
             }
         }
     }

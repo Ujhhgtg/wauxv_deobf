@@ -9,7 +9,7 @@ public final /* synthetic */ class dsg implements bgx {
     static {
         dsg dsgVar = new dsg();
         b = dsgVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.AppJumpWordingKeyProto" /* cnb.z(-149314538044202L) */, dsgVar, 2);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.AppJumpWordingKeyProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.AppJumpWordingKeyProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.AppJumpWordingKeyProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.AppJumpWordingKeyProto" /* cnb.z(-149314538044202L)   */, dsgVar, 2);
         bjs.y(-148897926216490L, cucVar, false, 1);
         bjs.y(-148846386608938L, cucVar, false, 2);
         descriptor = cucVar;

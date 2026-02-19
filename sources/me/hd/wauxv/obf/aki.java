@@ -57,7 +57,7 @@ public final class aki {
                 for (exa exaVar : linkedHashSet) {
                     exaVar.b.invoke();
                     ArrayList arrayList = ewq.a;
-                    Objects.toString(exaVar.a.b.getHookedMethod());
+                    Objects.toString(exaVar.a.xposedUnhook.getHookedMethod());
                     ewq.f();
                 }
                 try {
@@ -72,13 +72,13 @@ public final class aki {
         }
     }
 
-    public dop m(IHasInvokeMethod bgfVar) {
+    public dop m(IInvokable bgfVar) {
         this.g = bgfVar;
         q(false);
         return new dop(25);
     }
 
-    public dop n(IHasInvokeMethod bgfVar) {
+    public dop n(IInvokable bgfVar) {
         this.f = bgfVar;
         q(false);
         return new dop(25);
@@ -131,7 +131,7 @@ public final class aki {
                     try {
                         exh exhVarZ = cnh.z(member, new exj(butVar, this, member, (exg) this.c));
                         exa exaVar = exhVarZ.a;
-                        if ((exaVar != null ? exaVar.a.b.getHookedMethod() : null) == null) {
+                        if ((exaVar != null ? exaVar.a.xposedUnhook.getHookedMethod() : null) == null) {
                             throw new IllegalStateException(("Hook Member [" + member + "] failed").toString());
                         }
                         ((LinkedHashSet) this.h).add(exhVarZ.a);

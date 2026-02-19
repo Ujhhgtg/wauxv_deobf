@@ -21,7 +21,7 @@ public final class bpg {
         }
     }
 
-    public void b(zc zcVar, IHasInvokeMethod bgfVar) {
+    public void b(zc zcVar, IInvokable bgfVar) {
         LinkedHashMap linkedHashMap = this.a;
         if (!linkedHashMap.containsKey(zcVar)) {
             linkedHashMap.put(zcVar, new erm(zcVar, bgfVar));

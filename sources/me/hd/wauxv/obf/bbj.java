@@ -16,7 +16,7 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bbj extends BaseHook implements bnp {
+public final class bbj extends SwitchHook implements bnp {
     public static final bbj a;
     public static final String b;
     public static final List c;
@@ -27,18 +27,18 @@ public final class bbj extends BaseHook implements bnp {
     public static final ayz m;
 
     static {
-        "#FFF7F7F7" /* cnb.z(-550666346953514L) */;
-        "#FF1E1E1E" /* cnb.z(-550640577149738L) */;
-        "#FF1E1E1E" /* cnb.z(-550614807345962L) */;
-        "#FFF7F7F7" /* cnb.z(-549970562251562L) */;
-        a = new bbj("FloatActionButtonHook" /* cnb.z(-553153133017898L) */);
+        "#FFF7F7F7" /* "#FFF7F7F7" /* "#FFF7F7F7" /* cnb.z(-550666346953514L)  */;
+        "#FF1E1E1E" /* "#FF1E1E1E" /* "#FF1E1E1E" /* cnb.z(-550640577149738L)  */;
+        "#FF1E1E1E" /* "#FF1E1E1E" /* "#FF1E1E1E" /* cnb.z(-550614807345962L)  */;
+        "#FFF7F7F7" /* "#FFF7F7F7" /* "#FFF7F7F7" /* cnb.z(-549970562251562L)  */;
+        a = new bbj("FloatActionButtonHook" /* "FloatActionButtonHook" /* "FloatActionButtonHook" /* cnb.z(-553153133017898L)  */);
         dov dovVar = ctf.a;
-        b = ctf.c("Resource" /* cnb.z(-48086453844778L) */, "Fab" /* cnb.z(-48047799139114L) */);
-        c = aba.ag(new bbe("设置" /* cnb.z(-549944792447786L) */, "ic_setting.png" /* cnb.z(-549949087415082L) */, "activity" /* cnb.z(-549884662905642L) */, 0, "me.hd.wauxv.ui.activity.ModuleActivity" /* cnb.z(-549846008199978L) */), new bbe("扫一扫" /* cnb.z(-550228260289322L) */, "ic_scan.png" /* cnb.z(-550176720681770L) */, "activity" /* cnb.z(-550159540812586L) */, 1, "com.tencent.mm.plugin.scanner.ui.BaseScanUI" /* cnb.z(-550120886106922L) */), new bbe("朋友圈" /* cnb.z(-551546815249194L) */, "ic_timeline.png" /* cnb.z(-551563995118378L) */, "activity" /* cnb.z(-551495275641642L) */, 2, "com.tencent.mm.plugin.sns.ui.improve.ImproveSnsTimelineUI" /* cnb.z(-551473800805162L) */), new bbe("视频号" /* cnb.z(-551722908908330L) */, "ic_finder.png" /* cnb.z(-551740088777514L) */, "activity" /* cnb.z(-551113023552298L) */, 3, "com.tencent.mm.plugin.finder.ui.FinderHomeAffinityUI" /* cnb.z(-551074368846634L) */), new bbe("收藏" /* cnb.z(-551379311524650L) */, "ic_favorite.png" /* cnb.z(-551383606491946L) */, "activity" /* cnb.z(-551314887015210L) */, 4, "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* cnb.z(-551293412178730L) */), new bbe("钱包" /* cnb.z(-574705278909226L) */, "ic_wallet.png" /* cnb.z(-574726753745706L) */, "activity" /* cnb.z(-574649444334378L) */, 5, "com.tencent.mm.plugin.mall.ui.MallIndexUIv2" /* cnb.z(-574610789628714L) */), new bbe("清空未读" /* cnb.z(-575005926619946L) */, "ic_clear.png" /* cnb.z(-574967271914282L) */, "wauxv" /* cnb.z(-574877077601066L) */, 6, "clearUnreadCount" /* cnb.z(-574902847404842L) */));
+        b = ctf.c("Resource" /* "Resource" /* "Resource" /* cnb.z(-48086453844778L)  */, "Fab" /* "Fab" /* "Fab" /* cnb.z(-48047799139114L)  */);
+        c = OtherStaticHelpers.argsToList(new bbe("设置" /* "设置" /* "设置" /* cnb.z(-549944792447786L)  */, "ic_setting.png" /* "ic_setting.png" /* "ic_setting.png" /* cnb.z(-549949087415082L)  */, "activity" /* "activity" /* "activity" /* cnb.z(-549884662905642L)  */, 0, "me.hd.wauxv.ui.activity.ModuleActivity" /* "me.hd.wauxv.ui.activity.ModuleActivity" /* "me.hd.wauxv.ui.activity.ModuleActivity" /* cnb.z(-549846008199978L)  */), new bbe("扫一扫" /* "扫一扫" /* "扫一扫" /* cnb.z(-550228260289322L)  */, "ic_scan.png" /* "ic_scan.png" /* "ic_scan.png" /* cnb.z(-550176720681770L)  */, "activity" /* "activity" /* "activity" /* cnb.z(-550159540812586L)  */, 1, "com.tencent.mm.plugin.scanner.ui.BaseScanUI" /* "com.tencent.mm.plugin.scanner.ui.BaseScanUI" /* "com.tencent.mm.plugin.scanner.ui.BaseScanUI" /* cnb.z(-550120886106922L)  */), new bbe("朋友圈" /* "朋友圈" /* "朋友圈" /* cnb.z(-551546815249194L)  */, "ic_timeline.png" /* "ic_timeline.png" /* "ic_timeline.png" /* cnb.z(-551563995118378L)  */, "activity" /* "activity" /* "activity" /* cnb.z(-551495275641642L)  */, 2, "com.tencent.mm.plugin.sns.ui.improve.ImproveSnsTimelineUI" /* "com.tencent.mm.plugin.sns.ui.improve.ImproveSnsTimelineUI" /* "com.tencent.mm.plugin.sns.ui.improve.ImproveSnsTimelineUI" /* cnb.z(-551473800805162L)  */), new bbe("视频号" /* "视频号" /* "视频号" /* cnb.z(-551722908908330L)  */, "ic_finder.png" /* "ic_finder.png" /* "ic_finder.png" /* cnb.z(-551740088777514L)  */, "activity" /* "activity" /* "activity" /* cnb.z(-551113023552298L)  */, 3, "com.tencent.mm.plugin.finder.ui.FinderHomeAffinityUI" /* "com.tencent.mm.plugin.finder.ui.FinderHomeAffinityUI" /* "com.tencent.mm.plugin.finder.ui.FinderHomeAffinityUI" /* cnb.z(-551074368846634L)  */), new bbe("收藏" /* "收藏" /* "收藏" /* cnb.z(-551379311524650L)  */, "ic_favorite.png" /* "ic_favorite.png" /* "ic_favorite.png" /* cnb.z(-551383606491946L)  */, "activity" /* "activity" /* "activity" /* cnb.z(-551314887015210L)  */, 4, "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* cnb.z(-551293412178730L)  */), new bbe("钱包" /* "钱包" /* "钱包" /* cnb.z(-574705278909226L)  */, "ic_wallet.png" /* "ic_wallet.png" /* "ic_wallet.png" /* cnb.z(-574726753745706L)  */, "activity" /* "activity" /* "activity" /* cnb.z(-574649444334378L)  */, 5, "com.tencent.mm.plugin.mall.ui.MallIndexUIv2" /* "com.tencent.mm.plugin.mall.ui.MallIndexUIv2" /* "com.tencent.mm.plugin.mall.ui.MallIndexUIv2" /* cnb.z(-574610789628714L)  */), new bbe("清空未读" /* "清空未读" /* "清空未读" /* cnb.z(-575005926619946L)  */, "ic_clear.png" /* "ic_clear.png" /* "ic_clear.png" /* cnb.z(-574967271914282L)  */, "wauxv" /* "wauxv" /* "wauxv" /* cnb.z(-574877077601066L)  */, 6, "clearUnreadCount" /* "clearUnreadCount" /* "clearUnreadCount" /* cnb.z(-574902847404842L)  */));
         h = new dov(new amd(5));
-        i = "界面" /* cnb.z(-574778293353258L) */;
-        j = "悬浮动作按钮" /* cnb.z(-574782588320554L) */;
-        l = "为主界面右下角添加一个悬浮动作按钮" /* cnb.z(-574202767735594L) */;
+        i = "界面" /* "界面" /* "界面" /* cnb.z(-574778293353258L)  */;
+        j = "悬浮动作按钮" /* "悬浮动作按钮" /* "悬浮动作按钮" /* cnb.z(-574782588320554L)  */;
+        l = "为主界面右下角添加一个悬浮动作按钮" /* "为主界面右下角添加一个悬浮动作按钮" /* "为主界面右下角添加一个悬浮动作按钮" /* cnb.z(-574202767735594L)  */;
         m = new ayz(24);
     }
 
@@ -62,7 +62,7 @@ public final class bbj extends BaseHook implements bnp {
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final bgf p() {
+    public final bgf getOnClick() {
         return m;
     }
 

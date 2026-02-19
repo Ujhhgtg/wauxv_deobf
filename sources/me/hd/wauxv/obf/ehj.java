@@ -39,7 +39,7 @@ public final class ehj {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("w51Proto(battle_duration=" /* cnb.z(-305994945002282L) */);
+        sb.append("w51Proto(battle_duration=" /* "w51Proto(battle_duration=" /* "w51Proto(battle_duration=" /* cnb.z(-305994945002282L)  */);
         yg.v(sb, this.b, -307549723163434L);
         return concat(sb, this.c, ')');
     }

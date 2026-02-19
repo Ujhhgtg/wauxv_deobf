@@ -7,12 +7,12 @@ public final class EcsHardcodeGlobalSwitch extends SwitchHook implements IHandle
                                                                                                            * cnb.z(-
                                                                                                            * 614871813061418L)
                                                                                                            */);
-    public static final String b = "测试-配置修复-v50-ecs" /* cnb.z(-615168165804842L) */;
-    public static final String c = "服务号盒子全局总开关" /* cnb.z(-615099446328106L) */;
+    public static final String b = "测试-配置修复-v50-ecs" /* "测试-配置修复-v50-ecs" /* "测试-配置修复-v50-ecs" /* cnb.z(-615168165804842L)  */;
+    public static final String c = "服务号盒子全局总开关" /* "服务号盒子全局总开关" /* "服务号盒子全局总开关" /* cnb.z(-615099446328106L)  */;
 
     @Override // me.hd.wauxv.obf.IHandlesHookParam
     public final void handleHookParam(HookParam hookParam, String str) {
-        if (getIsEnabled() && str.equals("RepairerConfig_EcsHardcodeGlobalSwitch_Int" /* cnb.z(-614768733846314L) */)) {
+        if (getIsEnabled() && str.equals("RepairerConfig_EcsHardcodeGlobalSwitch_Int" /* "RepairerConfig_EcsHardcodeGlobalSwitch_Int" /* "RepairerConfig_EcsHardcodeGlobalSwitch_Int" /* cnb.z(-614768733846314L)  */)) {
             hookParam.setResult(1);
         }
     }

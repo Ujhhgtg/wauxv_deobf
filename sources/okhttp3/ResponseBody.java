@@ -7,11 +7,10 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.nio.charset.Charset;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.IHasInvokeMethod;
-import me.hd.wauxv.obf.KotlinHelpers;
+import me.hd.wauxv.obf.IInvokable;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.dts;
-import me.hd.wauxv.obf.ens;
+import me.hd.wauxv.obf.KotlinUnit;
 import me.hd.wauxv.obf.rh;
 import me.hd.wauxv.obf.rm;
 import me.hd.wauxv.obf.sj;
@@ -43,16 +42,16 @@ public abstract class ResponseBody implements Closeable {
 
         @Override // java.io.Reader, java.io.Closeable, java.lang.AutoCloseable
         public void close() throws IOException {
-            ens ensVar;
+            KotlinUnit kotlinUnitVar;
             this.closed = true;
             Reader reader = this.delegate;
             if (reader != null) {
                 reader.close();
-                ensVar = ens.a;
+                kotlinUnitVar = KotlinUnit.INSTANCE;
             } else {
-                ensVar = null;
+                kotlinUnitVar = null;
             }
-            if (ensVar == null) {
+            if (kotlinUnitVar == null) {
                 this.source.close();
             }
         }
@@ -199,7 +198,7 @@ public abstract class ResponseBody implements Closeable {
                 : charset;
     }
 
-    private final <T> T consumeSource(IHasInvokeMethod bgfVar, IHasInvokeMethod bgfVar2) throws IOException {
+    private final <T> T consumeSource(IInvokable bgfVar, IInvokable bgfVar2) throws IOException {
         long jContentLength = contentLength();
         if (jContentLength > 2147483647L) {
             throw new IOException(dts.b(jContentLength, "Cannot buffer entire body for content length: "));

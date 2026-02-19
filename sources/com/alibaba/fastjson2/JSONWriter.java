@@ -1,6 +1,5 @@
 package com.alibaba.fastjson2;
 
-import com.alibaba.fastjson2.JSONB;
 import com.alibaba.fastjson2.codec.FieldInfo;
 import com.alibaba.fastjson2.filter.AfterFilter;
 import com.alibaba.fastjson2.filter.BeforeFilter;
@@ -54,7 +53,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 import java.util.function.BiFunction;
-import me.hd.wauxv.obf.bjs;
+
 import me.hd.wauxv.obf.yg;
 import okhttp3.HttpUrl;
 import okhttp3.internal.ws.RealWebSocket;
@@ -847,7 +846,7 @@ public abstract class JSONWriter implements Closeable {
         if (i < i4) {
             return i4;
         }
-        StringBuilder sbR = yg.r(i,
+        StringBuilder sbR = yg.concatVar213(i,
                 "Maximum array size exceeded. Try enabling LargeObject feature instead. Requested size: ",
                 ", max size: ");
         sbR.append(this.maxArraySize);

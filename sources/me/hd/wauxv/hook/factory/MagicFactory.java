@@ -11,6 +11,6 @@ public final class MagicFactory {
     }
 
     public static final Class<Object> toAppClass(String str) {
-        return ajn.ag(str);
+        return ajn.tryGetClassByClassName(str);
     }
 }

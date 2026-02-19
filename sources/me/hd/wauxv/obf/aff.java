@@ -571,7 +571,7 @@ public final class aff implements CharSequence {
 
     public final void n(int i) {
         if (i > this.d || i < 0) {
-            StringBuilder sbR = yg.r(i, "Index ", " out of bounds. length:");
+            StringBuilder sbR = yg.concatVar213(i, "Index ", " out of bounds. length:");
             sbR.append(this.d);
             throw new StringIndexOutOfBoundsException(sbR.toString());
         }
@@ -580,7 +580,7 @@ public final class aff implements CharSequence {
     public final void o(int i) {
         ArrayList arrayList = this.a;
         if (i >= arrayList.size() || i < 0) {
-            StringBuilder sbR = yg.r(i, "Line ", " out of bounds. line count:");
+            StringBuilder sbR = yg.concatVar213(i, "Line ", " out of bounds. line count:");
             sbR.append(arrayList.size());
             throw new StringIndexOutOfBoundsException(sbR.toString());
         }
@@ -591,7 +591,7 @@ public final class aff implements CharSequence {
         afo afoVar = (afo) this.a.get(i);
         int i3 = afoVar.b + afoVar.setResultTrue().g;
         if (i2 > i3 || i2 < 0) {
-            StringBuilder sbQ = yg.q(i2, i, "Column ", " out of bounds. line: ",
+            StringBuilder sbQ = yg.concatVar31425(i2, i, "Column ", " out of bounds. line: ",
                     " , column count (line separator included):");
             sbQ.append(i3);
             throw new StringIndexOutOfBoundsException(sbQ.toString());

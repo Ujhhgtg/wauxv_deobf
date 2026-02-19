@@ -430,7 +430,7 @@ public class sj implements Serializable, Comparable {
             throw new IllegalArgumentException(
                     dkz.v(new StringBuilder("endIndex > length("), bArr.length, ')').toString());
         }
-        sb.append((64 == bArr.length ? this : new sj(la._ap(0, 64, bArr))).h());
+        sb.append((64 == bArr.length ? this : new sj(SomeStaticHelpers._ap(0, 64, bArr))).h());
         sb.append("…]");
         return sb.toString();
     }

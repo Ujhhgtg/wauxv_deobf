@@ -12,18 +12,18 @@ public final class AutoViewOriginalPhotoHook extends SwitchHook implements IDexF
                                                                                                                  * (-
                                                                                                                  * 440247032740650L)
                                                                                                                  */);
-    public static final String b = "聊天" /* cnb.z(-441325069531946L) */;
-    public static final String c = "自动查看原图" /* cnb.z(-441329364499242L) */;
-    public static final String d = "在打开图片和视频时自动点击查看原图" /* cnb.z(-441299299728170L) */;
+    public static final String b = "聊天" /* "聊天" /* "聊天" /* cnb.z(-441325069531946L)  */;
+    public static final String c = "自动查看原图" /* "自动查看原图" /* "自动查看原图" /* cnb.z(-441329364499242L)  */;
+    public static final String d = "在打开图片和视频时自动点击查看原图" /* "在打开图片和视频时自动点击查看原图" /* "在打开图片和视频时自动点击查看原图" /* cnb.z(-441299299728170L)  */;
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        Iterator it = aba.ag(MethodSetImageHdImgBtnVisibility.a, MethodCheckNeedShowOriginVideoBtn.a).iterator();
+        Iterator it = OtherStaticHelpers.argsToList(MethodSetImageHdImgBtnVisibility.a, MethodCheckNeedShowOriginVideoBtn.a).iterator();
         while (it.hasNext()) {
-            List listBf = dqc.bf(emn.bb((DexDescData) it.next()));
+            List listBf = dqc.toSingletonList(emn.bb((DexDescData) it.next()));
             AutoViewOriginalPhotoHook mmVar = a;
             aki akiVarAb = csb.ab(mmVar, listBf);
-            mmVar.x(akiVarAb, new mj(0));
+            mmVar.x(akiVarAb, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(0));
             akiVarAb.o();
         }
     }
@@ -40,8 +40,8 @@ public final class AutoViewOriginalPhotoHook extends SwitchHook implements IDexF
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(MethodSetImageHdImgBtnVisibility.a, dexKitBridge, new mj(1));
-        emn.aj(MethodCheckNeedShowOriginVideoBtn.a, dexKitBridge, new mj(2));
+        emn.aj(MethodSetImageHdImgBtnVisibility.a, dexKitBridge, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(1));
+        emn.aj(MethodCheckNeedShowOriginVideoBtn.a, dexKitBridge, new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(2));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

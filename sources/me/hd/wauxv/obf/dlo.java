@@ -131,9 +131,9 @@ public final class dlo implements Cloneable {
         if (i10 - i3 != 0) {
             int[] iArr = this.b;
             int i11 = i3 + 1;
-            la._al(iArr, i11, i3, i10, iArr);
+            SomeStaticHelpers._al(iArr, i11, i3, i10, iArr);
             Object[] objArr2 = this.c;
-            la._aj(i11, i3, objArr2, this.d, objArr2);
+            SomeStaticHelpers._aj(i11, i3, objArr2, this.d, objArr2);
         }
         this.b[i3] = i;
         this.c[i3] = obj;

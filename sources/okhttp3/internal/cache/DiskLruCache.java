@@ -17,7 +17,6 @@ import me.hd.wauxv.obf.QueryDidNotReturnUniqueResultRuntimeException;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bda;
 import me.hd.wauxv.obf.IEmpty;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.cyk;
 import me.hd.wauxv.obf.cyl;
@@ -33,7 +32,6 @@ import me.hd.wauxv.obf.rl;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.pool.TypePool;
 import okhttp3.internal.Util;
-import okhttp3.internal.cache.DiskLruCache;
 import okhttp3.internal.concurrent.Task;
 import okhttp3.internal.concurrent.TaskQueue;
 import okhttp3.internal.concurrent.TaskRunner;
@@ -521,7 +519,7 @@ public final class DiskLruCache implements Closeable, Flushable {
         this.maxSize = j;
         this.lruEntries = new LinkedHashMap<>(0, 0.75f, true);
         this.cleanupQueue = taskRunner.newQueue();
-        final String strO = yg.o(new StringBuilder(), Util.okHttpName, " Cache");
+        final String strO = yg.concatToVar1(new StringBuilder(), Util.okHttpName, " Cache");
         this.cleanupTask = new Task(strO) { // from class: okhttp3.internal.cache.DiskLruCache$cleanupTask$1
             {
                 int i3 = 2;

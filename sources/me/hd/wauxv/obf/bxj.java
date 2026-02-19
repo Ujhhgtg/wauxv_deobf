@@ -19,16 +19,16 @@ public final class bxj extends SwitchHook implements IDexFind {
     public static final boolean s;
 
     static {
-        cwb cwbVar = new cwb(bxj.class, "RedirectUIClass" /* cnb.z(-493818159823658L) */,
-                "getRedirectUIClass()Ljava/lang/Class;" /* cnb.z(-493749440346922L) */);
+        cwb cwbVar = new cwb(bxj.class, "RedirectUIClass" /* "RedirectUIClass" /* "RedirectUIClass" /* "RedirectUIClass" /* cnb.z(-493818159823658L)   */,
+                "getRedirectUIClass()Ljava/lang/Class;" /* "getRedirectUIClass()Ljava/lang/Class;" /* "getRedirectUIClass()Ljava/lang/Class;" /* "getRedirectUIClass()Ljava/lang/Class;" /* cnb.z(-493749440346922L)   */);
         dal.a.getClass();
         b = new btc[] { cwbVar };
-        a = new bxj("LocationHook" /* cnb.z(-496816046996266L) */);
-        i = ReflectionWrapper.h("com.tencent.mm.plugin.location.ui.RedirectUI" /* cnb.z(-494118807534378L) */,
+        a = new bxj("LocationHook" /* "LocationHook" /* "LocationHook" /* "LocationHook" /* cnb.z(-496816046996266L)   */);
+        i = ReflectionWrapper.h("com.tencent.mm.plugin.location.ui.RedirectUI" /* "com.tencent.mm.plugin.location.ui.RedirectUI" /* "com.tencent.mm.plugin.location.ui.RedirectUI" /* "com.tencent.mm.plugin.location.ui.RedirectUI" /* cnb.z(-494118807534378L)   */,
                 new amd(3), 2);
-        j = "辅助" /* cnb.z(-499938488220458L) */;
-        l = "虚拟定位" /* cnb.z(-499959963056938L) */;
-        m = "将腾讯定位SDK结果虚拟为指定经纬度" /* cnb.z(-499904128482090L) */;
+        j = "辅助" /* "辅助" /* "辅助" /* "辅助" /* cnb.z(-499938488220458L)   */;
+        l = "虚拟定位" /* "虚拟定位" /* "虚拟定位" /* "虚拟定位" /* cnb.z(-499959963056938L)   */;
+        m = "将腾讯定位SDK结果虚拟为指定经纬度" /* "将腾讯定位SDK结果虚拟为指定经纬度" /* "将腾讯定位SDK结果虚拟为指定经纬度" /* "将腾讯定位SDK结果虚拟为指定经纬度" /* cnb.z(-499904128482090L)   */;
         n = new bty(1);
         r = new String[] { ewi.a.e, ewi.b.e };
         s = true;
@@ -41,15 +41,15 @@ public final class bxj extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        int i2 = bte.a;
+        int i2 = 0;
         btc btcVar = b[0];
         cde cdeVarT = dqc.bh(i.w()).t();
-        cdeVarT.ab = "onActivityResult" /* cnb.z(-496794572159786L) */;
+        cdeVarT.ab = "onActivityResult" /* "onActivityResult" /* "onActivityResult" /* "onActivityResult" /* cnb.z(-496794572159786L)   */;
         Class cls = Integer.TYPE;
-        aki akiVarAd = ad((cdk) dkz.n(new Object[] { dal.b(cls), dal.b(cls), dal.b(Intent.class) }, 3, cdeVarT), exg.a);
+        aki akiVarAd = ad((MethodHookWrapper) dkz.n(new Object[] { dal.b(cls), dal.b(cls), dal.b(Intent.class) }, 3, cdeVarT), exg.a);
         a.x(akiVarAd, new bty(11));
         akiVarAd.o();
-        Iterator it = aba.ag(bxc.a, bxd.a, bxb.a).iterator();
+        Iterator it = OtherStaticHelpers.argsToList(bxc.a, bxd.a, bxb.a).iterator();
         while (it.hasNext()) {
             emn.bc((DexDescData) it.next(), new bty(12));
         }
@@ -80,7 +80,7 @@ public final class bxj extends SwitchHook implements IDexFind {
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final IHasInvokeMethod p() {
+    public final IInvokable getOnClick() {
         return n;
     }
 

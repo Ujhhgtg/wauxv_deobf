@@ -37,8 +37,8 @@ public abstract class ccz extends abn {
     public Interpolator n;
     public Interpolator o;
     public cuy p;
-    public IHasInvokeMethod q;
-    public IHasInvokeMethod r;
+    public IInvokable q;
+    public IInvokable r;
     public bfu s;
     public FrameLayout t;
     public ImageView u;
@@ -255,7 +255,7 @@ public abstract class ccz extends abn {
         }
         boolean z = !this.w;
         this.w = z;
-        IHasInvokeMethod bgfVar = this.r;
+        IInvokable bgfVar = this.r;
         if (bgfVar != null) {
             bgfVar.invoke(Boolean.valueOf(z));
         }
@@ -309,7 +309,7 @@ public abstract class ccz extends abn {
         throw null;
     }
 
-    public final IHasInvokeMethod getOnItemSelectedListener() {
+    public final IInvokable getOnItemSelectedListener() {
         return this.q;
     }
 
@@ -317,7 +317,7 @@ public abstract class ccz extends abn {
         return this.s;
     }
 
-    public final IHasInvokeMethod getOnMenuToggled() {
+    public final IInvokable getOnMenuToggled() {
         return this.r;
     }
 
@@ -399,7 +399,7 @@ public abstract class ccz extends abn {
         this.t = frameLayout;
     }
 
-    public final void setOnItemSelectedListener(IHasInvokeMethod bgfVar) {
+    public final void setOnItemSelectedListener(IInvokable bgfVar) {
         this.q = bgfVar;
     }
 
@@ -407,7 +407,7 @@ public abstract class ccz extends abn {
         this.s = bfuVar;
     }
 
-    public final void setOnMenuToggled(IHasInvokeMethod bgfVar) {
+    public final void setOnMenuToggled(IInvokable bgfVar) {
         this.r = bgfVar;
     }
 

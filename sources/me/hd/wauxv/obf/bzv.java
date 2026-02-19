@@ -49,11 +49,11 @@ public final class bzv extends ac {
                 return strGroup == null ? "" : strGroup;
             case 1:
                 List list = (List) this.c;
-                if (i >= 0 && i <= aba.af(this)) {
-                    return list.get(aba.af(this) - i);
+                if (i >= 0 && i <= OtherStaticHelpers.af(this)) {
+                    return list.get(OtherStaticHelpers.af(this) - i);
                 }
-                StringBuilder sbR = yg.r(i, "Element index ", " must be in range [");
-                sbR.append(new bqi(0, aba.af(this), 1));
+                StringBuilder sbR = yg.concatVar213(i, "Element index ", " must be in range [");
+                sbR.append(new IntRange(0, OtherStaticHelpers.af(this), 1));
                 sbR.append("].");
                 throw new IndexOutOfBoundsException(sbR.toString());
             default:

@@ -38,7 +38,7 @@ public final /* synthetic */ class ls implements bfu {
                 Long lBg = dnq.bg(String.valueOf(ceeVar.c.getText()));
                 luVar.s(lBg != null ? lBg.longValue() : 86400L);
                 lt.a.t(aaz.ad((Set) zmVar.c));
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 1:
                 cit citVar = (cit) this.b;
                 bdj bdjVar = (bdj) this.c;
@@ -49,10 +49,10 @@ public final /* synthetic */ class ls implements bfu {
                     }
                     citVar.k(cioVar);
                 }
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 2:
                 cnh.ac((MainActivity) this.b, ((bhl) this.c).b);
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 3:
                 dfx dfxVar = (dfx) this.b;
                 brn brnVar = (brn) this.c;
@@ -87,7 +87,7 @@ public final /* synthetic */ class ls implements bfu {
                 return linkedHashMap.isEmpty() ? ave.a : linkedHashMap;
             case 4:
                 ayc aycVar = new ayc((String) ((dov) ((DefaultConfig) this.b).c).getValue(), (String) this.c);
-                String strZ = "WAuxiliary" /* cnb.z(-29381871270698L) */;
+                String strZ = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-29381871270698L)   */;
                 if (strZ.length() == 0) {
                     throw new NoSuchElementException("Char sequence is empty.");
                 }
@@ -131,18 +131,18 @@ public final /* synthetic */ class ls implements bfu {
                         throw th2;
                     }
                 }
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 6:
                 cee ceeVar2 = (cee) this.b;
                 View view = (View) this.c;
                 String strValueOf = String.valueOf(ceeVar2.c.getText());
-                if (dnr.bi(strValueOf, "@chatroom" /* cnb.z(-513020958604074L) */)) {
+                if (dnr.bi(strValueOf, "@chatroom" /* "@chatroom" /* "@chatroom" /* "@chatroom" /* cnb.z(-513020958604074L)   */)) {
                     Context context = view.getContext();
                     Intent intent = new Intent();
                     intent.setClassName(context, "com.tencent.mm.chatroom.ui.ChatroomInfoUI" /*
-                                                                                              * cnb.z(-89438398970666L)
+                                                                                              * "com.tencent.mm.chatroom.ui.ChatroomInfoUI" /* "com.tencent.mm.chatroom.ui.ChatroomInfoUI" /* "com.tencent.mm.chatroom.ui.ChatroomInfoUI" /* cnb.z(-89438398970666L)  */
                                                                                               */);
-                    intent.putExtra("RoomInfo_Id" /* cnb.z(-95253784689450L) */, strValueOf);
+                    intent.putExtra("RoomInfo_Id" /* "RoomInfo_Id" /* "RoomInfo_Id" /* "RoomInfo_Id" /* cnb.z(-95253784689450L)   */, strValueOf);
                     context.startActivity(intent);
                 } else {
                     Context context2 = view.getContext();
@@ -151,16 +151,16 @@ public final /* synthetic */ class ls implements bfu {
                                                                                                      * cnb.z(-
                                                                                                      * 89111981456170L)
                                                                                                      */);
-                    intent2.putExtra("Contact_User" /* cnb.z(-89442693937962L) */, strValueOf);
+                    intent2.putExtra("Contact_User" /* "Contact_User" /* "Contact_User" /* "Contact_User" /* cnb.z(-89442693937962L)   */, strValueOf);
                     context2.startActivity(intent2);
                 }
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 7:
                 cua cuaVar = (cua) this.b;
                 ctx ctxVar = (ctx) this.c;
-                cnd.ar(cuaVar).j(R.id.codeFragment, bht.r(new Pair("pluginId" /* cnb.z(-418085001493290L) */, ctxVar.f),
-                        new Pair("pluginPath" /* cnb.z(-417994807180074L) */, ctxVar.b.getAbsolutePath())));
-                return ens.a;
+                KotlinHelpers2.ar(cuaVar).j(R.id.codeFragment, bht.r(new Pair("pluginId" /* "pluginId" /* "pluginId" /* "pluginId" /* cnb.z(-418085001493290L)   */, ctxVar.f),
+                        new Pair("pluginPath" /* "pluginPath" /* "pluginPath" /* "pluginPath" /* cnb.z(-417994807180074L)   */, ctxVar.b.getAbsolutePath())));
+                return KotlinUnit.INSTANCE;
             case 8:
                 return ((dap) this.b).d((CharSequence) this.c);
             default:
@@ -173,7 +173,7 @@ public final /* synthetic */ class ls implements bfu {
                     dpd.a.r(doz.b.d);
                     dpc.a.t(aaz.ad(arrayList3));
                 }
-                return ens.a;
+                return KotlinUnit.INSTANCE;
         }
     }
 

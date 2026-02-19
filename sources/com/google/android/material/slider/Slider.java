@@ -15,7 +15,7 @@ import me.hd.wauxv.obf.bht;
 import me.hd.wauxv.obf.bhv;
 import me.hd.wauxv.obf.bto;
 import me.hd.wauxv.obf.cau;
-import me.hd.wauxv.obf.cnd;
+import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.dgm;
 import me.hd.wauxv.obf.ns;
 import me.hd.wauxv.obf.o;
@@ -338,7 +338,7 @@ public class Slider extends ns {
         arj arjVar3 = new arj();
         arj arjVar4 = new arj();
         float f = this.ae / 2.0f;
-        bhv bhvVarAo = cnd.ao(0);
+        bhv bhvVarAo = KotlinHelpers2.ao(0);
         o oVar = new o(f);
         o oVar2 = new o(f);
         o oVar3 = new o(f);

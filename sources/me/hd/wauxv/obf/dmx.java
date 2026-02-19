@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class dmx extends cnd implements ajt, acm {
+public final class dmx extends KotlinHelpers2 implements ajt, acm {
     public final brn ac;
     public final ewf ad;
     public final yi br;
@@ -37,7 +37,7 @@ public final class dmx extends cnd implements ajt, acm {
         yi yiVar = this.br;
         if (yiVar.ai()) {
             brnVar.b.getClass();
-            cnd.ay(yiVar, "");
+            KotlinHelpers2.ay(yiVar, "");
             throw null;
         }
         yiVar.p(this.ad.h);
@@ -69,7 +69,7 @@ public final class dmx extends cnd implements ajt, acm {
             if (Math.abs(f) <= Float.MAX_VALUE) {
                 return f;
             }
-            cnd.bo(yiVar, Float.valueOf(f));
+            KotlinHelpers2.bo(yiVar, Float.valueOf(f));
             throw null;
         } catch (IllegalArgumentException unused) {
             yi.g(yiVar, dkz.o('\'', "Failed to parse type 'float' for input '", strS), 0, null, 6);
@@ -87,7 +87,7 @@ public final class dmx extends cnd implements ajt, acm {
             if (Math.abs(d) <= Double.MAX_VALUE) {
                 return d;
             }
-            cnd.bo(yiVar, Double.valueOf(d));
+            KotlinHelpers2.bo(yiVar, Double.valueOf(d));
             throw null;
         } catch (IllegalArgumentException unused) {
             yi.g(yiVar, dkz.o('\'', "Failed to parse type 'double' for input '", strS), 0, null, 6);
@@ -126,7 +126,7 @@ public final class dmx extends cnd implements ajt, acm {
                         break;
                     }
                     brtVar.getClass();
-                    cnd.ay(yiVar, "object");
+                    KotlinHelpers2.ay(yiVar, "object");
                     throw null;
                 }
                 this.bu.getClass();
@@ -155,7 +155,7 @@ public final class dmx extends cnd implements ajt, acm {
                     throw new brv("Encountered an unknown key '" + strM + "' at offset " + iAl + " at path: "
                             + ikVar.p()
                             + "\nUse 'ignoreUnknownKeys = true' in 'Json {}' builder or '@JsonIgnoreUnknownKeys' annotation to ignore unknown keys.\nJSON input: "
-                            + ((Object) cnd.ba(iAl, str)), 0);
+                            + ((Object) KotlinHelpers2.ba(iAl, str)), 0);
                 }
                 ArrayList arrayList = new ArrayList();
                 byte bAe = yiVar.ae();
@@ -169,12 +169,12 @@ public final class dmx extends cnd implements ajt, acm {
                                 arrayList.add(Byte.valueOf(bAe2));
                             } else if (bAe2 == 9) {
                                 if (((Number) aaz.l(arrayList)).byteValue() != 8) {
-                                    throw cnd.ak(yiVar.b, "found ] instead of } at path: " + ikVar, str);
+                                    throw KotlinHelpers2.ak(yiVar.b, "found ] instead of } at path: " + ikVar, str);
                                 }
                                 abf.ar(arrayList);
                             } else if (bAe2 == 7) {
                                 if (((Number) aaz.l(arrayList)).byteValue() != 6) {
-                                    throw cnd.ak(yiVar.b, "found } instead of ] at path: " + ikVar, str);
+                                    throw KotlinHelpers2.ak(yiVar.b, "found } instead of ] at path: " + ikVar, str);
                                 }
                                 abf.ar(arrayList);
                             } else if (bAe2 == 10) {
@@ -207,7 +207,7 @@ public final class dmx extends cnd implements ajt, acm {
                 this.bt = iG;
             } else if (zAi3) {
                 brtVar.getClass();
-                cnd.ay(yiVar, "array");
+                KotlinHelpers2.ay(yiVar, "array");
                 throw null;
             }
         } else {
@@ -238,7 +238,7 @@ public final class dmx extends cnd implements ajt, acm {
                 this.bt = iG;
             } else if (zAi) {
                 brtVar.getClass();
-                cnd.ay(yiVar, "object");
+                KotlinHelpers2.ay(yiVar, "object");
                 throw null;
             }
         }
@@ -424,7 +424,7 @@ public final class dmx extends cnd implements ajt, acm {
         brx brxVarBw = bw();
         String strB = ((cus) btdVar).getDescriptor().b();
         if (!(brxVarBw instanceof bsl)) {
-            throw cnd.ak(-1, "Expected " + dal.b(bsl.class).d() + ", but had " + dal.b(brxVarBw.getClass()).d()
+            throw KotlinHelpers2.ak(-1, "Expected " + dal.b(bsl.class).d() + ", but had " + dal.b(brxVarBw.getClass()).d()
                     + " as the serialized body of " + strB + " at element: " + ikVar.p(), brxVarBw.toString());
         }
         bsl bslVar = (bsl) brxVarBw;
@@ -439,7 +439,7 @@ public final class dmx extends cnd implements ajt, acm {
         } catch (dgb e3) {
             String message4 = e3.getMessage();
             throwIfVar1IsNull(message4);
-            throw cnd.ak(-1, message4, bslVar.toString());
+            throw KotlinHelpers2.ak(-1, message4, bslVar.toString());
         }
         message = e.getMessage();
         throwIfVar1IsNull(message);

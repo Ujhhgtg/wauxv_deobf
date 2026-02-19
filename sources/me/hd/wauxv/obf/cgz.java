@@ -13,28 +13,28 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class cgz extends SwitchHook implements bnb {
-    public static final cgz c = new cgz("MsgLeftSwipeHook" /* cnb.z(-473030518111018L) */);
-    public static final String h = "聊天" /* cnb.z(-473094942620458L) */;
-    public static final String i = "消息左滑引用" /* cnb.z(-474696965421866L) */;
-    public static final String j = "可左滑选中以修复无法多选消息的问题" /* cnb.z(-474649720781610L) */;
+    public static final cgz c = new cgz("MsgLeftSwipeHook" /* "MsgLeftSwipeHook" /* "MsgLeftSwipeHook" /* "MsgLeftSwipeHook" /* cnb.z(-473030518111018L)   */);
+    public static final String h = "聊天" /* "聊天" /* "聊天" /* "聊天" /* cnb.z(-473094942620458L)   */;
+    public static final String i = "消息左滑引用" /* "消息左滑引用" /* "消息左滑引用" /* "消息左滑引用" /* cnb.z(-474696965421866L)   */;
+    public static final String j = "可左滑选中以修复无法多选消息的问题" /* "可左滑选中以修复无法多选消息的问题" /* "可左滑选中以修复无法多选消息的问题" /* "可左滑选中以修复无法多选消息的问题" /* cnb.z(-474649720781610L)   */;
 
     @Override // me.hd.wauxv.obf.bnb
     public final void a(ViewGroup viewGroup) {
         if (getIsEnabled()) {
             View viewV = cnh.v(viewGroup, cnb.ac(ewh.r) ? "c0g"
-                    /* cnb.z(-472957503666986L) */ : cnb.ac(ewh.q) ? "bzy"
-                            /* cnb.z(-472905964059434L) */ : cnb.ac(ewh.o) ? "byw"
-                                    /* cnb.z(-472923143928618L) */ : cnb.ac(ewh.n) ? "bxy"
-                                            /* cnb.z(-472871604321066L) */ : cnb.ac(ewh.m) ? "bx_"
-                                                    /* cnb.z(-472888784190250L) */ : cnb.ac(ewh.l) ? "bw0"
-                                                            /* cnb.z(-472837244582698L) */ : cnb.ac(ewh.k) ? "bvg"
-                                                                    /* cnb.z(-472854424451882L) */ : cnb.ac(ewh.j)
+                    /* "c0g" /* "c0g" /* "c0g" /* cnb.z(-472957503666986L)   */ : cnb.ac(ewh.q) ? "bzy"
+                            /* "bzy" /* "bzy" /* "bzy" /* cnb.z(-472905964059434L)   */ : cnb.ac(ewh.o) ? "byw"
+                                    /* "byw" /* "byw" /* "byw" /* cnb.z(-472923143928618L)   */ : cnb.ac(ewh.n) ? "bxy"
+                                            /* "bxy" /* "bxy" /* "bxy" /* cnb.z(-472871604321066L)   */ : cnb.ac(ewh.m) ? "bx_"
+                                                    /* "bx_" /* "bx_" /* "bx_" /* cnb.z(-472888784190250L)   */ : cnb.ac(ewh.l) ? "bw0"
+                                                            /* "bw0" /* "bw0" /* "bw0" /* cnb.z(-472837244582698L)   */ : cnb.ac(ewh.k) ? "bvg"
+                                                                    /* "bvg" /* "bvg" /* "bvg" /* cnb.z(-472854424451882L)   */ : cnb.ac(ewh.j)
                                                                             ? "buz"
-                                                                            /* cnb.z(-472802884844330L) */ : cnb
+                                                                            /* "buz" /* "buz" /* "buz" /* cnb.z(-472802884844330L)   */ : cnb
                                                                                     .ac(ewh.i)
                                                                                             ? "bu9"
                                                                                             /*
-                                                                                             * cnb.z(-472820064713514L)
+                                                                                             * "bu9" /* "bu9" /* "bu9" /* cnb.z(-472820064713514L)  */
                                                                                              */ : cnb.ac(ewh.h) ? "btr"
                                                                                                     /*
                                                                                                      * cnb.z(-

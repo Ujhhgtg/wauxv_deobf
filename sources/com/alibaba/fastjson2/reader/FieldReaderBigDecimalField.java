@@ -24,7 +24,7 @@ final class FieldReaderBigDecimalField<T> extends FieldReaderObjectField<T> {
         try {
             this.field.set(t, BigDecimal.valueOf(i));
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 
@@ -51,7 +51,7 @@ final class FieldReaderBigDecimalField<T> extends FieldReaderObjectField<T> {
         try {
             this.field.set(t, BigDecimal.valueOf(j));
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 
@@ -65,7 +65,7 @@ final class FieldReaderBigDecimalField<T> extends FieldReaderObjectField<T> {
         try {
             this.field.set(t, bigDecimal);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 }

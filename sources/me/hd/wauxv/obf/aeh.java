@@ -41,7 +41,7 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
         switch (i) {
             case 0:
                 aek aekVar = (aek) obj;
-                if (((Boolean) ((IHasInvokeMethod) obj2).invoke(aekVar)).booleanValue()) {
+                if (((Boolean) ((IInvokable) obj2).invoke(aekVar)).booleanValue()) {
                     return;
                 }
                 ccu ccuVarM = aekVar.m();
@@ -53,7 +53,7 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                 aek aekVar2 = (aek) obj;
                 ael aelVar = aekVar2.a;
                 if (aelVar == null) {
-                    throwLateinitPropNotInitYet("info" /* cnb.z(-395527833254698L) */);
+                    throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-395527833254698L)   */);
                     throw null;
                 }
                 if (((Boolean) bgjVar.g(aelVar.n(), aekVar2)).booleanValue()) {
@@ -69,11 +69,11 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                 Context contextDc = cuaVar.dc();
                 View viewInflate = LayoutInflater.from(contextDc).inflate(R.layout.module_dialog_plugin_readme,
                         (ViewGroup) null, false);
-                MaterialTextView materialTextView = (MaterialTextView) cnd.aq(viewInflate,
+                MaterialTextView materialTextView = (MaterialTextView) KotlinHelpers2.aq(viewInflate,
                         R.id.moduleDialogTvPluginReadme);
                 if (materialTextView == null) {
                     throw new NullPointerException(
-                            "Missing required view with ID: " /* cnb.z(-663452188146474L) */.concat(
+                            "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-663452188146474L)   */.concat(
                                     viewInflate.getResources().getResourceName(R.id.moduleDialogTvPluginReadme)));
                 }
                 LinearLayout linearLayout = (LinearLayout) viewInflate;
@@ -312,7 +312,7 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                                 DefaultConfig ioVar2 = new DefaultConfig(context, 13);
                                 ioVar2.d = linearLayout2;
                                 DefaultConfig.g(ioVar2, null, 3);
-                                String strZ = "编辑" /* cnb.z(-418080706525994L) */;
+                                String strZ = "编辑" /* "编辑" /* "编辑" /* "编辑" /* cnb.z(-418080706525994L)   */;
                                 ls lsVar = new ls(cuaVar2, 7, ctxVar2);
                                 bzy bzyVar = (bzy) ioVar2.c;
                                 if (bzyVar != null) {

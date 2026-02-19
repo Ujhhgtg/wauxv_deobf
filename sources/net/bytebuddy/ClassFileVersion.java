@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.lang.reflect.Method;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
-import me.hd.wauxv.obf.bjs;
+
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.build.AccessControllerPlugin;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
@@ -267,7 +267,7 @@ public class ClassFileVersion implements Comparable<ClassFileVersion>, Serializa
     public static ClassFileVersion ofClassFile(byte[] bArr) {
         if (bArr.length < 7) {
             throw new IllegalArgumentException(
-                    yg.m(new StringBuilder("Supplied byte array is too short to be a class file with "), " byte",
+                    yg.concatToVar1(new StringBuilder("Supplied byte array is too short to be a class file with "), " byte",
                             bArr.length));
         }
         return ofMinorMajor(bArr[7] | (bArr[4] << 24) | (bArr[5] << 16) | (bArr[6] << 8));

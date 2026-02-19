@@ -1,6 +1,5 @@
 package com.alibaba.fastjson2;
 
-import com.alibaba.fastjson2.JSONWriter;
 import com.alibaba.fastjson2.filter.ContextAutoTypeBeforeHandler;
 import com.alibaba.fastjson2.filter.ExtraProcessor;
 import com.alibaba.fastjson2.filter.Filter;
@@ -65,7 +64,7 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
-import me.hd.wauxv.obf.bjs;
+
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.asm.Advice;
@@ -865,7 +864,7 @@ public abstract class JSONReader implements Closeable {
     }
 
     public static JSONException numberError(int i, int i2) {
-        StringBuilder sbR = yg.r(i, "illegal number, offset ", ", char ");
+        StringBuilder sbR = yg.concatVar213(i, "illegal number, offset ", ", char ");
         sbR.append((char) i2);
         return new JSONException(sbR.toString());
     }
@@ -4196,7 +4195,7 @@ public abstract class JSONReader implements Closeable {
     }
 
     public static JSONException syntaxError(int i, int i2) {
-        StringBuilder sbR = yg.r(i, "syntax error, offset ", ", char ");
+        StringBuilder sbR = yg.concatVar213(i, "syntax error, offset ", ", char ");
         sbR.append((char) i2);
         return new JSONException(sbR.toString());
     }
@@ -4274,7 +4273,7 @@ public abstract class JSONReader implements Closeable {
     }
 
     public final JSONException error(int i, int i2) {
-        StringBuilder sbR = yg.r(i, "error, offset ", ", char ");
+        StringBuilder sbR = yg.concatVar213(i, "error, offset ", ", char ");
         sbR.append((char) i2);
         throw new JSONValidException(sbR.toString());
     }

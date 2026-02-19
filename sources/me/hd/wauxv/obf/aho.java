@@ -227,7 +227,7 @@ public final class aho implements Executor, Closeable {
         }
         if (dpzVar != null) {
             if (!(dpzVar.ad ? this.j.b(dpzVar) : this.i.b(dpzVar))) {
-                throw new RejectedExecutionException(yg.o(new StringBuilder(), this.h, " was terminated"));
+                throw new RejectedExecutionException(yg.concatToVar1(new StringBuilder(), this.h, " was terminated"));
             }
         }
         if (z2) {

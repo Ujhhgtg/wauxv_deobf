@@ -20,7 +20,7 @@ import me.hd.wauxv.obf.bmy;
 import me.hd.wauxv.obf.cau;
 import me.hd.wauxv.obf.cbw;
 import me.hd.wauxv.obf.cmz;
-import me.hd.wauxv.obf.cnd;
+import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.eqq;
 import me.hd.wauxv.obf.eqz;
@@ -106,7 +106,7 @@ public class MaterialToolbar extends Toolbar {
     @Override // androidx.appcompat.widget.Toolbar, android.view.ViewGroup, android.view.View
     public final void onAttachedToWindow() {
         super.onAttachedToWindow();
-        cnd.bj(this);
+        KotlinHelpers2.bj(this);
     }
 
     @Override // androidx.appcompat.widget.Toolbar, android.view.ViewGroup, android.view.View
@@ -171,7 +171,7 @@ public class MaterialToolbar extends Toolbar {
     @Override // android.view.View
     public void setElevation(float f) {
         super.setElevation(f);
-        cnd.bh(this, f);
+        KotlinHelpers2.bh(this, f);
     }
 
     public void setLogoAdjustViewBounds(boolean z) {

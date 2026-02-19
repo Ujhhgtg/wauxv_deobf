@@ -4,8 +4,4 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class bte {
     public static final /* synthetic */ int a = 0;
-
-    static {
-        dov dovVar = bth.a;
-    }
 }

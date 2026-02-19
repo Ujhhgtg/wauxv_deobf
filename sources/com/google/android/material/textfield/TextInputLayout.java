@@ -68,7 +68,7 @@ import me.hd.wauxv.obf.cau;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cna;
 import me.hd.wauxv.obf.cnb;
-import me.hd.wauxv.obf.cnd;
+import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.cxc;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.dc;
@@ -727,7 +727,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             this.al = new cau();
         } else {
             if (i != 2) {
-                throw new IllegalArgumentException(yg.m(new StringBuilder(),
+                throw new IllegalArgumentException(yg.concatToVar1(new StringBuilder(),
                         " is illegal; only @BoxBackgroundMode constants are supported.", this.ap));
             }
             if (!this.ad || (this.ag instanceof aix)) {
@@ -1955,16 +1955,16 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
     public void setBoxCornerFamily(int i) {
         dgl dglVarQ = this.am.q();
         ahe aheVar = this.am.e;
-        dglVarQ.a = cnd.ao(i);
+        dglVarQ.a = KotlinHelpers2.ao(i);
         dglVarQ.e = aheVar;
         ahe aheVar2 = this.am.f;
-        dglVarQ.b = cnd.ao(i);
+        dglVarQ.b = KotlinHelpers2.ao(i);
         dglVarQ.f = aheVar2;
         ahe aheVar3 = this.am.h;
-        dglVarQ.d = cnd.ao(i);
+        dglVarQ.d = KotlinHelpers2.ao(i);
         dglVarQ.h = aheVar3;
         ahe aheVar4 = this.am.g;
-        dglVarQ.c = cnd.ao(i);
+        dglVarQ.c = KotlinHelpers2.ao(i);
         dglVarQ.g = aheVar4;
         this.am = dglVarQ.m();
         cc();

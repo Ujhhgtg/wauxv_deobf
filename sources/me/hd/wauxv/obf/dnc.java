@@ -21,22 +21,22 @@ public abstract class dnc {
     public static final String a(String str) {
         return dnj
                 .ba(dnr.bo(
-                        dnr.bo(dnr.bo(dnr.bo(str, "\r" /* cnb.z(-80706730457898L) */, "" /* cnb.z(-80646600915754L) */),
-                                "\n" /* cnb.z(-80659485817642L) */, "" /* cnb.z(-80668075752234L) */),
-                                "\t" /* cnb.z(-80663780784938L) */, "" /* cnb.z(-80672370719530L) */),
-                        "<?xml version=\"1.0\"?>" /* cnb.z(-80616536144682L) */, "" /* cnb.z(-80573586471722L) */))
+                        dnr.bo(dnr.bo(dnr.bo(str, "\r" /* "\r" /* "\r" /* cnb.z(-80706730457898L)  */, "" /* "" /* "" /* cnb.z(-80646600915754L)  */),
+                                "\n" /* "\n" /* "\n" /* cnb.z(-80659485817642L)  */, "" /* "" /* "" /* cnb.z(-80668075752234L)  */),
+                                "\t" /* "\t" /* "\t" /* cnb.z(-80663780784938L)  */, "" /* "" /* "" /* cnb.z(-80672370719530L)  */),
+                        "<?xml version=\"1.0\"?>" /* "<?xml version=\"1.0\"?>" /* "<?xml version=\"1.0\"?>" /* cnb.z(-80616536144682L)  */, "" /* "" /* "" /* cnb.z(-80573586471722L)  */))
                 .toString();
     }
 
     public static final void b(Context context, String str) {
-        Object systemService = context.getSystemService("clipboard" /* cnb.z(-80474802223914L) */);
+        Object systemService = context.getSystemService("clipboard" /* "clipboard" /* "clipboard" /* cnb.z(-80474802223914L)  */);
         throwIfVar1IsNull(systemService, "null cannot be cast to non-null type android.content.ClipboardManager" /*
                                                                                                                   * cnb.
                                                                                                                   * z(-
                                                                                                                   * 80449032420138L)
                                                                                                                   */);
         ClipboardManager clipboardManager = (ClipboardManager) systemService;
-        ClipData clipDataNewPlainText = ClipData.newPlainText("label" /* cnb.z(-80680960654122L) */, str);
+        ClipData clipDataNewPlainText = ClipData.newPlainText("label" /* "label" /* "label" /* cnb.z(-80680960654122L)  */, str);
         if (clipDataNewPlainText != null) {
             clipboardManager.setPrimaryClip(clipDataNewPlainText);
         }
@@ -140,6 +140,6 @@ public abstract class dnc {
             bmo.a.getClass();
             context = bmo.n();
         }
-        ewz.aq(str, new q(context, 10));
+        ewz.aq(str, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(context, 10));
     }
 }

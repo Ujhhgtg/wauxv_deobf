@@ -48,7 +48,7 @@ public final class kg extends nh {
                     }
                     throw null;
                 }
-                objX4 = ens.a;
+                objX4 = KotlinUnit.INSTANCE;
                 Throwable thB = dcy.b(objX4);
                 if (thB != null) {
                     blqVar.k(thB);
@@ -68,7 +68,7 @@ public final class kg extends nh {
                             throw null;
                         }
                     }
-                    objX = ens.a;
+                    objX = KotlinUnit.INSTANCE;
                 } catch (Throwable th2) {
                     objX = bhu.x(th2);
                 }
@@ -90,7 +90,7 @@ public final class kg extends nh {
                             throw null;
                         }
                     }
-                    objX2 = ens.a;
+                    objX2 = KotlinUnit.INSTANCE;
                 } catch (Throwable th3) {
                     objX2 = bhu.x(th3);
                 }
@@ -112,7 +112,7 @@ public final class kg extends nh {
                             throw null;
                         }
                     }
-                    objX5 = ens.a;
+                    objX5 = KotlinUnit.INSTANCE;
                 } catch (Throwable th4) {
                     objX5 = bhu.x(th4);
                 }
@@ -141,7 +141,7 @@ public final class kg extends nh {
                         }
                         throw null;
                     }
-                    objX3 = ens.a;
+                    objX3 = KotlinUnit.INSTANCE;
                     Throwable thB5 = dcy.b(objX3);
                     if (thB5 != null) {
                         blqVar.k(thB5);
@@ -170,7 +170,7 @@ public final class kg extends nh {
                             throw null;
                         }
                     }
-                    objX = ens.a;
+                    objX = KotlinUnit.INSTANCE;
                 } catch (Throwable th) {
                     objX = bhu.x(th);
                 }

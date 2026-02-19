@@ -1,6 +1,5 @@
 package com.alibaba.fastjson2;
 
-import com.alibaba.fastjson2.JSONPathCompilerReflect;
 import com.alibaba.fastjson2.internal.asm.ASMUtils;
 import com.alibaba.fastjson2.internal.asm.ClassWriter;
 import com.alibaba.fastjson2.internal.asm.MethodWriter;
@@ -31,7 +30,7 @@ final class JSONPathCompilerReflectASM extends JSONPathCompilerReflect {
         sb.append(ASMUtils.DESC_OBJECT_READER);
         sb.append(ASMUtils.DESC_FIELD_READER);
         sb.append(ASMUtils.DESC_OBJECT_WRITER);
-        METHOD_SINGLE_NAME_PATH_TYPED_INIT = yg.o(sb, ASMUtils.DESC_FIELD_WRITER, ")V");
+        METHOD_SINGLE_NAME_PATH_TYPED_INIT = yg.concatToVar1(sb, ASMUtils.DESC_FIELD_WRITER, ")V");
     }
 
     public JSONPathCompilerReflectASM(DynamicClassLoader dynamicClassLoader) {

@@ -22,7 +22,7 @@ import me.hd.wauxv.obf.cau;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cna;
 import me.hd.wauxv.obf.cnb;
-import me.hd.wauxv.obf.cnd;
+import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.ddb;
 import me.hd.wauxv.obf.dgl;
@@ -210,7 +210,7 @@ public class MaterialCardView extends te implements Checkable, dgx {
         super.onAttachedToWindow();
         cao caoVar = this.d;
         caoVar.ak();
-        cnd.bi(this, caoVar.e);
+        KotlinHelpers2.bi(this, caoVar.e);
     }
 
     @Override // android.view.ViewGroup, android.view.View

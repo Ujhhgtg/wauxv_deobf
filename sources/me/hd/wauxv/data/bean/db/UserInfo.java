@@ -90,7 +90,7 @@ public final class UserInfo {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("UserInfo(id=" /* cnb.z(-15010910698282L) */);
+        sb.append("UserInfo(id=" /* "UserInfo(id=" /* "UserInfo(id=" /* cnb.z(-15010910698282L)  */);
         dkz.ac(sb, this.id, -14937896254250L);
         dkz.ac(sb, this.type, -14903536515882L);
         return concat(sb, this.value, ')');

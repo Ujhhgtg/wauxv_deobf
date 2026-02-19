@@ -26,7 +26,7 @@ public final class PluginConfigMethod {
         if (ioVar != null) {
             return ioVar.ah(str2, z);
         }
-        throw new IllegalArgumentException("PluginConfig must be init" /* cnb.z(-29368986368810L) */.toString());
+        throw new IllegalArgumentException("PluginConfig must be init" /* "PluginConfig must be init" /* "PluginConfig must be init" /* cnb.z(-29368986368810L)  */.toString());
     }
 
     @cty
@@ -36,7 +36,7 @@ public final class PluginConfigMethod {
         if (ioVar != null) {
             return ioVar.aj().getFloat(str2, f);
         }
-        throw new IllegalArgumentException("PluginConfig must be init" /* cnb.z(-29368986368810L) */.toString());
+        throw new IllegalArgumentException("PluginConfig must be init" /* "PluginConfig must be init" /* "PluginConfig must be init" /* cnb.z(-29368986368810L)  */.toString());
     }
 
     @cty
@@ -46,7 +46,7 @@ public final class PluginConfigMethod {
         if (ioVar != null) {
             return ioVar.aj().getInt(str2, i);
         }
-        throw new IllegalArgumentException("PluginConfig must be init" /* cnb.z(-29368986368810L) */.toString());
+        throw new IllegalArgumentException("PluginConfig must be init" /* "PluginConfig must be init" /* "PluginConfig must be init" /* cnb.z(-29368986368810L)  */.toString());
     }
 
     @cty
@@ -56,7 +56,7 @@ public final class PluginConfigMethod {
         if (ioVar != null) {
             return ioVar.aj().getLong(str2, j);
         }
-        throw new IllegalArgumentException("PluginConfig must be init" /* cnb.z(-29368986368810L) */.toString());
+        throw new IllegalArgumentException("PluginConfig must be init" /* "PluginConfig must be init" /* "PluginConfig must be init" /* cnb.z(-29368986368810L)  */.toString());
     }
 
     @cty
@@ -64,7 +64,7 @@ public final class PluginConfigMethod {
         String str3 = this.a + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + str;
         DefaultConfig ioVar = bhs.h;
         if (ioVar == null) {
-            throw new IllegalArgumentException("PluginConfig must be init" /* cnb.z(-29368986368810L) */.toString());
+            throw new IllegalArgumentException("PluginConfig must be init" /* "PluginConfig must be init" /* "PluginConfig must be init" /* cnb.z(-29368986368810L)  */.toString());
         }
         String string = ioVar.aj().getString(str3, str2);
         throwIfVar1IsNull(string);
@@ -76,7 +76,7 @@ public final class PluginConfigMethod {
         String str2 = this.a + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + str;
         DefaultConfig ioVar = bhs.h;
         if (ioVar == null) {
-            throw new IllegalArgumentException("PluginConfig must be init" /* cnb.z(-29368986368810L) */.toString());
+            throw new IllegalArgumentException("PluginConfig must be init" /* "PluginConfig must be init" /* "PluginConfig must be init" /* cnb.z(-29368986368810L)  */.toString());
         }
         Set<String> stringSet = ioVar.aj().getStringSet(str2, set);
         throwIfVar1IsNull(stringSet);
@@ -88,7 +88,7 @@ public final class PluginConfigMethod {
         String str2 = this.a + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + str;
         DefaultConfig ioVar = bhs.h;
         if (ioVar == null) {
-            throw new IllegalArgumentException("PluginConfig must be init" /* cnb.z(-29368986368810L) */.toString());
+            throw new IllegalArgumentException("PluginConfig must be init" /* "PluginConfig must be init" /* "PluginConfig must be init" /* cnb.z(-29368986368810L)  */.toString());
         }
         ioVar.at(str2, z);
     }
@@ -98,7 +98,7 @@ public final class PluginConfigMethod {
         String str2 = this.a + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + str;
         DefaultConfig ioVar = bhs.h;
         if (ioVar == null) {
-            throw new IllegalArgumentException("PluginConfig must be init" /* cnb.z(-29368986368810L) */.toString());
+            throw new IllegalArgumentException("PluginConfig must be init" /* "PluginConfig must be init" /* "PluginConfig must be init" /* cnb.z(-29368986368810L)  */.toString());
         }
         ioVar.aj().putFloat(str2, f);
     }
@@ -108,7 +108,7 @@ public final class PluginConfigMethod {
         String str2 = this.a + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + str;
         DefaultConfig ioVar = bhs.h;
         if (ioVar == null) {
-            throw new IllegalArgumentException("PluginConfig must be init" /* cnb.z(-29368986368810L) */.toString());
+            throw new IllegalArgumentException("PluginConfig must be init" /* "PluginConfig must be init" /* "PluginConfig must be init" /* cnb.z(-29368986368810L)  */.toString());
         }
         ioVar.aj().putInt(str2, i);
     }
@@ -118,7 +118,7 @@ public final class PluginConfigMethod {
         String str2 = this.a + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + str;
         DefaultConfig ioVar = bhs.h;
         if (ioVar == null) {
-            throw new IllegalArgumentException("PluginConfig must be init" /* cnb.z(-29368986368810L) */.toString());
+            throw new IllegalArgumentException("PluginConfig must be init" /* "PluginConfig must be init" /* "PluginConfig must be init" /* cnb.z(-29368986368810L)  */.toString());
         }
         ioVar.aj().putLong(str2, j);
     }
@@ -128,7 +128,7 @@ public final class PluginConfigMethod {
         String str3 = this.a + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + str;
         DefaultConfig ioVar = bhs.h;
         if (ioVar == null) {
-            throw new IllegalArgumentException("PluginConfig must be init" /* cnb.z(-29368986368810L) */.toString());
+            throw new IllegalArgumentException("PluginConfig must be init" /* "PluginConfig must be init" /* "PluginConfig must be init" /* cnb.z(-29368986368810L)  */.toString());
         }
         ioVar.aj().putString(str3, str2);
     }
@@ -138,7 +138,7 @@ public final class PluginConfigMethod {
         String str2 = this.a + TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH + str;
         DefaultConfig ioVar = bhs.h;
         if (ioVar == null) {
-            throw new IllegalArgumentException("PluginConfig must be init" /* cnb.z(-29368986368810L) */.toString());
+            throw new IllegalArgumentException("PluginConfig must be init" /* "PluginConfig must be init" /* "PluginConfig must be init" /* cnb.z(-29368986368810L)  */.toString());
         }
         ioVar.aj().putStringSet(str2, set);
     }

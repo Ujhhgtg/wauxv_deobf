@@ -207,7 +207,7 @@ public final class nb extends bkw {
 
     @Override // me.hd.wauxv.obf.adq
     public final String toString() {
-        String strO = yg.o(new StringBuilder("[Barrier] "), this.br, " {");
+        String strO = yg.concatToVar1(new StringBuilder("[Barrier] "), this.br, " {");
         for (int i = 0; i < this.ew; i++) {
             adq adqVar = this.ev[i];
             if (i > 0) {

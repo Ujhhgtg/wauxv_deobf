@@ -9,10 +9,10 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class blk extends SwitchHook implements bnc {
-    public static final blk a = new blk("HideMsgAvatarIVHook" /* cnb.z(-487281219599146L) */);
-    public static final String b = "净化" /* cnb.z(-487143780645674L) */;
-    public static final String c = "隐藏消息头像" /* cnb.z(-487148075612970L) */;
-    public static final String h = "自定义隐藏微信聊天列表中的头像布局" /* cnb.z(-487118010841898L) */;
+    public static final blk a = new blk("HideMsgAvatarIVHook" /* "HideMsgAvatarIVHook" /* "HideMsgAvatarIVHook" /* cnb.z(-487281219599146L)  */);
+    public static final String b = "净化" /* "净化" /* "净化" /* cnb.z(-487143780645674L)  */;
+    public static final String c = "隐藏消息头像" /* "隐藏消息头像" /* "隐藏消息头像" /* cnb.z(-487148075612970L)  */;
+    public static final String h = "自定义隐藏微信聊天列表中的头像布局" /* "自定义隐藏微信聊天列表中的头像布局" /* "自定义隐藏微信聊天列表中的头像布局" /* cnb.z(-487118010841898L)  */;
     public static final bep j = new bep(17);
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -32,9 +32,9 @@ public final class blk extends SwitchHook implements bnc {
     @Override // me.hd.wauxv.obf.bnc
     public final void i(View view, Object obj, Object obj2, MsgInfoBean msgInfoBean) {
         if (getIsEnabled()) {
-            int i = bte.a;
+            int i = 0;
             azg azgVarR = dqc.bi(obj).r();
-            azgVarR.ab = "avatarIV" /* cnb.z(-487160960514858L) */;
+            azgVarR.ab = "avatarIV" /* "avatarIV" /* "avatarIV" /* cnb.z(-487160960514858L)  */;
             ImageView imageView = (ImageView) ((azk) yg.e(azgVarR)).e();
             if (imageView != null) {
                 boolean zIsSend = msgInfoBean.isSend();
@@ -59,7 +59,7 @@ public final class blk extends SwitchHook implements bnc {
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final IHasInvokeMethod p() {
+    public final IInvokable getOnClick() {
         return j;
     }
 }

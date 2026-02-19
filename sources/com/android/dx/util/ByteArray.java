@@ -47,7 +47,7 @@ public final class ByteArray {
 
     private void checkOffsets(int i, int i2) {
         if (i < 0 || i2 < i || i2 > this.size) {
-            StringBuilder sbQ = yg.q(i, i2, "bad range: ", "..", "; actual size ");
+            StringBuilder sbQ = yg.concatVar31425(i, i2, "bad range: ", "..", "; actual size ");
             sbQ.append(this.size);
             throw new IllegalArgumentException(sbQ.toString());
         }

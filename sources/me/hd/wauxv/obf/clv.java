@@ -4,6 +4,6 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class clv extends DexDescData {
     public static final clv a = new clv("NetSceneModifyContactLabelList.ConstructorNetScene" /*
-                                                                                              * cnb.z(-110157321206570L)
+                                                                                              * "NetSceneModifyContactLabelList.ConstructorNetScene" /* "NetSceneModifyContactLabelList.ConstructorNetScene" /* "NetSceneModifyContactLabelList.ConstructorNetScene" /* cnb.z(-110157321206570L)  */
                                                                                               */);
 }

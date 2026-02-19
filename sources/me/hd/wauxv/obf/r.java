@@ -83,7 +83,7 @@ public abstract class r implements Collection, IEmpty {
     }
 
     public final String toString() {
-        return aaz.k(this, ", ", "[", "]", new q(this, 0), 24);
+        return aaz.k(this, ", ", "[", "]", new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(this, 0), 24);
     }
 
     @Override // java.util.Collection

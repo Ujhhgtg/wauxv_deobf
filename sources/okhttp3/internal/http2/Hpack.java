@@ -11,10 +11,9 @@ import java.util.List;
 import java.util.Map;
 import me.hd.wauxv.obf.aaz;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dlc;
 import me.hd.wauxv.obf.emc;
-import me.hd.wauxv.obf.la;
+import me.hd.wauxv.obf.SomeStaticHelpers;
 import me.hd.wauxv.obf.rh;
 import me.hd.wauxv.obf.rm;
 import me.hd.wauxv.obf.sj;
@@ -70,7 +69,7 @@ public final class Hpack {
 
         private final void clearDynamicTable() {
             Header[] headerArr = this.dynamicTable;
-            la.l(headerArr, 0, headerArr.length);
+            SomeStaticHelpers.l(headerArr, 0, headerArr.length);
             this.nextHeaderIndex = this.dynamicTable.length - 1;
             this.headerCount = 0;
             this.dynamicTableByteCount = 0;
@@ -317,7 +316,7 @@ public final class Hpack {
 
         private final void clearDynamicTable() {
             Header[] headerArr = this.dynamicTable;
-            la.l(headerArr, 0, headerArr.length);
+            SomeStaticHelpers.l(headerArr, 0, headerArr.length);
             this.nextHeaderIndex = this.dynamicTable.length - 1;
             this.headerCount = 0;
             this.dynamicTableByteCount = 0;

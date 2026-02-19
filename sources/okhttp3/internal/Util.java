@@ -27,15 +27,15 @@ import java.util.TimeZone;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.aaz;
-import me.hd.wauxv.obf.aba;
+import me.hd.wauxv.obf.OtherStaticHelpers;
 import me.hd.wauxv.obf.abb;
-import me.hd.wauxv.obf.avd;
+import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.ave;
 import me.hd.wauxv.obf.aye;
 import me.hd.wauxv.obf.bfu;
-import me.hd.wauxv.obf.IHasInvokeMethod;
+import me.hd.wauxv.obf.IInvokable;
 import me.hd.wauxv.obf.bqe;
-import me.hd.wauxv.obf.bqi;
+import me.hd.wauxv.obf.IntRange;
 import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.cnh;
@@ -65,7 +65,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
-import okhttp3.internal.Util;
 import okhttp3.internal.http2.Header;
 import okhttp3.internal.io.FileSystem;
 
@@ -228,10 +227,10 @@ public final class Util {
         }
     }
 
-    public static final <T> List<T> filterList(Iterable<? extends T> iterable, IHasInvokeMethod bgfVar) {
+    public static final <T> List<T> filterList(Iterable<? extends T> iterable, IInvokable bgfVar) {
         throwIfVar1IsNull(iterable, "<this>");
         throwIfVar1IsNull(bgfVar, "predicate");
-        ArrayList arrayList = avd.a;
+        ArrayList arrayList = EmptyReadonlyList.a;
         for (T t : iterable) {
             if (((Boolean) bgfVar.invoke(t)).booleanValue()) {
                 if (arrayList.isEmpty()) {
@@ -289,7 +288,7 @@ public final class Util {
     public static final <T> List<T> immutableListOf(T... tArr) {
         throwIfVar1IsNull(tArr, "elements");
         Object[] objArr = (Object[]) tArr.clone();
-        List<T> listUnmodifiableList = Collections.unmodifiableList(aba.ag(Arrays.copyOf(objArr, objArr.length)));
+        List<T> listUnmodifiableList = Collections.unmodifiableList(OtherStaticHelpers.argsToList(Arrays.copyOf(objArr, objArr.length)));
         throwIfVar1IsNull(listUnmodifiableList, "unmodifiableList(listOf(*elements.clone()))");
         return listUnmodifiableList;
     }
@@ -639,9 +638,9 @@ public final class Util {
 
     public static final List<Header> toHeaderList(Headers headers) {
         throwIfVar1IsNull(headers, "<this>");
-        bqi bqiVarBm = dqc.bm(0, headers.size());
-        ArrayList arrayList = new ArrayList(abb.ak(bqiVarBm, 10));
-        Iterator it = bqiVarBm.iterator();
+        IntRange intRangeVarBm = dqc.bm(0, headers.size());
+        ArrayList arrayList = new ArrayList(abb.ak(intRangeVarBm, 10));
+        Iterator it = intRangeVarBm.iterator();
         while (it.hasNext()) {
             int iNextInt = ((bqe) it).nextInt();
             arrayList.add(new Header(headers.name(iNextInt), headers.value(iNextInt)));

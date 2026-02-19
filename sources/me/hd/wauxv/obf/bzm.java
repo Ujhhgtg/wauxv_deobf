@@ -17,7 +17,7 @@ public final class bzm implements btd {
             default:
                 dnh dnhVar = dnh.b;
                 bsb bsbVar = bsb.b;
-                this.d = dqc.aw("kotlin.collections.Map.Entry", dnt.c, new dfx[0], new bzk(0));
+                this.d = dqc.aw("kotlin.collections.Map.Entry", dnt.c, new dfx[0], new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(0));
                 break;
         }
     }
@@ -66,7 +66,7 @@ public final class bzm implements btd {
                     throw new dgb(concatVar2Var1(iF2, "Unexpected index "));
                 }
                 acmVarP2._bp(descriptor);
-                return ens.a;
+                return KotlinUnit.INSTANCE;
         }
     }
 

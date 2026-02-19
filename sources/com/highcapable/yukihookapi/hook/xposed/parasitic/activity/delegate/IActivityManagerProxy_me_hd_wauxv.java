@@ -8,7 +8,6 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 import me.hd.wauxv.obf.bhu;
 import me.hd.wauxv.obf.bmy;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cea;
 import me.hd.wauxv.obf.cnf;
 import me.hd.wauxv.obf.dal;
@@ -62,7 +61,7 @@ public final class IActivityManagerProxy_me_hd_wauxv implements InvocationHandle
                     Class<?> clsF = ReflectionWrapper.f(component.getClassName(), 3, null);
                     if (clsF != null) {
                         try {
-                            if (cnf.bd(dal.b(cls)).isAssignableFrom(clsF)) {
+                            if (cnf.getJavaClass(dal.b(cls)).isAssignableFrom(clsF)) {
                                 try {
                                     Object[] objArrCopyOf = Arrays.copyOf(new Object[0], 0);
                                     Object objC = ReflectionWrapper.createInstanceWithArgs(clsF,

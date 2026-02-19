@@ -12,7 +12,7 @@ public final class bsq implements btd {
         if (brxVarBw instanceof bsp) {
             return (bsp) brxVarBw;
         }
-        throw cnd.ak(-1, "Unexpected JSON element, expected JsonPrimitive, had " + dal.b(brxVarBw.getClass()),
+        throw KotlinHelpers2.ak(-1, "Unexpected JSON element, expected JsonPrimitive, had " + dal.b(brxVarBw.getClass()),
                 brxVarBw.toString());
     }
 

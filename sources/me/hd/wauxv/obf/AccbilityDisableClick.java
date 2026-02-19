@@ -7,12 +7,12 @@ public final class AccbilityDisableClick extends SwitchHook implements IHandlesH
                                                                                                      * cnb.z(-
                                                                                                      * 602248904178474L)
                                                                                                      */);
-    public static final String b = "测试-配置修复-v55-global" /* cnb.z(-602510897183530L) */;
-    public static final String c = "Accessibility - 禁用Action_Click响应" /* cnb.z(-602463652543274L) */;
+    public static final String b = "测试-配置修复-v55-global" /* "测试-配置修复-v55-global" /* "测试-配置修复-v55-global" /* cnb.z(-602510897183530L)  */;
+    public static final String c = "Accessibility - 禁用Action_Click响应" /* "Accessibility - 禁用Action_Click响应" /* "Accessibility - 禁用Action_Click响应" /* cnb.z(-602463652543274L)  */;
 
     @Override // me.hd.wauxv.obf.IHandlesHookParam
     public final void handleHookParam(HookParam hookParam, String str) {
-        if (getIsEnabled() && str.equals("RepairerConfig_AccbilityDisableClick_Int" /* cnb.z(-602137235028778L) */)) {
+        if (getIsEnabled() && str.equals("RepairerConfig_AccbilityDisableClick_Int" /* "RepairerConfig_AccbilityDisableClick_Int" /* "RepairerConfig_AccbilityDisableClick_Int" /* cnb.z(-602137235028778L)  */)) {
             hookParam.setResult(1);
         }
     }

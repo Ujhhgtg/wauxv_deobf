@@ -3,16 +3,16 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class div extends SwitchHook implements IDatabaseOperationsListener {
-    public static final div a = new div("SnsEnhanceHook" /* cnb.z(-530952447064874L) */);
-    public static final String b = "朋友圈" /* cnb.z(-528207962962730L) */;
-    public static final String c = "朋友圈增强" /* cnb.z(-528156423355178L) */;
-    public static final String h = "查看历史撤回以及缓存过的朋友圈内容" /* cnb.z(-528113473682218L) */;
+    public static final div a = new div("SnsEnhanceHook" /* "SnsEnhanceHook" /* "SnsEnhanceHook" /* cnb.z(-530952447064874L)  */);
+    public static final String b = "朋友圈" /* "朋友圈" /* "朋友圈" /* cnb.z(-528207962962730L)  */;
+    public static final String c = "朋友圈增强" /* "朋友圈增强" /* "朋友圈增强" /* cnb.z(-528156423355178L)  */;
+    public static final String h = "查看历史撤回以及缓存过的朋友圈内容" /* "查看历史撤回以及缓存过的朋友圈内容" /* "查看历史撤回以及缓存过的朋友圈内容" /* cnb.z(-528113473682218L)  */;
 
     public static String i(String str) {
-        if (!dnj.ab(str, "select *,rowid from SnsInfo" /* cnb.z(-530870842686250L) */, false)) {
+        if (!dnj.ab(str, "select *,rowid from SnsInfo" /* "select *,rowid from SnsInfo" /* "select *,rowid from SnsInfo" /* cnb.z(-530870842686250L)  */, false)) {
             return str;
         }
-        if (dnj.ab(str, "WHERE SnsInfo.userName=" /* cnb.z(-530235187526442L) */, false)) {
+        if (dnj.ab(str, "WHERE SnsInfo.userName=" /* "WHERE SnsInfo.userName=" /* "WHERE SnsInfo.userName=" /* cnb.z(-530235187526442L)  */, false)) {
             str = dnr.bo(dnr.bo(str,
                     "(sourceType in (8,264,10,266,12,268,14,270,24,280,26,282,28,284,30,286,72,328,74,330,76,332,78,334,88,344,90,346,92,348,94,350,136,392,138,394,140,396,142,398,152,408,154,410,156,412,158,414,200,456,202,458,204,460,206,462,216,472,218,474,220,476,222,478))" /*
                                                                                                                                                                                                                                                                                         * cnb
@@ -30,10 +30,10 @@ public final class div extends SwitchHook implements IDatabaseOperationsListener
                                                                                                                                                                                                                                                                                             * -
                                                                                                                                                                                                                                                                                             * 531175785364266L)
                                                                                                                                                                                                                                                                                             */),
-                    "(snsId >= " /* cnb.z(-527890135382826L) */, "(1=1 or snsId >= " /* cnb.z(-527808531004202L) */);
+                    "(snsId >= " /* "(snsId >= " /* "(snsId >= " /* cnb.z(-527890135382826L)  */, "(1=1 or snsId >= " /* "(1=1 or snsId >= " /* "(1=1 or snsId >= " /* cnb.z(-527808531004202L)  */);
         }
-        return dnr.bo(str, "(sourceType & 2 != 0 )" /* cnb.z(-528298157275946L) */, "(1=1)" /*
-                                                                                             * cnb.z(-528182193158954L)
+        return dnr.bo(str, "(sourceType & 2 != 0 )" /* "(sourceType & 2 != 0 )" /* "(sourceType & 2 != 0 )" /* cnb.z(-528298157275946L)  */, "(1=1)" /*
+                                                                                             * "(1=1)" /* "(1=1)" /* cnb.z(-528182193158954L)  */
                                                                                              */);
     }
 

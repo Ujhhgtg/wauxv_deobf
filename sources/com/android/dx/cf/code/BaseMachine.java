@@ -167,7 +167,7 @@ public abstract class BaseMachine implements Machine {
             return null;
         }
         if (this.resultCount != 1) {
-            throw new SimException(yg.o(new StringBuilder("local target with "), this.resultCount == 0 ? "no" : "multiple", " results"));
+            throw new SimException(yg.concatToVar1(new StringBuilder("local target with "), this.resultCount == 0 ? "no" : "multiple", " results"));
         }
         TypeBearer typeBearer = this.results[0];
         Type type = typeBearer.getType();

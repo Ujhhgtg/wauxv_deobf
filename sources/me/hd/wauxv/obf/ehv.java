@@ -34,6 +34,6 @@ public final class ehv {
     }
 
     public final String toString() {
-        return "wc1Proto(config=" /* cnb.z(-304672095075114L) */ + this.b + ')';
+        return "wc1Proto(config=" /* "wc1Proto(config=" /* "wc1Proto(config=" /* cnb.z(-304672095075114L)  */ + this.b + ')';
     }
 }

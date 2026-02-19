@@ -184,13 +184,13 @@ public final class ClassDataItem extends OffsettedItem {
         PrintWriter printWriterPrintWriterFor = Writers.printWriterFor(writer);
         int size = this.staticFields.size();
         for (int i = 0; i < size; i++) {
-            StringBuilder sbR = yg.r(i, "  sfields[", "]: ");
+            StringBuilder sbR = yg.concatVar213(i, "  sfields[", "]: ");
             sbR.append(this.staticFields.get(i));
             printWriterPrintWriterFor.println(sbR.toString());
         }
         int size2 = this.instanceFields.size();
         for (int i2 = 0; i2 < size2; i2++) {
-            StringBuilder sbR2 = yg.r(i2, "  ifields[", "]: ");
+            StringBuilder sbR2 = yg.concatVar213(i2, "  ifields[", "]: ");
             sbR2.append(this.instanceFields.get(i2));
             printWriterPrintWriterFor.println(sbR2.toString());
         }

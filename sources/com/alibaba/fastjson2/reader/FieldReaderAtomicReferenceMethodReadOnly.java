@@ -22,7 +22,7 @@ final class FieldReaderAtomicReferenceMethodReadOnly<T> extends FieldReaderAtomi
         try {
             ((AtomicReference) this.method.invoke(t, null)).set(obj);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 

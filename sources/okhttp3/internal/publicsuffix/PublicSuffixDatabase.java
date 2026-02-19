@@ -15,10 +15,9 @@ import me.hd.wauxv.obf.aaz;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.aqg;
 import me.hd.wauxv.obf.aqh;
-import me.hd.wauxv.obf.avd;
+import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.aye;
 import me.hd.wauxv.obf.bjr;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.cqj;
 import me.hd.wauxv.obf.cyl;
@@ -42,7 +41,7 @@ public final class PublicSuffixDatabase {
     private byte[] publicSuffixListBytes;
     public static final Companion Companion = new Companion(null);
     private static final byte[] WILDCARD_LABEL = { 42 };
-    private static final List<String> PREVAILING_RULE = dqc.bf("*");
+    private static final List<String> PREVAILING_RULE = dqc.toSingletonList("*");
     private static final PublicSuffixDatabase instance = new PublicSuffixDatabase();
     private final AtomicBoolean listRead = new AtomicBoolean(false);
     private final CountDownLatch readCompleteLatch = new CountDownLatch(1);
@@ -236,7 +235,7 @@ public final class PublicSuffixDatabase {
         if (strBinarySearch == null && strBinarySearch2 == null) {
             return PREVAILING_RULE;
         }
-        List<String> listAr = avd.a;
+        List<String> listAr = EmptyReadonlyList.a;
         List<String> listAr2 = strBinarySearch != null ? dnj.ar(strBinarySearch,
                 new char[] { TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH }) : listAr;
         if (strBinarySearch2 != null) {

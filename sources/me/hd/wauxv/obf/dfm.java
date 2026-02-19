@@ -201,7 +201,7 @@ public final class dfm extends sj {
             int i4 = iArr[length + i];
             int i5 = iArr[i];
             int i6 = i5 - i2;
-            la._ak(bArr2[i], i3, i4, bArr, i4 + i6);
+            SomeStaticHelpers._ak(bArr2[i], i3, i4, bArr, i4 + i6);
             i3 += i6;
             i++;
             i2 = i5;

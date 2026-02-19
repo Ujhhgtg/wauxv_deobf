@@ -10,13 +10,13 @@ public final class CommandProcessorHook extends SwitchHook implements IDexFind {
                                                                                                   * cnb.z(-
                                                                                                   * 633563510733610L)
                                                                                                   */);
-    public static final String b = "测试-杂项" /* cnb.z(-635212778175274L) */;
-    public static final String c = "强开更多命令处理" /* cnb.z(-635238547979050L) */;
-    public static final String d = "输入框点击发送时处理隐藏的其他命令" /* cnb.z(-635148353665834L) */;
+    public static final String b = "测试-杂项" /* "测试-杂项" /* "测试-杂项" /* "测试-杂项" /* cnb.z(-635212778175274L)   */;
+    public static final String c = "强开更多命令处理" /* "强开更多命令处理" /* "强开更多命令处理" /* "强开更多命令处理" /* cnb.z(-635238547979050L)   */;
+    public static final String d = "输入框点击发送时处理隐藏的其他命令" /* "输入框点击发送时处理隐藏的其他命令" /* "输入框点击发送时处理隐藏的其他命令" /* "输入框点击发送时处理隐藏的其他命令" /* cnb.z(-635148353665834L)   */;
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.bf(emn.bb(abk.a));
+        List listBf = dqc.toSingletonList(emn.bb(abk.a));
         CommandProcessorHook ablVar = a;
         aki akiVarAb = csb.ab(ablVar, listBf);
         ablVar.y(akiVarAb, new ws(26));

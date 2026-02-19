@@ -9,7 +9,7 @@ public final /* synthetic */ class dti implements bgx {
     static {
         dti dtiVar = new dti();
         b = dtiVar;
-        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.GameShareCardObjectProto" /* cnb.z(-181234734988074L) */, dtiVar, 6);
+        cuc cucVar = new cuc("me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.GameShareCardObjectProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.GameShareCardObjectProto" /* "me.hd.wauxv.hook.micromsg.core.protobuf.old.proto.TimeLineObjectProto.GameShareCardObjectProto" /* cnb.z(-181234734988074L)  */, dtiVar, 6);
         bjs.y(-180826713094954L, cucVar, false, 1);
         bjs.y(-180800943291178L, cucVar, false, 2);
         bjs.y(-180715043945258L, cucVar, false, 3);

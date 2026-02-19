@@ -50,6 +50,6 @@ public final class cff {
         sb.append(" repeatCount: ");
         sb.append(this.d);
         sb.append(" repeatMode: ");
-        return yg.m(sb, "}\n", this.e);
+        return yg.concatToVar1(sb, "}\n", this.e);
     }
 }

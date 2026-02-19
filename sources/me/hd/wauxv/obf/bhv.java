@@ -181,7 +181,7 @@ public abstract class bhv {
             Object obj_u = ahhVar._u(null, s);
             throwIfVar1IsNull(obj_u,
                     "null cannot be cast to non-null type kotlinx.coroutines.ThreadContextElement<kotlin.Any?>");
-            yg.t(obj_u);
+            yg.throwIfVarNotNull(obj_u);
             throw null;
         }
         drq drqVar = (drq) obj;
@@ -267,7 +267,7 @@ public abstract class bhv {
         if (obj instanceof Integer) {
             return ahhVar._u(new drq(ahhVar, ((Number) obj).intValue()), t);
         }
-        yg.t(obj);
+        yg.throwIfVarNotNull(obj);
         throw null;
     }
 
@@ -301,7 +301,7 @@ public abstract class bhv {
                 dis.a, dmu.a, epx.a, bub.a, diu.a, djx.a, dkc.a, dkn.a, dkt.a, dkv.a, eog.a, ms.a, xp.a, acv.a, aeg.a,
                 aeo.a, agp.a, bon.a, bop.a, cgy.a, dgd.a, djj.a, djz.a, eqb.a, bym.a, bos.a, cqv.a, cqx.a, cqz.a, cra.a,
                 AppBrandAntiGlobalAdHook.a, AppBrandAntiSplashAdHook.a, AppBrandForceShareHook.a,
-                AppBrandVideoRewardHook.a, cf.a, qo.a,
+                AppBrandVideoRewardHook.a, cf.a, BottomTabCustomHook.INSTANCE,
                 BottomTabMaterialHook.a, wh.a,
                 CustomBalanceHook.a,
                 CustomContactCountHook.a, cfm.a,
@@ -310,9 +310,9 @@ public abstract class bhv {
                 gd.a, lz.a, AutoSelectOriginalPhotoHook.a, mh.a, AutoViewOriginalPhotoHook.a, xg.a,
                 DisableMsgClipHook.a, DisablePatHook.a,
                 DisablePlayRingtoneHook.a,
-                DisableSendStatusHook.a, cgb.a, cgr.c,
+                DisableSendStatusHook.a, MsgFormatHook.a, cgr.c,
                 cgz.c,
-                csq.a, cww.a,
+                PanelEmojiHook.a, cww.a,
                 cxg.a, cxl.a, dhm.a, die.a, bcu.a, ble.a, blg.a, blh.a, blk.a, blm.a, blo.a, cud.a, fs.a,
                 CustomUnReadCountHook.a, azr.a,
                 elx.a, un.a, uo.a, cie.a, cif.a, fp.a, cnl.a, bjm.a, bjx.a, atx.a, bxj.a, etr.a, dlv.a,

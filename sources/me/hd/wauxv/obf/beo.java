@@ -2,7 +2,7 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class beo implements IHasInvokeMethod {
+public final /* synthetic */ class beo implements IInvokable {
     public final /* synthetic */ int a;
     public final /* synthetic */ String b;
 
@@ -24,25 +24,25 @@ public final /* synthetic */ class beo implements IHasInvokeMethod {
                 String str = this.b;
                 throwIfVar1IsNull(str, "name");
                 eojVar.d.tag(cne.class, new cne(str));
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 2:
                 ((eoj) obj).h(this.b);
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 3:
                 ((eoj) obj).h(this.b);
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 4:
                 ((eoj) obj).h(this.b);
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 5:
                 ((eoj) obj).h(this.b);
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 6:
                 ((eoj) obj).h(this.b);
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             default:
                 ((eoj) obj).h(this.b);
-                return ens.a;
+                return KotlinUnit.INSTANCE;
         }
     }
 }

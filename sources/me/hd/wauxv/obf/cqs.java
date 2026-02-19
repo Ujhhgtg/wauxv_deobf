@@ -21,6 +21,6 @@ public final /* synthetic */ class cqs extends bgr implements bfu {
                 ((cqt) this.d).k();
                 break;
         }
-        return ens.a;
+        return KotlinUnit.INSTANCE;
     }
 }

@@ -13,8 +13,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import me.hd.wauxv.obf.abf;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.avd;
-import me.hd.wauxv.obf.KotlinHelpers;
+import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.dqc;
 import okhttp3.Address;
 import okhttp3.Call;
@@ -103,9 +102,9 @@ public final class RouteSelector {
         this.routeDatabase = routeDatabase;
         this.call = call;
         this.eventListener = eventListener;
-        avd avdVar = avd.a;
-        this.proxies = avdVar;
-        this.inetSocketAddresses = avdVar;
+        EmptyReadonlyList emptyReadonlyListVar = EmptyReadonlyList.a;
+        this.proxies = emptyReadonlyListVar;
+        this.inetSocketAddresses = emptyReadonlyListVar;
         this.postponedRoutes = new ArrayList();
         resetNextProxy(address.url(), address.proxy());
     }
@@ -154,7 +153,7 @@ public final class RouteSelector {
             return;
         }
         if (Util.canParseAsIpAddress(strHost)) {
-            listLookup = dqc.bf(InetAddress.getByName(strHost));
+            listLookup = dqc.toSingletonList(InetAddress.getByName(strHost));
         } else {
             this.eventListener.dnsStart(this.call, strHost);
             listLookup = this.address.dns().lookup(strHost);
@@ -180,7 +179,7 @@ public final class RouteSelector {
     private static final List<Proxy> resetNextProxy$selectProxies(Proxy proxy, HttpUrl httpUrl,
             RouteSelector routeSelector) {
         if (proxy != null) {
-            return dqc.bf(proxy);
+            return dqc.toSingletonList(proxy);
         }
         URI uri = httpUrl.uri();
         if (uri.getHost() == null) {

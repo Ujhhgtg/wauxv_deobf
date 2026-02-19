@@ -100,7 +100,7 @@ public abstract class aaz extends abf {
             int i = 0;
             for (Object obj2 : iterable) {
                 if (i < 0) {
-                    aba.aj();
+                    OtherStaticHelpers.aj();
                     throw null;
                 }
                 if (nullSafeIsEqual(obj, obj2)) {
@@ -167,7 +167,7 @@ public abstract class aaz extends abf {
     }
 
     public static final void i(Iterable iterable, StringBuilder sb, CharSequence charSequence,
-            CharSequence charSequence2, CharSequence charSequence3, CharSequence charSequence4, IHasInvokeMethod bgfVar) {
+            CharSequence charSequence2, CharSequence charSequence3, CharSequence charSequence4, IInvokable bgfVar) {
         throwIfVar1IsNull(iterable, "<this>");
         sb.append(charSequence2);
         int i = 0;
@@ -181,7 +181,7 @@ public abstract class aaz extends abf {
         sb.append(charSequence3);
     }
 
-    public static String k(Iterable iterable, String str, String str2, String str3, IHasInvokeMethod bgfVar, int i) {
+    public static String k(Iterable iterable, String str, String str2, String str3, IInvokable bgfVar, int i) {
         if ((i & 1) != 0) {
             str = ", ";
         }
@@ -203,7 +203,7 @@ public abstract class aaz extends abf {
         if (list.isEmpty()) {
             throw new NoSuchElementException("List is empty.");
         }
-        return list.get(aba.af(list));
+        return list.get(OtherStaticHelpers.af(list));
     }
 
     public static Object m(List list) {
@@ -288,7 +288,7 @@ public abstract class aaz extends abf {
         if (array.length > 1) {
             Arrays.sort(array, comparator);
         }
-        return la.a(array);
+        return SomeStaticHelpers.toList(array);
     }
 
     public static List u(int i, List list) {
@@ -297,13 +297,13 @@ public abstract class aaz extends abf {
             throw new IllegalArgumentException(yg.f(i, "Requested element count ", " is less than zero.").toString());
         }
         if (i == 0) {
-            return avd.a;
+            return EmptyReadonlyList.a;
         }
         if (i >= list.size()) {
             return z(list);
         }
         if (i == 1) {
-            return dqc.bf(d(list));
+            return dqc.toSingletonList(d(list));
         }
         ArrayList arrayList = new ArrayList(i);
         Iterator it = list.iterator();
@@ -315,7 +315,7 @@ public abstract class aaz extends abf {
                 break;
             }
         }
-        return aba.ai(arrayList);
+        return OtherStaticHelpers.ai(arrayList);
     }
 
     public static boolean[] v(List list) {
@@ -364,16 +364,16 @@ public abstract class aaz extends abf {
     public static List z(Iterable iterable) {
         throwIfVar1IsNull(iterable, "<this>");
         if (!(iterable instanceof Collection)) {
-            return aba.ai(ac(iterable));
+            return OtherStaticHelpers.ai(ac(iterable));
         }
         Collection collection = (Collection) iterable;
         int size = collection.size();
         if (size == 0) {
-            return avd.a;
+            return EmptyReadonlyList.a;
         }
         if (size != 1) {
             return ab(collection);
         }
-        return dqc.bf(iterable instanceof List ? ((List) iterable).get(0) : collection.iterator().next());
+        return dqc.toSingletonList(iterable instanceof List ? ((List) iterable).get(0) : collection.iterator().next());
     }
 }

@@ -12,11 +12,10 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bfu;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dai;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.emc;
-import me.hd.wauxv.obf.ens;
+import me.hd.wauxv.obf.KotlinUnit;
 import me.hd.wauxv.obf.rh;
 import me.hd.wauxv.obf.rl;
 import me.hd.wauxv.obf.rm;
@@ -27,7 +26,6 @@ import okhttp3.internal.Util;
 import okhttp3.internal.concurrent.Task;
 import okhttp3.internal.concurrent.TaskQueue;
 import okhttp3.internal.concurrent.TaskRunner;
-import okhttp3.internal.http2.Http2Reader;
 import okhttp3.internal.platform.Platform;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -515,7 +513,7 @@ public final class Http2Connection implements Closeable {
         @Override // me.hd.wauxv.obf.bfu
         public /* bridge */ /* synthetic */ Object invoke() throws Throwable {
             m13invoke();
-            return ens.a;
+            return KotlinUnit.INSTANCE;
         }
 
         /*
@@ -1056,7 +1054,7 @@ public final class Http2Connection implements Closeable {
             this.degradedPingsSent = j2 + 1;
             this.degradedPongDeadlineNs = System.nanoTime() + ((long) DEGRADED_PONG_TIMEOUT_NS);
             TaskQueue taskQueue = this.writerQueue;
-            final String strO = yg.o(new StringBuilder(), this.connectionName, " ping");
+            final String strO = yg.concatToVar1(new StringBuilder(), this.connectionName, " ping");
             final boolean z = true;
             taskQueue.schedule(new Task(strO, z) { // from class:
                                                    // okhttp3.internal.http2.Http2Connection$sendDegradedPingLater$$inlined$execute$default$1

@@ -74,7 +74,7 @@ final class SortableType {
             iMax = 0;
         } else {
             if (i == yxVar.c) {
-                throw new amo(yg.m(new StringBuilder("Class with type index "), " extends itself", this.classDef.c), null);
+                throw new amo(yg.concatToVar1(new StringBuilder("Class with type index "), " extends itself", this.classDef.c), null);
             }
             SortableType sortableType = sortableTypeArr[i];
             if (sortableType != null) {

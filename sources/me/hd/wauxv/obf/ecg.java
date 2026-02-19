@@ -54,12 +54,12 @@ public final class ecg {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("o51Proto(badge_type=" /* cnb.z(-263315854981930L) */);
+        sb.append("o51Proto(badge_type=" /* "o51Proto(badge_type=" /* "o51Proto(badge_type=" /* "o51Proto(badge_type=" /* cnb.z(-263315854981930L)   */);
         bjs.w(sb, this.a, -263260020407082L);
-        yg.u(sb, this.b, -263135466355498L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -263135466355498L);
         bjs.w(sb, this.c, -263122581453610L);
-        yg.u(sb, this.d, -260253543299882L);
-        yg.u(sb, this.e, -260176233888554L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.d, -260253543299882L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.e, -260176233888554L);
         return concat(sb, this.f, ')');
     }
 }

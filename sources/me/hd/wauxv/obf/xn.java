@@ -9,16 +9,16 @@ public final class xn extends bws implements IDexFind {
     public static final xn a = new xn();
 
     public static Object b() throws IllegalAccessException, InvocationTargetException {
-        int i = bte.a;
+        int i = 0;
         byr byrVar = byr.a;
-        Class cls = (Class) la.p(emn.az(xm.a).getInterfaces());
+        Class cls = (Class) SomeStaticHelpers.p(emn.az(xm.a).getInterfaces());
         byrVar.getClass();
         Object objInvoke = emn.bb(byq.a).invoke(null, cls);
         throwIfVar1IsNull(objInvoke);
         cde cdeVarT = dqc.bi(objInvoke).t();
         xp.a.getClass();
         cdeVarT.a = emn.bb(xo.a).getDeclaringClass();
-        Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }

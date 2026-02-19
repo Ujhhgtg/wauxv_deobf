@@ -50,7 +50,7 @@ public final class ewr implements Serializable {
         this.e = strI;
         ki.a.getClass();
         String strI2 = ki.i();
-        int i2 = bte.a;
+        int i2 = 0;
         jx jxVar = ki.e;
         btc btcVar = ki.b[0];
         bmu bmuVarBh = dqc.bh(jxVar.w());
@@ -60,16 +60,16 @@ public final class ewr implements Serializable {
         cde cdeVarT = bmuVarBh.t();
         cdeVarT.ab = "currentActivityThread";
         cdeVarT.y();
-        cdk cdkVar = (cdk) aaz.g(cdeVarT.aj());
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
         Context context = null;
-        Object objE = cdkVar != null ? cdkVar.e(new Object[0]) : null;
+        Object objE = methodHookWrapperVar != null ? methodHookWrapperVar.e(new Object[0]) : null;
         cde cdeVarT2 = bmuVarBh.t();
         cdeVarT2.ab = "getSystemContext";
         cdeVarT2.y();
-        cdk cdkVar2 = (cdk) aaz.g(cdeVarT2.aj());
-        if (cdkVar2 != null) {
-            cdkVar2.h(objE);
-            context = (Context) cdkVar2.i(new Object[0]);
+        MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) aaz.g(cdeVarT2.aj());
+        if (methodHookWrapperVar2 != null) {
+            methodHookWrapperVar2.h(objE);
+            context = (Context) methodHookWrapperVar2.i(new Object[0]);
         }
         if (context != null && (packageManager = context.getPackageManager()) != null
                 && (applicationInfo = packageManager.getApplicationInfo(strI2, 1)) != null) {
@@ -80,8 +80,8 @@ public final class ewr implements Serializable {
             cde cdeVarT3 = bmuVarBg.t();
             cdeVarT3.ab = "getUserId";
             cdeVarT3.z(Arrays.copyOf(new Object[] { dal.b(Integer.TYPE) }, 1));
-            cdk cdkVar3 = (cdk) aaz.g(cdeVarT3.aj());
-            if (cdkVar3 != null && (num = (Integer) cdkVar3.j(Integer.valueOf(i3))) != null) {
+            MethodHookWrapper methodHookWrapperVar3 = (MethodHookWrapper) aaz.g(cdeVarT3.aj());
+            if (methodHookWrapperVar3 != null && (num = (Integer) methodHookWrapperVar3.j(Integer.valueOf(i3))) != null) {
                 iIntValue = num.intValue();
             }
         }

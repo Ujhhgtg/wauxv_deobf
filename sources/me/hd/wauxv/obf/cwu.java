@@ -3,14 +3,14 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes2.dex */
 public final class cwu extends SwitchHook implements IHandlesHookParam {
-    public static final cwu a = new cwu("QQAssistantJumpDevMiniApp" /* cnb.z(-605968345856810L) */);
-    public static final String b = "测试-配置修复-v57-global" /* cnb.z(-606208864025386L) */;
-    public static final String c = "QQ消息提醒插件-跳体验版小程序" /* cnb.z(-603326940969770L) */;
+    public static final cwu a = new cwu("QQAssistantJumpDevMiniApp" /* "QQAssistantJumpDevMiniApp" /* "QQAssistantJumpDevMiniApp" /* cnb.z(-605968345856810L)  */);
+    public static final String b = "测试-配置修复-v57-global" /* "测试-配置修复-v57-global" /* "测试-配置修复-v57-global" /* cnb.z(-606208864025386L)  */;
+    public static final String c = "QQ消息提醒插件-跳体验版小程序" /* "QQ消息提醒插件-跳体验版小程序" /* "QQ消息提醒插件-跳体验版小程序" /* cnb.z(-603326940969770L)  */;
 
     @Override // me.hd.wauxv.obf.IHandlesHookParam
     public final void handleHookParam(HookParam hookParam, String str) {
         if (getIsEnabled()
-                && str.equals("RepairerConfig_QQAssistant_JumpDevMiniApp_Int" /* cnb.z(-606354892913450L) */)) {
+                && str.equals("RepairerConfig_QQAssistant_JumpDevMiniApp_Int" /* "RepairerConfig_QQAssistant_JumpDevMiniApp_Int" /* "RepairerConfig_QQAssistant_JumpDevMiniApp_Int" /* cnb.z(-606354892913450L)  */)) {
             hookParam.setResult(1);
         }
     }

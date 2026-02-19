@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.WeakHashMap;
 import java.util.regex.Pattern;
-import me.hd.wauxv.obf.bjs;
+
 import me.hd.wauxv.obf.yg;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -188,7 +188,7 @@ class Name implements Serializable {
         }
         if (!(obj2 instanceof ClassIdentifier)) {
             if (z) {
-                throw new UtilEvalError(yg.o(new StringBuilder(), name.value, " does not resolve to a class name."));
+                throw new UtilEvalError(yg.concatToVar1(new StringBuilder(), name.value, " does not resolve to a class name."));
             }
             String strPrefix3 = prefix(name.evalName, 1);
             Interpreter.mainSecurityGuard.canGetField(name.evalBaseObject, strPrefix3);

@@ -49,7 +49,7 @@ class BSHArrayDimensions extends SimpleNode {
                     StringBuilder sb = new StringBuilder("Incompatible initializer. Allocation calls for a ");
                     sb.append(this.numUndefinedDims);
                     sb.append(" dimensional array, but initializer is a ");
-                    throw new EvalException(yg.m(sb, " dimensional array", this.definedDimensions.length), this, callStack);
+                    throw new EvalException(yg.concatToVar1(sb, " dimensional array", this.definedDimensions.length), this, callStack);
                 }
             }
             return objEval;

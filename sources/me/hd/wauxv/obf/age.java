@@ -19,7 +19,7 @@ import me.hd.wauxv.data.bean.ConversationBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class age implements IHasInvokeMethod {
+public final /* synthetic */ class age implements IInvokable {
     public final /* synthetic */ int a;
 
     public /* synthetic */ age(int i) {
@@ -48,7 +48,7 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
         char c2 = 1;
         Object obj2 = null;
         int i7 = 0;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         switch (i) {
             case 0:
                 HookParam hookParam = (HookParam) obj;
@@ -64,7 +64,7 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                 Object obj3 = objX instanceof dcx ? null : objX;
                 throwIfVar1IsNull(obj3);
                 MenuItem menuItem = (MenuItem) obj3;
-                int i8 = bte.a;
+                int i8 = 0;
                 azg azgVarAa = dkz.aa(hookParam);
                 azgVarAa.a = emn.bb(agg.a).getDeclaringClass();
                 Object objD = ((azk) aaz.e(azgVarAa.c())).d();
@@ -85,8 +85,8 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                     } catch (Exception e) {
                         ArrayList arrayList = ewq.a;
                         StringBuilder sb = new StringBuilder();
-                        sb.append("onCreateMenuItems " /* cnb.z(-38555921414954L) */);
-                        ewq.e(yg.n(sb,
+                        sb.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-38555921414954L)  */);
+                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
                                 bnfVar instanceof SwitchHook ? ((SwitchHook) bnfVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 38508676774698L)
@@ -94,7 +94,7 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                                 -39019777882922L), e, 12);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 1:
                 HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
@@ -122,7 +122,7 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                 Object obj4 = objX3 instanceof dcx ? null : objX3;
                 throwIfVar1IsNull(obj4);
                 AdapterView.AdapterContextMenuInfo adapterContextMenuInfo = (AdapterView.AdapterContextMenuInfo) obj4;
-                int i9 = bte.a;
+                int i9 = 0;
                 azg azgVarAa2 = dkz.aa(hookParam2);
                 agc.a.getClass();
                 azgVarAa2.a = emn.bb(agb.a).getDeclaringClass();
@@ -137,8 +137,8 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                     } catch (Exception e2) {
                         ArrayList arrayList2 = ewq.a;
                         StringBuilder sb2 = new StringBuilder();
-                        sb2.append("onCreateMenuItems " /* cnb.z(-38744899975978L) */);
-                        ewq.e(yg.n(sb2,
+                        sb2.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-38744899975978L)  */);
+                        ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
                                 bnfVar2 instanceof SwitchHook ? ((SwitchHook) bnfVar2).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -147,68 +147,68 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                                 -38590281153322L), e2, 12);
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 2:
-                ((amm) obj).c = new age(5);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new age(5);
+                return kotlinUnitVar;
             case 3:
-                ((amm) obj).c = new age(i2);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new age(i2);
+                return kotlinUnitVar;
             case 4:
                 bah bahVar = (bah) obj;
-                String[] strArr = { "com.tencent.mm.ui.conversation" /* cnb.z(-35270271433514L) */ };
+                String[] strArr = { "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* cnb.z(-35270271433514L)  */ };
                 bahVar.getClass();
-                bahVar.a = la.ab(strArr);
+                bahVar.a = SomeStaticHelpers.ab(strArr);
                 cdj cdjVar = new cdj();
-                cdjVar.s("onMMMenuItemSelected" /* cnb.z(-35669703392042L) */);
-                cdjVar.t("com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* cnb.z(-35631048686378L) */);
+                cdjVar.s("onMMMenuItemSelected" /* "onMMMenuItemSelected" /* "onMMMenuItemSelected" /* cnb.z(-35669703392042L)  */);
+                cdjVar.t("com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* "com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* "com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* cnb.z(-35631048686378L)  */);
                 bahVar.d = cdjVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 5:
                 bah bahVar2 = (bah) obj;
-                String[] strArr2 = { "com.tencent.mm.ui.conversation" /* cnb.z(-38985418144554L) */ };
+                String[] strArr2 = { "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* cnb.z(-38985418144554L)  */ };
                 bahVar2.getClass();
-                bahVar2.a = la.ab(strArr2);
+                bahVar2.a = SomeStaticHelpers.ab(strArr2);
                 cdj cdjVar2 = new cdj();
-                cdjVar2.s("onCreateContextMenu" /* cnb.z(-38852274158378L) */);
+                cdjVar2.s("onCreateContextMenu" /* "onCreateContextMenu" /* "onCreateContextMenu" /* cnb.z(-38852274158378L)  */);
                 if (cnb.ab(ewk.l) || cnb.ac(ewh.m)) {
-                    cdjVar2.t("MicroMsg.ConversationLongClickListener" /* cnb.z(-35983236004650L) */,
-                            "onCreateContextMenu, contact is null, talker = " /* cnb.z(-35867271887658L) */);
+                    cdjVar2.t("MicroMsg.ConversationLongClickListener" /* "MicroMsg.ConversationLongClickListener" /* "MicroMsg.ConversationLongClickListener" /* cnb.z(-35983236004650L)  */,
+                            "onCreateContextMenu, contact is null, talker = " /* "onCreateContextMenu, contact is null, talker = " /* "onCreateContextMenu, contact is null, talker = " /* cnb.z(-35867271887658L)  */);
                 } else {
-                    cdjVar2.t("MicroMsg.ConversationClickListener" /* cnb.z(-36210869271338L) */,
-                            "onCreateContextMenu, contact is null, talker = " /* cnb.z(-36026185677610L) */);
+                    cdjVar2.t("MicroMsg.ConversationClickListener" /* "MicroMsg.ConversationClickListener" /* "MicroMsg.ConversationClickListener" /* cnb.z(-36210869271338L)  */,
+                            "onCreateContextMenu, contact is null, talker = " /* "onCreateContextMenu, contact is null, talker = " /* "onCreateContextMenu, contact is null, talker = " /* cnb.z(-36026185677610L)  */);
                 }
                 bahVar2.d = cdjVar2;
-                return ensVar;
+                return kotlinUnitVar;
             case 6:
-                ((amm) obj).c = new age(7);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new age(7);
+                return kotlinUnitVar;
             case 7:
                 bah bahVar3 = (bah) obj;
                 cdj cdjVar3 = new cdj();
-                cdj.l(cdjVar3, "com.tencent.mm.ui.conversation.ConversationListView" /* cnb.z(-120813135067946L) */);
-                cdjVar3.t("[checkEmptyFooter] isRealFull:" /* cnb.z(-120074400693034L) */);
+                cdj.l(cdjVar3, "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* cnb.z(-120813135067946L)  */);
+                cdjVar3.t("[checkEmptyFooter] isRealFull:" /* "[checkEmptyFooter] isRealFull:" /* "[checkEmptyFooter] isRealFull:" /* cnb.z(-120074400693034L)  */);
                 bahVar3.getClass();
                 bahVar3.d = cdjVar3;
-                return ensVar;
+                return kotlinUnitVar;
             case 8:
-                ((amm) obj).b = new age(i4);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new age(i4);
+                return kotlinUnitVar;
             case 9:
-                ((amm) obj).c = new age(13);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new age(13);
+                return kotlinUnitVar;
             case 10:
-                ((amm) obj).c = new age(i3);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new age(i3);
+                return kotlinUnitVar;
             case 11:
-                ((amm) obj).c = new age(i5);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new age(i5);
+                return kotlinUnitVar;
             case 12:
                 bah bahVar4 = (bah) obj;
                 cdj cdjVar4 = new cdj();
                 agp.a.getClass();
                 cdjVar4.o(emn.az(agl.a));
-                cdjVar4.t("MicroMsg.ConversationStorage" /* cnb.z(-373460291287850L) */, "get null with username:" /*
+                cdjVar4.t("MicroMsg.ConversationStorage" /* "MicroMsg.ConversationStorage" /* "MicroMsg.ConversationStorage" /* cnb.z(-373460291287850L)  */, "get null with username:" /*
                                                                                                                     * cnb
                                                                                                                     * .z
                                                                                                                     * (-
@@ -216,54 +216,54 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                                                                                                                     */);
                 bahVar4.getClass();
                 bahVar4.d = cdjVar4;
-                return ensVar;
+                return kotlinUnitVar;
             case 13:
                 bah bahVar5 = (bah) obj;
                 cdj cdjVar5 = new cdj();
                 agp.a.getClass();
                 cdjVar5.o(emn.az(agl.a));
-                cdjVar5.t("updateUnreadByTalker %s" /* cnb.z(-371677879860010L) */);
+                cdjVar5.t("updateUnreadByTalker %s" /* "updateUnreadByTalker %s" /* "updateUnreadByTalker %s" /* cnb.z(-371677879860010L)  */);
                 bahVar5.getClass();
                 bahVar5.d = cdjVar5;
-                return ensVar;
+                return kotlinUnitVar;
             case 14:
                 bah bahVar6 = (bah) obj;
                 cdj cdjVar6 = new cdj();
                 agp.a.getClass();
                 cdjVar6.o(emn.az(agl.a));
-                cdjVar6.p(new bqi(2, 4, 1));
-                cdjVar6.v("Update " /* cnb.z(-372124556458794L) */, "rconversation" /* cnb.z(-372090196720426L) */,
-                        " set " /* cnb.z(-372081606785834L) */, "parentRef" /* cnb.z(-372038657112874L) */, " = '" /*
+                cdjVar6.p(new IntRange(2, 4, 1));
+                cdjVar6.v("Update " /* "Update " /* "Update " /* cnb.z(-372124556458794L)  */, "rconversation" /* "rconversation" /* "rconversation" /* cnb.z(-372090196720426L)  */,
+                        " set " /* " set " /* " set " /* cnb.z(-372081606785834L)  */, "parentRef" /* "parentRef" /* "parentRef" /* cnb.z(-372038657112874L)  */, " = '" /*
                                                                                                                     * cnb
                                                                                                                     * .z
                                                                                                                     * (-
                                                                                                                     * 372012887309098L)
                                                                                                                     */);
-                cdjVar6.n("' where 1 != 1 " /* cnb.z(-371957052734250L) */);
-                cdjVar6.n("rconversation" /* cnb.z(-373537600699178L) */);
+                cdjVar6.n("' where 1 != 1 " /* "' where 1 != 1 " /* "' where 1 != 1 " /* cnb.z(-371957052734250L)  */);
+                cdjVar6.n("rconversation" /* "rconversation" /* "rconversation" /* cnb.z(-373537600699178L)  */);
                 bahVar6.getClass();
                 bahVar6.d = cdjVar6;
-                return ensVar;
+                return kotlinUnitVar;
             case 15:
                 bag bagVar = (bag) obj;
-                String[] strArr3 = { "com.tencent.mm.storage" /* cnb.z(-372523988417322L) */ };
+                String[] strArr3 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-372523988417322L)  */ };
                 bagVar.getClass();
-                bagVar.a = la.ab(strArr3);
+                bagVar.a = SomeStaticHelpers.ab(strArr3);
                 zb zbVar = new zb();
-                zbVar.k("PRAGMA table_info( rconversation)" /* cnb.z(-371875448355626L) */);
+                zbVar.k("PRAGMA table_info( rconversation)" /* "PRAGMA table_info( rconversation)" /* "PRAGMA table_info( rconversation)" /* cnb.z(-371875448355626L)  */);
                 bagVar.b = zbVar;
-                return ensVar;
+                return kotlinUnitVar;
             case 16:
-                ((amm) obj).b = new age(17);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new age(17);
+                return kotlinUnitVar;
             case 17:
                 bag bagVar2 = (bag) obj;
                 zb zbVar2 = new zb();
-                zbVar2.k("MMKernel.CoreStorage" /* cnb.z(-102439264975658L) */,
-                        "CheckData path[%s] blocksize:%s blockcount:%s availcount:%s" /* cnb.z(-102331890793258L) */);
+                zbVar2.k("MMKernel.CoreStorage" /* "MMKernel.CoreStorage" /* "MMKernel.CoreStorage" /* cnb.z(-102439264975658L)  */,
+                        "CheckData path[%s] blocksize:%s blockcount:%s availcount:%s" /* "CheckData path[%s] blocksize:%s blockcount:%s availcount:%s" /* "CheckData path[%s] blocksize:%s blockcount:%s availcount:%s" /* cnb.z(-102331890793258L)  */);
                 bagVar2.getClass();
                 bagVar2.b = zbVar2;
-                return ensVar;
+                return kotlinUnitVar;
             case 18:
                 ahf ahfVar = (ahf) obj;
                 if (ahfVar instanceof ahj) {
@@ -271,100 +271,100 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                 }
                 return null;
             case 19:
-                ((amm) obj).c = new age(20);
-                return ensVar;
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new age(20);
+                return kotlinUnitVar;
             case 20:
                 bah bahVar7 = (bah) obj;
-                String[] strArr4 = { "com.tencent.mm.ui" /* cnb.z(-78855599553322L) */ };
+                String[] strArr4 = { "com.tencent.mm.ui" /* "com.tencent.mm.ui" /* "com.tencent.mm.ui" /* cnb.z(-78855599553322L)  */ };
                 bahVar7.getClass();
-                bahVar7.a = la.ab(strArr4);
+                bahVar7.a = SomeStaticHelpers.ab(strArr4);
                 cdj cdjVar7 = new cdj();
-                cdjVar7.t("newcursor closeCursor,clear events" /* cnb.z(-78726750534442L) */);
+                cdjVar7.t("newcursor closeCursor,clear events" /* "newcursor closeCursor,clear events" /* "newcursor closeCursor,clear events" /* cnb.z(-78726750534442L)  */);
                 bahVar7.d = cdjVar7;
-                return ensVar;
+                return kotlinUnitVar;
             case 21:
                 View view = (View) obj;
                 View viewK = dkz.k(view, R.layout.module_dialog_custom_balance, null, false);
                 int i10 = R.id.moduleDialogEdtCustomBalanceMax1;
-                TextInputEditText textInputEditText = (TextInputEditText) cnd.aq(viewK,
+                TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.aq(viewK,
                         R.id.moduleDialogEdtCustomBalanceMax1);
                 if (textInputEditText != null) {
                     i10 = R.id.moduleDialogEdtCustomBalanceMax2;
-                    TextInputEditText textInputEditText2 = (TextInputEditText) cnd.aq(viewK,
+                    TextInputEditText textInputEditText2 = (TextInputEditText) KotlinHelpers2.aq(viewK,
                             R.id.moduleDialogEdtCustomBalanceMax2);
                     if (textInputEditText2 != null) {
                         i10 = R.id.moduleDialogEdtCustomBalanceMax3;
-                        TextInputEditText textInputEditText3 = (TextInputEditText) cnd.aq(viewK,
+                        TextInputEditText textInputEditText3 = (TextInputEditText) KotlinHelpers2.aq(viewK,
                                 R.id.moduleDialogEdtCustomBalanceMax3);
                         if (textInputEditText3 != null) {
                             i10 = R.id.moduleDialogEdtCustomBalanceMin1;
-                            TextInputEditText textInputEditText4 = (TextInputEditText) cnd.aq(viewK,
+                            TextInputEditText textInputEditText4 = (TextInputEditText) KotlinHelpers2.aq(viewK,
                                     R.id.moduleDialogEdtCustomBalanceMin1);
                             if (textInputEditText4 != null) {
                                 i10 = R.id.moduleDialogEdtCustomBalanceMin2;
-                                TextInputEditText textInputEditText5 = (TextInputEditText) cnd.aq(viewK,
+                                TextInputEditText textInputEditText5 = (TextInputEditText) KotlinHelpers2.aq(viewK,
                                         R.id.moduleDialogEdtCustomBalanceMin2);
                                 if (textInputEditText5 != null) {
                                     i10 = R.id.moduleDialogEdtCustomBalanceMin3;
-                                    TextInputEditText textInputEditText6 = (TextInputEditText) cnd.aq(viewK,
+                                    TextInputEditText textInputEditText6 = (TextInputEditText) KotlinHelpers2.aq(viewK,
                                             R.id.moduleDialogEdtCustomBalanceMin3);
                                     if (textInputEditText6 != null) {
                                         i10 = R.id.moduleDialogEdtCustomBalanceValue1;
-                                        TextInputEditText textInputEditText7 = (TextInputEditText) cnd.aq(viewK,
+                                        TextInputEditText textInputEditText7 = (TextInputEditText) KotlinHelpers2.aq(viewK,
                                                 R.id.moduleDialogEdtCustomBalanceValue1);
                                         if (textInputEditText7 != null) {
                                             i10 = R.id.moduleDialogEdtCustomBalanceValue2;
-                                            TextInputEditText textInputEditText8 = (TextInputEditText) cnd.aq(viewK,
+                                            TextInputEditText textInputEditText8 = (TextInputEditText) KotlinHelpers2.aq(viewK,
                                                     R.id.moduleDialogEdtCustomBalanceValue2);
                                             if (textInputEditText8 != null) {
                                                 i10 = R.id.moduleDialogEdtCustomBalanceValue3;
-                                                TextInputEditText textInputEditText9 = (TextInputEditText) cnd.aq(viewK,
+                                                TextInputEditText textInputEditText9 = (TextInputEditText) KotlinHelpers2.aq(viewK,
                                                         R.id.moduleDialogEdtCustomBalanceValue3);
                                                 if (textInputEditText9 != null) {
                                                     i10 = R.id.moduleDialogInputCustomBalanceMax1;
-                                                    if (((TextInputLayout) cnd.aq(viewK,
+                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                                             R.id.moduleDialogInputCustomBalanceMax1)) != null) {
                                                         i10 = R.id.moduleDialogInputCustomBalanceMax2;
-                                                        if (((TextInputLayout) cnd.aq(viewK,
+                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                                                 R.id.moduleDialogInputCustomBalanceMax2)) != null) {
                                                             i10 = R.id.moduleDialogInputCustomBalanceMax3;
-                                                            if (((TextInputLayout) cnd.aq(viewK,
+                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                                                     R.id.moduleDialogInputCustomBalanceMax3)) != null) {
                                                                 i10 = R.id.moduleDialogInputCustomBalanceMin1;
-                                                                if (((TextInputLayout) cnd.aq(viewK,
+                                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                                                         R.id.moduleDialogInputCustomBalanceMin1)) != null) {
                                                                     i10 = R.id.moduleDialogInputCustomBalanceMin2;
-                                                                    if (((TextInputLayout) cnd.aq(viewK,
+                                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                                                             R.id.moduleDialogInputCustomBalanceMin2)) != null) {
                                                                         i10 = R.id.moduleDialogInputCustomBalanceMin3;
-                                                                        if (((TextInputLayout) cnd.aq(viewK,
+                                                                        if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                                                                 R.id.moduleDialogInputCustomBalanceMin3)) != null) {
                                                                             i10 = R.id.moduleDialogInputCustomBalanceValue1;
-                                                                            if (((TextInputLayout) cnd.aq(viewK,
+                                                                            if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                                                                     R.id.moduleDialogInputCustomBalanceValue1)) != null) {
                                                                                 i10 = R.id.moduleDialogInputCustomBalanceValue2;
-                                                                                if (((TextInputLayout) cnd.aq(viewK,
+                                                                                if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                                                                         R.id.moduleDialogInputCustomBalanceValue2)) != null) {
                                                                                     i10 = R.id.moduleDialogInputCustomBalanceValue3;
-                                                                                    if (((TextInputLayout) cnd.aq(viewK,
+                                                                                    if (((TextInputLayout) KotlinHelpers2.aq(viewK,
                                                                                             R.id.moduleDialogInputCustomBalanceValue3)) != null) {
                                                                                         i10 = R.id.moduleDialogRbCustomBalanceMathAdd;
-                                                                                        MaterialRadioButton materialRadioButton = (MaterialRadioButton) cnd
+                                                                                        MaterialRadioButton materialRadioButton = (MaterialRadioButton) KotlinHelpers2
                                                                                                 .aq(viewK,
                                                                                                         R.id.moduleDialogRbCustomBalanceMathAdd);
                                                                                         if (materialRadioButton != null) {
                                                                                             i10 = R.id.moduleDialogRbCustomBalanceMathDefault;
-                                                                                            MaterialRadioButton materialRadioButton2 = (MaterialRadioButton) cnd
+                                                                                            MaterialRadioButton materialRadioButton2 = (MaterialRadioButton) KotlinHelpers2
                                                                                                     .aq(viewK,
                                                                                                             R.id.moduleDialogRbCustomBalanceMathDefault);
                                                                                             if (materialRadioButton2 != null) {
                                                                                                 i10 = R.id.moduleDialogRbCustomBalanceMathSub;
-                                                                                                MaterialRadioButton materialRadioButton3 = (MaterialRadioButton) cnd
+                                                                                                MaterialRadioButton materialRadioButton3 = (MaterialRadioButton) KotlinHelpers2
                                                                                                         .aq(viewK,
                                                                                                                 R.id.moduleDialogRbCustomBalanceMathSub);
                                                                                                 if (materialRadioButton3 != null) {
                                                                                                     i10 = R.id.moduleDialogRgCustomBalanceMath;
-                                                                                                    RadioGroup radioGroup = (RadioGroup) cnd
+                                                                                                    RadioGroup radioGroup = (RadioGroup) KotlinHelpers2
                                                                                                             .aq(viewK,
                                                                                                                     R.id.moduleDialogRgCustomBalanceMath);
                                                                                                     if (radioGroup != null) {
@@ -481,7 +481,7 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                                                                                                         }
                                                                                                         bzyVar.i()
                                                                                                                 .show();
-                                                                                                        return ensVar;
+                                                                                                        return kotlinUnitVar;
                                                                                                     }
                                                                                                 }
                                                                                             }
@@ -505,7 +505,7 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                     }
                 }
                 throw new NullPointerException("Missing required view with ID: "
-                        /* cnb.z(-639537810242346L) */.concat(viewK.getResources().getResourceName(i10)));
+                        /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-639537810242346L)  */.concat(viewK.getResources().getResourceName(i10)));
             case 22:
                 List list = (List) obj;
                 Object obj5 = list.get(0);
@@ -554,7 +554,7 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                     }
                     aidVar = (aid) zVar.next();
                 } while (aidVar.f != aie.a.k());
-                for (Pair pairVar : aba.ag(new Pair(new aab(aii.a.j(), aif.a.j()), Float.valueOf(ail.a.j())),
+                for (Pair pairVar : OtherStaticHelpers.argsToList(new Pair(new aab(aii.a.j(), aif.a.j()), Float.valueOf(ail.a.j())),
                         new Pair(new aab(aij.a.j(), aig.a.j()), Float.valueOf(aim.a.j())),
                         new Pair(new aab(aik.a.j(), aih.a.j()), Float.valueOf(ain.a.j())))) {
                     aac aacVar = (aac) pairVar.first;
@@ -569,27 +569,27 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                             fFloatValue += f;
                         }
                         new ek(hookParam3, i7, 8).q(cnh.t(Float.valueOf(fFloatValue)));
-                        return ensVar;
+                        return kotlinUnitVar;
                     }
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 24:
                 View view2 = (View) obj;
                 View viewK2 = dkz.k(view2, R.layout.module_dialog_custom_contact_count, null, false);
                 int i11 = R.id.moduleDialogEdtCustomFriendCount;
-                TextInputEditText textInputEditText10 = (TextInputEditText) cnd.aq(viewK2,
+                TextInputEditText textInputEditText10 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
                         R.id.moduleDialogEdtCustomFriendCount);
                 if (textInputEditText10 != null) {
                     i11 = R.id.moduleDialogEdtCustomGroupCount;
-                    TextInputEditText textInputEditText11 = (TextInputEditText) cnd.aq(viewK2,
+                    TextInputEditText textInputEditText11 = (TextInputEditText) KotlinHelpers2.aq(viewK2,
                             R.id.moduleDialogEdtCustomGroupCount);
                     if (textInputEditText11 != null) {
                         i11 = R.id.moduleDialogEdtMsgInfoTextPlaceholders;
-                        if (((MaterialTextView) cnd.aq(viewK2, R.id.moduleDialogEdtMsgInfoTextPlaceholders)) != null) {
+                        if (((MaterialTextView) KotlinHelpers2.aq(viewK2, R.id.moduleDialogEdtMsgInfoTextPlaceholders)) != null) {
                             i11 = R.id.moduleDialogInputCustomFriendCount;
-                            if (((TextInputLayout) cnd.aq(viewK2, R.id.moduleDialogInputCustomFriendCount)) != null) {
+                            if (((TextInputLayout) KotlinHelpers2.aq(viewK2, R.id.moduleDialogInputCustomFriendCount)) != null) {
                                 i11 = R.id.moduleDialogInputCustomGroupCount;
-                                if (((TextInputLayout) cnd.aq(viewK2,
+                                if (((TextInputLayout) KotlinHelpers2.aq(viewK2,
                                         R.id.moduleDialogInputCustomGroupCount)) != null) {
                                     LinearLayout linearLayout2 = (LinearLayout) viewK2;
                                     cem cemVar = new cem(linearLayout2, textInputEditText10, textInputEditText11, i7);
@@ -599,7 +599,7 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                                     eg egVar2 = (eg) bzyVar2.d;
                                     CustomContactCountHook.a.getClass();
                                     egVar2.d = CustomContactCountHook.c;
-                                    bzyVar2.t("保存" /* cnb.z(-430978493315882L) */, new amw(new bp(cemVar, i3), 0));
+                                    bzyVar2.t("保存" /* "保存" /* "保存" /* cnb.z(-430978493315882L)  */, new amw(new bp(cemVar, i3), 0));
                                     bjs.x((3 & 2) != 0 ? new amd(c == true ? 1 : 0) : null, bzyVar2, "取消" /*
                                                                                                            * cnb.z(-
                                                                                                            * 47455093652266L)
@@ -608,17 +608,17 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                                         egVar2.r = linearLayout2;
                                     }
                                     bzyVar2.i().show();
-                                    return ensVar;
+                                    return kotlinUnitVar;
                                 }
                             }
                         }
                     }
                 }
                 throw new NullPointerException("Missing required view with ID: "
-                        /* cnb.z(-639400371288874L) */.concat(viewK2.getResources().getResourceName(i11)));
+                        /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-639400371288874L)  */.concat(viewK2.getResources().getResourceName(i11)));
             case 25:
                 HookParam hookParam4 = (HookParam) obj;
-                int i12 = bte.a;
+                int i12 = 0;
                 azg azgVarAa3 = dkz.aa(hookParam4);
                 azgVarAa3.a = dal.b(Integer.TYPE);
                 for (Object obj8 : azgVarAa3.c()) {
@@ -628,7 +628,7 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                     if (1 <= iIntValue && iIntValue < 3) {
                         if (i7 != 0) {
                             throw new IllegalArgumentException(
-                                    "Collection contains more than one matching element." /* cnb.z(-430999968152362L) */);
+                                    "Collection contains more than one matching element." /* "Collection contains more than one matching element." /* "Collection contains more than one matching element." /* cnb.z(-430999968152362L)  */);
                         }
                         obj2 = obj8;
                         i7 = 1;
@@ -644,21 +644,21 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                 throwIfVar1IsNull(objE2);
                 int iK2 = (((Number) objE2).intValue() == 1 ? aip.a : aiq.a).k();
                 if (iK2 != 0) {
-                    int i13 = bte.a;
+                    int i13 = 0;
                     cde cdeVarT = dqc.bi(hookParam4.getThisObject()).t();
-                    cdeVarT.ab = "setFixedContactCount" /* cnb.z(-430007830706986L) */;
-                    ((cdk) aaz.e(cdeVarT.aj())).e(Integer.valueOf(iK2));
+                    cdeVarT.ab = "setFixedContactCount" /* "setFixedContactCount" /* "setFixedContactCount" /* cnb.z(-430007830706986L)  */;
+                    ((MethodHookWrapper) aaz.e(cdeVarT.aj())).e(Integer.valueOf(iK2));
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 26:
                 View view3 = (View) obj;
                 View viewK3 = dkz.k(view3, R.layout.module_dialog_custom_unread_count, null, false);
                 int i14 = R.id.moduleDialogEdtCustomUnReadCount;
-                TextInputEditText textInputEditText12 = (TextInputEditText) cnd.aq(viewK3,
+                TextInputEditText textInputEditText12 = (TextInputEditText) KotlinHelpers2.aq(viewK3,
                         R.id.moduleDialogEdtCustomUnReadCount);
                 if (textInputEditText12 != null) {
                     i14 = R.id.moduleDialogInputCustomUnReadCount;
-                    if (((TextInputLayout) cnd.aq(viewK3, R.id.moduleDialogInputCustomUnReadCount)) != null) {
+                    if (((TextInputLayout) KotlinHelpers2.aq(viewK3, R.id.moduleDialogInputCustomUnReadCount)) != null) {
                         LinearLayout linearLayout3 = (LinearLayout) viewK3;
                         cee ceeVar = new cee(linearLayout3, textInputEditText12, i6);
                         textInputEditText12.setText(String.valueOf(ait.a.k()));
@@ -666,7 +666,7 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                         eg egVar3 = (eg) bzyVar3.d;
                         CustomUnReadCountHook.a.getClass();
                         egVar3.d = CustomUnReadCountHook.c;
-                        bzyVar3.t("保存" /* cnb.z(-490429430627114L) */, new amw(new bp(ceeVar, i4), 0));
+                        bzyVar3.t("保存" /* "保存" /* "保存" /* cnb.z(-490429430627114L)  */, new amw(new bp(ceeVar, i4), 0));
                         bjs.x((3 & 2) != 0 ? new amd(c2 == true ? 1 : 0) : null, bzyVar3, "取消" /*
                                                                                                 * cnb.z(-
                                                                                                 * 47455093652266L)
@@ -675,11 +675,11 @@ public final /* synthetic */ class age implements IHasInvokeMethod {
                             egVar3.r = linearLayout3;
                         }
                         bzyVar3.i().show();
-                        return ensVar;
+                        return kotlinUnitVar;
                     }
                 }
                 throw new NullPointerException("Missing required view with ID: "
-                        /* cnb.z(-639812688149290L) */.concat(viewK3.getResources().getResourceName(i14)));
+                        /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-639812688149290L)  */.concat(viewK3.getResources().getResourceName(i14)));
             case 27:
                 ro.a.getClass();
                 return Boolean.valueOf(((SwitchHook) obj)._z());

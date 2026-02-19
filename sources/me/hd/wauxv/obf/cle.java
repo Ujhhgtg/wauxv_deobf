@@ -21,16 +21,16 @@ public final class cle extends btp implements bfu {
             case 0:
                 return Long.valueOf(((clg) this.b).a.contentLength());
             default:
-                Toast toast = cnd.ah;
+                Toast toast = KotlinHelpers2.ah;
                 if (toast != null) {
                     toast.cancel();
                 }
                 Toast toastMakeText = Toast.makeText(ckv.j(), (String) this.b, 0);
-                cnd.ah = toastMakeText;
+                KotlinHelpers2.ah = toastMakeText;
                 if (toastMakeText != null) {
                     toastMakeText.show();
                 }
-                return ens.a;
+                return KotlinUnit.INSTANCE;
         }
     }
 }

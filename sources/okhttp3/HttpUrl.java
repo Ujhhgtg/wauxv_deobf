@@ -18,12 +18,11 @@ import java.util.Set;
 import java.util.regex.Pattern;
 import me.hd.wauxv.obf.abb;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.avd;
+import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.avh;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.bqf;
+import me.hd.wauxv.obf.KotlinIntProgression;
 import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.cnd;
+import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.dnj;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.dqc;
@@ -227,7 +226,7 @@ public final class HttpUrl {
             List<String> list = this.encodedQueryNamesAndValues;
             throwIfVar1IsNull(list);
             int size = list.size() - 2;
-            int iAv = cnd.av(size, 0, -2);
+            int iAv = KotlinHelpers2.getProgressionLastElement(size, 0, -2);
             if (iAv > size) {
                 return;
             }
@@ -1149,10 +1148,10 @@ public final class HttpUrl {
         public final void toQueryString$okhttp(List<String> list, StringBuilder sb) {
             throwIfVar1IsNull(list, "<this>");
             throwIfVar1IsNull(sb, "out");
-            bqf bqfVarBj = dqc.bj(dqc.bm(0, list.size()), 2);
-            int i = bqfVarBj.a;
-            int i2 = bqfVarBj.b;
-            int i3 = bqfVarBj.c;
+            KotlinIntProgression intRangeVarBj = dqc.bj(dqc.bm(0, list.size()), 2);
+            int i = intRangeVarBj.first;
+            int i2 = intRangeVarBj.last;
+            int i3 = intRangeVarBj.step;
             if ((i3 <= 0 || i > i2) && (i3 >= 0 || i2 > i)) {
                 return;
             }
@@ -1433,10 +1432,10 @@ public final class HttpUrl {
         if (list == null) {
             return null;
         }
-        bqf bqfVarBj = dqc.bj(dqc.bm(0, list.size()), 2);
-        int i = bqfVarBj.a;
-        int i2 = bqfVarBj.b;
-        int i3 = bqfVarBj.c;
+        KotlinIntProgression intRangeVarBj = dqc.bj(dqc.bm(0, list.size()), 2);
+        int i = intRangeVarBj.first;
+        int i2 = intRangeVarBj.last;
+        int i3 = intRangeVarBj.step;
         if ((i3 <= 0 || i > i2) && (i3 >= 0 || i2 > i)) {
             return null;
         }
@@ -1464,10 +1463,10 @@ public final class HttpUrl {
             return avh.a;
         }
         LinkedHashSet linkedHashSet = new LinkedHashSet();
-        bqf bqfVarBj = dqc.bj(dqc.bm(0, this.queryNamesAndValues.size()), 2);
-        int i = bqfVarBj.a;
-        int i2 = bqfVarBj.b;
-        int i3 = bqfVarBj.c;
+        KotlinIntProgression intRangeVarBj = dqc.bj(dqc.bm(0, this.queryNamesAndValues.size()), 2);
+        int i = intRangeVarBj.first;
+        int i2 = intRangeVarBj.last;
+        int i3 = intRangeVarBj.step;
         if ((i3 > 0 && i <= i2) || (i3 < 0 && i2 <= i)) {
             while (true) {
                 String str = this.queryNamesAndValues.get(i);
@@ -1495,13 +1494,13 @@ public final class HttpUrl {
     public final List<String> queryParameterValues(String str) {
         throwIfVar1IsNull(str, "name");
         if (this.queryNamesAndValues == null) {
-            return avd.a;
+            return EmptyReadonlyList.a;
         }
         ArrayList arrayList = new ArrayList();
-        bqf bqfVarBj = dqc.bj(dqc.bm(0, this.queryNamesAndValues.size()), 2);
-        int i = bqfVarBj.a;
-        int i2 = bqfVarBj.b;
-        int i3 = bqfVarBj.c;
+        KotlinIntProgression intRangeVarBj = dqc.bj(dqc.bm(0, this.queryNamesAndValues.size()), 2);
+        int i = intRangeVarBj.first;
+        int i2 = intRangeVarBj.last;
+        int i3 = intRangeVarBj.step;
         if ((i3 > 0 && i <= i2) || (i3 < 0 && i2 <= i)) {
             while (true) {
                 if (str.equals(this.queryNamesAndValues.get(i))) {

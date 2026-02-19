@@ -26,28 +26,28 @@ public final class BottomTabMaterialHook extends SwitchHook implements bnp {
     public static final String l;
     public static final String m;
     public static final String n;
-    public static final mj r;
+    public static final SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg r;
     public static final boolean s;
 
     static {
-        // "#FFF7F7F7" /* cnb.z(-436961382759210L) */;
-        // "#FFCCE8E3" /* cnb.z(-436935612955434L) */;
-        // "#FF1E1E1E" /* cnb.z(-436909843151658L) */;
-        // "#FF1E1E1E" /* cnb.z(-436884073347882L) */;
-        // "#FF324B48" /* cnb.z(-436789584067370L) */;
-        // "#FFF7F7F7" /* cnb.z(-425218942171946L) */;
-        a = new BottomTabMaterialHook("BottomTabMaterialHook" /* cnb.z(-435664302635818L) */);
+        // "#FFF7F7F7" /* "#FFF7F7F7" /* "#FFF7F7F7" /* "#FFF7F7F7" /* cnb.z(-436961382759210L)   */;
+        // "#FFCCE8E3" /* "#FFCCE8E3" /* "#FFCCE8E3" /* "#FFCCE8E3" /* cnb.z(-436935612955434L)   */;
+        // "#FF1E1E1E" /* "#FF1E1E1E" /* "#FF1E1E1E" /* "#FF1E1E1E" /* cnb.z(-436909843151658L)   */;
+        // "#FF1E1E1E" /* "#FF1E1E1E" /* "#FF1E1E1E" /* "#FF1E1E1E" /* cnb.z(-436884073347882L)   */;
+        // "#FF324B48" /* "#FF324B48" /* "#FF324B48" /* "#FF324B48" /* cnb.z(-436789584067370L)   */;
+        // "#FFF7F7F7" /* "#FFF7F7F7" /* "#FFF7F7F7" /* "#FFF7F7F7" /* cnb.z(-425218942171946L)   */;
+        a = new BottomTabMaterialHook("BottomTabMaterialHook" /* "BottomTabMaterialHook" /* "BottomTabMaterialHook" /* "BottomTabMaterialHook" /* cnb.z(-435664302635818L)   */);
         dov dovVar = ctf.a;
-        b = ctf.c("Resource" /* cnb.z(-46621869996842L) */, "BottomTab" /* cnb.z(-46531675683626L) */);
+        b = ctf.c("Resource" /* "Resource" /* "Resource" /* "Resource" /* cnb.z(-46621869996842L)   */, "BottomTab" /* "BottomTab" /* "BottomTab" /* "BottomTab" /* cnb.z(-46531675683626L)   */);
         c = new dov(new h(14));
         d = new dov(new h(15));
         h = new dov(new h(16));
         i = new dov(new h(17));
         j = new dov(new h(18));
-        l = "美化" /* cnb.z(-425193172368170L) */;
-        m = "底栏 Material You" /* cnb.z(-425197467335466L) */;
-        n = "替换主页底部标签栏为 Material You 样式" /* cnb.z(-425128747858730L) */;
-        r = new mj(13);
+        l = "美化" /* "美化" /* "美化" /* "美化" /* cnb.z(-425193172368170L)   */;
+        m = "底栏 Material You" /* "底栏 Material You" /* "底栏 Material You" /* "底栏 Material You" /* cnb.z(-425197467335466L)   */;
+        n = "替换主页底部标签栏为 Material You 样式" /* "替换主页底部标签栏为 Material You 样式" /* "替换主页底部标签栏为 Material You 样式" /* "替换主页底部标签栏为 Material You 样式" /* cnb.z(-425128747858730L)   */;
+        r = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(13);
         s = true;
     }
 
@@ -71,7 +71,7 @@ public final class BottomTabMaterialHook extends SwitchHook implements bnp {
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final bgf p() {
+    public final bgf getOnClick() {
         return r;
     }
 
@@ -107,15 +107,15 @@ public final class BottomTabMaterialHook extends SwitchHook implements bnp {
                 qbVar.setItemIconTintList(emc.ai(Color.parseColor(qt.a.o())));
             }
             Menu menu = qbVar.getMenu();
-            MenuItem menuItemAdd = menu.add(0, 0, 0, "" /* cnb.z(-435552633486122L) */);
+            MenuItem menuItemAdd = menu.add(0, 0, 0, "" /* "" /* "" /* "" /* cnb.z(-435552633486122L)   */);
             BottomTabMaterialHook qwVar = a;
             qwVar.getClass();
             menuItemAdd.setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) d.getValue()));
-            menu.add(0, 1, 1, "" /* cnb.z(-435548338518826L) */)
+            menu.add(0, 1, 1, "" /* "" /* "" /* "" /* cnb.z(-435548338518826L)   */)
                     .setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) h.getValue()));
-            menu.add(0, 2, 2, "" /* cnb.z(-435561223420714L) */)
+            menu.add(0, 2, 2, "" /* "" /* "" /* "" /* cnb.z(-435561223420714L)   */)
                     .setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) i.getValue()));
-            menu.add(0, 3, 3, "" /* cnb.z(-435556928453418L) */)
+            menu.add(0, 3, 3, "" /* "" /* "" /* "" /* cnb.z(-435556928453418L)   */)
                     .setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) j.getValue()));
             qbVar.setOnItemSelectedListener(new qp(obj, 0));
             ViewParent parent = viewGroup.getParent();
@@ -129,11 +129,11 @@ public final class BottomTabMaterialHook extends SwitchHook implements bnp {
                                                                                                       * 435827511393066L)
                                                                                                       */);
             ((ViewGroup) childAt).addView(qbVar);
-            int i2 = bte.a;
+            int i2 = 0;
             cde cdeVarT = dqc.bi(obj).t();
-            cdeVarT.ab = "onPageSelected" /* cnb.z(-437253440535338L) */;
-            aki akiVarAd = ad((cdk) aaz.e(cdeVarT.aj()), exg.a);
-            qwVar.x(akiVarAd, new q(qbVar, 1));
+            cdeVarT.ab = "onPageSelected" /* "onPageSelected" /* "onPageSelected" /* "onPageSelected" /* cnb.z(-437253440535338L)   */;
+            aki akiVarAd = ad((MethodHookWrapper) aaz.e(cdeVarT.aj()), exg.a);
+            qwVar.x(akiVarAd, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(qbVar, 1));
             akiVarAd.o();
         }
     }

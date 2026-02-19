@@ -4,5 +4,5 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class ly extends DexDescData {
     public static final ly a = new ly(
-            "AutoEnableForceNotifyHook.MethodOnNewXmlReceived" /* cnb.z(-442549135211306L) */);
+            "AutoEnableForceNotifyHook.MethodOnNewXmlReceived" /* "AutoEnableForceNotifyHook.MethodOnNewXmlReceived" /* "AutoEnableForceNotifyHook.MethodOnNewXmlReceived" /* cnb.z(-442549135211306L)  */);
 }

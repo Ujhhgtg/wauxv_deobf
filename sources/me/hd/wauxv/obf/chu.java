@@ -22,7 +22,7 @@ public final class chu {
             jArr = dev.a;
         } else {
             jArr = new long[((iMax + 15) & (-8)) >> 3];
-            la.n(jArr);
+            SomeStaticHelpers.n(jArr);
         }
         this.a = jArr;
         int i2 = iMax >> 3;

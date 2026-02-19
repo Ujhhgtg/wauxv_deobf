@@ -6,10 +6,10 @@ import org.luckypray.dexkit.DexKitBridge;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class cxg extends SwitchHook implements IDexFind {
-    public static final cxg a = new cxg("QuoteClickToPosHook" /* cnb.z(-460076896746282L) */);
-    public static final String b = "聊天" /* cnb.z(-461099098962730L) */;
-    public static final String c = "引用消息直达" /* cnb.z(-461103393930026L) */;
-    public static final String i = "点击引用消息内容直接定位到原文位置" /* cnb.z(-461073329158954L) */;
+    public static final cxg a = new cxg("QuoteClickToPosHook" /* "QuoteClickToPosHook" /* "QuoteClickToPosHook" /* cnb.z(-460076896746282L)  */);
+    public static final String b = "聊天" /* "聊天" /* "聊天" /* cnb.z(-461099098962730L)  */;
+    public static final String c = "引用消息直达" /* "引用消息直达" /* "引用消息直达" /* cnb.z(-461103393930026L)  */;
+    public static final String i = "点击引用消息内容直接定位到原文位置" /* "点击引用消息内容直接定位到原文位置" /* "点击引用消息内容直接定位到原文位置" /* cnb.z(-461073329158954L)  */;
     public static final boolean j;
 
     /* JADX WARN: Found duplicated region for block: B:11:0x005a */
@@ -34,7 +34,7 @@ public final class cxg extends SwitchHook implements IDexFind {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         if (j) {
-            List listBf = dqc.bf(emn.bb(cxe.a));
+            List listBf = dqc.toSingletonList(emn.bb(cxe.a));
             cxg cxgVar = a;
             aki akiVarAb = csb.ab(cxgVar, listBf);
             cxgVar.y(akiVarAb, new cvc(6));

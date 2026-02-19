@@ -28,7 +28,7 @@ public abstract class ni {
         return builderUrl.build();
     }
 
-    public final void g(IHasInvokeMethod bgfVar) {
+    public final void g(IInvokable bgfVar) {
         bcm bcmVar;
         OkHttpClient.Builder builderNewBuilder = this.e.newBuilder();
         bgfVar.invoke(builderNewBuilder);
@@ -79,7 +79,7 @@ public abstract class ni {
             throwIfVar1IsNull(builderNewBuilder2, "<set-?>");
             this.a = builderNewBuilder2;
         } catch (Throwable th) {
-            throw new URLParseException(yg.o(new StringBuilder(), ckv.b, str), th);
+            throw new URLParseException(yg.concatToVar1(new StringBuilder(), ckv.b, str), th);
         }
     }
 

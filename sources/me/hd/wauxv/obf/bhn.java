@@ -21,7 +21,7 @@ public final class bhn extends doi implements bgj {
      * JADX WARN: 'super' call moved to the top of the method (can break code
      * semantics)
      */
-    public /* synthetic */ bhn(String str, IHasInvokeMethod bgfVar, afw afwVar, int i) {
+    public /* synthetic */ bhn(String str, IInvokable bgfVar, afw afwVar, int i) {
         super(2, afwVar);
         this.a = i;
         this.e = str;
@@ -35,23 +35,23 @@ public final class bhn extends doi implements bgj {
         switch (this.a) {
             case 0:
                 bhn bhnVar = (bhn) h(ahpVar, afwVar);
-                ens ensVar = ens.a;
-                bhnVar.i(ensVar);
-                return ensVar;
+                KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
+                bhnVar.i(kotlinUnitVar);
+                return kotlinUnitVar;
             case 1:
-                return ((bhn) h(ahpVar, afwVar)).i(ens.a);
+                return ((bhn) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
             case 2:
-                return ((bhn) h(ahpVar, afwVar)).i(ens.a);
+                return ((bhn) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
             case 3:
-                return ((bhn) h(ahpVar, afwVar)).i(ens.a);
+                return ((bhn) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
             case 4:
-                return ((bhn) h(ahpVar, afwVar)).i(ens.a);
+                return ((bhn) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
             case 5:
-                return ((bhn) h(ahpVar, afwVar)).i(ens.a);
+                return ((bhn) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
             case 6:
-                return ((bhn) h(ahpVar, afwVar)).i(ens.a);
+                return ((bhn) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
             default:
-                return ((bhn) h(ahpVar, afwVar)).i(ens.a);
+                return ((bhn) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
         }
     }
 
@@ -99,17 +99,17 @@ public final class bhn extends doi implements bgj {
         switch (i) {
             case 0:
                 bhu.bd(obj);
-                String strZ = "检测到差异版本" /* cnb.z(-47704201755434L) */;
+                String strZ = "检测到差异版本" /* "检测到差异版本" /* "检测到差异版本" /* "检测到差异版本" /* cnb.z(-47704201755434L)   */;
                 bhl bhlVar = (bhl) serializable;
                 StringBuilder sb = new StringBuilder();
-                sb.append("版本名 " /* cnb.z(-47669842017066L) */ + bhlVar.a);
+                sb.append("版本名 " /* "版本名 " /* "版本名 " /* "版本名 " /* cnb.z(-47669842017066L)   */ + bhlVar.a);
                 sb.append('\n');
-                sb.append("发布于 " /* cnb.z(-47631187311402L) */ + bhlVar.d);
+                sb.append("发布于 " /* "发布于 " /* "发布于 " /* "发布于 " /* cnb.z(-47631187311402L)   */ + bhlVar.d);
                 sb.append('\n');
-                sb.append("\n更新日志如下\n" /* cnb.z(-47644072213290L) */);
+                sb.append("\n更新日志如下\n" /* "\n更新日志如下\n" /* "\n更新日志如下\n" /* "\n更新日志如下\n" /* cnb.z(-47644072213290L)   */);
                 sb.append('\n');
                 ((byx) this.d).b(strZ, concat(sb, bhlVar.c, '\n'), new ls((MainActivity) obj2, 2, bhlVar));
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 1:
                 bhu.bd(obj);
                 ahp ahpVar = (ahp) this.d;
@@ -138,7 +138,7 @@ public final class bhn extends doi implements bgj {
                     throw e2;
                 } catch (Throwable th) {
                     throw new ConvertException(responseExecute,
-                            "An unexpected error occurred in the converter" /* cnb.z(-541582491122474L) */, th, null, 8,
+                            "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* cnb.z(-541582491122474L)   */, th, null, 8,
                             null);
                 }
             case 2:
@@ -169,7 +169,7 @@ public final class bhn extends doi implements bgj {
                     throw e4;
                 } catch (Throwable th2) {
                     throw new ConvertException(responseExecute2,
-                            "An unexpected error occurred in the converter" /* cnb.z(-580988816063274L) */, th2, null,
+                            "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* cnb.z(-580988816063274L)   */, th2, null,
                             8, null);
                 }
             case 3:
@@ -200,7 +200,7 @@ public final class bhn extends doi implements bgj {
                     throw e6;
                 } catch (Throwable th3) {
                     throw new ConvertException(responseExecute3,
-                            "An unexpected error occurred in the converter" /* cnb.z(-581723255470890L) */, th3, null,
+                            "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* cnb.z(-581723255470890L)   */, th3, null,
                             8, null);
                 }
             case 4:
@@ -231,7 +231,7 @@ public final class bhn extends doi implements bgj {
                     throw e8;
                 } catch (Throwable th4) {
                     throw new ConvertException(responseExecute4,
-                            "An unexpected error occurred in the converter" /* cnb.z(-587409792170794L) */, th4, null,
+                            "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* cnb.z(-587409792170794L)   */, th4, null,
                             8, null);
                 }
             case 5:
@@ -262,7 +262,7 @@ public final class bhn extends doi implements bgj {
                     throw e10;
                 } catch (Throwable th5) {
                     throw new ConvertException(responseExecute5,
-                            "An unexpected error occurred in the converter" /* cnb.z(-586851446422314L) */, th5, null,
+                            "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* cnb.z(-586851446422314L)   */, th5, null,
                             8, null);
                 }
             case 6:
@@ -293,7 +293,7 @@ public final class bhn extends doi implements bgj {
                     throw e12;
                 } catch (Throwable th6) {
                     throw new ConvertException(responseExecute6,
-                            "An unexpected error occurred in the converter" /* cnb.z(-586503554071338L) */, th6, null,
+                            "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* cnb.z(-586503554071338L)   */, th6, null,
                             8, null);
                 }
             default:
@@ -324,7 +324,7 @@ public final class bhn extends doi implements bgj {
                     throw e14;
                 } catch (Throwable th7) {
                     throw new ConvertException(responseExecute7,
-                            "An unexpected error occurred in the converter" /* cnb.z(-609232521001770L) */, th7, null,
+                            "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* "An unexpected error occurred in the converter" /* cnb.z(-609232521001770L)   */, th7, null,
                             8, null);
                 }
         }

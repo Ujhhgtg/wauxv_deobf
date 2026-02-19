@@ -1481,7 +1481,7 @@ public final class axl {
             if (i2 >= mapArr.length) {
                 return;
             }
-            StringBuilder sbR = yg.r(i2, "The size of tag group[", "]: ");
+            StringBuilder sbR = yg.concatVar213(i2, "The size of tag group[", "]: ");
             sbR.append(mapArr[i2].size());
             Log.d("ExifInterface", sbR.toString());
             for (Map.Entry entry : mapArr[i2].entrySet()) {

@@ -36,8 +36,8 @@ public final class dsv {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("EmotionProto(md5=" /* cnb.z(-191980743162666L) */);
-        yg.u(sb, this.a, -191920613620522L);
+        sb.append("EmotionProto(md5=" /* "EmotionProto(md5=" /* "EmotionProto(md5=" /* "EmotionProto(md5=" /* cnb.z(-191980743162666L)   */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -191920613620522L);
         return concat(sb, this.b, ')');
     }
 }

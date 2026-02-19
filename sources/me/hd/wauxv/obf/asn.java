@@ -78,7 +78,7 @@ public final class asn {
         chwVar.d = iMax;
         if (iMax != 0) {
             jArr = new long[((iMax + 15) & (-8)) >> 3];
-            la.n(jArr);
+            SomeStaticHelpers.n(jArr);
         }
         chwVar.a = jArr;
         int i = iMax >> 3;
@@ -418,8 +418,8 @@ public final class asn {
             }
         }
         int i12 = i6;
-        char[] cArr3 = cnd.af;
-        char[] cArr4 = cnd.ag;
+        char[] cArr3 = KotlinHelpers2.af;
+        char[] cArr4 = KotlinHelpers2.ag;
         boolean z = i9 < 0;
         if (!z) {
             i9 = -i9;
@@ -979,7 +979,7 @@ public final class asn {
         ud udVar13 = udVar;
         int i67 = 31;
         ddoVarI.reset();
-        List<din> list = avd.a;
+        List<din> list = EmptyReadonlyList.a;
         CodeEditor codeEditor10 = asnVar2.r;
         dik snippetController = codeEditor10.getSnippetController();
         if (snippetController.l()) {

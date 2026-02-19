@@ -22,7 +22,6 @@ import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.ClassFileVersion;
-import net.bytebuddy.asm.AsmVisitorWrapper;
 import net.bytebuddy.build.HashCodeAndEqualsPlugin;
 import net.bytebuddy.build.SafeVarargsPlugin;
 import net.bytebuddy.description.ByteCodeElement;
@@ -1008,7 +1007,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                             StringBuilder sb = new StringBuilder();
                             sb.append(methodDescription);
                             sb.append(" does not declare ");
-                            throw new IllegalStateException(yg.m(sb, " parameters", this.index));
+                            throw new IllegalStateException(yg.concatToVar1(sb, " parameters", this.index));
                         }
                     }
 
@@ -1084,7 +1083,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                         StringBuilder sb = new StringBuilder();
                         sb.append(target);
                         sb.append(" has not ");
-                        throw new IllegalStateException(yg.m(sb, " arguments", this.index));
+                        throw new IllegalStateException(yg.concatToVar1(sb, " arguments", this.index));
                     }
                 }
 
@@ -1196,7 +1195,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                             StringBuilder sb = new StringBuilder();
                             sb.append(target);
                             sb.append(" has not ");
-                            throw new IllegalStateException(yg.m(sb, " arguments", this.index));
+                            throw new IllegalStateException(yg.concatToVar1(sb, " arguments", this.index));
                         }
                         StackManipulation stackManipulationAssign = this.assigner.assign(this.typeDescription,
                                 generic.get(this.index), this.typing);
@@ -5709,7 +5708,7 @@ public class MemberSubstitution implements AsmVisitorWrapper.ForDeclaredMethods.
                                     ((ParameterDescription) this.methodDescription.getParameters().get(i3)).getType(),
                                     this.typing);
                             if (!stackManipulationAssign2.isValid()) {
-                                StringBuilder sbR = yg.r(i3, "Cannot assign parameter with ", " of type ");
+                                StringBuilder sbR = yg.concatVar213(i3, "Cannot assign parameter with ", " of type ");
                                 sbR.append(generic.get(iIntValue));
                                 sbR.append(" to ");
                                 sbR.append(this.methodDescription);

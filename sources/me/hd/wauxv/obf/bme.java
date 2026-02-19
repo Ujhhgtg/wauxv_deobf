@@ -2,12 +2,12 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class bme implements IHasInvokeMethod {
+public final /* synthetic */ class bme implements IInvokable {
     public final /* synthetic */ int a;
-    public final /* synthetic */ IHasInvokeMethod b;
+    public final /* synthetic */ IInvokable b;
     public final /* synthetic */ BaseBaseHook c;
 
-    public /* synthetic */ bme(IHasInvokeMethod bgfVar, BaseBaseHook bmfVar, int i) {
+    public /* synthetic */ bme(IInvokable bgfVar, BaseBaseHook bmfVar, int i) {
         this.a = i;
         this.b = bgfVar;
         this.c = bmfVar;
@@ -18,7 +18,7 @@ public final /* synthetic */ class bme implements IHasInvokeMethod {
         HookParam hookParam = (HookParam) obj;
         switch (this.a) {
             case 0:
-                if (!this.c.z()) {
+                if (!this.c.getIsEnabled()) {
                     hookParam = null;
                 }
                 if (hookParam != null) {
@@ -26,7 +26,7 @@ public final /* synthetic */ class bme implements IHasInvokeMethod {
                 }
                 break;
             default:
-                if (!this.c.z()) {
+                if (!this.c.getIsEnabled()) {
                     hookParam = null;
                 }
                 if (hookParam != null) {
@@ -34,6 +34,6 @@ public final /* synthetic */ class bme implements IHasInvokeMethod {
                 }
                 break;
         }
-        return ens.a;
+        return KotlinUnit.INSTANCE;
     }
 }

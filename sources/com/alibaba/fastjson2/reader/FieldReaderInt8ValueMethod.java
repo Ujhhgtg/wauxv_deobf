@@ -26,7 +26,7 @@ final class FieldReaderInt8ValueMethod<T> extends FieldReaderObject<T> {
         try {
             this.method.invoke(t, Byte.valueOf(byteValue));
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 
@@ -67,7 +67,7 @@ final class FieldReaderInt8ValueMethod<T> extends FieldReaderObject<T> {
         try {
             this.method.invoke(t, Byte.valueOf((byte) j));
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 

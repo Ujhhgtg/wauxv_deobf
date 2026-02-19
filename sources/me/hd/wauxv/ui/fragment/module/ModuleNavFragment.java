@@ -12,7 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import me.hd.wauxv.R;
-import me.hd.wauxv.obf.aba;
+import me.hd.wauxv.obf.OtherStaticHelpers;
 import me.hd.wauxv.obf.abb;
 import me.hd.wauxv.obf.abi;
 import me.hd.wauxv.obf.acw;
@@ -23,9 +23,7 @@ import me.hd.wauxv.obf.bek;
 import me.hd.wauxv.obf.bez;
 import me.hd.wauxv.obf.bku;
 import me.hd.wauxv.obf.byu;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cer;
-import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.Pair;
 import me.hd.wauxv.obf.cua;
 import me.hd.wauxv.obf.cyw;
@@ -54,10 +52,10 @@ public final class ModuleNavFragment extends bdo {
         throwIfVar1IsNull(eqjVar);
         CoordinatorLayout coordinatorLayout = ((bek) eqjVar).a;
         StringBuilder sb = new StringBuilder();
-        sb.append("免费模块仅供学习,勿在国内平台传播\n" /* cnb.z(-394900768029482L) */);
+        sb.append("免费模块仅供学习,勿在国内平台传播\n" /* "免费模块仅供学习,勿在国内平台传播\n" /* "免费模块仅供学习,勿在国内平台传播\n" /* cnb.z(-394900768029482L)  */);
         ro.a.getClass();
         StringBuilder sb2 = new StringBuilder();
-        sb2.append("wxid:" /* cnb.z(-394853523389226L) */);
+        sb2.append("wxid:" /* "wxid:" /* "wxid:" /* cnb.z(-394853523389226L)  */);
         acx.a.getClass();
         sb2.append(acx.b());
         sb2.append('\n');
@@ -67,12 +65,12 @@ public final class ModuleNavFragment extends bdo {
                                                                                                           * cnb.z(-
                                                                                                           * 107949708016426L)
                                                                                                           */);
-        Object obj = ((Map) objInvoke).get("last_login_alias" /* cnb.z(-109568910687018L) */);
+        Object obj = ((Map) objInvoke).get("last_login_alias" /* "last_login_alias" /* "last_login_alias" /* cnb.z(-109568910687018L)  */);
         String str = obj instanceof String ? (String) obj : null;
         if (str != null) {
             String str2 = str.length() > 0 ? str : null;
             if (str2 != null) {
-                sb.append("alias:" /* cnb.z(-394810573716266L) */ + str2 + '\n');
+                sb.append("alias:" /* "alias:" /* "alias:" /* cnb.z(-394810573716266L)  */ + str2 + '\n');
             }
         }
         etz etzVar = new etz(sb.toString(), abi.f(dc().getColor(R.color.md_theme_primary), 48), 60);
@@ -83,16 +81,16 @@ public final class ModuleNavFragment extends bdo {
         eqj eqjVar2 = this.d;
         throwIfVar1IsNull(eqjVar2);
         MaterialToolbar materialToolbar = ((bek) eqjVar2).d;
-        materialToolbar.setTitle("WAuxiliary" /* cnb.z(-394763329076010L) */);
-        materialToolbar.setSubtitle("1.2.6.r1238.198c77c" /* cnb.z(-394750444174122L) */);
+        materialToolbar.setTitle("WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-394763329076010L)  */);
+        materialToolbar.setSubtitle("1.2.6.r1238.198c77c" /* "1.2.6.r1238.198c77c" /* "1.2.6.r1238.198c77c" /* cnb.z(-394750444174122L)  */);
         eqj eqjVar3 = this.d;
         throwIfVar1IsNull(eqjVar3);
         ViewPager2 viewPager2 = ((bek) eqjVar3).c;
         viewPager2.setUserInputEnabled(true);
-        List listAg = aba.ag(
-                new Pair(new bku(), "辅助" /* cnb.z(-395179940903722L) */), new Pair(new cua(),
-                        "插件" /* cnb.z(-395184235871018L) */),
-                new Pair(new amf(), "开发" /* cnb.z(-395205710707498L) */), new Pair(new j(), "关于" /*
+        List listAg = OtherStaticHelpers.argsToList(
+                new Pair(new bku(), "辅助" /* "辅助" /* "辅助" /* cnb.z(-395179940903722L)  */), new Pair(new cua(),
+                        "插件" /* "插件" /* "插件" /* cnb.z(-395184235871018L)  */),
+                new Pair(new amf(), "开发" /* "开发" /* "开发" /* cnb.z(-395205710707498L)  */), new Pair(new j(), "关于" /*
                                                                                                   * cnb.z(-
                                                                                                   * 395141286198058L)
                                                                                                   */));

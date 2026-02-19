@@ -91,8 +91,8 @@ public class dhq {
                 put(kuVar.r(i2), kuVar.s(i2));
             }
         } else if (i > 0) {
-            la._al(kuVar.j, 0, 0, i, this.j);
-            la._aj(0, 0, kuVar.k, i << 1, this.k);
+            SomeStaticHelpers._al(kuVar.j, 0, 0, i, this.j);
+            SomeStaticHelpers._aj(0, 0, kuVar.k, i << 1, this.k);
             this.l = i;
         }
     }
@@ -128,9 +128,9 @@ public class dhq {
         if (iArr.length <= 8 || i2 >= iArr.length / 3) {
             if (i < i4) {
                 int i5 = i + 1;
-                la._al(iArr, i, i5, i2, iArr);
+                SomeStaticHelpers._al(iArr, i, i5, i2, iArr);
                 Object[] objArr2 = this.k;
-                la._aj(i3, i5 << 1, objArr2, i2 << 1, objArr2);
+                SomeStaticHelpers._aj(i3, i5 << 1, objArr2, i2 << 1, objArr2);
             }
             Object[] objArr3 = this.k;
             int i6 = i4 << 1;
@@ -148,13 +148,13 @@ public class dhq {
                 throw new ConcurrentModificationException();
             }
             if (i > 0) {
-                la._al(iArr, 0, 0, i, this.j);
-                la._aj(0, 0, objArr, i3, this.k);
+                SomeStaticHelpers._al(iArr, 0, 0, i, this.j);
+                SomeStaticHelpers._aj(0, 0, objArr, i3, this.k);
             }
             if (i < i4) {
                 int i8 = i + 1;
-                la._al(iArr, i, i8, i2, this.j);
-                la._aj(i3, i8 << 1, objArr, i2 << 1, this.k);
+                SomeStaticHelpers._al(iArr, i, i8, i2, this.j);
+                SomeStaticHelpers._aj(i3, i8 << 1, objArr, i2 << 1, this.k);
             }
         }
         if (i2 != this.l) {
@@ -296,9 +296,9 @@ public class dhq {
         if (i3 < i) {
             int[] iArr2 = this.j;
             int i5 = i3 + 1;
-            la._al(iArr2, i5, i3, i, iArr2);
+            SomeStaticHelpers._al(iArr2, i5, i3, i, iArr2);
             Object[] objArr2 = this.k;
-            la._aj(i5 << 1, i3 << 1, objArr2, this.l << 1, objArr2);
+            SomeStaticHelpers._aj(i5 << 1, i3 << 1, objArr2, this.l << 1, objArr2);
         }
         int i6 = this.l;
         if (i == i6) {

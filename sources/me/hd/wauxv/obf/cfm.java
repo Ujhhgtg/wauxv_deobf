@@ -16,7 +16,7 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cfm extends BaseHook implements bnc {
+public final class cfm extends SwitchHook implements bnc {
     public static final cfm a;
     public static final String b;
     public static final dov c;
@@ -25,20 +25,20 @@ public final class cfm extends BaseHook implements bnc {
     public static final String l;
     public static final String m;
     public static final String n;
-    public static final bzk r;
+    public static final EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg r;
 
     static {
-        "#00000000" /* cnb.z(-451744660192042L) */;
-        a = new cfm("MsgBgBubbleHook" /* cnb.z(-428014965881642L) */);
+        "#00000000" /* "#00000000" /* "#00000000" /* cnb.z(-451744660192042L)  */;
+        a = new cfm("MsgBgBubbleHook" /* "MsgBgBubbleHook" /* "MsgBgBubbleHook" /* cnb.z(-428014965881642L)  */);
         dov dovVar = ctf.a;
-        b = ctf.c("Resource" /* cnb.z(-46505905879850L) */, "Bubble" /* cnb.z(-46467251174186L) */);
+        b = ctf.c("Resource" /* "Resource" /* "Resource" /* cnb.z(-46505905879850L)  */, "Bubble" /* "Bubble" /* "Bubble" /* cnb.z(-46467251174186L)  */);
         c = new dov(new cfh(0));
         h = new dov(new cfh(1));
         j = new dov(new cfh(2));
-        l = "美化" /* cnb.z(-451718890388266L) */;
-        m = "消息背景气泡" /* cnb.z(-451723185355562L) */;
-        n = "仅支持配置部分消息, 与背景颜色冲突" /* cnb.z(-451693120584490L) */;
-        r = new bzk(14);
+        l = "美化" /* "美化" /* "美化" /* cnb.z(-451718890388266L)  */;
+        m = "消息背景气泡" /* "消息背景气泡" /* "消息背景气泡" /* cnb.z(-451723185355562L)  */;
+        n = "仅支持配置部分消息, 与背景颜色冲突" /* "仅支持配置部分消息, 与背景颜色冲突" /* "仅支持配置部分消息, 与背景颜色冲突" /* cnb.z(-451693120584490L)  */;
+        r = new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(14);
     }
 
     public static void s(View view, boolean z) {
@@ -135,7 +135,7 @@ public final class cfm extends BaseHook implements bnc {
             }
             if (type != ewg.c.w) {
                 if (type == ewg.i.w) {
-                    View viewV2 = cnh.v(view, cnb.ab(ewk.c) ? "bkg" /* cnb.z(-426915454253866L) */ : "" /*
+                    View viewV2 = cnh.v(view, cnb.ab(ewk.c) ? "bkg" /* "bkg" /* "bkg" /* cnb.z(-426915454253866L)  */ : "" /*
                                                                                                          * cnb.z(-
                                                                                                          * 428513182087978L)
                                                                                                          */);
@@ -168,7 +168,7 @@ public final class cfm extends BaseHook implements bnc {
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final bgf p() {
+    public final bgf getOnClick() {
         return r;
     }
 }

@@ -54,9 +54,9 @@ public final class ehd {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("w10Proto(key=" /* cnb.z(-300407192550186L) */);
-        yg.u(sb, this.a, -300329883138858L);
-        yg.u(sb, this.b, -300295523400490L);
+        sb.append("w10Proto(key=" /* "w10Proto(key=" /* "w10Proto(key=" /* cnb.z(-300407192550186L)  */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -300329883138858L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -300295523400490L);
         bjs.v(sb, this.c, -300256868694826L);
         dts.g(sb, this.d, -300703545293610L);
         dts.h(sb, this.e, -300630530849578L);

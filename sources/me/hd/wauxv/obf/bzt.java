@@ -4,11 +4,11 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class bzt {
     public final String a;
-    public final bqi b;
+    public final IntRange b;
 
-    public bzt(String str, bqi bqiVar) {
+    public bzt(String str, IntRange intRangeVar) {
         this.a = str;
-        this.b = bqiVar;
+        this.b = intRangeVar;
     }
 
     public final boolean equals(Object obj) {

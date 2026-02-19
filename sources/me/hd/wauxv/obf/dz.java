@@ -37,6 +37,6 @@ public final class dz {
         sb.append(",s:");
         sb.append(this.b);
         sb.append("c:");
-        return yg.m(sb, ",p:null]", this.c);
+        return yg.concatToVar1(sb, ",p:null]", this.c);
     }
 }

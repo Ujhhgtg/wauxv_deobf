@@ -30,7 +30,7 @@ public final class dx extends btp implements bfu {
             case 1:
                 return new Handler(Looper.getMainLooper());
             default:
-                return ens.a;
+                return KotlinUnit.INSTANCE;
         }
     }
 

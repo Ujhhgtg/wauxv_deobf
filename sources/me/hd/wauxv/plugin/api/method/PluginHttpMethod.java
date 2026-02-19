@@ -14,14 +14,13 @@ import me.hd.wauxv.obf.bgj;
 import me.hd.wauxv.obf.bhu;
 import me.hd.wauxv.obf.bmy;
 import me.hd.wauxv.obf.cla;
-import me.hd.wauxv.obf.cnb;
-import me.hd.wauxv.obf.cnd;
+import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.cty;
 import me.hd.wauxv.obf.cue;
 import me.hd.wauxv.obf.cug;
 import me.hd.wauxv.obf.dob;
 import me.hd.wauxv.obf.doi;
-import me.hd.wauxv.obf.ens;
+import me.hd.wauxv.obf.KotlinUnit;
 import me.hd.wauxv.plugin.api.callback.PluginCallBack;
 import okhttp3.Response;
 import okhttp3.ResponseBody;
@@ -54,7 +53,7 @@ public final class PluginHttpMethod {
 
         @Override // me.hd.wauxv.obf.bgj
         public final Object g(Object obj, Object obj2) {
-            return ((AnonymousClass1) h((ahp) obj, (afw) obj2)).i(ens.a);
+            return ((AnonymousClass1) h((ahp) obj, (afw) obj2)).i(KotlinUnit.INSTANCE);
         }
 
         @Override // me.hd.wauxv.obf.nc
@@ -85,12 +84,12 @@ public final class PluginHttpMethod {
                 }
             } else {
                 if (i != 1) {
-                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-403172875041578L) */);
+                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* cnb.z(-403172875041578L)  */);
                 }
                 bhu.bd(obj);
             }
             this.r.onSuccess((File) obj);
-            return ens.a;
+            return KotlinUnit.INSTANCE;
         }
     }
 
@@ -116,7 +115,7 @@ public final class PluginHttpMethod {
 
         @Override // me.hd.wauxv.obf.bgj
         public final Object g(Object obj, Object obj2) {
-            return ((C00241) h((ahp) obj, (afw) obj2)).i(ens.a);
+            return ((C00241) h((ahp) obj, (afw) obj2)).i(KotlinUnit.INSTANCE);
         }
 
         @Override // me.hd.wauxv.obf.nc
@@ -147,7 +146,7 @@ public final class PluginHttpMethod {
                 }
             } else {
                 if (i != 1) {
-                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-402846457527082L) */);
+                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* cnb.z(-402846457527082L)  */);
                 }
                 bhu.bd(obj);
             }
@@ -155,7 +154,7 @@ public final class PluginHttpMethod {
             int iCode = response.code();
             ResponseBody responseBodyBody = response.body();
             this.p.onSuccess(iCode, responseBodyBody != null ? responseBodyBody.string() : null);
-            return ens.a;
+            return KotlinUnit.INSTANCE;
         }
     }
 
@@ -183,7 +182,7 @@ public final class PluginHttpMethod {
 
         @Override // me.hd.wauxv.obf.bgj
         public final Object g(Object obj, Object obj2) {
-            return ((C00251) h((ahp) obj, (afw) obj2)).i(ens.a);
+            return ((C00251) h((ahp) obj, (afw) obj2)).i(KotlinUnit.INSTANCE);
         }
 
         @Override // me.hd.wauxv.obf.nc
@@ -214,7 +213,7 @@ public final class PluginHttpMethod {
                 }
             } else {
                 if (i != 1) {
-                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* cnb.z(-403688271117098L) */);
+                    throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* "call to 'resume' before 'invoke' with coroutine" /* cnb.z(-403688271117098L)  */);
                 }
                 bhu.bd(obj);
             }
@@ -222,7 +221,7 @@ public final class PluginHttpMethod {
             int iCode = response.code();
             ResponseBody responseBodyBody = response.body();
             this.r.onSuccess(iCode, responseBodyBody != null ? responseBodyBody.string() : null);
-            return ens.a;
+            return KotlinUnit.INSTANCE;
         }
     }
 
@@ -243,16 +242,16 @@ public final class PluginHttpMethod {
 
     @cty
     public final void download(String str, String str2, Map<String, String> map, long j, PluginCallBack.DownloadCallback downloadCallback) {
-        cnd.bg(new AnonymousClass1(str, map, str2, j, downloadCallback, null));
+        KotlinHelpers2.bg(new AnonymousClass1(str, map, str2, j, downloadCallback, null));
     }
 
     @cty
     public final void get(String str, Map<String, String> map, long j, PluginCallBack.HttpCallback httpCallback) {
-        cnd.bg(new C00241(str, map, j, httpCallback, null));
+        KotlinHelpers2.bg(new C00241(str, map, j, httpCallback, null));
     }
 
     @cty
     public final void post(String str, Map<String, String> map, Map<String, String> map2, long j, PluginCallBack.HttpCallback httpCallback) {
-        cnd.bg(new C00251(str, map2, map, j, httpCallback, null));
+        KotlinHelpers2.bg(new C00251(str, map2, map, j, httpCallback, null));
     }
 }

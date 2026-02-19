@@ -42,8 +42,8 @@ public final class dey {
         }
         throwIfVar1IsNull(obj, "null cannot be cast to non-null type io.github.rosemoe.sora.lang.completion.Scratch");
         dey deyVar = (dey) obj;
-        return Arrays.equals(this.a, deyVar.a) && Arrays.equals(this.b, deyVar.b) && la._ai(this.c, deyVar.c)
-                && la._ai(this.d, deyVar.d) && la._ai(this.e, deyVar.e);
+        return Arrays.equals(this.a, deyVar.a) && Arrays.equals(this.b, deyVar.b) && SomeStaticHelpers._ai(this.c, deyVar.c)
+                && SomeStaticHelpers._ai(this.d, deyVar.d) && SomeStaticHelpers._ai(this.e, deyVar.e);
     }
 
     public final int hashCode() {
@@ -68,6 +68,6 @@ public final class dey {
         sb.append(", table=");
         sb.append(string4);
         sb.append(", arrows=");
-        return yg.o(sb, string5, ")");
+        return yg.concatToVar1(sb, string5, ")");
     }
 }

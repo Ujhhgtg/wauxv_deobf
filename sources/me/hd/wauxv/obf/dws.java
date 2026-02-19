@@ -57,11 +57,11 @@ public final class dws {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("dc5Proto(switch_skin_info_list=" /* cnb.z(-167061342911274L) */);
+        sb.append("dc5Proto(switch_skin_info_list=" /* "dc5Proto(switch_skin_info_list=" /* "dc5Proto(switch_skin_info_list=" /* "dc5Proto(switch_skin_info_list=" /* cnb.z(-167061342911274L)   */);
         yg.v(sb, this.b, -166923903957802L);
-        yg.u(sb, this.c, -166876659317546L);
-        yg.u(sb, this.d, -166206644419370L);
-        yg.u(sb, this.e, -166193759517482L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.c, -166876659317546L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.d, -166206644419370L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.e, -166193759517482L);
         dts.g(sb, this.f, -166090680302378L);
         return concat(sb, this.g, ')');
     }

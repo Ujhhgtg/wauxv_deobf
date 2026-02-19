@@ -36,8 +36,8 @@ public final /* synthetic */ class yj implements CompoundButton.OnCheckedChangeL
                         compoundButton.setChecked(false);
                         ctxVar.q(false);
                         StringBuilder sb = new StringBuilder();
-                        sb.append("加载[" /* cnb.z(-60842506713898L) */);
-                        dnc.g(null, 3, yg.n(sb, ctxVar.f, -60790967106346L));
+                        sb.append("加载[" /* "加载[" /* "加载[" /* cnb.z(-60842506713898L)  */);
+                        dnc.g(null, 3, yg.decryptVar3UsingCnbZAndConcatToVar1(sb, ctxVar.f, -60790967106346L));
                     } else {
                         ctxVar.q(true);
                     }
@@ -57,8 +57,8 @@ public final /* synthetic */ class yj implements CompoundButton.OnCheckedChangeL
                             compoundButton.setChecked(false);
                             ctxVar2.q(false);
                             StringBuilder sb2 = new StringBuilder();
-                            sb2.append("加载[" /* cnb.z(-388539921464106L) */);
-                            dnc.g(null, 3, yg.n(sb2, ctxVar2.f, -388488381856554L));
+                            sb2.append("加载[" /* "加载[" /* "加载[" /* cnb.z(-388539921464106L)  */);
+                            dnc.g(null, 3, yg.decryptVar3UsingCnbZAndConcatToVar1(sb2, ctxVar2.f, -388488381856554L));
                         } else {
                             ctxVar2.q(true);
                         }

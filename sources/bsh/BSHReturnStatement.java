@@ -28,6 +28,6 @@ class BSHReturnStatement extends SimpleNode implements ParserConstants {
         sb.append(": ");
         sb.append(ParserConstants.tokenImage[this.kind]);
         sb.append(" ");
-        return yg.o(sb, this.label, ":");
+        return yg.concatToVar1(sb, this.label, ":");
     }
 }

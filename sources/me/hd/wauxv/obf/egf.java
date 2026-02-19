@@ -67,14 +67,14 @@ public final class egf {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("v40Proto(support_custom_text=" /* cnb.z(-308997127142186L) */);
+        sb.append("v40Proto(support_custom_text=" /* "v40Proto(support_custom_text=" /* "v40Proto(support_custom_text=" /* cnb.z(-308997127142186L)  */);
         dts.g(sb, this.a, -309400854068010L);
         bjs.w(sb, this.b, -309340724525866L);
         bjs.v(sb, this.c, -309302069820202L);
-        yg.u(sb, this.d, -315284959263530L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.d, -315284959263530L);
         dts.g(sb, this.e, -315181880048426L);
-        yg.u(sb, this.f, -315078800833322L);
-        yg.u(sb, this.g, -315044441094954L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.f, -315078800833322L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.g, -315044441094954L);
         return concat(sb, this.h, ')');
     }
 }

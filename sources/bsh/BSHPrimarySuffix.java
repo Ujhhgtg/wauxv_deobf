@@ -281,7 +281,7 @@ class BSHPrimarySuffix extends SimpleNode {
         int i = this.operation;
         if (i != 1) {
             if (i != 2) {
-                return i == 3 ? yg.o(new StringBuilder(), super.toString(), ":PROPERTY {}") : i == 4 ? yg.o(new StringBuilder(), super.toString(), ":NEW new") : i == 6 ? yg.o(new StringBuilder(), super.toString(), ":CLASS class") : yg.o(new StringBuilder(), super.toString(), ":NO OPERATION");
+                return i == 3 ? yg.concatToVar1(new StringBuilder(), super.toString(), ":PROPERTY {}") : i == 4 ? yg.concatToVar1(new StringBuilder(), super.toString(), ":NEW new") : i == 6 ? yg.concatToVar1(new StringBuilder(), super.toString(), ":CLASS class") : yg.concatToVar1(new StringBuilder(), super.toString(), ":NO OPERATION");
             }
             return super.toString() + ":NAME " + this.field;
         }

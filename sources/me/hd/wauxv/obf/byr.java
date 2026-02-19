@@ -8,21 +8,21 @@ public final class byr extends bws implements IDexFind {
     public static final byr a = new byr();
 
     public static Object b() {
-        int i = bte.a;
+        int i = 0;
         cde cdeVarT = dqc.bh(emn.az(byp.a)).t();
         ahd.a.getClass();
         cdeVarT.a = emn.az(ahc.a);
-        Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }
 
     public static Object c() {
-        int i = bte.a;
+        int i = 0;
         cde cdeVarT = dqc.bh(emn.az(byp.a)).t();
         cme.a.getClass();
         cdeVarT.a = emn.bb(cmc.a).getDeclaringClass();
-        Object objE = ((cdk) bjs.h(cdeVarT)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.h(cdeVarT)).e(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }

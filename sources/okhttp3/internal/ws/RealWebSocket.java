@@ -9,8 +9,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bqi;
-import me.hd.wauxv.obf.KotlinHelpers;
+import me.hd.wauxv.obf.IntRange;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.dqc;
 import me.hd.wauxv.obf.nu;
@@ -33,7 +32,6 @@ import okhttp3.internal.concurrent.TaskQueue;
 import okhttp3.internal.concurrent.TaskRunner;
 import okhttp3.internal.connection.Exchange;
 import okhttp3.internal.connection.RealCall;
-import okhttp3.internal.ws.WebSocketReader;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -67,7 +65,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
     private WebSocketWriter writer;
     private Task writerTask;
     public static final Companion Companion = new Companion(null);
-    private static final List<Protocol> ONLY_HTTP1 = dqc.bf(Protocol.HTTP_1_1);
+    private static final List<Protocol> ONLY_HTTP1 = dqc.toSingletonList(Protocol.HTTP_1_1);
 
     /*
      * JADX INFO: compiled from:
@@ -214,9 +212,9 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
             return false;
         }
         if (webSocketExtensions.serverMaxWindowBits != null) {
-            bqi bqiVar = new bqi(8, 15, 1);
+            IntRange intRangeVar = new IntRange(8, 15, 1);
             int iIntValue = webSocketExtensions.serverMaxWindowBits.intValue();
-            if (8 > iIntValue || iIntValue > bqiVar.b) {
+            if (8 > iIntValue || iIntValue > intRangeVar.last) {
                 return false;
             }
         }
@@ -720,7 +718,7 @@ public final class RealWebSocket implements WebSocket, WebSocketReader.FrameCall
                     StringBuilder sb = new StringBuilder("sent ping but didn't receive pong within ");
                     sb.append(this.pingIntervalMillis);
                     sb.append("ms (after ");
-                    failWebSocket(new SocketTimeoutException(yg.m(sb, " successful ping/pongs)", i - 1)), null);
+                    failWebSocket(new SocketTimeoutException(yg.concatToVar1(sb, " successful ping/pongs)", i - 1)), null);
                     return;
                 }
                 try {

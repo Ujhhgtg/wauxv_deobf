@@ -22,7 +22,7 @@ public final class eq extends doi implements bgj {
             case 1:
                 break;
         }
-        return ((eq) h(ahpVar, afwVar)).i(ens.a);
+        return ((eq) h(ahpVar, afwVar)).i(KotlinUnit.INSTANCE);
     }
 
     /* JADX WARN: Type inference failed for: r1v1, types: [me.hd.wauxv.obf.bgj, me.hd.wauxv.obf.doi] */

@@ -4,6 +4,6 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class clt extends DexDescData {
     public static final clt a = new clt("NetSceneInviteChatroomMember.ConstructorNetScene" /*
-                                                                                            * cnb.z(-110698487085866L)
+                                                                                            * "NetSceneInviteChatroomMember.ConstructorNetScene" /* "NetSceneInviteChatroomMember.ConstructorNetScene" /* "NetSceneInviteChatroomMember.ConstructorNetScene" /* cnb.z(-110698487085866L)  */
                                                                                             */);
 }

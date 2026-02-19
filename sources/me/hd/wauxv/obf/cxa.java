@@ -39,12 +39,12 @@ public final /* synthetic */ class cxa implements bgj {
                 Iterator it = list.iterator();
                 while (it.hasNext()) {
                     String str3 = ((adx) it.next()).a;
-                    List listBf = dqc.bf(conversationBean.getUsername());
+                    List listBf = dqc.toSingletonList(conversationBean.getUsername());
                     clu.a.getClass();
                     cme.b(cme.a, emn.ba(clt.a).newInstance(str3, listBf, 0, null));
                 }
-                dnc.g(null, 3, "已邀请至" /* cnb.z(-527104156367658L) */ + list.size() + "个群聊" /*
-                                                                                            * cnb.z(-527048321792810L)
+                dnc.g(null, 3, "已邀请至" /* "已邀请至" /* "已邀请至" /* "已邀请至" /* cnb.z(-527104156367658L)   */ + list.size() + "个群聊" /*
+                                                                                            * "个群聊" /* "个群聊" /* "个群聊" /* cnb.z(-527048321792810L)  */
                                                                                             */);
                 return Boolean.FALSE;
             case 1:
@@ -77,10 +77,10 @@ public final /* synthetic */ class cxa implements bgj {
                     if (iIntValue2 < 0) {
                         iIntValue2 = 0;
                     }
-                    bqi bqiVar = new bqi(iIntValue2, charSequence2.length(), 1);
+                    IntRange intRangeVar = new IntRange(iIntValue2, charSequence2.length(), 1);
                     boolean z = charSequence2 instanceof String;
-                    int i2 = bqiVar.c;
-                    int i3 = bqiVar.b;
+                    int i2 = intRangeVar.step;
+                    int i3 = intRangeVar.last;
                     if (z) {
                         if ((i2 > 0 && iIntValue2 <= i3) || (i2 < 0 && i3 <= iIntValue2)) {
                             int i4 = iIntValue2;

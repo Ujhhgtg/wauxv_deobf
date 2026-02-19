@@ -24,7 +24,7 @@ public final /* synthetic */ class bux implements w, bm {
         int i = this.c;
         int i2 = 1;
         if (i == 1 || i == 2) {
-            throw new IllegalArgumentException(yg.o(new StringBuilder("STATE_"), i == 1 ? "DRAGGING" : "SETTLING", " should not be set externally."));
+            throw new IllegalArgumentException(yg.concatToVar1(new StringBuilder("STATE_"), i == 1 ? "DRAGGING" : "SETTLING", " should not be set externally."));
         }
         WeakReference weakReference = sideSheetBehavior.ae;
         if (weakReference == null || weakReference.get() == null) {

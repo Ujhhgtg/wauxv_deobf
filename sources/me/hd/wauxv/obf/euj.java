@@ -10,10 +10,10 @@ public final class euj extends bws {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         if (cnb.ab(ewk.o) || cnb.ac(ewh.r)) {
-            int i = bte.a;
+            int i = 0;
             cde cdeVarT = yg.s(-57896159148842L).t();
-            cdeVarT.ab = "onCreate" /* cnb.z(-58119497448234L) */;
-            aki akiVarAd = a.ad((cdk) dkz.n(new Object[] { dal.b(Bundle.class) }, 1, cdeVarT), exg.b);
+            cdeVarT.ab = "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-58119497448234L)  */;
+            aki akiVarAd = a.ad((MethodHookWrapper) dkz.n(new Object[] { dal.b(Bundle.class) }, 1, cdeVarT), exg.b);
             akiVarAd.m(new epy(15));
             akiVarAd.o();
         }

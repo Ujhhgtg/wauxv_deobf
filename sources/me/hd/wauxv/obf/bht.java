@@ -457,7 +457,7 @@ public abstract class bht implements ckp {
     }
 
     public static final String w(File file) throws NoSuchAlgorithmException, IOException {
-        MessageDigest messageDigest = MessageDigest.getInstance("MD5" /* cnb.z(-47163035876138L) */);
+        MessageDigest messageDigest = MessageDigest.getInstance("MD5" /* "MD5" /* "MD5" /* "MD5" /* cnb.z(-47163035876138L)   */);
         FileInputStream fileInputStream = new FileInputStream(file);
         byte[] bArr = new byte[1024];
         while (true) {
@@ -472,7 +472,7 @@ public abstract class bht implements ckp {
         StringBuffer stringBuffer = new StringBuffer();
         for (byte b : bArrDigest) {
             String upperCase = Integer.toHexString(b & 255).toUpperCase(Locale.getDefault());
-            throwIfVar1IsNull(upperCase, "toUpperCase(...)" /* cnb.z(-47218870450986L) */);
+            throwIfVar1IsNull(upperCase, "toUpperCase(...)" /* "toUpperCase(...)" /* "toUpperCase(...)" /* "toUpperCase(...)" /* cnb.z(-47218870450986L)   */);
             if (upperCase.length() < 2) {
                 stringBuffer.append(0);
             }

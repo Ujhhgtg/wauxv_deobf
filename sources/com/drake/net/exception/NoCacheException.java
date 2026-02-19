@@ -1,7 +1,6 @@
 package com.drake.net.exception;
 
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.nu;
 import me.hd.wauxv.obf.sj;
@@ -20,7 +19,7 @@ public final class NoCacheException extends NetException {
         StringBuilder sb = new StringBuilder("cacheKey = ");
         Request request = getRequest();
         throwIfVar1IsNull(request, "request");
-        yg.t(request.tag(cmz.class));
+        yg.throwIfVarNotNull(request.tag(cmz.class));
         String str = request.method() + request.url();
         sj sjVar = sj.a;
         sb.append(nu.g(str).f("SHA-1").h());

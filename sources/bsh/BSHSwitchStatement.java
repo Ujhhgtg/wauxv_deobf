@@ -72,6 +72,6 @@ class BSHSwitchStatement extends SimpleNode implements ParserConstants {
 
     @Override // bsh.SimpleNode
     public String toString() {
-        return yg.o(new StringBuilder(), super.toString(), ": switch");
+        return yg.concatToVar1(new StringBuilder(), super.toString(), ": switch");
     }
 }

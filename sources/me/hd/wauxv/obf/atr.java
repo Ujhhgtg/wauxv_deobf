@@ -17,17 +17,17 @@ public final class atr {
     public final String j;
 
     static {
-        atr atrVar = new atr("ONE" /* cnb.z(-506612867398442L) */, 0, 0, "一" /* cnb.z(-506630047267626L) */);
+        atr atrVar = new atr("ONE" /* "ONE" /* "ONE" /* "ONE" /* cnb.z(-506612867398442L)   */, 0, 0, "一" /* "一" /* "一" /* "一" /* cnb.z(-506630047267626L)   */);
         a = atrVar;
-        atr atrVar2 = new atr("TWO" /* cnb.z(-506020161911594L) */, 1, 1, "二" /* cnb.z(-506037341780778L) */);
+        atr atrVar2 = new atr("TWO" /* "TWO" /* "TWO" /* "TWO" /* cnb.z(-506020161911594L)   */, 1, 1, "二" /* "二" /* "二" /* "二" /* cnb.z(-506037341780778L)   */);
         b = atrVar2;
-        atr atrVar3 = new atr("THREE" /* cnb.z(-506045931715370L) */, 2, 2, "三" /* cnb.z(-506002982042410L) */);
+        atr atrVar3 = new atr("THREE" /* "THREE" /* "THREE" /* "THREE" /* cnb.z(-506045931715370L)   */, 2, 2, "三" /* "三" /* "三" /* "三" /* cnb.z(-506002982042410L)   */);
         c = atrVar3;
-        atr atrVar4 = new atr("FOUR" /* cnb.z(-506011571977002L) */, 3, 3, "四" /* cnb.z(-505972917271338L) */);
+        atr atrVar4 = new atr("FOUR" /* "FOUR" /* "FOUR" /* "FOUR" /* cnb.z(-506011571977002L)   */, 3, 3, "四" /* "四" /* "四" /* "四" /* cnb.z(-505972917271338L)   */);
         d = atrVar4;
-        atr atrVar5 = new atr("FIVE" /* cnb.z(-505981507205930L) */, 4, 4, "五" /* cnb.z(-505925672631082L) */);
+        atr atrVar5 = new atr("FIVE" /* "FIVE" /* "FIVE" /* "FIVE" /* cnb.z(-505981507205930L)   */, 4, 4, "五" /* "五" /* "五" /* "五" /* cnb.z(-505925672631082L)   */);
         e = atrVar5;
-        atr atrVar6 = new atr("SIX" /* cnb.z(-505934262565674L) */, 5, 5, "六" /* cnb.z(-505882722958122L) */);
+        atr atrVar6 = new atr("SIX" /* "SIX" /* "SIX" /* "SIX" /* cnb.z(-505934262565674L)   */, 5, 5, "六" /* "六" /* "六" /* "六" /* cnb.z(-505882722958122L)   */);
         f = atrVar6;
         atr[] atrVarArr = {atrVar, atrVar2, atrVar3, atrVar4, atrVar5, atrVar6};
         g = atrVarArr;

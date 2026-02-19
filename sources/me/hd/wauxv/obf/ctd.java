@@ -13,6 +13,6 @@ public final class ctd extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        emn.aj(ctc.a, dexKitBridge, new crl(11));
+        emn.aj(ctc.a, dexKitBridge, new AnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(11));
     }
 }

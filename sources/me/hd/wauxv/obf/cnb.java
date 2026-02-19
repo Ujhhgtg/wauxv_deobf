@@ -573,16 +573,16 @@ public abstract class cnb {
 
     public static void m(BaseAdapter baseAdapter, Object obj, int i2)
             throws IllegalAccessException, InvocationTargetException {
-        int i3 = bte.a;
+        int i3 = 0;
         bmu bmuVarBi = dqc.bi(baseAdapter);
         bmuVarBi.v(false);
         cde cdeVarT = bmuVarBi.t();
         abf.ao(cdeVarT.ae, (cdy[]) Arrays.copyOf(new cdy[] { cdy.d }, 1));
         cdeVarT.z(Arrays.copyOf(new Object[] { cvh.a.b(), dal.b(Integer.TYPE) }, 2));
         cdeVarT.ah();
-        cdk cdkVar = (cdk) aaz.g(cdeVarT.aj());
-        if (cdkVar != null) {
-            cdkVar.e(obj, Integer.valueOf(i2));
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+        if (methodHookWrapperVar != null) {
+            methodHookWrapperVar.e(obj, Integer.valueOf(i2));
         } else {
             byt.a.getClass();
             emn.bb(bys.a).invoke(baseAdapter, obj, Integer.valueOf(i2));
@@ -958,70 +958,70 @@ public abstract class cnb {
     }
 
     public static ChatRoomInfo q(Cursor cursor) {
-        String strG = yg.g(-87415469374250L, cursor);
-        long j2 = cursor.getLong(cursor.getColumnIndex(z(-87960930220842L)));
-        long j3 = cursor.getLong(cursor.getColumnIndex(z(-87926570482474L)));
-        long j4 = cursor.getLong(cursor.getColumnIndex(z(-87827786234666L)));
-        String strG2 = yg.g(-87733296954154L, cursor);
-        String strG3 = yg.g(-87720412052266L, cursor);
-        String strG4 = yg.g(-87084756892458L, cursor);
-        String strG5 = yg.g(-87063282055978L, cursor);
-        String strG6 = yg.g(-86968792775466L, cursor);
-        String strG7 = yg.g(-86900073298730L, cursor);
-        String strG8 = yg.g(-87385404603178L, cursor);
-        String strG9 = yg.g(-87325275061034L, cursor);
-        String strG10 = yg.g(-87269440486186L, cursor);
-        String strG11 = yg.g(-87166361271082L, cursor);
-        String strG12 = yg.g(-84348862724906L, cursor);
-        byte[] blob = cursor.getBlob(cursor.getColumnIndex(z(-84220013706026L)));
-        byte[] blob2 = cursor.getBlob(cursor.getColumnIndex(z(-84198538869546L)));
-        byte[] blob3 = cursor.getBlob(cursor.getColumnIndex(z(-84636625533738L)));
-        int i2 = cursor.getInt(cursor.getColumnIndex(z(-84542136253226L)));
-        int i3 = cursor.getInt(cursor.getColumnIndex(z(-84503481547562L)));
-        int i4 = cursor.getInt(cursor.getColumnIndex(z(-84490596645674L)));
-        int i5 = cursor.getInt(cursor.getColumnIndex(z(-84447646972714L)));
-        int i6 = cursor.getInt(cursor.getColumnIndex(z(-83824876714794L)));
-        int i7 = cursor.getInt(cursor.getColumnIndex(z(-83756157238058L)));
-        int i8 = cursor.getInt(cursor.getColumnIndex(z(-83696027695914L)));
-        int i9 = cursor.getInt(cursor.getColumnIndex(z(-83631603186474L)));
-        int i10 = cursor.getInt(cursor.getColumnIndex(z(-84095459654442L)));
-        int i11 = cursor.getInt(cursor.getColumnIndex(z(-83992380439338L)));
-        int i12 = cursor.getInt(cursor.getColumnIndex(z(-83927955929898L)));
+        String strG = cursor.getString(cursor.getColumnIndex("chatroomname")) /* yg.g(-87415469374250L, cursor) */;
+        long j2 = cursor.getLong(cursor.getColumnIndex("addtime" /* z(-87960930220842L) */));
+        long j3 = cursor.getLong(cursor.getColumnIndex("modifytime" /* z(-87926570482474L) */));
+        long j4 = cursor.getLong(cursor.getColumnIndex("chatroomnoticePublishTime" /* z(-87827786234666L) */));
+        String strG2 = cursor.getString(cursor.getColumnIndex("memberlist")) /* yg.g(-87733296954154L, cursor) */;
+        String strG3 = cursor.getString(cursor.getColumnIndex("displayname")) /* yg.g(-87720412052266L, cursor) */;
+        String strG4 = cursor.getString(cursor.getColumnIndex("chatroomnick")) /* yg.g(-87084756892458L, cursor) */;
+        String strG5 = cursor.getString(cursor.getColumnIndex("roomowner")) /* yg.g(-87063282055978L, cursor) */;
+        String strG6 = cursor.getString(cursor.getColumnIndex("selfDisplayName")) /* yg.g(-86968792775466L, cursor) */;
+        String strG7 = cursor.getString(cursor.getColumnIndex("chatroomnotice")) /* yg.g(-86900073298730L, cursor) */;
+        String strG8 = cursor.getString(cursor.getColumnIndex("xmlChatroomnotice")) /* yg.g(-87385404603178L, cursor) */;
+        String strG9 = cursor.getString(cursor.getColumnIndex("chatroomnoticeEditor")) /* yg.g(-87325275061034L, cursor) */;
+        String strG10 = cursor.getString(cursor.getColumnIndex("associateOpenIMRoomName")) /* yg.g(-87269440486186L, cursor) */;
+        String strG11 = cursor.getString(cursor.getColumnIndex("saveByteVersion")) /* yg.g(-87166361271082L, cursor) */;
+        String strG12 = cursor.getString(cursor.getColumnIndex("handleByteVersion")) /* yg.g(-84348862724906L, cursor) */;
+        byte[] blob = cursor.getBlob(cursor.getColumnIndex("roomdata" /* z(-84220013706026L) */));
+        byte[] blob2 = cursor.getBlob(cursor.getColumnIndex("roomInfoDetailResByte" /* z(-84198538869546L) */));
+        byte[] blob3 = cursor.getBlob(cursor.getColumnIndex("localChatRoomWatchMembers" /* z(-84636625533738L) */));
+        int i2 = cursor.getInt(cursor.getColumnIndex("roomflag" /* z(-84542136253226L) */));
+        int i3 = cursor.getInt(cursor.getColumnIndex("isShowname" /* z(-84503481547562L) */));
+        int i4 = cursor.getInt(cursor.getColumnIndex("style" /* z(-84490596645674L) */));
+        int i5 = cursor.getInt(cursor.getColumnIndex("chatroomdataflag" /* z(-84447646972714L) */));
+        int i6 = cursor.getInt(cursor.getColumnIndex("chatroomVersion" /* z(-83824876714794L) */));
+        int i7 = cursor.getInt(cursor.getColumnIndex("chatroomNoticeNew" /* z(-83756157238058L) */));
+        int i8 = cursor.getInt(cursor.getColumnIndex("chatroomStatus" /* z(-83696027695914L) */));
+        int i9 = cursor.getInt(cursor.getColumnIndex("memberCount" /* z(-83631603186474L) */));
+        int i10 = cursor.getInt(cursor.getColumnIndex("openIMRoomMigrateStatus" /* z(-84095459654442L) */));
+        int i11 = cursor.getInt(cursor.getColumnIndex("oldChatroomVersion" /* z(-83992380439338L) */));
+        int i12 = cursor.getInt(cursor.getColumnIndex("spamStatus" /* z(-83927955929898L) */));
         return new ChatRoomInfo(strG, Long.valueOf(j2), Long.valueOf(j3), j4,
-                cursor.getLong(cursor.getColumnIndex(z(-83846351551274L))), strG2, strG3, strG4, strG5, strG6, strG7,
+                cursor.getLong(cursor.getColumnIndex("chatroomfamilystatusmodifytime" /* z(-83846351551274L) */)), strG2, strG3, strG4, strG5, strG6, strG7,
                 strG8, strG9, strG10, strG11, strG12, blob, blob2, blob3, i2, i3, i4, i5, i8, i10, i12, i6, i7,
-                cursor.getLong(cursor.getColumnIndex(z(-85414014614314L))), i9, i11,
-                cursor.getLong(cursor.getColumnIndex(z(-85306640431914L))));
+                cursor.getLong(cursor.getColumnIndex("chatroomLocalVersion" /* z(-85414014614314L) */)), i9, i11,
+                cursor.getLong(cursor.getColumnIndex("compactFlag" /* z(-85306640431914L) */)));
     }
 
     public static RContactInfo r(Cursor cursor) {
-        String strG = yg.g(-86552180947754L, cursor);
-        String strG2 = yg.g(-86513526242090L, cursor);
-        String strG3 = yg.g(-86470576569130L, cursor);
-        String strG4 = yg.g(-86444806765354L, cursor);
-        String strG5 = yg.g(-86363202386730L, cursor);
-        String strG6 = yg.g(-86324547681066L, cursor);
-        String strG7 = yg.g(-86848533691178L, cursor);
-        int i2 = cursor.getInt(cursor.getColumnIndex(z(-86814173952810L)));
-        int i3 = cursor.getInt(cursor.getColumnIndex(z(-86792699116330L)));
-        long j2 = cursor.getLong(cursor.getColumnIndex(z(-86736864541482L)));
-        int i4 = cursor.getInt(cursor.getColumnIndex(z(-86706799770410L)));
-        String strG8 = yg.g(-86681029966634L, cursor);
-        String strG9 = yg.g(-86603720555306L, cursor);
-        String strG10 = yg.g(-85985245264682L, cursor);
-        byte[] blob = cursor.getBlob(cursor.getColumnIndex(z(-85912230820650L)));
-        int i5 = cursor.getInt(cursor.getColumnIndex(z(-85882166049578L)));
-        String strG11 = yg.g(-85852101278506L, cursor);
-        int i6 = cursor.getInt(cursor.getColumnIndex(z(-85783381801770L)));
-        int i7 = cursor.getInt(cursor.getColumnIndex(z(-86260123171626L)));
-        String strG12 = yg.g(-86230058400554L, cursor);
-        String strG13 = yg.g(-86161338923818L, cursor);
-        String strG14 = yg.g(-86084029512490L, cursor);
-        String strG15 = yg.g(-86066849643306L, cursor);
-        String strG16 = yg.g(-87638807673642L, cursor);
-        long j3 = cursor.getLong(cursor.getColumnIndex(z(-87608742902570L)));
-        byte[] blob2 = cursor.getBlob(cursor.getColumnIndex(z(-87518548589354L)));
-        int columnIndex = cursor.getColumnIndex(z(-87514253622058L));
+        String strG = cursor.getString(cursor.getColumnIndex("username")) /* yg.g(-86552180947754L, cursor) */;
+        String strG2 = cursor.getString(cursor.getColumnIndex("alias")) /* yg.g(-86513526242090L, cursor) */;
+        String strG3 = cursor.getString(cursor.getColumnIndex("conRemark")) /* yg.g(-86470576569130L, cursor) */;
+        String strG4 = cursor.getString(cursor.getColumnIndex("domainList")) /* yg.g(-86444806765354L, cursor) */;
+        String strG5 = cursor.getString(cursor.getColumnIndex("nickname")) /* yg.g(-86363202386730L, cursor) */;
+        String strG6 = cursor.getString(cursor.getColumnIndex("pyInitial")) /* yg.g(-86324547681066L, cursor) */;
+        String strG7 = cursor.getString(cursor.getColumnIndex("quanPin")) /* yg.g(-86848533691178L, cursor) */;
+        int i2 = cursor.getInt(cursor.getColumnIndex("showHead" /* z(-86814173952810L) */));
+        int i3 = cursor.getInt(cursor.getColumnIndex("type" /* z(-86792699116330L) */));
+        long j2 = cursor.getLong(cursor.getColumnIndex("uiType" /* z(-86736864541482L) */));
+        int i4 = cursor.getInt(cursor.getColumnIndex("weiboFlag" /* z(-86706799770410L) */));
+        String strG8 = cursor.getString(cursor.getColumnIndex("weiboNickname")) /* yg.g(-86681029966634L, cursor) */;
+        String strG9 = cursor.getString(cursor.getColumnIndex("conRemarkPYFull")) /* yg.g(-86603720555306L, cursor) */;
+        String strG10 = cursor.getString(cursor.getColumnIndex("conRemarkPYShort")) /* yg.g(-85985245264682L, cursor) */;
+        byte[] blob = cursor.getBlob(cursor.getColumnIndex("lvbuff" /* z(-85912230820650L) */));
+        int i5 = cursor.getInt(cursor.getColumnIndex("verifyFlag" /* z(-85882166049578L) */));
+        String strG11 = cursor.getString(cursor.getColumnIndex("encryptUsername")) /* yg.g(-85852101278506L, cursor) */;
+        int i6 = cursor.getInt(cursor.getColumnIndex("chatroomFlag" /* z(-85783381801770L) */));
+        int i7 = cursor.getInt(cursor.getColumnIndex("deleteFlag" /* z(-86260123171626L) */));
+        String strG12 = cursor.getString(cursor.getColumnIndex("contactLabelIds")) /* yg.g(-86230058400554L, cursor) */;
+        String strG13 = cursor.getString(cursor.getColumnIndex("descWordingId")) /* yg.g(-86161338923818L, cursor) */;
+        String strG14 = cursor.getString(cursor.getColumnIndex("openImAppid")) /* yg.g(-86084029512490L, cursor) */;
+        String strG15 = cursor.getString(cursor.getColumnIndex("sourceExtInfo")) /* yg.g(-86066849643306L, cursor) */;
+        String strG16 = cursor.getString(cursor.getColumnIndex("ticket")) /* yg.g(-87638807673642L, cursor) */;
+        long j3 = cursor.getLong(cursor.getColumnIndex("usernameFlag" /* z(-87608742902570L) */));
+        byte[] blob2 = cursor.getBlob(cursor.getColumnIndex("contactExtra" /* z(-87518548589354L) */));
+        int columnIndex = cursor.getColumnIndex("createTime" /* z(-87514253622058L) */);
         return new RContactInfo(strG, strG2, strG3, strG4, strG5, strG6, strG7, i2, i3, j2, i4, strG8, strG9, strG10,
                 blob, i5, strG11, i6, i7, strG12, strG13, strG14, strG15, strG16, j3, blob2,
                 columnIndex != -1 ? cursor.getLong(columnIndex) : 0L);
@@ -1037,21 +1037,21 @@ public abstract class cnb {
     public static GroupInfo t(Cursor cursor) throws IOException {
         GroupData groupData;
         RContactInfo rContactInfoR = r(cursor);
-        Cursor cursorAc = arj.ac(z(-74513387617066L) + rContactInfoR.getUsername() + '\'');
+        Cursor cursorAc = arj.ac("select * from chatroom where chatroomname = '" /* z(-74513387617066L) */ + rContactInfoR.getUsername() + '\'');
         cursorAc.moveToFirst();
         try {
             int count = cursorAc.getCount();
             Map linkedHashMap = ave.a;
-            List listZ = avd.a;
+            List listZ = EmptyReadonlyList.a;
             if (count == 0) {
-                groupData = new GroupData(z(-85761906965290L), listZ, listZ, 0, linkedHashMap, z(-85757611997994L),
-                        z(-85701777423146L), z(-85697482455850L), z(-85710367357738L), 0L);
+                groupData = new GroupData("" /* z(-85761906965290L) */, listZ, listZ, 0, linkedHashMap, "" /* z(-85757611997994L) */,
+                        "" /* z(-85701777423146L) */, "" /* z(-85697482455850L) */, "" /* z(-85710367357738L) */, 0L);
             } else {
                 ChatRoomInfo chatRoomInfoQ = q(cursorAc);
-                List listZ2 = aaz.z(dnj.as(chatRoomInfoQ.getMemberlist(), new String[] { z(-85706072390442L) }));
+                List listZ2 = aaz.z(dnj.as(chatRoomInfoQ.getMemberlist(), new String[] { ";" /* z(-85706072390442L) */ }));
                 String displayname = chatRoomInfoQ.getDisplayname();
                 if (displayname != null) {
-                    listZ = aaz.z(dnj.as(displayname, new String[] { z(-85714662325034L) }));
+                    listZ = aaz.z(dnj.as(displayname, new String[] { "、" /* z(-85714662325034L) */ }));
                 }
                 List list = listZ;
                 if (chatRoomInfoQ.getMemberCount() > 0) {
@@ -1071,23 +1071,23 @@ public abstract class cnb {
                 String selfDisplayName = chatRoomInfoQ.getSelfDisplayName();
                 if (selfDisplayName == null) {
                     Object objB = acv.b(acv.a, eom.b.f);
-                    throwIfVar1IsNull(objB, z(-121221156961066L));
+                    throwIfVar1IsNull(objB, "null cannot be cast to non-null type kotlin.String" /* z(-121221156961066L) */);
                     selfDisplayName = (String) objB;
                 }
                 String str = selfDisplayName;
                 String roomowner = chatRoomInfoQ.getRoomowner();
                 if (roomowner == null) {
-                    roomowner = z(-85723252259626L);
+                    roomowner = "未知" /* z(-85723252259626L) */;
                 }
                 String str2 = roomowner;
                 String chatroomnotice = chatRoomInfoQ.getChatroomnotice();
                 if (chatroomnotice == null) {
-                    chatroomnotice = z(-85676007619370L);
+                    chatroomnotice = "暂无群公告" /* z(-85676007619370L) */;
                 }
                 String str3 = chatroomnotice;
                 String chatroomnoticeEditor = chatRoomInfoQ.getChatroomnoticeEditor();
                 if (chatroomnoticeEditor == null) {
-                    chatroomnoticeEditor = z(-85633057946410L);
+                    chatroomnoticeEditor = "未知" /* z(-85633057946410L) */;
                 }
                 groupData = new GroupData(chatroomname, listZ2, list, memberCount, map, str, str2, str3,
                         chatroomnoticeEditor, chatRoomInfoQ.getChatroomnoticePublishTime());

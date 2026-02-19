@@ -1,6 +1,5 @@
 package bsh;
 
-import bsh.BshClassManager;
 import java.io.Serializable;
 import me.hd.wauxv.obf.yg;
 
@@ -82,7 +81,7 @@ public class Variable implements Serializable, BshClassManager.Listener, Cloneab
     public void setValue(Object obj, int i) {
         if (hasModifier("final")) {
             if (this.value != null) {
-                throw new UtilEvalError(yg.o(new StringBuilder("Cannot re-assign final variable "), this.name, "."));
+                throw new UtilEvalError(yg.concatToVar1(new StringBuilder("Cannot re-assign final variable "), this.name, "."));
             }
             if (obj == null) {
                 return;
@@ -112,7 +111,7 @@ public class Variable implements Serializable, BshClassManager.Listener, Cloneab
             StringBuilder sb = new StringBuilder();
             sb.append(z ? "Static f" : "F");
             sb.append("inal variable ");
-            throw new RuntimeException(yg.o(sb, this.name, " is not initialized."));
+            throw new RuntimeException(yg.concatToVar1(sb, this.name, " is not initialized."));
         }
     }
 

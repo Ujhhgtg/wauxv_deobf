@@ -9,13 +9,11 @@ import me.hd.wauxv.data.bean.info.GroupInfo;
 import me.hd.wauxv.obf.acw;
 import me.hd.wauxv.obf.acx;
 import me.hd.wauxv.obf.arj;
-import me.hd.wauxv.obf.avd;
+import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.bmy;
-import me.hd.wauxv.obf.bte;
 import me.hd.wauxv.obf.bym;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cde;
-import me.hd.wauxv.obf.cdk;
+import me.hd.wauxv.obf.MethodHookWrapper;
 import me.hd.wauxv.obf.clk;
 import me.hd.wauxv.obf.cll;
 import me.hd.wauxv.obf.clp;
@@ -23,7 +21,6 @@ import me.hd.wauxv.obf.clq;
 import me.hd.wauxv.obf.clt;
 import me.hd.wauxv.obf.clu;
 import me.hd.wauxv.obf.cme;
-import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.cty;
 import me.hd.wauxv.obf.dal;
 import me.hd.wauxv.obf.dkz;
@@ -41,7 +38,7 @@ public final class PluginContactMethod {
     @cty
     public final void addChatroomMember(String str, String str2)
             throws IllegalAccessException, InstantiationException, InvocationTargetException {
-        List listBf = dqc.bf(str2);
+        List listBf = dqc.toSingletonList(str2);
         cll.a.getClass();
         cme.b(cme.a, emn.ba(clk.a).newInstance(str, listBf, null, null));
     }
@@ -49,7 +46,7 @@ public final class PluginContactMethod {
     @cty
     public final void delChatroomMember(String str, String str2)
             throws IllegalAccessException, InstantiationException, InvocationTargetException {
-        List listBf = dqc.bf(str2);
+        List listBf = dqc.toSingletonList(str2);
         clq.a.getClass();
         cme.b(cme.a, emn.ba(clp.a).newInstance(str, listBf, 0));
     }
@@ -68,7 +65,7 @@ public final class PluginContactMethod {
     @cty
     public final String getFriendName(String str) {
         xj xjVar = xj.a;
-        String strZ = "" /* cnb.z(-99252399242026L) */;
+        String strZ = "" /* "" /* "" /* cnb.z(-99252399242026L)  */;
         xjVar.getClass();
         return xj.b(str, strZ);
     }
@@ -85,19 +82,19 @@ public final class PluginContactMethod {
         Method methodBb = emn.bb(xo.a);
         xn.a.getClass();
         Object objInvoke = methodBb.invoke(xn.b(), str);
-        throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.Int" /* cnb.z(-380173325171498L) */);
+        throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.Int" /* "null cannot be cast to non-null type kotlin.Int" /* "null cannot be cast to non-null type kotlin.Int" /* cnb.z(-380173325171498L)  */);
         return ((Integer) objInvoke).intValue();
     }
 
     @cty
     public final List<String> getGroupMemberList(String str) {
         xp.a.getClass();
-        int i = bte.a;
+        int i = 0;
         xn.a.getClass();
         cde cdeVarT = dqc.bi(xn.b()).t();
         cdeVarT.a = dal.b(List.class);
-        List<String> list = (List) ((cdk) dkz.n(new Object[] { dal.b(String.class) }, 1, cdeVarT)).j(str);
-        return list == null ? avd.a : list;
+        List<String> list = (List) ((MethodHookWrapper) dkz.n(new Object[] { dal.b(String.class) }, 1, cdeVarT)).j(str);
+        return list == null ? EmptyReadonlyList.a : list;
     }
 
     @cty
@@ -108,7 +105,7 @@ public final class PluginContactMethod {
                                                                                                           * cnb.z(-
                                                                                                           * 107949708016426L)
                                                                                                           */);
-        Object obj = ((Map) objInvoke).get("last_login_alias" /* cnb.z(-109568910687018L) */);
+        Object obj = ((Map) objInvoke).get("last_login_alias" /* "last_login_alias" /* "last_login_alias" /* cnb.z(-109568910687018L)  */);
         String str = obj instanceof String ? (String) obj : null;
         return str == null ? getLoginWxid() : str;
     }
@@ -128,7 +125,7 @@ public final class PluginContactMethod {
     @cty
     public final void inviteChatroomMember(String str, String str2)
             throws IllegalAccessException, InstantiationException, InvocationTargetException {
-        List listBf = dqc.bf(str2);
+        List listBf = dqc.toSingletonList(str2);
         clu.a.getClass();
         cme.b(cme.a, emn.ba(clt.a).newInstance(str, listBf, 0, null));
     }
@@ -136,7 +133,7 @@ public final class PluginContactMethod {
     @cty
     public final void modifyContactLabelList(String str, String str2)
             throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
-        arj.ab(str, dqc.bf(str2));
+        arj.ab(str, dqc.toSingletonList(str2));
     }
 
     @cty

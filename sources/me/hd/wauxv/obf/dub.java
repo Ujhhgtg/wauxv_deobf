@@ -36,8 +36,8 @@ public final class dub {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("ScanCodeInfoProto(codeContent=" /* cnb.z(-265549237975850L) */);
-        yg.u(sb, this.a, -265948669934378L);
+        sb.append("ScanCodeInfoProto(codeContent=" /* "ScanCodeInfoProto(codeContent=" /* "ScanCodeInfoProto(codeContent=" /* "ScanCodeInfoProto(codeContent=" /* cnb.z(-265549237975850L)   */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.a, -265948669934378L);
         return concat(sb, this.b, ')');
     }
 }

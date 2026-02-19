@@ -3,8 +3,6 @@ package me.hd.wauxv.data.bean.info;
 import java.util.List;
 import java.util.Map;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.dkz;
 import me.hd.wauxv.obf.dts;
 import me.hd.wauxv.obf.yg;
@@ -234,17 +232,17 @@ public final class GroupData {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("GroupData(roomId=" /* cnb.z(-14491219655466L) */);
-        yg.u(sb, this.roomId, -14431090113322L);
+        sb.append("GroupData(roomId=" /* "GroupData(roomId=" /* "GroupData(roomId=" /* cnb.z(-14491219655466L)  */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.roomId, -14431090113322L);
         yg.v(sb, this.memberIds, -14340895800106L);
         yg.v(sb, this.memberNames, -14826227104554L);
         dkz.ac(sb, this.memberCount, -14744622725930L);
         sb.append(this.membersHash);
-        sb.append(", mineRoomName=" /* cnb.z(-14680198216490L) */);
-        yg.u(sb, this.mineRoomName, -14611478739754L);
-        yg.u(sb, this.owner, -14572824034090L);
-        yg.u(sb, this.notice, -3002182138666L);
-        yg.u(sb, this.noticeEditor, -2933462661930L);
+        sb.append(", mineRoomName=" /* ", mineRoomName=" /* ", mineRoomName=" /* cnb.z(-14680198216490L)  */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.mineRoomName, -14611478739754L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.owner, -14572824034090L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.notice, -3002182138666L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.noticeEditor, -2933462661930L);
         sb.append(this.noticeTime);
         sb.append(')');
         return sb.toString();

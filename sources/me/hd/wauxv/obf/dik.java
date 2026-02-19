@@ -116,7 +116,7 @@ public final class dik {
                                 for (Object obj : list2) {
                                     int i7 = i6 + 1;
                                     if (i6 < 0) {
-                                        aba.aj();
+                                        OtherStaticHelpers.aj();
                                         throw null;
                                     }
                                     din dinVar2 = (din) obj;
@@ -198,7 +198,7 @@ public final class dik {
                         for (Object obj2 : list4) {
                             int i16 = i15 + 1;
                             if (i15 < 0) {
-                                aba.aj();
+                                OtherStaticHelpers.aj();
                                 throw null;
                             }
                             din dinVar4 = (din) obj2;
@@ -323,7 +323,7 @@ public final class dik {
                                 for (Object obj : list2) {
                                     int i7 = i6 + 1;
                                     if (i6 < 0) {
-                                        aba.aj();
+                                        OtherStaticHelpers.aj();
                                         throw null;
                                     }
                                     din dinVar2 = (din) obj;
@@ -405,7 +405,7 @@ public final class dik {
                         for (Object obj2 : list4) {
                             int i16 = i15 + 1;
                             if (i15 < 0) {
-                                aba.aj();
+                                OtherStaticHelpers.aj();
                                 throw null;
                             }
                             din dinVar4 = (din) obj2;

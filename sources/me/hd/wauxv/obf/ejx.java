@@ -69,11 +69,11 @@ public final class ejx {
 
     public final String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("zt1Proto(rich_text_json=" /* cnb.z(-347913825811242L) */);
-        yg.u(sb, this.b, -347823631498026L);
-        yg.u(sb, this.c, -349339754953514L);
+        sb.append("zt1Proto(rich_text_json=" /* "zt1Proto(rich_text_json=" /* "zt1Proto(rich_text_json=" /* "zt1Proto(rich_text_json=" /* cnb.z(-347913825811242L)   */);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.b, -347823631498026L);
+        yg.decryptVar2UsingCnbZAndConcatToVar1(sb, this.c, -349339754953514L);
         sb.append(this.d);
-        sb.append(", from_rich_publisher=" /* cnb.z(-349301100247850L) */);
+        sb.append(", from_rich_publisher=" /* ", from_rich_publisher=" /* ", from_rich_publisher=" /* ", from_rich_publisher=" /* cnb.z(-349301100247850L)   */);
         bjs.w(sb, this.e, -349185136130858L);
         yg.v(sb, this.f, -349601747958570L);
         yg.v(sb, this.g, -349481488874282L);

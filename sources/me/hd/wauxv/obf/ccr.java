@@ -42,13 +42,13 @@ public final class ccr implements View.OnClickListener {
                     dfVar.getClass();
                     Activity activityV = aye.v();
                     throwIfVar1IsNull(activityV);
-                    if (dnr.bi(string, "@chatroom" /* cnb.z(-513454750300970L) */)) {
+                    if (dnr.bi(string, "@chatroom" /* "@chatroom" /* "@chatroom" /* cnb.z(-513454750300970L)  */)) {
                         Intent intent = new Intent();
                         intent.setClassName(activityV, "com.tencent.mm.chatroom.ui.ChatroomInfoUI" /*
                                                                                                     * cnb.z(-
                                                                                                     * 89438398970666L)
                                                                                                     */);
-                        intent.putExtra("RoomInfo_Id" /* cnb.z(-95253784689450L) */, string);
+                        intent.putExtra("RoomInfo_Id" /* "RoomInfo_Id" /* "RoomInfo_Id" /* cnb.z(-95253784689450L)  */, string);
                         activityV.startActivity(intent);
                     } else {
                         Intent intent2 = new Intent();
@@ -56,7 +56,7 @@ public final class ccr implements View.OnClickListener {
                                                                                                           * cnb.z(-
                                                                                                           * 89111981456170L)
                                                                                                           */);
-                        intent2.putExtra("Contact_User" /* cnb.z(-89442693937962L) */, string);
+                        intent2.putExtra("Contact_User" /* "Contact_User" /* "Contact_User" /* cnb.z(-89442693937962L)  */, string);
                         activityV.startActivity(intent2);
                     }
                     cctVar.p(view);

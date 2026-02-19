@@ -38,7 +38,7 @@ public final class ecj {
     }
 
     public final String toString() {
-        return "o5Proto(music=" /* cnb.z(-259678017682218L) */ + this.b
-                + ", vibratio_meta_info_list=" /* cnb.z(-259613593172778L) */ + this.c + ')';
+        return "o5Proto(music=" /* "o5Proto(music=" /* "o5Proto(music=" /* "o5Proto(music=" /* cnb.z(-259678017682218L)   */ + this.b
+                + ", vibratio_meta_info_list=" /* ", vibratio_meta_info_list=" /* ", vibratio_meta_info_list=" /* ", vibratio_meta_info_list=" /* cnb.z(-259613593172778L)   */ + this.c + ')';
     }
 }

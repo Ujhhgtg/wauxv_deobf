@@ -54,7 +54,7 @@ public final class ki {
         if (application != null) {
             return application;
         }
-        int i = bte.a;
+        int i = 0;
         btc btcVar = b[0];
         bmu bmuVarBh = dqc.bh(e.w());
         dov dovVar = ep.a;
@@ -62,9 +62,9 @@ public final class ki {
         bmuVarBh.v(true);
         cde cdeVarT = bmuVarBh.t();
         cdeVarT.ab = "currentApplication";
-        cdk cdkVar = (cdk) aaz.g(cdeVarT.aj());
-        if (cdkVar != null) {
-            return (Application) cdkVar.j(new Object[0]);
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+        if (methodHookWrapperVar != null) {
+            return (Application) methodHookWrapperVar.j(new Object[0]);
         }
         return null;
     }
@@ -87,7 +87,7 @@ public final class ki {
         }
         ApplicationInfo applicationInfo2 = (ApplicationInfo) objX;
         if (applicationInfo2 == null) {
-            int i = bte.a;
+            int i = 0;
             a.getClass();
             btc btcVar = b[0];
             bmu bmuVarBh = dqc.bh(e.w());
@@ -97,8 +97,8 @@ public final class ki {
             cde cdeVarT = bmuVarBh.t();
             cdeVarT.ab = "currentActivityThread";
             cdeVarT.y();
-            cdk cdkVar = (cdk) aaz.g(cdeVarT.aj());
-            Object objE = cdkVar != null ? cdkVar.e(new Object[0]) : null;
+            MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
+            Object objE = methodHookWrapperVar != null ? methodHookWrapperVar.e(new Object[0]) : null;
             if (objE != null) {
                 bmuVarBi = dqc.bi(objE);
                 bmuVarBi.v(true);
@@ -138,15 +138,15 @@ public final class ki {
         }
         Class clsF = ReflectionWrapper.f(str, 2, classLoader);
         if (clsF != null) {
-            int i = bte.a;
+            int i = 0;
             bmu bmuVarBh = dqc.bh(clsF);
             bmuVarBh.v(true);
             if (bmkVar == bmk.c) {
                 cde cdeVarT = bmuVarBh.t();
                 cdeVarT.ab = "_--_";
-                cdk cdkVar = (cdk) aaz.g(cdeVarT.aj());
+                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT.aj());
                 kf kfVar = new kf(1);
-                if (cdkVar == null || (method = cdkVar.a) == null) {
+                if (methodHookWrapperVar == null || (method = methodHookWrapperVar.a) == null) {
                     return;
                 }
                 cnh.z(method, kfVar);
@@ -154,19 +154,19 @@ public final class ki {
             }
             cde cdeVarT2 = bmuVarBh.t();
             cdeVarT2.ab = "__--";
-            cnh.y((cdk) aaz.g(cdeVarT2.aj()), new kf(2));
+            cnh.y((MethodHookWrapper) aaz.g(cdeVarT2.aj()), new kf(2));
             cde cdeVarT3 = bmuVarBh.t();
             cdeVarT3.ab = "_-_-";
-            cnh.y((cdk) aaz.g(cdeVarT3.aj()), new kf(3));
+            cnh.y((MethodHookWrapper) aaz.g(cdeVarT3.aj()), new kf(3));
             cde cdeVarT4 = bmuVarBh.t();
             cdeVarT4.ab = "-__-";
-            cnh.y((cdk) aaz.g(cdeVarT4.aj()), new kf(4));
+            cnh.y((MethodHookWrapper) aaz.g(cdeVarT4.aj()), new kf(4));
             cde cdeVarT5 = bmuVarBh.t();
             cdeVarT5.ab = "-_-_";
-            cnh.y((cdk) aaz.g(cdeVarT5.aj()), new kf(5));
+            cnh.y((MethodHookWrapper) aaz.g(cdeVarT5.aj()), new kf(5));
             cde cdeVarT6 = bmuVarBh.t();
             cdeVarT6.ab = "___-";
-            cnh.y((cdk) aaz.g(cdeVarT6.aj()), new kf(0));
+            cnh.y((MethodHookWrapper) aaz.g(cdeVarT6.aj()), new kf(0));
         }
     }
 
@@ -176,36 +176,36 @@ public final class ki {
             LinkedHashMap linkedHashMap = d;
             int i = 1;
             if (!linkedHashMap.isEmpty()) {
-                int i2 = bte.a;
+                int i2 = 0;
                 bmu bmuVarBg = dqc.bg(dal.b(Application.class));
                 bmuVarBg.v(true);
                 cde cdeVarT = bmuVarBg.t();
                 cdeVarT.ab = "attach";
                 cdeVarT.z(Arrays.copyOf(new Object[]{dal.b(Context.class)}, 1));
-                cnh.y((cdk) aaz.e(cdeVarT.aj()), new kg(i));
+                cnh.y((MethodHookWrapper) aaz.e(cdeVarT.aj()), new kg(i));
                 cde cdeVarT2 = bmuVarBg.t();
                 cdeVarT2.ab = "onTerminate";
-                cnh.y((cdk) aaz.e(cdeVarT2.aj()), new kg(2));
+                cnh.y((MethodHookWrapper) aaz.e(cdeVarT2.aj()), new kg(2));
                 cde cdeVarT3 = bmuVarBg.t();
                 cdeVarT3.ab = "onLowMemory";
-                cnh.y((cdk) aaz.e(cdeVarT3.aj()), new kg(3));
+                cnh.y((MethodHookWrapper) aaz.e(cdeVarT3.aj()), new kg(3));
                 cde cdeVarT4 = bmuVarBg.t();
                 cdeVarT4.ab = "onTrimMemory";
                 cdeVarT4.z(Arrays.copyOf(new Object[]{dal.b(Integer.TYPE)}, 1));
-                cnh.y((cdk) aaz.e(cdeVarT4.aj()), new kg(4));
+                cnh.y((MethodHookWrapper) aaz.e(cdeVarT4.aj()), new kg(4));
                 cde cdeVarT5 = bmuVarBg.t();
                 cdeVarT5.ab = "onConfigurationChanged";
-                cnh.y((cdk) aaz.e(cdeVarT5.aj()), new kg(0));
+                cnh.y((MethodHookWrapper) aaz.e(cdeVarT5.aj()), new kg(0));
             }
             if (cnb.k || !linkedHashMap.isEmpty()) {
-                int i3 = bte.a;
+                int i3 = 0;
                 bmu bmuVarBg2 = dqc.bg(dal.b(Instrumentation.class));
                 bmuVarBg2.v(true);
                 cde cdeVarT6 = bmuVarBg2.t();
                 cdeVarT6.ab = "callApplicationOnCreate";
-                cdk cdkVar = (cdk) aaz.g(cdeVarT6.aj());
+                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) aaz.g(cdeVarT6.aj());
                 kh khVar = new kh(this, str);
-                if (cdkVar == null || (method = cdkVar.a) == null) {
+                if (methodHookWrapperVar == null || (method = methodHookWrapperVar.a) == null) {
                     return;
                 }
                 cnh.z(method, khVar);

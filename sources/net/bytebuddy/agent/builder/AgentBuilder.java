@@ -52,7 +52,6 @@ import me.hd.wauxv.obf.dts;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.ClassFileVersion;
-import net.bytebuddy.agent.builder.ResettableClassFileTransformer;
 import net.bytebuddy.asm.Advice;
 import net.bytebuddy.asm.AsmVisitorWrapper;
 import net.bytebuddy.build.AccessControllerPlugin;
@@ -5418,7 +5417,7 @@ public interface AgentBuilder {
                     @Override // net.bytebuddy.agent.builder.AgentBuilder.LambdaInstrumentationStrategy.LambdaMetafactoryFactory.Loader
                     public void apply(MethodVisitor methodVisitor) {
                         methodVisitor.visitMethodInsn(184, this.type, "getUnsafe",
-                                yg.o(new StringBuilder("()L"), this.type, ";"), false);
+                                yg.concatToVar1(new StringBuilder("()L"), this.type, ";"), false);
                         methodVisitor.visitVarInsn(58, 11);
                         methodVisitor.visitVarInsn(25, 11);
                         methodVisitor.visitVarInsn(25, 0);

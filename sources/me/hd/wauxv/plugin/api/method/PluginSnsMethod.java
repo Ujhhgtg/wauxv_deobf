@@ -4,8 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 import me.hd.wauxv.obf.arj;
-import me.hd.wauxv.obf.avd;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.cty;
 import me.hd.wauxv.obf.dqc;
 import me.hd.wauxv.obf.eog;
@@ -30,12 +29,12 @@ public final class PluginSnsMethod {
 
     @cty
     public final void uploadTextAndPicList(String str, String str2) throws IllegalAccessException, InvocationTargetException {
-        arj.aj(str, dqc.bf(str2), null, null);
+        arj.aj(str, dqc.toSingletonList(str2), null, null);
     }
 
     @cty
     public final void uploadTextAndPicList(String str, String str2, String str3, String str4) throws IllegalAccessException, InvocationTargetException {
-        arj.aj(str, dqc.bf(str2), str3, str4);
+        arj.aj(str, dqc.toSingletonList(str2), str3, str4);
     }
 
     @cty
@@ -75,8 +74,8 @@ public final class PluginSnsMethod {
     @cty
     public final void uploadTextAndPicList(JSONObject jSONObject) throws IllegalAccessException, InvocationTargetException {
         ?? arrayList;
-        String strOptString = jSONObject.optString("content" /* cnb.z(-401321744137002L) */);
-        JSONArray jSONArrayOptJSONArray = jSONObject.optJSONArray("picPathList" /* cnb.z(-401287384398634L) */);
+        String strOptString = jSONObject.optString("content" /* "content" /* "content" /* cnb.z(-401321744137002L)  */);
+        JSONArray jSONArrayOptJSONArray = jSONObject.optJSONArray("picPathList" /* "picPathList" /* "picPathList" /* cnb.z(-401287384398634L)  */);
         if (jSONArrayOptJSONArray != null) {
             int length = jSONArrayOptJSONArray.length();
             arrayList = new ArrayList(length);
@@ -87,16 +86,16 @@ public final class PluginSnsMethod {
             arrayList = 0;
         }
         if (arrayList == 0) {
-            arrayList = avd.a;
+            arrayList = EmptyReadonlyList.a;
         }
-        arj.aj(strOptString, arrayList, jSONObject.optString("sdkId" /* cnb.z(-401201485052714L) */), jSONObject.optString("sdkAppName" /* cnb.z(-401158535379754L) */));
+        arj.aj(strOptString, arrayList, jSONObject.optString("sdkId" /* "sdkId" /* "sdkId" /* cnb.z(-401201485052714L)  */), jSONObject.optString("sdkAppName" /* "sdkAppName" /* "sdkAppName" /* cnb.z(-401158535379754L)  */));
     }
 
     @cty
     public final void uploadText(JSONObject jSONObject) {
-        String strOptString = jSONObject.optString("content" /* cnb.z(-400862182636330L) */);
-        String strOptString2 = jSONObject.optString("sdkId" /* cnb.z(-400827822897962L) */);
-        String strOptString3 = jSONObject.optString("sdkAppName" /* cnb.z(-400784873225002L) */);
+        String strOptString = jSONObject.optString("content" /* "content" /* "content" /* cnb.z(-400862182636330L)  */);
+        String strOptString2 = jSONObject.optString("sdkId" /* "sdkId" /* "sdkId" /* cnb.z(-400827822897962L)  */);
+        String strOptString3 = jSONObject.optString("sdkAppName" /* "sdkAppName" /* "sdkAppName" /* cnb.z(-400784873225002L)  */);
         Object objC = eog.c(eog.a, ewj.b.h);
         eog.d(objC, strOptString);
         if (strOptString2 != null) {

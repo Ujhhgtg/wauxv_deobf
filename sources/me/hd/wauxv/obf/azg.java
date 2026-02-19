@@ -8,7 +8,7 @@ import java.util.Map;
 /* JADX INFO: loaded from: classes.dex */
 public final class azg extends cbh {
     public Object a;
-    public IHasInvokeMethod b;
+    public IInvokable b;
 
     public final List c() {
         cbg cbgVar = this.aa;

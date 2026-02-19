@@ -48,39 +48,39 @@ public final /* synthetic */ class aoz implements cwg {
         int iHashCode2;
         switch (this.a) {
             case 0:
-                iHashCode = "number" /* cnb.z(-338112710441770L) */.hashCode() * 127;
+                iHashCode = "number" /* "number" /* "number" /* "number" /* cnb.z(-338112710441770L)   */.hashCode() * 127;
                 iHashCode2 = Integer.hashCode(this.b);
                 break;
             case 1:
-                iHashCode = "number" /* cnb.z(-334895779937066L) */.hashCode() * 127;
+                iHashCode = "number" /* "number" /* "number" /* "number" /* cnb.z(-334895779937066L)   */.hashCode() * 127;
                 iHashCode2 = Integer.hashCode(this.b);
                 break;
             case 2:
-                iHashCode = "number" /* cnb.z(-123235496622890L) */.hashCode() * 127;
+                iHashCode = "number" /* "number" /* "number" /* "number" /* cnb.z(-123235496622890L)   */.hashCode() * 127;
                 iHashCode2 = Integer.hashCode(this.b);
                 break;
             case 3:
-                iHashCode = "number" /* cnb.z(-334685326539562L) */.hashCode() * 127;
+                iHashCode = "number" /* "number" /* "number" /* "number" /* cnb.z(-334685326539562L)   */.hashCode() * 127;
                 iHashCode2 = Integer.hashCode(this.b);
                 break;
             case 4:
-                iHashCode = "number" /* cnb.z(-335484190456618L) */.hashCode() * 127;
+                iHashCode = "number" /* "number" /* "number" /* "number" /* cnb.z(-335484190456618L)   */.hashCode() * 127;
                 iHashCode2 = Integer.hashCode(this.b);
                 break;
             case 5:
-                iHashCode = "number" /* cnb.z(-341432720161578L) */.hashCode() * 127;
+                iHashCode = "number" /* "number" /* "number" /* "number" /* cnb.z(-341432720161578L)   */.hashCode() * 127;
                 iHashCode2 = Integer.hashCode(this.b);
                 break;
             case 6:
-                iHashCode = "number" /* cnb.z(-130287832922922L) */.hashCode() * 127;
+                iHashCode = "number" /* "number" /* "number" /* "number" /* cnb.z(-130287832922922L)   */.hashCode() * 127;
                 iHashCode2 = Integer.hashCode(this.b);
                 break;
             case 7:
-                iHashCode = "number" /* cnb.z(-129703717370666L) */.hashCode() * 127;
+                iHashCode = "number" /* "number" /* "number" /* "number" /* cnb.z(-129703717370666L)   */.hashCode() * 127;
                 iHashCode2 = Integer.hashCode(this.b);
                 break;
             default:
-                iHashCode = "number" /* cnb.z(-221749161491242L) */.hashCode() * 127;
+                iHashCode = "number" /* "number" /* "number" /* "number" /* cnb.z(-221749161491242L)   */.hashCode() * 127;
                 iHashCode2 = Integer.hashCode(this.b);
                 break;
         }
@@ -115,39 +115,39 @@ public final /* synthetic */ class aoz implements cwg {
         switch (this.a) {
             case 0:
                 StringBuilder sb = new StringBuilder();
-                sb.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-338632401484586L) */);
+                sb.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-338632401484586L)   */);
                 return dkz.v(sb, this.b, ')');
             case 1:
                 StringBuilder sb2 = new StringBuilder();
-                sb2.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-334848535296810L) */);
+                sb2.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-334848535296810L)   */);
                 return dkz.v(sb2, this.b, ')');
             case 2:
                 StringBuilder sb3 = new StringBuilder();
-                sb3.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-123205431851818L) */);
+                sb3.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-123205431851818L)   */);
                 return dkz.v(sb3, this.b, ')');
             case 3:
                 StringBuilder sb4 = new StringBuilder();
-                sb4.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-334655261768490L) */);
+                sb4.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-334655261768490L)   */);
                 return dkz.v(sb4, this.b, ')');
             case 4:
                 StringBuilder sb5 = new StringBuilder();
-                sb5.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-335454125685546L) */);
+                sb5.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-335454125685546L)   */);
                 return dkz.v(sb5, this.b, ')');
             case 5:
                 StringBuilder sb6 = new StringBuilder();
-                sb6.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-341935231335210L) */);
+                sb6.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-341935231335210L)   */);
                 return dkz.v(sb6, this.b, ')');
             case 6:
                 StringBuilder sb7 = new StringBuilder();
-                sb7.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-130257768151850L) */);
+                sb7.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-130257768151850L)   */);
                 return dkz.v(sb7, this.b, ')');
             case 7:
                 StringBuilder sb8 = new StringBuilder();
-                sb8.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-129673652599594L) */);
+                sb8.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-129673652599594L)   */);
                 return dkz.v(sb8, this.b, ')');
             default:
                 StringBuilder sb9 = new StringBuilder();
-                sb9.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-221701916850986L) */);
+                sb9.append("@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* "@kotlinx.serialization.protobuf.ProtoNumber(number=" /* cnb.z(-221701916850986L)   */);
                 return dkz.v(sb9, this.b, ')');
         }
     }

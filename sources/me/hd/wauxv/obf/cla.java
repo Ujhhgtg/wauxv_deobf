@@ -37,7 +37,7 @@ public final class cla implements alp {
             bhu.bd(obj);
             StackTraceElement[] stackTrace = new Throwable().getStackTrace();
             throwIfVar1IsNull(stackTrace, "Throwable().stackTrace");
-            StackTraceElement stackTraceElement = (StackTraceElement) la.q(stackTrace, 1);
+            StackTraceElement stackTraceElement = (StackTraceElement) SomeStaticHelpers.q(stackTrace, 1);
             if (stackTraceElement != null) {
                 str = " ...(" + stackTraceElement.getFileName() + ':' + stackTraceElement.getLineNumber() + ')';
             } else {

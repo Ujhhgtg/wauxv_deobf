@@ -53,7 +53,7 @@ public final class bvs implements dfx {
 
     @Override // me.hd.wauxv.obf.dfx
     public final List getAnnotations() {
-        return avd.a;
+        return EmptyReadonlyList.a;
     }
 
     @Override // me.hd.wauxv.obf.dfx
@@ -78,7 +78,7 @@ public final class bvs implements dfx {
     @Override // me.hd.wauxv.obf.dfx
     public final List k(int i) {
         if (i >= 0) {
-            return avd.a;
+            return EmptyReadonlyList.a;
         }
         throw new IllegalArgumentException(
                 yg.f(i, "Illegal index ", ", kotlin.collections.LinkedHashMap expects only non-negative indices")

@@ -8,12 +8,12 @@ public final class xp extends bws implements IDexFind {
     public static final xp a = new xp();
 
     public static Object b(String str) {
-        int i = bte.a;
+        int i = 0;
         xn.a.getClass();
         cde cdeVarT = dqc.bi(xn.b()).t();
         wv.a.getClass();
         cdeVarT.a = emn.az(wt.a);
-        return ((cdk) dkz.n(new Object[] { dal.b(String.class) }, 1, cdeVarT)).e(str);
+        return ((MethodHookWrapper) dkz.n(new Object[] { dal.b(String.class) }, 1, cdeVarT)).e(str);
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

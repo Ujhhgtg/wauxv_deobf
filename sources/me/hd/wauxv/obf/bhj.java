@@ -176,7 +176,7 @@ public final class bhj {
                 i += i2;
             } catch (Exception e) {
                 if (Log.isLoggable("GifHeaderParser", 3)) {
-                    StringBuilder sbQ = yg.q(i, i2, "Error Reading Block n: ", " count: ", " blockSize: ");
+                    StringBuilder sbQ = yg.concatVar31425(i, i2, "Error Reading Block n: ", " count: ", " blockSize: ");
                     sbQ.append(this.d);
                     Log.d("GifHeaderParser", sbQ.toString(), e);
                 }

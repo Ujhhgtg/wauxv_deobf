@@ -108,7 +108,7 @@ public final class bfb {
             sb.append(" within the view of parent fragment ");
             sb.append(bdjVar);
             sb.append(" via container with ID ");
-            bfd.c(new bex(bdjVar2, yg.m(sb, " without using parent's childFragmentManager", i)));
+            bfd.c(new bex(bdjVar2, yg.concatToVar1(sb, " without using parent's childFragmentManager", i)));
             bfd.b(bdjVar2).getClass();
         }
         ArrayList arrayList = (ArrayList) this.b.c;
@@ -161,7 +161,7 @@ public final class bfb {
                 StringBuilder sb = new StringBuilder("Fragment ");
                 sb.append(bdjVar);
                 sb.append(" declared target fragment ");
-                throw new IllegalStateException(yg.o(sb, bdjVar.az, " that does not belong to this FragmentManager!"));
+                throw new IllegalStateException(yg.concatToVar1(sb, bdjVar.az, " that does not belong to this FragmentManager!"));
             }
         }
         if (bfbVar != null) {

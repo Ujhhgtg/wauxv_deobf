@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cbn implements IHasInvokeMethod {
+public final class cbn implements IInvokable {
     public final /* synthetic */ int a;
     public final /* synthetic */ cbg b;
 
@@ -22,19 +22,19 @@ public final class cbn implements IHasInvokeMethod {
             case 0:
                 Member member = (Member) obj;
                 throwIfVar1IsNull(member, "null cannot be cast to non-null type java.lang.reflect.Method");
-                cdk cdkVar = new cdk((Method) member);
+                MethodHookWrapper methodHookWrapperVar = new MethodHookWrapper((Method) member);
                 Object obj2 = this.b.b;
                 if (obj2 != null) {
-                    cdkVar.c(obj2);
+                    methodHookWrapperVar.c(obj2);
                 }
-                return cdkVar;
+                return methodHookWrapperVar;
             case 1:
                 Member member2 = (Member) obj;
                 throwIfVar1IsNull(member2,
                         "null cannot be cast to non-null type java.lang.reflect.Constructor<T of com.highcapable.kavaref.resolver.processor.MemberProcessor.resolve>");
-                adu aduVar = new adu((Constructor) member2);
+                ConstructorHookWrapper constructorHookWrapperVar = new ConstructorHookWrapper((Constructor) member2);
                 Object obj3 = this.b.b;
-                return aduVar;
+                return constructorHookWrapperVar;
             case 2:
                 Member member3 = (Member) obj;
                 throwIfVar1IsNull(member3, "null cannot be cast to non-null type java.lang.reflect.Field");
@@ -47,19 +47,19 @@ public final class cbn implements IHasInvokeMethod {
             case 3:
                 Member member4 = (Member) obj;
                 throwIfVar1IsNull(member4, "null cannot be cast to non-null type java.lang.reflect.Method");
-                cdk cdkVar2 = new cdk((Method) member4);
+                MethodHookWrapper methodHookWrapperVar2 = new MethodHookWrapper((Method) member4);
                 Object obj5 = this.b.b;
                 if (obj5 != null) {
-                    cdkVar2.c(obj5);
+                    methodHookWrapperVar2.c(obj5);
                 }
-                return cdkVar2;
+                return methodHookWrapperVar2;
             case 4:
                 Member member5 = (Member) obj;
                 throwIfVar1IsNull(member5,
                         "null cannot be cast to non-null type java.lang.reflect.Constructor<T of com.highcapable.kavaref.resolver.processor.MemberProcessor.resolve>");
-                adu aduVar2 = new adu((Constructor) member5);
+                ConstructorHookWrapper constructorHookWrapperVar2 = new ConstructorHookWrapper((Constructor) member5);
                 Object obj6 = this.b.b;
-                return aduVar2;
+                return constructorHookWrapperVar2;
             case 5:
                 Member member6 = (Member) obj;
                 throwIfVar1IsNull(member6, "null cannot be cast to non-null type java.lang.reflect.Field");
@@ -72,19 +72,19 @@ public final class cbn implements IHasInvokeMethod {
             case 6:
                 Member member7 = (Member) obj;
                 throwIfVar1IsNull(member7, "null cannot be cast to non-null type java.lang.reflect.Method");
-                cdk cdkVar3 = new cdk((Method) member7);
+                MethodHookWrapper methodHookWrapperVar3 = new MethodHookWrapper((Method) member7);
                 Object obj8 = this.b.b;
                 if (obj8 != null) {
-                    cdkVar3.c(obj8);
+                    methodHookWrapperVar3.c(obj8);
                 }
-                return cdkVar3;
+                return methodHookWrapperVar3;
             case 7:
                 Member member8 = (Member) obj;
                 throwIfVar1IsNull(member8,
                         "null cannot be cast to non-null type java.lang.reflect.Constructor<T of com.highcapable.kavaref.resolver.processor.MemberProcessor.resolve>");
-                adu aduVar3 = new adu((Constructor) member8);
+                ConstructorHookWrapper constructorHookWrapperVar3 = new ConstructorHookWrapper((Constructor) member8);
                 Object obj9 = this.b.b;
-                return aduVar3;
+                return constructorHookWrapperVar3;
             default:
                 Member member9 = (Member) obj;
                 throwIfVar1IsNull(member9, "null cannot be cast to non-null type java.lang.reflect.Field");

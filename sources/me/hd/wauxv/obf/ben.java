@@ -7,7 +7,7 @@ import java.util.Iterator;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class ben implements IHasInvokeMethod {
+public final /* synthetic */ class ben implements IInvokable {
     public final /* synthetic */ int a;
     public final /* synthetic */ Object b;
     public final /* synthetic */ Object c;
@@ -51,7 +51,7 @@ public final /* synthetic */ class ben implements IHasInvokeMethod {
                         burVar.j((buo) beqVar.n.invoke(cioVar));
                     }
                 }
-                return ens.a;
+                return KotlinUnit.INSTANCE;
             case 1:
                 Activity activity = (Activity) this.b;
                 String str = (String) this.c;
@@ -61,9 +61,9 @@ public final /* synthetic */ class ben implements IHasInvokeMethod {
                                                                                                            * cnb.z(-
                                                                                                            * 95236604820266L)
                                                                                                            */);
-                intent.putExtra("title" /* cnb.z(-95554432400170L) */, "历史发言记录" /* cnb.z(-95511482727210L) */);
-                intent.putExtra("RoomInfo_Id" /* cnb.z(-95464238086954L) */, str);
-                intent.putExtra("room_member" /* cnb.z(-95447058217770L) */, str2);
+                intent.putExtra("title" /* "title" /* "title" /* cnb.z(-95554432400170L)  */, "历史发言记录" /* "历史发言记录" /* "历史发言记录" /* cnb.z(-95511482727210L)  */);
+                intent.putExtra("RoomInfo_Id" /* "RoomInfo_Id" /* "RoomInfo_Id" /* cnb.z(-95464238086954L)  */, str);
+                intent.putExtra("room_member" /* "room_member" /* "room_member" /* cnb.z(-95447058217770L)  */, str2);
                 activity.startActivity(intent);
                 break;
             default:
@@ -72,12 +72,12 @@ public final /* synthetic */ class ben implements IHasInvokeMethod {
                 String str3 = (String) this.d;
                 Intent intent2 = new Intent();
                 intent2.setClassName(activity2,
-                        "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-96417720826666L) */);
-                intent2.putStringArrayListExtra("sns_kemdia_path_list" /* cnb.z(-96258807036714L) */, arrayList2);
-                intent2.putExtra("Kdescription" /* cnb.z(-96752728275754L) */, str3);
+                        "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* "com.tencent.mm.plugin.sns.ui.SnsUploadUI" /* cnb.z(-96417720826666L)  */);
+                intent2.putStringArrayListExtra("sns_kemdia_path_list" /* "sns_kemdia_path_list" /* "sns_kemdia_path_list" /* cnb.z(-96258807036714L)  */, arrayList2);
+                intent2.putExtra("Kdescription" /* "Kdescription" /* "Kdescription" /* cnb.z(-96752728275754L)  */, str3);
                 activity2.startActivity(intent2);
                 break;
         }
-        return ens.a;
+        return KotlinUnit.INSTANCE;
     }
 }

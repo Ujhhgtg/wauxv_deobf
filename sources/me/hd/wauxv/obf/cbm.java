@@ -76,13 +76,13 @@ public class cbm implements bno, crt, cvv, axv, ahw, dff, cdw {
             r0 = 0;
         }
         List list = (List) r0;
-        return list == null ? avd.a : list;
+        return list == null ? EmptyReadonlyList.a : list;
     }
 
     public List c(Class cls) {
         Object objX;
         try {
-            objX = la.ab(cls.getDeclaredMethods());
+            objX = SomeStaticHelpers.ab(cls.getDeclaredMethods());
         } catch (Throwable th) {
             objX = bhu.x(th);
         }
@@ -95,7 +95,7 @@ public class cbm implements bno, crt, cvv, axv, ahw, dff, cdw {
             objX = null;
         }
         List list = (List) objX;
-        return list == null ? avd.a : list;
+        return list == null ? EmptyReadonlyList.a : list;
     }
 
     @Override // me.hd.wauxv.obf.axv

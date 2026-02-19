@@ -34,7 +34,7 @@ import me.hd.wauxv.obf.bhu;
 import me.hd.wauxv.obf.cau;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cnb;
-import me.hd.wauxv.obf.cnd;
+import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.csh;
 import me.hd.wauxv.obf.cuw;
 import me.hd.wauxv.obf.cux;
@@ -599,7 +599,7 @@ public class TabLayout extends HorizontalScrollView {
     @Override // android.view.ViewGroup, android.view.View
     public final void onAttachedToWindow() {
         super.onAttachedToWindow();
-        cnd.bj(this);
+        KotlinHelpers2.bj(this);
         getParent();
     }
 
@@ -692,7 +692,7 @@ public class TabLayout extends HorizontalScrollView {
     @Override // android.view.View
     public void setElevation(float f) {
         super.setElevation(f);
-        cnd.bh(this, f);
+        KotlinHelpers2.bh(this, f);
     }
 
     public void setInlineLabel(boolean z) {

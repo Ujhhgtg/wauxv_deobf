@@ -31,12 +31,12 @@ public final /* synthetic */ class bxa implements View.OnClickListener {
                 jx jxVar = bxj.i;
                 btc btcVar = bxj.b[0];
                 Intent intent = new Intent(context2, (Class<?>) jxVar.w());
-                intent.putExtra("map_view_type" /* cnb.z(-496326420724522L) */, 8);
+                intent.putExtra("map_view_type" /* "map_view_type" /* "map_view_type" /* cnb.z(-496326420724522L)  */, 8);
                 ((Activity) context).startActivityForResult(intent, 6);
                 break;
             default:
                 cnh.ac(this.b.getContext(), "https://hdshare.github.io/WAuxiliary_Plugin/" /*
-                                                                                            * cnb.z(-485090786278186L)
+                                                                                            * "https://hdshare.github.io/WAuxiliary_Plugin/" /* "https://hdshare.github.io/WAuxiliary_Plugin/" /* cnb.z(-485090786278186L)  */
                                                                                             */);
                 break;
         }

@@ -43,6 +43,6 @@ public final class ud {
         sb.append(",column = ");
         sb.append(this.c);
         sb.append(",index = ");
-        return yg.m(sb, ")", this.a);
+        return yg.concatToVar1(sb, ")", this.a);
     }
 }

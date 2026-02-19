@@ -35,7 +35,7 @@ public final class kk implements Collection, IEmpty {
     public final boolean contains(Object obj) {
         Object[] objArr = this.a;
         throwIfVar1IsNull(objArr, "<this>");
-        return la.s(objArr, obj) >= 0;
+        return SomeStaticHelpers.s(objArr, obj) >= 0;
     }
 
     @Override // java.util.Collection
@@ -47,7 +47,7 @@ public final class kk implements Collection, IEmpty {
         for (Object obj : collection) {
             Object[] objArr = this.a;
             throwIfVar1IsNull(objArr, "<this>");
-            if (la.s(objArr, obj) < 0) {
+            if (SomeStaticHelpers.s(objArr, obj) < 0) {
                 return false;
             }
         }

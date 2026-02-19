@@ -59,7 +59,7 @@ public final class dfu implements Iterator, afw, IEmpty {
             afw afwVar = this.f;
             throwIfVar1IsNull(afwVar);
             this.f = null;
-            afwVar._bn(ens.a);
+            afwVar._bn(KotlinUnit.INSTANCE);
         }
     }
 

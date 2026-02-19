@@ -23,21 +23,21 @@ public abstract class dnk extends aye {
                 }
                 listBf = arrayList;
             } else {
-                listBf = dqc.bf(next);
+                listBf = dqc.toSingletonList(next);
             }
         } else {
-            listBf = avd.a;
+            listBf = EmptyReadonlyList.a;
         }
         int length = str.length();
         listBf.size();
-        int iAf = aba.af(listBf);
+        int iAf = OtherStaticHelpers.af(listBf);
         ArrayList arrayList2 = new ArrayList();
         int i = 0;
         for (Object obj : listBf) {
             int i2 = i + 1;
             String strSubstring = null;
             if (i < 0) {
-                aba.aj();
+                OtherStaticHelpers.aj();
                 throw null;
             }
             String str2 = (String) obj;

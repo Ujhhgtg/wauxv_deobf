@@ -24,7 +24,7 @@ final class FieldReaderFloatField<T> extends FieldReaderObjectField<T> {
         try {
             this.field.set(t, f);
         } catch (Exception e) {
-            throw new JSONException(yg.o(new StringBuilder("set "), this.fieldName, " error"), e);
+            throw new JSONException(yg.concatToVar1(new StringBuilder("set "), this.fieldName, " error"), e);
         }
     }
 

@@ -43,14 +43,14 @@ public final /* synthetic */ class cfx implements bfu {
         Bundle bundle2;
         int i2 = this.a;
         int i3 = 0;
-        ens ensVar = ens.a;
+        KotlinUnit kotlinUnitVar = KotlinUnit.INSTANCE;
         Object obj = this.b;
         switch (i2) {
             case 0:
                 cem cemVar = (cem) obj;
                 cfz.a.u(String.valueOf(cemVar.c.getText()));
                 cga.a.u(String.valueOf(cemVar.d.getText()));
-                return ensVar;
+                return kotlinUnitVar;
             case 1:
                 cen cenVar = (cen) obj;
                 cgk.a.u(String.valueOf(((TextInputEditText) cenVar.i).getText()));
@@ -70,14 +70,14 @@ public final /* synthetic */ class cfx implements bfu {
                 cgiVar.r(numBf3 != null ? numBf3.intValue() : 10);
                 cgn.a.p(((MaterialCheckBox) cenVar.c).isChecked());
                 cgo.a.p(((MaterialCheckBox) cenVar.d).isChecked());
-                return ensVar;
+                return kotlinUnitVar;
             case 2:
                 ceo ceoVar = (ceo) obj;
                 che.a.u(String.valueOf(ceoVar.d.getText()));
                 chg.a.u(String.valueOf(ceoVar.f.getText()));
                 chd.a.u(String.valueOf(ceoVar.c.getText()));
                 chf.a.u(String.valueOf(ceoVar.e.getText()));
-                return ensVar;
+                return kotlinUnitVar;
             case 3:
                 int i4 = 2;
                 NavHostFragment navHostFragment = (NavHostFragment) obj;
@@ -233,25 +233,25 @@ public final /* synthetic */ class cfx implements bfu {
                 if (dnj.ak(str6)) {
                     str6 = null;
                 }
-                CharSequence charSequenceBe = str6 != null ? dqc.be(str6) : null;
+                CharSequence charSequenceBe = str6 != null ? dqc.coerceIn5120Chars(str6) : null;
                 String str7 = (String) chmVar.f;
                 if (dnj.ak(str7)) {
                     str7 = null;
                 }
-                CharSequence charSequenceBe2 = str7 != null ? dqc.be(str7) : null;
+                CharSequence charSequenceBe2 = str7 != null ? dqc.coerceIn5120Chars(str7) : null;
                 CharSequence charSequence = !dnj.ak("") ? "" : null;
-                CharSequence charSequenceBe3 = charSequence != null ? dqc.be(charSequence) : null;
+                CharSequence charSequenceBe3 = charSequence != null ? dqc.coerceIn5120Chars(charSequence) : null;
                 CharSequence charSequence2 = !dnj.ak("") ? "" : null;
-                CharSequence charSequenceBe4 = charSequence2 != null ? dqc.be(charSequence2) : null;
+                CharSequence charSequenceBe4 = charSequence2 != null ? dqc.coerceIn5120Chars(charSequence2) : null;
                 CharSequence charSequence3 = !dnj.ak("") ? "" : null;
-                CharSequence charSequenceBe5 = charSequence3 != null ? dqc.be(charSequence3) : null;
+                CharSequence charSequenceBe5 = charSequence3 != null ? dqc.coerceIn5120Chars(charSequence3) : null;
                 String str8 = !dnj.ak("") ? "" : null;
                 String str9 = str8 != null ? str8 : null;
                 String str10 = !dnj.ak("") ? "" : null;
                 String str11 = str10 != null ? str10 : null;
                 CharSequence charSequence4 = !dnj.ak("") ? "" : null;
                 if (charSequence4 != null) {
-                    notification.tickerText = dqc.be(charSequence4);
+                    notification.tickerText = dqc.coerceIn5120Chars(charSequence4);
                 }
                 String str12 = !dnj.ak("") ? "" : null;
                 if (str12 == null) {
@@ -361,28 +361,28 @@ public final /* synthetic */ class cfx implements bfu {
                 cto.a.p(cefVar.e.isChecked());
                 ctn.a.p(cefVar.d.isChecked());
                 ctm.a.p(cefVar.c.isChecked());
-                return ensVar;
+                return kotlinUnitVar;
             case 8:
                 return new eqi(((cua) obj).a);
             case 9:
                 cem cemVar2 = (cem) obj;
                 cxk.a.u(String.valueOf(cemVar2.d.getText()));
                 cxj.a.u(String.valueOf(cemVar2.c.getText()));
-                return ensVar;
+                return kotlinUnitVar;
             case 10:
                 ddg.a.q(((ceq) obj).c.getValue());
-                return ensVar;
+                return kotlinUnitVar;
             case 11:
                 return aye.u((err) obj);
             case 12:
                 dep depVar = (dep) obj;
                 depVar.ap().j(new cyo(depVar, i3));
-                return ensVar;
+                return kotlinUnitVar;
             case 13:
                 cem cemVar3 = (cem) obj;
                 des.a.u(String.valueOf(cemVar3.c.getText()));
                 det.a.u(String.valueOf(cemVar3.d.getText()));
-                return ensVar;
+                return kotlinUnitVar;
             case 14:
                 dfz dfzVar = (dfz) obj;
                 return Integer.valueOf(bhu.af(dfzVar, dfzVar.u));
@@ -391,12 +391,12 @@ public final /* synthetic */ class cfx implements bfu {
                 djf.a.u(String.valueOf(((TextInputEditText) bqrVar.c).getText()));
                 djg.a.u(String.valueOf(((TextInputEditText) bqrVar.e).getText()));
                 dje.a.p(((MaterialCheckBox) bqrVar.d).isChecked());
-                return ensVar;
+                return kotlinUnitVar;
             case 16:
                 cem cemVar4 = (cem) obj;
                 dkf.a.u(String.valueOf(cemVar4.c.getText()));
                 dkg.a.u(String.valueOf(cemVar4.d.getText()));
-                return ensVar;
+                return kotlinUnitVar;
             case 17:
                 bqr bqrVar2 = (bqr) obj;
                 int checkedRadioButtonId = ((RadioGroup) bqrVar2.e).getCheckedRadioButtonId();
@@ -405,18 +405,18 @@ public final /* synthetic */ class cfx implements bfu {
                 } else if (checkedRadioButtonId == ((MaterialRadioButton) bqrVar2.c).getId()) {
                     dkk.a.r(dkj.b.d);
                 }
-                return ensVar;
+                return kotlinUnitVar;
             case 18:
                 dlu dluVar = dlu.a;
                 Long lBg = dnq.bg(String.valueOf(((cee) obj).c.getText()));
                 dluVar.s(lBg != null ? lBg.longValue() : 88888L);
-                return ensVar;
+                return kotlinUnitVar;
             case 19:
                 ((eqg) obj).invoke();
-                return ensVar;
+                return kotlinUnitVar;
             default:
                 etq.a.r((int) ((ceq) obj).c.getValue());
-                return ensVar;
+                return kotlinUnitVar;
         }
     }
 }

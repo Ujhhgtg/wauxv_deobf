@@ -21,8 +21,8 @@ public abstract class BaseBaseHook extends ewy {
         } catch (Exception e) {
             ArrayList arrayList = ewq.a;
             StringBuilder sb = new StringBuilder();
-            sb.append("initOnce " /* cnb.z(-51419348466474L) */);
-            ewq.e(yg.n(sb, this instanceof SwitchHook ? ((SwitchHook) this).getResult() : "LoadHook" /*
+            sb.append("initOnce " /* "initOnce " /* "initOnce " /* "initOnce " /* cnb.z(-51419348466474L)  */);
+            ewq.e(yg.decryptVar3UsingCnbZAndConcatToVar1(sb, this instanceof SwitchHook ? ((SwitchHook) this).getResult() : "LoadHook" /*
                                                                                                       * cnb.z(-
                                                                                                       * 50843822848810L)
                                                                                                       */), e, 12);
@@ -30,13 +30,13 @@ public abstract class BaseBaseHook extends ewy {
         this.v = true;
     }
 
-    public final void x(aki akiVar, IHasInvokeMethod bgfVar) {
+    public final void x(aki akiVar, IInvokable bgfVar) {
         akiVar.m(new bme(bgfVar, this, 0));
     }
 
-    public final void y(aki akiVar, IHasInvokeMethod bgfVar) {
+    public final void y(aki akiVar, IInvokable bgfVar) {
         akiVar.n(new bme(bgfVar, this, 1));
     }
 
-    public abstract boolean z();
+    public abstract boolean getIsEnabled();
 }
