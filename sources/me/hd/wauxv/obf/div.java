@@ -9,10 +9,10 @@ public final class div extends SwitchHook implements IDatabaseOperationsListener
     public static final String h = "查看历史撤回以及缓存过的朋友圈内容" /* "查看历史撤回以及缓存过的朋友圈内容" /* "查看历史撤回以及缓存过的朋友圈内容" /* cnb.z(-528113473682218L)  */;
 
     public static String i(String str) {
-        if (!dnj.ab(str, "select *,rowid from SnsInfo" /* "select *,rowid from SnsInfo" /* "select *,rowid from SnsInfo" /* cnb.z(-530870842686250L)  */, false)) {
+        if (!StringsKt.contains(str, "select *,rowid from SnsInfo" /* "select *,rowid from SnsInfo" /* "select *,rowid from SnsInfo" /* cnb.z(-530870842686250L)  */, false)) {
             return str;
         }
-        if (dnj.ab(str, "WHERE SnsInfo.userName=" /* "WHERE SnsInfo.userName=" /* "WHERE SnsInfo.userName=" /* cnb.z(-530235187526442L)  */, false)) {
+        if (StringsKt.contains(str, "WHERE SnsInfo.userName=" /* "WHERE SnsInfo.userName=" /* "WHERE SnsInfo.userName=" /* cnb.z(-530235187526442L)  */, false)) {
             str = dnr.bo(dnr.bo(str,
                     "(sourceType in (8,264,10,266,12,268,14,270,24,280,26,282,28,284,30,286,72,328,74,330,76,332,78,334,88,344,90,346,92,348,94,350,136,392,138,394,140,396,142,398,152,408,154,410,156,412,158,414,200,456,202,458,204,460,206,462,216,472,218,474,220,476,222,478))" /*
                                                                                                                                                                                                                                                                                         * cnb

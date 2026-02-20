@@ -13,7 +13,7 @@ public final class bym extends bws implements IDexFind {
         if (string != null) {
             String strZ = "/" /* "/" /* "/" /* cnb.z(-374168960891690L)  */;
             String strZ2 = z ? "0" : "132";
-            int iAl = dnj.al(6, string, strZ);
+            int iAl = StringsKt.al(6, string, strZ);
             if (iAl != -1) {
                 int length = strZ.length() + iAl;
                 int length2 = string.length();

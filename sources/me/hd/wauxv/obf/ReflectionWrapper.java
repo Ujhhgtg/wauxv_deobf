@@ -191,7 +191,7 @@ public abstract class ReflectionWrapper {
             return obj;
         }
         String strU = SomeStaticHelpers.joinToString(objArr, null, null, null, null, 63);
-        if (dnj.ak(strU)) {
+        if (StringsKt.isBlank(strU)) {
             strU = "(empty)";
         }
         throw new NoSuchMethodError("Could not find a suitable constructor for " + constructor + " with arguments: "

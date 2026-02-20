@@ -216,8 +216,8 @@ public final /* synthetic */ class dos implements IInvokable {
                     if (str2 == null) {
                         str2 = "";
                     }
-                    if (dnj.ab(str2, "avatar" /* "avatar" /* "avatar" /* cnb.z(-491967028919082L)  */, false)
-                            || dnj.ab(str2, "user_hd_" /* "user_hd_" /* "user_hd_" /* cnb.z(-491936964148010L)  */, false)) {
+                    if (StringsKt.contains(str2, "avatar" /* "avatar" /* "avatar" /* cnb.z(-491967028919082L)  */, false)
+                            || StringsKt.contains(str2, "user_hd_" /* "user_hd_" /* "user_hd_" /* cnb.z(-491936964148010L)  */, false)) {
                         new ek(hookParam2, 2, 8).q(Bitmap.CompressFormat.PNG);
                     }
                 }

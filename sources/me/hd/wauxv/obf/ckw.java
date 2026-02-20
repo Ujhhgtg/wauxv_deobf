@@ -68,21 +68,21 @@ public final class ckw {
                 if (strAx == null) {
                     strAx = null;
                 }
-                if (strAx == null || dnj.ak(strAx)) {
+                if (strAx == null || StringsKt.isBlank(strAx)) {
                     strAx = null;
                 }
                 if (strAx == null) {
                     String strHeader$default = Response.header$default(response, "Content-Disposition", null, 2, null);
                     if (strHeader$default != null) {
                         CharSequence charSequenceSubSequence = "";
-                        String strAu = dnj.au(strHeader$default, "filename=", "");
-                        if (dnj.ak(strAu)) {
+                        String strAu = StringsKt.au(strHeader$default, "filename=", "");
+                        if (StringsKt.isBlank(strAu)) {
                             strAu = null;
                         }
                         if (strAu != null) {
                             strAx = strAu;
                         } else {
-                            String strAu2 = dnj.au(strHeader$default, "filename*=", "");
+                            String strAu2 = StringsKt.au(strHeader$default, "filename*=", "");
                             char[] charArray = "UTF-8''".toCharArray();
                             throwIfVar1IsNull(charArray, "this as java.lang.String).toCharArray()");
                             char[] cArrCopyOf = Arrays.copyOf(charArray, charArray.length);
@@ -108,13 +108,13 @@ public final class ckw {
                                 }
                             }
                             strAx = charSequenceSubSequence.toString();
-                            if (dnj.ak(strAx)) {
+                            if (StringsKt.isBlank(strAx)) {
                                 strAx = null;
                             }
                             if (strAx == null) {
-                                strAx = dnj.ax((String) StaticHelpers5.l(response.request().url().pathSegments()),
+                                strAx = StringsKt.ax((String) StaticHelpers5.l(response.request().url().pathSegments()),
                                         TypeDescription.Generic.OfWildcardType.SYMBOL);
-                                if (dnj.ak(strAx)) {
+                                if (StringsKt.isBlank(strAx)) {
                                     strAx = "unknown_" + System.currentTimeMillis();
                                 } else {
                                     request = response.request();
@@ -126,9 +126,9 @@ public final class ckw {
                             }
                         }
                     } else {
-                        strAx = dnj.ax((String) StaticHelpers5.l(response.request().url().pathSegments()),
+                        strAx = StringsKt.ax((String) StaticHelpers5.l(response.request().url().pathSegments()),
                                 TypeDescription.Generic.OfWildcardType.SYMBOL);
-                        if (dnj.ak(strAx)) {
+                        if (StringsKt.isBlank(strAx)) {
                             strAx = "unknown_" + System.currentTimeMillis();
                         } else {
                             request = response.request();
@@ -142,11 +142,11 @@ public final class ckw {
                 file = new File(absolutePath, strAx);
             } else {
                 char c = File.separatorChar;
-                int iAm = dnj.am(absolutePath, c, 0, 6);
+                int iAm = StringsKt.am(absolutePath, c, 0, 6);
                 if (iAm != -1) {
                     throwIfVar1IsNull(absolutePath.substring(0, iAm), "substring(...)");
                 }
-                dnj.av(c, absolutePath, absolutePath);
+                StringsKt.av(c, absolutePath, absolutePath);
             }
             try {
                 if (file.exists()) {

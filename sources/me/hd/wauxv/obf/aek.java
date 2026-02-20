@@ -306,7 +306,7 @@ public final class aek {
             adx adxVar = (adx) obj2;
             String str2 = adxVar.b;
             String str3 = adxVar.c;
-            if (dnj.ab(str2, str, true) || dnj.ab(str3, str, true)) {
+            if (StringsKt.contains(str2, str, true) || StringsKt.contains(str3, str, true)) {
                 arrayList2.add(obj2);
             }
         }

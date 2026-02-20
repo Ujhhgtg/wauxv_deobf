@@ -16,7 +16,7 @@ import me.hd.wauxv.obf.BoundField;
 import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.dgg;
 import me.hd.wauxv.obf.dnc;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import me.hd.wauxv.obf.dnq;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.dqc;
@@ -95,7 +95,7 @@ public final class MsgInfoBean {
         if (str == null || str.length() == 0) {
             return EmptyReadonlyList.INSTANCE;
         }
-        List listAs = dnj.as(str, new String[] { "," /* "," /* "," /* cnb.z(-5274219838250L)  */ });
+        List listAs = StringsKt.as(str, new String[] { "," /* "," /* "," /* cnb.z(-5274219838250L)  */ });
         ArrayList arrayList = new ArrayList();
         for (Object obj : listAs) {
             if (((String) obj).length() > 0) {
@@ -119,16 +119,16 @@ public final class MsgInfoBean {
             }
             String str3 = this.originContent;
             throwIfVar1IsNull(str3);
-            return dnj.au(str3, "\n" /* "\n" /* "\n" /* cnb.z(-7722351196970L)  */, str3);
+            return StringsKt.au(str3, "\n" /* "\n" /* "\n" /* cnb.z(-7722351196970L)  */, str3);
         }
         if (isImage()) {
             String strH = this.originContent;
             if (strH != null) {
-                if (dnj.ab(strH, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-7730941131562L)  */, false) && dnj.ab(strH, "</msg>" /*
+                if (StringsKt.contains(strH, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-7730941131562L)  */, false) && StringsKt.contains(strH, "</msg>" /*
                                                                                                         * cnb.z(-
                                                                                                         * 8237747272490L)
                                                                                                         */, false)) {
-                    String strAy = dnj.ay(dnj.au(strH, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-8190502632234L)  */, strH), "</msg>" /*
+                    String strAy = StringsKt.ay(StringsKt.au(strH, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-8190502632234L)  */, strH), "</msg>" /*
                                                                                                               * cnb.z(-
                                                                                                               * 8147552959274L)
                                                                                                               */);
@@ -149,13 +149,13 @@ public final class MsgInfoBean {
         if (isEmoji()) {
             String str5 = this.originContent;
             throwIfVar1IsNull(str5);
-            if (!dnj.ab(str5, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-8108898253610L)  */, false) || !dnj.ab(str5, "</msg>" /*
+            if (!StringsKt.contains(str5, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-8108898253610L)  */, false) || !StringsKt.contains(str5, "</msg>" /*
                                                                                                       * cnb.z(-
                                                                                                       * 8065948580650L)
                                                                                                       */, false)) {
                 return str5;
             }
-            String strAy2 = dnj.ay(dnj.au(str5, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-8018703940394L)  */, str5), "</msg>" /*
+            String strAy2 = StringsKt.ay(StringsKt.au(str5, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-8018703940394L)  */, str5), "</msg>" /*
                                                                                                        * cnb.z(-
                                                                                                        * 7975754267434L)
                                                                                                        */);
@@ -167,17 +167,17 @@ public final class MsgInfoBean {
         if (isVoice() || isVideo()) {
             String str6 = this.originContent;
             throwIfVar1IsNull(str6);
-            return (dnj.ab(str6, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-5175435590442L)  */, false) && dnj.ab(str6,
-                    "</msg>" /* "</msg>" /* "</msg>" /* cnb.z(-5132485917482L)  */, false)) ? dnj.ax(dnj.au(str6,
+            return (StringsKt.contains(str6, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-5175435590442L)  */, false) && StringsKt.contains(str6,
+                    "</msg>" /* "</msg>" /* "</msg>" /* cnb.z(-5132485917482L)  */, false)) ? StringsKt.ax(StringsKt.au(str6,
                             "voicelength=\"" /* "voicelength=\"" /* "voicelength=\"" /* cnb.z(-5102421146410L)  */, str6), "\"" /* "\"" /* "\"" /* cnb.z(-5025111735082L)  */)
-                            : dnj.ax(dnj.au(str6, ":" /* ":" /* ":" /* cnb.z(-5033701669674L)  */, str6), ":" /*
+                            : StringsKt.ax(StringsKt.au(str6, ":" /* ":" /* ":" /* cnb.z(-5033701669674L)  */, str6), ":" /*
                                                                                                 * ":" /* ":" /* cnb.z(-5042291604266L)  */
                                                                                                 */);
         }
         if (isShareCard()) {
             String str7 = this.originContent;
             throwIfVar1IsNull(str7);
-            String strAy3 = dnj.ay(dnj.au(str7, "<msg" /* "<msg" /* "<msg" /* cnb.z(-5050881538858L)  */, str7), "/>" /*
+            String strAy3 = StringsKt.ay(StringsKt.au(str7, "<msg" /* "<msg" /* "<msg" /* cnb.z(-5050881538858L)  */, str7), "/>" /*
                                                                                                   * cnb.z(-
                                                                                                   * 4995046964010L)
                                                                                                   */);
@@ -190,7 +190,7 @@ public final class MsgInfoBean {
                 || isNote() || isQuote() || isFile()) {
             String str8 = this.originContent;
             throwIfVar1IsNull(str8);
-            String strAy4 = dnj.ay(dnj.au(str8, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-5471788333866L)  */, str8), "</msg>" /*
+            String strAy4 = StringsKt.ay(StringsKt.au(str8, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-5471788333866L)  */, str8), "</msg>" /*
                                                                                                        * cnb.z(-
                                                                                                        * 5497558137642L)
                                                                                                        */);
@@ -357,7 +357,7 @@ public final class MsgInfoBean {
         }
         String str = this.originContent;
         throwIfVar1IsNull(str);
-        return dnj.ax(str, ":" /* ":" /* ":" /* cnb.z(-7713761262378L)  */);
+        return StringsKt.ax(str, ":" /* ":" /* ":" /* cnb.z(-7713761262378L)  */);
     }
 
     public final String getTalker() {
@@ -484,7 +484,7 @@ public final class MsgInfoBean {
                     z2 = false;
                     break;
                 }
-                if (dnj.ab(getContent(), (String) it2.next(), false)) {
+                if (StringsKt.contains(getContent(), (String) it2.next(), false)) {
                     z2 = true;
                     break;
                 }
@@ -517,7 +517,7 @@ public final class MsgInfoBean {
         if (!dnr.bp(this.talker, "wxid_" /* "wxid_" /* "wxid_" /* cnb.z(-4883377814314L)  */, false) && !set_cd.isEmpty()) {
             Iterator it = set_cd.iterator();
             while (it.hasNext()) {
-                if (dnj.ab(this.talker, (String) it.next(), true)) {
+                if (StringsKt.contains(this.talker, (String) it.next(), true)) {
                     return false;
                 }
             }
@@ -652,8 +652,8 @@ public final class MsgInfoBean {
         }
 
         public FileMsg(String str) {
-            this(dnc.e("<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-2216203123498L)  */ + dnc.a(dnj
-                    .ay(dnj.au(str, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-2289217567530L)  */, str), "</msg>" /* "</msg>" /* "</msg>" /* cnb.z(-2246267894570L)  */))
+            this(dnc.e("<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-2216203123498L)  */ + dnc.a(StringsKt
+                    .ay(StringsKt.au(str, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-2289217567530L)  */, str), "</msg>" /* "</msg>" /* "</msg>" /* cnb.z(-2246267894570L)  */))
                     + "</msg>" /* "</msg>" /* "</msg>" /* cnb.z(-2723009264426L)  */));
         }
     }
@@ -863,7 +863,7 @@ public final class MsgInfoBean {
 
         public QuoteMsg(String str) {
             this(dnc.e("<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-1906965478186L)  */ + dnc.a(
-                    dnj.ay(dnj.au(str, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-330712480554L)  */, str), "</msg>" /* "</msg>" /* "</msg>" /* cnb.z(-287762807594L)  */))
+                    StringsKt.ay(StringsKt.au(str, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-330712480554L)  */, str), "</msg>" /* "</msg>" /* "</msg>" /* cnb.z(-287762807594L)  */))
                     + "</msg>" /* "</msg>" /* "</msg>" /* cnb.z(-1864015805226L)  */));
         }
     }
@@ -954,8 +954,8 @@ public final class MsgInfoBean {
         }
 
         public TransferMsg(String str) {
-            this(dnc.e("<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-6734508718890L)  */ + dnc.a(dnj
-                    .ay(dnj.au(str, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-6738803686186L)  */, str), "</msg>" /* "</msg>" /* "</msg>" /* cnb.z(-6764573489962L)  */))
+            this(dnc.e("<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-6734508718890L)  */ + dnc.a(StringsKt
+                    .ay(StringsKt.au(str, "<msg>" /* "<msg>" /* "<msg>" /* cnb.z(-6738803686186L)  */, str), "</msg>" /* "</msg>" /* "</msg>" /* cnb.z(-6764573489962L)  */))
                     + "</msg>" /* "</msg>" /* "</msg>" /* cnb.z(-6691559045930L)  */));
         }
     }

@@ -1206,8 +1206,8 @@ public final class cjd {
     }
 
     public static String y(String str) {
-        return (dnj.ab(str, "\\Q", false) && dnj.ab(str, "\\E", false)) ? dnr.bo(str, ".*", "\\E.*\\Q")
-                : dnj.ab(str, "\\.\\*", false) ? dnr.bo(str, "\\.\\*", ".*") : str;
+        return (StringsKt.contains(str, "\\Q", false) && StringsKt.contains(str, "\\E", false)) ? dnr.bo(str, ".*", "\\E.*\\Q")
+                : StringsKt.contains(str, "\\.\\*", false) ? dnr.bo(str, "\\.\\*", ".*") : str;
     }
 
     public final boolean aa(bzx bzxVar, Bundle bundle, Map map) {

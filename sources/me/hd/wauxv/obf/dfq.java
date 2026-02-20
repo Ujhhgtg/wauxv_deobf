@@ -372,7 +372,7 @@ public final /* synthetic */ class dfq implements bgj {
                 if (thB != null) {
                     String strZ = "保存失败: " /* "保存失败: " /* "保存失败: " /* cnb.z(-526391191796522L)  */;
                     String message = thB.getMessage();
-                    dnc.sendToast(null, 3, strZ.concat(message != null ? dnj.az(50, message) : "未知错误" /* "未知错误" /* "未知错误" /* cnb.z(-526343947156266L)  */));
+                    dnc.sendToast(null, 3, strZ.concat(message != null ? StringsKt.az(50, message) : "未知错误" /* "未知错误" /* "未知错误" /* cnb.z(-526343947156266L)  */));
                 }
                 return kotlinUnitVar;
         }

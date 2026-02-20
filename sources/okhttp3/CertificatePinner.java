@@ -13,7 +13,7 @@ import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.IFunction0;
 import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.btp;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.emc;
 import me.hd.wauxv.obf.SomeStaticHelpers;
@@ -106,9 +106,9 @@ public final class CertificatePinner {
         public Pin(String str, String str2) {
             throwIfVar1IsNull(str, "pattern");
             throwIfVar1IsNull(str2, "pin");
-            if ((!dnr.bp(str, "*.", false) || dnj.ai(str, "*", 1, false, 4) != -1)
-                    && ((!dnr.bp(str, "**.", false) || dnj.ai(str, "*", 2, false, 4) != -1)
-                            && dnj.ai(str, "*", 0, false, 6) != -1)) {
+            if ((!dnr.bp(str, "*.", false) || StringsKt.indexOf(str, "*", 1, false, 4) != -1)
+                    && ((!dnr.bp(str, "**.", false) || StringsKt.indexOf(str, "*", 2, false, 4) != -1)
+                            && StringsKt.indexOf(str, "*", 0, false, 6) != -1)) {
                 throw new IllegalArgumentException("Unexpected pattern: ".concat(str).toString());
             }
             String canonicalHost = HostnamesKt.toCanonicalHost(str);
@@ -197,7 +197,7 @@ public final class CertificatePinner {
             }
             int length3 = this.pattern.length() - 1;
             int length4 = str.length() - length3;
-            if (!dnr.bl(str.length() - length3, 1, length3, str, this.pattern, false) || dnj.am(str,
+            if (!dnr.bl(str.length() - length3, 1, length3, str, this.pattern, false) || StringsKt.am(str,
                     TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, length4 - 1, 4) != -1) {
             }
         }

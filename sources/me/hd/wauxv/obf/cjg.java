@@ -47,7 +47,7 @@ public abstract class cjg {
             eaVar.d = null;
         } else {
             eaVar.getClass();
-            if (dnj.ak(string)) {
+            if (StringsKt.isBlank(string)) {
                 throw new IllegalArgumentException("Cannot have an empty route");
             }
             String strConcat = "android-app://androidx.navigation/".concat(string);
@@ -825,7 +825,7 @@ public abstract class cjg {
         }
         sb.append(")");
         String str2 = (String) eaVar.f;
-        if (str2 != null && !dnj.ak(str2)) {
+        if (str2 != null && !StringsKt.isBlank(str2)) {
             sb.append(" route=");
             sb.append((String) eaVar.f);
         }

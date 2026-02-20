@@ -470,7 +470,7 @@ public final class chm implements dom {
         Logger.logException(6, "YukiHookDataChannel cannot send this data key of \"" + str2 + "\" type "
                 + (obj != null ? obj.getClass() : null) + ", because it is too large (total " + (i / 1024.0f)
                 + " KB, limit " + (exf.d / 1024.0f) + " KB) and cannot be segmented\n"
-                + (!dnj.ak(str) ? str.concat("\n") : "")
+                + (!StringsKt.isBlank(str) ? str.concat("\n") : "")
                 + "If you want to lift this restriction, use the allowSendTooLargeData function when calling, but this may cause the app crash",
                 null);
     }
@@ -1234,7 +1234,7 @@ public final class chm implements dom {
             return;
         }
         Intent intent = new Intent();
-        if (!dnj.ak("")) {
+        if (!StringsKt.isBlank("")) {
             intent.setPackage("");
         }
         boolean z = exf.a;

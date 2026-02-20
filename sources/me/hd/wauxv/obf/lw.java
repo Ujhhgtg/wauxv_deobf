@@ -149,7 +149,7 @@ public final class lw extends doi implements bgj {
                             List listAg = OtherStaticHelpers.argsToList("png", "jpg", "gif");
                             String name = file2.getName();
                             throwIfVar1IsNull(name, "getName(...)");
-                            String lowerCase = dnj
+                            String lowerCase = StringsKt
                                     .av('.', name,
                                             "")
                                     .toLowerCase(Locale.ROOT);

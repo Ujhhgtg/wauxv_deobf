@@ -7,7 +7,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import okhttp3.OkHttpClient;
 import okhttp3.internal.concurrent.TaskRunner;
 import okhttp3.internal.http2.Http2;
@@ -49,7 +49,7 @@ public final class AndroidLog {
 
     private final String loggerTag(String str) {
         String str2 = knownLoggers.get(str);
-        return str2 == null ? dnj.az(23, str) : str2;
+        return str2 == null ? StringsKt.az(23, str) : str2;
     }
 
     public final void androidLog$okhttp(String str, int i, String str2, Throwable th) {
@@ -64,7 +64,7 @@ public final class AndroidLog {
             int length = str2.length();
             int i2 = 0;
             while (i2 < length) {
-                int iAh = dnj.ah('\n', i2, 4, str2);
+                int iAh = StringsKt.indexOf('\n', i2, 4, str2);
                 if (iAh == -1) {
                     iAh = length;
                 }

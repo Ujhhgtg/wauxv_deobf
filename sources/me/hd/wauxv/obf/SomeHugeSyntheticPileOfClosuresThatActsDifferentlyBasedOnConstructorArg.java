@@ -74,7 +74,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                             Iterator it2 = listAg.iterator();
                             while (true) {
                                 if (it2.hasNext()) {
-                                    if (dnj.ab(button.getText(), (String) it2.next(), true)) {
+                                    if (StringsKt.contains(button.getText(), (String) it2.next(), true)) {
                                         button.performClick();
                                     }
                                     break;

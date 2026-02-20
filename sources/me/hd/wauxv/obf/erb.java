@@ -26,7 +26,7 @@ public abstract class erb {
     public static final View b(View view, String str, int... iArr) {
         ?? X;
         Integer num;
-        boolean zAk = dnj.ak(str);
+        boolean zAk = StringsKt.isBlank(str);
         LinkedHashMap linkedHashMap = a;
         if (!zAk && (num = (Integer) linkedHashMap.get(str)) != null) {
             return view.findViewById(num.intValue());
@@ -43,7 +43,7 @@ public abstract class erb {
                 i++;
                 X = ((ViewGroup) X).getChildAt(i2);
             }
-            if (!dnj.ak(str) && !nullSafeIsEqual(X, view)) {
+            if (!StringsKt.isBlank(str) && !nullSafeIsEqual(X, view)) {
                 linkedHashMap.put(str, Integer.valueOf(X.getId()));
             }
             if (X == 0) {

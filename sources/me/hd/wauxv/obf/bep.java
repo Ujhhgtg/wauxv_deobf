@@ -399,7 +399,7 @@ public final class bep implements IInvokable
                                 }
                                 s3 = (String)iterator8.next();
                                 textView2 = (TextView)view2;
-                            } while (!dnj.ab(textView2.getText(), (CharSequence)s3, true));
+                            } while (!StringsKt.contains(textView2.getText(), (CharSequence)s3, true));
                             ((View)textView2).setVisibility(4);
                             e2 = d;
                         }

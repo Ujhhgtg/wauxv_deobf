@@ -9,7 +9,7 @@ import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.bdb;
 import me.hd.wauxv.obf.dhy;
 import me.hd.wauxv.obf.dlc;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.dts;
 import me.hd.wauxv.obf.ekc;
@@ -189,7 +189,7 @@ public final class Http1ExchangeCodec implements ExchangeCodec {
             }
             try {
                 this.bytesRemainingInChunk = this.this$0.source.aj();
-                String string = dnj.ba(this.this$0.source.aa()).toString();
+                String string = StringsKt.ba(this.this$0.source.aa()).toString();
                 if (this.bytesRemainingInChunk < 0 || (string.length() > 0 && !dnr.bp(string, ";", false))) {
                     throw new ProtocolException("expected chunk size and optional extensions but was \""
                             + this.bytesRemainingInChunk + string + '\"');

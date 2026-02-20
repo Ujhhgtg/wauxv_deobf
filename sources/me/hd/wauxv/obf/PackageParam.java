@@ -63,7 +63,7 @@ public class PackageParam {
         MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "currentPackageName";
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
-        if (methodHookWrapperVar != null && (str = (String) methodHookWrapperVar.invoke(new Object[0])) != null && !dnj.ak(str)) {
+        if (methodHookWrapperVar != null && (str = (String) methodHookWrapperVar.invoke(new Object[0])) != null && !StringsKt.isBlank(str)) {
             str2 = str;
         }
         return str2 == null ? "android" : str2;
@@ -92,7 +92,7 @@ public class PackageParam {
             ewyVar.ak(this);
             return;
         }
-        if (dnj.ak(cscVar.packageName) || cscVar.hookScope == HookScopeEnum.ZYGOTE) {
+        if (StringsKt.isBlank(cscVar.packageName) || cscVar.hookScope == HookScopeEnum.ZYGOTE) {
             ewyVar.ak(this);
             return;
         }

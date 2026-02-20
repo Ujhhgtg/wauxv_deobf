@@ -52,7 +52,7 @@ public final /* synthetic */ class cxa implements bgj {
                 CharSequence charSequence = (CharSequence) obj;
                 int iIntValue = ((Integer) obj2).intValue();
                 throwIfVar1IsNull(charSequence, "$this$DelimitedRangesSequence");
-                int iAj = dnj.aj(charSequence, cArr, iIntValue, false);
+                int iAj = StringsKt.indexOfAny(charSequence, cArr, iIntValue, false);
                 if (iAj < 0) {
                     return null;
                 }
@@ -71,7 +71,7 @@ public final /* synthetic */ class cxa implements bgj {
                         throw new IllegalArgumentException("List has more than one element.");
                     }
                     String str4 = (String) list2.get(0);
-                    int iAi = dnj.ai(charSequence2, str4, iIntValue2, false, 4);
+                    int iAi = StringsKt.indexOf(charSequence2, str4, iIntValue2, false, 4);
                     pairVar = iAi < 0 ? null : new Pair(Integer.valueOf(iAi), str4);
                 } else {
                     if (iIntValue2 < 0) {
@@ -117,7 +117,7 @@ public final /* synthetic */ class cxa implements bgj {
                                     next = it3.next();
                                     String str5 = (String) next;
                                     i = i3;
-                                    if (!dnj.an(str5, 0, charSequence2, i5, str5.length(), false)) {
+                                    if (!StringsKt.an(str5, 0, charSequence2, i5, str5.length(), false)) {
                                         i3 = i;
                                     }
                                 } else {

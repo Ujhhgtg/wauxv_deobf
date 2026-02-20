@@ -63,7 +63,7 @@ public final class exj extends nh {
             if (bgfVar != null) {
                 bgfVar.invoke(hookParam);
             }
-            Member member2 = ((bmh) blqVar.a).b.method;
+            Member member2 = ((XposedMethodHookParamWrapper) blqVar.a).b.method;
             Method method = member2 instanceof Method ? (Method) member2 : null;
             Class<?> returnType = method != null ? method.getReturnType() : null;
             Object objG = ((bmi) blqVar.d).g(null, Boolean.FALSE);

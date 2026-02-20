@@ -22,10 +22,10 @@ public final class cqz extends bws implements IDatabaseOperationsListener {
             String asString = contentValues.getAsString("chatroomname" /* "chatroomname" /* "chatroomname" /* "chatroomname" /* cnb.z(-399509267938090L)   */);
             Integer asInteger = contentValues.getAsInteger("memberCount" /* "memberCount" /* "memberCount" /* "memberCount" /* cnb.z(-399487793101610L)   */);
             String asString2 = contentValues.getAsString("memberlist" /* "memberlist" /* "memberlist" /* "memberlist" /* cnb.z(-399401893755690L)   */);
-            if (asString2 == null || dnj.ak(asString2)) {
+            if (asString2 == null || StringsKt.isBlank(asString2)) {
                 return;
             }
-            Set setAd = StaticHelpers5.ad(dnj.as(asString2, new String[] { ";" /* ";" /* ";" /* ";" /* cnb.z(-396640229784362L)   */ }));
+            Set setAd = StaticHelpers5.ad(StringsKt.as(asString2, new String[] { ";" /* ";" /* ";" /* ";" /* cnb.z(-396640229784362L)   */ }));
             int i2 = 0;
             ClassSqliteDBDexFind.INSTANCE.getClass();
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(ClassSqliteDBDexFind.getDb()).getMethodResolverBasedOnPreviouslyProvidedConfig();
@@ -44,8 +44,8 @@ public final class cqz extends bws implements IDatabaseOperationsListener {
                     }
                     String string = cursor
                             .getString(cursor.getColumnIndex("memberlist" /* "memberlist" /* "memberlist" /* "memberlist" /* cnb.z(-396854978149162L)   */));
-                    if (string != null && !dnj.ak(string)) {
-                        Set setAd2 = StaticHelpers5.ad(dnj.as(string, new String[] { ";" /* ";" /* ";" /* ";" /* cnb.z(-396756193901354L)   */ }));
+                    if (string != null && !StringsKt.isBlank(string)) {
+                        Set setAd2 = StaticHelpers5.ad(StringsKt.as(string, new String[] { ";" /* ";" /* ";" /* ";" /* cnb.z(-396756193901354L)   */ }));
                         if (asInteger.intValue() > i3) {
                             for (String str3 : dgg.a(setAd, setAd2)) {
                                 String strZ = "join" /* "join" /* "join" /* "join" /* cnb.z(-396764783835946L)   */;

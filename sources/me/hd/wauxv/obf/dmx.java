@@ -151,7 +151,7 @@ public final class dmx extends KotlinHelpers2 implements ajt, acm {
                     if (i2 != -1) {
                         ikVar.b = i2 - 1;
                     }
-                    int iAl = dnj.al(6, str.subSequence(0, yiVar.b).toString(), strM);
+                    int iAl = StringsKt.al(6, str.subSequence(0, yiVar.b).toString(), strM);
                     throw new brv("Encountered an unknown key '" + strM + "' at offset " + iAl + " at path: "
                             + ikVar.p()
                             + "\nUse 'ignoreUnknownKeys = true' in 'Json {}' builder or '@JsonIgnoreUnknownKeys' annotation to ignore unknown keys.\nJSON input: "
@@ -390,7 +390,7 @@ public final class dmx extends KotlinHelpers2 implements ajt, acm {
         } catch (cdl e) {
             message = e.getMessage();
             throwIfVar1IsNull(message);
-            if (dnj.ab(message, "at path", false)) {
+            if (StringsKt.contains(message, "at path", false)) {
                 throw e;
             }
             throw new cdl(e.a, e.getMessage() + " at path: " + ikVar.p(), e);
@@ -409,10 +409,10 @@ public final class dmx extends KotlinHelpers2 implements ajt, acm {
             } catch (SomeIllegalArgumentException e2) {
                 String message2 = e2.getMessage();
                 throwIfVar1IsNull(message2);
-                String strAp = dnj.ap(dnj.aw(message2, '\n'), ".");
+                String strAp = StringsKt.ap(StringsKt.aw(message2, '\n'), ".");
                 String message3 = e2.getMessage();
                 throwIfVar1IsNull(message3);
-                yi.g(yiVar, strAp, 0, dnj.at('\n', message3, ""), 2);
+                yi.g(yiVar, strAp, 0, StringsKt.at('\n', message3, ""), 2);
                 throw null;
             }
         }
@@ -443,7 +443,7 @@ public final class dmx extends KotlinHelpers2 implements ajt, acm {
         }
         message = e.getMessage();
         throwIfVar1IsNull(message);
-        if (dnj.ab(message, "at path", false)) {
+        if (StringsKt.contains(message, "at path", false)) {
             throw e;
         }
         throw new cdl(e.a, e.getMessage() + " at path: " + ikVar.p(), e);

@@ -29,7 +29,7 @@ public final class kg extends nh {
         switch (this.a) {
             case 0:
                 try {
-                    obj2 = ((bmh) blqVar.b).b.thisObject;
+                    obj2 = ((XposedMethodHookParamWrapper) blqVar.b).b.thisObject;
                 } catch (Throwable th) {
                     objX4 = FastKV.getFailureFromException(th);
                 }
@@ -85,7 +85,7 @@ public final class kg extends nh {
                         if (((Map.Entry) it3.next()).getValue() != null) {
                             throw new ClassCastException();
                         }
-                        Object obj5 = ((bmh) blqVar.b).b.thisObject;
+                        Object obj5 = ((XposedMethodHookParamWrapper) blqVar.b).b.thisObject;
                         if ((obj5 instanceof Application ? (Application) obj5 : null) != null) {
                             throw null;
                         }
@@ -107,7 +107,7 @@ public final class kg extends nh {
                         if (((Map.Entry) it4.next()).getValue() != null) {
                             throw new ClassCastException();
                         }
-                        Object obj6 = ((bmh) blqVar.b).b.thisObject;
+                        Object obj6 = ((XposedMethodHookParamWrapper) blqVar.b).b.thisObject;
                         if ((obj6 instanceof Application ? (Application) obj6 : null) != null) {
                             throw null;
                         }
@@ -124,7 +124,7 @@ public final class kg extends nh {
                 return;
             default:
                 try {
-                    obj = ((bmh) blqVar.b).b.thisObject;
+                    obj = ((XposedMethodHookParamWrapper) blqVar.b).b.thisObject;
                 } catch (Throwable th5) {
                     objX3 = FastKV.getFailureFromException(th5);
                 }

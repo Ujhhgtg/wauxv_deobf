@@ -227,16 +227,16 @@ public abstract class bmy {
         String path = file.getPath();
         throwIfVar1IsNull(path);
         char c = File.separatorChar;
-        int iAh2 = dnj.ah(c, 0, 4, path);
+        int iAh2 = StringsKt.indexOf(c, 0, 4, path);
         if (iAh2 != 0) {
             length = (iAh2 <= 0 || path.charAt(iAh2 + (-1)) != ':')
-                    ? (iAh2 == -1 && path.length() > 0 && cmz.u(path.charAt(dnj.ae(path)), ':', false)) ? path.length()
+                    ? (iAh2 == -1 && path.length() > 0 && cmz.u(path.charAt(StringsKt.lastIndexOf(path)), ':', false)) ? path.length()
                             : 0
                     : iAh2 + 1;
-        } else if (path.length() <= 1 || path.charAt(1) != c || (iAh = dnj.ah(c, 2, 4, path)) < 0) {
+        } else if (path.length() <= 1 || path.charAt(1) != c || (iAh = StringsKt.indexOf(c, 2, 4, path)) < 0) {
             length = 1;
         } else {
-            int iAh3 = dnj.ah(c, iAh + 1, 4, path);
+            int iAh3 = StringsKt.indexOf(c, iAh + 1, 4, path);
             length = iAh3 >= 0 ? iAh3 + 1 : path.length();
         }
         String strSubstring = path.substring(0, length);
@@ -246,7 +246,7 @@ public abstract class bmy {
         if (strSubstring2.length() == 0) {
             list = EmptyReadonlyList.INSTANCE;
         } else {
-            List listAr = dnj.ar(strSubstring2, new char[] { c });
+            List listAr = StringsKt.ar(strSubstring2, new char[] { c });
             ArrayList arrayList = new ArrayList(StaticHelpers4.ak(listAr, 10));
             Iterator it = listAr.iterator();
             while (it.hasNext()) {
@@ -1100,7 +1100,7 @@ public abstract class bmy {
                 CustomBalanceHook.a,
                 CustomContactCountHook.a, cfm.a, cfv.a,
                 chh.a, ddh.a,
-                AntiRevoke1Hook.a, ga.a, gd.a, lz.a, AutoSelectOriginalPhotoHook.a, mh.a, AutoViewOriginalPhotoHook.a,
+                AntiRevoke1Hook.a, AntiRevoke2Hook.a, AntiRevoke3Hook.INSTANCE, lz.a, AutoSelectOriginalPhotoHook.a, mh.a, AutoViewOriginalPhotoHook.a,
                 xg.a,
                 DisableMsgClipHook.a, DisablePatHook.a,
                 DisablePlayRingtoneHook.a, DisableSendStatusHook.a,

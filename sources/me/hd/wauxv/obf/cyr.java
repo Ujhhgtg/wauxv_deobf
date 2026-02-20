@@ -46,7 +46,7 @@ public final /* synthetic */ class cyr implements View.OnClickListener {
                 zm zmVar = (zm) this.d;
                 TextInputEditText textInputEditText = (TextInputEditText) bqrVar.d;
                 String strValueOf = String.valueOf(textInputEditText.getText());
-                if (!dnj.ak(strValueOf)) {
+                if (!StringsKt.isBlank(strValueOf)) {
                     arrayList.add(strValueOf);
                     zmVar.af();
                     Editable text = textInputEditText.getText();

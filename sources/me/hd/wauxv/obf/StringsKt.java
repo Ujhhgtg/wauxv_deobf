@@ -5,26 +5,26 @@ import java.util.Iterator;
 import java.util.List;
 
 /* JADX INFO: loaded from: classes.dex */
-public abstract class dnj extends dnr {
-    public static boolean ab(CharSequence charSequence, CharSequence charSequence2, boolean z) {
+public abstract class StringsKt extends dnr {
+    public static boolean contains(CharSequence charSequence, CharSequence charSequence2, boolean z) {
         throwIfVar1IsNull(charSequence, "<this>");
         throwIfVar1IsNull(charSequence2, "other");
         if (charSequence2 instanceof String) {
-            if (ai(charSequence, (String) charSequence2, 0, z, 2) >= 0) {
+            if (indexOf(charSequence, (String) charSequence2, 0, z, 2) >= 0) {
                 return true;
             }
-        } else if (ag(charSequence, charSequence2, 0, charSequence.length(), z, false) >= 0) {
+        } else if (indexOf(charSequence, charSequence2, 0, charSequence.length(), z, false) >= 0) {
             return true;
         }
         return false;
     }
 
-    public static boolean ac(CharSequence charSequence, char c) {
+    public static boolean containsChar(CharSequence charSequence, char c) {
         throwIfVar1IsNull(charSequence, "<this>");
-        return ah(c, 0, 2, charSequence) >= 0;
+        return indexOf(c, 0, 2, charSequence) >= 0;
     }
 
-    public static String ad(int i, String str) {
+    public static String drop(int i, String str) {
         throwIfVar1IsNull(str, "<this>");
         if (i < 0) {
             throw new IllegalArgumentException(yg.f(i, "Requested character count ", " is less than zero.").toString());
@@ -38,7 +38,7 @@ public abstract class dnj extends dnr {
         return strSubstring;
     }
 
-    public static int ae(CharSequence charSequence) {
+    public static int lastIndexOf(CharSequence charSequence) {
         throwIfVar1IsNull(charSequence, "<this>");
         return charSequence.length() - 1;
     }
@@ -46,15 +46,15 @@ public abstract class dnj extends dnr {
     public static final int af(CharSequence charSequence, String str, int i, boolean z) {
         throwIfVar1IsNull(charSequence, "<this>");
         throwIfVar1IsNull(str, "string");
-        return (z || !(charSequence instanceof String)) ? ag(charSequence, str, i, charSequence.length(), z, false)
+        return (z || !(charSequence instanceof String)) ? indexOf(charSequence, str, i, charSequence.length(), z, false)
                 : ((String) charSequence).indexOf(str, i);
     }
 
-    public static final int ag(CharSequence charSequence, CharSequence charSequence2, int i, int i2, boolean z,
-            boolean z2) {
+    public static final int indexOf(CharSequence charSequence, CharSequence charSequence2, int i, int i2, boolean z,
+                                    boolean z2) {
         KotlinIntProgression intRangeVar;
         if (z2) {
-            int iAe = ae(charSequence);
+            int iAe = lastIndexOf(charSequence);
             if (i > iAe) {
                 i = iAe;
             }
@@ -111,16 +111,16 @@ public abstract class dnj extends dnr {
         return -1;
     }
 
-    public static int ah(char c, int i, int i2, CharSequence charSequence) {
+    public static int indexOf(char c, int i, int i2, CharSequence charSequence) {
         if ((i2 & 2) != 0) {
             i = 0;
         }
         throwIfVar1IsNull(charSequence, "<this>");
-        return !(charSequence instanceof String) ? aj(charSequence, new char[] { c }, i, false)
+        return !(charSequence instanceof String) ? indexOfAny(charSequence, new char[] { c }, i, false)
                 : ((String) charSequence).indexOf(c, i);
     }
 
-    public static /* synthetic */ int ai(CharSequence charSequence, String str, int i, boolean z, int i2) {
+    public static /* synthetic */ int indexOf(CharSequence charSequence, String str, int i, boolean z, int i2) {
         if ((i2 & 2) != 0) {
             i = 0;
         }
@@ -130,7 +130,7 @@ public abstract class dnj extends dnr {
         return af(charSequence, str, i, z);
     }
 
-    public static final int aj(CharSequence charSequence, char[] cArr, int i, boolean z) {
+    public static final int indexOfAny(CharSequence charSequence, char[] cArr, int i, boolean z) {
         throwIfVar1IsNull(charSequence, "<this>");
         if (!z && cArr.length == 1 && (charSequence instanceof String)) {
             return ((String) charSequence).indexOf(SomeStaticHelpers.w(cArr), i);
@@ -138,7 +138,7 @@ public abstract class dnj extends dnr {
         if (i < 0) {
             i = 0;
         }
-        int iAe = ae(charSequence);
+        int iAe = lastIndexOf(charSequence);
         if (i > iAe) {
             return -1;
         }
@@ -156,7 +156,7 @@ public abstract class dnj extends dnr {
         }
     }
 
-    public static boolean ak(CharSequence charSequence) {
+    public static boolean isBlank(CharSequence charSequence) {
         throwIfVar1IsNull(charSequence, "<this>");
         for (int i = 0; i < charSequence.length(); i++) {
             if (!cmz.ac(charSequence.charAt(i))) {
@@ -167,7 +167,7 @@ public abstract class dnj extends dnr {
     }
 
     public static int al(int i, String str, String str2) {
-        int iAe = (i & 2) != 0 ? ae(str) : 0;
+        int iAe = (i & 2) != 0 ? lastIndexOf(str) : 0;
         throwIfVar1IsNull(str, "<this>");
         throwIfVar1IsNull(str2, "string");
         return str.lastIndexOf(str2, iAe);
@@ -175,7 +175,7 @@ public abstract class dnj extends dnr {
 
     public static int am(String str, char c, int i, int i2) {
         if ((i2 & 2) != 0) {
-            i = ae(str);
+            i = lastIndexOf(str);
         }
         throwIfVar1IsNull(str, "<this>");
         return str.lastIndexOf(c, i);
@@ -272,7 +272,7 @@ public abstract class dnj extends dnr {
     }
 
     public static String at(char c, String str, String str2) {
-        int iAh = ah(c, 0, 6, str);
+        int iAh = indexOf(c, 0, 6, str);
         if (iAh == -1) {
             return str2;
         }
@@ -285,7 +285,7 @@ public abstract class dnj extends dnr {
         throwIfVar1IsNull(str, "<this>");
         throwIfVar1IsNull(str2, "delimiter");
         throwIfVar1IsNull(str3, "missingDelimiterValue");
-        int iAi = ai(str, str2, 0, false, 6);
+        int iAi = indexOf(str, str2, 0, false, 6);
         if (iAi == -1) {
             return str3;
         }
@@ -305,7 +305,7 @@ public abstract class dnj extends dnr {
     }
 
     public static String aw(String str, char c) {
-        int iAh = ah(c, 0, 6, str);
+        int iAh = indexOf(c, 0, 6, str);
         if (iAh == -1) {
             return str;
         }
@@ -317,7 +317,7 @@ public abstract class dnj extends dnr {
     public static String ax(String str, String str2) {
         throwIfVar1IsNull(str, "<this>");
         throwIfVar1IsNull(str, "missingDelimiterValue");
-        int iAi = ai(str, str2, 0, false, 6);
+        int iAi = indexOf(str, str2, 0, false, 6);
         if (iAi == -1) {
             return str;
         }

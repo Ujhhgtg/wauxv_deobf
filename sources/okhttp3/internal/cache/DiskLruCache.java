@@ -24,7 +24,7 @@ import me.hd.wauxv.obf.dap;
 import me.hd.wauxv.obf.dhy;
 import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dlc;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.emc;
 import me.hd.wauxv.obf.pc;
@@ -657,12 +657,12 @@ public final class DiskLruCache implements Closeable, Flushable {
 
     private final void readJournalLine(String str) throws IOException {
         String strSubstring;
-        int iAh = dnj.ah(' ', 0, 6, str);
+        int iAh = StringsKt.indexOf(' ', 0, 6, str);
         if (iAh == -1) {
             throw new IOException("unexpected journal line: ".concat(str));
         }
         int i = iAh + 1;
-        int iAh2 = dnj.ah(' ', i, 4, str);
+        int iAh2 = StringsKt.indexOf(' ', i, 4, str);
         if (iAh2 == -1) {
             strSubstring = str.substring(i);
             throwIfVar1IsNull(strSubstring, "this as java.lang.String).substring(startIndex)");
@@ -685,7 +685,7 @@ public final class DiskLruCache implements Closeable, Flushable {
             if (iAh == str3.length() && dnr.bp(str, str3, false)) {
                 String strSubstring2 = str.substring(iAh2 + 1);
                 throwIfVar1IsNull(strSubstring2, "this as java.lang.String).substring(startIndex)");
-                List<String> listAr = dnj.ar(strSubstring2, new char[] { ' ' });
+                List<String> listAr = StringsKt.ar(strSubstring2, new char[] { ' ' });
                 entry.setReadable$okhttp(true);
                 entry.setCurrentEditor$okhttp(null);
                 entry.setLengths$okhttp(listAr);

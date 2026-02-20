@@ -123,7 +123,7 @@ public final class LogEntry implements Serializable {
             }
             if (iIntValue == 1002 && !this.i) {
                 String str2 = this.e;
-                if (!dnj.ak(str2)) {
+                if (!StringsKt.isBlank(str2)) {
                     str = ((Object) str) + "[" + str2 + "]";
                 }
             }
@@ -131,7 +131,7 @@ public final class LogEntry implements Serializable {
                 str = ((Object) str) + "[" + i + "]";
             }
         }
-        String str3 = !dnj.ak(str) ? str : null;
+        String str3 = !StringsKt.isBlank(str) ? str : null;
         String str4 = this.g;
         if (str3 != null) {
             String str5 = ((Object) str) + " " + str4;

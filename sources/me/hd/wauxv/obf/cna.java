@@ -110,7 +110,7 @@ public abstract class cna {
     public static final long af(String str) {
         char cCharAt;
         int length = str.length();
-        int i = (length <= 0 || !dnj.ac("+-", str.charAt(0))) ? 0 : 1;
+        int i = (length <= 0 || !StringsKt.containsChar("+-", str.charAt(0))) ? 0 : 1;
         if (length - i > 16) {
             int i2 = i;
             while (true) {
@@ -133,7 +133,7 @@ public abstract class cna {
         }
         return (!dnr.bp(str, "+", false) || length <= 1 || '0' > (cCharAt = str.charAt(1)) || cCharAt >= ':')
                 ? Long.parseLong(str)
-                : Long.parseLong(dnj.ad(1, str));
+                : Long.parseLong(StringsKt.drop(1, str));
     }
 
     public static boolean ag(String str, String str2, boolean z) {
@@ -205,7 +205,7 @@ public abstract class cna {
             if (str.charAt(i3) != 'T') {
                 int i4 = i3;
                 while (i4 < str.length()
-                        && (('0' <= (cCharAt = str.charAt(i4)) && cCharAt < ':') || dnj.ac("+-.", cCharAt))) {
+                        && (('0' <= (cCharAt = str.charAt(i4)) && cCharAt < ':') || StringsKt.containsChar("+-.", cCharAt))) {
                     i4++;
                 }
                 String strSubstring = str.substring(i3, i4);
@@ -240,7 +240,7 @@ public abstract class cna {
                 if (aqpVar2 != null && aqpVar2.compareTo(aqpVar) <= 0) {
                     throw new IllegalArgumentException("Unexpected order of duration components");
                 }
-                int iAh = dnj.ah(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, 0, 6,
+                int iAh = StringsKt.indexOf(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, 0, 6,
                         strSubstring);
                 if (aqpVar != aqp.SECONDS || iAh <= 0) {
                     jI = aqm.i(jI, ai(af(strSubstring), aqpVar));

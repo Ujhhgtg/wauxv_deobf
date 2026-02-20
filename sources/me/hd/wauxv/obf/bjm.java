@@ -68,7 +68,7 @@ public final class bjm extends SwitchHook implements bnc {
                 String string = jSONObject.getString("id" /* "id" /* "id" /* cnb.z(-505749578971946L)  */);
                 String string2 = jSONObject.getString("desc" /* "desc" /* "desc" /* cnb.z(-505753873939242L)  */);
                 if (string != null && string.length() != 0 && string2 != null && string2.length() != 0) {
-                    String strAz = dnj.az(6, string2);
+                    String strAz = StringsKt.az(6, string2);
                     a.getClass();
                     s.put(string, new Pair(strAz, (bix) n.getValue()));
                 }
@@ -87,7 +87,7 @@ public final class bjm extends SwitchHook implements bnc {
                 if (string != null && string.length() != 0 && string2 != null && string2.length() != 0
                         && jSONArray != null && !jSONArray.isEmpty()) {
                     s.put(string,
-                            new Pair(dnj.az(6, string2), new bix(new int[] { Color.parseColor(jSONArray.getString(0)),
+                            new Pair(StringsKt.az(6, string2), new bix(new int[] { Color.parseColor(jSONArray.getString(0)),
                                     Color.parseColor(jSONArray.getString(1)) }, 0, 14)));
                 }
             }

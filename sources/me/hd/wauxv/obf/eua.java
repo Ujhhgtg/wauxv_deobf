@@ -25,7 +25,7 @@ public final class eua extends Drawable {
         paint.setTextSize(etzVar.c);
         paint.setStyle(Paint.Style.FILL);
         this.b = paint;
-        this.c = dnj.ar(etzVar.a, new char[]{'\n'});
+        this.c = StringsKt.ar(etzVar.a, new char[]{'\n'});
         float fDescent = paint.descent() - paint.ascent();
         this.d = fDescent;
         this.e = (fDescent * r1.size()) + etzVar.f;

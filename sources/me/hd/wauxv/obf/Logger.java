@@ -51,7 +51,7 @@ public final class Logger {
     public static void dispatchLog(LogDestination logDestinationVar, LogEntry logEntryVar, boolean z) {
         f();
         String str = logEntryVar.g;
-        boolean z2 = !dnj.ak(str) || (dnj.ak(str) && logEntryVar.h != null);
+        boolean z2 = !StringsKt.isBlank(str) || (StringsKt.isBlank(str) && logEntryVar.h != null);
         int iOrdinal = logDestinationVar.ordinal();
         if (iOrdinal == 0) {
             writeToLogcat(logEntryVar);

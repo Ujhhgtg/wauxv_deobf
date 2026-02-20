@@ -23,7 +23,7 @@ import me.hd.wauxv.obf.avh;
 import me.hd.wauxv.obf.KotlinIntProgression;
 import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.KotlinHelpers2;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.dqc;
 import me.hd.wauxv.obf.rh;
@@ -519,7 +519,7 @@ public final class HttpUrl {
                 if (httpUrl == null) {
                     throw new IllegalArgumentException(
                             yg.concat("Expected URL scheme 'http' or 'https' but no scheme was found for ",
-                                    str4.length() > 6 ? dnj.az(6, str4).concat("...") : str4));
+                                    str4.length() > 6 ? StringsKt.az(6, str4).concat("...") : str4));
                 }
                 this.scheme = httpUrl.scheme();
             }
@@ -854,7 +854,7 @@ public final class HttpUrl {
             }
             String str2 = this.host;
             if (str2 != null) {
-                if (dnj.ac(str2, ':')) {
+                if (StringsKt.containsChar(str2, ':')) {
                     sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.COMPONENT_TYPE_PATH);
                     sb.append(this.host);
                     sb.append(']');
@@ -988,7 +988,7 @@ public final class HttpUrl {
                     if (iCodePointAt == 43 && z3) {
                         rhVar.at(z ? "+" : "%2B");
                     } else if (iCodePointAt < 32 || iCodePointAt == 127
-                            || ((iCodePointAt >= 128 && !z4) || dnj.ac(str2, (char) iCodePointAt)
+                            || ((iCodePointAt >= 128 && !z4) || StringsKt.containsChar(str2, (char) iCodePointAt)
                                     || (iCodePointAt == 37 && (!z || (z2 && !isPercentEncoded(str, i, i2)))))) {
                         if (rhVar2 == null) {
                             rhVar2 = new rh();
@@ -1049,7 +1049,7 @@ public final class HttpUrl {
             while (iCharCount < i2) {
                 int iCodePointAt = str.codePointAt(iCharCount);
                 if (iCodePointAt < 32 || iCodePointAt == 127
-                        || ((iCodePointAt >= 128 && !z4) || dnj.ac(str2, (char) iCodePointAt)
+                        || ((iCodePointAt >= 128 && !z4) || StringsKt.containsChar(str2, (char) iCodePointAt)
                                 || ((iCodePointAt == 37 && (!z || (z2 && !isPercentEncoded(str, iCharCount, i2))))
                                         || (iCodePointAt == 43 && z3)))) {
                     rh rhVar = new rh();
@@ -1122,11 +1122,11 @@ public final class HttpUrl {
             ArrayList arrayList = new ArrayList();
             int i = 0;
             while (i <= str.length()) {
-                int iAh = dnj.ah('&', i, 4, str);
+                int iAh = StringsKt.indexOf('&', i, 4, str);
                 if (iAh == -1) {
                     iAh = str.length();
                 }
-                int iAh2 = dnj.ah(SignatureVisitor.INSTANCEOF, i, 4, str);
+                int iAh2 = StringsKt.indexOf(SignatureVisitor.INSTANCEOF, i, 4, str);
                 if (iAh2 == -1 || iAh2 > iAh) {
                     String strSubstring = str.substring(i, iAh);
                     throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
@@ -1258,7 +1258,7 @@ public final class HttpUrl {
         if (this.fragment == null) {
             return null;
         }
-        String strSubstring = this.url.substring(dnj.ah('#', 0, 6, this.url) + 1);
+        String strSubstring = this.url.substring(StringsKt.indexOf('#', 0, 6, this.url) + 1);
         throwIfVar1IsNull(strSubstring, "this as java.lang.String).substring(startIndex)");
         return strSubstring;
     }
@@ -1267,14 +1267,14 @@ public final class HttpUrl {
         if (this.password.length() == 0) {
             return "";
         }
-        String strSubstring = this.url.substring(dnj.ah(':', this.scheme.length() + 3, 4, this.url) + 1,
-                dnj.ah('@', 0, 6, this.url));
+        String strSubstring = this.url.substring(StringsKt.indexOf(':', this.scheme.length() + 3, 4, this.url) + 1,
+                StringsKt.indexOf('@', 0, 6, this.url));
         throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
         return strSubstring;
     }
 
     public final String encodedPath() {
-        int iAh = dnj.ah('/', this.scheme.length() + 3, 4, this.url);
+        int iAh = StringsKt.indexOf('/', this.scheme.length() + 3, 4, this.url);
         String str = this.url;
         String strSubstring = this.url.substring(iAh, Util.delimiterOffset(str, "?#", iAh, str.length()));
         throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
@@ -1282,7 +1282,7 @@ public final class HttpUrl {
     }
 
     public final List<String> encodedPathSegments() {
-        int iAh = dnj.ah('/', this.scheme.length() + 3, 4, this.url);
+        int iAh = StringsKt.indexOf('/', this.scheme.length() + 3, 4, this.url);
         String str = this.url;
         int iDelimiterOffset = Util.delimiterOffset(str, "?#", iAh, str.length());
         ArrayList arrayList = new ArrayList();
@@ -1301,7 +1301,7 @@ public final class HttpUrl {
         if (this.queryNamesAndValues == null) {
             return null;
         }
-        int iAh = dnj.ah('?', 0, 6, this.url) + 1;
+        int iAh = StringsKt.indexOf('?', 0, 6, this.url) + 1;
         String str = this.url;
         String strSubstring = this.url.substring(iAh, Util.delimiterOffset(str, '#', iAh, str.length()));
         throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");

@@ -10,11 +10,11 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class ga extends SwitchHook implements IDatabaseOperationsListener, bng {
-    public static final ga a = new ga("AntiRevoke2Hook" /* "AntiRevoke2Hook" /* "AntiRevoke2Hook" /* cnb.z(-454085417368362L)  */);
-    public static final String b = "聊天" /* "聊天" /* "聊天" /* cnb.z(-454776907103018L)  */;
-    public static final String c = "阻止消息撤回2" /* "阻止消息撤回2" /* "阻止消息撤回2" /* cnb.z(-454781202070314L)  */;
-    public static final String d = "消息有撤回提示，通用款，三款选一款" /* "消息有撤回提示，通用款，三款选一款" /* "消息有撤回提示，通用款，三款选一款" /* cnb.z(-454746842331946L)  */;
+public final class AntiRevoke2Hook extends SwitchHook implements IDatabaseOperationsListener, bng {
+    public static final AntiRevoke2Hook a = new AntiRevoke2Hook("AntiRevoke2Hook");
+    public static final String b = "聊天";
+    public static final String c = "阻止消息撤回2";
+    public static final String d = "消息有撤回提示，通用款，三款选一款";
     public static final bn i = new bn(14);
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -28,9 +28,9 @@ public final class ga extends SwitchHook implements IDatabaseOperationsListener,
             methodResolverVarT.parameterCount = 1;
             MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
             HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
-            ga gaVar = a;
-            HookManager hookManagerVarAd = gaVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-            gaVar.hookBefore(hookManagerVarAd, new bn(18));
+            AntiRevoke2Hook antiRevoke2HookVar = a;
+            HookManager hookManagerVarAd = antiRevoke2HookVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+            antiRevoke2HookVar.hookBefore(hookManagerVarAd, new bn(18));
             hookManagerVarAd.initInstantCollectionAndApplyHooks();
         }
     }
@@ -77,16 +77,16 @@ public final class ga extends SwitchHook implements IDatabaseOperationsListener,
                 Cursor cursor = (Cursor) objJ;
                 try {
                     if (cursor.moveToFirst()) {
-                        long j = cursor.getLong(cursor.getColumnIndex("createTime" /* "createTime" /* "createTime" /* cnb.z(-453080395021098L)  */));
+                        long j = cursor.getLong(cursor.getColumnIndex("createTime"));
                         String string = cursor
-                                .getString(cursor.getColumnIndex("talker" /* "talker" /* "talker" /* cnb.z(-453067510119210L)  */));
-                        Pattern patternCompile = Pattern.compile("([\"「])(.*?)([」\"])" /* "([\"「])(.*?)([」\"])" /* "([\"「])(.*?)([」\"])" /* cnb.z(-453020265478954L)  */);
+                                .getString(cursor.getColumnIndex("talker"));
+                        Pattern patternCompile = Pattern.compile("([\"「])(.*?)([」\"])");
                         throwIfVar1IsNull(patternCompile, "compile(...)");
                         Matcher matcher = patternCompile.matcher(asString);
                         throwIfVar1IsNull(matcher, "matcher(...)");
                         bzx bzxVarY = StaticAndroidHelpers.y(matcher, 0, asString);
                         aye.w(ewg.j.w, string, "\"" + (bzxVarY != null ? (String) ((bzv) bzxVarY.e()).get(2) : null)
-                                + "\" " /* "\" " /* "\" " /* cnb.z(-453509891750698L)  */ + fz.a.o(), j + 1);
+                                + "\" " + fz.a.o(), j + 1);
                         hookParam.setResult(1);
                     }
                     cursor.close();

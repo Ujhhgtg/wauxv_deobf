@@ -36,7 +36,7 @@ public final class exm {
             if (cscVar != null) {
                 cscVar.hookScope = hookScopeEnumVar;
                 if (str != null) {
-                    if (dnj.ak(str)) {
+                    if (StringsKt.isBlank(str)) {
                         str = null;
                     }
                     if (str != null) {
@@ -44,7 +44,7 @@ public final class exm {
                     }
                 }
                 if (str2 != null) {
-                    if (dnj.ak(str2)) {
+                    if (StringsKt.isBlank(str2)) {
                         str2 = null;
                     }
                     if (str2 != null) {

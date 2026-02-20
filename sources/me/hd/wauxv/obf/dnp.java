@@ -111,7 +111,7 @@ public abstract class dnp extends dno {
                     }
                     if (z7 && !z3) {
                         String str2 = length == i + 2 ? "NaN" : length == i + 7 ? "Infinity" : null;
-                        i2 = (str2 != null && dnj.af(str, str2, i, false) == i) ? length + 1 : -1;
+                        i2 = (str2 != null && StringsKt.af(str, str2, i, false) == i) ? length + 1 : -1;
                     }
                 } else {
                     i = i8;

@@ -250,7 +250,7 @@ public final synthetic class blx implements IInvokable
                         ki.a.getClass();
                         s2 = ki.i();
                     }
-                    if (s2.equals(z4) || dnj.ak((CharSequence)z4)) {
+                    if (s2.equals(z4) || StringsKt.isBlank((CharSequence)z4)) {
                         csb.ae((ewy)a3);
                     }
                 }

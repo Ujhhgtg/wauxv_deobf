@@ -108,9 +108,8 @@ public abstract class cnb {
         return HostInfoRegistry.getVerCode() >= ewkVar.r && !HostInfoRegistry.getIsPlay();
     }
 
-    public static final boolean ac(ewh ewhVar) {
-        HostInfoRegistry.INSTANCE.getClass();
-        return HostInfoRegistry.getVerCode() >= ewhVar.u && HostInfoRegistry.getIsPlay();
+    public static final boolean ac(WeChatVersionEnum weChatVersionEnumVar) {
+        return HostInfoRegistry.getVerCode() >= weChatVersionEnumVar.u && HostInfoRegistry.getIsPlay();
     }
 
     public static boolean ad(Context context) {
@@ -1048,10 +1047,10 @@ public abstract class cnb {
                         "" /* z(-85701777423146L) */, "" /* z(-85697482455850L) */, "" /* z(-85710367357738L) */, 0L);
             } else {
                 ChatRoomInfo chatRoomInfoQ = q(cursorAc);
-                List listZ2 = StaticHelpers5.z(dnj.as(chatRoomInfoQ.getMemberlist(), new String[] { ";" /* z(-85706072390442L) */ }));
+                List listZ2 = StaticHelpers5.z(StringsKt.as(chatRoomInfoQ.getMemberlist(), new String[] { ";" /* z(-85706072390442L) */ }));
                 String displayname = chatRoomInfoQ.getDisplayname();
                 if (displayname != null) {
-                    listZ = StaticHelpers5.z(dnj.as(displayname, new String[] { "、" /* z(-85714662325034L) */ }));
+                    listZ = StaticHelpers5.z(StringsKt.as(displayname, new String[] { "、" /* z(-85714662325034L) */ }));
                 }
                 List list = listZ;
                 if (chatRoomInfoQ.getMemberCount() > 0) {

@@ -60,7 +60,7 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
             case 2:
                 CompoundButton compoundButton = (CompoundButton) r7;
                 aek aekVar = (aek) obj;
-                if (dnj.ak(((EditText) aekVar.f.getValue()).getText())) {
+                if (StringsKt.isBlank(((EditText) aekVar.f.getValue()).getText())) {
                     String string = compoundButton.getText().toString();
                     ael aelVar = aekVar.a;
                     if (aelVar == null) {
@@ -94,12 +94,12 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
                 Boolean bool = (Boolean) r7;
                 doo dooVar = (BaseHook) obj;
                 if (bool.equals(Boolean.TRUE)) {
-                    zAb = dnj.ab(dooVar.g(), "测试" /* "测试" /* "测试" /* cnb.z(-22578643073834L)  */, false);
+                    zAb = StringsKt.contains(dooVar.g(), "测试" /* "测试" /* "测试" /* cnb.z(-22578643073834L)  */, false);
                 } else {
                     if (!bool.equals(Boolean.FALSE)) {
                         throw new abt();
                     }
-                    if (dnj.ab(dooVar.g(), "测试" /* "测试" /* "测试" /* cnb.z(-22600117910314L)  */, false)) {
+                    if (StringsKt.contains(dooVar.g(), "测试" /* "测试" /* "测试" /* cnb.z(-22600117910314L)  */, false)) {
                         zAb = false;
                     }
                 }

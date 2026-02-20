@@ -24,11 +24,11 @@ public final class HookParam {
         Object[] objArrD = getArgs();
         Object[] objArrCopyOf = Arrays.copyOf(objArrD, objArrD.length);
         blq blqVar = this.b;
-        Member member = ((bmh) blqVar.a).b.method;
+        Member member = ((XposedMethodHookParamWrapper) blqVar.a).b.method;
         if (member == null) {
             throw new IllegalStateException("Current hooked Member is null");
         }
-        Object obj = ((bmh) blqVar.b).b.thisObject;
+        Object obj = ((XposedMethodHookParamWrapper) blqVar.b).b.thisObject;
         try {
             iOrdinal = bhs.r().ordinal();
         } catch (Throwable th) {
@@ -48,7 +48,7 @@ public final class HookParam {
             if (message != null) {
                 String lowerCase = message.toLowerCase(Locale.ROOT);
                 throwIfVar1IsNull(lowerCase, "toLowerCase(...)");
-                if (dnj.ab(lowerCase, "wrong number of arguments", false)) {
+                if (StringsKt.contains(lowerCase, "wrong number of arguments", false)) {
                     String message2 = thB.getMessage();
                     if (message2 == null) {
                         message2 = thB.toString();
@@ -74,7 +74,7 @@ public final class HookParam {
     }
 
     public final Object getThisObject() {
-        Object obj = ((bmh) this.b.b).b.thisObject;
+        Object obj = ((XposedMethodHookParamWrapper) this.b.b).b.thisObject;
         if (obj != null) {
             return obj;
         }

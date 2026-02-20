@@ -43,7 +43,7 @@ import me.hd.wauxv.obf.crv;
 import me.hd.wauxv.obf.dap;
 import me.hd.wauxv.obf.dhy;
 import me.hd.wauxv.obf.dlc;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import me.hd.wauxv.obf.dqc;
 import me.hd.wauxv.obf.emc;
 import me.hd.wauxv.obf.StaticHelpers7;
@@ -96,7 +96,7 @@ public final class Util {
         UTC = timeZone;
         VERIFY_AS_IP_ADDRESS = new dap("([0-9a-fA-F]*:[0-9a-fA-F:.]*)|([\\d.]+)");
         assertionsEnabled = false;
-        okHttpName = dnj.ap(dnj.ao(OkHttpClient.class.getName(), "okhttp3."), "Client");
+        okHttpName = StringsKt.ap(StringsKt.ao(OkHttpClient.class.getName(), "okhttp3."), "Client");
     }
 
     public static final <E> void addIfAbsent(List<E> list, E e) {
@@ -198,7 +198,7 @@ public final class Util {
         throwIfVar1IsNull(str, "<this>");
         throwIfVar1IsNull(str2, "delimiters");
         while (i < i2) {
-            if (dnj.ac(str2, str.charAt(i))) {
+            if (StringsKt.containsChar(str2, str.charAt(i))) {
                 return i;
             }
             i++;
@@ -666,7 +666,7 @@ public final class Util {
     public static final String toHostHeader(HttpUrl httpUrl, boolean z) {
         String strHost;
         throwIfVar1IsNull(httpUrl, "<this>");
-        if (dnj.ab(httpUrl.host(), ":", false)) {
+        if (StringsKt.contains(httpUrl.host(), ":", false)) {
             strHost = "[" + httpUrl.host() + ']';
         } else {
             strHost = httpUrl.host();

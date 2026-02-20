@@ -9,7 +9,7 @@ public abstract class dnk extends aye {
     public static String bb(String str) {
         List listBf;
         throwIfVar1IsNull(str, "<this>");
-        if (dnj.ak("|")) {
+        if (StringsKt.isBlank("|")) {
             throw new IllegalArgumentException("marginPrefix must be non-blank string.");
         }
         bvn bvnVar = new bvn(str);
@@ -41,7 +41,7 @@ public abstract class dnk extends aye {
                 throw null;
             }
             String str2 = (String) obj;
-            if ((i != 0 && i != iAf) || !dnj.ak(str2)) {
+            if ((i != 0 && i != iAf) || !StringsKt.isBlank(str2)) {
                 int length2 = str2.length();
                 int i3 = 0;
                 while (true) {

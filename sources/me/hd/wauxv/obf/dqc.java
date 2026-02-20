@@ -24,7 +24,7 @@ public abstract class dqc {
 
     public static final dfz aw(String str, emc emcVar, dfx[] dfxVarArr, IInvokable bgfVar) {
         throwIfVar1IsNull(str, "serialName");
-        if (dnj.ak(str)) {
+        if (StringsKt.isBlank(str)) {
             throw new IllegalArgumentException("Blank serial names are prohibited");
         }
         if (emcVar.equals(dnt.a)) {
@@ -38,7 +38,7 @@ public abstract class dqc {
 
     public static dfz ax(String str, emc emcVar, dfx[] dfxVarArr) {
         throwIfVar1IsNull(str, "serialName");
-        if (dnj.ak(str)) {
+        if (StringsKt.isBlank(str)) {
             throw new IllegalArgumentException("Blank serial names are prohibited");
         }
         if (emcVar.equals(dnt.a)) {

@@ -99,7 +99,7 @@ public final /* synthetic */ class Function1$VarIsInt$2 implements IFunction0 {
             case 13:
                 dnt dntVar = dnt.n;
                 dfx[] dfxVarArr = new dfx[0];
-                if (dnj.ak("kotlin.Unit")) {
+                if (StringsKt.isBlank("kotlin.Unit")) {
                     throw new IllegalArgumentException("Blank serial names are prohibited");
                 }
                 if (dntVar.equals(dnt.a)) {

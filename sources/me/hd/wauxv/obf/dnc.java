@@ -19,7 +19,7 @@ import org.xmlpull.v1.XmlPullParserFactory;
 /* JADX INFO: loaded from: classes.dex */
 public abstract class dnc {
     public static final String a(String str) {
-        return dnj
+        return StringsKt
                 .ba(dnr.bo(
                         dnr.bo(dnr.bo(dnr.bo(str, "\r" /* "\r" /* "\r" /* cnb.z(-80706730457898L)  */, "" /* "" /* "" /* cnb.z(-80646600915754L)  */),
                                 "\n" /* "\n" /* "\n" /* cnb.z(-80659485817642L)  */, "" /* "" /* "" /* cnb.z(-80668075752234L)  */),
@@ -47,7 +47,7 @@ public abstract class dnc {
     }
 
     public static final boolean d(String str) {
-        if (dnj.ak(str)) {
+        if (StringsKt.isBlank(str)) {
             return false;
         }
         try {

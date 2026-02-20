@@ -42,7 +42,7 @@ public final /* synthetic */ class bn implements IInvokable {
         this.a = i;
     }
 
-    private final Object b(Object obj) {
+    final Object b(Object obj) {
         DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
         String[] strArr = { "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* cnb.z(-442909912464170L)  */ };
         dexMethodQueryBuilderVar.getClass();
@@ -792,8 +792,8 @@ public final /* synthetic */ class bn implements IInvokable {
                 final cee ceeVarD = cee.d(LayoutInflater.from(view3.getContext()));
                 ceeVarD.c.setText(fz.a.o());
                 bzy bzyVar2 = new bzy(view3.getContext());
-                ga.a.getClass();
-                String str3 = ga.c;
+                AntiRevoke2Hook.a.getClass();
+                String str3 = AntiRevoke2Hook.c;
                 eg egVar2 = (eg) bzyVar2.d;
                 egVar2.d = str3;
                 LinearLayout linearLayout2 = ceeVarD.b;
@@ -855,8 +855,8 @@ public final /* synthetic */ class bn implements IInvokable {
                 final cee ceeVarD2 = cee.d(LayoutInflater.from(view4.getContext()));
                 ceeVarD2.c.setText(gc.a.o());
                 bzy bzyVar3 = new bzy(view4.getContext());
-                gd.a.getClass();
-                String str4 = gd.c;
+                AntiRevoke3Hook.INSTANCE.getClass();
+                String str4 = AntiRevoke3Hook.c;
                 eg egVar3 = (eg) bzyVar3.d;
                 egVar3.d = str4;
                 LinearLayout linearLayout3 = ceeVarD2.b;
@@ -912,7 +912,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 }
                 String str7 = (String) objX4;
                 if ((str7 != null ? str7 : "").equals("sysmsg" /* "sysmsg" /* "sysmsg" /* cnb.z(-454252921092906L)  */)
-                        && dnj.ab(str6, "revokemsg" /* "revokemsg" /* "revokemsg" /* cnb.z(-454205676452650L)  */, false)) {
+                        && StringsKt.contains(str6, "revokemsg" /* "revokemsg" /* "revokemsg" /* cnb.z(-454205676452650L)  */, false)) {
                     Object objF = hookParam3.getResult();
                     if (!(objF instanceof Map) || ((objF instanceof IEmpty) && !(objF instanceof bsz))) {
                         objF = null;

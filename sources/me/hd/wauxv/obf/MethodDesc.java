@@ -22,10 +22,10 @@ public final class MethodDesc {
         throwIfVar1IsNull(str, "descriptor");
         this.e = new Kotlin$Lazy(new bp(this, 17));
         int iAh = 0;
-        int iAi = dnj.ai(str, "->", 0, false, 6);
-        int iAi2 = dnj.ai(str, "(", iAi + 1, false, 4);
+        int iAi = StringsKt.indexOf(str, "->", 0, false, 6);
+        int iAi2 = StringsKt.indexOf(str, "(", iAi + 1, false, 4);
         int i2 = iAi2 + 1;
-        int iAi3 = dnj.ai(str, ")", i2, false, 4);
+        int iAi3 = StringsKt.indexOf(str, ")", i2, false, 4);
         if (iAi == -1 || iAi2 == -1 || iAi3 == -1) {
             throw new IllegalAccessError("not method descriptor: ".concat(str));
         }
@@ -46,7 +46,7 @@ public final class MethodDesc {
                 }
                 char cCharAt = strSubstring3.charAt(iAh);
                 if (cCharAt == 'L') {
-                    iAh = dnj.ah(';', iAh, 4,
+                    iAh = StringsKt.indexOf(';', iAh, 4,
                             strSubstring3);
                     break;
                 } else if (cCharAt != '[') {

@@ -42,19 +42,19 @@ public final class exf {
     }
 
     public static String j(String str) {
-        return concatVar2Var1(dnj.ba(str).toString().hashCode(), "yuki_hook_host_data_channel_");
+        return concatVar2Var1(StringsKt.ba(str).toString().hashCode(), "yuki_hook_host_data_channel_");
     }
 
     public static String k(Context context) {
         String packageName;
         String str = exm.h;
-        if (dnj.ak(str)) {
+        if (StringsKt.isBlank(str)) {
             if (context == null || (packageName = context.getPackageName()) == null) {
                 packageName = "";
             }
             str = packageName;
         }
-        return concatVar2Var1(dnj.ba(str).toString().hashCode(), "yuki_hook_module_data_channel_");
+        return concatVar2Var1(StringsKt.ba(str).toString().hashCode(), "yuki_hook_module_data_channel_");
     }
 
     public final boolean l(Context context) {
@@ -100,7 +100,7 @@ public final class exf {
     }
 
     public final chm m(Application application, String str) {
-        if (a && dnj.ak(exm.h)) {
+        if (a && StringsKt.isBlank(exm.h)) {
             throw new IllegalStateException("Xposed modulePackageName load failed, please reset and rebuild it");
         }
         chm chmVar = new chm();

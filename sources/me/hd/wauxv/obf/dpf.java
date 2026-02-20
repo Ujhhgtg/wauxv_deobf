@@ -49,12 +49,12 @@ public final class dpf extends SwitchHook implements IStartActivity {
         String shortClassName;
         ActivityOptions activityOptionsMakeBasic;
         if (!z() || (stringExtra = intent.getStringExtra("rawUrl" /* "rawUrl" /* "rawUrl" /* "rawUrl" /* cnb.z(-516070385384234L)   */)) == null
-                || dnj.ak(stringExtra)) {
+                || StringsKt.isBlank(stringExtra)) {
             return;
         }
         if (dnr.bp(stringExtra, "http://" /* "http://" /* "http://" /* "http://" /* cnb.z(-516040320613162L)   */, false)
                 || dnr.bp(stringExtra, "https://" /* "https://" /* "https://" /* "https://" /* cnb.z(-516005960874794L)   */, false)) {
-            String strAx = dnj.ax(dnj.au(stringExtra, "://" /* "://" /* "://" /* "://" /* cnb.z(-516113335057194L)   */, stringExtra), "/" /*
+            String strAx = StringsKt.ax(StringsKt.au(stringExtra, "://" /* "://" /* "://" /* "://" /* cnb.z(-516113335057194L)   */, stringExtra), "/" /*
                                                                                                                * cnb.z(-
                                                                                                                * 516061795449642L)
                                                                                                                */);
@@ -83,7 +83,7 @@ public final class dpf extends SwitchHook implements IStartActivity {
             }
             ComponentName component = intent.getComponent();
             if (component == null || (shortClassName = component.getShortClassName()) == null
-                    || !dnj.ab(shortClassName, "MMWebViewUI" /* "MMWebViewUI" /* "MMWebViewUI" /* "MMWebViewUI" /* cnb.z(-515967306169130L)   */, false)) {
+                    || !StringsKt.contains(shortClassName, "MMWebViewUI" /* "MMWebViewUI" /* "MMWebViewUI" /* "MMWebViewUI" /* cnb.z(-515967306169130L)   */, false)) {
                 return;
             }
             Intent intent2 = new Intent("android.intent.action.VIEW");

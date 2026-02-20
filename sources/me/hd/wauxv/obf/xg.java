@@ -48,9 +48,9 @@ public final class xg extends SwitchHook implements bnr {
                 Object objE2 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
                 throwIfVar1IsNull(objE2);
                 String str = (String) objE2;
-                String strAx = dnj.ax(str, ":" /* ":" /* ":" /* ":" /* cnb.z(-446491915189034L)   */);
+                String strAx = StringsKt.ax(str, ":" /* ":" /* ":" /* ":" /* cnb.z(-446491915189034L)   */);
                 a.getClass();
-                if (dnj.ab(str, "点击链接直接打开 或者 淘宝搜索直接打开" /* "点击链接直接打开 或者 淘宝搜索直接打开" /* "点击链接直接打开 或者 淘宝搜索直接打开" /* "点击链接直接打开 或者 淘宝搜索直接打开" /* cnb.z(-447101800545066L)   */, false)) {
+                if (StringsKt.contains(str, "点击链接直接打开 或者 淘宝搜索直接打开" /* "点击链接直接打开 或者 淘宝搜索直接打开" /* "点击链接直接打开 或者 淘宝搜索直接打开" /* "点击链接直接打开 或者 淘宝搜索直接打开" /* cnb.z(-447101800545066L)   */, false)) {
                     String strZ3 = "【淘宝】" /* "【淘宝】" /* "【淘宝】" /* "【淘宝】" /* cnb.z(-446994426362666L)   */;
                     Pattern patternCompile = Pattern.compile("https?://[\\w./?=&%-]+" /* "https?://[\\w./?=&%-]+" /* "https?://[\\w./?=&%-]+" /* "https?://[\\w./?=&%-]+" /* cnb.z(-447007311264554L)   */);
                     throwIfVar1IsNull(patternCompile, "compile(...)");

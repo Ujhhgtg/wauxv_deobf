@@ -22,7 +22,7 @@ import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.cqj;
 import me.hd.wauxv.obf.cyl;
 import me.hd.wauxv.obf.dft;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import me.hd.wauxv.obf.dqc;
 import me.hd.wauxv.obf.ekc;
 import me.hd.wauxv.obf.emc;
@@ -229,17 +229,17 @@ public final class PublicSuffixDatabase {
             }
         }
         if (str != null) {
-            return dnj.ar("!".concat(str),
+            return StringsKt.ar("!".concat(str),
                     new char[] { TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH });
         }
         if (strBinarySearch == null && strBinarySearch2 == null) {
             return PREVAILING_RULE;
         }
         List<String> listAr = EmptyReadonlyList.INSTANCE;
-        List<String> listAr2 = strBinarySearch != null ? dnj.ar(strBinarySearch,
+        List<String> listAr2 = strBinarySearch != null ? StringsKt.ar(strBinarySearch,
                 new char[] { TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH }) : listAr;
         if (strBinarySearch2 != null) {
-            listAr = dnj.ar(strBinarySearch2,
+            listAr = StringsKt.ar(strBinarySearch2,
                     new char[] { TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH });
         }
         return listAr2.size() > listAr.size() ? listAr2 : listAr;
@@ -309,7 +309,7 @@ public final class PublicSuffixDatabase {
     }
 
     private final List<String> splitDomain(String str) {
-        List<String> listAr = dnj.ar(str,
+        List<String> listAr = StringsKt.ar(str,
                 new char[] { TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH });
         if (!nullSafeIsEqual(StaticHelpers5.l(listAr), "")) {
             return listAr;

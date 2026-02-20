@@ -15,7 +15,7 @@ public final class cxb extends SwitchHook implements bnf {
     @Override // me.hd.wauxv.obf.bnf
     public final List a(ConversationBean conversationBean) {
         return (!z()
-                || dnj.ab(conversationBean
+                || StringsKt.contains(conversationBean
                         .getUsername(), "@" /* "@" /* "@" /* cnb.z(-527215825517354L)  */, false)
                 || dnr.bp(conversationBean.getUsername(), "gh_" /* "gh_" /* "gh_" /* cnb.z(-527155695975210L)  */, false)) ? EmptyReadonlyList.INSTANCE
                         : dqc.toSingletonList(new agf(R.id.MenuItem_Conversation_QuickPullGroup, "快捷拉群" /*

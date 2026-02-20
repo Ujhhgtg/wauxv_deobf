@@ -20,7 +20,7 @@ import me.hd.wauxv.obf.bdp;
 import me.hd.wauxv.obf.brd;
 import me.hd.wauxv.obf.btq;
 import me.hd.wauxv.obf.PathUtils;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import me.hd.wauxv.obf.Kotlin$Lazy;
 import me.hd.wauxv.obf.eqj;
 import me.hd.wauxv.obf.FactoryPools;
@@ -91,7 +91,7 @@ public final class CodeFragment extends bdo {
         Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
         String strC = PathUtils.getModuleSubDir("Plugin" /* "Plugin" /* "Plugin" /* cnb.z(-47055661693738L)  */);
         throwIfVar1IsNull(strC, "delimiter");
-        int iAl = dnj.al(6, strZ2, strC);
+        int iAl = StringsKt.al(6, strZ2, strC);
         if (iAl == -1) {
             strSubstring = strZ2;
         } else {

@@ -398,7 +398,7 @@ public abstract class emc {
         Logger logger = cqj.a;
         if (assertionError.getCause() != null) {
             String message = assertionError.getMessage();
-            if (message != null ? dnj.ab(message, "getsockname failed", false) : false) {
+            if (message != null ? StringsKt.contains(message, "getsockname failed", false) : false) {
                 return true;
             }
         }

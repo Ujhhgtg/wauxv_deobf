@@ -289,7 +289,7 @@ public class yi {
         String str = (String) this.f;
         p('\"');
         int i = this.b;
-        int iAh = dnj.ah('\"', i, 4, str);
+        int iAh = StringsKt.indexOf('\"', i, 4, str);
         if (iAh == -1) {
             s();
             int i2 = this.b;

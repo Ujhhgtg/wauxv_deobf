@@ -415,7 +415,7 @@ public abstract class baf {
                 int i3 = i2 + 1;
                 String str5 = null;
                 if (i3 < str.length() && (cCharAt = str.charAt(i2)) != (cCharAt2 = str.charAt(i3))) {
-                    String strAz = dnj.az(i2, str);
+                    String strAz = StringsKt.az(i2, str);
                     String strSubstring = str.substring(i2 + 2);
                     throwIfVar1IsNull(strSubstring, "substring(...)");
                     str5 = strAz + cCharAt2 + cCharAt + strSubstring;

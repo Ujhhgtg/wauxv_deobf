@@ -205,13 +205,13 @@ public final /* synthetic */ class cfx implements IFunction0 {
                 bpy bpyVar = (bpy) ((but) obj).b;
                 cot cotVar = new cot(bpyVar.a, 3);
                 String str3 = bpyVar.b;
-                if (dnj.ak(str3)) {
+                if (StringsKt.isBlank(str3)) {
                     str3 = null;
                 }
                 if (str3 != null) {
                     cotVar.b = str3;
                 }
-                String str4 = !dnj.ak("") ? "" : null;
+                String str4 = !StringsKt.isBlank("") ? "" : null;
                 if (str4 != null) {
                     cotVar.d = str4;
                 }
@@ -230,34 +230,34 @@ public final /* synthetic */ class cfx implements IFunction0 {
                 notification.audioStreamType = -1;
                 ArrayList arrayList4 = new ArrayList();
                 String str6 = (String) chmVar.e;
-                if (dnj.ak(str6)) {
+                if (StringsKt.isBlank(str6)) {
                     str6 = null;
                 }
                 CharSequence charSequenceBe = str6 != null ? dqc.coerceIn5120Chars(str6) : null;
                 String str7 = (String) chmVar.f;
-                if (dnj.ak(str7)) {
+                if (StringsKt.isBlank(str7)) {
                     str7 = null;
                 }
                 CharSequence charSequenceBe2 = str7 != null ? dqc.coerceIn5120Chars(str7) : null;
-                CharSequence charSequence = !dnj.ak("") ? "" : null;
+                CharSequence charSequence = !StringsKt.isBlank("") ? "" : null;
                 CharSequence charSequenceBe3 = charSequence != null ? dqc.coerceIn5120Chars(charSequence) : null;
-                CharSequence charSequence2 = !dnj.ak("") ? "" : null;
+                CharSequence charSequence2 = !StringsKt.isBlank("") ? "" : null;
                 CharSequence charSequenceBe4 = charSequence2 != null ? dqc.coerceIn5120Chars(charSequence2) : null;
-                CharSequence charSequence3 = !dnj.ak("") ? "" : null;
+                CharSequence charSequence3 = !StringsKt.isBlank("") ? "" : null;
                 CharSequence charSequenceBe5 = charSequence3 != null ? dqc.coerceIn5120Chars(charSequence3) : null;
-                String str8 = !dnj.ak("") ? "" : null;
+                String str8 = !StringsKt.isBlank("") ? "" : null;
                 String str9 = str8 != null ? str8 : null;
-                String str10 = !dnj.ak("") ? "" : null;
+                String str10 = !StringsKt.isBlank("") ? "" : null;
                 String str11 = str10 != null ? str10 : null;
-                CharSequence charSequence4 = !dnj.ak("") ? "" : null;
+                CharSequence charSequence4 = !StringsKt.isBlank("") ? "" : null;
                 if (charSequence4 != null) {
                     notification.tickerText = dqc.coerceIn5120Chars(charSequence4);
                 }
-                String str12 = !dnj.ak("") ? "" : null;
+                String str12 = !StringsKt.isBlank("") ? "" : null;
                 if (str12 == null) {
                     str12 = null;
                 }
-                String str13 = dnj.ak("") ? null : "";
+                String str13 = StringsKt.isBlank("") ? null : "";
                 if (str13 == null) {
                     str13 = null;
                 }

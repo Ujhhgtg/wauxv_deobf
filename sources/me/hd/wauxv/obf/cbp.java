@@ -247,7 +247,7 @@ public abstract class cbp {
         if (optionalTypeVar != OptionalType.ENUM_NO) {
             if (optionalTypeVar == OptionalType.ENUM_NOTICE) {
                 Kotlin$Lazy kotlin$LazyVar = LogConfig.isDevelopmentMode;
-                LogConfig.logE(dnj.ba(strS).toString(), null);
+                LogConfig.logE(StringsKt.ba(strS).toString(), null);
                 return;
             }
             return;

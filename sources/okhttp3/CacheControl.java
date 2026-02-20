@@ -2,9 +2,7 @@ package okhttp3;
 
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import me.hd.wauxv.obf.dnr;
 import okhttp3.internal.Util;
 
@@ -121,7 +119,7 @@ public final class CacheControl {
         private final int indexOfElement(String str, String str2, int i) {
             int length = str.length();
             while (i < length) {
-                if (dnj.ac(str2, str.charAt(i))) {
+                if (StringsKt.containsChar(str2, str.charAt(i))) {
                     return i;
                 }
                 i++;
@@ -203,7 +201,7 @@ public final class CacheControl {
                         String strSubstring = strValue.substring(i, iIndexOfElement);
                         z = z2;
                         throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
-                        string = dnj.ba(strSubstring).toString();
+                        string = StringsKt.ba(strSubstring).toString();
                         if (iIndexOfElement != strValue.length()) {
                             i2 = size;
                             if (strValue.charAt(iIndexOfElement) == ',' && strValue.charAt(iIndexOfElement) != ';') {
@@ -214,10 +212,10 @@ public final class CacheControl {
                                     String strSubstring2 = strValue.substring(iIndexOfNonWhitespace, iIndexOfElement2);
                                     throwIfVar1IsNull(strSubstring2,
                                             "this as java.lang.String…ing(startIndex, endIndex)");
-                                    string2 = dnj.ba(strSubstring2).toString();
+                                    string2 = StringsKt.ba(strSubstring2).toString();
                                 } else {
                                     int i4 = iIndexOfNonWhitespace + 1;
-                                    int iAh = dnj.ah('\"', i4, 4, strValue);
+                                    int iAh = StringsKt.indexOf('\"', i4, 4, strValue);
                                     string2 = strValue.substring(i4, iAh);
                                     throwIfVar1IsNull(string2, "this as java.lang.String…ing(startIndex, endIndex)");
                                     iIndexOfElement2 = iAh + 1;
@@ -340,7 +338,7 @@ public final class CacheControl {
                     String strSubstring3 = strValue.substring(i, iIndexOfElement);
                     z = z2;
                     throwIfVar1IsNull(strSubstring3, "this as java.lang.String…ing(startIndex, endIndex)");
-                    string = dnj.ba(strSubstring3).toString();
+                    string = StringsKt.ba(strSubstring3).toString();
                     if (iIndexOfElement != strValue.length()) {
                         i2 = size;
                         if (strValue.charAt(iIndexOfElement) == ',') {

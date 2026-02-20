@@ -82,7 +82,7 @@ public abstract class dnr extends dnq {
     public static String bo(String str, String str2, String str3) {
         throwIfVar1IsNull(str, "<this>");
         throwIfVar1IsNull(str3, "newValue");
-        int iAf = dnj.af(str, str2, 0, false);
+        int iAf = StringsKt.af(str, str2, 0, false);
         if (iAf < 0) {
             return str;
         }
@@ -101,7 +101,7 @@ public abstract class dnr extends dnq {
             if (iAf >= str.length()) {
                 break;
             }
-            iAf = dnj.af(str, str2, iAf + i, false);
+            iAf = StringsKt.af(str, str2, iAf + i, false);
         } while (iAf > 0);
         sb.append((CharSequence) str, i2, str.length());
         String string = sb.toString();

@@ -166,7 +166,7 @@ public final /* synthetic */ class fq implements bgj {
                 if (thB != null) {
                     String strZ = "保存失败: " /* "保存失败: " /* "保存失败: " /* cnb.z(-519025322883882L)  */;
                     String message = thB.getMessage();
-                    dnc.sendToast(null, 3, strZ.concat(message != null ? dnj.az(50, message) : "未知错误" /*
+                    dnc.sendToast(null, 3, strZ.concat(message != null ? StringsKt.az(50, message) : "未知错误" /*
                                                                                                * cnb.z(-
                                                                                                * 518995258112810L)
                                                                                                */));

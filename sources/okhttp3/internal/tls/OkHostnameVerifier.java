@@ -15,7 +15,7 @@ import javax.net.ssl.SSLSession;
 import me.hd.wauxv.obf.StaticHelpers5;
 import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.StaticHelpers6;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.pool.TypePool;
@@ -174,16 +174,16 @@ public final class OkHostnameVerifier implements HostnameVerifier {
                 str2 = str2.concat(".");
             }
             String strAsciiToLowercase = asciiToLowercase(str2);
-            if (!dnj.ab(strAsciiToLowercase, "*", false)) {
+            if (!StringsKt.contains(strAsciiToLowercase, "*", false)) {
                 return nullSafeIsEqual(str, strAsciiToLowercase);
             }
             if (dnr.bp(strAsciiToLowercase, "*.", false)
-                    && dnj.ah(TypePool.Default.LazyTypeDescription.GenericTypeToken.WILDCARD_TYPE_PATH, 1, 4,
+                    && StringsKt.indexOf(TypePool.Default.LazyTypeDescription.GenericTypeToken.WILDCARD_TYPE_PATH, 1, 4,
                             strAsciiToLowercase) == -1
                     && str.length() >= strAsciiToLowercase.length() && !"*.".equals(strAsciiToLowercase)) {
                 String strSubstring = strAsciiToLowercase.substring(1);
                 throwIfVar1IsNull(strSubstring, "this as java.lang.String).substring(startIndex)");
-                if (dnr.ifVar1EndsWithVar2(str, strSubstring) && ((length = str.length() - strSubstring.length()) <= 0 || dnj.am(str,
+                if (dnr.ifVar1EndsWithVar2(str, strSubstring) && ((length = str.length() - strSubstring.length()) <= 0 || StringsKt.am(str,
                         TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, length - 1, 4) == -1)) {
                     return true;
                 }

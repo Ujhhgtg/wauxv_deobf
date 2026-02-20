@@ -56,7 +56,7 @@ public final /* synthetic */ class cue implements IInvokable {
                 }
                 boolean z = false;
                 if (map3 != null && (str = (String) map3.get("Content-Type" /* "Content-Type" /* "Content-Type" /* "Content-Type" /* cnb.z(-404031868500778L)   */)) != null
-                        && dnj.ab(str, "application/json" /* "application/json" /* "application/json" /* "application/json" /* cnb.z(-403958854056746L)   */, true)) {
+                        && StringsKt.contains(str, "application/json" /* "application/json" /* "application/json" /* "application/json" /* cnb.z(-403958854056746L)   */, true)) {
                     z = true;
                 }
                 if (map2 != null) {

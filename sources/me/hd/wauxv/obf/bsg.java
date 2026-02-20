@@ -15,7 +15,7 @@ public final class bsg implements btd {
         int length;
         Comparable comparable;
         cvm cvmVar = cvm.s;
-        if (dnj.ak("kotlinx.serialization.json.JsonLiteral")) {
+        if (StringsKt.isBlank("kotlinx.serialization.json.JsonLiteral")) {
             throw new IllegalArgumentException("Blank serial names are prohibited");
         }
         Object it = ((bzi) cvp.a.values()).iterator();
@@ -44,7 +44,7 @@ public final class bsg implements btd {
                 }
                 ArrayList arrayList2 = new ArrayList();
                 for (Object obj : listBf) {
-                    if (!dnj.ak((String) obj)) {
+                    if (!StringsKt.isBlank((String) obj)) {
                         arrayList2.add(obj);
                     }
                 }
@@ -97,7 +97,7 @@ public final class bsg implements btd {
                         throw null;
                     }
                     String str3 = (String) obj2;
-                    String strAd = ((length == 0 || length == iAf) && dnj.ak(str3)) ? null : dnj.ad(iIntValue, str3);
+                    String strAd = ((length == 0 || length == iAf) && StringsKt.isBlank(str3)) ? null : StringsKt.drop(iIntValue, str3);
                     if (strAd != null) {
                         arrayList4.add(strAd);
                     }

@@ -21,7 +21,7 @@ import me.hd.wauxv.obf.MethodResolver;
 import me.hd.wauxv.obf.MethodHookWrapper;
 import me.hd.wauxv.obf.dal;
 import me.hd.wauxv.obf.Failure;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import me.hd.wauxv.obf.Kotlin$Lazy;
 import me.hd.wauxv.obf.dqc;
 import me.hd.wauxv.obf.ep;
@@ -110,7 +110,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
             if (list != null) {
                 ArrayList arrayList = new ArrayList();
                 for (Object obj : list) {
-                    if (dnj.ab(obj.getClass().getName(), "LaunchActivityItem", false)) {
+                    if (StringsKt.contains(obj.getClass().getName(), "LaunchActivityItem", false)) {
                         arrayList.add(obj);
                     }
                 }

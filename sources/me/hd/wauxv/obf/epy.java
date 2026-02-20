@@ -306,7 +306,7 @@ public final /* synthetic */ class epy implements IInvokable {
                 Object objE4 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR6.resolve())).getValue_();
                 throwIfVar1IsNull(objE4);
                 HostInfoRegistry.isPlay.i(btcVarArr[9],
-                        Boolean.valueOf(dnj.ab((CharSequence) objE4, "_GP_" /* "_GP_" /* "_GP_" /* cnb.z(-30747670870826L)  */, false)));
+                        Boolean.valueOf(StringsKt.contains((CharSequence) objE4, "_GP_" /* "_GP_" /* "_GP_" /* cnb.z(-30747670870826L)  */, false)));
                 ResourcesCompat resourcesCompatVar = anj.a;
                 ng.af(baseContext);
                 anj.g = 3;
@@ -347,7 +347,7 @@ public final /* synthetic */ class epy implements IInvokable {
                     ki.a.getClass();
                     strI = ki.i();
                 }
-                if (euiVar.getCurrentProcessName().equals(dnj.ba(strI).toString())) {
+                if (euiVar.getCurrentProcessName().equals(StringsKt.ba(strI).toString())) {
                     UMConfigure.preInit(baseContext, "68393b1dbc47b67d83776862" /* "68393b1dbc47b67d83776862" /* "68393b1dbc47b67d83776862" /* cnb.z(-72438918413098L)  */, HostInfoRegistry.getAppName());
                     ArrayList arrayList = Logger.a;
                     Logger.logD(14, "running on: Android" /* "running on: Android" /* "running on: Android" /* cnb.z(-81728932674346L)  */ + Build.VERSION.RELEASE
@@ -390,7 +390,7 @@ public final /* synthetic */ class epy implements IInvokable {
                 return kotlinUnitVar;
             case 15:
                 HookParam hookParam3 = (HookParam) obj;
-                Object obj6 = ((bmh) hookParam3.b.b).b.thisObject;
+                Object obj6 = ((XposedMethodHookParamWrapper) hookParam3.b.b).b.thisObject;
                 if (nullSafeIsEqual(obj6 != null ? obj6.getClass() : null, ajn.tryGetClassByClassName(
                         "com.tencent.mm.plugin.setting.ui.setting_new.MainSettingsUI" /* "com.tencent.mm.plugin.setting.ui.setting_new.MainSettingsUI" /* "com.tencent.mm.plugin.setting.ui.setting_new.MainSettingsUI" /* cnb.z(-58080842742570L)  */))) {
                     Object objE5 = hookParam3.getThisObject();
@@ -401,10 +401,10 @@ public final /* synthetic */ class epy implements IInvokable {
                         throw new IllegalStateException("HookParam instance cannot cast to "
                                 .concat((clsBf4 != null ? clsBf4 : Activity.class).getName()).toString());
                     }
-                    euj eujVar = euj.a;
-                    String strZ = "WA" /* "WA" /* "WA" /* cnb.z(-57307748629290L)  */;
+                    SettingsInject settingsInjectVar = SettingsInject.INSTANCE;
+                    String strZ = "WA";
                     ars arsVar = new ars(activity, 2);
-                    eujVar.getClass();
+                    settingsInjectVar.getClass();
                     int i6 = 0;
                     MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(activity).getMethodResolverBasedOnPreviouslyProvidedConfig();
                     methodResolverVarT2.name = "addTextOptionMenu" /* "addTextOptionMenu" /* "addTextOptionMenu" /* cnb.z(-57956288690986L)  */;

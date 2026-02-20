@@ -178,10 +178,10 @@ public abstract class bhs {
             StaticHelpers2.addAllFromVar2ToVar1(fieldResolverVarR.modifiers, (AccessModifierEnum[]) Arrays.copyOf(new AccessModifierEnum[] { AccessModifierEnum.STATIC}, 1));
             BoundField boundFieldVar = (BoundField) StaticHelpers5.g(fieldResolverVarR.resolve());
             if (boundFieldVar != null && (str = (String) boundFieldVar.getValue_()) != null) {
-                if (dnj.ak(str)) {
+                if (StringsKt.isBlank(str)) {
                     str = null;
                 }
-                if (str != null && (string = dnj.ba(dnr.bo(dnr.bo(str, "Bridge", ""), "-", "")).toString()) != null) {
+                if (str != null && (string = StringsKt.ba(dnr.bo(dnr.bo(str, "Bridge", ""), "-", "")).toString()) != null) {
                     objX = string;
                 }
             }

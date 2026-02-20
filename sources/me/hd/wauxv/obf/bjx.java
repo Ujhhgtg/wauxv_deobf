@@ -38,7 +38,7 @@ public final class bjx extends SwitchHook implements IDexFind, bob {
         }
         String strO = bjv.a.o();
         String str4 = "weixin://weixinhongbao/wauxv/chatroom_userinfo/"
-                /* "weixin://weixinhongbao/wauxv/chatroom_userinfo/" /* "weixin://weixinhongbao/wauxv/chatroom_userinfo/" /* cnb.z(-502841886112554L)  */ + dnj.ax(str, "@chatroom" /* "@chatroom" /* "@chatroom" /* cnb.z(-502867655916330L)  */)
+                /* "weixin://weixinhongbao/wauxv/chatroom_userinfo/" /* "weixin://weixinhongbao/wauxv/chatroom_userinfo/" /* cnb.z(-502841886112554L)  */ + StringsKt.ax(str, "@chatroom" /* "@chatroom" /* "@chatroom" /* cnb.z(-502867655916330L)  */)
                 + "__" /* "__" /* "__" /* cnb.z(-508683041635114L)  */ + str2;
         StringBuilder sbY = StaticHelpers6.toSb(strB);
         sbY.append("(<_wc_custom_link_ color=\"" /* "(<_wc_custom_link_ color=\"" /* "(<_wc_custom_link_ color=\"" /* cnb.z(-508635796994858L)  */);
@@ -85,10 +85,10 @@ public final class bjx extends SwitchHook implements IDexFind, bob {
             String asString = contentValues.getAsString("chatroomname" /* "chatroomname" /* "chatroomname" /* cnb.z(-508923559803690L)  */);
             Integer asInteger = contentValues.getAsInteger("memberCount" /* "memberCount" /* "memberCount" /* cnb.z(-508850545359658L)  */);
             String asString2 = contentValues.getAsString("memberlist" /* "memberlist" /* "memberlist" /* cnb.z(-508833365490474L)  */);
-            if (asString2 == null || dnj.ak(asString2)) {
+            if (asString2 == null || StringsKt.isBlank(asString2)) {
                 return;
             }
-            Set setAd = StaticHelpers5.ad(dnj.as(asString2, new String[] { ";" /* ";" /* ";" /* cnb.z(-508184825428778L)  */ }));
+            Set setAd = StaticHelpers5.ad(StringsKt.as(asString2, new String[] { ";" /* ";" /* ";" /* cnb.z(-508184825428778L)  */ }));
             int i3 = 0;
             ClassSqliteDBDexFind.INSTANCE.getClass();
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(ClassSqliteDBDexFind.getDb()).getMethodResolverBasedOnPreviouslyProvidedConfig();
@@ -107,8 +107,8 @@ public final class bjx extends SwitchHook implements IDexFind, bob {
                     }
                     String string = cursor
                             .getString(cursor.getColumnIndex("memberlist" /* "memberlist" /* "memberlist" /* cnb.z(-508399573793578L)  */));
-                    if (string != null && !dnj.ak(string)) {
-                        Set setAd2 = StaticHelpers5.ad(dnj.as(string, new String[] { ";" /* ";" /* ";" /* cnb.z(-508386688891690L)  */ }));
+                    if (string != null && !StringsKt.isBlank(string)) {
+                        Set setAd2 = StaticHelpers5.ad(StringsKt.as(string, new String[] { ";" /* ";" /* ";" /* cnb.z(-508386688891690L)  */ }));
                         if (asInteger.intValue() < i4) {
                             for (String str3 : dgg.a(setAd2, setAd)) {
                                 bjx bjxVar = a;

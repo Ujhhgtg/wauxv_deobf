@@ -25,7 +25,7 @@ import me.hd.wauxv.obf.cyk;
 import me.hd.wauxv.obf.cyl;
 import me.hd.wauxv.obf.dhy;
 import me.hd.wauxv.obf.dlc;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.emc;
 import me.hd.wauxv.obf.nu;
@@ -130,9 +130,9 @@ public final class Cache implements Closeable, Flushable {
                         dnr.bk();
                         treeSet = new TreeSet(String.CASE_INSENSITIVE_ORDER);
                     }
-                    Iterator it = dnj.ar(strValue, new char[] { ',' }).iterator();
+                    Iterator it = StringsKt.ar(strValue, new char[] { ',' }).iterator();
                     while (it.hasNext()) {
-                        treeSet.add(dnj.ba((String) it.next()).toString());
+                        treeSet.add(StringsKt.ba((String) it.next()).toString());
                     }
                 }
             }

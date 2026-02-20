@@ -62,13 +62,13 @@ public final class KClass implements IEmpty5, KClassContainer {
         String simpleName = cls.getSimpleName();
         Method enclosingMethod = cls.getEnclosingMethod();
         if (enclosingMethod != null) {
-            return dnj.au(simpleName, enclosingMethod.getName() + '$', simpleName);
+            return StringsKt.au(simpleName, enclosingMethod.getName() + '$', simpleName);
         }
         Constructor<?> enclosingConstructor = cls.getEnclosingConstructor();
         if (enclosingConstructor == null) {
-            return dnj.at('$', simpleName, simpleName);
+            return StringsKt.at('$', simpleName, simpleName);
         }
-        return dnj.au(simpleName, enclosingConstructor.getName() + '$', simpleName);
+        return StringsKt.au(simpleName, enclosingConstructor.getName() + '$', simpleName);
     }
 
     public final boolean equals(Object obj) {

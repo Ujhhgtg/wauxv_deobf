@@ -35,7 +35,7 @@ public final class clg extends RequestBody {
         throwIfVar1IsNull(rlVar, "sink");
         boolean z = rlVar instanceof rh;
         RequestBody requestBody = this.a;
-        if (z || dnj.ab(rlVar.toString(), "com.android.tools.profiler.support.network.HttpTracker$OutputStreamTracker",
+        if (z || StringsKt.contains(rlVar.toString(), "com.android.tools.profiler.support.network.HttpTracker$OutputStreamTracker",
                 false)) {
             requestBody.writeTo(rlVar);
             return;

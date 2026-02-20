@@ -19,7 +19,7 @@ import me.hd.wauxv.obf.IEmpty;
 import me.hd.wauxv.obf.cnb;
 import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.Pair;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import me.hd.wauxv.obf.dnr;
 import okhttp3.internal.Util;
 import okhttp3.internal.http.DatesKt;
@@ -39,13 +39,13 @@ public final class Headers implements Iterable<Pair>, IEmpty {
 
         public final Builder add(String str) {
             throwIfVar1IsNull(str, "line");
-            int iAh = dnj.ah(':', 0, 6, str);
+            int iAh = StringsKt.indexOf(':', 0, 6, str);
             if (iAh == -1) {
                 throw new IllegalArgumentException("Unexpected header: ".concat(str).toString());
             }
             String strSubstring = str.substring(0, iAh);
             throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
-            String string = dnj.ba(strSubstring).toString();
+            String string = StringsKt.ba(strSubstring).toString();
             String strSubstring2 = str.substring(iAh + 1);
             throwIfVar1IsNull(strSubstring2, "this as java.lang.String).substring(startIndex)");
             add(string, strSubstring2);
@@ -63,7 +63,7 @@ public final class Headers implements Iterable<Pair>, IEmpty {
 
         public final Builder addLenient$okhttp(String str) {
             throwIfVar1IsNull(str, "line");
-            int iAh = dnj.ah(':', 1, 4, str);
+            int iAh = StringsKt.indexOf(':', 1, 4, str);
             if (iAh != -1) {
                 String strSubstring = str.substring(0, iAh);
                 throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
@@ -173,7 +173,7 @@ public final class Headers implements Iterable<Pair>, IEmpty {
             throwIfVar1IsNull(str, "name");
             throwIfVar1IsNull(str2, "value");
             this.namesAndValues.add(str);
-            this.namesAndValues.add(dnj.ba(str2).toString());
+            this.namesAndValues.add(StringsKt.ba(str2).toString());
             return this;
         }
 
@@ -258,7 +258,7 @@ public final class Headers implements Iterable<Pair>, IEmpty {
                 if (str == null) {
                     throw new IllegalArgumentException("Headers cannot be null");
                 }
-                strArr2[i2] = dnj.ba(str).toString();
+                strArr2[i2] = StringsKt.ba(str).toString();
             }
             int iAv = KotlinHelpers2.getProgressionLastElement(0, strArr2.length - 1, 2);
             if (iAv >= 0) {
@@ -291,8 +291,8 @@ public final class Headers implements Iterable<Pair>, IEmpty {
             for (Map.Entry<String, String> entry : map.entrySet()) {
                 String key = entry.getKey();
                 String value = entry.getValue();
-                String string = dnj.ba(key).toString();
-                String string2 = dnj.ba(value).toString();
+                String string = StringsKt.ba(key).toString();
+                String string2 = StringsKt.ba(value).toString();
                 checkName(string);
                 checkValue(string2, string);
                 strArr[i] = string;

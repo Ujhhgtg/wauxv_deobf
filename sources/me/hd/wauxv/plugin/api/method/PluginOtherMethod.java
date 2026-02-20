@@ -29,7 +29,7 @@ import me.hd.wauxv.obf.cuh;
 import me.hd.wauxv.obf.dgc;
 import me.hd.wauxv.obf.dgd;
 import me.hd.wauxv.obf.dnc;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import me.hd.wauxv.obf.Kotlin$Lazy;
 import me.hd.wauxv.obf.StaticHelpers7;
 import me.hd.wauxv.obf.eu;
@@ -114,7 +114,7 @@ public final class PluginOtherMethod {
         notificationChannel.enableVibration(false);
         cpcVar.g.createNotificationChannel(notificationChannel);
         Notification notification = (Notification) ((Kotlin$Lazy) butVar2.c).getValue();
-        if (dnj.ak("")) {
+        if (StringsKt.isBlank("")) {
             ((cpc) kotlin$LazyVar.getValue()).h(null, notification);
         } else {
             ((cpc) kotlin$LazyVar.getValue()).h("", notification);

@@ -182,7 +182,7 @@ public final class blq {
     }
 
     public Object[] i() {
-        return ((bmh) this.c).b.args;
+        return ((XposedMethodHookParamWrapper) this.c).b.args;
     }
 
     public void j(String str, Object obj) {
@@ -245,10 +245,10 @@ public final class blq {
         this.d = cjlVar.b.ag();
     }
 
-    public blq(bmh bmhVar, bmh bmhVar2, bmh bmhVar3, bmi bmiVar, bmi bmiVar2) {
-        this.a = bmhVar;
-        this.b = bmhVar2;
-        this.c = bmhVar3;
+    public blq(XposedMethodHookParamWrapper xposedMethodHookParamWrapperVar, XposedMethodHookParamWrapper xposedMethodHookParamWrapperVar2, XposedMethodHookParamWrapper xposedMethodHookParamWrapperVar3, bmi bmiVar, bmi bmiVar2) {
+        this.a = xposedMethodHookParamWrapperVar;
+        this.b = xposedMethodHookParamWrapperVar2;
+        this.c = xposedMethodHookParamWrapperVar3;
         this.d = bmiVar;
         this.e = bmiVar2;
     }

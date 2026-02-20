@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Locale;
 import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.StaticHelpers6;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.rh;
 
@@ -18,7 +18,7 @@ public final class HostnamesKt {
         int length = str.length();
         for (int i = 0; i < length; i++) {
             char cCharAt = str.charAt(i);
-            if (KotlinHelpers.r(cCharAt, 31) <= 0 || KotlinHelpers.r(cCharAt, 127) >= 0 || dnj.ah(cCharAt, 0, 6, " #%/:?@[\\]") != -1) {
+            if (KotlinHelpers.r(cCharAt, 31) <= 0 || KotlinHelpers.r(cCharAt, 127) >= 0 || StringsKt.indexOf(cCharAt, 0, 6, " #%/:?@[\\]") != -1) {
                 return true;
             }
         }
@@ -185,7 +185,7 @@ public final class HostnamesKt {
 
     public static final String toCanonicalHost(String str) {
         throwIfVar1IsNull(str, "<this>");
-        if (dnj.ab(str, ":", false)) {
+        if (StringsKt.contains(str, ":", false)) {
             InetAddress inetAddressDecodeIpv6 = (dnr.bp(str, "[", false) && dnr.ifVar1EndsWithVar2(str, "]"))
                     ? decodeIpv6(str, 1, str.length() - 1)
                     : decodeIpv6(str, 0, str.length());

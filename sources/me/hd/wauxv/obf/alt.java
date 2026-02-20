@@ -43,7 +43,7 @@ public final class alt implements Iterator, IEmpty {
             this.b = i2;
             this.c = i2 + (iIntValue2 == 0 ? 1 : 0);
         } else {
-            this.d = new IntRange(this.b, dnj.ae(charSequence), 1);
+            this.d = new IntRange(this.b, StringsKt.lastIndexOf(charSequence), 1);
             this.c = -1;
         }
         this.a = 1;

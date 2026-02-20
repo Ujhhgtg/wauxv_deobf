@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dnj;
+import me.hd.wauxv.obf.StringsKt;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.yg;
 import net.bytebuddy.jar.asm.signature.SignatureVisitor;
@@ -102,7 +102,7 @@ public final class Cookie {
 
         public final Builder name(String str) {
             throwIfVar1IsNull(str, "name");
-            if (!nullSafeIsEqual(dnj.ba(str).toString(), str)) {
+            if (!nullSafeIsEqual(StringsKt.ba(str).toString(), str)) {
                 throw new IllegalArgumentException("name is not trimmed");
             }
             this.name = str;
@@ -125,7 +125,7 @@ public final class Cookie {
 
         public final Builder value(String str) {
             throwIfVar1IsNull(str, "value");
-            if (!nullSafeIsEqual(dnj.ba(str).toString(), str)) {
+            if (!nullSafeIsEqual(StringsKt.ba(str).toString(), str)) {
                 throw new IllegalArgumentException("value is not trimmed");
             }
             this.value = str;
@@ -176,7 +176,7 @@ public final class Cookie {
             if (dnr.ifVar1EndsWithVar2(str, ".")) {
                 throw new IllegalArgumentException("Failed requirement.");
             }
-            String canonicalHost = HostnamesKt.toCanonicalHost(dnj.ao(str, "."));
+            String canonicalHost = HostnamesKt.toCanonicalHost(StringsKt.ao(str, "."));
             if (canonicalHost != null) {
                 return canonicalHost;
             }
@@ -218,7 +218,7 @@ public final class Cookie {
                     throwIfVar1IsNull(lowerCase, "this as java.lang.String).toLowerCase(locale)");
                     String strPattern = Cookie.MONTH_PATTERN.pattern();
                     throwIfVar1IsNull(strPattern, "MONTH_PATTERN.pattern()");
-                    iAi = dnj.ai(strPattern, lowerCase, 0, false, 6) / 4;
+                    iAi = StringsKt.indexOf(strPattern, lowerCase, 0, false, 6) / 4;
                 } else if (i3 == -1 && matcher.usePattern(Cookie.YEAR_PATTERN).matches()) {
                     String strGroup6 = matcher.group(1);
                     throwIfVar1IsNull(strGroup6, "matcher.group(1)");
@@ -375,7 +375,7 @@ public final class Cookie {
                         String strSubstring = "/";
                         if (str2 == null || !dnr.bp(str2, "/", false)) {
                             String strEncodedPath = httpUrl.encodedPath();
-                            int iAm = dnj.am(strEncodedPath, '/', 0, 6);
+                            int iAm = StringsKt.am(strEncodedPath, '/', 0, 6);
                             if (iAm != 0) {
                                 strSubstring = strEncodedPath.substring(0, iAm);
                                 throwIfVar1IsNull(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
