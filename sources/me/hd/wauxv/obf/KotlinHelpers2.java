@@ -669,7 +669,7 @@ public abstract class KotlinHelpers2 implements ajt, acm {
     public static final et bf(Dispatcher dispatcher, bgj bgjVar) {
         throwIfVar1IsNull(dispatcher, "dispatcher");
         et etVar = new et(LifeEventEnum.ON_DESTROY, dispatcher);
-        ajn.y(etVar, auz.a, new eq(bgjVar, (kotlinx$coroutines$internal$DispatchedContinuation) null)).af(new er(etVar, 0));
+        ajn.y(etVar, EmptyCoroutineContext.INSTANCE, new eq(bgjVar, null)).af(new er(etVar, 0));
         return etVar;
     }
 
@@ -680,7 +680,7 @@ public abstract class KotlinHelpers2 implements ajt, acm {
         LifeEventEnum lifeEventEnumVar = LifeEventEnum.ON_DESTROY;
         throwIfVar1IsNull(lifeEventEnumVar, "lifeEvent");
         cky ckyVar = new cky(lifeEventEnumVar, dispatcher2Var);
-        ajn.y(ckyVar, auz.a, new ckx(ckyVar, bgjVar, (kotlinx$coroutines$internal$DispatchedContinuation) null)).af(new er(ckyVar, 1));
+        ajn.y(ckyVar, EmptyCoroutineContext.INSTANCE, new ckx(ckyVar, bgjVar, (kotlinx$coroutines$internal$DispatchedContinuation) null)).af(new er(ckyVar, 1));
     }
 
     public static void bh(ViewGroup viewGroup, float f) {

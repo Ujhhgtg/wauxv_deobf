@@ -22,7 +22,7 @@ public final class cly extends bws implements IDexFind {
         } else {
             map = null;
         }
-        return StaticHelpers7.ba(clx.a).newInstance(str, str2, Integer.valueOf(i), Integer.valueOf(z ? 1 : 0), map);
+        return StaticHelpers7.toDexConstructor(clx.a).newInstance(str, str2, Integer.valueOf(i), Integer.valueOf(z ? 1 : 0), map);
     }
 
     public static Object c(cly clyVar, String str, String str2, int i, int i2) {

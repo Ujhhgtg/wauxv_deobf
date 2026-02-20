@@ -7,9 +7,9 @@ import java.util.Map;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class MethodResolver extends ExecutableResolver {
+public final class MethodResolver extends MethodResolver_ {
     public Object returnType;
-    public IInvokable ai;
+    public IInvokable returnTypeCondition;
 
     public final List findMethods() {
         Configuration configurationVar = this.config;
@@ -30,7 +30,7 @@ public final class MethodResolver extends ExecutableResolver {
     @Override // me.hd.wauxv.obf.axd, me.hd.wauxv.obf.cbh
     public final Map toFieldsNameValueMap() {
         Map mapX = super.toFieldsNameValueMap();
-        Map mapAi = KotlinHelpers.mapOf(new Pair("returnType", this.returnType), new Pair("returnTypeCondition", this.ai),
+        Map mapAi = KotlinHelpers.mapOf(new Pair("returnType", this.returnType), new Pair("returnTypeCondition", this.returnTypeCondition),
                 new Pair("isBridge", null), new Pair("isBridgeNot", null), new Pair("isDefault", null),
                 new Pair("isDefaultNot", null));
         LinkedHashMap linkedHashMap = new LinkedHashMap(mapX);

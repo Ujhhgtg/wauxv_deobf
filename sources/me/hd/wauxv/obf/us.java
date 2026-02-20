@@ -44,11 +44,11 @@ public final /* synthetic */ class us implements IInvokable {
     }
 
     private final Object b(Object obj) {
-        bag bagVar = (bag) obj;
+        DexClassQueryBuilder dexClassQueryBuilderVar = (DexClassQueryBuilder) obj;
         String[] strArr = { "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-48872432859946L)   */ };
-        bagVar.getClass();
-        bagVar.a = SomeStaticHelpers.ab(strArr);
-        zb zbVar = new zb();
+        dexClassQueryBuilderVar.getClass();
+        dexClassQueryBuilderVar.strings = SomeStaticHelpers.arrayToList(strArr);
+        DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
         azl azlVar = new azl();
         azi aziVar = new azi();
         String strZ = "convertView" /* "convertView" /* "convertView" /* "convertView" /* cnb.z(-48696339200810L)   */;
@@ -59,20 +59,20 @@ public final /* synthetic */ class us implements IInvokable {
         aziVar2.a = new dnf("avatarIV" /* "avatarIV" /* "avatarIV" /* "avatarIV" /* cnb.z(-48679159331626L)   */, dneVar, false);
         azlVar.e(aziVar2);
         zbVar.e = azlVar;
-        bagVar.b = zbVar;
+        dexClassQueryBuilderVar.methodGroupMatcher = zbVar;
         return Kotlin$Unit.INSTANCE;
     }
 
     private final Object c(Object obj) {
         Class cls;
-        bah bahVar = (bah) obj;
+        DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
         DexFinder cdjVar = new DexFinder();
         cdjVar.s("create" /* "create" /* "create" /* "create" /* cnb.z(-50289772067626L)   */);
         cls = View.class;
         Class<View> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
         cdjVar.q(clsBf != null ? clsBf : View.class);
-        bahVar.getClass();
-        bahVar.d = cdjVar;
+        dexMethodQueryBuilderVar.getClass();
+        dexMethodQueryBuilderVar.dexFinder = cdjVar;
         return Kotlin$Unit.INSTANCE;
     }
 
@@ -118,17 +118,17 @@ public final /* synthetic */ class us implements IInvokable {
             Object tag = view.getTag();
             FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam);
             xr.a.getClass();
-            fieldResolverVarAa.fieldType = StaticHelpers7.az(xq.a);
+            fieldResolverVarAa.fieldType = StaticHelpers7.toDexClass(xq.a);
             Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue();
             throwIfVar1IsNull(objD);
             FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(hookParam.getThisObject()).r();
             xv.a.getClass();
-            fieldResolverVarR2.fieldType = StaticHelpers7.az(xu.a);
+            fieldResolverVarR2.fieldType = StaticHelpers7.toDexClass(xu.a);
             Object objD2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue();
             throwIfVar1IsNull(objD2);
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objD2).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "getItem" /* "getItem" /* "getItem" /* "getItem" /* cnb.z(-49624052136746L)   */;
-            Object objE2 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(Integer.valueOf(iIntValue));
+            Object objE2 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).invokeAndThrowIfFailed(Integer.valueOf(iIntValue));
             throwIfVar1IsNull(objE2);
             MsgInfoBean msgInfoBean = new MsgInfoBean(objE2);
             for (bnc bncVar : linkedHashSet) {
@@ -179,12 +179,12 @@ public final /* synthetic */ class us implements IInvokable {
             Object tag2 = view2.getTag();
             FieldResolver fieldResolverVarAa2 = StaticHelpers6.aa(hookParam);
             xr.a.getClass();
-            fieldResolverVarAa2.fieldType = StaticHelpers7.az(xq.a);
+            fieldResolverVarAa2.fieldType = StaticHelpers7.toDexClass(xq.a);
             Object objD3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).getValue();
             throwIfVar1IsNull(objD3);
             MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(hookParam.getThisObject()).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT2.name = "getItem" /* "getItem" /* "getItem" /* "getItem" /* cnb.z(-49499498085162L)   */;
-            Object objE4 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).e(Integer.valueOf(iIntValue));
+            Object objE4 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).invokeAndThrowIfFailed(Integer.valueOf(iIntValue));
             throwIfVar1IsNull(objE4);
             MsgInfoBean msgInfoBean2 = new MsgInfoBean(objE4);
             for (bnc bncVar2 : linkedHashSet) {
@@ -210,15 +210,15 @@ public final /* synthetic */ class us implements IInvokable {
     }
 
     private final Object f(Object obj) {
-        bah bahVar = (bah) obj;
+        DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
         DexFinder cdjVar = new DexFinder();
         cdjVar.usingStrings(
                 (cnb.ab(ewk.d) || cnb.ac(ewh.d)) ? "MicroMsg.MvvmChattingItem"
                         /* "MicroMsg.MvvmChattingItem" /* "MicroMsg.MvvmChattingItem" /* "MicroMsg.MvvmChattingItem" /* cnb.z(-49873160239914L)   */ : "MicroMsg.ChattingDataAdapterV2" /* "MicroMsg.ChattingDataAdapterV2" /* "MicroMsg.ChattingDataAdapterV2" /* "MicroMsg.ChattingDataAdapterV2" /* cnb.z(-49778670959402L)   */,
                 "dealItemView" /* "dealItemView" /* "dealItemView" /* "dealItemView" /* cnb.z(-38083475012394L)   */);
         DexFinder.k(cdjVar, "[onBindView] " /* "[onBindView] " /* "[onBindView] " /* "[onBindView] " /* cnb.z(-38010460568362L)   */);
-        bahVar.getClass();
-        bahVar.d = cdjVar;
+        dexMethodQueryBuilderVar.getClass();
+        dexMethodQueryBuilderVar.dexFinder = cdjVar;
         return Kotlin$Unit.INSTANCE;
     }
 
@@ -372,14 +372,14 @@ public final /* synthetic */ class us implements IInvokable {
                 relativeLayout.addView(linearLayout);
                 return kotlinUnitVar;
             case 1:
-                bah bahVar = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar = new DexFinder();
                 DexFinder.setClassEquals(cdjVar, "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* cnb.z(-577252194515754L)   */);
                 cdjVar.usingStrings("MicroMsg.MainUI" /* "MicroMsg.MainUI" /* "MicroMsg.MainUI" /* "MicroMsg.MainUI" /* cnb.z(-577690281179946L)   */, "onTabCreate, %d" /*
                                                                                               * "onTabCreate, %d" /* "onTabCreate, %d" /* "onTabCreate, %d" /* cnb.z(-577621561703210L)  */
                                                                                               */);
-                bahVar.getClass();
-                bahVar.d = cdjVar;
+                dexMethodQueryBuilderVar.getClass();
+                dexMethodQueryBuilderVar.dexFinder = cdjVar;
                 return kotlinUnitVar;
             case 2:
                 View view2 = (View) obj;
@@ -623,15 +623,15 @@ public final /* synthetic */ class us implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new us(5);
                 return kotlinUnitVar;
             case 5:
-                bah bahVar2 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar2 = new DexFinder();
                 DexFinder.setClassEquals(cdjVar2, "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* cnb.z(-569031627111210L)   */);
                 cdjVar2.usingStrings("MicroMsg.MainUI" /* "MicroMsg.MainUI" /* "MicroMsg.MainUI" /* "MicroMsg.MainUI" /* cnb.z(-569400994298666L)   */, "onTabCreate, %d" /*
                                                                                                * cnb.z(-
                                                                                                * 569332274821930L)
                                                                                                */);
-                bahVar2.getClass();
-                bahVar2.d = cdjVar2;
+                dexMethodQueryBuilderVar2.getClass();
+                dexMethodQueryBuilderVar2.dexFinder = cdjVar2;
                 return kotlinUnitVar;
             case 6:
                 View view3 = (View) obj;
@@ -718,30 +718,30 @@ public final /* synthetic */ class us implements IInvokable {
                     wh whVar2 = wh.a;
                     String strO2 = vz.a.o();
                     whVar2.getClass();
-                    methodHookWrapperVar.e(wh.l(strO2));
+                    methodHookWrapperVar.invokeAndThrowIfFailed(wh.l(strO2));
                 }
                 return kotlinUnitVar;
             case 9:
-                bah bahVar3 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar3 = new DexFinder();
                 uq.a.getClass();
                 cdjVar3.o(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)   */));
                 cdjVar3.usingStrings("MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* cnb.z(-422800875584298L)   */,
                         "canSend true ! sendBtn is visible" /* "canSend true ! sendBtn is visible" /* "canSend true ! sendBtn is visible" /* "canSend true ! sendBtn is visible" /* cnb.z(-423299091790634L)   */);
-                bahVar3.getClass();
-                bahVar3.d = cdjVar3;
+                dexMethodQueryBuilderVar3.getClass();
+                dexMethodQueryBuilderVar3.dexFinder = cdjVar3;
                 return kotlinUnitVar;
             case 10:
-                bah bahVar4 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 String[] strArr = { "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-52514565126954L)   */ };
-                bahVar4.getClass();
-                bahVar4.a = SomeStaticHelpers.ab(strArr);
+                dexMethodQueryBuilderVar4.getClass();
+                dexMethodQueryBuilderVar4.a = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar4 = new DexFinder();
                 cdjVar4.usingStrings("MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* cnb.z(-51788715653930L)   */, "msg is null!" /*
                                                                                                  * cnb.z(-
                                                                                                  * 51745765980970L)
                                                                                                  */);
-                bahVar4.d = cdjVar4;
+                dexMethodQueryBuilderVar4.dexFinder = cdjVar4;
                 return kotlinUnitVar;
             case 11:
                 HookParam hookParam4 = (HookParam) obj;
@@ -779,20 +779,20 @@ public final /* synthetic */ class us implements IInvokable {
                 Object tag = ((View) obj3).getTag();
                 MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(tag).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT2.returnType = dal.getKClassFromClass(Integer.TYPE);
-                methodResolverVarT2.y();
+                methodResolverVarT2.setParamCountTo0();
                 methodResolverVarT2.enableSuperclass();
-                Integer num = (Integer) ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).j(new Object[0]);
+                Integer num = (Integer) ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).invoke(new Object[0]);
                 if (cnb.ab(ewk.p) || cnb.ac(ewh.s)) {
                     MethodResolver methodResolverVarT3 = dqc.getWrapperConfiguration(tag).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                    cge.a.getClass();
-                    methodResolverVarT3.returnType = StaticHelpers7.az(cgd.a);
-                    methodResolverVarT3.paramCount = 0;
-                    objE = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT3)).e(new Object[0]);
+                    MicroMsgMsgInfoDexClassFind.INSTANCE.getClass();
+                    methodResolverVarT3.returnType = StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE);
+                    methodResolverVarT3.parameterCount = 0;
+                    objE = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT3)).invokeAndThrowIfFailed(new Object[0]);
                     throwIfVar1IsNull(objE);
                 } else {
                     FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(tag).r();
-                    cge.a.getClass();
-                    fieldResolverVarR2.fieldType = StaticHelpers7.az(cgd.a);
+                    MicroMsgMsgInfoDexClassFind.INSTANCE.getClass();
+                    fieldResolverVarR2.fieldType = StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE);
                     objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue();
                     throwIfVar1IsNull(objE);
                 }
@@ -802,7 +802,7 @@ public final /* synthetic */ class us implements IInvokable {
                         for (wj wjVar : bnaVar.l(msgInfoBean)) {
                             MethodHookWrapper methodHookWrapperVarD = ((MethodHookWrapper) kotlin$LazyVar.getValue()).d();
                             methodHookWrapperVarD.bindInstance(obj8);
-                            methodHookWrapperVarD.e(num, Integer.valueOf(wjVar.a), 0, wjVar.b, Integer.valueOf(wjVar.c));
+                            methodHookWrapperVarD.invokeAndThrowIfFailed(num, Integer.valueOf(wjVar.a), 0, wjVar.b, Integer.valueOf(wjVar.c));
                         }
                     } catch (Exception e) {
                         ArrayList arrayList2 = Logger.a;
@@ -827,7 +827,7 @@ public final /* synthetic */ class us implements IInvokable {
                 FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration((View.OnLongClickListener) objE7).r();
                 xr.a.getClass();
                 xq xqVar = xq.a;
-                fieldResolverVarR3.fieldType = StaticHelpers7.az(xqVar);
+                fieldResolverVarR3.fieldType = StaticHelpers7.toDexClass(xqVar);
                 Object objD3 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue();
                 throwIfVar1IsNull(objD3);
                 FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(objD3).r();
@@ -837,8 +837,8 @@ public final /* synthetic */ class us implements IInvokable {
                 Object objD4 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).getValue();
                 throwIfVar1IsNull(objD4);
                 xz.a.getClass();
-                FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(gp.b((Class) SomeStaticHelpers.p(StaticHelpers7.az(xy.a).getInterfaces()), objD4)).r();
-                fieldResolverVarR5.fieldType = StaticHelpers7.az(xqVar);
+                FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(gp.b((Class) SomeStaticHelpers.p(StaticHelpers7.toDexClass(xy.a).getInterfaces()), objD4)).r();
+                fieldResolverVarR5.fieldType = StaticHelpers7.toDexClass(xqVar);
                 Object objD5 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR5)).getValue();
                 throwIfVar1IsNull(objD5);
                 FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(objD5).r();
@@ -846,7 +846,7 @@ public final /* synthetic */ class us implements IInvokable {
                 Object objD6 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR6.resolve())).getValue();
                 throwIfVar1IsNull(objD6);
                 xv.a.getClass();
-                Object objB = gp.b((Class) SomeStaticHelpers.p(StaticHelpers7.az(xu.a).getInterfaces()), objD6);
+                Object objB = gp.b((Class) SomeStaticHelpers.p(StaticHelpers7.toDexClass(xu.a).getInterfaces()), objD6);
                 try {
                     objX4 = hookParam5.getArgs()[0];
                     if (objX4 == null) {
@@ -860,7 +860,7 @@ public final /* synthetic */ class us implements IInvokable {
                 MenuItem menuItem = (MenuItem) obj3;
                 MethodResolver methodResolverVarT4 = dqc.getWrapperConfiguration(objB).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT4.name = "getItem" /* "getItem" /* "getItem" /* "getItem" /* cnb.z(-52737903426346L)   */;
-                Object objE8 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT4.findMethods())).e(Integer.valueOf(menuItem.getGroupId()));
+                Object objE8 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT4.findMethods())).invokeAndThrowIfFailed(Integer.valueOf(menuItem.getGroupId()));
                 throwIfVar1IsNull(objE8);
                 MsgInfoBean msgInfoBean2 = new MsgInfoBean(objE8);
                 for (bna bnaVar2 : wm.b) {
@@ -895,14 +895,14 @@ public final /* synthetic */ class us implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new us(16);
                 return kotlinUnitVar;
             case 16:
-                bah bahVar5 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 String[] strArr2 = { "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-52205327481642L)   */ };
-                bahVar5.getClass();
-                bahVar5.a = SomeStaticHelpers.ab(strArr2);
+                dexMethodQueryBuilderVar5.getClass();
+                dexMethodQueryBuilderVar5.a = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar5 = new DexFinder();
                 cdjVar5.usingStrings("MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* cnb.z(-52029233822506L)   */,
                         "context item select failed, null dataTag" /* "context item select failed, null dataTag" /* "context item select failed, null dataTag" /* "context item select failed, null dataTag" /* cnb.z(-51986284149546L)   */);
-                bahVar5.d = cdjVar5;
+                dexMethodQueryBuilderVar5.dexFinder = cdjVar5;
                 return kotlinUnitVar;
             case 17:
                 HookParam hookParam6 = (HookParam) obj;
@@ -1000,14 +1000,14 @@ public final /* synthetic */ class us implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new us(i4);
                 return kotlinUnitVar;
             case 21:
-                bah bahVar6 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 String[] strArr3 = { "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-50259707296554L)   */ };
-                bahVar6.getClass();
-                bahVar6.a = SomeStaticHelpers.ab(strArr3);
+                dexMethodQueryBuilderVar6.getClass();
+                dexMethodQueryBuilderVar6.a = SomeStaticHelpers.arrayToList(strArr3);
                 DexFinder cdjVar6 = new DexFinder();
                 cdjVar6.usingStrings("MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* cnb.z(-50066433768234L)   */,
                         "attachAvatarClickListener: getBizKfWorker:%s" /* "attachAvatarClickListener: getBizKfWorker:%s" /* "attachAvatarClickListener: getBizKfWorker:%s" /* "attachAvatarClickListener: getBizKfWorker:%s" /* cnb.z(-50573239909162L)   */);
-                bahVar6.d = cdjVar6;
+                dexMethodQueryBuilderVar6.dexFinder = cdjVar6;
                 return kotlinUnitVar;
             case 22:
                 return b(obj);
@@ -1024,16 +1024,16 @@ public final /* synthetic */ class us implements IInvokable {
             case 28:
                 return h(obj);
             default:
-                bag bagVar = (bag) obj;
+                DexClassQueryBuilder dexClassQueryBuilderVar = (DexClassQueryBuilder) obj;
                 String[] strArr4 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-99626061396778L)   */ };
-                bagVar.getClass();
-                bagVar.a = SomeStaticHelpers.ab(strArr4);
-                zb zbVar = new zb();
-                zbVar.k("MicroMsg.ChatRoomMember" /* "MicroMsg.ChatRoomMember" /* "MicroMsg.ChatRoomMember" /* "MicroMsg.ChatRoomMember" /* cnb.z(-99510097279786L)   */, "service is null" /*
+                dexClassQueryBuilderVar.getClass();
+                dexClassQueryBuilderVar.strings = SomeStaticHelpers.arrayToList(strArr4);
+                DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
+                zbVar.usingEqStrings("MicroMsg.ChatRoomMember" /* "MicroMsg.ChatRoomMember" /* "MicroMsg.ChatRoomMember" /* "MicroMsg.ChatRoomMember" /* cnb.z(-99510097279786L)   */, "service is null" /*
                                                                                                     * cnb.z(-
                                                                                                     * 99956773878570L)
                                                                                                     */);
-                bagVar.b = zbVar;
+                dexClassQueryBuilderVar.methodGroupMatcher = zbVar;
                 return kotlinUnitVar;
         }
     }

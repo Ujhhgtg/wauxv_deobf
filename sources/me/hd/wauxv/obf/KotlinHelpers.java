@@ -613,11 +613,11 @@ public abstract class KotlinHelpers {
             return ahhVar._v(ahhVar2);
         }
         fq fqVar = new fq(4);
-        auz auzVar = auz.a;
-        ahh ahhVar3 = (ahh) ahhVar._u(auzVar, fqVar);
+        EmptyCoroutineContext emptyCoroutineContextVar = EmptyCoroutineContext.INSTANCE;
+        ahh ahhVar3 = (ahh) ahhVar._u(emptyCoroutineContextVar, fqVar);
         Object obj_u = ahhVar2;
         if (zBooleanValue2) {
-            obj_u = ahhVar2._u(auzVar, new fq(5));
+            obj_u = ahhVar2._u(emptyCoroutineContextVar, new fq(5));
         }
         return ahhVar3._v((ahh) obj_u);
     }

@@ -91,7 +91,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(i3);
                 return kotlinUnitVar;
             case 3:
-                bah bahVar = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar = new DexFinder();
                 DexFinder.setClassEquals(cdjVar, "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* cnb.z(-441565587700522L)  */);
                 if (cnb.ab(ewk.h) || cnb.ac(ewh.g)) {
@@ -99,22 +99,22 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 } else {
                     cdjVar.usingStrings("setImageHdImgBtnVisibility" /* "setImageHdImgBtnVisibility" /* "setImageHdImgBtnVisibility" /* cnb.z(-441827580705578L)  */);
                 }
-                bahVar.getClass();
-                bahVar.d = cdjVar;
+                dexMethodQueryBuilderVar.getClass();
+                dexMethodQueryBuilderVar.dexFinder = cdjVar;
                 return kotlinUnitVar;
             case 4:
-                bah bahVar2 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar2 = new DexFinder();
                 DexFinder.setClassEquals(cdjVar2, "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* cnb.z(-441127501036330L)  */);
                 cdjVar2.usingStrings("checkNeedShowOriginVideoBtn" /* "checkNeedShowOriginVideoBtn" /* "checkNeedShowOriginVideoBtn" /* cnb.z(-440929932540714L)  */);
-                bahVar2.getClass();
-                bahVar2.d = cdjVar2;
+                dexMethodQueryBuilderVar2.getClass();
+                dexMethodQueryBuilderVar2.dexFinder = cdjVar2;
                 return kotlinUnitVar;
             case 5:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(i4);
                 return kotlinUnitVar;
             case 6:
-                bah bahVar3 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar3 = new DexFinder();
                 cls2 = ImageView.class;
                 Class<ImageView> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
@@ -128,52 +128,51 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 Class<Boolean> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar3.q(cls2, cls3, cls4, clsBf4 != null ? clsBf4 : Boolean.class);
                 cdjVar3.usingStrings("MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* cnb.z(-118858924948266L)  */);
-                bahVar3.getClass();
-                bahVar3.d = cdjVar3;
+                dexMethodQueryBuilderVar3.getClass();
+                dexMethodQueryBuilderVar3.dexFinder = cdjVar3;
                 return kotlinUnitVar;
             case 7:
                 ((FindDexClassMethodDslWrapper) obj).onClassCallback = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(i2);
                 return kotlinUnitVar;
             case 8:
-                bag bagVar = (bag) obj;
+                DexClassQueryBuilder dexClassQueryBuilderVar = (DexClassQueryBuilder) obj;
                 String[] strArr = { "com.tencent.mm.modelavatar" /* "com.tencent.mm.modelavatar" /* "com.tencent.mm.modelavatar" /* cnb.z(-361683490962218L)  */ };
-                bagVar.getClass();
-                bagVar.a = SomeStaticHelpers.ab(strArr);
-                zb zbVar = new zb();
+                dexClassQueryBuilderVar.getClass();
+                dexClassQueryBuilderVar.strings = SomeStaticHelpers.arrayToList(strArr);
+                DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
                 DexFinder cdjVar4 = new DexFinder();
                 cdjVar4.s("onAccountInitialized" /* "onAccountInitialized" /* "onAccountInitialized" /* cnb.z(-361601886583594L)  */);
                 cdjVar4.usingStrings("//avatar" /* "//avatar" /* "//avatar" /* cnb.z(-361477332532010L)  */);
-                fj fjVar = zbVar.f;
+                MethodMatcher fjVar = zbVar.f;
                 if (fjVar == null) {
-                    fjVar = new fj();
+                    fjVar = new MethodMatcher();
                 }
                 zbVar.f = fjVar;
                 fjVar.f(cdjVar4);
                 DexFinder cdjVar5 = new DexFinder();
                 cdjVar5.s("onAccountReleased" /* "onAccountReleased" /* "onAccountReleased" /* cnb.z(-360906101881642L)  */);
                 cdjVar5.usingStrings("//avatar" /* "//avatar" /* "//avatar" /* cnb.z(-360845972339498L)  */);
-                fj fjVar2 = zbVar.f;
+                MethodMatcher fjVar2 = zbVar.f;
                 if (fjVar2 == null) {
-                    fjVar2 = new fj();
+                    fjVar2 = new MethodMatcher();
                 }
                 zbVar.f = fjVar2;
                 fjVar2.f(cdjVar5);
-                bagVar.b = zbVar;
+                dexClassQueryBuilderVar.methodGroupMatcher = zbVar;
                 return kotlinUnitVar;
             case 9:
                 ((FindDexClassMethodDslWrapper) obj).onClassCallback = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(10);
                 return kotlinUnitVar;
             case 10:
-                bag bagVar2 = (bag) obj;
+                DexClassQueryBuilder dexClassQueryBuilderVar2 = (DexClassQueryBuilder) obj;
                 String[] strArr2 = { "com.tencent.mm.modelavatar" /* "com.tencent.mm.modelavatar" /* "com.tencent.mm.modelavatar" /* cnb.z(-380091720792874L)  */ };
-                bagVar2.getClass();
-                bagVar2.a = SomeStaticHelpers.ab(strArr2);
-                zb zbVar2 = new zb();
-                zbVar2.k("MicroMsg.AvatarStorage" /* "MicroMsg.AvatarStorage" /* "MicroMsg.AvatarStorage" /* cnb.z(-380010116414250L)  */, "Failed to save avatar: %s" /*
+                dexClassQueryBuilderVar2.strings = SomeStaticHelpers.arrayToList(strArr2);
+                DexMethodGroupMatcher zbVar2 = new DexMethodGroupMatcher();
+                zbVar2.usingEqStrings("MicroMsg.AvatarStorage" /* "MicroMsg.AvatarStorage" /* "MicroMsg.AvatarStorage" /* cnb.z(-380010116414250L)  */, "Failed to save avatar: %s" /*
                                                                                                                * cnb.z(-
                                                                                                                * 379894152297258L)
                                                                                                                */);
-                bagVar2.b = zbVar2;
+                dexClassQueryBuilderVar2.methodGroupMatcher = zbVar2;
                 return kotlinUnitVar;
             case 11:
                 View view = (View) obj;
@@ -495,7 +494,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                         throwIfVar1IsNull(objD3);
                         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objD3).getMethodResolverBasedOnPreviouslyProvidedConfig();
                         methodResolverVarT.name = "getData" /* "getData" /* "getData" /* cnb.z(-490240452066090L)  */;
-                        Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT)).j(new Object[0]);
+                        Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT)).invoke(new Object[0]);
                         throwIfVar1IsNull(objJ);
                         cwd cwdVar = cwd.a;
                         cwdVar.getClass();
@@ -557,18 +556,18 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(22);
                 return kotlinUnitVar;
             case 21:
-                bah bahVar4 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar6 = new DexFinder();
                 cdjVar6.usingStrings("MicroMsg.FavSendFilter" /* "MicroMsg.FavSendFilter" /* "MicroMsg.FavSendFilter" /* cnb.z(-489398638476074L)  */,
                         "[FAV_ITEM_TYPE_VOICE] canFilterVoice = true, back" /* "[FAV_ITEM_TYPE_VOICE] canFilterVoice = true, back" /* "[FAV_ITEM_TYPE_VOICE] canFilterVoice = true, back" /* cnb.z(-489299854228266L)  */);
-                bahVar4.getClass();
-                bahVar4.d = cdjVar6;
+                dexMethodQueryBuilderVar4.getClass();
+                dexMethodQueryBuilderVar4.dexFinder = cdjVar6;
                 return kotlinUnitVar;
             case 22:
-                bah bahVar5 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 String[] strArr3 = { "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* cnb.z(-489652041546538L)  */ };
-                bahVar5.getClass();
-                bahVar5.a = SomeStaticHelpers.ab(strArr3);
+                dexMethodQueryBuilderVar5.getClass();
+                dexMethodQueryBuilderVar5.a = SomeStaticHelpers.arrayToList(strArr3);
                 DexFinder cdjVar7 = new DexFinder();
                 cdjVar7.s("onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477948255664938L)  */);
                 cdjVar7.usingStrings("onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477931075795754L)  */, (cnb.ab(ewk.a) || cnb.ac(ewh.c))
@@ -577,7 +576,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                                                                                                         * cnb.z(-
                                                                                                         * 478089989585706L)
                                                                                                         */);
-                bahVar5.d = cdjVar7;
+                dexMethodQueryBuilderVar5.dexFinder = cdjVar7;
                 return kotlinUnitVar;
             case 23:
                 HookParam hookParam2 = (HookParam) obj;
@@ -612,7 +611,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                     throwIfVar1IsNull(objD5);
                     MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objD5).getMethodResolverBasedOnPreviouslyProvidedConfig();
                     methodResolverVarT2.name = "getData" /* "getData" /* "getData" /* cnb.z(-478996227685162L)  */;
-                    Object objJ2 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).j(new Object[0]);
+                    Object objJ2 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).invoke(new Object[0]);
                     throwIfVar1IsNull(objJ2);
                     cwd cwdVar2 = cwd.a;
                     cwdVar2.getClass();
@@ -671,7 +670,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(25);
                 return kotlinUnitVar;
             case 25:
-                bah bahVar6 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar8 = new DexFinder();
                 uq.a.getClass();
                 cdjVar8.o(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */));
@@ -682,7 +681,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 }
                 Class<Boolean> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar8.q(clsBf7, clsBf8 != null ? clsBf8 : Boolean.class);
-                fj fjVar3 = new fj();
+                MethodMatcher fjVar3 = new MethodMatcher();
                 DexFinder cdjVar9 = new DexFinder();
                 cdjVar9.usingStrings("MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* cnb.z(-76476187671338L)  */, "this is a quote msg" /*
                                                                                                       * cnb.z(-
@@ -690,13 +689,13 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                                                                                                       */);
                 fjVar3.f(cdjVar9);
                 cdjVar8.j = fjVar3;
-                bahVar6.getClass();
-                bahVar6.d = cdjVar8;
+                dexMethodQueryBuilderVar6.getClass();
+                dexMethodQueryBuilderVar6.dexFinder = cdjVar8;
                 return kotlinUnitVar;
             case 26:
                 Object obj4 = ((List) obj).get(0);
-                cge.a.getClass();
-                return Boolean.valueOf(nullSafeIsEqual(obj4, StaticHelpers7.az(cgd.a)));
+                MicroMsgMsgInfoDexClassFind.INSTANCE.getClass();
+                return Boolean.valueOf(nullSafeIsEqual(obj4, StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE)));
             case 27:
                 Object objE7 = ((HookParam) obj).getThisObject();
                 FrameLayout frameLayout = (FrameLayout) (!(objE7 instanceof FrameLayout) ? null : objE7);

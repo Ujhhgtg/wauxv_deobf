@@ -82,7 +82,7 @@ public final class bhp extends doi implements bgj {
                                                                                                             * 44044889619242L)
                                                                                                             */;
                     Dispatchers$Default alcVar = aou.a;
-                    akq akqVar = akq.f;
+                    Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
                     dob dobVar = new dob();
                     akqVar.getClass();
                     cla claVar = new cla(ajn.g(ahpVar, bmy.aa(akqVar, dobVar), new bho(strZ, afwVar, 0)));
@@ -147,7 +147,7 @@ public final class bhp extends doi implements bgj {
                     this.d = 1;
                     Kotlin$Lazy kotlin$LazyVar2 = doh.a;
                     Dispatchers$Default alcVar3 = aou.a;
-                    objAk = ajn.ak(akq.f, lwVar, this);
+                    objAk = ajn.ak(Dispatchers$IO.INSTANCE, lwVar, this);
                     if (objAk == ahqVar) {
                         return ahqVar;
                     }

@@ -6,22 +6,22 @@ import java.util.List;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class zb extends dqc {
+public final class DexMethodGroupMatcher extends dqc {
     public dnf a;
-    public fj b;
-    public fj d;
+    public MethodMatcher b;
+    public MethodMatcher d;
     public azl e;
-    public fj f;
+    public MethodMatcher f;
     public List g;
 
-    public static void h(zb zbVar, String str) {
-        fj fjVar = zbVar.b;
+    public static void h(DexMethodGroupMatcher zbVar, String str) {
+        MethodMatcher fjVar = zbVar.b;
         if (fjVar == null) {
-            fjVar = new fj(2);
+            fjVar = new MethodMatcher(2);
             fjVar.usingStringsType = UsingStringsTypeEnum.Contains;
         }
         zbVar.b = fjVar;
-        zb zbVar2 = new zb();
+        DexMethodGroupMatcher zbVar2 = new DexMethodGroupMatcher();
         zbVar2.j(str, dne.Equals);
         List arrayList = fjVar.b;
         if (arrayList == null) {
@@ -37,13 +37,13 @@ public final class zb extends dqc {
         throwIfVar1IsNull(bbbVar, "fbb");
         dnf dnfVar = this.a;
         int iC = dnfVar != null ? dnfVar.c(bbbVar) : 0;
-        fj fjVar = this.b;
+        MethodMatcher fjVar = this.b;
         int iC2 = fjVar != null ? fjVar.c(bbbVar) : 0;
-        fj fjVar2 = this.d;
+        MethodMatcher fjVar2 = this.d;
         int iC3 = fjVar2 != null ? fjVar2.c(bbbVar) : 0;
         azl azlVar = this.e;
         int iC4 = azlVar != null ? azlVar.c(bbbVar) : 0;
-        fj fjVar3 = this.f;
+        MethodMatcher fjVar3 = this.f;
         int iC5 = fjVar3 != null ? fjVar3.c(bbbVar) : 0;
         List list = this.g;
         if (list != null) {
@@ -76,7 +76,7 @@ public final class zb extends dqc {
         this.a = new dnf(str, dneVar, false);
     }
 
-    public final void k(String... strArr) {
+    public final void usingEqStrings(String... strArr) {
         ArrayList arrayList = new ArrayList(strArr.length);
         for (String str : strArr) {
             arrayList.add(new dnf(str, dne.Equals, false));

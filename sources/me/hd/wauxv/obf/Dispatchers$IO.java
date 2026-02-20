@@ -4,8 +4,8 @@ import java.util.concurrent.Executor;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class akq extends axe implements Executor {
-    public static final akq f = new akq();
+public final class Dispatchers$IO extends axe implements Executor {
+    public static final Dispatchers$IO INSTANCE = new Dispatchers$IO();
     public static final Dispatcher g;
 
     static {
@@ -24,7 +24,7 @@ public final class akq extends axe implements Executor {
 
     @Override // java.util.concurrent.Executor
     public final void execute(Runnable runnable) {
-        i(auz.a, runnable);
+        i(EmptyCoroutineContext.INSTANCE, runnable);
     }
 
     @Override // me.hd.wauxv.obf.ahj

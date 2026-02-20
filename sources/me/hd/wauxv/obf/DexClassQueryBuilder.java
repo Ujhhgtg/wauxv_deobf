@@ -6,15 +6,15 @@ import java.util.List;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bag extends dqc {
-    public List a;
-    public zb b;
+public final class DexClassQueryBuilder extends dqc {
+    public List strings;
+    public DexMethodGroupMatcher methodGroupMatcher;
 
     @Override // me.hd.wauxv.obf.dqc
     public final int c(bbb bbbVar) {
         int iT;
         throwIfVar1IsNull(bbbVar, "fbb");
-        List list = this.a;
+        List list = this.strings;
         if (list != null) {
             ArrayList arrayList = new ArrayList(StaticHelpers4.ak(list, 10));
             Iterator it = list.iterator();
@@ -25,7 +25,7 @@ public final class bag extends dqc {
         } else {
             iT = 0;
         }
-        zb zbVar = this.b;
+        DexMethodGroupMatcher zbVar = this.methodGroupMatcher;
         int iC = zbVar != null ? zbVar.c(bbbVar) : 0;
         bbbVar.ab(6);
         bbbVar.q(5, iC);

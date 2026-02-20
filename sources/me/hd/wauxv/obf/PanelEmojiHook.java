@@ -49,7 +49,7 @@ public final class PanelEmojiHook extends SwitchHook implements IDexFind {
                         methodResolverVarT.name = "delete";
                         Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(
                                 new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String[].class) }, 3, methodResolverVarT))
-                                .j(strZ, strZ2, strArr);
+                                .invoke(strZ, strZ2, strArr);
                         throwIfVar1IsNull(objJ);
                         ((Number) objJ).intValue();
                         dnc.sendToast(null, 3, "清除成功");
@@ -73,7 +73,7 @@ public final class PanelEmojiHook extends SwitchHook implements IDexFind {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         Dispatchers$Default alcVar = aou.a;
-        KotlinHelpers2.bf(akq.f, new lw(2, null, 4));
+        KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new lw(2, null, 4));
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(PanelEmojiHook$MethodGetEmojiGroupInfo.INSTANCE));
         PanelEmojiHook panelEmojiHookVar = INSTANCE;
         HookManager hookManagerVarAb = PackageParam.createHook(panelEmojiHookVar, listBf);
@@ -106,7 +106,7 @@ public final class PanelEmojiHook extends SwitchHook implements IDexFind {
             methodResolverVarT.name = "convertFrom";
             methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(ContentValues.class), dal.getKClassFromClass(Boolean.TYPE) }, 2));
             methodResolverVarT.enableSuperclass();
-            ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(contentValues, Boolean.TRUE);
+            ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).invokeAndThrowIfFailed(contentValues, Boolean.TRUE);
             list.add(0, objC);
             return kotlinUnitVar;
         });
@@ -126,13 +126,13 @@ public final class PanelEmojiHook extends SwitchHook implements IDexFind {
             SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(obj3);
             MethodResolver methodResolverVarT2 = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT2.addAccessModifiers(AccessModifierEnum.FINAL);
-            methodResolverVarT2.ai = (obj2) -> {
+            methodResolverVarT2.returnTypeCondition = (obj2) -> {
                 Class cls6 = (Class) obj2;
                 Class<Boolean> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(Boolean.class));
                 boolean zF = nullSafeIsEqual(cls6, clsBf3 != null ? clsBf3 : Boolean.class);
                 return !zF;
             };
-            Object objE = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).e(new Object[0]);
+            Object objE = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).invokeAndThrowIfFailed(new Object[0]);
             throwIfVar1IsNull(objE);
             FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objE).r();
             fieldResolverVarR.fieldType = ajn.tryGetClassByClassName("com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* cnb.z(-78585016613674L)   */);
@@ -143,7 +143,7 @@ public final class PanelEmojiHook extends SwitchHook implements IDexFind {
             String str = (String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue_();
             MethodResolver methodResolverVarT3 = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT3.returnType = dal.getKClassFromClass(List.class);
-            Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT3)).j(new Object[0]);
+            Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT3)).invoke(new Object[0]);
             throwIfVar1IsNull(objJ);
             List list2 = (List) objJ;
             if (nullSafeIsEqual(str, "面板表情" /* "面板表情" /* "面板表情" /* "面板表情" /* cnb.z(-470887329430314L)   */)) {
@@ -176,26 +176,26 @@ public final class PanelEmojiHook extends SwitchHook implements IDexFind {
         StaticHelpers7.resolveDexAndCache(PanelEmojiHook$MethodGetEmojiGroupInfo.INSTANCE, dexKitBridge, (obj) -> {
             ((FindDexClassMethodDslWrapper) obj).onMethodCallback = (obj2) -> {
                 ((FindDexClassMethodDslWrapper) obj2).onMethodCallback = (obj3) -> {
-                    bah bahVar2 = (bah) obj3;
+                    DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj3;
                     DexFinder cdjVar2 = new DexFinder();
                     DexFinder.setClassEquals(cdjVar2, "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI");
                     cdjVar2.usingStrings("checkNeedShowOriginVideoBtn");
-                    bahVar2.d = cdjVar2;
+                    dexMethodQueryBuilderVar2.dexFinder = cdjVar2;
                 };
             };
         });
         StaticHelpers7.resolveDexAndCache(PanelEmojiHook$MethodAddAllGroupItems.INSTANCE, dexKitBridge, (obj) -> {
             ((FindDexClassMethodDslWrapper) obj).onMethodCallback = (obj2) -> {
-                bah bahVar2 = (bah) obj2;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj2;
                 DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.usingStrings("data");
-                fj fjVar = new fj();
+                MethodMatcher fjVar = new MethodMatcher();
                 DexFinder cdjVar3 = new DexFinder();
                 cdjVar3.usingStrings("checkScrollToPosition: ");
                 fjVar.f(cdjVar3);
                 fjVar.usingStringsType = UsingStringsTypeEnum.Contains;
                 cdjVar2.i = fjVar;
-                bahVar2.d = cdjVar2;
+                dexMethodQueryBuilderVar2.dexFinder = cdjVar2;
             };
         });
     }

@@ -28,7 +28,7 @@ public final class MethodHookWrapper extends InstanceResolver {
         return new MethodHookWrapper(this.method);
     }
 
-    public final Object e(Object... objArr) {
+    public final Object invokeAndThrowIfFailed(Object... objArr) {
         Method method = this.method;
         Method method2 = method != null ? method : null;
         if (method2 != null && !method2.isAccessible()) {
@@ -40,7 +40,7 @@ public final class MethodHookWrapper extends InstanceResolver {
     public final Object f(Object... objArr) {
         Object objX;
         try {
-            objX = e(Arrays.copyOf(objArr, objArr.length));
+            objX = invokeAndThrowIfFailed(Arrays.copyOf(objArr, objArr.length));
         } catch (Throwable th) {
             objX = FastKV.getFailureFromException(th);
         }
@@ -53,7 +53,7 @@ public final class MethodHookWrapper extends InstanceResolver {
     public final Object i(Object... objArr) {
         Object objX;
         try {
-            objX = j(Arrays.copyOf(objArr, objArr.length));
+            objX = invoke(Arrays.copyOf(objArr, objArr.length));
         } catch (Throwable th) {
             objX = FastKV.getFailureFromException(th);
         }
@@ -63,7 +63,7 @@ public final class MethodHookWrapper extends InstanceResolver {
         return objX;
     }
 
-    public final Object j(Object... objArr) {
+    public final Object invoke(Object... objArr) {
         Method method = this.method;
         Method method2 = method != null ? method : null;
         if (method2 != null && !method2.isAccessible()) {

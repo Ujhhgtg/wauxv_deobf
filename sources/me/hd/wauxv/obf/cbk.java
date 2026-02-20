@@ -191,7 +191,7 @@ public final /* synthetic */ class cbk implements bgj {
                     String strZ = "你撤回了一条消息" /* "你撤回了一条消息" /* "你撤回了一条消息" /* "你撤回了一条消息" /* cnb.z(-133358734539562L)   */;
                     cmkVar.getClass();
                     cgy.a.getClass();
-                    cme.b(cme.a, StaticHelpers7.ba(cmj.a).newInstance(cgy.b(msgId), strZ, "" /* "" /* "" /* "" /* cnb.z(-133414569114410L)   */));
+                    cme.b(cme.a, StaticHelpers7.toDexConstructor(cmj.a).newInstance(cgy.b(msgId), strZ, "" /* "" /* "" /* "" /* cnb.z(-133414569114410L)   */));
                 }
                 return kotlinUnitVar;
             case 11:
@@ -232,7 +232,7 @@ public final /* synthetic */ class cbk implements bgj {
                 int i4 = 0;
                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.returnType = dal.getKClassFromClass(Activity.class);
-                Object objJ = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).j(new Object[0]);
+                Object objJ = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).invoke(new Object[0]);
                 throwIfVar1IsNull(objJ);
                 Activity activity = (Activity) objJ;
                 String content5 = ((MsgInfoBean) obj2).getContent();
@@ -247,13 +247,13 @@ public final /* synthetic */ class cbk implements bgj {
                 int i5 = 0;
                 MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT2.returnType = dal.getKClassFromClass(Activity.class);
-                Object objJ2 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).j(new Object[0]);
+                Object objJ2 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).invoke(new Object[0]);
                 throwIfVar1IsNull(objJ2);
                 Activity activity2 = (Activity) objJ2;
                 bop bopVar2 = bop.a;
                 Object origin2 = ((MsgInfoBean) obj2).getOrigin();
                 bopVar2.getClass();
-                ArrayList<String> arrayList10 = new ArrayList<>(new kk(new String[] { bop.b(origin2) }, true));
+                ArrayList<String> arrayList10 = new ArrayList<>(new ReadonlyArray(new String[] { bop.b(origin2) }, true));
                 String strZ2 = "" /* "" /* "" /* "" /* cnb.z(-96679713831722L)   */;
                 Intent intent5 = new Intent();
                 intent5.setClassName(activity2,
@@ -266,7 +266,7 @@ public final /* synthetic */ class cbk implements bgj {
                 int i6 = 0;
                 MethodResolver methodResolverVarT3 = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT3.returnType = dal.getKClassFromClass(Activity.class);
-                Object objJ3 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT3.findMethods())).j(new Object[0]);
+                Object objJ3 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT3.findMethods())).invoke(new Object[0]);
                 throwIfVar1IsNull(objJ3);
                 Activity activity3 = (Activity) objJ3;
                 String imgPath3 = ((MsgInfoBean) obj2).getImgPath();
@@ -319,11 +319,11 @@ public final /* synthetic */ class cbk implements bgj {
                 return kotlinUnitVar;
             case 19:
                 MsgInfoBean msgInfoBean13 = (MsgInfoBean) obj2;
-                aub aubVar = aub.a;
+                EmojiInfoStorageDexFind emojiInfoStorageDexFindVar = EmojiInfoStorageDexFind.a;
                 String imgPath6 = msgInfoBean13.getImgPath();
                 throwIfVar1IsNull(imgPath6);
-                aubVar.getClass();
-                auh.c(auh.a, msgInfoBean13.getTalker(), aub.b(imgPath6));
+                emojiInfoStorageDexFindVar.getClass();
+                EmojiMgrImplHook.sendEmoji(msgInfoBean13.getTalker(), EmojiInfoStorageDexFind.getEmojiInfoByMd5(imgPath6));
                 return kotlinUnitVar;
             case 20:
                 MsgInfoBean msgInfoBean14 = (MsgInfoBean) obj2;

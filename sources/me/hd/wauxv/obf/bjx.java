@@ -93,7 +93,7 @@ public final class bjx extends SwitchHook implements IDexFind, bob {
             dlx.a.getClass();
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
-            Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) }, 2, methodResolverVarT)).j(
+            Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) }, 2, methodResolverVarT)).invoke(
                     "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* cnb.z(-508193415363370L)  */,
                     new Object[] { asString });
             throwIfVar1IsNull(objJ);

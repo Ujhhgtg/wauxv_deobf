@@ -97,7 +97,7 @@ public final class etd extends doi implements bgj {
                     int i3 = 4;
                     beo beoVar = new beo(strH, i3);
                     Dispatchers$Default alcVar = aou.a;
-                    akq akqVar = akq.f;
+                    Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
                     dob dobVar = new dob();
                     akqVar.getClass();
                     cla claVar = new cla(ajn.g(ahpVar, bmy.aa(akqVar, dobVar), new bhn(str8, beoVar, (kotlinx$coroutines$internal$DispatchedContinuation) null, i3)));
@@ -150,7 +150,7 @@ public final class etd extends doi implements bgj {
                     int i5 = 7;
                     beo beoVar2 = new beo(strH2, i5);
                     Dispatchers$Default alcVar2 = aou.a;
-                    akq akqVar2 = akq.f;
+                    Dispatchers$IO akqVar2 = Dispatchers$IO.INSTANCE;
                     dob dobVar2 = new dob();
                     akqVar2.getClass();
                     cla claVar2 = new cla(ajn.g(ahpVar2, bmy.aa(akqVar2, dobVar2), new bhn(str10, beoVar2, (kotlinx$coroutines$internal$DispatchedContinuation) null, i5)));

@@ -13,12 +13,12 @@ public final class dlx extends bws implements IDexFind {
         byr.a.getClass();
         FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(byr.b()).r();
         a.getClass();
-        fieldResolverVarR.fieldType = StaticHelpers7.az(dlw.a);
+        fieldResolverVarR.fieldType = StaticHelpers7.toDexClass(dlw.a);
         Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue();
         throwIfVar1IsNull(objD);
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objD).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.returnType = "com.tencent.wcdb.database.SQLiteDatabase" /* "com.tencent.wcdb.database.SQLiteDatabase" /* "com.tencent.wcdb.database.SQLiteDatabase" /* "com.tencent.wcdb.database.SQLiteDatabase" /* cnb.z(-102542344190762L)   */;
-        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT)).invokeAndThrowIfFailed(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }

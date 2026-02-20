@@ -148,7 +148,7 @@ public final class pr extends cjv {
                 }
                 String[] stringArray2 = bundle.getStringArray(str);
                 if (stringArray2 != null) {
-                    return SomeStaticHelpers.ab(stringArray2);
+                    return SomeStaticHelpers.arrayToList(stringArray2);
                 }
                 cmz.ad(str);
                 throw null;

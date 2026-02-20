@@ -6,16 +6,16 @@ import java.util.List;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class fj extends dqc {
+public final class MethodMatcher extends dqc {
     public final /* synthetic */ int a;
     public List b;
     public Object usingStringsType;
 
-    public /* synthetic */ fj(int i) {
+    public /* synthetic */ MethodMatcher(int i) {
         this.a = i;
     }
 
-    public static void e(fj fjVar, String str) {
+    public static void e(MethodMatcher fjVar, String str) {
         fk fkVar = new fk();
         fkVar.a = new dnf(str, dne.Equals, false);
         fkVar.b = fl.StringValue;
@@ -112,7 +112,7 @@ public final class fj extends dqc {
                     ArrayList arrayList4 = new ArrayList(StaticHelpers4.ak(list4, 10));
                     Iterator it4 = list4.iterator();
                     while (it4.hasNext()) {
-                        arrayList4.add(Integer.valueOf(((zb) it4.next()).c(bbbVar)));
+                        arrayList4.add(Integer.valueOf(((DexMethodGroupMatcher) it4.next()).c(bbbVar)));
                     }
                     iT2 = bbbVar.t(StaticHelpers5.y(arrayList4));
                 } else {
@@ -182,7 +182,7 @@ public final class fj extends dqc {
         arrayList.add(cdjVar);
     }
 
-    public fj() {
+    public MethodMatcher() {
         this.a = 3;
         this.usingStringsType = UsingStringsTypeEnum.Contains;
     }

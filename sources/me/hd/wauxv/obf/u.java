@@ -3,14 +3,14 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public abstract class u implements ahf {
-    public final ahg a;
+    public final IEmpty8 a;
 
-    public u(ahg ahgVar) {
+    public u(IEmpty8 ahgVar) {
         this.a = ahgVar;
     }
 
     @Override // me.hd.wauxv.obf.ahh
-    public /* bridge */ ahh _t(ahg ahgVar) {
+    public /* bridge */ ahh _t(IEmpty8 ahgVar) {
         return bmy.x(this, ahgVar);
     }
 
@@ -25,7 +25,7 @@ public abstract class u implements ahf {
     }
 
     @Override // me.hd.wauxv.obf.ahh
-    public ahf _w(ahg ahgVar) {
+    public ahf _w(IEmpty8 ahgVar) {
         throwIfVar1IsNull(ahgVar, "key");
         if (nullSafeIsEqual(getKey(), ahgVar)) {
             return this;
@@ -34,7 +34,7 @@ public abstract class u implements ahf {
     }
 
     @Override // me.hd.wauxv.obf.ahf
-    public final ahg getKey() {
+    public final IEmpty8 getKey() {
         return this.a;
     }
 }

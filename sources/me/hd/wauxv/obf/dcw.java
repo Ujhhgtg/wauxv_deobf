@@ -7,7 +7,7 @@ public abstract class dcw extends nc implements bgq {
 
     public dcw(int i, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(afwVar);
-        if (afwVar != null && afwVar.c() != auz.a) {
+        if (afwVar != null && afwVar.c() != EmptyCoroutineContext.INSTANCE) {
             throw new IllegalArgumentException("Coroutines with restricted suspension must have EmptyCoroutineContext");
         }
         this.f = i;
@@ -15,7 +15,7 @@ public abstract class dcw extends nc implements bgq {
 
     @Override // me.hd.wauxv.obf.afw
     public final ahh c() {
-        return auz.a;
+        return EmptyCoroutineContext.INSTANCE;
     }
 
     @Override // me.hd.wauxv.obf.bgq

@@ -9,10 +9,10 @@ public final class aec extends bws implements IDexFind {
 
     public static Object b() {
         int i = 0;
-        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(aea.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.toDexClass(aea.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
         aeg.a.getClass();
         methodResolverVarT.returnType = StaticHelpers7.toDexMethod(aee.a).getDeclaringClass();
-        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT)).invokeAndThrowIfFailed(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }

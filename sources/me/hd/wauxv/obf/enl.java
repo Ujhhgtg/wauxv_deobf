@@ -2,11 +2,11 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class enl implements ahf, ahg {
+public final class enl implements ahf, IEmpty8 {
     public static final enl a = new enl();
 
     @Override // me.hd.wauxv.obf.ahh
-    public final ahh _t(ahg ahgVar) {
+    public final ahh _t(IEmpty8 ahgVar) {
         return bmy.x(this, ahgVar);
     }
 
@@ -21,7 +21,7 @@ public final class enl implements ahf, ahg {
     }
 
     @Override // me.hd.wauxv.obf.ahh
-    public final ahf _w(ahg ahgVar) {
+    public final ahf _w(IEmpty8 ahgVar) {
         throwIfVar1IsNull(ahgVar, "key");
         if (nullSafeIsEqual(this, ahgVar)) {
             return this;
@@ -30,7 +30,7 @@ public final class enl implements ahf, ahg {
     }
 
     @Override // me.hd.wauxv.obf.ahf
-    public final ahg getKey() {
+    public final IEmpty8 getKey() {
         return this;
     }
 }

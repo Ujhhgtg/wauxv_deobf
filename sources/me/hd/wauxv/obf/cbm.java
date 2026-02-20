@@ -82,7 +82,7 @@ public class cbm implements bno, crt, cvv, axv, ahw, dff, cdw {
     public List c(Class cls) {
         Object objX;
         try {
-            objX = SomeStaticHelpers.ab(cls.getDeclaredMethods());
+            objX = SomeStaticHelpers.arrayToList(cls.getDeclaredMethods());
         } catch (Throwable th) {
             objX = FastKV.getFailureFromException(th);
         }

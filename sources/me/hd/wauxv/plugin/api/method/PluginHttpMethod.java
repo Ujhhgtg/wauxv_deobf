@@ -7,7 +7,7 @@ import me.hd.wauxv.obf.ahp;
 import me.hd.wauxv.obf.ahq;
 import me.hd.wauxv.obf.ajm;
 import me.hd.wauxv.obf.ajn;
-import me.hd.wauxv.obf.akq;
+import me.hd.wauxv.obf.Dispatchers$IO;
 import me.hd.wauxv.obf.Dispatchers$Default;
 import me.hd.wauxv.obf.aou;
 import me.hd.wauxv.obf.bgj;
@@ -71,7 +71,7 @@ public final class PluginHttpMethod {
                 FastKV.bd(obj);
                 cue cueVar = new cue(this.f, this.o, this.p, 0);
                 Dispatchers$Default alcVar = aou.a;
-                akq akqVar = akq.f;
+                Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
                 dob dobVar = new dob();
                 akqVar.getClass();
                 cla claVar = new cla(ajn.g(ahpVar, bmy.aa(akqVar, dobVar), new PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$default$1(this.e, cueVar, null)));
@@ -133,7 +133,7 @@ public final class PluginHttpMethod {
                 FastKV.bd(obj);
                 cug cugVar = new cug(this.f, this.o, 0);
                 Dispatchers$Default alcVar = aou.a;
-                akq akqVar = akq.f;
+                Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
                 dob dobVar = new dob();
                 akqVar.getClass();
                 cla claVar = new cla(ajn.g(ahpVar, bmy.aa(akqVar, dobVar), new PluginHttpMethod$get$1$invokeSuspend$$inlined$Get$default$1(this.e, cugVar, null)));
@@ -200,7 +200,7 @@ public final class PluginHttpMethod {
                 FastKV.bd(obj);
                 cue cueVar = new cue(this.f, this.o, this.p, 1);
                 Dispatchers$Default alcVar = aou.a;
-                akq akqVar = akq.f;
+                Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
                 dob dobVar = new dob();
                 akqVar.getClass();
                 cla claVar = new cla(ajn.g(ahpVar, bmy.aa(akqVar, dobVar), new PluginHttpMethod$post$1$invokeSuspend$$inlined$Post$default$1(this.e, cueVar, null)));

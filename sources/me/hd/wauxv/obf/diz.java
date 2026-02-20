@@ -93,12 +93,12 @@ public final class diz extends SwitchHook implements boa, IDatabaseOperationsLis
             methodResolverVarT.name = "parseFrom" /* "parseFrom" /* "parseFrom" /* cnb.z(-529290294721322L)  */;
             methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(byte[].class) }, 1));
             methodResolverVarT.enableSuperclass();
-            ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e((byte[]) obj2);
+            ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).invokeAndThrowIfFailed((byte[]) obj2);
             SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(objC);
             LinkedList linkedList = new LinkedList();
             for (String str2 : setM) {
                 dkn.a.getClass();
-                Object objC2 = ReflectionWrapper.createInstanceWithArgs(StaticHelpers7.az(dkm.a), new Object[0]);
+                Object objC2 = ReflectionWrapper.createInstanceWithArgs(StaticHelpers7.toDexClass(dkm.a), new Object[0]);
                 int i3 = 0;
                 FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC2).r();
                 fieldResolverVarR.name = "d" /* "d" /* "d" /* cnb.z(-529264524917546L)  */;
@@ -123,7 +123,7 @@ public final class diz extends SwitchHook implements boa, IDatabaseOperationsLis
             MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objC).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT2.returnType = dal.getKClassFromClass(byte[].class);
             methodResolverVarT2.name = "toByteArray" /* "toByteArray" /* "toByteArray" /* cnb.z(-535054140832554L)  */;
-            Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).j(new Object[0]);
+            Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).invoke(new Object[0]);
             throwIfVar1IsNull(objJ);
             contentValues.put("attrBuf" /* "attrBuf" /* "attrBuf" /* cnb.z(-535036960963370L)  */, (byte[]) objJ);
         }

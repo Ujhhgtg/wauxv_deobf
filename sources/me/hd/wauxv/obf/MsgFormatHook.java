@@ -30,7 +30,7 @@ public final class MsgFormatHook extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() throws NoSuchMethodException {
-        Constructor constructorBa = StaticHelpers7.ba(ConstructorSendTextComponent.INSTANCE);
+        Constructor constructorBa = StaticHelpers7.toDexConstructor(ConstructorSendTextComponent.INSTANCE);
         List listBf = dqc.toSingletonList(constructorBa);
         MsgFormatHook msgFormatHookVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(msgFormatHookVar, listBf);

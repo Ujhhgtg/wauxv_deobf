@@ -12,7 +12,7 @@ public final class day extends SwitchHook {
     public final void initOnce() {
         int i = 0;
         adt adtVarM = yg.s(-499139624303402L).m();
-        adtVarM.y();
+        adtVarM.setParamCountTo0();
         ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) StaticHelpers5.safeGetFirstInList(adtVarM.a());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         day dayVar = a;

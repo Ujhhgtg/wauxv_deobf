@@ -14,13 +14,13 @@ public final class acv extends bws implements IDexFind {
         byr.a.getClass();
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(byr.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         a.getClass();
-        methodResolverVarT.returnType = StaticHelpers7.az(acu.a);
-        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
+        methodResolverVarT.returnType = StaticHelpers7.toDexClass(acu.a);
+        Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT)).invokeAndThrowIfFailed(new Object[0]);
         throwIfVar1IsNull(objE);
         MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objE).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.returnType = dal.getKClassFromClass(Object.class);
         return ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(Object.class) }, 2, methodResolverVarT2))
-                .e(Integer.valueOf(i), null);
+                .invokeAndThrowIfFailed(Integer.valueOf(i), null);
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

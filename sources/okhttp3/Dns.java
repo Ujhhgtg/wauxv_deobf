@@ -30,7 +30,7 @@ public interface Dns {
                 try {
                     InetAddress[] allByName = InetAddress.getAllByName(str);
                     throwIfVar1IsNull(allByName, "getAllByName(hostname)");
-                    return SomeStaticHelpers.ab(allByName);
+                    return SomeStaticHelpers.arrayToList(allByName);
                 } catch (NullPointerException e) {
                     UnknownHostException unknownHostException = new UnknownHostException(
                             "Broken system behaviour for dns lookup of ".concat(str));

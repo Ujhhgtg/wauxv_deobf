@@ -156,7 +156,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                             MethodResolver methodResolverVarT2 = bmuVarBh2.getMethodResolverBasedOnPreviouslyProvidedConfig();
                             methodResolverVarT2.name = "currentActivityThread";
                             MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT2.findMethods());
-                            Object objE = methodHookWrapperVar2 != null ? methodHookWrapperVar2.e(new Object[0]) : null;
+                            Object objE = methodHookWrapperVar2 != null ? methodHookWrapperVar2.invokeAndThrowIfFailed(new Object[0]) : null;
                             SyntheticPileOfMess bmuVarBi3 = dqc.getWrapperConfiguration(message.obj);
                             ((Configuration) bmuVarBi3.obj).processorResolver = FastKV.aa();
                             bmuVarBi3.setHookOptional(true);

@@ -178,10 +178,10 @@ public abstract class SomeStaticHelpers extends HugeSyntheticPileOfHelpers {
         return arrayList;
     }
 
-    public static List ab(Object[] objArr) {
+    public static List arrayToList(Object[] objArr) {
         throwIfVar1IsNull(objArr, "<this>");
         int length = objArr.length;
-        return length != 0 ? length != 1 ? new ArrayList(new kk(objArr, false)) : dqc.toSingletonList(objArr[0]) : EmptyReadonlyList.INSTANCE;
+        return length != 0 ? length != 1 ? new ArrayList(new ReadonlyArray(objArr, false)) : dqc.toSingletonList(objArr[0]) : EmptyReadonlyList.INSTANCE;
     }
 
     public static List ac(boolean[] zArr) {

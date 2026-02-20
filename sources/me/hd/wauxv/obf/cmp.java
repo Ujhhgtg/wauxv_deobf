@@ -15,7 +15,7 @@ public final class cmp extends bws implements IDexFind {
         String strZ3 = "" /* "" /* "" /* "" /* cnb.z(-138830522874666L)   */;
         String strZ4 = "" /* "" /* "" /* "" /* cnb.z(-138826227907370L)   */;
         cmpVar.getClass();
-        Constructor constructorBa = StaticHelpers7.ba(cmo.a);
+        Constructor constructorBa = StaticHelpers7.toDexConstructor(cmo.a);
         switch (constructorBa.getParameterCount()) {
             case 10:
                 return constructorBa.newInstance(str, str2, 0, str3, str4, Integer.valueOf(i), strZ, null, 1, null);

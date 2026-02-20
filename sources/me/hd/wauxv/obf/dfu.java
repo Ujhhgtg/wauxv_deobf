@@ -19,7 +19,7 @@ public final class dfu implements Iterator, kotlinx$coroutines$internal$Dispatch
 
     @Override // me.hd.wauxv.obf.afw
     public final ahh c() {
-        return auz.a;
+        return EmptyCoroutineContext.INSTANCE;
     }
 
     public final RuntimeException g() {

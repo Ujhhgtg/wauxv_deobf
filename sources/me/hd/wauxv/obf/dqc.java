@@ -33,7 +33,7 @@ public abstract class dqc {
         }
         zd zdVar = new zd(str);
         bgfVar.invoke(zdVar);
-        return new dfz(str, emcVar, zdVar.b.size(), SomeStaticHelpers.ab(dfxVarArr), zdVar);
+        return new dfz(str, emcVar, zdVar.b.size(), SomeStaticHelpers.arrayToList(dfxVarArr), zdVar);
     }
 
     public static dfz ax(String str, emc emcVar, dfx[] dfxVarArr) {
@@ -46,7 +46,7 @@ public abstract class dqc {
                     "For StructureKind.CLASS please use 'buildClassSerialDescriptor' instead");
         }
         zd zdVar = new zd(str);
-        return new dfz(str, emcVar, zdVar.b.size(), SomeStaticHelpers.ab(dfxVarArr), zdVar);
+        return new dfz(str, emcVar, zdVar.b.size(), SomeStaticHelpers.arrayToList(dfxVarArr), zdVar);
     }
 
     public static MethodHookWrapper initModuleStatus(String str) {

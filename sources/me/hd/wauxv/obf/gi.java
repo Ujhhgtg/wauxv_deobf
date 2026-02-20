@@ -64,7 +64,7 @@ public final /* synthetic */ class gi implements bgf {
                     int i3 = 0;
                     MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objX).getMethodResolverBasedOnPreviouslyProvidedConfig();
                     methodResolverVarT.returnType = dal.getKClassFromClass(Integer.TYPE);
-                    Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT)).j(new Object[0]);
+                    Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT)).invoke(new Object[0]);
                     throwIfVar1IsNull(objJ);
                     switch (((Number) objJ).intValue()) {
                         case 61:
@@ -88,46 +88,46 @@ public final /* synthetic */ class gi implements bgf {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new gi(7);
                 return kotlinUnitVar;
             case 5:
-                bag bagVar = (bag) obj;
-                zb zbVar = new zb();
-                zbVar.k("MicroMsg.OplogService" /* "MicroMsg.OplogService" /* "MicroMsg.OplogService" /* "MicroMsg.OplogService" /* cnb.z(-636810506009386L)   */, "openim op success, type:%d id %d" /* "openim op success, type:%d id %d" /* "openim op success, type:%d id %d" /* "openim op success, type:%d id %d" /* cnb.z(-636698836859690L)   */);
-                bagVar.getClass();
-                bagVar.b = zbVar;
+                DexClassQueryBuilder dexClassQueryBuilderVar = (DexClassQueryBuilder) obj;
+                DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
+                zbVar.usingEqStrings("MicroMsg.OplogService" /* "MicroMsg.OplogService" /* "MicroMsg.OplogService" /* "MicroMsg.OplogService" /* cnb.z(-636810506009386L)   */, "openim op success, type:%d id %d" /* "openim op success, type:%d id %d" /* "openim op success, type:%d id %d" /* "openim op success, type:%d id %d" /* cnb.z(-636698836859690L)   */);
+                dexClassQueryBuilderVar.getClass();
+                dexClassQueryBuilderVar.methodGroupMatcher = zbVar;
                 return kotlinUnitVar;
             case 6:
-                bah bahVar = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar = new DexFinder();
                 cdjVar.usingStrings("inserTime" /* "inserTime" /* "inserTime" /* "inserTime" /* cnb.z(-637124038621994L)   */, "cmdId" /* "cmdId" /* "cmdId" /* "cmdId" /* cnb.z(-637098268818218L)   */, "buffer" /* "buffer" /* "buffer" /* "buffer" /* cnb.z(-637055319145258L)   */);
-                bahVar.getClass();
-                bahVar.d = cdjVar;
+                dexMethodQueryBuilderVar.getClass();
+                dexMethodQueryBuilderVar.dexFinder = cdjVar;
                 return kotlinUnitVar;
             case 7:
-                bah bahVar2 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.usingStrings("MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* cnb.z(-634108971580202L)   */, "data is null." /* "data is null." /* "data is null." /* "data is null." /* cnb.z(-633950057790250L)   */);
                 cdjVar2.u(8108);
-                bahVar2.getClass();
-                bahVar2.d = cdjVar2;
+                dexMethodQueryBuilderVar2.getClass();
+                dexMethodQueryBuilderVar2.dexFinder = cdjVar2;
                 return kotlinUnitVar;
             case 8:
-                bah bahVar3 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar3 = new DexFinder();
                 cdjVar3.usingStrings("MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* "MicroMsg.SecInfoReporterImpl" /* cnb.z(-637008074505002L)   */, "data is null." /* "data is null." /* "data is null." /* "data is null." /* cnb.z(-634117561514794L)   */);
                 cdjVar3.u(771);
-                bahVar3.getClass();
-                bahVar3.d = cdjVar3;
+                dexMethodQueryBuilderVar3.getClass();
+                dexMethodQueryBuilderVar3.dexFinder = cdjVar3;
                 return kotlinUnitVar;
             case 9:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new gi(10);
                 return kotlinUnitVar;
             case 10:
-                bah bahVar4 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 String[] strArr = {"com.tencent.mm.ui.chatting.manager" /* "com.tencent.mm.ui.chatting.manager" /* "com.tencent.mm.ui.chatting.manager" /* "com.tencent.mm.ui.chatting.manager" /* cnb.z(-100351910869802L)   */};
-                bahVar4.getClass();
-                bahVar4.a = SomeStaticHelpers.ab(strArr);
+                dexMethodQueryBuilderVar4.getClass();
+                dexMethodQueryBuilderVar4.a = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar4 = new DexFinder();
                 cdjVar4.usingStrings("[get] " /* "[get] " /* "[get] " /* "[get] " /* cnb.z(-97418448206634L)   */, " is not a interface!" /* " is not a interface!" /* " is not a interface!" /* " is not a interface!" /* cnb.z(-97439923043114L)   */);
-                bahVar4.d = cdjVar4;
+                dexMethodQueryBuilderVar4.dexFinder = cdjVar4;
                 return kotlinUnitVar;
             case 11:
                 HookParam hookParam2 = (bmm) obj;
@@ -164,11 +164,11 @@ public final /* synthetic */ class gi implements bgf {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new gi(13);
                 return kotlinUnitVar;
             case 13:
-                bah bahVar5 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar5 = new DexFinder();
                 cdjVar5.v("NetSceneJSOperateWxData" /* "NetSceneJSOperateWxData" /* "NetSceneJSOperateWxData" /* "NetSceneJSOperateWxData" /* cnb.z(-412832256490282L)   */, "<init> hash[%d] appId [%s], data [%s], grantScope [%s], versionType [%d], opt [%d], extScene [%d]  sessionId [%s]  avatarOpt [%d]" /* "<init> hash[%d] appId [%s], data [%s], grantScope [%s], versionType [%d], opt [%d], extScene [%d]  sessionId [%s]  avatarOpt [%d]" /* "<init> hash[%d] appId [%s], data [%s], grantScope [%s], versionType [%d], opt [%d], extScene [%d]  sessionId [%s]  avatarOpt [%d]" /* "<init> hash[%d] appId [%s], data [%s], grantScope [%s], versionType [%d], opt [%d], extScene [%d]  sessionId [%s]  avatarOpt [%d]" /* cnb.z(-412729177275178L)   */);
-                bahVar5.getClass();
-                bahVar5.d = cdjVar5;
+                dexMethodQueryBuilderVar5.getClass();
+                dexMethodQueryBuilderVar5.dexFinder = cdjVar5;
                 return kotlinUnitVar;
             case 14:
                 ((bmm) obj).h(null);
@@ -177,13 +177,13 @@ public final /* synthetic */ class gi implements bgf {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new gi(16);
                 return kotlinUnitVar;
             case 16:
-                bah bahVar6 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 String[] strArr2 = {"com.tencent.mm.plugin.appbrand.jsapi.auth" /* "com.tencent.mm.plugin.appbrand.jsapi.auth" /* "com.tencent.mm.plugin.appbrand.jsapi.auth" /* "com.tencent.mm.plugin.appbrand.jsapi.auth" /* cnb.z(-409525131672362L)   */};
-                bahVar6.getClass();
-                bahVar6.a = SomeStaticHelpers.ab(strArr2);
+                dexMethodQueryBuilderVar6.getClass();
+                dexMethodQueryBuilderVar6.a = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar6 = new DexFinder();
                 cdjVar6.usingStrings("MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* "MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* "MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* "MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* cnb.z(-409361922915114L)   */, "cgi callback, callbackId:%s, service not running or preloaded" /* "cgi callback, callbackId:%s, service not running or preloaded" /* "cgi callback, callbackId:%s, service not running or preloaded" /* "cgi callback, callbackId:%s, service not running or preloaded" /* cnb.z(-410766377220906L)   */);
-                bahVar6.d = cdjVar6;
+                dexMethodQueryBuilderVar6.dexFinder = cdjVar6;
                 return kotlinUnitVar;
             case 17:
                 HookParam hookParam3 = (bmm) obj;
@@ -223,23 +223,23 @@ public final /* synthetic */ class gi implements bgf {
                 ((FindDexClassMethodDslWrapper) obj).onClassCallback = new gi(19);
                 return kotlinUnitVar;
             case 19:
-                bag bagVar2 = (bag) obj;
-                zb zbVar2 = new zb();
-                zbVar2.k("MicroMsg.AppMessage" /* "MicroMsg.AppMessage" /* "MicroMsg.AppMessage" /* "MicroMsg.AppMessage" /* cnb.z(-107103599459114L)   */, "parse msg failed" /* "parse msg failed" /* "parse msg failed" /* "parse msg failed" /* cnb.z(-107052059851562L)   */);
-                bagVar2.getClass();
-                bagVar2.b = zbVar2;
+                DexClassQueryBuilder dexClassQueryBuilderVar2 = (DexClassQueryBuilder) obj;
+                DexMethodGroupMatcher zbVar2 = new DexMethodGroupMatcher();
+                zbVar2.usingEqStrings("MicroMsg.AppMessage" /* "MicroMsg.AppMessage" /* "MicroMsg.AppMessage" /* "MicroMsg.AppMessage" /* cnb.z(-107103599459114L)   */, "parse msg failed" /* "parse msg failed" /* "parse msg failed" /* "parse msg failed" /* cnb.z(-107052059851562L)   */);
+                dexClassQueryBuilderVar2.getClass();
+                dexClassQueryBuilderVar2.methodGroupMatcher = zbVar2;
                 return kotlinUnitVar;
             case 20:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new gi(21);
                 return kotlinUnitVar;
             case 21:
-                bah bahVar7 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar7 = (DexMethodQueryBuilder) obj;
                 String[] strArr3 = {"com.tencent.mm.pluginsdk.model.app" /* "com.tencent.mm.pluginsdk.model.app" /* "com.tencent.mm.pluginsdk.model.app" /* "com.tencent.mm.pluginsdk.model.app" /* cnb.z(-120147415137066L)   */};
-                bahVar7.getClass();
-                bahVar7.a = SomeStaticHelpers.ab(strArr3);
+                dexMethodQueryBuilderVar7.getClass();
+                dexMethodQueryBuilderVar7.a = SomeStaticHelpers.arrayToList(strArr3);
                 DexFinder cdjVar7 = new DexFinder();
                 cdjVar7.usingStrings("MicroMsg.AppMsgLogic" /* "MicroMsg.AppMsgLogic" /* "MicroMsg.AppMsgLogic" /* "MicroMsg.AppMsgLogic" /* cnb.z(-108469399059242L)   */, "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* cnb.z(-108362024876842L)   */);
-                bahVar7.d = cdjVar7;
+                dexMethodQueryBuilderVar7.dexFinder = cdjVar7;
                 return kotlinUnitVar;
             case 22:
                 View view = (View) obj;
@@ -309,19 +309,19 @@ public final /* synthetic */ class gi implements bgf {
                     throwIfVar1IsNull(objE);
                     bcp.a.getClass();
                     Method methodBb = StaticHelpers7.toDexMethod(bco.a);
-                    dgf.a.getClass();
-                    methodBb.invoke(dgf.b(StaticHelpers7.toDexMethod(bcn.a).getDeclaringClass()), (String) objE);
+                    ServiceManagerDexFinder.INSTANCE.getClass();
+                    methodBb.invoke(ServiceManagerDexFinder.getServiceByClass(StaticHelpers7.toDexMethod(bcn.a).getDeclaringClass()), (String) objE);
                 }
                 return kotlinUnitVar;
             case 25:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new gi(26);
                 return kotlinUnitVar;
             case 26:
-                bah bahVar8 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar8 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar8 = new DexFinder();
                 cdjVar8.usingStrings("MicroMsg.ForceNotifyStorage" /* "MicroMsg.ForceNotifyStorage" /* "MicroMsg.ForceNotifyStorage" /* "MicroMsg.ForceNotifyStorage" /* cnb.z(-443760315988778L)   */, "[onNewXmlReceived] ret:%s isAdd:%s info:%s" /* "[onNewXmlReceived] ret:%s isAdd:%s info:%s" /* "[onNewXmlReceived] ret:%s isAdd:%s info:%s" /* "[onNewXmlReceived] ret:%s isAdd:%s info:%s" /* cnb.z(-443674416642858L)   */);
-                bahVar8.getClass();
-                bahVar8.d = cdjVar8;
+                dexMethodQueryBuilderVar8.getClass();
+                dexMethodQueryBuilderVar8.dexFinder = cdjVar8;
                 return kotlinUnitVar;
             case 27:
                 View view2 = (View) obj;

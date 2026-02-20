@@ -84,12 +84,12 @@ public final class don extends ViewGroup {
                             uqVar.getClass();
                             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(frameLayout).getMethodResolverBasedOnPreviouslyProvidedConfig();
                             methodResolverVarT.returnType = dal.getKClassFromClass(Boolean.TYPE);
-                            methodResolverVarT.d = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(26);
+                            methodResolverVarT.parametersCondition = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(26);
                             methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
                             if (methodHookWrapperVar.method.getParameterCount() == 2) {
-                                methodHookWrapperVar.e(origin, null);
+                                methodHookWrapperVar.invokeAndThrowIfFailed(origin, null);
                             } else {
-                                methodHookWrapperVar.e(origin);
+                                methodHookWrapperVar.invokeAndThrowIfFailed(origin);
                             }
                         }
                     }
@@ -177,12 +177,12 @@ public final class don extends ViewGroup {
                             uqVar2.getClass();
                             MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(frameLayout2).getMethodResolverBasedOnPreviouslyProvidedConfig();
                             methodResolverVarT2.returnType = dal.getKClassFromClass(Boolean.TYPE);
-                            methodResolverVarT2.d = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(26);
+                            methodResolverVarT2.parametersCondition = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(26);
                             methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods());
                             if (methodHookWrapperVar.method.getParameterCount() == 2) {
-                                methodHookWrapperVar.e(origin, null);
+                                methodHookWrapperVar.invokeAndThrowIfFailed(origin, null);
                             } else {
-                                methodHookWrapperVar.e(origin);
+                                methodHookWrapperVar.invokeAndThrowIfFailed(origin);
                             }
                         }
                     }

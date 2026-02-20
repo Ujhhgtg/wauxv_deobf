@@ -43,7 +43,7 @@ public final class cbo implements IInvokable {
                                 cbp.o(cbp.o(
                                         cbp.o(cbp.o(cbp.f(cbp.b(StaticHelpers5.a(cbmVar.c(cls)), methodResolverVar, configurationVar), methodResolverVar, configurationVar),
                                                         configurationVar, "returnType", methodResolverVar.returnType, new cbi(configurationVar, i2)), configurationVar,
-                                                "returnTypeCondition", methodResolverVar.ai, new fq(15)),
+                                                "returnTypeCondition", methodResolverVar.returnTypeCondition, new fq(15)),
                                         configurationVar, "isBridge", null, new fq(17)), configurationVar, "isBridgeNot", null, new fq(25)),
                                 configurationVar, "isDefault", null, new cbk(2)), configurationVar, "isDefaultNot", null, new cbk(3));
                 KClass zcVarB = dal.getKClassFromClass(Method.class);
@@ -86,7 +86,7 @@ public final class cbo implements IInvokable {
                     cbmVar = cbmVar4;
                 }
                 try {
-                    objX = SomeStaticHelpers.ab(cls3.getDeclaredFields());
+                    objX = SomeStaticHelpers.arrayToList(cls3.getDeclaredFields());
                     break;
                 } catch (Throwable th) {
                     objX = FastKV.getFailureFromException(th);

@@ -16,7 +16,7 @@ public final class agc extends bws implements IDexFind {
         methodResolverVarT.name = "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-79005923408682L)  */;
         methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(ContentValues.class), dal.getKClassFromClass(Boolean.TYPE) }, 2));
         methodResolverVarT.enableSuperclass();
-        ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(contentValues, Boolean.TRUE);
+        ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).invokeAndThrowIfFailed(contentValues, Boolean.TRUE);
         return objC;
     }
 

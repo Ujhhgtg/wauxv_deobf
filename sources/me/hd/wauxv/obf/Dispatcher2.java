@@ -63,7 +63,7 @@ public final class Dispatcher2 extends Dispatcher implements als {
             brfVar.q(cancellationException);
         }
         Dispatchers$Default alcVar = aou.a;
-        akq.f.i(ahhVar, runnable);
+        Dispatchers$IO.INSTANCE.i(ahhVar, runnable);
     }
 
     @Override // me.hd.wauxv.obf.ahj

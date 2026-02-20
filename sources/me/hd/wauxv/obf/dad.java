@@ -19,9 +19,9 @@ public final class dad extends SwitchHook implements IDexFind {
         dadVar.hookAfter(hookManagerVarAb, cvcVar);
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
         cma.a.getClass();
-        Class declaringClass = StaticHelpers7.ba(clz.a).getDeclaringClass();
+        Class declaringClass = StaticHelpers7.toDexConstructor(clz.a).getDeclaringClass();
         cls.a.getClass();
-        for (Class cls : OtherStaticHelpers.argsToList(declaringClass, StaticHelpers7.ba(clr.a).getDeclaringClass())) {
+        for (Class cls : OtherStaticHelpers.argsToList(declaringClass, StaticHelpers7.toDexConstructor(clr.a).getDeclaringClass())) {
             int i2 = 0;
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(cls).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "onGYNetEnd" /* "onGYNetEnd" /* "onGYNetEnd" /* cnb.z(-540848051714858L)  */;

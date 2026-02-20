@@ -18,7 +18,7 @@ public abstract class OtherStaticHelpers extends dqc {
 
     public static ArrayList ah(Object... objArr) {
         throwIfVar1IsNull(objArr, "elements");
-        return objArr.length == 0 ? new ArrayList() : new ArrayList(new kk(objArr, true));
+        return objArr.length == 0 ? new ArrayList() : new ArrayList(new ReadonlyArray(objArr, true));
     }
 
     public static final List ai(List list) {

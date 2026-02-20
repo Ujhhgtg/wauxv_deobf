@@ -106,7 +106,7 @@ public final /* synthetic */ class Function1$VarIsInt$2 implements bfu {
                     throw new IllegalArgumentException("For StructureKind.CLASS please use 'buildClassSerialDescriptor' instead");
                 }
                 zd zdVar = new zd("kotlin.Unit");
-                return new dfz("kotlin.Unit", dntVar, zdVar.b.size(), SomeStaticHelpers.ab(dfxVarArr), zdVar);
+                return new dfz("kotlin.Unit", dntVar, zdVar.b.size(), SomeStaticHelpers.arrayToList(dfxVarArr), zdVar);
             case 14:
                 String strZ = "打开详情" /* "打开详情" /* "打开详情" /* "打开详情" /* cnb.z(-512926469323562L)   */;
                 String strZ2 = "" /* "" /* "" /* "" /* cnb.z(-512956534094634L)   */;

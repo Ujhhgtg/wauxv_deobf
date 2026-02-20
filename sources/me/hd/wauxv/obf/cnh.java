@@ -110,7 +110,7 @@ public abstract class cnh {
         methodResolverVarT.returnType = dal.getKClassFromClass(cls);
         ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { "com.tencent.mm.opensdk.modelmsg.WXMediaMessage" /* "com.tencent.mm.opensdk.modelmsg.WXMediaMessage" /* "com.tencent.mm.opensdk.modelmsg.WXMediaMessage" /* cnb.z(-120332098730794L)  */,
                 dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(cls), dal.getKClassFromClass(String.class) }, 6,
-                methodResolverVarT)).e(obj, str2, "" /* "" /* "" /* cnb.z(-120130235267882L)  */, str, 2, null);
+                methodResolverVarT)).invokeAndThrowIfFailed(obj, str2, "" /* "" /* "" /* cnb.z(-120130235267882L)  */, str, 2, null);
     }
 
     public static File af(File file) throws IOException {

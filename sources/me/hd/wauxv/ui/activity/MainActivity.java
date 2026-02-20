@@ -17,7 +17,7 @@ import com.google.android.material.textview.MaterialTextView;
 import me.hd.wauxv.R;
 import me.hd.wauxv.obf.aam;
 import me.hd.wauxv.obf.abi;
-import me.hd.wauxv.obf.akq;
+import me.hd.wauxv.obf.Dispatchers$IO;
 import me.hd.wauxv.obf.Dispatchers$Default;
 import me.hd.wauxv.obf.aou;
 import me.hd.wauxv.obf.bhp;
@@ -110,7 +110,7 @@ public final class MainActivity extends dg {
         byx byxVar = new byx(this, i);
         bhqVar.getClass();
         Dispatchers$Default alcVar = aou.a;
-        KotlinHelpers2.bf(akq.f, new bhp(strZ, byxVar, this, null));
+        KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new bhp(strZ, byxVar, this, null));
         eqj eqjVar2 = this._ac;
         throwIfVar1IsNull(eqjVar2);
         ((dj) eqjVar2).l.setTitle("WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-391241455893290L)  */);

@@ -40,7 +40,7 @@ public final class PluginContactMethod {
             throws IllegalAccessException, InstantiationException, InvocationTargetException {
         List listBf = dqc.toSingletonList(str2);
         cll.a.getClass();
-        cme.b(cme.a, StaticHelpers7.ba(clk.a).newInstance(str, listBf, null, null));
+        cme.b(cme.a, StaticHelpers7.toDexConstructor(clk.a).newInstance(str, listBf, null, null));
     }
 
     @cty
@@ -48,7 +48,7 @@ public final class PluginContactMethod {
             throws IllegalAccessException, InstantiationException, InvocationTargetException {
         List listBf = dqc.toSingletonList(str2);
         clq.a.getClass();
-        cme.b(cme.a, StaticHelpers7.ba(clp.a).newInstance(str, listBf, 0));
+        cme.b(cme.a, StaticHelpers7.toDexConstructor(clp.a).newInstance(str, listBf, 0));
     }
 
     @cty
@@ -93,7 +93,7 @@ public final class PluginContactMethod {
         xn.a.getClass();
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(xn.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.returnType = dal.getKClassFromClass(List.class);
-        List<String> list = (List) ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class) }, 1, methodResolverVarT)).j(str);
+        List<String> list = (List) ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class) }, 1, methodResolverVarT)).invoke(str);
         return list == null ? EmptyReadonlyList.INSTANCE : list;
     }
 
@@ -127,7 +127,7 @@ public final class PluginContactMethod {
             throws IllegalAccessException, InstantiationException, InvocationTargetException {
         List listBf = dqc.toSingletonList(str2);
         clu.a.getClass();
-        cme.b(cme.a, StaticHelpers7.ba(clt.a).newInstance(str, listBf, 0, null));
+        cme.b(cme.a, StaticHelpers7.toDexConstructor(clt.a).newInstance(str, listBf, 0, null));
     }
 
     @cty
@@ -170,20 +170,20 @@ public final class PluginContactMethod {
     public final void addChatroomMember(String str, List<String> list)
             throws IllegalAccessException, InstantiationException, InvocationTargetException {
         cll.a.getClass();
-        cme.b(cme.a, StaticHelpers7.ba(clk.a).newInstance(str, list, null, null));
+        cme.b(cme.a, StaticHelpers7.toDexConstructor(clk.a).newInstance(str, list, null, null));
     }
 
     @cty
     public final void delChatroomMember(String str, List<String> list)
             throws IllegalAccessException, InstantiationException, InvocationTargetException {
         clq.a.getClass();
-        cme.b(cme.a, StaticHelpers7.ba(clp.a).newInstance(str, list, 0));
+        cme.b(cme.a, StaticHelpers7.toDexConstructor(clp.a).newInstance(str, list, 0));
     }
 
     @cty
     public final void inviteChatroomMember(String str, List<String> list)
             throws IllegalAccessException, InstantiationException, InvocationTargetException {
         clu.a.getClass();
-        cme.b(cme.a, StaticHelpers7.ba(clt.a).newInstance(str, list, 0, null));
+        cme.b(cme.a, StaticHelpers7.toDexConstructor(clt.a).newInstance(str, list, 0, null));
     }
 }

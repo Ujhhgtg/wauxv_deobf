@@ -40,7 +40,7 @@ public abstract class bmy {
 
     public static ahh aa(ahf ahfVar, ahh ahhVar) {
         throwIfVar1IsNull(ahhVar, "context");
-        return ahhVar == auz.a ? ahfVar : (ahh) ahhVar._u(ahfVar, new fq(3));
+        return ahhVar == EmptyCoroutineContext.INSTANCE ? ahfVar : (ahh) ahhVar._u(ahfVar, new fq(3));
     }
 
     public static Cursor ab(aer[] aerVarArr) {
@@ -1268,9 +1268,9 @@ public abstract class bmy {
         return false;
     }
 
-    public static ahh x(ahf ahfVar, ahg ahgVar) {
+    public static ahh x(ahf ahfVar, IEmpty8 ahgVar) {
         throwIfVar1IsNull(ahgVar, "key");
-        return nullSafeIsEqual(ahfVar.getKey(), ahgVar) ? auz.a : ahfVar;
+        return nullSafeIsEqual(ahfVar.getKey(), ahgVar) ? EmptyCoroutineContext.INSTANCE : ahfVar;
     }
 
     public static final void y(brn brnVar, dfx dfxVar) {

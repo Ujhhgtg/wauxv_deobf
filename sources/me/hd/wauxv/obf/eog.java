@@ -14,7 +14,7 @@ public final class eog extends bws implements IDexFind {
 
     public static Object c(eog eogVar, int i) {
         eogVar.getClass();
-        return StaticHelpers7.ba(eoa.a).newInstance(Integer.valueOf(i), null);
+        return StaticHelpers7.toDexConstructor(eoa.a).newInstance(Integer.valueOf(i), null);
     }
 
     public static void d(Object obj, String str) {

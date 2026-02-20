@@ -62,7 +62,7 @@ public class brm implements brf, csx {
     }
 
     @Override // me.hd.wauxv.obf.ahh
-    public final ahh _t(ahg ahgVar) {
+    public final ahh _t(IEmpty8 ahgVar) {
         return bmy.x(this, ahgVar);
     }
 
@@ -77,7 +77,7 @@ public class brm implements brf, csx {
     }
 
     @Override // me.hd.wauxv.obf.ahh
-    public final ahf _w(ahg ahgVar) {
+    public final ahf _w(IEmpty8 ahgVar) {
         throwIfVar1IsNull(ahgVar, "key");
         if (nullSafeIsEqual(arj.i, ahgVar)) {
             return this;
@@ -433,7 +433,7 @@ public class brm implements brf, csx {
     }
 
     @Override // me.hd.wauxv.obf.ahf
-    public final ahg getKey() {
+    public final IEmpty8 getKey() {
         return arj.i;
     }
 

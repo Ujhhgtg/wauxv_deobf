@@ -28,7 +28,7 @@ public final class deu extends SwitchHook {
         int i2 = 0;
         MethodResolver methodResolverVarT = yg.s(-518239343868714L).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "initView" /* "initView" /* "initView" /* cnb.z(-515258636565290L)  */;
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) bjs.h(methodResolverVarT);
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT);
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         deu deuVar = a;
         HookManager hookManagerVarAd = deuVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);

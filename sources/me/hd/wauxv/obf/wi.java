@@ -35,7 +35,7 @@ public final /* synthetic */ class wi implements bfu {
                 Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue();
                 throwIfVar1IsNull(objD);
                 xx.a.getClass();
-                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(gp.b((Class) SomeStaticHelpers.p(StaticHelpers7.az(xw.a).getInterfaces()), objD)).r();
+                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(gp.b((Class) SomeStaticHelpers.p(StaticHelpers7.toDexClass(xw.a).getInterfaces()), objD)).r();
                 uq.a.getClass();
                 fieldResolverVarR2.fieldType = ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */);
                 Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue_();

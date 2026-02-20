@@ -30,7 +30,7 @@ public final /* synthetic */ class cbi implements bgj {
                 zF = nullSafeIsEqual(((Method) obj2).getReturnType(), cbp.t(obj, this.b, "Method: returnType"));
                 return Boolean.valueOf(zF);
             case 1:
-                zF = cbp.e((List) obj, SomeStaticHelpers.ab(((Executable) obj2).getParameterTypes()), this.b);
+                zF = cbp.e((List) obj, SomeStaticHelpers.arrayToList(((Executable) obj2).getParameterTypes()), this.b);
                 return Boolean.valueOf(zF);
             case 2:
                 List list = (List) obj;
@@ -105,7 +105,7 @@ public final /* synthetic */ class cbi implements bgj {
                 zF = cbp.i(this.b, (Set) obj, (Executable) obj2);
                 return Boolean.valueOf(zF);
             case 7:
-                zE = cbp.e((List) obj, SomeStaticHelpers.ab(((Executable) obj2).getParameterTypes()), this.b);
+                zE = cbp.e((List) obj, SomeStaticHelpers.arrayToList(((Executable) obj2).getParameterTypes()), this.b);
                 break;
             case 8:
                 zF = cbp.j(this.b, (Set) obj, (Executable) obj2);
@@ -123,10 +123,10 @@ public final /* synthetic */ class cbi implements bgj {
                 zF = cbp.n(this.b, (Set) obj, (Executable) obj2);
                 return Boolean.valueOf(zF);
             case 13:
-                zF = cbp.e((Set) obj, SomeStaticHelpers.ab(((Executable) obj2).getExceptionTypes()), this.b);
+                zF = cbp.e((Set) obj, SomeStaticHelpers.arrayToList(((Executable) obj2).getExceptionTypes()), this.b);
                 return Boolean.valueOf(zF);
             case 14:
-                zE = cbp.e((Set) obj, SomeStaticHelpers.ab(((Executable) obj2).getExceptionTypes()), this.b);
+                zE = cbp.e((Set) obj, SomeStaticHelpers.arrayToList(((Executable) obj2).getExceptionTypes()), this.b);
                 break;
             case 15:
                 Set set = (Set) obj;

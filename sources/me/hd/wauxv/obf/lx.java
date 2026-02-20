@@ -43,9 +43,9 @@ public final class lx extends SwitchHook implements Runnable {
         if (jCurrentTimeMillis - lvVar.l() > lu.a.l() * 1000) {
             lvVar.s(System.currentTimeMillis());
             Dispatchers$Default alcVar = aou.a;
-            akq akqVar = akq.f;
+            Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
             lw lwVar = new lw(2, null, 0);
-            ahh ahhVarT = KotlinHelpers.t(auz.a, akqVar, true);
+            ahh ahhVarT = KotlinHelpers.t(EmptyCoroutineContext.INSTANCE, akqVar, true);
             Dispatchers$Default alcVar2 = aou.a;
             if (ahhVarT != alcVar2 && ahhVarT._w(arj.a) == null) {
                 ahhVarT = ahhVarT._v(alcVar2);

@@ -64,7 +64,7 @@ public final class ki {
         methodResolverVarT.name = "currentApplication";
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
         if (methodHookWrapperVar != null) {
-            return (Application) methodHookWrapperVar.j(new Object[0]);
+            return (Application) methodHookWrapperVar.invoke(new Object[0]);
         }
         return null;
     }
@@ -96,9 +96,9 @@ public final class ki {
             bmuVarBh.setHookOptional(true);
             MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "currentActivityThread";
-            methodResolverVarT.y();
+            methodResolverVarT.setParamCountTo0();
             MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
-            Object objE = methodHookWrapperVar != null ? methodHookWrapperVar.e(new Object[0]) : null;
+            Object objE = methodHookWrapperVar != null ? methodHookWrapperVar.invokeAndThrowIfFailed(new Object[0]) : null;
             if (objE != null) {
                 bmuVarBi = dqc.getWrapperConfiguration(objE);
                 bmuVarBi.setHookOptional(true);

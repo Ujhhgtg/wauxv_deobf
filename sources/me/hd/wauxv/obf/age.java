@@ -155,20 +155,20 @@ public final /* synthetic */ class age implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new age(i2);
                 return kotlinUnitVar;
             case 4:
-                bah bahVar = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 String[] strArr = { "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* cnb.z(-35270271433514L)  */ };
-                bahVar.getClass();
-                bahVar.a = SomeStaticHelpers.ab(strArr);
+                dexMethodQueryBuilderVar.getClass();
+                dexMethodQueryBuilderVar.a = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar = new DexFinder();
                 cdjVar.s("onMMMenuItemSelected" /* "onMMMenuItemSelected" /* "onMMMenuItemSelected" /* cnb.z(-35669703392042L)  */);
                 cdjVar.usingStrings("com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* "com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* "com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* cnb.z(-35631048686378L)  */);
-                bahVar.d = cdjVar;
+                dexMethodQueryBuilderVar.dexFinder = cdjVar;
                 return kotlinUnitVar;
             case 5:
-                bah bahVar2 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 String[] strArr2 = { "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* cnb.z(-38985418144554L)  */ };
-                bahVar2.getClass();
-                bahVar2.a = SomeStaticHelpers.ab(strArr2);
+                dexMethodQueryBuilderVar2.getClass();
+                dexMethodQueryBuilderVar2.a = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.s("onCreateContextMenu" /* "onCreateContextMenu" /* "onCreateContextMenu" /* cnb.z(-38852274158378L)  */);
                 if (cnb.ab(ewk.l) || cnb.ac(ewh.m)) {
@@ -178,18 +178,18 @@ public final /* synthetic */ class age implements IInvokable {
                     cdjVar2.usingStrings("MicroMsg.ConversationClickListener" /* "MicroMsg.ConversationClickListener" /* "MicroMsg.ConversationClickListener" /* cnb.z(-36210869271338L)  */,
                             "onCreateContextMenu, contact is null, talker = " /* "onCreateContextMenu, contact is null, talker = " /* "onCreateContextMenu, contact is null, talker = " /* cnb.z(-36026185677610L)  */);
                 }
-                bahVar2.d = cdjVar2;
+                dexMethodQueryBuilderVar2.dexFinder = cdjVar2;
                 return kotlinUnitVar;
             case 6:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new age(7);
                 return kotlinUnitVar;
             case 7:
-                bah bahVar3 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar3 = new DexFinder();
                 DexFinder.setClassEquals(cdjVar3, "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* cnb.z(-120813135067946L)  */);
                 cdjVar3.usingStrings("[checkEmptyFooter] isRealFull:" /* "[checkEmptyFooter] isRealFull:" /* "[checkEmptyFooter] isRealFull:" /* cnb.z(-120074400693034L)  */);
-                bahVar3.getClass();
-                bahVar3.d = cdjVar3;
+                dexMethodQueryBuilderVar3.getClass();
+                dexMethodQueryBuilderVar3.dexFinder = cdjVar3;
                 return kotlinUnitVar;
             case 8:
                 ((FindDexClassMethodDslWrapper) obj).onClassCallback = new age(i4);
@@ -204,33 +204,33 @@ public final /* synthetic */ class age implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new age(i5);
                 return kotlinUnitVar;
             case 12:
-                bah bahVar4 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar4 = new DexFinder();
                 agp.a.getClass();
-                cdjVar4.o(StaticHelpers7.az(agl.a));
+                cdjVar4.o(StaticHelpers7.toDexClass(agl.a));
                 cdjVar4.usingStrings("MicroMsg.ConversationStorage" /* "MicroMsg.ConversationStorage" /* "MicroMsg.ConversationStorage" /* cnb.z(-373460291287850L)  */, "get null with username:" /*
                                                                                                                     * cnb
                                                                                                                     * .z
                                                                                                                     * (-
                                                                                                                     * 373387276843818L)
                                                                                                                     */);
-                bahVar4.getClass();
-                bahVar4.d = cdjVar4;
+                dexMethodQueryBuilderVar4.getClass();
+                dexMethodQueryBuilderVar4.dexFinder = cdjVar4;
                 return kotlinUnitVar;
             case 13:
-                bah bahVar5 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar5 = new DexFinder();
                 agp.a.getClass();
-                cdjVar5.o(StaticHelpers7.az(agl.a));
+                cdjVar5.o(StaticHelpers7.toDexClass(agl.a));
                 cdjVar5.usingStrings("updateUnreadByTalker %s" /* "updateUnreadByTalker %s" /* "updateUnreadByTalker %s" /* cnb.z(-371677879860010L)  */);
-                bahVar5.getClass();
-                bahVar5.d = cdjVar5;
+                dexMethodQueryBuilderVar5.getClass();
+                dexMethodQueryBuilderVar5.dexFinder = cdjVar5;
                 return kotlinUnitVar;
             case 14:
-                bah bahVar6 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar6 = new DexFinder();
                 agp.a.getClass();
-                cdjVar6.o(StaticHelpers7.az(agl.a));
+                cdjVar6.o(StaticHelpers7.toDexClass(agl.a));
                 cdjVar6.p(new IntRange(2, 4, 1));
                 cdjVar6.v("Update " /* "Update " /* "Update " /* cnb.z(-372124556458794L)  */, "rconversation" /* "rconversation" /* "rconversation" /* cnb.z(-372090196720426L)  */,
                         " set " /* " set " /* " set " /* cnb.z(-372081606785834L)  */, "parentRef" /* "parentRef" /* "parentRef" /* cnb.z(-372038657112874L)  */, " = '" /*
@@ -241,28 +241,28 @@ public final /* synthetic */ class age implements IInvokable {
                                                                                                                     */);
                 cdjVar6.n("' where 1 != 1 " /* "' where 1 != 1 " /* "' where 1 != 1 " /* cnb.z(-371957052734250L)  */);
                 cdjVar6.n("rconversation" /* "rconversation" /* "rconversation" /* cnb.z(-373537600699178L)  */);
-                bahVar6.getClass();
-                bahVar6.d = cdjVar6;
+                dexMethodQueryBuilderVar6.getClass();
+                dexMethodQueryBuilderVar6.dexFinder = cdjVar6;
                 return kotlinUnitVar;
             case 15:
-                bag bagVar = (bag) obj;
+                DexClassQueryBuilder dexClassQueryBuilderVar = (DexClassQueryBuilder) obj;
                 String[] strArr3 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-372523988417322L)  */ };
-                bagVar.getClass();
-                bagVar.a = SomeStaticHelpers.ab(strArr3);
-                zb zbVar = new zb();
-                zbVar.k("PRAGMA table_info( rconversation)" /* "PRAGMA table_info( rconversation)" /* "PRAGMA table_info( rconversation)" /* cnb.z(-371875448355626L)  */);
-                bagVar.b = zbVar;
+                dexClassQueryBuilderVar.getClass();
+                dexClassQueryBuilderVar.strings = SomeStaticHelpers.arrayToList(strArr3);
+                DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
+                zbVar.usingEqStrings("PRAGMA table_info( rconversation)" /* "PRAGMA table_info( rconversation)" /* "PRAGMA table_info( rconversation)" /* cnb.z(-371875448355626L)  */);
+                dexClassQueryBuilderVar.methodGroupMatcher = zbVar;
                 return kotlinUnitVar;
             case 16:
                 ((FindDexClassMethodDslWrapper) obj).onClassCallback = new age(17);
                 return kotlinUnitVar;
             case 17:
-                bag bagVar2 = (bag) obj;
-                zb zbVar2 = new zb();
-                zbVar2.k("MMKernel.CoreStorage" /* "MMKernel.CoreStorage" /* "MMKernel.CoreStorage" /* cnb.z(-102439264975658L)  */,
+                DexClassQueryBuilder dexClassQueryBuilderVar2 = (DexClassQueryBuilder) obj;
+                DexMethodGroupMatcher zbVar2 = new DexMethodGroupMatcher();
+                zbVar2.usingEqStrings("MMKernel.CoreStorage" /* "MMKernel.CoreStorage" /* "MMKernel.CoreStorage" /* cnb.z(-102439264975658L)  */,
                         "CheckData path[%s] blocksize:%s blockcount:%s availcount:%s" /* "CheckData path[%s] blocksize:%s blockcount:%s availcount:%s" /* "CheckData path[%s] blocksize:%s blockcount:%s availcount:%s" /* cnb.z(-102331890793258L)  */);
-                bagVar2.getClass();
-                bagVar2.b = zbVar2;
+                dexClassQueryBuilderVar2.getClass();
+                dexClassQueryBuilderVar2.methodGroupMatcher = zbVar2;
                 return kotlinUnitVar;
             case 18:
                 ahf ahfVar = (ahf) obj;
@@ -274,13 +274,13 @@ public final /* synthetic */ class age implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new age(20);
                 return kotlinUnitVar;
             case 20:
-                bah bahVar7 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar7 = (DexMethodQueryBuilder) obj;
                 String[] strArr4 = { "com.tencent.mm.ui" /* "com.tencent.mm.ui" /* "com.tencent.mm.ui" /* cnb.z(-78855599553322L)  */ };
-                bahVar7.getClass();
-                bahVar7.a = SomeStaticHelpers.ab(strArr4);
+                dexMethodQueryBuilderVar7.getClass();
+                dexMethodQueryBuilderVar7.a = SomeStaticHelpers.arrayToList(strArr4);
                 DexFinder cdjVar7 = new DexFinder();
                 cdjVar7.usingStrings("newcursor closeCursor,clear events" /* "newcursor closeCursor,clear events" /* "newcursor closeCursor,clear events" /* cnb.z(-78726750534442L)  */);
-                bahVar7.d = cdjVar7;
+                dexMethodQueryBuilderVar7.dexFinder = cdjVar7;
                 return kotlinUnitVar;
             case 21:
                 View view = (View) obj;
@@ -647,7 +647,7 @@ public final /* synthetic */ class age implements IInvokable {
                     int i13 = 0;
                     MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(hookParam4.getThisObject()).getMethodResolverBasedOnPreviouslyProvidedConfig();
                     methodResolverVarT.name = "setFixedContactCount" /* "setFixedContactCount" /* "setFixedContactCount" /* cnb.z(-430007830706986L)  */;
-                    ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(Integer.valueOf(iK2));
+                    ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).invokeAndThrowIfFailed(Integer.valueOf(iK2));
                 }
                 return kotlinUnitVar;
             case 26:

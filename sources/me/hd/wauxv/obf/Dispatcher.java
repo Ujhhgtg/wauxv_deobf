@@ -34,7 +34,7 @@ public abstract class Dispatcher extends u implements afy {
      * Code decompiled incorrectly, please refer to instructions dump.
      * To view partially-correct add '--show-bad-code' argument
      */
-    public final me.hd.wauxv.obf.ahh _t(me.hd.wauxv.obf.ahg r3) {
+    public final me.hd.wauxv.obf.ahh _t(IEmpty8 r3) {
         /*
          * r2 = this;
          * java.lang.String r0 = "key"
@@ -69,12 +69,12 @@ public abstract class Dispatcher extends u implements afy {
     }
 
     @Override // me.hd.wauxv.obf.u, me.hd.wauxv.obf.ahh
-    public final ahf _w(ahg ahgVar) {
+    public final ahf _w(IEmpty8 ahgVar) {
         ahf ahfVar;
         throwIfVar1IsNull(ahgVar, "key");
         if (ahgVar instanceof ahi) {
             ahi ahiVar = (ahi) ahgVar;
-            ahg ahgVar2 = this.a;
+            IEmpty8 ahgVar2 = this.a;
             if ((ahgVar2 == ahiVar || ahiVar.b == ahgVar2) && (ahfVar = (ahf) ahiVar.a.invoke(this)) != null) {
                 return ahfVar;
             }

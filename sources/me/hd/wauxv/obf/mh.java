@@ -43,22 +43,22 @@ public final class mh extends SwitchHook implements bnc {
             Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue();
             throwIfVar1IsNull(objD);
             elb.a.getClass();
-            Object objB = gp.b((Class) SomeStaticHelpers.p(StaticHelpers7.az(ela.a).getInterfaces()), objD);
+            Object objB = gp.b((Class) SomeStaticHelpers.p(StaticHelpers7.toDexClass(ela.a).getInterfaces()), objD);
             long msgId = msgInfoBean.getMsgId();
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objB).getMethodResolverBasedOnPreviouslyProvidedConfig();
-            methodResolverVarT.ai = new dos(4);
-            Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(Long.TYPE) }, 1, methodResolverVarT)).j(Long.valueOf(msgId));
+            methodResolverVarT.returnTypeCondition = new dos(4);
+            Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(Long.TYPE) }, 1, methodResolverVarT)).invoke(Long.valueOf(msgId));
             throwIfVar1IsNull(objJ);
             if (nullSafeIsEqual(objJ.toString(), "NoTransform" /* "NoTransform" /* "NoTransform" /* cnb.z(-440878392933162L)  */)) {
                 mgVar.put(Long.valueOf(msgInfoBean.getMsgId()), bool);
                 Object origin = msgInfoBean.getOrigin();
                 MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objB).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT2.returnType = Void.TYPE;
-                cge.a.getClass();
-                Class clsAz = StaticHelpers7.az(cgd.a);
+                MicroMsgMsgInfoDexClassFind.INSTANCE.getClass();
+                Class clsAz = StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE);
                 KClass zcVarB = dal.getKClassFromClass(Boolean.TYPE);
                 Class cls = Integer.TYPE;
-                ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { clsAz, zcVarB, dal.getKClassFromClass(cls), dal.getKClassFromClass(cls) }, 4, methodResolverVarT2)).e(origin,
+                ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { clsAz, zcVarB, dal.getKClassFromClass(cls), dal.getKClassFromClass(cls) }, 4, methodResolverVarT2)).invokeAndThrowIfFailed(origin,
                         Boolean.FALSE, -1, 0);
             }
         }

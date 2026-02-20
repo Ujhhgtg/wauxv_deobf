@@ -25,7 +25,7 @@ public final class md extends SwitchHook {
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
         MethodResolver methodResolverVarT2 = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.name = "initView" /* "initView" /* "initView" /* "initView" /* cnb.z(-511887087237930L)   */;
-        HookManager hookManagerVarAd2 = mdVar.createImmediateHook((MethodHookWrapper) bjs.h(methodResolverVarT2), hookPriorityEnumVar);
+        HookManager hookManagerVarAd2 = mdVar.createImmediateHook((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT2), hookPriorityEnumVar);
         mdVar.hookAfter(hookManagerVarAd2, new gi(29));
         hookManagerVarAd2.initInstantCollectionAndApplyHooks();
     }

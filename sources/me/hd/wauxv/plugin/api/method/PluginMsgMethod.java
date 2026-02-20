@@ -12,12 +12,12 @@ import java.util.HashSet;
 import me.hd.wauxv.data.bean.MsgInfoBean;
 import me.hd.wauxv.obf.StaticHelpers5;
 import me.hd.wauxv.obf.acx;
-import me.hd.wauxv.obf.akq;
+import me.hd.wauxv.obf.Dispatchers$IO;
 import me.hd.wauxv.obf.Dispatchers$Default;
 import me.hd.wauxv.obf.aou;
 import me.hd.wauxv.obf.arj;
-import me.hd.wauxv.obf.aub;
-import me.hd.wauxv.obf.auh;
+import me.hd.wauxv.obf.EmojiInfoStorageDexFind;
+import me.hd.wauxv.obf.EmojiMgrImplHook;
 import me.hd.wauxv.obf.aye;
 import me.hd.wauxv.obf.blv;
 import me.hd.wauxv.obf.HostInfoRegistry;
@@ -41,7 +41,7 @@ import me.hd.wauxv.obf.ctc;
 import me.hd.wauxv.obf.ctd;
 import me.hd.wauxv.obf.cty;
 import me.hd.wauxv.obf.dal;
-import me.hd.wauxv.obf.dgf;
+import me.hd.wauxv.obf.ServiceManagerDexFinder;
 import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.dqc;
@@ -69,7 +69,7 @@ public final class PluginMsgMethod {
         String strZ = "你撤回了一条消息" /* "你撤回了一条消息" /* "你撤回了一条消息" /* cnb.z(-133358734539562L)  */;
         cmkVar.getClass();
         cgy.a.getClass();
-        cme.b(cme.a, StaticHelpers7.ba(cmj.a).newInstance(cgy.b(j), strZ, "" /* "" /* "" /* cnb.z(-133414569114410L)  */));
+        cme.b(cme.a, StaticHelpers7.toDexConstructor(cmj.a).newInstance(cgy.b(j), strZ, "" /* "" /* "" /* cnb.z(-133414569114410L)  */));
     }
 
     @cty
@@ -126,11 +126,8 @@ public final class PluginMsgMethod {
 
     @cty
     public final void sendEmoji(String str, String str2) {
-        auh auhVar = auh.a;
-        auhVar.getClass();
-        String strB = auh.b(str2);
-        aub.a.getClass();
-        auh.c(auhVar, str, aub.b(strB));
+        String strB = EmojiMgrImplHook.getMd5FromPath(str2);
+        EmojiMgrImplHook.sendEmoji(str, EmojiInfoStorageDexFind.getEmojiInfoByMd5(strB));
     }
 
     @cty
@@ -177,24 +174,24 @@ public final class PluginMsgMethod {
         String strB = acx.b();
         ctdVar.getClass();
         int i = 0;
-        dgf.a.getClass();
+        ServiceManagerDexFinder.INSTANCE.getClass();
         ctdVar.getClass();
         ctc ctcVar = ctc.a;
-        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dgf.b(StaticHelpers7.az(ctcVar))).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(ServiceManagerDexFinder.getServiceByClass(StaticHelpers7.toDexClass(ctcVar))).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.returnType = dal.getKClassFromClass(String.class);
-        Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class) }, 2, methodResolverVarT)).j(str2, str);
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class) }, 2, methodResolverVarT)).invoke(str2, str);
         throwIfVar1IsNull(objJ);
         String str3 = (String) objJ;
         int iCurrentTimeMillis = (int) (System.currentTimeMillis() / ((long) 1000));
         ctdVar.getClass();
-        MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(dgf.b(StaticHelpers7.az(ctcVar))).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(ServiceManagerDexFinder.getServiceByClass(StaticHelpers7.toDexClass(ctcVar))).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.returnType = dal.getKClassFromClass(Pair.class);
         Object objJ2 = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class),
                 dal.getKClassFromClass(String.class), dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(Long.TYPE) }, 6, methodResolverVarT2))
-                .j(str, strB, str2, str3, Integer.valueOf(iCurrentTimeMillis), 0L);
+                .invoke(str, strB, str2, str3, Integer.valueOf(iCurrentTimeMillis), 0L);
         throwIfVar1IsNull(objJ2);
         Dispatchers$Default alcVar = aou.a;
-        KotlinHelpers2.bf(akq.f, new ckx((Pair) objJ2, str, str2, null));
+        KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new ckx((Pair) objJ2, str, str2, null));
     }
 
     @cty
@@ -219,7 +216,7 @@ public final class PluginMsgMethod {
         methodResolverVarT.addAccessModifiers(AccessModifierEnum.STATIC);
         Class cls = Integer.TYPE;
         methodResolverVarT.returnType = dal.getKClassFromClass(cls);
-        Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(cls) }, 1, methodResolverVarT)).j(Integer.valueOf(type));
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(cls) }, 1, methodResolverVarT)).invoke(Integer.valueOf(type));
         throwIfVar1IsNull(objJ);
         jSONObject4.put(strZ4, ((Number) objJ).intValue());
         jSONObject4.put("svrid" /* "svrid" /* "svrid" /* cnb.z(-114873195297578L)  */, msgInfoBean.getMsgSvrId());
@@ -288,7 +285,7 @@ public final class PluginMsgMethod {
         int i = 0;
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objC).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "doScene" /* "doScene" /* "doScene" /* cnb.z(-135068131523370L)  */;
-        methodResolverVarT.paramCount = 2;
+        methodResolverVarT.parameterCount = 2;
         methodResolverVarT.enableSuperclass();
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
         if (methodHookWrapperVar == null) {
@@ -338,12 +335,12 @@ public final class PluginMsgMethod {
                                     MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objArr[3]).getMethodResolverBasedOnPreviouslyProvidedConfig();
                                     methodResolverVarT2.name = "getReqResp" /* "getReqResp" /* "getReqResp" /* cnb.z(-135875585375018L)  */;
                                     methodResolverVarT2.enableSuperclass();
-                                    Object objE = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).e(new Object[0]);
+                                    Object objE = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).invokeAndThrowIfFailed(new Object[0]);
                                     if (objE != null) {
                                         MethodResolver methodResolverVarT3 = dqc.getWrapperConfiguration(objE).getMethodResolverBasedOnPreviouslyProvidedConfig();
                                         methodResolverVarT3.name = "getRespObj" /* "getRespObj" /* "getRespObj" /* cnb.z(-135845520603946L)  */;
                                         methodResolverVarT3.enableSuperclass();
-                                        Object objE2 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT3.findMethods())).e(new Object[0]);
+                                        Object objE2 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT3.findMethods())).invokeAndThrowIfFailed(new Object[0]);
                                         if (objE2 != null) {
                                             azg azgVarR = dqc.getWrapperConfiguration(objE2).r();
                                             azgVarR.ab = "a" /* "a" /* "a" /* cnb.z(-136313672039210L)  */;
@@ -353,7 +350,7 @@ public final class PluginMsgMethod {
                                                 MethodResolver methodResolverVarT4 = dqc.getWrapperConfiguration(objD).getMethodResolverBasedOnPreviouslyProvidedConfig();
                                                 methodResolverVarT4.name = "toByteArray" /* "toByteArray" /* "toByteArray" /* cnb.z(-136322261973802L)  */;
                                                 methodResolverVarT4.enableSuperclass();
-                                                ?? r10 = (byte[]) ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT4.findMethods())).j(new Object[0]);
+                                                ?? r10 = (byte[]) ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT4.findMethods())).invoke(new Object[0]);
                                                 if (r10 != 0) {
                                                     blvVar2.c(num, num2, str3, r10);
                                                 }
@@ -377,7 +374,7 @@ public final class PluginMsgMethod {
         byr.a.getClass();
         Object objInvoke = methodBb.invoke(byr.c(), null);
         throwIfVar1IsNull(objInvoke);
-        methodHookWrapperVar.e(objInvoke, objNewProxyInstance);
+        methodHookWrapperVar.invokeAndThrowIfFailed(objInvoke, objNewProxyInstance);
     }
 
     @cty

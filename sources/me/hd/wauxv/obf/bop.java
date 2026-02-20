@@ -10,16 +10,16 @@ public final class bop extends bws implements IDexFind {
     public static String b(Object obj) {
         int i = 0;
         bol.a.getClass();
-        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(boj.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.toDexClass(boj.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.addAccessModifiers(AccessModifierEnum.STATIC);
         a.getClass();
-        methodResolverVarT.returnType = StaticHelpers7.az(boo.a);
-        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
+        methodResolverVarT.returnType = StaticHelpers7.toDexClass(boo.a);
+        Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT)).invokeAndThrowIfFailed(new Object[0]);
         throwIfVar1IsNull(objE);
         MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objE).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.returnType = dal.getKClassFromClass(String.class);
-        cge.a.getClass();
-        Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { StaticHelpers7.az(cgd.a) }, 1, methodResolverVarT2)).j(obj);
+        MicroMsgMsgInfoDexClassFind.INSTANCE.getClass();
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE) }, 1, methodResolverVarT2)).invoke(obj);
         throwIfVar1IsNull(objJ);
         return (String) objJ;
     }

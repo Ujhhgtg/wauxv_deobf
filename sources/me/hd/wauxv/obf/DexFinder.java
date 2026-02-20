@@ -9,13 +9,13 @@ import java.util.List;
 public final class DexFinder extends dqc {
     public dnf a;
     public an b;
-    public zb d;
-    public zb e;
-    public fj f;
+    public DexMethodGroupMatcher d;
+    public DexMethodGroupMatcher e;
+    public MethodMatcher f;
     public List g;
     public ArrayList h;
-    public fj i;
-    public fj j;
+    public MethodMatcher i;
+    public MethodMatcher j;
 
     public static void k(DexFinder cdjVar, String str) {
         List arrayList = cdjVar.g;
@@ -27,7 +27,7 @@ public final class DexFinder extends dqc {
     }
 
     public static void setClassEquals(DexFinder cdjVar, String str) {
-        zb zbVar = new zb();
+        DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
         zbVar.j(str, dne.Equals);
         cdjVar.d = zbVar;
     }
@@ -50,11 +50,11 @@ public final class DexFinder extends dqc {
         int iC = dnfVar != null ? dnfVar.c(bbbVar) : 0;
         an anVar = this.b;
         int iC2 = anVar != null ? anVar.c(bbbVar) : 0;
-        zb zbVar = this.d;
+        DexMethodGroupMatcher zbVar = this.d;
         int iC3 = zbVar != null ? zbVar.c(bbbVar) : 0;
-        zb zbVar2 = this.e;
+        DexMethodGroupMatcher zbVar2 = this.e;
         int iC4 = zbVar2 != null ? zbVar2.c(bbbVar) : 0;
-        fj fjVar = this.f;
+        MethodMatcher fjVar = this.f;
         int iC5 = fjVar != null ? fjVar.c(bbbVar) : 0;
         List list = this.g;
         if (list != null) {
@@ -106,9 +106,9 @@ public final class DexFinder extends dqc {
             i = 1;
             iV2 = 0;
         }
-        fj fjVar2 = this.i;
+        MethodMatcher fjVar2 = this.i;
         int iC6 = fjVar2 != null ? fjVar2.c(bbbVar) : 0;
-        fj fjVar3 = this.j;
+        MethodMatcher fjVar3 = this.j;
         int iC7 = fjVar3 != null ? fjVar3.c(bbbVar) : 0;
         bbbVar.ab(14);
         bbbVar.q(13, 0);
@@ -141,16 +141,16 @@ public final class DexFinder extends dqc {
 
     public final void o(Class cls) {
         throwIfVar1IsNull(cls, "clazz");
-        zb zbVar = new zb();
+        DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
         zbVar.j(ams.e(cls), dne.Equals);
         this.d = zbVar;
     }
 
     public final void p(IntRange intRangeVar) {
         if (this.f == null) {
-            this.f = new fj(4);
+            this.f = new MethodMatcher(4);
         }
-        fj fjVar = this.f;
+        MethodMatcher fjVar = this.f;
         throwIfVar1IsNull(fjVar);
         bqh bqhVar = new bqh();
         bqhVar.a = intRangeVar.first;
@@ -160,12 +160,12 @@ public final class DexFinder extends dqc {
 
     public final void q(Class... clsArr) {
         cst cstVar;
-        fj fjVar = new fj(4);
+        MethodMatcher fjVar = new MethodMatcher(4);
         fjVar.b = StaticHelpers5.ab(EmptyReadonlyList.INSTANCE);
         for (Class cls : clsArr) {
             if (cls != null) {
                 cstVar = new cst();
-                zb zbVar = new zb();
+                DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
                 zbVar.j(ams.e(cls), dne.Equals);
                 cstVar.a = zbVar;
             } else {
@@ -183,7 +183,7 @@ public final class DexFinder extends dqc {
 
     public final void r(Class cls) {
         throwIfVar1IsNull(cls, "clazz");
-        zb zbVar = new zb();
+        DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
         zbVar.j(ams.e(cls), dne.Equals);
         this.e = zbVar;
     }

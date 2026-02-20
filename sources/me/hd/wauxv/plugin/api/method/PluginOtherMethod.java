@@ -131,7 +131,7 @@ public final class PluginOtherMethod {
     public final void uploadDeviceStep(long j)
             throws IllegalAccessException, NoSuchMethodException, InstantiationException, InvocationTargetException {
         cmr.a.getClass();
-        Constructor constructorBa = StaticHelpers7.ba(cmq.a);
+        Constructor constructorBa = StaticHelpers7.toDexConstructor(cmq.a);
         String strZ = "" /* "" /* "" /* cnb.z(-140136192932650L)  */;
         String strZ2 = "gh_43f2581f6fd6" /* "gh_43f2581f6fd6" /* "gh_43f2581f6fd6" /* cnb.z(-140131897965354L)  */;
         Calendar calendar = Calendar.getInstance();

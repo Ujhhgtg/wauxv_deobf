@@ -19,7 +19,7 @@ public abstract class der {
             Constructor constructor = (Constructor) zVarAe.next();
             Class<?>[] parameterTypes = constructor.getParameterTypes();
             throwIfVar1IsNull(parameterTypes, "getParameterTypes(...)");
-            List listAb = SomeStaticHelpers.ab(parameterTypes);
+            List listAb = SomeStaticHelpers.arrayToList(parameterTypes);
             if (list.equals(listAb)) {
                 return constructor;
             }

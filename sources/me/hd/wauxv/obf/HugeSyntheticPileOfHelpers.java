@@ -491,7 +491,7 @@ public abstract class HugeSyntheticPileOfHelpers {
         methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(String.class) }, 1));
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
         if (methodHookWrapperVar != null) {
-            objX = methodHookWrapperVar.e(exm.i);
+            objX = methodHookWrapperVar.invokeAndThrowIfFailed(exm.i);
         }
         Throwable thB = Success.exceptionOrNull(objX);
         if (thB != null) {

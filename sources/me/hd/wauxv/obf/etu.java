@@ -16,10 +16,10 @@ public final class etu extends bws implements IDexFind {
         if (Modifier.isStatic(methodBb.getModifiers())) {
             objInvoke = methodBb.invoke(null, str, true);
         } else {
-            dgf dgfVar = dgf.a;
+            ServiceManagerDexFinder dgfVar = ServiceManagerDexFinder.INSTANCE;
             Class<?> declaringClass = methodBb.getDeclaringClass();
             dgfVar.getClass();
-            objInvoke = methodBb.invoke(dgf.b(declaringClass), null, str, true);
+            objInvoke = methodBb.invoke(ServiceManagerDexFinder.getServiceByClass(declaringClass), null, str, true);
         }
         throwIfVar1IsNull(objInvoke,
                 "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* cnb.z(-105643310578474L)  */);

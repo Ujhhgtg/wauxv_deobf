@@ -128,8 +128,8 @@ public abstract /* synthetic */ class bjs {
         return (list.hashCode() + i) * i2;
     }
 
-    public static Object h(MethodResolver methodResolverVar) {
-        methodResolverVar.y();
+    public static Object resolveFirstMethodWithoutParams(MethodResolver methodResolverVar) {
+        methodResolverVar.setParamCountTo0();
         return StaticHelpers5.safeGetFirstInList(methodResolverVar.findMethods());
     }
 

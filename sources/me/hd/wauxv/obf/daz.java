@@ -25,26 +25,26 @@ public final /* synthetic */ class daz implements IInvokable {
                 findDexClassMethodDslWrapperVar.onMethodCallback = new cvc(28);
                 break;
             default:
-                bag bagVar = (bag) obj;
+                DexClassQueryBuilder dexClassQueryBuilderVar = (DexClassQueryBuilder) obj;
                 String[] strArr = {this.b};
-                bagVar.getClass();
-                bagVar.a = SomeStaticHelpers.ab(strArr);
-                zb zbVar = new zb();
-                fj fjVar = new fj(1);
+                dexClassQueryBuilderVar.getClass();
+                dexClassQueryBuilderVar.strings = SomeStaticHelpers.arrayToList(strArr);
+                DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
+                MethodMatcher fjVar = new MethodMatcher(1);
                 fjVar.usingStringsType = UsingStringsTypeEnum.Contains;
                 fm fmVar = new fm();
                 String strZ = "dalvik.annotation.Signature" /* "dalvik.annotation.Signature" /* "dalvik.annotation.Signature" /* "dalvik.annotation.Signature" /* cnb.z(-519794122029866L)   */;
-                zb zbVar2 = new zb();
+                DexMethodGroupMatcher zbVar2 = new DexMethodGroupMatcher();
                 dne dneVar = dne.Equals;
                 zbVar2.j(strZ, dneVar);
                 fmVar.a = zbVar2;
                 fh fhVar = new fh();
                 fhVar.a = new dnf("value" /* "value" /* "value" /* "value" /* cnb.z(-519639503207210L)   */, dneVar, false);
-                fj fjVar2 = new fj(0);
+                MethodMatcher fjVar2 = new MethodMatcher(0);
                 fjVar2.usingStringsType = UsingStringsTypeEnum.Equals;
-                fj.e(fjVar2, "Lcom/tencent/mm/sdk/event/IListener<" /* "Lcom/tencent/mm/sdk/event/IListener<" /* "Lcom/tencent/mm/sdk/event/IListener<" /* "Lcom/tencent/mm/sdk/event/IListener<" /* cnb.z(-519596553534250L)   */);
-                fj.e(fjVar2, this.c);
-                fj.e(fjVar2, ">;" /* ">;" /* ">;" /* ">;" /* cnb.z(-520021755296554L)   */);
+                MethodMatcher.e(fjVar2, "Lcom/tencent/mm/sdk/event/IListener<" /* "Lcom/tencent/mm/sdk/event/IListener<" /* "Lcom/tencent/mm/sdk/event/IListener<" /* "Lcom/tencent/mm/sdk/event/IListener<" /* cnb.z(-519596553534250L)   */);
+                MethodMatcher.e(fjVar2, this.c);
+                MethodMatcher.e(fjVar2, ">;" /* ">;" /* ">;" /* ">;" /* cnb.z(-520021755296554L)   */);
                 fk fkVar = new fk();
                 fkVar.a = fjVar2;
                 fkVar.b = fl.ArrayValue;
@@ -67,7 +67,7 @@ public final /* synthetic */ class daz implements IInvokable {
                 fjVar.b = arrayList2;
                 arrayList2.add(fmVar);
                 zbVar.d = fjVar;
-                bagVar.b = zbVar;
+                dexClassQueryBuilderVar.methodGroupMatcher = zbVar;
                 break;
         }
         return Kotlin$Unit.INSTANCE;

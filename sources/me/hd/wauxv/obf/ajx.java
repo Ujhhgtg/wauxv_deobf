@@ -15,6 +15,6 @@ public final class ajx implements kotlinx$coroutines$internal$DispatchedContinua
 
     @Override // me.hd.wauxv.obf.afw
     public final ahh c() {
-        return auz.a;
+        return EmptyCoroutineContext.INSTANCE;
     }
 }

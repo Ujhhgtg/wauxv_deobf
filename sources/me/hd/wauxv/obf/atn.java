@@ -58,12 +58,12 @@ public final /* synthetic */ class atn implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onClassCallback = new atn(1 == true ? 1 : 0);
                 return kotlinUnitVar;
             case 1:
-                bag bagVar = (bag) obj;
-                zb zbVar = new zb();
-                zbVar.k("MicroMsg.emoji.EmojiFileEncryptMgr" /* "MicroMsg.emoji.EmojiFileEncryptMgr" /* "MicroMsg.emoji.EmojiFileEncryptMgr" /* cnb.z(-90284507527978L)  */,
+                DexClassQueryBuilder dexClassQueryBuilderVar = (DexClassQueryBuilder) obj;
+                DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
+                zbVar.usingEqStrings("MicroMsg.emoji.EmojiFileEncryptMgr" /* "MicroMsg.emoji.EmojiFileEncryptMgr" /* "MicroMsg.emoji.EmojiFileEncryptMgr" /* cnb.z(-90284507527978L)  */,
                         "decode emoji file failed. path is no exist :%s " /* "decode emoji file failed. path is no exist :%s " /* "decode emoji file failed. path is no exist :%s " /* cnb.z(-90649579748138L)  */);
-                bagVar.getClass();
-                bagVar.b = zbVar;
+                dexClassQueryBuilderVar.getClass();
+                dexClassQueryBuilderVar.methodGroupMatcher = zbVar;
                 return kotlinUnitVar;
             case 2:
                 View view = (View) obj;
@@ -171,10 +171,10 @@ public final /* synthetic */ class atn implements IInvokable {
                 throw new NullPointerException("Missing required view with ID: "
                         /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-638988054428458L)  */.concat(viewK.getResources().getResourceName(i6)));
             case 3:
-                bah bahVar = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 String[] strArr = { "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* cnb.z(-506887745305386L)  */ };
-                bahVar.getClass();
-                bahVar.a = SomeStaticHelpers.ab(strArr);
+                dexMethodQueryBuilderVar.getClass();
+                dexMethodQueryBuilderVar.a = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar = new DexFinder();
                 cls2 = Integer.class;
                 Class<Integer> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
@@ -188,7 +188,7 @@ public final /* synthetic */ class atn implements IInvokable {
                 }
                 Class<Integer> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar.q(clsBf2, clsBf3 != null ? clsBf3 : Integer.class);
-                fj fjVar = new fj();
+                MethodMatcher fjVar = new MethodMatcher();
                 DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.s("currentTimeMillis" /* "currentTimeMillis" /* "currentTimeMillis" /* cnb.z(-507312947067690L)  */);
                 fjVar.f(cdjVar2);
@@ -197,15 +197,15 @@ public final /* synthetic */ class atn implements IInvokable {
                 fjVar.f(cdjVar3);
                 fjVar.usingStringsType = UsingStringsTypeEnum.Contains;
                 cdjVar.i = fjVar;
-                bahVar.d = cdjVar;
+                dexMethodQueryBuilderVar.dexFinder = cdjVar;
                 return kotlinUnitVar;
             case 4:
-                bah bahVar2 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar4 = new DexFinder();
                 cdjVar4.usingStrings("MicroMsg.EmojiPanelClickListener" /* "MicroMsg.EmojiPanelClickListener" /* "MicroMsg.EmojiPanelClickListener" /* cnb.z(-507218457787178L)  */,
                         "penn send capture emoji click emoji: %s status: %d." /* "penn send capture emoji click emoji: %s status: %d." /* "penn send capture emoji click emoji: %s status: %d." /* cnb.z(-495531851774762L)  */);
-                bahVar2.getClass();
-                bahVar2.d = cdjVar4;
+                dexMethodQueryBuilderVar2.getClass();
+                dexMethodQueryBuilderVar2.dexFinder = cdjVar4;
                 return kotlinUnitVar;
             case 5:
                 final HookParam hookParam = (HookParam) obj;
@@ -236,7 +236,7 @@ public final /* synthetic */ class atn implements IInvokable {
                     throwIfVar1IsNull(objD);
                     MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objD).getMethodResolverBasedOnPreviouslyProvidedConfig();
                     methodResolverVarT.name = "getMd5" /* "getMd5" /* "getMd5" /* cnb.z(-507751033731882L)  */;
-                    Object objJ = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).j(new Object[0]);
+                    Object objJ = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).invoke(new Object[0]);
                     throwIfVar1IsNull(objJ);
                     String str = (String) objJ;
                     if (str.equals("9bd1281af3a31710a45b84d736363691" /* "9bd1281af3a31710a45b84d736363691" /* "9bd1281af3a31710a45b84d736363691" /* cnb.z(-507703789091626L)  */)) {
@@ -418,23 +418,23 @@ public final /* synthetic */ class atn implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new atn(10);
                 return kotlinUnitVar;
             case 10:
-                bah bahVar3 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar5 = new DexFinder();
                 DexFinder.setClassEquals(cdjVar5, "com.tencent.mm.storage.emotion.EmojiInfo" /* "com.tencent.mm.storage.emotion.EmojiInfo" /* "com.tencent.mm.storage.emotion.EmojiInfo" /* cnb.z(-75471165324074L)  */);
                 cdjVar5.usingStrings("save emoji thumb error" /* "save emoji thumb error" /* "save emoji thumb error" /* cnb.z(-75844827478826L)  */);
-                bahVar3.getClass();
-                bahVar3.d = cdjVar5;
+                dexMethodQueryBuilderVar3.getClass();
+                dexMethodQueryBuilderVar3.dexFinder = cdjVar5;
                 return kotlinUnitVar;
             case 11:
                 ((FindDexClassMethodDslWrapper) obj).onClassCallback = new atn(i4);
                 return kotlinUnitVar;
             case 12:
-                bag bagVar2 = (bag) obj;
-                zb zbVar2 = new zb();
-                zbVar2.k("MicroMsg.emoji.EmojiInfoStorage" /* "MicroMsg.emoji.EmojiInfoStorage" /* "MicroMsg.emoji.EmojiInfoStorage" /* cnb.z(-91976724642602L)  */,
+                DexClassQueryBuilder dexClassQueryBuilderVar2 = (DexClassQueryBuilder) obj;
+                DexMethodGroupMatcher zbVar2 = new DexMethodGroupMatcher();
+                zbVar2.usingEqStrings("MicroMsg.emoji.EmojiInfoStorage" /* "MicroMsg.emoji.EmojiInfoStorage" /* "MicroMsg.emoji.EmojiInfoStorage" /* cnb.z(-91976724642602L)  */,
                         "md5 is null or invalue. md5:%s" /* "md5 is null or invalue. md5:%s" /* "md5 is null or invalue. md5:%s" /* cnb.z(-91839285689130L)  */);
-                bagVar2.getClass();
-                bagVar2.b = zbVar2;
+                dexClassQueryBuilderVar2.getClass();
+                dexClassQueryBuilderVar2.methodGroupMatcher = zbVar2;
                 return kotlinUnitVar;
             case 13:
                 List list = (List) obj;
@@ -442,11 +442,10 @@ public final /* synthetic */ class atn implements IInvokable {
                 Class<String> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (nullSafeIsEqual(obj2, clsBf4 != null ? clsBf4 : String.class)) {
                     Object obj3 = list.get(1);
-                    atz.a.getClass();
-                    if (nullSafeIsEqual(obj3, StaticHelpers7.toDexMethod(aty.a).getDeclaringClass())) {
+                    if (nullSafeIsEqual(obj3, StaticHelpers7.toDexMethod(EmojiInfo$MethodSaveEmojiThumb.INSTANCE).getDeclaringClass())) {
                         Object obj4 = list.get(2);
-                        cge.a.getClass();
-                        z = nullSafeIsEqual(obj4, StaticHelpers7.az(cgd.a));
+                        MicroMsgMsgInfoDexClassFind.INSTANCE.getClass();
+                        z = nullSafeIsEqual(obj4, StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE));
                     }
                 }
                 return Boolean.valueOf(z);
@@ -454,16 +453,16 @@ public final /* synthetic */ class atn implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onClassCallback = new atn(15);
                 return kotlinUnitVar;
             case 15:
-                bag bagVar3 = (bag) obj;
-                zb zbVar3 = new zb();
-                zbVar3.k("MicroMsg.emoji.EmojiMgrImpl" /* "MicroMsg.emoji.EmojiMgrImpl" /* "MicroMsg.emoji.EmojiMgrImpl" /* cnb.z(-92105573661482L)  */, "sendEmoji: context is null" /*
+                DexClassQueryBuilder dexClassQueryBuilderVar3 = (DexClassQueryBuilder) obj;
+                DexMethodGroupMatcher zbVar3 = new DexMethodGroupMatcher();
+                zbVar3.usingEqStrings("MicroMsg.emoji.EmojiMgrImpl" /* "MicroMsg.emoji.EmojiMgrImpl" /* "MicroMsg.emoji.EmojiMgrImpl" /* cnb.z(-92105573661482L)  */, "sendEmoji: context is null" /*
                                                                                                                     * cnb
                                                                                                                     * .z
                                                                                                                     * (-
                                                                                                                     * 91401199024938L)
                                                                                                                     */);
-                bagVar3.getClass();
-                bagVar3.b = zbVar3;
+                dexClassQueryBuilderVar3.getClass();
+                dexClassQueryBuilderVar3.methodGroupMatcher = zbVar3;
                 return kotlinUnitVar;
             case 16:
                 View view2 = (View) obj;
@@ -487,17 +486,17 @@ public final /* synthetic */ class atn implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onClassCallback = new atn(18);
                 return kotlinUnitVar;
             case 18:
-                bag bagVar4 = (bag) obj;
+                DexClassQueryBuilder dexClassQueryBuilderVar4 = (DexClassQueryBuilder) obj;
                 String[] strArr2 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-91676076931882L)  */ };
-                bagVar4.getClass();
-                bagVar4.a = SomeStaticHelpers.ab(strArr2);
-                zb zbVar4 = new zb();
-                zbVar4.k("MicroMsg.emoji.EmojiStorageMgr" /* "MicroMsg.emoji.EmojiStorageMgr" /* "MicroMsg.emoji.EmojiStorageMgr" /* cnb.z(-91577292684074L)  */, "EmojiStorageMgr: %s" /*
+                dexClassQueryBuilderVar4.getClass();
+                dexClassQueryBuilderVar4.strings = SomeStaticHelpers.arrayToList(strArr2);
+                DexMethodGroupMatcher zbVar4 = new DexMethodGroupMatcher();
+                zbVar4.usingEqStrings("MicroMsg.emoji.EmojiStorageMgr" /* "MicroMsg.emoji.EmojiStorageMgr" /* "MicroMsg.emoji.EmojiStorageMgr" /* cnb.z(-91577292684074L)  */, "EmojiStorageMgr: %s" /*
                                                                                                                 * cnb.z(
                                                                                                                 * -
                                                                                                                 * 88746909236010L)
                                                                                                                 */);
-                bagVar4.b = zbVar4;
+                dexClassQueryBuilderVar4.methodGroupMatcher = zbVar4;
                 return kotlinUnitVar;
             case 19:
                 HookParam hookParam3 = (HookParam) obj;
@@ -548,7 +547,7 @@ public final /* synthetic */ class atn implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new atn(21);
                 return kotlinUnitVar;
             case 21:
-                bah bahVar4 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar6 = new DexFinder();
                 Class<String> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf5 == null) {
@@ -566,8 +565,8 @@ public final /* synthetic */ class atn implements IInvokable {
                 cdjVar6.q(clsBf6, cls, clsBf8 != null ? clsBf8 : Boolean.class);
                 cdjVar6.usingStrings("MicroMsg.ExptService" /* "MicroMsg.ExptService" /* "MicroMsg.ExptService" /* cnb.z(-36588826393386L)  */,
                         "Fail to query value, return default value '%s' instead." /* "Fail to query value, return default value '%s' instead." /* "Fail to query value, return default value '%s' instead." /* cnb.z(-42528766163754L)  */);
-                bahVar4.getClass();
-                bahVar4.d = cdjVar6;
+                dexMethodQueryBuilderVar4.getClass();
+                dexMethodQueryBuilderVar4.dexFinder = cdjVar6;
                 return kotlinUnitVar;
             case 22:
                 HookParam hookParam4 = (HookParam) obj;
@@ -603,7 +602,7 @@ public final /* synthetic */ class atn implements IInvokable {
                                 try {
                                     Integer numValueOf2 = Integer.valueOf(R.id.MenuItem_Group);
                                     ayvVar.getClass();
-                                    methodHookWrapperVarD.e(numValueOf2, Integer.valueOf(R.id.MenuItem_Fav_Forward), 0, ayvVar.a,
+                                    methodHookWrapperVarD.invokeAndThrowIfFailed(numValueOf2, Integer.valueOf(R.id.MenuItem_Fav_Forward), 0, ayvVar.a,
                                             Integer.valueOf(R.drawable.ic_menu_forward_24dp));
                                 } catch (Exception e2) {
                                     e = e2;
@@ -699,22 +698,22 @@ public final /* synthetic */ class atn implements IInvokable {
                 return Boolean.valueOf(dnr.bp(((Class) obj).getName(),
                         "com.tencent.mm.plugin.fav.ui.adapter." /* "com.tencent.mm.plugin.fav.ui.adapter." /* "com.tencent.mm.plugin.fav.ui.adapter." /* cnb.z(-43555263347498L)  */, false));
             case 27:
-                bah bahVar5 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 String[] strArr3 = { "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* cnb.z(-43383464655658L)  */ };
-                bahVar5.getClass();
-                bahVar5.a = SomeStaticHelpers.ab(strArr3);
+                dexMethodQueryBuilderVar5.getClass();
+                dexMethodQueryBuilderVar5.a = SomeStaticHelpers.arrayToList(strArr3);
                 DexFinder cdjVar7 = new DexFinder();
                 cdjVar7.usingStrings("MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* cnb.z(-43241730734890L)  */, "onMMMenuItemSelected" /*
                                                                                                             * cnb.z(-
                                                                                                             * 40385577483050L)
                                                                                                             */);
-                bahVar5.d = cdjVar7;
+                dexMethodQueryBuilderVar5.dexFinder = cdjVar7;
                 return kotlinUnitVar;
             case 28:
-                bah bahVar6 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 String[] strArr4 = { "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* cnb.z(-43924630534954L)  */ };
-                bahVar6.getClass();
-                bahVar6.a = SomeStaticHelpers.ab(strArr4);
+                dexMethodQueryBuilderVar6.getClass();
+                dexMethodQueryBuilderVar6.a = SomeStaticHelpers.arrayToList(strArr4);
                 DexFinder cdjVar8 = new DexFinder();
                 cdjVar8.usingStrings("MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* cnb.z(-43782896614186L)  */, (cnb.ab(ewk.b) || cnb.ac(ewh.c))
                         ? "[OnCreateContextMMMenu] pos = "
@@ -722,7 +721,7 @@ public final /* synthetic */ class atn implements IInvokable {
                                                                                                         * cnb.z(-
                                                                                                         * 42992622631722L)
                                                                                                         */);
-                bahVar6.d = cdjVar8;
+                dexMethodQueryBuilderVar6.dexFinder = cdjVar8;
                 return kotlinUnitVar;
             default:
                 HookParam hookParam6 = (HookParam) obj;
@@ -756,7 +755,7 @@ public final /* synthetic */ class atn implements IInvokable {
                             Integer numValueOf3 = Integer.valueOf(i2);
                             azaVar.getClass();
                             try {
-                                methodHookWrapperVarD2.e(numValueOf3, Integer.valueOf(R.id.MenuItem_Fav_Forward), 0, azaVar.a,
+                                methodHookWrapperVarD2.invokeAndThrowIfFailed(numValueOf3, Integer.valueOf(R.id.MenuItem_Fav_Forward), 0, azaVar.a,
                                         Integer.valueOf(R.drawable.ic_menu_forward_24dp));
                             } catch (Exception e6) {
                                 e = e6;

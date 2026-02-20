@@ -51,9 +51,9 @@ public final class bxj extends SwitchHook implements IDexFind {
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
         Iterator it = OtherStaticHelpers.argsToList(bxc.a, bxd.a, bxb.a).iterator();
         while (it.hasNext()) {
-            StaticHelpers7.bc((DexDescData) it.next(), new bty(12));
+            StaticHelpers7.toDexMethod((DexDescData) it.next(), new bty(12));
         }
-        StaticHelpers7.bc(bxe.a, new bty(13));
+        StaticHelpers7.toDexMethod(bxe.a, new bty(13));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

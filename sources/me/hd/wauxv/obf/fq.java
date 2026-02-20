@@ -77,8 +77,8 @@ public final /* synthetic */ class fq implements bgj {
                 throwIfVar1IsNull(ahhVar, "acc");
                 throwIfVar1IsNull(ahfVar2, "element");
                 ahh ahhVar_t = ahhVar._t(ahfVar2.getKey());
-                auz auzVar = auz.a;
-                if (ahhVar_t == auzVar) {
+                EmptyCoroutineContext emptyCoroutineContextVar = EmptyCoroutineContext.INSTANCE;
+                if (ahhVar_t == emptyCoroutineContextVar) {
                     return ahfVar2;
                 }
                 arj arjVar = arj.a;
@@ -87,7 +87,7 @@ public final /* synthetic */ class fq implements bgj {
                     abjVar = new abj(ahfVar2, ahhVar_t);
                 } else {
                     ahh ahhVar_t2 = ahhVar_t._t(arjVar);
-                    if (ahhVar_t2 == auzVar) {
+                    if (ahhVar_t2 == emptyCoroutineContextVar) {
                         return new abj(afyVar, ahfVar2);
                     }
                     abjVar = new abj(afyVar, new abj(ahfVar2, ahhVar_t2));
@@ -107,19 +107,19 @@ public final /* synthetic */ class fq implements bgj {
                 long msgId = msgInfoBean.getMsgId();
                 String imgPath = msgInfoBean.getImgPath();
                 throwIfVar1IsNull(imgPath);
-                aub.a.getClass();
-                Object objB = aub.b(imgPath);
+                EmojiInfoStorageDexFind.a.getClass();
+                Object objB = EmojiInfoStorageDexFind.getEmojiInfoByMd5(imgPath);
                 atp.a.getClass();
                 int i = 0;
-                MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(ato.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.toDexClass(ato.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.addAccessModifiers(AccessModifierEnum.STATIC);
-                Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
+                Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT)).invokeAndThrowIfFailed(new Object[0]);
                 throwIfVar1IsNull(objE);
                 MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objE).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT2.returnType = dal.getKClassFromClass(byte[].class);
                 Object objJ = ((MethodHookWrapper) StaticHelpers6
                         .setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-90430536416042L)  */ }, 1, methodResolverVarT2))
-                        .j(objB);
+                        .invoke(objB);
                 throwIfVar1IsNull(objJ);
                 byte[] bArr = (byte[]) objJ;
                 try {
@@ -141,7 +141,7 @@ public final /* synthetic */ class fq implements bgj {
                                                                                             * "com.tencent.mm.plugin.gif.MMWXGFJNI" /* "com.tencent.mm.plugin.gif.MMWXGFJNI" /* cnb.z(-119803817753386L)  */
                                                                                             */)).getMethodResolverBasedOnPreviouslyProvidedConfig();
                         methodResolverVarT3.name = "nativeWxamToGif" /* "nativeWxamToGif" /* "nativeWxamToGif" /* cnb.z(-119614839192362L)  */;
-                        Object objJ2 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT3.findMethods())).j(bArr);
+                        Object objJ2 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT3.findMethods())).invoke(bArr);
                         throwIfVar1IsNull(objJ2);
                         bArr = (byte[]) objJ2;
                     }
@@ -184,7 +184,7 @@ public final /* synthetic */ class fq implements bgj {
                 return bool2;
             case 10:
                 Set set = (Set) obj;
-                List listAb = SomeStaticHelpers.ab(((Executable) obj2).getGenericExceptionTypes());
+                List listAb = SomeStaticHelpers.arrayToList(((Executable) obj2).getGenericExceptionTypes());
                 if (set.size() == listAb.size()) {
                     ArrayList arrayList3 = new ArrayList();
                     Iterator it3 = set.iterator();
@@ -199,7 +199,7 @@ public final /* synthetic */ class fq implements bgj {
                 return Boolean.valueOf(!z);
             case 11:
                 Set set2 = (Set) obj;
-                List listAb2 = SomeStaticHelpers.ab(((Executable) obj2).getGenericParameterTypes());
+                List listAb2 = SomeStaticHelpers.arrayToList(((Executable) obj2).getGenericParameterTypes());
                 if (set2.size() == listAb2.size()) {
                     ArrayList arrayList4 = new ArrayList();
                     Iterator it4 = set2.iterator();
@@ -214,7 +214,7 @@ public final /* synthetic */ class fq implements bgj {
                 return Boolean.valueOf(z);
             case 12:
                 Set set3 = (Set) obj;
-                List listAb3 = SomeStaticHelpers.ab(((Executable) obj2).getGenericParameterTypes());
+                List listAb3 = SomeStaticHelpers.arrayToList(((Executable) obj2).getGenericParameterTypes());
                 if (set3.size() == listAb3.size()) {
                     ArrayList arrayList5 = new ArrayList();
                     Iterator it5 = set3.iterator();
@@ -246,7 +246,7 @@ public final /* synthetic */ class fq implements bgj {
                 return (Boolean) objX2;
             case 16:
                 try {
-                    objX3 = (Boolean) ((IInvokable) obj).invoke(SomeStaticHelpers.ab(((Executable) obj2).getParameterTypes()));
+                    objX3 = (Boolean) ((IInvokable) obj).invoke(SomeStaticHelpers.arrayToList(((Executable) obj2).getParameterTypes()));
                     objX3.getClass();
                     break;
                 } catch (Throwable th5) {
@@ -276,7 +276,7 @@ public final /* synthetic */ class fq implements bgj {
                 return (Boolean) objX4;
             case 20:
                 Set set4 = (Set) obj;
-                List listAb4 = SomeStaticHelpers.ab(((Executable) obj2).getTypeParameters());
+                List listAb4 = SomeStaticHelpers.arrayToList(((Executable) obj2).getTypeParameters());
                 if (set4.size() == listAb4.size()) {
                     ArrayList arrayList6 = new ArrayList();
                     Iterator it6 = set4.iterator();
@@ -291,7 +291,7 @@ public final /* synthetic */ class fq implements bgj {
                 return Boolean.valueOf(z);
             case 21:
                 Set set5 = (Set) obj;
-                List listAb5 = SomeStaticHelpers.ab(((Executable) obj2).getTypeParameters());
+                List listAb5 = SomeStaticHelpers.arrayToList(((Executable) obj2).getTypeParameters());
                 if (set5.size() == listAb5.size()) {
                     ArrayList arrayList7 = new ArrayList();
                     Iterator it7 = set5.iterator();
@@ -306,7 +306,7 @@ public final /* synthetic */ class fq implements bgj {
                 return Boolean.valueOf(!z);
             case 22:
                 Set set6 = (Set) obj;
-                List listAb6 = SomeStaticHelpers.ab(((Executable) obj2).getGenericExceptionTypes());
+                List listAb6 = SomeStaticHelpers.arrayToList(((Executable) obj2).getGenericExceptionTypes());
                 if (set6.size() == listAb6.size()) {
                     ArrayList arrayList8 = new ArrayList();
                     Iterator it8 = set6.iterator();

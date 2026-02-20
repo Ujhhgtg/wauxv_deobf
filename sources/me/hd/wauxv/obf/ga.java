@@ -21,11 +21,11 @@ public final class ga extends SwitchHook implements IDatabaseOperationsListener,
     public final void getThisObject() throws NoSuchMethodException {
         Iterator it = OtherStaticHelpers.argsToList(fw.a, fy.a, fx.a).iterator();
         while (it.hasNext()) {
-            Class clsAz = StaticHelpers7.az((DexDescData) it.next());
+            Class clsAz = StaticHelpers7.toDexClass((DexDescData) it.next());
             int i2 = 0;
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(clsAz).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.returnType = Void.TYPE;
-            methodResolverVarT.paramCount = 1;
+            methodResolverVarT.parameterCount = 1;
             MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
             HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
             ga gaVar = a;
@@ -70,7 +70,7 @@ public final class ga extends SwitchHook implements IDatabaseOperationsListener,
                 dlx.a.getClass();
                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
-                Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) }, 2, methodResolverVarT)).j(
+                Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) }, 2, methodResolverVarT)).invoke(
                         "SELECT createTime, talker FROM message WHERE msgId = ?" /* "SELECT createTime, talker FROM message WHERE msgId = ?" /* "SELECT createTime, talker FROM message WHERE msgId = ?" /* cnb.z(-453883553905450L)  */,
                         new Object[] { asLong });
                 throwIfVar1IsNull(objJ);

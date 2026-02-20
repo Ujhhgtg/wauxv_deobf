@@ -16,18 +16,18 @@ public final class cgy extends bws implements IDexFind {
         dlx.a.getClass();
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
-        Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) }, 2, methodResolverVarT)).j(strZ,
+        Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) }, 2, methodResolverVarT)).invoke(strZ,
                 objArr);
         throwIfVar1IsNull(objJ);
         Cursor cursor = (Cursor) objJ;
         try {
             if (!cursor.moveToFirst()) {
                 cursor.close();
-                cge.a.getClass();
-                return ReflectionWrapper.createInstanceWithArgs(StaticHelpers7.az(cgd.a), new Object[0]);
+                MicroMsgMsgInfoDexClassFind.INSTANCE.getClass();
+                return ReflectionWrapper.createInstanceWithArgs(StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE), new Object[0]);
             }
-            cge.a.getClass();
-            Object objB = cge.b(cursor);
+            MicroMsgMsgInfoDexClassFind.INSTANCE.getClass();
+            Object objB = MicroMsgMsgInfoDexClassFind.createMsgInfoFromCursor(cursor);
             cursor.close();
             return objB;
         } catch (Throwable th) {

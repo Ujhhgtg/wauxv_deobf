@@ -205,11 +205,11 @@ public final /* synthetic */ class h implements bfu {
                 return xf.l;
             case 24:
                 Dispatchers$Default alcVar = aou.a;
-                KotlinHelpers2.bf(akq.f, new lw(i2, r6, i3));
+                KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new lw(i2, r6, i3));
                 return kotlinUnitVar;
             case 25:
                 Dispatchers$Default alcVar2 = aou.a;
-                KotlinHelpers2.bf(akq.f, new lw(i2, r6, i2));
+                KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new lw(i2, r6, i2));
                 return kotlinUnitVar;
             case 26:
                 ccu ccuVar = new ccu();

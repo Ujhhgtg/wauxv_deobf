@@ -13,7 +13,7 @@ public final class gf extends SwitchHook {
         int i = 0;
         MethodResolver methodResolverVarT = yg.s(-544000557710122L).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "onScrollStateChangedInMain" /* "onScrollStateChangedInMain" /* "onScrollStateChangedInMain" /* cnb.z(-543167334054698L)  */;
-        methodResolverVarT.paramCount = 3;
+        methodResolverVarT.parameterCount = 3;
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         gf gfVar = a;

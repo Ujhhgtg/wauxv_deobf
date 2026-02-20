@@ -127,17 +127,17 @@ public final /* synthetic */ class wx implements bgk {
                 int i3 = 0;
                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(obj2).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.name = "getLocalid" /* "getLocalid" /* "getLocalid" /* cnb.z(-534470025280298L)  */;
-                Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT)).j(new Object[0]);
+                Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT)).invoke(new Object[0]);
                 throwIfVar1IsNull(objJ);
                 String str = (String) objJ;
                 MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(obj2).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT2.name = "getTypeFlag" /* "getTypeFlag" /* "getTypeFlag" /* cnb.z(-534457140378410L)  */;
-                Object objJ2 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).j(new Object[0]);
+                Object objJ2 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).invoke(new Object[0]);
                 throwIfVar1IsNull(objJ2);
                 int iIntValue = ((Number) objJ2).intValue();
                 MethodResolver methodResolverVarT3 = dqc.getWrapperConfiguration(obj3).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT3.name = "toByteArray" /* "toByteArray" /* "toByteArray" /* cnb.z(-534371241032490L)  */;
-                Object objJ3 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT3)).j(new Object[0]);
+                Object objJ3 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT3)).invoke(new Object[0]);
                 throwIfVar1IsNull(objJ3);
                 cwd cwdVar = cwd.a;
                 cwdVar.getClass();
@@ -179,7 +179,7 @@ public final /* synthetic */ class wx implements bgk {
                             diu diuVar = diu.a;
                             dkc.a.getClass();
                             int i5 = 0;
-                            adt adtVarM = dqc.bh(StaticHelpers7.az(dkb.a)).m();
+                            adt adtVarM = dqc.bh(StaticHelpers7.toDexClass(dkb.a)).m();
                             adtVarM.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(String.class) }, (int) r6));
                             ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) StaticHelpers5.safeGetFirstInList(adtVarM.a());
                             Object[] objArr = { "timeline" /* "timeline" /* "timeline" /* cnb.z(-353901010221866L)  */ };
@@ -196,10 +196,10 @@ public final /* synthetic */ class wx implements bgk {
                             dit ditVar = dit.a;
                             Method methodBb = StaticHelpers7.toDexMethod(ditVar);
                             dis.a.getClass();
-                            MethodResolver methodResolverVarT4 = dqc.bh(StaticHelpers7.az(dir.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                            MethodResolver methodResolverVarT4 = dqc.bh(StaticHelpers7.toDexClass(dir.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
                             methodResolverVarT4.addAccessModifiers(accessModifierEnumVar);
                             methodResolverVarT4.returnType = StaticHelpers7.toDexMethod(ditVar).getDeclaringClass();
-                            Object objE3 = ((MethodHookWrapper) bjs.h(methodResolverVarT4)).e(new Object[0]);
+                            Object objE3 = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT4)).invokeAndThrowIfFailed(new Object[0]);
                             throwIfVar1IsNull(objE3);
                             Object objInvoke2 = methodBb.invoke(objE3, obj5, 2, null, objNewInstance);
                             throwIfVar1IsNull(objInvoke2, "null cannot be cast to non-null type kotlin.Boolean" /*
@@ -264,10 +264,10 @@ public final /* synthetic */ class wx implements bgk {
                         dku dkuVar = dku.a;
                         Method methodBb2 = StaticHelpers7.toDexMethod(dkuVar);
                         dis.a.getClass();
-                        MethodResolver methodResolverVarT5 = dqc.bh(StaticHelpers7.az(dir.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                        MethodResolver methodResolverVarT5 = dqc.bh(StaticHelpers7.toDexClass(dir.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
                         methodResolverVarT5.addAccessModifiers(accessModifierEnumVar);
                         methodResolverVarT5.returnType = StaticHelpers7.toDexMethod(dkuVar).getDeclaringClass();
-                        Object objE5 = ((MethodHookWrapper) bjs.h(methodResolverVarT5)).e(new Object[0]);
+                        Object objE5 = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT5)).invokeAndThrowIfFailed(new Object[0]);
                         throwIfVar1IsNull(objE5);
                         Object objInvoke5 = methodBb2.invoke(objE5, objE4, Integer.valueOf(iCurrentTimeMillis), str,
                                 Boolean.FALSE, Boolean.TRUE, 30, strZ6);

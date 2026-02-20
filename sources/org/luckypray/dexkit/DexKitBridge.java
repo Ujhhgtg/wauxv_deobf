@@ -4,8 +4,8 @@ import java.io.Closeable;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import me.hd.wauxv.obf.StaticHelpers3;
-import me.hd.wauxv.obf.bag;
-import me.hd.wauxv.obf.bah;
+import me.hd.wauxv.obf.DexClassQueryBuilder;
+import me.hd.wauxv.obf.DexMethodQueryBuilder;
 import me.hd.wauxv.obf.bbb;
 import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.c;
@@ -49,9 +49,9 @@ public final class DexKitBridge implements Closeable {
         }
     }
 
-    public final yw e(bag bagVar) {
+    public final yw e(DexClassQueryBuilder dexClassQueryBuilderVar) {
         bbb bbbVar = new bbb();
-        bagVar.c(bbbVar);
+        dexClassQueryBuilderVar.c(bbbVar);
         ByteBuffer byteBufferWrap = ByteBuffer.wrap(nativeFindClass(b(this), bbbVar.z()));
         throwIfVar1IsNull(byteBufferWrap, "wrap(...)");
         c cVar = new c();
@@ -69,9 +69,9 @@ public final class DexKitBridge implements Closeable {
         return ywVar;
     }
 
-    public final cdg f(bah bahVar) {
+    public final cdg f(DexMethodQueryBuilder dexMethodQueryBuilderVar) {
         bbb bbbVar = new bbb();
-        bahVar.c(bbbVar);
+        dexMethodQueryBuilderVar.c(bbbVar);
         ByteBuffer byteBufferWrap = ByteBuffer.wrap(nativeFindMethod(b(this), bbbVar.z()));
         throwIfVar1IsNull(byteBufferWrap, "wrap(...)");
         c cVar = new c();

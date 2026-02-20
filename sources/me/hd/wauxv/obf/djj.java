@@ -13,11 +13,11 @@ public final class djj extends bws implements IDexFind {
         Method methodBb = StaticHelpers7.toDexMethod(djiVar);
         dis.a.getClass();
         int i = 0;
-        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(dir.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.toDexClass(dir.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.addAccessModifiers(AccessModifierEnum.STATIC);
         a.getClass();
         methodResolverVarT.returnType = StaticHelpers7.toDexMethod(djiVar).getDeclaringClass();
-        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT)).invokeAndThrowIfFailed(new Object[0]);
         throwIfVar1IsNull(objE);
         Object objInvoke = methodBb.invoke(objE, str);
         throwIfVar1IsNull(objInvoke);

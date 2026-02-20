@@ -582,7 +582,7 @@ public abstract class cnb {
         methodResolverVarT.enableSuperclass();
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
         if (methodHookWrapperVar != null) {
-            methodHookWrapperVar.e(obj, Integer.valueOf(i2));
+            methodHookWrapperVar.invokeAndThrowIfFailed(obj, Integer.valueOf(i2));
         } else {
             byt.a.getClass();
             StaticHelpers7.toDexMethod(bys.a).invoke(baseAdapter, obj, Integer.valueOf(i2));

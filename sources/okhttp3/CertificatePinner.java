@@ -371,7 +371,7 @@ public final class CertificatePinner {
     public final void check(String str, Certificate... certificateArr) {
         throwIfVar1IsNull(str, "hostname");
         throwIfVar1IsNull(certificateArr, "peerCertificates");
-        check(str, SomeStaticHelpers.ab(certificateArr));
+        check(str, SomeStaticHelpers.arrayToList(certificateArr));
     }
 
     public /* synthetic */ CertificatePinner(Set set, CertificateChainCleaner certificateChainCleaner, int i,

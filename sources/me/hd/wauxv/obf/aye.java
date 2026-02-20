@@ -416,7 +416,7 @@ public abstract class aye {
             ((Configuration) bmuVarBh.obj).processorResolver = FastKV.aa();
             MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "currentActivityThread" /* "currentActivityThread" /* "currentActivityThread" /* cnb.z(-74217034873642L)  */;
-            Object objE = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(new Object[0]);
+            Object objE = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).invokeAndThrowIfFailed(new Object[0]);
             throwIfVar1IsNull(objE);
             FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objE).r();
             fieldResolverVarR.name = "mActivities" /* "mActivities" /* "mActivities" /* cnb.z(-74105365723946L)  */;
@@ -444,7 +444,7 @@ public abstract class aye {
 
     public static long w(int i, String str, String str2, long j)
             throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
-        cge cgeVar = cge.a;
+        MicroMsgMsgInfoDexClassFind cgeVar = MicroMsgMsgInfoDexClassFind.INSTANCE;
         ContentValues contentValues = new ContentValues();
         contentValues.put("msgid" /* "msgid" /* "msgid" /* cnb.z(-116269059668778L)  */, (Integer) 0);
         contentValues.put("msgSvrId" /* "msgSvrId" /* "msgSvrId" /* cnb.z(-116226109995818L)  */, Long.valueOf(((long) cyj.f.b()) + j));
@@ -454,22 +454,22 @@ public abstract class aye {
         contentValues.put("talker" /* "talker" /* "talker" /* cnb.z(-116088671042346L)  */, str);
         contentValues.put("content" /* "content" /* "content" /* cnb.z(-116058606271274L)  */, str2);
         cgeVar.getClass();
-        Object objC = ReflectionWrapper.createInstanceWithArgs(StaticHelpers7.az(cgd.a), new Object[0]);
+        Object objC = ReflectionWrapper.createInstanceWithArgs(StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE), new Object[0]);
         int i2 = 0;
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objC).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-75690208656170L)  */;
         methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(ContentValues.class), dal.getKClassFromClass(Boolean.TYPE) }, 2));
         methodResolverVarT.enableSuperclass();
-        ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(contentValues, Boolean.TRUE);
+        ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).invokeAndThrowIfFailed(contentValues, Boolean.TRUE);
         cgy.a.getClass();
         Method methodBb = StaticHelpers7.toDexMethod(cgw.a);
         dmu dmuVar = dmu.a;
         dmuVar.getClass();
-        dgf.a.getClass();
+        ServiceManagerDexFinder.INSTANCE.getClass();
         dmuVar.getClass();
-        MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(dgf.b(StaticHelpers7.az(dmt.a))).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        methodResolverVarT2.returnType = StaticHelpers7.az(cgv.a);
-        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT2)).e(new Object[0]);
+        MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(ServiceManagerDexFinder.getServiceByClass(StaticHelpers7.toDexClass(dmt.a))).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT2.returnType = StaticHelpers7.toDexClass(cgv.a);
+        Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT2)).invokeAndThrowIfFailed(new Object[0]);
         throwIfVar1IsNull(objE);
         Object objInvoke = methodBb.invoke(objE, objC);
         throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.Long" /* "null cannot be cast to non-null type kotlin.Long" /* "null cannot be cast to non-null type kotlin.Long" /* cnb.z(-370294900390698L)  */);

@@ -64,26 +64,26 @@ public final /* synthetic */ class epy implements IInvokable {
         Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
-                bah bahVar = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar = new DexFinder();
                 cdjVar.usingStrings((cnb.ab(ewk.l) || cnb.ac(ewh.m)) ? "MicroMsg.C2CVideoPathFeatureService"
                         /* "MicroMsg.C2CVideoPathFeatureService" /* "MicroMsg.C2CVideoPathFeatureService" /* cnb.z(-374581277752106L)  */ : "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* cnb.z(-374392299191082L)  */,
                         ".mp4" /* ".mp4" /* ".mp4" /* cnb.z(-374847565724458L)  */, "success restore file, from " /*
                                                                                               * "success restore file, from " /* "success restore file, from " /* cnb.z(-374860450626346L)  */
                                                                                               */);
-                bahVar.getClass();
-                bahVar.d = cdjVar;
+                dexMethodQueryBuilderVar.getClass();
+                dexMethodQueryBuilderVar.dexFinder = cdjVar;
                 return kotlinUnitVar;
             case 1:
-                bah bahVar2 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.usingStrings((cnb.ab(ewk.l) || cnb.ac(ewh.m)) ? "MicroMsg.C2CVideoPathFeatureService"
                         /* "MicroMsg.C2CVideoPathFeatureService" /* "MicroMsg.C2CVideoPathFeatureService" /* cnb.z(-374705831803690L)  */ : "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* cnb.z(-374035816905514L)  */,
                         ".jpg" /* ".jpg" /* ".jpg" /* cnb.z(-373872608148266L)  */, "success restore file, from " /*
                                                                                               * "success restore file, from " /* "success restore file, from " /* cnb.z(-373902672919338L)  */
                                                                                               */);
-                bahVar2.getClass();
-                bahVar2.d = cdjVar2;
+                dexMethodQueryBuilderVar2.getClass();
+                dexMethodQueryBuilderVar2.dexFinder = cdjVar2;
                 return kotlinUnitVar;
             case 2:
                 View view = (View) obj;
@@ -182,15 +182,15 @@ public final /* synthetic */ class epy implements IInvokable {
                 }
                 return kotlinUnitVar;
             case 7:
-                bah bahVar3 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar3 = new DexFinder();
                 cdjVar3.usingStrings("MicroMsg.VoiceStorage" /* "MicroMsg.VoiceStorage" /* "MicroMsg.VoiceStorage" /* cnb.z(-500067337239338L)  */, "update failed, no values set" /*
                                                                                                                   * cnb.
                                                                                                                   * z(-
                                                                                                                   * 499405912275754L)
                                                                                                                   */);
-                bahVar3.getClass();
-                bahVar3.d = cdjVar3;
+                dexMethodQueryBuilderVar3.getClass();
+                dexMethodQueryBuilderVar3.dexFinder = cdjVar3;
                 return kotlinUnitVar;
             case 8:
                 List list = (List) obj;
@@ -219,19 +219,19 @@ public final /* synthetic */ class epy implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new epy(11);
                 return kotlinUnitVar;
             case 11:
-                bah bahVar4 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar4 = new DexFinder();
                 cdjVar4.usingStrings("getAmrFullPath cost: " /* "getAmrFullPath cost: " /* "getAmrFullPath cost: " /* cnb.z(-107348412594986L)  */);
-                bahVar4.getClass();
-                bahVar4.d = cdjVar4;
+                dexMethodQueryBuilderVar4.getClass();
+                dexMethodQueryBuilderVar4.dexFinder = cdjVar4;
                 return kotlinUnitVar;
             case 12:
-                bag bagVar = (bag) obj;
-                zb zbVar = new zb();
-                zbVar.k("MicroMsg.VoiceLogic" /* "MicroMsg.VoiceLogic" /* "MicroMsg.VoiceLogic" /* cnb.z(-105939663321898L)  */,
+                DexClassQueryBuilder dexClassQueryBuilderVar = (DexClassQueryBuilder) obj;
+                DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
+                zbVar.usingEqStrings("MicroMsg.VoiceLogic" /* "MicroMsg.VoiceLogic" /* "MicroMsg.VoiceLogic" /* cnb.z(-105939663321898L)  */,
                         "startRecord insert voicestg success" /* "startRecord insert voicestg success" /* "startRecord insert voicestg success" /* cnb.z(-105888123714346L)  */);
-                bagVar.getClass();
-                bagVar.b = zbVar;
+                dexClassQueryBuilderVar.getClass();
+                dexClassQueryBuilderVar.methodGroupMatcher = zbVar;
                 return kotlinUnitVar;
             case 13:
                 View view4 = (View) obj;
@@ -412,7 +412,7 @@ public final /* synthetic */ class epy implements IInvokable {
                             new Object[] { dal.getKClassFromClass(cls5), dal.getKClassFromClass(cls2), dal.getKClassFromClass(MenuItem.OnMenuItemClickListener.class) },
                             3));
                     methodResolverVarT2.enableSuperclass();
-                    ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).e(Integer.valueOf(R.id.Wauxv_Entry_Item), strZ, arsVar);
+                    ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).invokeAndThrowIfFailed(Integer.valueOf(R.id.Wauxv_Entry_Item), strZ, arsVar);
                 }
                 return kotlinUnitVar;
             case 16:

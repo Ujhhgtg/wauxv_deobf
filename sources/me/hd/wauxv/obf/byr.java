@@ -9,20 +9,20 @@ public final class byr extends bws implements IDexFind {
 
     public static Object b() {
         int i = 0;
-        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(byp.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.toDexClass(byp.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
         ahd.a.getClass();
-        methodResolverVarT.returnType = StaticHelpers7.az(ahc.a);
-        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
+        methodResolverVarT.returnType = StaticHelpers7.toDexClass(ahc.a);
+        Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT)).invokeAndThrowIfFailed(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }
 
     public static Object c() {
         int i = 0;
-        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(byp.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.toDexClass(byp.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
         cme.a.getClass();
         methodResolverVarT.returnType = StaticHelpers7.toDexMethod(cmc.a).getDeclaringClass();
-        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
+        Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT)).invokeAndThrowIfFailed(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }

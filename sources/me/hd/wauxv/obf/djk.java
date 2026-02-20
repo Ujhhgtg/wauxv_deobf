@@ -58,25 +58,25 @@ public final /* synthetic */ class djk implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new djk(i3);
                 return kotlinUnitVar;
             case 1:
-                bah bahVar = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 String[] strArr = { "com.tencent.mm.plugin.sns.ui.listener" /* "com.tencent.mm.plugin.sns.ui.listener" /* "com.tencent.mm.plugin.sns.ui.listener" /* cnb.z(-56500294777642L)  */ };
-                bahVar.getClass();
-                bahVar.a = SomeStaticHelpers.ab(strArr);
+                dexMethodQueryBuilderVar.getClass();
+                dexMethodQueryBuilderVar.a = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar = new DexFinder();
                 cdjVar.usingStrings("delete comment fail!!! snsInfo is null" /* "delete comment fail!!! snsInfo is null" /* "delete comment fail!!! snsInfo is null" /* cnb.z(-53571127081770L)  */,
                         "send photo fail, mediaObj is null" /* "send photo fail, mediaObj is null" /* "send photo fail, mediaObj is null" /* cnb.z(-53403623357226L)  */,
                         "mediaObj is null, send failed!" /* "mediaObj is null, send failed!" /* "mediaObj is null, send failed!" /* cnb.z(-53824530152234L)  */);
-                bahVar.d = cdjVar;
+                dexMethodQueryBuilderVar.dexFinder = cdjVar;
                 return kotlinUnitVar;
             case 2:
-                bah bahVar2 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 String[] strArr2 = { "com.tencent.mm.plugin.sns.ui.listener" /* "com.tencent.mm.plugin.sns.ui.listener" /* "com.tencent.mm.plugin.sns.ui.listener" /* cnb.z(-56994216016682L)  */ };
-                bahVar2.getClass();
-                bahVar2.a = SomeStaticHelpers.ab(strArr2);
+                dexMethodQueryBuilderVar2.getClass();
+                dexMethodQueryBuilderVar2.a = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.usingStrings("MicroMsg.TimelineOnCreateContextMenuListener" /* "MicroMsg.TimelineOnCreateContextMenuListener" /* "MicroMsg.TimelineOnCreateContextMenuListener" /* cnb.z(-56264071576362L)  */,
                         "onMMCreateContextMenu error" /* "onMMCreateContextMenu error" /* "onMMCreateContextMenu error" /* cnb.z(-56105157786410L)  */);
-                bahVar2.d = cdjVar2;
+                dexMethodQueryBuilderVar2.dexFinder = cdjVar2;
                 return kotlinUnitVar;
             case 3:
                 Object objE = ((HookParam) obj).getThisObject();
@@ -98,7 +98,7 @@ public final /* synthetic */ class djk implements IInvokable {
                         new Object[] { dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(cls), dal.getKClassFromClass(MenuItem.OnMenuItemClickListener.class) },
                         3));
                 methodResolverVarT.enableSuperclass();
-                ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(Integer.valueOf(R.id.MenuItem_Sns_LabelFilter), strZ, new ars(djpVar, 1));
+                ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).invokeAndThrowIfFailed(Integer.valueOf(R.id.MenuItem_Sns_LabelFilter), strZ, new ars(djpVar, 1));
                 return kotlinUnitVar;
             case 4:
                 return StaticHelpers6.o('\'', "'", (String) obj);
@@ -106,28 +106,28 @@ public final /* synthetic */ class djk implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new djk(6);
                 return kotlinUnitVar;
             case 6:
-                bah bahVar3 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar3 = new DexFinder();
                 DexFinder.setClassEquals(cdjVar3, "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* cnb.z(-556339998751530L)  */);
                 cls3 = Void.class;
                 Class<Void> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cdjVar3.r(clsBf2 != null ? clsBf2 : Void.class);
                 cdjVar3.usingStrings("submitRefreshAll" /* "submitRefreshAll" /* "submitRefreshAll" /* cnb.z(-556168200059690L)  */);
-                bahVar3.getClass();
-                bahVar3.d = cdjVar3;
+                dexMethodQueryBuilderVar3.getClass();
+                dexMethodQueryBuilderVar3.dexFinder = cdjVar3;
                 return kotlinUnitVar;
             case 7:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new djk(8);
                 return kotlinUnitVar;
             case 8:
-                bah bahVar4 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar4 = new DexFinder();
                 Class<String> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cls = clsBf3 != null ? clsBf3 : String.class;
                 cls4 = Integer.class;
                 Class<Integer> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
                 cdjVar4.q(cls, clsBf4 != null ? clsBf4 : Integer.class);
-                fj fjVar = new fj();
+                MethodMatcher fjVar = new MethodMatcher();
                 DexFinder cdjVar5 = new DexFinder();
                 cdjVar5.usingStrings("produceMediaObjByPath" /* "produceMediaObjByPath" /* "produceMediaObjByPath" /* cnb.z(-352380591799082L)  */,
                         "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-352268922649386L)  */);
@@ -137,14 +137,14 @@ public final /* synthetic */ class djk implements IInvokable {
                         "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-353660492053290L)  */);
                 fjVar.f(cdjVar6);
                 cdjVar4.j = fjVar;
-                bahVar4.getClass();
-                bahVar4.d = cdjVar4;
+                dexMethodQueryBuilderVar4.getClass();
+                dexMethodQueryBuilderVar4.dexFinder = cdjVar4;
                 return kotlinUnitVar;
             case 9:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new djk(10);
                 return kotlinUnitVar;
             case 10:
-                bah bahVar5 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar7 = new DexFinder();
                 Class<String> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf5 == null) {
@@ -156,26 +156,26 @@ public final /* synthetic */ class djk implements IInvokable {
                         "convertImg2WxamWithoutZip origPath:%s OutOfMemoryError! rollback" /*
                                                                                             * "convertImg2WxamWithoutZip origPath:%s OutOfMemoryError! rollback" /* "convertImg2WxamWithoutZip origPath:%s OutOfMemoryError! rollback" /* cnb.z(-377832567995178L)  */
                                                                                             */);
-                bahVar5.getClass();
-                bahVar5.d = cdjVar7;
+                dexMethodQueryBuilderVar5.getClass();
+                dexMethodQueryBuilderVar5.dexFinder = cdjVar7;
                 return kotlinUnitVar;
             case 11:
                 ((FindDexClassMethodDslWrapper) obj).onClassCallback = new djk(12);
                 return kotlinUnitVar;
             case 12:
-                bag bagVar = (bag) obj;
+                DexClassQueryBuilder dexClassQueryBuilderVar = (DexClassQueryBuilder) obj;
                 String[] strArr3 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-353810815908650L)  */ };
-                bagVar.getClass();
-                bagVar.a = SomeStaticHelpers.ab(strArr3);
-                zb zbVar = new zb();
-                zbVar.k("timeline" /* "timeline" /* "timeline" /* cnb.z(-353213815454506L)  */, "album_friend" /* "album_friend" /* "album_friend" /* cnb.z(-353123621141290L)  */,
+                dexClassQueryBuilderVar.getClass();
+                dexClassQueryBuilderVar.strings = SomeStaticHelpers.arrayToList(strArr3);
+                DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
+                zbVar.usingEqStrings("timeline" /* "timeline" /* "timeline" /* cnb.z(-353213815454506L)  */, "album_friend" /* "album_friend" /* "album_friend" /* cnb.z(-353123621141290L)  */,
                         "album_self" /* "album_self" /* "album_self" /* cnb.z(-353102146304810L)  */, "album_stranger" /* "album_stranger" /* "album_stranger" /* cnb.z(-353020541926186L)  */,
                         "profile_friend" /* "profile_friend" /* "profile_friend" /* cnb.z(-353007657024298L)  */,
                         "profile_stranger" /* "profile_stranger" /* "profile_stranger" /* cnb.z(-353492988328746L)  */, "comment" /* "comment" /* "comment" /* cnb.z(-353419973884714L)  */,
                         "comment_detail" /* "comment_detail" /* "comment_detail" /* cnb.z(-353385614146346L)  */, "other" /* "other" /* "other" /* cnb.z(-353321189636906L)  */,
                         "snssight" /* "snssight" /* "snssight" /* cnb.z(-353278239963946L)  */, "fts" /* "fts" /* "fts" /* cnb.z(-353239585258282L)  */,
                         "storysight" /* "storysight" /* "storysight" /* cnb.z(-359235359603498L)  */, "storyalbum" /* "storyalbum" /* "storyalbum" /* cnb.z(-359222474701610L)  */);
-                bagVar.b = zbVar;
+                dexClassQueryBuilderVar.methodGroupMatcher = zbVar;
                 return kotlinUnitVar;
             case 13:
                 View view = (View) obj;
@@ -254,12 +254,12 @@ public final /* synthetic */ class djk implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new djk(i2);
                 return kotlinUnitVar;
             case 16:
-                bah bahVar6 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar8 = new DexFinder();
                 cdjVar8.usingStrings("MicroMsg.UploadPackHelper" /* "MicroMsg.UploadPackHelper" /* "MicroMsg.UploadPackHelper" /* cnb.z(-561652873296682L)  */,
                         "commit sns info ret %d, typeFlag %d sightMd5 %s" /* "commit sns info ret %d, typeFlag %d sightMd5 %s" /* "commit sns info ret %d, typeFlag %d sightMd5 %s" /* cnb.z(-561008628202282L)  */);
-                bahVar6.getClass();
-                bahVar6.d = cdjVar8;
+                dexMethodQueryBuilderVar6.getClass();
+                dexMethodQueryBuilderVar6.dexFinder = cdjVar8;
                 return kotlinUnitVar;
             case 17:
                 View view2 = (View) obj;
@@ -428,23 +428,23 @@ public final /* synthetic */ class djk implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new djk(21);
                 return kotlinUnitVar;
             case 21:
-                bah bahVar7 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar7 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar9 = new DexFinder();
                 cdjVar9.usingStrings("MicroMsg.snsMediaStorage" /* "MicroMsg.snsMediaStorage" /* "MicroMsg.snsMediaStorage" /* cnb.z(-548432963959594L)  */,
                         "SnsCompressResolutionFor2G" /* "SnsCompressResolutionFor2G" /* "SnsCompressResolutionFor2G" /* cnb.z(-547775833963306L)  */,
                         "SnsCompressResolutionFor3G" /* "SnsCompressResolutionFor3G" /* "SnsCompressResolutionFor3G" /* cnb.z(-547694229584682L)  */,
                         "SnsCompressResolutionFor4G" /* "SnsCompressResolutionFor4G" /* "SnsCompressResolutionFor4G" /* cnb.z(-548076481674026L)  */,
                         "SnsCompressResolutionForWifi" /* "SnsCompressResolutionForWifi" /* "SnsCompressResolutionForWifi" /* cnb.z(-547994877295402L)  */);
-                bahVar7.getClass();
-                bahVar7.d = cdjVar9;
+                dexMethodQueryBuilderVar7.getClass();
+                dexMethodQueryBuilderVar7.dexFinder = cdjVar9;
                 return kotlinUnitVar;
             case 22:
                 ((FindDexClassMethodDslWrapper) obj).onClassCallback = new djk(23);
                 return kotlinUnitVar;
             case 23:
-                bag bagVar2 = (bag) obj;
-                zb zbVar2 = new zb();
-                fj fjVar2 = new fj();
+                DexClassQueryBuilder dexClassQueryBuilderVar2 = (DexClassQueryBuilder) obj;
+                DexMethodGroupMatcher zbVar2 = new DexMethodGroupMatcher();
+                MethodMatcher fjVar2 = new MethodMatcher();
                 DexFinder cdjVar10 = new DexFinder();
                 cdjVar10.s("compareContent" /* "compareContent" /* "compareContent" /* cnb.z(-359033496140586L)  */);
                 fjVar2.f(cdjVar10);
@@ -452,7 +452,7 @@ public final /* synthetic */ class djk implements IInvokable {
                 cdjVar11.s("op" /* "op" /* "op" /* cnb.z(-359020611238698L)  */);
                 fjVar2.f(cdjVar11);
                 DexFinder cdjVar12 = new DexFinder();
-                fj fjVar3 = new fj();
+                MethodMatcher fjVar3 = new MethodMatcher();
                 DexFinder cdjVar13 = new DexFinder();
                 cdjVar13.usingStrings("getCommentInfo" /* "getCommentInfo" /* "getCommentInfo" /* cnb.z(-359523122412330L)  */,
                         "com.tencent.mm.plugin.sns.ui.SnsCommentFooter" /* "com.tencent.mm.plugin.sns.ui.SnsCommentFooter" /* "com.tencent.mm.plugin.sns.ui.SnsCommentFooter" /* cnb.z(-359441518033706L)  */);
@@ -464,8 +464,8 @@ public final /* synthetic */ class djk implements IInvokable {
                 cdjVar12.j = fjVar3;
                 fjVar2.f(cdjVar12);
                 zbVar2.f = fjVar2;
-                bagVar2.getClass();
-                bagVar2.b = zbVar2;
+                dexClassQueryBuilderVar2.getClass();
+                dexClassQueryBuilderVar2.methodGroupMatcher = zbVar2;
                 return kotlinUnitVar;
             case 24:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new SyntheticMessOfLambdas(0);
@@ -480,24 +480,24 @@ public final /* synthetic */ class djk implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new SyntheticMessOfLambdas(1);
                 return kotlinUnitVar;
             case 28:
-                bah bahVar8 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar8 = (DexMethodQueryBuilder) obj;
                 String[] strArr4 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-359858129861418L)  */ };
-                bahVar8.getClass();
-                bahVar8.a = SomeStaticHelpers.ab(strArr4);
+                dexMethodQueryBuilderVar8.getClass();
+                dexMethodQueryBuilderVar8.a = SomeStaticHelpers.arrayToList(strArr4);
                 DexFinder cdjVar15 = new DexFinder();
                 cdjVar15.usingStrings("getSnsVideoFullPath" /* "getSnsVideoFullPath" /* "getSnsVideoFullPath" /* cnb.z(-356971911838506L)  */,
                         "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-356920372230954L)  */);
-                bahVar8.d = cdjVar15;
+                dexMethodQueryBuilderVar8.dexFinder = cdjVar15;
                 return kotlinUnitVar;
             default:
-                bah bahVar9 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar9 = (DexMethodQueryBuilder) obj;
                 String[] strArr5 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-357255379680042L)  */ };
-                bahVar9.getClass();
-                bahVar9.a = SomeStaticHelpers.ab(strArr5);
+                dexMethodQueryBuilderVar9.getClass();
+                dexMethodQueryBuilderVar9.a = SomeStaticHelpers.arrayToList(strArr5);
                 DexFinder cdjVar16 = new DexFinder();
                 cdjVar16.usingStrings("getDownloadVideoPath" /* "getDownloadVideoPath" /* "getDownloadVideoPath" /* cnb.z(-357117940726570L)  */,
                         "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-356512350337834L)  */);
-                bahVar9.d = cdjVar16;
+                dexMethodQueryBuilderVar9.dexFinder = cdjVar16;
                 return kotlinUnitVar;
         }
     }

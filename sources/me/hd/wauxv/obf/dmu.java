@@ -9,12 +9,12 @@ public final class dmu extends bws implements IDexFind {
 
     public static Object b() {
         int i = 0;
-        dgf.a.getClass();
+        ServiceManagerDexFinder.INSTANCE.getClass();
         a.getClass();
-        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dgf.b(StaticHelpers7.az(dmt.a))).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(ServiceManagerDexFinder.getServiceByClass(StaticHelpers7.toDexClass(dmt.a))).getMethodResolverBasedOnPreviouslyProvidedConfig();
         agp.a.getClass();
-        methodResolverVarT.returnType = StaticHelpers7.az(agl.a);
-        Object objE = ((MethodHookWrapper) bjs.h(methodResolverVarT)).e(new Object[0]);
+        methodResolverVarT.returnType = StaticHelpers7.toDexClass(agl.a);
+        Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT)).invokeAndThrowIfFailed(new Object[0]);
         throwIfVar1IsNull(objE);
         return objE;
     }

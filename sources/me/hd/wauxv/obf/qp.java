@@ -62,21 +62,21 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
             int i = 0;
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "onTabClick" /* "onTabClick" /* "onTabClick" /* "onTabClick" /* cnb.z(-436634965244714L)   */;
-            ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).e(0);
+            ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).invokeAndThrowIfFailed(0);
             return true;
         }
         if (itemId == 1) {
             int i2 = 0;
             MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT2.name = "onTabClick" /* "onTabClick" /* "onTabClick" /* "onTabClick" /* cnb.z(-436604900473642L)   */;
-            ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).e(1);
+            ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).invokeAndThrowIfFailed(1);
             return true;
         }
         if (itemId == 2) {
             int i3 = 0;
             MethodResolver methodResolverVarT3 = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT3.name = "onTabClick" /* "onTabClick" /* "onTabClick" /* "onTabClick" /* cnb.z(-436523296095018L)   */;
-            ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT3.findMethods())).e(2);
+            ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT3.findMethods())).invokeAndThrowIfFailed(2);
             return true;
         }
         if (itemId != 3) {
@@ -85,7 +85,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
         int i4 = 0;
         MethodResolver methodResolverVarT4 = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT4.name = "onTabClick" /* "onTabClick" /* "onTabClick" /* "onTabClick" /* cnb.z(-437042987137834L)   */;
-        ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT4.findMethods())).e(3);
+        ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT4.findMethods())).invokeAndThrowIfFailed(3);
         return true;
     }
 
@@ -276,7 +276,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
             throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-394471271299882L)   */);
             throw null;
         }
-        methodHookWrapperVar.e(Integer.valueOf(aelVar3.g));
+        methodHookWrapperVar.invokeAndThrowIfFailed(Integer.valueOf(aelVar3.g));
         MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration((Button) kotlin$LazyVar3.getValue()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.name = "setIconResource" /* "setIconResource" /* "setIconResource" /* "setIconResource" /* cnb.z(-393882860780330L)   */;
         MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(cls) }, 1, methodResolverVarT2);
@@ -285,7 +285,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
             throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-393814141303594L)   */);
             throw null;
         }
-        methodHookWrapperVar2.e(Integer.valueOf(aelVar4.i));
+        methodHookWrapperVar2.invokeAndThrowIfFailed(Integer.valueOf(aelVar4.i));
         ael aelVar5 = aekVar.a;
         if (aelVar5 == null) {
             throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-393827026205482L)   */);

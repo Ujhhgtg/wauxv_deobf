@@ -16,7 +16,7 @@ public final class abj implements ahh, Serializable {
     }
 
     @Override // me.hd.wauxv.obf.ahh
-    public final ahh _t(ahg ahgVar) {
+    public final ahh _t(IEmpty8 ahgVar) {
         throwIfVar1IsNull(ahgVar, "key");
         ahf ahfVar = this.f;
         ahf ahfVar_w = ahfVar._w(ahgVar);
@@ -25,7 +25,7 @@ public final class abj implements ahh, Serializable {
             return ahhVar;
         }
         ahh ahhVar_t = ahhVar._t(ahgVar);
-        return ahhVar_t == ahhVar ? this : ahhVar_t == auz.a ? ahfVar : new abj(ahfVar, ahhVar_t);
+        return ahhVar_t == ahhVar ? this : ahhVar_t == EmptyCoroutineContext.INSTANCE ? ahfVar : new abj(ahfVar, ahhVar_t);
     }
 
     @Override // me.hd.wauxv.obf.ahh
@@ -36,11 +36,11 @@ public final class abj implements ahh, Serializable {
     @Override // me.hd.wauxv.obf.ahh
     public final ahh _v(ahh ahhVar) {
         throwIfVar1IsNull(ahhVar, "context");
-        return ahhVar == auz.a ? this : (ahh) ahhVar._u(this, new fq(3));
+        return ahhVar == EmptyCoroutineContext.INSTANCE ? this : (ahh) ahhVar._u(this, new fq(3));
     }
 
     @Override // me.hd.wauxv.obf.ahh
-    public final ahf _w(ahg ahgVar) {
+    public final ahf _w(IEmpty8 ahgVar) {
         throwIfVar1IsNull(ahgVar, "key");
         abj abjVar = this;
         while (true) {

@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
-import net.bytebuddy.pool.TypePool;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -141,38 +140,26 @@ public final class lw extends doi implements bgj {
                 return kotlinUnitVar;
             case 4:
                 FastKV.bd(obj);
-                PanelEmojiHook panelEmojiHookVar = PanelEmojiHook.INSTANCE;
-                String strZ = "emoji" /* "emoji" /* "emoji" /* "emoji" /* cnb.z(-474967548361514L)   */;
+                String strZ = "emoji";
                 ArrayList arrayList2 = PanelEmojiHook.someArrayList;
-                panelEmojiHookVar.getClass();
                 File[] fileArrListFiles2 = new File(PanelEmojiHook.RESOURCE_DIR, strZ).listFiles();
                 if (fileArrListFiles2 != null) {
                     for (File file2 : fileArrListFiles2) {
                         if (file2.isFile()) {
-                            List listAg = OtherStaticHelpers.argsToList("png" /* "png" /* "png" /* "png" /* cnb.z(-474357663005482L)   */, "jpg" /*
-                                                                                              * "jpg" /* "jpg" /* "jpg" /* cnb.z(-474306123397930L)  */
-                                                                                              */, "gif" /*
-                                                                                                         * cnb.z(-
-                                                                                                         * 474323303267114L)
-                                                                                                         */);
+                            List listAg = OtherStaticHelpers.argsToList("png", "jpg", "gif");
                             String name = file2.getName();
                             throwIfVar1IsNull(name, "getName(...)");
                             String lowerCase = dnj
-                                    .av(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH, name,
+                                    .av('.', name,
                                             "")
                                     .toLowerCase(Locale.ROOT);
                             throwIfVar1IsNull(lowerCase, "toLowerCase(...)" /* "toLowerCase(...)" /* "toLowerCase(...)" /* "toLowerCase(...)" /* cnb.z(-474271763659562L)   */);
                             if (listAg.contains(lowerCase)) {
-                                auh auhVar = auh.a;
                                 String absolutePath = file2.getAbsolutePath();
-                                auhVar.getClass();
-                                String strB = auh.b(absolutePath);
-                                aub.a.getClass();
-                                Object objB = aub.b(strB);
-                                atz.a.getClass();
-                                StaticHelpers7.toDexMethod(aty.a).invoke(objB, null, Boolean.TRUE);
-                                arrayList2
-                                        .add(StaticHelpers7.ba(PanelEmojiHook$ConstructorGroupItemInfo.INSTANCE).newInstance(objB, 2, "" /* "" /* "" /* "" /* cnb.z(-474215929084714L)   */, 0));
+                                String strB = EmojiMgrImplHook.getMd5FromPath(absolutePath);
+                                Object objB = EmojiInfoStorageDexFind.getEmojiInfoByMd5(strB);
+                                StaticHelpers7.toDexMethod(EmojiInfo$MethodSaveEmojiThumb.INSTANCE).invoke(objB, null, Boolean.TRUE);
+                                arrayList2.add(StaticHelpers7.toDexConstructor(PanelEmojiHook$ConstructorGroupItemInfo.INSTANCE).newInstance(objB, 2, "" /* "" /* "" /* "" /* cnb.z(-474215929084714L)   */, 0));
                             }
                         }
                     }

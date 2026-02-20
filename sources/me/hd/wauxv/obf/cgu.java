@@ -44,38 +44,38 @@ public final /* synthetic */ class cgu implements IInvokable {
         Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
-                bah bahVar = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar = new DexFinder();
                 cgy.a.getClass();
-                cdjVar.o(StaticHelpers7.az(cgv.a));
+                cdjVar.o(StaticHelpers7.toDexClass(cgv.a));
                 cdjVar.usingStrings("MsgInfo processAddMsg insert db error" /* "MsgInfo processAddMsg insert db error" /* "MsgInfo processAddMsg insert db error" /* cnb.z(-371609160383274L)  */);
-                bahVar.getClass();
-                bahVar.d = cdjVar;
+                dexMethodQueryBuilderVar.getClass();
+                dexMethodQueryBuilderVar.dexFinder = cdjVar;
                 return kotlinUnitVar;
             case 1:
-                bag bagVar = (bag) obj;
+                DexClassQueryBuilder dexClassQueryBuilderVar = (DexClassQueryBuilder) obj;
                 String[] strArr = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-369904058366762L)  */ };
-                bagVar.getClass();
-                bagVar.a = SomeStaticHelpers.ab(strArr);
-                zb zbVar = new zb();
-                zbVar.k("MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* cnb.z(-369805274118954L)  */, "deleted dirty msg ,count is %d" /*
+                dexClassQueryBuilderVar.getClass();
+                dexClassQueryBuilderVar.strings = SomeStaticHelpers.arrayToList(strArr);
+                DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
+                zbVar.usingEqStrings("MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* cnb.z(-369805274118954L)  */, "deleted dirty msg ,count is %d" /*
                                                                                                                     * cnb
                                                                                                                     * .z
                                                                                                                     * (-
                                                                                                                     * 371351462345514L)
                                                                                                                     */);
-                bagVar.b = zbVar;
+                dexClassQueryBuilderVar.methodGroupMatcher = zbVar;
                 return kotlinUnitVar;
             case 2:
-                bah bahVar2 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar2 = new DexFinder();
                 cgy.a.getClass();
-                cdjVar2.o(StaticHelpers7.az(cgv.a));
+                cdjVar2.o(StaticHelpers7.toDexClass(cgv.a));
                 cdjVar2.p(new IntRange(2, 3, 1));
                 cdjVar2.usingStrings("notifymessage" /* "notifymessage" /* "notifymessage" /* cnb.z(-371201138490154L)  */, "msgId=?" /* "msgId=?" /* "msgId=?" /* cnb.z(-371123829078826L)  */,
                         "update" /* "update" /* "update" /* cnb.z(-371089469340458L)  */);
-                bahVar2.getClass();
-                bahVar2.d = cdjVar2;
+                dexMethodQueryBuilderVar2.getClass();
+                dexMethodQueryBuilderVar2.dexFinder = cdjVar2;
                 return kotlinUnitVar;
             case 3:
                 ArrayList arrayList = new ArrayList();
@@ -223,15 +223,15 @@ public final /* synthetic */ class cgu implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new cgu(8);
                 return kotlinUnitVar;
             case 8:
-                bah bahVar3 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar3 = new DexFinder();
                 cdjVar3.usingStrings("MicroMsg.PluginHelper" /* "MicroMsg.PluginHelper" /* "MicroMsg.PluginHelper" /* cnb.z(-518660250663722L)  */, "start multi webview!!!!!!!!!" /*
                                                                                                                   * cnb.
                                                                                                                   * z(-
                                                                                                                   * 518548581514026L)
                                                                                                                   */);
-                bahVar3.getClass();
-                bahVar3.d = cdjVar3;
+                dexMethodQueryBuilderVar3.getClass();
+                dexMethodQueryBuilderVar3.dexFinder = cdjVar3;
                 return kotlinUnitVar;
             case 9:
                 int i6 = 0;
@@ -246,7 +246,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                     throwIfVar1IsNull(objD);
                     MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objD).getMethodResolverBasedOnPreviouslyProvidedConfig();
                     methodResolverVarT.name = "getData" /* "getData" /* "getData" /* cnb.z(-478334802721578L)  */;
-                    Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT)).j(new Object[0]);
+                    Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT)).invoke(new Object[0]);
                     throwIfVar1IsNull(objJ);
                     cwd cwdVar = cwd.a;
                     cwdVar.getClass();
@@ -287,7 +287,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                     throwIfVar1IsNull(objD2);
                     MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objD2).getMethodResolverBasedOnPreviouslyProvidedConfig();
                     methodResolverVarT2.name = "getData" /* "getData" /* "getData" /* cnb.z(-475212361497386L)  */;
-                    Object objJ2 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).j(new Object[0]);
+                    Object objJ2 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).invoke(new Object[0]);
                     throwIfVar1IsNull(objJ2);
                     cwd cwdVar2 = cwd.a;
                     cwdVar2.getClass();
@@ -402,15 +402,15 @@ public final /* synthetic */ class cgu implements IInvokable {
                 findDexClassMethodDslWrapperVar.onMethodCallback = new cgu(25);
                 return kotlinUnitVar;
             case 24:
-                bag bagVar2 = (bag) obj;
-                zb zbVar2 = new zb();
-                zbVar2.k("MicroMsg.NetSceneAddChatRoomMember" /* "MicroMsg.NetSceneAddChatRoomMember" /* "MicroMsg.NetSceneAddChatRoomMember" /* cnb.z(-112828790864682L)  */,
+                DexClassQueryBuilder dexClassQueryBuilderVar2 = (DexClassQueryBuilder) obj;
+                DexMethodGroupMatcher zbVar2 = new DexMethodGroupMatcher();
+                zbVar2.usingEqStrings("MicroMsg.NetSceneAddChatRoomMember" /* "MicroMsg.NetSceneAddChatRoomMember" /* "MicroMsg.NetSceneAddChatRoomMember" /* cnb.z(-112828790864682L)  */,
                         "/cgi-bin/micromsg-bin/addchatroommember" /* "/cgi-bin/micromsg-bin/addchatroommember" /* "/cgi-bin/micromsg-bin/addchatroommember" /* cnb.z(-113245402692394L)  */);
-                bagVar2.getClass();
-                bagVar2.b = zbVar2;
+                dexClassQueryBuilderVar2.getClass();
+                dexClassQueryBuilderVar2.methodGroupMatcher = zbVar2;
                 return kotlinUnitVar;
             case 25:
-                bah bahVar4 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar4 = new DexFinder();
                 Class<String> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf == null) {
@@ -424,8 +424,8 @@ public final /* synthetic */ class cgu implements IInvokable {
                 cls3 = Object.class;
                 Class<Object> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cdjVar4.q(clsBf, cls2, cls, clsBf4 != null ? clsBf4 : Object.class);
-                bahVar4.getClass();
-                bahVar4.d = cdjVar4;
+                dexMethodQueryBuilderVar4.getClass();
+                dexMethodQueryBuilderVar4.dexFinder = cdjVar4;
                 return kotlinUnitVar;
             case 26:
                 FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar2 = (FindDexClassMethodDslWrapper) obj;
@@ -433,17 +433,17 @@ public final /* synthetic */ class cgu implements IInvokable {
                 findDexClassMethodDslWrapperVar2.onMethodCallback = new cgu(28);
                 return kotlinUnitVar;
             case 27:
-                bag bagVar3 = (bag) obj;
+                DexClassQueryBuilder dexClassQueryBuilderVar3 = (DexClassQueryBuilder) obj;
                 String[] strArr4 = { "com.tencent.mm.plugin.remittance.model" /* "com.tencent.mm.plugin.remittance.model" /* "com.tencent.mm.plugin.remittance.model" /* cnb.z(-112304804854570L)  */ };
-                bagVar3.getClass();
-                bagVar3.a = SomeStaticHelpers.ab(strArr4);
-                zb zbVar3 = new zb();
-                zbVar3.k("MicroMsg.NetSceneBeforeTransfer" /* "MicroMsg.NetSceneBeforeTransfer" /* "MicroMsg.NetSceneBeforeTransfer" /* cnb.z(-112669877074730L)  */,
+                dexClassQueryBuilderVar3.getClass();
+                dexClassQueryBuilderVar3.strings = SomeStaticHelpers.arrayToList(strArr4);
+                DexMethodGroupMatcher zbVar3 = new DexMethodGroupMatcher();
+                zbVar3.usingEqStrings("MicroMsg.NetSceneBeforeTransfer" /* "MicroMsg.NetSceneBeforeTransfer" /* "MicroMsg.NetSceneBeforeTransfer" /* cnb.z(-112669877074730L)  */,
                         "/cgi-bin/mmpay-bin/beforetransfer" /* "/cgi-bin/mmpay-bin/beforetransfer" /* "/cgi-bin/mmpay-bin/beforetransfer" /* cnb.z(-112532438121258L)  */);
-                bagVar3.b = zbVar3;
+                dexClassQueryBuilderVar3.methodGroupMatcher = zbVar3;
                 return kotlinUnitVar;
             case 28:
-                bah bahVar5 = (bah) obj;
+                DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar5 = new DexFinder();
                 Class<String> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf5 == null) {
@@ -451,8 +451,8 @@ public final /* synthetic */ class cgu implements IInvokable {
                 }
                 Class<String> clsBf6 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar5.q(clsBf5, clsBf6 != null ? clsBf6 : String.class);
-                bahVar5.getClass();
-                bahVar5.d = cdjVar5;
+                dexMethodQueryBuilderVar5.getClass();
+                dexMethodQueryBuilderVar5.dexFinder = cdjVar5;
                 return kotlinUnitVar;
             default:
                 FindDexClassMethodDslWrapper findDexClassMethodDslWrapperVar3 = (FindDexClassMethodDslWrapper) obj;

@@ -54,7 +54,7 @@ public final class chh extends SwitchHook implements bnc {
                 } else {
                     color = Color.parseColor((!msgInfoBean.isSend() ? che.a : chg.a).o());
                 }
-                methodHookWrapperVar.e(Integer.valueOf(color));
+                methodHookWrapperVar.invokeAndThrowIfFailed(Integer.valueOf(color));
             }
         }
     }

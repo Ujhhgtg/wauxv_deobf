@@ -75,7 +75,7 @@ public final class cla implements alp {
     }
 
     @Override // me.hd.wauxv.obf.ahh
-    public final ahh _t(ahg ahgVar) {
+    public final ahh _t(IEmpty8 ahgVar) {
         throwIfVar1IsNull(ahgVar, "key");
         return bmy.x(this.f, ahgVar);
     }
@@ -92,13 +92,13 @@ public final class cla implements alp {
     }
 
     @Override // me.hd.wauxv.obf.ahh
-    public final ahf _w(ahg ahgVar) {
+    public final ahf _w(IEmpty8 ahgVar) {
         throwIfVar1IsNull(ahgVar, "key");
         return this.f._w(ahgVar);
     }
 
     @Override // me.hd.wauxv.obf.ahf
-    public final ahg getKey() {
+    public final IEmpty8 getKey() {
         return arj.i;
     }
 

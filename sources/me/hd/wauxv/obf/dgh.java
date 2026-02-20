@@ -56,7 +56,7 @@ public final class dgh extends doi implements bgj {
                     this.d = 1;
                     Kotlin$Lazy kotlin$LazyVar = doh.a;
                     Dispatchers$Default alcVar = aou.a;
-                    obj = ajn.ak(akq.f, lwVar, this);
+                    obj = ajn.ak(Dispatchers$IO.INSTANCE, lwVar, this);
                     if (obj == ahqVar) {
                         return ahqVar;
                     }

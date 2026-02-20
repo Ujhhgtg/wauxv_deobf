@@ -98,7 +98,7 @@ public final class ckx extends doi implements bgj {
                 if (i4 == 0) {
                     FastKV.bd(obj);
                     cmn.a.getClass();
-                    cme.tryGetClassByName(cme.a, StaticHelpers7.ba(cmm.a).newInstance(pair, str2, str, 1));
+                    cme.tryGetClassByName(cme.a, StaticHelpers7.toDexConstructor(cmm.a).newInstance(pair, str2, str, 1));
                     this.d = 1;
                     if (dqc.delayCoroutine(5000L, this) == ahqVar) {
                         return ahqVar;
@@ -113,7 +113,7 @@ public final class ckx extends doi implements bgj {
                     FastKV.bd(obj);
                 }
                 cmn.a.getClass();
-                cme.tryGetClassByName(cme.a, StaticHelpers7.ba(cmm.a).newInstance(pair, str2, str, 0));
+                cme.tryGetClassByName(cme.a, StaticHelpers7.toDexConstructor(cmm.a).newInstance(pair, str2, str, 0));
                 return kotlinUnitVar;
             default:
                 ahp ahpVar2 = (ahp) this.e;
@@ -131,7 +131,7 @@ public final class ckx extends doi implements bgj {
                 FastKV.bd(obj);
                 beo beoVar = new beo((String) serializable, i2);
                 Dispatchers$Default alcVar = aou.a;
-                akq akqVar = akq.f;
+                Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
                 dob dobVar = new dob();
                 akqVar.getClass();
                 cla claVar = new cla(

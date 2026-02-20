@@ -13,7 +13,7 @@ public final class CustomBalanceHook extends SwitchHook {
     public final void initOnce() {
         int i = 0;
         MethodResolver methodResolverVarT = yg.s(-429552564173610L).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        methodResolverVarT.d = new age(22);
+        methodResolverVarT.parametersCondition = new age(22);
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         CustomBalanceHook aioVar = a;

@@ -53,7 +53,7 @@ public final /* synthetic */ class bka implements IInvokable {
                     bbj.a.getClass();
                     if (nullSafeIsEqual(str2, "clearUnreadCount" /* "clearUnreadCount" /* "clearUnreadCount" /* "clearUnreadCount" /* cnb.z(-553591219682090L)   */)) {
                         Dispatchers$Default alcVar = aou.a;
-                        KotlinHelpers2.bf(akq.f, new lw(i2, afwVar, 3));
+                        KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new lw(i2, afwVar, 3));
                     } else if (nullSafeIsEqual(str2, "killProcess" /* "killProcess" /* "killProcess" /* "killProcess" /* cnb.z(-553535385107242L)   */)) {
                         Process.killProcess(Process.myPid());
                     }
@@ -132,9 +132,9 @@ public final /* synthetic */ class bka implements IInvokable {
                 linearLayout.addView(progressBar);
                 AlertDialog alertDialogShow = title.setView(linearLayout).setCancelable(false).show();
                 Dispatchers$Default alcVar2 = aou.a;
-                akq akqVar = akq.f;
+                Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
                 bhp bhpVar = new bhp(euhVar, textView, progressBar, alertDialogShow, null);
-                ahh ahhVarT = KotlinHelpers.t(auz.a, akqVar, true);
+                ahh ahhVarT = KotlinHelpers.t(EmptyCoroutineContext.INSTANCE, akqVar, true);
                 Dispatchers$Default alcVar3 = aou.a;
                 if (ahhVarT != alcVar3 && ahhVarT._w(arj.a) == null) {
                     ahhVarT = ahhVarT._v(alcVar3);

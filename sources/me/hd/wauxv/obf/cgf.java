@@ -13,8 +13,8 @@ public final class cgf extends bws {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         int i = 0;
-        cge.a.getClass();
-        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.az(cgd.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        MicroMsgMsgInfoDexClassFind.INSTANCE.getClass();
+        MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE)).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "convertFrom" /* "convertFrom" /* "convertFrom" /* cnb.z(-66662187399978L)  */;
         methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(Cursor.class) }, 1));
         methodResolverVarT.enableSuperclass();
