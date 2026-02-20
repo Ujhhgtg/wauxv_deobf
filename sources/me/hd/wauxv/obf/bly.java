@@ -6,9 +6,9 @@ public final class bly {
     public final int a;
     public final String b;
     public final int c;
-    public final bfu d;
+    public final IFunction0 d;
 
-    public bly(int i, String str, int i2, bfu bfuVar) {
+    public bly(int i, String str, int i2, IFunction0 bfuVar) {
         this.a = i;
         this.b = str;
         this.c = i2;

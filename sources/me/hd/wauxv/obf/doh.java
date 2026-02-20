@@ -8,7 +8,7 @@ import android.os.Looper;
 public abstract class doh {
     public static final Kotlin$Lazy a = new Kotlin$Lazy(dx.b);
 
-    public static final void b(bfu bfuVar) {
+    public static final void b(IFunction0 bfuVar) {
         if (nullSafeIsEqual(Looper.myLooper(), Looper.getMainLooper())) {
             bfuVar.invoke();
         } else {

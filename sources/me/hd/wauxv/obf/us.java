@@ -52,11 +52,11 @@ public final /* synthetic */ class us implements IInvokable {
         azl azlVar = new azl();
         azi aziVar = new azi();
         String strZ = "convertView" /* "convertView" /* "convertView" /* "convertView" /* cnb.z(-48696339200810L)   */;
-        dne dneVar = dne.Equals;
-        aziVar.a = new dnf(strZ, dneVar, false);
+        MatchTypeEnum matchTypeEnumVar = MatchTypeEnum.Equals;
+        aziVar.a = new dnf(strZ, matchTypeEnumVar, false);
         azlVar.e(aziVar);
         azi aziVar2 = new azi();
-        aziVar2.a = new dnf("avatarIV" /* "avatarIV" /* "avatarIV" /* "avatarIV" /* cnb.z(-48679159331626L)   */, dneVar, false);
+        aziVar2.a = new dnf("avatarIV" /* "avatarIV" /* "avatarIV" /* "avatarIV" /* cnb.z(-48679159331626L)   */, matchTypeEnumVar, false);
         azlVar.e(aziVar2);
         zbVar.e = azlVar;
         dexClassQueryBuilderVar.methodGroupMatcher = zbVar;
@@ -725,7 +725,7 @@ public final /* synthetic */ class us implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar3 = new DexFinder();
                 uq.a.getClass();
-                cdjVar3.o(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)   */));
+                cdjVar3.setDeclaredClassName(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)   */));
                 cdjVar3.usingStrings("MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* cnb.z(-422800875584298L)   */,
                         "canSend true ! sendBtn is visible" /* "canSend true ! sendBtn is visible" /* "canSend true ! sendBtn is visible" /* "canSend true ! sendBtn is visible" /* cnb.z(-423299091790634L)   */);
                 dexMethodQueryBuilderVar3.getClass();

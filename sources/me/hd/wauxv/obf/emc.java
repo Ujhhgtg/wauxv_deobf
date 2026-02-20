@@ -408,7 +408,7 @@ public abstract class emc {
     public static boolean as(int i, Object obj) {
         if (obj instanceof bgp) {
             if ((obj instanceof bgq ? ((bgq) obj).getArity()
-                    : obj instanceof bfu ? 0
+                    : obj instanceof IFunction0 ? 0
                             : obj instanceof bgf ? 1
                                     : obj instanceof bgj ? 2
                                             : obj instanceof bgk ? 3

@@ -47,7 +47,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar = new DexFinder();
                 cgy.a.getClass();
-                cdjVar.o(StaticHelpers7.toDexClass(cgv.a));
+                cdjVar.setDeclaredClassName(StaticHelpers7.toDexClass(cgv.a));
                 cdjVar.usingStrings("MsgInfo processAddMsg insert db error" /* "MsgInfo processAddMsg insert db error" /* "MsgInfo processAddMsg insert db error" /* cnb.z(-371609160383274L)  */);
                 dexMethodQueryBuilderVar.getClass();
                 dexMethodQueryBuilderVar.dexFinder = cdjVar;
@@ -70,7 +70,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar2 = new DexFinder();
                 cgy.a.getClass();
-                cdjVar2.o(StaticHelpers7.toDexClass(cgv.a));
+                cdjVar2.setDeclaredClassName(StaticHelpers7.toDexClass(cgv.a));
                 cdjVar2.p(new IntRange(2, 3, 1));
                 cdjVar2.usingStrings("notifymessage" /* "notifymessage" /* "notifymessage" /* cnb.z(-371201138490154L)  */, "msgId=?" /* "msgId=?" /* "msgId=?" /* cnb.z(-371123829078826L)  */,
                         "update" /* "update" /* "update" /* cnb.z(-371089469340458L)  */);

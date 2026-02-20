@@ -2,8 +2,7 @@ package okhttp3.internal.concurrent;
 
 import java.util.Arrays;
 import java.util.logging.Level;
-import me.hd.wauxv.obf.bfu;
-import me.hd.wauxv.obf.KotlinHelpers;
+import me.hd.wauxv.obf.IFunction0;
 import okhttp3.internal.http2.Http2Connection;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -33,7 +32,7 @@ public final class TaskLoggerKt {
                 + String.format("%-22s", Arrays.copyOf(new Object[] { str }, 1)) + ": " + task.getName());
     }
 
-    public static final <T> T logElapsed(Task task, TaskQueue taskQueue, bfu bfuVar) {
+    public static final <T> T logElapsed(Task task, TaskQueue taskQueue, IFunction0 bfuVar) {
         long jNanoTime;
         throwIfVar1IsNull(task, "task");
         throwIfVar1IsNull(taskQueue, "queue");
@@ -60,7 +59,7 @@ public final class TaskLoggerKt {
         }
     }
 
-    public static final void taskLog(Task task, TaskQueue taskQueue, bfu bfuVar) {
+    public static final void taskLog(Task task, TaskQueue taskQueue, IFunction0 bfuVar) {
         throwIfVar1IsNull(task, "task");
         throwIfVar1IsNull(taskQueue, "queue");
         throwIfVar1IsNull(bfuVar, "messageBlock");

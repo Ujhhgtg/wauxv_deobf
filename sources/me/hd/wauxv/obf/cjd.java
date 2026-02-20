@@ -48,7 +48,7 @@ public final class cjd {
         ArrayList arrayList = new ArrayList();
         this.j = arrayList;
         final int i = 0;
-        this.l = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.cja
+        this.l = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.cja
             public final /* synthetic */ cjd b;
 
             {
@@ -180,7 +180,7 @@ public final class cjd {
             }
         });
         final int i2 = 1;
-        this.m = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.cja
+        this.m = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.cja
             public final /* synthetic */ cjd b;
 
             {
@@ -312,7 +312,7 @@ public final class cjd {
             }
         });
         final int i3 = 2;
-        bfu bfuVar = new bfu(this) { // from class: me.hd.wauxv.obf.cja
+        IFunction0 bfuVar = new IFunction0(this) { // from class: me.hd.wauxv.obf.cja
             public final /* synthetic */ cjd b;
 
             {
@@ -446,7 +446,7 @@ public final class cjd {
         btx btxVar = btx.b;
         this.n = StaticAndroidHelpers.am(btxVar, bfuVar);
         final int i4 = 3;
-        this.p = StaticAndroidHelpers.am(btxVar, new bfu(this) { // from class: me.hd.wauxv.obf.cja
+        this.p = StaticAndroidHelpers.am(btxVar, new IFunction0(this) { // from class: me.hd.wauxv.obf.cja
             public final /* synthetic */ cjd b;
 
             {
@@ -578,7 +578,7 @@ public final class cjd {
             }
         });
         final int i5 = 4;
-        this.q = StaticAndroidHelpers.am(btxVar, new bfu(this) { // from class: me.hd.wauxv.obf.cja
+        this.q = StaticAndroidHelpers.am(btxVar, new IFunction0(this) { // from class: me.hd.wauxv.obf.cja
             public final /* synthetic */ cjd b;
 
             {
@@ -710,7 +710,7 @@ public final class cjd {
             }
         });
         final int i6 = 5;
-        this.r = StaticAndroidHelpers.am(btxVar, new bfu(this) { // from class: me.hd.wauxv.obf.cja
+        this.r = StaticAndroidHelpers.am(btxVar, new IFunction0(this) { // from class: me.hd.wauxv.obf.cja
             public final /* synthetic */ cjd b;
 
             {
@@ -842,7 +842,7 @@ public final class cjd {
             }
         });
         final int i7 = 6;
-        this.s = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.cja
+        this.s = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.cja
             public final /* synthetic */ cjd b;
 
             {
@@ -974,7 +974,7 @@ public final class cjd {
             }
         });
         final int i8 = 7;
-        this.u = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.cja
+        this.u = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.cja
             public final /* synthetic */ cjd b;
 
             {

@@ -356,7 +356,7 @@ public final /* synthetic */ class dh implements Runnable {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public /* synthetic */ dh(bfu bfuVar) {
+    public /* synthetic */ dh(IFunction0 bfuVar) {
         this.a = 18;
         this.b = (btp) bfuVar;
     }

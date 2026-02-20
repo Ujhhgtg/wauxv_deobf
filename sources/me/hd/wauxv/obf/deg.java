@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicReferenceFieldUpdater;
 public final class deg implements IHasGetValue, Serializable {
     public static final AtomicReferenceFieldUpdater a = AtomicReferenceFieldUpdater.newUpdater(deg.class, Object.class,
             "ᛱᛱᛱᛱᛲ");
-    public volatile bfu b;
+    public volatile IFunction0 b;
     public volatile Object c;
 
     @Override // me.hd.wauxv.obf.btt
@@ -18,7 +18,7 @@ public final class deg implements IHasGetValue, Serializable {
         if (obj != arjVar) {
             return obj;
         }
-        bfu bfuVar = this.b;
+        IFunction0 bfuVar = this.b;
         if (bfuVar != null) {
             Object objInvoke = bfuVar.invoke();
             AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = a;

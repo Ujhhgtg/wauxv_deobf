@@ -22,7 +22,7 @@ import me.hd.wauxv.obf.aye;
 import me.hd.wauxv.obf.blv;
 import me.hd.wauxv.obf.HostInfoRegistry;
 import me.hd.wauxv.obf.bsr;
-import me.hd.wauxv.obf.byr;
+import me.hd.wauxv.obf.MMKernelDexFind;
 import me.hd.wauxv.obf.bzo;
 import me.hd.wauxv.obf.MethodResolver;
 import me.hd.wauxv.obf.MethodHookWrapper;
@@ -371,8 +371,8 @@ public final class PluginMsgMethod {
             }
         });
         Method methodBb = StaticHelpers7.toDexMethod(cmd.a);
-        byr.a.getClass();
-        Object objInvoke = methodBb.invoke(byr.c(), null);
+        MMKernelDexFind.INSTANCE.getClass();
+        Object objInvoke = methodBb.invoke(MMKernelDexFind.c(), null);
         throwIfVar1IsNull(objInvoke);
         methodHookWrapperVar.invokeAndThrowIfFailed(objInvoke, objNewProxyInstance);
     }

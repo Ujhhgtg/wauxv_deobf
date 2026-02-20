@@ -51,7 +51,7 @@ public final class azl extends dqc {
         throwIfVar1IsNull(cls, "clazz");
         azi aziVar = new azi();
         DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
-        zbVar.j(ams.e(cls), dne.Equals);
+        zbVar.j(ams.getClassPrimitiveTypeName(cls), MatchTypeEnum.Equals);
         aziVar.b = zbVar;
         e(aziVar);
     }

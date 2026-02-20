@@ -158,7 +158,7 @@ public final /* synthetic */ class amb implements IInvokable {
                 dexClassQueryBuilderVar.strings = SomeStaticHelpers.arrayToList(strArr);
                 DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
                 zbVar.usingEqStrings(".msgsource.sec_msg_node.clip-len" /* ".msgsource.sec_msg_node.clip-len" /* ".msgsource.sec_msg_node.clip-len" /* cnb.z(-448179837336362L)  */);
-                dnf dnfVar = new dnf("MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* cnb.z(-448587859229482L)  */, dne.Contains, false);
+                dnf dnfVar = new dnf("MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* cnb.z(-448587859229482L)  */, MatchTypeEnum.Contains, false);
                 List arrayList = zbVar.g;
                 if (arrayList == null) {
                     arrayList = new ArrayList();

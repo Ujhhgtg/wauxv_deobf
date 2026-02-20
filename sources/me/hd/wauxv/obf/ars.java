@@ -20,7 +20,7 @@ public final /* synthetic */ class ars implements MenuItem.OnMenuItemClickListen
             throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         switch (this.a) {
             case 0:
-                bfu bfuVar = (bfu) this.b;
+                IFunction0 bfuVar = (IFunction0) this.b;
                 throwIfVar1IsNull(menuItem, "it");
                 bfuVar.invoke();
                 return true;

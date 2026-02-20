@@ -402,7 +402,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
             case 27:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar6 = new DexFinder();
-                cdjVar6.o(cvh.a.b());
+                cdjVar6.setDeclaredClassName(cvh.a.b());
                 Class<CharSequence> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar6.q(clsBf7 != null ? clsBf7 : CharSequence.class);
                 cdjVar6.u(0);
@@ -412,7 +412,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
             case 28:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar7 = new DexFinder();
-                cdjVar7.o(cvh.a.b());
+                cdjVar7.setDeclaredClassName(cvh.a.b());
                 Class<CharSequence> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar7.q(clsBf8 != null ? clsBf8 : CharSequence.class);
                 dexMethodQueryBuilderVar6.getClass();

@@ -11,7 +11,7 @@ public abstract class bws extends BaseBaseHook {
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final boolean z() {
+    public final boolean getIsEnabled() {
         return true;
     }
 }

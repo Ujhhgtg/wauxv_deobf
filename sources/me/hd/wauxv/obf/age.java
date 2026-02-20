@@ -207,7 +207,7 @@ public final /* synthetic */ class age implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar4 = new DexFinder();
                 agp.a.getClass();
-                cdjVar4.o(StaticHelpers7.toDexClass(agl.a));
+                cdjVar4.setDeclaredClassName(StaticHelpers7.toDexClass(agl.a));
                 cdjVar4.usingStrings("MicroMsg.ConversationStorage" /* "MicroMsg.ConversationStorage" /* "MicroMsg.ConversationStorage" /* cnb.z(-373460291287850L)  */, "get null with username:" /*
                                                                                                                     * cnb
                                                                                                                     * .z
@@ -221,7 +221,7 @@ public final /* synthetic */ class age implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar5 = new DexFinder();
                 agp.a.getClass();
-                cdjVar5.o(StaticHelpers7.toDexClass(agl.a));
+                cdjVar5.setDeclaredClassName(StaticHelpers7.toDexClass(agl.a));
                 cdjVar5.usingStrings("updateUnreadByTalker %s" /* "updateUnreadByTalker %s" /* "updateUnreadByTalker %s" /* cnb.z(-371677879860010L)  */);
                 dexMethodQueryBuilderVar5.getClass();
                 dexMethodQueryBuilderVar5.dexFinder = cdjVar5;
@@ -230,7 +230,7 @@ public final /* synthetic */ class age implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar6 = new DexFinder();
                 agp.a.getClass();
-                cdjVar6.o(StaticHelpers7.toDexClass(agl.a));
+                cdjVar6.setDeclaredClassName(StaticHelpers7.toDexClass(agl.a));
                 cdjVar6.p(new IntRange(2, 4, 1));
                 cdjVar6.v("Update " /* "Update " /* "Update " /* cnb.z(-372124556458794L)  */, "rconversation" /* "rconversation" /* "rconversation" /* cnb.z(-372090196720426L)  */,
                         " set " /* " set " /* " set " /* cnb.z(-372081606785834L)  */, "parentRef" /* "parentRef" /* "parentRef" /* cnb.z(-372038657112874L)  */, " = '" /*

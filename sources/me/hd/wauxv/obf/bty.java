@@ -352,8 +352,8 @@ public final /* synthetic */ class bty implements IInvokable {
             case 23:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar7 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar7 = new DexFinder();
-                byr.a.getClass();
-                cdjVar7.o(StaticHelpers7.toDexClass(byp.a));
+                MMKernelDexFind.INSTANCE.getClass();
+                cdjVar7.setDeclaredClassName(StaticHelpers7.toDexClass(MMKernel$ClassMMKernel.INSTANCE));
                 cls = Class.class;
                 Class<Class> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar7.q(clsBf != null ? clsBf : Class.class);

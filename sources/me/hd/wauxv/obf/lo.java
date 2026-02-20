@@ -141,7 +141,7 @@ public class lo extends ekc {
     public void timedOut() {
     }
 
-    public final <T> T withTimeout(bfu bfuVar) throws IOException {
+    public final <T> T withTimeout(IFunction0 bfuVar) throws IOException {
         throwIfVar1IsNull(bfuVar, "block");
         enter();
         try {

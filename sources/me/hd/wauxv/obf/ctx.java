@@ -45,7 +45,7 @@ public final class ctx {
         this.c = new File(file, "info.prop" /* "info.prop" /* "info.prop" /* cnb.z(-400351081528106L)  */);
         this.d = new File(file, "readme.md" /* "readme.md" /* "readme.md" /* cnb.z(-400325311724330L)  */);
         final int i = 0;
-        this.e = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
+        this.e = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.ctw
             public final /* synthetic */ ctx b;
 
             {
@@ -101,7 +101,7 @@ public final class ctx {
         String name = file.getName();
         this.f = name;
         final int i2 = 1;
-        this.g = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
+        this.g = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.ctw
             public final /* synthetic */ ctx b;
 
             {
@@ -155,7 +155,7 @@ public final class ctx {
             }
         });
         final int i3 = 2;
-        this.h = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
+        this.h = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.ctw
             public final /* synthetic */ ctx b;
 
             {
@@ -209,7 +209,7 @@ public final class ctx {
             }
         });
         final int i4 = 3;
-        this.i = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
+        this.i = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.ctw
             public final /* synthetic */ ctx b;
 
             {
@@ -263,7 +263,7 @@ public final class ctx {
             }
         });
         final int i5 = 4;
-        this.j = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
+        this.j = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.ctw
             public final /* synthetic */ ctx b;
 
             {
@@ -317,7 +317,7 @@ public final class ctx {
             }
         });
         final int i6 = 5;
-        this.k = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.ctw
+        this.k = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.ctw
             public final /* synthetic */ ctx b;
 
             {

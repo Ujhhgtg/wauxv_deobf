@@ -45,7 +45,7 @@ public final /* synthetic */ class byx implements bgk {
                 ((dj) eqjVar4).j.setText((String) obj2);
                 eqj eqjVar5 = mainActivity._ac;
                 throwIfVar1IsNull(eqjVar5);
-                ((dj) eqjVar5).c.setOnClickListener(new bq((bfu) obj3, 8));
+                ((dj) eqjVar5).c.setOnClickListener(new bq((IFunction0) obj3, 8));
                 return kotlinUnitVar;
             case 1:
                 wx wxVar = (wx) obj4;

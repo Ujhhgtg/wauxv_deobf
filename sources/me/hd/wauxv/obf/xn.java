@@ -10,10 +10,10 @@ public final class xn extends bws implements IDexFind {
 
     public static Object b() throws IllegalAccessException, InvocationTargetException {
         int i = 0;
-        byr byrVar = byr.a;
+        MMKernelDexFind byrVar = MMKernelDexFind.INSTANCE;
         Class cls = (Class) SomeStaticHelpers.p(StaticHelpers7.toDexClass(xm.a).getInterfaces());
         byrVar.getClass();
-        Object objInvoke = StaticHelpers7.toDexMethod(byq.a).invoke(null, cls);
+        Object objInvoke = StaticHelpers7.toDexMethod(MMKernel$MethodGetServiceImpl.INSTANCE).invoke(null, cls);
         throwIfVar1IsNull(objInvoke);
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objInvoke).getMethodResolverBasedOnPreviouslyProvidedConfig();
         xp.a.getClass();

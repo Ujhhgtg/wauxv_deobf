@@ -7,7 +7,7 @@ import java.util.List;
 public final class bsc implements dfx {
     public final Kotlin$Lazy a;
 
-    public bsc(bfu bfuVar) {
+    public bsc(IFunction0 bfuVar) {
         this.a = new Kotlin$Lazy(bfuVar);
     }
 

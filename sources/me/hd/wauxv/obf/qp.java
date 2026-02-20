@@ -110,7 +110,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
                 artVar.c = !(text.d == 0);
                 final int i = 3;
                 int i2 = 0;
-                artVar.e = new ars(new bfu() { // from class: me.hd.wauxv.obf.arr
+                artVar.e = new ars(new IFunction0() { // from class: me.hd.wauxv.obf.arr
                     @Override // me.hd.wauxv.obf.bfu
                     public final Object invoke() {
                         switch (i) {
@@ -136,7 +136,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
                 artVar2.d = me.hd.wauxv.R.drawable.round_content_copy_20;
                 artVar2.c = codeEditor.bo.h();
                 final int i3 = 1;
-                artVar2.e = new ars(new bfu() { // from class: me.hd.wauxv.obf.arr
+                artVar2.e = new ars(new IFunction0() { // from class: me.hd.wauxv.obf.arr
                     @Override // me.hd.wauxv.obf.bfu
                     public final Object invoke() {
                         switch (i3) {
@@ -162,7 +162,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
                 artVar3.d = me.hd.wauxv.R.drawable.round_content_cut_20;
                 artVar3.c = codeEditor.bo.h();
                 final int i4 = 2;
-                artVar3.e = new ars(new bfu() { // from class: me.hd.wauxv.obf.arr
+                artVar3.e = new ars(new IFunction0() { // from class: me.hd.wauxv.obf.arr
                     @Override // me.hd.wauxv.obf.bfu
                     public final Object invoke() {
                         switch (i4) {
@@ -188,7 +188,7 @@ public final /* synthetic */ class qp implements cke, aww, awz, EventListener.Fa
                 artVar4.d = me.hd.wauxv.R.drawable.round_content_paste_20;
                 artVar4.c = codeEditor.bm.hasPrimaryClip();
                 final int i5 = 0;
-                artVar4.e = new ars(new bfu() { // from class: me.hd.wauxv.obf.arr
+                artVar4.e = new ars(new IFunction0() { // from class: me.hd.wauxv.obf.arr
                     @Override // me.hd.wauxv.obf.bfu
                     public final Object invoke() {
                         switch (i5) {

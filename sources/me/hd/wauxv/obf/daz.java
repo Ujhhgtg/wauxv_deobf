@@ -35,11 +35,11 @@ public final /* synthetic */ class daz implements IInvokable {
                 fm fmVar = new fm();
                 String strZ = "dalvik.annotation.Signature" /* "dalvik.annotation.Signature" /* "dalvik.annotation.Signature" /* "dalvik.annotation.Signature" /* cnb.z(-519794122029866L)   */;
                 DexMethodGroupMatcher zbVar2 = new DexMethodGroupMatcher();
-                dne dneVar = dne.Equals;
-                zbVar2.j(strZ, dneVar);
+                MatchTypeEnum matchTypeEnumVar = MatchTypeEnum.Equals;
+                zbVar2.j(strZ, matchTypeEnumVar);
                 fmVar.a = zbVar2;
                 fh fhVar = new fh();
-                fhVar.a = new dnf("value" /* "value" /* "value" /* "value" /* cnb.z(-519639503207210L)   */, dneVar, false);
+                fhVar.a = new dnf("value" /* "value" /* "value" /* "value" /* cnb.z(-519639503207210L)   */, matchTypeEnumVar, false);
                 MethodMatcher fjVar2 = new MethodMatcher(0);
                 fjVar2.usingStringsType = UsingStringsTypeEnum.Equals;
                 MethodMatcher.e(fjVar2, "Lcom/tencent/mm/sdk/event/IListener<" /* "Lcom/tencent/mm/sdk/event/IListener<" /* "Lcom/tencent/mm/sdk/event/IListener<" /* "Lcom/tencent/mm/sdk/event/IListener<" /* cnb.z(-519596553534250L)   */);

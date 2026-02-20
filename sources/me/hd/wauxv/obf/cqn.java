@@ -8,7 +8,7 @@ import android.window.OnBackInvokedDispatcher;
 public final class cqn {
     public static final cqn a = new cqn();
 
-    public final OnBackInvokedCallback b(bfu bfuVar) {
+    public final OnBackInvokedCallback b(IFunction0 bfuVar) {
         throwIfVar1IsNull(bfuVar, "onBackInvoked");
         return new hu(bfuVar, 1);
     }

@@ -17,7 +17,7 @@ public final class MethodMatcher extends dqc {
 
     public static void e(MethodMatcher fjVar, String str) {
         fk fkVar = new fk();
-        fkVar.a = new dnf(str, dne.Equals, false);
+        fkVar.a = new dnf(str, MatchTypeEnum.Equals, false);
         fkVar.b = fl.StringValue;
         List arrayList = fjVar.b;
         if (arrayList == null) {

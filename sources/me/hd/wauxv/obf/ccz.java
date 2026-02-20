@@ -39,7 +39,7 @@ public abstract class ccz extends abn {
     public cuy p;
     public IInvokable q;
     public IInvokable r;
-    public bfu s;
+    public IFunction0 s;
     public FrameLayout t;
     public ImageView u;
     public ArrayList v;
@@ -313,7 +313,7 @@ public abstract class ccz extends abn {
         return this.q;
     }
 
-    public final bfu getOnMenuClosed() {
+    public final IFunction0 getOnMenuClosed() {
         return this.s;
     }
 
@@ -403,7 +403,7 @@ public abstract class ccz extends abn {
         this.q = bgfVar;
     }
 
-    public final void setOnMenuClosed(bfu bfuVar) {
+    public final void setOnMenuClosed(IFunction0 bfuVar) {
         this.s = bfuVar;
     }
 

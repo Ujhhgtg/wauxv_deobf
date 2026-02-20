@@ -45,17 +45,15 @@ public final class PanelEmojiHook extends SwitchHook implements IDexFind {
                         String strZ = "EmojiGroupInfo";
                         String strZ2 = "productID = ?";
                         String[] strArr = { "wa.panel.emoji.group" };
-                        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(ClassSqliteDBDexFind.getDb()).getMethodResolverBasedOnPreviouslyProvidedConfig();
                         methodResolverVarT.name = "delete";
                         Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(
                                 new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String[].class) }, 3, methodResolverVarT))
-                                .invoke(strZ, strZ2, strArr);
+                                .invoke("EmojiGroupInfo", "productID = ?", strArr);
                         throwIfVar1IsNull(objJ);
-                        ((Number) objJ).intValue();
                         dnc.sendToast(null, 3, "清除成功");
                     });
                     DefaultConfig ioVar = new DefaultConfig(view2.getContext(), 13);
-                    PanelEmojiHook.INSTANCE.getClass();
                     ioVar.ay(PanelEmojiHook.NAME);
                     ioVar.d = (LinearLayout) viewK2;
                     DefaultConfig.g(ioVar, null, 3);
@@ -146,7 +144,7 @@ public final class PanelEmojiHook extends SwitchHook implements IDexFind {
             Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT3)).invoke(new Object[0]);
             throwIfVar1IsNull(objJ);
             List list2 = (List) objJ;
-            if (nullSafeIsEqual(str, "面板表情" /* "面板表情" /* "面板表情" /* "面板表情" /* cnb.z(-470887329430314L)   */)) {
+            if (nullSafeIsEqual(str, "面板表情")) {
                 list2.addAll(PanelEmojiHook.someArrayList);
             }
             return kotlinUnitVar;
@@ -178,6 +176,7 @@ public final class PanelEmojiHook extends SwitchHook implements IDexFind {
                 ((FindDexClassMethodDslWrapper) obj2).onMethodCallback = (obj3) -> {
                     DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj3;
                     DexFinder cdjVar2 = new DexFinder();
+                    // cdjVar2.paramTypes(Int::class.java)
                     cdjVar2.usingStrings("MicroMsg.emoji.EmojiGroupInfoStorage", "get Panel EmojiGroupInfo.");
                     dexMethodQueryBuilderVar2.dexFinder = cdjVar2;
                 };

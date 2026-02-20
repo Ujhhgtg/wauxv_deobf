@@ -35,7 +35,7 @@ public class cuc implements dfx, sr {
         this.s = new boolean[i3];
         this.t = EmptyReadonlyMap.INSTANCE;
         final int i4 = 0;
-        bfu bfuVar = new bfu(this) { // from class: me.hd.wauxv.obf.cub
+        IFunction0 bfuVar = new IFunction0(this) { // from class: me.hd.wauxv.obf.cub
             public final /* synthetic */ cuc b;
 
             {
@@ -63,7 +63,7 @@ public class cuc implements dfx, sr {
         btx btxVar = btx.a;
         this.u = StaticAndroidHelpers.am(btxVar, bfuVar);
         final int i5 = 1;
-        this.v = StaticAndroidHelpers.am(btxVar, new bfu(this) { // from class: me.hd.wauxv.obf.cub
+        this.v = StaticAndroidHelpers.am(btxVar, new IFunction0(this) { // from class: me.hd.wauxv.obf.cub
             public final /* synthetic */ cuc b;
 
             {
@@ -89,7 +89,7 @@ public class cuc implements dfx, sr {
             }
         });
         final int i6 = 2;
-        this.w = StaticAndroidHelpers.am(btxVar, new bfu(this) { // from class: me.hd.wauxv.obf.cub
+        this.w = StaticAndroidHelpers.am(btxVar, new IFunction0(this) { // from class: me.hd.wauxv.obf.cub
             public final /* synthetic */ cuc b;
 
             {

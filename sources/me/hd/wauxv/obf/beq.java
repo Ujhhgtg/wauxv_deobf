@@ -36,7 +36,7 @@ public class beq extends ckl {
                 throwLateinitPropNotInitYet("completeTransition");
                 throw null;
             }
-            bfu bfuVar = (bfu) weakReference.get();
+            IFunction0 bfuVar = (IFunction0) weakReference.get();
             if (bfuVar != null) {
                 bfuVar.invoke();
             }

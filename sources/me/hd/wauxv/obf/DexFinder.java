@@ -23,12 +23,12 @@ public final class DexFinder extends dqc {
             arrayList = new ArrayList();
         }
         cdjVar.g = arrayList;
-        arrayList.add(new dnf(str, dne.Contains, false));
+        arrayList.add(new dnf(str, MatchTypeEnum.Contains, false));
     }
 
     public static void setClassEquals(DexFinder cdjVar, String str) {
         DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
-        zbVar.j(str, dne.Equals);
+        zbVar.j(str, MatchTypeEnum.Equals);
         cdjVar.d = zbVar;
     }
 
@@ -136,13 +136,13 @@ public final class DexFinder extends dqc {
             arrayList = new ArrayList();
         }
         this.g = arrayList;
-        arrayList.add(new dnf(str, dne.Equals, false));
+        arrayList.add(new dnf(str, MatchTypeEnum.Equals, false));
     }
 
-    public final void o(Class cls) {
+    public final void setDeclaredClassName(Class cls) {
         throwIfVar1IsNull(cls, "clazz");
         DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
-        zbVar.j(ams.e(cls), dne.Equals);
+        zbVar.j(ams.getClassPrimitiveTypeName(cls), MatchTypeEnum.Equals);
         this.d = zbVar;
     }
 
@@ -166,7 +166,7 @@ public final class DexFinder extends dqc {
             if (cls != null) {
                 cstVar = new cst();
                 DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
-                zbVar.j(ams.e(cls), dne.Equals);
+                zbVar.j(ams.getClassPrimitiveTypeName(cls), MatchTypeEnum.Equals);
                 cstVar.a = zbVar;
             } else {
                 cstVar = null;
@@ -184,18 +184,18 @@ public final class DexFinder extends dqc {
     public final void r(Class cls) {
         throwIfVar1IsNull(cls, "clazz");
         DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
-        zbVar.j(ams.e(cls), dne.Equals);
+        zbVar.j(ams.getClassPrimitiveTypeName(cls), MatchTypeEnum.Equals);
         this.e = zbVar;
     }
 
     public final void s(String str) {
-        this.a = new dnf(str, dne.Equals, false);
+        this.a = new dnf(str, MatchTypeEnum.Equals, false);
     }
 
     public final void usingStrings(String... strArr) {
         ArrayList arrayList = new ArrayList(strArr.length);
         for (String str : strArr) {
-            arrayList.add(new dnf(str, dne.Equals, false));
+            arrayList.add(new dnf(str, MatchTypeEnum.Equals, false));
         }
         this.g = StaticHelpers5.ab(arrayList);
     }
@@ -232,7 +232,7 @@ public final class DexFinder extends dqc {
     public final void v(String... strArr) {
         ArrayList arrayList = new ArrayList(strArr.length);
         for (String str : strArr) {
-            arrayList.add(new dnf(str, dne.Contains, false));
+            arrayList.add(new dnf(str, MatchTypeEnum.Contains, false));
         }
         this.g = StaticHelpers5.ab(arrayList);
     }

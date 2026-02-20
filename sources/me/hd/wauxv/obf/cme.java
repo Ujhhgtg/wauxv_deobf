@@ -10,9 +10,9 @@ public final class cme extends bws implements IDexFind {
 
     public static void b(cme cmeVar, Object obj) {
         cmeVar.getClass();
-        Method methodBb = StaticHelpers7.toDexMethod(cmc.a);
-        byr.a.getClass();
-        methodBb.invoke(byr.c(), obj, 0);
+        Method methodBb = StaticHelpers7.toDexMethod(NetSceneQueue$MethodAddNetSceneToQueue.INSTANCE);
+        MMKernelDexFind.INSTANCE.getClass();
+        methodBb.invoke(MMKernelDexFind.c(), obj, 0);
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -21,7 +21,7 @@ public final class cme extends bws implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        StaticHelpers7.resolveDexAndCache(cmc.a, dexKitBridge, new clo(17));
+        StaticHelpers7.resolveDexAndCache(NetSceneQueue$MethodAddNetSceneToQueue.INSTANCE, dexKitBridge, new clo(17));
         StaticHelpers7.resolveDexAndCache(cmd.a, dexKitBridge, new clo(18));
     }
 }

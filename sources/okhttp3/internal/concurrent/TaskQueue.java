@@ -7,7 +7,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.RejectedExecutionException;
 import java.util.logging.Level;
 import me.hd.wauxv.obf.StaticHelpers5;
-import me.hd.wauxv.obf.bfu;
+import me.hd.wauxv.obf.IFunction0;
 import me.hd.wauxv.obf.yg;
 import okhttp3.internal.Util;
 
@@ -53,13 +53,13 @@ public final class TaskQueue {
      * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
      */
     public static final class AnonymousClass1 extends Task {
-        final /* synthetic */ bfu $block;
+        final /* synthetic */ IFunction0 $block;
 
         /*
          * JADX WARN: 'super' call moved to the top of the method (can break code
          * semantics)
          */
-        public AnonymousClass1(String str, boolean z, bfu bfuVar) {
+        public AnonymousClass1(String str, boolean z, IFunction0 bfuVar) {
             super(str, z);
             this.$block = bfuVar;
         }
@@ -80,13 +80,13 @@ public final class TaskQueue {
      * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
      */
     public static final class AnonymousClass2 extends Task {
-        final /* synthetic */ bfu $block;
+        final /* synthetic */ IFunction0 $block;
 
         /*
          * JADX WARN: 'super' call moved to the top of the method (can break code
          * semantics)
          */
-        public AnonymousClass2(String str, bfu bfuVar) {
+        public AnonymousClass2(String str, IFunction0 bfuVar) {
             super(str, false, 2, null);
             this.$block = bfuVar;
         }
@@ -105,7 +105,7 @@ public final class TaskQueue {
         this.futureTasks = new ArrayList();
     }
 
-    public static /* synthetic */ void execute$default(TaskQueue taskQueue, String str, long j, boolean z, bfu bfuVar,
+    public static /* synthetic */ void execute$default(TaskQueue taskQueue, String str, long j, boolean z, IFunction0 bfuVar,
             int i, Object obj) {
         if ((i & 2) != 0) {
             j = 0;
@@ -158,7 +158,7 @@ public final class TaskQueue {
         return z;
     }
 
-    public final void execute(String str, long j, boolean z, bfu bfuVar) {
+    public final void execute(String str, long j, boolean z, IFunction0 bfuVar) {
         throwIfVar1IsNull(str, "name");
         throwIfVar1IsNull(bfuVar, "block");
         schedule(new AnonymousClass1(str, z, bfuVar), j);
@@ -310,8 +310,8 @@ public final class TaskQueue {
         return this.name;
     }
 
-    public static /* synthetic */ void schedule$default(TaskQueue taskQueue, String str, long j, bfu bfuVar, int i,
-            Object obj) {
+    public static /* synthetic */ void schedule$default(TaskQueue taskQueue, String str, long j, IFunction0 bfuVar, int i,
+                                                        Object obj) {
         if ((i & 2) != 0) {
             j = 0;
         }
@@ -320,7 +320,7 @@ public final class TaskQueue {
         taskQueue.schedule(new AnonymousClass2(str, bfuVar), j);
     }
 
-    public final void schedule(String str, long j, bfu bfuVar) {
+    public final void schedule(String str, long j, IFunction0 bfuVar) {
         throwIfVar1IsNull(str, "name");
         throwIfVar1IsNull(bfuVar, "block");
         schedule(new AnonymousClass2(str, bfuVar), j);

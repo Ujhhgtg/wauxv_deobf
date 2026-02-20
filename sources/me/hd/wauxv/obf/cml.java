@@ -198,7 +198,7 @@ public final /* synthetic */ class cml implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar6 = new DexFinder();
                 cmy.a.getClass();
-                cdjVar6.o(StaticHelpers7.toDexConstructor(cmw.a).getDeclaringClass());
+                cdjVar6.setDeclaredClassName(StaticHelpers7.toDexConstructor(cmw.a).getDeclaringClass());
                 cdjVar6.usingStrings("This NetSceneVerifyUser init NEVER use opcode == MM_VERIFYUSER_VERIFYOK" /*
                                                                                                      * cnb.z(-
                                                                                                      * 125602023602986L)

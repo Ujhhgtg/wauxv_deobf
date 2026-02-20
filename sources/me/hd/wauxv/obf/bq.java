@@ -65,7 +65,7 @@ public final /* synthetic */ class bq implements View.OnClickListener {
                 return;
             case 8:
                 int i2 = MainActivity.as;
-                ((bfu) obj).invoke();
+                ((IFunction0) obj).invoke();
                 return;
             case 9:
                 ((cas) obj).ed();

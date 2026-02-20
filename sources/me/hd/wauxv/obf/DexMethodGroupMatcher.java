@@ -22,7 +22,7 @@ public final class DexMethodGroupMatcher extends dqc {
         }
         zbVar.b = fjVar;
         DexMethodGroupMatcher zbVar2 = new DexMethodGroupMatcher();
-        zbVar2.j(str, dne.Equals);
+        zbVar2.j(str, MatchTypeEnum.Equals);
         List arrayList = fjVar.b;
         if (arrayList == null) {
             arrayList = new ArrayList();
@@ -71,15 +71,15 @@ public final class DexMethodGroupMatcher extends dqc {
         return iU;
     }
 
-    public final void j(String str, dne dneVar) {
-        throwIfVar1IsNull(str, "className");
-        this.a = new dnf(str, dneVar, false);
+    public final void j(String className, MatchTypeEnum matchTypeEnumVar) {
+        throwIfVar1IsNull(className, "className");
+        this.a = new dnf(className, matchTypeEnumVar, false);
     }
 
     public final void usingEqStrings(String... strArr) {
         ArrayList arrayList = new ArrayList(strArr.length);
         for (String str : strArr) {
-            arrayList.add(new dnf(str, dne.Equals, false));
+            arrayList.add(new dnf(str, MatchTypeEnum.Equals, false));
         }
         this.g = StaticHelpers5.ab(arrayList);
     }

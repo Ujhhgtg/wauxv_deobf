@@ -13,8 +13,8 @@ public final class cgy extends bws implements IDexFind {
         String strZ = "SELECT * FROM message WHERE msgId = ?" /* "SELECT * FROM message WHERE msgId = ?" /* "SELECT * FROM message WHERE msgId = ?" /* cnb.z(-369534691179306L)  */;
         Object[] objArr = { Long.valueOf(j) };
         int i = 0;
-        dlx.a.getClass();
-        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        ClassSqliteDBDexFind.INSTANCE.getClass();
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(ClassSqliteDBDexFind.getDb()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
         Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) }, 2, methodResolverVarT)).invoke(strZ,
                 objArr);

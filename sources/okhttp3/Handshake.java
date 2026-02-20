@@ -15,7 +15,7 @@ import me.hd.wauxv.obf.StaticHelpers5;
 import me.hd.wauxv.obf.StaticHelpers4;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.EmptyReadonlyList;
-import me.hd.wauxv.obf.bfu;
+import me.hd.wauxv.obf.IFunction0;
 import me.hd.wauxv.obf.btp;
 import me.hd.wauxv.obf.IHasGetValue;
 import me.hd.wauxv.obf.Kotlin$Lazy;
@@ -100,14 +100,14 @@ public final class Handshake {
      * JADX INFO: compiled from:
      * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
      */
-    public static final class AnonymousClass2 extends btp implements bfu {
-        final /* synthetic */ bfu $peerCertificatesFn;
+    public static final class AnonymousClass2 extends btp implements IFunction0 {
+        final /* synthetic */ IFunction0 $peerCertificatesFn;
 
         /*
          * JADX WARN: 'super' call moved to the top of the method (can break code
          * semantics)
          */
-        public AnonymousClass2(bfu bfuVar) {
+        public AnonymousClass2(IFunction0 bfuVar) {
             super(0);
             this.$peerCertificatesFn = bfuVar;
         }
@@ -123,7 +123,7 @@ public final class Handshake {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public Handshake(TlsVersion tlsVersion, CipherSuite cipherSuite, List<? extends Certificate> list, bfu bfuVar) {
+    public Handshake(TlsVersion tlsVersion, CipherSuite cipherSuite, List<? extends Certificate> list, IFunction0 bfuVar) {
         throwIfVar1IsNull(tlsVersion, "tlsVersion");
         throwIfVar1IsNull(cipherSuite, "cipherSuite");
         throwIfVar1IsNull(list, "localCertificates");

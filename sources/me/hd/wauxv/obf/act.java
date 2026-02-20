@@ -160,7 +160,7 @@ public final /* synthetic */ class act implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar9 = new DexFinder();
                 aeg.a.getClass();
-                cdjVar9.o(StaticHelpers7.toDexMethod(aee.a).getDeclaringClass());
+                cdjVar9.setDeclaredClassName(StaticHelpers7.toDexMethod(aee.a).getDeclaringClass());
                 cdjVar9.usingStrings("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-386474042194730L)  */,
                         "getAllContactLable time:%s count:%s stack:%s" /* "getAllContactLable time:%s count:%s stack:%s" /* "getAllContactLable time:%s count:%s stack:%s" /* cnb.z(-386289358601002L)  */,
                         "select * from ContactLabel where isTemporary = 0  order by createTime ASC " /*
@@ -184,7 +184,7 @@ public final /* synthetic */ class act implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar11 = new DexFinder();
                 aeg.a.getClass();
-                cdjVar11.o(StaticHelpers7.toDexMethod(aee.a).getDeclaringClass());
+                cdjVar11.setDeclaredClassName(StaticHelpers7.toDexMethod(aee.a).getDeclaringClass());
                 cdjVar11.usingStrings("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-383574939269930L)  */,
                         "getUserNameListById time:%s id:%s count:%s stack:%s" /* "getUserNameListById time:%s id:%s count:%s stack:%s" /* "getUserNameListById time:%s id:%s count:%s stack:%s" /* cnb.z(-382892039469866L)  */);
                 dexMethodQueryBuilderVar5.getClass();
@@ -202,7 +202,7 @@ public final /* synthetic */ class act implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar12 = new DexFinder();
                 aeo.a.getClass();
-                cdjVar12.o(StaticHelpers7.toDexClass(aem.a));
+                cdjVar12.setDeclaredClassName(StaticHelpers7.toDexClass(aem.a));
                 Class<String> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cls3 = clsBf3 != null ? clsBf3 : String.class;
                 Class<Boolean> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));

@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bfu;
+import me.hd.wauxv.obf.IFunction0;
 import me.hd.wauxv.obf.dai;
 import me.hd.wauxv.obf.StaticHelpers6;
 import me.hd.wauxv.obf.emc;
@@ -314,7 +314,7 @@ public final class Http2Connection implements Closeable {
      * JADX INFO: compiled from:
      * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
      */
-    public final class ReaderRunnable implements Http2Reader.Handler, bfu {
+    public final class ReaderRunnable implements Http2Reader.Handler, IFunction0 {
         private final Http2Reader reader;
         final /* synthetic */ Http2Connection this$0;
 

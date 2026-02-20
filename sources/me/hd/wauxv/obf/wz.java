@@ -5,9 +5,9 @@ package me.hd.wauxv.obf;
 public final class wz {
     public final int a;
     public final String b;
-    public final bfu c;
+    public final IFunction0 c;
 
-    public wz(int i, String str, bfu bfuVar) {
+    public wz(int i, String str, IFunction0 bfuVar) {
         this.a = i;
         this.b = str;
         this.c = bfuVar;

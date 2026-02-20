@@ -81,7 +81,7 @@ public final /* synthetic */ class cvc implements IInvokable {
             case 0:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar = new DexFinder();
-                cdjVar.o(cvh.a.b());
+                cdjVar.setDeclaredClassName(cvh.a.b());
                 Class<String> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar.q(clsBf != null ? clsBf : String.class);
                 cdjVar.usingStrings("Preference does not have a key assigned." /* "Preference does not have a key assigned." /* "Preference does not have a key assigned." /* cnb.z(-101232379165482L)  */);

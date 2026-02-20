@@ -32,7 +32,7 @@ public final class aek {
 
     public aek() {
         final int i = 0;
-        this.e = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+        this.e = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.aej
             public final /* synthetic */ aek b;
 
             {
@@ -61,7 +61,7 @@ public final class aek {
             }
         });
         final int i2 = 1;
-        this.f = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+        this.f = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.aej
             public final /* synthetic */ aek b;
 
             {
@@ -90,7 +90,7 @@ public final class aek {
             }
         });
         final int i3 = 2;
-        this.g = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+        this.g = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.aej
             public final /* synthetic */ aek b;
 
             {
@@ -119,7 +119,7 @@ public final class aek {
             }
         });
         final int i4 = 3;
-        this.h = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+        this.h = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.aej
             public final /* synthetic */ aek b;
 
             {
@@ -148,7 +148,7 @@ public final class aek {
             }
         });
         final int i5 = 4;
-        this.i = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+        this.i = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.aej
             public final /* synthetic */ aek b;
 
             {
@@ -177,7 +177,7 @@ public final class aek {
             }
         });
         final int i6 = 5;
-        this.j = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+        this.j = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.aej
             public final /* synthetic */ aek b;
 
             {
@@ -206,7 +206,7 @@ public final class aek {
             }
         });
         final int i7 = 6;
-        this.k = new Kotlin$Lazy(new bfu(this) { // from class: me.hd.wauxv.obf.aej
+        this.k = new Kotlin$Lazy(new IFunction0(this) { // from class: me.hd.wauxv.obf.aej
             public final /* synthetic */ aek b;
 
             {

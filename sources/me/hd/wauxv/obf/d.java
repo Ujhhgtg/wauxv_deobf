@@ -36,8 +36,8 @@ public final /* synthetic */ class d implements View.OnClickListener {
                 String strZ2 = "productID = ?" /* "productID = ?" /* "productID = ?" /* cnb.z(-471411315440426L)  */;
                 String[] strArr = { "wa.panel.emoji.group" /* "wa.panel.emoji.group" /* "wa.panel.emoji.group" /* cnb.z(-471334006029098L)  */ };
                 int i = 0;
-                dlx.a.getClass();
-                MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                ClassSqliteDBDexFind.INSTANCE.getClass();
+                MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(ClassSqliteDBDexFind.getDb()).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.name = "delete" /* "delete" /* "delete" /* cnb.z(-103225243990826L)  */;
                 Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(
                         new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(String.class), dal.getKClassFromClass(String[].class) }, 3, methodResolverVarT))

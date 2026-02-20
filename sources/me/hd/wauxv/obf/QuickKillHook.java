@@ -5,7 +5,7 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class QuickKillHook extends SwitchHook implements bnn {
+public final class QuickKillHook extends SwitchHook implements IMainScreenOptionsMenuHook {
     public static final QuickKillHook a = new QuickKillHook("QuickKillHook" /* "QuickKillHook" /* "QuickKillHook" /* "QuickKillHook" /* cnb.z(-513278656641834L)   */);
     public static final String b = "菜单" /* "菜单" /* "菜单" /* "菜单" /* cnb.z(-513231412001578L)   */;
     public static final String c = "快捷终止" /* "快捷终止" /* "快捷终止" /* "快捷终止" /* cnb.z(-512617231678250L)   */;
@@ -26,10 +26,12 @@ public final class QuickKillHook extends SwitchHook implements bnn {
     }
 
     @Override // me.hd.wauxv.obf.bnn
-    public final List j() {
+    public final List getUiElements() {
         return !getIsEnabled() ? EmptyReadonlyList.INSTANCE
-                : dqc.toSingletonList(new bly(R.id.MenuItem_Home_QuickKill, "快捷终止" /* "快捷终止" /* "快捷终止" /* "快捷终止" /* cnb.z(-513201347230506L)   */,
-                        R.drawable.ic_menu_kill_24dp, new Function1$VarIsInt$2(20)));
+                : dqc.toSingletonList(new bly(R.id.MenuItem_Home_QuickKill, "快捷终止",
+                        R.drawable.ic_menu_kill_24dp, () -> {
+            Process.killProcess(Process.myPid())
+        }));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

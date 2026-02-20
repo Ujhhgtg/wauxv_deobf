@@ -27,8 +27,8 @@ public final class cqz extends bws implements IDatabaseOperationsListener {
             }
             Set setAd = StaticHelpers5.ad(dnj.as(asString2, new String[] { ";" /* ";" /* ";" /* ";" /* cnb.z(-396640229784362L)   */ }));
             int i2 = 0;
-            dlx.a.getClass();
-            MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+            ClassSqliteDBDexFind.INSTANCE.getClass();
+            MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(ClassSqliteDBDexFind.getDb()).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)   */;
             Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) }, 2, methodResolverVarT)).invoke(
                     "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* "SELECT memberlist, memberCount FROM chatroom WHERE chatroomname = ?" /* cnb.z(-396648819718954L)   */,

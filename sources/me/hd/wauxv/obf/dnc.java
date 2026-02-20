@@ -43,7 +43,6 @@ public abstract class dnc {
     }
 
     public static /* synthetic */ void c(String str) {
-        HostInfoRegistry.INSTANCE.getClass();
         tryGetClassByName(HostInfoRegistry.getContext(), str);
     }
 

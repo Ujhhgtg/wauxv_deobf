@@ -5,7 +5,7 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cha extends SwitchHook implements bnn {
+public final class cha extends SwitchHook implements IMainScreenOptionsMenuHook {
     public static final cha a = new cha("MsgListHideOrShowHook" /* "MsgListHideOrShowHook" /* "MsgListHideOrShowHook" /* cnb.z(-525317449972522L)  */);
     public static final String b = "菜单" /* "菜单" /* "菜单" /* cnb.z(-524776284093226L)  */;
     public static final String c = "消息列表" /* "消息列表" /* "消息列表" /* cnb.z(-513166987492138L)  */;
@@ -26,7 +26,7 @@ public final class cha extends SwitchHook implements bnn {
     }
 
     @Override // me.hd.wauxv.obf.bnn
-    public final List j() {
+    public final List getUiElements() {
         return !z() ? EmptyReadonlyList.INSTANCE
                 : OtherStaticHelpers.argsToList(
                         new bly(R.id.MenuItem_Home_MsgListHide, "列表隐藏" /* "列表隐藏" /* "列表隐藏" /* cnb.z(-524656025008938L)  */,

@@ -27,7 +27,7 @@ public final class ewm {
         b = new IEmpty7[]{cwbVar, new cwb(ewm.class, "XmlBlockClass", "getXmlBlockClass()Ljava/lang/Class;")};
         a = new ewm();
         c = ReflectionWrapper.h("android.content.res.ApkAssets", null, 6);
-        d = new FactoryPools("android.content.res.XmlBlock", (bfu) null);
+        d = new FactoryPools("android.content.res.XmlBlock", (IFunction0) null);
         h = new ewl(0);
         i = new Kotlin$Lazy(new efq(19));
     }

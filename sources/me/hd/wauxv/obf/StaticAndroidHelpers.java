@@ -278,7 +278,7 @@ public abstract class StaticAndroidHelpers {
         return view.getLayoutDirection() == 1;
     }
 
-    public static IHasGetValue am(btx btxVar, bfu bfuVar) {
+    public static IHasGetValue am(btx btxVar, IFunction0 bfuVar) {
         arj arjVar = arj.n;
         int iOrdinal = btxVar.ordinal();
         if (iOrdinal == 0) {

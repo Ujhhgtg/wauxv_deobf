@@ -585,7 +585,7 @@ public class FactoryPools implements dcq, cuv {
     public Class w() {
         String str = (String) this.e;
         if (((Class) this.h) == null) {
-            bfu bfuVar = (bfu) this.f;
+            IFunction0 bfuVar = (IFunction0) this.f;
             this.h = ReflectionWrapper.tryGetClassByName(bfuVar != null ? (ClassLoader) bfuVar.invoke() : null, str);
         }
         Class cls = (Class) this.h;
@@ -780,7 +780,7 @@ public class FactoryPools implements dcq, cuv {
         this.h = adrVar;
     }
 
-    public FactoryPools(String str, bfu bfuVar) {
+    public FactoryPools(String str, IFunction0 bfuVar) {
         this.d = 14;
         this.e = str;
         this.f = bfuVar;

@@ -4,7 +4,7 @@ import android.widget.Toast;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class cle extends btp implements bfu {
+public final class cle extends btp implements IFunction0 {
     public final /* synthetic */ int a;
     public final /* synthetic */ Object b;
 

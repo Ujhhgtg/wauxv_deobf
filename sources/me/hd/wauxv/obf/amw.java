@@ -6,9 +6,9 @@ import android.content.DialogInterface;
 /* JADX INFO: loaded from: classes.dex */
 public final /* synthetic */ class amw implements DialogInterface.OnClickListener {
     public final /* synthetic */ int a;
-    public final /* synthetic */ bfu b;
+    public final /* synthetic */ IFunction0 b;
 
-    public /* synthetic */ amw(bfu bfuVar, int i) {
+    public /* synthetic */ amw(IFunction0 bfuVar, int i) {
         this.a = i;
         this.b = bfuVar;
     }

@@ -8,10 +8,10 @@ import android.window.OnBackAnimationCallback;
 public final class cqo implements OnBackAnimationCallback {
     public final /* synthetic */ IInvokable a;
     public final /* synthetic */ IInvokable b;
-    public final /* synthetic */ bfu c;
-    public final /* synthetic */ bfu d;
+    public final /* synthetic */ IFunction0 c;
+    public final /* synthetic */ IFunction0 d;
 
-    public cqo(IInvokable bgfVar, IInvokable bgfVar2, bfu bfuVar, bfu bfuVar2) {
+    public cqo(IInvokable bgfVar, IInvokable bgfVar2, IFunction0 bfuVar, IFunction0 bfuVar2) {
         this.a = bgfVar;
         this.b = bgfVar2;
         this.c = bfuVar;

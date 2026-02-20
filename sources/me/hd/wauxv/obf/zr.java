@@ -6,7 +6,7 @@ import me.hd.wauxv.R;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class zr extends SwitchHook implements bnn {
+public final class zr extends SwitchHook implements IMainScreenOptionsMenuHook {
     public static final zr a = new zr("ClearAllUnReadHook" /* "ClearAllUnReadHook" /* "ClearAllUnReadHook" /* cnb.z(-523535038544682L)  */);
     public static final String b = "菜单" /* "菜单" /* "菜单" /* cnb.z(-525411939253034L)  */;
     public static final String c = "清空未读" /* "清空未读" /* "清空未读" /* cnb.z(-525416234220330L)  */;
@@ -36,7 +36,7 @@ public final class zr extends SwitchHook implements bnn {
     }
 
     @Override // me.hd.wauxv.obf.bnn
-    public final List j() {
+    public final List getUiElements() {
         return (z() && zp.a.i()) ? dqc.toSingletonList(new bly(R.id.MenuItem_Home_ClearAllUnRead,
                 "清空未读" /* "清空未读" /* "清空未读" /* cnb.z(-523805621484330L)  */, R.drawable.ic_menu_clear_24dp, new h(25))) : EmptyReadonlyList.INSTANCE;
     }

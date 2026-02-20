@@ -292,10 +292,10 @@ public abstract class bhv {
 
     public static final BaseBaseHook[] getAllBaseBaseHookInstances() {
         return new BaseBaseHook[] { ur.a, wm.a, wp.a, wr.a, aeq.a, afu.a, agi.a, aqw.a, axu.a, ayy.a, azd.a, bal.a,
-                bap.a, bmb.a,
+                bap.a, HomePopMenuApiHook.INSTANCE,
                 bzc.a, cey.a, cgf.a, cgt.a, cos.a, crj.a, dbl.a, djo.a, dly.a, dmi.a, dou.a, cfw.a, euj.a, eul.a, eop.a,
                 aic.a, agc.a, EmojiInfoMethodSaveEmojiThumbDexFind.INSTANCE, MicroMsgMsgInfoDexClassFind.INSTANCE, uq.a, xr.a, wv.a, xj.a, xn.a, gp.a, xv.a, xx.a, xz.a, elb.a, adz.a, byo.a,
-                byr.a, byt.a, cvh.a, dds.a, ahd.a, dlx.a, atp.a, EmojiInfoStorageDexFind.a, EmojiMgrImplHook.INSTANCE, EmojiStorageMgrDexFinder.INSTANCE, dpv.a, mo.a, apn.a, agk.a, kd.a,
+                MMKernelDexFind.INSTANCE, byt.a, cvh.a, dds.a, ClassCoreStorageDexFind.INSTANCE, ClassSqliteDBDexFind.INSTANCE, atp.a, EmojiInfoStorageDexFind.a, EmojiMgrImplHook.INSTANCE, EmojiStorageMgrDexFinder.INSTANCE, dpv.a, mo.a, apn.a, agk.a, kd.a,
                 acx.a, aga.a, etu.a, eoy.a, kb.a, cll.a, cln.a, clq.a, cls.a, clu.a, clw.a, cly.a, cma.a, cme.a, cmg.a,
                 cmi.a, cmk.a, cmn.a, cmp.a, cmr.a, cmt.a, cmv.a, cmy.a, mq.a, aec.a, EmojiFeatureServiceDexFinder.INSTANCE, bcp.a, bol.a, ctd.a, ServiceManagerDexFinder.INSTANCE,
                 dis.a, dmu.a, epx.a, bub.a, diu.a, djx.a, dkc.a, dkn.a, dkt.a, dkv.a, eog.a, ms.a, xp.a, acv.a, aeg.a,

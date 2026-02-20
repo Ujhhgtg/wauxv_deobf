@@ -13,7 +13,7 @@ public final class KClass implements IEmpty5, KClassContainer {
     public final Class javaClass;
 
     static {
-        List listAg = OtherStaticHelpers.argsToList(bfu.class, IInvokable.class, bgj.class, bgk.class, blv.class, bgl.class, bgm.class, aak.class,
+        List listAg = OtherStaticHelpers.argsToList(IFunction0.class, IInvokable.class, bgj.class, bgk.class, blv.class, bgl.class, bgm.class, aak.class,
                 bgn.class, bgo.class, bfv.class, bfw.class, bfx.class, bfy.class, bfz.class, bga.class, bgb.class,
                 bgc.class, bgd.class, bge.class, bgg.class, bgh.class, bgi.class);
         ArrayList arrayList = new ArrayList(StaticHelpers4.ak(listAg, 10));

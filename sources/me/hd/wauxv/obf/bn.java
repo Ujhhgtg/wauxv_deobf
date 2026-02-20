@@ -721,7 +721,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 if (str2 != null) {
                     cstVar = new cst();
                     DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
-                    zbVar.j(str2, dne.Equals);
+                    zbVar.j(str2, MatchTypeEnum.Equals);
                     cstVar.a = zbVar;
                 }
                 List arrayList3 = fjVar.b;
@@ -797,7 +797,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 eg egVar2 = (eg) bzyVar2.d;
                 egVar2.d = str3;
                 LinearLayout linearLayout2 = ceeVarD.b;
-                bzyVar2.t("保存" /* "保存" /* "保存" /* cnb.z(-453462647110442L)  */, new amw(new bfu() { // from class: me.hd.wauxv.obf.fv
+                bzyVar2.t("保存" /* "保存" /* "保存" /* cnb.z(-453462647110442L)  */, new amw(new IFunction0() { // from class: me.hd.wauxv.obf.fv
                     @Override // me.hd.wauxv.obf.bfu
                     public final Object invoke() {
                         switch (i8) {
@@ -860,7 +860,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 eg egVar3 = (eg) bzyVar3.d;
                 egVar3.d = str4;
                 LinearLayout linearLayout3 = ceeVarD2.b;
-                bzyVar3.t("保存" /* "保存" /* "保存" /* cnb.z(-454300165733162L)  */, new amw(new bfu() { // from class: me.hd.wauxv.obf.fv
+                bzyVar3.t("保存" /* "保存" /* "保存" /* cnb.z(-454300165733162L)  */, new amw(new IFunction0() { // from class: me.hd.wauxv.obf.fv
                     @Override // me.hd.wauxv.obf.bfu
                     public final Object invoke() {
                         switch (i7) {
@@ -936,8 +936,8 @@ public final /* synthetic */ class bn implements IInvokable {
                                 map.put(strZ14, null);
                                 hookParam3.setResult(map);
                                 int i13 = 0;
-                                dlx.a.getClass();
-                                MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dlx.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                                ClassSqliteDBDexFind.INSTANCE.getClass();
+                                MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(ClassSqliteDBDexFind.getDb()).getMethodResolverBasedOnPreviouslyProvidedConfig();
                                 methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
                                 Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) },
                                         2, methodResolverVarT)).invoke("SELECT createTime FROM message WHERE msgSvrId = ?" /*

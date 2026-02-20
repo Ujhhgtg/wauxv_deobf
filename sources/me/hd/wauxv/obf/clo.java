@@ -224,7 +224,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar8 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar8 = new DexFinder();
                 cme.a.getClass();
-                cdjVar8.o(StaticHelpers7.toDexMethod(cmc.a).getDeclaringClass());
+                cdjVar8.setDeclaredClassName(StaticHelpers7.toDexMethod(NetSceneQueue$MethodAddNetSceneToQueue.INSTANCE).getDeclaringClass());
                 MethodMatcher fjVar = new MethodMatcher();
                 DexFinder cdjVar9 = new DexFinder();
                 cdjVar9.usingStrings("MicroMsg.BigBallSysCmdMsgConsumer" /* "MicroMsg.BigBallSysCmdMsgConsumer" /* "MicroMsg.BigBallSysCmdMsgConsumer" /* "MicroMsg.BigBallSysCmdMsgConsumer" /* cnb.z(-135441793678122L)   */, "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* "summercck emotionkv pcKeyStr len:%d, content[%s] pcId[%s]" /* cnb.z(-135244225182506L)   */);

@@ -19,7 +19,7 @@ public final /* synthetic */ class hu implements OnBackInvokedCallback {
                 ((AppCompatDelegate) this.b).cm();
                 break;
             case 1:
-                bfu bfuVar = (bfu) this.b;
+                IFunction0 bfuVar = (IFunction0) this.b;
                 throwIfVar1IsNull(bfuVar, "$onBackInvoked");
                 bfuVar.invoke();
                 break;

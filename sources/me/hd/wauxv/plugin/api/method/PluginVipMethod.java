@@ -7,7 +7,7 @@ import me.hd.wauxv.obf.aen;
 import me.hd.wauxv.obf.aeo;
 import me.hd.wauxv.obf.FieldResolver;
 import me.hd.wauxv.obf.BoundField;
-import me.hd.wauxv.obf.bfu;
+import me.hd.wauxv.obf.IFunction0;
 import me.hd.wauxv.obf.bjs;
 import me.hd.wauxv.obf.MethodResolver;
 import me.hd.wauxv.obf.MethodHookWrapper;
@@ -22,7 +22,7 @@ import me.hd.wauxv.obf.yg;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class PluginVipMethod {
-    public static void a(bfu bfuVar) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
+    public static void a(IFunction0 bfuVar) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         aeo aeoVar = aeo.a;
         String strZ = "gh_6f586343034c" /* "gh_6f586343034c" /* "gh_6f586343034c" /* cnb.z(-401128470608682L)  */;
         aeoVar.getClass();
@@ -51,7 +51,7 @@ public final class PluginVipMethod {
     @cty
     public final void confirmTransfer(final String str, final String str2, final String str3, final int i)
             throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
-        a(new bfu() { // from class: me.hd.wauxv.obf.cul
+        a(new IFunction0() { // from class: me.hd.wauxv.obf.cul
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() throws NoSuchMethodException {
                 cme.tryGetClassByName(cme.a, cmp.tryGetClassByName(cmp.a, str, str2, "confirm" /*
@@ -66,7 +66,7 @@ public final class PluginVipMethod {
     @cty
     public final void refuseTransfer(final String str, final String str2, final String str3)
             throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
-        a(new bfu() { // from class: me.hd.wauxv.obf.cum
+        a(new IFunction0() { // from class: me.hd.wauxv.obf.cum
             @Override // me.hd.wauxv.obf.bfu
             public final Object invoke() throws NoSuchMethodException {
                 cme.tryGetClassByName(cme.a, cmp.tryGetClassByName(cmp.a, str, str2, "refuse" /*

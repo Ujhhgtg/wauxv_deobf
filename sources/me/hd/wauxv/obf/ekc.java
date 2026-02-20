@@ -71,7 +71,7 @@ public class ekc {
         return this.hasDeadline;
     }
 
-    public final <T> T intersectWith(ekc ekcVar, bfu bfuVar) {
+    public final <T> T intersectWith(ekc ekcVar, IFunction0 bfuVar) {
         throwIfVar1IsNull(ekcVar, "other");
         throwIfVar1IsNull(bfuVar, "block");
         long jTimeoutNanos = timeoutNanos();

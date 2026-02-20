@@ -49,12 +49,12 @@ public abstract class ams {
         return sb.toString();
     }
 
-    public static final String e(Class cls) {
+    public static final String getClassPrimitiveTypeName(Class cls) {
         throwIfVar1IsNull(cls, "clazz");
         if (cls.isArray()) {
             Class<?> componentType = cls.getComponentType();
             throwIfVar1IsNull(componentType);
-            return StaticHelpers6.concat(e(componentType), HttpUrl.PATH_SEGMENT_ENCODE_SET_URI);
+            return StaticHelpers6.concat(getClassPrimitiveTypeName(componentType), HttpUrl.PATH_SEGMENT_ENCODE_SET_URI);
         }
         if (!cls.isPrimitive()) {
             return cls.getName();

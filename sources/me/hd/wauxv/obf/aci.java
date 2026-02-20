@@ -469,7 +469,7 @@ public abstract class aci extends Activity implements err, bkg, dep, bup, btl {
                     bftVar.b = true;
                     Iterator it = bftVar.c.iterator();
                     while (it.hasNext()) {
-                        ((bfu) it.next()).invoke();
+                        ((IFunction0) it.next()).invoke();
                     }
                     bftVar.c.clear();
                 } catch (Throwable th) {

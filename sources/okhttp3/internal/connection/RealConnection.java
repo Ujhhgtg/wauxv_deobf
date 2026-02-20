@@ -20,7 +20,7 @@ import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 import me.hd.wauxv.obf.StaticHelpers4;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bfu;
+import me.hd.wauxv.obf.IFunction0;
 import me.hd.wauxv.obf.btp;
 import me.hd.wauxv.obf.dnk;
 import me.hd.wauxv.obf.ekc;
@@ -136,7 +136,7 @@ public final class RealConnection extends Http2Connection.Listener implements Co
      * JADX INFO: compiled from:
      * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
      */
-    public static final class AnonymousClass1 extends btp implements bfu {
+    public static final class AnonymousClass1 extends btp implements IFunction0 {
         final /* synthetic */ Address $address;
         final /* synthetic */ CertificatePinner $certificatePinner;
         final /* synthetic */ Handshake $unverifiedHandshake;
@@ -171,7 +171,7 @@ public final class RealConnection extends Http2Connection.Listener implements Co
      * JADX INFO: compiled from:
      * r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6
      */
-    public static final class AnonymousClass2 extends btp implements bfu {
+    public static final class AnonymousClass2 extends btp implements IFunction0 {
         public AnonymousClass2() {
             super(0);
         }

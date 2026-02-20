@@ -82,7 +82,7 @@ public final class ci extends AnimatorListenerAdapter {
             case 5:
                 throwIfVar1IsNull(animator, "animation");
                 super.onAnimationEnd(animator);
-                bfu onMenuClosed = ((ccz) this.b).getOnMenuClosed();
+                IFunction0 onMenuClosed = ((ccz) this.b).getOnMenuClosed();
                 if (onMenuClosed != null) {
                     onMenuClosed.invoke();
                 }

@@ -80,9 +80,8 @@ public final class eui extends ewy {
                 bal.a.getClass();
                 bal.b.add((bnl) bmfVar);
             }
-            if (bmfVar instanceof bnn) {
-                bmb.a.getClass();
-                bmb.b.add((bnn) bmfVar);
+            if (bmfVar instanceof IMainScreenOptionsMenuHook) {
+                HomePopMenuApiHook.allHomePopMenuHooks.add((IMainScreenOptionsMenuHook) bmfVar);
             }
             if (bmfVar instanceof bnp) {
                 bzc.a.getClass();

@@ -10,9 +10,9 @@ public final class acv extends bws implements IDexFind {
     public static Object b(acv acvVar, int i) {
         acvVar.getClass();
         int i2 = 0;
-        ahd.a.getClass();
-        byr.a.getClass();
-        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(byr.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        ClassCoreStorageDexFind.INSTANCE.getClass();
+        MMKernelDexFind.INSTANCE.getClass();
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(MMKernelDexFind.getCoreStorage()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         a.getClass();
         methodResolverVarT.returnType = StaticHelpers7.toDexClass(acu.a);
         Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT)).invokeAndThrowIfFailed(new Object[0]);

@@ -32,7 +32,7 @@ import me.hd.wauxv.obf.StaticHelpers4;
 import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.EmptyReadonlyMap;
 import me.hd.wauxv.obf.aye;
-import me.hd.wauxv.obf.bfu;
+import me.hd.wauxv.obf.IFunction0;
 import me.hd.wauxv.obf.IInvokable;
 import me.hd.wauxv.obf.bqe;
 import me.hd.wauxv.obf.IntRange;
@@ -276,7 +276,7 @@ public final class Util {
         return -1L;
     }
 
-    public static final void ignoreIoExceptions(bfu bfuVar) {
+    public static final void ignoreIoExceptions(IFunction0 bfuVar) {
         throwIfVar1IsNull(bfuVar, "block");
         try {
             bfuVar.invoke();
@@ -623,7 +623,7 @@ public final class Util {
         return thread;
     }
 
-    public static final void threadName(String str, bfu bfuVar) {
+    public static final void threadName(String str, IFunction0 bfuVar) {
         throwIfVar1IsNull(str, "name");
         throwIfVar1IsNull(bfuVar, "block");
         Thread threadCurrentThread = Thread.currentThread();
