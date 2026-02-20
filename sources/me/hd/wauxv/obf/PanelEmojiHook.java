@@ -77,15 +77,15 @@ public final class PanelEmojiHook extends SwitchHook implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(PanelEmojiHook$MethodGetEmojiGroupInfo.INSTANCE));
         PanelEmojiHook panelEmojiHookVar = INSTANCE;
         HookManager hookManagerVarAb = PackageParam.createHook(panelEmojiHookVar, listBf);
-        panelEmojiHookVar.hookAfter(hookManagerVarAb, (obj) -> {
-            Object obj2 = null;
+        panelEmojiHookVar.hookAfter(hookManagerVarAb, (hookParam) -> {
+            Object result2 = null;
             Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
-            Object objF = ((HookParam) obj).getResult();
-            if ((objF instanceof List) && (!(objF instanceof IEmpty) || (objF instanceof IEmpty3))) {
-                obj2 = objF;
+            Object result = ((HookParam) hookParam).getResult();
+            if ((result instanceof List) && (!(result instanceof IEmpty) || (result instanceof IEmpty3))) {
+                result2 = result;
             }
-            List list = (List) obj2;
-            throwIfVar1IsNull(list);
+            List resultList = (List) result2;
+            throwIfVar1IsNull(resultList);
             ContentValues contentValues = new ContentValues();
             contentValues.put("packGrayIconUrl",
                     "https://avatars.githubusercontent.com/u/49312623");
@@ -107,7 +107,7 @@ public final class PanelEmojiHook extends SwitchHook implements IDexFind {
             methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(ContentValues.class), dal.getKClassFromClass(Boolean.TYPE) }, 2));
             methodResolverVarT.enableSuperclass();
             ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).invokeAndThrowIfFailed(contentValues, Boolean.TRUE);
-            list.add(0, objC);
+            resultList.add(0, objC);
             return kotlinUnitVar;
         });
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
@@ -178,8 +178,7 @@ public final class PanelEmojiHook extends SwitchHook implements IDexFind {
                 ((FindDexClassMethodDslWrapper) obj2).onMethodCallback = (obj3) -> {
                     DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj3;
                     DexFinder cdjVar2 = new DexFinder();
-                    DexFinder.setClassEquals(cdjVar2, "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI");
-                    cdjVar2.usingStrings("checkNeedShowOriginVideoBtn");
+                    cdjVar2.usingStrings("MicroMsg.emoji.EmojiGroupInfoStorage", "get Panel EmojiGroupInfo.");
                     dexMethodQueryBuilderVar2.dexFinder = cdjVar2;
                 };
             };

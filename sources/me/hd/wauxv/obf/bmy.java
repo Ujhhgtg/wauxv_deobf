@@ -1110,7 +1110,7 @@ public abstract class bmy {
                 CustomUnReadCountHook.a,
                 azr.a, elx.a, un.a, uo.a, cie.a, cif.a, fp.a, cnl.a, bjm.a, bjx.a, atx.a, bxj.a, etr.a, dlv.a,
                 RemoveMultiSelectLimitHook.a,
-                dax.a, day.a, dbe.a, aun.a, cgc.a, chc.a, etl.a, etw.a, ctp.b, cxb.b, zr.a, cha.a, crm.a, cwy.a, cez.b,
+                dax.a, day.a, dbe.a, aun.a, cgc.a, chc.a, etl.a, etw.a, ctp.b, cxb.b, zr.a, cha.a, crm.a, QuickKillHook.a, cez.b,
                 cfa.b, cfc.b, lx.a, md.a, zw.a, DisableBrightnessHook.a, cdo.a, cho.a, deu.a, dha.a, dpf.a, dad.a,
                 dae.a, daf.a, ge.a,
                 gf.a, gh.a, diq.a, div.a, diz.b, dja.b, djh.a, djv.a, SnsUploadAppInfoHook.a, dkl.a, xf.a, bbj.a, vg.a,

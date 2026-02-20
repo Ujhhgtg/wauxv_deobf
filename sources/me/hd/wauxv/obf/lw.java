@@ -159,7 +159,7 @@ public final class lw extends doi implements bgj {
                                 String strB = EmojiMgrImplHook.getMd5FromPath(absolutePath);
                                 Object objB = EmojiInfoStorageDexFind.getEmojiInfoByMd5(strB);
                                 StaticHelpers7.toDexMethod(EmojiInfo$MethodSaveEmojiThumb.INSTANCE).invoke(objB, null, Boolean.TRUE);
-                                arrayList2.add(StaticHelpers7.toDexConstructor(PanelEmojiHook$ConstructorGroupItemInfo.INSTANCE).newInstance(objB, 2, "" /* "" /* "" /* "" /* cnb.z(-474215929084714L)   */, 0));
+                                arrayList2.add(StaticHelpers7.toDexConstructor(PanelEmojiHook$ConstructorGroupItemInfo.INSTANCE).newInstance(objB, 2, "", 0));
                             }
                         }
                     }
