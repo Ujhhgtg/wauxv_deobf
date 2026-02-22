@@ -73,7 +73,7 @@ public final class gh extends SwitchHook implements IDatabaseOperationsListener 
                         int iIntValue2 = ((Number) pairVarI.second).intValue();
                         int i = iIntValue + iR;
                         byte[] bArrX = SomeStaticHelpers.x(bArr, dqc.bm(i, bArr.length));
-                        Charset charset = uj.a;
+                        Charset charset = Charsets.UTF_8;
                         if (dnr.bp(new String(bArrX, charset), strO, false)) {
                             bArrV = bArr;
                         } else {
@@ -105,7 +105,7 @@ public final class gh extends SwitchHook implements IDatabaseOperationsListener 
                     int iIntValue4 = ((Number) pairVarI2.second).intValue();
                     int i3 = iIntValue3 + i2;
                     byte[] bArrX2 = SomeStaticHelpers.x(bArr2, dqc.bm(i3, bArr2.length));
-                    Charset charset2 = uj.a;
+                    Charset charset2 = Charsets.UTF_8;
                     if (dnr.bp(new String(bArrX2, charset2), strO2, false)) {
                         bArrV = bArr2;
                     } else {

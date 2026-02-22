@@ -62,8 +62,8 @@ public final class Logger {
             return;
         }
         if (iOrdinal == 2) {
-            boolean z3 = exm.a;
-            if (exm.l()) {
+            boolean z3 = exm.isInitialized;
+            if (exm.isXposedEnvironment()) {
                 writeToXposed(z2, logEntryVar, z);
                 return;
             } else {
@@ -75,8 +75,8 @@ public final class Logger {
             throw new QueryDidNotReturnUniqueResultRuntimeException();
         }
         writeToLogcat(logEntryVar);
-        boolean z4 = exm.a;
-        if (exm.l()) {
+        boolean z4 = exm.isInitialized;
+        if (exm.isXposedEnvironment()) {
             writeToXposed(z2, logEntryVar, z);
         }
     }

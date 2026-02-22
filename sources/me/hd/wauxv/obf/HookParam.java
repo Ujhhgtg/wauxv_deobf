@@ -66,7 +66,7 @@ public final class HookParam {
     }
 
     public final Object[] getArgs() {
-        Object[] objArrI = this.b.i();
+        Object[] objArrI = this.b.getArgs();
         if (objArrI != null) {
             return objArrI;
         }

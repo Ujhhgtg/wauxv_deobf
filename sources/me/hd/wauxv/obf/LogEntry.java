@@ -41,15 +41,15 @@ public final class LogEntry implements Serializable {
         long jCurrentTimeMillis = System.currentTimeMillis();
         this.a = jCurrentTimeMillis;
         this.b = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS", Locale.ROOT).format(new Date(jCurrentTimeMillis));
-        if (exm.l() && exm.c) {
+        if (exm.isXposedEnvironment() && exm.c) {
             strI = "android-zygote";
         } else {
             ki.a.getClass();
-            strI = ki.i();
+            strI = ki.getCurrentPackageName();
         }
         this.e = strI;
         ki.a.getClass();
-        String strI2 = ki.i();
+        String strI2 = ki.getCurrentPackageName();
         int i2 = 0;
         FactoryPools factoryPoolsVar = ki.e;
         IEmpty7 btcVar = ki.b[0];
@@ -60,13 +60,13 @@ public final class LogEntry implements Serializable {
         MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "currentActivityThread";
         methodResolverVarT.setParamCountTo0();
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT.findMethods());
         Context context = null;
         Object objE = methodHookWrapperVar != null ? methodHookWrapperVar.invokeAndThrowIfFailed(new Object[0]) : null;
         MethodResolver methodResolverVarT2 = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.name = "getSystemContext";
         methodResolverVarT2.setParamCountTo0();
-        MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT2.findMethods());
+        MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT2.findMethods());
         if (methodHookWrapperVar2 != null) {
             methodHookWrapperVar2.bindInstance(objE);
             context = (Context) methodHookWrapperVar2.i(new Object[0]);
@@ -80,7 +80,7 @@ public final class LogEntry implements Serializable {
             MethodResolver methodResolverVarT3 = bmuVarBg.getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT3.name = "getUserId";
             methodResolverVarT3.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(Integer.TYPE) }, 1));
-            MethodHookWrapper methodHookWrapperVar3 = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT3.findMethods());
+            MethodHookWrapper methodHookWrapperVar3 = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT3.findMethods());
             if (methodHookWrapperVar3 != null && (num = (Integer) methodHookWrapperVar3.invoke(Integer.valueOf(i3))) != null) {
                 iIntValue = num.intValue();
             }

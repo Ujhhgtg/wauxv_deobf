@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class ckx extends doi implements bgj {
+public final class ckx extends doi implements Function2 {
     public final /* synthetic */ int a = 1;
     public int d;
     public /* synthetic */ Object e;
@@ -44,7 +44,7 @@ public final class ckx extends doi implements bgj {
     public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         switch (this.a) {
             case 0:
-                ckx ckxVar = new ckx((cky) this.f, (bgj) this.o, afwVar);
+                ckx ckxVar = new ckx((cky) this.f, (Function2) this.o, afwVar);
                 ckxVar.e = obj;
                 return ckxVar;
             case 1:
@@ -130,7 +130,7 @@ public final class ckx extends doi implements bgj {
                 }
                 FastKV.bd(obj);
                 beo beoVar = new beo((String) serializable, i2);
-                Dispatchers$Default alcVar = aou.a;
+                Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                 Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
                 dob dobVar = new dob();
                 akqVar.getClass();
@@ -157,9 +157,9 @@ public final class ckx extends doi implements bgj {
      * semantics)
      */
     /* JADX WARN: Multi-variable type inference failed */
-    public ckx(cky ckyVar, bgj bgjVar, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
+    public ckx(cky ckyVar, Function2 function2Var, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(2, afwVar);
         this.f = ckyVar;
-        this.o = (doi) bgjVar;
+        this.o = (doi) function2Var;
     }
 }

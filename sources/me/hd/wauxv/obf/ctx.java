@@ -60,7 +60,7 @@ public final class ctx {
                         ctx ctxVar = this.b;
                         if (ctxVar.c.exists()) {
                             properties.load(new BufferedReader(
-                                    new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
+                                    new InputStreamReader(new FileInputStream(ctxVar.c), Charsets.UTF_8), 8192));
                         }
                         return properties;
                     case 1:
@@ -116,7 +116,7 @@ public final class ctx {
                         ctx ctxVar = this.b;
                         if (ctxVar.c.exists()) {
                             properties.load(new BufferedReader(
-                                    new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
+                                    new InputStreamReader(new FileInputStream(ctxVar.c), Charsets.UTF_8), 8192));
                         }
                         return properties;
                     case 1:
@@ -170,7 +170,7 @@ public final class ctx {
                         ctx ctxVar = this.b;
                         if (ctxVar.c.exists()) {
                             properties.load(new BufferedReader(
-                                    new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
+                                    new InputStreamReader(new FileInputStream(ctxVar.c), Charsets.UTF_8), 8192));
                         }
                         return properties;
                     case 1:
@@ -224,7 +224,7 @@ public final class ctx {
                         ctx ctxVar = this.b;
                         if (ctxVar.c.exists()) {
                             properties.load(new BufferedReader(
-                                    new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
+                                    new InputStreamReader(new FileInputStream(ctxVar.c), Charsets.UTF_8), 8192));
                         }
                         return properties;
                     case 1:
@@ -278,7 +278,7 @@ public final class ctx {
                         ctx ctxVar = this.b;
                         if (ctxVar.c.exists()) {
                             properties.load(new BufferedReader(
-                                    new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
+                                    new InputStreamReader(new FileInputStream(ctxVar.c), Charsets.UTF_8), 8192));
                         }
                         return properties;
                     case 1:
@@ -332,7 +332,7 @@ public final class ctx {
                         ctx ctxVar = this.b;
                         if (ctxVar.c.exists()) {
                             properties.load(new BufferedReader(
-                                    new InputStreamReader(new FileInputStream(ctxVar.c), uj.a), 8192));
+                                    new InputStreamReader(new FileInputStream(ctxVar.c), Charsets.UTF_8), 8192));
                         }
                         return properties;
                     case 1:
@@ -507,7 +507,7 @@ public final class ctx {
         cuk.f(interpreter, new PluginVipMethod());
         map2.put(str, interpreter);
         map.put(str, ResourcesCompat.w(file));
-        interpreter.eval(new InputStreamReader(new FileInputStream(file), uj.a));
+        interpreter.eval(new InputStreamReader(new FileInputStream(file), Charsets.UTF_8));
         return interpreter;
     }
 

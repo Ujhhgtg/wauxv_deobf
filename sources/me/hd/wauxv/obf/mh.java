@@ -37,13 +37,13 @@ public final class mh extends SwitchHook implements bnc {
                 return;
             }
             int i = 0;
-            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).r();
-            gp.a.getClass();
-            fieldResolverVarR.fieldType = StaticHelpers7.toDexMethod(go.a).getDeclaringClass();
+            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).createFieldResolver();
+            ApiManagerGetApiDexFindHook.a.getClass();
+            fieldResolverVarR.fieldType = StaticHelpers7.toDexMethod(ApiManager$MethodGetApi.INSTANCE).getDeclaringClass();
             Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue();
             throwIfVar1IsNull(objD);
             elb.a.getClass();
-            Object objB = gp.b((Class) SomeStaticHelpers.p(StaticHelpers7.toDexClass(ela.a).getInterfaces()), objD);
+            Object objB = ApiManagerGetApiDexFindHook.getApi((Class) SomeStaticHelpers.getFirstInArray(StaticHelpers7.toDexClass(ela.a).getInterfaces()), objD);
             long msgId = msgInfoBean.getMsgId();
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objB).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.returnTypeCondition = new dos(4);

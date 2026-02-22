@@ -19,7 +19,7 @@ public final class kh extends nh {
     public final void c(blq blqVar) {
         Object objX;
         try {
-            Object[] objArrI = blqVar.i();
+            Object[] objArrI = blqVar.getArgs();
             objX = null;
             Object obj = objArrI != null ? objArrI[0] : null;
             Application application = obj instanceof Application ? (Application) obj : null;
@@ -36,7 +36,7 @@ public final class kh extends nh {
                     if (ki.c) {
                         return;
                     }
-                    boolean zEquals = ki.i().equals("android");
+                    boolean zEquals = ki.getCurrentPackageName().equals("android");
                     String str = this.a;
                     if (zEquals && !str.equals("android")) {
                         return;

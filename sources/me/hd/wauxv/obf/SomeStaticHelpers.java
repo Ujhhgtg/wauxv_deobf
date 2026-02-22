@@ -249,7 +249,7 @@ public abstract class SomeStaticHelpers extends HugeSyntheticPileOfHelpers {
         return arrayList;
     }
 
-    public static Object p(Object[] objArr) {
+    public static Object getFirstInArray(Object[] objArr) {
         throwIfVar1IsNull(objArr, "<this>");
         if (objArr.length != 0) {
             return objArr[0];

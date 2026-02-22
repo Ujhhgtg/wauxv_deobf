@@ -267,7 +267,7 @@ public final /* synthetic */ class amb implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 String[] strArr2 = { "com.tencent.mm.ui.chatting.component" /* "com.tencent.mm.ui.chatting.component" /* "com.tencent.mm.ui.chatting.component" /* cnb.z(-446388835973930L)  */ };
                 dexMethodQueryBuilderVar4.getClass();
-                dexMethodQueryBuilderVar4.a = SomeStaticHelpers.arrayToList(strArr2);
+                dexMethodQueryBuilderVar4.searchedPackages = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar4 = new DexFinder();
                 cdjVar4.usingStrings("MicroMsg.SignallingComponent" /* "MicroMsg.SignallingComponent" /* "MicroMsg.SignallingComponent" /* cnb.z(-446212742314794L)  */,
                         "[doDirectSend] mChattingContext is null!" /* "[doDirectSend] mChattingContext is null!" /* "[doDirectSend] mChattingContext is null!" /* cnb.z(-445572792187690L)  */);

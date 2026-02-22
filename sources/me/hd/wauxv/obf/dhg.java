@@ -104,7 +104,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                 }
                 throwIfVar1IsNull(objX);
                 int i9 = 0;
-                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objX).r();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objX).createFieldResolver();
                 fieldResolverVarR.fieldType = dal.getKClassFromClass(cls);
                 fieldResolverVarR.enableSuperclass();
                 Iterator it = fieldResolverVarR.resolve().iterator();
@@ -217,7 +217,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                 }
                 throwIfVar1IsNull(objX5);
                 int i11 = 0;
-                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objX5).r();
+                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objX5).createFieldResolver();
                 fieldResolverVarR2.name = "d" /* "d" /* "d" /* "d" /* cnb.z(-465591634754346L)   */;
                 BoundField boundFieldVar = (BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve());
                 if (iIntValue == 4 && iIntValue2 == -2005) {
@@ -237,7 +237,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 String[] strArr = { "com.tencent.mm.plugin.webview.permission" /* "com.tencent.mm.plugin.webview.permission" /* "com.tencent.mm.plugin.webview.permission" /* "com.tencent.mm.plugin.webview.permission" /* cnb.z(-465505735408426L)   */ };
                 dexMethodQueryBuilderVar2.getClass();
-                dexMethodQueryBuilderVar2.a = SomeStaticHelpers.arrayToList(strArr);
+                dexMethodQueryBuilderVar2.searchedPackages = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.usingStrings("MicroMsg.LuggageGetA8Key" /* "MicroMsg.LuggageGetA8Key" /* "MicroMsg.LuggageGetA8Key" /* "MicroMsg.LuggageGetA8Key" /* cnb.z(-462580862679850L)   */,
                         "WebView-Trace onSceneEnd resp or cb not found(%b/%b), reqUrl: %s, reason: %d" /*
@@ -301,42 +301,42 @@ public final /* synthetic */ class dhg implements IInvokable {
                             }
                             throwIfVar1IsNull(objX9);
                             int i12 = 0;
-                            FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objX9).r();
+                            FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objX9).createFieldResolver();
                             fieldResolverVarR3.name = "field_userName" /* "field_userName" /* "field_userName" /* "field_userName" /* cnb.z(-542115067067178L)   */;
                             Object objE5 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
                             throwIfVar1IsNull(objE5);
                             String str4 = (String) objE5;
-                            FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(objX9).r();
+                            FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(objX9).createFieldResolver();
                             fieldResolverVarR4.name = "field_type" /* "field_type" /* "field_type" /* "field_type" /* cnb.z(-542600398371626L)   */;
                             Object objE6 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR4)).getValue_();
                             throwIfVar1IsNull(objE6);
                             int iIntValue3 = ((Number) objE6).intValue();
-                            FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(objX9).r();
+                            FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(objX9).createFieldResolver();
                             fieldResolverVarR5.name = "field_thumbUrl" /* "field_thumbUrl" /* "field_thumbUrl" /* "field_thumbUrl" /* cnb.z(-542570333600554L)   */;
                             String str5 = (String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR5)).getValue_();
-                            FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(objX9).r();
+                            FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(objX9).createFieldResolver();
                             fieldResolverVarR6.name = "field_imageBgUrl" /* "field_imageBgUrl" /* "field_imageBgUrl" /* "field_imageBgUrl" /* cnb.z(-542505909091114L)   */;
                             String str6 = (String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR6)).getValue_();
-                            FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(objX9).r();
+                            FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(objX9).createFieldResolver();
                             fieldResolverVarR7.name = "field_videoBgUrl" /* "field_videoBgUrl" /* "field_videoBgUrl" /* "field_videoBgUrl" /* cnb.z(-542432894647082L)   */;
                             String str7 = (String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR7)).getValue_();
                             if (iIntValue3 == 1 || iIntValue3 == 2 || iIntValue3 == 3) {
                                 if (str5 != null) {
                                     String strConcat = str4.concat(".thumbUrl.png" /* ".thumbUrl.png" /* ".thumbUrl.png" /* ".thumbUrl.png" /* cnb.z(-530763468503850L)   */);
                                     diqVar.getClass();
-                                    Dispatchers$Default alcVar = aou.a;
+                                    Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                                     KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new ckx(str5, strConcat, (kotlinx$coroutines$internal$DispatchedContinuation) null));
                                 }
                                 if (str6 != null) {
                                     String strConcat2 = str4.concat(".imageBgUrl.png" /* ".imageBgUrl.png" /* ".imageBgUrl.png" /* ".imageBgUrl.png" /* cnb.z(-530754878569258L)   */);
                                     diqVar.getClass();
-                                    Dispatchers$Default alcVar2 = aou.a;
+                                    Dispatchers$Default alcVar2 = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                                     KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new ckx(str6, strConcat2, (kotlinx$coroutines$internal$DispatchedContinuation) null));
                                 }
                                 if (str7 != null) {
                                     String strConcat3 = str4.concat(".videoBgUrl.png" /* ".videoBgUrl.png" /* ".videoBgUrl.png" /* ".videoBgUrl.png" /* cnb.z(-530686159092522L)   */);
                                     diqVar.getClass();
-                                    Dispatchers$Default alcVar3 = aou.a;
+                                    Dispatchers$Default alcVar3 = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                                     KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new ckx(str7, strConcat3, (kotlinx$coroutines$internal$DispatchedContinuation) null));
                                 }
                                 dnc.sendToast(null, 3, "下载完成" /* "下载完成" /* "下载完成" /* "下载完成" /* cnb.z(-530617439615786L)   */);
@@ -374,7 +374,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 String[] strArr3 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-352943232514858L)   */ };
                 dexMethodQueryBuilderVar4.getClass();
-                dexMethodQueryBuilderVar4.a = SomeStaticHelpers.arrayToList(strArr3);
+                dexMethodQueryBuilderVar4.searchedPackages = SomeStaticHelpers.arrayToList(strArr3);
                 DexFinder cdjVar4 = new DexFinder();
                 if (cdjVar4.f == null) {
                     cdjVar4.f = new MethodMatcher(i5);
@@ -474,7 +474,7 @@ public final /* synthetic */ class dhg implements IInvokable {
             case 18:
                 int i15 = 0;
                 SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(((HookParam) obj).getThisObject());
-                FieldResolver fieldResolverVarR3 = bmuVarBi.r();
+                FieldResolver fieldResolverVarR3 = bmuVarBi.createFieldResolver();
                 djb djbVar = djb.a;
                 fieldResolverVarR3.fieldType = StaticHelpers7.toDexMethod(djbVar).getDeclaringClass();
                 Object objD = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue();
@@ -510,7 +510,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                 }
                 obj = objX6 instanceof Failure ? null : objX6;
                 throwIfVar1IsNull(obj);
-                FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(obj).r();
+                FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(obj).createFieldResolver();
                 fieldResolverVarR4.fieldType = "com.tencent.mm.plugin.sns.storage.SnsInfo" /* "com.tencent.mm.plugin.sns.storage.SnsInfo" /* "com.tencent.mm.plugin.sns.storage.SnsInfo" /* "com.tencent.mm.plugin.sns.storage.SnsInfo" /* cnb.z(-532498635291434L)   */;
                 Object objD2 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR4)).getValue();
                 throwIfVar1IsNull(objD2);
@@ -616,19 +616,19 @@ public final /* synthetic */ class dhg implements IInvokable {
                 for (boa boaVar2 : djo.b) {
                     try {
                         int i17 = 0;
-                        FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(hookParam6.getThisObject()).r();
+                        FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(hookParam6.getThisObject()).createFieldResolver();
                         fieldResolverVarR5.fieldType = dal.getKClassFromClass(cls2);
                         Object objE5 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR5.resolve())).getValue_();
                         throwIfVar1IsNull(objE5);
                         Activity activity3 = (Activity) objE5;
-                        FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(hookParam6.getThisObject()).r();
+                        FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(hookParam6.getThisObject()).createFieldResolver();
                         StaticHelpers2.addAllFromVar2ToVar1(fieldResolverVarR6.modifiersNot, (AccessModifierEnum[]) Arrays.copyOf(new AccessModifierEnum[] { AccessModifierEnum.FINAL}, 1));
                         fieldResolverVarR6.fieldType = dal.getKClassFromClass(cls);
                         Object objE6 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR6.resolve())).getValue_();
                         throwIfVar1IsNull(objE6);
                         djj.a.getClass();
                         Object objB = djj.b((String) objE6);
-                        FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(hookParam6.getThisObject()).r();
+                        FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(hookParam6.getThisObject()).createFieldResolver();
                         fieldResolverVarR7.fieldType = "com.tencent.mm.protocal.protobuf.TimeLineObject" /* "com.tencent.mm.protocal.protobuf.TimeLineObject" /* "com.tencent.mm.protocal.protobuf.TimeLineObject" /* "com.tencent.mm.protocal.protobuf.TimeLineObject" /* cnb.z(-56770877717290L)   */;
                         Object objD3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR7.resolve())).getValue();
                         throwIfVar1IsNull(objD3);

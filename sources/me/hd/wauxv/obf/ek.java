@@ -536,7 +536,7 @@ public class ek implements dcq, IHandlesSwipeDismiss, sg {
                     ("HookParam Method args index out of bounds, max is " + (hookParam.getArgs().length - 1))
                             .toString());
         }
-        Object[] objArrI = hookParam.b.i();
+        Object[] objArrI = hookParam.b.getArgs();
         if (objArrI != null) {
             objArrI[i] = obj;
         }

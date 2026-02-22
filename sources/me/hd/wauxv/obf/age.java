@@ -65,13 +65,13 @@ public final /* synthetic */ class age implements IInvokable {
                 throwIfVar1IsNull(obj3);
                 MenuItem menuItem = (MenuItem) obj3;
                 int i8 = 0;
-                FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam);
+                FieldResolver fieldResolverVarAa = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam);
                 fieldResolverVarAa.fieldType = StaticHelpers7.toDexMethod(agg.a).getDeclaringClass();
                 Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue();
                 throwIfVar1IsNull(objD);
-                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objD).r();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objD).createFieldResolver();
                 agc.a.getClass();
-                fieldResolverVarR.fieldType = StaticHelpers7.toDexMethod(agb.a).getDeclaringClass();
+                fieldResolverVarR.fieldType = StaticHelpers7.toDexMethod(Conversation$MethodParseMsgInfo.INSTANCE).getDeclaringClass();
                 Object objD2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue();
                 throwIfVar1IsNull(objD2);
                 ConversationBean conversationBean = new ConversationBean(objD2);
@@ -123,9 +123,9 @@ public final /* synthetic */ class age implements IInvokable {
                 throwIfVar1IsNull(obj4);
                 AdapterView.AdapterContextMenuInfo adapterContextMenuInfo = (AdapterView.AdapterContextMenuInfo) obj4;
                 int i9 = 0;
-                FieldResolver fieldResolverVarAa2 = StaticHelpers6.aa(hookParam2);
+                FieldResolver fieldResolverVarAa2 = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam2);
                 agc.a.getClass();
-                fieldResolverVarAa2.fieldType = StaticHelpers7.toDexMethod(agb.a).getDeclaringClass();
+                fieldResolverVarAa2.fieldType = StaticHelpers7.toDexMethod(Conversation$MethodParseMsgInfo.INSTANCE).getDeclaringClass();
                 Object objD3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).getValue();
                 throwIfVar1IsNull(objD3);
                 ConversationBean conversationBean2 = new ConversationBean(objD3);
@@ -158,7 +158,7 @@ public final /* synthetic */ class age implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 String[] strArr = { "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* cnb.z(-35270271433514L)  */ };
                 dexMethodQueryBuilderVar.getClass();
-                dexMethodQueryBuilderVar.a = SomeStaticHelpers.arrayToList(strArr);
+                dexMethodQueryBuilderVar.searchedPackages = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar = new DexFinder();
                 cdjVar.s("onMMMenuItemSelected" /* "onMMMenuItemSelected" /* "onMMMenuItemSelected" /* cnb.z(-35669703392042L)  */);
                 cdjVar.usingStrings("com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* "com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* "com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* cnb.z(-35631048686378L)  */);
@@ -168,7 +168,7 @@ public final /* synthetic */ class age implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 String[] strArr2 = { "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* cnb.z(-38985418144554L)  */ };
                 dexMethodQueryBuilderVar2.getClass();
-                dexMethodQueryBuilderVar2.a = SomeStaticHelpers.arrayToList(strArr2);
+                dexMethodQueryBuilderVar2.searchedPackages = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.s("onCreateContextMenu" /* "onCreateContextMenu" /* "onCreateContextMenu" /* cnb.z(-38852274158378L)  */);
                 if (cnb.ab(ewk.l) || cnb.ac(ewh.m)) {
@@ -206,8 +206,8 @@ public final /* synthetic */ class age implements IInvokable {
             case 12:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar4 = new DexFinder();
-                agp.a.getClass();
-                cdjVar4.setDeclaredClassName(StaticHelpers7.toDexClass(agl.a));
+                ConversationDatabaseApi.a.getClass();
+                cdjVar4.setDeclaredClassName(StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage.INSTANCE));
                 cdjVar4.usingStrings("MicroMsg.ConversationStorage" /* "MicroMsg.ConversationStorage" /* "MicroMsg.ConversationStorage" /* cnb.z(-373460291287850L)  */, "get null with username:" /*
                                                                                                                     * cnb
                                                                                                                     * .z
@@ -220,8 +220,8 @@ public final /* synthetic */ class age implements IInvokable {
             case 13:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar5 = new DexFinder();
-                agp.a.getClass();
-                cdjVar5.setDeclaredClassName(StaticHelpers7.toDexClass(agl.a));
+                ConversationDatabaseApi.a.getClass();
+                cdjVar5.setDeclaredClassName(StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage.INSTANCE));
                 cdjVar5.usingStrings("updateUnreadByTalker %s" /* "updateUnreadByTalker %s" /* "updateUnreadByTalker %s" /* cnb.z(-371677879860010L)  */);
                 dexMethodQueryBuilderVar5.getClass();
                 dexMethodQueryBuilderVar5.dexFinder = cdjVar5;
@@ -229,8 +229,8 @@ public final /* synthetic */ class age implements IInvokable {
             case 14:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar6 = new DexFinder();
-                agp.a.getClass();
-                cdjVar6.setDeclaredClassName(StaticHelpers7.toDexClass(agl.a));
+                ConversationDatabaseApi.a.getClass();
+                cdjVar6.setDeclaredClassName(StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage.INSTANCE));
                 cdjVar6.p(new IntRange(2, 4, 1));
                 cdjVar6.v("Update " /* "Update " /* "Update " /* cnb.z(-372124556458794L)  */, "rconversation" /* "rconversation" /* "rconversation" /* cnb.z(-372090196720426L)  */,
                         " set " /* " set " /* " set " /* cnb.z(-372081606785834L)  */, "parentRef" /* "parentRef" /* "parentRef" /* cnb.z(-372038657112874L)  */, " = '" /*
@@ -277,7 +277,7 @@ public final /* synthetic */ class age implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar7 = (DexMethodQueryBuilder) obj;
                 String[] strArr4 = { "com.tencent.mm.ui" /* "com.tencent.mm.ui" /* "com.tencent.mm.ui" /* cnb.z(-78855599553322L)  */ };
                 dexMethodQueryBuilderVar7.getClass();
-                dexMethodQueryBuilderVar7.a = SomeStaticHelpers.arrayToList(strArr4);
+                dexMethodQueryBuilderVar7.searchedPackages = SomeStaticHelpers.arrayToList(strArr4);
                 DexFinder cdjVar7 = new DexFinder();
                 cdjVar7.usingStrings("newcursor closeCursor,clear events" /* "newcursor closeCursor,clear events" /* "newcursor closeCursor,clear events" /* cnb.z(-78726750534442L)  */);
                 dexMethodQueryBuilderVar7.dexFinder = cdjVar7;
@@ -619,7 +619,7 @@ public final /* synthetic */ class age implements IInvokable {
             case 25:
                 HookParam hookParam4 = (HookParam) obj;
                 int i12 = 0;
-                FieldResolver fieldResolverVarAa3 = StaticHelpers6.aa(hookParam4);
+                FieldResolver fieldResolverVarAa3 = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam4);
                 fieldResolverVarAa3.fieldType = dal.getKClassFromClass(Integer.TYPE);
                 for (Object obj8 : fieldResolverVarAa3.resolve()) {
                     Object objE = ((BoundField) obj8).getValue_();

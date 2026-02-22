@@ -601,7 +601,7 @@ public final class but implements aja, app, cqk, evw {
     public dle x(int i, long j) {
         dle dleVar = (dle) ((ArrayBlockingQueue) this.c).poll();
         if (dleVar == null) {
-            return (dle) ((bgj) this.b).g(Integer.valueOf(i), Long.valueOf(j));
+            return (dle) ((Function2) this.b).g(Integer.valueOf(i), Long.valueOf(j));
         }
         dleVar.h(i);
         dleVar.f(j);
@@ -742,9 +742,9 @@ public final class but implements aja, app, cqk, evw {
         lineInstance.setText(uhVar);
     }
 
-    public but(bgj bgjVar) {
+    public but(Function2 function2Var) {
         this.a = 12;
-        this.b = bgjVar;
+        this.b = function2Var;
         this.c = new ArrayBlockingQueue(16384);
     }
 

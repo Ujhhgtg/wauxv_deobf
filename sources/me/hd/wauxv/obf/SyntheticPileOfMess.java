@@ -332,7 +332,7 @@ public final class SyntheticPileOfMess implements cdw, ero, ajh, cab, ank, cbu, 
         return evrVar;
     }
 
-    public FieldResolver r() {
+    public FieldResolver createFieldResolver() {
         FieldResolver fieldResolverVar = new FieldResolver();
         fieldResolverVar.config = (Configuration) this.obj;
         return fieldResolverVar;
@@ -344,7 +344,7 @@ public final class SyntheticPileOfMess implements cdw, ero, ajh, cab, ank, cbu, 
         sb.append(cuhVar);
         sb.append('\n');
         String string = sb.toString();
-        Charset charset = uj.a;
+        Charset charset = Charsets.UTF_8;
         throwIfVar1IsNull(string, "text");
         throwIfVar1IsNull(charset, "charset");
         FileOutputStream fileOutputStream = new FileOutputStream(file, true);

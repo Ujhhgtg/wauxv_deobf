@@ -40,7 +40,7 @@ public final class bcu extends SwitchHook implements bnc {
     public final void i(View view, Object obj, Object obj2, MsgInfoBean msgInfoBean) {
         if (getIsEnabled()) {
             int i = 0;
-            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
+            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).createFieldResolver();
             fieldResolverVarR.name = "timeTV" /* "timeTV" /* "timeTV" /* cnb.z(-462086941440810L)  */;
             TextView textView = (TextView) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
             int iK = bcs.a.k();

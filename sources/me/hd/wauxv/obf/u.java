@@ -15,8 +15,8 @@ public abstract class u implements ahf {
     }
 
     @Override // me.hd.wauxv.obf.ahh
-    public final Object _u(Object obj, bgj bgjVar) {
-        return bgjVar.g(obj, this);
+    public final Object _u(Object obj, Function2 function2Var) {
+        return function2Var.g(obj, this);
     }
 
     @Override // me.hd.wauxv.obf.ahh

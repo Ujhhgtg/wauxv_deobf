@@ -55,13 +55,12 @@ public final /* synthetic */ class atn implements IInvokable {
         Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
-                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new atn(1 == true ? 1 : 0);
+                ((FindDexClassMethodDslWrapper) obj).onClassCallback = new atn(1);
                 return kotlinUnitVar;
             case 1:
                 DexClassQueryBuilder dexClassQueryBuilderVar = (DexClassQueryBuilder) obj;
                 DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
-                zbVar.usingEqStrings("MicroMsg.emoji.EmojiFileEncryptMgr" /* "MicroMsg.emoji.EmojiFileEncryptMgr" /* "MicroMsg.emoji.EmojiFileEncryptMgr" /* cnb.z(-90284507527978L)  */,
-                        "decode emoji file failed. path is no exist :%s " /* "decode emoji file failed. path is no exist :%s " /* "decode emoji file failed. path is no exist :%s " /* cnb.z(-90649579748138L)  */);
+                zbVar.usingEqStrings("MicroMsg.emoji.EmojiFileEncryptMgr", "decode emoji file failed. path is no exist :%s ");
                 dexClassQueryBuilderVar.getClass();
                 dexClassQueryBuilderVar.methodGroupMatcher = zbVar;
                 return kotlinUnitVar;
@@ -174,7 +173,7 @@ public final /* synthetic */ class atn implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 String[] strArr = { "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* cnb.z(-506887745305386L)  */ };
                 dexMethodQueryBuilderVar.getClass();
-                dexMethodQueryBuilderVar.a = SomeStaticHelpers.arrayToList(strArr);
+                dexMethodQueryBuilderVar.searchedPackages = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar = new DexFinder();
                 cls2 = Integer.class;
                 Class<Integer> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
@@ -224,13 +223,13 @@ public final /* synthetic */ class atn implements IInvokable {
                 }
                 throwIfVar1IsNull(objX);
                 int i7 = 0;
-                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objX).r();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objX).createFieldResolver();
                 StaticHelpers2.addAllFromVar2ToVar1(fieldResolverVarR.modifiers, (AccessModifierEnum[]) Arrays.copyOf(new AccessModifierEnum[] { AccessModifierEnum.FINAL}, 1));
                 fieldResolverVarR.fieldType = dal.getKClassFromClass(cls4);
                 Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue_();
                 throwIfVar1IsNull(objE);
                 if (((Number) objE).intValue() == 0) {
-                    FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objX).r();
+                    FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objX).createFieldResolver();
                     fieldResolverVarR2.fieldType = "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-507897062619946L)  */;
                     Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue();
                     throwIfVar1IsNull(objD);
@@ -585,7 +584,7 @@ public final /* synthetic */ class atn implements IInvokable {
                 ContextMenu contextMenu = (ContextMenu) obj5;
                 if (cnb.ab(ewk.b) || cnb.ac(ewh.c)) {
                     int i8 = 0;
-                    FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(contextMenu).r();
+                    FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(contextMenu).createFieldResolver();
                     fieldResolverVarR3.fieldType = dal.getKClassFromClass(Context.class);
                     Object objE2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).getValue_();
                     throwIfVar1IsNull(objE2);
@@ -651,17 +650,17 @@ public final /* synthetic */ class atn implements IInvokable {
                 throwIfVar1IsNull(obj6);
                 MenuItem menuItem = (MenuItem) obj6;
                 int i9 = 0;
-                FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam5);
+                FieldResolver fieldResolverVarAa = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam5);
                 fieldResolverVarAa.fieldType = dal.getKClassFromClass(cls4);
                 Object objE3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue_();
                 throwIfVar1IsNull(objE3);
                 int iIntValue = ((Number) objE3).intValue();
-                FieldResolver fieldResolverVarAa2 = StaticHelpers6.aa(hookParam5);
+                FieldResolver fieldResolverVarAa2 = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam5);
                 fieldResolverVarAa2.fieldType = "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* "com.tencent.mm.plugin.fav.ui.FavoriteIndexUI" /* cnb.z(-42253888256810L)  */;
                 Object objE4 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).getValue_();
                 throwIfVar1IsNull(objE4);
-                FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration((Activity) objE4).r();
-                fieldResolverVarR4.b = new atn(26);
+                FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration((Activity) objE4).createFieldResolver();
+                fieldResolverVarR4.fieldMatcher = new atn(26);
                 Object objE5 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).getValue_();
                 throwIfVar1IsNull(objE5);
                 Object item = ((BaseAdapter) objE5).getItem(iIntValue);
@@ -701,7 +700,7 @@ public final /* synthetic */ class atn implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 String[] strArr3 = { "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* cnb.z(-43383464655658L)  */ };
                 dexMethodQueryBuilderVar5.getClass();
-                dexMethodQueryBuilderVar5.a = SomeStaticHelpers.arrayToList(strArr3);
+                dexMethodQueryBuilderVar5.searchedPackages = SomeStaticHelpers.arrayToList(strArr3);
                 DexFinder cdjVar7 = new DexFinder();
                 cdjVar7.usingStrings("MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* cnb.z(-43241730734890L)  */, "onMMMenuItemSelected" /*
                                                                                                             * cnb.z(-
@@ -713,7 +712,7 @@ public final /* synthetic */ class atn implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 String[] strArr4 = { "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* cnb.z(-43924630534954L)  */ };
                 dexMethodQueryBuilderVar6.getClass();
-                dexMethodQueryBuilderVar6.a = SomeStaticHelpers.arrayToList(strArr4);
+                dexMethodQueryBuilderVar6.searchedPackages = SomeStaticHelpers.arrayToList(strArr4);
                 DexFinder cdjVar8 = new DexFinder();
                 cdjVar8.usingStrings("MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* cnb.z(-43782896614186L)  */, (cnb.ab(ewk.b) || cnb.ac(ewh.c))
                         ? "[OnCreateContextMMMenu] pos = "
@@ -738,7 +737,7 @@ public final /* synthetic */ class atn implements IInvokable {
                 throwIfVar1IsNull(obj7);
                 ContextMenu contextMenu2 = (ContextMenu) obj7;
                 int i10 = 0;
-                FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(contextMenu2).r();
+                FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(contextMenu2).createFieldResolver();
                 fieldResolverVarR5.fieldType = dal.getKClassFromClass(Context.class);
                 Object objE6 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR5.resolve())).getValue_();
                 throwIfVar1IsNull(objE6);

@@ -7,7 +7,7 @@ import net.bytebuddy.pool.TypePool;
 public abstract class dnr extends dnq {
     public static byte[] bh(String str) {
         throwIfVar1IsNull(str, "<this>");
-        byte[] bytes = str.getBytes(uj.a);
+        byte[] bytes = str.getBytes(Charsets.UTF_8);
         throwIfVar1IsNull(bytes, "getBytes(...)");
         return bytes;
     }

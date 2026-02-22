@@ -491,7 +491,7 @@ public final class chm implements dom {
                 StaticHelpers6.concat(str,
                         chmVar.ag() + JavaConstant.Dynamic.DEFAULT_NAME
                                 + (exf.a ? "X" : context != null ? context.getClass().getName() : "M") + "_0"),
-                new Pair(context, new bgj(exfVar, chmVar, str, bgfVar) { // from class: me.hd.wauxv.obf.exd
+                new Pair(context, new Function2(exfVar, chmVar, str, bgfVar) { // from class: me.hd.wauxv.obf.exd
                     public final /* synthetic */ chm a;
                     public final /* synthetic */ String b;
                     public final /* synthetic */ IInvokable c;
@@ -1241,7 +1241,7 @@ public final class chm implements dom {
         intent.setAction(z ? exf.k(null) : exf.j(str));
         if (!nullSafeIsEqual(str, "android")) {
             if (z) {
-                str = exm.h;
+                str = exm.modulePackageName;
             }
             intent.setPackage(str);
         }

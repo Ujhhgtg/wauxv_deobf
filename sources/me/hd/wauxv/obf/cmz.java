@@ -726,7 +726,7 @@ public abstract class cmz {
             numValueOf = (Integer) Long.valueOf(sharedPreferences.getLong(strZ2, 0L));
         }
         sb.append(numValueOf.intValue());
-        byte[] bytes = sb.toString().getBytes(uj.a);
+        byte[] bytes = sb.toString().getBytes(Charsets.UTF_8);
         throwIfVar1IsNull(bytes, "getBytes(...)" /* "getBytes(...)" /* "getBytes(...)" /* cnb.z(-80569291504426L)  */);
         try {
             MessageDigest messageDigest = MessageDigest.getInstance("MD5" /* "MD5" /* "MD5" /* cnb.z(-47145856006954L)  */);

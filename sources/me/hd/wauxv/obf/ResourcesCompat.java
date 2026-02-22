@@ -119,14 +119,14 @@ public abstract class ResourcesCompat implements ckp {
         }
     }
 
-    public static final Object ad(dex dexVar, dex dexVar2, bgj bgjVar) throws Throwable {
+    public static final Object ad(dex dexVar, dex dexVar2, Function2 function2Var) throws Throwable {
         Object abrVar;
         Object objAo;
         Object objAi;
         SpecificEmojiMatcher specificEmojiMatcherVar = bhv.k;
         try {
-            emc.af(2, bgjVar);
-            abrVar = bgjVar.g(dexVar2, dexVar);
+            emc.af(2, function2Var);
+            abrVar = function2Var.g(dexVar2, dexVar);
         } catch (aoq e) {
             Throwable th = e.a;
             abr abrVar2 = new abr(th, false);

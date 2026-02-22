@@ -121,7 +121,7 @@ public final /* synthetic */ class act implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 String[] strArr2 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-360983411292970L)  */ };
                 dexMethodQueryBuilderVar2.getClass();
-                dexMethodQueryBuilderVar2.a = SomeStaticHelpers.arrayToList(strArr2);
+                dexMethodQueryBuilderVar2.searchedPackages = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar7 = new DexFinder();
                 cdjVar7.usingStrings("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-362516714617642L)  */,
                         "cpan[getLabelIdByStr] label id is %s" /* "cpan[getLabelIdByStr] label id is %s" /* "cpan[getLabelIdByStr] label id is %s" /* cnb.z(-362332031023914L)  */);
@@ -174,7 +174,7 @@ public final /* synthetic */ class act implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 String[] strArr3 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-386830524480298L)  */ };
                 dexMethodQueryBuilderVar4.getClass();
-                dexMethodQueryBuilderVar4.a = SomeStaticHelpers.arrayToList(strArr3);
+                dexMethodQueryBuilderVar4.searchedPackages = SomeStaticHelpers.arrayToList(strArr3);
                 DexFinder cdjVar10 = new DexFinder();
                 cdjVar10.usingStrings("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-386783279840042L)  */,
                         "cpan[getLabelIdByStr] label id is %s" /* "cpan[getLabelIdByStr] label id is %s" /* "cpan[getLabelIdByStr] label id is %s" /* cnb.z(-386048840432426L)  */);
@@ -275,7 +275,7 @@ public final /* synthetic */ class act implements IInvokable {
                 Object obj2 = objX instanceof Failure ? null : objX;
                 throwIfVar1IsNull(obj2);
                 int i7 = 0;
-                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).r();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).createFieldResolver();
                 fieldResolverVarR.fieldType = dal.getKClassFromClass(cls3);
                 fieldResolverVarR.enableSuperclass();
                 Iterator it = fieldResolverVarR.resolve().iterator();
@@ -411,7 +411,7 @@ public final /* synthetic */ class act implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar8 = (DexMethodQueryBuilder) obj;
                 String[] strArr5 = { "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* cnb.z(-106210246261546L)  */ };
                 dexMethodQueryBuilderVar8.getClass();
-                dexMethodQueryBuilderVar8.a = SomeStaticHelpers.arrayToList(strArr5);
+                dexMethodQueryBuilderVar8.searchedPackages = SomeStaticHelpers.arrayToList(strArr5);
                 DexFinder cdjVar14 = new DexFinder();
                 cdjVar14.usingStrings("MicroMsg.ConvDelLogic" /* "MicroMsg.ConvDelLogic" /* "MicroMsg.ConvDelLogic" /* cnb.z(-106626858089258L)  */, "del all notify message" /*
                                                                                                              * cnb.z(-
@@ -426,7 +426,7 @@ public final /* synthetic */ class act implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar9 = (DexMethodQueryBuilder) obj;
                 String[] strArr6 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-78988743539498L)  */ };
                 dexMethodQueryBuilderVar9.getClass();
-                dexMethodQueryBuilderVar9.a = SomeStaticHelpers.arrayToList(strArr6);
+                dexMethodQueryBuilderVar9.searchedPackages = SomeStaticHelpers.arrayToList(strArr6);
                 DexFinder cdjVar15 = new DexFinder();
                 cdjVar15.usingStrings("hidden_conv_parent" /* "hidden_conv_parent" /* "hidden_conv_parent" /* cnb.z(-78340203477802L)  */, "message_fold" /*
                                                                                                * "message_fold" /* "message_fold" /* cnb.z(-78207059491626L)  */

@@ -9,8 +9,8 @@ import me.hd.wauxv.obf.ajm;
 import me.hd.wauxv.obf.ajn;
 import me.hd.wauxv.obf.Dispatchers$IO;
 import me.hd.wauxv.obf.Dispatchers$Default;
-import me.hd.wauxv.obf.aou;
-import me.hd.wauxv.obf.bgj;
+import me.hd.wauxv.obf.StaticDefaultDispatcherProvider;
+import me.hd.wauxv.obf.Function2;
 import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.bmy;
 import me.hd.wauxv.obf.cla;
@@ -32,7 +32,7 @@ public final class PluginHttpMethod {
     /* JADX INFO: renamed from: me.hd.wauxv.plugin.api.method.PluginHttpMethod$download$1, reason: invalid class name */
     /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
     @ajm(c = "me.hd.wauxv.plugin.api.method.PluginHttpMethod$download$1", f = "PluginHttpMethod.kt", l = {78}, m = "invokeSuspend", v = 1)
-    public static final class AnonymousClass1 extends doi implements bgj {
+    public static final class AnonymousClass1 extends doi implements Function2 {
         public int a;
         public /* synthetic */ Object d;
         public final /* synthetic */ String e;
@@ -70,7 +70,7 @@ public final class PluginHttpMethod {
             if (i == 0) {
                 FastKV.bd(obj);
                 cue cueVar = new cue(this.f, this.o, this.p, 0);
-                Dispatchers$Default alcVar = aou.a;
+                Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                 Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
                 dob dobVar = new dob();
                 akqVar.getClass();
@@ -96,7 +96,7 @@ public final class PluginHttpMethod {
     /* JADX INFO: renamed from: me.hd.wauxv.plugin.api.method.PluginHttpMethod$get$1, reason: invalid class name and case insensitive filesystem */
     /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
     @ajm(c = "me.hd.wauxv.plugin.api.method.PluginHttpMethod$get$1", f = "PluginHttpMethod.kt", l = {28}, m = "invokeSuspend", v = 1)
-    public static final class C00241 extends doi implements bgj {
+    public static final class C00241 extends doi implements Function2 {
         public int a;
         public /* synthetic */ Object d;
         public final /* synthetic */ String e;
@@ -132,7 +132,7 @@ public final class PluginHttpMethod {
             if (i == 0) {
                 FastKV.bd(obj);
                 cug cugVar = new cug(this.f, this.o, 0);
-                Dispatchers$Default alcVar = aou.a;
+                Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                 Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
                 dob dobVar = new dob();
                 akqVar.getClass();
@@ -161,7 +161,7 @@ public final class PluginHttpMethod {
     /* JADX INFO: renamed from: me.hd.wauxv.plugin.api.method.PluginHttpMethod$post$1, reason: invalid class name and case insensitive filesystem */
     /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
     @ajm(c = "me.hd.wauxv.plugin.api.method.PluginHttpMethod$post$1", f = "PluginHttpMethod.kt", l = {56}, m = "invokeSuspend", v = 1)
-    public static final class C00251 extends doi implements bgj {
+    public static final class C00251 extends doi implements Function2 {
         public int a;
         public /* synthetic */ Object d;
         public final /* synthetic */ String e;
@@ -199,7 +199,7 @@ public final class PluginHttpMethod {
             if (i == 0) {
                 FastKV.bd(obj);
                 cue cueVar = new cue(this.f, this.o, this.p, 1);
-                Dispatchers$Default alcVar = aou.a;
+                Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                 Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
                 dob dobVar = new dob();
                 akqVar.getClass();

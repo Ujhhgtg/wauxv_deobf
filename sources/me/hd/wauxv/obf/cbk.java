@@ -17,7 +17,7 @@ import org.json.JSONException;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class cbk implements bgj {
+public final /* synthetic */ class cbk implements Function2 {
     public final /* synthetic */ int a;
 
     public /* synthetic */ cbk(int i) {
@@ -159,8 +159,8 @@ public final /* synthetic */ class cbk implements bgj {
                     String strB3 = eqb.b(str2);
                     String str3 = (String) StaticHelpers5.l(arrayList6);
                     Method methodBb = StaticHelpers7.toDexMethod(epz.a);
-                    epx.a.getClass();
-                    Object objInvoke = methodBb.invoke(epx.b(), str3);
+                    VideoServiceDexFindHook.INSTANCE.getClass();
+                    Object objInvoke = methodBb.invoke(VideoServiceDexFindHook.b(), str3);
                     throwIfVar1IsNull(objInvoke,
                             "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* cnb.z(-377514740415274L)   */);
                     Intent intent3 = new Intent();
@@ -274,8 +274,8 @@ public final /* synthetic */ class cbk implements bgj {
                 eqb.a.getClass();
                 String strB4 = eqb.b(imgPath3);
                 Method methodBb2 = StaticHelpers7.toDexMethod(epz.a);
-                epx.a.getClass();
-                Object objInvoke2 = methodBb2.invoke(epx.b(), imgPath3);
+                VideoServiceDexFindHook.INSTANCE.getClass();
+                Object objInvoke2 = methodBb2.invoke(VideoServiceDexFindHook.b(), imgPath3);
                 throwIfVar1IsNull(objInvoke2, "null cannot be cast to non-null type kotlin.String" /*
                                                                                                     * cnb.z(-
                                                                                                     * 377514740415274L)

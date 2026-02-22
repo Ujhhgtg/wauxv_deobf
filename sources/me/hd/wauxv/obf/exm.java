@@ -8,15 +8,15 @@ import java.util.LinkedHashSet;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class exm {
-    public static boolean a;
+    public static boolean isInitialized;
     public static boolean b;
     public static boolean c;
     public static blx g;
     public static final LinkedHashMap d = new LinkedHashMap();
     public static final LinkedHashSet e = new LinkedHashSet();
     public static final LinkedHashMap f = new LinkedHashMap();
-    public static String h = "";
-    public static String i = "";
+    public static String modulePackageName = "";
+    public static String modulePath = "";
 
     public static csc j(HookScopeEnum hookScopeEnumVar, String str, String str2, ClassLoader classLoader, ApplicationInfo applicationInfo, dcv dcvVar, int i2) {
         if ((i2 & 4) != 0) {
@@ -98,7 +98,7 @@ public final class exm {
         return false;
     }
 
-    public static boolean l() {
-        return bhs.r() != bmc.b && a;
+    public static boolean isXposedEnvironment() {
+        return bhs.r() != bmc.b && isInitialized;
     }
 }

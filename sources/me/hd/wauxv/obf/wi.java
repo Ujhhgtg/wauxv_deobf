@@ -16,11 +16,9 @@ public final /* synthetic */ class wi implements IFunction0 {
 
     @Override // me.hd.wauxv.obf.bfu
     public final Object invoke() throws IllegalAccessException {
-        int i = this.a;
         Object obj = this.b;
-        switch (i) {
+        switch (this.a) {
             case 0:
-                int i2 = 0;
                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.returnType = dal.getKClassFromClass(MenuItem.class);
                 Class cls = Integer.TYPE;
@@ -28,15 +26,11 @@ public final /* synthetic */ class wi implements IFunction0 {
                         new Object[] { dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(CharSequence.class), dal.getKClassFromClass(cls) }, 5,
                         methodResolverVarT);
             case 1:
-                int i3 = 0;
-                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
-                gp.a.getClass();
-                fieldResolverVarR.fieldType = StaticHelpers7.toDexMethod(go.a).getDeclaringClass();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).createFieldResolver();
+                fieldResolverVarR.fieldType = StaticHelpers7.toDexMethod(ApiManager$MethodGetApi.INSTANCE).getDeclaringClass();
                 Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue();
                 throwIfVar1IsNull(objD);
-                xx.a.getClass();
-                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(gp.b((Class) SomeStaticHelpers.p(StaticHelpers7.toDexClass(xw.a).getInterfaces()), objD)).r();
-                uq.a.getClass();
+                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(ApiManagerGetApiDexFindHook.getApi((Class) SomeStaticHelpers.getFirstInArray(StaticHelpers7.toDexClass(xw.a).getInterfaces()), objD)).createFieldResolver();
                 fieldResolverVarR2.fieldType = ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */);
                 Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue_();
                 throwIfVar1IsNull(objE);

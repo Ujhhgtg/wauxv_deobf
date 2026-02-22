@@ -162,16 +162,16 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 throwIfVar1IsNull(obj3);
                 MenuItem menuItem = (MenuItem) obj3;
                 int i7 = 0;
-                FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam2);
+                FieldResolver fieldResolverVarAa = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam2);
                 fieldResolverVarAa.fieldType = dal.getKClassFromClass(View.class);
                 Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue_();
                 throwIfVar1IsNull(objE);
                 View view = (View) objE;
-                FieldResolver fieldResolverVarAa2 = StaticHelpers6.aa(hookParam2);
-                fieldResolverVarAa2.b = new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(9);
+                FieldResolver fieldResolverVarAa2 = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam2);
+                fieldResolverVarAa2.fieldMatcher = new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(9);
                 Object objE2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).getValue_();
                 throwIfVar1IsNull(objE2);
-                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration((View.OnClickListener) objE2).r();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration((View.OnClickListener) objE2).createFieldResolver();
                 fieldResolverVarR.name = "d" /* "d" /* "d" /* cnb.z(-70201240451882L)  */;
                 Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue();
                 throwIfVar1IsNull(objD);
@@ -221,11 +221,11 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 ContextMenu contextMenu = (ContextMenu) obj4;
                 Kotlin$Lazy kotlin$LazyVar = new Kotlin$Lazy(new ayu(contextMenu, i4));
                 int i8 = 0;
-                FieldResolver fieldResolverVarAa3 = StaticHelpers6.aa(hookParam3);
-                fieldResolverVarAa3.b = new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(i3);
+                FieldResolver fieldResolverVarAa3 = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam3);
+                fieldResolverVarAa3.fieldMatcher = new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(i3);
                 Object objE3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa3.resolve())).getValue_();
                 throwIfVar1IsNull(objE3);
-                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration((View.OnClickListener) objE3).r();
+                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration((View.OnClickListener) objE3).createFieldResolver();
                 fieldResolverVarR2.name = "d" /* "d" /* "d" /* cnb.z(-69831873264426L)  */;
                 Object objD2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue();
                 throwIfVar1IsNull(objD2);
@@ -882,7 +882,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 String[] strArr5 = { "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* "com.tencent.mm.storage" /* cnb.z(-66215510801194L)  */ };
                 dexMethodQueryBuilderVar5.getClass();
-                dexMethodQueryBuilderVar5.a = SomeStaticHelpers.arrayToList(strArr5);
+                dexMethodQueryBuilderVar5.searchedPackages = SomeStaticHelpers.arrayToList(strArr5);
                 DexFinder cdjVar7 = new DexFinder();
                 cdjVar7.usingStrings("MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* cnb.z(-66116726553386L)  */,
                         "protect:c2c msg should not here" /* "protect:c2c msg should not here" /* "protect:c2c msg should not here" /* cnb.z(-66013647338282L)  */);

@@ -248,7 +248,7 @@ public abstract class ajn {
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public static final Object ak(ahh ahhVar, bgj bgjVar, doi doiVar) throws Throwable {
+    public static final Object ak(ahh ahhVar, Function2 function2Var, doi doiVar) throws Throwable {
         ahh ahhVar2 = doiVar.m;
         throwIfVar1IsNull(ahhVar2);
         ahh ahhVar_v = !((Boolean) ahhVar._u(Boolean.FALSE, new fq(6))).booleanValue() ? ahhVar2._v(ahhVar)
@@ -256,7 +256,7 @@ public abstract class ajn {
         cna.q(ahhVar_v);
         if (ahhVar_v == ahhVar2) {
             dex dexVar = new dex(ahhVar_v, doiVar);
-            return ResourcesCompat.ad(dexVar, dexVar, bgjVar);
+            return ResourcesCompat.ad(dexVar, dexVar, function2Var);
         }
         arj arjVar = arj.a;
         if (nullSafeIsEqual(ahhVar_v._w(arjVar), ahhVar2._w(arjVar))) {
@@ -264,14 +264,14 @@ public abstract class ajn {
             ahh ahhVar3 = enkVar.a;
             Object objAl = bhv.al(ahhVar3, null);
             try {
-                return ResourcesCompat.ad(enkVar, enkVar, bgjVar);
+                return ResourcesCompat.ad(enkVar, enkVar, function2Var);
             } finally {
                 bhv.ag(ahhVar3, objAl);
             }
         }
         aos aosVar = new aos(ahhVar_v, doiVar);
         try {
-            HugeSyntheticPileOfHelpers.resumeCoroutine(Kotlin$Unit.INSTANCE, cmz.ab(((nc) bgjVar).h(aosVar, aosVar)));
+            HugeSyntheticPileOfHelpers.resumeCoroutine(Kotlin$Unit.INSTANCE, cmz.ab(((nc) function2Var).h(aosVar, aosVar)));
             AtomicIntegerFieldUpdater atomicIntegerFieldUpdater = aos.i;
             do {
                 int i = atomicIntegerFieldUpdater.get(aosVar);
@@ -336,14 +336,14 @@ public abstract class ajn {
         throw new IllegalArgumentException("Unexpected hex digit: " + c2);
     }
 
-    public static alq g(ahp ahpVar, ahh ahhVar, bgj bgjVar) {
+    public static alq g(ahp ahpVar, ahh ahhVar, Function2 function2Var) {
         ahh ahhVarT = KotlinHelpers.t(ahpVar.e(), ahhVar, true);
-        Dispatchers$Default alcVar = aou.a;
+        Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
         if (ahhVarT != alcVar && ahhVarT._w(arj.a) == null) {
             ahhVarT = ahhVarT._v(alcVar);
         }
         alq alqVar = new alq(ahhVarT, true);
-        alqVar.h(ahs.a, alqVar, bgjVar);
+        alqVar.h(SomeEnum.DEFAULT, alqVar, function2Var);
         return alqVar;
     }
 
@@ -668,14 +668,14 @@ public abstract class ajn {
         return !nullSafeIsEqual(emcVarH, cvm.s) && (emcVarH instanceof cvn);
     }
 
-    public static dmf y(ahp ahpVar, ahh ahhVar, bgj bgjVar) {
+    public static dmf y(ahp ahpVar, ahh ahhVar, Function2 function2Var) {
         ahh ahhVarT = KotlinHelpers.t(ahpVar.e(), ahhVar, true);
-        Dispatchers$Default alcVar = aou.a;
+        Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
         if (ahhVarT != alcVar && ahhVarT._w(arj.a) == null) {
             ahhVarT = ahhVarT._v(alcVar);
         }
         dmf dmfVar = new dmf(ahhVarT, true);
-        dmfVar.h(ahs.a, dmfVar, bgjVar);
+        dmfVar.h(SomeEnum.DEFAULT, dmfVar, function2Var);
         return dmfVar;
     }
 

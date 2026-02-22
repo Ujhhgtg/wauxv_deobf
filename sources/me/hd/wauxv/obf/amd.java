@@ -143,9 +143,9 @@ public final /* synthetic */ class amd implements IFunction0 {
                 int i2 = 0;
                 SyntheticPileOfMess bmuVarBg = dqc.bg(dal.getKClassFromClass(Intent.class));
                 bmuVarBg.setHookOptional(true);
-                FieldResolver fieldResolverVarR = bmuVarBg.r();
+                FieldResolver fieldResolverVarR = bmuVarBg.createFieldResolver();
                 fieldResolverVarR.name = "mExtras";
-                return (BoundField) StaticHelpers5.g(fieldResolverVarR.resolve());
+                return (BoundField) StaticHelpers5.getFirstInList(fieldResolverVarR.resolve());
             case 19:
                 Kotlin$Lazy kotlin$LazyVar2 = ajf.a;
                 return new eqi(ajf.b(Boolean.FALSE));

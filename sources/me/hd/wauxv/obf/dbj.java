@@ -319,7 +319,7 @@ public final /* synthetic */ class dbj implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar8 = (DexMethodQueryBuilder) obj;
                 String[] strArr2 = { "com.tencent.mm.pluginsdk.model.app" /* "com.tencent.mm.pluginsdk.model.app" /* "com.tencent.mm.pluginsdk.model.app" /* cnb.z(-514867794541354L)  */ };
                 dexMethodQueryBuilderVar8.getClass();
-                dexMethodQueryBuilderVar8.a = SomeStaticHelpers.arrayToList(strArr2);
+                dexMethodQueryBuilderVar8.searchedPackages = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar9 = new DexFinder();
                 cdjVar9.usingStrings("checkAppSignature get local signature failed" /* "checkAppSignature get local signature failed" /* "checkAppSignature get local signature failed" /* cnb.z(-516332378389290L)  */);
                 dexMethodQueryBuilderVar8.dexFinder = cdjVar9;

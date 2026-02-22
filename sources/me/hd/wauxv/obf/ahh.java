@@ -5,7 +5,7 @@ package me.hd.wauxv.obf;
 public interface ahh {
     ahh _t(IEmpty8 ahgVar);
 
-    Object _u(Object obj, bgj bgjVar);
+    Object _u(Object obj, Function2 function2Var);
 
     ahh _v(ahh ahhVar);
 

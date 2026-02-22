@@ -6,7 +6,7 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class chc extends SwitchHook implements bna {
+public final class chc extends SwitchHook implements IMessageLongPressHook {
     public static final chc a = new chc("MsgRepeatHook" /* "MsgRepeatHook" /* "MsgRepeatHook" /* "MsgRepeatHook" /* cnb.z(-520799144377130L)   */);
     public static final String b = "菜单" /* "菜单" /* "菜单" /* "菜单" /* cnb.z(-520661705423658L)   */;
     public static final String c = "消息复读" /* "消息复读" /* "消息复读" /* "消息复读" /* cnb.z(-520666000390954L)   */;
@@ -27,7 +27,7 @@ public final class chc extends SwitchHook implements bna {
     }
 
     @Override // me.hd.wauxv.obf.bna
-    public final List l(MsgInfoBean msgInfoBean) {
+    public final List getUiElements(MsgInfoBean msgInfoBean) {
         if (getIsEnabled()) {
             if (msgInfoBean.isText()) {
                 return dqc.toSingletonList(new wj(R.id.MenuItem_Chat_MsgRepeat, "复读" /* "复读" /* "复读" /* "复读" /* cnb.z(-520790554442538L)   */,

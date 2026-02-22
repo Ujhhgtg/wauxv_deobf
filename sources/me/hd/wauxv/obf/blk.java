@@ -33,7 +33,7 @@ public final class blk extends SwitchHook implements bnc {
     public final void i(View view, Object obj, Object obj2, MsgInfoBean msgInfoBean) {
         if (getIsEnabled()) {
             int i = 0;
-            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
+            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).createFieldResolver();
             fieldResolverVarR.name = "avatarIV" /* "avatarIV" /* "avatarIV" /* cnb.z(-487160960514858L)  */;
             ImageView imageView = (ImageView) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
             if (imageView != null) {

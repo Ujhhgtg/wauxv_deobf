@@ -14,7 +14,7 @@ import me.hd.wauxv.obf.StaticHelpers5;
 import me.hd.wauxv.obf.acx;
 import me.hd.wauxv.obf.Dispatchers$IO;
 import me.hd.wauxv.obf.Dispatchers$Default;
-import me.hd.wauxv.obf.aou;
+import me.hd.wauxv.obf.StaticDefaultDispatcherProvider;
 import me.hd.wauxv.obf.arj;
 import me.hd.wauxv.obf.EmojiInfoStorageDexFind;
 import me.hd.wauxv.obf.EmojiMgrImplHook;
@@ -190,7 +190,7 @@ public final class PluginMsgMethod {
                 dal.getKClassFromClass(String.class), dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(Long.TYPE) }, 6, methodResolverVarT2))
                 .invoke(str, strB, str2, str3, Integer.valueOf(iCurrentTimeMillis), 0L);
         throwIfVar1IsNull(objJ2);
-        Dispatchers$Default alcVar = aou.a;
+        Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
         KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new ckx((Pair) objJ2, str, str2, null));
     }
 
@@ -287,7 +287,7 @@ public final class PluginMsgMethod {
         methodResolverVarT.name = "doScene" /* "doScene" /* "doScene" /* cnb.z(-135068131523370L)  */;
         methodResolverVarT.parameterCount = 2;
         methodResolverVarT.enableSuperclass();
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT.findMethods());
         if (methodHookWrapperVar == null) {
             return;
         }
@@ -342,7 +342,7 @@ public final class PluginMsgMethod {
                                         methodResolverVarT3.enableSuperclass();
                                         Object objE2 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT3.findMethods())).invokeAndThrowIfFailed(new Object[0]);
                                         if (objE2 != null) {
-                                            azg azgVarR = dqc.getWrapperConfiguration(objE2).r();
+                                            azg azgVarR = dqc.getWrapperConfiguration(objE2).createFieldResolver();
                                             azgVarR.ab = "a" /* "a" /* "a" /* cnb.z(-136313672039210L)  */;
                                             azgVarR.ah();
                                             Object objD = ((azk) StaticHelpers5.safeGetFirstInList(azgVarR.c())).d();

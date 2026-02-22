@@ -52,10 +52,10 @@ public final /* synthetic */ class djp implements bgf {
                     djsVar2.a = "" /* "" /* "" /* "" /* cnb.z(-556378653457194L)   */;
                     djsVar2.b = "" /* "" /* "" /* "" /* cnb.z(-556374358489898L)   */;
                     int i3 = 0;
-                    FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).r();
+                    FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).createFieldResolver();
                     fieldResolverVarR.name = "field_labelID" /* "field_labelID" /* "field_labelID" /* "field_labelID" /* cnb.z(-556387243391786L)   */;
                     djsVar2.a = String.valueOf(((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_());
-                    FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj2).r();
+                    FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj2).createFieldResolver();
                     fieldResolverVarR2.name = "field_labelName" /* "field_labelName" /* "field_labelName" /* "field_labelName" /* cnb.z(-556859689794346L)   */;
                     Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue_();
                     throwIfVar1IsNull(objE);
@@ -160,7 +160,7 @@ public final /* synthetic */ class djp implements bgf {
                 methodResolverVarT2.name = "getAdapter" /* "getAdapter" /* "getAdapter" /* "getAdapter" /* cnb.z(-555992106400554L)   */;
                 Object objE2 = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).invokeAndThrowIfFailed(new Object[0]);
                 throwIfVar1IsNull(objE2);
-                FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objE2).r();
+                FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objE2).createFieldResolver();
                 fieldResolverVarR3.fieldType = "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* cnb.z(-555962041629482L)   */;
                 Object objD = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue();
                 throwIfVar1IsNull(objD);

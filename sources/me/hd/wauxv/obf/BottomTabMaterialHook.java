@@ -16,13 +16,13 @@ import me.hd.wauxv.R;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class BottomTabMaterialHook extends SwitchHook implements bnp {
-    public static final BottomTabMaterialHook a;
+    public static final BottomTabMaterialHook INSTANCE;
     public static final String b;
-    public static final Kotlin$Lazy c;
-    public static final Kotlin$Lazy d;
-    public static final Kotlin$Lazy h;
-    public static final Kotlin$Lazy i;
-    public static final Kotlin$Lazy j;
+    public static final Kotlin$Lazy emptyBitmap;
+    public static final Kotlin$Lazy icon1;
+    public static final Kotlin$Lazy icon2;
+    public static final Kotlin$Lazy icon3;
+    public static final Kotlin$Lazy icon4;
     public static final String l;
     public static final String m;
     public static final String n;
@@ -36,17 +36,16 @@ public final class BottomTabMaterialHook extends SwitchHook implements bnp {
         // "#FF1E1E1E" /* "#FF1E1E1E" /* "#FF1E1E1E" /* "#FF1E1E1E" /* cnb.z(-436884073347882L)   */;
         // "#FF324B48" /* "#FF324B48" /* "#FF324B48" /* "#FF324B48" /* cnb.z(-436789584067370L)   */;
         // "#FFF7F7F7" /* "#FFF7F7F7" /* "#FFF7F7F7" /* "#FFF7F7F7" /* cnb.z(-425218942171946L)   */;
-        a = new BottomTabMaterialHook("BottomTabMaterialHook" /* "BottomTabMaterialHook" /* "BottomTabMaterialHook" /* "BottomTabMaterialHook" /* cnb.z(-435664302635818L)   */);
-        Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
-        b = PathUtils.getModuleSubDir("Resource" /* "Resource" /* "Resource" /* "Resource" /* cnb.z(-46621869996842L)   */, "BottomTab" /* "BottomTab" /* "BottomTab" /* "BottomTab" /* cnb.z(-46531675683626L)   */);
-        c = new Kotlin$Lazy(new h(14));
-        d = new Kotlin$Lazy(new h(15));
-        h = new Kotlin$Lazy(new h(16));
-        i = new Kotlin$Lazy(new h(17));
-        j = new Kotlin$Lazy(new h(18));
-        l = "美化" /* "美化" /* "美化" /* "美化" /* cnb.z(-425193172368170L)   */;
-        m = "底栏 Material You" /* "底栏 Material You" /* "底栏 Material You" /* "底栏 Material You" /* cnb.z(-425197467335466L)   */;
-        n = "替换主页底部标签栏为 Material You 样式" /* "替换主页底部标签栏为 Material You 样式" /* "替换主页底部标签栏为 Material You 样式" /* "替换主页底部标签栏为 Material You 样式" /* cnb.z(-425128747858730L)   */;
+        INSTANCE = new BottomTabMaterialHook("BottomTabMaterialHook");
+        b = PathUtils.getModuleSubDir("Resource", "BottomTab");
+        emptyBitmap = new Kotlin$Lazy(new h(14));
+        icon1 = new Kotlin$Lazy(new h(15));
+        icon2 = new Kotlin$Lazy(new h(16));
+        icon3 = new Kotlin$Lazy(new h(17));
+        icon4 = new Kotlin$Lazy(new h(18));
+        l = "美化";
+        m = "底栏 Material You";
+        n = "替换主页底部标签栏为 Material You 样式";
         r = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(13);
         s = true;
     }
@@ -71,7 +70,7 @@ public final class BottomTabMaterialHook extends SwitchHook implements bnp {
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final bgf getOnClick() {
+    public final SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg getOnClick() {
         return r;
     }
 
@@ -107,33 +106,22 @@ public final class BottomTabMaterialHook extends SwitchHook implements bnp {
                 qbVar.setItemIconTintList(emc.ai(Color.parseColor(qt.a.o())));
             }
             Menu menu = qbVar.getMenu();
-            MenuItem menuItemAdd = menu.add(0, 0, 0, "" /* "" /* "" /* "" /* cnb.z(-435552633486122L)   */);
-            BottomTabMaterialHook qwVar = a;
-            qwVar.getClass();
-            menuItemAdd.setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) d.getValue()));
-            menu.add(0, 1, 1, "" /* "" /* "" /* "" /* cnb.z(-435548338518826L)   */)
-                    .setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) h.getValue()));
-            menu.add(0, 2, 2, "" /* "" /* "" /* "" /* cnb.z(-435561223420714L)   */)
-                    .setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) i.getValue()));
-            menu.add(0, 3, 3, "" /* "" /* "" /* "" /* cnb.z(-435556928453418L)   */)
-                    .setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) j.getValue()));
+            MenuItem menuItemAdd = menu.add(0, 0, 0, "");
+            menuItemAdd.setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) icon1.getValue()));
+            menu.add(0, 1, 1, "")
+                    .setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) icon2.getValue()));
+            menu.add(0, 2, 2, "")
+                    .setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) icon3.getValue()));
+            menu.add(0, 3, 3, "")
+                    .setIcon(new BitmapDrawable(qbVar.getResources(), (Bitmap) icon4.getValue()));
             qbVar.setOnItemSelectedListener(new qp(obj, 0));
             ViewParent parent = viewGroup.getParent();
-            throwIfVar1IsNull(parent, "null cannot be cast to non-null type android.view.ViewGroup" /*
-                                                                                                     * cnb.z(-
-                                                                                                     * 435569813355306L)
-                                                                                                     */);
             View childAt = ((ViewGroup) parent).getChildAt(1);
-            throwIfVar1IsNull(childAt, "null cannot be cast to non-null type android.view.ViewGroup" /*
-                                                                                                      * cnb.z(-
-                                                                                                      * 435827511393066L)
-                                                                                                      */);
             ((ViewGroup) childAt).addView(qbVar);
-            int i2 = 0;
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(obj).getMethodResolverBasedOnPreviouslyProvidedConfig();
-            methodResolverVarT.name = "onPageSelected" /* "onPageSelected" /* "onPageSelected" /* "onPageSelected" /* cnb.z(-437253440535338L)   */;
+            methodResolverVarT.name = "onPageSelected";
             HookManager hookManagerVarAd = createImmediateHook((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods()), HookPriorityEnum.ENUM_DEFAULT);
-            qwVar.hookAfter(hookManagerVarAd, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(qbVar, 1));
+            INSTANCE.hookAfter(hookManagerVarAd, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(qbVar, 1));
             hookManagerVarAd.initInstantCollectionAndApplyHooks();
         }
     }

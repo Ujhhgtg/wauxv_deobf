@@ -84,7 +84,7 @@ public abstract class bad extends bmy {
     }
 
     public static String c(File file) {
-        Charset charset = uj.a;
+        Charset charset = Charsets.UTF_8;
         throwIfVar1IsNull(file, "<this>");
         throwIfVar1IsNull(charset, "charset");
         InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(file), charset);
@@ -253,7 +253,7 @@ public abstract class bad extends bmy {
     }
 
     public static void e(File file, String str) {
-        Charset charset = uj.a;
+        Charset charset = Charsets.UTF_8;
         throwIfVar1IsNull(str, "text");
         throwIfVar1IsNull(charset, "charset");
         FileOutputStream fileOutputStream = new FileOutputStream(file);

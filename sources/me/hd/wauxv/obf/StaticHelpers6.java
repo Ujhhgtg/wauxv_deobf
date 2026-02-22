@@ -19,8 +19,8 @@ import net.bytebuddy.matcher.ElementMatcher;
 public abstract /* synthetic */ class StaticHelpers6 {
     public static final /* synthetic */ int[] a = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-    public static FieldResolver aa(HookParam hookParam) {
-        return dqc.getWrapperConfiguration(hookParam.getThisObject()).r();
+    public static FieldResolver createFieldResolverFromHookParamThisObject(HookParam hookParam) {
+        return dqc.getWrapperConfiguration(hookParam.getThisObject()).createFieldResolver();
     }
 
     public static void ab(int i, StringBuilder sb, AnnotatedOutput annotatedOutput, int i2) {

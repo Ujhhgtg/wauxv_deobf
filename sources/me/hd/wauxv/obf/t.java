@@ -52,12 +52,12 @@ public abstract class t extends brm implements kotlinx$coroutines$internal$Dispa
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public final void h(ahs ahsVar, t tVar, bgj bgjVar) {
+    public final void h(SomeEnum ahsVar, t tVar, Function2 function2Var) {
         int iOrdinal = ahsVar.ordinal();
         Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         if (iOrdinal == 0) {
             try {
-                HugeSyntheticPileOfHelpers.resumeCoroutine(kotlinUnitVar, cmz.ab(((nc) bgjVar).h(tVar, this)));
+                HugeSyntheticPileOfHelpers.resumeCoroutine(kotlinUnitVar, cmz.ab(((nc) function2Var).h(tVar, this)));
                 return;
             } catch (Throwable th) {
                 th = th;
@@ -70,7 +70,7 @@ public abstract class t extends brm implements kotlinx$coroutines$internal$Dispa
         }
         if (iOrdinal != 1) {
             if (iOrdinal == 2) {
-                cmz.ab(((nc) bgjVar).h(tVar, this))._bn(kotlinUnitVar);
+                cmz.ab(((nc) function2Var).h(tVar, this))._bn(kotlinUnitVar);
                 return;
             }
             if (iOrdinal != 3) {
@@ -80,8 +80,8 @@ public abstract class t extends brm implements kotlinx$coroutines$internal$Dispa
                 ahh ahhVar = this.a;
                 Object objAl = bhv.al(ahhVar, null);
                 try {
-                    emc.af(2, bgjVar);
-                    Object objG = bgjVar.g(tVar, this);
+                    emc.af(2, function2Var);
+                    Object objG = function2Var.g(tVar, this);
                     bhv.ag(ahhVar, objAl);
                     if (objG != ahq.a) {
                         _bn(objG);

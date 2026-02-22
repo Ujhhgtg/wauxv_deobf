@@ -36,7 +36,7 @@ public final class kg extends nh {
                 if ((obj2 instanceof Application ? (Application) obj2 : null) == null) {
                     return;
                 }
-                Object[] objArrI = blqVar.i();
+                Object[] objArrI = blqVar.getArgs();
                 Object obj3 = objArrI != null ? objArrI[0] : null;
                 if ((obj3 instanceof Configuration ? (Configuration) obj3 : null) == null) {
                     return;
@@ -62,7 +62,7 @@ public final class kg extends nh {
                         if (((Map.Entry) it2.next()).getValue() != null) {
                             throw new ClassCastException();
                         }
-                        Object[] objArrI2 = blqVar.i();
+                        Object[] objArrI2 = blqVar.getArgs();
                         Object obj4 = objArrI2 != null ? objArrI2[0] : null;
                         if ((obj4 instanceof Context ? (Context) obj4 : null) != null) {
                             throw null;
@@ -131,7 +131,7 @@ public final class kg extends nh {
                 if ((obj instanceof Application ? (Application) obj : null) == null) {
                     return;
                 }
-                Object[] objArrI3 = blqVar.i();
+                Object[] objArrI3 = blqVar.getArgs();
                 Object obj7 = objArrI3 != null ? objArrI3[0] : null;
                 if ((obj7 instanceof Integer ? (Integer) obj7 : null) != null) {
                     Iterator it5 = ki.d.entrySet().iterator();
@@ -164,7 +164,7 @@ public final class kg extends nh {
                         if (((Map.Entry) it.next()).getValue() != null) {
                             throw new ClassCastException();
                         }
-                        Object[] objArrI = blqVar.i();
+                        Object[] objArrI = blqVar.getArgs();
                         Object obj = objArrI != null ? objArrI[0] : null;
                         if ((obj instanceof Context ? (Context) obj : null) != null) {
                             throw null;

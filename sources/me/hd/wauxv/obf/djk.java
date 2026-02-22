@@ -61,7 +61,7 @@ public final /* synthetic */ class djk implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 String[] strArr = { "com.tencent.mm.plugin.sns.ui.listener" /* "com.tencent.mm.plugin.sns.ui.listener" /* "com.tencent.mm.plugin.sns.ui.listener" /* cnb.z(-56500294777642L)  */ };
                 dexMethodQueryBuilderVar.getClass();
-                dexMethodQueryBuilderVar.a = SomeStaticHelpers.arrayToList(strArr);
+                dexMethodQueryBuilderVar.searchedPackages = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar = new DexFinder();
                 cdjVar.usingStrings("delete comment fail!!! snsInfo is null" /* "delete comment fail!!! snsInfo is null" /* "delete comment fail!!! snsInfo is null" /* cnb.z(-53571127081770L)  */,
                         "send photo fail, mediaObj is null" /* "send photo fail, mediaObj is null" /* "send photo fail, mediaObj is null" /* cnb.z(-53403623357226L)  */,
@@ -72,7 +72,7 @@ public final /* synthetic */ class djk implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 String[] strArr2 = { "com.tencent.mm.plugin.sns.ui.listener" /* "com.tencent.mm.plugin.sns.ui.listener" /* "com.tencent.mm.plugin.sns.ui.listener" /* cnb.z(-56994216016682L)  */ };
                 dexMethodQueryBuilderVar2.getClass();
-                dexMethodQueryBuilderVar2.a = SomeStaticHelpers.arrayToList(strArr2);
+                dexMethodQueryBuilderVar2.searchedPackages = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.usingStrings("MicroMsg.TimelineOnCreateContextMenuListener" /* "MicroMsg.TimelineOnCreateContextMenuListener" /* "MicroMsg.TimelineOnCreateContextMenuListener" /* cnb.z(-56264071576362L)  */,
                         "onMMCreateContextMenu error" /* "onMMCreateContextMenu error" /* "onMMCreateContextMenu error" /* cnb.z(-56105157786410L)  */);
@@ -483,7 +483,7 @@ public final /* synthetic */ class djk implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar8 = (DexMethodQueryBuilder) obj;
                 String[] strArr4 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-359858129861418L)  */ };
                 dexMethodQueryBuilderVar8.getClass();
-                dexMethodQueryBuilderVar8.a = SomeStaticHelpers.arrayToList(strArr4);
+                dexMethodQueryBuilderVar8.searchedPackages = SomeStaticHelpers.arrayToList(strArr4);
                 DexFinder cdjVar15 = new DexFinder();
                 cdjVar15.usingStrings("getSnsVideoFullPath" /* "getSnsVideoFullPath" /* "getSnsVideoFullPath" /* cnb.z(-356971911838506L)  */,
                         "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-356920372230954L)  */);
@@ -493,7 +493,7 @@ public final /* synthetic */ class djk implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar9 = (DexMethodQueryBuilder) obj;
                 String[] strArr5 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-357255379680042L)  */ };
                 dexMethodQueryBuilderVar9.getClass();
-                dexMethodQueryBuilderVar9.a = SomeStaticHelpers.arrayToList(strArr5);
+                dexMethodQueryBuilderVar9.searchedPackages = SomeStaticHelpers.arrayToList(strArr5);
                 DexFinder cdjVar16 = new DexFinder();
                 cdjVar16.usingStrings("getDownloadVideoPath" /* "getDownloadVideoPath" /* "getDownloadVideoPath" /* cnb.z(-357117940726570L)  */,
                         "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-356512350337834L)  */);

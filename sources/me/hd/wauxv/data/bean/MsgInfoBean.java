@@ -45,46 +45,45 @@ public final class MsgInfoBean {
 
     public MsgInfoBean(Object obj) throws IllegalAccessException {
         this.origin = obj;
-        int i = 0;
-        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
+        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).createFieldResolver();
         fieldResolverVarR.name = "field_msgId" /* "field_msgId" /* "field_msgId" /* cnb.z(-8396661062442L)  */;
         Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
         throwIfVar1IsNull(objE);
         this.msgId = ((Number) objE).longValue();
-        FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj).r();
+        FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj).createFieldResolver();
         fieldResolverVarR2.name = "field_msgSvrId" /* "field_msgSvrId" /* "field_msgSvrId" /* cnb.z(-8379481193258L)  */;
         this.msgSvrId = (Long) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue_();
-        FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).r();
+        FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).createFieldResolver();
         fieldResolverVarR3.name = "field_type" /* "field_type" /* "field_type" /* cnb.z(-8315056683818L)  */;
         Object objE2 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
         throwIfVar1IsNull(objE2);
         this.type = ((Number) objE2).intValue();
-        FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(obj).r();
+        FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(obj).createFieldResolver();
         fieldResolverVarR4.name = "field_isSend" /* "field_isSend" /* "field_isSend" /* cnb.z(-8766028249898L)  */;
         this.isSendInt = (Integer) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR4)).getValue_();
-        FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(obj).r();
+        FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(obj).createFieldResolver();
         fieldResolverVarR5.name = "field_createTime" /* "field_createTime" /* "field_createTime" /* cnb.z(-8761733282602L)  */;
         Object objE3 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR5)).getValue_();
         throwIfVar1IsNull(objE3);
         this.createTime = ((Number) objE3).longValue();
-        FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(obj).r();
+        FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(obj).createFieldResolver();
         fieldResolverVarR6.name = "field_talker" /* "field_talker" /* "field_talker" /* cnb.z(-8688718838570L)  */;
         Object objE4 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR6)).getValue_();
         throwIfVar1IsNull(objE4);
         this.talker = (String) objE4;
-        FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(obj).r();
+        FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(obj).createFieldResolver();
         fieldResolverVarR7.name = "field_content" /* "field_content" /* "field_content" /* cnb.z(-8615704394538L)  */;
         this.originContent = (String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR7)).getValue_();
-        FieldResolver fieldResolverVarR8 = dqc.getWrapperConfiguration(obj).r();
+        FieldResolver fieldResolverVarR8 = dqc.getWrapperConfiguration(obj).createFieldResolver();
         fieldResolverVarR8.name = "field_imgPath" /* "field_imgPath" /* "field_imgPath" /* cnb.z(-8538394983210L)  */;
         this.imgPath = (String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR8)).getValue_();
-        FieldResolver fieldResolverVarR9 = dqc.getWrapperConfiguration(obj).r();
+        FieldResolver fieldResolverVarR9 = dqc.getWrapperConfiguration(obj).createFieldResolver();
         fieldResolverVarR9.name = "field_lvbuffer" /* "field_lvbuffer" /* "field_lvbuffer" /* cnb.z(-7911329757994L)  */;
         this.lvBuffer = (byte[]) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR9)).getValue_();
-        FieldResolver fieldResolverVarR10 = dqc.getWrapperConfiguration(obj).r();
+        FieldResolver fieldResolverVarR10 = dqc.getWrapperConfiguration(obj).createFieldResolver();
         fieldResolverVarR10.name = "field_talkerId" /* "field_talkerId" /* "field_talkerId" /* cnb.z(-7898444856106L)  */;
         this.talkerId = (Integer) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR10)).getValue_();
-        FieldResolver fieldResolverVarR11 = dqc.getWrapperConfiguration(obj).r();
+        FieldResolver fieldResolverVarR11 = dqc.getWrapperConfiguration(obj).createFieldResolver();
         fieldResolverVarR11.name = "field_msgSeq" /* "field_msgSeq" /* "field_msgSeq" /* cnb.z(-7834020346666L)  */;
         this.msgSeq = (Long) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR11)).getValue_();
     }
@@ -425,7 +424,7 @@ public final class MsgInfoBean {
         if (objB != null) {
             wv.a.getClass();
             int i = 0;
-            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objB).r();
+            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objB).createFieldResolver();
             fieldResolverVarR.name = "field_chatroomStatus" /* "field_chatroomStatus" /* "field_chatroomStatus" /* cnb.z(-76149770156842L)  */;
             Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
             throwIfVar1IsNull(objE);

@@ -44,10 +44,10 @@ public final /* synthetic */ class gi implements bgf {
         Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         switch (i) {
             case 0:
-                ((bmm) obj).h(null);
+                ((HookParam) obj).h(null);
                 return kotlinUnitVar;
             case 1:
-                HookParam hookParam = (bmm) obj;
+                HookParam hookParam = (HookParam) obj;
                 hookParam.getClass();
                 try {
                     objX = hookParam.d()[0];
@@ -124,13 +124,13 @@ public final /* synthetic */ class gi implements bgf {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 String[] strArr = {"com.tencent.mm.ui.chatting.manager" /* "com.tencent.mm.ui.chatting.manager" /* "com.tencent.mm.ui.chatting.manager" /* "com.tencent.mm.ui.chatting.manager" /* cnb.z(-100351910869802L)   */};
                 dexMethodQueryBuilderVar4.getClass();
-                dexMethodQueryBuilderVar4.a = SomeStaticHelpers.arrayToList(strArr);
+                dexMethodQueryBuilderVar4.searchedPackages = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar4 = new DexFinder();
                 cdjVar4.usingStrings("[get] " /* "[get] " /* "[get] " /* "[get] " /* cnb.z(-97418448206634L)   */, " is not a interface!" /* " is not a interface!" /* " is not a interface!" /* " is not a interface!" /* cnb.z(-97439923043114L)   */);
                 dexMethodQueryBuilderVar4.dexFinder = cdjVar4;
                 return kotlinUnitVar;
             case 11:
-                HookParam hookParam2 = (bmm) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
                 try {
                     objX2 = hookParam2.d()[0];
@@ -171,7 +171,7 @@ public final /* synthetic */ class gi implements bgf {
                 dexMethodQueryBuilderVar5.dexFinder = cdjVar5;
                 return kotlinUnitVar;
             case 14:
-                ((bmm) obj).h(null);
+                ((HookParam) obj).setResult(null);
                 return kotlinUnitVar;
             case 15:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new gi(16);
@@ -180,13 +180,13 @@ public final /* synthetic */ class gi implements bgf {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 String[] strArr2 = {"com.tencent.mm.plugin.appbrand.jsapi.auth" /* "com.tencent.mm.plugin.appbrand.jsapi.auth" /* "com.tencent.mm.plugin.appbrand.jsapi.auth" /* "com.tencent.mm.plugin.appbrand.jsapi.auth" /* cnb.z(-409525131672362L)   */};
                 dexMethodQueryBuilderVar6.getClass();
-                dexMethodQueryBuilderVar6.a = SomeStaticHelpers.arrayToList(strArr2);
+                dexMethodQueryBuilderVar6.searchedPackages = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar6 = new DexFinder();
                 cdjVar6.usingStrings("MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* "MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* "MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* "MicroMsg.AppBrand.JsApiAdOperateWXData[AppBrandSplashAd]" /* cnb.z(-409361922915114L)   */, "cgi callback, callbackId:%s, service not running or preloaded" /* "cgi callback, callbackId:%s, service not running or preloaded" /* "cgi callback, callbackId:%s, service not running or preloaded" /* "cgi callback, callbackId:%s, service not running or preloaded" /* cnb.z(-410766377220906L)   */);
                 dexMethodQueryBuilderVar6.dexFinder = cdjVar6;
                 return kotlinUnitVar;
             case 17:
-                HookParam hookParam3 = (bmm) obj;
+                HookParam hookParam3 = (HookParam) obj;
                 hookParam3.getClass();
                 try {
                     objX4 = hookParam3.d()[0];
@@ -236,7 +236,7 @@ public final /* synthetic */ class gi implements bgf {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar7 = (DexMethodQueryBuilder) obj;
                 String[] strArr3 = {"com.tencent.mm.pluginsdk.model.app" /* "com.tencent.mm.pluginsdk.model.app" /* "com.tencent.mm.pluginsdk.model.app" /* "com.tencent.mm.pluginsdk.model.app" /* cnb.z(-120147415137066L)   */};
                 dexMethodQueryBuilderVar7.getClass();
-                dexMethodQueryBuilderVar7.a = SomeStaticHelpers.arrayToList(strArr3);
+                dexMethodQueryBuilderVar7.searchedPackages = SomeStaticHelpers.arrayToList(strArr3);
                 DexFinder cdjVar7 = new DexFinder();
                 cdjVar7.usingStrings("MicroMsg.AppMsgLogic" /* "MicroMsg.AppMsgLogic" /* "MicroMsg.AppMsgLogic" /* "MicroMsg.AppMsgLogic" /* cnb.z(-108469399059242L)   */, "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* "summerbig sendAppMsg attachFilePath[%s], content[%s]" /* cnb.z(-108362024876842L)   */);
                 dexMethodQueryBuilderVar7.dexFinder = cdjVar7;
@@ -261,8 +261,8 @@ public final /* synthetic */ class gi implements bgf {
                             recyclerView.setAdapter(zmVar);
                             bzy bzyVar = new bzy(view.getContext());
                             eg egVar = (eg) bzyVar.d;
-                            lx.a.getClass();
-                            egVar.d = lx.c;
+                            AutoCleanHook.INSTANCE.getClass();
+                            egVar.d = AutoCleanHook.c;
                             bzyVar.t("保存" /* "保存" /* "保存" /* "保存" /* cnb.z(-511139762928426L)   */, new amw(new ls(ceeVar, 0, zmVar), 0));
                             bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, "取消" /* "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)   */);
                             if (linearLayout != null) {
@@ -277,7 +277,7 @@ public final /* synthetic */ class gi implements bgf {
             case 23:
                 return Boolean.valueOf(lt.a.n().contains(((zn) obj).a));
             case 24:
-                HookParam hookParam4 = (bmm) obj;
+                HookParam hookParam4 = (HookParam) obj;
                 hookParam4.getClass();
                 try {
                     objX6 = hookParam4.d()[1];
@@ -303,7 +303,7 @@ public final /* synthetic */ class gi implements bgf {
                     Object obj2 = objX7 instanceof Failure ? null : objX7;
                     throwIfVar1IsNull(obj2);
                     int i5 = 0;
-                    FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).r();
+                    FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).createFieldResolver();
                     fieldResolverVarR.name = "field_UserName" /* "field_UserName" /* "field_UserName" /* "field_UserName" /* cnb.z(-443841920367402L)   */;
                     Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
                     throwIfVar1IsNull(objE);
@@ -356,7 +356,7 @@ public final /* synthetic */ class gi implements bgf {
                 }
                 throw new NullPointerException("Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-641324516637482L)   */.concat(viewK2.getResources().getResourceName(i6)));
             case 28:
-                Object objE2 = ((bmm) obj).e();
+                Object objE2 = ((HookParam) obj).e();
                 Activity activity = (Activity) (objE2 instanceof Activity ? objE2 : null);
                 if (activity == null) {
                     cls = Activity.class;
@@ -377,7 +377,7 @@ public final /* synthetic */ class gi implements bgf {
                 return kotlinUnitVar;
             default:
                 int i8 = 0;
-                FieldResolver fieldResolverVarAa = StaticHelpers6.aa((bmm) obj);
+                FieldResolver fieldResolverVarAa = StaticHelpers6.createFieldResolverFromHookParamThisObject((HookParam) obj);
                 fieldResolverVarAa.fieldType = dal.getKClassFromClass(Button.class);
                 Object objE3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue_();
                 throwIfVar1IsNull(objE3);

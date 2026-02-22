@@ -1494,7 +1494,7 @@ public final class cix {
         for (cio cioVar : StaticHelpers5.r(arrayListAb)) {
             buh buhVar = cioVar.h.k;
             cjg cjgVar2 = cioVar.b;
-            cjg cjgVar3 = (cjg) StaticHelpers5.g(arrayListAh);
+            cjg cjgVar3 = (cjg) StaticHelpers5.getFirstInList(arrayListAh);
             buh buhVar2 = buh.e;
             buh buhVar3 = buh.d;
             if (cjgVar3 != null && cjgVar3.g.a == cjgVar2.g.a) {
@@ -1509,7 +1509,7 @@ public final class cix {
                         map.put(cioVar, buhVar2);
                     }
                 }
-                cjg cjgVar4 = (cjg) StaticHelpers5.g(arrayList);
+                cjg cjgVar4 = (cjg) StaticHelpers5.getFirstInList(arrayList);
                 if (cjgVar4 != null && cjgVar4.g.a == cjgVar2.g.a) {
                     StaticHelpers2.aq(arrayList);
                 }

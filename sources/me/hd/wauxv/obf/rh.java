@@ -32,7 +32,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
     }
 
     public final String ac() {
-        return z(this.b, uj.a);
+        return z(this.b, Charsets.UTF_8);
     }
 
     public final sj ad(int i) {
@@ -324,7 +324,7 @@ public final class rh implements rm, rl, Cloneable, ByteChannel {
             sbR.append(str.length());
             throw new IllegalArgumentException(sbR.toString().toString());
         }
-        if (charset.equals(uj.a)) {
+        if (charset.equals(Charsets.UTF_8)) {
             au(str, i, i2);
             return;
         }

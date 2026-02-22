@@ -3,14 +3,10 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class AppBrandVideoRewardHook extends SwitchHook {
-    public static final AppBrandVideoRewardHook a = new AppBrandVideoRewardHook("AppBrandVideoRewardHook" /*
-                                                                                                           * cnb.z(-
-                                                                                                           * 410461434542890L)
-                                                                                                           */);
-    public static final String b = "小程序" /* "小程序" /* "小程序" /* "小程序" /* cnb.z(-434053689899818L)   */;
-    public static final String c = "程序视频奖励" /* "程序视频奖励" /* "程序视频奖励" /* "程序视频奖励" /* cnb.z(-433452394478378L)   */;
-    public static final String d = "跳过小程序视频广告等待时长领取奖励" /* "跳过小程序视频广告等待时长领取奖励" /* "跳过小程序视频广告等待时长领取奖励" /* "跳过小程序视频广告等待时长领取奖励" /* cnb.z(-433422329707306L)   */;
-    public static final String[] h = { ewi.b.e, ewi.c.e };
+    public static final AppBrandVideoRewardHook INSTANCE = new AppBrandVideoRewardHook("AppBrandVideoRewardHook");
+    public static final String c = "程序视频奖励";
+    public static final String d = "跳过小程序视频广告等待时长领取奖励";
+    public static final String[] h = { APP_BRAND_ID_ENUM.APP_BRAND_0.strValue, APP_BRAND_ID_ENUM.APP_BRAND_1.strValue };
     public static final boolean i = true;
 
     @Override // me.hd.wauxv.obf.SwitchHook, me.hd.wauxv.obf.SwitchHook
@@ -20,14 +16,30 @@ public final class AppBrandVideoRewardHook extends SwitchHook {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        int i2 = 0;
-        MethodResolver methodResolverVarT = yg.s(-433997855324970L).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        methodResolverVarT.name = "subscribeHandler" /* "subscribeHandler" /* "subscribeHandler" /* "subscribeHandler" /* cnb.z(-434246963428138L)   */;
+        MethodResolver methodResolverVarT = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.appbrand.commonjni.AppBrandJsBridgeBinding")).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        methodResolverVarT.name = "subscribeHandler";
         MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
-        AppBrandVideoRewardHook gyVar = a;
+        AppBrandVideoRewardHook gyVar = INSTANCE;
         HookManager hookManagerVarAd = gyVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-        gyVar.hookBefore(hookManagerVarAd, new gi(17));
+        gyVar.hookBefore(hookManagerVarAd, (obj -> {
+            HookParam hookParam = (HookParam) obj;
+            Object args0 = hookParam.getArgs()[0];
+            String args0Str = (String) args0;
+            String args0StrNullSafe = args0Str == null ? "" : args0Str;
+            Object args1 = hookParam.getArgs()[1];
+            String args1Str = (String) args1;
+            String args1StrNullSafe = args1Str != null ? args1Str : "";
+            if (args0StrNullSafe.equals("onVideoTimeUpdate")) {
+                JSONObject jSONObject3 = new JSONObject(args1StrNullSafe);
+                jSONObject3.put("position", 60);
+                jSONObject3.put("duration", 1);
+                Object[] objArrI = hookParam.b.getArgs();
+                if (objArrI != null) {
+                    objArrI[1] = jSONObject3.toString();
+                }
+            }
+        }));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 

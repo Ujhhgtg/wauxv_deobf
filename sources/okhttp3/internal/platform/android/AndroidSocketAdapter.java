@@ -7,16 +7,12 @@ import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.dnr;
-import me.hd.wauxv.obf.uj;
+import me.hd.wauxv.obf.Charsets;
 import net.bytebuddy.pool.TypePool;
 import okhttp3.Protocol;
 import okhttp3.internal.platform.AndroidPlatform;
 import okhttp3.internal.platform.Platform;
-import okhttp3.internal.platform.android.DeferredSocketAdapter;
-import okhttp3.internal.platform.android.SocketAdapter;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -123,7 +119,7 @@ public class AndroidSocketAdapter implements SocketAdapter {
         try {
             byte[] bArr = (byte[]) this.getAlpnSelectedProtocol.invoke(sSLSocket, null);
             if (bArr != null) {
-                return new String(bArr, uj.a);
+                return new String(bArr, Charsets.UTF_8);
             }
             return null;
         } catch (IllegalAccessException e) {

@@ -96,7 +96,7 @@ public final /* synthetic */ class byx implements bgk {
                                 if (activity != null && activity.isDestroyed()) {
                                     arrayList.add(str);
                                 } else if (exfVar.l((Context) pairVar.first)) {
-                                    ((bgj) pairVar.second).g(action, intent);
+                                    ((Function2) pairVar.second).g(action, intent);
                                 }
                             }
                             ArrayList arrayList2 = arrayList.isEmpty() ? null : arrayList;

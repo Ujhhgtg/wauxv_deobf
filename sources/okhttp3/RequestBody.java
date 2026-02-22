@@ -6,14 +6,13 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.logging.Logger;
 import me.hd.wauxv.obf.akd;
-import me.hd.wauxv.obf.KotlinHelpers;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.cqj;
 import me.hd.wauxv.obf.ekc;
 import me.hd.wauxv.obf.ln;
 import me.hd.wauxv.obf.rl;
 import me.hd.wauxv.obf.sj;
-import me.hd.wauxv.obf.uj;
+import me.hd.wauxv.obf.Charsets;
 import okhttp3.internal.Util;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -109,7 +108,7 @@ public abstract class RequestBody {
 
         public final RequestBody create(String str, MediaType mediaType) {
             throwIfVar1IsNull(str, "<this>");
-            Charset charset = uj.a;
+            Charset charset = Charsets.UTF_8;
             if (mediaType != null) {
                 Charset charsetCharset$default = MediaType.charset$default(mediaType, null, 1, null);
                 if (charsetCharset$default == null) {

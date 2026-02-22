@@ -46,7 +46,7 @@ public final /* synthetic */ class bn implements IInvokable {
         DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
         String[] strArr = { "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* cnb.z(-442909912464170L)  */ };
         dexMethodQueryBuilderVar.getClass();
-        dexMethodQueryBuilderVar.a = SomeStaticHelpers.arrayToList(strArr);
+        dexMethodQueryBuilderVar.searchedPackages = SomeStaticHelpers.arrayToList(strArr);
         DexFinder cdjVar = new DexFinder();
         cdjVar.usingStrings("MicroMsg.SDK.XmlParser" /* "MicroMsg.SDK.XmlParser" /* "MicroMsg.SDK.XmlParser" /* cnb.z(-442235602598698L)  */, "[ %s ]" /* "[ %s ]" /* "[ %s ]" /* cnb.z(-442119638481706L)  */);
         dexMethodQueryBuilderVar.dexFinder = cdjVar;
@@ -685,18 +685,18 @@ public final /* synthetic */ class bn implements IInvokable {
                 Object obj2 = objX2 instanceof Failure ? null : objX2;
                 throwIfVar1IsNull(obj2);
                 int i12 = 0;
-                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).r();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).createFieldResolver();
                 fieldResolverVarR.name = "f" /* "f" /* "f" /* cnb.z(-477029132663594L)  */;
                 Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue();
                 throwIfVar1IsNull(objD);
-                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objD).r();
+                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objD).createFieldResolver();
                 fieldResolverVarR2.name = "f" /* "f" /* "f" /* cnb.z(-477037722598186L)  */;
                 Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue_();
                 throwIfVar1IsNull(objE);
                 try {
                     if (new JSONObject((String) objE)
                             .optJSONArray("ad_slot_data" /* "ad_slot_data" /* "ad_slot_data" /* cnb.z(-477046312532778L)  */) != null) {
-                        FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objD).r();
+                        FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objD).createFieldResolver();
                         fieldResolverVarR3.name = "f" /* "f" /* "f" /* cnb.z(-476973298088746L)  */;
                         ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).setValue("{}" /* "{}" /* "{}" /* cnb.z(-476981888023338L)  */);
                     }

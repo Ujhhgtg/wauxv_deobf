@@ -33,12 +33,11 @@ public final class eui extends ewy {
     public static void d() {
         for (bmf bmfVar : (List) ajf.a.getValue()) {
             if (bmfVar instanceof bmz) {
-                ur.a.getClass();
                 ur.b.add((bmz) bmfVar);
             }
-            if (bmfVar instanceof bna) {
-                wm.a.getClass();
-                wm.b.add((bna) bmfVar);
+            if (bmfVar instanceof IMessageLongPressHook) {
+                ChatItemMenuNewApiHook.INSTANCE.getClass();
+                ChatItemMenuNewApiHook.ALL_HOOKS.add((IMessageLongPressHook) bmfVar);
             }
             if (bmfVar instanceof bnb) {
                 wp.a.getClass();
@@ -120,8 +119,7 @@ public final class eui extends ewy {
                 dly.b.add((bob) bmfVar);
             }
             if (bmfVar instanceof boc) {
-                dmi.a.getClass();
-                dmi.b.add((boc) bmfVar);
+                StartActivityApiHook.ALL_HOOKS.add((boc) bmfVar);
             }
             if (bmfVar instanceof bod) {
                 dou.a.getClass();
@@ -153,7 +151,7 @@ public final class eui extends ewy {
         MethodResolver methodResolverVarT = dqc.bg(dal.getKClassFromClass(Instrumentation.class)).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "callApplicationOnCreate" /* "callApplicationOnCreate" /* "callApplicationOnCreate" /* "callApplicationOnCreate" /* cnb.z(-82549271427882L)   */;
         HookManager hookManagerVarAd = a.createImmediateHook((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(Application.class) }, 1, methodResolverVarT), HookPriorityEnum.ENUM_DEFAULT);
-        hookManagerVarAd.m(new epy(14));
+        hookManagerVarAd.hookAfter(new epy(14));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
     }
 }

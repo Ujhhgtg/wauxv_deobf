@@ -14,8 +14,8 @@ public abstract class exl {
         boolean z;
         Object objX;
         Boolean bool;
-        boolean z2 = exm.a;
-        if (!exm.l()) {
+        boolean z2 = exm.isInitialized;
+        if (!exm.isXposedEnvironment()) {
             MethodHookWrapper methodHookWrapperVarAy = dqc.initModuleStatus("__--");
             z = ((methodHookWrapperVarAy == null || (bool = (Boolean) methodHookWrapperVarAy.invoke(new Object[0])) == null) ? false : bool.booleanValue()) || KotlinHelpers2.az();
         }

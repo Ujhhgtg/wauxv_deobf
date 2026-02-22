@@ -38,8 +38,8 @@ public abstract class dg extends hb implements cea {
               // android.content.ComponentCallbacks
     public final void onConfigurationChanged(Configuration configuration) {
         Resources resources;
-        boolean z = exm.a;
-        if (exm.l() && (resources = getResources()) != null) {
+        boolean z = exm.isInitialized;
+        if (exm.isXposedEnvironment() && (resources = getResources()) != null) {
             HugeSyntheticPileOfHelpers.injectModuleAssets(resources);
         }
         super.onConfigurationChanged(configuration);
@@ -49,8 +49,8 @@ public abstract class dg extends hb implements cea {
     public void onCreate(Bundle bundle) {
         View viewPeekDecorView;
         Context context;
-        boolean z = exm.a;
-        if (exm.l()) {
+        boolean z = exm.isInitialized;
+        if (exm.isXposedEnvironment()) {
             setTheme(R.style.AppTheme);
         }
         super.onCreate(bundle);

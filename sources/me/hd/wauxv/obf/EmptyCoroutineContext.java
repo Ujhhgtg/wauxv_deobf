@@ -14,7 +14,7 @@ public final class EmptyCoroutineContext implements ahh, Serializable {
     }
 
     @Override // me.hd.wauxv.obf.ahh
-    public final Object _u(Object obj, bgj bgjVar) {
+    public final Object _u(Object obj, Function2 function2Var) {
         return obj;
     }
 

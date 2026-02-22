@@ -410,7 +410,7 @@ public abstract class emc {
             if ((obj instanceof bgq ? ((bgq) obj).getArity()
                     : obj instanceof IFunction0 ? 0
                             : obj instanceof bgf ? 1
-                                    : obj instanceof bgj ? 2
+                                    : obj instanceof Function2 ? 2
                                             : obj instanceof bgk ? 3
                                                     : obj instanceof blv ? 4 : obj instanceof aak ? 7 : -1) == i) {
                 return true;

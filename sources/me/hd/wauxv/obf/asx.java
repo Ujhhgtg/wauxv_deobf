@@ -10,10 +10,10 @@ public final class asx {
     public final long[] e;
 
     /* JADX WARN: Multi-variable type inference failed */
-    public asx(dfx dfxVar, bgj bgjVar) {
+    public asx(dfx dfxVar, Function2 function2Var) {
         throwIfVar1IsNull(dfxVar, "descriptor");
         this.b = dfxVar;
-        this.c = (bgr) bgjVar;
+        this.c = (bgr) function2Var;
         int i = dfxVar.i();
         if (i <= 64) {
             this.d = i != 64 ? (-1) << i : 0L;

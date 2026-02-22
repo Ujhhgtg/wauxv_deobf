@@ -14,8 +14,8 @@ public final class HookManager {
     public Object hookPriority;
     public Object resolutionStrategy;
     public Object instantCollection;
-    public Object f;
-    public Object g;
+    public Object beforeHook;
+    public Object afterHook;
     public Object activeUnhooks;
     public Object members;
     public Object hookingEngine;
@@ -71,14 +71,14 @@ public final class HookManager {
         }
     }
 
-    public dop m(IInvokable bgfVar) {
-        this.g = bgfVar;
+    public dop hookAfter(IInvokable bgfVar) {
+        this.afterHook = bgfVar;
         applyHooks(false);
         return new dop(25);
     }
 
-    public dop n(IInvokable bgfVar) {
-        this.f = bgfVar;
+    public dop hookBefore(IInvokable bgfVar) {
+        this.beforeHook = bgfVar;
         applyHooks(false);
         return new dop(25);
     }

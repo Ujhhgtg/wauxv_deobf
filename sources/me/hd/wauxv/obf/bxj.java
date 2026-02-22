@@ -30,7 +30,7 @@ public final class bxj extends SwitchHook implements IDexFind {
         l = "虚拟定位" /* "虚拟定位" /* "虚拟定位" /* "虚拟定位" /* cnb.z(-499959963056938L)   */;
         m = "将腾讯定位SDK结果虚拟为指定经纬度" /* "将腾讯定位SDK结果虚拟为指定经纬度" /* "将腾讯定位SDK结果虚拟为指定经纬度" /* "将腾讯定位SDK结果虚拟为指定经纬度" /* cnb.z(-499904128482090L)   */;
         n = new bty(1);
-        r = new String[] { ewi.a.e, ewi.b.e };
+        r = new String[] { APP_BRAND_ID_ENUM.APP_BRAND_HOST_PKG_NAME.strValue, APP_BRAND_ID_ENUM.APP_BRAND_0.strValue};
         s = true;
     }
 

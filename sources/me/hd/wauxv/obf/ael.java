@@ -18,7 +18,7 @@ public final class ael {
     public final int i = R.drawable.ic_contact_cancel_24dp;
     public String j = "确定" /* "确定" /* "确定" /* "确定" /* cnb.z(-395450523843370L)   */;
     public final act k = new act(16);
-    public bgj l = new fq(2);
+    public Function2 l = new fq(2);
 
     public ael(aek aekVar) {
         this.a = aekVar;

@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bhp extends doi implements bgj {
+public final class bhp extends doi implements Function2 {
     public final /* synthetic */ int a = 0;
     public int d;
     public Object e;
@@ -81,7 +81,7 @@ public final class bhp extends doi implements bgj {
                                                                                                             * cnb.z(-
                                                                                                             * 44044889619242L)
                                                                                                             */;
-                    Dispatchers$Default alcVar = aou.a;
+                    Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                     Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
                     dob dobVar = new dob();
                     akqVar.getClass();
@@ -128,7 +128,7 @@ public final class bhp extends doi implements bgj {
                 this.e = null;
                 this.d = 2;
                 Kotlin$Lazy kotlin$LazyVar = doh.a;
-                Dispatchers$Default alcVar2 = aou.a;
+                Dispatchers$Default alcVar2 = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                 if (ajn.ak(bza.a, bhnVar, this) != ahqVar) {
                     return kotlinUnitVar;
                 }
@@ -146,7 +146,7 @@ public final class bhp extends doi implements bgj {
                     this.o = bvzVar;
                     this.d = 1;
                     Kotlin$Lazy kotlin$LazyVar2 = doh.a;
-                    Dispatchers$Default alcVar3 = aou.a;
+                    Dispatchers$Default alcVar3 = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                     objAk = ajn.ak(Dispatchers$IO.INSTANCE, lwVar, this);
                     if (objAk == ahqVar) {
                         return ahqVar;
@@ -223,7 +223,7 @@ public final class bhp extends doi implements bgj {
                     return kotlinUnitVar;
                 }
                 FastKV.bd(obj);
-                Dispatchers$Default alcVar4 = aou.a;
+                Dispatchers$Default alcVar4 = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                 Dispatcher2 dispatcher2Var = bza.a;
                 zl zlVar = new zl((AlertDialog) onCreateContextMenuListener, null, 1);
                 this.d = 2;

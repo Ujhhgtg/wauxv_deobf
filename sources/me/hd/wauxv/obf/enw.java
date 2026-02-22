@@ -7,7 +7,7 @@ public final class enw extends Dispatcher {
 
     @Override // me.hd.wauxv.obf.ahj
     public final void i(ahh ahhVar, Runnable runnable) {
-        Dispatchers$Default.f.g.m(runnable, true);
+        Dispatchers$Default.INSTANCE.g.m(runnable, true);
     }
 
     @Override // me.hd.wauxv.obf.ahj

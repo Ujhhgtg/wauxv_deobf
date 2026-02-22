@@ -29,8 +29,8 @@ public final class abj implements ahh, Serializable {
     }
 
     @Override // me.hd.wauxv.obf.ahh
-    public final Object _u(Object obj, bgj bgjVar) {
-        return bgjVar.g(this.a._u(obj, bgjVar), this.f);
+    public final Object _u(Object obj, Function2 function2Var) {
+        return function2Var.g(this.a._u(obj, function2Var), this.f);
     }
 
     @Override // me.hd.wauxv.obf.ahh

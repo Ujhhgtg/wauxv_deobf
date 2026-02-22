@@ -61,9 +61,9 @@ public final class bep implements IInvokable
                 return bzo.f((Object)clazz, (Object)clazz2) ^ true;
             }
             case 27: {
-                final bmm bmm = (bmm)d;
-                final azg aa = dkz.aa(bmm);
-                aa.a = dal.b((Class)Context.class);
+                final HookParam param = (HookParam)d;
+                final azg aa = dkz.aa(param);
+                aa.a = dal.getKClassFromClass((Class)Context.class);
                 final Object e = ((azk)aaz.e(aa.c())).e();
                 bzo.n(e);
                 final Resources resources = ((Context)e).getResources();
@@ -75,7 +75,7 @@ public final class bep implements IInvokable
                 final Object j = ((cdk)aaz.e(t.aj())).j(new Object[0]);
                 bzo.n(j);
                 final BaseAdapter baseAdapter = (BaseAdapter)j;
-                final azg aa2 = dkz.aa(bmm);
+                final azg aa2 = dkz.aa(param);
                 aa2.a = dal.b((Class)SparseArray.class);
                 d = aaz.e(aa2.c());
                 d = ((azk)d).e();
@@ -115,7 +115,7 @@ public final class bep implements IInvokable
                                 size = i;
                                 final String b2 = bly.b;
                                 size = i;
-                                final String z = cnb.z(-63690070031146L);
+                                final String z = "";
                                 size = i;
                                 final int c = bly.c;
                                 try {
@@ -136,13 +136,13 @@ public final class bep implements IInvokable
                     }
                     final ArrayList a6 = ewq.a;
                     final StringBuilder sb = new StringBuilder();
-                    sb.append(cnb.z(-63702954933034L));
+                    sb.append("onCreateMenuItems");
                     String s;
                     if (bnn instanceof doo) {
                         s = ((doo)bnn).f();
                     }
                     else {
-                        s = cnb.z(-63569810946858L);
+                        s = "LoadHook";
                     }
                     final Exception ex;
                     ewq.e(yg.n(sb, s, -63548336110378L), ex, 12);
@@ -150,7 +150,7 @@ public final class bep implements IInvokable
                 return a2;
             }
             case 26: {
-                final bmm bmm2 = (bmm)d;
+                final bmm bmm2 = (HookParam)d;
                 bmm2.getClass();
                 Object x = null;
                 try {
@@ -253,7 +253,7 @@ public final class bep implements IInvokable
                 return a2;
             }
             case 21: {
-                final bmm bmm3 = (bmm)d;
+                final bmm bmm3 = (HookParam)d;
                 final int a10 = bte.a;
                 final azg aa4 = dkz.aa(bmm3);
                 aa4.a = dal.b((Class)TextView.class);
@@ -281,7 +281,7 @@ public final class bep implements IInvokable
                 return a2;
             }
             case 18: {
-                final bmm bmm4 = (bmm)d;
+                final bmm bmm4 = (HookParam)d;
                 bmm4.getClass();
                 new ek((Object)bmm4, 0, 8).q((Object)8);
                 return a2;
@@ -321,7 +321,7 @@ public final class bep implements IInvokable
                 throw d;
             }
             case 16: {
-                final bmm bmm5 = (bmm)d;
+                final bmm bmm5 = (HookParam)d;
                 bmm5.getClass();
                 Object x2 = null;
                 try {
@@ -422,7 +422,7 @@ public final class bep implements IInvokable
                 return a2;
             }
             case 13: {
-                d = ((bmm)d).f();
+                d = ((HookParam)d).f();
                 if (!(d instanceof ViewGroup)) {
                     d = o;
                 }
@@ -448,7 +448,7 @@ public final class bep implements IInvokable
                 return a2;
             }
             case 10: {
-                final bmm bmm6 = (bmm)d;
+                final bmm bmm6 = (HookParam)d;
                 final int a12 = bte.a;
                 final azg aa5 = dkz.aa(bmm6);
                 aa5.b = (bgf)new bep(12);
@@ -511,7 +511,7 @@ public final class bep implements IInvokable
                 return a2;
             }
             case 6: {
-                final bmm bmm7 = (bmm)d;
+                final bmm bmm7 = (HookParam)d;
                 bmm7.getClass();
                 Object x3 = null;
                 try {

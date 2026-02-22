@@ -104,11 +104,11 @@ public final /* synthetic */ class cvc implements IInvokable {
                 KeyEvent keyEvent = (KeyEvent) obj2;
                 if (keyEvent.getKeyCode() == 67 && keyEvent.getAction() == 0) {
                     int i6 = 0;
-                    FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam);
-                    fieldResolverVarAa.b = new cvc(i2);
+                    FieldResolver fieldResolverVarAa = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam);
+                    fieldResolverVarAa.fieldMatcher = new cvc(i2);
                     Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue();
                     throwIfVar1IsNull(objD);
-                    FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objD).r();
+                    FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objD).createFieldResolver();
                     uq.a.getClass();
                     fieldResolverVarR.fieldType = ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */);
                     Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue_();
@@ -140,7 +140,7 @@ public final /* synthetic */ class cvc implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 String[] strArr = { "com.tencent.mm.pluginsdk.ui.chat" /* "com.tencent.mm.pluginsdk.ui.chat" /* "com.tencent.mm.pluginsdk.ui.chat" /* cnb.z(-460343184718634L)  */ };
                 dexMethodQueryBuilderVar2.getClass();
-                dexMethodQueryBuilderVar2.a = SomeStaticHelpers.arrayToList(strArr);
+                dexMethodQueryBuilderVar2.searchedPackages = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.s("onKey" /* "onKey" /* "onKey" /* cnb.z(-460201450797866L)  */);
                 cdjVar2.usingStrings("ChatFooterKtHelper" /* "ChatFooterKtHelper" /* "ChatFooterKtHelper" /* cnb.z(-460158501124906L)  */, "supportAutoComplete err" /*
@@ -393,7 +393,7 @@ public final /* synthetic */ class cvc implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 String[] strArr2 = { "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-461640264842026L)  */ };
                 dexMethodQueryBuilderVar3.getClass();
-                dexMethodQueryBuilderVar3.a = SomeStaticHelpers.arrayToList(strArr2);
+                dexMethodQueryBuilderVar3.searchedPackages = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar3 = new DexFinder();
                 cdjVar3.usingStrings("MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* "MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* "MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* cnb.z(-460965954976554L)  */,
                         "handleItemClickToPositionEvent,quotedMsg is null!" /* "handleItemClickToPositionEvent,quotedMsg is null!" /* "handleItemClickToPositionEvent,quotedMsg is null!" /* cnb.z(-460746911644458L)  */);
@@ -403,7 +403,7 @@ public final /* synthetic */ class cvc implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 String[] strArr3 = { "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-459956637661994L)  */ };
                 dexMethodQueryBuilderVar4.getClass();
-                dexMethodQueryBuilderVar4.a = SomeStaticHelpers.arrayToList(strArr3);
+                dexMethodQueryBuilderVar4.searchedPackages = SomeStaticHelpers.arrayToList(strArr3);
                 DexFinder cdjVar4 = new DexFinder();
                 cdjVar4.usingStrings("MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* "MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* "MicroMsg.msgquote.QuoteMsgSourceClickLogic" /* cnb.z(-461481351052074L)  */,
                         "handleItemClickEvent,quotedMsg is null!" /* "handleItemClickEvent,quotedMsg is null!" /* "handleItemClickEvent,quotedMsg is null!" /* cnb.z(-461262307719978L)  */);
@@ -464,20 +464,20 @@ public final /* synthetic */ class cvc implements IInvokable {
                 }
                 throwIfVar1IsNull(objX21);
                 int i8 = 0;
-                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objX21).r();
+                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objX21).createFieldResolver();
                 fieldResolverVarR2.name = "field_unReadCount" /* "field_unReadCount" /* "field_unReadCount" /* cnb.z(-457542866041642L)  */;
                 Object objE2 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue_();
                 throwIfVar1IsNull(objE2);
                 int iIntValue3 = ((Number) objE2).intValue();
-                FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objX21).r();
+                FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objX21).createFieldResolver();
                 fieldResolverVarR3.name = "field_unReadMuteCount" /* "field_unReadMuteCount" /* "field_unReadMuteCount" /* cnb.z(-457482736499498L)  */;
                 Object objE3 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
                 throwIfVar1IsNull(objE3);
                 int iIntValue4 = ((Number) objE3).intValue();
-                FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(objX21).r();
+                FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(objX21).createFieldResolver();
                 fieldResolverVarR4.name = "field_msgType" /* "field_msgType" /* "field_msgType" /* cnb.z(-457920823163690L)  */;
                 String str3 = (String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR4)).getValue_();
-                FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(objX21).r();
+                FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(objX21).createFieldResolver();
                 fieldResolverVarR5.name = "field_content" /* "field_content" /* "field_content" /* cnb.z(-457912233229098L)  */;
                 Object objE4 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR5)).getValue_();
                 throwIfVar1IsNull(objE4);
@@ -553,7 +553,7 @@ public final /* synthetic */ class cvc implements IInvokable {
                 }
                 throwIfVar1IsNull(objX24);
                 int i9 = 0;
-                FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(obj12).r();
+                FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(obj12).createFieldResolver();
                 fieldResolverVarR6.fieldType = dal.getKClassFromClass(View.class);
                 Object objE5 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR6)).getValue_();
                 throwIfVar1IsNull(objE5);
@@ -586,7 +586,7 @@ public final /* synthetic */ class cvc implements IInvokable {
                 Object obj13 = field.get(objX24);
                 throwIfVar1IsNull(obj13);
                 int i11 = 0;
-                FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(obj13).r();
+                FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(obj13).createFieldResolver();
                 fieldResolverVarR7.fieldType = dal.getKClassFromClass(cls);
                 Object obj14 = null;
                 boolean z2 = false;
@@ -690,7 +690,7 @@ public final /* synthetic */ class cvc implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 String[] strArr4 = { "com.tencent.mm.plugin.luckymoney.ui" /* "com.tencent.mm.plugin.luckymoney.ui" /* "com.tencent.mm.plugin.luckymoney.ui" /* cnb.z(-537158674807594L)  */ };
                 dexMethodQueryBuilderVar6.getClass();
-                dexMethodQueryBuilderVar6.a = SomeStaticHelpers.arrayToList(strArr4);
+                dexMethodQueryBuilderVar6.searchedPackages = SomeStaticHelpers.arrayToList(strArr4);
                 DexFinder cdjVar6 = new DexFinder();
                 cdjVar6.usingStrings("MicroMsg.LuckyMoneyDetailUI" /* "MicroMsg.LuckyMoneyDetailUI" /* "MicroMsg.LuckyMoneyDetailUI" /* cnb.z(-537588171537194L)  */, "try get user contact: %s" /*
                                                                                                                     * cnb
@@ -719,7 +719,7 @@ public final /* synthetic */ class cvc implements IInvokable {
                 return kotlinUnitVar;
             case 23:
                 int i16 = 0;
-                FieldResolver fieldResolverVarAa2 = StaticHelpers6.aa((HookParam) obj);
+                FieldResolver fieldResolverVarAa2 = StaticHelpers6.createFieldResolverFromHookParamThisObject((HookParam) obj);
                 fieldResolverVarAa2.fieldType = dal.getKClassFromClass(cls4);
                 for (BoundField boundFieldVar : fieldResolverVarAa2.resolve()) {
                     Integer num = (Integer) boundFieldVar.getValue_();
@@ -741,7 +741,7 @@ public final /* synthetic */ class cvc implements IInvokable {
                 return kotlinUnitVar;
             case 26:
                 int i17 = 0;
-                FieldResolver fieldResolverVarAa3 = StaticHelpers6.aa((HookParam) obj);
+                FieldResolver fieldResolverVarAa3 = StaticHelpers6.createFieldResolverFromHookParamThisObject((HookParam) obj);
                 StaticHelpers2.addAllFromVar2ToVar1(fieldResolverVarAa3.modifiers, (AccessModifierEnum[]) Arrays.copyOf(new AccessModifierEnum[] { AccessModifierEnum.PUBLIC, AccessModifierEnum.FINAL}, 2));
                 fieldResolverVarAa3.fieldType = dal.getKClassFromClass(cls4);
                 for (BoundField boundFieldVar2 : fieldResolverVarAa3.resolve()) {

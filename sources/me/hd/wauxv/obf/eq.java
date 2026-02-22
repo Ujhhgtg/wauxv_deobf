@@ -2,7 +2,7 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class eq extends doi implements bgj {
+public final class eq extends doi implements Function2 {
     public final /* synthetic */ int a = 2;
     public int d;
     public /* synthetic */ Object e;
@@ -30,7 +30,7 @@ public final class eq extends doi implements bgj {
     public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         switch (this.a) {
             case 0:
-                eq eqVar = new eq((bgj) this.f, afwVar);
+                eq eqVar = new eq((Function2) this.f, afwVar);
                 eqVar.e = obj;
                 return eqVar;
             case 1:
@@ -62,9 +62,9 @@ public final class eq extends doi implements bgj {
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     /* JADX WARN: Multi-variable type inference failed */
-    public eq(bgj bgjVar, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
+    public eq(Function2 function2Var, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
         super(2, afwVar);
-        this.f = (doi) bgjVar;
+        this.f = (doi) function2Var;
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */

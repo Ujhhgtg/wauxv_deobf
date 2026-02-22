@@ -8,7 +8,7 @@ public abstract class b {
     public static final byte[] a;
 
     static {
-        byte[] bytes = "0123456789abcdef".getBytes(uj.a);
+        byte[] bytes = "0123456789abcdef".getBytes(Charsets.UTF_8);
         throwIfVar1IsNull(bytes, "this as java.lang.String).getBytes(charset)");
         a = bytes;
     }
@@ -36,12 +36,12 @@ public abstract class b {
         if (j > 0) {
             long j2 = j - 1;
             if (rhVar.n(j2) == 13) {
-                String strZ = rhVar.z(j2, uj.a);
+                String strZ = rhVar.z(j2, Charsets.UTF_8);
                 rhVar.skip(2L);
                 return strZ;
             }
         }
-        String strZ2 = rhVar.z(j, uj.a);
+        String strZ2 = rhVar.z(j, Charsets.UTF_8);
         rhVar.skip(1L);
         return strZ2;
     }

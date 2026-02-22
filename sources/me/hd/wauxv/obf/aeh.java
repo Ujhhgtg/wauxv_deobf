@@ -49,14 +49,14 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                 ng.aj(new ccq(ccuVarM, 1));
                 return;
             case 1:
-                bgj bgjVar = (bgj) obj2;
+                Function2 function2Var = (Function2) obj2;
                 aek aekVar2 = (aek) obj;
                 ael aelVar = aekVar2.a;
                 if (aelVar == null) {
                     throwLateinitPropNotInitYet("info" /* "info" /* "info" /* "info" /* cnb.z(-395527833254698L)   */);
                     throw null;
                 }
-                if (((Boolean) bgjVar.g(aelVar.n(), aekVar2)).booleanValue()) {
+                if (((Boolean) function2Var.g(aelVar.n(), aekVar2)).booleanValue()) {
                     return;
                 }
                 ccu ccuVarM2 = aekVar2.m();

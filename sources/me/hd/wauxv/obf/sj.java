@@ -77,7 +77,7 @@ public class sj implements Serializable, Comparable {
             bArr3[i2 + 2] = bArr[(b6 & com.umeng.analytics.pro.dn.m) << 2];
             bArr3[i2 + 3] = 61;
         }
-        return new String(bArr3, uj.a);
+        return new String(bArr3, Charsets.UTF_8);
     }
 
     public boolean equals(Object obj) {
@@ -184,7 +184,7 @@ public class sj implements Serializable, Comparable {
         }
         byte[] bArrI = i();
         throwIfVar1IsNull(bArrI, "<this>");
-        String str2 = new String(bArrI, uj.a);
+        String str2 = new String(bArrI, Charsets.UTF_8);
         this.d = str2;
         return str2;
     }

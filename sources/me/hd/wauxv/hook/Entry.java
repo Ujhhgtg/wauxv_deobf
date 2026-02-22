@@ -35,14 +35,14 @@ public final class Entry implements IXposedHookZygoteInit, IXposedHookLoadPackag
             return;
         }
         try {
-            String strZ = "me.hd.wauxv" /* "me.hd.wauxv" /* "me.hd.wauxv" /* cnb.z(-77159087471402L)  */;
+            String strZ = "me.hd.wauxv";
             String str = startupParam.modulePath;
-            exm.a = true;
-            exm.h = strZ;
-            exm.i = str;
+            exm.isInitialized = true;
+            exm.modulePackageName = strZ;
+            exm.modulePath = str;
             try {
                 int i = exk.a;
-                objX2 = new exk(XModuleResources.createInstance(exm.i, (XResources) null));
+                objX2 = new exk(XModuleResources.createInstance(exm.modulePath, (XResources) null));
             } catch (Throwable th) {
                 objX2 = FastKV.getFailureFromException(th);
             }

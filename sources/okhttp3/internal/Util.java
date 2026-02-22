@@ -53,7 +53,7 @@ import me.hd.wauxv.obf.rh;
 import me.hd.wauxv.obf.rl;
 import me.hd.wauxv.obf.rm;
 import me.hd.wauxv.obf.sj;
-import me.hd.wauxv.obf.uj;
+import me.hd.wauxv.obf.Charsets;
 import me.hd.wauxv.obf.z;
 import net.bytebuddy.implementation.MethodDelegation;
 import okhttp3.Call;
@@ -508,27 +508,27 @@ public final class Util {
             return charset4;
         }
         if (iAb == 3) {
-            Charset charset5 = uj.a;
-            Charset charset6 = uj.c;
+            Charset charset5 = Charsets.UTF_8;
+            Charset charset6 = Charsets.c;
             if (charset6 != null) {
                 return charset6;
             }
             Charset charsetForName = Charset.forName("UTF-32BE");
             throwIfVar1IsNull(charsetForName, "forName(...)");
-            uj.c = charsetForName;
+            Charsets.c = charsetForName;
             return charsetForName;
         }
         if (iAb != 4) {
             throw new AssertionError();
         }
-        Charset charset7 = uj.a;
-        Charset charset8 = uj.b;
+        Charset charset7 = Charsets.UTF_8;
+        Charset charset8 = Charsets.b;
         if (charset8 != null) {
             return charset8;
         }
         Charset charsetForName2 = Charset.forName("UTF-32LE");
         throwIfVar1IsNull(charsetForName2, "forName(...)");
-        uj.b = charsetForName2;
+        Charsets.b = charsetForName2;
         return charsetForName2;
     }
 

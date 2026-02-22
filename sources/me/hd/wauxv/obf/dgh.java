@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class dgh extends doi implements bgj {
+public final class dgh extends doi implements Function2 {
     public final /* synthetic */ int a;
     public int d;
     public final /* synthetic */ View e;
@@ -55,7 +55,7 @@ public final class dgh extends doi implements bgj {
                     lw lwVar = new lw(2, null, 6);
                     this.d = 1;
                     Kotlin$Lazy kotlin$LazyVar = doh.a;
-                    Dispatchers$Default alcVar = aou.a;
+                    Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                     obj = ajn.ak(Dispatchers$IO.INSTANCE, lwVar, this);
                     if (obj == ahqVar) {
                         return ahqVar;

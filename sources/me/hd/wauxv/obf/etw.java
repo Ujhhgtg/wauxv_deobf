@@ -6,7 +6,7 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class etw extends SwitchHook implements bna {
+public final class etw extends SwitchHook implements IMessageLongPressHook {
     public static final etw a = new etw("VoiceSaveHook" /* "VoiceSaveHook" /* "VoiceSaveHook" /* cnb.z(-520459841960746L)  */);
     public static final String b;
     public static final String c;
@@ -38,7 +38,7 @@ public final class etw extends SwitchHook implements bna {
     }
 
     @Override // me.hd.wauxv.obf.bna
-    public final List l(MsgInfoBean msgInfoBean) {
+    public final List getUiElements(MsgInfoBean msgInfoBean) {
         return (z() && msgInfoBean.isVoice()) ? dqc.toSingletonList(new wj(R.id.MenuItem_Chat_VoiceSave,
                 "保存" /* "保存" /* "保存" /* cnb.z(-520382532549418L)  */, R.drawable.ic_menu_save_24dp, new dfq(18))) : EmptyReadonlyList.INSTANCE;
     }

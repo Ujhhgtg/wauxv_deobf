@@ -108,7 +108,7 @@ public final class cbo implements IInvokable {
                                 cbp.o(cbp.o(cbp.o(cbp.b(StaticHelpers5.a(iterable), fieldResolverVar, configurationVar), configurationVar, "isEnumConstant",
                                         null, new cbk(4)), configurationVar, "isEnumConstantNot", null, new cbk(5)), configurationVar,
                                         "type", fieldResolverVar.fieldType, new cbi(configurationVar, i3)),
-                                configurationVar, "typeCondition", fieldResolverVar.b, new cbk(6)), configurationVar, "genericType", null, new fq(8)),
+                                configurationVar, "typeCondition", fieldResolverVar.fieldMatcher, new cbk(6)), configurationVar, "genericType", null, new fq(8)),
                         configurationVar, "genericTypeCondition", null, new fq(9));
                 KClass zcVarB3 = dal.getKClassFromClass(Field.class);
                 if (zcVarB3.equals(dal.getKClassFromClass(Method.class))) {

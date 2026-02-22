@@ -16,7 +16,7 @@ public abstract class akl {
             property = null;
         }
         if (property != null ? Boolean.parseBoolean(property) : false) {
-            Dispatchers$Default alcVar = aou.a;
+            Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
             dispatcher2Var = bza.a;
             Dispatcher2 dispatcher2Var2 = dispatcher2Var.l;
             if (dispatcher2Var == null) {

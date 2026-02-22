@@ -38,24 +38,16 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
         boolean z = true;
         int i2 = 8;
         Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
-        ?? r7 = this.b;
+        Object r7 = this.b;
         switch (i) {
             case 0:
                 return obj == ((AbstractReadOnlyCollection) r7) ? "(this Collection)" : String.valueOf(obj);
             case 1:
                 qb qbVar = (qb) r7;
-                HookParam hookParam = (bmm) obj;
-                hookParam.getClass();
-                try {
-                    objX = hookParam.d()[0];
-                    if (objX == null) {
-                        objX = null;
-                    }
-                } catch (Throwable th) {
-                    objX = FastKV.getFailureFromException(th);
-                }
-                Integer num = (Integer) (objX instanceof Failure ? null : objX);
-                qbVar.setSelectedItemId(num != null ? num.intValue() : 0);
+                HookParam hookParam = (HookParam) obj;
+                objX = hookParam.getArgs()[0];
+                Integer num = (Integer) objX;
+                qbVar.setSelectedItemId(num != null ? num : 0);
                 return kotlinUnitVar;
             case 2:
                 CompoundButton compoundButton = (CompoundButton) r7;
@@ -110,7 +102,7 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
                 return new acb((beq) r7, z ? 1 : 0, cioVar);
             case 5:
                 HookManager hookManagerVar = (HookManager) r7;
-                HookParam hookParam2 = (bmm) obj;
+                HookParam hookParam2 = (HookParam) obj;
                 hookParam2.getClass();
                 try {
                     objX2 = hookParam2.d()[0];
@@ -143,7 +135,7 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
             case 6:
                 return ((bzw) r7).c(((Integer) obj).intValue());
             case 7:
-                HookParam hookParam3 = (bmm) obj;
+                HookParam hookParam3 = (HookParam) obj;
                 int parameterCount = ((Constructor) r7).getParameterCount();
                 i = (parameterCount == 13 || parameterCount == 14) ? 8 : 7;
                 hookParam3.getClass();

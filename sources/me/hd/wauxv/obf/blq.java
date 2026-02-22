@@ -77,7 +77,7 @@ public final class blq {
                 methodResolverVarT.name = "generateLayoutParams";
                 methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(ViewGroup.LayoutParams.class) }, 1));
                 methodResolverVarT.enableSuperclass();
-                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
+                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT.findMethods());
                 if (methodHookWrapperVar != null) {
                     layoutParams2 = (ViewGroup.LayoutParams) methodHookWrapperVar.i(layoutParamsF);
                 }
@@ -181,7 +181,7 @@ public final class blq {
         return null;
     }
 
-    public Object[] i() {
+    public Object[] getArgs() {
         return ((XposedMethodHookParamWrapper) this.c).b.args;
     }
 

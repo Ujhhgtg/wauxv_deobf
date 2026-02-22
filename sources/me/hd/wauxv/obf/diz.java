@@ -100,23 +100,23 @@ public final class diz extends SwitchHook implements boa, IDatabaseOperationsLis
                 dkn.a.getClass();
                 Object objC2 = ReflectionWrapper.createInstanceWithArgs(StaticHelpers7.toDexClass(dkm.a), new Object[0]);
                 int i3 = 0;
-                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC2).r();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC2).createFieldResolver();
                 fieldResolverVarR.name = "d" /* "d" /* "d" /* cnb.z(-529264524917546L)  */;
                 ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(str2);
                 linkedList.push(objC2);
             }
             int size = linkedList.size();
             int i4 = !linkedList.isEmpty() ? 1 : 0;
-            FieldResolver fieldResolverVarR2 = bmuVarBi.r();
+            FieldResolver fieldResolverVarR2 = bmuVarBi.createFieldResolver();
             fieldResolverVarR2.name = "LikeUserList" /* "LikeUserList" /* "LikeUserList" /* cnb.z(-529273114852138L)  */;
             ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).setValue(linkedList);
-            FieldResolver fieldResolverVarR3 = bmuVarBi.r();
+            FieldResolver fieldResolverVarR3 = bmuVarBi.createFieldResolver();
             fieldResolverVarR3.name = "LikeUserListCount" /* "LikeUserListCount" /* "LikeUserListCount" /* cnb.z(-529200100408106L)  */;
             ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).setValue(Integer.valueOf(size));
-            FieldResolver fieldResolverVarR4 = bmuVarBi.r();
+            FieldResolver fieldResolverVarR4 = bmuVarBi.createFieldResolver();
             fieldResolverVarR4.name = "LikeCount" /* "LikeCount" /* "LikeCount" /* cnb.z(-535187284818730L)  */;
             ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).setValue(Integer.valueOf(size));
-            FieldResolver fieldResolverVarR5 = bmuVarBi.r();
+            FieldResolver fieldResolverVarR5 = bmuVarBi.createFieldResolver();
             fieldResolverVarR5.name = "LikeFlag" /* "LikeFlag" /* "LikeFlag" /* cnb.z(-535092795538218L)  */;
             ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR5.resolve())).setValue(Integer.valueOf(i4));
             int i5 = 0;

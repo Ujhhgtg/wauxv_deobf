@@ -8,7 +8,7 @@ import java.util.Locale;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class lw extends doi implements bgj {
+public final class lw extends doi implements Function2 {
     public final /* synthetic */ int a;
 
     /*
@@ -125,18 +125,15 @@ public final class lw extends doi implements bgj {
                 return kotlinUnitVar;
             case 1:
                 FastKV.bd(obj);
-                agp.a.getClass();
-                agp.b();
+                ConversationDatabaseApi.b();
                 return kotlinUnitVar;
             case 2:
                 FastKV.bd(obj);
-                agp.a.getClass();
-                agp.b();
+                ConversationDatabaseApi.b();
                 return kotlinUnitVar;
             case 3:
                 FastKV.bd(obj);
-                agp.a.getClass();
-                agp.b();
+                ConversationDatabaseApi.b();
                 return kotlinUnitVar;
             case 4:
                 FastKV.bd(obj);

@@ -24,8 +24,8 @@ public final class exf {
 
     static {
         Object objX;
-        boolean z = exm.a;
-        a = exm.l();
+        boolean z = exm.isInitialized;
+        a = exm.isXposedEnvironment();
         try {
             objX = 1771232894858L;
         } catch (Throwable th) {
@@ -47,7 +47,7 @@ public final class exf {
 
     public static String k(Context context) {
         String packageName;
-        String str = exm.h;
+        String str = exm.modulePackageName;
         if (StringsKt.isBlank(str)) {
             if (context == null || (packageName = context.getPackageName()) == null) {
                 packageName = "";
@@ -100,7 +100,7 @@ public final class exf {
     }
 
     public final chm m(Application application, String str) {
-        if (a && StringsKt.isBlank(exm.h)) {
+        if (a && StringsKt.isBlank(exm.modulePackageName)) {
             throw new IllegalStateException("Xposed modulePackageName load failed, please reset and rebuild it");
         }
         chm chmVar = new chm();

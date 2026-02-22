@@ -150,7 +150,7 @@ public abstract class StaticHelpers5 extends StaticHelpers2 {
         return null;
     }
 
-    public static Object g(List list) {
+    public static Object getFirstInList(List list) {
         throwIfVar1IsNull(list, "<this>");
         if (list.isEmpty()) {
             return null;

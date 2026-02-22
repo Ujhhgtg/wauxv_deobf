@@ -93,11 +93,11 @@ public final /* synthetic */ class cgu implements IInvokable {
                     }
                 }
                 cursorAc.close();
-                agp agpVar = agp.a;
+                ConversationDatabaseApi conversationDatabaseApiVar = ConversationDatabaseApi.a;
                 String[] strArr2 = (String[]) arrayList.toArray(new String[0]);
                 String strZ = "" /* "" /* "" /* cnb.z(-524763399191338L)  */;
-                agpVar.getClass();
-                agp.d(strZ, strArr2);
+                conversationDatabaseApiVar.getClass();
+                ConversationDatabaseApi.d(strZ, strArr2);
                 return kotlinUnitVar;
             case 4:
                 ArrayList arrayList2 = new ArrayList();
@@ -115,11 +115,11 @@ public final /* synthetic */ class cgu implements IInvokable {
                     }
                 }
                 cursorAc2.close();
-                agp agpVar2 = agp.a;
+                ConversationDatabaseApi conversationDatabaseApiVar2 = ConversationDatabaseApi.a;
                 String[] strArr3 = (String[]) arrayList2.toArray(new String[0]);
                 String strZ2 = "hidden_conv_parent" /* "hidden_conv_parent" /* "hidden_conv_parent" /* cnb.z(-524995327425322L)  */;
-                agpVar2.getClass();
-                agp.d(strZ2, strArr3);
+                conversationDatabaseApiVar2.getClass();
+                ConversationDatabaseApi.d(strZ2, strArr3);
                 return kotlinUnitVar;
             case 5:
                 View view = (View) obj;
@@ -235,12 +235,12 @@ public final /* synthetic */ class cgu implements IInvokable {
                 return kotlinUnitVar;
             case 9:
                 int i6 = 0;
-                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).createFieldResolver();
                 fieldResolverVarR.name = "field_type" /* "field_type" /* "field_type" /* cnb.z(-478429292002090L)  */;
                 Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
                 throwIfVar1IsNull(objE);
                 if (((Number) objE).intValue() == 3) {
-                    FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj).r();
+                    FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj).createFieldResolver();
                     fieldResolverVarR2.name = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-478416407100202L)  */;
                     Object objD = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue();
                     throwIfVar1IsNull(objD);
@@ -277,11 +277,11 @@ public final /* synthetic */ class cgu implements IInvokable {
                 return kotlinUnitVar;
             case 10:
                 int i7 = 0;
-                FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).r();
+                FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).createFieldResolver();
                 fieldResolverVarR3.name = "field_type" /* "field_type" /* "field_type" /* cnb.z(-475856606591786L)  */;
                 Integer num = (Integer) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
                 if (num != null && num.intValue() == 3) {
-                    FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(obj).r();
+                    FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(obj).createFieldResolver();
                     fieldResolverVarR4.name = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-475826541820714L)  */;
                     Object objD2 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR4)).getValue();
                     throwIfVar1IsNull(objD2);

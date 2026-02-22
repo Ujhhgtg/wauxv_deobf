@@ -5,7 +5,7 @@ import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Process;
 import android.view.View;
-import android.widget.LinearLayout;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -54,7 +54,7 @@ public final /* synthetic */ class h implements IFunction0 {
             case 2:
                 Object objB = acv.b(acv.a, eom.b.f);
                 throwIfVar1IsNull(objB, "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121221156961066L)  */);
-                return (String) objB;
+                return objB;
             case 3:
                 Object objB2 = acv.b(acv.a, eom.c.f);
                 if (objB2 instanceof String) {
@@ -102,28 +102,28 @@ public final /* synthetic */ class h implements IFunction0 {
                     return BitmapFactory.decodeFile(file.getAbsolutePath());
                 }
                 BottomTabCustomHook.INSTANCE.getClass();
-                return (Bitmap) BottomTabCustomHook.c.getValue();
+                return BottomTabCustomHook.c.getValue();
             case 10:
                 File file2 = new File(BottomTabCustomHook.b, "icon_contacts.png" /* "icon_contacts.png" /* "icon_contacts.png" /* cnb.z(-437648577526570L)  */);
                 if (file2.exists()) {
                     return BitmapFactory.decodeFile(file2.getAbsolutePath());
                 }
                 BottomTabCustomHook.INSTANCE.getClass();
-                return (Bitmap) BottomTabCustomHook.c.getValue();
+                return BottomTabCustomHook.c.getValue();
             case 11:
                 File file3 = new File(BottomTabCustomHook.b, "icon_discover.png" /* "icon_discover.png" /* "icon_discover.png" /* cnb.z(-438138203798314L)  */);
                 if (file3.exists()) {
                     return BitmapFactory.decodeFile(file3.getAbsolutePath());
                 }
                 BottomTabCustomHook.INSTANCE.getClass();
-                return (Bitmap) BottomTabCustomHook.c.getValue();
+                return BottomTabCustomHook.c.getValue();
             case 12:
                 File file4 = new File(BottomTabCustomHook.b, "icon_me.png" /* "icon_me.png" /* "icon_me.png" /* cnb.z(-438078074256170L)  */);
                 if (file4.exists()) {
                     return BitmapFactory.decodeFile(file4.getAbsolutePath());
                 }
                 BottomTabCustomHook.INSTANCE.getClass();
-                return (Bitmap) BottomTabCustomHook.c.getValue();
+                return BottomTabCustomHook.c.getValue();
             case 13:
                 qg.a.u("微信" /* "微信" /* "微信" /* cnb.z(-438017944714026L)  */);
                 qh.a.u("通讯" /* "通讯" /* "通讯" /* cnb.z(-437953520204586L)  */);
@@ -139,33 +139,29 @@ public final /* synthetic */ class h implements IFunction0 {
                 bitmapCreateBitmap2.eraseColor(0);
                 return bitmapCreateBitmap2;
             case 15:
-                File file5 = new File(qw.b, "icon_chats.png" /* "icon_chats.png" /* "icon_chats.png" /* cnb.z(-437171836156714L)  */);
+                File file5 = new File(BottomTabMaterialHook.b, "icon_chats.png");
                 if (file5.exists()) {
                     return BitmapFactory.decodeFile(file5.getAbsolutePath());
                 }
-                qw.a.getClass();
-                return (Bitmap) qw.c.getValue();
+                return BottomTabMaterialHook.emptyBitmap.getValue();
             case 16:
-                File file6 = new File(qw.b, "icon_contacts.png" /* "icon_contacts.png" /* "icon_contacts.png" /* cnb.z(-437107411647274L)  */);
+                File file6 = new File(BottomTabMaterialHook.b, "icon_contacts.png");
                 if (file6.exists()) {
                     return BitmapFactory.decodeFile(file6.getAbsolutePath());
                 }
-                qw.a.getClass();
-                return (Bitmap) qw.c.getValue();
+                return BottomTabMaterialHook.emptyBitmap.getValue();
             case 17:
-                File file7 = new File(qw.b, "icon_discover.png" /* "icon_discover.png" /* "icon_discover.png" /* cnb.z(-437597037919018L)  */);
+                File file7 = new File(BottomTabMaterialHook.b, "icon_discover.png");
                 if (file7.exists()) {
                     return BitmapFactory.decodeFile(file7.getAbsolutePath());
                 }
-                qw.a.getClass();
-                return (Bitmap) qw.c.getValue();
+                return BottomTabMaterialHook.emptyBitmap.getValue();
             case 18:
-                File file8 = new File(qw.b, "icon_me.png" /* "icon_me.png" /* "icon_me.png" /* cnb.z(-437536908376874L)  */);
+                File file8 = new File(BottomTabMaterialHook.b, "icon_me.png");
                 if (file8.exists()) {
                     return BitmapFactory.decodeFile(file8.getAbsolutePath());
                 }
-                qw.a.getClass();
-                return (Bitmap) qw.c.getValue();
+                return BottomTabMaterialHook.emptyBitmap.getValue();
             case 19:
                 qr.a.u("#FFF7F7F7" /* "#FFF7F7F7" /* "#FFF7F7F7" /* cnb.z(-437408059357994L)  */);
                 qv.a.u("#FFCCE8E3" /* "#FFCCE8E3" /* "#FFCCE8E3" /* cnb.z(-437382289554218L)  */);
@@ -204,11 +200,11 @@ public final /* synthetic */ class h implements IFunction0 {
             case 23:
                 return xf.l;
             case 24:
-                Dispatchers$Default alcVar = aou.a;
+                Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                 KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new lw(i2, r6, i3));
                 return kotlinUnitVar;
             case 25:
-                Dispatchers$Default alcVar2 = aou.a;
+                Dispatchers$Default alcVar2 = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                 KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new lw(i2, r6, i2));
                 return kotlinUnitVar;
             case 26:
@@ -223,10 +219,10 @@ public final /* synthetic */ class h implements IFunction0 {
                 HostInfoRegistry.INSTANCE.getClass();
                 View viewInflate = View.inflate(aqu.e(HugeSyntheticPileOfHelpers.wrapModuleContext(HostInfoRegistry.getContext())), R.layout.module_dialog_choose_contacts, null);
                 throwIfVar1IsNull(viewInflate, "null cannot be cast to non-null type android.widget.LinearLayout" /* "null cannot be cast to non-null type android.widget.LinearLayout" /* "null cannot be cast to non-null type android.widget.LinearLayout" /* cnb.z(-394157738687274L)  */);
-                return (LinearLayout) viewInflate;
+                return viewInflate;
             case 28:
                 HostInfoRegistry.INSTANCE.getClass();
-                return (LinearLayout) View.inflate(aqu.e(HugeSyntheticPileOfHelpers.wrapModuleContext(HostInfoRegistry.getContext())), R.layout.item_rv_contact_tab, null).findViewById(R.id.itemContactLinearLayout);
+                return View.inflate(aqu.e(HugeSyntheticPileOfHelpers.wrapModuleContext(HostInfoRegistry.getContext())), R.layout.item_rv_contact_tab, null).findViewById(R.id.itemContactLinearLayout);
             default:
                 try {
                     bmf[] bmfVarArrW = bhv.w();

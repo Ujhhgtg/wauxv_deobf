@@ -31,11 +31,11 @@ public abstract class BaseBaseHook extends ewy {
     }
 
     public final void hookAfter(HookManager hookManagerVar, IInvokable bgfVar) {
-        hookManagerVar.m(new bme(bgfVar, this, 0));
+        hookManagerVar.hookAfter(new bme(bgfVar, this, 0));
     }
 
     public final void hookBefore(HookManager hookManagerVar, IInvokable bgfVar) {
-        hookManagerVar.n(new bme(bgfVar, this, 1));
+        hookManagerVar.hookBefore(new bme(bgfVar, this, 1));
     }
 
     public abstract boolean getIsEnabled();

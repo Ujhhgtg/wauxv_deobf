@@ -4,7 +4,7 @@ import java.util.LinkedHashSet;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class aeq extends bws {
+public final class aeq extends ApiHookItem {
     public static final aeq a = new aeq();
     public static final LinkedHashSet b = new LinkedHashSet();
 
@@ -18,12 +18,12 @@ public final class aeq extends bws {
         aeq aeqVar = a;
         HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
         HookManager hookManagerVarAd = aeqVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-        hookManagerVarAd.m(new act(21));
+        hookManagerVarAd.hookAfter(new act(21));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
         MethodResolver methodResolverVarT2 = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.name = "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* "onPreferenceTreeClick" /* cnb.z(-38311108279082L)   */;
         HookManager hookManagerVarAd2 = aeqVar.createImmediateHook((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { eoz.a, cvh.a.b() }, 2, methodResolverVarT2), hookPriorityEnumVar);
-        hookManagerVarAd2.n(new act(22));
+        hookManagerVarAd2.hookBefore(new act(22));
         hookManagerVarAd2.initInstantCollectionAndApplyHooks();
     }
 }

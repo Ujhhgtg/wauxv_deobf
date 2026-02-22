@@ -62,7 +62,7 @@ public class PackageParam {
         bmuVarBh.setHookOptional(true);
         MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "currentPackageName";
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT.findMethods());
         if (methodHookWrapperVar != null && (str = (String) methodHookWrapperVar.invoke(new Object[0])) != null && !StringsKt.isBlank(str)) {
             str2 = str;
         }

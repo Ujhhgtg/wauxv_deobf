@@ -73,7 +73,7 @@ public final /* synthetic */ class efq implements IFunction0 {
                 MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.name = "newParser";
                 methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(Integer.TYPE) }, 1));
-                return (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
+                return (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT.findMethods());
         }
     }
 }

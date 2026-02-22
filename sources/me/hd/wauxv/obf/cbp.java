@@ -196,8 +196,8 @@ public abstract class cbp {
         return !e(set, StaticHelpers4.al(arrayList), configurationVar);
     }
 
-    public static bae o(dft dftVar, Configuration configurationVar, String str, Object obj, bgj bgjVar) {
-        return new bae(dftVar, true, new cbj(obj, bgjVar, configurationVar, str, 0));
+    public static bae o(dft dftVar, Configuration configurationVar, String str, Object obj, Function2 function2Var) {
+        return new bae(dftVar, true, new cbj(obj, function2Var, configurationVar, str, 0));
     }
 
     public static Annotation[] p(Member member) {

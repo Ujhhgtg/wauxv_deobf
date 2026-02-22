@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="WAuxiliary">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/resources/assets/WAuxiliary.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

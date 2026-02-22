@@ -6,7 +6,7 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class ayy extends bws implements IDexFind {
+public final class ayy extends ApiHookItem implements IDexFind {
     public static final ayy a = new ayy();
     public static final LinkedHashSet b = new LinkedHashSet();
 
@@ -15,10 +15,10 @@ public final class ayy extends bws implements IDexFind {
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(ayw.a));
         ayy ayyVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(ayyVar, listBf);
-        hookManagerVarAb.n(new atn(22));
+        hookManagerVarAb.hookBefore(new atn(22));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
         HookManager hookManagerVarAb2 = PackageParam.createHook(ayyVar, dqc.toSingletonList(StaticHelpers7.toDexMethod(ayx.a)));
-        hookManagerVarAb2.n(new atn(23));
+        hookManagerVarAb2.hookBefore(new atn(23));
         hookManagerVarAb2.initInstantCollectionAndApplyHooks();
     }
 

@@ -56,7 +56,7 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                 DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 String[] strArr = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-359729280842538L)   */ };
                 dexMethodQueryBuilderVar.getClass();
-                dexMethodQueryBuilderVar.a = SomeStaticHelpers.arrayToList(strArr);
+                dexMethodQueryBuilderVar.searchedPackages = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar = new DexFinder();
                 cdjVar.usingStrings("getSnsVideoPath" /* "getSnsVideoPath" /* "getSnsVideoPath" /* "getSnsVideoPath" /* cnb.z(-359591841889066L)   */,
                         "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-360072878226218L)   */);
@@ -66,7 +66,7 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                 DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 String[] strArr2 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-356297601973034L)   */ };
                 dexMethodQueryBuilderVar2.getClass();
-                dexMethodQueryBuilderVar2.a = SomeStaticHelpers.arrayToList(strArr2);
+                dexMethodQueryBuilderVar2.searchedPackages = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.usingStrings("getSnsVideoThumbImagePath" /* "getSnsVideoThumbImagePath" /* "getSnsVideoThumbImagePath" /* "getSnsVideoThumbImagePath" /* cnb.z(-356709918833450L)   */,
                         "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* "com.tencent.mm.plugin.sns.model.SnsVideoLogic" /* cnb.z(-356615429552938L)   */);
@@ -79,7 +79,7 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                 DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 String[] strArr3 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-358230337256234L)   */ };
                 dexMethodQueryBuilderVar3.getClass();
-                dexMethodQueryBuilderVar3.a = SomeStaticHelpers.arrayToList(strArr3);
+                dexMethodQueryBuilderVar3.searchedPackages = SomeStaticHelpers.arrayToList(strArr3);
                 DexFinder cdjVar3 = new DexFinder();
                 cdjVar3.usingStrings("MicroMsg.SnsVideoService" /* "MicroMsg.SnsVideoService" /* "MicroMsg.SnsVideoService" /* "MicroMsg.SnsVideoService" /* cnb.z(-357543142488874L)   */,
                         "add video task, but url is weixin, do nothing" /* "add video task, but url is weixin, do nothing" /* "add video task, but url is weixin, do nothing" /* "add video task, but url is weixin, do nothing" /* cnb.z(-357384228698922L)   */);
@@ -122,7 +122,7 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                 DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 String[] strArr4 = { "com.tencent.mm.plugin.sport.model" /* "com.tencent.mm.plugin.sport.model" /* "com.tencent.mm.plugin.sport.model" /* "com.tencent.mm.plugin.sport.model" /* cnb.z(-501029409913642L)   */ };
                 dexMethodQueryBuilderVar4.getClass();
-                dexMethodQueryBuilderVar4.a = SomeStaticHelpers.arrayToList(strArr4);
+                dexMethodQueryBuilderVar4.searchedPackages = SomeStaticHelpers.arrayToList(strArr4);
                 DexFinder cdjVar4 = new DexFinder();
                 cdjVar4.usingStrings("MicroMsg.Sport.DeviceStepManager" /* "MicroMsg.Sport.DeviceStepManager" /* "MicroMsg.Sport.DeviceStepManager" /* "MicroMsg.Sport.DeviceStepManager" /* cnb.z(-500831841418026L)   */,
                         "get today step from %s todayStep %d" /* "get today step from %s todayStep %d" /* "get today step from %s todayStep %d" /* "get today step from %s todayStep %d" /* cnb.z(-501257043180330L)   */);
@@ -481,8 +481,8 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                 return kotlinUnitVar;
             case 15:
                 String str13 = (String) obj;
-                if (!nullSafeIsEqual(str13, "startActivity" /* "startActivity" /* "startActivity" /* "startActivity" /* cnb.z(-59953448483626L)   */)
-                        && !nullSafeIsEqual(str13, "startActivityForResult" /* "startActivityForResult" /* "startActivityForResult" /* "startActivityForResult" /* cnb.z(-60425894886186L)   */)) {
+                if (!nullSafeIsEqual(str13, "startActivity")
+                        && !nullSafeIsEqual(str13, "startActivityForResult")) {
                     z = false;
                 }
                 return Boolean.valueOf(z);
@@ -510,18 +510,14 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                     intent = (Intent) (objX20 instanceof Failure ? null : objX20);
                 }
                 throwIfVar1IsNull(intent);
-                for (IStartActivity bocVar : dmi.b) {
+                for (IStartActivity bocVar : StartActivityApiHook.ALL_HOOKS) {
                     try {
                         bocVar.onStartActivityIntent(hookParam6, intent);
                     } catch (Exception e6) {
-                        ArrayList arrayList6 = Logger.a;
                         StringBuilder sb6 = new StringBuilder();
-                        sb6.append("onStartActivityIntent " /* "onStartActivityIntent " /* "onStartActivityIntent " /* "onStartActivityIntent " /* cnb.z(-60327110638378L)   */);
+                        sb6.append("onStartActivityIntent ");
                         Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb6,
-                                bocVar instanceof SwitchHook ? ((SwitchHook) bocVar).getResult() : "LoadHook" /*
-                                                                                                               * cnb.z(-
-                                                                                                               * 60211146521386L)
-                                                                                                               */,
+                                bocVar instanceof SwitchHook ? ((SwitchHook) bocVar).getResult() : "LoadHook",
                                 -59639915871018L), e6, 12);
                     }
                 }
@@ -573,9 +569,9 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                 dexClassQueryBuilderVar5.strings = SomeStaticHelpers.arrayToList(strArr10);
                 DexMethodGroupMatcher zbVar5 = new DexMethodGroupMatcher();
                 azl azlVar = new azl();
-                azlVar.f(StaticHelpers7.toDexClass(dmq.a));
-                azlVar.f(StaticHelpers7.toDexClass(dms.a));
-                azlVar.f(StaticHelpers7.toDexClass(dmr.a));
+                azlVar.f(StaticHelpers7.toDexClass(ContactStorage$ClassContactStorage.INSTANCE));
+                azlVar.f(StaticHelpers7.toDexClass(MsgInfoStorage$ClassMsgInfoStorage.INSTANCE));
+                azlVar.f(StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage_.INSTANCE));
                 zbVar5.e = azlVar;
                 dexClassQueryBuilderVar5.methodGroupMatcher = zbVar5;
                 return kotlinUnitVar;

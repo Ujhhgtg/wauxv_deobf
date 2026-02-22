@@ -24,7 +24,7 @@ public final class PluginMediaMsgMethod {
         Object objC = ReflectionWrapper.createInstanceWithArgs(
                 ajn.tryGetClassByClassName("com.tencent.mm.opensdk.modelmsg.WXFileObject" /* "com.tencent.mm.opensdk.modelmsg.WXFileObject" /* "com.tencent.mm.opensdk.modelmsg.WXFileObject" /* cnb.z(-92732638886698L)  */), new Object[0]);
         int i = 0;
-        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC).r();
+        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC).createFieldResolver();
         fieldResolverVarR.name = "filePath" /* "filePath" /* "filePath" /* cnb.z(-94171452930858L)  */;
         ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(str3);
         cnh.ae(str, arj.y(str2, null, objC, 6), str4);
@@ -38,10 +38,10 @@ public final class PluginMediaMsgMethod {
                 new Object[0]);
         int i = 0;
         SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(objC);
-        FieldResolver fieldResolverVarR = bmuVarBi.r();
+        FieldResolver fieldResolverVarR = bmuVarBi.createFieldResolver();
         fieldResolverVarR.name = "userName" /* "userName" /* "userName" /* cnb.z(-94424856001322L)  */;
         ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(str4);
-        FieldResolver fieldResolverVarR2 = bmuVarBi.r();
+        FieldResolver fieldResolverVarR2 = bmuVarBi.createFieldResolver();
         fieldResolverVarR2.name = "path" /* "path" /* "path" /* cnb.z(-94403381164842L)  */;
         ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).setValue(str5);
         cnh.ae(str, arj.x(str2, str3, bArr, objC), str6);
@@ -54,10 +54,10 @@ public final class PluginMediaMsgMethod {
                 ajn.tryGetClassByClassName("com.tencent.mm.opensdk.modelmsg.WXMusicObject" /* "com.tencent.mm.opensdk.modelmsg.WXMusicObject" /* "com.tencent.mm.opensdk.modelmsg.WXMusicObject" /* cnb.z(-94416266066730L)  */), new Object[0]);
         int i = 0;
         SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(objC);
-        FieldResolver fieldResolverVarR = bmuVarBi.r();
+        FieldResolver fieldResolverVarR = bmuVarBi.createFieldResolver();
         fieldResolverVarR.name = "musicUrl" /* "musicUrl" /* "musicUrl" /* cnb.z(-93651761888042L)  */;
         ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(str4);
-        FieldResolver fieldResolverVarR2 = bmuVarBi.r();
+        FieldResolver fieldResolverVarR2 = bmuVarBi.createFieldResolver();
         fieldResolverVarR2.name = "musicDataUrl" /* "musicDataUrl" /* "musicDataUrl" /* cnb.z(-93630287051562L)  */;
         ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).setValue(str5);
         cnh.ae(str, arj.x(str2, str3, bArr, objC), str6);
@@ -71,19 +71,19 @@ public final class PluginMediaMsgMethod {
                 new Object[0]);
         int i2 = 0;
         SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(objC);
-        FieldResolver fieldResolverVarR = bmuVarBi.r();
+        FieldResolver fieldResolverVarR = bmuVarBi.createFieldResolver();
         fieldResolverVarR.name = "musicUrl" /* "musicUrl" /* "musicUrl" /* cnb.z(-93905164958506L)  */;
         ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(str4);
-        FieldResolver fieldResolverVarR2 = bmuVarBi.r();
+        FieldResolver fieldResolverVarR2 = bmuVarBi.createFieldResolver();
         fieldResolverVarR2.name = "musicDataUrl" /* "musicDataUrl" /* "musicDataUrl" /* cnb.z(-93866510252842L)  */;
         ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).setValue(str5);
-        FieldResolver fieldResolverVarR3 = bmuVarBi.r();
+        FieldResolver fieldResolverVarR3 = bmuVarBi.createFieldResolver();
         fieldResolverVarR3.name = "singerName" /* "singerName" /* "singerName" /* cnb.z(-93793495808810L)  */;
         ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).setValue(str6);
-        FieldResolver fieldResolverVarR4 = bmuVarBi.r();
+        FieldResolver fieldResolverVarR4 = bmuVarBi.createFieldResolver();
         fieldResolverVarR4.name = "duration" /* "duration" /* "duration" /* cnb.z(-93763431037738L)  */;
         ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).setValue(Integer.valueOf(i));
-        FieldResolver fieldResolverVarR5 = bmuVarBi.r();
+        FieldResolver fieldResolverVarR5 = bmuVarBi.createFieldResolver();
         fieldResolverVarR5.name = "songLyric" /* "songLyric" /* "songLyric" /* cnb.z(-117312736721706L)  */;
         ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR5.resolve())).setValue(str7);
         cnh.ae(str, arj.x(str2, str3, bArr, objC), str8);
@@ -94,7 +94,7 @@ public final class PluginMediaMsgMethod {
         Object objC = ReflectionWrapper.createInstanceWithArgs(
                 ajn.tryGetClassByClassName("com.tencent.mm.opensdk.modelmsg.WXTextObject" /* "com.tencent.mm.opensdk.modelmsg.WXTextObject" /* "com.tencent.mm.opensdk.modelmsg.WXTextObject" /* cnb.z(-117286966917930L)  */), new Object[0]);
         int i = 0;
-        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC).r();
+        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC).createFieldResolver();
         fieldResolverVarR.name = "text" /* "text" /* "text" /* cnb.z(-117128053127978L)  */;
         ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(str2);
         cnh.ae(str, arj.y(null, str2, objC, 5), str3);
@@ -106,7 +106,7 @@ public final class PluginMediaMsgMethod {
         Object objC = ReflectionWrapper.createInstanceWithArgs(
                 ajn.tryGetClassByClassName("com.tencent.mm.opensdk.modelmsg.WXVideoObject" /* "com.tencent.mm.opensdk.modelmsg.WXVideoObject" /* "com.tencent.mm.opensdk.modelmsg.WXVideoObject" /* cnb.z(-117639154236202L)  */), new Object[0]);
         int i = 0;
-        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC).r();
+        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC).createFieldResolver();
         fieldResolverVarR.name = "videoUrl" /* "videoUrl" /* "videoUrl" /* cnb.z(-117424405871402L)  */;
         ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(str4);
         cnh.ae(str, arj.x(str2, str3, bArr, objC), str5);
@@ -119,7 +119,7 @@ public final class PluginMediaMsgMethod {
                 ajn.tryGetClassByClassName("com.tencent.mm.opensdk.modelmsg.WXWebpageObject" /* "com.tencent.mm.opensdk.modelmsg.WXWebpageObject" /* "com.tencent.mm.opensdk.modelmsg.WXWebpageObject" /* cnb.z(-117385751165738L)  */),
                 new Object[0]);
         int i = 0;
-        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC).r();
+        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objC).createFieldResolver();
         fieldResolverVarR.name = "webpageUrl" /* "webpageUrl" /* "webpageUrl" /* cnb.z(-116629836921642L)  */;
         ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(str4);
         cnh.ae(str, arj.x(str2, str3, bArr, objC), str5);

@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class SettingsInject extends bws {
+public final class SettingsInject extends ApiHookItem {
     public static final SettingsInject INSTANCE = new SettingsInject();
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -16,7 +16,7 @@ public final class SettingsInject extends bws {
             MethodResolver methodResolverVarT = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.plugin.setting.ui.setting_new.base.BaseSettingPrefUI")).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "onCreate";
             HookManager hookManagerVarAd = INSTANCE.createImmediateHook((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(Bundle.class) }, 1, methodResolverVarT), HookPriorityEnum.ENUM_LOWEST);
-            hookManagerVarAd.m((obj -> {
+            hookManagerVarAd.hookAfter((obj -> {
                 HookParam hookParam3 = (HookParam) obj;
                 Object obj6 = ((XposedMethodHookParamWrapper) hookParam3.b.b).b.thisObject;
                 if (nullSafeIsEqual(obj6 != null ? obj6.getClass() : null, ajn.tryGetClassByClassName(

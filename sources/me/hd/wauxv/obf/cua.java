@@ -21,7 +21,7 @@ public final class cua extends bdo {
     public final void cz() {
         this.bx = true;
         bhp bhpVar = new bhp(this, null);
-        Dispatchers$Default alcVar = aou.a;
+        Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
         KotlinHelpers2.bf(bza.a, bhpVar);
     }
 

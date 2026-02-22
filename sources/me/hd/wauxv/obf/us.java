@@ -110,20 +110,20 @@ public final /* synthetic */ class us implements IInvokable {
             Integer num = (Integer) (objX2 instanceof Failure ? null : objX2);
             iIntValue = num != null ? num.intValue() : 0;
             int i = 0;
-            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objX).r();
+            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objX).createFieldResolver();
             fieldResolverVarR.fieldType = dal.getKClassFromClass(View.class);
             Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
             throwIfVar1IsNull(objE);
             View view = (View) objE;
             Object tag = view.getTag();
-            FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam);
-            xr.a.getClass();
-            fieldResolverVarAa.fieldType = StaticHelpers7.toDexClass(xq.a);
+            FieldResolver fieldResolverVarAa = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam);
+            ClassChattingContextDexFindHook.a.getClass();
+            fieldResolverVarAa.fieldType = StaticHelpers7.toDexClass(ChattingContext$ClassChattingContext.INSTANCE);
             Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue();
             throwIfVar1IsNull(objD);
-            FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(hookParam.getThisObject()).r();
+            FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(hookParam.getThisObject()).createFieldResolver();
             xv.a.getClass();
-            fieldResolverVarR2.fieldType = StaticHelpers7.toDexClass(xu.a);
+            fieldResolverVarR2.fieldType = StaticHelpers7.toDexClass(ChattingDataAdapter$ClassChattingDataAdapter.INSTANCE);
             Object objD2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue();
             throwIfVar1IsNull(objD2);
             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objD2).getMethodResolverBasedOnPreviouslyProvidedConfig();
@@ -171,15 +171,15 @@ public final /* synthetic */ class us implements IInvokable {
             Integer num2 = (Integer) (objX4 instanceof Failure ? null : objX4);
             iIntValue = num2 != null ? num2.intValue() : 0;
             int i2 = 0;
-            FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objX3).r();
+            FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objX3).createFieldResolver();
             fieldResolverVarR3.fieldType = dal.getKClassFromClass(View.class);
             Object objE3 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
             throwIfVar1IsNull(objE3);
             View view2 = (View) objE3;
             Object tag2 = view2.getTag();
-            FieldResolver fieldResolverVarAa2 = StaticHelpers6.aa(hookParam);
-            xr.a.getClass();
-            fieldResolverVarAa2.fieldType = StaticHelpers7.toDexClass(xq.a);
+            FieldResolver fieldResolverVarAa2 = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam);
+            ClassChattingContextDexFindHook.a.getClass();
+            fieldResolverVarAa2.fieldType = StaticHelpers7.toDexClass(ChattingContext$ClassChattingContext.INSTANCE);
             Object objD3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).getValue();
             throwIfVar1IsNull(objD3);
             MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(hookParam.getThisObject()).getMethodResolverBasedOnPreviouslyProvidedConfig();
@@ -262,12 +262,12 @@ public final /* synthetic */ class us implements IInvokable {
             case 0:
                 HookParam hookParam = (HookParam) obj;
                 int i6 = 0;
-                FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam);
+                FieldResolver fieldResolverVarAa = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam);
                 fieldResolverVarAa.fieldType = "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* cnb.z(-576625129290538L)   */;
                 Object objE2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue_();
                 throwIfVar1IsNull(objE2);
                 View view = (ListView) objE2;
-                FieldResolver fieldResolverVarAa2 = StaticHelpers6.aa(hookParam);
+                FieldResolver fieldResolverVarAa2 = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam);
                 StaticHelpers2.addAllFromVar2ToVar1(fieldResolverVarAa2.modifiersNot, (AccessModifierEnum[]) Arrays.copyOf(new AccessModifierEnum[] {accessModifierEnumVar}, 1));
                 boolean z = false;
                 Object obj4 = null;
@@ -520,12 +520,12 @@ public final /* synthetic */ class us implements IInvokable {
             case 3:
                 HookParam hookParam2 = (HookParam) obj;
                 int i9 = 0;
-                FieldResolver fieldResolverVarAa3 = StaticHelpers6.aa(hookParam2);
+                FieldResolver fieldResolverVarAa3 = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam2);
                 fieldResolverVarAa3.fieldType = "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* cnb.z(-567515503655722L)   */;
                 Object objE4 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa3.resolve())).getValue_();
                 throwIfVar1IsNull(objE4);
                 ListView listView = (ListView) objE4;
-                FieldResolver fieldResolverVarAa4 = StaticHelpers6.aa(hookParam2);
+                FieldResolver fieldResolverVarAa4 = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam2);
                 StaticHelpers2.addAllFromVar2ToVar1(fieldResolverVarAa4.modifiersNot, (AccessModifierEnum[]) Arrays.copyOf(new AccessModifierEnum[] {accessModifierEnumVar}, 1));
                 Object[] objArr = false;
                 Object obj6 = null;
@@ -735,7 +735,7 @@ public final /* synthetic */ class us implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 String[] strArr = { "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-52514565126954L)   */ };
                 dexMethodQueryBuilderVar4.getClass();
-                dexMethodQueryBuilderVar4.a = SomeStaticHelpers.arrayToList(strArr);
+                dexMethodQueryBuilderVar4.searchedPackages = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar4 = new DexFinder();
                 cdjVar4.usingStrings("MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* cnb.z(-51788715653930L)   */, "msg is null!" /*
                                                                                                  * cnb.z(-
@@ -757,7 +757,7 @@ public final /* synthetic */ class us implements IInvokable {
                 Object obj8 = objX2 instanceof Failure ? null : objX2;
                 throwIfVar1IsNull(obj8);
                 int i12 = 0;
-                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj8).r();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj8).createFieldResolver();
                 fieldResolverVarR.fieldType = dal.getKClassFromClass(Context.class);
                 Object objE6 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue_();
                 throwIfVar1IsNull(objE6);
@@ -790,96 +790,70 @@ public final /* synthetic */ class us implements IInvokable {
                     objE = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT3)).invokeAndThrowIfFailed(new Object[0]);
                     throwIfVar1IsNull(objE);
                 } else {
-                    FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(tag).r();
+                    FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(tag).createFieldResolver();
                     MicroMsgMsgInfoDexClassFind.INSTANCE.getClass();
                     fieldResolverVarR2.fieldType = StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE);
                     objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue();
                     throwIfVar1IsNull(objE);
                 }
                 MsgInfoBean msgInfoBean = new MsgInfoBean(objE);
-                for (bna bnaVar : wm.b) {
+                for (IMessageLongPressHook bnaVar : ChatItemMenuNewApiHook.ALL_HOOKS) {
                     try {
-                        for (wj wjVar : bnaVar.l(msgInfoBean)) {
+                        for (wj wjVar : bnaVar.getUiElements(msgInfoBean)) {
                             MethodHookWrapper methodHookWrapperVarD = ((MethodHookWrapper) kotlin$LazyVar.getValue()).d();
                             methodHookWrapperVarD.bindInstance(obj8);
-                            methodHookWrapperVarD.invokeAndThrowIfFailed(num, Integer.valueOf(wjVar.a), 0, wjVar.b, Integer.valueOf(wjVar.c));
+                            methodHookWrapperVarD.invokeAndThrowIfFailed(num, Integer.valueOf(wjVar.someInt), 0, wjVar.someStr, Integer.valueOf(wjVar.anotherInt));
                         }
                     } catch (Exception e) {
                         ArrayList arrayList2 = Logger.a;
                         StringBuilder sb = new StringBuilder();
-                        sb.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-52308406696746L)   */);
+                        sb.append("onCreateMenuItems ");
                         Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
-                                bnaVar instanceof SwitchHook ? ((SwitchHook) bnaVar).getResult() : "LoadHook" /*
-                                                                                                               * cnb.z(-
-                                                                                                               * 52261162056490L)
-                                                                                                               */,
-                                -52772263164714L), e, 12);
+                                bnaVar instanceof SwitchHook ? ((SwitchHook) bnaVar).getResult() : "LoadHook",
+                                "Failed"), e, 12);
                     }
                 }
                 return kotlinUnitVar;
             case 12:
                 HookParam hookParam5 = (HookParam) obj;
-                int i13 = 0;
-                FieldResolver fieldResolverVarAa5 = StaticHelpers6.aa(hookParam5);
-                fieldResolverVarAa5.b = new us(13);
+                FieldResolver fieldResolverVarAa5 = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam5);
+                fieldResolverVarAa5.fieldMatcher = (obj1 -> Boolean.valueOf(View.OnLongClickListener.class.isAssignableFrom((Class) obj1)));
                 Object objE7 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa5.resolve())).getValue_();
-                throwIfVar1IsNull(objE7);
-                FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration((View.OnLongClickListener) objE7).r();
-                xr.a.getClass();
-                xq xqVar = xq.a;
+                FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration((View.OnLongClickListener) objE7).createFieldResolver();
+                ChattingContext$ClassChattingContext xqVar = ChattingContext$ClassChattingContext.INSTANCE;
                 fieldResolverVarR3.fieldType = StaticHelpers7.toDexClass(xqVar);
                 Object objD3 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue();
-                throwIfVar1IsNull(objD3);
-                FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(objD3).r();
-                gp.a.getClass();
-                go goVar = go.a;
+                FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(objD3).createFieldResolver();
+                ApiManager$MethodGetApi goVar = ApiManager$MethodGetApi.INSTANCE;
                 fieldResolverVarR4.fieldType = StaticHelpers7.toDexMethod(goVar).getDeclaringClass();
                 Object objD4 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).getValue();
-                throwIfVar1IsNull(objD4);
-                xz.a.getClass();
-                FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(gp.b((Class) SomeStaticHelpers.p(StaticHelpers7.toDexClass(xy.a).getInterfaces()), objD4)).r();
+                FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(ApiManagerGetApiDexFindHook.getApi((Class) SomeStaticHelpers.getFirstInArray(StaticHelpers7.toDexClass(ChattingMessBox$ClassChattingMessBox.INSTANCE).getInterfaces()), objD4)).createFieldResolver();
                 fieldResolverVarR5.fieldType = StaticHelpers7.toDexClass(xqVar);
                 Object objD5 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR5)).getValue();
-                throwIfVar1IsNull(objD5);
-                FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(objD5).r();
+                FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(objD5).createFieldResolver();
                 fieldResolverVarR6.fieldType = StaticHelpers7.toDexMethod(goVar).getDeclaringClass();
                 Object objD6 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR6.resolve())).getValue();
-                throwIfVar1IsNull(objD6);
-                xv.a.getClass();
-                Object objB = gp.b((Class) SomeStaticHelpers.p(StaticHelpers7.toDexClass(xu.a).getInterfaces()), objD6);
-                try {
-                    objX4 = hookParam5.getArgs()[0];
-                    if (objX4 == null) {
-                        objX4 = null;
-                    }
-                } catch (Throwable th4) {
-                    objX4 = FastKV.getFailureFromException(th4);
-                }
-                obj3 = objX4 instanceof Failure ? null : objX4;
-                throwIfVar1IsNull(obj3);
-                MenuItem menuItem = (MenuItem) obj3;
+                Object objB = ApiManagerGetApiDexFindHook.getApi((Class) SomeStaticHelpers.getFirstInArray(StaticHelpers7.toDexClass(ChattingDataAdapter$ClassChattingDataAdapter.INSTANCE).getInterfaces()), objD6);
+                objX4 = hookParam5.getArgs()[0];
+                MenuItem menuItem = (MenuItem) objX4;
                 MethodResolver methodResolverVarT4 = dqc.getWrapperConfiguration(objB).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                methodResolverVarT4.name = "getItem" /* "getItem" /* "getItem" /* "getItem" /* cnb.z(-52737903426346L)   */;
+                methodResolverVarT4.name = "getItem";
                 Object objE8 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT4.findMethods())).invokeAndThrowIfFailed(Integer.valueOf(menuItem.getGroupId()));
                 throwIfVar1IsNull(objE8);
                 MsgInfoBean msgInfoBean2 = new MsgInfoBean(objE8);
-                for (bna bnaVar2 : wm.b) {
+                for (IMessageLongPressHook bnaVar2 : ChatItemMenuNewApiHook.ALL_HOOKS) {
                     try {
-                        for (wj wjVar2 : bnaVar2.l(msgInfoBean2)) {
-                            if (menuItem.getItemId() == wjVar2.a) {
-                                wjVar2.d.g(objD3, msgInfoBean2);
+                        for (wj wjVar2 : bnaVar2.getUiElements(msgInfoBean2)) {
+                            if (menuItem.getItemId() == wjVar2.someInt) {
+                                wjVar2.function2.g(objD3, msgInfoBean2);
                             }
                         }
                     } catch (Exception e2) {
                         ArrayList arrayList3 = Logger.a;
                         StringBuilder sb2 = new StringBuilder();
-                        sb2.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-52703543687978L)   */);
+                        sb2.append("onCreateMenuItems ");
                         Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
-                                bnaVar2 instanceof SwitchHook ? ((SwitchHook) bnaVar2).getResult() : "LoadHook" /*
-                                                                                                                 * cnb.z
-                                                                                                                 * (-
-                                                                                                                 * 52587579570986L)
-                                                                                                                 */,
+                                bnaVar2 instanceof SwitchHook ? ((SwitchHook) bnaVar2).getResult() : "LoadHook",
                                 -52548924865322L), e2, 12);
                     }
                 }
@@ -898,7 +872,7 @@ public final /* synthetic */ class us implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 String[] strArr2 = { "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-52205327481642L)   */ };
                 dexMethodQueryBuilderVar5.getClass();
-                dexMethodQueryBuilderVar5.a = SomeStaticHelpers.arrayToList(strArr2);
+                dexMethodQueryBuilderVar5.searchedPackages = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar5 = new DexFinder();
                 cdjVar5.usingStrings("MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* cnb.z(-52029233822506L)   */,
                         "context item select failed, null dataTag" /* "context item select failed, null dataTag" /* "context item select failed, null dataTag" /* "context item select failed, null dataTag" /* cnb.z(-51986284149546L)   */);
@@ -948,7 +922,7 @@ public final /* synthetic */ class us implements IInvokable {
                 Object obj9 = objX6 instanceof Failure ? null : objX6;
                 throwIfVar1IsNull(obj9);
                 int i14 = 0;
-                FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(obj9).r();
+                FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(obj9).createFieldResolver();
                 fieldResolverVarR7.name = "convertView" /* "convertView" /* "convertView" /* "convertView" /* cnb.z(-48541720378154L)   */;
                 Object objE9 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR7)).getValue_();
                 throwIfVar1IsNull(objE9);
@@ -1003,7 +977,7 @@ public final /* synthetic */ class us implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 String[] strArr3 = { "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* "com.tencent.mm.ui.chatting.viewitems" /* cnb.z(-50259707296554L)   */ };
                 dexMethodQueryBuilderVar6.getClass();
-                dexMethodQueryBuilderVar6.a = SomeStaticHelpers.arrayToList(strArr3);
+                dexMethodQueryBuilderVar6.searchedPackages = SomeStaticHelpers.arrayToList(strArr3);
                 DexFinder cdjVar6 = new DexFinder();
                 cdjVar6.usingStrings("MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* "MicroMsg.ChattingItem" /* cnb.z(-50066433768234L)   */,
                         "attachAvatarClickListener: getBizKfWorker:%s" /* "attachAvatarClickListener: getBizKfWorker:%s" /* "attachAvatarClickListener: getBizKfWorker:%s" /* "attachAvatarClickListener: getBizKfWorker:%s" /* cnb.z(-50573239909162L)   */);

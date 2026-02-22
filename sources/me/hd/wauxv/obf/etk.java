@@ -124,7 +124,7 @@ public final /* synthetic */ class etk implements IInvokable {
                 String strZ = "转发" /* "转发" /* "转发" /* cnb.z(-520184964053802L)  */;
                 final String str3 = this.b;
                 final int i = this.c;
-                bgj bgjVar = new bgj() { // from class: me.hd.wauxv.obf.etj
+                Function2 function2Var = new Function2() { // from class: me.hd.wauxv.obf.etj
                     @Override // me.hd.wauxv.obf.bgj
                     public final Object g(Object obj2, Object obj3)
                             throws IllegalAccessException, InstantiationException, InvocationTargetException {
@@ -141,7 +141,7 @@ public final /* synthetic */ class etk implements IInvokable {
                     }
                 };
                 aelVar2.j = strZ;
-                aelVar2.l = bgjVar;
+                aelVar2.l = function2Var;
                 break;
         }
         return Kotlin$Unit.INSTANCE;

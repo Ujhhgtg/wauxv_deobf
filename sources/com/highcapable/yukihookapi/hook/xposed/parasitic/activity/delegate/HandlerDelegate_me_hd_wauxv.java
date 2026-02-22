@@ -59,9 +59,9 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
             Kotlin$Lazy kotlin$LazyVar = ep.a;
             ((Configuration) bmuVarBi.obj).processorResolver = FastKV.aa();
             bmuVarBi.setHookOptional(true);
-            FieldResolver fieldResolverVarR = bmuVarBi.r();
+            FieldResolver fieldResolverVarR = bmuVarBi.createFieldResolver();
             fieldResolverVarR.name = "intent";
-            BoundField boundFieldVar = (BoundField) StaticHelpers5.g(fieldResolverVarR.resolve());
+            BoundField boundFieldVar = (BoundField) StaticHelpers5.getFirstInList(fieldResolverVarR.resolve());
             Intent intent = boundFieldVar != null ? (Intent) boundFieldVar.getValue_() : null;
             BoundField boundFieldVar2 = (BoundField) bkc.e.getValue();
             if (boundFieldVar2 != null) {
@@ -97,7 +97,7 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
             bmuVarBh.setHookOptional(true);
             MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "getCallbacks";
-            MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
+            MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT.findMethods());
             if (methodHookWrapperVar != null) {
                 methodHookWrapperVar.dexFind(message.obj);
                 list = (List) methodHookWrapperVar.i(new Object[0]);
@@ -118,9 +118,9 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                     int i4 = 0;
                     SyntheticPileOfMess bmuVarBi2 = dqc.getWrapperConfiguration(obj2);
                     bmuVarBi2.setHookOptional(true);
-                    FieldResolver fieldResolverVarR2 = bmuVarBi2.r();
+                    FieldResolver fieldResolverVarR2 = bmuVarBi2.createFieldResolver();
                     fieldResolverVarR2.name = "mIntent";
-                    BoundField boundFieldVar4 = (BoundField) StaticHelpers5.g(fieldResolverVarR2.resolve());
+                    BoundField boundFieldVar4 = (BoundField) StaticHelpers5.getFirstInList(fieldResolverVarR2.resolve());
                     Intent intent2 = boundFieldVar4 != null ? (Intent) boundFieldVar4.getValue_() : null;
                     bkc.a.getClass();
                     BoundField boundFieldVar5 = (BoundField) bkc.e.getValue();
@@ -155,14 +155,14 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                             bmuVarBh2.setHookOptional(true);
                             MethodResolver methodResolverVarT2 = bmuVarBh2.getMethodResolverBasedOnPreviouslyProvidedConfig();
                             methodResolverVarT2.name = "currentActivityThread";
-                            MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT2.findMethods());
+                            MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT2.findMethods());
                             Object objE = methodHookWrapperVar2 != null ? methodHookWrapperVar2.invokeAndThrowIfFailed(new Object[0]) : null;
                             SyntheticPileOfMess bmuVarBi3 = dqc.getWrapperConfiguration(message.obj);
                             ((Configuration) bmuVarBi3.obj).processorResolver = FastKV.aa();
                             bmuVarBi3.setHookOptional(true);
                             MethodResolver methodResolverVarT3 = bmuVarBi3.getMethodResolverBasedOnPreviouslyProvidedConfig();
                             methodResolverVarT3.name = "getActivityToken";
-                            MethodHookWrapper methodHookWrapperVar3 = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT3.findMethods());
+                            MethodHookWrapper methodHookWrapperVar3 = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT3.findMethods());
                             Object objF2 = methodHookWrapperVar3 != null ? methodHookWrapperVar3.f(new Object[0]) : null;
                             if (objE != null) {
                                 SyntheticPileOfMess bmuVarBi4 = dqc.getWrapperConfiguration(objE);
@@ -171,16 +171,16 @@ public final class HandlerDelegate_me_hd_wauxv implements Handler.Callback {
                                 MethodResolver methodResolverVarT4 = bmuVarBi4.getMethodResolverBasedOnPreviouslyProvidedConfig();
                                 methodResolverVarT4.name = "getLaunchingActivity";
                                 methodResolverVarT4.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(IBinder.class) }, 1));
-                                MethodHookWrapper methodHookWrapperVar4 = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT4.findMethods());
+                                MethodHookWrapper methodHookWrapperVar4 = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT4.findMethods());
                                 objF = methodHookWrapperVar4 != null ? methodHookWrapperVar4.f(objF2) : null;
                             }
                             if (objF != null) {
                                 SyntheticPileOfMess bmuVarBi5 = dqc.getWrapperConfiguration(objF);
                                 ((Configuration) bmuVarBi5.obj).processorResolver = FastKV.aa();
                                 bmuVarBi5.setHookOptional(true);
-                                FieldResolver fieldResolverVarR3 = bmuVarBi5.r();
+                                FieldResolver fieldResolverVarR3 = bmuVarBi5.createFieldResolver();
                                 fieldResolverVarR3.name = "intent";
-                                BoundField boundFieldVar7 = (BoundField) StaticHelpers5.g(fieldResolverVarR3.resolve());
+                                BoundField boundFieldVar7 = (BoundField) StaticHelpers5.getFirstInList(fieldResolverVarR3.resolve());
                                 if (boundFieldVar7 != null) {
                                     boundFieldVar7.setValue(intent3);
                                 }

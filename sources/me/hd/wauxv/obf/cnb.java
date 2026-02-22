@@ -579,7 +579,7 @@ public abstract class cnb {
         StaticHelpers2.addAllFromVar2ToVar1(methodResolverVarT.modifiersNot, (AccessModifierEnum[]) Arrays.copyOf(new AccessModifierEnum[] { AccessModifierEnum.FINAL}, 1));
         methodResolverVarT.setParams(Arrays.copyOf(new Object[] { cvh.a.b(), dal.getKClassFromClass(Integer.TYPE) }, 2));
         methodResolverVarT.enableSuperclass();
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT.findMethods());
         if (methodHookWrapperVar != null) {
             methodHookWrapperVar.invokeAndThrowIfFailed(obj, Integer.valueOf(i2));
         } else {

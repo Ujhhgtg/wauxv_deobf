@@ -195,7 +195,7 @@ public final class Handshake {
     }
 
     public final Principal localPrincipal() {
-        Object objG = StaticHelpers5.g(this.localCertificates);
+        Object objG = StaticHelpers5.getFirstInList(this.localCertificates);
         X509Certificate x509Certificate = objG instanceof X509Certificate ? (X509Certificate) objG : null;
         if (x509Certificate != null) {
             return x509Certificate.getSubjectX500Principal();
@@ -208,7 +208,7 @@ public final class Handshake {
     }
 
     public final Principal peerPrincipal() {
-        Object objG = StaticHelpers5.g(peerCertificates());
+        Object objG = StaticHelpers5.getFirstInList(peerCertificates());
         X509Certificate x509Certificate = objG instanceof X509Certificate ? (X509Certificate) objG : null;
         if (x509Certificate != null) {
             return x509Certificate.getSubjectX500Principal();

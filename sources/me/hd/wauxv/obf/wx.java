@@ -115,7 +115,7 @@ public final /* synthetic */ class wx implements bgk {
                         + (clsBf5 != null ? clsBf5 : TextView.class).getName() + ".");
             case 1:
                 int i2 = 0;
-                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).r();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).createFieldResolver();
                 fieldResolverVarR.name = "field_snsId" /* "field_snsId" /* "field_snsId" /* cnb.z(-535002601225002L)  */;
                 Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
                 throwIfVar1IsNull(objE);
@@ -142,11 +142,11 @@ public final /* synthetic */ class wx implements bgk {
                 cwd cwdVar = cwd.a;
                 cwdVar.getClass();
                 ejy ejyVar = (ejy) cwdVar.c(ejy.Companion.serializer(), (byte[]) objJ3);
-                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj3).r();
+                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj3).createFieldResolver();
                 fieldResolverVarR2.name = "ContentObj" /* "ContentObj" /* "ContentObj" /* cnb.z(-534903816977194L)  */;
                 Object objD = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue();
                 throwIfVar1IsNull(objD);
-                FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objD).r();
+                FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objD).createFieldResolver();
                 fieldResolverVarR3.fieldType = dal.getKClassFromClass(LinkedList.class);
                 Object objE2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).getValue_();
                 throwIfVar1IsNull(objE2);

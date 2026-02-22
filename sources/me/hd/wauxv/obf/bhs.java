@@ -173,10 +173,10 @@ public abstract class bhs {
             int i2 = 0;
             SyntheticPileOfMess bmuVarBg = dqc.bg(dal.getKClassFromClass(XposedBridge.class));
             bmuVarBg.setHookOptional(true);
-            FieldResolver fieldResolverVarR = bmuVarBg.r();
+            FieldResolver fieldResolverVarR = bmuVarBg.createFieldResolver();
             fieldResolverVarR.name = "TAG";
             StaticHelpers2.addAllFromVar2ToVar1(fieldResolverVarR.modifiers, (AccessModifierEnum[]) Arrays.copyOf(new AccessModifierEnum[] { AccessModifierEnum.STATIC}, 1));
-            BoundField boundFieldVar = (BoundField) StaticHelpers5.g(fieldResolverVarR.resolve());
+            BoundField boundFieldVar = (BoundField) StaticHelpers5.getFirstInList(fieldResolverVarR.resolve());
             if (boundFieldVar != null && (str = (String) boundFieldVar.getValue_()) != null) {
                 if (StringsKt.isBlank(str)) {
                     str = null;

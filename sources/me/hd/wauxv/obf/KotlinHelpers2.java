@@ -387,8 +387,8 @@ public abstract class KotlinHelpers2 implements ajt, acm {
         Object objX2;
         Bundle bundleCall;
         Bundle bundleCall2;
-        boolean z = exm.a;
-        if (exm.l()) {
+        boolean z = exm.isInitialized;
+        if (exm.isXposedEnvironment()) {
             return false;
         }
         MainApp mainApp = MainApp.a;
@@ -666,21 +666,21 @@ public abstract class KotlinHelpers2 implements ajt, acm {
         }
     }
 
-    public static final et bf(Dispatcher dispatcher, bgj bgjVar) {
+    public static final et bf(Dispatcher dispatcher, Function2 function2Var) {
         throwIfVar1IsNull(dispatcher, "dispatcher");
         et etVar = new et(LifeEventEnum.ON_DESTROY, dispatcher);
-        ajn.y(etVar, EmptyCoroutineContext.INSTANCE, new eq(bgjVar, null)).af(new er(etVar, 0));
+        ajn.y(etVar, EmptyCoroutineContext.INSTANCE, new eq(function2Var, null)).af(new er(etVar, 0));
         return etVar;
     }
 
-    public static void bg(bgj bgjVar) {
-        Dispatchers$Default alcVar = aou.a;
+    public static void bg(Function2 function2Var) {
+        Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
         Dispatcher2 dispatcher2Var = bza.a;
         throwIfVar1IsNull(dispatcher2Var, "dispatcher");
         LifeEventEnum lifeEventEnumVar = LifeEventEnum.ON_DESTROY;
         throwIfVar1IsNull(lifeEventEnumVar, "lifeEvent");
         cky ckyVar = new cky(lifeEventEnumVar, dispatcher2Var);
-        ajn.y(ckyVar, EmptyCoroutineContext.INSTANCE, new ckx(ckyVar, bgjVar, (kotlinx$coroutines$internal$DispatchedContinuation) null)).af(new er(ckyVar, 1));
+        ajn.y(ckyVar, EmptyCoroutineContext.INSTANCE, new ckx(ckyVar, function2Var, (kotlinx$coroutines$internal$DispatchedContinuation) null)).af(new er(ckyVar, 1));
     }
 
     public static void bh(ViewGroup viewGroup, float f) {

@@ -11,7 +11,7 @@ import me.hd.wauxv.obf.kotlinx$coroutines$internal$DispatchedContinuation;
 import me.hd.wauxv.obf.ahp;
 import me.hd.wauxv.obf.ajm;
 import me.hd.wauxv.obf.arj;
-import me.hd.wauxv.obf.bgj;
+import me.hd.wauxv.obf.Function2;
 import me.hd.wauxv.obf.bhs;
 import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.ckv;
@@ -32,7 +32,7 @@ import okhttp3.Response;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 @ajm(c = "com.drake.net.NetCoroutineKt$Get$1", f = "NetCoroutine.kt", l = {}, m = "invokeSuspend")
-public final class PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$default$1 extends doi implements bgj {
+public final class PluginHttpMethod$download$1$invokeSuspend$$inlined$Get$default$1 extends doi implements Function2 {
     public /* synthetic */ Object a;
     public final /* synthetic */ String d;
     public final /* synthetic */ cue e;

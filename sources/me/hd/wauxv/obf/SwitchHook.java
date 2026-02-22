@@ -6,7 +6,7 @@ public abstract class SwitchHook extends BaseBaseHook {
     public final String af;
     public final boolean ag = true;
     public final boolean ah = true;
-    public final String[] ai = { ewi.a.e };
+    public final String[] ai = { APP_BRAND_ID_ENUM.APP_BRAND_HOST_PKG_NAME.strValue};
 
     public SwitchHook(String str) {
         this.af = str.concat(".enabled" /* ".enabled" /* ".enabled" /* cnb.z(-50770808404778L)  */);

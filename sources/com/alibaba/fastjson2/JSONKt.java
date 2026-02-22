@@ -8,7 +8,7 @@ import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.List;
 import me.hd.wauxv.obf.IInvokable;
-import me.hd.wauxv.obf.uj;
+import me.hd.wauxv.obf.Charsets;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -50,7 +50,7 @@ public final class JSONKt {
             int length = bArr.length;
         }
         if ((i3 & 4) != 0) {
-            charset = uj.a;
+            charset = Charsets.UTF_8;
         }
         throwIfVar1IsNull(bArr, "<this>");
         throwIfVar1IsNull(charset, "charset");

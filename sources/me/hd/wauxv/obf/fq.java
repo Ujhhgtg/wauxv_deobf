@@ -11,12 +11,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import me.hd.wauxv.data.bean.MsgInfoBean;
-import net.bytebuddy.jar.asm.signature.SignatureVisitor;
-import net.bytebuddy.pool.TypePool;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final /* synthetic */ class fq implements bgj {
+public final /* synthetic */ class fq implements Function2 {
     public final /* synthetic */ int a;
 
     public /* synthetic */ fq(int i) {
@@ -106,41 +104,33 @@ public final /* synthetic */ class fq implements bgj {
                 Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
                 long msgId = msgInfoBean.getMsgId();
                 String imgPath = msgInfoBean.getImgPath();
-                throwIfVar1IsNull(imgPath);
-                EmojiInfoStorageDexFind.a.getClass();
                 Object objB = EmojiInfoStorageDexFind.getEmojiInfoByMd5(imgPath);
-                atp.a.getClass();
-                int i = 0;
-                MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.toDexClass(ato.a)).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                MethodResolver methodResolverVarT = dqc.bh(StaticHelpers7.toDexClass(EmojiFileEncryptMgr$ClassEmojiFileEncryptMgr.INSTANCE)).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.addAccessModifiers(AccessModifierEnum.STATIC);
                 Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT)).invokeAndThrowIfFailed(new Object[0]);
-                throwIfVar1IsNull(objE);
                 MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objE).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT2.returnType = dal.getKClassFromClass(byte[].class);
                 Object objJ = ((MethodHookWrapper) StaticHelpers6
-                        .setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* "com.tencent.mm.api.IEmojiInfo" /* cnb.z(-90430536416042L)  */ }, 1, methodResolverVarT2))
+                        .setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { "com.tencent.mm.api.IEmojiInfo" }, 1, methodResolverVarT2))
                         .invoke(objB);
-                throwIfVar1IsNull(objJ);
                 byte[] bArr = (byte[]) objJ;
                 try {
                     File file = new File(aum.a.o());
                     file.mkdirs();
                     StringBuilder sb = new StringBuilder();
                     sb.append(msgId);
-                    sb.append(SignatureVisitor.SUPER);
+                    sb.append("-");
                     sb.append(imgPath);
-                    sb.append(SignatureVisitor.SUPER);
+                    sb.append("-");
                     sb.append(System.currentTimeMillis());
-                    sb.append(TypePool.Default.LazyTypeDescription.GenericTypeToken.INNER_CLASS_PATH);
+                    sb.append(".");
                     sb.append(
                             cna.ac(bArr) ? "gif" /* "gif" /* "gif" /* cnb.z(-519106927262506L)  */ : "png" /* "png" /* "png" /* cnb.z(-519055387654954L)  */);
                     String string = sb.toString();
                     File file2 = new File(file, string);
                     if (cna.ac(bArr)) {
-                        MethodResolver methodResolverVarT3 = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.plugin.gif.MMWXGFJNI" /*
-                                                                                            * "com.tencent.mm.plugin.gif.MMWXGFJNI" /* "com.tencent.mm.plugin.gif.MMWXGFJNI" /* cnb.z(-119803817753386L)  */
-                                                                                            */)).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                        methodResolverVarT3.name = "nativeWxamToGif" /* "nativeWxamToGif" /* "nativeWxamToGif" /* cnb.z(-119614839192362L)  */;
+                        MethodResolver methodResolverVarT3 = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.plugin.gif.MMWXGFJNI")).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                        methodResolverVarT3.name = "nativeWxamToGif";
                         Object objJ2 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT3.findMethods())).invoke(bArr);
                         throwIfVar1IsNull(objJ2);
                         bArr = (byte[]) objJ2;
@@ -164,12 +154,9 @@ public final /* synthetic */ class fq implements bgj {
                 }
                 Throwable thB = Success.exceptionOrNull(objX);
                 if (thB != null) {
-                    String strZ = "保存失败: " /* "保存失败: " /* "保存失败: " /* cnb.z(-519025322883882L)  */;
+                    String strZ = "保存失败: ";
                     String message = thB.getMessage();
-                    dnc.sendToast(null, 3, strZ.concat(message != null ? StringsKt.az(50, message) : "未知错误" /*
-                                                                                               * cnb.z(-
-                                                                                               * 518995258112810L)
-                                                                                               */));
+                    dnc.sendToast(null, 3, strZ.concat(message != null ? StringsKt.az(50, message) : "未知错误"));
                 }
                 return kotlinUnitVar;
             case 8:

@@ -174,11 +174,11 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 methodResolverVarT2.returnTypeCondition = new Function1$VarIsObj(9);
                 Object objE = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).invokeAndThrowIfFailed(new Object[0]);
                 throwIfVar1IsNull(objE);
-                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objE).r();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objE).createFieldResolver();
                 fieldResolverVarR.fieldType = ajn.tryGetClassByClassName("com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* cnb.z(-78585016613674L)   */);
                 Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue();
                 throwIfVar1IsNull(objD);
-                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objD).r();
+                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objD).createFieldResolver();
                 fieldResolverVarR2.name = "field_packName" /* "field_packName" /* "field_packName" /* "field_packName" /* cnb.z(-470968933808938L)   */;
                 String str = (String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue_();
                 MethodResolver methodResolverVarT3 = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
@@ -315,7 +315,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 ContentValues contentValues2 = new ContentValues();
                 contentValues2.put("flag" /* "flag" /* "flag" /* "flag" /* cnb.z(-525948810165034L)   */,
                         Long.valueOf(arj.z(conversationBean2.getFlag(), agd.f)));
-                agp.c(agp.a, agcVar.b(contentValues2), conversationBean2.getUsername());
+                ConversationDatabaseApi.c(ConversationDatabaseApi.a, agcVar.b(contentValues2), conversationBean2.getUsername());
                 return kotlinUnitVar;
             case 16:
                 ConversationBean conversationBean3 = (ConversationBean) obj;
@@ -323,7 +323,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 ContentValues contentValues3 = new ContentValues();
                 contentValues3.put("flag" /* "flag" /* "flag" /* "flag" /* cnb.z(-525978874936106L)   */,
                         Long.valueOf(arj.z(conversationBean3.getFlag(), agd.d)));
-                agp.c(agp.a, agcVar2.b(contentValues3), conversationBean3.getUsername());
+                ConversationDatabaseApi.c(ConversationDatabaseApi.a, agcVar2.b(contentValues3), conversationBean3.getUsername());
                 return kotlinUnitVar;
             case 17:
                 ConversationBean conversationBean4 = (ConversationBean) obj;
@@ -331,7 +331,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 ContentValues contentValues4 = new ContentValues();
                 contentValues4.put("flag" /* "flag" /* "flag" /* "flag" /* cnb.z(-525923040361258L)   */,
                         Long.valueOf(conversationBean4.getConversationTime()));
-                agp.c(agp.a, agcVar3.b(contentValues4), conversationBean4.getUsername());
+                ConversationDatabaseApi.c(ConversationDatabaseApi.a, agcVar3.b(contentValues4), conversationBean4.getUsername());
                 return kotlinUnitVar;
             case 18:
                 ConversationBean conversationBean5 = (ConversationBean) obj;
@@ -339,7 +339,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 ContentValues contentValues5 = new ContentValues();
                 contentValues5.put("flag" /* "flag" /* "flag" /* "flag" /* cnb.z(-525884385655594L)   */,
                         Long.valueOf(arj.z(conversationBean5.getFlag(), agd.e)));
-                agp.c(agp.a, agcVar4.b(contentValues5), conversationBean5.getUsername());
+                ConversationDatabaseApi.c(ConversationDatabaseApi.a, agcVar4.b(contentValues5), conversationBean5.getUsername());
                 return kotlinUnitVar;
             case 19:
                 ConversationBean conversationBean6 = (ConversationBean) obj;
@@ -347,7 +347,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 ContentValues contentValues6 = new ContentValues();
                 contentValues6.put("flag" /* "flag" /* "flag" /* "flag" /* cnb.z(-525897270557482L)   */,
                         Long.valueOf(arj.z(conversationBean6.getFlag(), agd.c)));
-                agp.c(agp.a, agcVar5.b(contentValues6), conversationBean6.getUsername());
+                ConversationDatabaseApi.c(ConversationDatabaseApi.a, agcVar5.b(contentValues6), conversationBean6.getUsername());
                 return kotlinUnitVar;
             case 20:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new Function1$VarIsObj(21);
@@ -356,7 +356,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 String[] strArr = { "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* "com.tencent.mm.ui.conversation" /* cnb.z(-527301724863274L)   */ };
                 dexMethodQueryBuilderVar4.getClass();
-                dexMethodQueryBuilderVar4.a = SomeStaticHelpers.arrayToList(strArr);
+                dexMethodQueryBuilderVar4.searchedPackages = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar5 = new DexFinder();
                 cdjVar5.usingStrings("MicroMsg.ConversationWithCacheAdapter" /* "MicroMsg.ConversationWithCacheAdapter" /* "MicroMsg.ConversationWithCacheAdapter" /* "MicroMsg.ConversationWithCacheAdapter" /* cnb.z(-527701156821802L)   */,
                         "handle show tip count, but talker is null" /* "handle show tip count, but talker is null" /* "handle show tip count, but talker is null" /* "handle show tip count, but talker is null" /* cnb.z(-527589487672106L)   */);

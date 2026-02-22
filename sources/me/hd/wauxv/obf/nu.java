@@ -163,7 +163,7 @@ public class nu implements oz, esn, cdw, avu, aoh, bfh, app, cvg, ccv, dcc {
 
     public static sj g(String str) {
         throwIfVar1IsNull(str, "<this>");
-        byte[] bytes = str.getBytes(uj.a);
+        byte[] bytes = str.getBytes(Charsets.UTF_8);
         throwIfVar1IsNull(bytes, "this as java.lang.String).getBytes(charset)");
         sj sjVar = new sj(bytes);
         sjVar.d = str;

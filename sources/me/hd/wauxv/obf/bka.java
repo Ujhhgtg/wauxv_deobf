@@ -52,7 +52,7 @@ public final /* synthetic */ class bka implements IInvokable {
                 } else if (nullSafeIsEqual(str, "wauxv" /* "wauxv" /* "wauxv" /* "wauxv" /* cnb.z(-550709296626474L)   */)) {
                     bbj.a.getClass();
                     if (nullSafeIsEqual(str2, "clearUnreadCount" /* "clearUnreadCount" /* "clearUnreadCount" /* "clearUnreadCount" /* cnb.z(-553591219682090L)   */)) {
-                        Dispatchers$Default alcVar = aou.a;
+                        Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                         KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new lw(i2, afwVar, 3));
                     } else if (nullSafeIsEqual(str2, "killProcess" /* "killProcess" /* "killProcess" /* "killProcess" /* cnb.z(-553535385107242L)   */)) {
                         Process.killProcess(Process.myPid());
@@ -131,16 +131,16 @@ public final /* synthetic */ class bka implements IInvokable {
                 linearLayout.addView(textView);
                 linearLayout.addView(progressBar);
                 AlertDialog alertDialogShow = title.setView(linearLayout).setCancelable(false).show();
-                Dispatchers$Default alcVar2 = aou.a;
+                Dispatchers$Default alcVar2 = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                 Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
                 bhp bhpVar = new bhp(euhVar, textView, progressBar, alertDialogShow, null);
                 ahh ahhVarT = KotlinHelpers.t(EmptyCoroutineContext.INSTANCE, akqVar, true);
-                Dispatchers$Default alcVar3 = aou.a;
+                Dispatchers$Default alcVar3 = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                 if (ahhVarT != alcVar3 && ahhVarT._w(arj.a) == null) {
                     ahhVarT = ahhVarT._v(alcVar3);
                 }
                 t dmfVar = new dmf(ahhVarT, true);
-                dmfVar.h(ahs.a, dmfVar, bhpVar);
+                dmfVar.h(SomeEnum.DEFAULT, dmfVar, bhpVar);
                 return kotlinUnitVar;
         }
     }

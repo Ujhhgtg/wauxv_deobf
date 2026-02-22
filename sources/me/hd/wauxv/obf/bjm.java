@@ -96,7 +96,7 @@ public final class bjm extends SwitchHook implements bnc {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        Dispatchers$Default alcVar = aou.a;
+        Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
         KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new eq(2, (kotlinx$coroutines$internal$DispatchedContinuation) null));
     }
 
@@ -146,7 +146,7 @@ public final class bjm extends SwitchHook implements bnc {
                 } else {
                     wv.a.getClass();
                     int i = 0;
-                    FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objB).r();
+                    FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objB).createFieldResolver();
                     fieldResolverVarR.name = "field_roomowner" /* "field_roomowner" /* "field_roomowner" /* cnb.z(-99733435579178L)  */;
                     zF = nullSafeIsEqual((String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_(), sendTalker);
                     mgVar2.put(pairVar3, Boolean.valueOf(zF));
@@ -175,7 +175,7 @@ public final class bjm extends SwitchHook implements bnc {
                         Object objInvoke = StaticHelpers7.toDexMethod(wu.a).invoke(objB2, sendTalker2);
                         if (objInvoke != null) {
                             int i2 = 0;
-                            FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objInvoke).r();
+                            FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objInvoke).createFieldResolver();
                             fieldResolverVarR2.name = "f" /* "f" /* "f" /* cnb.z(-99664716102442L)  */;
                             Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue_();
                             throwIfVar1IsNull(objE);
@@ -191,7 +191,7 @@ public final class bjm extends SwitchHook implements bnc {
                     str = (String) pairVar2.a;
                     bixVar = (bix) pairVar2.b;
                     int i3 = 0;
-                    FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).r();
+                    FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).createFieldResolver();
                     fieldResolverVarR3.name = "userTV" /* "userTV" /* "userTV" /* cnb.z(-505667974593322L)  */;
                     textView = (TextView) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
                     strValueOf = String.valueOf(textView != null ? textView.getText() : null);
@@ -215,7 +215,7 @@ public final class bjm extends SwitchHook implements bnc {
             str = (String) pairVar2.a;
             bixVar = (bix) pairVar2.b;
             int i32 = 0;
-            FieldResolver fieldResolverVarR32 = dqc.getWrapperConfiguration(obj).r();
+            FieldResolver fieldResolverVarR32 = dqc.getWrapperConfiguration(obj).createFieldResolver();
             fieldResolverVarR32.name = "userTV" /* "userTV" /* "userTV" /* cnb.z(-505667974593322L)  */;
             textView = (TextView) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR32)).getValue_();
             strValueOf = String.valueOf(textView != null ? textView.getText() : null);

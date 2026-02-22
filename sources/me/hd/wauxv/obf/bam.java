@@ -6,12 +6,12 @@ public final class bam {
     public final int a;
     public final String b;
     public final int c;
-    public final bgj d;
+    public final Function2 d;
 
-    public bam(int i, String str, int i2, bgj bgjVar) {
+    public bam(int i, String str, int i2, Function2 function2Var) {
         this.a = i;
         this.b = str;
         this.c = i2;
-        this.d = bgjVar;
+        this.d = function2Var;
     }
 }

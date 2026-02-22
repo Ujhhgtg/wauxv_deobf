@@ -46,8 +46,8 @@ public final class ceb extends ClassLoader {
         Object objX;
         Class<?> clsLoadClass;
         Iterator it;
-        boolean z2 = exm.a;
-        if (!exm.l()) {
+        boolean z2 = exm.isInitialized;
+        if (!exm.isXposedEnvironment()) {
             ki.a.getClass();
             return ki.getHostClassLoader().loadClass(str);
         }

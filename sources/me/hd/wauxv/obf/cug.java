@@ -55,7 +55,7 @@ public final /* synthetic */ class cug implements IInvokable {
                         aelVar.m(strZ, arrayList);
                         aelVar.g = R.drawable.ic_contact_confirm_24dp;
                         String strZ2 = "点赞" /* "点赞" /* "点赞" /* "点赞" /* cnb.z(-535311838870314L)   */;
-                        bgj bgjVar = new bgj() { // from class: me.hd.wauxv.obf.dix
+                        Function2 function2Var = new Function2() { // from class: me.hd.wauxv.obf.dix
                             @Override // me.hd.wauxv.obf.bgj
                             public final Object g(Object obj2, Object obj3) {
                                 long j2;
@@ -95,7 +95,7 @@ public final /* synthetic */ class cug implements IInvokable {
                             }
                         };
                         aelVar.j = strZ2;
-                        aelVar.l = bgjVar;
+                        aelVar.l = function2Var;
                     } else {
                         FriendInfo friendInfo = (FriendInfo) it.next();
                         String wxid = friendInfo.getWxid();

@@ -5,11 +5,11 @@ package me.hd.wauxv.obf;
 public final class cev {
     public final int a;
     public final String b;
-    public final bgj c;
+    public final Function2 c;
 
-    public cev(int i, String str, bgj bgjVar) {
+    public cev(int i, String str, Function2 function2Var) {
         this.a = i;
         this.b = str;
-        this.c = bgjVar;
+        this.c = function2Var;
     }
 }

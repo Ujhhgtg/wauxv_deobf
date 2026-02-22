@@ -12,7 +12,7 @@ import me.hd.wauxv.obf.dnr;
 import me.hd.wauxv.obf.nu;
 import me.hd.wauxv.obf.rh;
 import me.hd.wauxv.obf.sj;
-import me.hd.wauxv.obf.uj;
+import me.hd.wauxv.obf.Charsets;
 import okhttp3.Challenge;
 import okhttp3.Cookie;
 import okhttp3.CookieJar;
@@ -192,7 +192,7 @@ public final class HttpHeaders {
             jT = rhVar.b;
         }
         if (jT != 0) {
-            return rhVar.z(jT, uj.a);
+            return rhVar.z(jT, Charsets.UTF_8);
         }
         return null;
     }

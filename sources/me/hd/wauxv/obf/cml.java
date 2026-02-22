@@ -268,7 +268,7 @@ public final /* synthetic */ class cml implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar8 = (DexMethodQueryBuilder) obj;
                 String[] strArr5 = { "com.tencent.mm.booter.notification" /* "com.tencent.mm.booter.notification" /* "com.tencent.mm.booter.notification" /* cnb.z(-67860483275562L)  */ };
                 dexMethodQueryBuilderVar8.getClass();
-                dexMethodQueryBuilderVar8.a = SomeStaticHelpers.arrayToList(strArr5);
+                dexMethodQueryBuilderVar8.searchedPackages = SomeStaticHelpers.arrayToList(strArr5);
                 DexFinder cdjVar8 = new DexFinder();
                 cdjVar8.usingStrings("MicroMsg.MMNotification" /* "MicroMsg.MMNotification" /* "MicroMsg.MMNotification" /* cnb.z(-67658619812650L)  */,
                         "notifyFirst talker:%s msgid:%d type:%d tipsFlag:%d content:%s" /* "notifyFirst talker:%s msgid:%d type:%d tipsFlag:%d content:%s" /* "notifyFirst talker:%s msgid:%d type:%d tipsFlag:%d content:%s" /* cnb.z(-68105296411434L)  */);
@@ -277,13 +277,13 @@ public final /* synthetic */ class cml implements IInvokable {
             case 23:
                 HookParam hookParam2 = (HookParam) obj;
                 int i4 = 0;
-                FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam2);
+                FieldResolver fieldResolverVarAa = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam2);
                 uq.a.getClass();
                 fieldResolverVarAa.fieldType = ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */);
                 Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue_();
                 throwIfVar1IsNull(objE);
-                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration((FrameLayout) objE).r();
-                fieldResolverVarR.b = new cml(24);
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration((FrameLayout) objE).createFieldResolver();
+                fieldResolverVarR.fieldMatcher = new cml(24);
                 Object obj3 = null;
                 boolean z = false;
                 for (Object obj4 : fieldResolverVarR.resolve()) {
@@ -347,7 +347,7 @@ public final /* synthetic */ class cml implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar9 = (DexMethodQueryBuilder) obj;
                 String[] strArr6 = { "com.tencent.mm.pluginsdk.ui.chat" /* "com.tencent.mm.pluginsdk.ui.chat" /* "com.tencent.mm.pluginsdk.ui.chat" /* cnb.z(-399298814540586L)  */ };
                 dexMethodQueryBuilderVar9.getClass();
-                dexMethodQueryBuilderVar9.a = SomeStaticHelpers.arrayToList(strArr6);
+                dexMethodQueryBuilderVar9.searchedPackages = SomeStaticHelpers.arrayToList(strArr6);
                 DexFinder cdjVar9 = new DexFinder();
                 cdjVar9.usingStrings("MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* cnb.z(-399174260489002L)  */, "send msg onClick" /*
                                                                                                     * cnb.z(-

@@ -5,7 +5,7 @@ import org.json.JSONObject;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class etc extends doi implements bgj {
+public final class etc extends doi implements Function2 {
     public final /* synthetic */ int a;
     public int d;
     public /* synthetic */ Object e;
@@ -72,7 +72,7 @@ public final class etc extends doi implements bgj {
                     String strN = yg.decryptVar3UsingCnbZAndConcatToVar1(sb, str, -587869353671466L);
                     String string = jSONObject.getString("pcdn_url" /* "pcdn_url" /* "pcdn_url" /* cnb.z(-587882238573354L)  */);
                     beo beoVar = new beo(strN, i2);
-                    Dispatchers$Default alcVar = aou.a;
+                    Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                     Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
                     dob dobVar = new dob();
                     akqVar.getClass();
@@ -106,7 +106,7 @@ public final class etc extends doi implements bgj {
                     String string2 = jSONObject.getString("pcdn_url" /* "pcdn_url" /* "pcdn_url" /* cnb.z(-609704967404330L)  */);
                     int i5 = 6;
                     beo beoVar2 = new beo(strN2, i5);
-                    Dispatchers$Default alcVar2 = aou.a;
+                    Dispatchers$Default alcVar2 = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                     Dispatchers$IO akqVar2 = Dispatchers$IO.INSTANCE;
                     dob dobVar2 = new dob();
                     akqVar2.getClass();

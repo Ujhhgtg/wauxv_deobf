@@ -64,7 +64,7 @@ public abstract class dqc {
             bmuVarBh.setHookOptional(true);
             MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = str;
-            methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
+            methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT.findMethods());
         }
         if (methodHookWrapperVar == null) {
             Logger.logW("Failed to initialize YukiXposedModuleStatus");

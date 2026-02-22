@@ -130,7 +130,7 @@ public final class AntiRevoke3Hook extends SwitchHook implements IDexFind {
             ((FindDexClassMethodDslWrapper) obj).onMethodCallback = (obj1 -> {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj1;
                 String[] strArr = { "com.tencent.mm.sdk.platformtools" };
-                dexMethodQueryBuilderVar.a = SomeStaticHelpers.arrayToList(strArr);
+                dexMethodQueryBuilderVar.searchedPackages = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar = new DexFinder();
                 cdjVar.usingStrings("MicroMsg.SDK.XmlParser", "[ %s ]");
                 dexMethodQueryBuilderVar.dexFinder = cdjVar;

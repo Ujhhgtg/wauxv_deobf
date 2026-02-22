@@ -81,8 +81,8 @@ public final class cla implements alp {
     }
 
     @Override // me.hd.wauxv.obf.ahh
-    public final Object _u(Object obj, bgj bgjVar) {
-        return bgjVar.g(obj, this.f);
+    public final Object _u(Object obj, Function2 function2Var) {
+        return function2Var.g(obj, this.f);
     }
 
     @Override // me.hd.wauxv.obf.ahh

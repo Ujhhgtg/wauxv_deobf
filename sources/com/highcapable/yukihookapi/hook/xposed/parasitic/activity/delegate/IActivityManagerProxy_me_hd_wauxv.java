@@ -54,7 +54,7 @@ public final class IActivityManagerProxy_me_hd_wauxv implements InvocationHandle
             if (intent != null && (component = intent.getComponent()) != null) {
                 String packageName = component.getPackageName();
                 ki.a.getClass();
-                if (nullSafeIsEqual(packageName, ki.i()) && (classLoader = bmy.class.getClassLoader()) != null
+                if (nullSafeIsEqual(packageName, ki.getCurrentPackageName()) && (classLoader = bmy.class.getClassLoader()) != null
                         && ReflectionWrapper.g(classLoader, component.getClassName())) {
                     Intent intent2 = new Intent();
                     String packageName2 = component.getPackageName();

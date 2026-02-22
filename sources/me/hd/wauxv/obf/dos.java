@@ -229,7 +229,7 @@ public final /* synthetic */ class dos implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 String[] strArr2 = { "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* "com.tencent.mm.sdk.platformtools" /* cnb.z(-491898309442346L)  */ };
                 dexMethodQueryBuilderVar2.getClass();
-                dexMethodQueryBuilderVar2.a = SomeStaticHelpers.arrayToList(strArr2);
+                dexMethodQueryBuilderVar2.searchedPackages = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar2 = new DexFinder();
                 if (cnb.ab(ewk.e) || cnb.ac(ewh.d)) {
                     cdjVar2.usingStrings("MicroMsg.BitmapUtil" /* "MicroMsg.BitmapUtil" /* "MicroMsg.BitmapUtil" /* cnb.z(-491773755390762L)  */, "saveBitmapToImage failed: %s" /*
@@ -257,7 +257,7 @@ public final /* synthetic */ class dos implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 String[] strArr3 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-382067405749034L)  */ };
                 dexMethodQueryBuilderVar3.getClass();
-                dexMethodQueryBuilderVar3.a = SomeStaticHelpers.arrayToList(strArr3);
+                dexMethodQueryBuilderVar3.searchedPackages = SomeStaticHelpers.arrayToList(strArr3);
                 DexFinder cdjVar3 = new DexFinder();
                 cdjVar3.usingStrings("setSdkId" /* "setSdkId" /* "setSdkId" /* cnb.z(-381929966795562L)  */,
                         "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-381908491959082L)  */);
@@ -267,7 +267,7 @@ public final /* synthetic */ class dos implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 String[] strArr4 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-382350873590570L)  */ };
                 dexMethodQueryBuilderVar4.getClass();
-                dexMethodQueryBuilderVar4.a = SomeStaticHelpers.arrayToList(strArr4);
+                dexMethodQueryBuilderVar4.searchedPackages = SomeStaticHelpers.arrayToList(strArr4);
                 DexFinder cdjVar4 = new DexFinder();
                 cdjVar4.usingStrings("setContentDes" /* "setContentDes" /* "setContentDes" /* cnb.z(-382213434637098L)  */,
                         "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-382136125225770L)  */);
@@ -292,7 +292,7 @@ public final /* synthetic */ class dos implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 String[] strArr5 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-379090993412906L)  */ };
                 dexMethodQueryBuilderVar5.getClass();
-                dexMethodQueryBuilderVar5.a = SomeStaticHelpers.arrayToList(strArr5);
+                dexMethodQueryBuilderVar5.searchedPackages = SomeStaticHelpers.arrayToList(strArr5);
                 DexFinder cdjVar5 = new DexFinder();
                 cdjVar5.usingStrings("MicroMsg.UploadPackHelper" /* "MicroMsg.UploadPackHelper" /* "MicroMsg.UploadPackHelper" /* cnb.z(-378403798645546L)  */,
                         "commit sns info ret %d, typeFlag %d sightMd5 %s" /* "commit sns info ret %d, typeFlag %d sightMd5 %s" /* "commit sns info ret %d, typeFlag %d sightMd5 %s" /* cnb.z(-378240589888298L)  */);
@@ -302,7 +302,7 @@ public final /* synthetic */ class dos implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 String[] strArr6 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-380512627587882L)  */ };
                 dexMethodQueryBuilderVar6.getClass();
-                dexMethodQueryBuilderVar6.a = SomeStaticHelpers.arrayToList(strArr6);
+                dexMethodQueryBuilderVar6.searchedPackages = SomeStaticHelpers.arrayToList(strArr6);
                 DexFinder cdjVar6 = new DexFinder();
                 cls3 = Integer.class;
                 Class<Integer> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
@@ -318,7 +318,7 @@ public final /* synthetic */ class dos implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar7 = (DexMethodQueryBuilder) obj;
                 String[] strArr7 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-378949259492138L)  */ };
                 dexMethodQueryBuilderVar7.getClass();
-                dexMethodQueryBuilderVar7.a = SomeStaticHelpers.arrayToList(strArr7);
+                dexMethodQueryBuilderVar7.searchedPackages = SomeStaticHelpers.arrayToList(strArr7);
                 DexFinder cdjVar7 = new DexFinder();
                 cdjVar7.usingStrings("setSdkAppName" /* "setSdkAppName" /* "setSdkAppName" /* cnb.z(-378811820538666L)  */,
                         "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-379284266941226L)  */);
@@ -328,7 +328,7 @@ public final /* synthetic */ class dos implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar8 = (DexMethodQueryBuilder) obj;
                 String[] strArr8 = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-382492607511338L)  */ };
                 dexMethodQueryBuilderVar8.getClass();
-                dexMethodQueryBuilderVar8.a = SomeStaticHelpers.arrayToList(strArr8);
+                dexMethodQueryBuilderVar8.searchedPackages = SomeStaticHelpers.arrayToList(strArr8);
                 DexFinder cdjVar8 = new DexFinder();
                 cdjVar8.usingStrings("setUploadList" /* "setUploadList" /* "setUploadList" /* cnb.z(-381805412743978L)  */,
                         "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* "com.tencent.mm.plugin.sns.model.UploadPackHelper" /* cnb.z(-381728103332650L)  */);
@@ -374,11 +374,7 @@ public final /* synthetic */ class dos implements IInvokable {
             case 27:
                 DexClassQueryBuilder dexClassQueryBuilderVar4 = (DexClassQueryBuilder) obj;
                 DexMethodGroupMatcher zbVar4 = new DexMethodGroupMatcher();
-                zbVar4.usingEqStrings("MicroMsg.VideoService" /* "MicroMsg.VideoService" /* "MicroMsg.VideoService" /* cnb.z(-354704169106218L)  */, "MicroMsg.SubCoreVideo" /*
-                                                                                                          * cnb.z(-
-                                                                                                          * 354661219433258L)
-                                                                                                          */,
-                        "quitVideoSendThread" /* "quitVideoSendThread" /* "quitVideoSendThread" /* cnb.z(-355099306097450L)  */);
+                zbVar4.usingEqStrings("MicroMsg.VideoService", "MicroMsg.SubCoreVideo", "quitVideoSendThread");
                 dexClassQueryBuilderVar4.getClass();
                 dexClassQueryBuilderVar4.methodGroupMatcher = zbVar4;
                 return Kotlin$Unit.INSTANCE;

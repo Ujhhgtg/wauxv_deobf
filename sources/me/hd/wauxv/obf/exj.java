@@ -29,11 +29,11 @@ public final class exj extends nh {
         hookParam.b = blqVar;
         Member member = this.b;
         try {
-            IInvokable bgfVar = (IInvokable) hookManagerVar.g;
+            IInvokable bgfVar = (IInvokable) hookManagerVar.afterHook;
             if (bgfVar != null) {
                 bgfVar.invoke(hookParam);
             }
-            if (((IInvokable) hookManagerVar.g) != null) {
+            if (((IInvokable) hookManagerVar.afterHook) != null) {
                 ArrayList arrayList = Logger.a;
                 StringBuilder sb = new StringBuilder("After Hook Member [");
                 sb.append(member);
@@ -59,7 +59,7 @@ public final class exj extends nh {
         hookParam.b = blqVar;
         Member member = this.b;
         try {
-            IInvokable bgfVar = (IInvokable) hookManagerVar.f;
+            IInvokable bgfVar = (IInvokable) hookManagerVar.beforeHook;
             if (bgfVar != null) {
                 bgfVar.invoke(hookParam);
             }
@@ -68,7 +68,7 @@ public final class exj extends nh {
             Class<?> returnType = method != null ? method.getReturnType() : null;
             Object objG = ((bmi) blqVar.d).g(null, Boolean.FALSE);
             HookManager.verifySignature(hookManagerVar, returnType, objG != null ? objG.getClass() : null);
-            if (((IInvokable) hookManagerVar.f) != null) {
+            if (((IInvokable) hookManagerVar.beforeHook) != null) {
                 ArrayList arrayList = Logger.a;
                 StringBuilder sb = new StringBuilder("Before Hook Member [");
                 sb.append(member);

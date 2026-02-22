@@ -50,8 +50,8 @@ public final class bml {
                 return;
             }
             blx blxVar2 = new blx(4);
-            boolean z3 = exm.a;
-            if (exm.l()) {
+            boolean z3 = exm.isInitialized;
+            if (exm.isXposedEnvironment()) {
                 exm.g = blxVar2;
             } else {
                 Logger.logException(2, "Could not found any available Hook APIs in current environment! Aborted", null);
@@ -81,7 +81,7 @@ public final class bml {
         }
         ClassLoader classLoader3 = classLoader;
         ApplicationInfo applicationInfo = loadPackageParam2 != null ? loadPackageParam2.appInfo : null;
-        boolean z4 = exm.a;
+        boolean z4 = exm.isInitialized;
         if ((nullSafeIsEqual(str2, "com.miui.contentcatcher") || nullSafeIsEqual(str2, "com.miui.catcherpatch"))
                 && (classLoader2 = exm.class.getClassLoader()) != null && zf.g(classLoader2, "android.miui.R")) {
             return;
@@ -95,7 +95,7 @@ public final class bml {
                 HookScopeEnum hookScopeEnumVar5 = HookScopeEnum.RESOURCES;
                 if (!exm.k(str2, hookScopeEnumVar5)) {
                     ki.a.getClass();
-                    if (nullSafeIsEqual(str2, ki.i())) {
+                    if (nullSafeIsEqual(str2, ki.getCurrentPackageName())) {
                         cscVarJ = exm.j(hookScopeEnumVar5, str2, null, null, null, null, 28);
                     }
                 }
@@ -125,7 +125,7 @@ public final class bml {
                     packageParamVar.processInfo = cscVarJ;
                     blxVar.invoke(packageParamVar);
                 }
-                if (cscVarJ.hookScope != hookScopeEnumVar && cscVarJ.packageName.equals(exm.h)) {
+                if (cscVarJ.hookScope != hookScopeEnumVar && cscVarJ.packageName.equals(exm.modulePackageName)) {
                     ki kiVar = ki.a;
                     ClassLoader classLoader4 = cscVarJ.appClassLoader;
                     HookScopeEnum hookScopeEnumVar7 = cscVarJ.hookScope;

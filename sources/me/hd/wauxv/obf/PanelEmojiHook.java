@@ -70,7 +70,7 @@ public final class PanelEmojiHook extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        Dispatchers$Default alcVar = aou.a;
+        Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
         KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new lw(2, null, 4));
         List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(PanelEmojiHook$MethodGetEmojiGroupInfo.INSTANCE));
         PanelEmojiHook panelEmojiHookVar = INSTANCE;
@@ -132,11 +132,11 @@ public final class PanelEmojiHook extends SwitchHook implements IDexFind {
             };
             Object objE = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT2)).invokeAndThrowIfFailed(new Object[0]);
             throwIfVar1IsNull(objE);
-            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objE).r();
+            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objE).createFieldResolver();
             fieldResolverVarR.fieldType = ajn.tryGetClassByClassName("com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* "com.tencent.mm.storage.emotion.EmojiGroupInfo" /* cnb.z(-78585016613674L)   */);
             Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue();
             throwIfVar1IsNull(objD);
-            FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objD).r();
+            FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objD).createFieldResolver();
             fieldResolverVarR2.name = "field_packName" /* "field_packName" /* "field_packName" /* "field_packName" /* cnb.z(-470968933808938L)   */;
             String str = (String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue_();
             MethodResolver methodResolverVarT3 = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();

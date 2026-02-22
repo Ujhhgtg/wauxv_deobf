@@ -158,7 +158,7 @@ public final /* synthetic */ class epy implements IInvokable {
                     }
                     throwIfVar1IsNull(obj);
                     int i4 = 0;
-                    FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
+                    FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).createFieldResolver();
                     fieldResolverVarR.name = "l" /* "l" /* "l" /* cnb.z(-500058747304746L)  */;
                     fieldResolverVarR.fieldType = dal.getKClassFromClass(cls5);
                     ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(Integer.valueOf(etq.a.k() * 1000));
@@ -175,7 +175,7 @@ public final /* synthetic */ class epy implements IInvokable {
                     Object obj2 = objX instanceof Failure ? null : objX;
                     throwIfVar1IsNull(obj2);
                     int i42 = 0;
-                    FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj2).r();
+                    FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj2).createFieldResolver();
                     fieldResolverVarR2.name = "l" /* "l" /* "l" /* cnb.z(-500058747304746L)  */;
                     fieldResolverVarR2.fieldType = dal.getKClassFromClass(cls5);
                     ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).setValue(Integer.valueOf(etq.a.k() * 1000));
@@ -271,7 +271,7 @@ public final /* synthetic */ class epy implements IInvokable {
                 euiVar.getClass();
                 HugeSyntheticPileOfHelpers.bh(baseContext);
                 HostInfoRegistry hostInfoRegistryVar = HostInfoRegistry.INSTANCE;
-                String str4 = exm.i;
+                String str4 = exm.modulePath;
                 hostInfoRegistryVar.getClass();
                 LateinitProperty lateinitPropertyVar = HostInfoRegistry.modulePath;
                 IEmpty7[] btcVarArr = HostInfoRegistry.b;
@@ -284,24 +284,24 @@ public final /* synthetic */ class epy implements IInvokable {
                         .getApplicationLabel(baseContext.getApplicationInfo()).toString());
                 int i5 = 0;
                 SyntheticPileOfMess bmuVarS = yg.s(-28930899704618L);
-                FieldResolver fieldResolverVarR3 = bmuVarS.r();
+                FieldResolver fieldResolverVarR3 = bmuVarS.createFieldResolver();
                 fieldResolverVarR3.name = "VERSION_NAME" /* "VERSION_NAME" /* "VERSION_NAME" /* cnb.z(-30442728192810L)  */;
                 Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).getValue_();
                 throwIfVar1IsNull(objE);
                 LateinitProperty lateinitPropertyVar2 = HostInfoRegistry.verName;
                 lateinitPropertyVar2.i(btcVarArr[6], (String) objE);
-                FieldResolver fieldResolverVarR4 = bmuVarS.r();
+                FieldResolver fieldResolverVarR4 = bmuVarS.createFieldResolver();
                 fieldResolverVarR4.name = "VERSION_CODE" /* "VERSION_CODE" /* "VERSION_CODE" /* cnb.z(-30352533879594L)  */;
                 Object objE2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).getValue_();
                 throwIfVar1IsNull(objE2);
                 HostInfoRegistry.verCode.i(btcVarArr[7], Integer.valueOf(((Number) objE2).intValue()));
-                FieldResolver fieldResolverVarR5 = bmuVarS.r();
+                FieldResolver fieldResolverVarR5 = bmuVarS.createFieldResolver();
                 fieldResolverVarR5.name = "CLIENT_VERSION_ARM64" /* "CLIENT_VERSION_ARM64" /* "CLIENT_VERSION_ARM64" /* cnb.z(-30279519435562L)  */;
                 Object objE3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR5.resolve())).getValue_();
                 throwIfVar1IsNull(objE3);
                 LateinitProperty lateinitPropertyVar3 = HostInfoRegistry.verClient;
                 lateinitPropertyVar3.i(btcVarArr[8], (String) objE3);
-                FieldResolver fieldResolverVarR6 = bmuVarS.r();
+                FieldResolver fieldResolverVarR6 = bmuVarS.createFieldResolver();
                 fieldResolverVarR6.name = "BUILD_TAG" /* "BUILD_TAG" /* "BUILD_TAG" /* cnb.z(-30773440674602L)  */;
                 Object objE4 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR6.resolve())).getValue_();
                 throwIfVar1IsNull(objE4);
@@ -345,7 +345,7 @@ public final /* synthetic */ class epy implements IInvokable {
                     strI = cscVar.packageName;
                 } else {
                     ki.a.getClass();
-                    strI = ki.i();
+                    strI = ki.getCurrentPackageName();
                 }
                 if (euiVar.getCurrentProcessName().equals(StringsKt.ba(strI).toString())) {
                     UMConfigure.preInit(baseContext, "68393b1dbc47b67d83776862" /* "68393b1dbc47b67d83776862" /* "68393b1dbc47b67d83776862" /* cnb.z(-72438918413098L)  */, HostInfoRegistry.getAppName());
@@ -380,7 +380,7 @@ public final /* synthetic */ class epy implements IInvokable {
                         MethodResolver methodResolverVarT = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.ui.LauncherUI" /* "com.tencent.mm.ui.LauncherUI" /* "com.tencent.mm.ui.LauncherUI" /* cnb.z(-83528523971370L)  */)).getMethodResolverBasedOnPreviouslyProvidedConfig();
                         methodResolverVarT.name = "onCreate" /* "onCreate" /* "onCreate" /* cnb.z(-83369610181418L)  */;
                         HookManager hookManagerVarAd = euiVar.createImmediateHook((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods()), HookPriorityEnum.ENUM_DEFAULT);
-                        hookManagerVarAd.m(new bka(hookManagerVarAd, i3, euhVar));
+                        hookManagerVarAd.hookAfter(new bka(hookManagerVarAd, i3, euhVar));
                         hookManagerVarAd.initInstantCollectionAndApplyHooks();
                     }
                 }
@@ -427,7 +427,7 @@ public final /* synthetic */ class epy implements IInvokable {
                             .concat((clsBf5 != null ? clsBf5 : Context.class).getName()).toString());
                 }
                 int i7 = 0;
-                FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(context).r();
+                FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(context).createFieldResolver();
                 fieldResolverVarR7.name = "adapter" /* "adapter" /* "adapter" /* cnb.z(-58918361365290L)  */;
                 Object objE7 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR7)).getValue_();
                 throwIfVar1IsNull(objE7);
@@ -459,7 +459,7 @@ public final /* synthetic */ class epy implements IInvokable {
                 Object obj7 = objX3 instanceof Failure ? null : objX3;
                 throwIfVar1IsNull(obj7);
                 int i8 = 0;
-                FieldResolver fieldResolverVarR8 = dqc.getWrapperConfiguration(obj7).r();
+                FieldResolver fieldResolverVarR8 = dqc.getWrapperConfiguration(obj7).createFieldResolver();
                 fieldResolverVarR8.fieldType = dal.getKClassFromClass(cls2);
                 fieldResolverVarR8.enableSuperclass();
                 Iterator it = fieldResolverVarR8.resolve().iterator();

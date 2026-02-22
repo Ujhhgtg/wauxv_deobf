@@ -48,7 +48,7 @@ public final /* synthetic */ class bty implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 String[] strArr = { "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* "com.tencent.mm.plugin.sns.model" /* cnb.z(-355859515308842L)  */ };
                 dexMethodQueryBuilderVar.getClass();
-                dexMethodQueryBuilderVar.a = SomeStaticHelpers.arrayToList(strArr);
+                dexMethodQueryBuilderVar.searchedPackages = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar = new DexFinder();
                 cdjVar.usingStrings("getSnsDirectPath" /* "getSnsDirectPath" /* "getSnsDirectPath" /* cnb.z(-355722076355370L)  */,
                         "com.tencent.mm.plugin.sns.model.LazyerImageLoader2" /* "com.tencent.mm.plugin.sns.model.LazyerImageLoader2" /* "com.tencent.mm.plugin.sns.model.LazyerImageLoader2" /* cnb.z(-356147278117674L)  */);
@@ -181,7 +181,7 @@ public final /* synthetic */ class bty implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 String[] strArr2 = { "com.tencent.mm.plugin.location.ui.impl" /* "com.tencent.mm.plugin.location.ui.impl" /* "com.tencent.mm.plugin.location.ui.impl" /* cnb.z(-494655678446378L)  */ };
                 dexMethodQueryBuilderVar4.getClass();
-                dexMethodQueryBuilderVar4.a = SomeStaticHelpers.arrayToList(strArr2);
+                dexMethodQueryBuilderVar4.searchedPackages = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar4 = new DexFinder();
                 cdjVar4.usingStrings("MicroMsg.MMPoiMapUI" /* "MicroMsg.MMPoiMapUI" /* "MicroMsg.MMPoiMapUI" /* cnb.z(-493938418907946L)  */, "invalid lat lng" /*
                                                                                                    * cnb.z(-
@@ -314,7 +314,7 @@ public final /* synthetic */ class bty implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 String[] strArr3 = { "com.tencent.mm.plugin.luckymoney.model" /* "com.tencent.mm.plugin.luckymoney.model" /* "com.tencent.mm.plugin.luckymoney.model" /* cnb.z(-374130306186026L)  */ };
                 dexMethodQueryBuilderVar6.getClass();
-                dexMethodQueryBuilderVar6.a = SomeStaticHelpers.arrayToList(strArr3);
+                dexMethodQueryBuilderVar6.searchedPackages = SomeStaticHelpers.arrayToList(strArr3);
                 DexFinder cdjVar6 = new DexFinder();
                 cdjVar6.usingStrings("MicroMsg.LuckyMoneyUtil" /* "MicroMsg.LuckyMoneyUtil" /* "MicroMsg.LuckyMoneyUtil" /* cnb.z(-375612069903146L)  */, "exception:%s" /*
                                                                                                     * cnb.z(-
@@ -391,35 +391,27 @@ public final /* synthetic */ class bty implements IInvokable {
                 return kotlinUnitVar;
             case 27:
                 HookParam hookParam3 = (HookParam) obj;
-                int i9 = 0;
-                FieldResolver fieldResolverVarAa = StaticHelpers6.aa(hookParam3);
-                fieldResolverVarAa.fieldType = "com.tencent.mm.ui.MMFragmentActivity" /* "com.tencent.mm.ui.MMFragmentActivity" /* "com.tencent.mm.ui.MMFragmentActivity" /* cnb.z(-69200513071914L)  */;
+                FieldResolver fieldResolverVarAa = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam3);
+                fieldResolverVarAa.fieldType = "com.tencent.mm.ui.MMFragmentActivity";
                 Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue_();
-                throwIfVar1IsNull(objE);
                 Activity activity = (Activity) objE;
-                FieldResolver fieldResolverVarAa2 = StaticHelpers6.aa(hookParam3);
-                fieldResolverVarAa2.name = "mViewPager" /* "mViewPager" /* "mViewPager" /* cnb.z(-69007239543594L)  */;
+                FieldResolver fieldResolverVarAa2 = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam3);
+                fieldResolverVarAa2.name = "mViewPager";
                 Object objE2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa2.resolve())).getValue_();
-                throwIfVar1IsNull(objE2);
                 ViewGroup viewGroup = (ViewGroup) objE2;
-                FieldResolver fieldResolverVarAa3 = StaticHelpers6.aa(hookParam3);
-                fieldResolverVarAa3.name = "mTabsAdapter" /* "mTabsAdapter" /* "mTabsAdapter" /* cnb.z(-68444598827818L)  */;
+                FieldResolver fieldResolverVarAa3 = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam3);
+                fieldResolverVarAa3.name = "mTabsAdapter";
                 Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa3.resolve())).getValue();
-                throwIfVar1IsNull(objD);
                 for (bnp bnpVar : bzc.b) {
-                    try {
+//                    try {
                         bnpVar.t(activity, viewGroup, objD);
-                    } catch (Exception e) {
-                        ArrayList arrayList = Logger.a;
-                        StringBuilder sb = new StringBuilder();
-                        sb.append("doOnCreate " /* "doOnCreate " /* "doOnCreate " /* cnb.z(-68354404514602L)  */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
-                                bnpVar instanceof SwitchHook ? ((SwitchHook) bnpVar).getResult() : "LoadHook" /*
-                                                                                                               * cnb.z(-
-                                                                                                               * 68337224645418L)
-                                                                                                               */,
-                                -68247030332202L), e, 12);
-                    }
+//                    } catch (Exception e) {
+//                        ArrayList arrayList = Logger.a;
+//                        StringBuilder sb = new StringBuilder();
+//                        sb.append("doOnCreate ");
+//                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+//                                bnpVar instanceof SwitchHook ? ((SwitchHook) bnpVar).getResult() : "LoadHook", "Failed"), e, 12);
+//                    }
                 }
                 return kotlinUnitVar;
             case 28:

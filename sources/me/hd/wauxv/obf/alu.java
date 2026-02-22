@@ -34,10 +34,10 @@ public final class alu implements dft {
         this.c = bgfVar;
     }
 
-    public alu(CharSequence charSequence, bgj bgjVar) {
+    public alu(CharSequence charSequence, Function2 function2Var) {
         this.a = 0;
         throwIfVar1IsNull(charSequence, "input");
         this.b = charSequence;
-        this.c = bgjVar;
+        this.c = function2Var;
     }
 }

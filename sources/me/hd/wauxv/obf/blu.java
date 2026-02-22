@@ -72,7 +72,7 @@ public final class blu {
                         methodResolverVarT.setParams(Arrays.copyOf(
                                 new Object[] { dal.getKClassFromClass(cls3), dal.getKClassFromClass(String.class), dal.getKClassFromClass(cls3), dal.getKClassFromClass(evt.b()) }, 4));
                         methodResolverVarT.addAccessModifiers(accessModifierEnumVar);
-                        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
+                        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT.findMethods());
                         objF = methodHookWrapperVar != null ? methodHookWrapperVar.f(0, str, 1, null) : null;
                     } else {
                         if (!eu.b(28)) {
@@ -89,7 +89,7 @@ public final class blu {
                         methodResolverVarT2.setParams(Arrays.copyOf(
                                 new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(cls2), dal.getKClassFromClass(cls2), dal.getKClassFromClass(cls2) }, 4));
                         methodResolverVarT2.addAccessModifiers(accessModifierEnumVar);
-                        MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT2.findMethods());
+                        MethodHookWrapper methodHookWrapperVar2 = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT2.findMethods());
                         if (methodHookWrapperVar2 != null) {
                             Boolean bool = Boolean.FALSE;
                             objF = methodHookWrapperVar2.f(str, bool, bool, bool);
@@ -114,7 +114,7 @@ public final class blu {
                     } else {
                         adtVarM.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(AssetManager.class), dal.getKClassFromClass(cls4) }, 2));
                     }
-                    ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) StaticHelpers5.g(adtVarM.a());
+                    ConstructorHookWrapper constructorHookWrapperVar = (ConstructorHookWrapper) StaticHelpers5.getFirstInList(adtVarM.a());
                     if (constructorHookWrapperVar != null) {
                         AutoCloseable autoCloseable = eu.b(36) ? (AutoCloseable) constructorHookWrapperVar.c(null, ewm.e, Boolean.FALSE)
                                 : (AutoCloseable) constructorHookWrapperVar.c(null, ewm.e);

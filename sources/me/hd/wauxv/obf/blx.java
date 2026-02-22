@@ -219,7 +219,7 @@ public final synthetic class blx implements IInvokable
             case 4: {
                 final csb csb = (csb)key;
                 HookEntry.a.getClass();
-                final byte[] bytes = cnb.z(-71798968285994L).getBytes(uj.a);
+                final byte[] bytes = cnb.z(-71798968285994L).getBytes(Charsets.UTF_8);
                 bzo.p((Object)bytes, cnb.z(-77764677860138L));
                 final boolean equals = Arrays.equals(bytes, new byte[] { 87, 65, 117, 120, 105, 108, 105, 97, 114, 121 });
                 if (System.currentTimeMillis() - exl.b <= 10368000000L) {
@@ -248,7 +248,7 @@ public final synthetic class blx implements IInvokable
                     }
                     else {
                         ki.a.getClass();
-                        s2 = ki.i();
+                        s2 = ki.getCurrentPackageName();
                     }
                     if (s2.equals(z4) || StringsKt.isBlank((CharSequence)z4)) {
                         csb.ae((ewy)a3);
@@ -260,7 +260,7 @@ public final synthetic class blx implements IInvokable
                 final DexMethodQueryBuilder bah3 = (DexMethodQueryBuilder)key;
                 final String z5 = "com.tencent.mm.ui";
                 bah3.getClass();
-                bah3.a = SomeStaticHelpers.arrayToList(new String[] { z5 });
+                bah3.searchedPackages = SomeStaticHelpers.arrayToList(new String[] { z5 });
                 final Object d3 = new Object();
                 ((cdj)d3).t(new String[] { "MicroMsg.PlusSubMenuHelper", "processOnItemClick" });
                 bah3.d = (cdj)d3;
@@ -268,7 +268,7 @@ public final synthetic class blx implements IInvokable
             case 2: {
                 final DexMethodQueryBuilder bah4 = (DexMethodQueryBuilder)key;
                 final String z6 = "com.tencent.mm.ui";
-                bah4.a = SomeStaticHelpers.arrayToList(new String[] { z6 });
+                bah4.searchedPackages = SomeStaticHelpers.arrayToList(new String[] { z6 });
                 final Object d4 = new Object();
                 ((DexFinder)d4).t(new String[] { "MicroMsg.PlusSubMenuHelper", "dyna plus config is null, we use default one" });
                 bah4.d = (DexFinder)d4;

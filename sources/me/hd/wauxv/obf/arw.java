@@ -82,7 +82,7 @@ public final class arw extends ase {
             }
             View viewFindViewById2 = view3.findViewById(R.id.diagnostic_tooltip_detailed_message);
             throwIfVar1IsNull(viewFindViewById2, "findViewById(...)");
-            hookManagerVar.f = (TextView) viewFindViewById2;
+            hookManagerVar.beforeHook = (TextView) viewFindViewById2;
             View view4 = (View) hookManagerVar.resolutionStrategy;
             if (view4 == null) {
                 throwLateinitPropNotInitYet("root");
@@ -90,7 +90,7 @@ public final class arw extends ase {
             }
             View viewFindViewById3 = view4.findViewById(R.id.diagnostic_tooltip_preferred_action);
             throwIfVar1IsNull(viewFindViewById3, "findViewById(...)");
-            hookManagerVar.g = (TextView) viewFindViewById3;
+            hookManagerVar.afterHook = (TextView) viewFindViewById3;
             View view5 = (View) hookManagerVar.resolutionStrategy;
             if (view5 == null) {
                 throwLateinitPropNotInitYet("root");
@@ -115,7 +115,7 @@ public final class arw extends ase {
             View viewFindViewById6 = view7.findViewById(R.id.diagnostic_container_quickfix);
             throwIfVar1IsNull(viewFindViewById6, "findViewById(...)");
             hookManagerVar.hookingEngine = (ViewGroup) viewFindViewById6;
-            TextView textView = (TextView) hookManagerVar.g;
+            TextView textView = (TextView) hookManagerVar.afterHook;
             if (textView == null) {
                 throwLateinitPropNotInitYet("quickfixText");
                 throw null;
@@ -1104,13 +1104,13 @@ public final class arw extends ase {
             throw null;
         }
         textView.setTextColor(sparseIntArray.get(54));
-        TextView textView2 = (TextView) hookManagerVar.f;
+        TextView textView2 = (TextView) hookManagerVar.beforeHook;
         if (textView2 == null) {
             throwLateinitPropNotInitYet("detailMessageText");
             throw null;
         }
         textView2.setTextColor(sparseIntArray.get(55));
-        TextView textView3 = (TextView) hookManagerVar.g;
+        TextView textView3 = (TextView) hookManagerVar.afterHook;
         if (textView3 == null) {
             throwLateinitPropNotInitYet("quickfixText");
             throw null;

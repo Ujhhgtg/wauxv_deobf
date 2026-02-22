@@ -35,7 +35,7 @@ public final class alt implements Iterator, IEmpty {
             return;
         }
         if (i <= charSequence.length()
-                && (pairVar = (Pair) ((bgj) aluVar.c).g(charSequence, Integer.valueOf(this.c))) != null) {
+                && (pairVar = (Pair) ((Function2) aluVar.c).g(charSequence, Integer.valueOf(this.c))) != null) {
             int iIntValue = ((Number) pairVar.first).intValue();
             int iIntValue2 = ((Number) pairVar.second).intValue();
             this.d = dqc.bm(this.b, iIntValue);

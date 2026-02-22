@@ -19,7 +19,7 @@ import me.hd.wauxv.obf.aam;
 import me.hd.wauxv.obf.abi;
 import me.hd.wauxv.obf.Dispatchers$IO;
 import me.hd.wauxv.obf.Dispatchers$Default;
-import me.hd.wauxv.obf.aou;
+import me.hd.wauxv.obf.StaticDefaultDispatcherProvider;
 import me.hd.wauxv.obf.bhp;
 import me.hd.wauxv.obf.bhq;
 import me.hd.wauxv.obf.byx;
@@ -109,7 +109,7 @@ public final class MainActivity extends dg {
         final int i = 0;
         byx byxVar = new byx(this, i);
         bhqVar.getClass();
-        Dispatchers$Default alcVar = aou.a;
+        Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
         KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new bhp(strZ, byxVar, this, null));
         eqj eqjVar2 = this._ac;
         throwIfVar1IsNull(eqjVar2);

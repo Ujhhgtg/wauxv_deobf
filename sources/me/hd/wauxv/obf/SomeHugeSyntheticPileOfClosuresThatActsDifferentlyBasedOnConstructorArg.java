@@ -61,7 +61,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
         switch (i) {
             case 0:
                 int i7 = 0;
-                FieldResolver fieldResolverVarAa = StaticHelpers6.aa((HookParam) obj);
+                FieldResolver fieldResolverVarAa = StaticHelpers6.createFieldResolverFromHookParamThisObject((HookParam) obj);
                 fieldResolverVarAa.fieldType = dal.getKClassFromClass(Button.class);
                 Iterator it = fieldResolverVarAa.resolve().iterator();
                 while (it.hasNext()) {
@@ -387,7 +387,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                                                                 textInputEditText7.setText(qs.a.o());
                                                                 bzy bzyVar2 = new bzy(view2.getContext());
                                                                 eg egVar2 = (eg) bzyVar2.d;
-                                                                BottomTabMaterialHook.a.getClass();
+                                                                BottomTabMaterialHook.INSTANCE.getClass();
                                                                 egVar2.d = BottomTabMaterialHook.m;
                                                                 bzyVar2.t("保存" /* "保存" /* "保存" /* cnb.z(-437451009030954L)  */,
                                                                         new amw(new bp(cehVar, i4), 0));
@@ -461,34 +461,34 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 View view3 = (View) objX;
                 Object tag = view3.getTag();
                 int i11 = 0;
-                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(tag).r();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(tag).createFieldResolver();
                 fieldResolverVarR.name = "a" /* "a" /* "a" /* cnb.z(-490369301084970L)  */;
                 Object objD = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue();
                 throwIfVar1IsNull(objD);
-                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(hookParam.getThisObject()).r();
+                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(hookParam.getThisObject()).createFieldResolver();
                 fieldResolverVarR2.name = "d" /* "d" /* "d" /* cnb.z(-490377891019562L)  */;
                 Object objD2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue();
                 throwIfVar1IsNull(objD2);
                 if (cnb.ab(ewk.a) || cnb.ac(ewh.c)) {
-                    FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objD2).r();
+                    FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objD2).createFieldResolver();
                     fieldResolverVarR3.name = "w" /* "w" /* "w" /* cnb.z(-490317761477418L)  */;
                     Object objE3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).getValue_();
                     throwIfVar1IsNull(objE3);
                     zBooleanValue = ((Boolean) objE3).booleanValue();
                 } else {
-                    FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(objD2).r();
+                    FieldResolver fieldResolverVarR4 = dqc.getWrapperConfiguration(objD2).createFieldResolver();
                     fieldResolverVarR4.name = "d" /* "d" /* "d" /* cnb.z(-490326351412010L)  */;
                     Object objE4 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR4.resolve())).getValue_();
                     throwIfVar1IsNull(objE4);
                     zBooleanValue = ((Number) objE4).intValue() == 1;
                 }
                 if (zBooleanValue) {
-                    FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(objD).r();
+                    FieldResolver fieldResolverVarR5 = dqc.getWrapperConfiguration(objD).createFieldResolver();
                     fieldResolverVarR5.name = "field_type" /* "field_type" /* "field_type" /* cnb.z(-490334941346602L)  */;
                     Object objE5 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR5)).getValue_();
                     throwIfVar1IsNull(objE5);
                     if (((Number) objE5).intValue() == 3) {
-                        FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(objD).r();
+                        FieldResolver fieldResolverVarR6 = dqc.getWrapperConfiguration(objD).createFieldResolver();
                         fieldResolverVarR6.name = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-490253336967978L)  */;
                         Object objD3 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR6)).getValue();
                         throwIfVar1IsNull(objD3);
@@ -567,7 +567,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 String[] strArr3 = { "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* "com.tencent.mm.plugin.fav.ui" /* cnb.z(-489652041546538L)  */ };
                 dexMethodQueryBuilderVar5.getClass();
-                dexMethodQueryBuilderVar5.a = SomeStaticHelpers.arrayToList(strArr3);
+                dexMethodQueryBuilderVar5.searchedPackages = SomeStaticHelpers.arrayToList(strArr3);
                 DexFinder cdjVar7 = new DexFinder();
                 cdjVar7.s("onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477948255664938L)  */);
                 cdjVar7.usingStrings("onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477931075795754L)  */, (cnb.ab(ewk.a) || cnb.ac(ewh.c))
@@ -596,16 +596,16 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 View view4 = (View) objX2;
                 Object tag2 = view4.getTag();
                 int i12 = 0;
-                FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(tag2).r();
+                FieldResolver fieldResolverVarR7 = dqc.getWrapperConfiguration(tag2).createFieldResolver();
                 fieldResolverVarR7.name = "a" /* "a" /* "a" /* cnb.z(-479082127031082L)  */;
                 Object objD4 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR7)).getValue();
                 throwIfVar1IsNull(objD4);
-                FieldResolver fieldResolverVarR8 = dqc.getWrapperConfiguration(objD4).r();
+                FieldResolver fieldResolverVarR8 = dqc.getWrapperConfiguration(objD4).createFieldResolver();
                 fieldResolverVarR8.name = "field_type" /* "field_type" /* "field_type" /* cnb.z(-479090716965674L)  */;
                 Object objE6 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR8)).getValue_();
                 throwIfVar1IsNull(objE6);
                 if (((Number) objE6).intValue() == 3) {
-                    FieldResolver fieldResolverVarR9 = dqc.getWrapperConfiguration(objD4).r();
+                    FieldResolver fieldResolverVarR9 = dqc.getWrapperConfiguration(objD4).createFieldResolver();
                     fieldResolverVarR9.name = "field_favProto" /* "field_favProto" /* "field_favProto" /* cnb.z(-479077832063786L)  */;
                     Object objD5 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR9)).getValue();
                     throwIfVar1IsNull(objD5);

@@ -37,7 +37,7 @@ public final class SourceBuffer {
         byte[] bArr = this.c;
         throwIfVar1IsNull(bArr, "<this>");
         cnh.j(i2, i3, bArr.length);
-        String str = new String(bArr, i2, i3 - i2, uj.a);
+        String str = new String(bArr, i2, i3 - i2, Charsets.UTF_8);
         this.b += i;
         return str;
     }

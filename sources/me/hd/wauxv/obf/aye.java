@@ -418,18 +418,18 @@ public abstract class aye {
             methodResolverVarT.name = "currentActivityThread" /* "currentActivityThread" /* "currentActivityThread" /* cnb.z(-74217034873642L)  */;
             Object objE = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).invokeAndThrowIfFailed(new Object[0]);
             throwIfVar1IsNull(objE);
-            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objE).r();
+            FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objE).createFieldResolver();
             fieldResolverVarR.name = "mActivities" /* "mActivities" /* "mActivities" /* cnb.z(-74105365723946L)  */;
             Object objE2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue_();
             throwIfVar1IsNull(objE2);
             for (Object obj : ((Map) objE2).values()) {
                 int i2 = 0;
-                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj).r();
+                FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj).createFieldResolver();
                 fieldResolverVarR2.name = "paused" /* "paused" /* "paused" /* cnb.z(-74019466378026L)  */;
                 Object objE3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue_();
                 throwIfVar1IsNull(objE3);
                 if (!((Boolean) objE3).booleanValue()) {
-                    FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).r();
+                    FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).createFieldResolver();
                     fieldResolverVarR3.name = "activity" /* "activity" /* "activity" /* cnb.z(-74040941214506L)  */;
                     return (Activity) ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).getValue_();
                 }
@@ -460,7 +460,7 @@ public abstract class aye {
         methodResolverVarT.enableSuperclass();
         ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).invokeAndThrowIfFailed(contentValues, Boolean.TRUE);
         Method methodBb = StaticHelpers7.toDexMethod(cgw.a);
-        MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(ServiceManagerDexFinder.getServiceByClass(StaticHelpers7.toDexClass(dmt.a))).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(ServiceManagerDexFinder.getServiceByClass(StaticHelpers7.toDexClass(StorageFeatureService$ClassStorageFeatureService.INSTANCE))).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT2.returnType = StaticHelpers7.toDexClass(cgv.a);
         Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT2)).invokeAndThrowIfFailed(new Object[0]);
         throwIfVar1IsNull(objE);

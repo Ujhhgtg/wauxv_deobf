@@ -30,7 +30,7 @@ public final class dfs {
     public static final dfs o;
     public static final dfs p;
     public static final /* synthetic */ dfs[] q;
-    public final bgj r;
+    public final Function2 r;
     public final dfr s;
 
     static {
@@ -73,8 +73,8 @@ public final class dfs {
         q = new dfs[]{dfsVar, dfsVar2, dfsVar3, dfsVar4, dfsVar5, dfsVar6, dfsVar7, dfsVar8, dfsVar9, dfsVar10, dfsVar11, dfsVar12, dfsVar13, dfsVar14, dfsVar15, dfsVar16};
     }
 
-    public dfs(String str, int i2, bgj bgjVar, dfr dfrVar) {
-        this.r = bgjVar;
+    public dfs(String str, int i2, Function2 function2Var, dfr dfrVar) {
+        this.r = function2Var;
         this.s = dfrVar;
     }
 
@@ -86,7 +86,7 @@ public final class dfs {
         return (dfs[]) q.clone();
     }
 
-    public /* synthetic */ dfs(int i2, String str, bgj bgjVar) {
-        this(str, i2, bgjVar, dfr.c);
+    public /* synthetic */ dfs(int i2, String str, Function2 function2Var) {
+        this(str, i2, function2Var, dfr.c);
     }
 }

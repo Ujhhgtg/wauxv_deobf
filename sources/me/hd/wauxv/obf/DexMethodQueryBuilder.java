@@ -8,7 +8,7 @@ import java.util.List;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class DexMethodQueryBuilder extends dqc {
-    public List a;
+    public List searchedPackages;
     public List b;
     public DexFinder dexFinder;
 
@@ -17,7 +17,7 @@ public final class DexMethodQueryBuilder extends dqc {
         int iT;
         int iV;
         throwIfVar1IsNull(bbbVar, "fbb");
-        List list = this.a;
+        List list = this.searchedPackages;
         if (list != null) {
             ArrayList arrayList = new ArrayList(StaticHelpers4.ak(list, 10));
             Iterator it = list.iterator();

@@ -23,7 +23,6 @@ import java.lang.annotation.Annotation;
 import java.lang.ref.WeakReference;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.zip.ZipEntry;
@@ -55,8 +54,8 @@ public abstract class HugeSyntheticPileOfHelpers {
             throw new IllegalStateException("ModuleContextThemeWrapper already loaded");
         }
         cec cecVar = new cec(context, R.style.AppTheme);
-        boolean z = exm.a;
-        if (exm.l() && (resources = cecVar.getResources()) != null) {
+        boolean z = exm.isInitialized;
+        if (exm.isXposedEnvironment() && (resources = cecVar.getResources()) != null) {
             injectModuleAssets(resources);
         }
         return cecVar;
@@ -466,9 +465,7 @@ public abstract class HugeSyntheticPileOfHelpers {
 
     public static final void injectModuleAssets(Resources resources) {
         Object objX;
-        ki.a.getClass();
-        boolean z = exm.a;
-        if (!exm.l()) {
+        if (!exm.isXposedEnvironment()) {
             Logger.logW("You can only inject module resources in Xposed Environment");
             return;
         }
@@ -477,25 +474,22 @@ public abstract class HugeSyntheticPileOfHelpers {
         } catch (Throwable th) {
             objX = FastKV.getFailureFromException(th);
         }
-        if (ki.i().equals(exm.h)) {
+        if (ki.getCurrentPackageName().equals(exm.modulePackageName)) {
             Logger.logException(6, "You cannot inject module resources into yourself", null);
             return;
         }
-        int i = 0;
         SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(resources.getAssets());
-        Kotlin$Lazy kotlin$LazyVar = ep.a;
         ((Configuration) bmuVarBi.obj).processorResolver = FastKV.aa();
         bmuVarBi.setHookOptional(true);
         MethodResolver methodResolverVarT = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "addAssetPath";
         methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(String.class) }, 1));
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT.findMethods());
         if (methodHookWrapperVar != null) {
-            objX = methodHookWrapperVar.invokeAndThrowIfFailed(exm.i);
+            objX = methodHookWrapperVar.invokeAndThrowIfFailed(exm.modulePath);
         }
         Throwable thB = Success.exceptionOrNull(objX);
         if (thB != null) {
-            ArrayList arrayList = Logger.a;
             Logger.logException(4, "Failed to inject module resources into [" + resources + "]", thB);
         }
     }

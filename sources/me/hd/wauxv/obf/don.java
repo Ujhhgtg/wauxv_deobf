@@ -66,12 +66,12 @@ public final class don extends ViewGroup {
                         chmVar = (chm) domVar;
                         int i2 = 0;
                         obj = chmVar.d;
-                        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).r();
+                        FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).createFieldResolver();
                         fieldResolverVarR.name = "checkBox" /* "checkBox" /* "checkBox" /* "checkBox" /* cnb.z(-473640403467050L)   */;
                         objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
                         throwIfVar1IsNull(objE);
                         if (((View) objE).getVisibility() == 0) {
-                            FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj).r();
+                            FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj).createFieldResolver();
                             fieldResolverVarR2.name = "maskView" /* "maskView" /* "maskView" /* "maskView" /* cnb.z(-473051992947498L)   */;
                             Object objE2 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue_();
                             throwIfVar1IsNull(objE2);
@@ -159,12 +159,12 @@ public final class don extends ViewGroup {
                         chmVar = (chm) domVar;
                         int i22 = 0;
                         obj = chmVar.d;
-                        FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).r();
+                        FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).createFieldResolver();
                         fieldResolverVarR3.name = "checkBox" /* "checkBox" /* "checkBox" /* "checkBox" /* cnb.z(-473640403467050L)   */;
                         objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
                         throwIfVar1IsNull(objE);
                         if (((View) objE).getVisibility() == 0) {
-                            FieldResolver fieldResolverVarR22 = dqc.getWrapperConfiguration(obj).r();
+                            FieldResolver fieldResolverVarR22 = dqc.getWrapperConfiguration(obj).createFieldResolver();
                             fieldResolverVarR22.name = "maskView" /* "maskView" /* "maskView" /* "maskView" /* cnb.z(-473051992947498L)   */;
                             Object objE22 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR22)).getValue_();
                             throwIfVar1IsNull(objE22);

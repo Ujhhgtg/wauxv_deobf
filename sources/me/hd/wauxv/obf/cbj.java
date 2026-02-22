@@ -33,14 +33,14 @@ public final /* synthetic */ class cbj implements IInvokable {
         Object obj5 = this.b;
         switch (i) {
             case 0:
-                bgj bgjVar = (bgj) obj3;
+                Function2 function2Var = (Function2) obj3;
                 Configuration configurationVar = (Configuration) obj2;
                 String str = (String) obj4;
                 if ((obj5 instanceof Collection) && ((Collection) obj5).isEmpty()) {
                     obj5 = null;
                 }
                 if (obj5 != null) {
-                    zBooleanValue = ((Boolean) bgjVar.g(obj5, obj)).booleanValue();
+                    zBooleanValue = ((Boolean) function2Var.g(obj5, obj)).booleanValue();
                     String strB = eoz.b(obj5);
                     String strBo = strB != null ? dnr.bo(strB.toString(), " (Kotlin reflection is not available)", "")
                             : null;

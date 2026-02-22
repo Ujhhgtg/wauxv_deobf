@@ -98,7 +98,7 @@ public final class cjd {
                                             + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
                                             .toString());
                                 }
-                                String str8 = (String) StaticHelpers5.g(queryParameters);
+                                String str8 = (String) StaticHelpers5.getFirstInList(queryParameters);
                                 if (str8 == null) {
                                     cjdVar.o = true;
                                     str8 = str7;
@@ -230,7 +230,7 @@ public final class cjd {
                                             + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
                                             .toString());
                                 }
-                                String str8 = (String) StaticHelpers5.g(queryParameters);
+                                String str8 = (String) StaticHelpers5.getFirstInList(queryParameters);
                                 if (str8 == null) {
                                     cjdVar.o = true;
                                     str8 = str7;
@@ -362,7 +362,7 @@ public final class cjd {
                                             + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
                                             .toString());
                                 }
-                                String str8 = (String) StaticHelpers5.g(queryParameters);
+                                String str8 = (String) StaticHelpers5.getFirstInList(queryParameters);
                                 if (str8 == null) {
                                     cjdVar.o = true;
                                     str8 = str7;
@@ -496,7 +496,7 @@ public final class cjd {
                                             + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
                                             .toString());
                                 }
-                                String str8 = (String) StaticHelpers5.g(queryParameters);
+                                String str8 = (String) StaticHelpers5.getFirstInList(queryParameters);
                                 if (str8 == null) {
                                     cjdVar.o = true;
                                     str8 = str7;
@@ -628,7 +628,7 @@ public final class cjd {
                                             + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
                                             .toString());
                                 }
-                                String str8 = (String) StaticHelpers5.g(queryParameters);
+                                String str8 = (String) StaticHelpers5.getFirstInList(queryParameters);
                                 if (str8 == null) {
                                     cjdVar.o = true;
                                     str8 = str7;
@@ -760,7 +760,7 @@ public final class cjd {
                                             + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
                                             .toString());
                                 }
-                                String str8 = (String) StaticHelpers5.g(queryParameters);
+                                String str8 = (String) StaticHelpers5.getFirstInList(queryParameters);
                                 if (str8 == null) {
                                     cjdVar.o = true;
                                     str8 = str7;
@@ -892,7 +892,7 @@ public final class cjd {
                                             + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
                                             .toString());
                                 }
-                                String str8 = (String) StaticHelpers5.g(queryParameters);
+                                String str8 = (String) StaticHelpers5.getFirstInList(queryParameters);
                                 if (str8 == null) {
                                     cjdVar.o = true;
                                     str8 = str7;
@@ -1024,7 +1024,7 @@ public final class cjd {
                                             + ". To support repeated query parameters, use an array type for your argument and the pattern provided in your URI will be used to parse each query parameter instance.")
                                             .toString());
                                 }
-                                String str8 = (String) StaticHelpers5.g(queryParameters);
+                                String str8 = (String) StaticHelpers5.getFirstInList(queryParameters);
                                 if (str8 == null) {
                                     cjdVar.o = true;
                                     str8 = str7;

@@ -85,7 +85,7 @@ public final class dgi extends LinearLayout {
             }
         } else {
             dgh dghVar = new dgh(linearLayout, null, null == true ? 1 : 0);
-            Dispatchers$Default alcVar = aou.a;
+            Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
             KotlinHelpers2.bf(bza.a, dghVar);
         }
         scrollView.addView(linearLayout);

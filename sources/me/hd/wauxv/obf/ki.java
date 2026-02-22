@@ -62,7 +62,7 @@ public final class ki {
         bmuVarBh.setHookOptional(true);
         MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "currentApplication";
-        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
+        MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT.findMethods());
         if (methodHookWrapperVar != null) {
             return (Application) methodHookWrapperVar.invoke(new Object[0]);
         }
@@ -70,7 +70,7 @@ public final class ki {
     }
 
     /* JADX WARN: Found duplicated region for block: B:22:0x007f  */
-    public static String i() {
+    public static String getCurrentPackageName() {
         Object objX;
         String str;
         SyntheticPileOfMess bmuVarBi;
@@ -88,16 +88,13 @@ public final class ki {
         ApplicationInfo applicationInfo2 = (ApplicationInfo) objX;
         if (applicationInfo2 == null) {
             int i = 0;
-            a.getClass();
-            IEmpty7 btcVar = b[0];
             SyntheticPileOfMess bmuVarBh = dqc.bh(e.w());
-            Kotlin$Lazy kotlin$LazyVar = ep.a;
             ((Configuration) bmuVarBh.obj).processorResolver = FastKV.aa();
             bmuVarBh.setHookOptional(true);
             MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "currentActivityThread";
             methodResolverVarT.setParamCountTo0();
-            MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
+            MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT.findMethods());
             Object objE = methodHookWrapperVar != null ? methodHookWrapperVar.invokeAndThrowIfFailed(new Object[0]) : null;
             if (objE != null) {
                 bmuVarBi = dqc.getWrapperConfiguration(objE);
@@ -106,9 +103,9 @@ public final class ki {
                 bmuVarBi = null;
             }
             if (bmuVarBi != null) {
-                FieldResolver fieldResolverVarR = bmuVarBi.r();
+                FieldResolver fieldResolverVarR = bmuVarBi.createFieldResolver();
                 fieldResolverVarR.name = "mBoundApplication";
-                BoundField boundFieldVar = (BoundField) StaticHelpers5.g(fieldResolverVarR.resolve());
+                BoundField boundFieldVar = (BoundField) StaticHelpers5.getFirstInList(fieldResolverVarR.resolve());
                 objD = boundFieldVar != null ? boundFieldVar.getValue() : null;
             }
             if (objD != null) {
@@ -118,9 +115,9 @@ public final class ki {
                 bmuVarBi2 = null;
             }
             if (bmuVarBi2 != null) {
-                FieldResolver fieldResolverVarR2 = bmuVarBi2.r();
+                FieldResolver fieldResolverVarR2 = bmuVarBi2.createFieldResolver();
                 fieldResolverVarR2.name = "appInfo";
-                BoundField boundFieldVar2 = (BoundField) StaticHelpers5.g(fieldResolverVarR2.resolve());
+                BoundField boundFieldVar2 = (BoundField) StaticHelpers5.getFirstInList(fieldResolverVarR2.resolve());
                 if (boundFieldVar2 != null) {
                     applicationInfo = (ApplicationInfo) boundFieldVar2.getValue_();
                 }
@@ -144,7 +141,7 @@ public final class ki {
             if (hookScopeEnumVar == HookScopeEnum.RESOURCES) {
                 MethodResolver methodResolverVarT = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.name = "_--_";
-                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT.findMethods());
+                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT.findMethods());
                 kf kfVar = new kf(1);
                 if (methodHookWrapperVar == null || (method = methodHookWrapperVar.method) == null) {
                     return;
@@ -154,19 +151,19 @@ public final class ki {
             }
             MethodResolver methodResolverVarT2 = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT2.name = "__--";
-            cnh.y((MethodHookWrapper) StaticHelpers5.g(methodResolverVarT2.findMethods()), new kf(2));
+            cnh.y((MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT2.findMethods()), new kf(2));
             MethodResolver methodResolverVarT3 = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT3.name = "_-_-";
-            cnh.y((MethodHookWrapper) StaticHelpers5.g(methodResolverVarT3.findMethods()), new kf(3));
+            cnh.y((MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT3.findMethods()), new kf(3));
             MethodResolver methodResolverVarT4 = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT4.name = "-__-";
-            cnh.y((MethodHookWrapper) StaticHelpers5.g(methodResolverVarT4.findMethods()), new kf(4));
+            cnh.y((MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT4.findMethods()), new kf(4));
             MethodResolver methodResolverVarT5 = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT5.name = "-_-_";
-            cnh.y((MethodHookWrapper) StaticHelpers5.g(methodResolverVarT5.findMethods()), new kf(5));
+            cnh.y((MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT5.findMethods()), new kf(5));
             MethodResolver methodResolverVarT6 = bmuVarBh.getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT6.name = "___-";
-            cnh.y((MethodHookWrapper) StaticHelpers5.g(methodResolverVarT6.findMethods()), new kf(0));
+            cnh.y((MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT6.findMethods()), new kf(0));
         }
     }
 
@@ -203,7 +200,7 @@ public final class ki {
                 bmuVarBg2.setHookOptional(true);
                 MethodResolver methodResolverVarT6 = bmuVarBg2.getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT6.name = "callApplicationOnCreate";
-                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.g(methodResolverVarT6.findMethods());
+                MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.getFirstInList(methodResolverVarT6.findMethods());
                 kh khVar = new kh(this, str);
                 if (methodHookWrapperVar == null || (method = methodHookWrapperVar.method) == null) {
                     return;

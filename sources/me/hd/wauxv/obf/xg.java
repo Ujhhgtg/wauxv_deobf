@@ -32,18 +32,18 @@ public final class xg extends SwitchHook implements bnr {
         if (getIsEnabled()) {
             int i = 0;
             SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(obj);
-            FieldResolver fieldResolverVarR = bmuVarBi.r();
+            FieldResolver fieldResolverVarR = bmuVarBi.createFieldResolver();
             fieldResolverVarR.name = "field_isSend" /* "field_isSend" /* "field_isSend" /* "field_isSend" /* cnb.z(-446672303815466L)   */;
             Integer num = (Integer) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
             if (num != null && num.intValue() == 1) {
                 return;
             }
-            FieldResolver fieldResolverVarR2 = bmuVarBi.r();
+            FieldResolver fieldResolverVarR2 = bmuVarBi.createFieldResolver();
             fieldResolverVarR2.name = "field_type" /* "field_type" /* "field_type" /* "field_type" /* cnb.z(-446599289371434L)   */;
             Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR2)).getValue_();
             throwIfVar1IsNull(objE);
             if (((Number) objE).intValue() == ewg.a.w) {
-                FieldResolver fieldResolverVarR3 = bmuVarBi.r();
+                FieldResolver fieldResolverVarR3 = bmuVarBi.createFieldResolver();
                 fieldResolverVarR3.name = "field_content" /* "field_content" /* "field_content" /* "field_content" /* cnb.z(-446569224600362L)   */;
                 Object objE2 = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
                 throwIfVar1IsNull(objE2);
@@ -77,7 +77,7 @@ public final class xg extends SwitchHook implements bnr {
                     sb.append("<a href=\"" /* "<a href=\"" /* "<a href=\"" /* "<a href=\"" /* cnb.z(-116616952019754L)   */ + strZ + "\">" /* "\">" /* "\">" /* "\">" /* cnb.z(-117072218553130L)   */
                             + strZ2 + "</a>" /* "</a>" /* "</a>" /* "</a>" /* cnb.z(-117076513520426L)   */);
                     String string = sb.toString();
-                    FieldResolver fieldResolverVarR4 = bmuVarBi.r();
+                    FieldResolver fieldResolverVarR4 = bmuVarBi.createFieldResolver();
                     fieldResolverVarR4.name = "field_content" /* "field_content" /* "field_content" /* "field_content" /* cnb.z(-447174814989098L)   */;
                     BoundField boundFieldVar = (BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR4);
                     StringBuilder sbY = StaticHelpers6.toSb(strAx);

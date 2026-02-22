@@ -49,6 +49,6 @@ public final class eov implements Comparable, Serializable {
         cna.s(this.c, 19, 0, bArr, 2);
         bArr[23] = 45;
         cna.s(this.c, 24, 2, bArr, 8);
-        return new String(bArr, uj.a);
+        return new String(bArr, Charsets.UTF_8);
     }
 }
