@@ -7,12 +7,13 @@ import org.luckypray.dexkit.DexKitBridge;
 public final class dmu extends ApiHookItem implements IDexFind {
     public static final dmu a = new dmu();
 
-    public static Object b() {
+    public static Object getConversationStorage() {
         ServiceManagerDexFinder.INSTANCE.getClass();
-        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(ServiceManagerDexFinder.getServiceByClass(StaticHelpers7.toDexClass(StorageFeatureService$ClassStorageFeatureService.INSTANCE))).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(
+                ServiceManagerDexFinder.getServiceByClass(StaticHelpers7.toDexClass(
+                        StorageFeatureService$ClassStorageFeatureService.INSTANCE))).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.returnType = StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage.INSTANCE);
-        Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT)).invokeAndThrowIfFailed();
-        return objE;
+        return ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT)).invokeAndThrowIfFailed();
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -39,8 +40,7 @@ public final class dmu extends ApiHookItem implements IDexFind {
                 dexClassQueryBuilderVar4.getClass();
                 dexClassQueryBuilderVar4.strings = SomeStaticHelpers.arrayToList(strArr9);
                 DexMethodGroupMatcher zbVar4 = new DexMethodGroupMatcher();
-                zbVar4.usingEqStrings("MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* "MicroMsg.MsgInfoStorage" /* cnb.z(-367108034657066L)   */,
-                        "deleted dirty msg ,count is %d" /* "deleted dirty msg ,count is %d" /* "deleted dirty msg ,count is %d" /* "deleted dirty msg ,count is %d" /* cnb.z(-367004955441962L)   */);
+                zbVar4.usingEqStrings("MicroMsg.MsgInfoStorage", "deleted dirty msg ,count is %d");
                 dexClassQueryBuilderVar4.methodGroupMatcher = zbVar4;
             })
         }));
@@ -58,8 +58,7 @@ public final class dmu extends ApiHookItem implements IDexFind {
         StaticHelpers7.resolveDexAndCache(StorageFeatureService$ClassStorageFeatureService.INSTANCE, dexKitBridge, (obj -> {
             ((FindDexClassMethodDslWrapper) obj).onClassCallback = (obj1 -> {
                 DexClassQueryBuilder dexClassQueryBuilderVar5 = (DexClassQueryBuilder) obj1;
-                String[] strArr10 = { "com.tencent.mm.plugin.messenger.foundation" /* "com.tencent.mm.plugin.messenger.foundation" /* "com.tencent.mm.plugin.messenger.foundation" /* "com.tencent.mm.plugin.messenger.foundation" /* cnb.z(-366626998319914L)   */ };
-                dexClassQueryBuilderVar5.getClass();
+                String[] strArr10 = { "com.tencent.mm.plugin.messenger.foundation" };
                 dexClassQueryBuilderVar5.strings = SomeStaticHelpers.arrayToList(strArr10);
                 DexMethodGroupMatcher zbVar5 = new DexMethodGroupMatcher();
                 azl azlVar = new azl();

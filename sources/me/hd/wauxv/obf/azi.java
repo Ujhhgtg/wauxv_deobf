@@ -4,14 +4,14 @@ package me.hd.wauxv.obf;
 /* JADX INFO: loaded from: classes.dex */
 public final class azi extends dqc {
     public dnf a;
-    public DexMethodGroupMatcher b;
+    public DexMethodGroupMatcher dexMethodGroupMatcher;
 
     @Override // me.hd.wauxv.obf.dqc
     public final int c(bbb bbbVar) {
         throwIfVar1IsNull(bbbVar, "fbb");
         dnf dnfVar = this.a;
         int iC = dnfVar != null ? dnfVar.c(bbbVar) : 0;
-        DexMethodGroupMatcher zbVar = this.b;
+        DexMethodGroupMatcher zbVar = this.dexMethodGroupMatcher;
         int iC2 = zbVar != null ? zbVar.c(bbbVar) : 0;
         bbbVar.ab(7);
         bbbVar.q(6, 0);

@@ -130,7 +130,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 DexMethodGroupMatcher zbVar2 = new DexMethodGroupMatcher();
                 Class<View.OnClickListener> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 DexMethodGroupMatcher.h(zbVar2, (clsBf != null ? clsBf : View.OnClickListener.class).getName());
-                aziVar.b = zbVar2;
+                aziVar.dexMethodGroupMatcher = zbVar2;
                 azlVar.e(aziVar);
                 zbVar.e = azlVar;
                 MethodMatcher fjVar = new MethodMatcher();
@@ -291,7 +291,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 DexMethodGroupMatcher zbVar4 = new DexMethodGroupMatcher();
                 Class<View.OnClickListener> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 DexMethodGroupMatcher.h(zbVar4, (clsBf2 != null ? clsBf2 : View.OnClickListener.class).getName());
-                aziVar2.b = zbVar4;
+                aziVar2.dexMethodGroupMatcher = zbVar4;
                 azlVar2.e(aziVar2);
                 zbVar3.e = azlVar2;
                 MethodMatcher fjVar2 = new MethodMatcher();

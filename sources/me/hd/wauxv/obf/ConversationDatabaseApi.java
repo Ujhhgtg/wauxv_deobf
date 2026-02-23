@@ -16,7 +16,7 @@ public final class ConversationDatabaseApi extends ApiHookItem implements IDexFi
             try {
                 String string = cursorAc.getString(0);
                 Method methodBb = StaticHelpers7.toDexMethod(ConversationStorage$MethodUpdateUnreadByTalker.INSTANCE);
-                methodBb.invoke(dmu.b(), string);
+                methodBb.invoke(dmu.getConversationStorage(), string);
             } catch (Throwable th) {
                 try {
                     throw th;
@@ -31,7 +31,7 @@ public final class ConversationDatabaseApi extends ApiHookItem implements IDexFi
 
     public static void c(ConversationDatabaseApi conversationDatabaseApiVar, Object obj, String str) {
         conversationDatabaseApiVar.getClass();
-        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dmu.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(dmu.getConversationStorage()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.returnType = dal.getKClassFromClass(Integer.TYPE);
         Class<?> declaringClass = StaticHelpers7.toDexMethod(Conversation$MethodParseMsgInfo.INSTANCE).getDeclaringClass();
         Class cls = Boolean.TYPE;
@@ -44,10 +44,10 @@ public final class ConversationDatabaseApi extends ApiHookItem implements IDexFi
         Method methodBb = StaticHelpers7.toDexMethod(ConversationStorage$MethodHiddenConvParent.INSTANCE);
         if (methodBb.getParameterCount() == 4) {
             dmu.a.getClass();
-            methodBb.invoke(dmu.b(), strArr, str, Boolean.TRUE, Boolean.FALSE);
+            methodBb.invoke(dmu.getConversationStorage(), strArr, str, Boolean.TRUE, Boolean.FALSE);
         } else {
             dmu.a.getClass();
-            methodBb.invoke(dmu.b(), strArr, str);
+            methodBb.invoke(dmu.getConversationStorage(), strArr, str);
         }
     }
 

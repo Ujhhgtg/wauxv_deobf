@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Static deobfuscation script for WeChat Xposed module
-Decrypts all cnb.z() calls and replaces them with string literals
+Decrypts all merged string decryption calls and replaces them with string literals
 """
 
 import re
@@ -71,7 +71,7 @@ def ab(j):
     return res
 
 
-def z(j2, string_array):
+def decrypt(j2, string_array):
     j2 = to_int64(j2)
     j3 = j2 & 0xFFFFFFFF
 
@@ -113,17 +113,17 @@ def z(j2, string_array):
         return f"[DECRYPT_ERROR: {e}]"
 
 
-def parse_string_array(cnb_path):
+def parse_string_array(src_path: Path) -> list[str]:
     """
-    Parse the string array from cnb.java line 37
+    Parse the string array from ?.java line
 
     Args:
-        cnb_path: Path to cnb.java file
+        cnb_path: Path to ?.java file
 
     Returns:
         List of strings from the array
     """
-    with open(cnb_path, "r", encoding="utf-8", errors="surrogateescape") as f:
+    with open(src_path, "r", encoding="utf-8") as f:
         content = f.read()
 
     # Find the string array declaration: public static final String[] i = {...}
@@ -131,7 +131,7 @@ def parse_string_array(cnb_path):
     match = re.search(pattern, content, re.DOTALL)
 
     if not match:
-        raise ValueError("Could not find string array 'i' in cnb.java")
+        raise ValueError(f"Could not find string array 'i' in {src_path}")
 
     array_content = match.group(1)
 
@@ -149,13 +149,13 @@ def parse_string_array(cnb_path):
     return strings
 
 
-def find_cnb_z_calls(java_content):
+def find_crypt_calls(java_content, call_name):
     """
     Find all cnb.z() calls in Java content, supporting decimal and hex
     """
     # Updated pattern: matches optional minus, then either 0x... or standard digits
     # It also handles the 'L' or 'l' suffix flexibly
-    pattern = r"cnb\.z\((-?(?:0x[0-9a-fA-F]+|\d+))[Ll]?\)"
+    pattern = call_name + r"\((-?(?:0x[0-9a-fA-F]+|\d+))[Ll]?\)"
 
     matches = []
     for match in re.finditer(pattern, java_content):
@@ -192,9 +192,9 @@ def find_yg_g_calls(java_content):
     return matches
 
 
-def deobfuscate_file(java_path, string_array):
+def deobfuscate_file(java_path: Path, string_array, call_name: str):
     """
-    Deobfuscate a single Java file by replacing cnb.z() and yg.g() calls
+    Deobfuscate a single Java file by inlining decryption calls
 
     Args:
         java_path: Path to Java file
@@ -203,12 +203,11 @@ def deobfuscate_file(java_path, string_array):
     Returns:
         Number of replacements made
     """
-    with open(java_path, "r", encoding="utf-8", errors="surrogateescape") as f:
+    with open(java_path, "r", encoding="utf-8") as f:
         content = f.read()
 
     # Find both types of calls
-    cnb_matches = find_cnb_z_calls(content)
-    yg_matches = find_yg_g_calls(content)
+    cnb_matches = find_crypt_calls(content, call_name)
 
     # Also find standalone z() calls (for cnb.java itself)
     z_pattern = r"(?<!cnb\.)(?<!yg\.)z\((-?(?:0x[0-9a-fA-F]+|\d+))[Ll]?\)"
@@ -221,24 +220,22 @@ def deobfuscate_file(java_path, string_array):
         except ValueError:
             print(f"  Warning: Could not parse integer value: {long_str}")
 
-    if not cnb_matches and not yg_matches and not z_matches:
+    if not cnb_matches and not z_matches:
         return 0
 
     # Combine and sort by position (reverse order for replacement)
     all_matches = []
     for match, long_val in cnb_matches:
-        all_matches.append((match, long_val, 'cnb', None))
-    for match, long_val, cursor_var in yg_matches:
-        all_matches.append((match, long_val, 'yg', cursor_var))
+        all_matches.append((match, long_val, "cnb", None))
     for match, long_val in z_matches:
-        all_matches.append((match, long_val, 'z', None))
+        all_matches.append((match, long_val, "z", None))
 
     all_matches.sort(key=lambda x: x[0].start(), reverse=True)
 
     replacements = 0
     for match, long_val, call_type, cursor_var in all_matches:
         try:
-            decrypted = z(long_val, string_array)
+            decrypted = decrypt(long_val, string_array)
 
             # Escape special characters for Java string
             decrypted_escaped = (
@@ -251,11 +248,7 @@ def deobfuscate_file(java_path, string_array):
 
             original_call = match.group(0)
 
-            # Different replacement based on call type
-            if call_type == 'yg':
-                replacement = f'{cursor_var}.getString({cursor_var}.getColumnIndex("{decrypted_escaped}")) /* {original_call} */'
-            else:  # cnb or z
-                replacement = f'"{decrypted_escaped}" /* {original_call} */'
+            replacement = decrypted_escaped
 
             # Replace in content
             start, end = match.span()
@@ -269,7 +262,7 @@ def deobfuscate_file(java_path, string_array):
 
     # Write back if changes were made
     if replacements > 0:
-        with open(java_path, "w", encoding="utf-8", errors="surrogateescape") as f:
+        with open(java_path, "w", encoding="utf-8") as f:
             f.write(content)
 
     return replacements
@@ -279,7 +272,9 @@ def main():
     if len(sys.argv) < 2:
         print("Usage:")
         print("  python deobfuscate.py <directory>           # Deobfuscate all files")
-        print("  python deobfuscate.py --decrypt <long> <cnb.java>  # Decrypt single value")
+        print(
+            "  python deobfuscate.py --decrypt <long> <cnb.java>  # Decrypt single value"
+        )
         print("\nExpects:")
         print("  - <directory>/cnb.java with string array on line 37")
         print("  - Other .java files in the directory with cnb.z() calls")
@@ -293,10 +288,10 @@ def main():
             sys.exit(1)
 
         long_str = sys.argv[2]
-        cnb_path = Path(sys.argv[3])
+        crypt_path = Path(sys.argv[3])
 
-        if not cnb_path.exists():
-            print(f"Error: {cnb_path} not found")
+        if not crypt_path.exists():
+            print(f"Error: {crypt_path} not found")
             sys.exit(1)
 
         try:
@@ -305,16 +300,16 @@ def main():
             print(f"Error: Invalid long value: {long_str}")
             sys.exit(1)
 
-        print(f"Loading string array from: {cnb_path}")
+        print(f"Loading string array from: {crypt_path}")
         try:
-            string_array = parse_string_array(cnb_path)
+            string_array = parse_string_array(crypt_path)
             print(f"Loaded {len(string_array)} encrypted strings")
         except Exception as e:
             print(f"Error parsing string array: {e}")
             sys.exit(1)
 
         try:
-            decrypted = z(long_val, string_array)
+            decrypted = decrypt(long_val, string_array)
             print(f"\nDecrypted value: {decrypted}")
         except Exception as e:
             print(f"Error decrypting: {e}")
@@ -323,25 +318,17 @@ def main():
         return
 
     directory = Path(sys.argv[1])
-    cnb_path = Path(sys.argv[2])
+    crypt_path = Path(sys.argv[2])
+    call_name = sys.argv[2]
 
     if not directory.is_dir():
         print(f"Error: {directory} is not a directory")
         sys.exit(1)
 
-    cnb_candidates = list(directory.rglob("cnb.java"))
-    if not cnb_candidates:
-        print(f"Error: cnb.java not found in {directory} or subdirectories")
-        sys.exit(1)
-
-    cnb_path = cnb_candidates[0]
-    if len(cnb_candidates) > 1:
-        print(f"Warning: Multiple cnb.java files found, using {cnb_path}")
-
-    print(f"Using string array from: {cnb_path}")
-    print("Parsing string array from cnb.java...")
+    print(f"Using string array from: {crypt_path}")
+    print(f"Parsing string array from {crypt_path}...")
     try:
-        string_array = parse_string_array(cnb_path)
+        string_array = parse_string_array(crypt_path)
         print(f"Loaded {len(string_array)} encrypted strings")
     except Exception as e:
         print(f"Error parsing string array: {e}")
@@ -355,13 +342,9 @@ def main():
     files_modified = 0
 
     for java_file in java_files:
-#         if java_file.name == "cnb.java":
-#             continue  # Skip the string array file itself
-
-        # Show relative path for better readability
         rel_path = java_file.relative_to(directory)
         print(f"\nProcessing {rel_path}...")
-        replacements = deobfuscate_file(java_file, string_array)
+        replacements = deobfuscate_file(java_file, string_array, call_name)
 
         if replacements > 0:
             total_replacements += replacements

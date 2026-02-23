@@ -52,7 +52,7 @@ public final class azl extends dqc {
         azi aziVar = new azi();
         DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
         zbVar.j(ams.getClassPrimitiveTypeName(cls), MatchTypeEnum.Equals);
-        aziVar.b = zbVar;
+        aziVar.dexMethodGroupMatcher = zbVar;
         e(aziVar);
     }
 }
