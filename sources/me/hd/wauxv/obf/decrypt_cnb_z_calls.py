@@ -310,7 +310,7 @@ def main():
 
         try:
             decrypted = decrypt(long_val, string_array)
-            print(f"\nDecrypted value: {decrypted}")
+            print(f"\nDecrypted value: '{decrypted}'")
         except Exception as e:
             print(f"Error decrypting: {e}")
             sys.exit(1)
