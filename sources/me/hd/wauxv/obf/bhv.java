@@ -293,7 +293,7 @@ public abstract class bhv {
     public static final BaseBaseHook[] getAllBaseBaseHookInstances() {
         return new BaseBaseHook[] { ur.a, ChatItemMenuNewApiHook.INSTANCE, wp.a, wr.a, aeq.a, afu.a, agi.a, aqw.a, axu.a, ayy.a, azd.a, bal.a,
                 bap.a, HomePopMenuApiHook.INSTANCE,
-                bzc.a, cey.a, cgf.a, cgt.a, cos.a, crj.a, dbl.a, djo.a, dly.a, StartActivityApiHook.a, dou.a, cfw.a, SettingsInject.INSTANCE, eul.a, eop.a,
+                bzc.a, cey.a, cgf.a, cgt.a, cos.a, crj.a, RepairerConfigHook.a, djo.a, dly.a, StartActivityApiHook.a, dou.a, cfw.a, SettingsInject.INSTANCE, eul.a, eop.a,
                 aic.a, agc.a, EmojiInfoMethodSaveEmojiThumbDexFind.INSTANCE, MicroMsgMsgInfoDexClassFind.INSTANCE, uq.a, ClassChattingContextDexFindHook.a, wv.a, xj.a, xn.a, ApiManagerGetApiDexFindHook.a, xv.a, xx.a, xz.a, elb.a, adz.a, byo.a,
                 MMKernelDexFind.INSTANCE, byt.a, cvh.a, dds.a, ClassCoreStorageDexFind.INSTANCE, ClassSqliteDBDexFind.INSTANCE, atp.a, EmojiInfoStorageDexFind.a, EmojiMgrImplHook.INSTANCE, EmojiStorageMgrDexFinder.INSTANCE, dpv.a, mo.a, apn.a, agk.a, kd.a,
                 acx.a, aga.a, etu.a, eoy.a, kb.a, cll.a, cln.a, clq.a, cls.a, clu.a, clw.a, cly.a, cma.a, cme.a, cmg.a,
@@ -315,7 +315,7 @@ public abstract class bhv {
                 PanelEmojiHook.INSTANCE, cww.a,
                 cxg.a, cxl.a, dhm.a, die.a, bcu.a, ble.a, blg.a, blh.a, blk.a, blm.a, blo.a, cud.a, fs.a,
                 CustomUnReadCountHook.a, azr.a,
-                elx.a, un.a, uo.a, cie.a, cif.a, fp.a, cnl.a, bjm.a, bjx.a, atx.a, bxj.a, etr.a, dlv.a,
+                elx.a, un.a, uo.a, cie.a, cif.a, fp.a, cnl.a, GroupOwnerTitleHook.a, bjx.a, atx.a, bxj.a, etr.a, dlv.a,
                 RemoveMultiSelectLimitHook.a, dax.a,
                 day.a, dbe.a, aun.a, MsgForwardSnsHook.INSTANCE, chc.a, etl.a, etw.a, ctp.b, cxb.b, zr.a, cha.a, crm.a, QuickKillHook.a, cez.b, cfa.b,
                 cfc.b, AutoCleanHook.INSTANCE, md.a, zw.a, DisableBrightnessHook.a, cdo.a, cho.a, deu.a, dha.a, dpf.a, dad.a, dae.a,

@@ -2,6 +2,6 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class dkf extends akf {
+public final class dkf extends ConfigOption {
     public static final dkf a = new dkf("SnsUploadAppInfoHook.ValPhoneAppId" /* "SnsUploadAppInfoHook.ValPhoneAppId" /* "SnsUploadAppInfoHook.ValPhoneAppId" /* cnb.z(-555287731764010L)  */, "wx8dd6ecd81906fd84" /* "wx8dd6ecd81906fd84" /* "wx8dd6ecd81906fd84" /* cnb.z(-555635624114986L)  */, null, false, 0, 0.0f, 0, 124);
 }

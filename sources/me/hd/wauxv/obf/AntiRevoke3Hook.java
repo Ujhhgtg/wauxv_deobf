@@ -23,89 +23,44 @@ public final class AntiRevoke3Hook extends SwitchHook implements IDexFind {
         HookManager hookManagerVarAb = PackageParam.createHook(antiRevoke3HookVar, listBf);
         antiRevoke3HookVar.hookAfter(hookManagerVarAb, (obj -> {
             HookParam hookParam3 = (HookParam) obj;
-            Object objX3;
-            Object objX4;
-            try {
-                objX3 = hookParam3.getArgs()[0];
-                if (objX3 == null) {
-                    objX3 = null;
-                }
-            } catch (Throwable th4) {
-                objX3 = FastKV.getFailureFromException(th4);
-            }
-            if (objX3 instanceof Failure) {
-                objX3 = null;
-            }
-            String str5 = (String) objX3;
-            String str6 = str5 == null ? "" : str5;
-            try {
-                objX4 = hookParam3.getArgs()[1];
-                if (objX4 == null) {
-                    objX4 = null;
-                }
-            } catch (Throwable th5) {
-                objX4 = FastKV.getFailureFromException(th5);
-            }
-            if (objX4 instanceof Failure) {
-                objX4 = null;
-            }
-            String str7 = (String) objX4;
-            if ((str7 != null ? str7 : "").equals("sysmsg")
+            Object args0 = hookParam3.getArgs()[0];
+            String str6 = (String) args0;
+            Object arg1 = hookParam3.getArgs()[1];
+            String arg1Str = (String) arg1;
+            if ((arg1Str).equals("sysmsg")
                     && StringsKt.contains(str6, "revokemsg", false)) {
-                Object objF = hookParam3.getResult();
-                if (!(objF instanceof Map) || ((objF instanceof IEmpty) && !(objF instanceof bsz))) {
-                    objF = null;
-                }
-                Map map = (Map) objF;
-                if (map != null) {
-                    String strZ14 = ".sysmsg.$type";
-                    if (map.containsKey(strZ14)
-                            && nullSafeIsEqual(map.get(strZ14), "revokemsg")) {
-                        Object obj3 = map.get(".sysmsg.revokemsg.session");
-                        throwIfVar1IsNull(obj3);
+                Object result = hookParam3.getResult();
+                Map resultMap = (Map) result;
+                if (resultMap != null) {
+                    if (resultMap.containsKey(".sysmsg.$type")
+                            && nullSafeIsEqual(resultMap.get(".sysmsg.$type"), "revokemsg")) {
+                        Object obj3 = resultMap.get(".sysmsg.revokemsg.session");
                         String str8 = (String) obj3;
-                        Object obj4 = map.get(".sysmsg.revokemsg.replacemsg");
-                        throwIfVar1IsNull(obj4);
+                        Object obj4 = resultMap.get(".sysmsg.revokemsg.replacemsg");
                         String str9 = (String) obj4;
-                        Object obj5 = map.get(".sysmsg.revokemsg.newmsgid");
-                        throwIfVar1IsNull(obj5);
+                        Object obj5 = resultMap.get(".sysmsg.revokemsg.newmsgid");
                         String str10 = (String) obj5;
                         if (dnr.bp(str9, "\"", false)
                                 || dnr.bp(str9, "「", false)) {
-                            map.put(strZ14, null);
-                            hookParam3.setResult(map);
+                            resultMap.put(".sysmsg.$type", null);
+                            hookParam3.setResult(resultMap);
                             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(ClassSqliteDBDexFind.getDb()).getMethodResolverBasedOnPreviouslyProvidedConfig();
                             methodResolverVarT.name = "rawQuery";
                             Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) },
-                                    2, methodResolverVarT)).invoke("SELECT createTime FROM message WHERE msgSvrId = ?" /*
-                                     * cnb.z(-
-                                     * 442695164099370L)
-                                     */,
+                                    2, methodResolverVarT)).invoke("SELECT createTime FROM message WHERE msgSvrId = ?",
                                     new Object[] { str10 });
-                            throwIfVar1IsNull(objJ);
                             Cursor cursor = (Cursor) objJ;
-                            try {
-                                if (cursor.moveToFirst()) {
-                                    long j = cursor.getLong(cursor.getColumnIndex("createTime"));
-                                    Pattern patternCompile = Pattern.compile("([\"「])(.*?)([」\"])");
-                                    throwIfVar1IsNull(patternCompile, "compile(...)");
-                                    Matcher matcher = patternCompile.matcher(str9);
-                                    throwIfVar1IsNull(matcher, "matcher(...)");
-                                    bzx bzxVarY = StaticAndroidHelpers.y(matcher, 0, str9);
-                                    aye.w(ewg.j.w, str8,
-                                            "\"" + (bzxVarY != null ? (String) ((bzv) bzxVarY.e()).get(2) : null)
-                                                    + "\" " + gc.a.o(),
-                                            j + 1);
-                                }
-                                cursor.close();
-                            } catch (Throwable th6) {
-                                try {
-                                    throw th6;
-                                } catch (Throwable th7) {
-                                    cnh.m(cursor, th6);
-                                    throw th7;
-                                }
+                            if (cursor.moveToFirst()) {
+                                long j = cursor.getLong(cursor.getColumnIndex("createTime"));
+                                Pattern patternCompile = Pattern.compile("([\"「])(.*?)([」\"])");
+                                Matcher matcher = patternCompile.matcher(str9);
+                                bzx bzxVarY = StaticAndroidHelpers.y(matcher, 0, str9);
+                                aye.w(ewg.j.w, str8,
+                                        "\"" + (bzxVarY != null ? (String) ((bzv) bzxVarY.e()).get(2) : null)
+                                                + "\" " + gc.a.o(),
+                                        j + 1);
                             }
+                            cursor.close();
                         }
                     }
                 }

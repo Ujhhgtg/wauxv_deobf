@@ -67,7 +67,7 @@ public final /* synthetic */ class cug implements IInvokable {
                                 }
                                 Set setAd = StaticHelpers5.ad(arrayList2);
                                 diy diyVar = diy.a;
-                                Set setN = diyVar.n();
+                                Set setN = diyVar.getStringSet();
                                 ArrayList arrayList3 = new ArrayList();
                                 Iterator it3 = setN.iterator();
                                 while (true) {

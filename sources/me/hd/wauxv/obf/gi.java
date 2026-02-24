@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.checkbox.MaterialCheckBox;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import me.hd.wauxv.R;
@@ -248,23 +248,22 @@ public final /* synthetic */ class gi implements bgf {
                 TextInputEditText textInputEditText = (TextInputEditText) KotlinHelpers2.recursivelyFindViewById(viewK, R.id.moduleDialogEdtAutoCleanCycle);
                 if (textInputEditText != null) {
                     i4 = R.id.moduleDialogInputAutoCleanCycle;
-                    if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK, R.id.moduleDialogInputAutoCleanCycle)) != null) {
+                    if (KotlinHelpers2.recursivelyFindViewById(viewK, R.id.moduleDialogInputAutoCleanCycle) != null) {
                         i4 = R.id.moduleDialogRvAutoCleanConfig;
                         RecyclerView recyclerView = (RecyclerView) KotlinHelpers2.recursivelyFindViewById(viewK, R.id.moduleDialogRvAutoCleanConfig);
                         if (recyclerView != null) {
                             LinearLayout linearLayout = (LinearLayout) viewK;
                             cee ceeVar = new cee(linearLayout, textInputEditText, recyclerView);
-                            textInputEditText.setText(String.valueOf(lu.a.l()));
+                            textInputEditText.setText(String.valueOf(AutoCleanHook$ValCleanCycle.INSTANCE.getLong()));
                             view.getContext();
                             recyclerView.setLayoutManager(new GridLayoutManager());
-                            zm zmVar = new zm(zo.c(), lt.a.n());
+                            zm zmVar = new zm(zo.c(), lt.a.getStringSet());
                             recyclerView.setAdapter(zmVar);
                             bzy bzyVar = new bzy(view.getContext());
                             eg egVar = (eg) bzyVar.d;
-                            AutoCleanHook.INSTANCE.getClass();
-                            egVar.d = AutoCleanHook.c;
-                            bzyVar.t("保存" /* "保存" /* "保存" /* "保存" /* cnb.z(-511139762928426L)   */, new amw(new ls(ceeVar, 0, zmVar), 0));
-                            bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, "取消" /* "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)   */);
+                            egVar.d = AutoCleanHook.name;
+                            bzyVar.t("保存", new amw(new ls(ceeVar, 0, zmVar), 0));
+                            bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar, "取消");
                             if (linearLayout != null) {
                                 egVar.r = linearLayout;
                             }
@@ -275,7 +274,7 @@ public final /* synthetic */ class gi implements bgf {
                 }
                 throw new NullPointerException("Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-641461955590954L)   */.concat(viewK.getResources().getResourceName(i4)));
             case 23:
-                return Boolean.valueOf(lt.a.n().contains(((zn) obj).a));
+                return Boolean.valueOf(lt.a.getStringSet().contains(((zn) obj).a));
             case 24:
                 HookParam hookParam4 = (HookParam) obj;
                 hookParam4.getClass();

@@ -335,9 +335,9 @@ public final /* synthetic */ class amb implements IInvokable {
                 if (clsBf == null) {
                     clsBf = cls;
                 }
-                cdjVar5.r(clsBf);
+                cdjVar5.setReturnType(clsBf);
                 Class<String> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
-                cdjVar5.q(clsBf2 != null ? clsBf2 : String.class);
+                cdjVar5.setParamTypes(clsBf2 != null ? clsBf2 : String.class);
                 cdjVar5.usingStrings("MicroMsg.DynamicConfig" /* "MicroMsg.DynamicConfig" /* "MicroMsg.DynamicConfig" /* cnb.z(-36481452210986L)  */, "DynamicConfig hadnot load" /*
                                                                                                                * cnb.z(-
                                                                                                                * 36365488093994L)

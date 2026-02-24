@@ -138,7 +138,7 @@ public final /* synthetic */ class act implements IInvokable {
                 MethodMatcher fjVar3 = new MethodMatcher();
                 DexFinder cdjVar8 = new DexFinder();
                 DexFinder.m(cdjVar8, 8);
-                cdjVar8.r(StaticHelpers7.toDexMethod(aeeVar).getDeclaringClass());
+                cdjVar8.setReturnType(StaticHelpers7.toDexMethod(aeeVar).getDeclaringClass());
                 MethodMatcher fjVar4 = new MethodMatcher(i3);
                 fjVar4.b = StaticHelpers5.ab(EmptyReadonlyList.INSTANCE);
                 cdjVar8.f = fjVar4;
@@ -206,7 +206,7 @@ public final /* synthetic */ class act implements IInvokable {
                 Class<String> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cls3 = clsBf3 != null ? clsBf3 : String.class;
                 Class<Boolean> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
-                cdjVar12.q(cls3, clsBf4 != null ? clsBf4 : Boolean.class);
+                cdjVar12.setParamTypes(cls3, clsBf4 != null ? clsBf4 : Boolean.class);
                 cdjVar12.usingStrings("[get]username = %s" /* "[get]username = %s" /* "[get]username = %s" /* cnb.z(-384309378677546L)  */);
                 dexMethodQueryBuilderVar6.getClass();
                 dexMethodQueryBuilderVar6.dexFinder = cdjVar12;
@@ -384,7 +384,7 @@ public final /* synthetic */ class act implements IInvokable {
                 DexFinder cdjVar13 = new DexFinder();
                 cls4 = MenuItem.class;
                 Class<MenuItem> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
-                cdjVar13.r(clsBf7 != null ? clsBf7 : MenuItem.class);
+                cdjVar13.setReturnType(clsBf7 != null ? clsBf7 : MenuItem.class);
                 cls5 = Integer.class;
                 Class<Integer> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls5));
                 if (clsBf8 == null) {
@@ -400,7 +400,7 @@ public final /* synthetic */ class act implements IInvokable {
                 Class<Integer> clsBf11 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls5));
                 cls5 = clsBf11 != null ? clsBf11 : Integer.class;
                 Class<Boolean> clsBf12 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
-                cdjVar13.q(clsBf8, cls6, clsBf10, cls5, clsBf12 != null ? clsBf12 : Boolean.class);
+                cdjVar13.setParamTypes(clsBf8, cls6, clsBf10, cls5, clsBf12 != null ? clsBf12 : Boolean.class);
                 dexMethodQueryBuilderVar7.getClass();
                 dexMethodQueryBuilderVar7.dexFinder = cdjVar13;
                 return kotlinUnitVar;

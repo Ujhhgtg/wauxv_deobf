@@ -158,7 +158,7 @@ public final class DexFinder extends dqc {
         fjVar.usingStringsType = bqhVar;
     }
 
-    public final void q(Class... clsArr) {
+    public final void setParamTypes(Class... clsArr) {
         cst cstVar;
         MethodMatcher fjVar = new MethodMatcher(4);
         fjVar.b = StaticHelpers5.ab(EmptyReadonlyList.INSTANCE);
@@ -181,7 +181,7 @@ public final class DexFinder extends dqc {
         this.f = fjVar;
     }
 
-    public final void r(Class cls) {
+    public final void setReturnType(Class cls) {
         throwIfVar1IsNull(cls, "clazz");
         DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
         zbVar.j(ams.getClassPrimitiveTypeName(cls), MatchTypeEnum.Equals);

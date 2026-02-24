@@ -30,7 +30,7 @@ public final class QuickKillHook extends SwitchHook implements IMainScreenOption
         return !getIsEnabled() ? EmptyReadonlyList.INSTANCE
                 : dqc.toSingletonList(new bly(R.id.MenuItem_Home_QuickKill, "快捷终止",
                         R.drawable.ic_menu_kill_24dp, () -> {
-            Process.killProcess(Process.myPid())
+            Process.killProcess(Process.myPid());
         }));
     }
 

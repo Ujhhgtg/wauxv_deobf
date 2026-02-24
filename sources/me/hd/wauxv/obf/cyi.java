@@ -12,16 +12,16 @@ public final class cyi extends cyj implements Serializable {
 
     @Override // me.hd.wauxv.obf.cyj
     public final int a(int i) {
-        return cyj.f.a(i);
+        return cyj.RANDOM.a(i);
     }
 
     @Override // me.hd.wauxv.obf.cyj
-    public final int b() {
-        return cyj.f.b();
+    public final int nextInt() {
+        return cyj.RANDOM.nextInt();
     }
 
     @Override // me.hd.wauxv.obf.cyj
     public final int c(int i) {
-        return cyj.f.c(i);
+        return cyj.RANDOM.c(i);
     }
 }

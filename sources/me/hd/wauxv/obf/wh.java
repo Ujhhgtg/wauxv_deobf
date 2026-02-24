@@ -30,13 +30,13 @@ public final class wh extends SwitchHook implements IDexFind, bns {
                 dnr.bo(dnr.bo(
                         dnr.bo(dnr.bo(
                                 dnr.bo(dnr.bo(str, "${totalMsg}" /* "${totalMsg}" /* "${totalMsg}" /* cnb.z(-425605489228586L)  */,
-                                        String.valueOf(wd.a.k())), "${textMsg}" /* "${textMsg}" /* "${textMsg}" /* cnb.z(-425519589882666L)  */,
-                                        String.valueOf(wb.a.k())),
-                                "${textWord}" /* "${textWord}" /* "${textWord}" /* cnb.z(-426039280925482L)  */, String.valueOf(wc.a.k())),
-                                "${emojiMsg}" /* "${emojiMsg}" /* "${emojiMsg}" /* cnb.z(-426022101056298L)  */, String.valueOf(vw.a.k())),
-                        "${transferMsg}" /* "${transferMsg}" /* "${transferMsg}" /* cnb.z(-425936201710378L)  */, String.valueOf(we.a.k())),
-                        "${redBagMsg}" /* "${redBagMsg}" /* "${redBagMsg}" /* cnb.z(-425871777200938L)  */, String.valueOf(wa.a.k())),
-                "${fileMsg}" /* "${fileMsg}" /* "${fileMsg}" /* cnb.z(-425850302364458L)  */, String.valueOf(vx.a.k()));
+                                        String.valueOf(wd.a.getInt())), "${textMsg}" /* "${textMsg}" /* "${textMsg}" /* cnb.z(-425519589882666L)  */,
+                                        String.valueOf(wb.a.getInt())),
+                                "${textWord}" /* "${textWord}" /* "${textWord}" /* cnb.z(-426039280925482L)  */, String.valueOf(wc.a.getInt())),
+                                "${emojiMsg}" /* "${emojiMsg}" /* "${emojiMsg}" /* cnb.z(-426022101056298L)  */, String.valueOf(vw.a.getInt())),
+                        "${transferMsg}" /* "${transferMsg}" /* "${transferMsg}" /* cnb.z(-425936201710378L)  */, String.valueOf(we.a.getInt())),
+                        "${redBagMsg}" /* "${redBagMsg}" /* "${redBagMsg}" /* cnb.z(-425871777200938L)  */, String.valueOf(wa.a.getInt())),
+                "${fileMsg}" /* "${fileMsg}" /* "${fileMsg}" /* cnb.z(-425850302364458L)  */, String.valueOf(vx.a.getInt()));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -69,7 +69,7 @@ public final class wh extends SwitchHook implements IDexFind, bns {
             int i2 = drv.a;
             int dayOfMonth = LocalDate.now().getDayOfMonth();
             vv vvVar = vv.a;
-            if (vvVar.k() != dayOfMonth) {
+            if (vvVar.getInt() != dayOfMonth) {
                 vvVar.r(dayOfMonth);
                 wd.a.r(0);
                 wb.a.r(0);
@@ -80,28 +80,28 @@ public final class wh extends SwitchHook implements IDexFind, bns {
                 vx.a.r(0);
             }
             wd wdVar = wd.a;
-            wdVar.r(wdVar.k() + 1);
+            wdVar.r(wdVar.getInt() + 1);
             if (msgInfoBean.isText()) {
                 wb wbVar = wb.a;
-                wbVar.r(wbVar.k() + 1);
+                wbVar.r(wbVar.getInt() + 1);
                 wc wcVar = wc.a;
-                wcVar.r(msgInfoBean.getContent().length() + wcVar.k());
+                wcVar.r(msgInfoBean.getContent().length() + wcVar.getInt());
                 return;
             }
             if (msgInfoBean.isEmoji()) {
                 vw vwVar = vw.a;
-                vwVar.r(vwVar.k() + 1);
+                vwVar.r(vwVar.getInt() + 1);
                 return;
             }
             if (msgInfoBean.isTransfer()) {
                 we weVar = we.a;
-                weVar.r(weVar.k() + 1);
+                weVar.r(weVar.getInt() + 1);
             } else if (msgInfoBean.isRedBag()) {
                 wa waVar = wa.a;
-                waVar.r(waVar.k() + 1);
+                waVar.r(waVar.getInt() + 1);
             } else if (msgInfoBean.isFile()) {
                 vx vxVar = vx.a;
-                vxVar.r(vxVar.k() + 1);
+                vxVar.r(vxVar.getInt() + 1);
             }
         }
     }

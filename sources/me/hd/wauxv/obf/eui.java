@@ -45,7 +45,7 @@ public final class eui extends ewy {
             }
             if (bmfVar instanceof bnc) {
                 wr.a.getClass();
-                wr.b.add((bnc) bmfVar);
+                wr.HOOKS.add((bnc) bmfVar);
             }
             if (bmfVar instanceof bnd) {
                 aeq.a.getClass();
@@ -107,8 +107,8 @@ public final class eui extends ewy {
                 crj.b.add((bnx) bmfVar);
             }
             if (bmfVar instanceof bny) {
-                dbl.a.getClass();
-                dbl.b.add((bny) bmfVar);
+                RepairerConfigHook.a.getClass();
+                RepairerConfigHook.HOOKS.add((bny) bmfVar);
             }
             if (bmfVar instanceof boa) {
                 djo.a.getClass();

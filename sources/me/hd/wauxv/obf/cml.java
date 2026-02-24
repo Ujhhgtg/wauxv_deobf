@@ -60,7 +60,7 @@ public final /* synthetic */ class cml implements IInvokable {
                 Class<String> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cls = clsBf3 != null ? clsBf3 : String.class;
                 Class<Integer> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
-                cdjVar.q(cls3, clsBf2, cls, clsBf4 != null ? clsBf4 : Integer.class);
+                cdjVar.setParamTypes(cls3, clsBf2, cls, clsBf4 != null ? clsBf4 : Integer.class);
                 dexMethodQueryBuilderVar.getClass();
                 dexMethodQueryBuilderVar.dexFinder = cdjVar;
                 return kotlinUnitVar;
@@ -117,7 +117,7 @@ public final /* synthetic */ class cml implements IInvokable {
                 Class<String> clsBf10 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 Class<String> cls10 = clsBf10 == null ? cls : clsBf10;
                 Class<Integer> clsBf11 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
-                cdjVar3.q(cls5, cls6, cls7, cls8, cls9, cls10, clsBf11 == null ? cls2 : clsBf11);
+                cdjVar3.setParamTypes(cls5, cls6, cls7, cls8, cls9, cls10, clsBf11 == null ? cls2 : clsBf11);
                 dexMethodQueryBuilderVar3.getClass();
                 dexMethodQueryBuilderVar3.dexFinder = cdjVar3;
                 return kotlinUnitVar;
@@ -158,7 +158,7 @@ public final /* synthetic */ class cml implements IInvokable {
                 Class clsBf20 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(Boolean.class));
                 Class cls19 = clsBf20 == null ? Boolean.class : clsBf20;
                 Class<Integer> clsBf21 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
-                cdjVar4.q(cls11, cls12, cls13, cls14, cls15, null, cls16, cls17, cls18, cls19,
+                cdjVar4.setParamTypes(cls11, cls12, cls13, cls14, cls15, null, cls16, cls17, cls18, cls19,
                         clsBf21 == null ? cls2 : clsBf21);
                 dexMethodQueryBuilderVar4.getClass();
                 dexMethodQueryBuilderVar4.dexFinder = cdjVar4;
@@ -182,7 +182,7 @@ public final /* synthetic */ class cml implements IInvokable {
                 Class<String> clsBf22 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cls = clsBf22 != null ? clsBf22 : String.class;
                 Class<Integer> clsBf23 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
-                cdjVar5.q(cls, clsBf23 != null ? clsBf23 : Integer.class);
+                cdjVar5.setParamTypes(cls, clsBf23 != null ? clsBf23 : Integer.class);
                 dexMethodQueryBuilderVar5.getClass();
                 dexMethodQueryBuilderVar5.dexFinder = cdjVar5;
                 return kotlinUnitVar;
@@ -245,7 +245,7 @@ public final /* synthetic */ class cml implements IInvokable {
                 for (Object obj2 : cos.b) {
                     try {
                         if (((fs) obj2).z() && msgInfoBean.isNotifyAll()
-                                && fr.a.n().contains(msgInfoBean.getTalker())) {
+                                && fr.a.getStringSet().contains(msgInfoBean.getTalker())) {
                             hookParam.setResult(null);
                         }
                     } catch (Exception e) {
@@ -393,7 +393,7 @@ public final /* synthetic */ class cml implements IInvokable {
                 DexFinder cdjVar10 = new DexFinder();
                 cls4 = byte[].class;
                 Class<byte[]> clsBf24 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
-                cdjVar10.r(clsBf24 != null ? clsBf24 : byte[].class);
+                cdjVar10.setReturnType(clsBf24 != null ? clsBf24 : byte[].class);
                 cdjVar10.usingStrings("MicroMsg.OpLog.Operation" /* "MicroMsg.OpLog.Operation" /* "MicroMsg.OpLog.Operation" /* cnb.z(-67409511709482L)  */,
                         "summeroplog Operation toByteArray err: " /* "summeroplog Operation toByteArray err: " /* "summeroplog Operation toByteArray err: " /* cnb.z(-55705725827882L)  */);
                 dexMethodQueryBuilderVar10.getClass();

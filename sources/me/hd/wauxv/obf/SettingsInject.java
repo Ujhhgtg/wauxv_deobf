@@ -12,7 +12,7 @@ public final class SettingsInject extends ApiHookItem {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        if (cnb.ab(ewk.o) || cnb.ac(ewh.r)) {
+        if (cnb.isNewerThanArgVerAndNotPlay(ewk.o) || cnb.isNewerThanArgVerAndPlay(ewh.VER_8065)) {
             MethodResolver methodResolverVarT = dqc.bh(ajn.tryGetClassByClassName("com.tencent.mm.plugin.setting.ui.setting_new.base.BaseSettingPrefUI")).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.name = "onCreate";
             HookManager hookManagerVarAd = INSTANCE.createImmediateHook((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(Bundle.class) }, 1, methodResolverVarT), HookPriorityEnum.ENUM_LOWEST);

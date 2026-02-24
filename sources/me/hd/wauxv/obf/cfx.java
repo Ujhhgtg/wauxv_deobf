@@ -409,7 +409,7 @@ public final /* synthetic */ class cfx implements IFunction0 {
             case 18:
                 dlu dluVar = dlu.a;
                 Long lBg = dnq.bg(String.valueOf(((cee) obj).c.getText()));
-                dluVar.s(lBg != null ? lBg.longValue() : 88888L);
+                dluVar.setLong(lBg != null ? lBg.longValue() : 88888L);
                 return kotlinUnitVar;
             case 19:
                 ((eqg) obj).invoke();

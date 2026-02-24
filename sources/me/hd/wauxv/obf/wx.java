@@ -89,7 +89,7 @@ public final /* synthetic */ class wx implements bgk {
                             + (clsBf3 != null ? clsBf3 : ImageView.class).getName() + ".");
                 }
                 xb xbVar = xb.a;
-                imageView2.setVisibility(xbVar.k() != wy.a.e ? 0 : 8);
+                imageView2.setVisibility(xbVar.getInt() != wy.a.e ? 0 : 8);
                 String strZ4 = "title" /* "title" /* "title" /* cnb.z(-552775175895850L)  */;
                 View viewJ4 = bluVar.j(strZ4);
                 if (!(viewJ4 instanceof TextView)) {
@@ -107,7 +107,7 @@ public final /* synthetic */ class wx implements bgk {
                 View viewJ5 = bluVar.j(strZ5);
                 TextView textView2 = (TextView) (viewJ5 instanceof TextView ? viewJ5 : null);
                 if (textView2 != null) {
-                    textView2.setVisibility(xbVar.k() == wy.c.e ? 8 : 0);
+                    textView2.setVisibility(xbVar.getInt() == wy.c.e ? 8 : 0);
                     return kotlinUnitVar;
                 }
                 Class<TextView> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));

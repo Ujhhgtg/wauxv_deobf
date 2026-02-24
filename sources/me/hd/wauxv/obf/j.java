@@ -183,7 +183,7 @@ public final class j extends bdo {
         String strZ = "使用天数" /* "使用天数" /* "使用天数" /* cnb.z(-391670952622890L)  */;
         StringBuilder sb = new StringBuilder();
         eop.a.getClass();
-        sb.append(eoo.a.k());
+        sb.append(eoo.a.getInt());
         sb.append((char) 22825);
         ArrayList arrayListO = StaticHelpers5.o(listAg, OtherStaticHelpers.argsToList(nzVar, new ny(strZ, sb.toString(), 0 == true ? 1 : 0, i2)));
         nz nzVar2 = new nz("版本" /* "版本" /* "版本" /* cnb.z(-391701017393962L)  */);

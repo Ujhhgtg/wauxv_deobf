@@ -66,7 +66,7 @@ public final /* synthetic */ class epy implements IInvokable {
             case 0:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar = new DexFinder();
-                cdjVar.usingStrings((cnb.ab(ewk.l) || cnb.ac(ewh.m)) ? "MicroMsg.C2CVideoPathFeatureService"
+                cdjVar.usingStrings((cnb.isNewerThanArgVerAndNotPlay(ewk.l) || cnb.isNewerThanArgVerAndPlay(ewh.VER_8061)) ? "MicroMsg.C2CVideoPathFeatureService"
                         /* "MicroMsg.C2CVideoPathFeatureService" /* "MicroMsg.C2CVideoPathFeatureService" /* cnb.z(-374581277752106L)  */ : "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* cnb.z(-374392299191082L)  */,
                         ".mp4" /* ".mp4" /* ".mp4" /* cnb.z(-374847565724458L)  */, "success restore file, from " /*
                                                                                               * "success restore file, from " /* "success restore file, from " /* cnb.z(-374860450626346L)  */
@@ -77,7 +77,7 @@ public final /* synthetic */ class epy implements IInvokable {
             case 1:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar2 = new DexFinder();
-                cdjVar2.usingStrings((cnb.ab(ewk.l) || cnb.ac(ewh.m)) ? "MicroMsg.C2CVideoPathFeatureService"
+                cdjVar2.usingStrings((cnb.isNewerThanArgVerAndNotPlay(ewk.l) || cnb.isNewerThanArgVerAndPlay(ewh.VER_8061)) ? "MicroMsg.C2CVideoPathFeatureService"
                         /* "MicroMsg.C2CVideoPathFeatureService" /* "MicroMsg.C2CVideoPathFeatureService" /* cnb.z(-374705831803690L)  */ : "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* cnb.z(-374035816905514L)  */,
                         ".jpg" /* ".jpg" /* ".jpg" /* cnb.z(-373872608148266L)  */, "success restore file, from " /*
                                                                                               * "success restore file, from " /* "success restore file, from " /* cnb.z(-373902672919338L)  */
@@ -132,7 +132,7 @@ public final /* synthetic */ class epy implements IInvokable {
                 }
                 LinearLayout linearLayout3 = (LinearLayout) viewK;
                 ceq ceqVar = new ceq(linearLayout3, slider, 1);
-                slider.setValue(etq.a.k());
+                slider.setValue(etq.a.getInt());
                 bzy bzyVar3 = new bzy(view3.getContext());
                 eg egVar3 = (eg) bzyVar3.d;
                 etr.a.getClass();
@@ -161,7 +161,7 @@ public final /* synthetic */ class epy implements IInvokable {
                     FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).createFieldResolver();
                     fieldResolverVarR.name = "l" /* "l" /* "l" /* cnb.z(-500058747304746L)  */;
                     fieldResolverVarR.fieldType = dal.getKClassFromClass(cls5);
-                    ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(Integer.valueOf(etq.a.k() * 1000));
+                    ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).setValue(Integer.valueOf(etq.a.getInt() * 1000));
                 } else if (hookParam.getArgs().length == 2 && (hookParam.getArgs()[0] instanceof String)) {
                     c = 1;
                     try {
@@ -178,7 +178,7 @@ public final /* synthetic */ class epy implements IInvokable {
                     FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(obj2).createFieldResolver();
                     fieldResolverVarR2.name = "l" /* "l" /* "l" /* cnb.z(-500058747304746L)  */;
                     fieldResolverVarR2.fieldType = dal.getKClassFromClass(cls5);
-                    ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).setValue(Integer.valueOf(etq.a.k() * 1000));
+                    ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).setValue(Integer.valueOf(etq.a.getInt() * 1000));
                 }
                 return kotlinUnitVar;
             case 7:

@@ -18,10 +18,10 @@ public final class cnl extends SwitchHook implements IStartActivity {
         ewk ewkVar = ewk.m;
         HostInfoRegistry hostInfoRegistryVar = HostInfoRegistry.INSTANCE;
         hostInfoRegistryVar.getClass();
-        if (HostInfoRegistry.getVerCode() > ewkVar.r || HostInfoRegistry.getIsPlay()) {
-            ewh ewhVar = ewh.p;
+        if (HostInfoRegistry.getVerCode() > ewkVar.code || HostInfoRegistry.getIsPlay()) {
+            ewh ewhVar = ewh.VER_8063_PATCH;
             hostInfoRegistryVar.getClass();
-            z = HostInfoRegistry.getVerCode() <= ewhVar.u && HostInfoRegistry.getIsPlay();
+            z = HostInfoRegistry.getVerCode() <= ewhVar.code && HostInfoRegistry.getIsPlay();
         }
         j = z;
     }

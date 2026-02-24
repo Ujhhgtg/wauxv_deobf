@@ -58,31 +58,31 @@ public final class xf extends SwitchHook implements bmz, bng {
         Class cls;
         Class cls2;
         if (getIsEnabled()) {
-            LinearLayout linearLayout = (LinearLayout) cnh.v(frameLayout, cnb.ac(ewh.q) ? "c0p"
-                    /* "c0p" /* "c0p" /* "c0p" /* cnb.z(-548995604675370L)   */ : cnb.ac(ewh.o) ? "bzn"
-                            /* "bzn" /* "bzn" /* "bzn" /* cnb.z(-548944065067818L)   */ : cnb.ac(ewh.n) ? "byp"
-                                    /* "byp" /* "byp" /* "byp" /* cnb.z(-548961244937002L)   */ : cnb.ac(ewh.m) ? "by1"
-                                            /* "by1" /* "by1" /* "by1" /* cnb.z(-546160926260010L)   */ : cnb.ac(ewh.l) ? "bwr"
-                                                    /* "bwr" /* "bwr" /* "bwr" /* cnb.z(-546178106129194L)   */ : cnb.ac(ewh.k) ? "bw_"
-                                                            /* "bw_" /* "bw_" /* "bw_" /* cnb.z(-546126566521642L)   */ : cnb.ac(ewh.j) ? "bvs"
-                                                                    /* "bvs" /* "bvs" /* "bvs" /* cnb.z(-546143746390826L)   */ : cnb.ac(ewh.i)
+            LinearLayout linearLayout = (LinearLayout) cnh.v(frameLayout, cnb.isNewerThanArgVerAndPlay(ewh.VER_8064) ? "c0p"
+                    /* "c0p" /* "c0p" /* "c0p" /* cnb.z(-548995604675370L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8063) ? "bzn"
+                            /* "bzn" /* "bzn" /* "bzn" /* cnb.z(-548944065067818L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8061_PATCH) ? "byp"
+                                    /* "byp" /* "byp" /* "byp" /* cnb.z(-548961244937002L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8061) ? "by1"
+                                            /* "by1" /* "by1" /* "by1" /* cnb.z(-546160926260010L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8060) ? "bwr"
+                                                    /* "bwr" /* "bwr" /* "bwr" /* cnb.z(-546178106129194L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8058) ? "bw_"
+                                                            /* "bw_" /* "bw_" /* "bw_" /* cnb.z(-546126566521642L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8057) ? "bvs"
+                                                                    /* "bvs" /* "bvs" /* "bvs" /* cnb.z(-546143746390826L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8056)
                                                                             ? "bv0"
                                                                             /* "bv0" /* "bv0" /* "bv0" /* cnb.z(-546092206783274L)   */ : cnb
-                                                                                    .ac(ewh.h)
+                                                                                    .isNewerThanArgVerAndPlay(ewh.h)
                                                                                             ? "bui"
                                                                                             /*
                                                                                              * "bui" /* "bui" /* "bui" /* cnb.z(-546109386652458L)  */
-                                                                                             */ : cnb.ac(ewh.g) ? "bwa"
+                                                                                             */ : cnb.isNewerThanArgVerAndPlay(ewh.g) ? "bwa"
                                                                                                     /*
                                                                                                      * cnb.z(-
                                                                                                      * 546057847044906L)
-                                                                                                     */ : cnb.ac(ewh.f)
+                                                                                                     */ : cnb.isNewerThanArgVerAndPlay(ewh.f)
                                                                                                             ? "bvv"
                                                                                                             /*
                                                                                                              * cnb.z(-
                                                                                                              * 546075026914090L)
                                                                                                              */ : cnb
-                                                                                                                    .ac(ewh.e)
+                                                                                                                    .isNewerThanArgVerAndPlay(ewh.e)
                                                                                                                             ? "brq"
                                                                                                                             /*
                                                                                                                              * cnb
@@ -92,7 +92,7 @@ public final class xf extends SwitchHook implements bmz, bng {
                                                                                                                              * -
                                                                                                                              * 546023487306538L)
                                                                                                                              */ : cnb
-                                                                                                                                    .ac(ewh.d)
+                                                                                                                                    .isNewerThanArgVerAndPlay(ewh.d)
                                                                                                                                             ? "br6"
                                                                                                                                             /*
                                                                                                                                              * cnb
@@ -102,7 +102,7 @@ public final class xf extends SwitchHook implements bmz, bng {
                                                                                                                                              * -
                                                                                                                                              * 546040667175722L)
                                                                                                                                              */ : cnb
-                                                                                                                                                    .ac(ewh.c)
+                                                                                                                                                    .isNewerThanArgVerAndPlay(ewh.c)
                                                                                                                                                             ? "bmw"
                                                                                                                                                             /*
                                                                                                                                                              * cnb
@@ -112,7 +112,7 @@ public final class xf extends SwitchHook implements bmz, bng {
                                                                                                                                                              * -
                                                                                                                                                              * 545989127568170L)
                                                                                                                                                              */ : cnb
-                                                                                                                                                                    .ac(ewh.b)
+                                                                                                                                                                    .isNewerThanArgVerAndPlay(ewh.b)
                                                                                                                                                                             ? "bip"
                                                                                                                                                                             /*
                                                                                                                                                                              * cnb
@@ -122,7 +122,7 @@ public final class xf extends SwitchHook implements bmz, bng {
                                                                                                                                                                              * -
                                                                                                                                                                              * 546006307437354L)
                                                                                                                                                                              */ : cnb
-                                                                                                                                                                                    .ac(ewh.a)
+                                                                                                                                                                                    .isNewerThanArgVerAndPlay(ewh.a)
                                                                                                                                                                                             ? "bej"
                                                                                                                                                                                             /*
                                                                                                                                                                                              * cnb
@@ -132,7 +132,7 @@ public final class xf extends SwitchHook implements bmz, bng {
                                                                                                                                                                                              * -
                                                                                                                                                                                              * 545954767829802L)
                                                                                                                                                                                              */ : cnb
-                                                                                                                                                                                                    .ab(ewk.c)
+                                                                                                                                                                                                    .isNewerThanArgVerAndNotPlay(ewk.c)
                                                                                                                                                                                                             ? "bl8"
                                                                                                                                                                                                             /*
                                                                                                                                                                                                              * cnb

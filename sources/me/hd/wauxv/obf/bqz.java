@@ -3,7 +3,7 @@ package me.hd.wauxv.obf;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public abstract class bqz {
-    public static final Integer a;
+    public static final Integer OS_SDK_INT;
 
     static {
         Object obj;
@@ -16,6 +16,6 @@ public abstract class bqz {
         if (num2 != null && num2.intValue() > 0) {
             num = num2;
         }
-        a = num;
+        OS_SDK_INT = num;
     }
 }

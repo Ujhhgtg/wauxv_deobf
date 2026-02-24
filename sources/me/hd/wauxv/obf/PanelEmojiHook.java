@@ -167,7 +167,7 @@ public final class PanelEmojiHook extends SwitchHook implements IDexFind {
         StaticHelpers7.resolveDexAndCache(PanelEmojiHook$ConstructorGroupItemInfo.INSTANCE, dexKitBridge, (obj) -> {
             ((FindDexClassMethodDslWrapper) obj).onMethodCallback = (obj2) -> {
                 DexFinder cdjVar4 = new DexFinder();
-                cdjVar4.q(ajn.tryGetClassByClassName("com.tencent.mm.api.IEmojiInfo"), Integer.class, String.class, Integer.class);
+                cdjVar4.setParamTypes(ajn.tryGetClassByClassName("com.tencent.mm.api.IEmojiInfo"), Integer.class, String.class, Integer.class);
                 cdjVar4.usingStrings("emojiInfo", "sosDocId");
             };
         });

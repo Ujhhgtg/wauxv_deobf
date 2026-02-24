@@ -94,7 +94,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar = new DexFinder();
                 DexFinder.setClassEquals(cdjVar, "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* cnb.z(-441565587700522L)  */);
-                if (cnb.ab(ewk.h) || cnb.ac(ewh.g)) {
+                if (cnb.isNewerThanArgVerAndNotPlay(ewk.h) || cnb.isNewerThanArgVerAndPlay(ewh.g)) {
                     cdjVar.usingStrings("setHdImageActionDownloadable" /* "setHdImageActionDownloadable" /* "setHdImageActionDownloadable" /* cnb.z(-441917775018794L)  */);
                 } else {
                     cdjVar.usingStrings("setImageHdImgBtnVisibility" /* "setImageHdImgBtnVisibility" /* "setImageHdImgBtnVisibility" /* cnb.z(-441827580705578L)  */);
@@ -126,7 +126,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 Class<Float> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
                 cls4 = clsBf3 != null ? clsBf3 : Float.class;
                 Class<Boolean> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
-                cdjVar3.q(cls2, cls3, cls4, clsBf4 != null ? clsBf4 : Boolean.class);
+                cdjVar3.setParamTypes(cls2, cls3, cls4, clsBf4 != null ? clsBf4 : Boolean.class);
                 cdjVar3.usingStrings("MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* cnb.z(-118858924948266L)  */);
                 dexMethodQueryBuilderVar3.getClass();
                 dexMethodQueryBuilderVar3.dexFinder = cdjVar3;
@@ -469,7 +469,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 fieldResolverVarR2.name = "d" /* "d" /* "d" /* cnb.z(-490377891019562L)  */;
                 Object objD2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue();
                 throwIfVar1IsNull(objD2);
-                if (cnb.ab(ewk.a) || cnb.ac(ewh.c)) {
+                if (cnb.isNewerThanArgVerAndNotPlay(ewk.a) || cnb.isNewerThanArgVerAndPlay(ewh.c)) {
                     FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objD2).createFieldResolver();
                     fieldResolverVarR3.name = "w" /* "w" /* "w" /* cnb.z(-490317761477418L)  */;
                     Object objE3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).getValue_();
@@ -570,7 +570,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 dexMethodQueryBuilderVar5.searchedPackages = SomeStaticHelpers.arrayToList(strArr3);
                 DexFinder cdjVar7 = new DexFinder();
                 cdjVar7.s("onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477948255664938L)  */);
-                cdjVar7.usingStrings("onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477931075795754L)  */, (cnb.ab(ewk.a) || cnb.ac(ewh.c))
+                cdjVar7.usingStrings("onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477931075795754L)  */, (cnb.isNewerThanArgVerAndNotPlay(ewk.a) || cnb.isNewerThanArgVerAndPlay(ewh.c))
                         ? "com/tencent/mm/plugin/fav/ui/FavTopSearchUIC$initOnItemClickListener$1"
                         /* "com/tencent/mm/plugin/fav/ui/FavTopSearchUIC$initOnItemClickListener$1" /* "com/tencent/mm/plugin/fav/ui/FavTopSearchUIC$initOnItemClickListener$1" /* cnb.z(-477845176449834L)  */ : "com/tencent/mm/plugin/fav/ui/FavSearchUI$10" /*
                                                                                                         * cnb.z(-
@@ -674,13 +674,13 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 DexFinder cdjVar8 = new DexFinder();
                 uq.a.getClass();
                 cdjVar8.setDeclaredClassName(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */));
-                cdjVar8.r(Void.TYPE);
+                cdjVar8.setReturnType(Void.TYPE);
                 Class<Boolean> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf7 == null) {
                     clsBf7 = cls;
                 }
                 Class<Boolean> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
-                cdjVar8.q(clsBf7, clsBf8 != null ? clsBf8 : Boolean.class);
+                cdjVar8.setParamTypes(clsBf7, clsBf8 != null ? clsBf8 : Boolean.class);
                 MethodMatcher fjVar3 = new MethodMatcher();
                 DexFinder cdjVar9 = new DexFinder();
                 cdjVar9.usingStrings("MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* cnb.z(-76476187671338L)  */, "this is a quote msg" /*
@@ -813,11 +813,11 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                                                                                                 textInputEditText19
                                                                                                         .setText(String
                                                                                                                 .valueOf(
-                                                                                                                        vc.a.k()));
+                                                                                                                        vc.a.getInt()));
                                                                                                 textInputEditText20
                                                                                                         .setText(String
                                                                                                                 .valueOf(
-                                                                                                                        vf.a.k()));
+                                                                                                                        vf.a.getInt()));
                                                                                                 textInputEditText16
                                                                                                         .setText(vb.a
                                                                                                                 .o());

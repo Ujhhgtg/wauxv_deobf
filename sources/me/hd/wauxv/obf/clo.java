@@ -47,7 +47,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 cls2 = clsBf2 != null ? clsBf2 : List.class;
                 cls3 = Integer.class;
                 Class<Integer> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
-                cdjVar.q(cls, cls2, clsBf3 != null ? clsBf3 : Integer.class);
+                cdjVar.setParamTypes(cls, cls2, clsBf3 != null ? clsBf3 : Integer.class);
                 dexMethodQueryBuilderVar.getClass();
                 dexMethodQueryBuilderVar.dexFinder = cdjVar;
                 return Kotlin$Unit.INSTANCE;
@@ -85,7 +85,7 @@ public final /* synthetic */ class clo implements IInvokable {
                     clsBf7 = cls4;
                 }
                 Class<String> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
-                cdjVar2.q(clsBf4, clsBf5, cls5, clsBf7, clsBf8 != null ? clsBf8 : String.class);
+                cdjVar2.setParamTypes(clsBf4, clsBf5, cls5, clsBf7, clsBf8 != null ? clsBf8 : String.class);
                 dexMethodQueryBuilderVar2.getClass();
                 dexMethodQueryBuilderVar2.dexFinder = cdjVar2;
                 return Kotlin$Unit.INSTANCE;
@@ -117,7 +117,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 cls8 = clsBf11 != null ? clsBf11 : Integer.class;
                 cls9 = Object.class;
                 Class<Object> clsBf12 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls9));
-                cdjVar3.q(cls6, cls7, cls8, clsBf12 != null ? clsBf12 : Object.class);
+                cdjVar3.setParamTypes(cls6, cls7, cls8, clsBf12 != null ? clsBf12 : Object.class);
                 dexMethodQueryBuilderVar3.getClass();
                 dexMethodQueryBuilderVar3.dexFinder = cdjVar3;
                 return Kotlin$Unit.INSTANCE;
@@ -130,7 +130,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 cdjVar4.usingStrings("/cgi-bin/micromsg-bin/modifycontactlabellist" /* "/cgi-bin/micromsg-bin/modifycontactlabellist" /* "/cgi-bin/micromsg-bin/modifycontactlabellist" /* "/cgi-bin/micromsg-bin/modifycontactlabellist" /* cnb.z(-110436494080810L)   */);
                 cls10 = LinkedList.class;
                 Class<LinkedList> clsBf13 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls10));
-                cdjVar4.q(clsBf13 != null ? clsBf13 : LinkedList.class);
+                cdjVar4.setParamTypes(clsBf13 != null ? clsBf13 : LinkedList.class);
                 dexMethodQueryBuilderVar4.getClass();
                 dexMethodQueryBuilderVar4.dexFinder = cdjVar4;
                 return Kotlin$Unit.INSTANCE;
@@ -165,7 +165,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 cls12 = clsBf17 != null ? clsBf17 : Integer.class;
                 cls13 = Object.class;
                 Class<Object> clsBf18 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls13));
-                cdjVar5.q(clsBf14, cls11, clsBf16, cls12, clsBf18 != null ? clsBf18 : Object.class);
+                cdjVar5.setParamTypes(clsBf14, cls11, clsBf16, cls12, clsBf18 != null ? clsBf18 : Object.class);
                 dexMethodQueryBuilderVar5.getClass();
                 dexMethodQueryBuilderVar5.dexFinder = cdjVar5;
                 return Kotlin$Unit.INSTANCE;
@@ -203,7 +203,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 Class clsBf26 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(String.class));
                 Class cls22 = clsBf26 == null ? String.class : clsBf26;
                 Class clsBf27 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(String.class));
-                cdjVar6.q(cls15, cls16, cls17, cls18, cls19, cls20, cls21, cls22, clsBf27 == null ? String.class : clsBf27);
+                cdjVar6.setParamTypes(cls15, cls16, cls17, cls18, cls19, cls20, cls21, cls22, clsBf27 == null ? String.class : clsBf27);
                 dexMethodQueryBuilderVar6.getClass();
                 dexMethodQueryBuilderVar6.dexFinder = cdjVar6;
                 return Kotlin$Unit.INSTANCE;
@@ -272,7 +272,7 @@ public final /* synthetic */ class clo implements IInvokable {
                 Class clsBf33 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(String.class));
                 Class cls25 = clsBf33 == null ? String.class : clsBf33;
                 Class clsBf34 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(String.class));
-                cdjVar11.q(cls23, cls24, clsBf30, clsBf31, clsBf32, cls25, clsBf34 == null ? String.class : clsBf34);
+                cdjVar11.setParamTypes(cls23, cls24, clsBf30, clsBf31, clsBf32, cls25, clsBf34 == null ? String.class : clsBf34);
                 dexMethodQueryBuilderVar9.getClass();
                 dexMethodQueryBuilderVar9.dexFinder = cdjVar11;
                 return Kotlin$Unit.INSTANCE;
@@ -320,7 +320,7 @@ public final /* synthetic */ class clo implements IInvokable {
                     clsBf35 = cls14;
                 }
                 Class<String> clsBf36 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls14));
-                cdjVar13.q(null, clsBf35, clsBf36 != null ? clsBf36 : String.class);
+                cdjVar13.setParamTypes(null, clsBf35, clsBf36 != null ? clsBf36 : String.class);
                 dexMethodQueryBuilderVar11.getClass();
                 dexMethodQueryBuilderVar11.dexFinder = cdjVar13;
                 return Kotlin$Unit.INSTANCE;

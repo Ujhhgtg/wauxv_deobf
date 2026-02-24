@@ -605,10 +605,9 @@ public abstract class KotlinHelpers {
         return y(affVar, udVar.b, i3, false);
     }
 
-    public static final ahh t(ahh ahhVar, ahh ahhVar2, boolean z) {
-        Boolean bool = Boolean.FALSE;
-        boolean zBooleanValue = ((Boolean) ahhVar._u(bool, new fq(6))).booleanValue();
-        boolean zBooleanValue2 = ((Boolean) ahhVar2._u(bool, new fq(6))).booleanValue();
+    public static final ahh t(ahh ahhVar, ahh ahhVar2) {
+        boolean zBooleanValue = (Boolean) ahhVar._u(false, new fq(6));
+        boolean zBooleanValue2 = (Boolean) ahhVar2._u(false, new fq(6));
         if (!zBooleanValue && !zBooleanValue2) {
             return ahhVar._v(ahhVar2);
         }

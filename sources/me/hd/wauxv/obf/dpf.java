@@ -37,9 +37,9 @@ public final class dpf extends SwitchHook implements IStartActivity {
         LinkedHashSet linkedHashSet2 = new LinkedHashSet(KotlinHelpers.calcHashMapCapacity(1));
         linkedHashSet2.add(strArr2[0]);
         c = linkedHashSet2;
-        i = "杂项" /* "杂项" /* "杂项" /* "杂项" /* cnb.z(-539692705512234L)   */;
-        j = "系统浏览器" /* "系统浏览器" /* "系统浏览器" /* "系统浏览器" /* cnb.z(-539714180348714L)   */;
-        m = "致敬经典模块 '去你大爷的内置浏览器' " /* "致敬经典模块 '去你大爷的内置浏览器' " /* "致敬经典模块 '去你大爷的内置浏览器' " /* "致敬经典模块 '去你大爷的内置浏览器' " /* cnb.z(-539671230675754L)   */;
+        i = "杂项";
+        j = "系统浏览器";
+        m = "致敬经典模块 '去你大爷的内置浏览器' ";
         n = new dos(2);
     }
 
@@ -48,19 +48,16 @@ public final class dpf extends SwitchHook implements IStartActivity {
         String stringExtra;
         String shortClassName;
         ActivityOptions activityOptionsMakeBasic;
-        if (!z() || (stringExtra = intent.getStringExtra("rawUrl" /* "rawUrl" /* "rawUrl" /* "rawUrl" /* cnb.z(-516070385384234L)   */)) == null
+        if (!getIsEnabled() || (stringExtra = intent.getStringExtra("rawUrl")) == null
                 || StringsKt.isBlank(stringExtra)) {
             return;
         }
-        if (dnr.bp(stringExtra, "http://" /* "http://" /* "http://" /* "http://" /* cnb.z(-516040320613162L)   */, false)
-                || dnr.bp(stringExtra, "https://" /* "https://" /* "https://" /* "https://" /* cnb.z(-516005960874794L)   */, false)) {
-            String strAx = StringsKt.ax(StringsKt.au(stringExtra, "://" /* "://" /* "://" /* "://" /* cnb.z(-516113335057194L)   */, stringExtra), "/" /*
-                                                                                                               * cnb.z(-
-                                                                                                               * 516061795449642L)
-                                                                                                               */);
-            int iK = dpd.a.k();
-            if (iK == doz.a.d) {
-                Set setN = dpe.a.n();
+        if (dnr.bp(stringExtra, "http://", false)
+                || dnr.bp(stringExtra, "https://", false)) {
+            String strAx = StringsKt.ax(StringsKt.au(stringExtra, "://", stringExtra), "/");
+            int iK = SystemBrowserHook$ValMode.INSTANCE.getInt();
+            if (iK == 0) {
+                Set setN = SystemBrowserHook$ValWhiteHost.INSTANCE.getStringSet();
                 if (!setN.isEmpty()) {
                     Iterator it = setN.iterator();
                     while (it.hasNext()) {
@@ -70,7 +67,7 @@ public final class dpf extends SwitchHook implements IStartActivity {
                     }
                 }
             } else if (iK == doz.b.d) {
-                Set setN2 = dpc.a.n();
+                Set setN2 = dpc.a.getStringSet();
                 if (setN2.isEmpty()) {
                     return;
                 }
@@ -97,7 +94,7 @@ public final class dpf extends SwitchHook implements IStartActivity {
             intent2.putExtra("androidx.browser.customtabs.extra.SHARE_STATE", 0);
             int i2 = Build.VERSION.SDK_INT;
             LocaleList adjustedDefault = LocaleList.getAdjustedDefault();
-            String languageTag = adjustedDefault.size() > 0 ? adjustedDefault.get(0).toLanguageTag() : null;
+            String languageTag = !adjustedDefault.isEmpty() ? adjustedDefault.get(0).toLanguageTag() : null;
             if (!TextUtils.isEmpty(languageTag)) {
                 Bundle bundleExtra = intent2.hasExtra("com.android.browser.headers")
                         ? intent2.getBundleExtra("com.android.browser.headers")

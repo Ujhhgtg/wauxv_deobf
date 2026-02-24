@@ -10,7 +10,7 @@ public final class mh extends SwitchHook implements bnc {
     public static final String b = "聊天" /* "聊天" /* "聊天" /* cnb.z(-440861213063978L)  */;
     public static final String c = "自动语音转文" /* "自动语音转文" /* "自动语音转文" /* cnb.z(-440865508031274L)  */;
     public static final String d = "自动将微信聊天列表的语音消息转文字" /* "自动将微信聊天列表的语音消息转文字" /* "自动将微信聊天列表的语音消息转文字" /* cnb.z(-440835443260202L)  */;
-    public static final mg h = new mg(100, 0.75f, true, 0);
+    public static final LruCacheMap h = new LruCacheMap(100, 0.75f, true, 0);
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
@@ -30,8 +30,8 @@ public final class mh extends SwitchHook implements bnc {
     public final void i(View view, Object obj, Object obj2, MsgInfoBean msgInfoBean) throws NoSuchMethodException {
         if (getIsEnabled() && msgInfoBean.isVoice()) {
             Long lValueOf = Long.valueOf(msgInfoBean.getMsgId());
-            mg mgVar = h;
-            Object obj3 = mgVar.get(lValueOf);
+            LruCacheMap lruCacheMapVar = h;
+            Object obj3 = lruCacheMapVar.get(lValueOf);
             Boolean bool = Boolean.TRUE;
             if (nullSafeIsEqual(obj3, bool)) {
                 return;
@@ -50,7 +50,7 @@ public final class mh extends SwitchHook implements bnc {
             Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(Long.TYPE) }, 1, methodResolverVarT)).invoke(Long.valueOf(msgId));
             throwIfVar1IsNull(objJ);
             if (nullSafeIsEqual(objJ.toString(), "NoTransform" /* "NoTransform" /* "NoTransform" /* cnb.z(-440878392933162L)  */)) {
-                mgVar.put(Long.valueOf(msgInfoBean.getMsgId()), bool);
+                lruCacheMapVar.put(Long.valueOf(msgInfoBean.getMsgId()), bool);
                 Object origin = msgInfoBean.getOrigin();
                 MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objB).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT2.returnType = Void.TYPE;

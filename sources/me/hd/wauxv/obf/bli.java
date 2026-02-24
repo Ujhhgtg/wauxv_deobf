@@ -2,6 +2,6 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bli extends akf {
+public final class bli extends ConfigOption {
     public static final bli a = new bli("HideMsgAvatarIVHook.ValHideLeft" /* "HideMsgAvatarIVHook.ValHideLeft" /* "HideMsgAvatarIVHook.ValHideLeft" /* cnb.z(-488092968418090L)  */, null, null, false, 0, 0.0f, 0, 118);
 }

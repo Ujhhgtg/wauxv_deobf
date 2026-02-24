@@ -4,12 +4,382 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1cc98c4-77a3-4031-8b4b-7a06fe7102b2" name="更改" comment="update">
-      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ConversationDatabaseApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ConversationDatabaseApi.java" afterDir="false" />
+    <list default="true" id="d1cc98c4-77a3-4031-8b4b-7a06fe7102b2" name="更改" comment="improve">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/data/bean/MsgInfoBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/data/bean/MsgInfoBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/AccbilityDisableClick.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/AccbilityDisableClick.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/AntiRevoke3Hook.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/AntiRevoke3Hook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/AutoCleanHook$ValCleanLastTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/AutoCleanHook$ValCleanLastTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/AutoCleanHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/AutoCleanHook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/CustomUnReadCountHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/CustomUnReadCountHook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/DexFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/DexFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/DisableBrightnessHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/DisableBrightnessHook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/DisableDetailNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/DisableDetailNotification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/DistinctAtMeOrAtAllToNotify.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/DistinctAtMeOrAtAllToNotify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/EcsHardcodeGlobalSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/EcsHardcodeGlobalSwitch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/azi.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/azi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/azl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/azl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dmu.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dmu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/Function1$VarIsObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/Function1$VarIsObj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/IHandlesHookParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/IHandlesRepairerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/KotlinHelpers.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/KotlinHelpers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/MMKernelDexFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/MMKernelDexFind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/PanelEmojiHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/PanelEmojiHook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/QuickKillHook.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/QuickKillHook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/SettingsInject.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/SettingsInject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/StaticHelpers5.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/StaticHelpers5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/StorageFeatureService$ClassStorageFeatureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/StorageFeatureService$ClassStorageFeatureService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/SyntheticMessOfLambdas.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/SyntheticMessOfLambdas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/WeChatVersionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/WeChatVersionEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/act.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/act.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ae.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/AbstractRandom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/age.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/age.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aie.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aif.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aif.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aih.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aih.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aii.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aii.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aij.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aij.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aik.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aik.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ail.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aim.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aim.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ain.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aip.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aiq.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aiq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ait.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ait.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ajn.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ajn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/akf.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ConfigOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/amb.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/amb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aoc.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aoc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aod.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aqz.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aqz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ara.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ara.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/arb.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/arb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/arj.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/arj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/atn.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/atn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/atv.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/atv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/atw.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/atw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aum.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/avj.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/avj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aya.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/RandomOsSdkEtOrSt34Impl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aye.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/aye.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ayk.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ayk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/azq.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/azq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/azu.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/azu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bbf.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bbf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bbg.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bbg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bbh.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bbh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bbi.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bbi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bcs.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bcs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bct.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bcu.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bcu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bcw.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bcw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bep.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bhs.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bhs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bhv.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bhv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bie.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/big.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/big.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bih.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bih.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bii.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bii.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/biy.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/biy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/biz.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/biz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bja.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjb.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjc.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjd.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bje.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjf.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjg.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjh.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bji.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bji.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjj.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjk.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/GroupOwnerTitleHook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjv.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjw.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bjw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bka.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bld.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bli.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bli.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/blj.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/blj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bmy.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bmy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bn.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/boh.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/boh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/boq.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/boq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bqx.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bqx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bqz.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bqz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/br.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/br.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bs.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bt.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bty.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bu.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bv.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bw.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bx.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bxf.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bxf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bxg.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bxg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/by.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/by.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bz.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/bz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ca.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cb.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cc.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cd.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ce.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfi.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfj.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfk.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfn.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfp.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfq.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfr.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfs.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cft.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfu.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfv.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfx.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfz.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cfz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cga.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cga.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgg.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgh.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgi.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgj.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgk.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgn.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgo.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgp.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgq.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgr.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgu.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgv.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/MsgInfoStorage$ClassMsgInfoStorage_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgw.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/MsgInfoStorage$MethodInsertMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgy.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgz.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cgz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/chb.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/chb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/chd.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/chd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/che.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/che.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/chf.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/chf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/chg.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/chg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/chz.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/chz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cia.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/clo.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/clo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cml.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cml.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnb.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnh.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnn.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cno.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cno.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnp.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnq.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnx.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cny.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cny.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnz.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cnz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/coa.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/coa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cob.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cou.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cou.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cov.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cov.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cow.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/crn.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/crn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cro.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/crp.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/crp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/crq.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/crq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/crr.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/crr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/crs.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/crs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/csy.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/csy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ctm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ctm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ctn.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ctn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cto.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ctv.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/RandomOsSdkLt34Impl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cug.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cug.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cvc.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cvc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cvw.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cvw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cvx.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cvx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cwt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cwu.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cwu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cxe.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/QuoteClickToPosHook$MethodClickEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cxf.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/QuoteClickToPosHook$MethodClickToPositionEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cxg.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cxg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cxh.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cxh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cxj.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cxj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cxk.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cxk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cxm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cxm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cxn.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cxn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cxo.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cxo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cyi.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cyi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cyj.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cyj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cym.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cym.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cyn.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/cyn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dbe.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dbe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dbj.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dbj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dbk.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/RepairerConfigApi$MethodGet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dbl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/RepairerConfigHook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dda.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ddc.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ddc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ddg.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ddg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ddh.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ddh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/decrypt_cnb_z_calls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/des.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/des.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/det.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/det.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dez.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dez.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dgj.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dgj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dhg.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dhg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dhn.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dhn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dip.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/diy.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/diy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/diz.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/diz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dje.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/djf.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/djf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/djg.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/djg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/djh.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/djh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/djk.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/djk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/djp.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/djp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dju.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dju.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/djv.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/djv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dka.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dkd.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dkd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dkf.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dkf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dkg.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dkg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dkk.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dkk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dlu.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dlu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dly.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dly.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/doj.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/doj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dok.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dok.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dos.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dpd.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/SystemBrowserHook$ValMode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dpe.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/SystemBrowserHook$ValWhiteHost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dpf.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dpf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dqr.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dqr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dru.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dru.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dx.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/dx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ee.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eky.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eky.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/elu.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/elu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/elv.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/elv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/emo.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/emo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eol.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eon.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eoo.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eoo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eop.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/epv.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/epv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/epy.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/epy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eta.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/etf.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/etf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eth.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eti.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/etm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/etm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/etn.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/etn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eto.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/etq.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/etq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/etv.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/etv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/etx.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/etx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ety.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ety.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eub.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/euc.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/euc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eud.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eud.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eue.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/euf.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/euf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eui.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ewg.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ewg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ewk.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ewk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ewu.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ewu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ewv.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ewv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eww.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/eww.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ewx.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ewx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/fq.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/fq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/fr.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/fr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/fz.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/fz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/gc.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/gc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/gg.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/gg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/gi.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/gi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/j.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/j.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/lq.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/lq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ls.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/lt.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/lt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/lu.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/AutoCleanHook$ValCleanCycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ma.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/mb.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/mb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/mc.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/mc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/mg.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/LruCacheMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/mh.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/mh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/og.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/og.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qg.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qh.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qi.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qj.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qk.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ql.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qn.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qq.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qr.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qs.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qt.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qu.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qv.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/qv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/sk.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/sk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/sl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/sl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/sm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/sm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/us.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/us.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/uv.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/uv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/uw.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/uw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ux.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ux.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/uy.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/uy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/uz.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/uz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/va.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/va.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vb.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vc.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vd.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ve.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ve.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vf.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vi.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vj.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vk.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vn.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vo.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vp.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vq.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vr.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vv.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vw.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vx.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vy.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vz.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/vz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wa.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wb.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wc.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wd.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/we.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/we.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wh.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wq.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ChatItemViewNewApi$MethodOnBindView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wr.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wr.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ws.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ws.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wt.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ChatRoomMember$ClassChatRoomMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wu.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ChatRoomMember$MethodGetChatRoomData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wv.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wx.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/wx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xb.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xc.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xd.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xf.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xh.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/StaticMapsProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xm.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ChatroomService$ClassChatroomService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xn.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xo.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ChatroomStorage$MethodGetMemberCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xp.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xs.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xt.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/xt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ya.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/ya.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/zp.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/zp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/zq.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/obf/zq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sources/me/hd/wauxv/plugin/api/method/PluginContactMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/sources/me/hd/wauxv/plugin/api/method/PluginContactMethod.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +423,7 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ujhhgtg/coding/wechat_deobf&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ujhhgtg/coding/newmiko_deobf&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -62,7 +432,7 @@
     &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="SharedIndexes">
@@ -96,7 +466,23 @@
       <option name="project" value="LOCAL" />
       <updated>1771759490348</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <option name="closed" value="true" />
+      <created>1771831627822</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1771831627822</updated>
+    </task>
+    <task id="LOCAL-00004" summary="improve">
+      <option name="closed" value="true" />
+      <created>1771831676035</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1771831676035</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,7 +504,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="settings inject" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="improve" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve" />
     <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
 </project>

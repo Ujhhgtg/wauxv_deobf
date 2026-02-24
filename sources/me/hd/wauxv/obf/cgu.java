@@ -47,7 +47,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar = new DexFinder();
                 cgy.a.getClass();
-                cdjVar.setDeclaredClassName(StaticHelpers7.toDexClass(cgv.a));
+                cdjVar.setDeclaredClassName(StaticHelpers7.toDexClass(MsgInfoStorage$ClassMsgInfoStorage_.INSTANCE));
                 cdjVar.usingStrings("MsgInfo processAddMsg insert db error" /* "MsgInfo processAddMsg insert db error" /* "MsgInfo processAddMsg insert db error" /* cnb.z(-371609160383274L)  */);
                 dexMethodQueryBuilderVar.getClass();
                 dexMethodQueryBuilderVar.dexFinder = cdjVar;
@@ -70,7 +70,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar2 = new DexFinder();
                 cgy.a.getClass();
-                cdjVar2.setDeclaredClassName(StaticHelpers7.toDexClass(cgv.a));
+                cdjVar2.setDeclaredClassName(StaticHelpers7.toDexClass(MsgInfoStorage$ClassMsgInfoStorage_.INSTANCE));
                 cdjVar2.p(new IntRange(2, 3, 1));
                 cdjVar2.usingStrings("notifymessage" /* "notifymessage" /* "notifymessage" /* cnb.z(-371201138490154L)  */, "msgId=?" /* "msgId=?" /* "msgId=?" /* cnb.z(-371123829078826L)  */,
                         "update" /* "update" /* "update" /* cnb.z(-371089469340458L)  */);
@@ -423,7 +423,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                 cls = clsBf3 != null ? clsBf3 : String.class;
                 cls3 = Object.class;
                 Class<Object> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
-                cdjVar4.q(clsBf, cls2, cls, clsBf4 != null ? clsBf4 : Object.class);
+                cdjVar4.setParamTypes(clsBf, cls2, cls, clsBf4 != null ? clsBf4 : Object.class);
                 dexMethodQueryBuilderVar4.getClass();
                 dexMethodQueryBuilderVar4.dexFinder = cdjVar4;
                 return kotlinUnitVar;
@@ -450,7 +450,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                     clsBf5 = cls;
                 }
                 Class<String> clsBf6 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
-                cdjVar5.q(clsBf5, clsBf6 != null ? clsBf6 : String.class);
+                cdjVar5.setParamTypes(clsBf5, clsBf6 != null ? clsBf6 : String.class);
                 dexMethodQueryBuilderVar5.getClass();
                 dexMethodQueryBuilderVar5.dexFinder = cdjVar5;
                 return kotlinUnitVar;

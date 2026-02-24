@@ -29,7 +29,7 @@ import me.hd.wauxv.obf.dqc;
 import me.hd.wauxv.obf.StaticHelpers7;
 import me.hd.wauxv.obf.xj;
 import me.hd.wauxv.obf.xn;
-import me.hd.wauxv.obf.xo;
+import me.hd.wauxv.obf.ChatroomStorage$MethodGetMemberCount;
 import me.hd.wauxv.obf.xp;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -79,7 +79,7 @@ public final class PluginContactMethod {
     public final int getGroupMemberCount(String str)
             throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         xp.a.getClass();
-        Method methodBb = StaticHelpers7.toDexMethod(xo.a);
+        Method methodBb = StaticHelpers7.toDexMethod(ChatroomStorage$MethodGetMemberCount.INSTANCE);
         xn.a.getClass();
         Object objInvoke = methodBb.invoke(xn.b(), str);
         throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.Int" /* "null cannot be cast to non-null type kotlin.Int" /* "null cannot be cast to non-null type kotlin.Int" /* cnb.z(-380173325171498L)  */);

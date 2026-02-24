@@ -253,11 +253,11 @@ public abstract class StaticHelpers5 extends StaticHelpers2 {
     }
 
     public static Object q(List list) {
-        ae aeVar = cyj.f;
+        AbstractRandom aeVar = cyj.RANDOM;
         if (list.isEmpty()) {
             throw new NoSuchElementException("Collection is empty.");
         }
-        return list.get(cyj.f.c(list.size()));
+        return list.get(cyj.RANDOM.c(list.size()));
     }
 
     public static List r(Iterable iterable) {

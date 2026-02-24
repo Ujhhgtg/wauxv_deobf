@@ -26,7 +26,7 @@ public final class dx extends btp implements IFunction0 {
     public final Object invoke() {
         switch (this.c) {
             case 0:
-                return Integer.valueOf(cyj.f.c(2147418112) + 65536);
+                return Integer.valueOf(cyj.RANDOM.c(2147418112) + 65536);
             case 1:
                 return new Handler(Looper.getMainLooper());
             default:

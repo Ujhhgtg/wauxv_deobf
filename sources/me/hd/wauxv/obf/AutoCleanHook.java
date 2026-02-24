@@ -7,7 +7,7 @@ import android.os.Handler;
 public final class AutoCleanHook extends SwitchHook implements Runnable {
     public static final AutoCleanHook INSTANCE = new AutoCleanHook("AutoCleanHook");
     public static final String b = "杂项";
-    public static final String c = "自动瘦身";
+    public static final String name = "自动瘦身";
     public static final String d = "致敬瘦身模块 'KitsunePie-QQCleaner' ";
     public static final gi h = new gi(22);
 
@@ -18,7 +18,7 @@ public final class AutoCleanHook extends SwitchHook implements Runnable {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final String getName() {
-        return c;
+        return name;
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -39,13 +39,12 @@ public final class AutoCleanHook extends SwitchHook implements Runnable {
     @Override // java.lang.Runnable
     public final void run() {
         long unixEpoch = System.currentTimeMillis();
-        AutoCleanHook$ValCleanLastTime lvVar = AutoCleanHook$ValCleanLastTime.INSTANCE;
-        if (unixEpoch - lvVar.l() > lu.a.l() * 1000) {
-            lvVar.s(System.currentTimeMillis());
-            Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
+        AutoCleanHook$ValCleanLastTime valCleanLastTime = AutoCleanHook$ValCleanLastTime.INSTANCE;
+        if (unixEpoch - valCleanLastTime.getLong() > AutoCleanHook$ValCleanCycle.INSTANCE.getLong() * 1000) {
+            valCleanLastTime.setLong(System.currentTimeMillis());
             Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
             lw lwVar = new lw(2, null, 0);
-            ahh ahhVarT = KotlinHelpers.t(EmptyCoroutineContext.INSTANCE, akqVar, true);
+            ahh ahhVarT = KotlinHelpers.t(EmptyCoroutineContext.INSTANCE, akqVar);
             Dispatchers$Default alcVar2 = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
             if (ahhVarT != alcVar2 && ahhVarT._w(arj.a) == null) {
                 ahhVarT = ahhVarT._v(alcVar2);

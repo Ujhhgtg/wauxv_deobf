@@ -7,12 +7,9 @@ import org.luckypray.dexkit.DexKitBridge;
 public final class xp extends ApiHookItem implements IDexFind {
     public static final xp a = new xp();
 
-    public static Object b(String str) {
-        int i = 0;
-        xn.a.getClass();
+    public static Object getChatroomMember(String str) {
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(xn.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        wv.a.getClass();
-        methodResolverVarT.returnType = StaticHelpers7.toDexClass(wt.a);
+        methodResolverVarT.returnType = StaticHelpers7.toDexClass(ChatRoomMember$ClassChatRoomMember.INSTANCE);
         return ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class) }, 1, methodResolverVarT)).invokeAndThrowIfFailed(str);
     }
 
@@ -22,6 +19,6 @@ public final class xp extends ApiHookItem implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        StaticHelpers7.resolveDexAndCache(xo.a, dexKitBridge, new ws(12));
+        StaticHelpers7.resolveDexAndCache(ChatroomStorage$MethodGetMemberCount.INSTANCE, dexKitBridge, new ws(12));
     }
 }

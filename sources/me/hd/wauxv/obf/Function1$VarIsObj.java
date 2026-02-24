@@ -102,9 +102,9 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 DexFinder cdjVar = new DexFinder();
                 cls3 = ArrayList.class;
                 Class<ArrayList> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
-                cdjVar.r(clsBf != null ? clsBf : ArrayList.class);
+                cdjVar.setReturnType(clsBf != null ? clsBf : ArrayList.class);
                 Class<Integer> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
-                cdjVar.q(clsBf2 != null ? clsBf2 : Integer.class);
+                cdjVar.setParamTypes(clsBf2 != null ? clsBf2 : Integer.class);
                 cdjVar.usingStrings("MicroMsg.emoji.EmojiGroupInfoStorage" /* "MicroMsg.emoji.EmojiGroupInfoStorage" /* "MicroMsg.emoji.EmojiGroupInfoStorage" /* "MicroMsg.emoji.EmojiGroupInfoStorage" /* cnb.z(-472287488768810L)   */,
                         "get Panel EmojiGroupInfo." /* "get Panel EmojiGroupInfo." /* "get Panel EmojiGroupInfo." /* "get Panel EmojiGroupInfo." /* cnb.z(-472661150923562L)   */);
                 dexMethodQueryBuilderVar.getClass();
@@ -217,7 +217,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 Class<String> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls5));
                 cls5 = clsBf5 != null ? clsBf5 : String.class;
                 Class<Integer> clsBf6 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
-                cdjVar4.q(clsAg, clsBf4, cls5, clsBf6 != null ? clsBf6 : Integer.class);
+                cdjVar4.setParamTypes(clsAg, clsBf4, cls5, clsBf6 != null ? clsBf6 : Integer.class);
                 cdjVar4.usingStrings("emojiInfo" /* "emojiInfo" /* "emojiInfo" /* "emojiInfo" /* cnb.z(-472351913278250L)   */, "sosDocId" /* "sosDocId" /* "sosDocId" /* "sosDocId" /* cnb.z(-472326143474474L)   */);
                 dexMethodQueryBuilderVar3.getClass();
                 dexMethodQueryBuilderVar3.dexFinder = cdjVar4;
@@ -404,7 +404,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 DexFinder cdjVar6 = new DexFinder();
                 cdjVar6.setDeclaredClassName(cvh.a.b());
                 Class<CharSequence> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
-                cdjVar6.q(clsBf7 != null ? clsBf7 : CharSequence.class);
+                cdjVar6.setParamTypes(clsBf7 != null ? clsBf7 : CharSequence.class);
                 cdjVar6.u(0);
                 dexMethodQueryBuilderVar5.getClass();
                 dexMethodQueryBuilderVar5.dexFinder = cdjVar6;
@@ -414,7 +414,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 DexFinder cdjVar7 = new DexFinder();
                 cdjVar7.setDeclaredClassName(cvh.a.b());
                 Class<CharSequence> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
-                cdjVar7.q(clsBf8 != null ? clsBf8 : CharSequence.class);
+                cdjVar7.setParamTypes(clsBf8 != null ? clsBf8 : CharSequence.class);
                 dexMethodQueryBuilderVar6.getClass();
                 dexMethodQueryBuilderVar6.dexFinder = cdjVar7;
                 return kotlinUnitVar;

@@ -34,9 +34,9 @@ public final /* synthetic */ class ls implements IFunction0 {
             case 0:
                 cee ceeVar = (cee) this.b;
                 zm zmVar = (zm) this.c;
-                lu luVar = lu.a;
+                AutoCleanHook$ValCleanCycle luVar = AutoCleanHook$ValCleanCycle.INSTANCE;
                 Long lBg = dnq.bg(String.valueOf(ceeVar.c.getText()));
-                luVar.s(lBg != null ? lBg.longValue() : 86400L);
+                luVar.setLong(lBg != null ? lBg.longValue() : 86400L);
                 lt.a.t(StaticHelpers5.ad((Set) zmVar.c));
                 return Kotlin$Unit.INSTANCE;
             case 1:
@@ -167,10 +167,10 @@ public final /* synthetic */ class ls implements IFunction0 {
                 bqr bqrVar = (bqr) this.b;
                 ArrayList arrayList3 = (ArrayList) this.c;
                 if (((MaterialRadioButton) bqrVar.e).isChecked()) {
-                    dpd.a.r(doz.a.d);
-                    dpe.a.t(StaticHelpers5.ad(arrayList3));
+                    SystemBrowserHook$ValMode.INSTANCE.r(doz.a.d);
+                    SystemBrowserHook$ValWhiteHost.INSTANCE.t(StaticHelpers5.ad(arrayList3));
                 } else if (((MaterialRadioButton) bqrVar.c).isChecked()) {
-                    dpd.a.r(doz.b.d);
+                    SystemBrowserHook$ValMode.INSTANCE.r(doz.b.d);
                     dpc.a.t(StaticHelpers5.ad(arrayList3));
                 }
                 return Kotlin$Unit.INSTANCE;

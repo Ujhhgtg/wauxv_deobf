@@ -103,12 +103,12 @@ public abstract class cnb {
         return new cva(textPaint, textDirectionHeuristic, breakStrategy, hyphenationFrequency);
     }
 
-    public static final boolean ab(ewk ewkVar) {
+    public static final boolean isNewerThanArgVerAndNotPlay(ewk ewkVar) {
         HostInfoRegistry.INSTANCE.getClass();
-        return HostInfoRegistry.getVerCode() >= ewkVar.r && !HostInfoRegistry.getIsPlay();
+        return HostInfoRegistry.getVerCode() >= ewkVar.code && !HostInfoRegistry.getIsPlay();
     }
 
-    public static final boolean ac(WeChatVersionEnum weChatVersionEnumVar) {
+    public static final boolean isNewerThanArgVerAndPlay(WeChatVersionEnum weChatVersionEnumVar) {
         return HostInfoRegistry.getVerCode() >= weChatVersionEnumVar.u && HostInfoRegistry.getIsPlay();
     }
 

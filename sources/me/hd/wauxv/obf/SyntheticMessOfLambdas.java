@@ -96,7 +96,7 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                     if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK, R.id.moduleDialogInputSportModifyStep)) != null) {
                         LinearLayout linearLayout = (LinearLayout) viewK;
                         cee ceeVar = new cee(linearLayout, textInputEditText, i2);
-                        textInputEditText.setText(String.valueOf(dlu.a.l()));
+                        textInputEditText.setText(String.valueOf(dlu.a.getLong()));
                         bzy bzyVar = new bzy(view.getContext());
                         eg egVar = (eg) bzyVar.d;
                         dlv.a.getClass();
@@ -113,7 +113,7 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                 throw new NullPointerException("Missing required view with ID: "
                         /* "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-659741336402730L)   */.concat(viewK.getResources().getResourceName(i4)));
             case 5:
-                ((HookParam) obj).setResult(Long.valueOf(Math.min(dlu.a.l(), 98800L)));
+                ((HookParam) obj).setResult(Long.valueOf(Math.min(dlu.a.getLong(), 98800L)));
                 return kotlinUnitVar;
             case 6:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new SyntheticMessOfLambdas(i2);

@@ -263,11 +263,11 @@ public final /* synthetic */ class bn implements IInvokable {
                                                                                                                     textInputEditText5
                                                                                                                             .setText(
                                                                                                                                     String.valueOf(
-                                                                                                                                            bw.a.k()));
+                                                                                                                                            bw.a.getInt()));
                                                                                                                     textInputEditText4
                                                                                                                             .setText(
                                                                                                                                     String.valueOf(
-                                                                                                                                            bv.a.k()));
+                                                                                                                                            bv.a.getInt()));
                                                                                                                     textInputEditText3
                                                                                                                             .setText(
                                                                                                                                     String.valueOf(
@@ -278,7 +278,7 @@ public final /* synthetic */ class bn implements IInvokable {
                                                                                                                     textInputEditText9
                                                                                                                             .setText(
                                                                                                                                     String.valueOf(
-                                                                                                                                            cb.a.k()));
+                                                                                                                                            cb.a.getInt()));
                                                                                                                     textInputEditText8
                                                                                                                             .setText(
                                                                                                                                     bz.a.o());
@@ -288,7 +288,7 @@ public final /* synthetic */ class bn implements IInvokable {
                                                                                                                     textInputEditText2
                                                                                                                             .setText(
                                                                                                                                     String.valueOf(
-                                                                                                                                            bt.a.k()));
+                                                                                                                                            bt.a.getInt()));
                                                                                                                     textInputEditText
                                                                                                                             .setText(
                                                                                                                                     br.a.o());
@@ -298,7 +298,7 @@ public final /* synthetic */ class bn implements IInvokable {
                                                                                                                     textInputEditText11
                                                                                                                             .setText(
                                                                                                                                     String.valueOf(
-                                                                                                                                            ce.a.k()));
+                                                                                                                                            ce.a.getInt()));
                                                                                                                     textInputEditText10
                                                                                                                             .setText(
                                                                                                                                     cc.a.o());
@@ -490,7 +490,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 String name2 = clsBf7.getName();
                 int size2 = linkedHashMap3.size();
                 FrameLayout frameLayout = (FrameLayout) viewGroup3;
-                ajn.aj(frameLayout, 0, blrVarI2.k(Integer.valueOf(bw.a.k())).intValue(), 0, 13);
+                ajn.aj(frameLayout, 0, blrVarI2.k(Integer.valueOf(bw.a.getInt())).intValue(), 0, 13);
                 frameLayout.setId(R.id.AccountInfoCenter_flAvatar);
                 if (linkedHashMap3.size() != size2) {
                     throw new cth(concat("Performers are not allowed to appear in ", name2, " DSL creation process."));
@@ -505,8 +505,8 @@ public final /* synthetic */ class bn implements IInvokable {
                 blu bluVar4 = blrVarI3.f;
                 bv bvVar = bv.a;
                 blq blqVarD3 = SyntheticClass.d(bluVar4, blrVarI3.a, blrVarI3.b,
-                        blr.g(blrVarI3, blrVarI3.k(Integer.valueOf(bvVar.k())).intValue(),
-                                blrVarI3.k(Integer.valueOf(bvVar.k())).intValue(), null, 60));
+                        blr.g(blrVarI3, blrVarI3.k(Integer.valueOf(bvVar.getInt())).intValue(),
+                                blrVarI3.k(Integer.valueOf(bvVar.getInt())).intValue(), null, 60));
                 cls6 = ImageView.class;
                 Class<ImageView> clsBf10 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls6));
                 if (clsBf10 == null) {
@@ -528,7 +528,7 @@ public final /* synthetic */ class bn implements IInvokable {
                 bymVar.getClass();
                 String strB2 = bym.b(strB, true);
                 ddl ddlVar = new ddl(
-                        Math.max(1, (int) (2 * bu.a.j() * (blrVarI3.k(Integer.valueOf(bvVar.k())).intValue() / 2))));
+                        Math.max(1, (int) (2 * bu.a.j() * (blrVarI3.k(Integer.valueOf(bvVar.getInt())).intValue() / 2))));
                 Context context2 = imageView.getContext();
                 cmz.n(context2,
                         "You cannot start a load on a not yet attached View or a Fragment where getActivity() returns null (which usually occurs when getActivity() is called before the Fragment is attached or after the Fragment is destroyed).");
@@ -591,11 +591,11 @@ public final /* synthetic */ class bn implements IInvokable {
                 Class<ImageView> clsBf12 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls6));
                 blr.i(blrVarI3, null, clsBf12 != null ? clsBf12 : ImageView.class);
                 blr.h(blrVarI3, viewH3);
-                cf.n(cfVar, blrVarI2, R.id.AccountInfoCenter_tvName, R.id.AccountInfoCenter_flAvatar, cb.a.k(), 18.0f,
+                cf.n(cfVar, blrVarI2, R.id.AccountInfoCenter_tvName, R.id.AccountInfoCenter_flAvatar, cb.a.getInt(), 18.0f,
                         bz.a.o(), ca.a.i(), new File(cf.h, "nickName.ttf" /* "nickName.ttf" /* "nickName.ttf" /* cnb.z(-431347860503338L)  */), 64);
-                cf.n(cfVar, blrVarI2, R.id.AccountInfoCenter_tvAlias, R.id.AccountInfoCenter_tvName, bt.a.k(), 16.0f,
+                cf.n(cfVar, blrVarI2, R.id.AccountInfoCenter_tvAlias, R.id.AccountInfoCenter_tvName, bt.a.getInt(), 16.0f,
                         br.a.o(), bs.a.i(), null, 960);
-                cf.n(cfVar, blrVarI2, R.id.AccountInfoCenter_tvSign, R.id.AccountInfoCenter_tvAlias, ce.a.k(), 14.0f,
+                cf.n(cfVar, blrVarI2, R.id.AccountInfoCenter_tvSign, R.id.AccountInfoCenter_tvAlias, ce.a.getInt(), 14.0f,
                         cc.a.o(), cd.a.i(), null, 896);
                 relativeLayout.addView(bluVar.k(), -1);
                 return kotlinUnitVar;
@@ -658,7 +658,7 @@ public final /* synthetic */ class bn implements IInvokable {
                         "该账号违反了《微信个人账号使用规范》，请轻触 “确定” 了解详情后，继续登录微信。" /* "该账号违反了《微信个人账号使用规范》，请轻触 “确定” 了解详情后，继续登录微信。" /* "该账号违反了《微信个人账号使用规范》，请轻触 “确定” 了解详情后，继续登录微信。" /* cnb.z(-89717571844906L)  */,
                         "你的账号可能有安全风险，为了你的账号安全，暂时无法在新设备登录，你可以在常用手机登录微信，或者轻触「了解详情」查看更多信息。" /* "你的账号可能有安全风险，为了你的账号安全，暂时无法在新设备登录，你可以在常用手机登录微信，或者轻触「了解详情」查看更多信息。" /* "你的账号可能有安全风险，为了你的账号安全，暂时无法在新设备登录，你可以在常用手机登录微信，或者轻触「了解详情」查看更多信息。" /* cnb.z(-90104118901546L)  */,
                         "账号状态异常，本次登录已失效。请尝试重新登录，并根据弹窗提示操作。" /* "账号状态异常，本次登录已失效。请尝试重新登录，并根据弹窗提示操作。" /* "账号状态异常，本次登录已失效。请尝试重新登录，并根据弹窗提示操作。" /* cnb.z(-89283780148010L)  */);
-                ae aeVar = cyj.f;
+                AbstractRandom aeVar = cyj.RANDOM;
                 String str = (String) StaticHelpers5.q(listAg);
                 String strZ10 = "确定" /* "确定" /* "确定" /* cnb.z(-89154931129130L)  */;
                 String strZ11 = "取消" /* "取消" /* "取消" /* cnb.z(-89159226096426L)  */;
@@ -765,7 +765,7 @@ public final /* synthetic */ class bn implements IInvokable {
                     }
                     sb.append("(" + groupInfo.getGroupData().getMemberCount() + ')');
                     arrayList4.add(new adx(roomId, sb.toString(), groupInfo.getRoomId(),
-                            fr.a.n().contains(groupInfo.getRoomId())));
+                            fr.a.getStringSet().contains(groupInfo.getRoomId())));
                 }
                 aelVar2.m(strZ12, arrayList4);
                 aelVar2.g = R.drawable.ic_contact_confirm_24dp;

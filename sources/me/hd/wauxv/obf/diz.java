@@ -19,7 +19,7 @@ public final class diz extends SwitchHook implements boa, IDatabaseOperationsLis
     public static Set m(long j) {
         Object next;
         StringBuilder sb;
-        Iterator it = diy.a.n().iterator();
+        Iterator it = diy.a.getStringSet().iterator();
         do {
             if (!it.hasNext()) {
                 next = null;

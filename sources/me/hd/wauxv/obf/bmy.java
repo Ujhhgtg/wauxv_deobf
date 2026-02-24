@@ -1108,7 +1108,7 @@ public abstract class bmy {
                 cgz.c, PanelEmojiHook.INSTANCE,
                 cww.a, cxg.a, cxl.a, dhm.a, die.a, bcu.a, ble.a, blg.a, blh.a, blk.a, blm.a, blo.a, cud.a, fs.a,
                 CustomUnReadCountHook.a,
-                azr.a, elx.a, un.a, uo.a, cie.a, cif.a, fp.a, cnl.a, bjm.a, bjx.a, atx.a, bxj.a, etr.a, dlv.a,
+                azr.a, elx.a, un.a, uo.a, cie.a, cif.a, fp.a, cnl.a, GroupOwnerTitleHook.a, bjx.a, atx.a, bxj.a, etr.a, dlv.a,
                 RemoveMultiSelectLimitHook.a,
                 dax.a, day.a, dbe.a, aun.a, MsgForwardSnsHook.INSTANCE, chc.a, etl.a, etw.a, ctp.b, cxb.b, zr.a, cha.a, crm.a, QuickKillHook.a, cez.b,
                 cfa.b, cfc.b, AutoCleanHook.INSTANCE, md.a, zw.a, DisableBrightnessHook.a, cdo.a, cho.a, deu.a, dha.a, dpf.a, dad.a,

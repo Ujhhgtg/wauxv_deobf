@@ -91,14 +91,10 @@ public final /* synthetic */ class fq implements Function2 {
                     abjVar = new abj(afyVar, new abj(ahfVar2, ahhVar_t2));
                 }
                 return abjVar;
-            case 4:
-                return ((ahh) obj)._v((ahf) obj2);
-            case 5:
+            case 4, 5:
                 return ((ahh) obj)._v((ahf) obj2);
             case 6:
-                Boolean bool = (Boolean) obj;
-                bool.booleanValue();
-                return bool;
+                return obj;
             case 7:
                 MsgInfoBean msgInfoBean = (MsgInfoBean) obj2;
                 Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;

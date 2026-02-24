@@ -111,7 +111,7 @@ public final /* synthetic */ class djk implements IInvokable {
                 DexFinder.setClassEquals(cdjVar3, "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* "com.tencent.mm.plugin.mvvmlist.MvvmList" /* cnb.z(-556339998751530L)  */);
                 cls3 = Void.class;
                 Class<Void> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
-                cdjVar3.r(clsBf2 != null ? clsBf2 : Void.class);
+                cdjVar3.setReturnType(clsBf2 != null ? clsBf2 : Void.class);
                 cdjVar3.usingStrings("submitRefreshAll" /* "submitRefreshAll" /* "submitRefreshAll" /* cnb.z(-556168200059690L)  */);
                 dexMethodQueryBuilderVar3.getClass();
                 dexMethodQueryBuilderVar3.dexFinder = cdjVar3;
@@ -126,7 +126,7 @@ public final /* synthetic */ class djk implements IInvokable {
                 cls = clsBf3 != null ? clsBf3 : String.class;
                 cls4 = Integer.class;
                 Class<Integer> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls4));
-                cdjVar4.q(cls, clsBf4 != null ? clsBf4 : Integer.class);
+                cdjVar4.setParamTypes(cls, clsBf4 != null ? clsBf4 : Integer.class);
                 MethodMatcher fjVar = new MethodMatcher();
                 DexFinder cdjVar5 = new DexFinder();
                 cdjVar5.usingStrings("produceMediaObjByPath" /* "produceMediaObjByPath" /* "produceMediaObjByPath" /* cnb.z(-352380591799082L)  */,
@@ -151,7 +151,7 @@ public final /* synthetic */ class djk implements IInvokable {
                     clsBf5 = cls;
                 }
                 Class<String> clsBf6 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
-                cdjVar7.q(clsBf5, clsBf6 != null ? clsBf6 : String.class);
+                cdjVar7.setParamTypes(clsBf5, clsBf6 != null ? clsBf6 : String.class);
                 cdjVar7.usingStrings("MicroMsg.snsMediaStorage" /* "MicroMsg.snsMediaStorage" /* "MicroMsg.snsMediaStorage" /* cnb.z(-377939942177578L)  */,
                         "convertImg2WxamWithoutZip origPath:%s OutOfMemoryError! rollback" /*
                                                                                             * "convertImg2WxamWithoutZip origPath:%s OutOfMemoryError! rollback" /* "convertImg2WxamWithoutZip origPath:%s OutOfMemoryError! rollback" /* cnb.z(-377832567995178L)  */
@@ -279,7 +279,7 @@ public final /* synthetic */ class djk implements IInvokable {
                             LinearLayout linearLayout2 = (LinearLayout) viewK2;
                             bqr bqrVar = new bqr(linearLayout2, materialRadioButton, materialRadioButton2, radioGroup,
                                     3);
-                            int iK = dkk.a.k();
+                            int iK = dkk.a.getInt();
                             if (iK == dkj.a.d) {
                                 materialRadioButton.setChecked(true);
                             } else if (iK == dkj.b.d) {
@@ -303,7 +303,7 @@ public final /* synthetic */ class djk implements IInvokable {
                         /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-659878775356202L)  */.concat(viewK2.getResources().getResourceName(i6)));
             case 18:
                 HookParam hookParam2 = (HookParam) obj;
-                if (dkk.a.k() == dkj.a.d) {
+                if (dkk.a.getInt() == dkj.a.d) {
                     hookParam2.getClass();
                     try {
                         objX = hookParam2.getArgs()[0];
@@ -357,7 +357,7 @@ public final /* synthetic */ class djk implements IInvokable {
                 return kotlinUnitVar;
             case 19:
                 HookParam hookParam3 = (HookParam) obj;
-                if (dkk.a.k() == dkj.b.d) {
+                if (dkk.a.getInt() == dkj.b.d) {
                     hookParam3.getClass();
                     try {
                         objX4 = hookParam3.getArgs()[0];

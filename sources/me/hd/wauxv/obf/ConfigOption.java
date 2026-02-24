@@ -5,7 +5,7 @@ import java.util.Set;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public abstract class akf {
+public abstract class ConfigOption {
     public final String b;
     public final Set c;
     public final boolean d;
@@ -14,7 +14,7 @@ public abstract class akf {
     public final long g;
     public final Kotlin$Lazy h;
 
-    public akf(String str, String str2, Set set, boolean z, int i, float f, long j, int i2) {
+    public ConfigOption(String str, String str2, Set set, boolean z, int i, float f, long j, int i2) {
         str2 = (i2 & 2) != 0 ? "" /* "" /* "" /* "" /* cnb.z(-5514738006826L)   */ : str2;
         set = (i2 & 4) != 0 ? new LinkedHashSet() : set;
         z = (i2 & 8) != 0 ? false : z;
@@ -48,7 +48,7 @@ public abstract class akf {
         throw new IllegalArgumentException("DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)   */.toString());
     }
 
-    public final int k() {
+    public final int getInt() {
         String strM = m();
         DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar != null) {
@@ -57,7 +57,7 @@ public abstract class akf {
         throw new IllegalArgumentException("DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* "DefaultConfig must be init" /* cnb.z(-5763846109994L)   */.toString());
     }
 
-    public final long l() {
+    public final long getLong() {
         String strM = m();
         DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar != null) {
@@ -70,7 +70,7 @@ public abstract class akf {
         return (String) this.h.getValue();
     }
 
-    public final Set n() {
+    public final Set getStringSet() {
         String strM = m();
         DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar == null) {
@@ -119,7 +119,7 @@ public abstract class akf {
         ioVar.aj().putInt(strM, i);
     }
 
-    public final void s(long j) {
+    public final void setLong(long j) {
         String strM = m();
         DefaultConfig ioVar = HugeSyntheticPileOfHelpers.ah;
         if (ioVar == null) {

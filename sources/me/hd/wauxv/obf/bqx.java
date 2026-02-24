@@ -303,7 +303,7 @@ public final class bqx extends czd implements czi {
     }
 
     public final void ao(SomeView someViewVar) {
-        akf akfVar;
+        ConfigOption akfVar;
         int bottom;
         int iAbs;
         int top;

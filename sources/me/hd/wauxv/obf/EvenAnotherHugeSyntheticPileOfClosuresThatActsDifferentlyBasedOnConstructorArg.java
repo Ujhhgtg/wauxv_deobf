@@ -735,15 +735,15 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                                                                                                     textInputEditText18
                                                                                                             .setText(
                                                                                                                     String.valueOf(
-                                                                                                                            cgj.a.k()));
+                                                                                                                            cgj.a.getInt()));
                                                                                                     textInputEditText21
                                                                                                             .setText(
                                                                                                                     String.valueOf(
-                                                                                                                            cgm.a.k()));
+                                                                                                                            cgm.a.getInt()));
                                                                                                     textInputEditText17
                                                                                                             .setText(
                                                                                                                     String.valueOf(
-                                                                                                                            cgi.a.k()));
+                                                                                                                            cgi.a.getInt()));
                                                                                                     materialCheckBox
                                                                                                             .setChecked(
                                                                                                                     cgn.a.i());

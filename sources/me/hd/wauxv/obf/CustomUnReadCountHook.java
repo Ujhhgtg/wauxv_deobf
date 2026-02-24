@@ -34,7 +34,7 @@ public final class CustomUnReadCountHook extends SwitchHook implements IDatabase
         if (getIsEnabled() && str.equals("rconversation" /* "rconversation" /* "rconversation" /* cnb.z(-490644178991914L)  */)
                 && nullSafeIsEqual(contentValues.get("unReadCount" /* "unReadCount" /* "unReadCount" /* cnb.z(-490566869580586L)  */), 1)
                 && nullSafeIsEqual(contentValues.get("atCount" /* "atCount" /* "atCount" /* cnb.z(-490549689711402L)  */), 0)) {
-            contentValues.put("unReadCount" /* "unReadCount" /* "unReadCount" /* cnb.z(-490515329973034L)  */, Integer.valueOf(ait.a.k()));
+            contentValues.put("unReadCount" /* "unReadCount" /* "unReadCount" /* cnb.z(-490515329973034L)  */, Integer.valueOf(ait.a.getInt()));
         }
     }
 

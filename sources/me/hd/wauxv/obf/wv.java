@@ -13,7 +13,28 @@ public final class wv extends ApiHookItem implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        StaticHelpers7.resolveDexAndCache(wt.a, dexKitBridge, new us(27));
-        StaticHelpers7.resolveDexAndCache(wu.a, dexKitBridge, new us(28));
+        StaticHelpers7.resolveDexAndCache(ChatRoomMember$ClassChatRoomMember.INSTANCE, dexKitBridge,
+                (obj -> {
+                    ((FindDexClassMethodDslWrapper) obj).onClassCallback = (obj1 -> {
+                        DexClassQueryBuilder dexClassQueryBuilderVar = (DexClassQueryBuilder) obj1;
+                        String[] strArr4 = { "com.tencent.mm.storage" };
+                        dexClassQueryBuilderVar.getClass();
+                        dexClassQueryBuilderVar.strings = SomeStaticHelpers.arrayToList(strArr4);
+                        DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
+                        zbVar.usingEqStrings("MicroMsg.ChatRoomMember", "service is null");
+                        dexClassQueryBuilderVar.methodGroupMatcher = zbVar;
+                    })
+                }));
+        StaticHelpers7.resolveDexAndCache(ChatRoomMember$MethodGetChatRoomData.INSTANCE, dexKitBridge,
+                (obj -> {
+                    ((FindDexClassMethodDslWrapper) obj).onClassCallback = (obj1 ->  {
+                        final HookParam bah5 = (HookParam)obj1;
+                        final Object d8 = new Object();
+                        ((cdj)d8).o(emn.az((amn)wt.a));
+                        ((cdj)d8).t(new String[] { "MicroMsg.ChatRoomMember", "getChatroomData hashMap is null!" });
+                        bah5.getClass();
+                        bah5.d = (cdj)d8;
+                    })
+                }));
     }
 }

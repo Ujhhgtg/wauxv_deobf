@@ -118,7 +118,7 @@ public final /* synthetic */ class atn implements IInvokable {
                                                                     materialRadioButton6, materialRadioButton7,
                                                                     materialRadioButton8, materialRadioButton9,
                                                                     radioGroup, radioGroup2);
-                                                            int iK = atw.a.k();
+                                                            int iK = atw.a.getInt();
                                                             if (iK == atu.a.f) {
                                                                 materialRadioButton7.setChecked(true);
                                                             } else if (iK == atu.b.f) {
@@ -126,7 +126,7 @@ public final /* synthetic */ class atn implements IInvokable {
                                                             } else if (iK == atu.c.f) {
                                                                 materialRadioButton9.setChecked(true);
                                                             }
-                                                            int iK2 = atv.a.k();
+                                                            int iK2 = atv.a.getInt();
                                                             if (iK2 == atr.a.i) {
                                                                 materialRadioButton.setChecked(true);
                                                             } else if (iK2 == atr.b.i) {
@@ -180,13 +180,13 @@ public final /* synthetic */ class atn implements IInvokable {
                 if (clsBf == null) {
                     clsBf = cls2;
                 }
-                cdjVar.r(clsBf);
+                cdjVar.setReturnType(clsBf);
                 Class<Integer> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 if (clsBf2 == null) {
                     clsBf2 = cls2;
                 }
                 Class<Integer> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
-                cdjVar.q(clsBf2, clsBf3 != null ? clsBf3 : Integer.class);
+                cdjVar.setParamTypes(clsBf2, clsBf3 != null ? clsBf3 : Integer.class);
                 MethodMatcher fjVar = new MethodMatcher();
                 DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.s("currentTimeMillis" /* "currentTimeMillis" /* "currentTimeMillis" /* cnb.z(-507312947067690L)  */);
@@ -267,14 +267,14 @@ public final /* synthetic */ class atn implements IInvokable {
                                                         hookParam.callOriginalMethod();
                                                         break;
                                                     case 1:
-                                                        atw.a.r(cyj.f._bi(3));
+                                                        atw.a.r(cyj.RANDOM._bi(3));
                                                         hookParam.callOriginalMethod();
                                                         break;
                                                     case 2:
                                                         hookParam.callOriginalMethod();
                                                         break;
                                                     default:
-                                                        atv.a.r(cyj.f._bi(6));
+                                                        atv.a.r(cyj.RANDOM._bi(6));
                                                         hookParam.callOriginalMethod();
                                                         break;
                                                 }
@@ -292,14 +292,14 @@ public final /* synthetic */ class atn implements IInvokable {
                                                 hookParam.callOriginalMethod();
                                                 break;
                                             case 1:
-                                                atw.a.r(cyj.f._bi(3));
+                                                atw.a.r(cyj.RANDOM._bi(3));
                                                 hookParam.callOriginalMethod();
                                                 break;
                                             case 2:
                                                 hookParam.callOriginalMethod();
                                                 break;
                                             default:
-                                                atv.a.r(cyj.f._bi(6));
+                                                atv.a.r(cyj.RANDOM._bi(6));
                                                 hookParam.callOriginalMethod();
                                                 break;
                                         }
@@ -339,14 +339,14 @@ public final /* synthetic */ class atn implements IInvokable {
                                                         hookParam.callOriginalMethod();
                                                         break;
                                                     case 1:
-                                                        atw.a.r(cyj.f._bi(3));
+                                                        atw.a.r(cyj.RANDOM._bi(3));
                                                         hookParam.callOriginalMethod();
                                                         break;
                                                     case 2:
                                                         hookParam.callOriginalMethod();
                                                         break;
                                                     default:
-                                                        atv.a.r(cyj.f._bi(6));
+                                                        atv.a.r(cyj.RANDOM._bi(6));
                                                         hookParam.callOriginalMethod();
                                                         break;
                                                 }
@@ -361,14 +361,14 @@ public final /* synthetic */ class atn implements IInvokable {
                                                         hookParam.callOriginalMethod();
                                                         break;
                                                     case 1:
-                                                        atw.a.r(cyj.f._bi(3));
+                                                        atw.a.r(cyj.RANDOM._bi(3));
                                                         hookParam.callOriginalMethod();
                                                         break;
                                                     case 2:
                                                         hookParam.callOriginalMethod();
                                                         break;
                                                     default:
-                                                        atv.a.r(cyj.f._bi(6));
+                                                        atv.a.r(cyj.RANDOM._bi(6));
                                                         hookParam.callOriginalMethod();
                                                         break;
                                                 }
@@ -407,9 +407,9 @@ public final /* synthetic */ class atn implements IInvokable {
                 Object objF = hookParam2.getResult();
                 Integer numValueOf = (Integer) (objF instanceof Integer ? objF : null);
                 if (iIntValue == 2) {
-                    numValueOf = Integer.valueOf(atw.a.k());
+                    numValueOf = Integer.valueOf(atw.a.getInt());
                 } else if (iIntValue == 5) {
-                    numValueOf = Integer.valueOf(atv.a.k());
+                    numValueOf = Integer.valueOf(atv.a.getInt());
                 }
                 hookParam2.setResult(numValueOf);
                 return kotlinUnitVar;
@@ -552,7 +552,7 @@ public final /* synthetic */ class atn implements IInvokable {
                 if (clsBf5 == null) {
                     clsBf5 = cls;
                 }
-                cdjVar6.r(clsBf5);
+                cdjVar6.setReturnType(clsBf5);
                 Class<String> clsBf6 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 if (clsBf6 == null) {
                     clsBf6 = cls;
@@ -561,7 +561,7 @@ public final /* synthetic */ class atn implements IInvokable {
                 cls = clsBf7 != null ? clsBf7 : String.class;
                 cls3 = Boolean.class;
                 Class<Boolean> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
-                cdjVar6.q(clsBf6, cls, clsBf8 != null ? clsBf8 : Boolean.class);
+                cdjVar6.setParamTypes(clsBf6, cls, clsBf8 != null ? clsBf8 : Boolean.class);
                 cdjVar6.usingStrings("MicroMsg.ExptService" /* "MicroMsg.ExptService" /* "MicroMsg.ExptService" /* cnb.z(-36588826393386L)  */,
                         "Fail to query value, return default value '%s' instead." /* "Fail to query value, return default value '%s' instead." /* "Fail to query value, return default value '%s' instead." /* cnb.z(-42528766163754L)  */);
                 dexMethodQueryBuilderVar4.getClass();
@@ -582,7 +582,7 @@ public final /* synthetic */ class atn implements IInvokable {
                 Object obj5 = objX5 instanceof Failure ? null : objX5;
                 throwIfVar1IsNull(obj5);
                 ContextMenu contextMenu = (ContextMenu) obj5;
-                if (cnb.ab(ewk.b) || cnb.ac(ewh.c)) {
+                if (cnb.isNewerThanArgVerAndNotPlay(ewk.b) || cnb.isNewerThanArgVerAndPlay(ewh.c)) {
                     int i8 = 0;
                     FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(contextMenu).createFieldResolver();
                     fieldResolverVarR3.fieldType = dal.getKClassFromClass(Context.class);
@@ -714,7 +714,7 @@ public final /* synthetic */ class atn implements IInvokable {
                 dexMethodQueryBuilderVar6.getClass();
                 dexMethodQueryBuilderVar6.searchedPackages = SomeStaticHelpers.arrayToList(strArr4);
                 DexFinder cdjVar8 = new DexFinder();
-                cdjVar8.usingStrings("MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* cnb.z(-43782896614186L)  */, (cnb.ab(ewk.b) || cnb.ac(ewh.c))
+                cdjVar8.usingStrings("MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* cnb.z(-43782896614186L)  */, (cnb.isNewerThanArgVerAndNotPlay(ewk.b) || cnb.isNewerThanArgVerAndPlay(ewh.c))
                         ? "[OnCreateContextMMMenu] pos = "
                         /* "[OnCreateContextMMMenu] pos = " /* "[OnCreateContextMMMenu] pos = " /* cnb.z(-43125766617898L)  */ : "onCreateContextMenu() pos:%s id:%s fav_id:%s" /*
                                                                                                         * cnb.z(-

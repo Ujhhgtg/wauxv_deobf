@@ -13,7 +13,6 @@ import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import me.hd.wauxv.R;
@@ -356,7 +355,7 @@ public final /* synthetic */ class bty implements IInvokable {
                 cdjVar7.setDeclaredClassName(StaticHelpers7.toDexClass(MMKernel$ClassMMKernel.INSTANCE));
                 cls = Class.class;
                 Class<Class> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
-                cdjVar7.q(clsBf != null ? clsBf : Class.class);
+                cdjVar7.setParamTypes(clsBf != null ? clsBf : Class.class);
                 dexMethodQueryBuilderVar7.getClass();
                 dexMethodQueryBuilderVar7.dexFinder = cdjVar7;
                 return kotlinUnitVar;
@@ -379,7 +378,7 @@ public final /* synthetic */ class bty implements IInvokable {
                 Class clsB = cvh.a.b();
                 cls2 = Integer.class;
                 Class<Integer> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
-                cdjVar8.q(clsB, clsBf2 != null ? clsBf2 : Integer.class);
+                cdjVar8.setParamTypes(clsB, clsBf2 != null ? clsBf2 : Integer.class);
                 MethodMatcher fjVar = new MethodMatcher();
                 DexFinder cdjVar9 = new DexFinder();
                 cdjVar9.s("notifyDataSetChanged" /* "notifyDataSetChanged" /* "notifyDataSetChanged" /* cnb.z(-101850854456106L)  */);

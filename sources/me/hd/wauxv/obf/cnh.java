@@ -388,10 +388,9 @@ public abstract class cnh {
     }
 
     public static final Integer u(Object obj, String str) {
-        String strZ = "id" /* "id" /* "id" /* cnb.z(-71932112272170L)  */;
+        String strZ = "id";
         if (obj instanceof View) {
             Resources resources = ((View) obj).getResources();
-            HostInfoRegistry.INSTANCE.getClass();
             return Integer.valueOf(resources.getIdentifier(str, strZ, HostInfoRegistry.getPackageName()));
         }
         if (!(obj instanceof Context)) {

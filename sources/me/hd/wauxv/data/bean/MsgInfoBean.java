@@ -8,24 +8,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import me.hd.wauxv.obf.OtherStaticHelpers;
-import me.hd.wauxv.obf.acv;
-import me.hd.wauxv.obf.EmptyReadonlyList;
-import me.hd.wauxv.obf.FieldResolver;
-import me.hd.wauxv.obf.BoundField;
-import me.hd.wauxv.obf.bjs;
-import me.hd.wauxv.obf.dgg;
-import me.hd.wauxv.obf.dnc;
-import me.hd.wauxv.obf.StringsKt;
-import me.hd.wauxv.obf.dnq;
-import me.hd.wauxv.obf.dnr;
-import me.hd.wauxv.obf.dqc;
-import me.hd.wauxv.obf.eom;
-import me.hd.wauxv.obf.ewg;
-import me.hd.wauxv.obf.ri;
-import me.hd.wauxv.obf.wv;
-import me.hd.wauxv.obf.xp;
-import me.hd.wauxv.obf.yg;
+
+import me.hd.wauxv.obf.*;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
@@ -420,7 +404,7 @@ public final class MsgInfoBean {
         xp xpVar = xp.a;
         String str = this.talker;
         xpVar.getClass();
-        Object objB = xp.b(str);
+        Object objB = xp.getChatroomMember(str);
         if (objB != null) {
             wv.a.getClass();
             int i = 0;
@@ -675,25 +659,23 @@ public final class MsgInfoBean {
 
         public PatMsg(JSONObject jSONObject) {
             this.json = jSONObject;
-            this.talker = bjs.k(-2628519983914L, jSONObject);
+            this.talker = String.valueOf(jSONObject.getByPath("msg.appmsg.patMsg.chatUser"));
             this.recordNum = Integer.parseInt(String
-                    .valueOf(jSONObject.getByPath("msg.appmsg.patMsg.records.recordNum" /* "msg.appmsg.patMsg.records.recordNum" /* "msg.appmsg.patMsg.records.recordNum" /* cnb.z(-2529735736106L)  */)));
-            this.fromUser = bjs.k(-3990024616746L, getRecordObj());
-            this.pattedUser = bjs.k(-3968549780266L, getRecordObj());
-            this.template = bjs.k(-3938485009194L, getRecordObj());
-            this.createTime = Long.parseLong(String.valueOf(getRecordObj().getByPath("createTime" /*
-                                                                                                   * cnb.z(-
-                                                                                                   * 3917010172714L)
-                                                                                                   */)));
-            this.readStatus = Integer.parseInt(String.valueOf(getRecordObj().getByPath("readStatus" /*
-                                                                                                     * cnb.z(-
-                                                                                                     * 4367981738794L)
-                                                                                                     */)));
-            this.svrId = Long.parseLong(String.valueOf(getRecordObj().getByPath("svrId" /* "svrId" /* "svrId" /* cnb.z(-4355096836906L)  */)));
-            this.showModifyTip = Integer.parseInt(String.valueOf(getRecordObj().getByPath("showModifyTip" /*
-                                                                                                           * cnb.z(-
-                                                                                                           * 4312147163946L)
-                                                                                                           */)));
+                    .valueOf(jSONObject.getByPath("msg.appmsg.patMsg.records.recordNum")));
+            this.fromUser = String.valueOf(getRecordObj().getByPath("fromUser"));
+            this.pattedUser = String.valueOf(getRecordObj().getByPath("pattedUser"));
+            this.template = String.valueOf(getRecordObj().getByPath("template"));
+            this.createTime = Long.parseLong(String.valueOf(getRecordObj().getByPath("createTime")));
+            this.readStatus = Integer.parseInt(String.valueOf(getRecordObj().getByPath("readStatus")));
+            this.svrId = Long.parseLong(String.valueOf(getRecordObj().getByPath("svrId")));
+            this.showModifyTip = Integer.parseInt(String.valueOf(getRecordObj().getByPath("showModifyTip")));
+        }
+        public final JSONObject getRecordObj() {
+            Object byPath = this.json.getByPath("msg.appmsg.patMsg.records.record");
+            if (byPath instanceof JSONArray) {
+                return ((JSONArray) byPath).getJSONObject(0);
+            }
+            return (JSONObject) byPath;
         }
 
         public final long getCreateTime() {
@@ -720,17 +702,6 @@ public final class MsgInfoBean {
             return this.recordNum;
         }
 
-        public final JSONObject getRecordObj() {
-            Object byPath = this.json.getByPath("msg.appmsg.patMsg.records.record" /* "msg.appmsg.patMsg.records.record" /* "msg.appmsg.patMsg.records.record" /* cnb.z(-4234837752618L)  */);
-            if (byPath instanceof JSONArray) {
-                return ((JSONArray) byPath).getJSONObject(0);
-            }
-            throwIfVar1IsNull(byPath, "null cannot be cast to non-null type com.alibaba.fastjson2.JSONObject" /*
-                                                                                                               * cnb.z(-
-                                                                                                               * 3543348017962L)
-                                                                                                               */);
-            return (JSONObject) byPath;
-        }
 
         public final int getShowModifyTip() {
             return this.showModifyTip;

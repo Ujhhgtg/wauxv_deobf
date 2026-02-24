@@ -2,7 +2,7 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes2.dex */
-public final class EcsHardcodeGlobalSwitch extends SwitchHook implements IHandlesHookParam {
+public final class EcsHardcodeGlobalSwitch extends SwitchHook implements IHandlesRepairerConfig {
     public static final EcsHardcodeGlobalSwitch a = new EcsHardcodeGlobalSwitch("EcsHardcodeGlobalSwitch" /*
                                                                                                            * cnb.z(-
                                                                                                            * 614871813061418L)
@@ -11,7 +11,7 @@ public final class EcsHardcodeGlobalSwitch extends SwitchHook implements IHandle
     public static final String c = "服务号盒子全局总开关" /* "服务号盒子全局总开关" /* "服务号盒子全局总开关" /* cnb.z(-615099446328106L)  */;
 
     @Override // me.hd.wauxv.obf.IHandlesHookParam
-    public final void handleHookParam(HookParam hookParam, String str) {
+    public final void handleRepairerConfig(HookParam hookParam, String str) {
         if (getIsEnabled() && str.equals("RepairerConfig_EcsHardcodeGlobalSwitch_Int" /* "RepairerConfig_EcsHardcodeGlobalSwitch_Int" /* "RepairerConfig_EcsHardcodeGlobalSwitch_Int" /* cnb.z(-614768733846314L)  */)) {
             hookParam.setResult(1);
         }

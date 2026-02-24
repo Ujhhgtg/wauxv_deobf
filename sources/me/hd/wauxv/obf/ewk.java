@@ -88,10 +88,10 @@ public enum ewk {
     i(2800),
     /* JADX INFO: Fake field, exist only in values array */
     EF1(2820),
-    j(2840),
+    VER_8058(2840),
     /* JADX INFO: Fake field, exist only in values array */
     EF1(2860),
-    k(2880),
+    VER_8061(2880),
     l(2900),
     /* JADX INFO: Fake field, exist only in values array */
     EF0(2920),
@@ -104,9 +104,9 @@ public enum ewk {
     /* JADX INFO: Fake field, exist only in values array */
     EF1153(3040);
 
-    public final int r;
+    public final int code;
 
     ewk(int i2) {
-        this.r = i2;
+        this.code = i2;
     }
 }

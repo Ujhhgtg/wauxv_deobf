@@ -264,28 +264,28 @@ public abstract class bhs {
     }
 
     public static String v() {
-        return cnb.ac(ewh.q) ? "c00"
-                /* "c00" /* "c00" /* "c00" /* cnb.z(-430351428090666L)   */ : cnb.ac(ewh.o) ? "byy"
-                        /* "byy" /* "byy" /* "byy" /* cnb.z(-430299888483114L)   */ : cnb.ac(ewh.n) ? "by0"
-                                /* "by0" /* "by0" /* "by0" /* cnb.z(-430317068352298L)   */ : cnb.ac(ewh.m) ? "bxb"
-                                        /* "bxb" /* "bxb" /* "bxb" /* cnb.z(-430265528744746L)   */ : cnb.ac(ewh.l) ? "bw2"
-                                                /* "bw2" /* "bw2" /* "bw2" /* cnb.z(-430282708613930L)   */ : cnb.ac(ewh.k) ? "bvi"
-                                                        /* "bvi" /* "bvi" /* "bvi" /* cnb.z(-430231169006378L)   */ : cnb.ac(ewh.j) ? "bv1"
-                                                                /* "bv1" /* "bv1" /* "bv1" /* cnb.z(-430248348875562L)   */ : cnb.ac(ewh.i) ? "bua"
-                                                                        /* "bua" /* "bua" /* "bua" /* cnb.z(-430196809268010L)   */ : cnb.ac(ewh.h)
+        return cnb.isNewerThanArgVerAndPlay(ewh.VER_8064) ? "c00"
+                /* "c00" /* "c00" /* "c00" /* cnb.z(-430351428090666L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8063) ? "byy"
+                        /* "byy" /* "byy" /* "byy" /* cnb.z(-430299888483114L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8061_PATCH) ? "by0"
+                                /* "by0" /* "by0" /* "by0" /* cnb.z(-430317068352298L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8061) ? "bxb"
+                                        /* "bxb" /* "bxb" /* "bxb" /* cnb.z(-430265528744746L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8060) ? "bw2"
+                                                /* "bw2" /* "bw2" /* "bw2" /* cnb.z(-430282708613930L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8058) ? "bvi"
+                                                        /* "bvi" /* "bvi" /* "bvi" /* cnb.z(-430231169006378L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8057) ? "bv1"
+                                                                /* "bv1" /* "bv1" /* "bv1" /* cnb.z(-430248348875562L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8056) ? "bua"
+                                                                        /* "bua" /* "bua" /* "bua" /* cnb.z(-430196809268010L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.h)
                                                                                 ? "btt"
                                                                                 /* "btt" /* "btt" /* "btt" /* cnb.z(-430213989137194L)   */ : cnb
-                                                                                        .ac(ewh.g)
+                                                                                        .isNewerThanArgVerAndPlay(ewh.g)
                                                                                                 ? "bvo"
                                                                                                 /*
                                                                                                  * cnb.z(-
                                                                                                  * 427413670460202L)
-                                                                                                 */ : cnb.ac(ewh.f)
+                                                                                                 */ : cnb.isNewerThanArgVerAndPlay(ewh.f)
                                                                                                         ? "bv9"
                                                                                                         /*
                                                                                                          * cnb.z(-
                                                                                                          * 427430850329386L)
-                                                                                                         */ : cnb.ac(
+                                                                                                         */ : cnb.isNewerThanArgVerAndPlay(
                                                                                                                 ewh.e) ? "br4"
                                                                                                                         /*
                                                                                                                          * cnb
@@ -295,7 +295,7 @@ public abstract class bhs {
                                                                                                                          * -
                                                                                                                          * 427379310721834L)
                                                                                                                          */ : cnb
-                                                                                                                                .ac(ewh.d)
+                                                                                                                                .isNewerThanArgVerAndPlay(ewh.d)
                                                                                                                                         ? "bqj"
                                                                                                                                         /*
                                                                                                                                          * cnb
@@ -305,7 +305,7 @@ public abstract class bhs {
                                                                                                                                          * -
                                                                                                                                          * 427396490591018L)
                                                                                                                                          */ : cnb
-                                                                                                                                                .ac(ewh.c)
+                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.c)
                                                                                                                                                         ? "bm_"
                                                                                                                                                         /*
                                                                                                                                                          * cnb
@@ -315,7 +315,7 @@ public abstract class bhs {
                                                                                                                                                          * -
                                                                                                                                                          * 427344950983466L)
                                                                                                                                                          */ : cnb
-                                                                                                                                                                .ac(ewh.b)
+                                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.b)
                                                                                                                                                                         ? "bi2"
                                                                                                                                                                         /*
                                                                                                                                                                          * cnb
@@ -325,7 +325,7 @@ public abstract class bhs {
                                                                                                                                                                          * -
                                                                                                                                                                          * 427362130852650L)
                                                                                                                                                                          */ : cnb
-                                                                                                                                                                                .ac(ewh.a)
+                                                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.a)
                                                                                                                                                                                         ? "bdx"
                                                                                                                                                                                         /*
                                                                                                                                                                                          * cnb
@@ -335,7 +335,7 @@ public abstract class bhs {
                                                                                                                                                                                          * -
                                                                                                                                                                                          * 427310591245098L)
                                                                                                                                                                                          */ : cnb
-                                                                                                                                                                                                .ab(ewk.c)
+                                                                                                                                                                                                .isNewerThanArgVerAndNotPlay(ewk.c)
                                                                                                                                                                                                         ? "bkl"
                                                                                                                                                                                                         /*
                                                                                                                                                                                                          * cnb
@@ -355,28 +355,28 @@ public abstract class bhs {
     }
 
     public static String w() {
-        return cnb.ac(ewh.q) ? "c91"
-                /* "c91" /* "c91" /* "c91" /* cnb.z(-427293411375914L)   */ : cnb.ac(ewh.o) ? "c7z"
-                        /* "c7z" /* "c7z" /* "c7z" /* cnb.z(-427241871768362L)   */ : cnb.ac(ewh.n) ? "c6w"
-                                /* "c6w" /* "c6w" /* "c6w" /* cnb.z(-427259051637546L)   */ : cnb.ac(ewh.m) ? "c68"
-                                        /* "c68" /* "c68" /* "c68" /* cnb.z(-427207512029994L)   */ : cnb.ac(ewh.l) ? "c52"
-                                                /* "c52" /* "c52" /* "c52" /* cnb.z(-427224691899178L)   */ : cnb.ac(ewh.k) ? "c44"
-                                                        /* "c44" /* "c44" /* "c44" /* cnb.z(-427173152291626L)   */ : cnb.ac(ewh.j) ? "c3h"
-                                                                /* "c3h" /* "c3h" /* "c3h" /* cnb.z(-427190332160810L)   */ : cnb.ac(ewh.i) ? "c2l"
-                                                                        /* "c2l" /* "c2l" /* "c2l" /* cnb.z(-427688548367146L)   */ : cnb.ac(ewh.h)
+        return cnb.isNewerThanArgVerAndPlay(ewh.VER_8064) ? "c91"
+                /* "c91" /* "c91" /* "c91" /* cnb.z(-427293411375914L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8063) ? "c7z"
+                        /* "c7z" /* "c7z" /* "c7z" /* cnb.z(-427241871768362L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8061_PATCH) ? "c6w"
+                                /* "c6w" /* "c6w" /* "c6w" /* cnb.z(-427259051637546L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8061) ? "c68"
+                                        /* "c68" /* "c68" /* "c68" /* cnb.z(-427207512029994L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8060) ? "c52"
+                                                /* "c52" /* "c52" /* "c52" /* cnb.z(-427224691899178L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8058) ? "c44"
+                                                        /* "c44" /* "c44" /* "c44" /* cnb.z(-427173152291626L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8057) ? "c3h"
+                                                                /* "c3h" /* "c3h" /* "c3h" /* cnb.z(-427190332160810L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8056) ? "c2l"
+                                                                        /* "c2l" /* "c2l" /* "c2l" /* cnb.z(-427688548367146L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.h)
                                                                                 ? "c20"
                                                                                 /* "c20" /* "c20" /* "c20" /* cnb.z(-427705728236330L)   */ : cnb
-                                                                                        .ac(ewh.g)
+                                                                                        .isNewerThanArgVerAndPlay(ewh.g)
                                                                                                 ? "c40"
                                                                                                 /*
                                                                                                  * cnb.z(-
                                                                                                  * 427654188628778L)
-                                                                                                 */ : cnb.ac(ewh.f)
+                                                                                                 */ : cnb.isNewerThanArgVerAndPlay(ewh.f)
                                                                                                         ? "c3g"
                                                                                                         /*
                                                                                                          * cnb.z(-
                                                                                                          * 427671368497962L)
-                                                                                                         */ : cnb.ac(
+                                                                                                         */ : cnb.isNewerThanArgVerAndPlay(
                                                                                                                 ewh.e) ? "byr"
                                                                                                                         /*
                                                                                                                          * cnb
@@ -386,7 +386,7 @@ public abstract class bhs {
                                                                                                                          * -
                                                                                                                          * 427619828890410L)
                                                                                                                          */ : cnb
-                                                                                                                                .ac(ewh.d)
+                                                                                                                                .isNewerThanArgVerAndPlay(ewh.d)
                                                                                                                                         ? "by6"
                                                                                                                                         /*
                                                                                                                                          * cnb
@@ -396,7 +396,7 @@ public abstract class bhs {
                                                                                                                                          * -
                                                                                                                                          * 427637008759594L)
                                                                                                                                          */ : cnb
-                                                                                                                                                .ac(ewh.c)
+                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.c)
                                                                                                                                                         ? "bth"
                                                                                                                                                         /*
                                                                                                                                                          * cnb
@@ -406,7 +406,7 @@ public abstract class bhs {
                                                                                                                                                          * -
                                                                                                                                                          * 427585469152042L)
                                                                                                                                                          */ : cnb
-                                                                                                                                                                .ac(ewh.b)
+                                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.b)
                                                                                                                                                                         ? "bp4"
                                                                                                                                                                         /*
                                                                                                                                                                          * cnb
@@ -416,7 +416,7 @@ public abstract class bhs {
                                                                                                                                                                          * -
                                                                                                                                                                          * 427602649021226L)
                                                                                                                                                                          */ : cnb
-                                                                                                                                                                                .ac(ewh.a)
+                                                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.a)
                                                                                                                                                                                         ? "bl0"
                                                                                                                                                                                         /*
                                                                                                                                                                                          * cnb
@@ -426,7 +426,7 @@ public abstract class bhs {
                                                                                                                                                                                          * -
                                                                                                                                                                                          * 427551109413674L)
                                                                                                                                                                                          */ : cnb
-                                                                                                                                                                                                .ab(ewk.c)
+                                                                                                                                                                                                .isNewerThanArgVerAndNotPlay(ewk.c)
                                                                                                                                                                                                         ? "brp"
                                                                                                                                                                                                         /*
                                                                                                                                                                                                          * cnb
@@ -446,28 +446,28 @@ public abstract class bhs {
     }
 
     public static String x() {
-        return cnb.ac(ewh.q) ? "c8x"
-                /* "c8x" /* "c8x" /* "c8x" /* cnb.z(-427533929544490L)   */ : cnb.ac(ewh.o) ? "c7v"
-                        /* "c7v" /* "c7v" /* "c7v" /* cnb.z(-427482389936938L)   */ : cnb.ac(ewh.n) ? "c6s"
-                                /* "c6s" /* "c6s" /* "c6s" /* cnb.z(-427499569806122L)   */ : cnb.ac(ewh.m) ? "c64"
-                                        /* "c64" /* "c64" /* "c64" /* cnb.z(-427448030198570L)   */ : cnb.ac(ewh.l) ? "c4y"
-                                                /* "c4y" /* "c4y" /* "c4y" /* cnb.z(-427465210067754L)   */ : cnb.ac(ewh.k) ? "c40"
-                                                        /* "c40" /* "c40" /* "c40" /* cnb.z(-426863914646314L)   */ : cnb.ac(ewh.j) ? "c3d"
-                                                                /* "c3d" /* "c3d" /* "c3d" /* cnb.z(-426881094515498L)   */ : cnb.ac(ewh.i) ? "c2h"
-                                                                        /* "c2h" /* "c2h" /* "c2h" /* cnb.z(-426829554907946L)   */ : cnb.ac(ewh.h)
+        return cnb.isNewerThanArgVerAndPlay(ewh.VER_8064) ? "c8x"
+                /* "c8x" /* "c8x" /* "c8x" /* cnb.z(-427533929544490L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8063) ? "c7v"
+                        /* "c7v" /* "c7v" /* "c7v" /* cnb.z(-427482389936938L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8061_PATCH) ? "c6s"
+                                /* "c6s" /* "c6s" /* "c6s" /* cnb.z(-427499569806122L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8061) ? "c64"
+                                        /* "c64" /* "c64" /* "c64" /* cnb.z(-427448030198570L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8060) ? "c4y"
+                                                /* "c4y" /* "c4y" /* "c4y" /* cnb.z(-427465210067754L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8058) ? "c40"
+                                                        /* "c40" /* "c40" /* "c40" /* cnb.z(-426863914646314L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8057) ? "c3d"
+                                                                /* "c3d" /* "c3d" /* "c3d" /* cnb.z(-426881094515498L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8056) ? "c2h"
+                                                                        /* "c2h" /* "c2h" /* "c2h" /* cnb.z(-426829554907946L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.h)
                                                                                 ? "c1w"
                                                                                 /* "c1w" /* "c1w" /* "c1w" /* cnb.z(-426846734777130L)   */ : cnb
-                                                                                        .ac(ewh.g)
+                                                                                        .isNewerThanArgVerAndPlay(ewh.g)
                                                                                                 ? "c3w"
                                                                                                 /*
                                                                                                  * cnb.z(-
                                                                                                  * 426795195169578L)
-                                                                                                 */ : cnb.ac(ewh.f)
+                                                                                                 */ : cnb.isNewerThanArgVerAndPlay(ewh.f)
                                                                                                         ? "c3c"
                                                                                                         /*
                                                                                                          * cnb.z(-
                                                                                                          * 426812375038762L)
-                                                                                                         */ : cnb.ac(
+                                                                                                         */ : cnb.isNewerThanArgVerAndPlay(
                                                                                                                 ewh.e) ? "byn"
                                                                                                                         /*
                                                                                                                          * cnb
@@ -477,7 +477,7 @@ public abstract class bhs {
                                                                                                                          * -
                                                                                                                          * 426760835431210L)
                                                                                                                          */ : cnb
-                                                                                                                                .ac(ewh.d)
+                                                                                                                                .isNewerThanArgVerAndPlay(ewh.d)
                                                                                                                                         ? "by2"
                                                                                                                                         /*
                                                                                                                                          * cnb
@@ -487,7 +487,7 @@ public abstract class bhs {
                                                                                                                                          * -
                                                                                                                                          * 426778015300394L)
                                                                                                                                          */ : cnb
-                                                                                                                                                .ac(ewh.c)
+                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.c)
                                                                                                                                                         ? "btd"
                                                                                                                                                         /*
                                                                                                                                                          * cnb
@@ -497,7 +497,7 @@ public abstract class bhs {
                                                                                                                                                          * -
                                                                                                                                                          * 426726475692842L)
                                                                                                                                                          */ : cnb
-                                                                                                                                                                .ac(ewh.b)
+                                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.b)
                                                                                                                                                                         ? "bp0"
                                                                                                                                                                         /*
                                                                                                                                                                          * cnb
@@ -507,7 +507,7 @@ public abstract class bhs {
                                                                                                                                                                          * -
                                                                                                                                                                          * 426743655562026L)
                                                                                                                                                                          */ : cnb
-                                                                                                                                                                                .ac(ewh.a)
+                                                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.a)
                                                                                                                                                                                         ? "bkw"
                                                                                                                                                                                         /*
                                                                                                                                                                                          * cnb
@@ -517,7 +517,7 @@ public abstract class bhs {
                                                                                                                                                                                          * -
                                                                                                                                                                                          * 426692115954474L)
                                                                                                                                                                                          */ : cnb
-                                                                                                                                                                                                .ab(ewk.c)
+                                                                                                                                                                                                .isNewerThanArgVerAndNotPlay(ewk.c)
                                                                                                                                                                                                         ? "brl"
                                                                                                                                                                                                         /*
                                                                                                                                                                                                          * cnb
@@ -537,28 +537,28 @@ public abstract class bhs {
     }
 
     public static String y() {
-        return cnb.ac(ewh.q) ? "c9b"
-                /* "c9b" /* "c9b" /* "c9b" /* cnb.z(-426674936085290L)   */ : cnb.ac(ewh.o) ? "c8_"
-                        /* "c8_" /* "c8_" /* "c8_" /* cnb.z(-426623396477738L)   */ : cnb.ac(ewh.n) ? "c77"
-                                /* "c77" /* "c77" /* "c77" /* cnb.z(-426640576346922L)   */ : cnb.ac(ewh.m) ? "c6i"
-                                        /* "c6i" /* "c6i" /* "c6i" /* cnb.z(-427138792553258L)   */ : cnb.ac(ewh.l) ? "c5c"
-                                                /* "c5c" /* "c5c" /* "c5c" /* cnb.z(-427155972422442L)   */ : cnb.ac(ewh.k) ? "c4e"
-                                                        /* "c4e" /* "c4e" /* "c4e" /* cnb.z(-427104432814890L)   */ : cnb.ac(ewh.j) ? "c3s"
-                                                                /* "c3s" /* "c3s" /* "c3s" /* cnb.z(-427121612684074L)   */ : cnb.ac(ewh.i) ? "c2w"
-                                                                        /* "c2w" /* "c2w" /* "c2w" /* cnb.z(-427070073076522L)   */ : cnb.ac(ewh.h)
+        return cnb.isNewerThanArgVerAndPlay(ewh.VER_8064) ? "c9b"
+                /* "c9b" /* "c9b" /* "c9b" /* cnb.z(-426674936085290L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8063) ? "c8_"
+                        /* "c8_" /* "c8_" /* "c8_" /* cnb.z(-426623396477738L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8061_PATCH) ? "c77"
+                                /* "c77" /* "c77" /* "c77" /* cnb.z(-426640576346922L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8061) ? "c6i"
+                                        /* "c6i" /* "c6i" /* "c6i" /* cnb.z(-427138792553258L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8060) ? "c5c"
+                                                /* "c5c" /* "c5c" /* "c5c" /* cnb.z(-427155972422442L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8058) ? "c4e"
+                                                        /* "c4e" /* "c4e" /* "c4e" /* cnb.z(-427104432814890L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8057) ? "c3s"
+                                                                /* "c3s" /* "c3s" /* "c3s" /* cnb.z(-427121612684074L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8056) ? "c2w"
+                                                                        /* "c2w" /* "c2w" /* "c2w" /* cnb.z(-427070073076522L)   */ : cnb.isNewerThanArgVerAndPlay(ewh.h)
                                                                                 ? "c2a"
                                                                                 /* "c2a" /* "c2a" /* "c2a" /* cnb.z(-427087252945706L)   */ : cnb
-                                                                                        .ac(ewh.g)
+                                                                                        .isNewerThanArgVerAndPlay(ewh.g)
                                                                                                 ? "c4a"
                                                                                                 /*
                                                                                                  * cnb.z(-
                                                                                                  * 427035713338154L)
-                                                                                                 */ : cnb.ac(ewh.f)
+                                                                                                 */ : cnb.isNewerThanArgVerAndPlay(ewh.f)
                                                                                                         ? "c3r"
                                                                                                         /*
                                                                                                          * cnb.z(-
                                                                                                          * 427052893207338L)
-                                                                                                         */ : cnb.ac(
+                                                                                                         */ : cnb.isNewerThanArgVerAndPlay(
                                                                                                                 ewh.e) ? "bz2"
                                                                                                                         /*
                                                                                                                          * cnb
@@ -568,7 +568,7 @@ public abstract class bhs {
                                                                                                                          * -
                                                                                                                          * 427001353599786L)
                                                                                                                          */ : cnb
-                                                                                                                                .ac(ewh.d)
+                                                                                                                                .isNewerThanArgVerAndPlay(ewh.d)
                                                                                                                                         ? "byg"
                                                                                                                                         /*
                                                                                                                                          * cnb
@@ -578,7 +578,7 @@ public abstract class bhs {
                                                                                                                                          * -
                                                                                                                                          * 427018533468970L)
                                                                                                                                          */ : cnb
-                                                                                                                                                .ac(ewh.c)
+                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.c)
                                                                                                                                                         ? "bts"
                                                                                                                                                         /*
                                                                                                                                                          * cnb
@@ -588,7 +588,7 @@ public abstract class bhs {
                                                                                                                                                          * -
                                                                                                                                                          * 426966993861418L)
                                                                                                                                                          */ : cnb
-                                                                                                                                                                .ac(ewh.b)
+                                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.b)
                                                                                                                                                                         ? "bpe"
                                                                                                                                                                         /*
                                                                                                                                                                          * cnb
@@ -598,7 +598,7 @@ public abstract class bhs {
                                                                                                                                                                          * -
                                                                                                                                                                          * 426984173730602L)
                                                                                                                                                                          */ : cnb
-                                                                                                                                                                                .ac(ewh.a)
+                                                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.a)
                                                                                                                                                                                         ? "bla"
                                                                                                                                                                                         /*
                                                                                                                                                                                          * cnb
@@ -608,7 +608,7 @@ public abstract class bhs {
                                                                                                                                                                                          * -
                                                                                                                                                                                          * 426932634123050L)
                                                                                                                                                                                          */ : cnb
-                                                                                                                                                                                                .ab(ewk.c)
+                                                                                                                                                                                                .isNewerThanArgVerAndNotPlay(ewk.c)
                                                                                                                                                                                                         ? "bs0"
                                                                                                                                                                                                         /*
                                                                                                                                                                                                          * cnb

@@ -561,7 +561,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar8 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar8 = new DexFinder();
                 Class<String> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
-                cdjVar8.q(clsBf4 != null ? clsBf4 : String.class);
+                cdjVar8.setParamTypes(clsBf4 != null ? clsBf4 : String.class);
                 cdjVar8.usingStrings("getByLocalId" /* "getByLocalId" /* "getByLocalId" /* "getByLocalId" /* cnb.z(-376969279568682L)   */,
                         "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* "com.tencent.mm.plugin.sns.storage.SnsInfoStorage" /* cnb.z(-376947804732202L)   */);
                 dexMethodQueryBuilderVar8.getClass();

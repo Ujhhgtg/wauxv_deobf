@@ -13,14 +13,14 @@ public final class eop extends ApiHookItem {
         int i = drv.a;
         long jCurrentTimeMillis = System.currentTimeMillis();
         eon eonVar = eon.a;
-        long jL = eonVar.l();
+        long jL = eonVar.getLong();
         if (jL == 0) {
             eoo.a.r(1);
-            eonVar.s(jCurrentTimeMillis);
+            eonVar.setLong(jCurrentTimeMillis);
         } else if (Duration.between(Instant.ofEpochMilli(jL), Instant.ofEpochMilli(jCurrentTimeMillis)).toDays() >= 1) {
             eoo eooVar = eoo.a;
-            eooVar.r(eooVar.k() + 1);
-            eonVar.s(jCurrentTimeMillis);
+            eooVar.r(eooVar.getInt() + 1);
+            eonVar.setLong(jCurrentTimeMillis);
         }
     }
 }

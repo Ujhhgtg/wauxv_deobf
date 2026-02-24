@@ -59,12 +59,12 @@ public final /* synthetic */ class dbj implements IInvokable {
                 if (clsBf == null) {
                     clsBf = cls;
                 }
-                cdjVar.r(clsBf);
+                cdjVar.setReturnType(clsBf);
                 cls2 = String.class;
                 Class<String> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cls2 = clsBf2 != null ? clsBf2 : String.class;
                 Class<Object> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
-                cdjVar.q(cls2, clsBf3 != null ? clsBf3 : Object.class);
+                cdjVar.setParamTypes(cls2, clsBf3 != null ? clsBf3 : Object.class);
                 cdjVar.usingStrings("String" /* "String" /* "String" /* cnb.z(-55147380079402L)  */, "Int" /* "Int" /* "Int" /* cnb.z(-55100135439146L)  */,
                         "Long" /* "Long" /* "Long" /* cnb.z(-55048595831594L)  */, "Float" /* "Float" /* "Float" /* cnb.z(-55078660602666L)  */);
                 dexMethodQueryBuilderVar.getClass();
@@ -120,7 +120,7 @@ public final /* synthetic */ class dbj implements IInvokable {
                 cls5 = clsBf6 != null ? clsBf6 : Float.class;
                 cls6 = Boolean.class;
                 Class<Boolean> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls6));
-                cdjVar3.q(cls3, cls4, cls5, clsBf7 != null ? clsBf7 : Boolean.class);
+                cdjVar3.setParamTypes(cls3, cls4, cls5, clsBf7 != null ? clsBf7 : Boolean.class);
                 cdjVar3.usingStrings("MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* "MicroMsg.AvatarDrawable" /* cnb.z(-455657375398698L)  */);
                 dexMethodQueryBuilderVar3.getClass();
                 dexMethodQueryBuilderVar3.dexFinder = cdjVar3;
@@ -185,7 +185,7 @@ public final /* synthetic */ class dbj implements IInvokable {
                 cls7 = clsBf8 != null ? clsBf8 : Runnable.class;
                 cls8 = String.class;
                 Class<String> clsBf9 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls8));
-                cdjVar5.q(cls7, clsBf9 != null ? clsBf9 : String.class);
+                cdjVar5.setParamTypes(cls7, clsBf9 != null ? clsBf9 : String.class);
                 dexMethodQueryBuilderVar5.getClass();
                 dexMethodQueryBuilderVar5.dexFinder = cdjVar5;
                 return Kotlin$Unit.INSTANCE;
@@ -269,7 +269,7 @@ public final /* synthetic */ class dbj implements IInvokable {
                 return Kotlin$Unit.INSTANCE;
             case 20:
                 throwIfVar1IsNull(obj, "it");
-                return Integer.valueOf(cyj.f.c(2147418112) + 65536);
+                return Integer.valueOf(cyj.RANDOM.c(2147418112) + 65536);
             case 21:
                 return Boolean.valueOf(obj == null);
             case 22:

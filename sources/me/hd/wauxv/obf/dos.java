@@ -51,12 +51,12 @@ public final /* synthetic */ class dos implements IInvokable {
                 if (clsBf == null) {
                     clsBf = cls;
                 }
-                cdjVar.r(clsBf);
+                cdjVar.setReturnType(clsBf);
                 cls2 = String.class;
                 Class<String> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cls2 = clsBf2 != null ? clsBf2 : String.class;
                 Class<Object> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
-                cdjVar.q(cls2, clsBf3 != null ? clsBf3 : Object.class);
+                cdjVar.setParamTypes(cls2, clsBf3 != null ? clsBf3 : Object.class);
                 dexMethodQueryBuilderVar.getClass();
                 dexMethodQueryBuilderVar.dexFinder = cdjVar;
                 return Kotlin$Unit.INSTANCE;
@@ -92,17 +92,17 @@ public final /* synthetic */ class dos implements IInvokable {
                                             final bqr bqrVar = new bqr(linearLayout, materialButton, textInputEditText,
                                                     materialRadioButton, materialRadioButton2, radioGroup,
                                                     recyclerView);
-                                            dpd dpdVar = dpd.a;
-                                            int iK = dpdVar.k();
+                                            SystemBrowserHook$ValMode dpdVar = SystemBrowserHook$ValMode.INSTANCE;
+                                            int iK = dpdVar.getInt();
                                             doz dozVar = doz.a;
                                             if (iK == dozVar.d) {
                                                 materialRadioButton2.setChecked(true);
                                             } else if (iK == doz.b.d) {
                                                 materialRadioButton.setChecked(true);
                                             }
-                                            int iK2 = dpdVar.k();
-                                            final ArrayList arrayListAb = iK2 == dozVar.d ? StaticHelpers5.ab(dpe.a.n())
-                                                    : iK2 == doz.b.d ? StaticHelpers5.ab(dpc.a.n()) : new ArrayList();
+                                            int iK2 = dpdVar.getInt();
+                                            final ArrayList arrayListAb = iK2 == dozVar.d ? StaticHelpers5.ab(SystemBrowserHook$ValWhiteHost.INSTANCE.getStringSet())
+                                                    : iK2 == doz.b.d ? StaticHelpers5.ab(dpc.a.getStringSet()) : new ArrayList();
                                             final zm zmVar = new zm();
                                             zmVar.b = arrayListAb;
                                             zmVar.c = new but(arrayListAb, 15, zmVar);
@@ -120,11 +120,11 @@ public final /* synthetic */ class dos implements IInvokable {
                                                             ArrayList arrayList = arrayListAb;
                                                             if (i2 == id) {
                                                                 arrayList.clear();
-                                                                arrayList.addAll(StaticHelpers5.ab(dpe.a.n()));
+                                                                arrayList.addAll(StaticHelpers5.ab(SystemBrowserHook$ValWhiteHost.INSTANCE.getStringSet()));
                                                             } else if (i2 == ((MaterialRadioButton) bqrVar2.c)
                                                                     .getId()) {
                                                                 arrayList.clear();
-                                                                arrayList.addAll(StaticHelpers5.ab(dpc.a.n()));
+                                                                arrayList.addAll(StaticHelpers5.ab(dpc.a.getStringSet()));
                                                             }
                                                             zmVar.af();
                                                         }
@@ -231,7 +231,7 @@ public final /* synthetic */ class dos implements IInvokable {
                 dexMethodQueryBuilderVar2.getClass();
                 dexMethodQueryBuilderVar2.searchedPackages = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar2 = new DexFinder();
-                if (cnb.ab(ewk.e) || cnb.ac(ewh.d)) {
+                if (cnb.isNewerThanArgVerAndNotPlay(ewk.e) || cnb.isNewerThanArgVerAndPlay(ewh.d)) {
                     cdjVar2.usingStrings("MicroMsg.BitmapUtil" /* "MicroMsg.BitmapUtil" /* "MicroMsg.BitmapUtil" /* cnb.z(-491773755390762L)  */, "saveBitmapToImage failed: %s" /*
                                                                                                                     * cnb
                                                                                                                     * .z
@@ -359,12 +359,12 @@ public final /* synthetic */ class dos implements IInvokable {
                 if (clsBf6 == null) {
                     clsBf6 = cls5;
                 }
-                cdjVar9.r(clsBf6);
+                cdjVar9.setReturnType(clsBf6);
                 Class<String> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls5));
                 cls5 = clsBf7 != null ? clsBf7 : String.class;
                 cls6 = Boolean.class;
                 Class<Boolean> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls6));
-                cdjVar9.q(cls5, clsBf8 != null ? clsBf8 : Boolean.class);
+                cdjVar9.setParamTypes(cls5, clsBf8 != null ? clsBf8 : Boolean.class);
                 dexMethodQueryBuilderVar9.getClass();
                 dexMethodQueryBuilderVar9.dexFinder = cdjVar9;
                 return Kotlin$Unit.INSTANCE;

@@ -12,10 +12,9 @@ public final class cgy extends ApiHookItem implements IDexFind {
     public static Object b(long j) throws IOException {
         String strZ = "SELECT * FROM message WHERE msgId = ?" /* "SELECT * FROM message WHERE msgId = ?" /* "SELECT * FROM message WHERE msgId = ?" /* cnb.z(-369534691179306L)  */;
         Object[] objArr = { Long.valueOf(j) };
-        int i = 0;
         ClassSqliteDBDexFind.INSTANCE.getClass();
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(ClassSqliteDBDexFind.getDb()).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        methodResolverVarT.name = "rawQuery" /* "rawQuery" /* "rawQuery" /* cnb.z(-103246718827306L)  */;
+        methodResolverVarT.name = "rawQuery";
         Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class), dal.getKClassFromClass(Object[].class) }, 2, methodResolverVarT)).invoke(strZ,
                 objArr);
         throwIfVar1IsNull(objJ);
@@ -46,8 +45,28 @@ public final class cgy extends ApiHookItem implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        StaticHelpers7.resolveDexAndCache(cgv.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(27));
+        StaticHelpers7.resolveDexAndCache(MsgInfoStorage$ClassMsgInfoStorage_.INSTANCE, dexKitBridge, (obj -> {
+            ((FindDexClassMethodDslWrapper) obj).onClassCallback = (obj1 -> {
+                DexClassQueryBuilder dexClassQueryBuilderVar = (DexClassQueryBuilder) obj1;
+                String[] strArr = { "com.tencent.mm.storage" };
+                dexClassQueryBuilderVar.getClass();
+                dexClassQueryBuilderVar.strings = SomeStaticHelpers.arrayToList(strArr);
+                DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
+                zbVar.usingEqStrings("MicroMsg.MsgInfoStorage", "deleted dirty msg ,count is %d");
+                dexClassQueryBuilderVar.methodGroupMatcher = zbVar;
+            })
+        }));
         StaticHelpers7.resolveDexAndCache(cgx.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(28));
-        StaticHelpers7.resolveDexAndCache(cgw.a, dexKitBridge, new EvenAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(29));
+        StaticHelpers7.resolveDexAndCache(MsgInfoStorage$MethodInsertMessage.INSTANCE, dexKitBridge,
+                (obj -> {
+                    ((FindDexClassMethodDslWrapper) obj).onMethodCallback = (obj1 -> {
+                        DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj1;
+                        DexFinder cdjVar = new DexFinder();
+                        cdjVar.setDeclaredClassName(StaticHelpers7.toDexClass(MsgInfoStorage$ClassMsgInfoStorage_.INSTANCE));
+                        cdjVar.usingStrings("MsgInfo processAddMsg insert db error");
+                        dexMethodQueryBuilderVar.getClass();
+                        dexMethodQueryBuilderVar.dexFinder = cdjVar;
+                    })
+                }));
     }
 }

@@ -62,10 +62,10 @@ public final class cgr extends SwitchHook implements bnb {
             relativeLayout.setVisibility(0);
             if (msgInfoBean.isSend()) {
                 layoutParams.addRule(11);
-                layoutParams.setMarginEnd((int) cnh.r(Integer.valueOf(cgm.a.k()), relativeLayout.getContext()));
+                layoutParams.setMarginEnd((int) cnh.r(Integer.valueOf(cgm.a.getInt()), relativeLayout.getContext()));
             } else {
                 layoutParams.addRule(9);
-                layoutParams.setMarginStart((int) cnh.r(Integer.valueOf(cgj.a.k()), relativeLayout.getContext()));
+                layoutParams.setMarginStart((int) cnh.r(Integer.valueOf(cgj.a.getInt()), relativeLayout.getContext()));
             }
             ViewGroup viewGroup2 = (ViewGroup) viewGroup.findViewById(R.id.MsgLeftSwipe_SwipeMenu);
             cgr cgrVar = c;
@@ -73,27 +73,27 @@ public final class cgr extends SwitchHook implements bnb {
                 layoutParams.addRule(3, viewGroup2.getId());
             } else {
                 cgrVar.getClass();
-                View viewV = cnh.v(viewGroup, cnb.ac(ewh.r) ? "c0g"
-                        /* "c0g" /* "c0g" /* cnb.z(-467872262388522L)  */ : cnb.ac(ewh.q) ? "bzy"
-                                /* "bzy" /* "bzy" /* cnb.z(-468370478594858L)  */ : cnb.ac(ewh.o) ? "byw"
-                                        /* "byw" /* "byw" /* cnb.z(-468387658464042L)  */ : cnb.ac(ewh.n) ? "bxy"
-                                                /* "bxy" /* "bxy" /* cnb.z(-468336118856490L)  */ : cnb.ac(ewh.m) ? "bx_"
-                                                        /* "bx_" /* "bx_" /* cnb.z(-468353298725674L)  */ : cnb.ac(ewh.l) ? "bw0"
-                                                                /* "bw0" /* "bw0" /* cnb.z(-468301759118122L)  */ : cnb.ac(ewh.k) ? "bvg"
-                                                                        /* "bvg" /* "bvg" /* cnb.z(-468318938987306L)  */ : cnb.ac(ewh.j)
+                View viewV = cnh.v(viewGroup, cnb.isNewerThanArgVerAndPlay(ewh.VER_8065) ? "c0g"
+                        /* "c0g" /* "c0g" /* cnb.z(-467872262388522L)  */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8064) ? "bzy"
+                                /* "bzy" /* "bzy" /* cnb.z(-468370478594858L)  */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8063) ? "byw"
+                                        /* "byw" /* "byw" /* cnb.z(-468387658464042L)  */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8061_PATCH) ? "bxy"
+                                                /* "bxy" /* "bxy" /* cnb.z(-468336118856490L)  */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8061) ? "bx_"
+                                                        /* "bx_" /* "bx_" /* cnb.z(-468353298725674L)  */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8060) ? "bw0"
+                                                                /* "bw0" /* "bw0" /* cnb.z(-468301759118122L)  */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8058) ? "bvg"
+                                                                        /* "bvg" /* "bvg" /* cnb.z(-468318938987306L)  */ : cnb.isNewerThanArgVerAndPlay(ewh.VER_8057)
                                                                                 ? "buz"
                                                                                 /* "buz" /* "buz" /* cnb.z(-468267399379754L)  */ : cnb
-                                                                                        .ac(ewh.i)
+                                                                                        .isNewerThanArgVerAndPlay(ewh.VER_8056)
                                                                                                 ? "bu9"
                                                                                                 /*
                                                                                                  * cnb.z(-
                                                                                                  * 468284579248938L)
-                                                                                                 */ : cnb.ac(ewh.h)
+                                                                                                 */ : cnb.isNewerThanArgVerAndPlay(ewh.h)
                                                                                                         ? "btr"
                                                                                                         /*
                                                                                                          * cnb.z(-
                                                                                                          * 468233039641386L)
-                                                                                                         */ : cnb.ac(
+                                                                                                         */ : cnb.isNewerThanArgVerAndPlay(
                                                                                                                 ewh.g) ? "bvm"
                                                                                                                         /*
                                                                                                                          * cnb
@@ -103,7 +103,7 @@ public final class cgr extends SwitchHook implements bnb {
                                                                                                                          * -
                                                                                                                          * 468250219510570L)
                                                                                                                          */ : cnb
-                                                                                                                                .ac(ewh.f)
+                                                                                                                                .isNewerThanArgVerAndPlay(ewh.f)
                                                                                                                                         ? "bv7"
                                                                                                                                         /*
                                                                                                                                          * cnb
@@ -113,7 +113,7 @@ public final class cgr extends SwitchHook implements bnb {
                                                                                                                                          * -
                                                                                                                                          * 468198679903018L)
                                                                                                                                          */ : cnb
-                                                                                                                                                .ac(ewh.e)
+                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.e)
                                                                                                                                                         ? "br2"
                                                                                                                                                         /*
                                                                                                                                                          * cnb
@@ -123,7 +123,7 @@ public final class cgr extends SwitchHook implements bnb {
                                                                                                                                                          * -
                                                                                                                                                          * 468215859772202L)
                                                                                                                                                          */ : cnb
-                                                                                                                                                                .ac(ewh.d)
+                                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.d)
                                                                                                                                                                         ? "bqh"
                                                                                                                                                                         /*
                                                                                                                                                                          * cnb
@@ -133,7 +133,7 @@ public final class cgr extends SwitchHook implements bnb {
                                                                                                                                                                          * -
                                                                                                                                                                          * 468164320164650L)
                                                                                                                                                                          */ : cnb
-                                                                                                                                                                                .ac(ewh.c)
+                                                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.c)
                                                                                                                                                                                         ? "bm8"
                                                                                                                                                                                         /*
                                                                                                                                                                                          * cnb
@@ -143,7 +143,7 @@ public final class cgr extends SwitchHook implements bnb {
                                                                                                                                                                                          * -
                                                                                                                                                                                          * 468181500033834L)
                                                                                                                                                                                          */ : cnb
-                                                                                                                                                                                                .ac(ewh.b)
+                                                                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.b)
                                                                                                                                                                                                         ? "bi0"
                                                                                                                                                                                                         /*
                                                                                                                                                                                                          * cnb
@@ -153,7 +153,7 @@ public final class cgr extends SwitchHook implements bnb {
                                                                                                                                                                                                          * -
                                                                                                                                                                                                          * 468129960426282L)
                                                                                                                                                                                                          */ : cnb
-                                                                                                                                                                                                                .ac(ewh.a)
+                                                                                                                                                                                                                .isNewerThanArgVerAndPlay(ewh.a)
                                                                                                                                                                                                                         ? "bdv"
                                                                                                                                                                                                                         /*
                                                                                                                                                                                                                          * cnb
@@ -163,7 +163,7 @@ public final class cgr extends SwitchHook implements bnb {
                                                                                                                                                                                                                          * -
                                                                                                                                                                                                                          * 468147140295466L)
                                                                                                                                                                                                                          */ : cnb
-                                                                                                                                                                                                                                .ab(ewk.c)
+                                                                                                                                                                                                                                .isNewerThanArgVerAndNotPlay(ewk.c)
                                                                                                                                                                                                                                         ? "bkj"
                                                                                                                                                                                                                                         /*
                                                                                                                                                                                                                                          * cnb
@@ -227,7 +227,7 @@ public final class cgr extends SwitchHook implements bnb {
                 strZ = "@" + msgInfoBean.getAtUserList().size() + (char) 20154;
             }
             textView.setText(dnr.bo(strBo2, strZ4, strZ));
-            Integer numValueOf = Integer.valueOf(cgi.a.k());
+            Integer numValueOf = Integer.valueOf(cgi.a.getInt());
             Context context = textView.getContext();
             textView.setTextSize((numValueOf.floatValue() * context.getResources().getDisplayMetrics().density)
                     / context.getResources().getDisplayMetrics().scaledDensity);

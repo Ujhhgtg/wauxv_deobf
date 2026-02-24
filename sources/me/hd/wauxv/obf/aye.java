@@ -447,25 +447,23 @@ public abstract class aye {
         MicroMsgMsgInfoDexClassFind cgeVar = MicroMsgMsgInfoDexClassFind.INSTANCE;
         ContentValues contentValues = new ContentValues();
         contentValues.put("msgid", (Integer) 0);
-        contentValues.put("msgSvrId", Long.valueOf(((long) cyj.f.b()) + j));
+        contentValues.put("msgSvrId", Long.valueOf(((long) cyj.RANDOM.nextInt()) + j));
         contentValues.put("type", Integer.valueOf(i));
         contentValues.put("status", (Integer) 3);
         contentValues.put("createTime", Long.valueOf(j));
         contentValues.put("talker", str);
         contentValues.put("content", str2);
-        Object objC = ReflectionWrapper.createInstanceWithArgs(StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE), new Object[0]);
-        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objC).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        Object msgInfo = ReflectionWrapper.createInstanceWithArgs(StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE), new Object[0]);
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(msgInfo).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "convertFrom";
         methodResolverVarT.setParams(Arrays.copyOf(new Object[] { dal.getKClassFromClass(ContentValues.class), dal.getKClassFromClass(Boolean.TYPE) }, 2));
         methodResolverVarT.enableSuperclass();
         ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).invokeAndThrowIfFailed(contentValues, Boolean.TRUE);
-        Method methodBb = StaticHelpers7.toDexMethod(cgw.a);
+        Method methodBb = StaticHelpers7.toDexMethod(MsgInfoStorage$MethodInsertMessage.INSTANCE);
         MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(ServiceManagerDexFinder.getServiceByClass(StaticHelpers7.toDexClass(StorageFeatureService$ClassStorageFeatureService.INSTANCE))).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        methodResolverVarT2.returnType = StaticHelpers7.toDexClass(cgv.a);
-        Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT2)).invokeAndThrowIfFailed(new Object[0]);
-        throwIfVar1IsNull(objE);
-        Object objInvoke = methodBb.invoke(objE, objC);
-        throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.Long" /* "null cannot be cast to non-null type kotlin.Long" /* "null cannot be cast to non-null type kotlin.Long" /* cnb.z(-370294900390698L)  */);
+        methodResolverVarT2.returnType = StaticHelpers7.toDexClass(MsgInfoStorage$ClassMsgInfoStorage_.INSTANCE);
+        Object msgInfoStorage = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT2)).invokeAndThrowIfFailed(new Object[0]);
+        Object objInvoke = methodBb.invoke(msgInfoStorage, msgInfo);
         return ((Long) objInvoke).longValue();
     }
 

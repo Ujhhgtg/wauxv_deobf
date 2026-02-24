@@ -14,8 +14,8 @@ import me.hd.wauxv.data.bean.MsgInfoBean;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bjm extends SwitchHook implements bnc {
-    public static final bjm a;
+public final class GroupOwnerTitleHook extends SwitchHook implements bnc {
+    public static final GroupOwnerTitleHook a;
     public static final String b;
     public static final String c;
     public static final String h;
@@ -27,31 +27,31 @@ public final class bjm extends SwitchHook implements bnc {
     public static final LinkedHashMap s;
 
     static {
-        "#FFF9E8C8" /* "#FFF9E8C8" /* "#FFF9E8C8" /* cnb.z(-502317900102442L)  */;
-        "#FFFEF3D6" /* "#FFFEF3D6" /* "#FFFEF3D6" /* cnb.z(-502292130298666L)  */;
-        "#FFE87A20" /* "#FFE87A20" /* "#FFE87A20" /* cnb.z(-502266360494890L)  */;
-        "#FFA3F0E6" /* "#FFA3F0E6" /* "#FFA3F0E6" /* cnb.z(-501622115400490L)  */;
-        "#FFE0F7F4" /* "#FFE0F7F4" /* "#FFE0F7F4" /* cnb.z(-501596345596714L)  */;
-        "#FF3AAE9D" /* "#FF3AAE9D" /* "#FF3AAE9D" /* cnb.z(-501570575792938L)  */;
-        "#FFF2D5F8" /* "#FFF2D5F8" /* "#FFF2D5F8" /* cnb.z(-501544805989162L)  */;
-        "#FFF9EBFC" /* "#FFF9EBFC" /* "#FFF9EBFC" /* cnb.z(-501450316708650L)  */;
-        "#FFA64BDB" /* "#FFA64BDB" /* "#FFA64BDB" /* cnb.z(-501424546904874L)  */;
-        "#FFD8D8D8" /* "#FFD8D8D8" /* "#FFD8D8D8" /* cnb.z(-501398777101098L)  */;
-        "#FFE0E0E0" /* "#FFE0E0E0" /* "#FFE0E0E0" /* cnb.z(-501922763111210L)  */;
-        "#FF666666" /* "#FF666666" /* "#FF666666" /* cnb.z(-501828273830698L)  */;
-        "#FFFFD56A" /* "#FFFFD56A" /* "#FFFFD56A" /* cnb.z(-501802504026922L)  */;
-        "#FFFFE87A" /* "#FFFFE87A" /* "#FFFFE87A" /* cnb.z(-501776734223146L)  */;
-        "#FF4DD5CC" /* "#FF4DD5CC" /* "#FF4DD5CC" /* cnb.z(-501750964419370L)  */;
-        "#FF68E8DF" /* "#FF68E8DF" /* "#FF68E8DF" /* cnb.z(-501656475138858L)  */;
-        "#FFD0A3FF" /* "#FFD0A3FF" /* "#FFD0A3FF" /* cnb.z(-503279972776746L)  */;
-        "#FFEFBFFF" /* "#FFEFBFFF" /* "#FFEFBFFF" /* cnb.z(-503254202972970L)  */;
-        "#FF95A0B8" /* "#FF95A0B8" /* "#FF95A0B8" /* cnb.z(-503228433169194L)  */;
-        "#FFA8B2C9" /* "#FFA8B2C9" /* "#FFA8B2C9" /* cnb.z(-503133943888682L)  */;
-        "#FFFFFFFF" /* "#FFFFFFFF" /* "#FFFFFFFF" /* cnb.z(-503108174084906L)  */;
-        a = new bjm("GroupOwnerTitleHook" /* "GroupOwnerTitleHook" /* "GroupOwnerTitleHook" /* cnb.z(-505320082242346L)  */);
-        b = "群组" /* "群组" /* "群组" /* cnb.z(-503082404281130L)  */;
-        c = "显示群头衔" /* "显示群头衔" /* "显示群头衔" /* cnb.z(-503035159640874L)  */;
-        h = "在微信群成员聊天列表显示对应的头衔" /* "在微信群成员聊天列表显示对应的头衔" /* "在微信群成员聊天列表显示对应的头衔" /* cnb.z(-503060929444650L)  */;
+//        "#FFF9E8C8";
+//        "#FFFEF3D6";
+//        "#FFE87A20";
+//        "#FFA3F0E6";
+//        "#FFE0F7F4";
+//        "#FF3AAE9D";
+//        "#FFF2D5F8";
+//        "#FFF9EBFC";
+//        "#FFA64BDB";
+//        "#FFD8D8D8";
+//        "#FFE0E0E0";
+//        "#FF666666";
+//        "#FFFFD56A";
+//        "#FFFFE87A";
+//        "#FF4DD5CC";
+//        "#FF68E8DF";
+//        "#FFD0A3FF";
+//        "#FFEFBFFF";
+//        "#FF95A0B8";
+//        "#FFA8B2C9";
+//        "#FFFFFFFF";
+        a = new GroupOwnerTitleHook("GroupOwnerTitleHook");
+        b = "群组";
+        c = "显示群头衔";
+        h = "在微信群成员聊天列表显示对应的头衔";
         j = new bep(3);
         l = new Kotlin$Lazy(new amd(11));
         m = new Kotlin$Lazy(new amd(12));
@@ -60,8 +60,8 @@ public final class bjm extends SwitchHook implements bnc {
         s = new LinkedHashMap();
     }
 
-    public static final void t(bjm bjmVar) {
-        bjmVar.getClass();
+    public static final void t(GroupOwnerTitleHook groupOwnerTitleHookVar) {
+        groupOwnerTitleHookVar.getClass();
         for (Object obj : JSON.parseArray(bjk.a.o())) {
             if (obj instanceof JSONObject) {
                 JSONObject jSONObject = (JSONObject) obj;
@@ -70,14 +70,14 @@ public final class bjm extends SwitchHook implements bnc {
                 if (string != null && string.length() != 0 && string2 != null && string2.length() != 0) {
                     String strAz = StringsKt.az(6, string2);
                     a.getClass();
-                    s.put(string, new Pair(strAz, (bix) n.getValue()));
+                    s.put(string, new Pair(strAz, n.getValue()));
                 }
             }
         }
     }
 
-    public static final void u(bjm bjmVar) {
-        bjmVar.getClass();
+    public static final void u(GroupOwnerTitleHook groupOwnerTitleHookVar) {
+        groupOwnerTitleHookVar.getClass();
         for (Object obj : JSON.parseArray(bjl.a.o())) {
             if (obj instanceof JSONObject) {
                 JSONObject jSONObject = (JSONObject) obj;
@@ -97,7 +97,7 @@ public final class bjm extends SwitchHook implements bnc {
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
         Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
-        KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new eq(2, (kotlinx$coroutines$internal$DispatchedContinuation) null));
+        KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new eq(2, null));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -130,69 +130,61 @@ public final class bjm extends SwitchHook implements bnc {
         String strZ2;
         if (getIsEnabled() && msgInfoBean.isGroupChat()) {
             Pair pairVar2 = (Pair) s.get(msgInfoBean.getSendTalker());
-            mg mgVar = xh.a;
             String talker = msgInfoBean.getTalker();
             String sendTalker = msgInfoBean.getSendTalker();
             Pair pairVar3 = new Pair(talker, sendTalker);
-            mg mgVar2 = xh.a;
-            Boolean bool = (Boolean) mgVar2.get(pairVar3);
+            LruCacheMap lruCacheMapVar2 = StaticMapsProvider.MAP_1;
+            Boolean bool = (Boolean) lruCacheMapVar2.get(pairVar3);
             if (bool != null) {
                 zF = bool.booleanValue();
             } else {
-                xp.a.getClass();
-                Object objB = xp.b(talker);
+                Object objB = xp.getChatroomMember(talker);
                 if (objB == null) {
                     zF = false;
                 } else {
-                    wv.a.getClass();
-                    int i = 0;
                     FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objB).createFieldResolver();
-                    fieldResolverVarR.name = "field_roomowner" /* "field_roomowner" /* "field_roomowner" /* cnb.z(-99733435579178L)  */;
+                    fieldResolverVarR.name = "field_roomowner";
                     zF = nullSafeIsEqual((String) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_(), sendTalker);
-                    mgVar2.put(pairVar3, Boolean.valueOf(zF));
+                    lruCacheMapVar2.put(pairVar3, zF);
                 }
             }
             if (zF) {
-                if (pairVar2 == null || (strZ2 = (String) pairVar2.a) == null) {
-                    strZ2 = "群主" /* "群主" /* "群主" /* cnb.z(-505706629298986L)  */;
+                if (pairVar2 == null || (strZ2 = (String) pairVar2.first) == null) {
+                    strZ2 = "群主";
                 }
-                pairVar = new Pair(strZ2, (bix) l.getValue());
+                pairVar = new Pair(strZ2, l.getValue());
             } else {
                 String talker2 = msgInfoBean.getTalker();
                 String sendTalker2 = msgInfoBean.getSendTalker();
                 Pair pairVar4 = new Pair(talker2, sendTalker2);
-                mg mgVar3 = xh.b;
-                Boolean bool2 = (Boolean) mgVar3.get(pairVar4);
+                LruCacheMap lruCacheMapVar3 = StaticMapsProvider.MAP_2;
+                Boolean bool2 = (Boolean) lruCacheMapVar3.get(pairVar4);
                 if (bool2 != null) {
-                    zBooleanValue = bool2.booleanValue();
+                    zBooleanValue = bool2;
                 } else {
-                    xp.a.getClass();
-                    Object objB2 = xp.b(talker2);
+                    Object objB2 = xp.getChatroomMember(talker2);
                     if (objB2 == null) {
                         zBooleanValue = false;
                     } else {
-                        wv.a.getClass();
-                        Object objInvoke = StaticHelpers7.toDexMethod(wu.a).invoke(objB2, sendTalker2);
+                        Object objInvoke = StaticHelpers7.toDexMethod(ChatRoomMember$MethodGetChatRoomData.INSTANCE).invoke(objB2, sendTalker2);
                         if (objInvoke != null) {
-                            int i2 = 0;
                             FieldResolver fieldResolverVarR2 = dqc.getWrapperConfiguration(objInvoke).createFieldResolver();
-                            fieldResolverVarR2.name = "f" /* "f" /* "f" /* cnb.z(-99664716102442L)  */;
+                            fieldResolverVarR2.name = "f";
                             Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue_();
                             throwIfVar1IsNull(objE);
                             zBooleanValue = (((Number) objE).intValue() & 2048) != 0;
                         }
-                        mgVar3.put(pairVar4, Boolean.valueOf(zBooleanValue));
+                        lruCacheMapVar3.put(pairVar4, Boolean.valueOf(zBooleanValue));
                     }
                 }
                 if (!zBooleanValue) {
                     if (pairVar2 == null) {
-                        pairVar = new Pair("群员" /* "群员" /* "群员" /* cnb.z(-505663679626026L)  */, (bix) r.getValue());
+                        pairVar = new Pair("群员", r.getValue());
                     }
-                    str = (String) pairVar2.a;
-                    bixVar = (bix) pairVar2.b;
-                    int i3 = 0;
+                    str = (String) pairVar2.first;
+                    bixVar = (bix) pairVar2.second;
                     FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).createFieldResolver();
-                    fieldResolverVarR3.name = "userTV" /* "userTV" /* "userTV" /* cnb.z(-505667974593322L)  */;
+                    fieldResolverVarR3.name = "userTV";
                     textView = (TextView) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
                     strValueOf = String.valueOf(textView != null ? textView.getText() : null);
                     if (textView != null) {
@@ -206,17 +198,16 @@ public final class bjm extends SwitchHook implements bnc {
                         textView.setEllipsize(null);
                     }
                 }
-                if (pairVar2 == null || (strZ = (String) pairVar2.a) == null) {
-                    strZ = "管理" /* "管理" /* "管理" /* cnb.z(-505642204789546L)  */;
+                if (pairVar2 == null || (strZ = (String) pairVar2.first) == null) {
+                    strZ = "管理";
                 }
-                pairVar = new Pair(strZ, (bix) m.getValue());
+                pairVar = new Pair(strZ, m.getValue());
             }
             pairVar2 = pairVar;
-            str = (String) pairVar2.a;
-            bixVar = (bix) pairVar2.b;
-            int i32 = 0;
+            str = (String) pairVar2.first;
+            bixVar = (bix) pairVar2.second;
             FieldResolver fieldResolverVarR32 = dqc.getWrapperConfiguration(obj).createFieldResolver();
-            fieldResolverVarR32.name = "userTV" /* "userTV" /* "userTV" /* cnb.z(-505667974593322L)  */;
+            fieldResolverVarR32.name = "userTV";
             textView = (TextView) ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR32)).getValue_();
             strValueOf = String.valueOf(textView != null ? textView.getText() : null);
             if (textView != null) {
@@ -237,7 +228,7 @@ public final class bjm extends SwitchHook implements bnc {
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final bgf getOnClick() {
+    public final IInvokable getOnClick() {
         return j;
     }
 }

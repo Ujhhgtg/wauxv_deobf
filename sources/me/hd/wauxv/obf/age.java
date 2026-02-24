@@ -171,7 +171,7 @@ public final /* synthetic */ class age implements IInvokable {
                 dexMethodQueryBuilderVar2.searchedPackages = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar2 = new DexFinder();
                 cdjVar2.s("onCreateContextMenu" /* "onCreateContextMenu" /* "onCreateContextMenu" /* cnb.z(-38852274158378L)  */);
-                if (cnb.ab(ewk.l) || cnb.ac(ewh.m)) {
+                if (cnb.isNewerThanArgVerAndNotPlay(ewk.l) || cnb.isNewerThanArgVerAndPlay(ewh.VER_8061)) {
                     cdjVar2.usingStrings("MicroMsg.ConversationLongClickListener" /* "MicroMsg.ConversationLongClickListener" /* "MicroMsg.ConversationLongClickListener" /* cnb.z(-35983236004650L)  */,
                             "onCreateContextMenu, contact is null, talker = " /* "onCreateContextMenu, contact is null, talker = " /* "onCreateContextMenu, contact is null, talker = " /* cnb.z(-35867271887658L)  */);
                 } else {
@@ -385,7 +385,7 @@ public final /* synthetic */ class age implements IInvokable {
                                                                                                                 materialRadioButton3,
                                                                                                                 radioGroup);
                                                                                                         int iK = aie.a
-                                                                                                                .k();
+                                                                                                                .getInt();
                                                                                                         if (iK == aid.a.f) {
                                                                                                             materialRadioButton3
                                                                                                                     .setChecked(
@@ -553,7 +553,7 @@ public final /* synthetic */ class age implements IInvokable {
                                                                                                                    */);
                     }
                     aidVar = (aid) zVar.next();
-                } while (aidVar.f != aie.a.k());
+                } while (aidVar.f != aie.a.getInt());
                 for (Pair pairVar : OtherStaticHelpers.argsToList(new Pair(new aab(aii.a.j(), aif.a.j()), Float.valueOf(ail.a.j())),
                         new Pair(new aab(aij.a.j(), aig.a.j()), Float.valueOf(aim.a.j())),
                         new Pair(new aab(aik.a.j(), aih.a.j()), Float.valueOf(ain.a.j())))) {
@@ -593,8 +593,8 @@ public final /* synthetic */ class age implements IInvokable {
                                         R.id.moduleDialogInputCustomGroupCount)) != null) {
                                     LinearLayout linearLayout2 = (LinearLayout) viewK2;
                                     cem cemVar = new cem(linearLayout2, textInputEditText10, textInputEditText11, i7);
-                                    textInputEditText10.setText(String.valueOf(aip.a.k()));
-                                    textInputEditText11.setText(String.valueOf(aiq.a.k()));
+                                    textInputEditText10.setText(String.valueOf(aip.a.getInt()));
+                                    textInputEditText11.setText(String.valueOf(aiq.a.getInt()));
                                     bzy bzyVar2 = new bzy(view2.getContext());
                                     eg egVar2 = (eg) bzyVar2.d;
                                     CustomContactCountHook.a.getClass();
@@ -642,7 +642,7 @@ public final /* synthetic */ class age implements IInvokable {
                 }
                 Object objE2 = ((BoundField) obj2).getValue_();
                 throwIfVar1IsNull(objE2);
-                int iK2 = (((Number) objE2).intValue() == 1 ? aip.a : aiq.a).k();
+                int iK2 = (((Number) objE2).intValue() == 1 ? aip.a : aiq.a).getInt();
                 if (iK2 != 0) {
                     int i13 = 0;
                     MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(hookParam4.getThisObject()).getMethodResolverBasedOnPreviouslyProvidedConfig();
@@ -661,7 +661,7 @@ public final /* synthetic */ class age implements IInvokable {
                     if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK3, R.id.moduleDialogInputCustomUnReadCount)) != null) {
                         LinearLayout linearLayout3 = (LinearLayout) viewK3;
                         cee ceeVar = new cee(linearLayout3, textInputEditText12, i6);
-                        textInputEditText12.setText(String.valueOf(ait.a.k()));
+                        textInputEditText12.setText(String.valueOf(ait.a.getInt()));
                         bzy bzyVar3 = new bzy(view3.getContext());
                         eg egVar3 = (eg) bzyVar3.d;
                         CustomUnReadCountHook.a.getClass();
