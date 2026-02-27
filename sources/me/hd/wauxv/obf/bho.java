@@ -53,9 +53,8 @@ public final class bho extends doi implements Function2 {
 
     @Override // me.hd.wauxv.obf.nc
     public final Object i(Object obj) throws Throwable {
-        int i = this.a;
         String str = this.e;
-        switch (i) {
+        switch (this.a) {
             case 0:
                 FastKV.bd(obj);
                 ahp ahpVar = (ahp) this.d;
@@ -90,7 +89,6 @@ public final class bho extends doi implements Function2 {
                 eojVar2.c = 1;
                 eojVar2.i(ahpVar2.e()._w(arj.b));
                 eojVar2.k(null);
-                Context context2 = ckv.a;
                 dbv.a(eojVar2.d, dal.c(String.class));
                 Response responseExecute2 = eojVar2.e.newCall(eojVar2.f()).execute();
                 try {
@@ -115,13 +113,12 @@ public final class bho extends doi implements Function2 {
                 eojVar3.c = 1;
                 eojVar3.i(ahpVar3.e()._w(arj.b));
                 eojVar3.k(null);
-                Context context3 = ckv.a;
                 dbv.a(eojVar3.d, dal.c(String.class));
                 Response responseExecute3 = eojVar3.e.newCall(eojVar3.f()).execute();
                 try {
                     Object objB3 = bhs.p(responseExecute3.request()).b(StaticHelpers7.am(dal.c(String.class)), responseExecute3);
                     if (objB3 != null) {
-                        return (String) objB3;
+                        return objB3;
                     }
                     throw new NullPointerException("null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* cnb.z(-483583252757290L)  */);
                 } catch (NetException e5) {

@@ -81,7 +81,7 @@ public final class PluginContactMethod {
         xp.a.getClass();
         Method methodBb = StaticHelpers7.toDexMethod(ChatroomStorage$MethodGetMemberCount.INSTANCE);
         xn.a.getClass();
-        Object objInvoke = methodBb.invoke(xn.b(), str);
+        Object objInvoke = methodBb.invoke(xn.getChatroomStorage(), str);
         throwIfVar1IsNull(objInvoke, "null cannot be cast to non-null type kotlin.Int" /* "null cannot be cast to non-null type kotlin.Int" /* "null cannot be cast to non-null type kotlin.Int" /* cnb.z(-380173325171498L)  */);
         return ((Integer) objInvoke).intValue();
     }
@@ -91,7 +91,7 @@ public final class PluginContactMethod {
         xp.a.getClass();
         int i = 0;
         xn.a.getClass();
-        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(xn.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(xn.getChatroomStorage()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.returnType = dal.getKClassFromClass(List.class);
         List<String> list = (List) ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class) }, 1, methodResolverVarT)).invoke(str);
         return list == null ? EmptyReadonlyList.INSTANCE : list;

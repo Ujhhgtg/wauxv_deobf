@@ -83,7 +83,7 @@ public abstract class t extends brm implements kotlinx$coroutines$internal$Dispa
                     emc.af(2, function2Var);
                     Object objG = function2Var.g(tVar, this);
                     bhv.ag(ahhVar, objAl);
-                    if (objG != ahq.a) {
+                    if (objG != CoroutineStateEnum.a) {
                         _bn(objG);
                     }
                 } catch (Throwable th2) {

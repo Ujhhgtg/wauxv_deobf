@@ -228,7 +228,6 @@ public final /* synthetic */ class act implements IInvokable {
                     throw new IllegalStateException("HookParam instance cannot cast to "
                             .concat((clsBf5 != null ? clsBf5 : Activity.class).getName()).toString());
                 }
-                int i6 = 0;
                 MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(activity).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT.name = "getPreferenceScreen" /* "getPreferenceScreen" /* "getPreferenceScreen" /* cnb.z(-37649683315498L)  */;
                 Object objJ = ((MethodHookWrapper) StaticHelpers6.resolveFirstMethod(methodResolverVarT)).invoke(new Object[0]);
@@ -272,10 +271,10 @@ public final /* synthetic */ class act implements IInvokable {
                 } catch (Throwable th) {
                     objX = FastKV.getFailureFromException(th);
                 }
-                Object obj2 = objX instanceof Failure ? null : objX;
-                throwIfVar1IsNull(obj2);
+                Object pref = objX instanceof Failure ? null : objX;
+                throwIfVar1IsNull(pref);
                 int i7 = 0;
-                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).createFieldResolver();
+                FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(pref).createFieldResolver();
                 fieldResolverVarR.fieldType = dal.getKClassFromClass(cls3);
                 fieldResolverVarR.enableSuperclass();
                 Iterator it = fieldResolverVarR.resolve().iterator();

@@ -572,7 +572,6 @@ public abstract class cnb {
 
     public static void m(BaseAdapter baseAdapter, Object obj, int i2)
             throws IllegalAccessException, InvocationTargetException {
-        int i3 = 0;
         SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(baseAdapter);
         bmuVarBi.setHookOptional(false);
         MethodResolver methodResolverVarT = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
@@ -1069,7 +1068,7 @@ public abstract class cnb {
                 int memberCount = chatRoomInfoQ.getMemberCount();
                 String selfDisplayName = chatRoomInfoQ.getSelfDisplayName();
                 if (selfDisplayName == null) {
-                    Object objB = acv.b(acv.a, eom.b.f);
+                    Object objB = acv.b(eom.b.f);
                     throwIfVar1IsNull(objB, "null cannot be cast to non-null type kotlin.String" /* z(-121221156961066L) */);
                     selfDisplayName = (String) objB;
                 }

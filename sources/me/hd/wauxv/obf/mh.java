@@ -36,29 +36,22 @@ public final class mh extends SwitchHook implements bnc {
             if (nullSafeIsEqual(obj3, bool)) {
                 return;
             }
-            int i = 0;
             FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj2).createFieldResolver();
-            ApiManagerGetApiDexFindHook.a.getClass();
             fieldResolverVarR.fieldType = StaticHelpers7.toDexMethod(ApiManager$MethodGetApi.INSTANCE).getDeclaringClass();
             Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue();
             throwIfVar1IsNull(objD);
-            elb.a.getClass();
-            Object objB = ApiManagerGetApiDexFindHook.getApi((Class) SomeStaticHelpers.getFirstInArray(StaticHelpers7.toDexClass(ela.a).getInterfaces()), objD);
+            Object api = ApiManagerGetApiDexFindHook.getApi((Class) SomeStaticHelpers.getFirstInArray(StaticHelpers7.toDexClass(Transform$ClassTransform.a).getInterfaces()), objD);
             long msgId = msgInfoBean.getMsgId();
-            MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objB).getMethodResolverBasedOnPreviouslyProvidedConfig();
+            MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(api).getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT.returnTypeCondition = new dos(4);
             Object objJ = ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(Long.TYPE) }, 1, methodResolverVarT)).invoke(Long.valueOf(msgId));
             throwIfVar1IsNull(objJ);
             if (nullSafeIsEqual(objJ.toString(), "NoTransform" /* "NoTransform" /* "NoTransform" /* cnb.z(-440878392933162L)  */)) {
-                lruCacheMapVar.put(Long.valueOf(msgInfoBean.getMsgId()), bool);
+                lruCacheMapVar.put(Long.valueOf(msgInfoBean.getMsgId()), true);
                 Object origin = msgInfoBean.getOrigin();
-                MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objB).getMethodResolverBasedOnPreviouslyProvidedConfig();
+                MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(api).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT2.returnType = Void.TYPE;
-                MicroMsgMsgInfoDexClassFind.INSTANCE.getClass();
-                Class clsAz = StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE);
-                KClass zcVarB = dal.getKClassFromClass(Boolean.TYPE);
-                Class cls = Integer.TYPE;
-                ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { clsAz, zcVarB, dal.getKClassFromClass(cls), dal.getKClassFromClass(cls) }, 4, methodResolverVarT2)).invokeAndThrowIfFailed(origin,
+                ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE), Boolean.TYPE, dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(Integer.TYPE) }, 4, methodResolverVarT2)).invokeAndThrowIfFailed(origin,
                         Boolean.FALSE, -1, 0);
             }
         }

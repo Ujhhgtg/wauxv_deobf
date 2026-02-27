@@ -330,7 +330,7 @@ public final class MsgInfoBean {
             return patMsg.getFromUser();
         }
         if (isSend()) {
-            Object objB = acv.b(acv.a, eom.a.f);
+            Object objB = acv.b(eom.a.f);
             throwIfVar1IsNull(objB,
                     "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121955596368682L)  */);
             return (String) objB;
@@ -374,7 +374,7 @@ public final class MsgInfoBean {
 
     public final boolean isAtMe() {
         List<String> atUserList = getAtUserList();
-        Object objB = acv.b(acv.a, eom.a.f);
+        Object objB = acv.b(eom.a.f);
         throwIfVar1IsNull(objB, "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121955596368682L)  */);
         return atUserList.contains((String) objB);
     }
@@ -440,7 +440,7 @@ public final class MsgInfoBean {
     public final boolean isNotifyAll() {
         boolean z;
         boolean z2;
-        Object objB = acv.b(acv.a, eom.a.f);
+        Object objB = acv.b(eom.a.f);
         throwIfVar1IsNull(objB, "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121955596368682L)  */);
         List listAg = OtherStaticHelpers.argsToList((String) objB, "notify@all" /* "notify@all" /* "notify@all" /* cnb.z(-4660039514922L)  */);
         if (!listAg.isEmpty()) {

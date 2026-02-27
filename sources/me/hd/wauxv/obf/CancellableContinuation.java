@@ -316,7 +316,7 @@ public class CancellableContinuation extends aot implements kotlinx$coroutines$i
         if (zV) {
             x();
         }
-        return ahq.a;
+        return CoroutineStateEnum.a;
     }
 
     public final String toString() {

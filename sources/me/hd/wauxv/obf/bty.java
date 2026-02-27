@@ -250,7 +250,7 @@ public final /* synthetic */ class bty implements IInvokable {
                     throwIfVar1IsNull(objJ);
                     String str = (String) objJ;
                     Pattern patternCompile = Pattern.compile(
-                            "lat ([-+]?[0-9]*\\.?[0-9]+);lng ([-+]?[0-9]*\\.?[0-9]+);" /* "lat ([-+]?[0-9]*\\.?[0-9]+);lng ([-+]?[0-9]*\\.?[0-9]+);" /* "lat ([-+]?[0-9]*\\.?[0-9]+);lng ([-+]?[0-9]*\\.?[0-9]+);" /* cnb.z(-493362893290282L)  */);
+                            "lat ([-+]?[0-9]*\\.?[0-9]+);lng ([-+]?[0-9]*\\.?[0-9]+);");
                     throwIfVar1IsNull(patternCompile, "compile(...)");
                     Matcher matcher = patternCompile.matcher(str);
                     throwIfVar1IsNull(matcher, "matcher(...)");

@@ -7,14 +7,9 @@ import org.luckypray.dexkit.DexKitBridge;
 public final class acv extends ApiHookItem implements IDexFind {
     public static final acv a = new acv();
 
-    public static Object b(acv acvVar, int i) {
-        acvVar.getClass();
-        int i2 = 0;
-        ClassCoreStorageDexFind.INSTANCE.getClass();
-        MMKernelDexFind.INSTANCE.getClass();
+    public static Object b(int i) {
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(MMKernelDexFind.getCoreStorage()).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        a.getClass();
-        methodResolverVarT.returnType = StaticHelpers7.toDexClass(acu.a);
+        methodResolverVarT.returnType = StaticHelpers7.toDexClass(ConfigStorage$ClassConfigStorage.INSTANCE);
         Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT)).invokeAndThrowIfFailed(new Object[0]);
         throwIfVar1IsNull(objE);
         MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(objE).getMethodResolverBasedOnPreviouslyProvidedConfig();
@@ -29,6 +24,6 @@ public final class acv extends ApiHookItem implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        StaticHelpers7.resolveDexAndCache(acu.a, dexKitBridge, new act(0));
+        StaticHelpers7.resolveDexAndCache(ConfigStorage$ClassConfigStorage.INSTANCE, dexKitBridge, new act(0));
     }
 }

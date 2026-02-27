@@ -52,11 +52,11 @@ public final /* synthetic */ class h implements IFunction0 {
                 Process.killProcess(Process.myPid());
                 return kotlinUnitVar;
             case 2:
-                Object objB = acv.b(acv.a, eom.b.f);
+                Object objB = acv.b(eom.b.f);
                 throwIfVar1IsNull(objB, "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121221156961066L)  */);
                 return objB;
             case 3:
-                Object objB2 = acv.b(acv.a, eom.c.f);
+                Object objB2 = acv.b(eom.c.f);
                 if (objB2 instanceof String) {
                     str = (String) objB2;
                 }
@@ -67,7 +67,7 @@ public final /* synthetic */ class h implements IFunction0 {
                 r6 = str;
                 return r6;
             case 4:
-                Object objB3 = acv.b(acv.a, eom.d.f);
+                Object objB3 = acv.b(eom.d.f);
                 String str2 = objB3 instanceof String ? (String) objB3 : null;
                 return str2 == null ? "未填写" /* "未填写" /* "未填写" /* cnb.z(-122638496168746L)  */ : str2;
             case 5:

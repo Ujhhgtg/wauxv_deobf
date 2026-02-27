@@ -30,7 +30,7 @@ public abstract class cna {
     public static final FactoryPools b;
     public static FactoryPools c = null;
     public static String d = "YukiHookAPI";
-    public static final ahq a = ahq.a;
+    public static final CoroutineStateEnum a = CoroutineStateEnum.a;
     public static final Integer[] e = { 1000, Integer.valueOf(WebSocketProtocol.CLOSE_CLIENT_GOING_AWAY), 1002, 1003 };
 
     static {

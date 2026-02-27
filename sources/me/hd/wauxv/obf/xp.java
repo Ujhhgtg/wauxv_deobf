@@ -8,7 +8,7 @@ public final class xp extends ApiHookItem implements IDexFind {
     public static final xp a = new xp();
 
     public static Object getChatroomMember(String str) {
-        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(xn.b()).getMethodResolverBasedOnPreviouslyProvidedConfig();
+        MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(xn.getChatroomStorage()).getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.returnType = StaticHelpers7.toDexClass(ChatRoomMember$ClassChatRoomMember.INSTANCE);
         return ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(String.class) }, 1, methodResolverVarT)).invokeAndThrowIfFailed(str);
     }

@@ -10,7 +10,6 @@ public final class aeq extends ApiHookItem {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        int i = 0;
         SyntheticPileOfMess bmuVarS = yg.s(-38001870633770L);
         MethodResolver methodResolverVarT = bmuVarS.getMethodResolverBasedOnPreviouslyProvidedConfig();
         methodResolverVarT.name = "initView" /* "initView" /* "initView" /* "initView" /* cnb.z(-38332583115562L)   */;

@@ -24,7 +24,15 @@ public final class bap extends ApiHookItem implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        StaticHelpers7.resolveDexAndCache(ban.a, dexKitBridge, new ayz(20));
-        StaticHelpers7.resolveDexAndCache(bao.a, dexKitBridge, new ayz(21));
+        StaticHelpers7.resolveDexAndCache(ban.a, dexKitBridge, (obj -> {
+            searchPackages("com.tencent.mm.plugin.finder.feed");
+            methodName("onCreateMMMenu");
+            usingEqStrings("pos is error ");
+        }));
+        StaticHelpers7.resolveDexAndCache(bao.a, dexKitBridge, (obj -> {
+            searchPackages("com.tencent.mm.plugin.finder.feed");
+            methodName("onMMMenuItemSelected");
+            usingEqStrings("[getMoreMenuItemSelectedListener] feed ");
+        }));
     }
 }

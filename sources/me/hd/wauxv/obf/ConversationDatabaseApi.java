@@ -10,7 +10,7 @@ import org.luckypray.dexkit.DexKitBridge;
 public final class ConversationDatabaseApi extends ApiHookItem implements IDexFind {
     public static final ConversationDatabaseApi a = new ConversationDatabaseApi();
 
-    public static void b() throws IOException {
+    public static void clearUnreadConversations() {
         Cursor cursorAc = arj.ac("SELECT username FROM rconversation WHERE unReadCount>0 OR unReadMuteCount>0");
         while (cursorAc.moveToNext()) {
             try {

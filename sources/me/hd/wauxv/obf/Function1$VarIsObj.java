@@ -406,7 +406,6 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 Class<CharSequence> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar6.setParamTypes(clsBf7 != null ? clsBf7 : CharSequence.class);
                 cdjVar6.u(0);
-                dexMethodQueryBuilderVar5.getClass();
                 dexMethodQueryBuilderVar5.dexFinder = cdjVar6;
                 return kotlinUnitVar;
             case 28:

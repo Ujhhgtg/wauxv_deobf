@@ -15,7 +15,6 @@ public final class VnPreviewShareMenuCopyOrDownHook extends SwitchHook implement
     public static final epy j;
 
     static {
-        Kotlin$Lazy kotlin$LazyVar = PathUtils.externalStorageRoot;
         b = PathUtils.getModuleSubDir("Download" /* "Download" /* "Download" /* cnb.z(-46699179408170L)  */, "VideoNumber" /* "VideoNumber" /* "VideoNumber" /* cnb.z(-46677704571690L)  */);
         c = "视频号" /* "视频号" /* "视频号" /* cnb.z(-607372800162602L)  */;
         h = "预览分享菜单复制下载" /* "预览分享菜单复制下载" /* "预览分享菜单复制下载" /* cnb.z(-607321260555050L)  */;
@@ -38,7 +37,7 @@ public final class VnPreviewShareMenuCopyOrDownHook extends SwitchHook implement
     }
 
     public final List m() {
-        return !z() ? EmptyReadonlyList.INSTANCE
+        return !getIsEnabled() ? EmptyReadonlyList.INSTANCE
                 : OtherStaticHelpers.argsToList(
                         new bai(R.id.MenuItem_VideoNumber_CopyLink, "复制链接" /* "复制链接" /* "复制链接" /* cnb.z(-610332032629546L)  */,
                                 R.drawable.ic_menu_copy_24dp, new dfq(15)),

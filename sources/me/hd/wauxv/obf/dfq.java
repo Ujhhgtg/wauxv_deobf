@@ -194,32 +194,32 @@ public final /* synthetic */ class dfq implements Function2 {
                     dnc.sendToast(null, 3, "复制图片成功" /* "复制图片成功" /* "复制图片成功" /* cnb.z(-588367569877802L)  */);
                 } else if (iIntValue3 == 4) {
                     JSONObject jSONObject2 = (JSONObject) list.get(0);
-                    int i17 = jSONObject2.getInt("videoDuration" /* "videoDuration" /* "videoDuration" /* cnb.z(-588320325237546L)  */);
+                    int i17 = jSONObject2.getInt("videoDuration" );
                     Locale locale = Locale.CHINA;
-                    String str = String.format(locale, "%02d:%02d:%02d" /* "%02d:%02d:%02d" /* "%02d:%02d:%02d" /* cnb.z(-588243015826218L)  */, Arrays.copyOf(new Object[]{Integer.valueOf(i17 / 3600), Integer.valueOf((i17 % 3600) / 60), Integer.valueOf(i17 % 60)}, 3));
-                    "format(...)" /* "format(...)" /* "format(...)" /* cnb.z(-588728347130666L)  */;
-                    String str2 = String.format(locale, "%.2f MB" /* "%.2f MB" /* "%.2f MB" /* cnb.z(-588672512555818L)  */, Arrays.copyOf(new Object[]{Double.valueOf((((double) jSONObject2.getInt("fileSize" /* "fileSize" /* "fileSize" /* cnb.z(-588711167261482L)  */)) / 1024.0d) / 1024.0d)}, 1));
-                    "format(...)" /* "format(...)" /* "format(...)" /* cnb.z(-588638152817450L)  */;
+                    String str = String.format(locale, "%02d:%02d:%02d" , Arrays.copyOf(new Object[]{Integer.valueOf(i17 / 3600), Integer.valueOf((i17 % 3600) / 60), Integer.valueOf(i17 % 60)}, 3));
+                    "format(...)" ;
+                    String str2 = String.format(locale, "%.2f MB" , Arrays.copyOf(new Object[]{Double.valueOf((((double) jSONObject2.getInt("fileSize" )) / 1024.0d) / 1024.0d)}, 1));
+                    "format(...)" ;
                     StringBuilder sb2 = new StringBuilder();
-                    sb2.append("时长: " /* "时长: " /* "时长: " /* cnb.z(-588552253471530L)  */.concat(str));
+                    sb2.append("时长: ".concat(str));
                     sb2.append('\n');
-                    sb2.append("大小: " /* "大小: " /* "大小: " /* cnb.z(-588582318242602L)  */.concat(str2));
+                    sb2.append("大小: ".concat(str2));
                     sb2.append('\n');
-                    JSONObject jSONObjectOptJSONObject = jSONObject2.optJSONObject("media_cdn_info" /* "media_cdn_info" /* "media_cdn_info" /* cnb.z(-588526483667754L)  */);
-                    if (jSONObjectOptJSONObject == null || !jSONObjectOptJSONObject.has("pcdn_url" /* "pcdn_url" /* "pcdn_url" /* cnb.z(-585713280088874L)  */)) {
-                        String string = jSONObject2.getString("url" /* "url" /* "url" /* cnb.z(-585597315971882L)  */);
-                        String string2 = jSONObject2.getString("url_token" /* "url_token" /* "url_token" /* cnb.z(-585614495841066L)  */);
-                        String string3 = jSONObject2.getString("decodeKey" /* "decodeKey" /* "decodeKey" /* cnb.z(-585588726037290L)  */);
-                        sb2.append("密链: " /* "密链: " /* "密链: " /* cnb.z(-585494236756778L)  */ + string + string2);
+                    JSONObject jSONObjectOptJSONObject = jSONObject2.optJSONObject("media_cdn_info");
+                    if (jSONObjectOptJSONObject == null || !jSONObjectOptJSONObject.has("pcdn_url")) {
+                        String string = jSONObject2.getString("url");
+                        String string2 = jSONObject2.getString("url_token");
+                        String string3 = jSONObject2.getString("decodeKey");
+                        sb2.append("密链: " + string + string2);
                         sb2.append('\n');
-                        sb2.append("密钥: " /* "密钥: " /* "密钥: " /* cnb.z(-585524301527850L)  */ + string3);
+                        sb2.append("密钥: " + string3);
                         sb2.append('\n');
                     } else {
-                        sb2.append("直链: " /* "直链: " /* "直链: " /* cnb.z(-585674625383210L)  */ + jSONObjectOptJSONObject.getString("pcdn_url" /* "pcdn_url" /* "pcdn_url" /* cnb.z(-585635970677546L)  */));
+                        sb2.append("直链: " + jSONObjectOptJSONObject.getString("pcdn_url"));
                         sb2.append('\n');
                     }
                     dnc.c(sb2.toString());
-                    dnc.sendToast(null, 3, "复制视频成功" /* "复制视频成功" /* "复制视频成功" /* cnb.z(-586018222766890L)  */);
+                    dnc.sendToast(null, 3, "复制视频成功");
                 }
                 return kotlinUnitVar;
             case 14:

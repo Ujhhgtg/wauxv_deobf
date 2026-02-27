@@ -99,7 +99,7 @@ public abstract class dqc {
                 alsVar._av(j, cancellableContinuationVar);
             }
             Object objT = cancellableContinuationVar.t();
-            if (objT == ahq.a) {
+            if (objT == CoroutineStateEnum.a) {
                 return objT;
             }
         }

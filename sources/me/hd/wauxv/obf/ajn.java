@@ -286,7 +286,7 @@ public abstract class ajn {
                     return objAk;
                 }
             } while (!atomicIntegerFieldUpdater.compareAndSet(aosVar, 0, 1));
-            return ahq.a;
+            return CoroutineStateEnum.a;
         } catch (Throwable th) {
             th = th;
             if (th instanceof aoq) {

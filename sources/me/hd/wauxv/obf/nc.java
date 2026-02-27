@@ -22,7 +22,7 @@ public abstract class nc implements kotlinx$coroutines$internal$DispatchedContin
             throwIfVar1IsNull(afwVar2);
             try {
                 obj = ncVar.i(obj);
-                if (obj == ahq.a) {
+                if (obj == CoroutineStateEnum.a) {
                     return;
                 }
             } catch (Throwable th) {

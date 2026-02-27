@@ -75,8 +75,7 @@ public final class bbj extends SwitchHook implements bnp {
                                                                                                      * 553449485761322L)
                                                                                                      */);
             ViewGroup viewGroup2 = (ViewGroup) parent;
-            a.getClass();
-            io ioVar = new io(viewGroup2, (List) h.getValue(), 18, false);
+            DefaultConfig ioVar = new DefaultConfig(viewGroup2, (List) h.getValue(), 18, false);
             Context context = viewGroup2.getContext();
             throwIfVar1IsNull(context, "context");
             ant antVar = new ant(context);

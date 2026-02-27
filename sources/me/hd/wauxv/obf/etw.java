@@ -39,7 +39,7 @@ public final class etw extends SwitchHook implements IMessageLongPressHook {
 
     @Override // me.hd.wauxv.obf.bna
     public final List getUiElements(MsgInfoBean msgInfoBean) {
-        return (z() && msgInfoBean.isVoice()) ? dqc.toSingletonList(new wj(R.id.MenuItem_Chat_VoiceSave,
+        return (getIsEnabled() && msgInfoBean.isVoice()) ? dqc.toSingletonList(new wj(R.id.MenuItem_Chat_VoiceSave,
                 "保存" /* "保存" /* "保存" /* cnb.z(-520382532549418L)  */, R.drawable.ic_menu_save_24dp, new dfq(18))) : EmptyReadonlyList.INSTANCE;
     }
 

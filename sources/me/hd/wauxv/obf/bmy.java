@@ -1155,7 +1155,7 @@ public abstract class bmy {
         while (cursorAb.moveToNext()) {
             try {
                 FriendInfo friendInfoS = cnb.s(cursorAb);
-                Object objB = acv.b(acv.a, eom.a.f);
+                Object objB = acv.b(eom.a.f);
                 throwIfVar1IsNull(objB, "null cannot be cast to non-null type kotlin.String" /*
                                                                                               * "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121955596368682L)  */
                                                                                               */);

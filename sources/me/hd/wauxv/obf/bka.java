@@ -52,8 +52,7 @@ public final /* synthetic */ class bka implements IInvokable {
                 } else if (nullSafeIsEqual(str, "wauxv" /* "wauxv" /* "wauxv" /* "wauxv" /* cnb.z(-550709296626474L)   */)) {
                     bbj.a.getClass();
                     if (nullSafeIsEqual(str2, "clearUnreadCount" /* "clearUnreadCount" /* "clearUnreadCount" /* "clearUnreadCount" /* cnb.z(-553591219682090L)   */)) {
-                        Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
-                        KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new lw(i2, afwVar, 3));
+                        KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new lw(2, null, 3));
                     } else if (nullSafeIsEqual(str2, "killProcess" /* "killProcess" /* "killProcess" /* "killProcess" /* cnb.z(-553535385107242L)   */)) {
                         Process.killProcess(Process.myPid());
                     }

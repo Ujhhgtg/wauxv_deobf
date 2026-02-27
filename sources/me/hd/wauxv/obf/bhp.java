@@ -69,7 +69,7 @@ public final class bhp extends doi implements Function2 {
         Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         kotlinx$coroutines$internal$DispatchedContinuation afwVar = null;
         View.OnCreateContextMenuListener onCreateContextMenuListener = this.p;
-        ahq ahqVar = ahq.a;
+        CoroutineStateEnum ahqVar = CoroutineStateEnum.a;
         int i2 = 2;
         switch (i) {
             case 0:

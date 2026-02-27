@@ -1,76 +1,196 @@
+//
+// Decompiled by Procyon - 1560ms
+//
 package me.hd.wauxv.obf;
 
-/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
-/* JADX INFO: loaded from: classes.dex */
-public final class eq extends doi implements Function2 {
-    public final /* synthetic */ int a = 2;
+import android.widget.TextView;
+import com.alibaba.fastjson2.JSONObject;
+import com.google.android.material.checkbox.MaterialCheckBox;
+import com.alibaba.fastjson2.JSON;
+
+public final class eq extends doi implements Function2
+{
+    public final int a;
     public int d;
-    public /* synthetic */ Object e;
+    public Object e;
     public Object f;
 
-    public /* synthetic */ eq(int i, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
-        super(i, afwVar);
+    public eq(final int n, final DispatchedContinuation DispatchedContinuation) {
+        super(n, DispatchedContinuation);
+        this.a = 2;
     }
 
-    @Override // me.hd.wauxv.obf.bgj
-    public final Object g(Object obj, Object obj2) {
-        ahp ahpVar = (ahp) obj;
-        kotlinx$coroutines$internal$DispatchedContinuation afwVar = (kotlinx$coroutines$internal$DispatchedContinuation) obj2;
-        switch (this.a) {
-            case 0:
-                break;
-            case 1:
-                break;
+    public eq(final bgj bgj, final DispatchedContinuation DispatchedContinuation) {
+        super(2, DispatchedContinuation);
+        this.a = 0;
+        this.f = bgj;
+    }
+
+    public eq(final bqq e, final zn f, final DispatchedContinuation DispatchedContinuation) {
+        super(2, DispatchedContinuation);
+        this.a = 1;
+        this.e = e;
+        this.f = f;
+    }
+
+    public final Object g(Object o, final Object o2) {
+        final int a = this.a;
+        final ahp ahp = (ahp)o;
+        final DispatchedContinuation DispatchedContinuation = (DispatchedContinuation)o2;
+        switch (a) {
+            default: {
+                o = ((eq)this.h(ahp, DispatchedContinuation)).i(DexFinder.a);
+                return o;
+            }
+            case 1: {
+                o = ((eq)this.h(ahp, DispatchedContinuation)).i(ens.a);
+                return o;
+            }
+            case 0: {
+                o = ((eq)this.h(ahp, DispatchedContinuation)).i(ens.a);
+                return o;
+            }
         }
-        return ((eq) h(ahpVar, afwVar)).i(Kotlin$Unit.INSTANCE);
     }
 
-    /* JADX WARN: Type inference failed for: r1v1, types: [me.hd.wauxv.obf.bgj, me.hd.wauxv.obf.doi] */
-    @Override // me.hd.wauxv.obf.nc
-    public final kotlinx$coroutines$internal$DispatchedContinuation h(Object obj, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
+    public final DispatchedContinuation h(Object e, final DispatchedContinuation DispatchedContinuation) {
         switch (this.a) {
-            case 0:
-                eq eqVar = new eq((Function2) this.f, afwVar);
-                eqVar.e = obj;
-                return eqVar;
-            case 1:
-                return new eq((bqq) this.e, (zn) this.f, afwVar);
-            default:
-                eq eqVar2 = new eq(2, afwVar);
-                eqVar2.e = obj;
-                return eqVar2;
+            default: {
+                final eq eq = new eq(2, DispatchedContinuation);
+                eq.e = e;
+                return (DispatchedContinuation)eq;
+            }
+            case 1: {
+                e = this.e;
+                return (DispatchedContinuation)new eq((bqq)e, (zn)this.f, DispatchedContinuation);
+            }
+            case 0: {
+                final eq eq2 = new eq((bgj)this.f, DispatchedContinuation);
+                eq2.e = e;
+                return (DispatchedContinuation)eq2;
+            }
         }
     }
 
-    /* JADX WARN: Code restructure failed: missing block: B:20:0x00d8, code lost:
-    
-        if (r12 == r4) goto L21;
-     */
-    /* JADX WARN: Type inference failed for: r0v3, types: [me.hd.wauxv.obf.bgj, me.hd.wauxv.obf.doi] */
-    @Override // me.hd.wauxv.obf.nc
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct add '--show-bad-code' argument
-    */
-    public final java.lang.Object i(java.lang.Object r12) throws java.lang.Exception {
-        /*
-            Method dump skipped, instruction units count: 426
-            To view this dump add '--comments-level debug' option
-        */
-        throw new UnsupportedOperationException("Method not decompiled: me.hd.wauxv.obf.eq.i(java.lang.Object):java.lang.Object");
-    }
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    /* JADX WARN: Multi-variable type inference failed */
-    public eq(Function2 function2Var, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
-        super(2, afwVar);
-        this.f = (doi) function2Var;
-    }
-
-    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-    public eq(bqq bqqVar, zn znVar, kotlinx$coroutines$internal$DispatchedContinuation afwVar) {
-        super(2, afwVar);
-        this.e = bqqVar;
-        this.f = znVar;
+    public final Object i(Object o) {
+        final int a = this.a;
+        Object a2 = ens.a;
+        final CoroutineStateEnum a3 = CoroutineStateEnum.a;
+        switch (a) {
+            default: {
+                final ahp ahp = (ahp)this.e;
+                final int d = this.d;
+                Label_0422: {
+                    cla f;
+                    if (d != 0) {
+                        if (d != 1) {
+                            if (d == 2) {
+                                bhu.bd(o);
+                                break Label_0422;
+                            }
+                            throw new IllegalStateException(cnb.z(-480306192710442L));
+                        }
+                        else {
+                            f = (cla)this.f;
+                            bhu.bd(o);
+                        }
+                    }
+                    else {
+                        bhu.bd(o);
+                        final bjm a4 = bjm.a;
+                        bjm.t(a4);
+                        bjm.u(a4);
+                        final String z = "https://api.fpfast.top/shared/user/getallinfo";
+                        final alc a5 = aou.a;
+                        final akq f2 = akq.f;
+                        final dob dob = new dob();
+                        final cla cla = new cla(ajn.g(ahp, bmy.aa((ahf)f2, dob), (bgj)new bho(z, null, 1)));
+                        f = new cla(ajn.g(ahp, bmy.aa((ahf)f2, new dob()), (bgj)new bho("https://hd.slzzs.me/wauxv/api/getGroupTitle.php", null, 2)));
+                        this.e = null;
+                        this.f = f;
+                        this.d = 1;
+                        o = cla._be((DispatchedContinuation)this);
+                        if (o == a3) {
+                            return a3;
+                        }
+                    }
+                    final JSONObject object = JSON.parseObject((String)o);
+                    if (bzo.f(object.get("code"), (Object)new Integer(0))) {
+                        ((akf)bjk.a).u(object.getJSONArray("data").toString());
+                        bjm.t(bjm.a);
+                    }
+                    this.e = null;
+                    this.f = null;
+                    this.d = 2;
+                    if ((o = ((alp)f)._be(this)) != a3) {
+                        break Label_0422;
+                    }
+                    return a3;
+                }
+                final JSONObject object2 = JSON.parseObject((String)o);
+                final Object value = object2.get("code");
+                o = new Integer(0);
+                final boolean f3 = bzo.f(value, o);
+                Object o2 = a2;
+                if (f3) {
+                    ((akf)bjl.a).u(object2.getJSONArray("data").toString());
+                    bjm.u(bjm.a);
+                    o2 = a2;
+                }
+                return o2;
+            }
+            case 1: {
+                final zn zn = (zn)this.f;
+                final int d2 = this.d;
+                if (d2 != 0) {
+                    if (d2 != 1) {
+                        throw new IllegalStateException("");
+                    }
+                    bhu.bd(o);
+                }
+                else {
+                    bhu.bd(o);
+                    final zl zl = new zl(zn, null, 0);
+                    this.d = 1;
+                    final dov a6 = doh.a;
+                    final alc a7 = aou.a;
+                    if ((o = ajn.ak((ahh)akq.f, (bgj)zl, (doi)this)) == a3) {
+                        a2 = a3;
+                        return a2;
+                    }
+                }
+                final String str = (String)o;
+                final MaterialCheckBox materialCheckBox = (MaterialCheckBox)((bqq)this.e).c;
+                final StringBuilder sb = new StringBuilder();
+                sb.append(zn.a);
+                sb.append(cnb.z(-11587821763370L));
+                sb.append(str);
+                sb.append(')');
+                materialCheckBox.setText(sb.toString());
+                return a2;
+            }
+            case 0: {
+                final int d3 = this.d;
+                if (d3 != 0) {
+                    if (d3 != 1) {
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                    }
+                    bhu.bd(o);
+                }
+                else {
+                    bhu.bd(o);
+                    o = this.e;
+                    final ahp ahp2 = (ahp)o;
+                    final doi doi = (doi)this.f;
+                    this.d = 1;
+                    o = ((bgj)doi).g((Object)ahp2, (Object)this);
+                    if (o == a3) {
+                        a2 = a3;
+                    }
+                }
+                return a2;
+            }
+        }
     }
 }
+

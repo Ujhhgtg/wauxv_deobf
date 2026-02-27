@@ -8,14 +8,11 @@ import org.luckypray.dexkit.DexKitBridge;
 public final class xn extends ApiHookItem implements IDexFind {
     public static final xn a = new xn();
 
-    public static Object b() throws IllegalAccessException, InvocationTargetException {
-        MMKernelDexFind byrVar = MMKernelDexFind.INSTANCE;
+    public static Object getChatroomStorage() throws IllegalAccessException, InvocationTargetException {
         Class cls = (Class) SomeStaticHelpers.getFirstInArray(StaticHelpers7.toDexClass(ChatroomService$ClassChatroomService.INSTANCE).getInterfaces());
-        byrVar.getClass();
         Object objInvoke = StaticHelpers7.toDexMethod(MMKernel$MethodGetServiceImpl.INSTANCE).invoke(null, cls);
         throwIfVar1IsNull(objInvoke);
         MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(objInvoke).getMethodResolverBasedOnPreviouslyProvidedConfig();
-        xp.a.getClass();
         methodResolverVarT.returnType = StaticHelpers7.toDexMethod(ChatroomStorage$MethodGetMemberCount.INSTANCE).getDeclaringClass();
         Object objE = ((MethodHookWrapper) bjs.resolveFirstMethodWithoutParams(methodResolverVarT)).invokeAndThrowIfFailed(new Object[0]);
         throwIfVar1IsNull(objE);

@@ -12,7 +12,7 @@ public final class etu extends ApiHookItem implements IDexFind {
     public static String b(etu etuVar, String str) {
         Object objInvoke;
         etuVar.getClass();
-        Method methodBb = StaticHelpers7.toDexMethod(ett.a);
+        Method methodBb = StaticHelpers7.toDexMethod(VoiceLogic$MethodGetAmrFullPath.INSTANCE);
         if (Modifier.isStatic(methodBb.getModifiers())) {
             objInvoke = methodBb.invoke(null, str, true);
         } else {
@@ -22,7 +22,7 @@ public final class etu extends ApiHookItem implements IDexFind {
             objInvoke = methodBb.invoke(ServiceManagerDexFinder.getServiceByClass(declaringClass), null, str, true);
         }
         throwIfVar1IsNull(objInvoke,
-                "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* cnb.z(-105643310578474L)  */);
+                "null cannot be cast to non-null type kotlin.String");
         return (String) objInvoke;
     }
 
@@ -32,7 +32,7 @@ public final class etu extends ApiHookItem implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        StaticHelpers7.resolveDexAndCache(ets.a, dexKitBridge, new epy(9));
-        StaticHelpers7.resolveDexAndCache(ett.a, dexKitBridge, new epy(10));
+        StaticHelpers7.resolveDexAndCache(VoiceLogic$ClassVoiceLogic.INSTANCE, dexKitBridge, new epy(9));
+        StaticHelpers7.resolveDexAndCache(VoiceLogic$MethodGetAmrFullPath.INSTANCE, dexKitBridge, new epy(10));
     }
 }

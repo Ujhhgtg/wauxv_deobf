@@ -141,7 +141,7 @@ public abstract class ResourcesCompat implements ckp {
         } catch (Throwable th2) {
             abrVar = new abr(th2, false);
         }
-        ahq ahqVar = ahq.a;
+        CoroutineStateEnum ahqVar = CoroutineStateEnum.a;
         if (abrVar == ahqVar || (objAi = dexVar.ai(abrVar)) == specificEmojiMatcherVar) {
             return ahqVar;
         }

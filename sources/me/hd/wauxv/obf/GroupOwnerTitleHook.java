@@ -61,15 +61,13 @@ public final class GroupOwnerTitleHook extends SwitchHook implements bnc {
     }
 
     public static final void t(GroupOwnerTitleHook groupOwnerTitleHookVar) {
-        groupOwnerTitleHookVar.getClass();
-        for (Object obj : JSON.parseArray(bjk.a.o())) {
+        for (Object obj : JSON.parseArray(GroupOwnerTitleHook$ValTitleFbJsonStr.INSTANCE.o())) {
             if (obj instanceof JSONObject) {
                 JSONObject jSONObject = (JSONObject) obj;
                 String string = jSONObject.getString("id" /* "id" /* "id" /* cnb.z(-505749578971946L)  */);
                 String string2 = jSONObject.getString("desc" /* "desc" /* "desc" /* cnb.z(-505753873939242L)  */);
                 if (string != null && string.length() != 0 && string2 != null && string2.length() != 0) {
                     String strAz = StringsKt.az(6, string2);
-                    a.getClass();
                     s.put(string, new Pair(strAz, n.getValue()));
                 }
             }
@@ -77,8 +75,7 @@ public final class GroupOwnerTitleHook extends SwitchHook implements bnc {
     }
 
     public static final void u(GroupOwnerTitleHook groupOwnerTitleHookVar) {
-        groupOwnerTitleHookVar.getClass();
-        for (Object obj : JSON.parseArray(bjl.a.o())) {
+        for (Object obj : JSON.parseArray(GroupOwnerTitleHook$ValTitleWaJsonStr.INSTANCE.o())) {
             if (obj instanceof JSONObject) {
                 JSONObject jSONObject = (JSONObject) obj;
                 String string = jSONObject.getString("id" /* "id" /* "id" /* cnb.z(-505715219233578L)  */);
@@ -96,7 +93,6 @@ public final class GroupOwnerTitleHook extends SwitchHook implements bnc {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
         KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new eq(2, null));
     }
 
@@ -136,7 +132,7 @@ public final class GroupOwnerTitleHook extends SwitchHook implements bnc {
             LruCacheMap lruCacheMapVar2 = StaticMapsProvider.MAP_1;
             Boolean bool = (Boolean) lruCacheMapVar2.get(pairVar3);
             if (bool != null) {
-                zF = bool.booleanValue();
+                zF = bool;
             } else {
                 Object objB = xp.getChatroomMember(talker);
                 if (objB == null) {

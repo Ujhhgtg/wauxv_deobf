@@ -68,7 +68,7 @@ public final class ckx extends doi implements Function2 {
         kotlinx$coroutines$internal$DispatchedContinuation afwVar = null;
         Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         Serializable serializable = this.o;
-        ahq ahqVar = ahq.a;
+        CoroutineStateEnum ahqVar = CoroutineStateEnum.a;
         int i2 = 1;
         switch (i) {
             case 0:

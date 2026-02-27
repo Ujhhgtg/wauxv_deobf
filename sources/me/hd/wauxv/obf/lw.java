@@ -79,9 +79,8 @@ public final class lw extends doi implements Function2 {
 
     @Override // me.hd.wauxv.obf.nc
     public final Object i(Object obj) throws Throwable {
-        int i = this.a;
         Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
-        switch (i) {
+        switch (this.a) {
             case 0:
                 FastKV.bd(obj);
                 baa baaVar = new baa(new bae(StaticHelpers5.a(zo.c()), true, new gi(23)));
@@ -125,15 +124,15 @@ public final class lw extends doi implements Function2 {
                 return kotlinUnitVar;
             case 1:
                 FastKV.bd(obj);
-                ConversationDatabaseApi.b();
+                ConversationDatabaseApi.clearUnreadConversations();
                 return kotlinUnitVar;
             case 2:
                 FastKV.bd(obj);
-                ConversationDatabaseApi.b();
+                ConversationDatabaseApi.clearUnreadConversations();
                 return kotlinUnitVar;
             case 3:
                 FastKV.bd(obj);
-                ConversationDatabaseApi.b();
+                ConversationDatabaseApi.clearUnreadConversations();
                 return kotlinUnitVar;
             case 4:
                 FastKV.bd(obj);

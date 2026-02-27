@@ -46,7 +46,7 @@ public final class dgh extends doi implements Function2 {
         int i = this.a;
         Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         View view = this.e;
-        ahq ahqVar = ahq.a;
+        CoroutineStateEnum ahqVar = CoroutineStateEnum.a;
         switch (i) {
             case 0:
                 int i2 = this.d;

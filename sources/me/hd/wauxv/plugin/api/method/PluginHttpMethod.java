@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.Map;
 import me.hd.wauxv.obf.kotlinx$coroutines$internal$DispatchedContinuation;
 import me.hd.wauxv.obf.ahp;
-import me.hd.wauxv.obf.ahq;
+import me.hd.wauxv.obf.CoroutineStateEnum;
 import me.hd.wauxv.obf.ajm;
 import me.hd.wauxv.obf.ajn;
 import me.hd.wauxv.obf.Dispatchers$IO;
@@ -78,7 +78,7 @@ public final class PluginHttpMethod {
                 this.d = null;
                 this.a = 1;
                 obj = claVar._be(this);
-                ahq ahqVar = ahq.a;
+                CoroutineStateEnum ahqVar = CoroutineStateEnum.a;
                 if (obj == ahqVar) {
                     return ahqVar;
                 }
@@ -140,7 +140,7 @@ public final class PluginHttpMethod {
                 this.d = null;
                 this.a = 1;
                 obj = claVar._be(this);
-                ahq ahqVar = ahq.a;
+                CoroutineStateEnum ahqVar = CoroutineStateEnum.a;
                 if (obj == ahqVar) {
                     return ahqVar;
                 }
@@ -207,7 +207,7 @@ public final class PluginHttpMethod {
                 this.d = null;
                 this.a = 1;
                 obj = claVar._be(this);
-                ahq ahqVar = ahq.a;
+                CoroutineStateEnum ahqVar = CoroutineStateEnum.a;
                 if (obj == ahqVar) {
                     return ahqVar;
                 }

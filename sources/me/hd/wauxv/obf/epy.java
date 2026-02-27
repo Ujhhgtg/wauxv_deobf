@@ -115,7 +115,7 @@ public final /* synthetic */ class epy implements IInvokable {
                 LinearLayout linearLayout2 = ceeVarE2.b;
                 bzyVar2.t("保存" /* "保存" /* "保存" /* cnb.z(-610237543349034L)  */, new amw(new aul(ceeVarE2, 4), 0));
                 bzyVar2.s("重置" /* "重置" /* "重置" /* cnb.z(-610241838316330L)  */, new amw(new efq(16), 2));
-                bjs.x((3 & 2) != 0 ? new amd(1) : null, bzyVar2, "取消" /* "取消" /* "取消" /* cnb.z(-47455093652266L)  */);
+                bjs.x(new amd(1), bzyVar2, "取消");
                 if (linearLayout2 != null) {
                     egVar2.r = linearLayout2;
                 }
@@ -222,7 +222,6 @@ public final /* synthetic */ class epy implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar4 = new DexFinder();
                 cdjVar4.usingStrings("getAmrFullPath cost: " /* "getAmrFullPath cost: " /* "getAmrFullPath cost: " /* cnb.z(-107348412594986L)  */);
-                dexMethodQueryBuilderVar4.getClass();
                 dexMethodQueryBuilderVar4.dexFinder = cdjVar4;
                 return kotlinUnitVar;
             case 12:

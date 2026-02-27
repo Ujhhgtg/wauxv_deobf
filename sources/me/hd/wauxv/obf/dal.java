@@ -26,7 +26,6 @@ public abstract class dal {
 
     public static eme c(Class cls) {
         KClass zcVarB = getKClassFromClass(cls);
-        List list = Collections.EMPTY_LIST;
         return new eme(zcVarB, false);
     }
 }

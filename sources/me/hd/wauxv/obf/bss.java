@@ -45,7 +45,7 @@ public final class bss extends dcw implements bgk {
             this.d = null;
             this.a = 1;
             obj = ek.e(ekVar, ajxVar, this);
-            ahq ahqVar = ahq.a;
+            CoroutineStateEnum ahqVar = CoroutineStateEnum.a;
             if (obj == ahqVar) {
                 return ahqVar;
             }
