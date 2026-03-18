@@ -22,13 +22,13 @@ public final /* synthetic */ class ajz implements Runnable {
         int i = this.b;
         int i2 = this.c;
         if (i == 0 && i2 == 0) {
-            ((ListView) chmVar.c).setSelectionFromTop(0, 0);
+            ((ListView) chmVar.var1).setSelectionFromTop(0, 0);
             return;
         }
-        while (((ListView) chmVar.c).getFirstVisiblePosition() + 1 > i && ((ListView) chmVar.c).canScrollList(-1)) {
+        while (((ListView) chmVar.var1).getFirstVisiblePosition() + 1 > i && ((ListView) chmVar.var1).canScrollList(-1)) {
             chmVar.aq(i2 / 2);
         }
-        while (((ListView) chmVar.c).getLastVisiblePosition() - 1 < i && ((ListView) chmVar.c).canScrollList(1)) {
+        while (((ListView) chmVar.var1).getLastVisiblePosition() - 1 < i && ((ListView) chmVar.var1).canScrollList(1)) {
             chmVar.aq((-i2) / 2);
         }
     }

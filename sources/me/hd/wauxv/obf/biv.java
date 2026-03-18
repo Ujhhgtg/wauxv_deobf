@@ -41,8 +41,8 @@ public final class biv {
         }
         StringBuilder sb = new StringBuilder();
         sb.append(" where (username in " /* " where (username in " /* " where (username in " /* cnb.z(-593036199328554L)  */);
-        return yg.decryptVar3UsingCnbZAndConcatToVar1(sb, SomeStaticHelpers.joinToString(this.f, null, "(" /* "(" /* "(" /* cnb.z(-592928825146154L)  */, ")" /* ")" /* ")" /* cnb.z(-592937415080746L)  */,
-                new bep(2), 25), -592946005015338L);
+        return yg.concatVar2AndDecryptedVar3ToVar1(sb, SomeStaticHelpers.joinToString(this.f, null, "(", ")",
+                new bep(2), 25), -592946005015338L); // ') order by flag desc'
     }
 
     public biv(String str, int i, String str2, String[] strArr) {

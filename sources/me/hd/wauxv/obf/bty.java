@@ -156,7 +156,7 @@ public final /* synthetic */ class bty implements IInvokable {
             case 5:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar2 = new DexFinder();
-                cdjVar2.s("onLocationChanged" /* "onLocationChanged" /* "onLocationChanged" /* cnb.z(-492868972051242L)  */);
+                cdjVar2.setMethodName("onLocationChanged" /* "onLocationChanged" /* "onLocationChanged" /* cnb.z(-492868972051242L)  */);
                 cdjVar2.usingStrings("MicroMsg.DefaultTencentLocationManager" /* "MicroMsg.DefaultTencentLocationManager" /* "MicroMsg.DefaultTencentLocationManager" /* cnb.z(-494458109950762L)  */,
                         "[mlocationListener]error:%d, reason:%s" /* "[mlocationListener]error:%d, reason:%s" /* "[mlocationListener]error:%d, reason:%s" /* cnb.z(-494290606226218L)  */);
                 dexMethodQueryBuilderVar2.getClass();
@@ -165,7 +165,7 @@ public final /* synthetic */ class bty implements IInvokable {
             case 6:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar3 = new DexFinder();
-                cdjVar3.s("onLocationChanged" /* "onLocationChanged" /* "onLocationChanged" /* cnb.z(-492744417999658L)  */);
+                cdjVar3.setMethodName("onLocationChanged" /* "onLocationChanged" /* "onLocationChanged" /* cnb.z(-492744417999658L)  */);
                 cdjVar3.usingStrings("MicroMsg.SLocationListener" /* "MicroMsg.SLocationListener" /* "MicroMsg.SLocationListener" /* cnb.z(-492684288457514L)  */);
                 dexMethodQueryBuilderVar3.getClass();
                 dexMethodQueryBuilderVar3.dexFinder = cdjVar3;
@@ -191,7 +191,7 @@ public final /* synthetic */ class bty implements IInvokable {
             case 10:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar5 = new DexFinder();
-                cdjVar5.s("onLocationChanged" /* "onLocationChanged" /* "onLocationChanged" /* cnb.z(-493066540546858L)  */);
+                cdjVar5.setMethodName("onLocationChanged" /* "onLocationChanged" /* "onLocationChanged" /* cnb.z(-493066540546858L)  */);
                 cdjVar5.usingStrings("MicroMsg.SLocationListenerWgs84" /* "MicroMsg.SLocationListenerWgs84" /* "MicroMsg.SLocationListenerWgs84" /* cnb.z(-493006411004714L)  */);
                 dexMethodQueryBuilderVar5.getClass();
                 dexMethodQueryBuilderVar5.dexFinder = cdjVar5;
@@ -352,7 +352,7 @@ public final /* synthetic */ class bty implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar7 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar7 = new DexFinder();
                 MMKernelDexFind.INSTANCE.getClass();
-                cdjVar7.setDeclaredClassName(StaticHelpers7.toDexClass(MMKernel$ClassMMKernel.INSTANCE));
+                cdjVar7.setDeclaredClass(StaticHelpers7.toDexClass(MMKernel$ClassMMKernel.INSTANCE));
                 cls = Class.class;
                 Class<Class> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar7.setParamTypes(clsBf != null ? clsBf : Class.class);
@@ -381,7 +381,7 @@ public final /* synthetic */ class bty implements IInvokable {
                 cdjVar8.setParamTypes(clsB, clsBf2 != null ? clsBf2 : Integer.class);
                 MethodMatcher fjVar = new MethodMatcher();
                 DexFinder cdjVar9 = new DexFinder();
-                cdjVar9.s("notifyDataSetChanged" /* "notifyDataSetChanged" /* "notifyDataSetChanged" /* cnb.z(-101850854456106L)  */);
+                cdjVar9.setMethodName("notifyDataSetChanged" /* "notifyDataSetChanged" /* "notifyDataSetChanged" /* cnb.z(-101850854456106L)  */);
                 fjVar.f(cdjVar9);
                 fjVar.usingStringsType = UsingStringsTypeEnum.Contains;
                 cdjVar8.i = fjVar;

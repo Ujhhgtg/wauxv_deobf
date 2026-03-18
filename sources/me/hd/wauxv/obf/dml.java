@@ -15,7 +15,7 @@ public final class dml extends StaticHelpers7 implements chy {
     }
 
     public final Object c() {
-        SpecificEmojiMatcher specificEmojiMatcherVar = cnb.j;
+        SpecificEmojiMatcher specificEmojiMatcherVar = StaticUtils.j;
         Object obj = a.get(this);
         if (obj == specificEmojiMatcherVar) {
             return null;
@@ -26,7 +26,7 @@ public final class dml extends StaticHelpers7 implements chy {
     public final void g(Object obj) {
         int i;
         if (obj == null) {
-            obj = cnb.j;
+            obj = StaticUtils.j;
         }
         synchronized (this) {
             AtomicReferenceFieldUpdater atomicReferenceFieldUpdater = a;

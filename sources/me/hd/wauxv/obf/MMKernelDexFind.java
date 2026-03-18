@@ -41,7 +41,7 @@ public final class MMKernelDexFind extends ApiHookItem implements IDexFind {
             ((FindDexClassMethodDslWrapper) obj).onMethodCallback = (obj2) -> {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar7 = (DexMethodQueryBuilder) obj2;
                 DexFinder cdjVar7 = new DexFinder();
-                cdjVar7.setDeclaredClassName(StaticHelpers7.toDexClass(MMKernel$ClassMMKernel.INSTANCE));
+                cdjVar7.setDeclaredClass(StaticHelpers7.toDexClass(MMKernel$ClassMMKernel.INSTANCE));
                 cdjVar7.setParamTypes(Class.class);
                 dexMethodQueryBuilderVar7.dexFinder = cdjVar7;
             };

@@ -42,7 +42,7 @@ public final class dmj extends LinearLayout {
         this.d = checkableImageButton;
         jp jpVar = new jp(getContext(), null);
         this.b = jpVar;
-        if (cnb.ad(getContext())) {
+        if (StaticUtils.ad(getContext())) {
             ((ViewGroup.MarginLayoutParams) checkableImageButton.getLayoutParams()).setMarginEnd(0);
         }
         View.OnLongClickListener onLongClickListener = this.i;
@@ -53,7 +53,7 @@ public final class dmj extends LinearLayout {
         FastKV.bb(checkableImageButton, null);
         TypedArray typedArray = (TypedArray) factoryPoolsVar.e;
         if (typedArray.hasValue(69)) {
-            this.e = cnb.w(getContext(), factoryPoolsVar, 69);
+            this.e = StaticUtils.w(getContext(), factoryPoolsVar, 69);
         }
         if (typedArray.hasValue(70)) {
             this.f = StaticAndroidHelpers.ap(typedArray.getInt(70, -1), null);

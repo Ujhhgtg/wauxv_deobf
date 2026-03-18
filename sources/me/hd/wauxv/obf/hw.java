@@ -324,11 +324,11 @@ public final class hw implements Window.Callback {
         AppCompatDelegate appCompatDelegateVar = this.e;
         Context context = appCompatDelegateVar.x;
         chm chmVar = new chm();
-        chmVar.e = context;
-        chmVar.d = callback;
-        chmVar.c = new ArrayList();
+        chmVar.var3 = context;
+        chmVar.var2 = callback;
+        chmVar.var1 = new ArrayList();
         boolean z = false;
-        chmVar.f = new dhq(0);
+        chmVar.var4 = new dhq(0);
         da daVar = appCompatDelegateVar.ah;
         if (daVar != null) {
             daVar.c();

@@ -21,7 +21,7 @@ import me.hd.wauxv.obf.cao;
 import me.hd.wauxv.obf.cau;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cna;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.ddb;
@@ -55,7 +55,7 @@ public class MaterialCardView extends te implements Checkable, dgx {
         caoVar.d.set(super.getContentPaddingLeft(), super.getContentPaddingTop(), super.getContentPaddingRight(), super.getContentPaddingBottom());
         caoVar.al();
         MaterialCardView materialCardView = caoVar.c;
-        ColorStateList colorStateListV = cnb.v(materialCardView.getContext(), typedArrayAn, 11);
+        ColorStateList colorStateListV = StaticUtils.v(materialCardView.getContext(), typedArrayAn, 11);
         caoVar.p = colorStateListV;
         if (colorStateListV == null) {
             caoVar.p = ColorStateList.valueOf(-1);
@@ -64,17 +64,17 @@ public class MaterialCardView extends te implements Checkable, dgx {
         boolean z = typedArrayAn.getBoolean(0, false);
         caoVar.u = z;
         materialCardView.setLongClickable(z);
-        caoVar.n = cnb.v(materialCardView.getContext(), typedArrayAn, 6);
-        caoVar.ag(cnb.x(materialCardView.getContext(), typedArrayAn, 2));
+        caoVar.n = StaticUtils.v(materialCardView.getContext(), typedArrayAn, 6);
+        caoVar.ag(StaticUtils.x(materialCardView.getContext(), typedArrayAn, 2));
         caoVar.h = typedArrayAn.getDimensionPixelSize(5, 0);
         caoVar.g = typedArrayAn.getDimensionPixelSize(4, 0);
         caoVar.i = typedArrayAn.getInteger(3, 8388661);
-        ColorStateList colorStateListV2 = cnb.v(materialCardView.getContext(), typedArrayAn, 7);
+        ColorStateList colorStateListV2 = StaticUtils.v(materialCardView.getContext(), typedArrayAn, 7);
         caoVar.m = colorStateListV2;
         if (colorStateListV2 == null) {
             caoVar.m = ColorStateList.valueOf(cna.v(materialCardView, me.hd.wauxv.R.attr.colorControlHighlight));
         }
-        ColorStateList colorStateListV3 = cnb.v(materialCardView.getContext(), typedArrayAn, 1);
+        ColorStateList colorStateListV3 = StaticUtils.v(materialCardView.getContext(), typedArrayAn, 1);
         colorStateListV3 = colorStateListV3 == null ? ColorStateList.valueOf(0) : colorStateListV3;
         cau cauVar2 = caoVar.f;
         cauVar2.dz(colorStateListV3);

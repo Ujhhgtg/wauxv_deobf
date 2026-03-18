@@ -29,7 +29,7 @@ public final class dek implements den {
             String str = (String) entry.getKey();
             Bundle bundleC = ((bdv) ((deh) entry.getValue()).a.e).c();
             if (!bundleC.isEmpty()) {
-                cnb.ag(bundleR, str, bundleC);
+                StaticUtils.ag(bundleR, str, bundleC);
             }
         }
         this.b = false;

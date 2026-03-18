@@ -38,7 +38,7 @@ public final class bml {
             try {
                 c.getClass();
                 cna.d = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-71829033057066L)  */;
-                cnb.k = false;
+                StaticUtils.k = false;
             } catch (Throwable th) {
                 objX = FastKV.getFailureFromException(th);
             }

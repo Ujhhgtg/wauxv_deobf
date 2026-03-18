@@ -25,7 +25,7 @@ public final class gz implements den {
                 return bundle;
             default:
                 Bundle bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
-                cnb.ai(bundleR, "classes_to_restore", StaticHelpers5.z((LinkedHashSet) this.b));
+                StaticUtils.ai(bundleR, "classes_to_restore", StaticHelpers5.z((LinkedHashSet) this.b));
                 return bundleR;
         }
     }

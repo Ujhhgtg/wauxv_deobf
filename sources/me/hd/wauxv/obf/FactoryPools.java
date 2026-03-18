@@ -146,7 +146,7 @@ public class FactoryPools implements dcq, cuv {
     public Object ac(CharSequence charSequence, int i, int i2, int i3, boolean z, EmojiMatchCallback emojiMatchCallbackVar) {
         int i4;
         char c2;
-        auk aukVar = new auk((cdd) ((chm) this.f).e);
+        auk aukVar = new auk((cdd) ((chm) this.f).var3);
         int iCodePointAt = Character.codePointAt(charSequence, i);
         int i5 = 0;
         boolean zP = true;

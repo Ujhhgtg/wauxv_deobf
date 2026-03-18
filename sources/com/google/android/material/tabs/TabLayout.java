@@ -33,7 +33,7 @@ import me.hd.wauxv.obf.ResourcesCompat;
 import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.cau;
 import me.hd.wauxv.obf.cmz;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.csh;
 import me.hd.wauxv.obf.cuw;
@@ -124,7 +124,7 @@ public class TabLayout extends HorizontalScrollView {
             cauVar.dy(eqq.e(this));
             setBackground(cauVar);
         }
-        setSelectedTabIndicator(cnb.x(context2, typedArrayAn, 5));
+        setSelectedTabIndicator(StaticUtils.x(context2, typedArrayAn, 5));
         setSelectedTabIndicatorColor(typedArrayAn.getColor(8, 0));
         dpkVar.e(typedArrayAn.getDimensionPixelSize(11, -1));
         setSelectedTabIndicatorGravity(typedArrayAn.getInt(10, 0));
@@ -151,7 +151,7 @@ public class TabLayout extends HorizontalScrollView {
         try {
             float dimensionPixelSize2 = typedArrayObtainStyledAttributes.getDimensionPixelSize(0, 0);
             this.s = dimensionPixelSize2;
-            this.m = cnb.v(context2, typedArrayObtainStyledAttributes, 3);
+            this.m = StaticUtils.v(context2, typedArrayObtainStyledAttributes, 3);
             typedArrayObtainStyledAttributes.recycle();
             if (typedArrayAn.hasValue(22)) {
                 this.l = typedArrayAn.getResourceId(22, resourceId);
@@ -161,7 +161,7 @@ public class TabLayout extends HorizontalScrollView {
                 TypedArray typedArrayObtainStyledAttributes2 = context2.obtainStyledAttributes(i, iArr);
                 try {
                     typedArrayObtainStyledAttributes2.getDimensionPixelSize(0, (int) dimensionPixelSize2);
-                    ColorStateList colorStateListV = cnb.v(context2, typedArrayObtainStyledAttributes2, 3);
+                    ColorStateList colorStateListV = StaticUtils.v(context2, typedArrayObtainStyledAttributes2, 3);
                     if (colorStateListV != null) {
                         this.m = aq(this.m.getDefaultColor(), colorStateListV.getColorForState(new int[]{android.R.attr.state_selected}, colorStateListV.getDefaultColor()));
                     }
@@ -172,14 +172,14 @@ public class TabLayout extends HorizontalScrollView {
                 }
             }
             if (typedArrayAn.hasValue(25)) {
-                this.m = cnb.v(context2, typedArrayAn, 25);
+                this.m = StaticUtils.v(context2, typedArrayAn, 25);
             }
             if (typedArrayAn.hasValue(23)) {
                 this.m = aq(this.m.getDefaultColor(), typedArrayAn.getColor(23, 0));
             }
-            this.n = cnb.v(context2, typedArrayAn, 3);
+            this.n = StaticUtils.v(context2, typedArrayAn, 3);
             this.r = StaticAndroidHelpers.ap(typedArrayAn.getInt(4, -1), null);
-            this.o = cnb.v(context2, typedArrayAn, 21);
+            this.o = StaticUtils.v(context2, typedArrayAn, 21);
             this.ab = typedArrayAn.getInt(6, 300);
             this.ak = ajn.ae(context2, R.attr.motionEasingEmphasizedInterpolator, ff.b);
             this.w = typedArrayAn.getDimensionPixelSize(14, -1);

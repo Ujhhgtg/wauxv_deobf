@@ -21,14 +21,14 @@ public final class MsgInfoBean {
     private final long msgId;
     private final Long msgSeq;
     private final Long msgSvrId;
-    private final Object origin;
+    private final Object instance;
     private final String originContent;
     private final String talker;
     private final Integer talkerId;
     private final int type;
 
     public MsgInfoBean(Object obj) throws IllegalAccessException {
-        this.origin = obj;
+        this.instance = obj;
         FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).createFieldResolver();
         fieldResolverVarR.name = "field_msgId" /* "field_msgId" /* "field_msgId" /* cnb.z(-8396661062442L)  */;
         Object objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
@@ -294,8 +294,8 @@ public final class MsgInfoBean {
         return this.msgSvrId;
     }
 
-    public final Object getOrigin() {
-        return this.origin;
+    public final Object getInstance() {
+        return this.instance;
     }
 
     public final String getOriginContent() {

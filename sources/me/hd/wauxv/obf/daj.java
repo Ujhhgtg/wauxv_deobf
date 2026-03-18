@@ -34,7 +34,7 @@ public final class daj extends aax {
     public final Iterator d(Object obj) {
         Object[] objArr = (Object[]) obj;
         throwIfVar1IsNull(objArr, "<this>");
-        return cnb.ae(objArr);
+        return StaticUtils.ae(objArr);
     }
 
     @Override // me.hd.wauxv.obf.s

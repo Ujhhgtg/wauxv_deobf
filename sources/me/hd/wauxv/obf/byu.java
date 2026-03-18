@@ -155,7 +155,7 @@ public final class byu extends cyw {
             if (it.hasNext()) {
                 throw yg.d(it);
             }
-            FragmentManager fragmentManagerVar = (FragmentManager) ((HashMap) begVar.c.d).get(someFragmentManagerVar.aw);
+            FragmentManager fragmentManagerVar = (FragmentManager) ((HashMap) begVar.c.var2).get(someFragmentManagerVar.aw);
             if (fragmentManagerVar != null) {
                 SomeFragmentManager someFragmentManagerVar2 = fragmentManagerVar.c;
                 if (someFragmentManagerVar2.equals(someFragmentManagerVar)) {

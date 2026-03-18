@@ -318,7 +318,7 @@ public class anc extends SomeFragmentManager implements DialogInterface.OnCancel
     }
 
     @Override // me.hd.wauxv.obf.bdj
-    public final cnb x() {
+    public final StaticUtils x() {
         return new anb(this, new bde(this));
     }
 

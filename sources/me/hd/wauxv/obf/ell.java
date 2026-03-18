@@ -45,10 +45,10 @@ public abstract class ell implements Cloneable {
     public dop bb = ae;
 
     public static void be(chm chmVar, View view, elt eltVar) {
-        ku kuVar = (ku) chmVar.c;
-        ku kuVar2 = (ku) chmVar.f;
-        SparseArray sparseArray = (SparseArray) chmVar.d;
-        byc bycVar = (byc) chmVar.e;
+        ku kuVar = (ku) chmVar.var1;
+        ku kuVar2 = (ku) chmVar.var4;
+        SparseArray sparseArray = (SparseArray) chmVar.var2;
+        byc bycVar = (byc) chmVar.var3;
         kuVar.put(view, eltVar);
         int id = view.getId();
         if (id >= 0) {
@@ -198,13 +198,13 @@ public abstract class ell implements Cloneable {
 
     public final void bk(boolean z) {
         if (z) {
-            ((ku) this.am.c).clear();
-            ((SparseArray) this.am.d).clear();
-            ((byc) this.am.e).e();
+            ((ku) this.am.var1).clear();
+            ((SparseArray) this.am.var2).clear();
+            ((byc) this.am.var3).e();
         } else {
-            ((ku) this.an.c).clear();
-            ((SparseArray) this.an.d).clear();
-            ((byc) this.an.e).e();
+            ((ku) this.an.var1).clear();
+            ((SparseArray) this.an.var2).clear();
+            ((byc) this.an.var3).e();
         }
     }
 
@@ -213,14 +213,14 @@ public abstract class ell implements Cloneable {
         this.av = i;
         if (i == 0) {
             bq(this, df.b, false);
-            for (int i2 = 0; i2 < ((byc) this.am.e).k(); i2++) {
-                View view = (View) ((byc) this.am.e).l(i2);
+            for (int i2 = 0; i2 < ((byc) this.am.var3).k(); i2++) {
+                View view = (View) ((byc) this.am.var3).l(i2);
                 if (view != null) {
                     view.setHasTransientState(false);
                 }
             }
-            for (int i3 = 0; i3 < ((byc) this.an.e).k(); i3++) {
-                View view2 = (View) ((byc) this.an.e).l(i3);
+            for (int i3 = 0; i3 < ((byc) this.an.var3).k(); i3++) {
+                View view2 = (View) ((byc) this.an.var3).l(i3);
                 if (view2 != null) {
                     view2.setHasTransientState(false);
                 }
@@ -270,7 +270,7 @@ public abstract class ell implements Cloneable {
         if (miVar != null) {
             return miVar.bo(view, z);
         }
-        return (elt) ((ku) (z ? this.am : this.an).c).get(view);
+        return (elt) ((ku) (z ? this.am : this.an).var1).get(view);
     }
 
     public final boolean bp(View view) {
@@ -402,7 +402,7 @@ public abstract class ell implements Cloneable {
                         String[] strArrAb = ab();
                         if (strArrAb != null && strArrAb.length > 0) {
                             eltVar2 = new elt(view);
-                            elt eltVar5 = (elt) ((ku) chmVar2.c).get(view);
+                            elt eltVar5 = (elt) ((ku) chmVar2.var1).get(view);
                             i = size;
                             if (eltVar5 != null) {
                                 int i4 = 0;

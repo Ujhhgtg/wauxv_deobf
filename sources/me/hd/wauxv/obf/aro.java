@@ -51,19 +51,19 @@ public final class aro extends ase {
         this._bf = ajyVar;
         final chm chmVar = new chm();
         this.j = chmVar;
-        chmVar.f = this;
+        chmVar.var4 = this;
         final Context context = codeEditor.getContext();
         LinearLayout linearLayout = new LinearLayout(context);
-        chmVar.e = linearLayout;
-        chmVar.c = new ListView(context);
-        chmVar.d = new ProgressBar(context, null, R.attr.progressBarStyleHorizontal);
+        chmVar.var3 = linearLayout;
+        chmVar.var1 = new ListView(context);
+        chmVar.var2 = new ProgressBar(context, null, R.attr.progressBarStyleHorizontal);
         linearLayout.setOrientation(1);
-        ((LinearLayout) chmVar.e).setLayoutTransition(null);
-        ((ListView) chmVar.c).setLayoutTransition(null);
-        linearLayout.addView((ProgressBar) chmVar.d, new LinearLayout.LayoutParams(-1, (int) TypedValue.applyDimension(1, 20.0f, context.getResources().getDisplayMetrics())));
-        linearLayout.addView((ListView) chmVar.c, new LinearLayout.LayoutParams(-1, -1));
-        ((ProgressBar) chmVar.d).setIndeterminate(true);
-        LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) ((ProgressBar) chmVar.d).getLayoutParams();
+        ((LinearLayout) chmVar.var3).setLayoutTransition(null);
+        ((ListView) chmVar.var1).setLayoutTransition(null);
+        linearLayout.addView((ProgressBar) chmVar.var2, new LinearLayout.LayoutParams(-1, (int) TypedValue.applyDimension(1, 20.0f, context.getResources().getDisplayMetrics())));
+        linearLayout.addView((ListView) chmVar.var1, new LinearLayout.LayoutParams(-1, -1));
+        ((ProgressBar) chmVar.var2).setIndeterminate(true);
+        LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) ((ProgressBar) chmVar.var2).getLayoutParams();
         layoutParams.topMargin = (int) TypedValue.applyDimension(1, -8.0f, context.getResources().getDisplayMetrics());
         layoutParams.bottomMargin = (int) TypedValue.applyDimension(1, -8.0f, context.getResources().getDisplayMetrics());
         layoutParams.leftMargin = (int) TypedValue.applyDimension(1, 4.0f, context.getResources().getDisplayMetrics());
@@ -71,18 +71,18 @@ public final class aro extends ase {
         GradientDrawable gradientDrawable = new GradientDrawable();
         gradientDrawable.setCornerRadius(TypedValue.applyDimension(1, 8.0f, context.getResources().getDisplayMetrics()));
         linearLayout.setBackground(gradientDrawable);
-        LinearLayout linearLayout2 = (LinearLayout) chmVar.e;
+        LinearLayout linearLayout2 = (LinearLayout) chmVar.var3;
         linearLayout2.setOutlineProvider(new akb());
         linearLayout2.setClipToOutline(true);
-        ((ListView) chmVar.c).setDividerHeight(0);
-        ((ProgressBar) chmVar.d).setVisibility(0);
-        ((ListView) chmVar.c).setOnItemClickListener(new AdapterView.OnItemClickListener() { // from class: me.hd.wauxv.obf.aka
+        ((ListView) chmVar.var1).setDividerHeight(0);
+        ((ProgressBar) chmVar.var2).setVisibility(0);
+        ((ListView) chmVar.var1).setOnItemClickListener(new AdapterView.OnItemClickListener() { // from class: me.hd.wauxv.obf.aka
             @Override // android.widget.AdapterView.OnItemClickListener
             public final void onItemClick(AdapterView adapterView, View view, int i, long j) {
                 chm chmVar2 = chmVar;
                 chmVar2.getClass();
                 try {
-                    ((aro) chmVar2.f).w(i);
+                    ((aro) chmVar2.var4).w(i);
                 } catch (Exception e) {
                     e.printStackTrace(System.err);
                     Toast.makeText(context, e.toString(), 0).show();
@@ -91,7 +91,7 @@ public final class aro extends ase {
         });
         this.z.setContentView(linearLayout);
         r();
-        ((ListView) this.j.c).setAdapter(ajyVar);
+        ((ListView) this.j.var1).setAdapter(ajyVar);
         awy awyVar = new awy(codeEditor.i);
         this.k = awyVar;
         final int i = 0;
@@ -162,7 +162,7 @@ public final class aro extends ase {
                             if (aroVar3.z.isShowing()) {
                                 int keyCode = keyEvent.getKeyCode();
                                 if (keyCode == 19) {
-                                    ListView listView = (ListView) aroVar3.j.c;
+                                    ListView listView = (ListView) aroVar3.j.var1;
                                     int i6 = aroVar3.h - 1;
                                     if (i6 >= 0) {
                                         aroVar3.h = i6;
@@ -170,7 +170,7 @@ public final class aro extends ase {
                                         int i7 = aroVar3.h;
                                         if (i7 != -1) {
                                             chm chmVar2 = aroVar3.j;
-                                            ((ListView) chmVar2.c).post(new ajz(chmVar2, i7, (int) TypedValue.applyDimension(1, 45.0f, aroVar3._bf.a.a.getContext().getResources().getDisplayMetrics())));
+                                            ((ListView) chmVar2.var1).post(new ajz(chmVar2, i7, (int) TypedValue.applyDimension(1, 45.0f, aroVar3._bf.a.a.getContext().getResources().getDisplayMetrics())));
                                         }
                                     }
                                     asbVar.a = Boolean.TRUE;
@@ -297,7 +297,7 @@ public final class aro extends ase {
                             if (aroVar3.z.isShowing()) {
                                 int keyCode = keyEvent.getKeyCode();
                                 if (keyCode == 19) {
-                                    ListView listView = (ListView) aroVar3.j.c;
+                                    ListView listView = (ListView) aroVar3.j.var1;
                                     int i6 = aroVar3.h - 1;
                                     if (i6 >= 0) {
                                         aroVar3.h = i6;
@@ -305,7 +305,7 @@ public final class aro extends ase {
                                         int i7 = aroVar3.h;
                                         if (i7 != -1) {
                                             chm chmVar2 = aroVar3.j;
-                                            ((ListView) chmVar2.c).post(new ajz(chmVar2, i7, (int) TypedValue.applyDimension(1, 45.0f, aroVar3._bf.a.a.getContext().getResources().getDisplayMetrics())));
+                                            ((ListView) chmVar2.var1).post(new ajz(chmVar2, i7, (int) TypedValue.applyDimension(1, 45.0f, aroVar3._bf.a.a.getContext().getResources().getDisplayMetrics())));
                                         }
                                     }
                                     asbVar.a = Boolean.TRUE;
@@ -432,7 +432,7 @@ public final class aro extends ase {
                             if (aroVar3.z.isShowing()) {
                                 int keyCode = keyEvent.getKeyCode();
                                 if (keyCode == 19) {
-                                    ListView listView = (ListView) aroVar3.j.c;
+                                    ListView listView = (ListView) aroVar3.j.var1;
                                     int i6 = aroVar3.h - 1;
                                     if (i6 >= 0) {
                                         aroVar3.h = i6;
@@ -440,7 +440,7 @@ public final class aro extends ase {
                                         int i7 = aroVar3.h;
                                         if (i7 != -1) {
                                             chm chmVar2 = aroVar3.j;
-                                            ((ListView) chmVar2.c).post(new ajz(chmVar2, i7, (int) TypedValue.applyDimension(1, 45.0f, aroVar3._bf.a.a.getContext().getResources().getDisplayMetrics())));
+                                            ((ListView) chmVar2.var1).post(new ajz(chmVar2, i7, (int) TypedValue.applyDimension(1, 45.0f, aroVar3._bf.a.a.getContext().getResources().getDisplayMetrics())));
                                         }
                                     }
                                     asbVar.a = Boolean.TRUE;
@@ -567,7 +567,7 @@ public final class aro extends ase {
                             if (aroVar3.z.isShowing()) {
                                 int keyCode = keyEvent.getKeyCode();
                                 if (keyCode == 19) {
-                                    ListView listView = (ListView) aroVar3.j.c;
+                                    ListView listView = (ListView) aroVar3.j.var1;
                                     int i6 = aroVar3.h - 1;
                                     if (i6 >= 0) {
                                         aroVar3.h = i6;
@@ -575,7 +575,7 @@ public final class aro extends ase {
                                         int i7 = aroVar3.h;
                                         if (i7 != -1) {
                                             chm chmVar2 = aroVar3.j;
-                                            ((ListView) chmVar2.c).post(new ajz(chmVar2, i7, (int) TypedValue.applyDimension(1, 45.0f, aroVar3._bf.a.a.getContext().getResources().getDisplayMetrics())));
+                                            ((ListView) chmVar2.var1).post(new ajz(chmVar2, i7, (int) TypedValue.applyDimension(1, 45.0f, aroVar3._bf.a.a.getContext().getResources().getDisplayMetrics())));
                                         }
                                     }
                                     asbVar.a = Boolean.TRUE;
@@ -702,7 +702,7 @@ public final class aro extends ase {
                             if (aroVar3.z.isShowing()) {
                                 int keyCode = keyEvent.getKeyCode();
                                 if (keyCode == 19) {
-                                    ListView listView = (ListView) aroVar3.j.c;
+                                    ListView listView = (ListView) aroVar3.j.var1;
                                     int i6 = aroVar3.h - 1;
                                     if (i6 >= 0) {
                                         aroVar3.h = i6;
@@ -710,7 +710,7 @@ public final class aro extends ase {
                                         int i7 = aroVar3.h;
                                         if (i7 != -1) {
                                             chm chmVar2 = aroVar3.j;
-                                            ((ListView) chmVar2.c).post(new ajz(chmVar2, i7, (int) TypedValue.applyDimension(1, 45.0f, aroVar3._bf.a.a.getContext().getResources().getDisplayMetrics())));
+                                            ((ListView) chmVar2.var1).post(new ajz(chmVar2, i7, (int) TypedValue.applyDimension(1, 45.0f, aroVar3._bf.a.a.getContext().getResources().getDisplayMetrics())));
                                         }
                                     }
                                     asbVar.a = Boolean.TRUE;
@@ -837,7 +837,7 @@ public final class aro extends ase {
                             if (aroVar3.z.isShowing()) {
                                 int keyCode = keyEvent.getKeyCode();
                                 if (keyCode == 19) {
-                                    ListView listView = (ListView) aroVar3.j.c;
+                                    ListView listView = (ListView) aroVar3.j.var1;
                                     int i62 = aroVar3.h - 1;
                                     if (i62 >= 0) {
                                         aroVar3.h = i62;
@@ -845,7 +845,7 @@ public final class aro extends ase {
                                         int i7 = aroVar3.h;
                                         if (i7 != -1) {
                                             chm chmVar2 = aroVar3.j;
-                                            ((ListView) chmVar2.c).post(new ajz(chmVar2, i7, (int) TypedValue.applyDimension(1, 45.0f, aroVar3._bf.a.a.getContext().getResources().getDisplayMetrics())));
+                                            ((ListView) chmVar2.var1).post(new ajz(chmVar2, i7, (int) TypedValue.applyDimension(1, 45.0f, aroVar3._bf.a.a.getContext().getResources().getDisplayMetrics())));
                                         }
                                     }
                                     asbVar.a = Boolean.TRUE;
@@ -916,11 +916,11 @@ public final class aro extends ase {
         chm chmVar = this.j;
         chmVar.getClass();
         GradientDrawable gradientDrawable = new GradientDrawable();
-        gradientDrawable.setCornerRadius(TypedValue.applyDimension(1, 8.0f, ((aro) chmVar.f).a.getContext().getResources().getDisplayMetrics()));
-        gradientDrawable.setStroke((int) TypedValue.applyDimension(1, 1.0f, ((aro) chmVar.f).a.getContext().getResources().getDisplayMetrics()), colorScheme.b.get(20));
+        gradientDrawable.setCornerRadius(TypedValue.applyDimension(1, 8.0f, ((aro) chmVar.var4).a.getContext().getResources().getDisplayMetrics()));
+        gradientDrawable.setStroke((int) TypedValue.applyDimension(1, 1.0f, ((aro) chmVar.var4).a.getContext().getResources().getDisplayMetrics()), colorScheme.b.get(20));
         gradientDrawable.setColor(colorScheme.b.get(19));
-        ((LinearLayout) chmVar.e).setBackground(gradientDrawable);
-        LinearLayout linearLayout = (LinearLayout) chmVar.e;
+        ((LinearLayout) chmVar.var3).setBackground(gradientDrawable);
+        LinearLayout linearLayout = (LinearLayout) chmVar.var3;
         linearLayout.setOutlineProvider(new akb());
         linearLayout.setClipToOutline(true);
     }
@@ -944,7 +944,7 @@ public final class aro extends ase {
     }
 
     public final void u() {
-        ListView listView = (ListView) this.j.c;
+        ListView listView = (ListView) this.j.var1;
         if (this.h + 1 >= listView.getAdapter().getCount()) {
             return;
         }
@@ -954,7 +954,7 @@ public final class aro extends ase {
         if (i != -1) {
             int iApplyDimension = (int) TypedValue.applyDimension(1, 45.0f, this._bf.a.a.getContext().getResources().getDisplayMetrics());
             chm chmVar = this.j;
-            ((ListView) chmVar.c).post(new ajz(chmVar, i, iApplyDimension));
+            ((ListView) chmVar.var1).post(new ajz(chmVar, i, iApplyDimension));
         }
     }
 
@@ -991,7 +991,7 @@ public final class aro extends ase {
         if (i == -1) {
             return false;
         }
-        dhr dhrVar = (dhr) ((ajy) ((ListView) this.j.c).getAdapter()).b.get(i);
+        dhr dhrVar = (dhr) ((ajy) ((ListView) this.j.var1).getAdapter()).b.get(i);
         CodeEditor codeEditor = this.a;
         ahy cursor = codeEditor.getCursor();
         arn arnVar = this.e;

@@ -75,12 +75,10 @@ public final /* synthetic */ class amd implements IFunction0 {
                 if (file2.exists()) {
                     brn brnVar3 = brn.a;
                     String strC2 = bad.c(file2);
-                    brnVar3.getClass();
                     list2 = (List) brnVar3.e(new ko(biv.Companion.serializer()), strC2);
                 } else {
                     brn brnVar4 = brn.a;
                     List list4 = biw.d;
-                    brnVar4.getClass();
                     bad.e(file2, brnVar4.f(new ko(biv.Companion.serializer()), list4));
                     list2 = list4;
                 }

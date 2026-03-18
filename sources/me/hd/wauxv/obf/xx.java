@@ -13,6 +13,6 @@ public final class xx extends ApiHookItem implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        StaticHelpers7.resolveDexAndCache(xw.a, dexKitBridge, new ws(18));
+        StaticHelpers7.resolveDexAndCache(ChattingFoot$ClassChattingFoot.a, dexKitBridge, new ws(18));
     }
 }

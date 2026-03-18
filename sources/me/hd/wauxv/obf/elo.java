@@ -107,8 +107,8 @@ public final class elo implements ViewTreeObserver.OnPreDrawListener, View.OnAtt
             ellVar.ar = new ArrayList();
             chmVar = ellVar.am;
             chmVar2 = ellVar.an;
-            kuVar = new ku((ku) chmVar.c);
-            kuVar2 = new ku((ku) chmVar2.c);
+            kuVar = new ku((ku) chmVar.var1);
+            kuVar2 = new ku((ku) chmVar2.var1);
             i2 = 0;
             while (true) {
                 iArr = ellVar.ap;
@@ -129,8 +129,8 @@ public final class elo implements ViewTreeObserver.OnPreDrawListener, View.OnAtt
                 } else if (i6 != 2) {
                     chmVar3 = chmVar2;
                     z2 = z4;
-                    kuVar3 = (ku) chmVar.f;
-                    ku kuVar4 = (ku) chmVar3.f;
+                    kuVar3 = (ku) chmVar.var4;
+                    ku kuVar4 = (ku) chmVar3.var4;
                     i8 = kuVar3.l;
                     for (i9 = 0; i9 < i8; i9++) {
                         view2 = (View) kuVar3.s(i9);
@@ -147,9 +147,9 @@ public final class elo implements ViewTreeObserver.OnPreDrawListener, View.OnAtt
                     }
                 } else if (i6 != 3) {
                     z2 = z4;
-                    sparseArray = (SparseArray) chmVar.d;
+                    sparseArray = (SparseArray) chmVar.var2;
                     chmVar3 = chmVar2;
-                    SparseArray sparseArray2 = (SparseArray) chmVar3.d;
+                    SparseArray sparseArray2 = (SparseArray) chmVar3.var2;
                     size = sparseArray.size();
                     for (i10 = 0; i10 < size; i10++) {
                         view4 = (View) sparseArray.valueAt(i10);
@@ -168,8 +168,8 @@ public final class elo implements ViewTreeObserver.OnPreDrawListener, View.OnAtt
                     chmVar3 = chmVar2;
                     z2 = z4;
                 } else {
-                    bycVar = (byc) chmVar.e;
-                    byc bycVar2 = (byc) chmVar2.e;
+                    bycVar = (byc) chmVar.var3;
+                    byc bycVar2 = (byc) chmVar2.var3;
                     iK = bycVar.k();
                     i11 = i;
                     while (i11 < iK) {
@@ -237,7 +237,7 @@ public final class elo implements ViewTreeObserver.OnPreDrawListener, View.OnAtt
                         elt eltVarBo = ellVar.bo(view8, z5);
                         elt eltVarBm = ellVar.bm(view8, z5);
                         if (eltVarBo == null && eltVarBm == null) {
-                            eltVarBm = (elt) ((ku) ellVar.an.c).get(view8);
+                            eltVarBm = (elt) ((ku) ellVar.an.var1).get(view8);
                         }
                         if ((eltVarBo != null || eltVarBm != null) && ellVar2.y(eltVar10, eltVarBm)) {
                             ellVar2.bn().getClass();
@@ -272,8 +272,8 @@ public final class elo implements ViewTreeObserver.OnPreDrawListener, View.OnAtt
         ellVar.ar = new ArrayList();
         chmVar = ellVar.am;
         chmVar2 = ellVar.an;
-        kuVar = new ku((ku) chmVar.c);
-        kuVar2 = new ku((ku) chmVar2.c);
+        kuVar = new ku((ku) chmVar.var1);
+        kuVar2 = new ku((ku) chmVar2.var1);
         i2 = 0;
         while (true) {
             iArr = ellVar.ap;
@@ -293,8 +293,8 @@ public final class elo implements ViewTreeObserver.OnPreDrawListener, View.OnAtt
             } else if (i6 != 2) {
                 chmVar3 = chmVar2;
                 z2 = z4;
-                kuVar3 = (ku) chmVar.f;
-                ku kuVar42 = (ku) chmVar3.f;
+                kuVar3 = (ku) chmVar.var4;
+                ku kuVar42 = (ku) chmVar3.var4;
                 i8 = kuVar3.l;
                 while (i9 < i8) {
                     view2 = (View) kuVar3.s(i9);
@@ -303,9 +303,9 @@ public final class elo implements ViewTreeObserver.OnPreDrawListener, View.OnAtt
                 }
             } else if (i6 != 3) {
                 z2 = z4;
-                sparseArray = (SparseArray) chmVar.d;
+                sparseArray = (SparseArray) chmVar.var2;
                 chmVar3 = chmVar2;
-                SparseArray sparseArray22 = (SparseArray) chmVar3.d;
+                SparseArray sparseArray22 = (SparseArray) chmVar3.var2;
                 size = sparseArray.size();
                 while (i10 < size) {
                     view4 = (View) sparseArray.valueAt(i10);
@@ -316,8 +316,8 @@ public final class elo implements ViewTreeObserver.OnPreDrawListener, View.OnAtt
                 chmVar3 = chmVar2;
                 z2 = z4;
             } else {
-                bycVar = (byc) chmVar.e;
-                byc bycVar22 = (byc) chmVar2.e;
+                bycVar = (byc) chmVar.var3;
+                byc bycVar22 = (byc) chmVar2.var3;
                 iK = bycVar.k();
                 i11 = i;
                 while (i11 < iK) {

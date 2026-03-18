@@ -39,7 +39,7 @@ public final /* synthetic */ class daz implements IInvokable {
                 zbVar2.j(strZ, matchTypeEnumVar);
                 fmVar.a = zbVar2;
                 fh fhVar = new fh();
-                fhVar.a = new dnf("value" /* "value" /* "value" /* "value" /* cnb.z(-519639503207210L)   */, matchTypeEnumVar, false);
+                fhVar.a = new MethodNameMatcher("value" /* "value" /* "value" /* "value" /* cnb.z(-519639503207210L)   */, matchTypeEnumVar, false);
                 MethodMatcher fjVar2 = new MethodMatcher(0);
                 fjVar2.usingStringsType = UsingStringsTypeEnum.Equals;
                 MethodMatcher.e(fjVar2, "Lcom/tencent/mm/sdk/event/IListener<" /* "Lcom/tencent/mm/sdk/event/IListener<" /* "Lcom/tencent/mm/sdk/event/IListener<" /* "Lcom/tencent/mm/sdk/event/IListener<" /* cnb.z(-519596553534250L)   */);

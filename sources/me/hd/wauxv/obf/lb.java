@@ -17,7 +17,7 @@ public final class lb implements dft {
     public final Iterator iterator() {
         switch (this.a) {
             case 0:
-                return cnb.ae((Object[]) this.b);
+                return StaticUtils.ae((Object[]) this.b);
             case 1:
                 return ((Iterable) this.b).iterator();
             case 2:

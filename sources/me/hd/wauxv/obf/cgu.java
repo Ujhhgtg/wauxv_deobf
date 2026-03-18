@@ -47,7 +47,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar = new DexFinder();
                 cgy.a.getClass();
-                cdjVar.setDeclaredClassName(StaticHelpers7.toDexClass(MsgInfoStorage$ClassMsgInfoStorage_.INSTANCE));
+                cdjVar.setDeclaredClass(StaticHelpers7.toDexClass(MsgInfoStorage$ClassMsgInfoStorage_.INSTANCE));
                 cdjVar.usingStrings("MsgInfo processAddMsg insert db error" /* "MsgInfo processAddMsg insert db error" /* "MsgInfo processAddMsg insert db error" /* cnb.z(-371609160383274L)  */);
                 dexMethodQueryBuilderVar.getClass();
                 dexMethodQueryBuilderVar.dexFinder = cdjVar;
@@ -70,7 +70,7 @@ public final /* synthetic */ class cgu implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar2 = new DexFinder();
                 cgy.a.getClass();
-                cdjVar2.setDeclaredClassName(StaticHelpers7.toDexClass(MsgInfoStorage$ClassMsgInfoStorage_.INSTANCE));
+                cdjVar2.setDeclaredClass(StaticHelpers7.toDexClass(MsgInfoStorage$ClassMsgInfoStorage_.INSTANCE));
                 cdjVar2.p(new IntRange(2, 3, 1));
                 cdjVar2.usingStrings("notifymessage" /* "notifymessage" /* "notifymessage" /* cnb.z(-371201138490154L)  */, "msgId=?" /* "msgId=?" /* "msgId=?" /* cnb.z(-371123829078826L)  */,
                         "update" /* "update" /* "update" /* cnb.z(-371089469340458L)  */);
@@ -93,15 +93,13 @@ public final /* synthetic */ class cgu implements IInvokable {
                     }
                 }
                 cursorAc.close();
-                ConversationDatabaseApi conversationDatabaseApiVar = ConversationDatabaseApi.a;
                 String[] strArr2 = (String[]) arrayList.toArray(new String[0]);
-                String strZ = "" /* "" /* "" /* cnb.z(-524763399191338L)  */;
-                conversationDatabaseApiVar.getClass();
+                String strZ = "";
                 ConversationDatabaseApi.d(strZ, strArr2);
                 return kotlinUnitVar;
             case 4:
                 ArrayList arrayList2 = new ArrayList();
-                Cursor cursorAc2 = arj.ac("SELECT username FROM rconversation" /* "SELECT username FROM rconversation" /* "SELECT username FROM rconversation" /* cnb.z(-524578715597610L)  */);
+                Cursor cursorAc2 = arj.ac("SELECT username FROM rconversation");
                 while (cursorAc2.moveToNext()) {
                     try {
                         arrayList2.add(cursorAc2.getString(0));
@@ -115,10 +113,8 @@ public final /* synthetic */ class cgu implements IInvokable {
                     }
                 }
                 cursorAc2.close();
-                ConversationDatabaseApi conversationDatabaseApiVar2 = ConversationDatabaseApi.a;
                 String[] strArr3 = (String[]) arrayList2.toArray(new String[0]);
-                String strZ2 = "hidden_conv_parent" /* "hidden_conv_parent" /* "hidden_conv_parent" /* cnb.z(-524995327425322L)  */;
-                conversationDatabaseApiVar2.getClass();
+                String strZ2 = "hidden_conv_parent";
                 ConversationDatabaseApi.d(strZ2, strArr3);
                 return kotlinUnitVar;
             case 5:

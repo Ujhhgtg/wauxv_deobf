@@ -80,7 +80,7 @@ public final /* synthetic */ class Function1$VarIsInt$2 implements IFunction0 {
                 return kotlinUnitVar;
             case 8:
                 dnc.sendToast(null, 3, "显示中" /* "显示中" /* "显示中" /* "显示中" /* cnb.z(-524948082785066L)   */);
-                StaticAndroidHelpers.runOnUiThread(cha.a, new cgu(i2));
+                StaticAndroidHelpers.runOnUiThread(cha.a, new cgu(3));
                 return kotlinUnitVar;
             case 9:
                 che.a.u("#FF000000" /* "#FF000000" /* "#FF000000" /* "#FF000000" /* cnb.z(-450095392750378L)   */);

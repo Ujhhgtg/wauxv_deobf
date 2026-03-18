@@ -45,7 +45,7 @@ import me.hd.wauxv.obf.bkj;
 import me.hd.wauxv.obf.cau;
 import me.hd.wauxv.obf.ckr;
 import me.hd.wauxv.obf.cmz;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.HugeSyntheticPileOfHelpers;
 import me.hd.wauxv.obf.cxs;
@@ -207,7 +207,7 @@ public class AppBarLayout extends LinearLayout implements agq {
             Drawable drawable = typedArrayAn2.getDrawable(0);
             WeakHashMap weakHashMap = ViewCompat.a;
             setBackground(drawable);
-            final ColorStateList colorStateListV = cnb.v(context2, typedArrayAn2, 6);
+            final ColorStateList colorStateListV = StaticUtils.v(context2, typedArrayAn2, 6);
             this.p = colorStateListV != null;
             final ColorStateList colorStateListX = cmz.x(getBackground());
             if (colorStateListX != null) {
@@ -992,7 +992,7 @@ public class AppBarLayout extends LinearLayout implements agq {
             boolean zAf = appBarLayout.af(zAg);
             if (!z) {
                 if (zAf) {
-                    ArrayList arrayList = (ArrayList) ((dhq) coordinatorLayout.g.f).get(appBarLayout);
+                    ArrayList arrayList = (ArrayList) ((dhq) coordinatorLayout.g.var4).get(appBarLayout);
                     List arrayList2 = arrayList != null ? new ArrayList(arrayList) : null;
                     if (arrayList2 == null) {
                         arrayList2 = Collections.EMPTY_LIST;
@@ -1344,7 +1344,7 @@ public class AppBarLayout extends LinearLayout implements agq {
                         }
                     }
                     if (!zF && appBarLayout.f
-                            && (arrayList = (ArrayList) ((dhq) coordinatorLayout.g.f).get(appBarLayout)) != null
+                            && (arrayList = (ArrayList) ((dhq) coordinatorLayout.g.var4).get(appBarLayout)) != null
                             && !arrayList.isEmpty()) {
                         for (int i10 = 0; i10 < arrayList.size(); i10++) {
                             View view2 = (View) arrayList.get(i10);

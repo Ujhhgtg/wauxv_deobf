@@ -100,13 +100,13 @@ public final class but implements aja, app, cqk, evw {
         }
         synchronized (deoVar.c) {
             for (Map.Entry entry : deoVar.d.entrySet()) {
-                cnb.ag(bundleR, (String) entry.getKey(), ((den) entry.getValue()).c());
+                StaticUtils.ag(bundleR, (String) entry.getKey(), ((den) entry.getValue()).c());
             }
         }
         if (bundleR.isEmpty()) {
             return;
         }
-        cnb.ag(bundle, "androidx.lifecycle.BundlableSavedStateRegistry.key", bundleR);
+        StaticUtils.ag(bundle, "androidx.lifecycle.BundlableSavedStateRegistry.key", bundleR);
     }
 
     public cjn ac(SomeView someViewVar, int i) {
@@ -713,10 +713,10 @@ public final class but implements aja, app, cqk, evw {
         this.a = 1;
         cbm cbmVar = chm.a;
         chm chmVar = new chm();
-        chmVar.c = new ArrayList();
-        chmVar.e = new HashSet();
-        chmVar.f = factoryPoolsVar;
-        chmVar.d = cbmVar;
+        chmVar.var1 = new ArrayList();
+        chmVar.var3 = new HashSet();
+        chmVar.var4 = factoryPoolsVar;
+        chmVar.var2 = cbmVar;
         this.c = new aji(3);
         this.b = chmVar;
     }

@@ -66,7 +66,7 @@ public final /* synthetic */ class bp implements IFunction0 {
                 gg.a.u(String.valueOf(((cee) this.b).c.getText()));
                 return Kotlin$Unit.INSTANCE;
             case 3:
-                return cnb.ae((Object[]) this.b);
+                return StaticUtils.ae((Object[]) this.b);
             case 4:
                 cef cefVar = (cef) this.b;
                 mb.a.p(cefVar.d.isChecked());

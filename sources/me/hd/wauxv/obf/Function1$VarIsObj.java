@@ -301,12 +301,12 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
                 long flag = conversationBean.getFlag();
                 if (6917529027641081856L <= flag && flag < 8070450532247928833L) {
                     childAt.setBackgroundColor(Color
-                            .parseColor(cnb.z(cnh.aa(childAt.getContext()) ? -527473523555114L : -527447753751338L)));
+                            .parseColor(StaticUtils.decryptString(cnh.aa(childAt.getContext()) ? -527473523555114L : -527447753751338L)));
                 } else if (-6917529027641081856L > flag || flag >= -5764607523034234879L) {
                     childAt.setBackgroundColor(0);
                 } else {
                     childAt.setBackgroundColor(Color
-                            .parseColor(cnb.z(cnh.aa(childAt.getContext()) ? -527421983947562L : -527327494667050L)));
+                            .parseColor(StaticUtils.decryptString(cnh.aa(childAt.getContext()) ? -527421983947562L : -527327494667050L)));
                 }
                 return kotlinUnitVar;
             case 15:
@@ -402,7 +402,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
             case 27:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar6 = new DexFinder();
-                cdjVar6.setDeclaredClassName(cvh.a.b());
+                cdjVar6.setDeclaredClass(cvh.a.b());
                 Class<CharSequence> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar6.setParamTypes(clsBf7 != null ? clsBf7 : CharSequence.class);
                 cdjVar6.u(0);
@@ -411,7 +411,7 @@ public final /* synthetic */ class Function1$VarIsObj implements IInvokable {
             case 28:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar7 = new DexFinder();
-                cdjVar7.setDeclaredClassName(cvh.a.b());
+                cdjVar7.setDeclaredClass(cvh.a.b());
                 Class<CharSequence> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
                 cdjVar7.setParamTypes(clsBf8 != null ? clsBf8 : CharSequence.class);
                 dexMethodQueryBuilderVar6.getClass();

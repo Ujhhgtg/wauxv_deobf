@@ -77,7 +77,7 @@ public final /* synthetic */ class bq implements View.OnClickListener {
                 MsgInfoBean msgInfoBean = (MsgInfoBean) obj;
                 if (cgn.a.i()) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-                    builder.setTitle(msgInfoBean.getOrigin().getClass().getSimpleName());
+                    builder.setTitle(msgInfoBean.getInstance().getClass().getSimpleName());
                     cgo cgoVar = cgo.a;
                     if (cgoVar.i()) {
                         originContent = msgInfoBean.getContent();

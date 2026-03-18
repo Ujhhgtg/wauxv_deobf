@@ -93,7 +93,7 @@ public final class hg extends CheckedTextView {
 
     @Override // android.widget.TextView
     public ActionMode.Callback getCustomSelectionActionModeCallback() {
-        return cnb.ar(super.getCustomSelectionActionModeCallback());
+        return StaticUtils.ar(super.getCustomSelectionActionModeCallback());
     }
 
     public ColorStateList getSupportBackgroundTintList() {
@@ -201,7 +201,7 @@ public final class hg extends CheckedTextView {
 
     @Override // android.widget.TextView
     public void setCustomSelectionActionModeCallback(ActionMode.Callback callback) {
-        super.setCustomSelectionActionModeCallback(cnb.as(callback, this));
+        super.setCustomSelectionActionModeCallback(StaticUtils.as(callback, this));
     }
 
     public void setEmojiCompatEnabled(boolean z) {

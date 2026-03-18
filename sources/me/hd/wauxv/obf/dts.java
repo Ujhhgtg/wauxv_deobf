@@ -77,11 +77,11 @@ public abstract /* synthetic */ class dts {
 
     public static void g(StringBuilder sb, Boolean bool, long j) {
         sb.append(bool);
-        sb.append(cnb.z(j));
+        sb.append(StaticUtils.decryptString(j));
     }
 
     public static void h(StringBuilder sb, dwj dwjVar, long j) {
         sb.append(dwjVar);
-        sb.append(cnb.z(j));
+        sb.append(StaticUtils.decryptString(j));
     }
 }

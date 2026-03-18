@@ -113,7 +113,7 @@ public final class bsg implements btd {
 
     @Override // me.hd.wauxv.obf.btd
     public final Object a(ajt ajtVar) {
-        brx brxVarBw = cnb.n(ajtVar).bw();
+        brx brxVarBw = StaticUtils.n(ajtVar).bw();
         if (brxVarBw instanceof bsf) {
             return (bsf) brxVarBw;
         }
@@ -126,7 +126,7 @@ public final class bsg implements btd {
         bsf bsfVar = (bsf) obj;
         throwIfVar1IsNull(bsfVar, "value");
         String str = bsfVar.b;
-        cnb.l(avtVar);
+        StaticUtils.l(avtVar);
         if (bsfVar.a) {
             avtVar.ad(str);
             return;

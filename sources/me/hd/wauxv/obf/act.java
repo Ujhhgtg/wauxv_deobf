@@ -88,10 +88,10 @@ public final /* synthetic */ class act implements IInvokable {
                 zbVar2.e = azlVar;
                 MethodMatcher fjVar = new MethodMatcher();
                 DexFinder cdjVar2 = new DexFinder();
-                cdjVar2.s("compareContent" /* "compareContent" /* "compareContent" /* cnb.z(-103521596734250L)  */);
+                cdjVar2.setMethodName("compareContent" /* "compareContent" /* "compareContent" /* cnb.z(-103521596734250L)  */);
                 fjVar.f(cdjVar2);
                 DexFinder cdjVar3 = new DexFinder();
-                cdjVar3.s("op" /* "op" /* "op" /* cnb.z(-103457172224810L)  */);
+                cdjVar3.setMethodName("op" /* "op" /* "op" /* cnb.z(-103457172224810L)  */);
                 fjVar.f(cdjVar3);
                 DexFinder cdjVar4 = new DexFinder();
                 MethodMatcher fjVar2 = new MethodMatcher();
@@ -160,7 +160,7 @@ public final /* synthetic */ class act implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar9 = new DexFinder();
                 aeg.a.getClass();
-                cdjVar9.setDeclaredClassName(StaticHelpers7.toDexMethod(aee.a).getDeclaringClass());
+                cdjVar9.setDeclaredClass(StaticHelpers7.toDexMethod(aee.a).getDeclaringClass());
                 cdjVar9.usingStrings("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-386474042194730L)  */,
                         "getAllContactLable time:%s count:%s stack:%s" /* "getAllContactLable time:%s count:%s stack:%s" /* "getAllContactLable time:%s count:%s stack:%s" /* cnb.z(-386289358601002L)  */,
                         "select * from ContactLabel where isTemporary = 0  order by createTime ASC " /*
@@ -184,7 +184,7 @@ public final /* synthetic */ class act implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar11 = new DexFinder();
                 aeg.a.getClass();
-                cdjVar11.setDeclaredClassName(StaticHelpers7.toDexMethod(aee.a).getDeclaringClass());
+                cdjVar11.setDeclaredClass(StaticHelpers7.toDexMethod(aee.a).getDeclaringClass());
                 cdjVar11.usingStrings("MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* "MicroMsg.Label.ContactLabelStorage" /* cnb.z(-383574939269930L)  */,
                         "getUserNameListById time:%s id:%s count:%s stack:%s" /* "getUserNameListById time:%s id:%s count:%s stack:%s" /* "getUserNameListById time:%s id:%s count:%s stack:%s" /* cnb.z(-382892039469866L)  */);
                 dexMethodQueryBuilderVar5.getClass();
@@ -202,7 +202,7 @@ public final /* synthetic */ class act implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar12 = new DexFinder();
                 aeo.a.getClass();
-                cdjVar12.setDeclaredClassName(StaticHelpers7.toDexClass(aem.a));
+                cdjVar12.setDeclaredClass(StaticHelpers7.toDexClass(aem.a));
                 Class<String> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls3));
                 cls3 = clsBf3 != null ? clsBf3 : String.class;
                 Class<Boolean> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
@@ -236,13 +236,13 @@ public final /* synthetic */ class act implements IInvokable {
                 for (bnd bndVar : aeq.b) {
                     try {
                         for (aep aepVar : bndVar.a(activity)) {
-                            cnb.m(baseAdapter, aepVar.b, aepVar.c);
+                            StaticUtils.m(baseAdapter, aepVar.b, aepVar.c);
                         }
                     } catch (Exception e) {
                         ArrayList arrayList = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onAddItems " /* "onAddItems " /* "onAddItems " /* cnb.z(-37529424231210L)  */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb,
                                 bndVar instanceof SwitchHook ? ((SwitchHook) bndVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 37512244362026L)
@@ -293,7 +293,7 @@ public final /* synthetic */ class act implements IInvokable {
                                 ArrayList arrayList2 = Logger.a;
                                 StringBuilder sb2 = new StringBuilder();
                                 sb2.append("onAddItems " /* "onAddItems " /* "onAddItems " /* cnb.z(-37439229917994L)  */);
-                                Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2, bndVar2 instanceof SwitchHook ? ((SwitchHook) bndVar2).getResult()
+                                Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb2, bndVar2 instanceof SwitchHook ? ((SwitchHook) bndVar2).getResult()
                                         : "LoadHook" /* "LoadHook" /* "LoadHook" /* cnb.z(-37903086385962L)  */, -37881611549482L), e2, 12);
                             }
                         }
@@ -366,7 +366,7 @@ public final /* synthetic */ class act implements IInvokable {
                         ArrayList arrayList3 = Logger.a;
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("onCreateBottomSheetDialogMenu " /* "onCreateBottomSheetDialogMenu " /* "onCreateBottomSheetDialogMenu " /* cnb.z(-39286065855274L)  */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb3,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb3,
                                 obj3 instanceof SwitchHook ? ((SwitchHook) obj3).getResult() : "LoadHook" /*
                                                                                                            * cnb.z(-
                                                                                                            * 39152921869098L)

@@ -10,7 +10,7 @@ public final class bsn implements btd {
 
     @Override // me.hd.wauxv.obf.btd
     public final Object a(ajt ajtVar) {
-        cnb.n(ajtVar);
+        StaticUtils.n(ajtVar);
         dnh dnhVar = dnh.b;
         bsb bsbVar = bsb.b;
         return new bsl((Map) new bvt().a(ajtVar));
@@ -20,7 +20,7 @@ public final class bsn implements btd {
     public final void c(avt avtVar, Object obj) {
         bsl bslVar = (bsl) obj;
         throwIfVar1IsNull(bslVar, "value");
-        cnb.l(avtVar);
+        StaticUtils.l(avtVar);
         dnh dnhVar = dnh.b;
         bsb bsbVar = bsb.b;
         new bvt().c(avtVar, bslVar);

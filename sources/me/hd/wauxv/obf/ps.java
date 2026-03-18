@@ -198,9 +198,9 @@ public final class ps extends cjv {
                 String str2 = (String) obj;
                 throwIfVar1IsNull(str, "key");
                 if (str2 == null) {
-                    cnb.af(str, bundle);
+                    StaticUtils.af(str, bundle);
                 } else {
-                    cnb.ah(str, str2, bundle);
+                    StaticUtils.ah(str, str2, bundle);
                 }
                 break;
         }

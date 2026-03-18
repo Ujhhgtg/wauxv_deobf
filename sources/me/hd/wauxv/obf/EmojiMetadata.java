@@ -33,7 +33,7 @@ public final class EmojiMetadata {
             cdbVar = new FlatBufferTable();
             threadLocal.set(cdbVar);
         }
-        GenericMetadataIterator3 cdcVar = (GenericMetadataIterator3) this.c.c;
+        GenericMetadataIterator3 cdcVar = (GenericMetadataIterator3) this.c.var1;
         int iF = cdcVar.getVTableOffset(6);
         if (iF != 0) {
             int i = iF + cdcVar.b;

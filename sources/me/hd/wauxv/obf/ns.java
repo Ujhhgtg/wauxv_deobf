@@ -195,29 +195,29 @@ public abstract class ns extends View {
         boolean zHasValue = typedArrayObtainStyledAttributes.hasValue(24);
         int i = zHasValue ? 24 : 26;
         int i2 = zHasValue ? 24 : 25;
-        ColorStateList colorStateListV = cnb.v(context2, typedArrayObtainStyledAttributes, i);
+        ColorStateList colorStateListV = StaticUtils.v(context2, typedArrayObtainStyledAttributes, i);
         setTrackInactiveTintList(colorStateListV == null ? ResourcesCompat.v(context2, R.color.material_slider_inactive_track_color)
                 : colorStateListV);
-        ColorStateList colorStateListV2 = cnb.v(context2, typedArrayObtainStyledAttributes, i2);
+        ColorStateList colorStateListV2 = StaticUtils.v(context2, typedArrayObtainStyledAttributes, i2);
         setTrackActiveTintList(colorStateListV2 == null ? ResourcesCompat.v(context2, R.color.material_slider_active_track_color)
                 : colorStateListV2);
-        cauVar.dz(cnb.v(context2, typedArrayObtainStyledAttributes, 10));
+        cauVar.dz(StaticUtils.v(context2, typedArrayObtainStyledAttributes, 10));
         if (typedArrayObtainStyledAttributes.hasValue(14)) {
-            setThumbStrokeColor(cnb.v(context2, typedArrayObtainStyledAttributes, 14));
+            setThumbStrokeColor(StaticUtils.v(context2, typedArrayObtainStyledAttributes, 14));
         }
         setThumbStrokeWidth(typedArrayObtainStyledAttributes.getDimension(15, 0.0f));
-        ColorStateList colorStateListV3 = cnb.v(context2, typedArrayObtainStyledAttributes, 5);
+        ColorStateList colorStateListV3 = StaticUtils.v(context2, typedArrayObtainStyledAttributes, 5);
         setHaloTintList(
                 colorStateListV3 == null ? ResourcesCompat.v(context2, R.color.material_slider_halo_color) : colorStateListV3);
         this.ax = typedArrayObtainStyledAttributes.getBoolean(23, true);
         boolean zHasValue2 = typedArrayObtainStyledAttributes.hasValue(18);
         int i3 = zHasValue2 ? 18 : 20;
         int i4 = zHasValue2 ? 18 : 19;
-        ColorStateList colorStateListV4 = cnb.v(context2, typedArrayObtainStyledAttributes, i3);
+        ColorStateList colorStateListV4 = StaticUtils.v(context2, typedArrayObtainStyledAttributes, i3);
         setTickInactiveTintList(
                 colorStateListV4 == null ? ResourcesCompat.v(context2, R.color.material_slider_inactive_tick_marks_color)
                         : colorStateListV4);
-        ColorStateList colorStateListV5 = cnb.v(context2, typedArrayObtainStyledAttributes, i4);
+        ColorStateList colorStateListV5 = StaticUtils.v(context2, typedArrayObtainStyledAttributes, i4);
         setTickActiveTintList(
                 colorStateListV5 == null ? ResourcesCompat.v(context2, R.color.material_slider_active_tick_marks_color)
                         : colorStateListV5);
@@ -508,7 +508,7 @@ public abstract class ns extends View {
             dqh dqhVar = (!typedArrayAn.hasValue(0) || (resourceId = typedArrayAn.getResourceId(0, 0)) == 0) ? null
                     : new dqh(context2, resourceId);
             if (dqhVar != null && typedArrayAn.hasValue(1)) {
-                dqhVar.j = cnb.v(context2, typedArrayAn, 1);
+                dqhVar.j = StaticUtils.v(context2, typedArrayAn, 1);
             }
             dqkVar.j(dqhVar, context2);
             ekvVar2.dz(ColorStateList.valueOf(typedArrayAn.getColor(7, abi.d(

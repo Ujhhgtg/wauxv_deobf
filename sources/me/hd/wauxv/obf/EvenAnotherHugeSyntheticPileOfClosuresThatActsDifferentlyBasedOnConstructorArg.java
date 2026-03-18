@@ -135,7 +135,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 zbVar.e = azlVar;
                 MethodMatcher fjVar = new MethodMatcher();
                 DexFinder cdjVar2 = new DexFinder();
-                cdjVar2.s("onCreateMMMenu" /* "onCreateMMMenu" /* "onCreateMMMenu" /* cnb.z(-69363721829162L)  */);
+                cdjVar2.setMethodName("onCreateMMMenu" /* "onCreateMMMenu" /* "onCreateMMMenu" /* cnb.z(-69363721829162L)  */);
                 fjVar.f(cdjVar2);
                 zbVar.f = fjVar;
                 dexClassQueryBuilderVar.methodGroupMatcher = zbVar;
@@ -143,7 +143,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
             case 5:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar3 = new DexFinder();
-                cdjVar3.s("onCreateMMMenu" /* "onCreateMMMenu" /* "onCreateMMMenu" /* cnb.z(-69282117450538L)  */);
+                cdjVar3.setMethodName("onCreateMMMenu" /* "onCreateMMMenu" /* "onCreateMMMenu" /* cnb.z(-69282117450538L)  */);
                 dexMethodQueryBuilderVar2.getClass();
                 dexMethodQueryBuilderVar2.dexFinder = cdjVar3;
                 return kotlinUnitVar;
@@ -196,7 +196,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                         ArrayList arrayList2 = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-70209830386474L)  */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb,
                                 bnqVar instanceof SwitchHook ? ((SwitchHook) bnqVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 70162585746218L)
@@ -250,7 +250,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                         ArrayList arrayList4 = Logger.a;
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-69840463199018L)  */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb2,
                                 bnqVar2 instanceof SwitchHook ? ((SwitchHook) bnqVar2).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -296,7 +296,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                 zbVar3.e = azlVar2;
                 MethodMatcher fjVar2 = new MethodMatcher();
                 DexFinder cdjVar4 = new DexFinder();
-                cdjVar4.s("onMMMenuItemSelected" /* "onMMMenuItemSelected" /* "onMMMenuItemSelected" /* cnb.z(-69642894703402L)  */);
+                cdjVar4.setMethodName("onMMMenuItemSelected" /* "onMMMenuItemSelected" /* "onMMMenuItemSelected" /* cnb.z(-69642894703402L)  */);
                 fjVar2.f(cdjVar4);
                 zbVar3.f = fjVar2;
                 dexClassQueryBuilderVar2.methodGroupMatcher = zbVar3;
@@ -304,7 +304,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
             case 13:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar5 = new DexFinder();
-                cdjVar5.s("onMMMenuItemSelected" /* "onMMMenuItemSelected" /* "onMMMenuItemSelected" /* cnb.z(-66786741451562L)  */);
+                cdjVar5.setMethodName("onMMMenuItemSelected" /* "onMMMenuItemSelected" /* "onMMMenuItemSelected" /* cnb.z(-66786741451562L)  */);
                 dexMethodQueryBuilderVar3.getClass();
                 dexMethodQueryBuilderVar3.dexFinder = cdjVar5;
                 return kotlinUnitVar;
@@ -609,7 +609,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                         ArrayList arrayList5 = Logger.a;
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("onConvert " /* "onConvert " /* "onConvert " /* cnb.z(-66645007530794L)  */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb3,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb3,
                                 bnrVar instanceof SwitchHook ? ((SwitchHook) bnrVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 66563403152170L)
@@ -866,7 +866,7 @@ public final /* synthetic */ class EvenAnotherHugeSyntheticPileOfClosuresThatAct
                         ArrayList arrayList6 = Logger.a;
                         StringBuilder sb4 = new StringBuilder();
                         sb4.append("onInsert " /* "onInsert " /* "onInsert " /* cnb.z(-66932770339626L)  */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb4,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb4,
                                 bnsVar instanceof SwitchHook ? ((SwitchHook) bnsVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 66838281059114L)

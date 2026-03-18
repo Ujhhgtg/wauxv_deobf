@@ -56,7 +56,7 @@ public final class MsgForwardSnsHook extends SwitchHook implements IMessageLongP
                     throwIfVar1IsNull(objJ2);
                     Activity activity2 = (Activity) objJ2;
                     bop bopVar2 = bop.a;
-                    Object origin2 = ((MsgInfoBean) obj2).getOrigin();
+                    Object origin2 = ((MsgInfoBean) obj2).getInstance();
                     ArrayList<String> arrayList10 = new ArrayList<>(new ReadonlyArray(new String[] { bop.b(origin2) }, true));
                     String strZ2 = "";
                     Intent intent5 = new Intent();

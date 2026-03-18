@@ -189,10 +189,10 @@ public final /* synthetic */ class atn implements IInvokable {
                 cdjVar.setParamTypes(clsBf2, clsBf3 != null ? clsBf3 : Integer.class);
                 MethodMatcher fjVar = new MethodMatcher();
                 DexFinder cdjVar2 = new DexFinder();
-                cdjVar2.s("currentTimeMillis" /* "currentTimeMillis" /* "currentTimeMillis" /* cnb.z(-507312947067690L)  */);
+                cdjVar2.setMethodName("currentTimeMillis" /* "currentTimeMillis" /* "currentTimeMillis" /* cnb.z(-507312947067690L)  */);
                 fjVar.f(cdjVar2);
                 DexFinder cdjVar3 = new DexFinder();
-                cdjVar3.s("nextInt" /* "nextInt" /* "nextInt" /* cnb.z(-507252817525546L)  */);
+                cdjVar3.setMethodName("nextInt" /* "nextInt" /* "nextInt" /* cnb.z(-507252817525546L)  */);
                 fjVar.f(cdjVar3);
                 fjVar.usingStringsType = UsingStringsTypeEnum.Contains;
                 cdjVar.i = fjVar;
@@ -533,7 +533,7 @@ public final /* synthetic */ class atn implements IInvokable {
                         ArrayList arrayList = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onGetExptConfig " /* "onGetExptConfig " /* "onGetExptConfig " /* cnb.z(-36717675412266L)  */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb,
                                 bniVar instanceof SwitchHook ? ((SwitchHook) bniVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 36661840837418L)
@@ -582,7 +582,7 @@ public final /* synthetic */ class atn implements IInvokable {
                 Object obj5 = objX5 instanceof Failure ? null : objX5;
                 throwIfVar1IsNull(obj5);
                 ContextMenu contextMenu = (ContextMenu) obj5;
-                if (cnb.isNewerThanArgVerAndNotPlay(ewk.b) || cnb.isNewerThanArgVerAndPlay(ewh.c)) {
+                if (StaticUtils.isNewerThanArgVerAndNotPlay(ewk.b) || StaticUtils.isNewerThanArgVerAndPlay(ewh.c)) {
                     int i8 = 0;
                     FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(contextMenu).createFieldResolver();
                     fieldResolverVarR3.fieldType = dal.getKClassFromClass(Context.class);
@@ -608,7 +608,7 @@ public final /* synthetic */ class atn implements IInvokable {
                                     ArrayList arrayList2 = Logger.a;
                                     StringBuilder sb2 = new StringBuilder();
                                     sb2.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-42013370088234L)  */);
-                                    Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
+                                    Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb2,
                                             bnjVar instanceof SwitchHook ? ((SwitchHook) bnjVar).getResult()
                                                     : "LoadHook" /* "LoadHook" /* "LoadHook" /* cnb.z(-41948945578794L)  */,
                                             -41858751265578L), e, 12);
@@ -629,7 +629,7 @@ public final /* synthetic */ class atn implements IInvokable {
                             ArrayList arrayList3 = Logger.a;
                             StringBuilder sb3 = new StringBuilder();
                             sb3.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-41824391527210L)  */);
-                            Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb3, bnjVar2 instanceof SwitchHook ? ((SwitchHook) bnjVar2).getResult()
+                            Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb3, bnjVar2 instanceof SwitchHook ? ((SwitchHook) bnjVar2).getResult()
                                     : "LoadHook" /* "LoadHook" /* "LoadHook" /* cnb.z(-42309722831658L)  */, -42288247995178L), e4, 12);
                         }
                     }
@@ -677,7 +677,7 @@ public final /* synthetic */ class atn implements IInvokable {
                         ArrayList arrayList4 = Logger.a;
                         StringBuilder sb4 = new StringBuilder();
                         sb4.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-43675522431786L)  */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb4,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb4,
                                 bnjVar3 instanceof SwitchHook ? ((SwitchHook) bnjVar3).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -714,7 +714,7 @@ public final /* synthetic */ class atn implements IInvokable {
                 dexMethodQueryBuilderVar6.getClass();
                 dexMethodQueryBuilderVar6.searchedPackages = SomeStaticHelpers.arrayToList(strArr4);
                 DexFinder cdjVar8 = new DexFinder();
-                cdjVar8.usingStrings("MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* cnb.z(-43782896614186L)  */, (cnb.isNewerThanArgVerAndNotPlay(ewk.b) || cnb.isNewerThanArgVerAndPlay(ewh.c))
+                cdjVar8.usingStrings("MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* "MicroMsg.FavoriteIndexUI" /* cnb.z(-43782896614186L)  */, (StaticUtils.isNewerThanArgVerAndNotPlay(ewk.b) || StaticUtils.isNewerThanArgVerAndPlay(ewh.c))
                         ? "[OnCreateContextMMMenu] pos = "
                         /* "[OnCreateContextMMMenu] pos = " /* "[OnCreateContextMMMenu] pos = " /* cnb.z(-43125766617898L)  */ : "onCreateContextMenu() pos:%s id:%s fav_id:%s" /*
                                                                                                         * cnb.z(-
@@ -761,7 +761,7 @@ public final /* synthetic */ class atn implements IInvokable {
                                 ArrayList arrayList5 = Logger.a;
                                 StringBuilder sb5 = new StringBuilder();
                                 sb5.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-40535901338410L)  */);
-                                Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb5, bnkVar instanceof SwitchHook ? ((SwitchHook) bnkVar).getResult()
+                                Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb5, bnkVar instanceof SwitchHook ? ((SwitchHook) bnkVar).getResult()
                                         : "LoadHook" /* "LoadHook" /* "LoadHook" /* cnb.z(-40471476828970L)  */, -39831526701866L), e, 12);
                                 i2 = R.id.MenuItem_Group;
                             }

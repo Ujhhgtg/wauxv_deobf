@@ -12,7 +12,7 @@ import me.hd.wauxv.R;
 import me.hd.wauxv.obf.SomeFragmentManager;
 import me.hd.wauxv.obf.cfx;
 import me.hd.wauxv.obf.cjl;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.cyb;
 import me.hd.wauxv.obf.cyd;
 import me.hd.wauxv.obf.Kotlin$Lazy;
@@ -67,7 +67,7 @@ public class NavHostFragment extends SomeFragmentManager {
     public final void h() {
         this.bx = true;
         View view = this.b;
-        if (view != null && cnb.u(view) == l()) {
+        if (view != null && StaticUtils.u(view) == l()) {
             view.setTag(R.id.nav_controller_view_tag, null);
         }
         this.b = null;

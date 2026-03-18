@@ -61,7 +61,7 @@ public final class ReadonlyArray implements Collection, IEmpty {
 
     @Override // java.util.Collection, java.lang.Iterable
     public final Iterator iterator() {
-        return cnb.ae(this.a);
+        return StaticUtils.ae(this.a);
     }
 
     @Override // java.util.Collection

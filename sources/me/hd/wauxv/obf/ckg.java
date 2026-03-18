@@ -82,13 +82,13 @@ public abstract class ckg extends FrameLayout {
         if (typedArray.hasValue(2)) {
             setElevation(typedArray.getDimensionPixelSize(2, 0));
         }
-        getBackground().mutate().setTintList(cnb.w(context2, factoryPoolsVarAo, 1));
+        getBackground().mutate().setTintList(StaticUtils.w(context2, factoryPoolsVarAo, 1));
         setLabelVisibilityMode(typedArray.getInteger(14, -1));
         int resourceId = typedArray.getResourceId(4, 0);
         if (resourceId != 0) {
             ckaVarA.setItemBackgroundRes(resourceId);
         } else {
-            setItemRippleColor(cnb.w(context2, factoryPoolsVarAo, 9));
+            setItemRippleColor(StaticUtils.w(context2, factoryPoolsVarAo, 9));
         }
         int resourceId2 = typedArray.getResourceId(3, 0);
         if (resourceId2 != 0) {
@@ -97,7 +97,7 @@ public abstract class ckg extends FrameLayout {
             setItemActiveIndicatorWidth(typedArrayObtainStyledAttributes.getDimensionPixelSize(1, 0));
             setItemActiveIndicatorHeight(typedArrayObtainStyledAttributes.getDimensionPixelSize(0, 0));
             setItemActiveIndicatorMarginHorizontal(typedArrayObtainStyledAttributes.getDimensionPixelOffset(3, 0));
-            setItemActiveIndicatorColor(cnb.v(context2, typedArrayObtainStyledAttributes, 2));
+            setItemActiveIndicatorColor(StaticUtils.v(context2, typedArrayObtainStyledAttributes, 2));
             setItemActiveIndicatorShapeAppearance(dgm.m(context2, typedArrayObtainStyledAttributes.getResourceId(4, 0), 0, new o(0)).m());
             typedArrayObtainStyledAttributes.recycle();
         }

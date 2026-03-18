@@ -155,7 +155,7 @@ public abstract class KotlinHelpers2 implements ajt, acm {
         }
         View view = someFragmentManagerVar.bz;
         if (view != null) {
-            return cnb.u(view);
+            return StaticUtils.u(view);
         }
         View decorView = null;
         anc ancVar = someFragmentManagerVar instanceof anc ? (anc) someFragmentManagerVar : null;
@@ -163,7 +163,7 @@ public abstract class KotlinHelpers2 implements ajt, acm {
             decorView = window.getDecorView();
         }
         if (decorView != null) {
-            return cnb.u(decorView);
+            return StaticUtils.u(decorView);
         }
         throw new IllegalStateException(yg.l("Fragment ", someFragmentManagerVar, " does not have a NavController set"));
     }

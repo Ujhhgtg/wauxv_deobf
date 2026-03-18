@@ -19,7 +19,7 @@ public final class cyt extends cyw {
     public cyt(ea eaVar) {
         this.b = eaVar;
         if (eaVar.a > 0) {
-            ArrayList arrayList = ((h) eaVar.f) != null ? xf.l : null;
+            ArrayList arrayList = ((h) eaVar.f) != null ? ChatToolbarHook.l : null;
             if (arrayList != null && !arrayList.isEmpty()) {
                 throw new IllegalArgumentException("You can only use once dataSetCount or entities on RecyclerView.Adapter.");
             }
@@ -46,7 +46,7 @@ public final class cyt extends cyw {
         if (numValueOf != null) {
             iIntValue = numValueOf.intValue();
         } else {
-            if (((h) eaVar.f) != null && (arrayList = xf.l) != null) {
+            if (((h) eaVar.f) != null && (arrayList = ChatToolbarHook.l) != null) {
                 numValueOf2 = Integer.valueOf(arrayList.size());
             }
             iIntValue = numValueOf2 != null ? numValueOf2.intValue() : 0;

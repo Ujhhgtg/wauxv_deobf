@@ -104,15 +104,15 @@ public final class exf {
             throw new IllegalStateException("Xposed modulePackageName load failed, please reset and rebuild it");
         }
         chm chmVar = new chm();
-        chmVar.f = this;
-        chmVar.c = application;
-        chmVar.d = str;
-        chmVar.e = new ConcurrentHashMap();
+        chmVar.var4 = this;
+        chmVar.var1 = application;
+        chmVar.var2 = str;
+        chmVar.var3 = new ConcurrentHashMap();
         return chmVar;
     }
 
     public final void n(final Application application, String str) {
-        if (cnb.k) {
+        if (StaticUtils.k) {
             this.h = application;
             IntentFilter intentFilter = new IntentFilter();
             boolean z = a;

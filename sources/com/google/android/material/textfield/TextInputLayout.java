@@ -67,7 +67,7 @@ import me.hd.wauxv.obf.cat;
 import me.hd.wauxv.obf.cau;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cna;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.cxc;
 import me.hd.wauxv.obf.cxs;
@@ -253,7 +253,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             dglVarQ.h = new o(dimension4);
         }
         this.am = dglVarQ.m();
-        ColorStateList colorStateListW = cnb.w(context2, factoryPoolsVarAo, 7);
+        ColorStateList colorStateListW = StaticUtils.w(context2, factoryPoolsVarAo, 7);
         if (colorStateListW != null) {
             int defaultColor = colorStateListW.getDefaultColor();
             this.bm = defaultColor;
@@ -282,7 +282,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             this.bh = colorStateListR;
             this.bg = colorStateListR;
         }
-        ColorStateList colorStateListW2 = cnb.w(context2, factoryPoolsVarAo, 14);
+        ColorStateList colorStateListW2 = StaticUtils.w(context2, factoryPoolsVarAo, 14);
         this.bk = typedArray.getColor(14, 0);
         this.bi = context2.getColor(me.hd.wauxv.R.color.mtrl_textinput_default_box_stroke_color);
         this.bq = context2.getColor(me.hd.wauxv.R.color.mtrl_textinput_disabled_color);
@@ -291,7 +291,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             setBoxStrokeColorStateList(colorStateListW2);
         }
         if (typedArray.hasValue(15)) {
-            setBoxStrokeErrorColor(cnb.w(context2, factoryPoolsVarAo, 15));
+            setBoxStrokeErrorColor(StaticUtils.w(context2, factoryPoolsVarAo, 15));
         }
         if (typedArray.getResourceId(49, -1) != -1) {
             setHintTextAppearance(typedArray.getResourceId(49, 0));
@@ -752,7 +752,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
             if (getContext().getResources().getConfiguration().fontScale >= 2.0f) {
                 this.aq = getResources()
                         .getDimensionPixelSize(me.hd.wauxv.R.dimen.material_font_2_0_box_collapsed_padding_top);
-            } else if (cnb.ad(getContext())) {
+            } else if (StaticUtils.ad(getContext())) {
                 this.aq = getResources()
                         .getDimensionPixelSize(me.hd.wauxv.R.dimen.material_font_1_3_box_collapsed_padding_top);
             }
@@ -766,7 +766,7 @@ public class TextInputLayout extends LinearLayout implements ViewTreeObserver.On
                                 me.hd.wauxv.R.dimen.material_filled_edittext_font_2_0_padding_top),
                         this.e.getPaddingEnd(), getResources().getDimensionPixelSize(
                                 me.hd.wauxv.R.dimen.material_filled_edittext_font_2_0_padding_bottom));
-            } else if (cnb.ad(getContext())) {
+            } else if (StaticUtils.ad(getContext())) {
                 EditText editText2 = this.e;
                 WeakHashMap weakHashMap2 = ViewCompat.a;
                 editText2.setPaddingRelative(editText2.getPaddingStart(),

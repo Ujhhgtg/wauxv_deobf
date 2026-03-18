@@ -19,14 +19,14 @@ public final class esa implements IHandlesSwipeDismiss {
         switch (this.a) {
             case 0:
                 int currentItem = ((ViewPager2) view).getCurrentItem() + 1;
-                ViewPager2 viewPager2 = (ViewPager2) this.c.f;
+                ViewPager2 viewPager2 = (ViewPager2) this.c.var4;
                 if (viewPager2.r) {
                     viewPager2.v(currentItem);
                 }
                 break;
             default:
                 int currentItem2 = ((ViewPager2) view).getCurrentItem() - 1;
-                ViewPager2 viewPager22 = (ViewPager2) this.c.f;
+                ViewPager2 viewPager22 = (ViewPager2) this.c.var4;
                 if (viewPager22.r) {
                     viewPager22.v(currentItem2);
                 }

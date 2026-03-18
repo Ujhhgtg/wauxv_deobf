@@ -66,7 +66,7 @@ public final /* synthetic */ class epy implements IInvokable {
             case 0:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar = new DexFinder();
-                cdjVar.usingStrings((cnb.isNewerThanArgVerAndNotPlay(ewk.l) || cnb.isNewerThanArgVerAndPlay(ewh.VER_8061)) ? "MicroMsg.C2CVideoPathFeatureService"
+                cdjVar.usingStrings((StaticUtils.isNewerThanArgVerAndNotPlay(ewk.l) || StaticUtils.isNewerThanArgVerAndPlay(ewh.VER_8061)) ? "MicroMsg.C2CVideoPathFeatureService"
                         /* "MicroMsg.C2CVideoPathFeatureService" /* "MicroMsg.C2CVideoPathFeatureService" /* cnb.z(-374581277752106L)  */ : "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* cnb.z(-374392299191082L)  */,
                         ".mp4" /* ".mp4" /* ".mp4" /* cnb.z(-374847565724458L)  */, "success restore file, from " /*
                                                                                               * "success restore file, from " /* "success restore file, from " /* cnb.z(-374860450626346L)  */
@@ -77,7 +77,7 @@ public final /* synthetic */ class epy implements IInvokable {
             case 1:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar2 = new DexFinder();
-                cdjVar2.usingStrings((cnb.isNewerThanArgVerAndNotPlay(ewk.l) || cnb.isNewerThanArgVerAndPlay(ewh.VER_8061)) ? "MicroMsg.C2CVideoPathFeatureService"
+                cdjVar2.usingStrings((StaticUtils.isNewerThanArgVerAndNotPlay(ewk.l) || StaticUtils.isNewerThanArgVerAndPlay(ewh.VER_8061)) ? "MicroMsg.C2CVideoPathFeatureService"
                         /* "MicroMsg.C2CVideoPathFeatureService" /* "MicroMsg.C2CVideoPathFeatureService" /* cnb.z(-374705831803690L)  */ : "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* "MicroMsg.VideoInfoStorage" /* cnb.z(-374035816905514L)  */,
                         ".jpg" /* ".jpg" /* ".jpg" /* cnb.z(-373872608148266L)  */, "success restore file, from " /*
                                                                                               * "success restore file, from " /* "success restore file, from " /* cnb.z(-373902672919338L)  */
@@ -432,7 +432,7 @@ public final /* synthetic */ class epy implements IInvokable {
                 throwIfVar1IsNull(objE7);
                 BaseAdapter baseAdapter = (BaseAdapter) objE7;
                 for (euk eukVar : eul.b) {
-                    cnb.m(baseAdapter, cnb.y(context, eukVar.a, eukVar.b), 0);
+                    StaticUtils.m(baseAdapter, StaticUtils.y(context, eukVar.a, eukVar.b), 0);
                 }
                 return kotlinUnitVar;
             default:

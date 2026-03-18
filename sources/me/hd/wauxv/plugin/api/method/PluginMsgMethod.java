@@ -34,7 +34,7 @@ import me.hd.wauxv.obf.cmd;
 import me.hd.wauxv.obf.cme;
 import me.hd.wauxv.obf.cmj;
 import me.hd.wauxv.obf.cmk;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.ctc;
@@ -226,7 +226,7 @@ public final class PluginMsgMethod {
         Cursor cursorAc = arj.ac("select * from rcontact where username = '"
                 /* "select * from rcontact where username = '" /* "select * from rcontact where username = '" /* cnb.z(-85083302132522L)  */ + msgInfoBean.getSendTalker() + '\'');
         cursorAc.moveToFirst();
-        jSONObject4.put(strZ5, cnb.s(cursorAc).getNickname());
+        jSONObject4.put(strZ5, StaticUtils.s(cursorAc).getNickname());
         jSONObject4.put("msgsource" /* "msgsource" /* "msgsource" /* cnb.z(-114744346278698L)  */, "" /* "" /* "" /* cnb.z(-114718576474922L)  */);
         jSONObject4.put("content" /* "content" /* "content" /* cnb.z(-114714281507626L)  */, msgInfoBean.getContent());
         jSONObject4.put("strid" /* "strid" /* "strid" /* cnb.z(-114679921769258L)  */, "" /* "" /* "" /* cnb.z(-114636972096298L)  */);
@@ -254,9 +254,9 @@ public final class PluginMsgMethod {
         Cursor cursorAc = arj
                 .ac("select * from rcontact where username = '" /* "select * from rcontact where username = '" /* "select * from rcontact where username = '" /* cnb.z(-85083302132522L)  */ + str2 + '\'');
         cursorAc.moveToFirst();
-        jSONObject2.put(strZ2, cnb.s(cursorAc).getNickname());
-        jSONObject2.put("certflag" /* "certflag" /* "certflag" /* cnb.z(-116866060122922L)  */, cnb
-                .z(dnr.bp(str2, "gh_" /* "gh_" /* "gh_" /* cnb.z(-116827405417258L)  */, false) ? -116844585286442L : -118446608087850L));
+        jSONObject2.put(strZ2, StaticUtils.s(cursorAc).getNickname());
+        jSONObject2.put("certflag" /* "certflag" /* "certflag" /* cnb.z(-116866060122922L)  */, StaticUtils
+                .decryptString(dnr.bp(str2, "gh_" /* "gh_" /* "gh_" /* cnb.z(-116827405417258L)  */, false) ? -116844585286442L : -118446608087850L));
         jSONObject.put(strZ, jSONObject2);
         HashSet hashSet = new HashSet();
         HashSet hashSet2 = new HashSet();

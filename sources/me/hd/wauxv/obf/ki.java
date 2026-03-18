@@ -194,7 +194,7 @@ public final class ki {
                 methodResolverVarT5.name = "onConfigurationChanged";
                 cnh.y((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT5.findMethods()), new kg(0));
             }
-            if (cnb.k || !linkedHashMap.isEmpty()) {
+            if (StaticUtils.k || !linkedHashMap.isEmpty()) {
                 int i3 = 0;
                 SyntheticPileOfMess bmuVarBg2 = dqc.bg(dal.getKClassFromClass(Instrumentation.class));
                 bmuVarBg2.setHookOptional(true);

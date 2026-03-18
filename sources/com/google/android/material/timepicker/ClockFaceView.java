@@ -28,7 +28,7 @@ import me.hd.wauxv.obf.adl;
 import me.hd.wauxv.obf.adp;
 import me.hd.wauxv.obf.LateinitProperty;
 import me.hd.wauxv.obf.ResourcesCompat;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.cyg;
 import me.hd.wauxv.obf.ViewCompat;
@@ -63,7 +63,7 @@ class ClockFaceView extends cyg implements zz {
         this.ad = new float[]{0.0f, 0.9f, 1.0f};
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, cxs.i, R.attr.materialClockStyle, R.style.Widget_MaterialComponents_TimePicker_Clock);
         Resources resources = getResources();
-        ColorStateList colorStateListV = cnb.v(context, typedArrayObtainStyledAttributes, 1);
+        ColorStateList colorStateListV = StaticUtils.v(context, typedArrayObtainStyledAttributes, 1);
         this.ak = colorStateListV;
         LayoutInflater.from(context).inflate(R.layout.material_clockface_view, (ViewGroup) this, true);
         ClockHandView clockHandView = (ClockHandView) findViewById(R.id.material_clock_hand);
@@ -73,7 +73,7 @@ class ClockFaceView extends cyg implements zz {
         this.ac = new int[]{colorForState, colorForState, colorStateListV.getDefaultColor()};
         clockHandView.c.add(this);
         int defaultColor = ResourcesCompat.v(context, R.color.material_timepicker_clockface).getDefaultColor();
-        ColorStateList colorStateListV2 = cnb.v(context, typedArrayObtainStyledAttributes, 0);
+        ColorStateList colorStateListV2 = StaticUtils.v(context, typedArrayObtainStyledAttributes, 0);
         setBackgroundColor(colorStateListV2 != null ? colorStateListV2.getDefaultColor() : defaultColor);
         getViewTreeObserver().addOnPreDrawListener(new b(this));
         setFocusable(true);

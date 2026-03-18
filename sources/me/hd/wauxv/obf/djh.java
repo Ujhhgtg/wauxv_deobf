@@ -60,9 +60,9 @@ public final class djh extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        boolean zAb = cnb.isNewerThanArgVerAndNotPlay(ewk.d);
+        boolean zAb = StaticUtils.isNewerThanArgVerAndNotPlay(ewk.d);
         djh djhVar = a;
-        if (zAb || cnb.isNewerThanArgVerAndPlay(ewh.d)) {
+        if (zAb || StaticUtils.isNewerThanArgVerAndPlay(ewh.d)) {
             HookManager hookManagerVarAb = PackageParam.createHook(djhVar, dqc.toSingletonList(StaticHelpers7.toDexMethod(djc.a)));
             djhVar.hookAfter(hookManagerVarAb, new dhg(18));
             hookManagerVarAb.initInstantCollectionAndApplyHooks();
@@ -85,7 +85,7 @@ public final class djh extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        if (!cnb.isNewerThanArgVerAndNotPlay(ewk.d) && !cnb.isNewerThanArgVerAndPlay(ewh.d)) {
+        if (!StaticUtils.isNewerThanArgVerAndNotPlay(ewk.d) && !StaticUtils.isNewerThanArgVerAndPlay(ewh.d)) {
             StaticHelpers7.resolveDexAndCache(djd.a, dexKitBridge, new dhg(22));
         } else {
             StaticHelpers7.resolveDexAndCache(djc.a, dexKitBridge, new dhg(20));

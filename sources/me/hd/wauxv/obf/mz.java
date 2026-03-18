@@ -121,7 +121,7 @@ public final class mz {
         myVar11.h = Integer.valueOf(num4 == null ? typedArrayAn.getResourceId(16, 0) : num4.intValue());
         my myVar12 = this.b;
         Integer num5 = myVar2.b;
-        myVar12.b = Integer.valueOf(num5 == null ? cnb.v(context, typedArrayAn, 1).getDefaultColor() : num5.intValue());
+        myVar12.b = Integer.valueOf(num5 == null ? StaticUtils.v(context, typedArrayAn, 1).getDefaultColor() : num5.intValue());
         my myVar13 = this.b;
         Integer num6 = myVar2.d;
         myVar13.d = Integer.valueOf(num6 == null ? typedArrayAn.getResourceId(8, R.style.TextAppearance_MaterialComponents_Badge) : num6.intValue());
@@ -129,21 +129,21 @@ public final class mz {
         if (num7 != null) {
             this.b.c = num7;
         } else if (typedArrayAn.hasValue(9)) {
-            this.b.c = Integer.valueOf(cnb.v(context, typedArrayAn, 9).getDefaultColor());
+            this.b.c = Integer.valueOf(StaticUtils.v(context, typedArrayAn, 9).getDefaultColor());
         } else {
             int iIntValue = this.b.d.intValue();
             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(iIntValue, cxs.ao);
             typedArrayObtainStyledAttributes.getDimension(0, 0.0f);
-            ColorStateList colorStateListV = cnb.v(context, typedArrayObtainStyledAttributes, 3);
-            cnb.v(context, typedArrayObtainStyledAttributes, 4);
-            cnb.v(context, typedArrayObtainStyledAttributes, 5);
+            ColorStateList colorStateListV = StaticUtils.v(context, typedArrayObtainStyledAttributes, 3);
+            StaticUtils.v(context, typedArrayObtainStyledAttributes, 4);
+            StaticUtils.v(context, typedArrayObtainStyledAttributes, 5);
             typedArrayObtainStyledAttributes.getInt(2, 0);
             typedArrayObtainStyledAttributes.getInt(1, 1);
             int i8 = typedArrayObtainStyledAttributes.hasValue(12) ? 12 : 10;
             typedArrayObtainStyledAttributes.getResourceId(i8, 0);
             typedArrayObtainStyledAttributes.getString(i8);
             typedArrayObtainStyledAttributes.getBoolean(14, false);
-            cnb.v(context, typedArrayObtainStyledAttributes, 6);
+            StaticUtils.v(context, typedArrayObtainStyledAttributes, 6);
             typedArrayObtainStyledAttributes.getFloat(7, 0.0f);
             typedArrayObtainStyledAttributes.getFloat(8, 0.0f);
             typedArrayObtainStyledAttributes.getFloat(9, 0.0f);

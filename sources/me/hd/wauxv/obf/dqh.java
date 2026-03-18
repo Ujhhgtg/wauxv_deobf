@@ -30,16 +30,16 @@ public final class dqh {
     public dqh(Context context, int i) {
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(i, cxs.ao);
         this.k = typedArrayObtainStyledAttributes.getDimension(0, 0.0f);
-        this.j = cnb.v(context, typedArrayObtainStyledAttributes, 3);
-        cnb.v(context, typedArrayObtainStyledAttributes, 4);
-        cnb.v(context, typedArrayObtainStyledAttributes, 5);
+        this.j = StaticUtils.v(context, typedArrayObtainStyledAttributes, 3);
+        StaticUtils.v(context, typedArrayObtainStyledAttributes, 4);
+        StaticUtils.v(context, typedArrayObtainStyledAttributes, 5);
         this.c = typedArrayObtainStyledAttributes.getInt(2, 0);
         this.d = typedArrayObtainStyledAttributes.getInt(1, 1);
         int i2 = typedArrayObtainStyledAttributes.hasValue(12) ? 12 : 10;
         this.l = typedArrayObtainStyledAttributes.getResourceId(i2, 0);
         this.b = typedArrayObtainStyledAttributes.getString(i2);
         typedArrayObtainStyledAttributes.getBoolean(14, false);
-        this.a = cnb.v(context, typedArrayObtainStyledAttributes, 6);
+        this.a = StaticUtils.v(context, typedArrayObtainStyledAttributes, 6);
         this.e = typedArrayObtainStyledAttributes.getFloat(7, 0.0f);
         this.f = typedArrayObtainStyledAttributes.getFloat(8, 0.0f);
         this.g = typedArrayObtainStyledAttributes.getFloat(9, 0.0f);

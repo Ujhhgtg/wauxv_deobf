@@ -8,7 +8,7 @@ public final class bsq implements btd {
 
     @Override // me.hd.wauxv.obf.btd
     public final Object a(ajt ajtVar) {
-        brx brxVarBw = cnb.n(ajtVar).bw();
+        brx brxVarBw = StaticUtils.n(ajtVar).bw();
         if (brxVarBw instanceof bsp) {
             return (bsp) brxVarBw;
         }
@@ -20,7 +20,7 @@ public final class bsq implements btd {
     public final void c(avt avtVar, Object obj) {
         bsp bspVar = (bsp) obj;
         throwIfVar1IsNull(bspVar, "value");
-        cnb.l(avtVar);
+        StaticUtils.l(avtVar);
         if (bspVar instanceof bsi) {
             avtVar.x(bsj.b, bsi.INSTANCE);
         } else {

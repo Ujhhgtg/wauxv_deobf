@@ -30,12 +30,12 @@ public abstract /* synthetic */ class StaticHelpers6 {
 
     public static void ac(StringBuilder sb, int i, long j) {
         sb.append(i);
-        sb.append(cnb.z(j));
+        sb.append(StaticUtils.decryptString(j));
     }
 
     public static void ad(StringBuilder sb, Long l, long j) {
         sb.append(l);
-        sb.append(cnb.z(j));
+        sb.append(StaticUtils.decryptString(j));
     }
 
     public static /* synthetic */ int ae(int i) {

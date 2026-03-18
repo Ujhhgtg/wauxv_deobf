@@ -299,7 +299,7 @@ public final class pr extends cjv {
                 boolean[] zArr = (boolean[]) obj;
                 throwIfVar1IsNull(str, "key");
                 if (zArr == null) {
-                    cnb.af(str, bundle);
+                    StaticUtils.af(str, bundle);
                 } else {
                     bundle.putBooleanArray(str, zArr);
                 }
@@ -308,7 +308,7 @@ public final class pr extends cjv {
                 List list = (List) obj;
                 throwIfVar1IsNull(str, "key");
                 if (list == null) {
-                    cnb.af(str, bundle);
+                    StaticUtils.af(str, bundle);
                 } else {
                     bundle.putBooleanArray(str, StaticHelpers5.v(list));
                 }
@@ -317,7 +317,7 @@ public final class pr extends cjv {
                 float[] fArr = (float[]) obj;
                 throwIfVar1IsNull(str, "key");
                 if (fArr == null) {
-                    cnb.af(str, bundle);
+                    StaticUtils.af(str, bundle);
                 } else {
                     bundle.putFloatArray(str, fArr);
                 }
@@ -326,7 +326,7 @@ public final class pr extends cjv {
                 List list2 = (List) obj;
                 throwIfVar1IsNull(str, "key");
                 if (list2 == null) {
-                    cnb.af(str, bundle);
+                    StaticUtils.af(str, bundle);
                 } else {
                     float[] fArr2 = new float[list2.size()];
                     Iterator it = list2.iterator();
@@ -342,7 +342,7 @@ public final class pr extends cjv {
                 int[] iArr = (int[]) obj;
                 throwIfVar1IsNull(str, "key");
                 if (iArr == null) {
-                    cnb.af(str, bundle);
+                    StaticUtils.af(str, bundle);
                 } else {
                     bundle.putIntArray(str, iArr);
                 }
@@ -358,7 +358,7 @@ public final class pr extends cjv {
                 long[] jArr = (long[]) obj;
                 throwIfVar1IsNull(str, "key");
                 if (jArr == null) {
-                    cnb.af(str, bundle);
+                    StaticUtils.af(str, bundle);
                 } else {
                     bundle.putLongArray(str, jArr);
                 }
@@ -367,7 +367,7 @@ public final class pr extends cjv {
                 List list4 = (List) obj;
                 throwIfVar1IsNull(str, "key");
                 if (list4 == null) {
-                    cnb.af(str, bundle);
+                    StaticUtils.af(str, bundle);
                 } else {
                     bundle.putLongArray(str, StaticHelpers5.aa(list4));
                 }
@@ -376,7 +376,7 @@ public final class pr extends cjv {
                 String[] strArr = (String[]) obj;
                 throwIfVar1IsNull(str, "key");
                 if (strArr == null) {
-                    cnb.af(str, bundle);
+                    StaticUtils.af(str, bundle);
                 } else {
                     bundle.putStringArray(str, strArr);
                 }
@@ -385,7 +385,7 @@ public final class pr extends cjv {
                 List list5 = (List) obj;
                 throwIfVar1IsNull(str, "key");
                 if (list5 == null) {
-                    cnb.af(str, bundle);
+                    StaticUtils.af(str, bundle);
                 } else {
                     String[] strArr2 = (String[]) list5.toArray(new String[0]);
                     throwIfVar1IsNull(strArr2, "value");

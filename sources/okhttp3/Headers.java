@@ -16,7 +16,7 @@ import me.hd.wauxv.obf.StaticHelpers2;
 import me.hd.wauxv.obf.akd;
 import me.hd.wauxv.obf.EmptyReadonlyList;
 import me.hd.wauxv.obf.IEmpty;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.Pair;
 import me.hd.wauxv.obf.StringsKt;
@@ -363,7 +363,7 @@ public final class Headers implements Iterable<Pair>, IEmpty {
         for (int i = 0; i < size; i++) {
             pairVarArr[i] = new Pair(name(i), value(i));
         }
-        return cnb.ae(pairVarArr);
+        return StaticUtils.ae(pairVarArr);
     }
 
     public final String name(int i) {

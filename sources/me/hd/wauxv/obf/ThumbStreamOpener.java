@@ -190,7 +190,7 @@ public final class ThumbStreamOpener implements ajb {
         InputStream inputStreamOpenInputStream;
         int iY;
         chm chmVar = (chm) this.g;
-        ContentResolver contentResolver = (ContentResolver) chmVar.f;
+        ContentResolver contentResolver = (ContentResolver) chmVar.var4;
         Uri uri = (Uri) this.c;
         ?? r6 = 0;
         InputStream inputStreamOpenInputStream2 = null;
@@ -198,7 +198,7 @@ public final class ThumbStreamOpener implements ajb {
             try {
                 try {
                     try {
-                        cursorE = ((drs) chmVar.d).e(uri);
+                        cursorE = ((drs) chmVar.var2).e(uri);
                     } catch (SecurityException e2) {
                         e = e2;
                         cursorE = null;
@@ -217,7 +217,7 @@ public final class ThumbStreamOpener implements ajb {
                             try {
                                 try {
                                     inputStreamOpenInputStream2 = contentResolver.openInputStream(uri);
-                                    iY = bhv.y((ArrayList) chmVar.c, inputStreamOpenInputStream2, (bva) chmVar.e);
+                                    iY = bhv.y((ArrayList) chmVar.var1, inputStreamOpenInputStream2, (bva) chmVar.var3);
                                     if (inputStreamOpenInputStream2 != null) {
                                         try {
                                             inputStreamOpenInputStream2.close();
@@ -281,7 +281,7 @@ public final class ThumbStreamOpener implements ajb {
                     }
                     if (inputStreamOpenInputStream != null) {
                         inputStreamOpenInputStream2 = contentResolver.openInputStream(uri);
-                        iY = bhv.y((ArrayList) chmVar.c, inputStreamOpenInputStream2, (bva) chmVar.e);
+                        iY = bhv.y((ArrayList) chmVar.var1, inputStreamOpenInputStream2, (bva) chmVar.var3);
                         if (inputStreamOpenInputStream2 != null) {
                             inputStreamOpenInputStream2.close();
                         }
@@ -304,7 +304,7 @@ public final class ThumbStreamOpener implements ajb {
                 }
                 if (inputStreamOpenInputStream != null) {
                     inputStreamOpenInputStream2 = contentResolver.openInputStream(uri);
-                    iY = bhv.y((ArrayList) chmVar.c, inputStreamOpenInputStream2, (bva) chmVar.e);
+                    iY = bhv.y((ArrayList) chmVar.var1, inputStreamOpenInputStream2, (bva) chmVar.var3);
                     if (inputStreamOpenInputStream2 != null) {
                         inputStreamOpenInputStream2.close();
                     }
@@ -325,7 +325,7 @@ public final class ThumbStreamOpener implements ajb {
             }
             if (inputStreamOpenInputStream != null) {
                 inputStreamOpenInputStream2 = contentResolver.openInputStream(uri);
-                iY = bhv.y((ArrayList) chmVar.c, inputStreamOpenInputStream2, (bva) chmVar.e);
+                iY = bhv.y((ArrayList) chmVar.var1, inputStreamOpenInputStream2, (bva) chmVar.var3);
                 if (inputStreamOpenInputStream2 != null) {
                     inputStreamOpenInputStream2.close();
                 }

@@ -20,7 +20,7 @@ public final class ddh extends SwitchHook implements IDexFind {
         ddh ddhVar = a;
         ddhVar.hookBefore(hookManagerVarAb, dbjVar);
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
-        if (cnb.isNewerThanArgVerAndNotPlay(ewk.i) || cnb.isNewerThanArgVerAndPlay(ewh.h)) {
+        if (StaticUtils.isNewerThanArgVerAndNotPlay(ewk.i) || StaticUtils.isNewerThanArgVerAndPlay(ewh.h)) {
             HookManager hookManagerVarAb2 = PackageParam.createHook(this, dqc.toSingletonList(StaticHelpers7.toDexMethod(dde.a)));
             ddhVar.hookBefore(hookManagerVarAb2, new dbj(10));
             hookManagerVarAb2.initInstantCollectionAndApplyHooks();
@@ -41,7 +41,7 @@ public final class ddh extends SwitchHook implements IDexFind {
     public final void dexFind(DexKitBridge dexKitBridge) {
         StaticHelpers7.resolveDexAndCache(ddf.a, dexKitBridge, new dbj(11));
         StaticHelpers7.resolveDexAndCache(ddd.a, dexKitBridge, new dbj(12));
-        if (cnb.isNewerThanArgVerAndNotPlay(ewk.i) || cnb.isNewerThanArgVerAndPlay(ewh.h)) {
+        if (StaticUtils.isNewerThanArgVerAndNotPlay(ewk.i) || StaticUtils.isNewerThanArgVerAndPlay(ewh.h)) {
             StaticHelpers7.resolveDexAndCache(dde.a, dexKitBridge, new dbj(13));
         }
     }

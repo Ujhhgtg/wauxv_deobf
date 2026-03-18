@@ -1197,7 +1197,7 @@ public final class cjd {
 
     public static void x(Bundle bundle, String str, String str2, cin cinVar) {
         if (cinVar == null) {
-            cnb.ah(str, str2, bundle);
+            StaticUtils.ah(str, str2, bundle);
             return;
         }
         cjv cjvVar = cinVar.a;

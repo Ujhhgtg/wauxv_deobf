@@ -32,7 +32,7 @@ import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.car;
 import me.hd.wauxv.obf.cfe;
 import me.hd.wauxv.obf.cmz;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.cxc;
 import me.hd.wauxv.obf.cxs;
@@ -118,12 +118,12 @@ public class Chip extends hf implements yn, dgx, Checkable {
         TypedArray typedArrayAn = FastKV.an(context3, attributeSet, iArr, me.hd.wauxv.R.attr.chipStyle, me.hd.wauxv.R.style.Widget_MaterialComponents_Chip_Action, new int[0]);
         yoVar.bk = typedArrayAn.hasValue(37);
         Context context4 = yoVar.ak;
-        ColorStateList colorStateListV = cnb.v(context4, typedArrayAn, 24);
+        ColorStateList colorStateListV = StaticUtils.v(context4, typedArrayAn, 24);
         if (yoVar._bd != colorStateListV) {
             yoVar._bd = colorStateListV;
             yoVar.onStateChange(yoVar.getState());
         }
-        ColorStateList colorStateListV2 = cnb.v(context4, typedArrayAn, 11);
+        ColorStateList colorStateListV2 = StaticUtils.v(context4, typedArrayAn, 11);
         if (yoVar.d != colorStateListV2) {
             yoVar.d = colorStateListV2;
             yoVar.onStateChange(yoVar.getState());
@@ -137,9 +137,9 @@ public class Chip extends hf implements yn, dgx, Checkable {
         if (typedArrayAn.hasValue(12)) {
             yoVar.bz(typedArrayAn.getDimension(12, 0.0f));
         }
-        yoVar.ce(cnb.v(context4, typedArrayAn, 22));
+        yoVar.ce(StaticUtils.v(context4, typedArrayAn, 22));
         yoVar.cf(typedArrayAn.getDimension(23, 0.0f));
-        yoVar.co(cnb.v(context4, typedArrayAn, 36));
+        yoVar.co(StaticUtils.v(context4, typedArrayAn, 36));
         String text = typedArrayAn.getText(5);
         text = text == null ? "" : text;
         boolean zEquals = TextUtils.equals(yoVar.j, text);
@@ -165,26 +165,26 @@ public class Chip extends hf implements yn, dgx, Checkable {
         if (attributeSet != null && attributeSet.getAttributeValue("http://schemas.android.com/apk/res-auto", "chipIconEnabled") != null && attributeSet.getAttributeValue("http://schemas.android.com/apk/res-auto", "chipIconVisible") == null) {
             yoVar.cd(typedArrayAn.getBoolean(15, false));
         }
-        yoVar.ca(cnb.x(context4, typedArrayAn, 14));
+        yoVar.ca(StaticUtils.x(context4, typedArrayAn, 14));
         if (typedArrayAn.hasValue(17)) {
-            yoVar.cc(cnb.v(context4, typedArrayAn, 17));
+            yoVar.cc(StaticUtils.v(context4, typedArrayAn, 17));
         }
         yoVar.cb(typedArrayAn.getDimension(16, -1.0f));
         yoVar.cl(typedArrayAn.getBoolean(31, false));
         if (attributeSet != null && attributeSet.getAttributeValue("http://schemas.android.com/apk/res-auto", "closeIconEnabled") != null && attributeSet.getAttributeValue("http://schemas.android.com/apk/res-auto", "closeIconVisible") == null) {
             yoVar.cl(typedArrayAn.getBoolean(26, false));
         }
-        yoVar.cg(cnb.x(context4, typedArrayAn, 25));
-        yoVar.ck(cnb.v(context4, typedArrayAn, 30));
+        yoVar.cg(StaticUtils.x(context4, typedArrayAn, 25));
+        yoVar.ck(StaticUtils.v(context4, typedArrayAn, 30));
         yoVar.ci(typedArrayAn.getDimension(28, 0.0f));
         yoVar.bv(typedArrayAn.getBoolean(6, false));
         yoVar.by(typedArrayAn.getBoolean(10, false));
         if (attributeSet != null && attributeSet.getAttributeValue("http://schemas.android.com/apk/res-auto", "checkedIconEnabled") != null && attributeSet.getAttributeValue("http://schemas.android.com/apk/res-auto", "checkedIconVisible") == null) {
             yoVar.by(typedArrayAn.getBoolean(8, false));
         }
-        yoVar.bw(cnb.x(context4, typedArrayAn, 7));
+        yoVar.bw(StaticUtils.x(context4, typedArrayAn, 7));
         if (typedArrayAn.hasValue(9)) {
-            yoVar.bx(cnb.v(context4, typedArrayAn, 9));
+            yoVar.bx(StaticUtils.v(context4, typedArrayAn, 9));
         }
         yoVar.aa = (!typedArrayAn.hasValue(39) || (resourceId2 = typedArrayAn.getResourceId(39, 0)) == 0) ? null : cfe.c(context4, resourceId2);
         yoVar.ab = (!typedArrayAn.hasValue(33) || (resourceId = typedArrayAn.getResourceId(33, 0)) == 0) ? null : cfe.c(context4, resourceId);

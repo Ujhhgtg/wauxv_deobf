@@ -249,7 +249,7 @@ public abstract class cna {
                     String strSubstring3 = strSubstring.substring(iAh);
                     throwIfVar1IsNull(strSubstring3, "substring(...)");
                     double d2 = Double.parseDouble(strSubstring3);
-                    double dP = cnb.p(d2, aqpVar, aqp.NANOSECONDS);
+                    double dP = StaticUtils.p(d2, aqpVar, aqp.NANOSECONDS);
                     if (Double.isNaN(dP)) {
                         throw new IllegalArgumentException("Duration value cannot be NaN.");
                     }
@@ -258,7 +258,7 @@ public abstract class cna {
                     }
                     long jRound = Math.round(dP);
                     if (-4611686018426999999L > jRound || jRound >= 4611686018427000000L) {
-                        double dP2 = cnb.p(d2, aqpVar, aqp.MILLISECONDS);
+                        double dP2 = StaticUtils.p(d2, aqpVar, aqp.MILLISECONDS);
                         if (Double.isNaN(dP2)) {
                             throw new IllegalArgumentException("Cannot round NaN value.");
                         }

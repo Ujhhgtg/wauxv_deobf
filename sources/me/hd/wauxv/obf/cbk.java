@@ -106,7 +106,7 @@ public final /* synthetic */ class cbk implements Function2 {
                     }
                     if (msgInfoBean3 != null) {
                         bop bopVar = bop.a;
-                        Object origin = msgInfoBean3.getOrigin();
+                        Object origin = msgInfoBean3.getInstance();
                         bopVar.getClass();
                         strB = bop.b(origin);
                     } else {
@@ -251,7 +251,7 @@ public final /* synthetic */ class cbk implements Function2 {
                 throwIfVar1IsNull(objJ2);
                 Activity activity2 = (Activity) objJ2;
                 bop bopVar2 = bop.a;
-                Object origin2 = ((MsgInfoBean) obj2).getOrigin();
+                Object origin2 = ((MsgInfoBean) obj2).getInstance();
                 bopVar2.getClass();
                 ArrayList<String> arrayList10 = new ArrayList<>(new ReadonlyArray(new String[] { bop.b(origin2) }, true));
                 String strZ2 = "" /* "" /* "" /* "" /* cnb.z(-96679713831722L)   */;
@@ -297,7 +297,7 @@ public final /* synthetic */ class cbk implements Function2 {
             case 16:
                 MsgInfoBean msgInfoBean10 = (MsgInfoBean) obj2;
                 bop bopVar3 = bop.a;
-                Object origin3 = msgInfoBean10.getOrigin();
+                Object origin3 = msgInfoBean10.getInstance();
                 bopVar3.getClass();
                 arj.ad(msgInfoBean10.getTalker(), bop.b(origin3), null);
                 return kotlinUnitVar;

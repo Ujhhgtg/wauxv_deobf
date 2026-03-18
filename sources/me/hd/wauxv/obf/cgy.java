@@ -62,7 +62,7 @@ public final class cgy extends ApiHookItem implements IDexFind {
                     ((FindDexClassMethodDslWrapper) obj).onMethodCallback = (obj1 -> {
                         DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj1;
                         DexFinder cdjVar = new DexFinder();
-                        cdjVar.setDeclaredClassName(StaticHelpers7.toDexClass(MsgInfoStorage$ClassMsgInfoStorage_.INSTANCE));
+                        cdjVar.setDeclaredClass(StaticHelpers7.toDexClass(MsgInfoStorage$ClassMsgInfoStorage_.INSTANCE));
                         cdjVar.usingStrings("MsgInfo processAddMsg insert db error");
                         dexMethodQueryBuilderVar.getClass();
                         dexMethodQueryBuilderVar.dexFinder = cdjVar;

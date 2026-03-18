@@ -28,7 +28,7 @@ import me.hd.wauxv.obf.caq;
 import me.hd.wauxv.obf.ci;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cna;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.dcu;
 import me.hd.wauxv.obf.ew;
@@ -102,7 +102,7 @@ public class MaterialCheckBox extends hf {
                 }
             }
         }
-        this.p = cnb.w(context3, factoryPoolsVarAo, 3);
+        this.p = StaticUtils.w(context3, factoryPoolsVarAo, 3);
         this.q = StaticAndroidHelpers.ap(typedArray.getInt(4, -1), PorterDuff.Mode.SRC_IN);
         this.h = typedArray.getBoolean(10, false);
         this.i = typedArray.getBoolean(6, true);

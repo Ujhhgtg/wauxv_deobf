@@ -101,7 +101,7 @@ public final class dfm extends sj {
         int length = bArr.length - 1;
         int[] iArr = this.q;
         aye.n(iArr[length], i, 1L);
-        int iAl = cnb.al(this, i);
+        int iAl = StaticUtils.al(this, i);
         return bArr[iAl][(i - (iAl == 0 ? 0 : iArr[iAl - 1])) + iArr[bArr.length + iAl]];
     }
 
@@ -109,7 +109,7 @@ public final class dfm extends sj {
     public final boolean k(sj sjVar, int i) {
         throwIfVar1IsNull(sjVar, "other");
         if (g() - i >= 0) {
-            int iAl = cnb.al(this, 0);
+            int iAl = StaticUtils.al(this, 0);
             int i2 = 0;
             int i3 = 0;
             while (i2 < i) {
@@ -137,7 +137,7 @@ public final class dfm extends sj {
             return false;
         }
         int i4 = i3 + i;
-        int iAl = cnb.al(this, i);
+        int iAl = StaticUtils.al(this, i);
         while (i < i4) {
             int[] iArr = this.q;
             int i5 = iAl == 0 ? 0 : iArr[iAl - 1];
@@ -162,7 +162,7 @@ public final class dfm extends sj {
 
     @Override // me.hd.wauxv.obf.sj
     public final void o(int i, rh rhVar) {
-        int iAl = cnb.al(this, 0);
+        int iAl = StaticUtils.al(this, 0);
         int i2 = 0;
         while (i2 < i) {
             int[] iArr = this.q;

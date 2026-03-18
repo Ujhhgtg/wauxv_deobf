@@ -51,7 +51,7 @@ public final class ery extends LinearLayoutManager {
     public final void y(RecyclerView recyclerViewVar, czt cztVar, View view, bd bdVar) {
         int iEl;
         int iEl2;
-        ViewPager2 viewPager2 = (ViewPager2) this.a.t.f;
+        ViewPager2 viewPager2 = (ViewPager2) this.a.t.var4;
         if (viewPager2.getOrientation() == 1) {
             viewPager2.g.getClass();
             iEl = czg.el(view);

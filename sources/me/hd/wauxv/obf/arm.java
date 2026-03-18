@@ -30,12 +30,12 @@ public final /* synthetic */ class arm implements Runnable {
             case 0:
                 chm chmVar = this.b.j;
                 int i = 0;
-                ((ListView) chmVar.c).post(new ajz(chmVar, i, i));
+                ((ListView) chmVar.var1).post(new ajz(chmVar, i, i));
                 break;
             case 1:
                 aro aroVar = this.b;
                 if (aroVar.p) {
-                    ((ProgressBar) aroVar.j.d).setVisibility(0);
+                    ((ProgressBar) aroVar.j.var2).setVisibility(0);
                 }
                 break;
             case 2:

@@ -29,7 +29,7 @@ public final class esd extends RecyclerView {
         ViewPager2 viewPager2 = this.d;
         accessibilityEvent.setFromIndex(viewPager2.d);
         accessibilityEvent.setToIndex(viewPager2.d);
-        accessibilityEvent.setSource((ViewPager2) viewPager2.t.f);
+        accessibilityEvent.setSource((ViewPager2) viewPager2.t.var4);
         accessibilityEvent.setClassName("androidx.viewpager.widget.ViewPager");
     }
 

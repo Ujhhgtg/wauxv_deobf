@@ -15,7 +15,7 @@ public final class cly extends ApiHookItem implements IDexFind {
             String strZ = "atuserlist" /* "atuserlist" /* "atuserlist" /* "atuserlist" /* cnb.z(-111759344007978L)   */;
             StringBuilder sb = new StringBuilder();
             sb.append("<![CDATA[" /* "<![CDATA[" /* "<![CDATA[" /* "<![CDATA[" /* cnb.z(-111677739629354L)   */);
-            Pair[] pairVarArr = { new Pair(strZ, yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+            Pair[] pairVarArr = { new Pair(strZ, yg.concatVar2AndDecryptedVar3ToVar1(sb,
                     StaticHelpers5.k(list, "," /* "," /* "," /* "," /* cnb.z(-111651969825578L)   */, null, null, null, 62), -111660559760170L)) };
             map = new HashMap(KotlinHelpers.calcHashMapCapacity(1));
             KotlinHelpers.addVar2PairArrayToVar1Map(map, pairVarArr);

@@ -37,7 +37,7 @@ import me.hd.wauxv.obf.IInvokable;
 import me.hd.wauxv.obf.bqe;
 import me.hd.wauxv.obf.IntRange;
 import me.hd.wauxv.obf.KotlinHelpers;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.cnh;
 import me.hd.wauxv.obf.crv;
 import me.hd.wauxv.obf.dap;
@@ -256,7 +256,7 @@ public final class Util {
         throwIfVar1IsNull(comparator, "comparator");
         if (strArr.length != 0 && strArr2 != null && strArr2.length != 0) {
             for (String str : strArr) {
-                z zVarAe = cnb.ae(strArr2);
+                z zVarAe = StaticUtils.ae(strArr2);
                 while (zVarAe.hasNext()) {
                     if (comparator.compare(str, (String) zVarAe.next()) == 0) {
                         return true;

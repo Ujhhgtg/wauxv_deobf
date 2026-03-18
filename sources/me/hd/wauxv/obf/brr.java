@@ -11,7 +11,7 @@ public final class brr implements btd {
 
     @Override // me.hd.wauxv.obf.btd
     public final Object a(ajt ajtVar) {
-        cnb.n(ajtVar);
+        StaticUtils.n(ajtVar);
         return new brp((List) new ko(bsb.b).a(ajtVar));
     }
 
@@ -19,7 +19,7 @@ public final class brr implements btd {
     public final void c(avt avtVar, Object obj) {
         brp brpVar = (brp) obj;
         throwIfVar1IsNull(brpVar, "value");
-        cnb.l(avtVar);
+        StaticUtils.l(avtVar);
         bsb bsbVar = bsb.b;
         dfx descriptor = bsbVar.getDescriptor();
         throwIfVar1IsNull(descriptor, "elementDesc");

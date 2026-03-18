@@ -81,7 +81,7 @@ public final /* synthetic */ class cvc implements IInvokable {
             case 0:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar = new DexFinder();
-                cdjVar.setDeclaredClassName(cvh.a.b());
+                cdjVar.setDeclaredClass(cvh.a.b());
                 Class<String> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar.setParamTypes(clsBf != null ? clsBf : String.class);
                 cdjVar.usingStrings("Preference does not have a key assigned." /* "Preference does not have a key assigned." /* "Preference does not have a key assigned." /* cnb.z(-101232379165482L)  */);
@@ -99,32 +99,30 @@ public final /* synthetic */ class cvc implements IInvokable {
                 } catch (Throwable th) {
                     objX = FastKV.getFailureFromException(th);
                 }
-                obj2 = objX instanceof Failure ? null : objX;
+                obj2 = objX;
                 throwIfVar1IsNull(obj2);
                 KeyEvent keyEvent = (KeyEvent) obj2;
                 if (keyEvent.getKeyCode() == 67 && keyEvent.getAction() == 0) {
-                    int i6 = 0;
                     FieldResolver fieldResolverVarAa = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam);
-                    fieldResolverVarAa.fieldMatcher = new cvc(i2);
+                    fieldResolverVarAa.fieldMatcher = new cvc(3);
                     Object objD = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa.resolve())).getValue();
                     throwIfVar1IsNull(objD);
                     FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(objD).createFieldResolver();
-                    uq.a.getClass();
-                    fieldResolverVarR.fieldType = ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */);
+                    fieldResolverVarR.fieldType = ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter");
                     Object objE = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR.resolve())).getValue_();
                     throwIfVar1IsNull(objE);
                     FrameLayout frameLayout = (FrameLayout) objE;
                     MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(frameLayout).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                    methodResolverVarT.name = "getLastText" /* "getLastText" /* "getLastText" /* cnb.z(-76622216559402L)  */;
+                    methodResolverVarT.name = "getLastText";
                     Object objJ = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods())).invoke(new Object[0]);
                     throwIfVar1IsNull(objJ);
                     MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(frameLayout).getMethodResolverBasedOnPreviouslyProvidedConfig();
-                    methodResolverVarT2.name = "getLastQuoteMsgId" /* "getLastQuoteMsgId" /* "getLastQuoteMsgId" /* cnb.z(-76536317213482L)  */;
+                    methodResolverVarT2.name = "getLastQuoteMsgId";
                     Object objJ2 = ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).invoke(new Object[0]);
                     throwIfVar1IsNull(objJ2);
                     long jLongValue = ((Number) objJ2).longValue();
                     if (((String) objJ).length() == 0 && jLongValue != 0) {
-                        StaticHelpers7.toDexMethod(up.a).invoke(frameLayout, Boolean.FALSE, Boolean.TRUE);
+                        StaticHelpers7.toDexMethod(ChatFooter$MethodShowMsgQuoteContainer.a).invoke(frameLayout, Boolean.FALSE, Boolean.TRUE);
                     }
                 }
                 return kotlinUnitVar;
@@ -132,17 +130,14 @@ public final /* synthetic */ class cvc implements IInvokable {
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new cvc(i4);
                 return kotlinUnitVar;
             case 3:
-                return Boolean.valueOf(dnr.bp(((Class) obj).getName(), "com.tencent.mm.pluginsdk.ui.chat." /*
-                                                                                                            * cnb.z(-
-                                                                                                            * 472016905829162L)
-                                                                                                            */, false));
+                return Boolean.valueOf(dnr.bp(((Class) obj).getName(), "com.tencent.mm.pluginsdk.ui.chat.", false));
             case 4:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 String[] strArr = { "com.tencent.mm.pluginsdk.ui.chat" /* "com.tencent.mm.pluginsdk.ui.chat" /* "com.tencent.mm.pluginsdk.ui.chat" /* cnb.z(-460343184718634L)  */ };
                 dexMethodQueryBuilderVar2.getClass();
                 dexMethodQueryBuilderVar2.searchedPackages = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar2 = new DexFinder();
-                cdjVar2.s("onKey" /* "onKey" /* "onKey" /* cnb.z(-460201450797866L)  */);
+                cdjVar2.setMethodName("onKey" /* "onKey" /* "onKey" /* cnb.z(-460201450797866L)  */);
                 cdjVar2.usingStrings("ChatFooterKtHelper" /* "ChatFooterKtHelper" /* "ChatFooterKtHelper" /* cnb.z(-460158501124906L)  */, "supportAutoComplete err" /*
                                                                                                           * cnb.z(-
                                                                                                           * 460661012298538L)
@@ -154,7 +149,7 @@ public final /* synthetic */ class cvc implements IInvokable {
                 return kotlinUnitVar;
             case 6:
                 HookParam hookParam2 = (HookParam) obj;
-                if (cnb.isNewerThanArgVerAndNotPlay(ewk.VER_8058) || cnb.isNewerThanArgVerAndPlay(ewh.VER_8057)) {
+                if (StaticUtils.isNewerThanArgVerAndNotPlay(ewk.VER_8058) || StaticUtils.isNewerThanArgVerAndPlay(ewh.VER_8057)) {
                     hookParam2.getClass();
                     try {
                         objX2 = hookParam2.getArgs()[0];
@@ -226,7 +221,7 @@ public final /* synthetic */ class cvc implements IInvokable {
                     StaticHelpers7.toDexMethod(QuoteClickToPosHook$MethodClickToPositionEvent.INSTANCE).invoke(null, obj3, obj4, cgy.b(jLongValue2), view, Long.valueOf(jLongValue2), str,
                             obj5);
                     hookParam2.setResult(null);
-                } else if (cnb.isNewerThanArgVerAndNotPlay(ewk.g) || cnb.isNewerThanArgVerAndPlay(ewh.f)) {
+                } else if (StaticUtils.isNewerThanArgVerAndNotPlay(ewk.g) || StaticUtils.isNewerThanArgVerAndPlay(ewh.f)) {
                     hookParam2.getClass();
                     try {
                         objX8 = hookParam2.getArgs()[0];
@@ -447,7 +442,7 @@ public final /* synthetic */ class cvc implements IInvokable {
                         /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-663314749193002L)  */.concat(viewK.getResources().getResourceName(i7)));
             case 12:
                 HookParam hookParam3 = (HookParam) obj;
-                Pair pairVar = (cnb.isNewerThanArgVerAndNotPlay(ewk.n) || cnb.isNewerThanArgVerAndPlay(ewh.VER_8064)) ? new Pair(1, 5) : new Pair(0, 4);
+                Pair pairVar = (StaticUtils.isNewerThanArgVerAndNotPlay(ewk.n) || StaticUtils.isNewerThanArgVerAndPlay(ewh.VER_8064)) ? new Pair(1, 5) : new Pair(0, 4);
                 int iIntValue = ((Number) pairVar.first).intValue();
                 int iIntValue2 = ((Number) pairVar.second).intValue();
                 hookParam3.getClass();
@@ -757,7 +752,7 @@ public final /* synthetic */ class cvc implements IInvokable {
             case 28:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar9 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar9 = new DexFinder();
-                cdjVar9.s("callback" /* "callback" /* "callback" /* cnb.z(-519974510656298L)  */);
+                cdjVar9.setMethodName("callback" /* "callback" /* "callback" /* cnb.z(-519974510656298L)  */);
                 dexMethodQueryBuilderVar9.getClass();
                 dexMethodQueryBuilderVar9.dexFinder = cdjVar9;
                 return kotlinUnitVar;
@@ -793,7 +788,7 @@ public final /* synthetic */ class cvc implements IInvokable {
                         ArrayList arrayList = Logger.a;
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("onGetRepairerConfig " /* "onGetRepairerConfig " /* "onGetRepairerConfig " /* cnb.z(-55997783604010L)  */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb3,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb3,
                                 bnyVar instanceof SwitchHook ? ((SwitchHook) bnyVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 55873229552426L)

@@ -30,7 +30,7 @@ public final class auc extends InputConnectionWrapper {
             ata ataVar = atfVarL.g;
             ataVar.getClass();
             Bundle bundle = editorInfo.extras;
-            GenericMetadataIterator3 cdcVar = (GenericMetadataIterator3) ataVar.c.c;
+            GenericMetadataIterator3 cdcVar = (GenericMetadataIterator3) ataVar.c.var1;
             int iF = cdcVar.getVTableOffset(4);
             bundle.putInt("android.support.text.emoji.emojiCompat_metadataVersion", iF != 0 ? ((ByteBuffer) cdcVar.e).getInt(iF + cdcVar.b) : 0);
             editorInfo.extras.putBoolean("android.support.text.emoji.emojiCompat_replaceAll", false);

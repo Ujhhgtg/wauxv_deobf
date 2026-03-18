@@ -35,11 +35,11 @@ public final synthetic class blx implements IInvokable
         switch (a) {
             default: {
                 final bah bah = (bah)key;
-                final String z = cnb.z(-355395658840874L);
+                final String z = StaticUtils.decryptString(-355395658840874L);
                 bah.getClass();
                 bah.a = la.ab((Object[])new String[] { z });
                 final Object d = new Object();
-                ((cdj)d).t(new String[] { cnb.z(-355258219887402L), cnb.z(-355146550737706L) });
+                ((cdj)d).t(new String[] { StaticUtils.decryptString(-355258219887402L), StaticUtils.decryptString(-355146550737706L) });
                 bah.d = (cdj)d;
                 return a2;
             }
@@ -137,11 +137,11 @@ public final synthetic class blx implements IInvokable
             }
             case 16: {
                 final bag bag = (bag)key;
-                final String z2 = cnb.z(-375040839252778L);
+                final String z2 = StaticUtils.decryptString(-375040839252778L);
                 bag.getClass();
                 bag.a = la.ab((Object[])new String[] { z2 });
                 final Object b9 = new Object();
-                ((zb)b9).k(new String[] { cnb.z(-375457451080490L), cnb.z(-375362961799978L) });
+                ((zb)b9).k(new String[] { StaticUtils.decryptString(-375457451080490L), StaticUtils.decryptString(-375362961799978L) });
                 bag.b = (zb)b9;
                 return a2;
             }
@@ -154,7 +154,7 @@ public final synthetic class blx implements IInvokable
             case 14: {
                 final bag bag2 = (bag)key;
                 key = new Object();
-                ((zb)key).k(new String[] { cnb.z(-373082334165802L), cnb.z(-370230475881258L) });
+                ((zb)key).k(new String[] { StaticUtils.decryptString(-373082334165802L), StaticUtils.decryptString(-370230475881258L) });
                 bag2.getClass();
                 bag2.b = (zb)key;
                 return a2;
@@ -165,11 +165,11 @@ public final synthetic class blx implements IInvokable
             }
             case 12: {
                 final bag bag3 = (bag)key;
-                final String z3 = cnb.z(-373632089979690L);
+                final String z3 = StaticUtils.decryptString(-373632089979690L);
                 bag3.getClass();
                 bag3.a = la.ab((Object[])new String[] { z3 });
                 final Object b10 = new Object();
-                ((zb)b10).k(new String[] { cnb.z(-373000729787178L), cnb.z(-372897650572074L) });
+                ((zb)b10).k(new String[] { StaticUtils.decryptString(-373000729787178L), StaticUtils.decryptString(-372897650572074L) });
                 bag3.b = (zb)b10;
                 return a2;
             }
@@ -180,7 +180,7 @@ public final synthetic class blx implements IInvokable
             case 10: {
                 final bag bag4 = (bag)key;
                 final Object b11 = new Object();
-                ((zb)b11).k(new String[] { cnb.z(-369100899482410L), cnb.z(-368997820267306L) });
+                ((zb)b11).k(new String[] { StaticUtils.decryptString(-369100899482410L), StaticUtils.decryptString(-368997820267306L) });
                 bag4.getClass();
                 bag4.b = (zb)b11;
                 return a2;
@@ -199,7 +199,7 @@ public final synthetic class blx implements IInvokable
             case 8: {
                 final bag bag6 = (bag)key;
                 final Object b12 = new Object();
-                ((zb)b12).k(new String[] { cnb.z(-368946280659754L), cnb.z(-369350007585578L) });
+                ((zb)b12).k(new String[] { StaticUtils.decryptString(-368946280659754L), StaticUtils.decryptString(-369350007585578L) });
                 bag6.getClass();
                 bag6.b = (zb)b12;
                 return a2;
@@ -219,8 +219,8 @@ public final synthetic class blx implements IInvokable
             case 4: {
                 final csb csb = (csb)key;
                 HookEntry.a.getClass();
-                final byte[] bytes = cnb.z(-71798968285994L).getBytes(Charsets.UTF_8);
-                bzo.p((Object)bytes, cnb.z(-77764677860138L));
+                final byte[] bytes = StaticUtils.decryptString(-71798968285994L).getBytes(Charsets.UTF_8);
+                bzo.p((Object)bytes, StaticUtils.decryptString(-77764677860138L));
                 final boolean equals = Arrays.equals(bytes, new byte[] { 87, 65, 117, 120, 105, 108, 105, 97, 114, 121 });
                 if (System.currentTimeMillis() - exl.b <= 10368000000L) {
                     b6 = false;
@@ -231,7 +231,7 @@ public final synthetic class blx implements IInvokable
                         return a2;
                     }
                 }
-                final String z4 = cnb.z(-77756087925546L);
+                final String z4 = StaticUtils.decryptString(-77756087925546L);
                 final eui a3 = eui.a;
                 final csc aa = csb.aa;
                 bmk a4;

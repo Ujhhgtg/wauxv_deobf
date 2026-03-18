@@ -37,7 +37,7 @@ import me.hd.wauxv.obf.asy;
 import me.hd.wauxv.obf.ResourcesCompat;
 import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.cmz;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.eqo;
 import me.hd.wauxv.obf.eqq;
@@ -147,12 +147,12 @@ public class CollapsingToolbarLayout extends FrameLayout {
                     : TextUtils.TruncateAt.MIDDLE : TextUtils.TruncateAt.START);
         }
         if (typedArrayObtainStyledAttributes.hasValue(11)
-                && aatVar.n != (colorStateListV2 = cnb.v(context2, typedArrayObtainStyledAttributes, 11))) {
+                && aatVar.n != (colorStateListV2 = StaticUtils.v(context2, typedArrayObtainStyledAttributes, 11))) {
             aatVar.n = colorStateListV2;
             aatVar.bz(false);
         }
         if (typedArrayObtainStyledAttributes.hasValue(2)
-                && aatVar.o != (colorStateListV = cnb.v(context2, typedArrayObtainStyledAttributes, 2))) {
+                && aatVar.o != (colorStateListV = StaticUtils.v(context2, typedArrayObtainStyledAttributes, 2))) {
             aatVar.o = colorStateListV;
             aatVar.bz(false);
         }

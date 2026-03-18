@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 import me.hd.wauxv.obf.FastKV;
 import me.hd.wauxv.obf.cmz;
 import me.hd.wauxv.obf.cna;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.ip;
 
@@ -24,7 +24,7 @@ public class MaterialRadioButton extends ip {
         Context context2 = getContext();
         TypedArray typedArrayAn = FastKV.an(context2, attributeSet, cxs.x, me.hd.wauxv.R.attr.radioButtonStyle, me.hd.wauxv.R.style.Widget_MaterialComponents_CompoundButton_RadioButton, new int[0]);
         if (typedArrayAn.hasValue(0)) {
-            setButtonTintList(cnb.v(context2, typedArrayAn, 0));
+            setButtonTintList(StaticUtils.v(context2, typedArrayAn, 0));
         }
         this.c = typedArrayAn.getBoolean(1, false);
         typedArrayAn.recycle();

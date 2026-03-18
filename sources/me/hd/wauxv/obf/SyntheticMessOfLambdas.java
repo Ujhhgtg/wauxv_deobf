@@ -197,7 +197,7 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         ArrayList arrayList = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onDatabaseInsertBefore " /* "onDatabaseInsertBefore " /* "onDatabaseInsertBefore " /* "onDatabaseInsertBefore " /* cnb.z(-54709293415210L)   */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb,
                                 bobVar instanceof SwitchHook ? ((SwitchHook) bobVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 54056458386218L)
@@ -277,7 +277,7 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         ArrayList arrayList2 = Logger.a;
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onDatabaseUpdateBefore " /* "onDatabaseUpdateBefore " /* "onDatabaseUpdateBefore " /* "onDatabaseUpdateBefore " /* cnb.z(-53983443942186L)   */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb2,
                                 bobVar2 instanceof SwitchHook ? ((SwitchHook) bobVar2).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -341,7 +341,7 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         ArrayList arrayList3 = Logger.a;
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("onDatabaseQueryBefore " /* "onDatabaseQueryBefore " /* "onDatabaseQueryBefore " /* "onDatabaseQueryBefore " /* cnb.z(-54374285966122L)   */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb3,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb3,
                                 bobVar3 instanceof SwitchHook ? ((SwitchHook) bobVar3).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -422,7 +422,7 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         ArrayList arrayList4 = Logger.a;
                         StringBuilder sb4 = new StringBuilder();
                         sb4.append("onCompatUpdateBefore " /* "onCompatUpdateBefore " /* "onCompatUpdateBefore " /* "onCompatUpdateBefore " /* cnb.z(-54202487274282L)   */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb4,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb4,
                                 bobVar4 instanceof SwitchHook ? ((SwitchHook) bobVar4).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -469,7 +469,7 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         ArrayList arrayList5 = Logger.a;
                         StringBuilder sb5 = new StringBuilder();
                         sb5.append("onCompatQueryBefore " /* "onCompatQueryBefore " /* "onCompatQueryBefore " /* "onCompatQueryBefore " /* cnb.z(-60065117633322L)   */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb5,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb5,
                                 bobVar5 instanceof SwitchHook ? ((SwitchHook) bobVar5).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -516,7 +516,7 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                     } catch (Exception e6) {
                         StringBuilder sb6 = new StringBuilder();
                         sb6.append("onStartActivityIntent ");
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb6,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb6,
                                 bocVar instanceof SwitchHook ? ((SwitchHook) bocVar).getResult() : "LoadHook",
                                 -59639915871018L), e6, 12);
                     }
@@ -608,7 +608,7 @@ public final /* synthetic */ class SyntheticMessOfLambdas implements IInvokable 
                         ArrayList arrayList7 = Logger.a;
                         StringBuilder sb7 = new StringBuilder();
                         sb7.append("onGetSyncConfig " /* "onGetSyncConfig " /* "onGetSyncConfig " /* "onGetSyncConfig " /* cnb.z(-59502476917546L)   */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb7,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb7,
                                 bodVar instanceof SwitchHook ? ((SwitchHook) bodVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 59429462473514L)

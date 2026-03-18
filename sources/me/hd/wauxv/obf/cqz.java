@@ -54,7 +54,7 @@ public final class cqz extends ApiHookItem implements IDatabaseOperationsListene
                                                                                                       * 85083302132522L)
                                                                                                       */ + str3 + '\'');
                                 cursorAc.moveToFirst();
-                                String nickname = cnb.s(cursorAc).getNickname();
+                                String nickname = StaticUtils.s(cursorAc).getNickname();
                                 if (nickname == null) {
                                     nickname = "" /* "" /* "" /* "" /* cnb.z(-396726129130282L)   */;
                                 }
@@ -70,7 +70,7 @@ public final class cqz extends ApiHookItem implements IDatabaseOperationsListene
                                 Cursor cursorAc2 = arj.ac("select * from rcontact where username = '"
                                         /* "select * from rcontact where username = '" /* "select * from rcontact where username = '" /* "select * from rcontact where username = '" /* cnb.z(-85083302132522L)   */ + str4 + '\'');
                                 cursorAc2.moveToFirst();
-                                String nickname2 = cnb.s(cursorAc2).getNickname();
+                                String nickname2 = StaticUtils.s(cursorAc2).getNickname();
                                 if (nickname2 == null) {
                                     nickname2 = "" /* "" /* "" /* "" /* cnb.z(-396751898934058L)   */;
                                 }

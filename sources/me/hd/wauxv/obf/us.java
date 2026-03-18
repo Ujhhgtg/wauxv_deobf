@@ -53,10 +53,10 @@ public final /* synthetic */ class us implements IInvokable {
         azi aziVar = new azi();
         String strZ = "convertView" /* "convertView" /* "convertView" /* "convertView" /* cnb.z(-48696339200810L)   */;
         MatchTypeEnum matchTypeEnumVar = MatchTypeEnum.Equals;
-        aziVar.a = new dnf(strZ, matchTypeEnumVar, false);
+        aziVar.a = new MethodNameMatcher(strZ, matchTypeEnumVar, false);
         azlVar.e(aziVar);
         azi aziVar2 = new azi();
-        aziVar2.a = new dnf("avatarIV" /* "avatarIV" /* "avatarIV" /* "avatarIV" /* cnb.z(-48679159331626L)   */, matchTypeEnumVar, false);
+        aziVar2.a = new MethodNameMatcher("avatarIV" /* "avatarIV" /* "avatarIV" /* "avatarIV" /* cnb.z(-48679159331626L)   */, matchTypeEnumVar, false);
         azlVar.e(aziVar2);
         zbVar.e = azlVar;
         dexClassQueryBuilderVar.methodGroupMatcher = zbVar;
@@ -67,7 +67,7 @@ public final /* synthetic */ class us implements IInvokable {
         Class cls;
         DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
         DexFinder cdjVar = new DexFinder();
-        cdjVar.s("create" /* "create" /* "create" /* "create" /* cnb.z(-50289772067626L)   */);
+        cdjVar.setMethodName("create" /* "create" /* "create" /* "create" /* cnb.z(-50289772067626L)   */);
         cls = View.class;
         Class<View> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
         cdjVar.setParamTypes(clsBf != null ? clsBf : View.class);
@@ -127,7 +127,7 @@ public final /* synthetic */ class us implements IInvokable {
                 ArrayList arrayList = Logger.a;
                 StringBuilder sb = new StringBuilder();
                 sb.append("onBindView " /* "onBindView " /* "onBindView " /* "onBindView " /* cnb.z(-49589692398378L)   */);
-                Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb,
                         bncVar instanceof SwitchHook ? ((SwitchHook) bncVar).getResult() : "LoadHook" /*
                                                                                                        * cnb.z(-
                                                                                                        * 49572512529194L)
@@ -202,7 +202,7 @@ public final /* synthetic */ class us implements IInvokable {
         DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
         DexFinder cdjVar = new DexFinder();
         cdjVar.usingStrings(
-                (cnb.isNewerThanArgVerAndNotPlay(ewk.d) || cnb.isNewerThanArgVerAndPlay(ewh.d)) ? "MicroMsg.MvvmChattingItem"
+                (StaticUtils.isNewerThanArgVerAndNotPlay(ewk.d) || StaticUtils.isNewerThanArgVerAndPlay(ewh.d)) ? "MicroMsg.MvvmChattingItem"
                         /* "MicroMsg.MvvmChattingItem" /* "MicroMsg.MvvmChattingItem" /* "MicroMsg.MvvmChattingItem" /* cnb.z(-49873160239914L)   */ : "MicroMsg.ChattingDataAdapterV2" /* "MicroMsg.ChattingDataAdapterV2" /* "MicroMsg.ChattingDataAdapterV2" /* "MicroMsg.ChattingDataAdapterV2" /* cnb.z(-49778670959402L)   */,
                 "dealItemView" /* "dealItemView" /* "dealItemView" /* "dealItemView" /* cnb.z(-38083475012394L)   */);
         DexFinder.k(cdjVar, "[onBindView] " /* "[onBindView] " /* "[onBindView] " /* "[onBindView] " /* cnb.z(-38010460568362L)   */);
@@ -508,9 +508,8 @@ public final /* synthetic */ class us implements IInvokable {
                         /* "Missing required view with ID: " /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-638575737568042L)   */.concat(viewK.getResources().getResourceName(i8)));
             case 3:
                 HookParam hookParam2 = (HookParam) obj;
-                int i9 = 0;
                 FieldResolver fieldResolverVarAa3 = StaticHelpers6.createFieldResolverFromHookParamThisObject(hookParam2);
-                fieldResolverVarAa3.fieldType = "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* "com.tencent.mm.ui.conversation.ConversationListView" /* cnb.z(-567515503655722L)   */;
+                fieldResolverVarAa3.fieldType = "com.tencent.mm.ui.conversation.ConversationListView";
                 Object objE4 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarAa3.resolve())).getValue_();
                 throwIfVar1IsNull(objE4);
                 ListView listView = (ListView) objE4;
@@ -525,7 +524,6 @@ public final /* synthetic */ class us implements IInvokable {
                     } else {
                         KClass zcVarB3 = dal.getKClassFromClass(objD2.getClass());
                         KClass zcVarB4 = dal.getKClassFromClass(BaseAdapter.class);
-                        ConcurrentHashMap concurrentHashMap2 = ReflectionWrapper.cachedConstructors;
                         zIsAssignableFrom2 = HugeSyntheticPileOfHelpers.getJavaClass(zcVarB4).isAssignableFrom(HugeSyntheticPileOfHelpers.getJavaClass(zcVarB3));
                     }
                     if (zIsAssignableFrom2) {
@@ -614,11 +612,8 @@ public final /* synthetic */ class us implements IInvokable {
             case 5:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar2 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar2 = new DexFinder();
-                DexFinder.setClassEquals(cdjVar2, "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* "com.tencent.mm.ui.conversation.MainUI" /* cnb.z(-569031627111210L)   */);
-                cdjVar2.usingStrings("MicroMsg.MainUI" /* "MicroMsg.MainUI" /* "MicroMsg.MainUI" /* "MicroMsg.MainUI" /* cnb.z(-569400994298666L)   */, "onTabCreate, %d" /*
-                                                                                               * cnb.z(-
-                                                                                               * 569332274821930L)
-                                                                                               */);
+                DexFinder.setClassEquals(cdjVar2, "com.tencent.mm.ui.conversation.MainUI");
+                cdjVar2.usingStrings("MicroMsg.MainUI", "onTabCreate, %d");
                 dexMethodQueryBuilderVar2.getClass();
                 dexMethodQueryBuilderVar2.dexFinder = cdjVar2;
                 return kotlinUnitVar;
@@ -714,7 +709,7 @@ public final /* synthetic */ class us implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar3 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar3 = new DexFinder();
                 uq.a.getClass();
-                cdjVar3.setDeclaredClassName(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)   */));
+                cdjVar3.setDeclaredClass(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)   */));
                 cdjVar3.usingStrings("MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* cnb.z(-422800875584298L)   */,
                         "canSend true ! sendBtn is visible" /* "canSend true ! sendBtn is visible" /* "canSend true ! sendBtn is visible" /* "canSend true ! sendBtn is visible" /* cnb.z(-423299091790634L)   */);
                 dexMethodQueryBuilderVar3.getClass();
@@ -771,7 +766,7 @@ public final /* synthetic */ class us implements IInvokable {
                 methodResolverVarT2.setParamCountTo0();
                 methodResolverVarT2.enableSuperclass();
                 Integer num = (Integer) ((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods())).invoke(new Object[0]);
-                if (cnb.isNewerThanArgVerAndNotPlay(ewk.p) || cnb.isNewerThanArgVerAndPlay(ewh.VER_8067)) {
+                if (StaticUtils.isNewerThanArgVerAndNotPlay(ewk.p) || StaticUtils.isNewerThanArgVerAndPlay(ewh.VER_8067)) {
                     MethodResolver methodResolverVarT3 = dqc.getWrapperConfiguration(tag).getMethodResolverBasedOnPreviouslyProvidedConfig();
                     MicroMsgMsgInfoDexClassFind.INSTANCE.getClass();
                     methodResolverVarT3.returnType = StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE);
@@ -797,7 +792,7 @@ public final /* synthetic */ class us implements IInvokable {
                         ArrayList arrayList2 = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onCreateMenuItems ");
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb,
                                 bnaVar instanceof SwitchHook ? ((SwitchHook) bnaVar).getResult() : "LoadHook",
                                 "Failed"), e, 12);
                     }
@@ -841,7 +836,7 @@ public final /* synthetic */ class us implements IInvokable {
                         ArrayList arrayList3 = Logger.a;
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onCreateMenuItems ");
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb2,
                                 bnaVar2 instanceof SwitchHook ? ((SwitchHook) bnaVar2).getResult() : "LoadHook",
                                 -52548924865322L), e2, 12);
                     }
@@ -888,7 +883,7 @@ public final /* synthetic */ class us implements IInvokable {
                         ArrayList arrayList4 = Logger.a;
                         StringBuilder sb3 = new StringBuilder();
                         sb3.append("onCreateViewHolder " /* "onCreateViewHolder " /* "onCreateViewHolder " /* "onCreateViewHolder " /* cnb.z(-49267569851178L)   */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb3,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb3,
                                 bnbVar instanceof SwitchHook ? ((SwitchHook) bnbVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 48597554953002L)
@@ -944,7 +939,7 @@ public final /* synthetic */ class us implements IInvokable {
                         ArrayList arrayList5 = Logger.a;
                         StringBuilder sb4 = new StringBuilder();
                         sb4.append("onBindViewHolder " /* "onBindViewHolder " /* "onBindViewHolder " /* "onBindViewHolder " /* cnb.z(-48455821032234L)   */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb4,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb4,
                                 bnbVar2 instanceof SwitchHook ? ((SwitchHook) bnbVar2).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-

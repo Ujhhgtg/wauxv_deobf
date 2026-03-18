@@ -30,7 +30,7 @@ import me.hd.wauxv.obf.cab;
 import me.hd.wauxv.obf.cac;
 import me.hd.wauxv.obf.cad;
 import me.hd.wauxv.obf.cmz;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.KotlinHelpers2;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.ddb;
@@ -73,8 +73,8 @@ public class MaterialButton extends hd implements Checkable, dgx {
         int i = typedArrayAn.getInt(15, -1);
         PorterDuff.Mode mode = PorterDuff.Mode.SRC_IN;
         this.f = StaticAndroidHelpers.ap(i, mode);
-        this.g = cnb.v(getContext(), typedArrayAn, 14);
-        this.h = cnb.x(getContext(), typedArrayAn, 10);
+        this.g = StaticUtils.v(getContext(), typedArrayAn, 14);
+        this.h = StaticUtils.x(getContext(), typedArrayAn, 10);
         this.p = typedArrayAn.getInteger(11, 1);
         this.j = typedArrayAn.getDimensionPixelSize(13, 0);
         cad cadVar = new cad(this, dgm.n(context2, attributeSet, me.hd.wauxv.R.attr.materialButtonStyle, me.hd.wauxv.R.style.Widget_MaterialComponents_Button).m());
@@ -93,9 +93,9 @@ public class MaterialButton extends hd implements Checkable, dgx {
         }
         cadVar.h = typedArrayAn.getDimensionPixelSize(20, 0);
         cadVar.i = StaticAndroidHelpers.ap(typedArrayAn.getInt(7, -1), mode);
-        cadVar.j = cnb.v(getContext(), typedArrayAn, 6);
-        cadVar.k = cnb.v(getContext(), typedArrayAn, 19);
-        cadVar.l = cnb.v(getContext(), typedArrayAn, 16);
+        cadVar.j = StaticUtils.v(getContext(), typedArrayAn, 6);
+        cadVar.k = StaticUtils.v(getContext(), typedArrayAn, 19);
+        cadVar.l = StaticUtils.v(getContext(), typedArrayAn, 16);
         cadVar.q = typedArrayAn.getBoolean(5, false);
         cadVar.t = typedArrayAn.getDimensionPixelSize(9, 0);
         cadVar.r = typedArrayAn.getBoolean(21, true);

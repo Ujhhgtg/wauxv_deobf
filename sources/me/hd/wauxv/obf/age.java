@@ -86,7 +86,7 @@ public final /* synthetic */ class age implements IInvokable {
                         ArrayList arrayList = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-38555921414954L)  */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb,
                                 bnfVar instanceof SwitchHook ? ((SwitchHook) bnfVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 38508676774698L)
@@ -138,7 +138,7 @@ public final /* synthetic */ class age implements IInvokable {
                         ArrayList arrayList2 = Logger.a;
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-38744899975978L)  */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb2,
                                 bnfVar2 instanceof SwitchHook ? ((SwitchHook) bnfVar2).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-
@@ -160,7 +160,7 @@ public final /* synthetic */ class age implements IInvokable {
                 dexMethodQueryBuilderVar.getClass();
                 dexMethodQueryBuilderVar.searchedPackages = SomeStaticHelpers.arrayToList(strArr);
                 DexFinder cdjVar = new DexFinder();
-                cdjVar.s("onMMMenuItemSelected" /* "onMMMenuItemSelected" /* "onMMMenuItemSelected" /* cnb.z(-35669703392042L)  */);
+                cdjVar.setMethodName("onMMMenuItemSelected" /* "onMMMenuItemSelected" /* "onMMMenuItemSelected" /* cnb.z(-35669703392042L)  */);
                 cdjVar.usingStrings("com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* "com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* "com.tencent.mm.plugin.repairer.ui.RepairerChatroomDebugUI" /* cnb.z(-35631048686378L)  */);
                 dexMethodQueryBuilderVar.dexFinder = cdjVar;
                 return kotlinUnitVar;
@@ -170,8 +170,8 @@ public final /* synthetic */ class age implements IInvokable {
                 dexMethodQueryBuilderVar2.getClass();
                 dexMethodQueryBuilderVar2.searchedPackages = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar2 = new DexFinder();
-                cdjVar2.s("onCreateContextMenu" /* "onCreateContextMenu" /* "onCreateContextMenu" /* cnb.z(-38852274158378L)  */);
-                if (cnb.isNewerThanArgVerAndNotPlay(ewk.l) || cnb.isNewerThanArgVerAndPlay(ewh.VER_8061)) {
+                cdjVar2.setMethodName("onCreateContextMenu" /* "onCreateContextMenu" /* "onCreateContextMenu" /* cnb.z(-38852274158378L)  */);
+                if (StaticUtils.isNewerThanArgVerAndNotPlay(ewk.l) || StaticUtils.isNewerThanArgVerAndPlay(ewh.VER_8061)) {
                     cdjVar2.usingStrings("MicroMsg.ConversationLongClickListener" /* "MicroMsg.ConversationLongClickListener" /* "MicroMsg.ConversationLongClickListener" /* cnb.z(-35983236004650L)  */,
                             "onCreateContextMenu, contact is null, talker = " /* "onCreateContextMenu, contact is null, talker = " /* "onCreateContextMenu, contact is null, talker = " /* cnb.z(-35867271887658L)  */);
                 } else {
@@ -207,7 +207,7 @@ public final /* synthetic */ class age implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar4 = new DexFinder();
                 ConversationDatabaseApi.a.getClass();
-                cdjVar4.setDeclaredClassName(StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage.INSTANCE));
+                cdjVar4.setDeclaredClass(StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage.INSTANCE));
                 cdjVar4.usingStrings("MicroMsg.ConversationStorage" /* "MicroMsg.ConversationStorage" /* "MicroMsg.ConversationStorage" /* cnb.z(-373460291287850L)  */, "get null with username:" /*
                                                                                                                     * cnb
                                                                                                                     * .z
@@ -221,7 +221,7 @@ public final /* synthetic */ class age implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar5 = new DexFinder();
                 ConversationDatabaseApi.a.getClass();
-                cdjVar5.setDeclaredClassName(StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage.INSTANCE));
+                cdjVar5.setDeclaredClass(StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage.INSTANCE));
                 cdjVar5.usingStrings("updateUnreadByTalker %s" /* "updateUnreadByTalker %s" /* "updateUnreadByTalker %s" /* cnb.z(-371677879860010L)  */);
                 dexMethodQueryBuilderVar5.getClass();
                 dexMethodQueryBuilderVar5.dexFinder = cdjVar5;
@@ -230,7 +230,7 @@ public final /* synthetic */ class age implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar6 = new DexFinder();
                 ConversationDatabaseApi.a.getClass();
-                cdjVar6.setDeclaredClassName(StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage.INSTANCE));
+                cdjVar6.setDeclaredClass(StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage.INSTANCE));
                 cdjVar6.p(new IntRange(2, 4, 1));
                 cdjVar6.v("Update " /* "Update " /* "Update " /* cnb.z(-372124556458794L)  */, "rconversation" /* "rconversation" /* "rconversation" /* cnb.z(-372090196720426L)  */,
                         " set " /* " set " /* " set " /* cnb.z(-372081606785834L)  */, "parentRef" /* "parentRef" /* "parentRef" /* cnb.z(-372038657112874L)  */, " = '" /*

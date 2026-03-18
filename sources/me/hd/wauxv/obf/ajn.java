@@ -668,13 +668,13 @@ public abstract class ajn {
         return !nullSafeIsEqual(emcVarH, cvm.s) && (emcVarH instanceof cvn);
     }
 
-    public static dmf y(ahp ahpVar, ahh ahhVar, Function2 function2Var) {
+    public static SomeBaseDispatchedContinuation y(ahp ahpVar, ahh ahhVar, Function2 function2Var) {
         ahh ahhVarT = KotlinHelpers.t(ahpVar.e(), ahhVar);
         Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
         if (ahhVarT != alcVar && ahhVarT._w(arj.a) == null) {
             ahhVarT = ahhVarT._v(alcVar);
         }
-        dmf dmfVar = new dmf(ahhVarT, true);
+        SomeBaseDispatchedContinuation dmfVar = new SomeBaseDispatchedContinuation(ahhVarT, true);
         dmfVar.h(SomeEnum.DEFAULT, dmfVar, function2Var);
         return dmfVar;
     }

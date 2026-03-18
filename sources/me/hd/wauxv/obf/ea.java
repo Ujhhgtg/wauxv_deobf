@@ -33,7 +33,7 @@ public final class ea {
 
     public static final Object g(ea eaVar, int i) {
         List list;
-        if (((h) eaVar.f) == null || (list = xf.l) == null) {
+        if (((h) eaVar.f) == null || (list = ChatToolbarHook.l) == null) {
             list = EmptyReadonlyList.INSTANCE;
         }
         return (!list.isEmpty() || eaVar.a <= 0) ? StaticHelpers5.h(i, list) : new Object();

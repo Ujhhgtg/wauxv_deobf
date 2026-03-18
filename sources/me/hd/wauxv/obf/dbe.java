@@ -43,7 +43,7 @@ public final class dbe extends SwitchHook implements IDexFind {
         StaticHelpers7.resolveDexAndCache(dbb.a, dexKitBridge, new daz(0, "com.tencent.mm.plugin.ipcall" /* "com.tencent.mm.plugin.ipcall" /* "com.tencent.mm.plugin.ipcall" /* cnb.z(-522942333057834L)  */,
                 "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* "Lcom/tencent/mm/autogen/events/VoipCheckIsDeviceUsingEvent;" /* cnb.z(-523350354950954L)  */));
         StaticHelpers7.resolveDexAndCache(dba.a, dexKitBridge,
-                new daz(0, (cnb.isNewerThanArgVerAndNotPlay(ewk.f) || cnb.isNewerThanArgVerAndPlay(ewh.f)) ? "com.tencent.mm.voipmp.helper"
+                new daz(0, (StaticUtils.isNewerThanArgVerAndNotPlay(ewk.f) || StaticUtils.isNewerThanArgVerAndPlay(ewh.f)) ? "com.tencent.mm.voipmp.helper"
                         /* "com.tencent.mm.voipmp.helper" /* "com.tencent.mm.voipmp.helper" /* cnb.z(-523127016651562L)  */ : "com.tencent.mm.plugin_flutter_ilinkvoip.helper" /*
                                                                                                            * cnb.z(-
                                                                                                            * 522418347047722L)

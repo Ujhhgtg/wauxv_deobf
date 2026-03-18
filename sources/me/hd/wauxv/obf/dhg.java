@@ -76,7 +76,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                 if (stringExtra == null) {
                     stringExtra = "异常" /* "异常" /* "异常" /* "异常" /* cnb.z(-594565207685930L)   */;
                 }
-                cnb.m(baseAdapter, cnb.y(activity, "WAuxiliary_chatroom_info_pref" /* "WAuxiliary_chatroom_info_pref" /* "WAuxiliary_chatroom_info_pref" /* "WAuxiliary_chatroom_info_pref" /* cnb.z(-594586682522410L)   */,
+                StaticUtils.m(baseAdapter, StaticUtils.y(activity, "WAuxiliary_chatroom_info_pref" /* "WAuxiliary_chatroom_info_pref" /* "WAuxiliary_chatroom_info_pref" /* "WAuxiliary_chatroom_info_pref" /* cnb.z(-594586682522410L)   */,
                         "ID: " /* "ID: " /* "ID: " /* "ID: " /* cnb.z(-593890897820458L)   */.concat(stringExtra)), 1);
                 return kotlinUnitVar;
             case 1:
@@ -590,7 +590,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                         ArrayList arrayList2 = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-55310588836650L)   */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb,
                                 boaVar instanceof SwitchHook ? ((SwitchHook) boaVar).getResult() : "LoadHook" /*
                                                                                                                * cnb.z(-
                                                                                                                * 56895431768874L)
@@ -641,7 +641,7 @@ public final /* synthetic */ class dhg implements IInvokable {
                         ArrayList arrayList3 = Logger.a;
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* "onCreateMenuItems " /* cnb.z(-57114475100970L)   */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb2,
                                 boaVar2 instanceof SwitchHook ? ((SwitchHook) boaVar2).getResult() : "LoadHook" /*
                                                                                                                  * cnb.z
                                                                                                                  * (-

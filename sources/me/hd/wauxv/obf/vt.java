@@ -15,25 +15,25 @@ public final class vt extends SwitchHook implements IDexFind, bob {
     public static final boolean m;
 
     static {
-        "#FFEDEDED" /* "#FFEDEDED" /* "#FFEDEDED" /* cnb.z(-568713799531306L)  */;
-        "#FF006A62" /* "#FF006A62" /* "#FF006A62" /* cnb.z(-568688029727530L)  */;
-        "#FF161D1C" /* "#FF161D1C" /* "#FF161D1C" /* cnb.z(-568593540447018L)  */;
-        "#FF006A62" /* "#FF006A62" /* "#FF006A62" /* cnb.z(-568567770643242L)  */;
-        "#FF242424" /* "#FF242424" /* "#FF242424" /* cnb.z(-568542000839466L)  */;
-        "#FF81D5CB" /* "#FF81D5CB" /* "#FF81D5CB" /* cnb.z(-568516231035690L)  */;
-        "#FFDDE4E2" /* "#FFDDE4E2" /* "#FFDDE4E2" /* cnb.z(-568971497569066L)  */;
-        "#FF81D5CB" /* "#FF81D5CB" /* "#FF81D5CB" /* cnb.z(-568945727765290L)  */;
-        a = new vt("ChatGroupTabHook" /* "ChatGroupTabHook" /* "ChatGroupTabHook" /* cnb.z(-563525479037738L)  */);
-        b = "界面" /* "界面" /* "界面" /* cnb.z(-568919957961514L)  */;
-        c = "聊天分组标签" /* "聊天分组标签" /* "聊天分组标签" /* cnb.z(-568924252928810L)  */;
-        d = "添加分组顶部标签栏，顶部栏无法固定" /* "添加分组顶部标签栏，顶部栏无法固定" /* "添加分组顶部标签栏，顶部栏无法固定" /* cnb.z(-568894188157738L)  */;
+        "#FFEDEDED";
+        "#FF006A62";
+        "#FF161D1C";
+        "#FF006A62";
+        "#FF242424";
+        "#FF81D5CB";
+        "#FFDDE4E2";
+        "#FF81D5CB";
+        a = new vt("ChatGroupTabHook");
+        b = "界面";
+        c = "聊天分组标签";
+        d = "添加分组顶部标签栏，顶部栏无法固定";
         i = new us(2);
         m = true;
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(vh.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(ChatGroupTabHook$MethodOnTabCreate.a));
         vt vtVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(vtVar, listBf);
         vtVar.hookAfter(hookManagerVarAb, new us(3));
@@ -52,7 +52,7 @@ public final class vt extends SwitchHook implements IDexFind, bob {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        StaticHelpers7.resolveDexAndCache(vh.a, dexKitBridge, new us(4));
+        StaticHelpers7.resolveDexAndCache(ChatGroupTabHook$MethodOnTabCreate.a, dexKitBridge, new us(4));
     }
 
     @Override // me.hd.wauxv.obf.IDatabaseOperationsListener
@@ -61,14 +61,7 @@ public final class vt extends SwitchHook implements IDexFind, bob {
         if (getIsEnabled()) {
             Object obj = null;
             if (dnr.bp(str,
-                    "select unReadCount, status, isSend, conversationTime, username, content, msgType, flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, hasTodo, hbMarkRed, remitMarkRed, parentRef from rconversation where " /*
-                                                                                                                                                                                                                                                                       * cnb
-                                                                                                                                                                                                                                                                       * .
-                                                                                                                                                                                                                                                                       * z
-                                                                                                                                                                                                                                                                       * (
-                                                                                                                                                                                                                                                                       * -
-                                                                                                                                                                                                                                                                       * 564002220407594L)
-                                                                                                                                                                                                                                                                       */,
+                    "select unReadCount, status, isSend, conversationTime, username, content, msgType, flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, hasTodo, hbMarkRed, remitMarkRed, parentRef from rconversation where ",
                     false)) {
                 if (vi.a.o().equals(bis.a.d)) {
                     return;
@@ -86,19 +79,11 @@ public final class vt extends SwitchHook implements IDexFind, bob {
                 if (bivVar != null) {
                     hookParam.getClass();
                     new ek(hookParam, 1, 8).q(
-                            "select unReadCount, status, isSend, conversationTime, username, content, msgType, flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, hasTodo, hbMarkRed, remitMarkRed, parentRef from rconversation "
-                                    /* "select unReadCount, status, isSend, conversationTime, username, content, msgType, flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, hasTodo, hbMarkRed, remitMarkRed, parentRef from rconversation " /* "select unReadCount, status, isSend, conversationTime, username, content, msgType, flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, hasTodo, hbMarkRed, remitMarkRed, parentRef from rconversation " /* cnb.z(-564620695698218L)  */ + bivVar.g(vi.a.o()));
+                            "select unReadCount, status, isSend, conversationTime, username, content, msgType, flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, hasTodo, hbMarkRed, remitMarkRed, parentRef from rconversation " + bivVar.g(vi.a.o()));
                 }
             }
             if (!dnr.bp(str,
-                    "select unReadCount, status, isSend, conversationTime, username, content, msgType,flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, editingQuoteMsgId, hasTodo, hbMarkRed, remitMarkRed, hasSpecialFollow, parentRef from rconversation where " /*
-                                                                                                                                                                                                                                                                                                           * cnb
-                                                                                                                                                                                                                                                                                                           * .
-                                                                                                                                                                                                                                                                                                           * z
-                                                                                                                                                                                                                                                                                                           * (
-                                                                                                                                                                                                                                                                                                           * -
-                                                                                                                                                                                                                                                                                                           * 570229922986794L)
-                                                                                                                                                                                                                                                                                                           */,
+                    "select unReadCount, status, isSend, conversationTime, username, content, msgType,flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, editingQuoteMsgId, hasTodo, hbMarkRed, remitMarkRed, hasSpecialFollow, parentRef from rconversation where ",
                     false) || vi.a.o().equals(bis.a.d)) {
                 return;
             }
@@ -113,8 +98,7 @@ public final class vt extends SwitchHook implements IDexFind, bob {
             if (bivVar2 != null) {
                 hookParam.getClass();
                 new ek(hookParam, 1, 8).q(
-                        "select unReadCount, status, isSend, conversationTime, username, content, msgType,flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, editingQuoteMsgId, hasTodo, hbMarkRed, remitMarkRed, hasSpecialFollow, parentRef from rconversation "
-                                /* "select unReadCount, status, isSend, conversationTime, username, content, msgType,flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, editingQuoteMsgId, hasTodo, hbMarkRed, remitMarkRed, hasSpecialFollow, parentRef from rconversation " /* "select unReadCount, status, isSend, conversationTime, username, content, msgType,flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, editingQuoteMsgId, hasTodo, hbMarkRed, remitMarkRed, hasSpecialFollow, parentRef from rconversation " /* cnb.z(-571209175530282L)  */ + bivVar2.g(vi.a.o()));
+                        "select unReadCount, status, isSend, conversationTime, username, content, msgType,flag, digest, digestUser, attrflag, editingMsg, atCount, unReadMuteCount, UnReadInvite, editingQuoteMsgId, hasTodo, hbMarkRed, remitMarkRed, hasSpecialFollow, parentRef from rconversation " + bivVar2.g(vi.a.o()));
             }
         }
     }
@@ -125,7 +109,7 @@ public final class vt extends SwitchHook implements IDexFind, bob {
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
-    public final bgf getOnClick() {
+    public final IInvokable getOnClick() {
         return i;
     }
 

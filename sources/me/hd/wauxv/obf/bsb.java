@@ -8,14 +8,14 @@ public final class bsb implements btd {
 
     @Override // me.hd.wauxv.obf.btd
     public final Object a(ajt ajtVar) {
-        return cnb.n(ajtVar).bw();
+        return StaticUtils.n(ajtVar).bw();
     }
 
     @Override // me.hd.wauxv.obf.btd
     public final void c(avt avtVar, Object obj) {
         brx brxVar = (brx) obj;
         throwIfVar1IsNull(brxVar, "value");
-        cnb.l(avtVar);
+        StaticUtils.l(avtVar);
         if (brxVar instanceof bsp) {
             avtVar.x(bsq.b, brxVar);
         } else if (brxVar instanceof bsl) {

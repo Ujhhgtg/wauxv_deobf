@@ -92,7 +92,7 @@ public final class etd extends doi implements Function2 {
                     sb2.append('/');
                     sb2.append(str5);
                     sb2.append(SignatureVisitor.SUPER);
-                    strN = yg.decryptVar3UsingCnbZAndConcatToVar1(sb2, str6, -587469921712938L);
+                    strN = yg.concatVar2AndDecryptedVar3ToVar1(sb2, str6, -587469921712938L);
                     String str8 = str4 + str3;
                     int i3 = 4;
                     beo beoVar = new beo(strH, i3);
@@ -145,7 +145,7 @@ public final class etd extends doi implements Function2 {
                     sb4.append('/');
                     sb4.append(str5);
                     sb4.append(SignatureVisitor.SUPER);
-                    strN2 = yg.decryptVar3UsingCnbZAndConcatToVar1(sb4, str6, -610941917985578L);
+                    strN2 = yg.concatVar2AndDecryptedVar3ToVar1(sb4, str6, -610941917985578L);
                     String str10 = str4 + str3;
                     int i5 = 7;
                     beo beoVar2 = new beo(strH2, i5);

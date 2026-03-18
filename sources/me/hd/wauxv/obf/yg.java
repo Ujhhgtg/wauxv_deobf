@@ -37,11 +37,11 @@ public abstract /* synthetic */ class yg {
     }
 
     public static String g(long j, Cursor cursor) {
-        return cursor.getString(cursor.getColumnIndex(cnb.z(j)));
+        return cursor.getString(cursor.getColumnIndex(StaticUtils.decryptString(j)));
     }
 
     public static String h(long j, StringBuilder sb) {
-        sb.append(cnb.z(j));
+        sb.append(StaticUtils.decryptString(j));
         return sb.toString();
     }
 
@@ -68,9 +68,9 @@ public abstract /* synthetic */ class yg {
         return sb.toString();
     }
 
-    public static String decryptVar3UsingCnbZAndConcatToVar1(StringBuilder sb, String str, long j) {
+    public static String concatVar2AndDecryptedVar3ToVar1(StringBuilder sb, String str, long j) {
         sb.append(str);
-        sb.append(cnb.z(j));
+        sb.append(StaticUtils.decryptString(j));
         return sb.toString();
     }
 
@@ -103,7 +103,7 @@ public abstract /* synthetic */ class yg {
     }
 
     public static SyntheticPileOfMess s(long j) {
-        return dqc.bh(ajn.tryGetClassByClassName(cnb.z(j)));
+        return dqc.bh(ajn.tryGetClassByClassName(StaticUtils.decryptString(j)));
     }
 
     public static /* synthetic */ void throwIfVarNotNull(Object obj) {
@@ -114,12 +114,12 @@ public abstract /* synthetic */ class yg {
 
     public static void decryptVar2UsingCnbZAndConcatToVar1(StringBuilder sb, String str, long j) {
         sb.append(str);
-        sb.append(cnb.z(j));
+        sb.append(StaticUtils.decryptString(j));
     }
 
     public static void v(StringBuilder sb, List list, long j) {
         sb.append(list);
-        sb.append(cnb.z(j));
+        sb.append(StaticUtils.decryptString(j));
     }
 
     public static /* synthetic */ String w(int i) {

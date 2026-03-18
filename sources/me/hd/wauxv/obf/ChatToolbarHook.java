@@ -1,0 +1,205 @@
+package me.hd.wauxv.obf;
+
+import android.content.Context;
+import android.content.res.Resources;
+import android.view.GestureDetector;
+import android.view.VelocityTracker;
+import android.view.View;
+import android.view.ViewConfiguration;
+import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import androidx.recyclerview.widget.RecyclerView;
+import com.highcapable.betterandroid.ui.component.adapter.recycler.layoutmanager.LinearLayoutManager;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.LinkedHashSet;
+import me.hd.wauxv.R;
+import org.luckypray.dexkit.DexKitBridge;
+
+/* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
+/* JADX INFO: loaded from: classes.dex */
+public final class ChatToolbarHook extends SwitchHook implements bmz, bng {
+    public static final ChatToolbarHook a = new ChatToolbarHook("ChatToolbarHook" /* "ChatToolbarHook" /* "ChatToolbarHook" /* "ChatToolbarHook" /* cnb.z(-549064324152106L)   */);
+    public static final String b = "界面" /* "界面" /* "界面" /* "界面" /* cnb.z(-552998514195242L)   */;
+    public static final String c = "聊天工具栏" /* "聊天工具栏" /* "聊天工具栏" /* "聊天工具栏" /* cnb.z(-553019989031722L)   */;
+    public static final String d = "聊天输入框顶部显示工具栏，可能串台" /* "聊天输入框顶部显示工具栏，可能串台" /* "聊天输入框顶部显示工具栏，可能串台" /* "聊天输入框顶部显示工具栏，可能串台" /* cnb.z(-552977039358762L)   */;
+    public static final ws i = new ws(1);
+    public static final boolean j = true;
+    public static final ArrayList l = new ArrayList();
+    public static cyt m;
+
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final void getThisObject() {
+        HookManager hookManagerVarAb = PackageParam.createHook(this, dqc.toSingletonList(StaticHelpers7.toDexMethod(MethodInitAppGrid.INSTANCE)));
+        ChatToolbarHook xfVar = a;
+        xfVar.hookBefore(hookManagerVarAb, new ws(3));
+        xfVar.hookAfter(hookManagerVarAb, new ws(4));
+        hookManagerVarAb.initInstantCollectionAndApplyHooks();
+    }
+
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final String getName() {
+        return c;
+    }
+
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final String getCategory() {
+        return b;
+    }
+
+    @Override // me.hd.wauxv.obf.IDexFind
+    public final void dexFind(DexKitBridge dexKitBridge) {
+        StaticHelpers7.resolveDexAndCache(MethodInitAppGrid.INSTANCE, dexKitBridge, new ws(5));
+    }
+
+    public final void n(FrameLayout frameLayout) throws cth {
+        Class cls;
+        Class cls2;
+        if (getIsEnabled()) {
+            LinearLayout linearLayout = (LinearLayout) cnh.v(frameLayout, StaticUtils.isNewerThanArgVerAndPlay(ewh.VER_8064) ? "c0p" : StaticUtils.isNewerThanArgVerAndPlay(ewh.VER_8063) ? "bzn" : StaticUtils.isNewerThanArgVerAndPlay(ewh.VER_8061_PATCH) ? "byp" : StaticUtils.isNewerThanArgVerAndPlay(ewh.VER_8061) ? "by1" : StaticUtils.isNewerThanArgVerAndPlay(ewh.VER_8060) ? "bwr" : StaticUtils.isNewerThanArgVerAndPlay(ewh.VER_8058) ? "bw_" : StaticUtils.isNewerThanArgVerAndPlay(ewh.VER_8057) ? "bvs" : StaticUtils.isNewerThanArgVerAndPlay(ewh.VER_8056) ? "bv0" : StaticUtils.isNewerThanArgVerAndPlay(ewh.h) ? "bui" : StaticUtils.isNewerThanArgVerAndPlay(ewh.g) ? "bwa" : StaticUtils.isNewerThanArgVerAndPlay(ewh.f) ? "bvv" : StaticUtils.isNewerThanArgVerAndPlay(ewh.e) ? "brq" : StaticUtils.isNewerThanArgVerAndPlay(ewh.d) ? "br6" : StaticUtils.isNewerThanArgVerAndPlay(ewh.c) ? "bmw" : StaticUtils.isNewerThanArgVerAndPlay(ewh.b) ? "bip": StaticUtils.isNewerThanArgVerAndPlay(ewh.a) ? "bej"  : StaticUtils.isNewerThanArgVerAndNotPlay(ewk.c) ? "bl8" : "b4t" );
+            if (linearLayout == null
+                    || linearLayout.findViewWithTag("ChatToolbar") != null) {
+                return;
+            }
+            HugeSyntheticPileOfHelpers.bh(linearLayout.getContext());
+            Context context = linearLayout.getContext();
+            cls = ViewGroup.LayoutParams.class;
+            Class<ViewGroup.LayoutParams> clsBf = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
+            if (clsBf == null) {
+                clsBf = cls;
+            }
+            ArrayList arrayList = new ArrayList();
+            int i2 = 0;
+            if (blu.c) {
+                arrayList.add(new blv(StaticHelpers7.an(context), i2));
+            }
+            blu bluVar = new blu(StaticHelpers5.z(arrayList));
+            blr blrVarI = blu.i(bluVar, clsBf, null, false, context);
+            blu bluVar2 = blrVarI.f;
+            LinkedHashMap linkedHashMap2 = bluVar2.f;
+            blq blqVarD = SyntheticClass.d(bluVar2, blrVarI.a, blrVarI.b, blr.g(blrVarI, 0, 0, null, 55));
+            cls2 = RecyclerView.class;
+            Class<RecyclerView> clsBf2 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
+            if (clsBf2 == null) {
+                clsBf2 = cls2;
+            }
+            View viewH = blu.h(bluVar2, clsBf2, null, blrVarI.j());
+            viewH.setLayoutParams(blqVarD.f());
+            Class<RecyclerView> clsBf3 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
+            if (clsBf3 == null) {
+                clsBf3 = cls2;
+            }
+            String name = clsBf3.getName();
+            int size = linkedHashMap2.size();
+            RecyclerView recyclerView = (RecyclerView) viewH;
+            recyclerView.setTag("ChatToolbar" /* "ChatToolbar" /* "ChatToolbar" /* "ChatToolbar" /* cnb.z(-546401444428586L)   */);
+            int iIntValue = blrVarI.k(8).intValue();
+            recyclerView.setPadding(iIntValue, iIntValue, iIntValue, iIntValue);
+            recyclerView.setFadingEdgeLength(blrVarI.k(10).intValue());
+            int i3 = 1;
+            recyclerView.setHorizontalFadingEdgeEnabled(true);
+            recyclerView.setHorizontalScrollBarEnabled(false);
+            int iIntValue2 = FastKV.am(10, recyclerView.getContext()).intValue();
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(0);
+            bve bveVar = new bve();
+            bveVar.a = iIntValue2;
+            recyclerView.setLayoutManager(linearLayoutManager);
+            recyclerView.cu(bveVar);
+            ea eaVar = new ea(recyclerView.getContext());
+            eaVar.f = new h(23);
+            ws wsVar = new ws(6);
+            wx wxVar = new wx(i2);
+            bep bepVar = new bep(25);
+            Class<ViewGroup.LayoutParams> clsBf4 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
+            ((LinkedHashSet) eaVar.c).add(
+                    new daa(new erp(
+                            new DefaultConfig(clsBf4 != null ? clsBf4 : ViewGroup.LayoutParams.class, bepVar, wsVar),
+                            28),
+                            new byx(eaVar, new byx(wxVar, i3))));
+            cyt cytVar = new cyt(eaVar);
+            recyclerView.setAdapter(cytVar);
+            m = cytVar;
+            recyclerView.setAdapter(cytVar);
+            a.getClass();
+            cyt cytVar2 = m;
+            throwIfVar1IsNull(cytVar2);
+            bqx bqxVar = new bqx(new xe(recyclerView, l, cytVar2));
+            RecyclerView recyclerView2 = bqxVar.s;
+            if (recyclerView2 != recyclerView) {
+                bqt bqtVar = bqxVar.aa;
+                if (recyclerView2 != null) {
+                    recyclerView2.em(bqxVar);
+                    RecyclerView recyclerView3 = bqxVar.s;
+                    recyclerView3.aa.remove(bqtVar);
+                    if (recyclerView3.ab == bqtVar) {
+                        recyclerView3.ab = null;
+                    }
+                    ArrayList arrayList2 = bqxVar.s.am;
+                    if (arrayList2 != null) {
+                        arrayList2.remove(bqxVar);
+                    }
+                    ArrayList arrayList3 = bqxVar.q;
+                    for (int size2 = arrayList3.size() - 1; size2 >= 0; size2--) {
+                        bqu bquVar = (bqu) arrayList3.get(0);
+                        bquVar.g.cancel();
+                        SomeView someViewVar = bquVar.e;
+                        bqxVar.n.getClass();
+                        xe.g(someViewVar);
+                    }
+                    arrayList3.clear();
+                    bqxVar.x = null;
+                    VelocityTracker velocityTracker = bqxVar.u;
+                    if (velocityTracker != null) {
+                        velocityTracker.recycle();
+                        bqxVar.u = null;
+                    }
+                    bqw bqwVar = bqxVar.z;
+                    if (bqwVar != null) {
+                        bqwVar.a = false;
+                        bqxVar.z = null;
+                    }
+                    if (bqxVar.y != null) {
+                        bqxVar.y = null;
+                    }
+                }
+                bqxVar.s = recyclerView;
+                Resources resources = recyclerView.getResources();
+                bqxVar.g = resources.getDimension(R.dimen.item_touch_helper_swipe_escape_velocity);
+                bqxVar.h = resources.getDimension(R.dimen.item_touch_helper_swipe_escape_max_velocity);
+                bqxVar.r = ViewConfiguration.get(bqxVar.s.getContext()).getScaledTouchSlop();
+                bqxVar.s.cu(bqxVar);
+                bqxVar.s.aa.add(bqtVar);
+                RecyclerView recyclerView4 = bqxVar.s;
+                if (recyclerView4.am == null) {
+                    recyclerView4.am = new ArrayList();
+                }
+                recyclerView4.am.add(bqxVar);
+                bqxVar.z = new bqw(bqxVar);
+                bqxVar.y = new GestureDetector(bqxVar.s.getContext(), bqxVar.z);
+            }
+            if (linkedHashMap2.size() != size) {
+                throw new cth(concat("Performers are not allowed to appear in ", name, " DSL creation process."));
+            }
+            Class<RecyclerView> clsBf5 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls2));
+            blr.i(blrVarI, null, clsBf5 != null ? clsBf5 : RecyclerView.class);
+            blr.h(blrVarI, viewH);
+            linearLayout.addView(bluVar.k(), 0);
+        }
+    }
+
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final String getDescription() {
+        return d;
+    }
+
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final IInvokable getOnClick() {
+        return i;
+    }
+
+    @Override // me.hd.wauxv.obf.SwitchHook
+    public final boolean q() {
+        return j;
+    }
+}

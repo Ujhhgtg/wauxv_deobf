@@ -47,7 +47,7 @@ public final class dly extends ApiHookItem {
                         5, methodResolverVarT3), hookPriorityEnumVar);
         hookManagerVarAd3.hookBefore(new SyntheticMessOfLambdas(12));
         hookManagerVarAd3.initInstantCollectionAndApplyHooks();
-        if (cnb.isNewerThanArgVerAndNotPlay(ewk.d) || cnb.isNewerThanArgVerAndPlay(ewh.d)) {
+        if (StaticUtils.isNewerThanArgVerAndNotPlay(ewk.d) || StaticUtils.isNewerThanArgVerAndPlay(ewh.d)) {
             SyntheticPileOfMess bmuVarS2 = yg.s(-54473070213930L);
             MethodResolver methodResolverVarT4 = bmuVarS2.getMethodResolverBasedOnPreviouslyProvidedConfig();
             methodResolverVarT4.name = "updateWithOnConflict" /* "updateWithOnConflict" /* "updateWithOnConflict" /* cnb.z(-54855322303274L)  */;

@@ -358,11 +358,11 @@ public abstract class emc {
             return null;
         }
         if (!cls.isArray()) {
-            String strO2 = cnb.o(cls.getName());
+            String strO2 = StaticUtils.o(cls.getName());
             return strO2 == null ? cls.getCanonicalName() : strO2;
         }
         Class<?> componentType = cls.getComponentType();
-        if (componentType.isPrimitive() && (strO = cnb.o(componentType.getName())) != null) {
+        if (componentType.isPrimitive() && (strO = StaticUtils.o(componentType.getName())) != null) {
             strConcat = strO.concat("Array");
         }
         return strConcat == null ? "kotlin.Array" : strConcat;

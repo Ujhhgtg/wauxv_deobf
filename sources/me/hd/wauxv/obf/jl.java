@@ -446,18 +446,18 @@ public final class jl {
         }
         typedArrayObtainStyledAttributes4.recycle();
         if (dimensionPixelSize2 != i4) {
-            cnb.am(textView, dimensionPixelSize2);
+            StaticUtils.am(textView, dimensionPixelSize2);
         }
         if (dimensionPixelSize3 != i4) {
-            cnb.an(textView, dimensionPixelSize3);
+            StaticUtils.an(textView, dimensionPixelSize3);
         }
         if (dimensionPixelSize != -1.0f) {
             if (i5 == i4) {
-                cnb.trimStackTraceToClass(textView, (int) dimensionPixelSize);
+                StaticUtils.trimStackTraceToClass(textView, (int) dimensionPixelSize);
             } else if (Build.VERSION.SDK_INT >= 34) {
                 ba.h(textView, i5, dimensionPixelSize);
             } else {
-                cnb.trimStackTraceToClass(textView, Math.round(TypedValue.applyDimension(i5, dimensionPixelSize,
+                StaticUtils.trimStackTraceToClass(textView, Math.round(TypedValue.applyDimension(i5, dimensionPixelSize,
                         textView.getResources().getDisplayMetrics())));
             }
         }

@@ -15,7 +15,7 @@ public final class agz implements bzs {
     @Override // me.hd.wauxv.obf.bzs
     public final void b(chm chmVar, coi coiVar) {
         String str = ((dqe) coiVar).d;
-        ((dll) chmVar.e).a.append(str);
+        ((dll) chmVar.var3).a.append(str);
         ArrayList arrayList = this.a.a;
         if (arrayList.isEmpty()) {
             return;

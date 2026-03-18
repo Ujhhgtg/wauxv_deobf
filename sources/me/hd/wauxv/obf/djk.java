@@ -227,7 +227,7 @@ public final /* synthetic */ class djk implements IInvokable {
                                     egVar.d = SnsUploadAppInfoHook.i;
                                     bzyVar.t("保存" /* "保存" /* "保存" /* cnb.z(-561786017282858L)  */, new amw(new cfx(cemVar, 16), 0));
                                     bzyVar.s("重置" /* "重置" /* "重置" /* cnb.z(-561807492119338L)  */, new amw(new Function1$VarIsInt$2(26), 2));
-                                    bjs.x((c & 2) != 0 ? new amd(1) : null, bzyVar, cnb.z(j3));
+                                    bjs.x((c & 2) != 0 ? new amd(1) : null, bzyVar, StaticUtils.decryptString(j3));
                                     LinearLayout linearLayout = cemVar.b;
                                     if (linearLayout != null) {
                                         egVar.r = linearLayout;
@@ -446,10 +446,10 @@ public final /* synthetic */ class djk implements IInvokable {
                 DexMethodGroupMatcher zbVar2 = new DexMethodGroupMatcher();
                 MethodMatcher fjVar2 = new MethodMatcher();
                 DexFinder cdjVar10 = new DexFinder();
-                cdjVar10.s("compareContent" /* "compareContent" /* "compareContent" /* cnb.z(-359033496140586L)  */);
+                cdjVar10.setMethodName("compareContent" /* "compareContent" /* "compareContent" /* cnb.z(-359033496140586L)  */);
                 fjVar2.f(cdjVar10);
                 DexFinder cdjVar11 = new DexFinder();
-                cdjVar11.s("op" /* "op" /* "op" /* cnb.z(-359020611238698L)  */);
+                cdjVar11.setMethodName("op" /* "op" /* "op" /* cnb.z(-359020611238698L)  */);
                 fjVar2.f(cdjVar11);
                 DexFinder cdjVar12 = new DexFinder();
                 MethodMatcher fjVar3 = new MethodMatcher();

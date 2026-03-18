@@ -267,16 +267,16 @@ public final /* synthetic */ class aeh implements View.OnClickListener {
                                 dll dllVar = new dll();
                                 Map mapUnmodifiableMap = Collections.unmodifiableMap(map3);
                                 chm chmVar = new chm();
-                                chmVar.c = blqVar;
-                                chmVar.d = ajiVar;
-                                chmVar.e = dllVar;
-                                chmVar.f = mapUnmodifiableMap;
+                                chmVar.var1 = blqVar;
+                                chmVar.var2 = ajiVar;
+                                chmVar.var3 = dllVar;
+                                chmVar.var4 = mapUnmodifiableMap;
                                 chmVar.aw(bmrVar);
                                 Iterator it7 = listUnmodifiableList.iterator();
                                 while (it7.hasNext()) {
                                     ((aha) it7.next()).getClass();
                                 }
-                                dll dllVar2 = (dll) chmVar.e;
+                                dll dllVar2 = (dll) chmVar.var3;
                                 dlj dljVar = new dlj(dllVar2.a);
                                 for (dli dliVar : dllVar2.b) {
                                     dljVar.setSpan(dliVar.a, dliVar.b, dliVar.c, dliVar.d);

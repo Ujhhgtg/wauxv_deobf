@@ -33,7 +33,7 @@ import me.hd.wauxv.obf.atf;
 import me.hd.wauxv.obf.aus;
 import me.hd.wauxv.obf.ResourcesCompat;
 import me.hd.wauxv.obf.cmz;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.cyf;
 import me.hd.wauxv.obf.drm;
 import me.hd.wauxv.obf.em;
@@ -311,7 +311,7 @@ public class SwitchCompat extends CompoundButton {
 
     @Override // android.widget.TextView
     public ActionMode.Callback getCustomSelectionActionModeCallback() {
-        return cnb.ar(super.getCustomSelectionActionModeCallback());
+        return StaticUtils.ar(super.getCustomSelectionActionModeCallback());
     }
 
     public boolean getShowText() {
@@ -763,7 +763,7 @@ public class SwitchCompat extends CompoundButton {
 
     @Override // android.widget.TextView
     public void setCustomSelectionActionModeCallback(ActionMode.Callback callback) {
-        super.setCustomSelectionActionModeCallback(cnb.as(callback, this));
+        super.setCustomSelectionActionModeCallback(StaticUtils.as(callback, this));
     }
 
     public void setEmojiCompatEnabled(boolean z) {

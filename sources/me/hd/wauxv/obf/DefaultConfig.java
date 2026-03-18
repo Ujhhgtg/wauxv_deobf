@@ -343,7 +343,7 @@ public class DefaultConfig implements dln, dcm, EmojiMatchCallback, ccv {
 
     public void ao(da daVar) {
         chm chmVar = (chm) this.c;
-        ((ActionMode.Callback) chmVar.d).onDestroyActionMode(chmVar.ab(daVar));
+        ((ActionMode.Callback) chmVar.var2).onDestroyActionMode(chmVar.ab(daVar));
         AppCompatDelegate appCompatDelegateVar = (AppCompatDelegate) this.d;
         if (appCompatDelegateVar.aj != null) {
             appCompatDelegateVar.y.getDecorView().removeCallbacks(appCompatDelegateVar.ak);
@@ -370,12 +370,12 @@ public class DefaultConfig implements dln, dcm, EmojiMatchCallback, ccv {
         WeakHashMap weakHashMap = ViewCompat.a;
         eqo.c(viewGroup);
         chm chmVar = (chm) this.c;
-        ActionMode.Callback callback = (ActionMode.Callback) chmVar.d;
+        ActionMode.Callback callback = (ActionMode.Callback) chmVar.var2;
         doc docVarAb = chmVar.ab(daVar);
-        dhq dhqVar = (dhq) chmVar.f;
+        dhq dhqVar = (dhq) chmVar.var4;
         Menu ccpVar = (Menu) dhqVar.get(menu);
         if (ccpVar == null) {
-            ccpVar = new ccp((Context) chmVar.e, (cbw) menu);
+            ccpVar = new ccp((Context) chmVar.var3, (cbw) menu);
             dhqVar.put(menu, ccpVar);
         }
         return callback.onPrepareActionMode(docVarAb, ccpVar);
@@ -1140,7 +1140,7 @@ public class DefaultConfig implements dln, dcm, EmojiMatchCallback, ccv {
                 nu.createInstanceWithArgs(context, typedArrayObtainStyledAttributes.getResourceId(2, 0));
                 nu.createInstanceWithArgs(context, typedArrayObtainStyledAttributes.getResourceId(3, 0));
                 nu.createInstanceWithArgs(context, typedArrayObtainStyledAttributes.getResourceId(5, 0));
-                ColorStateList colorStateListV = cnb.v(context, typedArrayObtainStyledAttributes, 7);
+                ColorStateList colorStateListV = StaticUtils.v(context, typedArrayObtainStyledAttributes, 7);
                 this.c = nu.createInstanceWithArgs(context, typedArrayObtainStyledAttributes.getResourceId(9, 0));
                 nu.createInstanceWithArgs(context, typedArrayObtainStyledAttributes.getResourceId(8, 0));
                 this.d = nu.createInstanceWithArgs(context, typedArrayObtainStyledAttributes.getResourceId(10, 0));

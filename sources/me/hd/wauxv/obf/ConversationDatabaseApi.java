@@ -1,7 +1,7 @@
 package me.hd.wauxv.obf;
 
 import android.database.Cursor;
-import java.io.IOException;
+
 import java.lang.reflect.Method;
 import org.luckypray.dexkit.DexKitBridge;
 
@@ -43,10 +43,8 @@ public final class ConversationDatabaseApi extends ApiHookItem implements IDexFi
     public static void d(String str, String[] strArr) {
         Method methodBb = StaticHelpers7.toDexMethod(ConversationStorage$MethodHiddenConvParent.INSTANCE);
         if (methodBb.getParameterCount() == 4) {
-            dmu.a.getClass();
             methodBb.invoke(dmu.getConversationStorage(), strArr, str, Boolean.TRUE, Boolean.FALSE);
         } else {
-            dmu.a.getClass();
             methodBb.invoke(dmu.getConversationStorage(), strArr, str);
         }
     }
@@ -74,7 +72,7 @@ public final class ConversationDatabaseApi extends ApiHookItem implements IDexFi
                     ((FindDexClassMethodDslWrapper) obj).onMethodCallback = (obj1 -> {
                         DexMethodQueryBuilder dexMethodQueryBuilderVar5 = (DexMethodQueryBuilder) obj1;
                         DexFinder cdjVar5 = new DexFinder();
-                        cdjVar5.setDeclaredClassName(StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage.INSTANCE));
+                        cdjVar5.setDeclaredClass(StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage.INSTANCE));
                         cdjVar5.usingStrings("updateUnreadByTalker %s");
                         dexMethodQueryBuilderVar5.getClass();
                         dexMethodQueryBuilderVar5.dexFinder = cdjVar5;
@@ -84,7 +82,7 @@ public final class ConversationDatabaseApi extends ApiHookItem implements IDexFi
             ((FindDexClassMethodDslWrapper) obj).onMethodCallback = (obj1 -> {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj1;
                 DexFinder cdjVar6 = new DexFinder();
-                cdjVar6.setDeclaredClassName(StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage.INSTANCE));
+                cdjVar6.setDeclaredClass(StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage.INSTANCE));
                 cdjVar6.p(new IntRange(2, 4, 1));
                 cdjVar6.v("Update ", "rconversation", " set ", "parentRef", " = '");
                 cdjVar6.n("' where 1 != 1 ");
@@ -97,7 +95,7 @@ public final class ConversationDatabaseApi extends ApiHookItem implements IDexFi
             ((FindDexClassMethodDslWrapper) obj).onMethodCallback = (obj1 -> {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar4 = (DexMethodQueryBuilder) obj1;
                 DexFinder cdjVar4 = new DexFinder();
-                cdjVar4.setDeclaredClassName(StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage.INSTANCE));
+                cdjVar4.setDeclaredClass(StaticHelpers7.toDexClass(ConversationStorage$ClassConversationStorage.INSTANCE));
                 cdjVar4.usingStrings("MicroMsg.ConversationStorage", "get null with username:");
                 dexMethodQueryBuilderVar4.dexFinder = cdjVar4;
             })

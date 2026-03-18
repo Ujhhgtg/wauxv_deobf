@@ -52,7 +52,7 @@ public final /* synthetic */ class cid implements IInvokable {
                                                                                                                  * (-
                                                                                                                  * 478622565530410L)
                                                                                                                  */)) {
-                                GroupInfo groupInfoT = cnb.t(cursorAb);
+                                GroupInfo groupInfoT = StaticUtils.t(cursorAb);
                                 String roomId = groupInfoT.getRoomId();
                                 StringBuilder sb3 = new StringBuilder();
                                 sb3.append(groupInfoT.getName());
@@ -70,7 +70,7 @@ public final /* synthetic */ class cid implements IInvokable {
                                 arrayList3.add(adxVar);
                                 arrayList2.add(adxVar);
                             } else {
-                                FriendInfo friendInfoS = cnb.s(cursorAb);
+                                FriendInfo friendInfoS = StaticUtils.s(cursorAb);
                                 String wxid = friendInfoS.getWxid();
                                 StringBuilder sb5 = new StringBuilder();
                                 String nickname = friendInfoS.getNickname();
@@ -146,7 +146,7 @@ public final /* synthetic */ class cid implements IInvokable {
                             if (dnr.ifVar1EndsWithVar2(cursorAb2
                                     .getString(cursorAb2.getColumnIndex("username" /* "username" /* "username" /* cnb.z(-475521599142698L)  */)),
                                     "@chatroom" /* "@chatroom" /* "@chatroom" /* cnb.z(-475482944437034L)  */)) {
-                                GroupInfo groupInfoT2 = cnb.t(cursorAb2);
+                                GroupInfo groupInfoT2 = StaticUtils.t(cursorAb2);
                                 String roomId2 = groupInfoT2.getRoomId();
                                 StringBuilder sb6 = new StringBuilder();
                                 sb6.append(groupInfoT2.getName());
@@ -164,7 +164,7 @@ public final /* synthetic */ class cid implements IInvokable {
                                 arrayList6.add(adxVar3);
                                 arrayList5.add(adxVar3);
                             } else {
-                                FriendInfo friendInfoS2 = cnb.s(cursorAb2);
+                                FriendInfo friendInfoS2 = StaticUtils.s(cursorAb2);
                                 String wxid2 = friendInfoS2.getWxid();
                                 StringBuilder sb8 = new StringBuilder();
                                 String nickname2 = friendInfoS2.getNickname();

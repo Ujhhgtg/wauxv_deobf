@@ -41,15 +41,15 @@ public final /* synthetic */ class bdv implements den {
                     Bundle bundleR3 = ((ckl) entry.getValue()).r();
                     if (bundleR3 != null) {
                         arrayList.add(str);
-                        cnb.ag(bundleR2, str, bundleR3);
+                        StaticUtils.ag(bundleR2, str, bundleR3);
                     }
                 }
                 if (arrayList.isEmpty()) {
                     bundleR = null;
                 } else {
                     bundleR = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
-                    cnb.ai(bundleR2, "android-support-nav:controller:navigatorState:names", arrayList);
-                    cnb.ag(bundleR, "android-support-nav:controller:navigatorState", bundleR2);
+                    StaticUtils.ai(bundleR2, "android-support-nav:controller:navigatorState:names", arrayList);
+                    StaticUtils.ag(bundleR, "android-support-nav:controller:navigatorState", bundleR2);
                 }
                 if (kmVar.isEmpty()) {
                     linkedHashMap = linkedHashMap2;
@@ -68,13 +68,13 @@ public final /* synthetic */ class bdv implements den {
                         Bundle bundleR4 = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                         ciqVar.h.ab(bundleR4);
                         Bundle bundleR5 = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
-                        cnb.ah("nav-entry-state:id", str2, bundleR5);
+                        StaticUtils.ah("nav-entry-state:id", str2, bundleR5);
                         bundleR5.putInt("nav-entry-state:destination-id", i);
                         if (bundleL == null) {
                             bundleL = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                         }
-                        cnb.ag(bundleR5, "nav-entry-state:args", bundleL);
-                        cnb.ag(bundleR5, "nav-entry-state:saved-state", bundleR4);
+                        StaticUtils.ag(bundleR5, "nav-entry-state:args", bundleL);
+                        StaticUtils.ag(bundleR5, "nav-entry-state:saved-state", bundleR4);
                         arrayList2.add(bundleR5);
                         linkedHashMap2 = linkedHashMap4;
                     }
@@ -100,7 +100,7 @@ public final /* synthetic */ class bdv implements den {
                         i2 = i3;
                     }
                     bundleR.putIntArray("android-support-nav:controller:backStackDestIds", iArr);
-                    cnb.ai(bundleR, "android-support-nav:controller:backStackIds", arrayList3);
+                    StaticUtils.ai(bundleR, "android-support-nav:controller:backStackIds", arrayList3);
                 }
                 if (!linkedHashMap.isEmpty()) {
                     if (bundleR == null) {
@@ -117,21 +117,21 @@ public final /* synthetic */ class bdv implements den {
                             xe xeVar = ((cir) it.next()).a;
                             xeVar.getClass();
                             Bundle bundleR6 = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
-                            cnb.ah("nav-entry-state:id", (String) xeVar.d, bundleR6);
+                            StaticUtils.ah("nav-entry-state:id", (String) xeVar.d, bundleR6);
                             bundleR6.putInt("nav-entry-state:destination-id", xeVar.c);
                             Bundle bundleR7 = (Bundle) xeVar.e;
                             if (bundleR7 == null) {
                                 bundleR7 = ResourcesCompat.r((Pair[]) Arrays.copyOf(new Pair[0], 0));
                             }
-                            cnb.ag(bundleR6, "nav-entry-state:args", bundleR7);
-                            cnb.ag(bundleR6, "nav-entry-state:saved-state", (Bundle) xeVar.f);
+                            StaticUtils.ag(bundleR6, "nav-entry-state:args", bundleR7);
+                            StaticUtils.ag(bundleR6, "nav-entry-state:saved-state", (Bundle) xeVar.f);
                             arrayList5.add(bundleR6);
                         }
                         String str5 = "android-support-nav:controller:backStackStates:" + str4;
                         throwIfVar1IsNull(str5, "key");
                         bundleR.putParcelableArrayList(str5, arrayList5);
                     }
-                    cnb.ai(bundleR, "android-support-nav:controller:backStackStates", arrayList4);
+                    StaticUtils.ai(bundleR, "android-support-nav:controller:backStackStates", arrayList4);
                 }
                 if (cjlVar.e) {
                     if (bundleR == null) {

@@ -1113,7 +1113,7 @@ public abstract class bmy {
                 dax.a, day.a, dbe.a, aun.a, MsgForwardSnsHook.INSTANCE, chc.a, etl.a, etw.a, ctp.b, cxb.b, zr.a, cha.a, crm.a, QuickKillHook.a, cez.b,
                 cfa.b, cfc.b, AutoCleanHook.INSTANCE, md.a, zw.a, DisableBrightnessHook.a, cdo.a, cho.a, deu.a, dha.a, dpf.a, dad.a,
                 dae.a, daf.a, ge.a,
-                gf.a, gh.a, diq.a, div.a, diz.b, dja.b, djh.a, djv.a, SnsUploadAppInfoHook.a, dkl.a, xf.a, bbj.a, vg.a,
+                gf.a, gh.a, diq.a, div.a, diz.b, dja.b, djh.a, djv.a, SnsUploadAppInfoHook.a, dkl.a, ChatToolbarHook.a, bbj.a, vg.a,
                 vt.a, dhh.a,
                 dhi.b, ShowContactInfoHook.b, VnHomeShareMenuCopyOrDownHook.a, VnPreviewShareMenuCopyOrDownHook.a, ee.a,
                 cia.a, doj.a, dok.a, bie.a,
@@ -1154,7 +1154,7 @@ public abstract class bmy {
         }
         while (cursorAb.moveToNext()) {
             try {
-                FriendInfo friendInfoS = cnb.s(cursorAb);
+                FriendInfo friendInfoS = StaticUtils.s(cursorAb);
                 Object objB = acv.b(eom.a.f);
                 throwIfVar1IsNull(objB, "null cannot be cast to non-null type kotlin.String" /*
                                                                                               * "null cannot be cast to non-null type kotlin.String" /* "null cannot be cast to non-null type kotlin.String" /* cnb.z(-121955596368682L)  */
@@ -1183,7 +1183,7 @@ public abstract class bmy {
         }
         while (cursorAb.moveToNext()) {
             try {
-                GroupInfo groupInfoT = cnb.t(cursorAb);
+                GroupInfo groupInfoT = StaticUtils.t(cursorAb);
                 if (groupInfoT.getGroupData().getMemberCount() > 0) {
                     arrayList.add(groupInfoT);
                 }

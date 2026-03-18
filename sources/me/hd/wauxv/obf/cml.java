@@ -198,7 +198,7 @@ public final /* synthetic */ class cml implements IInvokable {
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar6 = new DexFinder();
                 cmy.a.getClass();
-                cdjVar6.setDeclaredClassName(StaticHelpers7.toDexConstructor(cmw.a).getDeclaringClass());
+                cdjVar6.setDeclaredClass(StaticHelpers7.toDexConstructor(cmw.a).getDeclaringClass());
                 cdjVar6.usingStrings("This NetSceneVerifyUser init NEVER use opcode == MM_VERIFYUSER_VERIFYOK" /*
                                                                                                      * cnb.z(-
                                                                                                      * 125602023602986L)
@@ -252,7 +252,7 @@ public final /* synthetic */ class cml implements IInvokable {
                         ArrayList arrayList = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onHandleMsg " /* "onHandleMsg " /* "onHandleMsg " /* cnb.z(-66288525245226L)  */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb,
                                 obj2 instanceof SwitchHook ? ((SwitchHook) obj2).getResult() : "LoadHook" /*
                                                                                                            * cnb.z(-
                                                                                                            * 66267050408746L)
@@ -376,7 +376,7 @@ public final /* synthetic */ class cml implements IInvokable {
                         ArrayList arrayList4 = Logger.a;
                         StringBuilder sb2 = new StringBuilder();
                         sb2.append("onGetBuffer " /* "onGetBuffer " /* "onGetBuffer " /* cnb.z(-67486821120810L)  */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb2,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb2,
                                 obj5 instanceof SwitchHook ? ((SwitchHook) obj5).getResult() : "LoadHook" /*
                                                                                                            * cnb.z(-
                                                                                                            * 67482526153514L)

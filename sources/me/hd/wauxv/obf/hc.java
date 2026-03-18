@@ -77,7 +77,7 @@ public class hc extends AutoCompleteTextView {
 
     @Override // android.widget.TextView
     public ActionMode.Callback getCustomSelectionActionModeCallback() {
-        return cnb.ar(super.getCustomSelectionActionModeCallback());
+        return StaticUtils.ar(super.getCustomSelectionActionModeCallback());
     }
 
     public ColorStateList getSupportBackgroundTintList() {
@@ -149,7 +149,7 @@ public class hc extends AutoCompleteTextView {
 
     @Override // android.widget.TextView
     public void setCustomSelectionActionModeCallback(ActionMode.Callback callback) {
-        super.setCustomSelectionActionModeCallback(cnb.as(callback, this));
+        super.setCustomSelectionActionModeCallback(StaticUtils.as(callback, this));
     }
 
     @Override // android.widget.AutoCompleteTextView

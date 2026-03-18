@@ -7,7 +7,7 @@ import java.util.List;
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
 public final class DexFinder extends dqc {
-    public dnf a;
+    public MethodNameMatcher a;
     public an b;
     public DexMethodGroupMatcher d;
     public DexMethodGroupMatcher e;
@@ -23,7 +23,7 @@ public final class DexFinder extends dqc {
             arrayList = new ArrayList();
         }
         cdjVar.g = arrayList;
-        arrayList.add(new dnf(str, MatchTypeEnum.Contains, false));
+        arrayList.add(new MethodNameMatcher(str, MatchTypeEnum.Contains, false));
     }
 
     public static void setClassEquals(DexFinder cdjVar, String str) {
@@ -46,8 +46,8 @@ public final class DexFinder extends dqc {
         int i;
         int iV2;
         throwIfVar1IsNull(bbbVar, "fbb");
-        dnf dnfVar = this.a;
-        int iC = dnfVar != null ? dnfVar.c(bbbVar) : 0;
+        MethodNameMatcher methodNameMatcherVar = this.a;
+        int iC = methodNameMatcherVar != null ? methodNameMatcherVar.c(bbbVar) : 0;
         an anVar = this.b;
         int iC2 = anVar != null ? anVar.c(bbbVar) : 0;
         DexMethodGroupMatcher zbVar = this.d;
@@ -61,7 +61,7 @@ public final class DexFinder extends dqc {
             ArrayList arrayList = new ArrayList(StaticHelpers4.ak(list, 10));
             Iterator it = list.iterator();
             while (it.hasNext()) {
-                arrayList.add(Integer.valueOf(((dnf) it.next()).c(bbbVar)));
+                arrayList.add(Integer.valueOf(((MethodNameMatcher) it.next()).c(bbbVar)));
             }
             iT = bbbVar.t(StaticHelpers5.y(arrayList));
         } else {
@@ -136,10 +136,10 @@ public final class DexFinder extends dqc {
             arrayList = new ArrayList();
         }
         this.g = arrayList;
-        arrayList.add(new dnf(str, MatchTypeEnum.Equals, false));
+        arrayList.add(new MethodNameMatcher(str, MatchTypeEnum.Equals, false));
     }
 
-    public final void setDeclaredClassName(Class cls) {
+    public final void setDeclaredClass(Class cls) {
         throwIfVar1IsNull(cls, "clazz");
         DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
         zbVar.j(ams.getClassPrimitiveTypeName(cls), MatchTypeEnum.Equals);
@@ -188,14 +188,14 @@ public final class DexFinder extends dqc {
         this.e = zbVar;
     }
 
-    public final void s(String str) {
-        this.a = new dnf(str, MatchTypeEnum.Equals, false);
+    public final void setMethodName(String str) {
+        this.a = new MethodNameMatcher(str, MatchTypeEnum.Equals, false);
     }
 
     public final void usingStrings(String... strArr) {
         ArrayList arrayList = new ArrayList(strArr.length);
         for (String str : strArr) {
-            arrayList.add(new dnf(str, MatchTypeEnum.Equals, false));
+            arrayList.add(new MethodNameMatcher(str, MatchTypeEnum.Equals, false));
         }
         this.g = StaticHelpers5.ab(arrayList);
     }
@@ -232,7 +232,7 @@ public final class DexFinder extends dqc {
     public final void v(String... strArr) {
         ArrayList arrayList = new ArrayList(strArr.length);
         for (String str : strArr) {
-            arrayList.add(new dnf(str, MatchTypeEnum.Contains, false));
+            arrayList.add(new MethodNameMatcher(str, MatchTypeEnum.Contains, false));
         }
         this.g = StaticHelpers5.ab(arrayList);
     }

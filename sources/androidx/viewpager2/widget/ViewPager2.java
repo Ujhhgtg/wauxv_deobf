@@ -84,9 +84,9 @@ public final class ViewPager2 extends ViewGroup {
         this.r = true;
         this.s = -1;
         chm chmVar = new chm();
-        chmVar.f = this;
-        chmVar.c = new esa(chmVar, 0);
-        chmVar.d = new esa(chmVar, 1);
+        chmVar.var4 = this;
+        chmVar.var1 = new esa(chmVar, 0);
+        chmVar.var2 = new esa(chmVar, 1);
         this.t = chmVar;
         esd esdVar = new esd(this, context);
         this.j = esdVar;
@@ -127,8 +127,8 @@ public final class ViewPager2 extends ViewGroup {
             esd esdVar3 = this.j;
             chmVar2.getClass();
             esdVar3.setImportantForAccessibility(2);
-            chmVar2.e = new erv(chmVar2, 1);
-            ViewPager2 viewPager2 = (ViewPager2) chmVar2.f;
+            chmVar2.var3 = new erv(chmVar2, 1);
+            ViewPager2 viewPager2 = (ViewPager2) chmVar2.var4;
             if (viewPager2.getImportantForAccessibility() == 0) {
                 viewPager2.setImportantForAccessibility(1);
             }
@@ -218,7 +218,7 @@ public final class ViewPager2 extends ViewGroup {
         int iD2;
         int iD3;
         super.onInitializeAccessibilityNodeInfo(accessibilityNodeInfo);
-        ViewPager2 viewPager2 = (ViewPager2) this.t.f;
+        ViewPager2 viewPager2 = (ViewPager2) this.t.var4;
         if (viewPager2.getAdapter() == null) {
             iD = 0;
             iD2 = 0;
@@ -343,12 +343,12 @@ public final class ViewPager2 extends ViewGroup {
             return super.performAccessibilityAction(i, bundle);
         }
         chm chmVar = this.t;
-        ViewPager2 viewPager2 = (ViewPager2) chmVar.f;
+        ViewPager2 viewPager2 = (ViewPager2) chmVar.var4;
         if (i != 8192 && i != 4096) {
             throw new IllegalStateException();
         }
         int currentItem = i == 8192 ? viewPager2.getCurrentItem() - 1 : viewPager2.getCurrentItem() + 1;
-        ViewPager2 viewPager22 = (ViewPager2) chmVar.f;
+        ViewPager2 viewPager22 = (ViewPager2) chmVar.var4;
         if (viewPager22.r) {
             viewPager22.v(currentItem);
         }
@@ -359,7 +359,7 @@ public final class ViewPager2 extends ViewGroup {
         cyw adapter = this.j.getAdapter();
         chm chmVar = this.t;
         if (adapter != null) {
-            adapter.ac.unregisterObserver((erv) chmVar.e);
+            adapter.ac.unregisterObserver((erv) chmVar.var3);
         } else {
             chmVar.getClass();
         }
@@ -373,7 +373,7 @@ public final class ViewPager2 extends ViewGroup {
         chm chmVar2 = this.t;
         chmVar2.av();
         if (cywVar != null) {
-            cywVar.ac.registerObserver((erv) chmVar2.e);
+            cywVar.ac.registerObserver((erv) chmVar2.var3);
         }
         if (cywVar != null) {
             cywVar.ac.registerObserver(ervVar);

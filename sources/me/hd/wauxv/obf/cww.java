@@ -13,7 +13,7 @@ public final class cww extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(cwv.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(QuickClearQuoteHook$MethodSupportAutoCompleteOnKey.a));
         cww cwwVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(cwwVar, listBf);
         cwwVar.hookBefore(hookManagerVarAb, new cvc(1));
@@ -32,7 +32,7 @@ public final class cww extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        StaticHelpers7.resolveDexAndCache(cwv.a, dexKitBridge, new cvc(2));
+        StaticHelpers7.resolveDexAndCache(QuickClearQuoteHook$MethodSupportAutoCompleteOnKey.a, dexKitBridge, new cvc(2));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

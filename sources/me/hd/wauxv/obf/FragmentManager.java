@@ -111,7 +111,7 @@ public final class FragmentManager {
             bfd.c(new bex(someFragmentManagerVar2, yg.concatToVar1(sb, " without using parent's childFragmentManager", i)));
             bfd.b(someFragmentManagerVar2).getClass();
         }
-        ArrayList arrayList = (ArrayList) this.b.c;
+        ArrayList arrayList = (ArrayList) this.b.var1;
         ViewGroup viewGroup = someFragmentManagerVar2.by;
         int iIndexOfChild = -1;
         if (viewGroup != null) {
@@ -147,7 +147,7 @@ public final class FragmentManager {
         FragmentManager fragmentManagerVar = null;
         chm chmVar = this.b;
         if (someFragmentManagerVar2 != null) {
-            FragmentManager fragmentManagerVar2 = (FragmentManager) ((HashMap) chmVar.d).get(someFragmentManagerVar2.aw);
+            FragmentManager fragmentManagerVar2 = (FragmentManager) ((HashMap) chmVar.var2).get(someFragmentManagerVar2.aw);
             if (fragmentManagerVar2 == null) {
                 throw new IllegalStateException("Fragment " + someFragmentManagerVar + " declared target fragment " + someFragmentManagerVar.ay
                         + " that does not belong to this FragmentManager!");
@@ -157,7 +157,7 @@ public final class FragmentManager {
             fragmentManagerVar = fragmentManagerVar2;
         } else {
             String str = someFragmentManagerVar.az;
-            if (str != null && (fragmentManagerVar = (FragmentManager) ((HashMap) chmVar.d).get(str)) == null) {
+            if (str != null && (fragmentManagerVar = (FragmentManager) ((HashMap) chmVar.var2).get(str)) == null) {
                 StringBuilder sb = new StringBuilder("Fragment ");
                 sb.append(someFragmentManagerVar);
                 sb.append(" declared target fragment ");
@@ -403,7 +403,7 @@ public final class FragmentManager {
             chmVar.as(someFragmentManagerVar.aw, null);
         }
         if (!z2) {
-            bej bejVar = (bej) chmVar.f;
+            bej bejVar = (bej) chmVar.var4;
             if (!((bejVar.b.containsKey(someFragmentManagerVar.aw) && bejVar.e) ? bejVar.f : true)) {
                 String str = someFragmentManagerVar.az;
                 if (str != null && (someFragmentManagerVarZ = chmVar.z(str)) != null && someFragmentManagerVarZ.bv) {
@@ -415,12 +415,12 @@ public final class FragmentManager {
         }
         bdm bdmVar = someFragmentManagerVar.bn;
         if (bdmVar != null) {
-            z = ((bej) chmVar.f).f;
+            z = ((bej) chmVar.var4).f;
         } else {
             z = bdmVar.e != null ? !r6.isChangingConfigurations() : true;
         }
         if ((z2 && !someFragmentManagerVar.bf) || z) {
-            ((bej) chmVar.f).j(someFragmentManagerVar, false);
+            ((bej) chmVar.var4).j(someFragmentManagerVar, false);
         }
         someFragmentManagerVar.bo.bh();
         someFragmentManagerVar.ch.m(LifeEventEnum.ON_DESTROY);
@@ -521,7 +521,7 @@ public final class FragmentManager {
         someFragmentManagerVar.bp = null;
         someFragmentManagerVar.bm = null;
         if (!someFragmentManagerVar.bd || someFragmentManagerVar.cx()) {
-            bej bejVar = (bej) this.b.f;
+            bej bejVar = (bej) this.b.var4;
             if (!((bejVar.b.containsKey(someFragmentManagerVar.aw) && bejVar.e) ? bejVar.f : true)) {
                 return;
             }
@@ -586,7 +586,7 @@ public final class FragmentManager {
                         if (beg.ar(3)) {
                             Log.d("FragmentManager", "Cleaning up state of never attached fragment: " + someFragmentManagerVar);
                         }
-                        ((bej) chmVar.f).j(someFragmentManagerVar, true);
+                        ((bej) chmVar.var4).j(someFragmentManagerVar, true);
                         chmVar.ak(this);
                         if (beg.ar(3)) {
                             Log.d("FragmentManager", "initState called for fragment: " + someFragmentManagerVar);
@@ -629,7 +629,7 @@ public final class FragmentManager {
                             break;
                         case 0:
                             if (someFragmentManagerVar.bf) {
-                                if (((Bundle) ((HashMap) chmVar.e).get(someFragmentManagerVar.aw)) == null) {
+                                if (((Bundle) ((HashMap) chmVar.var3).get(someFragmentManagerVar.aw)) == null) {
                                     chmVar.as(someFragmentManagerVar.aw, t());
                                 }
                             }

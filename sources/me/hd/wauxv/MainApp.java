@@ -4,7 +4,7 @@ import android.app.Application;
 import com.umeng.commonsdk.UMConfigure;
 import me.hd.wauxv.hook.HookEntry;
 import me.hd.wauxv.obf.cna;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.exf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
@@ -18,7 +18,7 @@ public final class MainApp extends Application {
         try {
             HookEntry.a.getClass();
             cna.d = "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* "WAuxiliary" /* cnb.z(-71829033057066L)   */;
-            cnb.k = false;
+            StaticUtils.k = false;
         } catch (Throwable unused) {
         }
         exf exfVar = exf.f;

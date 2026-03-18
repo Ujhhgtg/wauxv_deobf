@@ -470,7 +470,7 @@ public abstract class SomeFragmentManager implements ComponentCallbacks, View.On
         return sb.toString();
     }
 
-    public cnb x() {
+    public StaticUtils x() {
         return new bde(this);
     }
 

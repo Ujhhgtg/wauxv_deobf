@@ -37,7 +37,7 @@ import me.hd.wauxv.obf.AccessibilityDelegateCompat;
 import me.hd.wauxv.obf.ax;
 import me.hd.wauxv.obf.bpt;
 import me.hd.wauxv.obf.cau;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.cxc;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.dgm;
@@ -1000,7 +1000,7 @@ public class BottomSheetBehavior<V extends View> extends agr {
         this.v = context.getResources().getDimensionPixelSize(R.dimen.mtrl_min_touch_target_size);
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, cxs.e);
         if (typedArrayObtainStyledAttributes.hasValue(3)) {
-            this.x = cnb.v(context, typedArrayObtainStyledAttributes, 3);
+            this.x = StaticUtils.v(context, typedArrayObtainStyledAttributes, 3);
         }
         if (typedArrayObtainStyledAttributes.hasValue(21)) {
             this.am = dgm.n(context, attributeSet, R.attr.bottomSheetStyle, R.style.Widget_Design_BottomSheet_Modal)

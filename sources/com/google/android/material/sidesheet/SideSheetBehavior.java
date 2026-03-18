@@ -28,7 +28,7 @@ import me.hd.wauxv.obf.ax;
 import me.hd.wauxv.obf.buc;
 import me.hd.wauxv.obf.bux;
 import me.hd.wauxv.obf.cau;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.dgl;
 import me.hd.wauxv.obf.dgm;
@@ -449,7 +449,7 @@ public class SideSheetBehavior<V extends View> extends agr {
         this.ak = new qd(this, 1);
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, cxs.ak);
         if (typedArrayObtainStyledAttributes.hasValue(3)) {
-            this.h = cnb.v(context, typedArrayObtainStyledAttributes, 3);
+            this.h = StaticUtils.v(context, typedArrayObtainStyledAttributes, 3);
         }
         if (typedArrayObtainStyledAttributes.hasValue(6)) {
             this.q = dgm.n(context, attributeSet, 0, R.style.Widget_Material3_SideSheet).m();

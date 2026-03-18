@@ -138,7 +138,7 @@ public final /* synthetic */ class bka implements IInvokable {
                 if (ahhVarT != alcVar3 && ahhVarT._w(arj.a) == null) {
                     ahhVarT = ahhVarT._v(alcVar3);
                 }
-                t dmfVar = new dmf(ahhVarT, true);
+                SomeDispatchedContinuation dmfVar = new SomeBaseDispatchedContinuation(ahhVarT, true);
                 dmfVar.h(SomeEnum.DEFAULT, dmfVar, bhpVar);
                 return kotlinUnitVar;
         }

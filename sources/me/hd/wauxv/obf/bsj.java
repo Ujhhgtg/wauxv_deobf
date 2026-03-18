@@ -8,7 +8,7 @@ public final class bsj implements btd {
 
     @Override // me.hd.wauxv.obf.btd
     public final Object a(ajt ajtVar) {
-        cnb.n(ajtVar);
+        StaticUtils.n(ajtVar);
         if (ajtVar.x()) {
             throw new brv("Expected 'null' literal");
         }
@@ -18,7 +18,7 @@ public final class bsj implements btd {
     @Override // me.hd.wauxv.obf.btd
     public final void c(avt avtVar, Object obj) {
         throwIfVar1IsNull((bsi) obj, "value");
-        cnb.l(avtVar);
+        StaticUtils.l(avtVar);
         avtVar.q();
     }
 

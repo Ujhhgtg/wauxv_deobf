@@ -17,7 +17,7 @@ public final class boz implements Iterable, IEmpty {
     public final Iterator iterator() {
         switch (this.a) {
             case 0:
-                return new aqf(cnb.ae((Object[]) ((bp) this.b).b));
+                return new aqf(StaticUtils.ae((Object[]) ((bp) this.b).b));
             case 1:
                 return new alt((alu) this.b);
             default:

@@ -135,7 +135,7 @@ public final class cfm extends SwitchHook implements bnc {
             }
             if (type != ewg.c.w) {
                 if (type == ewg.i.w) {
-                    View viewV2 = cnh.v(view, cnb.isNewerThanArgVerAndNotPlay(ewk.c) ? "bkg" /* "bkg" /* "bkg" /* cnb.z(-426915454253866L)  */ : "" /*
+                    View viewV2 = cnh.v(view, StaticUtils.isNewerThanArgVerAndNotPlay(ewk.c) ? "bkg" /* "bkg" /* "bkg" /* cnb.z(-426915454253866L)  */ : "" /*
                                                                                                          * cnb.z(-
                                                                                                          * 428513182087978L)
                                                                                                          */);

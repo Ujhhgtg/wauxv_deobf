@@ -14,7 +14,7 @@ public abstract class der {
 
     public static final Constructor c(Class cls, List list) {
         throwIfVar1IsNull(list, com.umeng.ccg.a.A);
-        z zVarAe = cnb.ae(cls.getConstructors());
+        z zVarAe = StaticUtils.ae(cls.getConstructors());
         while (zVarAe.hasNext()) {
             Constructor constructor = (Constructor) zVarAe.next();
             Class<?>[] parameterTypes = constructor.getParameterTypes();

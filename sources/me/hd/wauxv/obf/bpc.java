@@ -99,7 +99,7 @@ public final class bpc {
             if (textInputLayout.getEditText() != null) {
                 EditText editText = textInputLayout.getEditText();
                 Context context = this.g;
-                boolean zAd = cnb.ad(context);
+                boolean zAd = StaticUtils.ad(context);
                 LinearLayout linearLayout = this.i;
                 WeakHashMap weakHashMap = ViewCompat.a;
                 int paddingStart = editText.getPaddingStart();

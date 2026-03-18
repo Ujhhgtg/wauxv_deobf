@@ -22,7 +22,7 @@ public abstract class BaseBaseHook extends ewy {
             ArrayList arrayList = Logger.a;
             StringBuilder sb = new StringBuilder();
             sb.append("initOnce " /* "initOnce " /* "initOnce " /* "initOnce " /* cnb.z(-51419348466474L)  */);
-            Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb, this instanceof SwitchHook ? ((SwitchHook) this).getResult() : "LoadHook" /*
+            Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb, this instanceof SwitchHook ? ((SwitchHook) this).getResult() : "LoadHook" /*
                                                                                                       * cnb.z(-
                                                                                                       * 50843822848810L)
                                                                                                       */), e, 12);

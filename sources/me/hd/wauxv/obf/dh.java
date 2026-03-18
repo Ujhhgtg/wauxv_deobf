@@ -150,7 +150,7 @@ public final /* synthetic */ class dh implements Runnable {
             case 7:
                 aro aroVar = ((arn) this.b).g;
                 aroVar.p = false;
-                ((ProgressBar) aroVar.j.d).setVisibility(8);
+                ((ProgressBar) aroVar.j.var2).setVisibility(8);
                 return;
             case 8:
                 arw arwVar = (arw) this.b;

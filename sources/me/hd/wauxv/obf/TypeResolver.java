@@ -127,16 +127,16 @@ public abstract class TypeResolver {
         throwIfVar1IsNull(str, "typeName");
         chm chmVar = globalCache;
         chmVar.getClass();
-        ReentrantReadWriteLock reentrantReadWriteLock = (ReentrantReadWriteLock) chmVar.c;
+        ReentrantReadWriteLock reentrantReadWriteLock = (ReentrantReadWriteLock) chmVar.var1;
         ReentrantReadWriteLock.ReadLock lock = reentrantReadWriteLock.readLock();
         throwIfVar1IsNull(lock, "readLock(...)");
         lock.lock();
         try {
-            WeakHashMap weakHashMap2 = (WeakHashMap) chmVar.f;
+            WeakHashMap weakHashMap2 = (WeakHashMap) chmVar.var4;
             if (weakHashMap2 == null) {
-                WeakReference weakReference = (WeakReference) chmVar.d;
+                WeakReference weakReference = (WeakReference) chmVar.var2;
                 if ((weakReference != null ? (ClassLoader) weakReference.get() : null) != classLoader
-                        || (ecVar3 = (ec) ((HashMap) chmVar.e).get(str)) == null || (objB3 = ecVar3.b()) == null) {
+                        || (ecVar3 = (ec) ((HashMap) chmVar.var3).get(str)) == null || (objB3 = ecVar3.b()) == null) {
                     obj2 = objB;
                     obj2 = objB3;
                     lock.unlock();
@@ -144,20 +144,20 @@ public abstract class TypeResolver {
                     throwIfVar1IsNull(writeLock, "writeLock(...)");
                     writeLock.lock();
                     try {
-                        weakHashMap = (WeakHashMap) chmVar.f;
+                        weakHashMap = (WeakHashMap) chmVar.var4;
                         if (weakHashMap == null) {
-                            WeakReference weakReference2 = (WeakReference) chmVar.d;
+                            WeakReference weakReference2 = (WeakReference) chmVar.var2;
                             classLoader2 = weakReference2 != null ? (ClassLoader) weakReference2.get() : null;
                             if (classLoader2 == null) {
-                                chmVar.d = new WeakReference(classLoader);
-                                ((HashMap) chmVar.e).clear();
+                                chmVar.var2 = new WeakReference(classLoader);
+                                ((HashMap) chmVar.var3).clear();
                             } else if (classLoader2 != classLoader) {
                                 weakHashMap = new WeakHashMap();
-                                weakHashMap.put(classLoader2, (HashMap) chmVar.e);
+                                weakHashMap.put(classLoader2, (HashMap) chmVar.var3);
                                 weakHashMap.put(classLoader, new HashMap());
-                                chmVar.f = weakHashMap;
-                                chmVar.d = null;
-                                chmVar.e = new HashMap();
+                                chmVar.var4 = weakHashMap;
+                                chmVar.var2 = null;
+                                chmVar.var3 = new HashMap();
                             }
                         }
                         if (weakHashMap != null) {
@@ -168,7 +168,7 @@ public abstract class TypeResolver {
                             }
                             map = (Map) map2;
                         } else {
-                            map = (HashMap) chmVar.e;
+                            map = (HashMap) chmVar.var3;
                         }
                         ecVar2 = (ec) map.get(str);
                         if (ecVar2 != null || (objB2 = ecVar2.b()) == null) {
@@ -212,21 +212,21 @@ public abstract class TypeResolver {
                     ReentrantReadWriteLock.WriteLock writeLock2 = reentrantReadWriteLock.writeLock();
                     throwIfVar1IsNull(writeLock2, "writeLock(...)");
                     writeLock2.lock();
-                    weakHashMap = (WeakHashMap) chmVar.f;
+                    weakHashMap = (WeakHashMap) chmVar.var4;
                     if (weakHashMap == null) {
-                        WeakReference weakReference22 = (WeakReference) chmVar.d;
+                        WeakReference weakReference22 = (WeakReference) chmVar.var2;
                         if (weakReference22 != null) {
                         }
                         if (classLoader2 == null) {
-                            chmVar.d = new WeakReference(classLoader);
-                            ((HashMap) chmVar.e).clear();
+                            chmVar.var2 = new WeakReference(classLoader);
+                            ((HashMap) chmVar.var3).clear();
                         } else if (classLoader2 != classLoader) {
                             weakHashMap = new WeakHashMap();
-                            weakHashMap.put(classLoader2, (HashMap) chmVar.e);
+                            weakHashMap.put(classLoader2, (HashMap) chmVar.var3);
                             weakHashMap.put(classLoader, new HashMap());
-                            chmVar.f = weakHashMap;
-                            chmVar.d = null;
-                            chmVar.e = new HashMap();
+                            chmVar.var4 = weakHashMap;
+                            chmVar.var2 = null;
+                            chmVar.var3 = new HashMap();
                         }
                     }
                     if (weakHashMap != null) {
@@ -237,7 +237,7 @@ public abstract class TypeResolver {
                         }
                         map = (Map) map2;
                     } else {
-                        map = (HashMap) chmVar.e;
+                        map = (HashMap) chmVar.var3;
                     }
                     ecVar2 = (ec) map.get(str);
                     if (ecVar2 != null) {

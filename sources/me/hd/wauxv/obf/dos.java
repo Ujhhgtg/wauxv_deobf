@@ -231,7 +231,7 @@ public final /* synthetic */ class dos implements IInvokable {
                 dexMethodQueryBuilderVar2.getClass();
                 dexMethodQueryBuilderVar2.searchedPackages = SomeStaticHelpers.arrayToList(strArr2);
                 DexFinder cdjVar2 = new DexFinder();
-                if (cnb.isNewerThanArgVerAndNotPlay(ewk.e) || cnb.isNewerThanArgVerAndPlay(ewh.d)) {
+                if (StaticUtils.isNewerThanArgVerAndNotPlay(ewk.e) || StaticUtils.isNewerThanArgVerAndPlay(ewh.d)) {
                     cdjVar2.usingStrings("MicroMsg.BitmapUtil" /* "MicroMsg.BitmapUtil" /* "MicroMsg.BitmapUtil" /* cnb.z(-491773755390762L)  */, "saveBitmapToImage failed: %s" /*
                                                                                                                     * cnb
                                                                                                                     * .z
@@ -240,7 +240,7 @@ public final /* synthetic */ class dos implements IInvokable {
                                                                                                                     */);
                 } else {
                     DexFinder.setClassEquals(cdjVar2, "com.tencent.mm.sdk.platformtools.BitmapUtil" /* "com.tencent.mm.sdk.platformtools.BitmapUtil" /* "com.tencent.mm.sdk.platformtools.BitmapUtil" /* cnb.z(-488814522923818L)  */);
-                    cdjVar2.s("saveBitmapToImage" /* "saveBitmapToImage" /* "saveBitmapToImage" /* cnb.z(-489209659915050L)  */);
+                    cdjVar2.setMethodName("saveBitmapToImage" /* "saveBitmapToImage" /* "saveBitmapToImage" /* cnb.z(-489209659915050L)  */);
                 }
                 dexMethodQueryBuilderVar2.dexFinder = cdjVar2;
                 return Kotlin$Unit.INSTANCE;

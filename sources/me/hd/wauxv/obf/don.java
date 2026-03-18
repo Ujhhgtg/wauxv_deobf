@@ -24,7 +24,7 @@ public final class don extends ViewGroup {
     public final PointF e;
     public boolean f;
     public boolean g;
-    public dom h;
+    public dom chm;
 
     public don(Context context) {
         super(context, null, 0);
@@ -44,7 +44,7 @@ public final class don extends ViewGroup {
     /* JADX WARN: Found duplicated region for block: B:45:0x01a9 */
     @Override // android.view.ViewGroup, android.view.View
     public final boolean dispatchTouchEvent(MotionEvent motionEvent) throws IllegalAccessException {
-        dom domVar;
+        dom chm_;
         chm chmVar;
         Object obj;
         Object objE;
@@ -61,11 +61,11 @@ public final class don extends ViewGroup {
                     valueAnimatorOfInt.addUpdateListener(new aqi(this, 4));
                     valueAnimatorOfInt.setDuration(100L);
                     valueAnimatorOfInt.start();
-                    domVar = this.h;
-                    if (domVar != null) {
-                        chmVar = (chm) domVar;
+                    chm_ = this.chm;
+                    if (chm_ != null) {
+                        chmVar = (chm) chm_;
                         int i2 = 0;
-                        obj = chmVar.d;
+                        obj = chmVar.var2;
                         FieldResolver fieldResolverVarR = dqc.getWrapperConfiguration(obj).createFieldResolver();
                         fieldResolverVarR.name = "checkBox" /* "checkBox" /* "checkBox" /* "checkBox" /* cnb.z(-473640403467050L)   */;
                         objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR)).getValue_();
@@ -77,11 +77,9 @@ public final class don extends ViewGroup {
                             throwIfVar1IsNull(objE2);
                             ((View) objE2).performClick();
                         } else {
-                            Kotlin$Lazy kotlin$LazyVar = new Kotlin$Lazy(new wi(chmVar.f, i));
-                            uq uqVar = uq.a;
+                            Kotlin$Lazy kotlin$LazyVar = new Kotlin$Lazy(new wi(chmVar.var4, 1));
                             FrameLayout frameLayout = (FrameLayout) kotlin$LazyVar.getValue();
-                            origin = ((MsgInfoBean) chmVar.e).getOrigin();
-                            uqVar.getClass();
+                            origin = ((MsgInfoBean) chmVar.var3).getInstance();
                             MethodResolver methodResolverVarT = dqc.getWrapperConfiguration(frameLayout).getMethodResolverBasedOnPreviouslyProvidedConfig();
                             methodResolverVarT.returnType = dal.getKClassFromClass(Boolean.TYPE);
                             methodResolverVarT.parametersCondition = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(26);
@@ -117,9 +115,9 @@ public final class don extends ViewGroup {
                     if (Math.abs(getScrollX()) <= this.c) {
                         this.g = false;
                     } else if (!this.g) {
-                        dom domVar2 = this.h;
+                        dom domVar2 = this.chm;
                         if (domVar2 != null) {
-                            Context context = ((don) ((chm) domVar2).c).getContext();
+                            Context context = ((don) ((chm) domVar2).var1).getContext();
                             if (Build.VERSION.SDK_INT >= 31) {
                                 Object systemService = context.getSystemService("vibrator_manager" /*
                                                                                                     * cnb.z(-
@@ -154,11 +152,10 @@ public final class don extends ViewGroup {
                     valueAnimatorOfInt3.addUpdateListener(new aqi(this, 4));
                     valueAnimatorOfInt3.setDuration(100L);
                     valueAnimatorOfInt3.start();
-                    domVar = this.h;
-                    if (domVar != null) {
-                        chmVar = (chm) domVar;
-                        int i22 = 0;
-                        obj = chmVar.d;
+                    chm_ = this.chm;
+                    if (chm_ != null) {
+                        chmVar = (chm) chm_;
+                        obj = chmVar.var2;
                         FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(obj).createFieldResolver();
                         fieldResolverVarR3.name = "checkBox" /* "checkBox" /* "checkBox" /* "checkBox" /* cnb.z(-473640403467050L)   */;
                         objE = ((BoundField) yg.enableSuperclassAndResolveFirstField(fieldResolverVarR3)).getValue_();
@@ -170,11 +167,9 @@ public final class don extends ViewGroup {
                             throwIfVar1IsNull(objE22);
                             ((View) objE22).performClick();
                         } else {
-                            Kotlin$Lazy kotlin$LazyVar2 = new Kotlin$Lazy(new wi(chmVar.f, i));
-                            uq uqVar2 = uq.a;
+                            Kotlin$Lazy kotlin$LazyVar2 = new Kotlin$Lazy(new wi(chmVar.var4, 1));
                             FrameLayout frameLayout2 = (FrameLayout) kotlin$LazyVar2.getValue();
-                            origin = ((MsgInfoBean) chmVar.e).getOrigin();
-                            uqVar2.getClass();
+                            origin = ((MsgInfoBean) chmVar.var3).getInstance();
                             MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(frameLayout2).getMethodResolverBasedOnPreviouslyProvidedConfig();
                             methodResolverVarT2.returnType = dal.getKClassFromClass(Boolean.TYPE);
                             methodResolverVarT2.parametersCondition = new SomeHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(26);
@@ -212,7 +207,7 @@ public final class don extends ViewGroup {
     }
 
     public final dom getSmoothListener() {
-        return this.h;
+        return this.chm;
     }
 
     @Override // android.view.ViewGroup
@@ -302,6 +297,6 @@ public final class don extends ViewGroup {
     }
 
     public final void setSmoothListener(dom domVar) {
-        this.h = domVar;
+        this.chm = domVar;
     }
 }

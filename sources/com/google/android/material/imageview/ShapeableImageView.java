@@ -14,7 +14,7 @@ import me.hd.wauxv.R;
 import me.hd.wauxv.obf.ResourcesCompat;
 import me.hd.wauxv.obf.cau;
 import me.hd.wauxv.obf.cmz;
-import me.hd.wauxv.obf.cnb;
+import me.hd.wauxv.obf.StaticUtils;
 import me.hd.wauxv.obf.cxs;
 import me.hd.wauxv.obf.dgm;
 import me.hd.wauxv.obf.dgn;
@@ -61,7 +61,7 @@ public class ShapeableImageView extends il implements dgx {
         this.k = new Path();
         TypedArray typedArrayObtainStyledAttributes = context2.obtainStyledAttributes(attributeSet, cxs.aj, 0, R.style.Widget_MaterialComponents_ShapeableImageView);
         setLayerType(2, null);
-        this.g = cnb.v(context2, typedArrayObtainStyledAttributes, 9);
+        this.g = StaticUtils.v(context2, typedArrayObtainStyledAttributes, 9);
         this.j = typedArrayObtainStyledAttributes.getDimensionPixelSize(10, 0);
         int dimensionPixelSize = typedArrayObtainStyledAttributes.getDimensionPixelSize(0, 0);
         this.l = dimensionPixelSize;

@@ -69,7 +69,7 @@ public final class etc extends doi implements Function2 {
                     sb.append('/');
                     sb.append(str2);
                     sb.append(SignatureVisitor.SUPER);
-                    String strN = yg.decryptVar3UsingCnbZAndConcatToVar1(sb, str, -587869353671466L);
+                    String strN = yg.concatVar2AndDecryptedVar3ToVar1(sb, str, -587869353671466L);
                     String string = jSONObject.getString("pcdn_url" /* "pcdn_url" /* "pcdn_url" /* cnb.z(-587882238573354L)  */);
                     beo beoVar = new beo(strN, i2);
                     Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
@@ -102,7 +102,7 @@ public final class etc extends doi implements Function2 {
                     sb2.append('/');
                     sb2.append(str2);
                     sb2.append(SignatureVisitor.SUPER);
-                    String strN2 = yg.decryptVar3UsingCnbZAndConcatToVar1(sb2, str, -609743622109994L);
+                    String strN2 = yg.concatVar2AndDecryptedVar3ToVar1(sb2, str, -609743622109994L);
                     String string2 = jSONObject.getString("pcdn_url" /* "pcdn_url" /* "pcdn_url" /* cnb.z(-609704967404330L)  */);
                     int i5 = 6;
                     beo beoVar2 = new beo(strN2, i5);

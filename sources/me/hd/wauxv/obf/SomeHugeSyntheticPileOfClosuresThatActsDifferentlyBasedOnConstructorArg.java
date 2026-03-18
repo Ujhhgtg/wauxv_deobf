@@ -94,7 +94,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 DexMethodQueryBuilder dexMethodQueryBuilderVar = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar = new DexFinder();
                 DexFinder.setClassEquals(cdjVar, "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* "com.tencent.mm.ui.chatting.gallery.ImageGalleryUI" /* cnb.z(-441565587700522L)  */);
-                if (cnb.isNewerThanArgVerAndNotPlay(ewk.h) || cnb.isNewerThanArgVerAndPlay(ewh.g)) {
+                if (StaticUtils.isNewerThanArgVerAndNotPlay(ewk.h) || StaticUtils.isNewerThanArgVerAndPlay(ewh.g)) {
                     cdjVar.usingStrings("setHdImageActionDownloadable" /* "setHdImageActionDownloadable" /* "setHdImageActionDownloadable" /* cnb.z(-441917775018794L)  */);
                 } else {
                     cdjVar.usingStrings("setImageHdImgBtnVisibility" /* "setImageHdImgBtnVisibility" /* "setImageHdImgBtnVisibility" /* cnb.z(-441827580705578L)  */);
@@ -141,7 +141,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 dexClassQueryBuilderVar.strings = SomeStaticHelpers.arrayToList(strArr);
                 DexMethodGroupMatcher zbVar = new DexMethodGroupMatcher();
                 DexFinder cdjVar4 = new DexFinder();
-                cdjVar4.s("onAccountInitialized" /* "onAccountInitialized" /* "onAccountInitialized" /* cnb.z(-361601886583594L)  */);
+                cdjVar4.setMethodName("onAccountInitialized" /* "onAccountInitialized" /* "onAccountInitialized" /* cnb.z(-361601886583594L)  */);
                 cdjVar4.usingStrings("//avatar" /* "//avatar" /* "//avatar" /* cnb.z(-361477332532010L)  */);
                 MethodMatcher fjVar = zbVar.f;
                 if (fjVar == null) {
@@ -150,7 +150,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 zbVar.f = fjVar;
                 fjVar.f(cdjVar4);
                 DexFinder cdjVar5 = new DexFinder();
-                cdjVar5.s("onAccountReleased" /* "onAccountReleased" /* "onAccountReleased" /* cnb.z(-360906101881642L)  */);
+                cdjVar5.setMethodName("onAccountReleased" /* "onAccountReleased" /* "onAccountReleased" /* cnb.z(-360906101881642L)  */);
                 cdjVar5.usingStrings("//avatar" /* "//avatar" /* "//avatar" /* cnb.z(-360845972339498L)  */);
                 MethodMatcher fjVar2 = zbVar.f;
                 if (fjVar2 == null) {
@@ -469,7 +469,7 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 fieldResolverVarR2.name = "d" /* "d" /* "d" /* cnb.z(-490377891019562L)  */;
                 Object objD2 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR2.resolve())).getValue();
                 throwIfVar1IsNull(objD2);
-                if (cnb.isNewerThanArgVerAndNotPlay(ewk.a) || cnb.isNewerThanArgVerAndPlay(ewh.c)) {
+                if (StaticUtils.isNewerThanArgVerAndNotPlay(ewk.a) || StaticUtils.isNewerThanArgVerAndPlay(ewh.c)) {
                     FieldResolver fieldResolverVarR3 = dqc.getWrapperConfiguration(objD2).createFieldResolver();
                     fieldResolverVarR3.name = "w" /* "w" /* "w" /* cnb.z(-490317761477418L)  */;
                     Object objE3 = ((BoundField) StaticHelpers5.safeGetFirstInList(fieldResolverVarR3.resolve())).getValue_();
@@ -569,8 +569,8 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 dexMethodQueryBuilderVar5.getClass();
                 dexMethodQueryBuilderVar5.searchedPackages = SomeStaticHelpers.arrayToList(strArr3);
                 DexFinder cdjVar7 = new DexFinder();
-                cdjVar7.s("onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477948255664938L)  */);
-                cdjVar7.usingStrings("onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477931075795754L)  */, (cnb.isNewerThanArgVerAndNotPlay(ewk.a) || cnb.isNewerThanArgVerAndPlay(ewh.c))
+                cdjVar7.setMethodName("onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477948255664938L)  */);
+                cdjVar7.usingStrings("onItemClick" /* "onItemClick" /* "onItemClick" /* cnb.z(-477931075795754L)  */, (StaticUtils.isNewerThanArgVerAndNotPlay(ewk.a) || StaticUtils.isNewerThanArgVerAndPlay(ewh.c))
                         ? "com/tencent/mm/plugin/fav/ui/FavTopSearchUIC$initOnItemClickListener$1"
                         /* "com/tencent/mm/plugin/fav/ui/FavTopSearchUIC$initOnItemClickListener$1" /* "com/tencent/mm/plugin/fav/ui/FavTopSearchUIC$initOnItemClickListener$1" /* cnb.z(-477845176449834L)  */ : "com/tencent/mm/plugin/fav/ui/FavSearchUI$10" /*
                                                                                                         * cnb.z(-
@@ -672,29 +672,20 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
             case 25:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;
                 DexFinder cdjVar8 = new DexFinder();
-                uq.a.getClass();
-                cdjVar8.setDeclaredClassName(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* "com.tencent.mm.pluginsdk.ui.chat.ChatFooter" /* cnb.z(-75127567940394L)  */));
+                cdjVar8.setDeclaredClass(ajn.tryGetClassByClassName("com.tencent.mm.pluginsdk.ui.chat.ChatFooter"));
                 cdjVar8.setReturnType(Void.TYPE);
                 Class<Boolean> clsBf7 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
-                if (clsBf7 == null) {
-                    clsBf7 = cls;
-                }
                 Class<Boolean> clsBf8 = HugeSyntheticPileOfHelpers.getPrimitiveTypeClassByJWrapperClass(dal.getKClassFromClass(cls));
                 cdjVar8.setParamTypes(clsBf7, clsBf8 != null ? clsBf8 : Boolean.class);
                 MethodMatcher fjVar3 = new MethodMatcher();
                 DexFinder cdjVar9 = new DexFinder();
-                cdjVar9.usingStrings("MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* "MicroMsg.ChatFooter" /* cnb.z(-76476187671338L)  */, "this is a quote msg" /*
-                                                                                                      * cnb.z(-
-                                                                                                      * 76905684400938L)
-                                                                                                      */);
+                cdjVar9.usingStrings("MicroMsg.ChatFooter", "this is a quote msg");
                 fjVar3.f(cdjVar9);
                 cdjVar8.j = fjVar3;
-                dexMethodQueryBuilderVar6.getClass();
                 dexMethodQueryBuilderVar6.dexFinder = cdjVar8;
                 return kotlinUnitVar;
             case 26:
                 Object obj4 = ((List) obj).get(0);
-                MicroMsgMsgInfoDexClassFind.INSTANCE.getClass();
                 return Boolean.valueOf(nullSafeIsEqual(obj4, StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE)));
             case 27:
                 Object objE7 = ((HookParam) obj).getThisObject();
@@ -707,12 +698,12 @@ public final /* synthetic */ class SomeHugeSyntheticPileOfClosuresThatActsDiffer
                 }
                 for (Object obj5 : ur.b) {
                     try {
-                        ((xf) obj5).n(frameLayout);
+                        ((ChatToolbarHook) obj5).n(frameLayout);
                     } catch (Exception e) {
                         ArrayList arrayList = Logger.a;
                         StringBuilder sb = new StringBuilder();
                         sb.append("onInit " /* "onInit " /* "onInit " /* cnb.z(-51075751082794L)  */);
-                        Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                        Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb,
                                 obj5 instanceof SwitchHook ? ((SwitchHook) obj5).getResult() : "LoadHook" /*
                                                                                                            * cnb.z(-
                                                                                                            * 51041391344426L)

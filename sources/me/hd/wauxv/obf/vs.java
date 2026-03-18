@@ -20,7 +20,6 @@ public final class vs implements dpi {
     @Override // me.hd.wauxv.obf.dph
     public final void c(dpl dplVar) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         Object next;
-        biw.a.getClass();
         Iterator it = biw.f().iterator();
         do {
             if (!it.hasNext()) {
@@ -31,12 +30,10 @@ public final class vs implements dpi {
         } while (!nullSafeIsEqual(((biv) next).b, String.valueOf(dplVar.b)));
         if (((biv) next) != null) {
             vi.a.u(String.valueOf(dplVar.b));
-            aic.a.getClass();
             Method methodBb = StaticHelpers7.toDexMethod(aib.a);
             Object[] objArr = { Boolean.TRUE };
             BaseAdapter baseAdapter = this.a;
             methodBb.invoke(baseAdapter, objArr);
-            agk.a.getClass();
             StaticHelpers7.toDexMethod(agj.a).invoke(this.b, null);
             baseAdapter.notifyDataSetChanged();
         }

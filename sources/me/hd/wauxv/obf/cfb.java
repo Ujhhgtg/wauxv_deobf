@@ -50,7 +50,7 @@ public final /* synthetic */ class cfb implements IInvokable {
                                                                                                                  * (-
                                                                                                                  * 514545671994154L)
                                                                                                                  */)) {
-                                GroupInfo groupInfoT = cnb.t(cursorAb);
+                                GroupInfo groupInfoT = StaticUtils.t(cursorAb);
                                 String roomId = groupInfoT.getRoomId();
                                 StringBuilder sb2 = new StringBuilder();
                                 sb2.append(groupInfoT.getName());
@@ -68,7 +68,7 @@ public final /* synthetic */ class cfb implements IInvokable {
                                 arrayList3.add(adxVar);
                                 arrayList2.add(adxVar);
                             } else {
-                                FriendInfo friendInfoS = cnb.s(cursorAb);
+                                FriendInfo friendInfoS = StaticUtils.s(cursorAb);
                                 String wxid = friendInfoS.getWxid();
                                 StringBuilder sb4 = new StringBuilder();
                                 String nickname = friendInfoS.getNickname();

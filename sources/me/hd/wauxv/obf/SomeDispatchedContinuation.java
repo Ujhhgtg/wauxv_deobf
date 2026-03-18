@@ -2,10 +2,10 @@ package me.hd.wauxv.obf;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public abstract class t extends brm implements kotlinx$coroutines$internal$DispatchedContinuation, ahp {
+public abstract class SomeDispatchedContinuation extends brm implements kotlinx$coroutines$internal$DispatchedContinuation, ahp {
     public final ahh a;
 
-    public t(ahh ahhVar, boolean z) {
+    public SomeDispatchedContinuation(ahh ahhVar, boolean z) {
         super(z);
         ae((brf) ahhVar._w(arj.i));
         this.a = ahhVar._v(this);
@@ -52,7 +52,7 @@ public abstract class t extends brm implements kotlinx$coroutines$internal$Dispa
     }
 
     /* JADX WARN: Multi-variable type inference failed */
-    public final void h(SomeEnum ahsVar, t tVar, Function2 function2Var) {
+    public final void h(SomeEnum ahsVar, SomeDispatchedContinuation tVar, Function2 function2Var) {
         int iOrdinal = ahsVar.ordinal();
         Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
         if (iOrdinal == 0) {

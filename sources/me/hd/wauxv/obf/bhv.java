@@ -320,7 +320,7 @@ public abstract class bhv {
                 day.a, dbe.a, aun.a, MsgForwardSnsHook.INSTANCE, chc.a, etl.a, etw.a, ctp.b, cxb.b, zr.a, cha.a, crm.a, QuickKillHook.a, cez.b, cfa.b,
                 cfc.b, AutoCleanHook.INSTANCE, md.a, zw.a, DisableBrightnessHook.a, cdo.a, cho.a, deu.a, dha.a, dpf.a, dad.a, dae.a,
                 daf.a, ge.a, gf.a,
-                gh.a, diq.a, div.a, diz.b, dja.b, djh.a, djv.a, SnsUploadAppInfoHook.a, dkl.a, xf.a, bbj.a, vg.a, vt.a,
+                gh.a, diq.a, div.a, diz.b, dja.b, djh.a, djv.a, SnsUploadAppInfoHook.a, dkl.a, ChatToolbarHook.a, bbj.a, vg.a, vt.a,
                 dhh.a, dhi.b,
                 ShowContactInfoHook.b, VnHomeShareMenuCopyOrDownHook.a, VnPreviewShareMenuCopyOrDownHook.a, diw.a, ee.a,
                 cia.a, doj.a, dok.a, bie.a,

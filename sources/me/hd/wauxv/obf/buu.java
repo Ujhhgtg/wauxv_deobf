@@ -116,7 +116,7 @@ public abstract class buu {
                             Object obj = map2.get(superclass);
                             throwIfVar1IsNull(obj);
                             arrayList = new ArrayList((Collection) obj);
-                            zVarAe = cnb.ae(cls.getInterfaces());
+                            zVarAe = StaticUtils.ae(cls.getInterfaces());
                             while (zVarAe.hasNext()) {
                                 cls2 = (Class) zVarAe.next();
                                 if (!(cls2 == null && buo.class.isAssignableFrom(cls2))) {
@@ -136,7 +136,7 @@ public abstract class buu {
                             }
                         }
                     } else {
-                        zVarAe = cnb.ae(cls.getInterfaces());
+                        zVarAe = StaticUtils.ae(cls.getInterfaces());
                         while (zVarAe.hasNext()) {
                             cls2 = (Class) zVarAe.next();
                             if (!(cls2 == null && buo.class.isAssignableFrom(cls2))) {

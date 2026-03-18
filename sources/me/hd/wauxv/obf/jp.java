@@ -83,7 +83,7 @@ public class jp extends TextView {
 
     @Override // android.widget.TextView
     public ActionMode.Callback getCustomSelectionActionModeCallback() {
-        return cnb.ar(super.getCustomSelectionActionModeCallback());
+        return StaticUtils.ar(super.getCustomSelectionActionModeCallback());
     }
 
     @Override // android.widget.TextView
@@ -146,7 +146,7 @@ public class jp extends TextView {
                 if (Build.VERSION.SDK_INT >= 29) {
                     throw null;
                 }
-                cnb.aa(this);
+                StaticUtils.aa(this);
                 throw null;
             } catch (InterruptedException | ExecutionException unused) {
             }
@@ -165,7 +165,7 @@ public class jp extends TextView {
     }
 
     public cva getTextMetricsParamsCompat() {
-        return cnb.aa(this);
+        return StaticUtils.aa(this);
     }
 
     @Override // android.widget.TextView, android.view.View
@@ -208,7 +208,7 @@ public class jp extends TextView {
                 if (Build.VERSION.SDK_INT >= 29) {
                     throw null;
                 }
-                cnb.aa(this);
+                StaticUtils.aa(this);
                 throw null;
             } catch (InterruptedException | ExecutionException unused) {
             }
@@ -302,7 +302,7 @@ public class jp extends TextView {
 
     @Override // android.widget.TextView
     public void setCustomSelectionActionModeCallback(ActionMode.Callback callback) {
-        super.setCustomSelectionActionModeCallback(cnb.as(callback, this));
+        super.setCustomSelectionActionModeCallback(StaticUtils.as(callback, this));
     }
 
     public void setEmojiCompatEnabled(boolean z) {
@@ -319,7 +319,7 @@ public class jp extends TextView {
         if (Build.VERSION.SDK_INT >= 28) {
             getSuperCaller().b(i);
         } else {
-            cnb.am(this, i);
+            StaticUtils.am(this, i);
         }
     }
 
@@ -328,20 +328,20 @@ public class jp extends TextView {
         if (Build.VERSION.SDK_INT >= 28) {
             getSuperCaller().a(i);
         } else {
-            cnb.an(this, i);
+            StaticUtils.an(this, i);
         }
     }
 
     @Override // android.widget.TextView
     public void setLineHeight(int i) {
-        cnb.trimStackTraceToClass(this, i);
+        StaticUtils.trimStackTraceToClass(this, i);
     }
 
     public void setPrecomputedText(cvb cvbVar) {
         if (Build.VERSION.SDK_INT >= 29) {
             throw null;
         }
-        cnb.aa(this);
+        StaticUtils.aa(this);
         throw null;
     }
 
@@ -482,7 +482,7 @@ public class jp extends TextView {
         } else if (i2 >= 34) {
             ba.h(this, i, f);
         } else {
-            cnb.trimStackTraceToClass(this,
+            StaticUtils.trimStackTraceToClass(this,
                     Math.round(TypedValue.applyDimension(i, f, getResources().getDisplayMetrics())));
         }
     }

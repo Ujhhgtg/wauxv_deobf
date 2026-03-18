@@ -1,6 +1,5 @@
 package me.hd.wauxv.obf;
 
-import java.util.ArrayList;
 import java.util.LinkedHashSet;
 
 import android.view.View;
@@ -49,7 +48,7 @@ public final class wr extends ApiHookItem implements IDexFind {
                 } catch (Exception e) {
                     StringBuilder sb = new StringBuilder();
                     sb.append("onBindView ");
-                    Logger.logE(yg.decryptVar3UsingCnbZAndConcatToVar1(sb,
+                    Logger.logE(yg.concatVar2AndDecryptedVar3ToVar1(sb,
                             bncVar instanceof SwitchHook ? ((SwitchHook) bncVar).getResult() : "LoadHook", " Failed"), e, 12);
                 }
             }

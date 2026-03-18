@@ -3,7 +3,6 @@
 //
 package me.hd.wauxv.obf;
 
-import android.widget.TextView;
 import com.alibaba.fastjson2.JSONObject;
 import com.google.android.material.checkbox.MaterialCheckBox;
 import com.alibaba.fastjson2.JSON;
@@ -88,7 +87,7 @@ public final class eq extends doi implements Function2
                                 bhu.bd(o);
                                 break Label_0422;
                             }
-                            throw new IllegalStateException(cnb.z(-480306192710442L));
+                            throw new IllegalStateException(StaticUtils.decryptString(-480306192710442L));
                         }
                         else {
                             f = (cla)this.f;
@@ -163,7 +162,7 @@ public final class eq extends doi implements Function2
                 final MaterialCheckBox materialCheckBox = (MaterialCheckBox)((bqq)this.e).c;
                 final StringBuilder sb = new StringBuilder();
                 sb.append(zn.a);
-                sb.append(cnb.z(-11587821763370L));
+                sb.append(StaticUtils.decryptString(-11587821763370L));
                 sb.append(str);
                 sb.append(')');
                 materialCheckBox.setText(sb.toString());

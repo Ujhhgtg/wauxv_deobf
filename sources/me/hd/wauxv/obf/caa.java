@@ -46,7 +46,7 @@ public final class caa extends hc {
             this.j = ColorStateList.valueOf(typedArrayAn.getColor(2, 0));
         }
         this.k = typedArrayAn.getColor(4, 0);
-        this.l = cnb.v(context2, typedArrayAn, 5);
+        this.l = StaticUtils.v(context2, typedArrayAn, 5);
         this.b = (AccessibilityManager) context2.getSystemService("accessibility");
         bwn bwnVar = new bwn(context2, null, R.attr.listPopupWindowStyle, 0);
         this.a = bwnVar;

@@ -65,7 +65,7 @@ public final class das {
             synchronized (chmVar) {
                 try {
                     chl chlVar = new chl(cls, cls2, cdwVar);
-                    ArrayList arrayList = (ArrayList) chmVar.c;
+                    ArrayList arrayList = (ArrayList) chmVar.var1;
                     arrayList.add(arrayList.size(), chlVar);
                 } catch (Throwable th) {
                     throw th;

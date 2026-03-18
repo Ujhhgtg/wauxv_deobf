@@ -54,7 +54,7 @@ public final class beg {
     public final bdy u;
     public int v;
     public bdm w;
-    public cnb x;
+    public StaticUtils x;
     public SomeFragmentManager y;
     public SomeFragmentManager z;
     public final ArrayList a = new ArrayList();
@@ -343,7 +343,7 @@ public final class beg {
         return fragmentManagerVarBc;
     }
 
-    public final void ax(bdm bdmVar, cnb cnbVar, SomeFragmentManager someFragmentManagerVar) {
+    public final void ax(bdm bdmVar, StaticUtils cnbVar, SomeFragmentManager someFragmentManagerVar) {
         if (this.w != null) {
             throw new IllegalStateException("Already attached");
         }
@@ -398,7 +398,7 @@ public final class beg {
             this.ao = new bej(false);
         }
         this.ao.g = ci();
-        this.c.f = this.ao;
+        this.c.var4 = this.ao;
         bdm bdmVar2 = this.w;
         if (bdmVar2 != null && someFragmentManagerVar == null) {
             but butVarAk = bdmVar2.ak();
@@ -522,7 +522,7 @@ public final class beg {
     public final FragmentManager bc(SomeFragmentManager someFragmentManagerVar) {
         String str = someFragmentManagerVar.aw;
         chm chmVar = this.c;
-        FragmentManager fragmentManagerVar = (FragmentManager) ((HashMap) chmVar.d).get(str);
+        FragmentManager fragmentManagerVar = (FragmentManager) ((HashMap) chmVar.var2).get(str);
         if (fragmentManagerVar != null) {
             return fragmentManagerVar;
         }
@@ -545,8 +545,8 @@ public final class beg {
                 Log.v("FragmentManager", "remove from detach: " + someFragmentManagerVar);
             }
             chm chmVar = this.c;
-            synchronized (((ArrayList) chmVar.c)) {
-                ((ArrayList) chmVar.c).remove(someFragmentManagerVar);
+            synchronized (((ArrayList) chmVar.var1)) {
+                ((ArrayList) chmVar.var1).remove(someFragmentManagerVar);
             }
             someFragmentManagerVar.bc = false;
             if (as(someFragmentManagerVar)) {
@@ -622,7 +622,7 @@ public final class beg {
         bdm bdmVar = this.w;
         chm chmVar = this.c;
         if (bdmVar != null) {
-            zIsChangingConfigurations = ((bej) chmVar.f).f;
+            zIsChangingConfigurations = ((bej) chmVar.var4).f;
         } else {
             hb hbVar = bdmVar.e;
             if (hbVar != null) {
@@ -634,7 +634,7 @@ public final class beg {
             while (it.hasNext()) {
                 Iterator it2 = ((mw) it.next()).a.iterator();
                 while (it2.hasNext()) {
-                    ((bej) chmVar.f).i((String) it2.next(), false);
+                    ((bej) chmVar.var4).i((String) it2.next(), false);
                 }
             }
         }
@@ -811,7 +811,7 @@ public final class beg {
     public final void bq(int i) {
         try {
             this.b = true;
-            for (FragmentManager fragmentManagerVar : ((HashMap) this.c.d).values()) {
+            for (FragmentManager fragmentManagerVar : ((HashMap) this.c.var2).values()) {
                 if (fragmentManagerVar != null) {
                     fragmentManagerVar.e = i;
                 }
@@ -841,9 +841,9 @@ public final class beg {
         String str2;
         String strS = StaticHelpers6.concat(str, "    ");
         chm chmVar = this.c;
-        ArrayList arrayList = (ArrayList) chmVar.c;
+        ArrayList arrayList = (ArrayList) chmVar.var1;
         String strS2 = StaticHelpers6.concat(str, "    ");
-        HashMap map = (HashMap) chmVar.d;
+        HashMap map = (HashMap) chmVar.var2;
         if (!map.isEmpty()) {
             printWriter.print(str);
             printWriter.println("Active Fragments:");
@@ -1211,7 +1211,7 @@ public final class beg {
             if (!zV) {
                 cz();
                 br();
-                ((HashMap) this.c.d).values().removeAll(Collections.singleton(null));
+                ((HashMap) this.c.var2).values().removeAll(Collections.singleton(null));
                 return z2;
             }
             z2 = true;
@@ -1257,7 +1257,7 @@ public final class beg {
             az();
             cz();
             br();
-            ((HashMap) this.c.d).values().removeAll(Collections.singleton(null));
+            ((HashMap) this.c.var2).values().removeAll(Collections.singleton(null));
         } catch (Throwable th) {
             az();
             throw th;
@@ -1775,14 +1775,14 @@ public final class beg {
 
     public final SomeFragmentManager ca(int i) {
         chm chmVar = this.c;
-        ArrayList arrayList = (ArrayList) chmVar.c;
+        ArrayList arrayList = (ArrayList) chmVar.var1;
         for (int size = arrayList.size() - 1; size >= 0; size--) {
             SomeFragmentManager someFragmentManagerVar = (SomeFragmentManager) arrayList.get(size);
             if (someFragmentManagerVar != null && someFragmentManagerVar.bq == i) {
                 return someFragmentManagerVar;
             }
         }
-        for (FragmentManager fragmentManagerVar : ((HashMap) chmVar.d).values()) {
+        for (FragmentManager fragmentManagerVar : ((HashMap) chmVar.var2).values()) {
             if (fragmentManagerVar != null) {
                 SomeFragmentManager someFragmentManagerVar2 = fragmentManagerVar.c;
                 if (someFragmentManagerVar2.bq == i) {
@@ -1795,7 +1795,7 @@ public final class beg {
 
     public final SomeFragmentManager cb(String str) {
         chm chmVar = this.c;
-        ArrayList arrayList = (ArrayList) chmVar.c;
+        ArrayList arrayList = (ArrayList) chmVar.var1;
         if (str != null) {
             for (int size = arrayList.size() - 1; size >= 0; size--) {
                 SomeFragmentManager someFragmentManagerVar = (SomeFragmentManager) arrayList.get(size);
@@ -1807,7 +1807,7 @@ public final class beg {
         if (str == null) {
             return null;
         }
-        for (FragmentManager fragmentManagerVar : ((HashMap) chmVar.d).values()) {
+        for (FragmentManager fragmentManagerVar : ((HashMap) chmVar.var2).values()) {
             if (fragmentManagerVar != null) {
                 SomeFragmentManager someFragmentManagerVar2 = fragmentManagerVar.c;
                 if (str.equals(someFragmentManagerVar2.bs)) {
@@ -1887,8 +1887,8 @@ public final class beg {
         if (z || i != this.v) {
             this.v = i;
             chm chmVar = this.c;
-            HashMap map = (HashMap) chmVar.d;
-            Iterator it = ((ArrayList) chmVar.c).iterator();
+            HashMap map = (HashMap) chmVar.var2;
+            Iterator it = ((ArrayList) chmVar.var1).iterator();
             while (it.hasNext()) {
                 FragmentManager fragmentManagerVar = (FragmentManager) map.get(((SomeFragmentManager) it.next()).aw);
                 if (fragmentManagerVar != null) {
@@ -1900,7 +1900,7 @@ public final class beg {
                     fragmentManagerVar2.p();
                     SomeFragmentManager someFragmentManagerVar = fragmentManagerVar2.c;
                     if (someFragmentManagerVar.bd && !someFragmentManagerVar.cx()) {
-                        if (someFragmentManagerVar.bf && !((HashMap) chmVar.e).containsKey(someFragmentManagerVar.aw)) {
+                        if (someFragmentManagerVar.bf && !((HashMap) chmVar.var3).containsKey(someFragmentManagerVar.aw)) {
                             chmVar.as(someFragmentManagerVar.aw, fragmentManagerVar2.t());
                         }
                         chmVar.ak(fragmentManagerVar2);
@@ -1953,7 +1953,7 @@ public final class beg {
         }
         cz();
         br();
-        ((HashMap) this.c.d).values().removeAll(Collections.singleton(null));
+        ((HashMap) this.c.var2).values().removeAll(Collections.singleton(null));
         return zCn;
     }
 
@@ -1978,8 +1978,8 @@ public final class beg {
             return;
         }
         chm chmVar = this.c;
-        synchronized (((ArrayList) chmVar.c)) {
-            ((ArrayList) chmVar.c).remove(someFragmentManagerVar);
+        synchronized (((ArrayList) chmVar.var1)) {
+            ((ArrayList) chmVar.var1).remove(someFragmentManagerVar);
         }
         someFragmentManagerVar.bc = false;
         if (as(someFragmentManagerVar)) {
@@ -2039,8 +2039,8 @@ public final class beg {
             }
         }
         chm chmVar = this.c;
-        HashMap map2 = (HashMap) chmVar.e;
-        HashMap map3 = (HashMap) chmVar.d;
+        HashMap map2 = (HashMap) chmVar.var3;
+        HashMap map3 = (HashMap) chmVar.var2;
         map2.clear();
         map2.putAll(map);
         beh behVar = (beh) bundle.getParcelable("state");
@@ -2095,7 +2095,7 @@ public final class beg {
             }
         }
         ArrayList<String> arrayList = behVar.b;
-        ((ArrayList) chmVar.c).clear();
+        ((ArrayList) chmVar.var1).clear();
         if (arrayList != null) {
             for (String str3 : arrayList) {
                 SomeFragmentManager someFragmentManagerVarZ = chmVar.z(str3);
@@ -2171,7 +2171,7 @@ public final class beg {
         this.ao.g = true;
         chm chmVar = this.c;
         chmVar.getClass();
-        HashMap map = (HashMap) chmVar.d;
+        HashMap map = (HashMap) chmVar.var2;
         ArrayList arrayList2 = new ArrayList(map.size());
         for (FragmentManager fragmentManagerVar : map.values()) {
             if (fragmentManagerVar != null) {
@@ -2183,16 +2183,16 @@ public final class beg {
                 }
             }
         }
-        HashMap map2 = (HashMap) this.c.e;
+        HashMap map2 = (HashMap) this.c.var3;
         if (!map2.isEmpty()) {
             chm chmVar2 = this.c;
-            synchronized (((ArrayList) chmVar2.c)) {
+            synchronized (((ArrayList) chmVar2.var1)) {
                 try {
-                    if (((ArrayList) chmVar2.c).isEmpty()) {
+                    if (((ArrayList) chmVar2.var1).isEmpty()) {
                         arrayList = null;
                     } else {
-                        arrayList = new ArrayList(((ArrayList) chmVar2.c).size());
-                        for (SomeFragmentManager someFragmentManagerVar2 : (ArrayList) chmVar2.c) {
+                        arrayList = new ArrayList(((ArrayList) chmVar2.var1).size());
+                        for (SomeFragmentManager someFragmentManagerVar2 : (ArrayList) chmVar2.var1) {
                             arrayList.add(someFragmentManagerVar2.aw);
                             if (ar(2)) {
                                 Log.v("FragmentManager",

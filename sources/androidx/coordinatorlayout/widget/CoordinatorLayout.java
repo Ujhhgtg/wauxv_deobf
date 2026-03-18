@@ -260,7 +260,7 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
     }
 
     public final List af(View view) {
-        dhq dhqVar = (dhq) this.g.f;
+        dhq dhqVar = (dhq) this.g.var4;
         int i = dhqVar.l;
         ArrayList arrayList = null;
         for (int i2 = 0; i2 < i; i2++) {
@@ -1263,7 +1263,7 @@ public class CoordinatorLayout extends ViewGroup implements ckt, cku {
                 break;
             }
             View childAt = coordinatorLayout.getChildAt(i14);
-            dhq dhqVar = (dhq) coordinatorLayout.g.f;
+            dhq dhqVar = (dhq) coordinatorLayout.g.var4;
             int i15 = dhqVar.l;
             for (int i16 = 0; i16 < i15; i16++) {
                 ArrayList arrayList2 = (ArrayList) dhqVar.s(i16);

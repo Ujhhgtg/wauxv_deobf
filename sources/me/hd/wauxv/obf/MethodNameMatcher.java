@@ -4,12 +4,12 @@ import java.nio.ByteBuffer;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class dnf extends dqc {
+public final class MethodNameMatcher extends dqc {
     public final String value;
     public MatchTypeEnum matchType;
     public final boolean d;
 
-    public dnf(String value, MatchTypeEnum matchType, boolean z) {
+    public MethodNameMatcher(String value, MatchTypeEnum matchType, boolean z) {
         throwIfVar1IsNull(value, "value");
         throwIfVar1IsNull(matchType, "matchType");
         this.value = value;

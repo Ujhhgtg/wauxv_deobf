@@ -75,11 +75,11 @@ public final class ws implements bgf
             }
             case 28: {
                 final bag bag = (bag)o;
-                final String z = cnb.z(-633524856027946L);
+                final String z = StaticUtils.decryptString(-633524856027946L);
                 bag.getClass();
                 bag.a = la.ab((Object[])new String[] { z });
                 final Object b = new Object();
-                ((zb)b).k(new String[] { cnb.z(-633408891910954L), cnb.z(-633864158444330L) });
+                ((zb)b).k(new String[] { StaticUtils.decryptString(-633408891910954L), StaticUtils.decryptString(-633864158444330L) });
                 bag.b = (zb)b;
                 return a2;
             }
@@ -119,7 +119,7 @@ public final class ws implements bgf
                     final int a3 = bte.a;
                     o = bmm.e();
                     final cde t2 = dqc.bi(o).t();
-                    ((cbh)t2).ab = cnb.z(-523771261745962L);
+                    ((cbh)t2).ab = StaticUtils.decryptString(-523771261745962L);
                     o = dkz.m(t2);
                     o = ((cdk)o).j(new Object[0]);
                     bzo.n(o);
@@ -141,21 +141,21 @@ public final class ws implements bgf
                         bzo.n(e);
                         final TextView textView = (TextView)e;
                         final int id = ((View)textView).getId();
-                        final Integer u = cnh.u((Object)textView, cnb.z(-523741196974890L));
+                        final Integer u = cnh.u((Object)textView, StaticUtils.decryptString(-523741196974890L));
                         if (u != null) {
                             if (id == u) {
                                 continue;
                             }
                         }
                         if (n3 != 0) {
-                            o = new IllegalArgumentException(cnb.z(-523706837236522L));
+                            o = new IllegalArgumentException(StaticUtils.decryptString(-523706837236522L));
                             throw o;
                         }
                         o = next;
                         n3 = 1;
                     }
                     if (n3 == 0) {
-                        o = new NoSuchElementException(cnb.z(-525098406640426L));
+                        o = new NoSuchElementException(StaticUtils.decryptString(-525098406640426L));
                         throw o;
                     }
                     o = ((azk)o).e();
@@ -207,8 +207,8 @@ public final class ws implements bgf
                         final eg eg = (eg)((ek)bzy).d;
                         zr.a.getClass();
                         eg.d = zr.c;
-                        ((ek)bzy).t(cnb.z(-523749786909482L), new amw((bfu)new bp((Object)cek, 12), 0));
-                        final String z2 = cnb.z(-47455093652266L);
+                        ((ek)bzy).t(StaticUtils.decryptString(-523749786909482L), new amw((bfu)new bp((Object)cek, 12), 0));
+                        final String z2 = StaticUtils.decryptString(-47455093652266L);
                         amd amd2 = amd;
                         if ((0x3 & 0x2) != 0x0) {
                             amd2 = new amd(1);
@@ -221,7 +221,7 @@ public final class ws implements bgf
                         return a2;
                     }
                 }
-                o = new NullPointerException(cnb.z(-638025981754154L).concat(k.getResources().getResourceName(n4)));
+                o = new NullPointerException(StaticUtils.decryptString(-638025981754154L).concat(k.getResources().getResourceName(n4)));
                 throw o;
             }
             case 23: {
@@ -235,11 +235,11 @@ public final class ws implements bgf
             }
             case 21: {
                 final bag bag2 = (bag)o;
-                final String z3 = cnb.z(-98741298133802L);
+                final String z3 = StaticUtils.decryptString(-98741298133802L);
                 bag2.getClass();
                 bag2.a = la.ab((Object[])new String[] { z3 });
                 final Object b2 = new Object();
-                ((zb)b2).k(new String[] { cnb.z(-97998268791594L), cnb.z(-97890894609194L) });
+                ((zb)b2).k(new String[] { StaticUtils.decryptString(-97998268791594L), StaticUtils.decryptString(-97890894609194L) });
                 bag2.b = (zb)b2;
                 return a2;
             }
@@ -249,11 +249,11 @@ public final class ws implements bgf
             }
             case 19: {
                 final bag bag3 = (bag)o;
-                final String z4 = cnb.z(-97169340103466L);
+                final String z4 = StaticUtils.decryptString(-97169340103466L);
                 bag3.getClass();
                 bag3.a = la.ab((Object[])new String[] { z4 });
                 final Object b3 = new Object();
-                ((zb)b3).k(new String[] { cnb.z(-98625334016810L), cnb.z(-98496484997930L) });
+                ((zb)b3).k(new String[] { StaticUtils.decryptString(-98625334016810L), StaticUtils.decryptString(-98496484997930L) });
                 bag3.b = (zb)b3;
                 return a2;
             }
@@ -265,13 +265,13 @@ public final class ws implements bgf
                 final bag bag4 = (bag)o;
                 final Object b4 = new Object();
                 String s;
-                if (!cnb.isNewerThanArgVerAndNotPlay(ewk.d) && !cnb.isNewerThanArgVerAndPlay(ewh.d)) {
-                    s = cnb.z(-96971771607850L);
+                if (!StaticUtils.isNewerThanArgVerAndNotPlay(ewk.d) && !StaticUtils.isNewerThanArgVerAndPlay(ewh.d)) {
+                    s = StaticUtils.decryptString(-96971771607850L);
                 }
                 else {
-                    s = cnb.z(-97654671407914L);
+                    s = StaticUtils.decryptString(-97654671407914L);
                 }
-                ((zb)b4).k(new String[] { s, cnb.z(-96890167229226L) });
+                ((zb)b4).k(new String[] { s, StaticUtils.decryptString(-96890167229226L) });
                 bag4.getClass();
                 bag4.b = (zb)b4;
                 return a2;
@@ -283,7 +283,7 @@ public final class ws implements bgf
             case 15: {
                 final bag bag5 = (bag)o;
                 final Object b5 = new Object();
-                ((zb)b5).k(new String[] { cnb.z(-76111115451178L), cnb.z(-76020921137962L) });
+                ((zb)b5).k(new String[] { StaticUtils.decryptString(-76111115451178L), StaticUtils.decryptString(-76020921137962L) });
                 bag5.getClass();
                 bag5.b = (zb)b5;
                 return a2;
@@ -294,11 +294,11 @@ public final class ws implements bgf
             }
             case 13: {
                 final bah bah2 = (bah)o;
-                final String z5 = cnb.z(-379417410927402L);
+                final String z5 = StaticUtils.decryptString(-379417410927402L);
                 bah2.getClass();
                 bah2.a = la.ab((Object[])new String[] { z5 });
                 final Object d2 = new Object();
-                ((cdj)d2).t(new String[] { cnb.z(-379851202624298L), cnb.z(-379761008311082L) });
+                ((cdj)d2).t(new String[] { StaticUtils.decryptString(-379851202624298L), StaticUtils.decryptString(-379761008311082L) });
                 bah2.d = (cdj)d2;
                 return a2;
             }
@@ -309,7 +309,7 @@ public final class ws implements bgf
             case 11: {
                 final bag bag6 = (bag)o;
                 final Object b6 = new Object();
-                ((zb)b6).k(new String[] { cnb.z(-100124277603114L), cnb.z(-100566659234602L) });
+                ((zb)b6).k(new String[] { StaticUtils.decryptString(-100124277603114L), StaticUtils.decryptString(-100566659234602L) });
                 bag6.getClass();
                 bag6.b = (zb)b6;
                 return a2;
@@ -332,12 +332,12 @@ public final class ws implements bgf
                 ((cdj)d3).q(new Class[] { bf3, clazz2 });
                 o = new fj();
                 final Object o5 = new Object();
-                cdj.l((cdj)o5, cnb.z(-99265284143914L));
-                ((cdj)o5).s(cnb.z(-100635378711338L));
+                cdj.l((cdj)o5, StaticUtils.decryptString(-99265284143914L));
+                ((cdj)o5).s(StaticUtils.decryptString(-100635378711338L));
                 ((fj)o).f((cdj)o5);
                 final Object o6 = new Object();
-                cdj.l((cdj)o6, cnb.z(-101094940212010L));
-                ((cdj)o6).s(cnb.z(-100304666229546L));
+                cdj.l((cdj)o6, StaticUtils.decryptString(-101094940212010L));
+                ((cdj)o6).s(StaticUtils.decryptString(-100304666229546L));
                 ((fj)o).f((cdj)o6);
                 ((cdj)d3).j = (fj)o;
                 bah3.getClass();
@@ -354,7 +354,7 @@ public final class ws implements bgf
             case 6: {
                 final blr blr = (blr)o;
                 final Integer value = 3;
-                final String z6 = cnb.z(-546534588414762L);
+                final String z6 = StaticUtils.decryptString(-546534588414762L);
                 final blq d4 = awp.d(blr.f, blr.a, blr.b, (blq)null);
                 final blu f2 = blr.f;
                 final Class<LinearLayout> clazz4 = LinearLayout.class;
@@ -396,7 +396,7 @@ public final class ws implements bgf
                 else {
                     n5 = -546461573970730L;
                 }
-                background.setColor(Color.parseColor(cnb.z(n5)));
+                background.setColor(Color.parseColor(StaticUtils.decryptString(n5)));
                 background.setCornerRadius(10.0f);
                 ((View)linearLayout).setBackground((Drawable)background);
                 if (f3.size() != size) {
@@ -418,7 +418,7 @@ public final class ws implements bgf
                 final ViewGroup b7 = i.b;
                 final Class a5 = i.a;
                 final blu f4 = i.f;
-                final String z7 = cnb.z(-546985559980842L);
+                final String z7 = StaticUtils.decryptString(-546985559980842L);
                 final blq d5 = awp.d(f4, a5, b7, (blq)null);
                 final Class<ImageView> clazz6 = ImageView.class;
                 Class<ImageView> bf9;
@@ -442,7 +442,7 @@ public final class ws implements bgf
                 else {
                     n6 = -546921135471402L;
                 }
-                imageView.setImageTintList(emc.ai(Color.parseColor(cnb.z(n6))));
+                imageView.setImageTintList(emc.ai(Color.parseColor(StaticUtils.decryptString(n6))));
                 if (f5.size() != size2) {
                     o = new Exception(bjs.o("Performers are not allowed to appear in ", name2, " DSL creation process."));
                     throw o;
@@ -453,7 +453,7 @@ public final class ws implements bgf
                 }
                 me.hd.wauxv.obf.blr.i(i, z7, (Class)bf11);
                 me.hd.wauxv.obf.blr.h(i, h3);
-                final String z8 = cnb.z(-546895365667626L);
+                final String z8 = StaticUtils.decryptString(-546895365667626L);
                 final blq d6 = awp.d(f4, a5, b7, (blq)null);
                 Class<TextView> bf12;
                 if ((bf12 = cnf.bf(dal.b((Class)TextView.class))) == null) {
@@ -476,7 +476,7 @@ public final class ws implements bgf
                 else {
                     n7 = -546826646190890L;
                 }
-                textView3.setTextColor(Color.parseColor(cnb.z(n7)));
+                textView3.setTextColor(Color.parseColor(StaticUtils.decryptString(n7)));
                 if (f5.size() == size3) {
                     Class<TextView> bf14 = cnf.bf(dal.b((Class)TextView.class));
                     if (bf14 == null) {
@@ -494,11 +494,11 @@ public final class ws implements bgf
                 return a2;
             }
             case 4: {
-                final bmm bmm2 = (bmm)o;
+                final HookParam bmm2 = (HookParam)o;
                 bmm2.getClass();
                 Object x2 = null;
                 try {
-                    if ((o = bmm2.d()[0]) == null) {}
+                    if ((o = bmm2.getArgs()[0]) == null) {}
                 }
                 finally {
                     final Throwable t3;
@@ -511,7 +511,7 @@ public final class ws implements bgf
                 final LinearLayout linearLayout2 = (LinearLayout)x2;
                 final int a6 = bte.a;
                 final azg r3 = dqc.bi((Object)linearLayout2).r();
-                ((cbh)r3).ab = cnb.z(-546302660180778L);
+                ((cbh)r3).ab = "o";
                 o = aaz.e(r3.c());
                 o = ((azk)o).e();
                 bzo.n(o);
@@ -545,7 +545,7 @@ public final class ws implements bgf
                         o = ((Adapter)adapter).getView(j, (View)null, (ViewGroup)gridView).getTag();
                         final int a8 = bte.a;
                         final azg r6 = dqc.bi(o).r();
-                        ((cbh)r6).ab = cnb.z(-546311250115370L);
+                        ((cbh)r6).ab = "e";
                         o = aaz.e(r6.c());
                         o = ((azk)o).e();
                         bzo.n(o);
@@ -573,289 +573,289 @@ public final class ws implements bgf
                                                                                                 break Label_5310;
                                                                                             }
                                                                                             case 2102144823: {
-                                                                                                if (!string.equals(cnb.z(-547019919719210L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547019919719210L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5189;
                                                                                             }
                                                                                             case 2011082565: {
-                                                                                                if (!string.equals(cnb.z(-545422191885098L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545422191885098L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5103;
                                                                                             }
                                                                                             case 1965687765: {
-                                                                                                if (!string.equals(cnb.z(-547406466775850L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547406466775850L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5220;
                                                                                             }
                                                                                             case 1382589264: {
-                                                                                                if (!string.equals(cnb.z(-547088639195946L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547088639195946L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5134;
                                                                                             }
                                                                                             case 1345526795: {
-                                                                                                if (!string.equals(cnb.z(-547127293901610L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547127293901610L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4732;
                                                                                             }
                                                                                             case 1105704745: {
-                                                                                                if (!string.equals(cnb.z(-545572515740458L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545572515740458L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5321;
                                                                                             }
                                                                                             case 1105685592: {
-                                                                                                if (!string.equals(cnb.z(-547384991939370L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547384991939370L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break;
                                                                                             }
                                                                                             case 1095724396: {
-                                                                                                if (!string.equals(cnb.z(-545864573516586L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545864573516586L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5321;
                                                                                             }
                                                                                             case 1095702786: {
-                                                                                                if (!string.equals(cnb.z(-545611170446122L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545611170446122L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break;
                                                                                             }
                                                                                             case 1089441742: {
-                                                                                                if (!string.equals(cnb.z(-545898933254954L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545898933254954L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5321;
                                                                                             }
                                                                                             case 1084437451: {
-                                                                                                if (!string.equals(cnb.z(-545791559072554L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545791559072554L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5321;
                                                                                             }
                                                                                             case 1005034066: {
-                                                                                                if (!string.equals(cnb.z(-547217488214826L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547217488214826L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4598;
                                                                                             }
                                                                                             case 937455802: {
-                                                                                                if (!string.equals(cnb.z(-545435076786986L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545435076786986L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4598;
                                                                                             }
                                                                                             case 777897260: {
-                                                                                                if (!string.equals(cnb.z(-545701364759338L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545701364759338L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4969;
                                                                                             }
                                                                                             case 418957516: {
-                                                                                                if (!string.equals(cnb.z(-545645530184490L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545645530184490L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5321;
                                                                                             }
                                                                                             case 315964195: {
-                                                                                                if (!string.equals(cnb.z(-547247552985898L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547247552985898L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5321;
                                                                                             }
                                                                                             case 218729015: {
-                                                                                                if (!string.equals(cnb.z(-547432236579626L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547432236579626L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4969;
                                                                                             }
                                                                                             case 108713756: {
-                                                                                                if (!string.equals(cnb.z(-545808738941738L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545808738941738L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break;
                                                                                             }
                                                                                             case 74710533: {
-                                                                                                if (!string.equals(cnb.z(-547148768738090L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547148768738090L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4677;
                                                                                             }
                                                                                             case 67881559: {
-                                                                                                if (!string.equals(cnb.z(-545392127114026L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545392127114026L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5048;
                                                                                             }
                                                                                             case 63344207: {
-                                                                                                if (!string.equals(cnb.z(-546281185344298L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-546281185344298L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4914;
                                                                                             }
                                                                                             case 32167638: {
-                                                                                                if (!string.equals(cnb.z(-547492366121770L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547492366121770L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4598;
                                                                                             }
                                                                                             case 2219344: {
-                                                                                                if (!string.equals(cnb.z(-545671299988266L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545671299988266L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4835;
                                                                                             }
                                                                                             case 1233007: {
-                                                                                                if (!string.equals(cnb.z(-547509545990954L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547509545990954L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4677;
                                                                                             }
                                                                                             case 1225917: {
-                                                                                                if (!string.equals(cnb.z(-545735724497706L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545735724497706L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4677;
                                                                                             }
                                                                                             case 1174330: {
-                                                                                                if (!string.equals(cnb.z(-545752904366890L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545752904366890L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4732;
                                                                                             }
                                                                                             case 1173187: {
-                                                                                                if (!string.equals(cnb.z(-545538156002090L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545538156002090L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4732;
                                                                                             }
                                                                                             case 1026211: {
-                                                                                                if (!string.equals(cnb.z(-545757199334186L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545757199334186L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5189;
                                                                                             }
                                                                                             case 1013408: {
-                                                                                                if (!string.equals(cnb.z(-545714249661226L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545714249661226L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5189;
                                                                                             }
                                                                                             case 994939: {
-                                                                                                if (!string.equals(cnb.z(-547281912724266L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547281912724266L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4835;
                                                                                             }
                                                                                             case 991405: {
-                                                                                                if (!string.equals(cnb.z(-545843098680106L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545843098680106L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4835;
                                                                                             }
                                                                                             case 975943: {
-                                                                                                if (!string.equals(cnb.z(-546276890377002L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-546276890377002L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4914;
                                                                                             }
                                                                                             case 969785: {
-                                                                                                if (!string.equals(cnb.z(-547174538541866L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547174538541866L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5251;
                                                                                             }
                                                                                             case 965012: {
-                                                                                                if (!string.equals(cnb.z(-545482321427242L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545482321427242L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4914;
                                                                                             }
                                                                                             case 872500: {
-                                                                                                if (!string.equals(cnb.z(-547015624751914L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547015624751914L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5048;
                                                                                             }
                                                                                             case 837465: {
-                                                                                                if (!string.equals(cnb.z(-545525271100202L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545525271100202L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_4969;
                                                                                             }
                                                                                             case 831636: {
-                                                                                                if (!string.equals(cnb.z(-545478026459946L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545478026459946L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5282;
                                                                                             }
                                                                                             case 831624: {
-                                                                                                if (!string.equals(cnb.z(-546255415540522L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-546255415540522L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5282;
                                                                                             }
                                                                                             case 825935: {
-                                                                                                if (!string.equals(cnb.z(-546319840049962L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-546319840049962L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5048;
                                                                                             }
                                                                                             case 809968: {
-                                                                                                if (!string.equals(cnb.z(-547556790631210L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547556790631210L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5103;
                                                                                             }
                                                                                             case 809751: {
-                                                                                                if (!string.equals(cnb.z(-545417896917802L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545417896917802L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5103;
                                                                                             }
                                                                                             case 696282: {
-                                                                                                if (!string.equals(cnb.z(-545585400642346L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545585400642346L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5134;
                                                                                             }
                                                                                             case 682743: {
-                                                                                                if (!string.equals(cnb.z(-547462301350698L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547462301350698L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5317;
                                                                                             }
                                                                                             case 678182: {
-                                                                                                if (!string.equals(cnb.z(-545709954693930L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545709954693930L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5189;
                                                                                             }
                                                                                             case 661953: {
-                                                                                                if (!string.equals(cnb.z(-545606875478826L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545606875478826L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5220;
                                                                                             }
                                                                                             case -362284748: {
-                                                                                                if (!string.equals(cnb.z(-545542450969386L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-545542450969386L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5251;
                                                                                             }
                                                                                             case -1078316749: {
-                                                                                                if (!string.equals(cnb.z(-546238235671338L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-546238235671338L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5282;
                                                                                             }
                                                                                             case -1672428307: {
-                                                                                                if (!string.equals(cnb.z(-547466596317994L))) {
+                                                                                                if (!string.equals(StaticUtils.decryptString(-547466596317994L))) {
                                                                                                     break Label_5310;
                                                                                                 }
                                                                                                 break Label_5317;
@@ -909,29 +909,29 @@ public final class ws implements bgf
                             n9 = 0x600800a6;
                         }
                         list2.add(new wz(n9, string, (bfu)new ww((Object)adapterView$OnItemClickListener, gridView, j, 0)));
-                        if (la.s((Object[])new String[] { cnb.z(-547329157364522L), cnb.z(-547350632201002L), cnb.z(-547286207691562L) }, (Object)string) >= 0) {
+                        if (la.s((Object[])new String[] { StaticUtils.decryptString(-547329157364522L), StaticUtils.decryptString(-547350632201002L), StaticUtils.decryptString(-547286207691562L) }, (Object)string) >= 0) {
                             final int hashCode2 = string.hashCode();
                             String s2 = null;
                             Label_5545: {
                                 if (hashCode2 != 965012) {
                                     if (hashCode2 != 975943) {
                                         if (hashCode2 == 0x03c68e4f) {
-                                            if (string.equals(cnb.z(-546714977041194L))) {
-                                                s2 = cnb.z(-546641962597162L);
+                                            if (string.equals(StaticUtils.decryptString(-546714977041194L))) {
+                                                s2 = StaticUtils.decryptString(-546641962597162L);
                                                 break Label_5545;
                                             }
                                         }
                                     }
-                                    else if (string.equals(cnb.z(-547311977495338L))) {
-                                        s2 = cnb.z(-546693502204714L);
+                                    else if (string.equals(StaticUtils.decryptString(-547311977495338L))) {
+                                        s2 = StaticUtils.decryptString(-546693502204714L);
                                         break Label_5545;
                                     }
                                 }
-                                else if (string.equals(cnb.z(-546672027368234L))) {
-                                    s2 = cnb.z(-546676322335530L);
+                                else if (string.equals(StaticUtils.decryptString(-546672027368234L))) {
+                                    s2 = StaticUtils.decryptString(-546676322335530L);
                                     break Label_5545;
                                 }
-                                s2 = cnb.z(-546629077695274L);
+                                s2 = StaticUtils.decryptString(-546629077695274L);
                             }
                             o = new wz(0x600800a4, s2, (bfu)new ww((Object)adapterView$OnItemLongClickListener, gridView, j, 1));
                             list2.add(o);
@@ -944,7 +944,7 @@ public final class ws implements bgf
                     if (!list2.isEmpty()) {
                         final Iterator iterator3 = list2.iterator();
                         while (iterator3.hasNext()) {
-                            if (((wz)iterator3.next()).b.equals(cnb.z(-546577538087722L))) {
+                            if (((wz)iterator3.next()).b.equals(StaticUtils.decryptString(-546577538087722L))) {
                                 o7 = xc.a;
                                 break Label_5688;
                             }
@@ -952,7 +952,7 @@ public final class ws implements bgf
                     }
                     o7 = xd.a;
                 }
-                final List as = dnj.as(((akf)o7).o(), new String[] { cnb.z(-546594717956906L) });
+                final List as = dnj.as(((akf)o7).o(), new String[] { StaticUtils.decryptString(-546594717956906L) });
                 final ArrayList<wz> list3 = new ArrayList<wz>();
                 final Iterator iterator4 = as.iterator();
                 Label_5734:
@@ -982,60 +982,57 @@ public final class ws implements bgf
                         ((ArrayList<wz>)o).add((wz)next2);
                     }
                 }
-                final ArrayList l = xf.l;
+                final ArrayList l = ChatToolbarHook.l;
                 l.clear();
                 l.addAll(aaz.o((Collection)list3, (Iterable)o));
-                final cyt m = xf.m;
+                final cyt m = ChatToolbarHook.m;
                 if (m != null) {
                     ((cyw)m).af();
                 }
                 return a2;
             }
             case 3: {
-                final bmm bmm3 = (bmm)o;
-                final Integer value2 = 1;
-                bmm3.getClass();
-                Object x3 = null;
+                final HookParam bmm3 = (HookParam)o;
+                Object appPanel = null;
                 try {
-                    if ((o = bmm3.d()[0]) == null) {}
+                    if ((o = bmm3.getArgs()[0]) == null) {}
                 }
                 finally {
                     final Throwable t4;
-                    x3 = bhu.x(t4);
+                    appPanel = bhu.x(t4);
                 }
-                if (x3 instanceof dcx) {
-                    x3 = null;
+                if (appPanel instanceof dcx) {
+                    appPanel = null;
                 }
-                bzo.n(x3);
-                final LinearLayout linearLayout3 = (LinearLayout)x3;
-                final int a9 = bte.a;
-                final bmu bi = dqc.bi((Object)linearLayout3);
+                bzo.n(appPanel);
+                final LinearLayout panelLinearLayout = (LinearLayout)appPanel;
+                final SyntheticPileOfMess bi = dqc.getWrapperConfiguration(panelLinearLayout);
                 final azg r7 = bi.r();
-                ((cbh)r7).ab = cnb.z(-546337019919146L);
+                ((cbh)r7).ab = "r";
                 final Object e3 = ((azk)aaz.e(r7.c())).e();
                 bzo.n(e3);
                 final int intValue5 = ((Number)e3).intValue();
                 final azg r8 = bi.r();
-                ((cbh)r8).ab = cnb.z(-546345609853738L);
+                ((cbh)r8).ab = "s";
                 final Object e4 = ((azk)aaz.e(r8.c())).e();
                 bzo.n(e4);
                 final int intValue6 = ((Number)e4).intValue();
                 if (intValue5 == 0 || intValue6 == 0) {
                     final azg r9 = bi.r();
-                    ((cbh)r9).ab = cnb.z(-546354199788330L);
-                    ((azk)aaz.e(r9.c())).f((Object)value2);
+                    ((cbh)r9).ab = "r";
+                    ((azk)aaz.e(r9.c())).f(1);
                     final azg r10 = bi.r();
-                    ((cbh)r10).ab = cnb.z(-546294070246186L);
+                    ((cbh)r10).ab = "s";
                     o = aaz.e(r10.c());
-                    ((azk)o).f((Object)value2);
+                    ((azk)o).f(1);
                 }
                 return a2;
             }
             case 2: {
                 final bah bah4 = (bah)o;
                 final Object d7 = new Object();
-                cdj.l((cdj)d7, cnb.z(-552689276549930L));
-                ((cdj)d7).t(new String[] { cnb.z(-552526067792682L) });
+                cdj.l((cdj)d7, "com.tencent.mm.pluginsdk.ui.chat.AppPanel");
+                ((cdj)d7).t(new String[] { "initAppGrid()" });
                 bah4.getClass();
                 bah4.d = (cdj)d7;
                 return a2;
@@ -1069,13 +1066,13 @@ public final class ws implements bgf
                                 }
                                 final bzy bzy2 = new bzy(view2.getContext());
                                 final eg eg2 = (eg)((ek)bzy2).d;
-                                xf.a.getClass();
-                                eg2.d = xf.c;
-                                final String z9 = cnb.z(-546384264559402L);
+                                ChatToolbarHook.a.getClass();
+                                eg2.d = ChatToolbarHook.c;
+                                final String z9 = StaticUtils.decryptString(-546384264559402L);
                                 o = new bp((Object)bqs, 10);
                                 o = new amw((bfu)o, 0);
                                 ((ek)bzy2).t(z9, (amw)o);
-                                final String z10 = cnb.z(-47455093652266L);
+                                final String z10 = StaticUtils.decryptString(-47455093652266L);
                                 if ((0x3 & 0x2) != 0x0) {
                                     o = new amd(1);
                                 }
@@ -1092,7 +1089,7 @@ public final class ws implements bgf
                         }
                     }
                 }
-                o = new NullPointerException(cnb.z(-637751103847210L).concat(k2.getResources().getResourceName(n10)));
+                o = new NullPointerException(StaticUtils.decryptString(-637751103847210L).concat(k2.getResources().getResourceName(n10)));
                 throw o;
             }
             case 0: {
@@ -1100,7 +1097,7 @@ public final class ws implements bgf
                 final Object d8 = new Object();
                 wv.a.getClass();
                 ((cdj)d8).o(emn.az((amn)wt.a));
-                ((cdj)d8).t(new String[] { cnb.z(-99888054401834L), cnb.z(-99784975186730L) });
+                ((cdj)d8).t(new String[] { StaticUtils.decryptString(-99888054401834L), StaticUtils.decryptString(-99784975186730L) });
                 bah5.getClass();
                 bah5.d = (cdj)d8;
                 return a2;

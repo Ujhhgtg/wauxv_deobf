@@ -40,9 +40,9 @@ public class nu implements oz, esn, cdw, avu, aoh, bfh, app, cvg, ccv, dcc {
                 typedArrayObtainStyledAttributes.getDimensionPixelOffset(2, 0),
                 typedArrayObtainStyledAttributes.getDimensionPixelOffset(1, 0),
                 typedArrayObtainStyledAttributes.getDimensionPixelOffset(3, 0));
-        cnb.v(context, typedArrayObtainStyledAttributes, 4);
-        cnb.v(context, typedArrayObtainStyledAttributes, 9);
-        cnb.v(context, typedArrayObtainStyledAttributes, 7);
+        StaticUtils.v(context, typedArrayObtainStyledAttributes, 4);
+        StaticUtils.v(context, typedArrayObtainStyledAttributes, 9);
+        StaticUtils.v(context, typedArrayObtainStyledAttributes, 7);
         typedArrayObtainStyledAttributes.getDimensionPixelSize(8, 0);
         dgm.m(context, typedArrayObtainStyledAttributes.getResourceId(5, 0),
                 typedArrayObtainStyledAttributes.getResourceId(6, 0), new o(0)).m();

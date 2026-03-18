@@ -48,7 +48,7 @@ public final class mh extends SwitchHook implements bnc {
             throwIfVar1IsNull(objJ);
             if (nullSafeIsEqual(objJ.toString(), "NoTransform" /* "NoTransform" /* "NoTransform" /* cnb.z(-440878392933162L)  */)) {
                 lruCacheMapVar.put(Long.valueOf(msgInfoBean.getMsgId()), true);
-                Object origin = msgInfoBean.getOrigin();
+                Object origin = msgInfoBean.getInstance();
                 MethodResolver methodResolverVarT2 = dqc.getWrapperConfiguration(api).getMethodResolverBasedOnPreviouslyProvidedConfig();
                 methodResolverVarT2.returnType = Void.TYPE;
                 ((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { StaticHelpers7.toDexClass(MsgInfo$ClassMsgInfo.INSTANCE), Boolean.TYPE, dal.getKClassFromClass(Integer.TYPE), dal.getKClassFromClass(Integer.TYPE) }, 4, methodResolverVarT2)).invokeAndThrowIfFailed(origin,

@@ -50,11 +50,11 @@ public final class KClass implements IEmpty5, KClassContainer {
         }
         if (!cls.isLocalClass()) {
             if (!cls.isArray()) {
-                String strAq2 = cnb.aq(cls.getName());
+                String strAq2 = StaticUtils.aq(cls.getName());
                 return strAq2 == null ? cls.getSimpleName() : strAq2;
             }
             Class<?> componentType = cls.getComponentType();
-            if (componentType.isPrimitive() && (strAq = cnb.aq(componentType.getName())) != null) {
+            if (componentType.isPrimitive() && (strAq = StaticUtils.aq(componentType.getName())) != null) {
                 strConcat = strAq.concat("Array");
             }
             return strConcat == null ? "Array" : strConcat;

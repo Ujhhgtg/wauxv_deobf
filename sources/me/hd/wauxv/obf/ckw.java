@@ -157,7 +157,7 @@ public final class ckw {
                     }
                     Request request5 = response.request();
                     throwIfVar1IsNull(request5, "<this>");
-                    if (request5.tag(cnb.class) != null) {
+                    if (request5.tag(StaticUtils.class) != null) {
                         throw new ClassCastException();
                     }
                 }

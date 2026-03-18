@@ -76,7 +76,7 @@ public final /* synthetic */ class wx implements bgk {
                     throw new cth("View with id \"" + strZ2 + "\" is not a "
                             + (clsBf2 != null ? clsBf2 : ImageView.class).getName() + ".");
                 }
-                imageView.setImageResource(wzVar.a);
+                imageView.setImageResource(wzVar.iconId);
                 String strZ3 = "icon" /* "icon" /* "icon" /* cnb.z(-552762290993962L)  */;
                 View viewJ3 = bluVar.j(strZ3);
                 if (!(viewJ3 instanceof ImageView)) {

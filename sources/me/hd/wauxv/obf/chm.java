@@ -40,10 +40,10 @@ import net.bytebuddy.utility.JavaConstant;
 public final class chm implements dom {
     public static final cbm a;
     public static final ent b;
-    public Object c;
-    public Object d;
-    public Object e;
-    public Object f;
+    public Object var1;
+    public Object var2;
+    public Object var3;
+    public Object var4;
 
     static {
         int i = 2;
@@ -52,10 +52,10 @@ public final class chm implements dom {
     }
 
     public /* synthetic */ chm(Object obj, Object obj2, Object obj3, Object obj4) {
-        this.d = obj2;
-        this.e = obj3;
-        this.f = obj4;
-        this.c = obj;
+        this.var2 = obj2;
+        this.var3 = obj3;
+        this.var4 = obj4;
+        this.var1 = obj;
     }
 
     public static void g(String str, ArrayList arrayList) {
@@ -166,11 +166,11 @@ public final class chm implements dom {
         String str3;
         ArrayList arrayList = new ArrayList();
         chm chmVar = new chm();
-        chmVar.c = str;
-        chmVar.d = new ik(arrayList);
-        chmVar.e = new aap(str);
-        ik ikVar = (ik) chmVar.d;
-        chmVar.f = ((aap) chmVar.e).f();
+        chmVar.var1 = str;
+        chmVar.var2 = new ik(arrayList);
+        chmVar.var3 = new aap(str);
+        ik ikVar = (ik) chmVar.var2;
+        chmVar.var4 = ((aap) chmVar.var3).f();
         while (true) {
             ekj ekjVar = ekj.Backslash;
             boolean zR = chmVar.r(ekjVar);
@@ -182,7 +182,7 @@ public final class chm implements dom {
                 String strP = chmVar.p(ekjVar4, ekjVar3, ekjVar, ekjVar2);
                 ikVar.i(strP != null ? strP : "\\");
             } else {
-                adh adhVar2 = (adh) chmVar.f;
+                adh adhVar2 = (adh) chmVar.var4;
                 boolean zR2 = chmVar.r(ekjVar3);
                 ekj ekjVar5 = ekj.VariableName;
                 ekj ekjVar6 = ekj.Int;
@@ -210,12 +210,12 @@ public final class chm implements dom {
                 if (epbVarQ != null) {
                     continue;
                 } else {
-                    adh adhVar3 = (adh) chmVar.f;
+                    adh adhVar3 = (adh) chmVar.var4;
                     boolean zR3 = chmVar.r(ekjVar3);
                     ekj ekjVar7 = ekj.EOF;
                     if (!zR3 || !chmVar.r(ekj.CurlyOpen) || (strO = chmVar.o(ekjVar6)) == null) {
                         chmVar.t(adhVar3);
-                        adhVar = (adh) chmVar.f;
+                        adhVar = (adh) chmVar.var4;
                         if (chmVar.r(ekjVar2)) {
                             sb = new StringBuilder();
                             while (true) {
@@ -227,16 +227,16 @@ public final class chm implements dom {
                                     } else {
                                         sb.append('\\');
                                     }
-                                } else if (((ekj) ((adh) chmVar.f).d) == ekjVar7) {
+                                } else if (((ekj) ((adh) chmVar.var4).d) == ekjVar7) {
                                     chmVar.t(adhVar);
                                 } else {
                                     sb.append(chmVar.p(new ekj[0]));
                                 }
                             }
                         } else {
-                            chmVar.t((adh) chmVar.f);
+                            chmVar.t((adh) chmVar.var4);
                         }
-                        if (((ekj) ((adh) chmVar.f).d) == ekjVar7) {
+                        if (((ekj) ((adh) chmVar.var4).d) == ekjVar7) {
                             return new aao((ArrayList) ikVar.d, (ArrayList) ikVar.c);
                         }
                         ikVar.i(chmVar.p(new ekj[0]));
@@ -252,10 +252,10 @@ public final class chm implements dom {
                                 }
                                 g(strP2, arrayList2);
                             } else {
-                                adh adhVar4 = (adh) chmVar.f;
+                                adh adhVar4 = (adh) chmVar.var4;
                                 if (((ekj) adhVar4.d) == ekjVar7) {
                                     chmVar.t(adhVar3);
-                                    adhVar = (adh) chmVar.f;
+                                    adhVar = (adh) chmVar.var4;
                                     if (chmVar.r(ekjVar2)) {
                                         sb = new StringBuilder();
                                         while (true) {
@@ -267,16 +267,16 @@ public final class chm implements dom {
                                                 } else {
                                                     sb.append('\\');
                                                 }
-                                            } else if (((ekj) ((adh) chmVar.f).d) == ekjVar7) {
+                                            } else if (((ekj) ((adh) chmVar.var4).d) == ekjVar7) {
                                                 chmVar.t(adhVar);
                                             } else {
                                                 sb.append(chmVar.p(new ekj[0]));
                                             }
                                         }
                                     } else {
-                                        chmVar.t((adh) chmVar.f);
+                                        chmVar.t((adh) chmVar.var4);
                                     }
-                                    if (((ekj) ((adh) chmVar.f).d) == ekjVar7) {
+                                    if (((ekj) ((adh) chmVar.var4).d) == ekjVar7) {
                                         return new aao((ArrayList) ikVar.d, (ArrayList) ikVar.c);
                                     }
                                     ikVar.i(chmVar.p(new ekj[0]));
@@ -287,18 +287,18 @@ public final class chm implements dom {
                                     }
                                     if (strO2 != null) {
                                         str3 = str2;
-                                        arrayList2.add(new epb(((adh) chmVar.f).b, strO2, "", null));
+                                        arrayList2.add(new epb(((adh) chmVar.var4).b, strO2, "", null));
                                     } else {
                                         str3 = str2;
                                         epb epbVarQ2 = chmVar.q();
                                         if (epbVarQ2 != null) {
-                                            int i2 = ((adh) chmVar.f).b;
+                                            int i2 = ((adh) chmVar.var4).b;
                                             epbVarQ2.c = i2;
                                             epbVarQ2.d = i2;
                                             arrayList2.add(epbVarQ2);
                                         } else {
-                                            String str4 = (String) chmVar.c;
-                                            adh adhVar5 = (adh) chmVar.f;
+                                            String str4 = (String) chmVar.var1;
+                                            adh adhVar5 = (adh) chmVar.var4;
                                             int i3 = adhVar5.b;
                                             g(str4.substring(i3, adhVar5.c + i3), arrayList2);
                                             chmVar.al();
@@ -313,10 +313,10 @@ public final class chm implements dom {
                         if (chmVar.r(ekjVar8)) {
                             ArrayList arrayList3 = new ArrayList();
                             while (true) {
-                                adh adhVar6 = (adh) chmVar.f;
+                                adh adhVar6 = (adh) chmVar.var4;
                                 StringBuilder sb2 = new StringBuilder();
                                 while (true) {
-                                    ekj ekjVar9 = (ekj) ((adh) chmVar.f).d;
+                                    ekj ekjVar9 = (ekj) ((adh) chmVar.var4).d;
                                     ekj ekjVar10 = ekj.Comma;
                                     if (ekjVar9 == ekjVar10 || ekjVar9 == ekjVar8) {
                                         if (sb2.length() == 0) {
@@ -352,13 +352,13 @@ public final class chm implements dom {
                                         } else {
                                             sb2.append('\\');
                                         }
-                                    } else if (((ekj) ((adh) chmVar.f).d) != ekjVar7) {
+                                    } else if (((ekj) ((adh) chmVar.var4).d) != ekjVar7) {
                                         sb2.append(chmVar.p(new ekj[0]));
                                     } else {
                                         chmVar.t(adhVar6);
                                     }
                                     chmVar.t(adhVar3);
-                                    adhVar = (adh) chmVar.f;
+                                    adhVar = (adh) chmVar.var4;
                                     if (chmVar.r(ekjVar2)) {
                                         sb = new StringBuilder();
                                         while (true) {
@@ -370,16 +370,16 @@ public final class chm implements dom {
                                                 } else {
                                                     sb.append('\\');
                                                 }
-                                            } else if (((ekj) ((adh) chmVar.f).d) == ekjVar7) {
+                                            } else if (((ekj) ((adh) chmVar.var4).d) == ekjVar7) {
                                                 chmVar.t(adhVar);
                                             } else {
                                                 sb.append(chmVar.p(new ekj[0]));
                                             }
                                         }
                                     } else {
-                                        chmVar.t((adh) chmVar.f);
+                                        chmVar.t((adh) chmVar.var4);
                                     }
-                                    if (((ekj) ((adh) chmVar.f).d) == ekjVar7) {
+                                    if (((ekj) ((adh) chmVar.var4).d) == ekjVar7) {
                                         return new aao((ArrayList) ikVar.d, (ArrayList) ikVar.c);
                                     }
                                     ikVar.i(chmVar.p(new ekj[0]));
@@ -400,7 +400,7 @@ public final class chm implements dom {
                                 ctqVar.d = connectivityMonitorVar;
                             } else {
                                 chmVar.t(adhVar3);
-                                adhVar = (adh) chmVar.f;
+                                adhVar = (adh) chmVar.var4;
                                 if (chmVar.r(ekjVar2)) {
                                     sb = new StringBuilder();
                                     while (true) {
@@ -412,16 +412,16 @@ public final class chm implements dom {
                                             } else {
                                                 sb.append('\\');
                                             }
-                                        } else if (((ekj) ((adh) chmVar.f).d) == ekjVar7) {
+                                        } else if (((ekj) ((adh) chmVar.var4).d) == ekjVar7) {
                                             chmVar.t(adhVar);
                                         } else {
                                             sb.append(chmVar.p(new ekj[0]));
                                         }
                                     }
                                 } else {
-                                    chmVar.t((adh) chmVar.f);
+                                    chmVar.t((adh) chmVar.var4);
                                 }
-                                if (((ekj) ((adh) chmVar.f).d) == ekjVar7) {
+                                if (((ekj) ((adh) chmVar.var4).d) == ekjVar7) {
                                     return new aao((ArrayList) ikVar.d, (ArrayList) ikVar.c);
                                 }
                                 ikVar.i(chmVar.p(new ekj[0]));
@@ -430,7 +430,7 @@ public final class chm implements dom {
                             ikVar.h(Integer.parseInt(strO), null);
                         } else {
                             chmVar.t(adhVar3);
-                            adhVar = (adh) chmVar.f;
+                            adhVar = (adh) chmVar.var4;
                             if (chmVar.r(ekjVar2)) {
                                 sb = new StringBuilder();
                                 while (true) {
@@ -442,16 +442,16 @@ public final class chm implements dom {
                                         } else {
                                             sb.append('\\');
                                         }
-                                    } else if (((ekj) ((adh) chmVar.f).d) == ekjVar7) {
+                                    } else if (((ekj) ((adh) chmVar.var4).d) == ekjVar7) {
                                         chmVar.t(adhVar);
                                     } else {
                                         sb.append(chmVar.p(new ekj[0]));
                                     }
                                 }
                             } else {
-                                chmVar.t((adh) chmVar.f);
+                                chmVar.t((adh) chmVar.var4);
                             }
-                            if (((ekj) ((adh) chmVar.f).d) == ekjVar7) {
+                            if (((ekj) ((adh) chmVar.var4).d) == ekjVar7) {
                                 return new aao((ArrayList) ikVar.d, (ArrayList) ikVar.c);
                             }
                             ikVar.i(chmVar.p(new ekj[0]));
@@ -485,8 +485,8 @@ public final class chm implements dom {
     }
 
     public static void n(final chm chmVar, final String str, final IInvokable bgfVar) {
-        Context context = (Context) chmVar.c;
-        final exf exfVar = (exf) chmVar.f;
+        Context context = (Context) chmVar.var1;
+        final exf exfVar = (exf) chmVar.var4;
         exfVar.g.put(
                 StaticHelpers6.concat(str,
                         chmVar.ag() + JavaConstant.Dynamic.DEFAULT_NAME
@@ -530,7 +530,7 @@ public final class chm implements dom {
                         Intent intent = (Intent) obj2;
                         boolean z = exf.a;
                         chm chmVar2 = this.a;
-                        boolean zF = nullSafeIsEqual(str3, z ? exf.j((String) chmVar2.d) : exf.k((Context) chmVar2.c));
+                        boolean zF = nullSafeIsEqual(str3, z ? exf.j((String) chmVar2.var2) : exf.k((Context) chmVar2.var1));
                         Kotlin$Unit kotlinUnitVar = Kotlin$Unit.INSTANCE;
                         if (zF) {
                             try {
@@ -545,8 +545,8 @@ public final class chm implements dom {
                                 objX = null;
                             }
                             tx txVar = (tx) objX;
-                            ConcurrentHashMap concurrentHashMap = (ConcurrentHashMap) chmVar2.e;
-                            if (cnb.k && txVar != null) {
+                            ConcurrentHashMap concurrentHashMap = (ConcurrentHashMap) chmVar2.var3;
+                            if (StaticUtils.k && txVar != null) {
                                 tw twVar = txVar.e;
                                 String str4 = twVar.a;
                                 Object obj3 = twVar.b;
@@ -681,7 +681,7 @@ public final class chm implements dom {
     }
 
     public SomeFragmentManager aa(String str) {
-        for (FragmentManager fragmentManagerVar : ((HashMap) this.d).values()) {
+        for (FragmentManager fragmentManagerVar : ((HashMap) this.var2).values()) {
             if (fragmentManagerVar != null) {
                 SomeFragmentManager someFragmentManagerVarAa = fragmentManagerVar.c;
                 if (!str.equals(someFragmentManagerVarAa.aw)) {
@@ -696,7 +696,7 @@ public final class chm implements dom {
     }
 
     public doc ab(da daVar) {
-        ArrayList arrayList = (ArrayList) this.c;
+        ArrayList arrayList = (ArrayList) this.var1;
         int size = arrayList.size();
         for (int i = 0; i < size; i++) {
             doc docVar = (doc) arrayList.get(i);
@@ -704,14 +704,14 @@ public final class chm implements dom {
                 return docVar;
             }
         }
-        doc docVar2 = new doc((Context) this.e, daVar);
+        doc docVar2 = new doc((Context) this.var3, daVar);
         arrayList.add(docVar2);
         return docVar2;
     }
 
     public ArrayList ac() {
         ArrayList arrayList = new ArrayList();
-        for (FragmentManager fragmentManagerVar : ((HashMap) this.d).values()) {
+        for (FragmentManager fragmentManagerVar : ((HashMap) this.var2).values()) {
             if (fragmentManagerVar != null) {
                 arrayList.add(fragmentManagerVar);
             }
@@ -721,7 +721,7 @@ public final class chm implements dom {
 
     public ArrayList ad() {
         ArrayList arrayList = new ArrayList();
-        for (FragmentManager fragmentManagerVar : ((HashMap) this.d).values()) {
+        for (FragmentManager fragmentManagerVar : ((HashMap) this.var2).values()) {
             if (fragmentManagerVar != null) {
                 arrayList.add(fragmentManagerVar.c);
             } else {
@@ -734,7 +734,7 @@ public final class chm implements dom {
     public synchronized ArrayList ae(Class cls) {
         ArrayList arrayList;
         arrayList = new ArrayList();
-        for (chl chlVar : (ArrayList) this.c) {
+        for (chl chlVar : (ArrayList) this.var1) {
             if (!arrayList.contains(chlVar.b) && chlVar.a.isAssignableFrom(cls)) {
                 arrayList.add(chlVar.b);
             }
@@ -744,17 +744,17 @@ public final class chm implements dom {
 
     public List af() {
         ArrayList arrayList;
-        if (((ArrayList) this.c).isEmpty()) {
+        if (((ArrayList) this.var1).isEmpty()) {
             return Collections.EMPTY_LIST;
         }
-        synchronized (((ArrayList) this.c)) {
-            arrayList = new ArrayList((ArrayList) this.c);
+        synchronized (((ArrayList) this.var1)) {
+            arrayList = new ArrayList((ArrayList) this.var1);
         }
         return arrayList;
     }
 
     public String ag() {
-        return concatVar2Var1(((String) this.d).hashCode(), JavaConstant.Dynamic.DEFAULT_NAME);
+        return concatVar2Var1(((String) this.var2).hashCode(), JavaConstant.Dynamic.DEFAULT_NAME);
     }
 
     /*
@@ -779,9 +779,9 @@ public final class chm implements dom {
         boolean zIsInstance;
         erk erkVarB;
         throwIfVar1IsNull(str, "key");
-        synchronized (((dop) this.f)) {
+        synchronized (((dop) this.var4)) {
             try {
-                erq erqVar = (erq) this.c;
+                erq erqVar = (erq) this.var1;
                 erqVar.getClass();
                 erkVar = (erk) erqVar.a.get(str);
                 Class clsBe = zcVar.javaClass;
@@ -799,7 +799,7 @@ public final class chm implements dom {
                     zIsInstance = clsBe.isInstance(erkVar);
                 }
                 if (zIsInstance) {
-                    ero eroVar = (ero) this.d;
+                    ero eroVar = (ero) this.var2;
                     if (eroVar instanceof deq) {
                         deq deqVar = (deq) eroVar;
                         throwIfVar1IsNull(erkVar);
@@ -814,9 +814,9 @@ public final class chm implements dom {
                     throwIfVar1IsNull(erkVar,
                             "null cannot be cast to non-null type T of androidx.lifecycle.viewmodel.ViewModelProviderImpl.getViewModel");
                 } else {
-                    chq chqVar = new chq((ahx) this.e);
+                    chq chqVar = new chq((ahx) this.var3);
                     chqVar.c.put(erp.s, str);
-                    ero eroVar2 = (ero) this.d;
+                    ero eroVar2 = (ero) this.var2;
                     throwIfVar1IsNull(eroVar2, "factory");
                     try {
                         try {
@@ -828,7 +828,7 @@ public final class chm implements dom {
                         erkVarB = eroVar2.l(HugeSyntheticPileOfHelpers.getJavaClass(zcVar), chqVar);
                     }
                     erkVar = erkVarB;
-                    erq erqVar2 = (erq) this.c;
+                    erq erqVar2 = (erq) this.var1;
                     erqVar2.getClass();
                     throwIfVar1IsNull(erkVar, "viewModel");
                     erk erkVar2 = (erk) erqVar2.a.put(str, erkVar);
@@ -844,13 +844,13 @@ public final class chm implements dom {
     }
 
     public int ai() {
-        return ((dll) this.e).a.length();
+        return ((dll) this.var3).a.length();
     }
 
     public void aj(FragmentManager fragmentManagerVar) {
         SomeFragmentManager someFragmentManagerVar = fragmentManagerVar.c;
         String str = someFragmentManagerVar.aw;
-        HashMap map = (HashMap) this.d;
+        HashMap map = (HashMap) this.var2;
         if (map.get(str) != null) {
             return;
         }
@@ -861,10 +861,10 @@ public final class chm implements dom {
     }
 
     public void ak(FragmentManager fragmentManagerVar) {
-        HashMap map = (HashMap) this.d;
+        HashMap map = (HashMap) this.var2;
         SomeFragmentManager someFragmentManagerVar = fragmentManagerVar.c;
         if (someFragmentManagerVar.bv) {
-            ((bej) this.f).l(someFragmentManagerVar);
+            ((bej) this.var4).l(someFragmentManagerVar);
         }
         if (map.get(someFragmentManagerVar.aw) == fragmentManagerVar && ((FragmentManager) map.put(someFragmentManagerVar.aw, null)) != null && beg.ar(2)) {
             Log.v("FragmentManager", "Removed fragment from active set " + someFragmentManagerVar);
@@ -872,30 +872,30 @@ public final class chm implements dom {
     }
 
     public void al() {
-        if (((ekj) ((adh) this.f).d) == ekj.EOF) {
+        if (((ekj) ((adh) this.var4).d) == ekj.EOF) {
             return;
         }
-        this.f = ((aap) this.e).f();
+        this.var4 = ((aap) this.var3).f();
     }
 
     public boolean am(da daVar, MenuItem menuItem) {
-        return ((ActionMode.Callback) this.d).onActionItemClicked(ab(daVar), new ccd((Context) this.e, (dog) menuItem));
+        return ((ActionMode.Callback) this.var2).onActionItemClicked(ab(daVar), new ccd((Context) this.var3, (dog) menuItem));
     }
 
     public boolean an(da daVar, Menu menu) {
-        ActionMode.Callback callback = (ActionMode.Callback) this.d;
+        ActionMode.Callback callback = (ActionMode.Callback) this.var2;
         doc docVarAb = ab(daVar);
-        dhq dhqVar = (dhq) this.f;
+        dhq dhqVar = (dhq) this.var4;
         Menu ccpVar = (Menu) dhqVar.get(menu);
         if (ccpVar == null) {
-            ccpVar = new ccp((Context) this.e, (cbw) menu);
+            ccpVar = new ccp((Context) this.var3, (cbw) menu);
             dhqVar.put(menu, ccpVar);
         }
         return callback.onCreateActionMode(docVarAb, ccpVar);
     }
 
     public void ao(tx txVar) {
-        if (cnb.k) {
+        if (StaticUtils.k) {
             String strS = arj.s();
             tw twVar = txVar.e;
             String str = twVar.a;
@@ -1073,7 +1073,7 @@ public final class chm implements dom {
     }
 
     public boolean ap(ConnectivityMonitor connectivityMonitorVar) {
-        adh adhVar = (adh) this.f;
+        adh adhVar = (adh) this.var4;
         StringBuilder sb = new StringBuilder();
         while (true) {
             ekj ekjVar = ekj.Forwardslash;
@@ -1082,7 +1082,7 @@ public final class chm implements dom {
             ekj ekjVar3 = ekj.EOF;
             if (!zR) {
                 if (!r(ekjVar2)) {
-                    if (((ekj) ((adh) this.f).d) == ekjVar3) {
+                    if (((ekj) ((adh) this.var4).d) == ekjVar3) {
                         break;
                     }
                     sb.append(p(new ekj[0]));
@@ -1099,7 +1099,7 @@ public final class chm implements dom {
                     if (zR2) {
                         StringBuilder sb2 = new StringBuilder();
                         while (!r(ekjVar4)) {
-                            if (((ekj) ((adh) this.f).d) == ekjVar3) {
+                            if (((ekj) ((adh) this.var4).d) == ekjVar3) {
                                 break;
                             }
                             sb2.append(p(new ekj[0]));
@@ -1135,7 +1135,7 @@ public final class chm implements dom {
                             }
                         }
                     } else {
-                        adh adhVar2 = (adh) this.f;
+                        adh adhVar2 = (adh) this.var4;
                         if (r(ekj.Dollar)) {
                             boolean zR4 = r(ekj.CurlyOpen);
                             String strO2 = o(ekj.Int);
@@ -1193,7 +1193,7 @@ public final class chm implements dom {
                                 }
                             }
                         }
-                        if (((ekj) ((adh) this.f).d) == ekjVar3) {
+                        if (((ekj) ((adh) this.var4).d) == ekjVar3) {
                             break;
                         }
                         arrayList.add(new cof(p(new ekj[0])));
@@ -1205,7 +1205,7 @@ public final class chm implements dom {
     }
 
     public void aq(int i) {
-        ListView listView = (ListView) this.c;
+        ListView listView = (ListView) this.var1;
         long jUptimeMillis = SystemClock.uptimeMillis();
         MotionEvent motionEventObtain = MotionEvent.obtain(jUptimeMillis, jUptimeMillis, 0, 0.0f, 0.0f, 0);
         listView.onTouchEvent(motionEventObtain);
@@ -1220,9 +1220,9 @@ public final class chm implements dom {
     }
 
     public void ar(tx txVar) {
-        String str = (String) this.d;
+        String str = (String) this.var2;
         tw twVar = txVar.e;
-        Context contextH = (Context) this.c;
+        Context contextH = (Context) this.var1;
         if (contextH == null) {
             ki.a.getClass();
             contextH = ki.tryGetApplication();
@@ -1250,17 +1250,17 @@ public final class chm implements dom {
     }
 
     public Bundle as(String str, Bundle bundle) {
-        HashMap map = (HashMap) this.e;
+        HashMap map = (HashMap) this.var3;
         return bundle != null ? (Bundle) map.put(str, bundle) : (Bundle) map.remove(str);
     }
 
     public void at(coi coiVar, int i) {
         Class<?> cls = coiVar.getClass();
-        blq blqVar = (blq) this.c;
+        blq blqVar = (blq) this.var1;
         pn pnVar = (pn) ((bib) blqVar.e).a.get(cls);
         if (pnVar != null) {
-            Object objB = pnVar.b(blqVar, (aji) this.d);
-            dll dllVar = (dll) this.e;
+            Object objB = pnVar.b(blqVar, (aji) this.var2);
+            dll dllVar = (dll) this.var3;
             StringBuilder sb = dllVar.a;
             int length = sb.length();
             int length2 = sb.length();
@@ -1272,10 +1272,10 @@ public final class chm implements dom {
     }
 
     public String au(ekj ekjVar) {
-        adh adhVar = (adh) this.f;
+        adh adhVar = (adh) this.var4;
         StringBuilder sb = new StringBuilder();
         while (true) {
-            ekj ekjVar2 = (ekj) ((adh) this.f).d;
+            ekj ekjVar2 = (ekj) ((adh) this.var4).d;
             if (ekjVar2 == ekjVar) {
                 return sb.toString();
             }
@@ -1299,9 +1299,9 @@ public final class chm implements dom {
 
     public void av() {
         int iD;
-        esa esaVar = (esa) this.d;
-        esa esaVar2 = (esa) this.c;
-        ViewPager2 viewPager2 = (ViewPager2) this.f;
+        esa esaVar = (esa) this.var2;
+        esa esaVar2 = (esa) this.var1;
+        ViewPager2 viewPager2 = (ViewPager2) this.var4;
         int i = R.id.accessibilityActionPageLeft;
         ViewCompat.p(viewPager2, R.id.accessibilityActionPageLeft);
         ViewCompat.notifyAccessibilityChange(viewPager2, 0);
@@ -1338,7 +1338,7 @@ public final class chm implements dom {
     }
 
     public void aw(coi coiVar) {
-        bzs bzsVar = (bzs) ((Map) this.f).get(coiVar.getClass());
+        bzs bzsVar = (bzs) ((Map) this.var4).get(coiVar.getClass());
         if (bzsVar != null) {
             bzsVar.b(this, coiVar);
         } else {
@@ -1356,11 +1356,11 @@ public final class chm implements dom {
     }
 
     public String o(ekj ekjVar) {
-        adh adhVar = (adh) this.f;
+        adh adhVar = (adh) this.var4;
         if (((ekj) adhVar.d) != ekjVar) {
             return null;
         }
-        String str = (String) this.c;
+        String str = (String) this.var1;
         int i = adhVar.b;
         String strSubstring = str.substring(i, adhVar.c + i);
         al();
@@ -1368,16 +1368,16 @@ public final class chm implements dom {
     }
 
     public String p(ekj... ekjVarArr) {
-        String str = (String) this.c;
+        String str = (String) this.var1;
         if (ekjVarArr.length == 0) {
-            adh adhVar = (adh) this.f;
+            adh adhVar = (adh) this.var4;
             int i = adhVar.b;
             String strSubstring = str.substring(i, adhVar.c + i);
             al();
             return strSubstring;
         }
         for (ekj ekjVar : ekjVarArr) {
-            adh adhVar2 = (adh) this.f;
+            adh adhVar2 = (adh) this.var4;
             if (((ekj) adhVar2.d) == ekjVar) {
                 int i2 = adhVar2.b;
                 String strSubstring2 = str.substring(i2, adhVar2.c + i2);
@@ -1390,7 +1390,7 @@ public final class chm implements dom {
 
     public epb q() {
         String strO;
-        adh adhVar = (adh) this.f;
+        adh adhVar = (adh) this.var4;
         ekj ekjVar = ekj.Dollar;
         if (!r(ekjVar) || !r(ekj.CurlyOpen) || (strO = o(ekj.VariableName)) == null) {
             t(adhVar);
@@ -1424,12 +1424,12 @@ public final class chm implements dom {
                     sb.append('\\');
                 }
             } else {
-                adh adhVar2 = (adh) this.f;
+                adh adhVar2 = (adh) this.var4;
                 if (((ekj) adhVar2.d) == ekj.EOF) {
                     t(adhVar);
                     return null;
                 }
-                String str = (String) this.c;
+                String str = (String) this.var1;
                 int i = adhVar2.b;
                 sb.append((CharSequence) str, i, adhVar2.c + i);
                 al();
@@ -1439,7 +1439,7 @@ public final class chm implements dom {
     }
 
     public boolean r(ekj ekjVar) {
-        if (((ekj) ((adh) this.f).d) != ekjVar) {
+        if (((ekj) ((adh) this.var4).d) != ekjVar) {
             return false;
         }
         al();
@@ -1447,26 +1447,26 @@ public final class chm implements dom {
     }
 
     public void s(SomeFragmentManager someFragmentManagerVar) {
-        if (((ArrayList) this.c).contains(someFragmentManagerVar)) {
+        if (((ArrayList) this.var1).contains(someFragmentManagerVar)) {
             throw new IllegalStateException("Fragment already added: " + someFragmentManagerVar);
         }
-        synchronized (((ArrayList) this.c)) {
-            ((ArrayList) this.c).add(someFragmentManagerVar);
+        synchronized (((ArrayList) this.var1)) {
+            ((ArrayList) this.var1).add(someFragmentManagerVar);
         }
         someFragmentManagerVar.bc = true;
     }
 
     public void t(adh adhVar) {
-        aap aapVar = (aap) this.e;
+        aap aapVar = (aap) this.var3;
         aapVar.b = adhVar.b + adhVar.c;
         aapVar.c = 0;
-        this.f = adhVar;
+        this.var4 = adhVar;
     }
 
     public void u(coi coiVar) {
         if (coiVar.m != null) {
             y();
-            ((dll) this.e).d('\n');
+            ((dll) this.var3).d('\n');
         }
     }
 
@@ -1474,15 +1474,15 @@ public final class chm implements dom {
         ArrayList arrayList;
         try {
             arrayList = new ArrayList();
-            for (chl chlVar : (ArrayList) this.c) {
-                if (!((HashSet) this.e).contains(chlVar) && chlVar.a.isAssignableFrom(cls)) {
-                    ((HashSet) this.e).add(chlVar);
+            for (chl chlVar : (ArrayList) this.var1) {
+                if (!((HashSet) this.var3).contains(chlVar) && chlVar.a.isAssignableFrom(cls)) {
+                    ((HashSet) this.var3).add(chlVar);
                     arrayList.add(chlVar.c.u(this));
-                    ((HashSet) this.e).remove(chlVar);
+                    ((HashSet) this.var3).remove(chlVar);
                 }
             }
         } catch (Throwable th) {
-            ((HashSet) this.e).clear();
+            ((HashSet) this.var3).clear();
             throw th;
         }
         return arrayList;
@@ -1492,18 +1492,18 @@ public final class chm implements dom {
         try {
             ArrayList arrayList = new ArrayList();
             boolean z = false;
-            for (chl chlVar : (ArrayList) this.c) {
-                if (((HashSet) this.e).contains(chlVar)) {
+            for (chl chlVar : (ArrayList) this.var1) {
+                if (((HashSet) this.var3).contains(chlVar)) {
                     z = true;
                 } else if (chlVar.a.isAssignableFrom(cls) && chlVar.b.isAssignableFrom(cls2)) {
-                    ((HashSet) this.e).add(chlVar);
+                    ((HashSet) this.var3).add(chlVar);
                     arrayList.add(chlVar.c.u(this));
-                    ((HashSet) this.e).remove(chlVar);
+                    ((HashSet) this.var3).remove(chlVar);
                 }
             }
             if (arrayList.size() > 1) {
-                cbm cbmVar = (cbm) this.d;
-                FactoryPools factoryPoolsVar = (FactoryPools) this.f;
+                cbm cbmVar = (cbm) this.var2;
+                FactoryPools factoryPoolsVar = (FactoryPools) this.var4;
                 cbmVar.getClass();
                 return new le(arrayList, 2, factoryPoolsVar);
             }
@@ -1515,7 +1515,7 @@ public final class chm implements dom {
             }
             throw new dar("Failed to find any ModelLoaders for model: " + cls + " and data: " + cls2);
         } catch (Throwable th) {
-            ((HashSet) this.e).clear();
+            ((HashSet) this.var3).clear();
             throw th;
         }
     }
@@ -1528,7 +1528,7 @@ public final class chm implements dom {
             throw new RuntimeException("This graph contains cyclic dependencies");
         }
         hashSet.add(obj);
-        ArrayList arrayList2 = (ArrayList) ((dhq) this.f).get(obj);
+        ArrayList arrayList2 = (ArrayList) ((dhq) this.var4).get(obj);
         if (arrayList2 != null) {
             int size = arrayList2.size();
             for (int i = 0; i < size; i++) {
@@ -1540,7 +1540,7 @@ public final class chm implements dom {
     }
 
     public void y() {
-        dll dllVar = (dll) this.e;
+        dll dllVar = (dll) this.var3;
         StringBuilder sb = dllVar.a;
         if (sb.length() <= 0 || '\n' == sb.charAt(sb.length() - 1)) {
             return;
@@ -1549,7 +1549,7 @@ public final class chm implements dom {
     }
 
     public SomeFragmentManager z(String str) {
-        FragmentManager fragmentManagerVar = (FragmentManager) ((HashMap) this.d).get(str);
+        FragmentManager fragmentManagerVar = (FragmentManager) ((HashMap) this.var2).get(str);
         if (fragmentManagerVar != null) {
             return fragmentManagerVar.c;
         }
@@ -1559,25 +1559,25 @@ public final class chm implements dom {
     public chm(int i) {
         switch (i) {
             case 5:
-                this.d = new cuw(10);
-                this.f = new dhq(0);
-                this.c = new ArrayList();
-                this.e = new HashSet();
+                this.var2 = new cuw(10);
+                this.var4 = new dhq(0);
+                this.var1 = new ArrayList();
+                this.var3 = new HashSet();
                 break;
             case 6:
-                this.c = new ArrayList();
-                this.d = new HashMap();
-                this.e = new HashMap();
+                this.var1 = new ArrayList();
+                this.var2 = new HashMap();
+                this.var3 = new HashMap();
                 break;
             case 12:
-                this.c = new ku(0);
-                this.d = new SparseArray();
-                this.e = new byc();
-                this.f = new ku(0);
+                this.var1 = new ku(0);
+                this.var2 = new SparseArray();
+                this.var3 = new byc();
+                this.var4 = new ku(0);
                 break;
             default:
-                this.c = new ReentrantReadWriteLock();
-                this.e = new HashMap();
+                this.var1 = new ReentrantReadWriteLock();
+                this.var3 = new HashMap();
                 break;
         }
     }
@@ -1586,10 +1586,10 @@ public final class chm implements dom {
         throwIfVar1IsNull(erqVar, "store");
         throwIfVar1IsNull(eroVar, "factory");
         throwIfVar1IsNull(ahxVar, "defaultExtras");
-        this.c = erqVar;
-        this.d = eroVar;
-        this.e = ahxVar;
-        this.f = new dop(4);
+        this.var1 = erqVar;
+        this.var2 = eroVar;
+        this.var3 = ahxVar;
+        this.var4 = new dop(4);
     }
 
     public chm(Typeface typeface, GenericMetadataIterator3 cdcVar) {
@@ -1597,9 +1597,9 @@ public final class chm implements dom {
         int i2;
         int i3;
         int i4;
-        this.f = typeface;
-        this.c = cdcVar;
-        this.e = new cdd(1024);
+        this.var4 = typeface;
+        this.var1 = cdcVar;
+        this.var3 = new cdd(1024);
         int iF = cdcVar.getVTableOffset(6);
         if (iF != 0) {
             int i5 = iF + cdcVar.b;
@@ -1607,7 +1607,7 @@ public final class chm implements dom {
         } else {
             i = 0;
         }
-        this.d = new char[i * 2];
+        this.var2 = new char[i * 2];
         int iF2 = cdcVar.getVTableOffset(6);
         if (iF2 != 0) {
             int i6 = iF2 + cdcVar.b;
@@ -1619,7 +1619,7 @@ public final class chm implements dom {
             EmojiMetadata emojiMetadataVar = new EmojiMetadata(this, i7);
             FlatBufferTable cdbVarF = emojiMetadataVar.f();
             int iF3 = cdbVarF.getVTableOffset(4);
-            Character.toChars(iF3 != 0 ? ((ByteBuffer) cdbVarF.e).getInt(iF3 + cdbVarF.b) : 0, (char[]) this.d, i7 * 2);
+            Character.toChars(iF3 != 0 ? ((ByteBuffer) cdbVarF.e).getInt(iF3 + cdbVarF.b) : 0, (char[]) this.var2, i7 * 2);
             FlatBufferTable cdbVarF2 = emojiMetadataVar.f();
             int iF4 = cdbVarF2.getVTableOffset(16);
             if (iF4 != 0) {
@@ -1629,7 +1629,7 @@ public final class chm implements dom {
                 i3 = 0;
             }
             cna.g("invalid metadata codepoint length", i3 > 0);
-            cdd cddVar = (cdd) this.e;
+            cdd cddVar = (cdd) this.var3;
             FlatBufferTable cdbVarF3 = emojiMetadataVar.f();
             int iF5 = cdbVarF3.getVTableOffset(16);
             if (iF5 != 0) {

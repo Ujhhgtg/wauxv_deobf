@@ -42,14 +42,14 @@ public final class AutoCleanHook extends SwitchHook implements Runnable {
         AutoCleanHook$ValCleanLastTime valCleanLastTime = AutoCleanHook$ValCleanLastTime.INSTANCE;
         if (unixEpoch - valCleanLastTime.getLong() > AutoCleanHook$ValCleanCycle.INSTANCE.getLong() * 1000) {
             valCleanLastTime.setLong(System.currentTimeMillis());
-            Dispatchers$IO akqVar = Dispatchers$IO.INSTANCE;
+            Dispatchers$IO dispatchersIo = Dispatchers$IO.INSTANCE;
             lw lwVar = new lw(2, null, 0);
-            ahh ahhVarT = KotlinHelpers.t(EmptyCoroutineContext.INSTANCE, akqVar);
-            Dispatchers$Default alcVar2 = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
-            if (ahhVarT != alcVar2 && ahhVarT._w(arj.a) == null) {
-                ahhVarT = ahhVarT._v(alcVar2);
+            ahh ahhVarT = KotlinHelpers.t(EmptyCoroutineContext.INSTANCE, dispatchersIo);
+            Dispatchers$Default dispatchersDefault = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
+            if (ahhVarT != dispatchersDefault && ahhVarT._w(arj.a) == null) {
+                ahhVarT = ahhVarT._v(dispatchersDefault);
             }
-            t dmfVar = new dmf(ahhVarT, true);
+            SomeDispatchedContinuation dmfVar = new SomeBaseDispatchedContinuation(ahhVarT, true);
             dmfVar.h(SomeEnum.DEFAULT, dmfVar, lwVar);
         }
         ((Handler) StaticMainLooperHandlerProvider.HANDLER.getValue()).postDelayed(this, 600000L);

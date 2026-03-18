@@ -73,7 +73,7 @@ public final class awa extends LinearLayout {
         this.q = jpVar;
         TypedArray typedArray = (TypedArray) factoryPoolsVar.e;
         if (typedArray.hasValue(38)) {
-            this.d = cnb.w(getContext(), factoryPoolsVar, 38);
+            this.d = StaticUtils.w(getContext(), factoryPoolsVar, 38);
         }
         if (typedArray.hasValue(39)) {
             this.e = StaticAndroidHelpers.ap(typedArray.getInt(39, -1), null);
@@ -89,7 +89,7 @@ public final class awa extends LinearLayout {
         checkableImageButtonW.setFocusable(false);
         if (!typedArray.hasValue(53)) {
             if (typedArray.hasValue(32)) {
-                this.k = cnb.w(getContext(), factoryPoolsVar, 32);
+                this.k = StaticUtils.w(getContext(), factoryPoolsVar, 32);
             }
             if (typedArray.hasValue(33)) {
                 this.l = StaticAndroidHelpers.ap(typedArray.getInt(33, -1), null);
@@ -105,7 +105,7 @@ public final class awa extends LinearLayout {
             checkableImageButtonW2.setCheckable(typedArray.getBoolean(26, true));
         } else if (typedArray.hasValue(53)) {
             if (typedArray.hasValue(54)) {
-                this.k = cnb.w(getContext(), factoryPoolsVar, 54);
+                this.k = StaticUtils.w(getContext(), factoryPoolsVar, 54);
             }
             if (typedArray.hasValue(55)) {
                 this.l = StaticAndroidHelpers.ap(typedArray.getInt(55, -1), null);
@@ -331,7 +331,7 @@ public final class awa extends LinearLayout {
         CheckableImageButton checkableImageButton = (CheckableImageButton) layoutInflater
                 .inflate(R.layout.design_text_input_end_icon, viewGroup, false);
         checkableImageButton.setId(i);
-        if (cnb.ad(getContext())) {
+        if (StaticUtils.ad(getContext())) {
             ((ViewGroup.MarginLayoutParams) checkableImageButton.getLayoutParams()).setMarginStart(0);
         }
         return checkableImageButton;

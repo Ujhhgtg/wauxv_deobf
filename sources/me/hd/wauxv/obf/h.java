@@ -198,7 +198,7 @@ public final /* synthetic */ class h implements IFunction0 {
                 vy.a.p(true);
                 return kotlinUnitVar;
             case 23:
-                return xf.l;
+                return ChatToolbarHook.l;
             case 24:
                 Dispatchers$Default alcVar = StaticDefaultDispatcherProvider.DISPATCHERS_DEFAULT;
                 KotlinHelpers2.bf(Dispatchers$IO.INSTANCE, new lw(i2, r6, i3));

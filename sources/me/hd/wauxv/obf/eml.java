@@ -69,10 +69,10 @@ public final class eml extends ReplacementSpan {
         }
         EmojiMetadata emojiMetadataVar = this.b;
         chm chmVar = emojiMetadataVar.c;
-        Typeface typeface = (Typeface) chmVar.f;
+        Typeface typeface = (Typeface) chmVar.var4;
         Typeface typeface2 = paint2.getTypeface();
         paint2.setTypeface(typeface);
-        canvas.drawText((char[]) chmVar.d, emojiMetadataVar.b * 2, 2, f, f2, paint2);
+        canvas.drawText((char[]) chmVar.var2, emojiMetadataVar.b * 2, 2, f, f2, paint2);
         paint2.setTypeface(typeface2);
     }
 

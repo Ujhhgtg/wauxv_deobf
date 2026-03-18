@@ -10,16 +10,16 @@ public final class aha {
     public static void b(chm chmVar, String str, String str2, pd pdVar) {
         chmVar.y();
         int iAi = chmVar.ai();
-        dll dllVar = (dll) chmVar.e;
+        dll dllVar = (dll) chmVar.var3;
         StringBuilder sb = dllVar.a;
         sb.append((char) 160);
         sb.append('\n');
-        ((dop) ((blq) chmVar.c).b).getClass();
+        ((dop) ((blq) chmVar.var1).b).getClass();
         dllVar.e(sb.length(), str2);
         sb.append((CharSequence) str2);
         chmVar.y();
         dllVar.d((char) 160);
-        cmz.g.c((aji) chmVar.d, str);
+        cmz.g.c((aji) chmVar.var2, str);
         chmVar.at(pdVar, iAi);
         chmVar.u(pdVar);
     }

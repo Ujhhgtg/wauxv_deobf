@@ -80,7 +80,7 @@ public final class cf extends SwitchHook {
         textView.setVisibility(z ? 0 : 8);
         if (z2) {
             textView.setTextColor(
-                    Color.parseColor(cnb.z(cnh.aa(textView.getContext()) ? -432924113500970L : -432898343697194L)));
+                    Color.parseColor(StaticUtils.decryptString(cnh.aa(textView.getContext()) ? -432924113500970L : -432898343697194L)));
         }
         textView.setMaxLines(i6);
         textView.setTypeface(textView.getTypeface(), i7);

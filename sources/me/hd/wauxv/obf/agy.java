@@ -18,7 +18,7 @@ public final class agy implements bzs {
                 coi coiVar2 = (drl) coiVar;
                 chmVar.y();
                 int iAi = chmVar.ai();
-                ((dll) chmVar.e).d((char) 160);
+                ((dll) chmVar.var3).d((char) 160);
                 chmVar.at(coiVar2, iAi);
                 chmVar.u(coiVar2);
                 break;
@@ -27,12 +27,12 @@ public final class agy implements bzs {
                 chmVar.y();
                 int iAi2 = chmVar.ai();
                 chmVar.ax(bklVar);
-                cmz.d.c((aji) chmVar.d, Integer.valueOf(bklVar.d));
+                cmz.d.c((aji) chmVar.var2, Integer.valueOf(bklVar.d));
                 chmVar.at(bklVar, iAi2);
                 chmVar.u(bklVar);
                 break;
             case 2:
-                ((dll) chmVar.e).d(' ');
+                ((dll) chmVar.var3).d(' ');
                 break;
             case 3:
                 chmVar.y();
@@ -49,7 +49,7 @@ public final class agy implements bzs {
                 }
                 int iAi3 = chmVar.ai();
                 chmVar.ax(coiVar3);
-                cmz.f.c((aji) chmVar.d, Boolean.valueOf(z));
+                cmz.f.c((aji) chmVar.var2, Boolean.valueOf(z));
                 chmVar.at(coiVar3, iAi3);
                 if (!z) {
                     chmVar.u(coiVar3);
@@ -59,7 +59,7 @@ public final class agy implements bzs {
                 bvo bvoVar = (bvo) coiVar;
                 int iAi4 = chmVar.ai();
                 chmVar.ax(bvoVar);
-                cmz.e.c((aji) chmVar.d, bvoVar.d);
+                cmz.e.c((aji) chmVar.var2, bvoVar.d);
                 chmVar.at(bvoVar, iAi4);
                 break;
             case 6:
@@ -85,7 +85,7 @@ public final class agy implements bzs {
             case 9:
                 aaf aafVar = (aaf) coiVar;
                 int iAi8 = chmVar.ai();
-                dll dllVar = (dll) chmVar.e;
+                dll dllVar = (dll) chmVar.var3;
                 StringBuilder sb = dllVar.a;
                 sb.append((char) 160);
                 sb.append(aafVar.d);
@@ -101,9 +101,9 @@ public final class agy implements bzs {
                 aha.b(chmVar, null, boxVar.d, boxVar);
                 break;
             case 12:
-                dll dllVar2 = (dll) chmVar.e;
+                dll dllVar2 = (dll) chmVar.var3;
                 boe boeVar = (boe) coiVar;
-                blq blqVar = (blq) chmVar.c;
+                blq blqVar = (blq) chmVar.var1;
                 pn pnVar = (pn) ((bib) blqVar.e).a.get(boe.class);
                 if (pnVar == null) {
                     chmVar.ax(boeVar);
@@ -118,7 +118,7 @@ public final class agy implements bzs {
                     SyntheticClass syntheticClassVar = (SyntheticClass) blqVar.d;
                     String str = boeVar.d;
                     syntheticClassVar.getClass();
-                    aji ajiVar = (aji) chmVar.d;
+                    aji ajiVar = (aji) chmVar.var2;
                     ResourcesCompat.m.c(ajiVar, str);
                     ResourcesCompat.n.c(ajiVar, Boolean.valueOf(z2));
                     ResourcesCompat.o.c(ajiVar, null);
@@ -136,7 +136,7 @@ public final class agy implements bzs {
                 coi coiVar7 = (bwb) coiVar;
                 cwa cwaVar = cmz.a;
                 int iAi10 = chmVar.ai();
-                aji ajiVar2 = (aji) chmVar.d;
+                aji ajiVar2 = (aji) chmVar.var2;
                 chmVar.ax(coiVar7);
                 pd pdVar3 = (pd) coiVar7.i;
                 if (pdVar3 instanceof crx) {
