@@ -72,16 +72,16 @@ public final /* synthetic */ class bty implements IInvokable {
                                 i7 = R.id.moduleDialogInputLocationLongitude;
                                 if (((TextInputLayout) KotlinHelpers2.recursivelyFindViewById(viewK,
                                         R.id.moduleDialogInputLocationLongitude)) != null) {
-                                    bxj.c = new cem((LinearLayout) viewK, materialButton, textInputEditText,
+                                    LocationHook.c = new cem((LinearLayout) viewK, materialButton, textInputEditText,
                                             textInputEditText2);
                                     materialButton.setOnClickListener(new bxa(view, i6));
-                                    cem cemVar = bxj.c;
+                                    cem cemVar = LocationHook.c;
                                     if (cemVar == null) {
                                         throwLateinitPropNotInitYet("binding" /* "binding" /* "binding" /* cnb.z(-496154622032682L)  */);
                                         throw null;
                                     }
                                     cemVar.c.setText(String.valueOf(bxf.a.j()));
-                                    cem cemVar2 = bxj.c;
+                                    cem cemVar2 = LocationHook.c;
                                     if (cemVar2 == null) {
                                         throwLateinitPropNotInitYet("binding" /* "binding" /* "binding" /* cnb.z(-496120262294314L)  */);
                                         throw null;
@@ -89,9 +89,9 @@ public final /* synthetic */ class bty implements IInvokable {
                                     cemVar2.d.setText(String.valueOf(bxg.a.j()));
                                     bzy bzyVar = new bzy(view.getContext());
                                     eg egVar = (eg) bzyVar.d;
-                                    bxj.a.getClass();
-                                    egVar.d = bxj.l;
-                                    cem cemVar3 = bxj.c;
+                                    LocationHook.a.getClass();
+                                    egVar.d = LocationHook.l;
+                                    cem cemVar3 = LocationHook.c;
                                     if (cemVar3 == null) {
                                         throwLateinitPropNotInitYet("binding" /* "binding" /* "binding" /* cnb.z(-496085902555946L)  */);
                                         throw null;
@@ -113,7 +113,7 @@ public final /* synthetic */ class bty implements IInvokable {
                 throw new NullPointerException("Missing required view with ID: "
                         /* "Missing required view with ID: " /* "Missing required view with ID: " /* cnb.z(-662764993379114L)  */.concat(viewK.getResources().getResourceName(i7)));
             case 2:
-                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new bty(i2);
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new bty(5);
                 return kotlinUnitVar;
             case 3:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new bty(9);
@@ -256,20 +256,20 @@ public final /* synthetic */ class bty implements IInvokable {
                     throwIfVar1IsNull(matcher, "matcher(...)");
                     bzx bzxVarY = StaticAndroidHelpers.y(matcher, 0, str);
                     if (bzxVarY == null || ((AbstractReadOnlyCollection) bzxVarY.e()).a() != 3) {
-                        cem cemVar4 = bxj.c;
+                        cem cemVar4 = LocationHook.c;
                         if (cemVar4 == null) {
                             throwLateinitPropNotInitYet("binding" /* "binding" /* "binding" /* cnb.z(-493590526556970L)  */);
                             throw null;
                         }
                         cemVar4.c.setText("31.135633" /* "31.135633" /* "31.135633" /* cnb.z(-493556166818602L)  */);
-                        cem cemVar5 = bxj.c;
+                        cem cemVar5 = LocationHook.c;
                         if (cemVar5 == null) {
                             throwLateinitPropNotInitYet("binding" /* "binding" /* "binding" /* cnb.z(-493530397014826L)  */);
                             throw null;
                         }
                         cemVar5.d.setText("121.66625" /* "121.66625" /* "121.66625" /* cnb.z(-493496037276458L)  */);
                     } else {
-                        cem cemVar6 = bxj.c;
+                        cem cemVar6 = LocationHook.c;
                         if (cemVar6 == null) {
                             throwLateinitPropNotInitYet("binding" /* "binding" /* "binding" /* cnb.z(-493659246033706L)  */);
                             throw null;
@@ -277,7 +277,7 @@ public final /* synthetic */ class bty implements IInvokable {
                         TextInputEditText textInputEditText3 = cemVar6.c;
                         Float fBd = dnp.bd((String) ((bzv) bzxVarY.e()).get(1));
                         textInputEditText3.setText(String.valueOf(fBd != null ? fBd.floatValue() : 31.135633f));
-                        cem cemVar7 = bxj.c;
+                        cem cemVar7 = LocationHook.c;
                         if (cemVar7 == null) {
                             throwLateinitPropNotInitYet("binding" /* "binding" /* "binding" /* cnb.z(-493624886295338L)  */);
                             throw null;
@@ -289,25 +289,25 @@ public final /* synthetic */ class bty implements IInvokable {
                 }
                 return kotlinUnitVar;
             case 12:
-                bxj bxjVar = bxj.a;
-                HookManager hookManagerVarAb = PackageParam.createHook(bxjVar, dqc.toSingletonList((Method) obj));
-                bxjVar.hookBefore(hookManagerVarAb, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(hookManagerVarAb, i2));
+                LocationHook locationHookVar = LocationHook.a;
+                HookManager hookManagerVarAb = PackageParam.createHook(locationHookVar, dqc.toSingletonList((Method) obj));
+                locationHookVar.hookBefore(hookManagerVarAb, new StillAnotherHugeSyntheticPileOfClosuresThatActsDifferentlyBasedOnConstructorArg(hookManagerVarAb, 5));
                 hookManagerVarAb.initInstantCollectionAndApplyHooks();
                 return kotlinUnitVar;
             case 13:
-                bxj bxjVar2 = bxj.a;
-                HookManager hookManagerVarAb2 = PackageParam.createHook(bxjVar2, dqc.toSingletonList((Method) obj));
-                bxjVar2.hookBefore(hookManagerVarAb2, new bty(4));
+                LocationHook locationHookVar2 = LocationHook.a;
+                HookManager hookManagerVarAb2 = PackageParam.createHook(locationHookVar2, dqc.toSingletonList((Method) obj));
+                locationHookVar2.hookBefore(hookManagerVarAb2, new bty(4));
                 hookManagerVarAb2.initInstantCollectionAndApplyHooks();
                 return kotlinUnitVar;
             case 14:
-                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new bty(i3);
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new bty(6);
                 return kotlinUnitVar;
             case 15:
                 ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new bty(10);
                 return kotlinUnitVar;
             case 16:
-                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new bty(i4);
+                ((FindDexClassMethodDslWrapper) obj).onMethodCallback = new bty(17);
                 return kotlinUnitVar;
             case 17:
                 DexMethodQueryBuilder dexMethodQueryBuilderVar6 = (DexMethodQueryBuilder) obj;

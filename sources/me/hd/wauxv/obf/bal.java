@@ -12,19 +12,19 @@ public final class bal extends ApiHookItem implements IDexFind {
 
     @Override // me.hd.wauxv.obf.SwitchHook
     public final void initOnce() {
-        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(baj.a));
+        List listBf = dqc.toSingletonList(StaticHelpers7.toDexMethod(FinderChatShareMenuApi$MethodCreateMenuInvoke.a));
         bal balVar = a;
         HookManager hookManagerVarAb = PackageParam.createHook(balVar, listBf);
         hookManagerVarAb.hookBefore(new ayz(12));
         hookManagerVarAb.initInstantCollectionAndApplyHooks();
-        HookManager hookManagerVarAb2 = PackageParam.createHook(balVar, dqc.toSingletonList(StaticHelpers7.toDexMethod(bak.a)));
+        HookManager hookManagerVarAb2 = PackageParam.createHook(balVar, dqc.toSingletonList(StaticHelpers7.toDexMethod(FinderChatShareMenuApi$MethodSelectMenuInvoke.a)));
         hookManagerVarAb2.hookBefore(new ayz(11));
         hookManagerVarAb2.initInstantCollectionAndApplyHooks();
     }
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        StaticHelpers7.resolveDexAndCache(baj.a, dexKitBridge, new ayz(13));
-        StaticHelpers7.resolveDexAndCache(bak.a, dexKitBridge, new ayz(14));
+        StaticHelpers7.resolveDexAndCache(FinderChatShareMenuApi$MethodCreateMenuInvoke.a, dexKitBridge, new ayz(13));
+        StaticHelpers7.resolveDexAndCache(FinderChatShareMenuApi$MethodSelectMenuInvoke.a, dexKitBridge, new ayz(14));
     }
 }

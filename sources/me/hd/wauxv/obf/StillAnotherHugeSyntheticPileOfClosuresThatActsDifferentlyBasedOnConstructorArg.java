@@ -116,18 +116,18 @@ public final /* synthetic */ class StillAnotherHugeSyntheticPileOfClosuresThatAc
                 if (obj2 != null) {
                     int i3 = 0;
                     SyntheticPileOfMess bmuVarBi = dqc.getWrapperConfiguration(obj2);
-                    bxj bxjVar = bxj.a;
+                    LocationHook locationHookVar = LocationHook.a;
                     MethodResolver methodResolverVarT = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
-                    methodResolverVarT.name = "getLatitude" /* "getLatitude" /* "getLatitude" /* cnb.z(-493470267472682L)  */;
+                    methodResolverVarT.name = "getLatitude";
                     MethodHookWrapper methodHookWrapperVar = (MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT.findMethods());
                     HookPriorityEnum hookPriorityEnumVar = HookPriorityEnum.ENUM_DEFAULT;
-                    HookManager hookManagerVarAd = bxjVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
-                    bxjVar.hookBefore(hookManagerVarAd, new bty(i));
+                    HookManager hookManagerVarAd = locationHookVar.createImmediateHook(methodHookWrapperVar, hookPriorityEnumVar);
+                    locationHookVar.hookBefore(hookManagerVarAd, new bty(i));
                     hookManagerVarAd.initInstantCollectionAndApplyHooks();
                     MethodResolver methodResolverVarT2 = bmuVarBi.getMethodResolverBasedOnPreviouslyProvidedConfig();
-                    methodResolverVarT2.name = "getLongitude" /* "getLongitude" /* "getLongitude" /* cnb.z(-492834612312874L)  */;
-                    HookManager hookManagerVarAd2 = bxjVar.createImmediateHook((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods()), hookPriorityEnumVar);
-                    bxjVar.hookBefore(hookManagerVarAd2, new bty(i2));
+                    methodResolverVarT2.name = "getLongitude";
+                    HookManager hookManagerVarAd2 = locationHookVar.createImmediateHook((MethodHookWrapper) StaticHelpers5.safeGetFirstInList(methodResolverVarT2.findMethods()), hookPriorityEnumVar);
+                    locationHookVar.hookBefore(hookManagerVarAd2, new bty(i2));
                     hookManagerVarAd2.initInstantCollectionAndApplyHooks();
                 }
                 HookManager.l(hookManagerVar);

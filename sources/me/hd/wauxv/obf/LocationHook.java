@@ -6,8 +6,8 @@ import org.luckypray.dexkit.DexKitBridge;
 
 /* JADX INFO: compiled from: r8-map-id-b9de5da7d0413052737328a4e696e1bcc3145db8f6a41e1e318485e124198cd6 */
 /* JADX INFO: loaded from: classes.dex */
-public final class bxj extends SwitchHook implements IDexFind {
-    public static final bxj a;
+public final class LocationHook extends SwitchHook implements IDexFind {
+    public static final LocationHook a;
     public static final /* synthetic */ IEmpty7[] b;
     public static cem c;
     public static final FactoryPools i;
@@ -19,11 +19,11 @@ public final class bxj extends SwitchHook implements IDexFind {
     public static final boolean s;
 
     static {
-        cwb cwbVar = new cwb(bxj.class, "RedirectUIClass" /* "RedirectUIClass" /* "RedirectUIClass" /* "RedirectUIClass" /* cnb.z(-493818159823658L)   */,
+        cwb cwbVar = new cwb(LocationHook.class, "RedirectUIClass" /* "RedirectUIClass" /* "RedirectUIClass" /* "RedirectUIClass" /* cnb.z(-493818159823658L)   */,
                 "getRedirectUIClass()Ljava/lang/Class;" /* "getRedirectUIClass()Ljava/lang/Class;" /* "getRedirectUIClass()Ljava/lang/Class;" /* "getRedirectUIClass()Ljava/lang/Class;" /* cnb.z(-493749440346922L)   */);
         dal.a.getClass();
         b = new IEmpty7[] { cwbVar };
-        a = new bxj("LocationHook" /* "LocationHook" /* "LocationHook" /* "LocationHook" /* cnb.z(-496816046996266L)   */);
+        a = new LocationHook("LocationHook" /* "LocationHook" /* "LocationHook" /* "LocationHook" /* cnb.z(-496816046996266L)   */);
         i = ReflectionWrapper.h("com.tencent.mm.plugin.location.ui.RedirectUI" /* "com.tencent.mm.plugin.location.ui.RedirectUI" /* "com.tencent.mm.plugin.location.ui.RedirectUI" /* "com.tencent.mm.plugin.location.ui.RedirectUI" /* cnb.z(-494118807534378L)   */,
                 new amd(3), 2);
         j = "辅助" /* "辅助" /* "辅助" /* "辅助" /* cnb.z(-499938488220458L)   */;
@@ -49,11 +49,11 @@ public final class bxj extends SwitchHook implements IDexFind {
         HookManager hookManagerVarAd = createImmediateHook((MethodHookWrapper) StaticHelpers6.setParamsBasedOnVar1Var2AndResolveFirstMethod(new Object[] { dal.getKClassFromClass(cls), dal.getKClassFromClass(cls), dal.getKClassFromClass(Intent.class) }, 3, methodResolverVarT), HookPriorityEnum.ENUM_DEFAULT);
         a.hookAfter(hookManagerVarAd, new bty(11));
         hookManagerVarAd.initInstantCollectionAndApplyHooks();
-        Iterator it = OtherStaticHelpers.argsToList(bxc.a, bxd.a, bxb.a).iterator();
+        Iterator it = OtherStaticHelpers.argsToList(LocationHook$MethodListener.a, LocationHook$MethodListenerWgs84.a, LocationHook$MethodDefaultManager.a).iterator();
         while (it.hasNext()) {
             StaticHelpers7.toDexMethod((DexDescData) it.next(), new bty(12));
         }
-        StaticHelpers7.toDexMethod(bxe.a, new bty(13));
+        StaticHelpers7.toDexMethod(LocationHook$MethodSelectPoiMapOnClick.a, new bty(13));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook
@@ -68,10 +68,10 @@ public final class bxj extends SwitchHook implements IDexFind {
 
     @Override // me.hd.wauxv.obf.IDexFind
     public final void dexFind(DexKitBridge dexKitBridge) {
-        StaticHelpers7.resolveDexAndCache(bxc.a, dexKitBridge, new bty(14));
-        StaticHelpers7.resolveDexAndCache(bxd.a, dexKitBridge, new bty(15));
-        StaticHelpers7.resolveDexAndCache(bxb.a, dexKitBridge, new bty(2));
-        StaticHelpers7.resolveDexAndCache(bxe.a, dexKitBridge, new bty(3));
+        StaticHelpers7.resolveDexAndCache(LocationHook$MethodListener.a, dexKitBridge, new bty(14));
+        StaticHelpers7.resolveDexAndCache(LocationHook$MethodListenerWgs84.a, dexKitBridge, new bty(15));
+        StaticHelpers7.resolveDexAndCache(LocationHook$MethodDefaultManager.a, dexKitBridge, new bty(2));
+        StaticHelpers7.resolveDexAndCache(LocationHook$MethodSelectPoiMapOnClick.a, dexKitBridge, new bty(3));
     }
 
     @Override // me.hd.wauxv.obf.SwitchHook

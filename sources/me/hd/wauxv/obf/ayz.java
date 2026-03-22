@@ -420,29 +420,12 @@ public final synthetic class ayz implements bgf
                 final Iterator iterator6 = bal.b.iterator();
                 while (iterator6.hasNext()) {
                     o = iterator6.next();
-                    o = o;
-                    try {
-                        for (final bai bai : ((etg)o).m()) {
-                            final cdk d7 = ((cdk)dov2.getValue()).d();
-                            ((bpu)d7).h((Object)contextMenu4);
-                            d7.e(new Object[] { bai.a, bai.b, bai.c });
-                        }
-                        continue;
+                    for (final bai bai : ((etg)o).m()) {
+                        final cdk d7 = ((cdk)dov2.getValue()).d();
+                        ((bpu)d7).h((Object)contextMenu4);
+                        d7.e(new Object[] { bai.a, bai.b, bai.c });
                     }
-                    catch (final Exception ex3) {
-                        final ArrayList a9 = ewq.a;
-                        final StringBuilder sb3 = new StringBuilder();
-                        sb3.append(StaticUtils.decryptString(-41089952119594L));
-                        String s4;
-                        if (o instanceof doo) {
-                            s4 = ((doo)o).f();
-                        }
-                        else {
-                            s4 = StaticUtils.decryptString(-40973988002602L);
-                        }
-                        ewq.e(yg.n(sb3, s4, -64574833294122L), ex3, 12);
-                        continue;
-                    }
+                    continue;
                     break;
                 }
                 return a2;

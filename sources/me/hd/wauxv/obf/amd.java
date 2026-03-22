@@ -166,14 +166,14 @@ public final /* synthetic */ class amd implements IFunction0 {
                 return Boolean.valueOf(ReflectionWrapper.g(LogConfig.class.getClassLoader(), "android.os.Build"));
             case 28:
                 bxf bxfVar = bxf.a;
-                cem cemVar = bxj.c;
+                cem cemVar = LocationHook.c;
                 if (cemVar == null) {
                     throwLateinitPropNotInitYet("binding" /* "binding" /* "binding" /* cnb.z(-496249111313194L)  */);
                     throw null;
                 }
                 bxfVar.q(Float.parseFloat(String.valueOf(cemVar.c.getText())));
                 bxg bxgVar = bxg.a;
-                cem cemVar2 = bxj.c;
+                cem cemVar2 = LocationHook.c;
                 if (cemVar2 != null) {
                     bxgVar.q(Float.parseFloat(String.valueOf(cemVar2.d.getText())));
                     return kotlinUnitVar;
